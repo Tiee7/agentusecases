@@ -13,3 +13,6 @@ class DigestTests(unittest.TestCase):
         text=render(result)
         self.assertIn('目录新增 1',text)
         self.assertIn('[A](https://example.test/a)',text)
+    def test_time_is_shown_in_shanghai(self):
+        result={'run_id':1,'fetched_at':'2026-10-14T14:00:00+00:00','catalog':{},'cases':[]}
+        self.assertIn('2026-10-14 22:00:00（北京时间）',render(result))

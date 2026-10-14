@@ -14,13 +14,20 @@ from datetime import datetime, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit, urldefrag
-from urllib.request import Request, urlopen
+from urllib.request import Request, HTTPRedirectHandler, build_opener
+
+class NoRedirect(HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        # A redirect target needs its own robots/access review before fetching.
+        return None
+
+OPENER = build_opener(NoRedirect)
 
 UA = 'AgentUseCaseWatch/0.1'
 ADAPTER_VERSION = 'public-ssr-v1'
 RATE_LOCK = threading.Lock()
 NEXT_REQUEST = 0.0
-REQUEST_DELAY = 0.0
+REQUEST_DELAY = 2.0
 
 class Page(HTMLParser):
     def __init__(self):
@@ -75,7 +82,7 @@ def fetch(url):
                 time.sleep(wait)
             NEXT_REQUEST = time.monotonic() + REQUEST_DELAY
         try:
-            with urlopen(Request(url, headers={'User-Agent': UA}), timeout=30) as response:
+            with OPENER.open(Request(url, headers={'User-Agent': UA}), timeout=30) as response:
                 if urlsplit(response.url).netloc != urlsplit(url).netloc:
                     raise RuntimeError('Cross-host redirect requires explicit review')
                 raw = response.read(5_000_001)
@@ -112,8 +119,9 @@ def save(db, listing, ordering, rows, catalog_rows=None, priorities=None):
     old = {r[0]: r[1:] for r in db.execute('SELECT url,title,digest,position FROM observations WHERE run_id=?', (previous,))}
     old_catalog = dict(db.execute('SELECT url,lastmod FROM catalogs WHERE run_id=?', (previous,)))
     changes = []
+    fetched_at = datetime.now(timezone.utc).isoformat()
     with db:
-        run = db.execute('INSERT INTO runs(fetched_at,listing_url,ordering,adapter_version) VALUES(?,?,?,?)', (datetime.now(timezone.utc).isoformat(), listing, ordering,ADAPTER_VERSION)).lastrowid
+        run = db.execute('INSERT INTO runs(fetched_at,listing_url,ordering,adapter_version) VALUES(?,?,?,?)', (fetched_at, listing, ordering,ADAPTER_VERSION)).lastrowid
         if priorities:
             db.executemany('INSERT INTO priorities VALUES(?,?,?,?)', [(run,url,rank,category) for url,(rank,category) in priorities.items()])
         if catalog_rows is not None:
@@ -125,7 +133,7 @@ def save(db, listing, ordering, rows, catalog_rows=None, priorities=None):
             kind = 'baseline' if previous is None else 'newly_observed' if before is None else 'content_changed' if before[:2] != (row['title'], digest) else 'position_changed' if before[2] != position else 'unchanged'
             changes.append({'url': row['url'], 'title': row['title'], 'position': position, 'change': kind})
     catalog_delta = None if catalog_rows is None else {'count': len(catalog_rows), 'baseline': not old_catalog, 'newly_listed': sorted(set(catalog_rows)-set(old_catalog)) if old_catalog else [], 'no_longer_listed': sorted(set(old_catalog)-set(catalog_rows)), 'lastmod_changed': sorted(url for url in set(catalog_rows)&set(old_catalog) if catalog_rows[url] != old_catalog[url])}
-    return {'adapter_version': ADAPTER_VERSION, 'catalog': catalog_delta, 'details_complete': catalog_rows is not None and len(rows)==len(catalog_rows), 'run_id': run, 'previous_run_id': previous, 'ordering': ordering, 'complete_catalog': catalog_rows is not None, 'not_observed': sorted(set(old) - {r['url'] for r in rows}), 'cases': changes}
+    return {'fetched_at': fetched_at, 'adapter_version': ADAPTER_VERSION, 'catalog': catalog_delta, 'details_complete': catalog_rows is not None and len(rows)==len(catalog_rows), 'run_id': run, 'previous_run_id': previous, 'ordering': ordering, 'complete_catalog': catalog_rows is not None, 'not_observed': sorted(set(old) - {r['url'] for r in rows}), 'cases': changes}
 
 def main():
     global REQUEST_DELAY
@@ -164,6 +172,8 @@ def main():
     for section in seed['firstPage']:
         for item in section['items']:
             url = urljoin(args.listing, '/use-case/' + item['id'])
+            if url not in catalog_rows:
+                raise RuntimeError('SSR first-page case is not present in the sitemap')
             links[url] = item['title']
             priorities[url] = (len(priorities)+1, section['id'])
     for url in catalog_rows:
@@ -196,10 +206,10 @@ def main():
         pool.shutdown(wait=True)
     db = database(args.db)
     result = save(db, args.listing, args.ordering, rows, catalog_rows, priorities)
-    Path('data').mkdir(exist_ok=True)
-    Path('data/catalog.json').write_text(json.dumps(catalog_rows,ensure_ascii=False,indent=2))
-    Path('data/runs').mkdir(parents=True, exist_ok=True)
-    Path(f"data/runs/{result['run_id']}.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))
+    output_root = Path(args.db).parent
+    (output_root/'catalog.json').write_text(json.dumps(catalog_rows,ensure_ascii=False,indent=2))
+    (output_root/'runs').mkdir(parents=True, exist_ok=True)
+    (output_root/'runs'/f"{result['run_id']}.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 if __name__ == '__main__':
