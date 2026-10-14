@@ -1,6 +1,12 @@
 name: Daily usecase watch
 on:
   workflow_dispatch:
+    inputs:
+      limit:
+        description: '0 = full catalog; 5 = fast smoke test'
+        required: false
+        default: '0'
+        type: string
   schedule:
     - cron: '0 1 * * *' # 09:00 Asia/Shanghai; GitHub scheduling may be delayed
 permissions:
@@ -14,6 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 300
     env:
+      CASE_LIMIT: ${{ github.event.inputs.limit || '0' }}
       LISTING_URL: ${{ vars.LISTING_URL || 'https://agentusecases.ai/' }}
       CASE_ORDERING: ${{ vars.CASE_ORDERING || 'site_category_top' }}
     steps:
@@ -36,7 +43,7 @@ jobs:
       - name: Collect snapshot and prepare next batch
         run: |
           set -euo pipefail
-          python -m agentwatch.crawler --listing "$LISTING_URL" --ordering "$CASE_ORDERING" --limit 0
+          python -m agentwatch.crawler --listing "$LISTING_URL" --ordering "$CASE_ORDERING" --limit "$CASE_LIMIT"
           python -m agentwatch.queue
           python -m agentwatch.digest
           cat data/daily-report.md >> "$GITHUB_STEP_SUMMARY"
