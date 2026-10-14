@@ -1,0 +1,48 @@
+name: Daily usecase watch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 1 * * *' # 09:00 Asia/Shanghai; GitHub scheduling may be delayed
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: daily-usecase-watch
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    env:
+      LISTING_URL: ${{ vars.LISTING_URL || 'https://agentusecases.ai/' }}
+      CASE_ORDERING: ${{ vars.CASE_ORDERING || 'site_category_top' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test
+        run: python -m unittest discover -s tests -v
+      - name: Restore most recent successful history
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          previous_run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow daily.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+          if [ -n "$previous_run" ]; then
+            mkdir -p data
+            gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name usecase-history --dir data
+          fi
+      - name: Collect snapshot and prepare next batch
+        run: |
+          set -euo pipefail
+          python -m agentwatch.crawler --listing "$LISTING_URL" --ordering "$CASE_ORDERING" --limit 0
+          python -m agentwatch.queue
+          python -m agentwatch.digest
+          cat data/daily-report.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: usecase-history
+          path: data/
+          retention-days: 90
+          if-no-files-found: error
