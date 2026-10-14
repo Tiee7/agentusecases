@@ -69,3 +69,11 @@ Artifact保留90天；长期停用、删除或过期会导致恢复失败，应�
 站点域名、首批原始报道域名、GitHub API域名和复用启动说明已保存到环境配置草稿。草稿不代表运行策略已更新或环境已发布；请在环境设置审阅并保存，然后发布环境。没有需要安装的第三方依赖，所以未添加安装脚本。
 
 下一步：恢复原始报道访问，补齐首批5份研究；全量遍历已完成验证，代码已授权推送到main；恢复GitHub API访问后手动验证Actions与历史恢复，再确认定时运行。可视化Data报告运行时在本环境不可用，当前交付可审阅Markdown研究稿及JSON证据记录，没有声称发布在线报告。
+
+## 每小时商业深度研究
+
+新增工作流`hourly-research.yml`每小时17分研究一个案例，并自动更新对应报告、结构化记录、来源凭据与总索引，提交推送main。每日全量爬虫保留。
+
+入口：[商业深度研究总索引](INDEX.md)；[完整对应目录](registry/CATALOG.md)；[研究标准](RESEARCH_STANDARD.md)。用户反馈占5%，其余评分围绕付费需求、效果、利润、获客、壁垒与经营风险。旧介绍型初稿不算深研完成。
+
+首次运行会检查仓库Actions Secret `OPENAI_API_KEY`的存在性。没有密钥就明确失败，不会用固定模板冒充研究完成。请在GitHub仓库Settings → Secrets and variables → Actions安全添加；不要把值写到仓库或聊天。添加后可在Hourly commercial research中手动Run workflow。`RESEARCH_MODEL`仓库变量可选择模型，默认由Codex选择，推理努力xhigh。

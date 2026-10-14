@@ -1,0 +1,115 @@
+name: Hourly commercial research
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+    inputs:
+      case_id:
+        description: 'Optional stable case ID; otherwise next unfinished case'
+        required: false
+        type: string
+concurrency:
+  group: hourly-commercial-research
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    outputs:
+      case_id: ${{ steps.select.outputs.case_id }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check model credential without exposing it
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "${OPENAI_API_KEY:-}" ]; then
+            echo "::error::Missing repository Actions Secret OPENAI_API_KEY. Add it in Settings > Secrets and variables > Actions. No case was marked complete."
+            exit 1
+          fi
+      - name: Test research and publication gates
+        run: python -m unittest discover -s tests -v
+      - name: Select exactly one case
+        id: select
+        env:
+          REQUESTED_CASE_ID: ${{ inputs.case_id }}
+        run: |
+          set -euo pipefail
+          if [ -n "$REQUESTED_CASE_ID" ]; then
+            case_id=$(python -m agentwatch.business prepare --case-id "$REQUESTED_CASE_ID")
+          else
+            case_id=$(python -m agentwatch.business prepare)
+          fi
+          echo "case_id=$case_id" >> "$GITHUB_OUTPUT"
+      - name: Conduct deep business research
+        if: steps.select.outputs.case_id != ''
+        uses: openai/codex-action@v1
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          prompt-file: .github/prompts/business-research.md
+          permission-profile: business-research
+          codex-home: .github/codex
+          effort: xhigh
+          model: ${{ vars.RESEARCH_MODEL }}
+          codex-args: '["--search", "--ephemeral"]'
+          output-file: data/agent-final-message.md
+      - name: Validate completion and protect tracked files
+        if: steps.select.outputs.case_id != ''
+        env:
+          CASE_ID: ${{ steps.select.outputs.case_id }}
+        run: |
+          set -euo pipefail
+          test -z "$(git status --porcelain --untracked-files=no)"
+          python -c 'import json, os; from pathlib import Path; from agentwatch.business import validate; cid=os.environ["CASE_ID"]; validate(json.loads(Path("data/business-draft.json").read_text()),json.loads(Path(f"data/evidence/{cid}.json").read_text()),cid)'
+      - uses: actions/upload-artifact@v4
+        if: steps.select.outputs.case_id != ''
+        with:
+          name: commercial-research-draft
+          path: |
+            data/business-draft.json
+            data/evidence/*.json
+          retention-days: 7
+          if-no-files-found: error
+  publish:
+    needs: research
+    if: needs.research.outputs.case_id != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          name: commercial-research-draft
+          path: data/
+      - name: Publish matching report, record and overall indexes
+        env:
+          CASE_ID: ${{ needs.research.outputs.case_id }}
+        run: |
+          set -euo pipefail
+          python -m agentwatch.business verify-sources --expected-id "$CASE_ID" --evidence "data/evidence/$CASE_ID.json"
+          python -m agentwatch.business publish --expected-id "$CASE_ID" --evidence "data/evidence/$CASE_ID.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "reports/$CASE_ID.md" "research/$CASE_ID.json" "research/evidence/$CASE_ID.json" INDEX.md registry/CATALOG.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Research business case: $CASE_ID"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+          cat "reports/$CASE_ID.md" >> "$GITHUB_STEP_SUMMARY"

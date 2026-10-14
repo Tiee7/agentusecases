@@ -20,7 +20,7 @@ def main():
     completed = set()
     for path in Path('research').glob('*.json'):
         record = json.loads(path.read_text())
-        if record.get('status') == 'reviewed':
+        if record.get('status') in ('reviewed','completed'):
             completed.add(record['url'])
     pending = [{'url': url, 'title': title, 'listing_position': position, 'category': category, 'priority_kind': 'site_category_top' if position is not None else 'sitemap_order'} for url,title,position,category in rows if url not in completed]
     batch = pending[:args.batch_size]

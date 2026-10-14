@@ -1,0 +1,244 @@
+"""One-case commercial research, validation, stable mapping and deterministic indexes."""
+import argparse
+import hashlib
+import json
+import re
+import sqlite3
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import urlsplit
+
+WEIGHTS={'demand':20,'outcome':20,'economics':20,'distribution':15,'moat':10,'execution':10,'feedback':5}
+LABELS={'demand':'付费需求','outcome':'业务价值与效果证据','economics':'单位经济与利润','distribution':'获客与市场进入','moat':'竞争壁垒','execution':'交付与经营风险','feedback':'独立用户反馈信号'}
+DECISIONS=('建议投入客户验证','仅建议受控试点','适合内部效率工具','不建议商业投入')
+SECTIONS=('customer','workflow','market','competition','economics','distribution','moat','execution','feedback','decision')
+REGISTRY=Path('registry/cases.json')
+
+def safe_id(value):
+    if not isinstance(value,str) or not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,199}',value):
+        raise ValueError('Invalid stable case ID')
+    return value
+
+def read_registry():
+    return json.loads(REGISTRY.read_text())
+
+def bootstrap(db_path):
+    db=sqlite3.connect(f'file:{Path(db_path).resolve()}?mode=ro',uri=True)
+    run=db.execute('SELECT MAX(id) FROM runs').fetchone()[0]
+    if run is None:
+        raise ValueError('No successful crawl')
+    rows=db.execute('SELECT o.url,o.title,o.body,p.position,p.category FROM observations o LEFT JOIN priorities p ON p.run_id=o.run_id AND p.url=o.url WHERE o.run_id=? ORDER BY p.position IS NULL,p.position,o.url',(run,)).fetchall()
+    old=read_registry() if REGISTRY.exists() else {'cases':[]}
+    existing={c['id']:c for c in old['cases']}
+    cases=[]
+    for url,title,body,rank,category in rows:
+        case_id=safe_id(urlsplit(url).path.rstrip('/').rsplit('/',1)[-1])
+        previous=existing.pop(case_id,{})
+        cases.append(dict(previous,id=case_id,title=title,url=url,category=category,site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M),listed=True))
+    # Retain historical mappings if a case disappears from the current listing.
+    cases.extend(dict(c,listed=False) for c in existing.values())
+    REGISTRY.parent.mkdir(exist_ok=True)
+    REGISTRY.write_text(json.dumps({'schema_version':1,'ranking_scope':'public SSR category top, then sitemap order','cases':cases},ensure_ascii=False,indent=2)+'\n')
+    return len(cases)
+
+def case_state(case):
+    path=Path(case['record'])
+    if not path.exists():
+        return 'pending',None
+    record=json.loads(path.read_text())
+    if record.get('schema_version')==2 and record.get('status')=='completed':
+        return 'completed',record
+    return 'legacy_draft',record
+
+def select_case(case_id=None):
+    cases=read_registry()['cases']
+    if case_id:
+        safe_id(case_id)
+        case=next((c for c in cases if c['id']==case_id),None)
+        if not case:
+            raise ValueError('Case is not registered')
+        return case
+    return next((c for c in cases if c.get('listed',True) and case_state(c)[0]!='completed'),None)
+
+def refs(values,source_ids):
+    if not isinstance(values,list) or not values or any(v not in source_ids for v in values):
+        raise ValueError('Claim references an unread or unknown source')
+
+def weighted_score(record):
+    return round(sum(WEIGHTS[k]*record['scores'][k]['score']/5 for k in WEIGHTS),1)
+
+def validate(record,receipts,expected_id):
+    safe_id(expected_id)
+    case=select_case(expected_id)
+    if record.get('schema_version')!=2 or record.get('status')!='completed' or record.get('id')!=expected_id or record.get('url')!=case['url']:
+        raise ValueError('Record identity or completion status does not match the selected case')
+    datetime.fromisoformat(record['researched_at'])
+    fetched={r['id']:r for r in receipts if r.get('status')=='fetched'}
+    sources=record.get('sources',[])
+    ids={s['id'] for s in sources}
+    if len(sources)<6 or len(ids)!=len(sources) or not ids<=set(fetched):
+        raise ValueError('At least six distinct actually fetched sources are required')
+    hosts={urlsplit(fetched[s]['url']).hostname for s in ids}
+    kinds=Counter(fetched[s]['kind'] for s in ids)
+    if len(hosts)<3 or kinds['primary']<2 or not (kinds['independent'] or kinds['market']) or not kinds['competitor']:
+        raise ValueError('Require three publishers, two primary sources, independent/market evidence and a competitor source')
+    for source in sources:
+        receipt=fetched[source['id']]
+        if source['url']!=receipt['url'] or len(source.get('supports',''))<20:
+            raise ValueError('Every source must explain exactly what it supports')
+    facts=record.get('facts',[])
+    if len(facts)<8:
+        raise ValueError('At least eight sourced business facts are required')
+    for fact in facts:
+        if len(fact.get('statement',''))<20:
+            raise ValueError('Fact is too thin to support a commercial decision')
+        refs(fact.get('source_ids'),ids)
+    sections={s['id']:s for s in record.get('sections',[])}
+    if set(sections)!=set(SECTIONS):
+        raise ValueError('Missing required business analysis sections')
+    if sum(len(s.get('body','')) for s in sections.values())<3500:
+        raise ValueError('Business report is too brief; depth also requires sourced facts and decision coverage')
+    for section in sections.values():
+        if len(section.get('body',''))<150:
+            raise ValueError('A business section lacks substantive analysis')
+        refs(section.get('source_ids'),ids)
+    decision=record.get('verdict',{})
+    if decision.get('decision') not in DECISIONS or len(decision.get('headline',''))<15 or len(decision.get('reason',''))<100 or not decision.get('next_action') or not decision.get('stop_condition'):
+        raise ValueError('Give one explicit commercial decision, rationale, next action and stop condition')
+    for key in WEIGHTS:
+        dimension=record['scores'][key]
+        score=dimension.get('score')
+        if isinstance(score,bool) or not isinstance(score,(int,float)) or not 0<=score<=5 or len(dimension.get('rationale',''))<30:
+            raise ValueError('Every score must be justified and between zero and five')
+        refs(dimension.get('source_ids'),ids)
+    searches=record.get('feedback',{}).get('searches',[])
+    if len(searches)<3 or len({s['channel'] for s in searches})<2 or any(not s.get('query') or not s.get('outcome') for s in searches):
+        raise ValueError('User feedback must be investigated in at least three searches over two channels')
+    for observation in record.get('feedback',{}).get('observations',[]):
+        refs([observation['source_id']],ids)
+        if observation.get('directness') not in ('direct_user','adjacent_workflow') or not observation.get('bias'):
+            raise ValueError('Classify direct versus adjacent users and selection bias')
+    if not record['feedback'].get('observations') and record['scores']['feedback']['score']!=0:
+        raise ValueError('No verified feedback means zero independent feedback signal, not a claimed negative user rating')
+    models=record.get('unit_economics',[])
+    if len(models)<2:
+        raise ValueError('At least two explicit unit economics scenarios are required')
+    for model in models:
+        for key in ('price','api_cost','human_cost','other_variable_cost','acquisition_cost','units_per_month','fixed_monthly_cost'):
+            v=model.get(key)
+            if isinstance(v,bool) or not isinstance(v,(int,float)) or v<0:
+                raise ValueError('Economic inputs must be nonnegative numbers')
+        if not model.get('assumptions') or not model.get('unit') or not model.get('currency') or not model.get('scenario'):
+            raise ValueError('Label every economic assumption and delivery unit')
+        refs(model.get('source_ids'),ids)
+    if not record.get('disconfirming_evidence') or not record.get('limitations'):
+        raise ValueError('Include contrary evidence and concrete unverified claims')
+    return record
+
+def economics(model):
+    variable=sum(model[k] for k in ('api_cost','human_cost','other_variable_cost','acquisition_cost'))
+    contribution=model['price']-variable
+    profit=contribution*model['units_per_month']-model['fixed_monthly_cost']
+    return variable,contribution,profit
+
+def render(record):
+    v=record['verdict']
+    lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']} · 证据置信度：{record['confidence']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
+    for key,weight in WEIGHTS.items():
+        d=record['scores'][key]
+        rationale=d['rationale'].replace('|','\\|').replace('\n',' ')
+        lines.append(f"| {LABELS[key]} | {weight}% | {d['score']} | {rationale} [{', '.join(d['source_ids'])}] |")
+    lines += ['','## 已核验事实','']
+    for fact in record['facts']:
+        lines.append(f"- {fact['statement']} [{', '.join(fact['source_ids'])}]")
+    for section in record['sections']:
+        lines += ['',f"## {section['title']}",'',section['body'],'',f"依据：{', '.join(section['source_ids'])}"]
+    lines += ['','## 单位经济测算：情景假设，不是项目已实现的财务结果','','| 情景 / 交付单位 | 收入 | 可变成本（含获客） | 单位贡献 | 月交付量 | 月固定成本 | 月经营贡献 |','|---|---:|---:|---:|---:|---:|---:|']
+    for model in record['unit_economics']:
+        variable,contribution,profit=economics(model)
+        lines.append(f"| {model['scenario']} / {model['unit']} ({model['currency']}) | {model['price']:.2f} | {variable:.2f} | {contribution:.2f} | {model['units_per_month']} | {model['fixed_monthly_cost']:.2f} | {profit:.2f} |")
+        lines += [f"\n{model['scenario']}假设：{model['assumptions']}；API成本 {model['api_cost']}，人工成本 {model['human_cost']}，其他可变成本 {model['other_variable_cost']}，分摊获客成本 {model['acquisition_cost']}。依据：{', '.join(model['source_ids'])}"]
+    lines += ['','## 用户反馈核对（低权重）','']
+    for search in record['feedback']['searches']:
+        lines.append(f"- {search['channel']} · `{search['query']}`：{search['outcome']}")
+    for observation in record['feedback']['observations']:
+        lines.append(f"- [{observation['source_id']}] {observation['directness']}：{observation['finding']}；偏差：{observation['bias']}")
+    if not record['feedback']['observations']:
+        lines.append('- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。')
+    lines += ['','## 反证与未核实信息','',record['disconfirming_evidence'],'',record['limitations'],'','## 具体动作与止损条件','',v['next_action'],'',f"停止投入条件：{v['stop_condition']}",'','## 来源与对应关系','']
+    for source in record['sources']:
+        lines.append(f"- [{source['id']}] [{source['title']}]({source['url']})：{source['supports']}")
+    lines += ['',f"结构化记录：[research/{record['id']}.json](../research/{record['id']}.json)",f"来源读取凭据：[research/evidence/{record['id']}.json](../research/evidence/{record['id']}.json)",'','评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。']
+    return '\n'.join(lines)+'\n'
+
+def indexes():
+    cases=read_registry()['cases']
+    completed=[];drafts=[];pending=[]
+    for case in cases:
+        state,record=case_state(case)
+        item=(case,state,record)
+        (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','每小时处理一个未完成案例，优先公开分类top。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
+    for case,_,record in completed:
+        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record['industry']} | {record['researched_at']} |")
+    lines += ['','## 需要重做的旧版简略初稿','']
+    for case,_,_ in drafts:
+        lines.append(f"- [{case['title']}]({case['report']}) · `{case['id']}`")
+    lines += ['','## 下一批优先案例','']
+    for case,_,_ in (drafts+pending)[:10]:
+        lines.append(f"- {case['title']} · `{case['id']}`")
+    Path('INDEX.md').write_text('\n'.join(lines)+'\n')
+    catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 |','|---|---|---|---|']
+    for case in cases:
+        state,_=case_state(case)
+        title=case['title'].replace('|','\\|')
+        report=f"[报告](../{case['report']})" if Path(case['report']).exists() else f"`{case['report']}`"
+        catalog.append(f"| `{case['id']}` | [{title}]({case['url']}) | {state} | {report} |")
+    Path('registry/CATALOG.md').write_text('\n'.join(catalog)+'\n')
+
+def publish(record_path,evidence_path,expected_id):
+    record=json.loads(Path(record_path).read_text())
+    receipts=json.loads(Path(evidence_path).read_text())
+    validate(record,receipts,expected_id)
+    directory=Path('research/evidence');directory.mkdir(parents=True,exist_ok=True)
+    # Source receipts carry metadata only; cache paths and full scraped text stay private to the runner.
+    clean=[{k:v for k,v in r.items() if k not in ('text_path','links')} for r in receipts]
+    Path(f'research/{expected_id}.json').write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
+    Path(f'research/evidence/{expected_id}.json').write_text(json.dumps(clean,ensure_ascii=False,indent=2)+'\n')
+    Path(f'reports/{expected_id}.md').write_text(render(record))
+    indexes()
+
+def main():
+    parser=argparse.ArgumentParser()
+    sub=parser.add_subparsers(dest='command',required=True)
+    boot=sub.add_parser('bootstrap');boot.add_argument('--db',default='data/history.sqlite3')
+    prep=sub.add_parser('prepare');prep.add_argument('--case-id')
+    pub=sub.add_parser('publish');pub.add_argument('--record',default='data/business-draft.json');pub.add_argument('--evidence',required=True);pub.add_argument('--expected-id',required=True)
+    check=sub.add_parser('verify-sources');check.add_argument('--record',default='data/business-draft.json');check.add_argument('--evidence',required=True);check.add_argument('--expected-id',required=True)
+    sub.add_parser('index')
+    args=parser.parse_args()
+    if args.command=='bootstrap':
+        print('Registered cases:',bootstrap(args.db));indexes()
+    elif args.command=='prepare':
+        case=select_case(args.case_id)
+        Path('data').mkdir(exist_ok=True)
+        Path('data/selected-case.json').write_text(json.dumps(case,ensure_ascii=False,indent=2))
+        print(case['id'] if case else '')
+    elif args.command=='verify-sources':
+        record=json.loads(Path(args.record).read_text())
+        receipts=json.loads(Path(args.evidence).read_text())
+        validate(record,receipts,args.expected_id)
+        from .evidence import capture
+        source_ids={s['id'] for s in record['sources']}
+        # This executes in the separate trusted publisher, not in the model process.
+        verified=[capture(args.expected_id,r['url'],r['kind'],Path('data/verified')) for r in receipts if r['id'] in source_ids]
+        validate(record,verified,args.expected_id)
+        Path(args.evidence).write_text(json.dumps(verified,ensure_ascii=False,indent=2))
+    elif args.command=='publish':
+        publish(args.record,args.evidence,args.expected_id)
+    else:
+        indexes()
+
+if __name__=='__main__':
+    main()
