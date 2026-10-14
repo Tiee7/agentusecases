@@ -37,6 +37,8 @@ def request(url):
         return raw.decode(response.headers.get_content_charset() or 'utf-8',errors='replace'),response.headers.get_content_type()
 
 def capture(case_id,url,kind,root=Path('data')):
+    from .business import safe_id
+    safe_id(case_id)
     parts=public_url(url)
     if kind not in KINDS:
         raise ValueError('Unknown source kind')
@@ -62,7 +64,8 @@ def capture(case_id,url,kind,root=Path('data')):
             links=page.links
         else:
             text=raw;title=parts.path;links=[]
-        if len(text)<100:
+        structured_empty = content_type=='application/json' and json.loads(raw) in ([], {})
+        if len(text)<100 and not structured_empty:
             raise ValueError('Source has insufficient readable content')
         cache=root/'source-cache'/case_id
         cache.mkdir(parents=True,exist_ok=True)

@@ -12,7 +12,7 @@ class BusinessTests(unittest.TestCase):
         self.temp=tempfile.TemporaryDirectory()
         os.chdir(self.temp.name)
         Path('registry').mkdir();Path('research').mkdir();Path('reports').mkdir()
-        Path('registry/cases.json').write_text(json.dumps({'cases':[{'id':'real-case','url':'https://agentusecases.ai/use-case/real-case','title':'Case','report':'reports/real-case.md','record':'research/real-case.json','listed':True}]}))
+        Path('registry/cases.json').write_text(json.dumps({'cases':[{'id':'real-case','url':'https://agentusecases.ai/use-case/real-case','title':'Case','report':'reports/real-case.md','record':'research/real-case.json','listed':True,'original_sources':['https://publisher0.test/doc']}]}))
         kinds=['primary','primary','independent','competitor','market','feedback']
         self.receipts=[{'id':f'S{i}','url':f'https://publisher{i}.test/doc','kind':kind,'status':'fetched','sha256':'fixture','fetched_at':'2026-10-14T14:00:00+00:00'} for i,kind in enumerate(kinds)]
         self.record={'schema_version':2,'status':'completed','id':'real-case','url':'https://agentusecases.ai/use-case/real-case','title':'Synthetic business fixture','industry':'Fixture','researched_at':'2026-10-14T22:00:00+08:00','confidence':'Fixture, not real data','verdict':{'decision':'适合内部效率工具','headline':'A specific fixture commercial decision with evidence','reason':'A fixture commercial argument '*10,'next_action':'Measure fixture cost','stop_condition':'No measurable value'},'sources':[{'id':r['id'],'url':r['url'],'title':r['id'],'supports':'A specific bounded business fact in this synthetic source'} for r in self.receipts],'facts':[{'statement':'A specific source-backed synthetic business fact','source_ids':['S0']} for _ in range(8)],'sections':[{'id':key,'title':key,'body':('Substantive synthetic commercial analysis. '*12),'source_ids':['S0']} for key in SECTIONS],'scores':{k:{'score':4,'rationale':'A specific evidence-backed commercial rationale','source_ids':['S0']} for k in WEIGHTS},'feedback':{'searches':[{'channel':str(i%2),'query':'fixture query','outcome':'No verified users'} for i in range(3)],'observations':[]},'unit_economics':[{'scenario':f'Scenario {i}','unit':'delivery','currency':'USD','price':100,'api_cost':2,'human_cost':30,'other_variable_cost':3,'acquisition_cost':5,'units_per_month':10,'fixed_monthly_cost':100,'assumptions':'All synthetic scenario assumptions, not real operations','source_ids':['S0']} for i in range(2)],'disconfirming_evidence':'Synthetic opposing evidence','limitations':'No real model or business verification'}
@@ -50,3 +50,30 @@ class BusinessTests(unittest.TestCase):
         self.assertIn('月经营贡献',render(self.record))
     def test_path_traversal_is_rejected(self):
         with self.assertRaises(ValueError):safe_id('../stolen')
+    def test_nonfinite_financial_assumptions_are_rejected(self):
+        self.record['unit_economics'][0]['price']=float('nan')
+        with self.assertRaises(ValueError):validate(self.record,self.receipts,'real-case')
+    def test_research_time_requires_timezone(self):
+        self.record['researched_at']='2026-10-14T22:00:00'
+        with self.assertRaises(ValueError):validate(self.record,self.receipts,'real-case')
+    def test_scenario_rows_form_one_readable_table(self):
+        text=render(self.record)
+        rows=[line for line in text.splitlines() if line.startswith('| Scenario')]
+        self.assertEqual(len(rows),2)
+        self.assertIn(rows[0]+'\n'+rows[1],text)
+    def test_sampled_details_do_not_delist_unsampled_cases(self):
+        from agentwatch.crawler import database,save
+        from agentwatch.business import bootstrap,read_registry
+        db=database('sample.sqlite3')
+        urls=['https://agentusecases.ai/use-case/real-case','https://agentusecases.ai/use-case/second-case']
+        save(db,'https://agentusecases.ai/','site_category_top',[{'url':urls[0],'title':'Case','body':'body'}],dict.fromkeys(urls,'2026-10-14'))
+        db.close()
+        bootstrap('sample.sqlite3')
+        cases=read_registry()['cases']
+        self.assertEqual(len(cases),2)
+        self.assertTrue(all(c['listed'] for c in cases))
+    def test_generic_sources_cannot_be_misassigned_to_a_case(self):
+        registry=json.loads(Path('registry/cases.json').read_text())
+        registry['cases'][0]['original_sources']=['https://another-project.test/original']
+        Path('registry/cases.json').write_text(json.dumps(registry))
+        with self.assertRaises(ValueError):validate(self.record,self.receipts,'real-case')

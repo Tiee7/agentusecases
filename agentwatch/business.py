@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import math
 import re
 import sqlite3
 from collections import Counter
@@ -28,14 +29,20 @@ def bootstrap(db_path):
     run=db.execute('SELECT MAX(id) FROM runs').fetchone()[0]
     if run is None:
         raise ValueError('No successful crawl')
-    rows=db.execute('SELECT o.url,o.title,o.body,p.position,p.category FROM observations o LEFT JOIN priorities p ON p.run_id=o.run_id AND p.url=o.url WHERE o.run_id=? ORDER BY p.position IS NULL,p.position,o.url',(run,)).fetchall()
+    catalog_count=db.execute('SELECT count(*) FROM catalogs WHERE run_id=?',(run,)).fetchone()[0]
+    if catalog_count:
+        rows=db.execute('SELECT c.url,o.title,o.body,p.position,p.category FROM catalogs c LEFT JOIN observations o ON o.run_id=c.run_id AND o.url=c.url LEFT JOIN priorities p ON p.run_id=c.run_id AND p.url=c.url WHERE c.run_id=? ORDER BY p.position IS NULL,p.position,c.url',(run,)).fetchall()
+    else:
+        rows=db.execute('SELECT o.url,o.title,o.body,p.position,p.category FROM observations o LEFT JOIN priorities p ON p.run_id=o.run_id AND p.url=o.url WHERE o.run_id=? ORDER BY p.position IS NULL,p.position,o.url',(run,)).fetchall()
     old=read_registry() if REGISTRY.exists() else {'cases':[]}
     existing={c['id']:c for c in old['cases']}
     cases=[]
     for url,title,body,rank,category in rows:
         case_id=safe_id(urlsplit(url).path.rstrip('/').rsplit('/',1)[-1])
         previous=existing.pop(case_id,{})
-        cases.append(dict(previous,id=case_id,title=title,url=url,category=category,site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M),listed=True))
+        title=title or previous.get('title') or case_id.replace('-',' ')
+        original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M) if body else previous.get('original_sources',[])
+        cases.append(dict(previous,id=case_id,title=title,url=url,category=category or previous.get('category'),site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=original_sources,listed=True))
     # Retain historical mappings if a case disappears from the current listing.
     cases.extend(dict(c,listed=False) for c in existing.values())
     REGISTRY.parent.mkdir(exist_ok=True)
@@ -73,12 +80,19 @@ def validate(record,receipts,expected_id):
     case=select_case(expected_id)
     if record.get('schema_version')!=2 or record.get('status')!='completed' or record.get('id')!=expected_id or record.get('url')!=case['url']:
         raise ValueError('Record identity or completion status does not match the selected case')
-    datetime.fromisoformat(record['researched_at'])
+    stamp=datetime.fromisoformat(record['researched_at'])
+    if stamp.tzinfo is None:
+        raise ValueError('Research time must include its timezone')
+    if any(not isinstance(record.get(k),str) or not record[k].strip() for k in ('title','industry','confidence')):
+        raise ValueError('Report title, industry and confidence are required')
     fetched={r['id']:r for r in receipts if r.get('status')=='fetched'}
     sources=record.get('sources',[])
     ids={s['id'] for s in sources}
     if len(sources)<6 or len(ids)!=len(sources) or not ids<=set(fetched):
         raise ValueError('At least six distinct actually fetched sources are required')
+    known_origins={case['url'],*case.get('original_sources',[])}
+    if not known_origins.intersection(s['url'] for s in sources):
+        raise ValueError('Sources must include the selected case page or its actual original source')
     hosts={urlsplit(fetched[s]['url']).hostname for s in ids}
     kinds=Counter(fetched[s]['kind'] for s in ids)
     if len(hosts)<3 or kinds['primary']<2 or not (kinds['independent'] or kinds['market']) or not kinds['competitor']:
@@ -127,11 +141,13 @@ def validate(record,receipts,expected_id):
     for model in models:
         for key in ('price','api_cost','human_cost','other_variable_cost','acquisition_cost','units_per_month','fixed_monthly_cost'):
             v=model.get(key)
-            if isinstance(v,bool) or not isinstance(v,(int,float)) or v<0:
+            if isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) or v<0:
                 raise ValueError('Economic inputs must be nonnegative numbers')
         if not model.get('assumptions') or not model.get('unit') or not model.get('currency') or not model.get('scenario'):
             raise ValueError('Label every economic assumption and delivery unit')
         refs(model.get('source_ids'),ids)
+        if not all(math.isfinite(v) for v in economics(model)):
+            raise ValueError('Computed economic results must be finite')
     if not record.get('disconfirming_evidence') or not record.get('limitations'):
         raise ValueError('Include contrary evidence and concrete unverified claims')
     return record
@@ -158,7 +174,8 @@ def render(record):
     for model in record['unit_economics']:
         variable,contribution,profit=economics(model)
         lines.append(f"| {model['scenario']} / {model['unit']} ({model['currency']}) | {model['price']:.2f} | {variable:.2f} | {contribution:.2f} | {model['units_per_month']} | {model['fixed_monthly_cost']:.2f} | {profit:.2f} |")
-        lines += [f"\n{model['scenario']}假设：{model['assumptions']}；API成本 {model['api_cost']}，人工成本 {model['human_cost']}，其他可变成本 {model['other_variable_cost']}，分摊获客成本 {model['acquisition_cost']}。依据：{', '.join(model['source_ids'])}"]
+    for model in record['unit_economics']:
+        lines += ['',f"{model['scenario']}假设：{model['assumptions']}；API成本 {model['api_cost']}，人工成本 {model['human_cost']}，其他可变成本 {model['other_variable_cost']}，分摊获客成本 {model['acquisition_cost']}。依据：{', '.join(model['source_ids'])}"]
     lines += ['','## 用户反馈核对（低权重）','']
     for search in record['feedback']['searches']:
         lines.append(f"- {search['channel']} · `{search['query']}`：{search['outcome']}")
@@ -179,7 +196,7 @@ def indexes():
         state,record=case_state(case)
         item=(case,state,record)
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
-    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','每小时处理一个未完成案例，优先公开分类top。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务尚未创建，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
     for case,_,record in completed:
         lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
@@ -231,7 +248,7 @@ def main():
         validate(record,receipts,args.expected_id)
         from .evidence import capture
         source_ids={s['id'] for s in record['sources']}
-        # This executes in the separate trusted publisher, not in the model process.
+        # Re-fetch independently of the original collection before publishing.
         verified=[capture(args.expected_id,r['url'],r['kind'],Path('data/verified')) for r in receipts if r['id'] in source_ids]
         validate(record,verified,args.expected_id)
         Path(args.evidence).write_text(json.dumps(verified,ensure_ascii=False,indent=2))

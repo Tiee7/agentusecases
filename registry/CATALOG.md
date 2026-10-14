@@ -5,7 +5,7 @@
 | ID | 案例 / 来源 | 状态 | 对应报告 |
 |---|---|---|---|
 | `write-appeals-and-phone-insurers-on-denied-claims` | [Write appeals and phone insurers on denied claims](https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims) | legacy_draft | [报告](../reports/write-appeals-and-phone-insurers-on-denied-claims.md) |
-| `compile-deductions-and-schedule-c-with-claude-code` | [Compile deductions and Schedule C with Claude Code](https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code) | legacy_draft | [报告](../reports/compile-deductions-and-schedule-c-with-claude-code.md) |
+| `compile-deductions-and-schedule-c-with-claude-code` | [Compile deductions and Schedule C with Claude Code](https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code) | completed | [报告](../reports/compile-deductions-and-schedule-c-with-claude-code.md) |
 | `negotiate-bills-handle-returns-and-cancel-subscriptions` | [Negotiate bills, handle returns and cancel subscriptions](https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions) | legacy_draft | [报告](../reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) |
 | `prepare-federal-and-state-tax-returns-from-a-folder` | [Prepare federal and state tax returns from a folder](https://agentusecases.ai/use-case/prepare-federal-and-state-tax-returns-from-a-folder) | legacy_draft | [报告](../reports/prepare-federal-and-state-tax-returns-from-a-folder.md) |
 | `negotiate-a-lower-comcast-bill-via-chatbot` | [Negotiate a lower Comcast bill via chatbot](https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot) | legacy_draft | [报告](../reports/negotiate-a-lower-comcast-bill-via-chatbot.md) |

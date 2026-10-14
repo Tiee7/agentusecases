@@ -1,63 +1,427 @@
 {
-  "title": "Claude Code 整理扣除项与 Schedule C",
+  "schema_version": 2,
+  "status": "completed",
+  "id": "compile-deductions-and-schedule-c-with-claude-code",
   "url": "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code",
-  "researched_at": "2026-10-14",
-  "status": "draft",
-  "confidence": "低；仅核对聚合站详情",
-  "evidence_scope": "这是一份初步案头研究：已读取案例详情，原始报道被云环境网络策略拦截；没有运行项目或验证金额、效果与现时产品可用性。维度分数是基于这些有限材料的研究判断，不是性能测评或最终结论。",
-  "summary": "案例描述 Chris Blattman 用 Claude Code skills 搜索 Gmail 税务附件、汇总捐赠与信用卡记录、生成税务软件可用表格和 Schedule C。医疗与托儿费用分类仍由本人检查，并手动输入税务软件。站点转述约三小时完成，相比会计报价约1,000美元。",
-  "dimensions": {
-    "value": {
-      "score": 4,
-      "rationale": "收集凭证和对账是具体重复工作，输出可以交给已有税务流程。",
-      "sources": [
-        "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code"
+  "title": "Claude Code税务凭证整理的商业研究",
+  "industry": "美国个人税务资料准备",
+  "researched_at": "2026-10-15T00:03:06.932856+08:00",
+  "confidence": "流程与公开文件事实中等；付费、实际利润及生产准确率未被证明",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先用于专业团队的可复核材料整理，不为通用消费者订阅入口立项。",
+    "reason": "项目能帮助具备税务知识的人组织材料，但这种价值仍依赖人工脱敏、逐金额复核和最终专业判断。公开的关键收集、编译技能存在交付缺口，独立用户也报告了该问题。消费者已有符合条件的免费申报替代；项目没有提供可验证的付费、获客或单位利润记录。把案例介绍中的费用比较当成创业收入会误判，因此当前应投入小范围内部流程验证，而不是开发大众收费产品。",
+    "next_action": "补齐核心技能，采用10个不同布局的合成或合法脱敏材料包比较原流程与新流程，记录金额原文关联、漏件、人工总工时、返工及全成本；只验证资料准备，不执行真实申报。",
+    "stop_condition": "无法稳定追溯每个金额；或脱敏、审核及返工后没有至少45分钟总工时节省；或专业采购方不愿支付覆盖全部交付成本的价格。任一条件满足则停止追加产品工程与买量投入。"
+  },
+  "sources": [
+    {
+      "id": "Scbb804531ac6",
+      "url": "https://claudeblattman.com/tax-workflow/",
+      "title": "Using Claude Code for Tax Season - Claude Blattman · AI for Professionals Who Don't Code",
+      "supports": "作者的工作流定位、个人时间陈述与虚构教学金额声明；不能据此推断真实CPA报价或产品收入。"
+    },
+    {
+      "id": "S476f702778ef",
+      "url": "https://claudeblattman.com/tax-workflow/case-study/what-ai-got-wrong/",
+      "title": "What AI Got Wrong - Claude Blattman · AI for Professionals Who Don't Code",
+      "supports": "PDF提取、漏材料、费用分类与虚构金额的具体失败模式，以及逐金额人工核验的要求。"
+    },
+    {
+      "id": "S85fe5b9383b2",
+      "url": "https://claudeblattman.com/tax-workflow/before-you-start/privacy-and-setup/",
+      "title": "Privacy & Setup - Claude Blattman · AI for Professionals Who Don't Code",
+      "supports": "邮件MCP权限、文件文本进入云端API、处理前脱敏和最终由人填写税务软件的边界。"
+    },
+    {
+      "id": "Se2dcf79552d8",
+      "url": "https://claudeblattman.com/tax-workflow/case-study/compilation-and-review/",
+      "title": "Compilation & Review - Claude Blattman · AI for Professionals Who Don't Code",
+      "supports": "编译、人工分类和跨年度复核的流程；说明交付物与专业判断分别由谁承担。"
+    },
+    {
+      "id": "S60249a89567e",
+      "url": "https://raw.githubusercontent.com/chrisblattman/claudeblattman/main/skills/tax-guide.md",
+      "title": "/chrisblattman/claudeblattman/main/skills/tax-guide.md",
+      "supports": "实际公开的八问指南、条件分流与材料清单代码；它不是完整税务计算或申报引擎。"
+    },
+    {
+      "id": "S5e6f05a6d935",
+      "url": "https://www.irs.gov/e-file-do-your-taxes-for-free",
+      "title": "E-file: Do your taxes for free | Internal Revenue Service",
+      "supports": "美国IRS当前免费电子报税替代、89,000美元AGI资格及州税服务的不同适用条件。"
+    },
+    {
+      "id": "S53a3ac8cd121",
+      "url": "https://www.irs.gov/tax-professionals/choosing-a-tax-professional",
+      "title": "Choosing a tax professional | Internal Revenue Service",
+      "supports": "付费申报准备人的PTIN要求、专业资格差异和敏感财务信息信任关系。"
+    },
+    {
+      "id": "S196735574731",
+      "url": "https://github.com/robbalian/claude-tax-filing",
+      "title": "GitHub - robbalian/claude-tax-filing · GitHub",
+      "supports": "另一套公开可取得的Claude税务技能，展示PDF填表与计算等更宽的交付范围；不证明其正确率。"
+    },
+    {
+      "id": "Sa37d06e695be",
+      "url": "https://simonsafar.com/2026/claude_and_taxes/",
+      "title": "Claude and Taxes - simonsafar.com",
+      "supports": "一名技术用户借助Claude与既有OpenTaxSolver脚本完成工作的个人体验，属于邻近工作流反馈。"
+    },
+    {
+      "id": "S619379f92e66",
+      "url": "https://api.github.com/repos/chrisblattman/claudeblattman/issues/6",
+      "title": "/repos/chrisblattman/claudeblattman/issues/6",
+      "supports": "仓库用户实际报告tax-collect和tax-compile缺失，issue仍开放；属于直接复现阻碍反馈。"
+    },
+    {
+      "id": "S158ecc23657a",
+      "url": "https://api.github.com/repos/chrisblattman/claudeblattman/issues/6/comments",
+      "title": "/repos/chrisblattman/claudeblattman/issues/6/comments",
+      "supports": "作者针对缺失技能issue的回应没有提供公开补齐路径，不能视为问题已解决。"
+    },
+    {
+      "id": "S6628bf0b014d",
+      "url": "https://hn.algolia.com/api/v1/search?query=claudeblattman&tags=story",
+      "title": "/api/v1/search",
+      "supports": "本项目名称在Hacker News故事检索中返回零结果，属于检索覆盖信息，不是负面用户评分。"
+    },
+    {
+      "id": "S3888ccf04759",
+      "url": "https://hn.algolia.com/api/v1/search?query=Claude%20taxes&tags=story",
+      "title": "/api/v1/search",
+      "supports": "Claude税务相关故事搜索用于找到邻近使用经验；命中数不等于本项目用户数。"
+    },
+    {
+      "id": "S1a5cfeeaa950",
+      "url": "https://api.github.com/repos/chrisblattman/claudeblattman/issues?state=all&per_page=100",
+      "title": "/repos/chrisblattman/claudeblattman/issues",
+      "supports": "公开仓库问题检索用于发现与税务技能有关的实际反馈，其他无关issue不计作用户评价。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "项目定位是税务资料组织与编译，最终数字由人输入税务软件，并非已交付独立电子申报平台。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S85fe5b9383b2"
       ]
     },
-    "evidence": {
-      "score": 1,
-      "rationale": "指向个人工作流文章，但原文尚未读取；没有原始输入、技能代码或对照样本。",
-      "sources": [
-        "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code"
+    {
+      "statement": "首页个人经验同时出现约三小时和会计费用比较，但同页将美元金额与教学示例声明为虚构，不能当已验证经营基准。",
+      "source_ids": [
+        "Scbb804531ac6"
       ]
     },
-    "feasibility": {
-      "score": 4,
-      "rationale": "任务被拆成提取、缺失追踪、汇总、人工分类和手动填报，流程比整套自动报税更可检查。",
-      "sources": [
-        "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code"
+    {
+      "statement": "实际公开的tax-guide通过八个问题生成准备建议和材料清单，复杂收入情形会转向专业人员。",
+      "source_ids": [
+        "S60249a89567e"
+      ]
+    },
+    {
+      "statement": "公开仓库的用户报告了tax-collect与tax-compile缺失，issue保持开放，当前回应没有给出公开补齐路径。",
+      "source_ids": [
+        "S619379f92e66",
+        "S158ecc23657a"
+      ]
+    },
+    {
+      "statement": "项目隐私页区分本地文件保留与文本进入云端API，并明确提示词排除规则不能防止传输敏感内容。",
+      "source_ids": [
+        "S85fe5b9383b2"
+      ]
+    },
+    {
+      "statement": "Gmail MCP接入按文档描述可覆盖整个邮箱，税务标签属于使用约束，不等同于技术权限隔离。",
+      "source_ids": [
+        "S85fe5b9383b2"
+      ]
+    },
+    {
+      "statement": "错误文档列出PDF读取、漏材料、分类与无来源金额等机制，并要求逐金额与原始文档核对。",
+      "source_ids": [
+        "S476f702778ef"
+      ]
+    },
+    {
+      "statement": "IRS当前免费软件入口标注89,000美元AGI资格；州税免费性与合作方资格不同，不能泛称所有申报都免费。",
+      "source_ids": [
+        "S5e6f05a6d935"
+      ]
+    },
+    {
+      "statement": "IRS说明实际有偿报税准备人需要PTIN，同时存在不同专业资格，材料整理软件的角色需按实际服务界定。",
+      "source_ids": [
+        "S53a3ac8cd121"
+      ]
+    },
+    {
+      "statement": "另一个公开Claude Tax Filing Skill展示计算与PDF填表等流程，说明类似代理编排存在公开替代，但本研究未验证其正确率。",
+      "source_ids": [
+        "S196735574731"
+      ]
+    },
+    {
+      "statement": "独立个人文章描述借助Claude与既有OpenTaxSolver脚本完成工作，同时仍需检查；不是本项目的付费使用证据。",
+      "source_ids": [
+        "Sa37d06e695be"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "分散材料整理的痛点与专业人员工作确实存在，但项目未公布付费者、预算或采购记录，且个人使用主要是年度频率。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S53a3ac8cd121",
+        "S5e6f05a6d935"
+      ]
+    },
+    "outcome": {
+      "score": 3,
+      "rationale": "材料清单、异常检查与表格整理有可核验流程结构，但核心技能公开交付缺口与未经验证的效果金额降低证明强度。",
+      "source_ids": [
+        "S60249a89567e",
+        "Se2dcf79552d8",
+        "S476f702778ef",
+        "S619379f92e66"
       ]
     },
     "economics": {
-      "score": 3,
-      "rationale": "三小时与约1,000美元是单人陈述，并非同范围成本实验；模型和维护费用未单列。",
-      "sources": [
-        "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code"
+      "score": 2,
+      "rationale": "API便宜不足以保证利润；脱敏、专业复核、获客和季节性是主要成本，当前没有已实现的单位利润或真实定价。",
+      "source_ids": [
+        "S85fe5b9383b2",
+        "S476f702778ef",
+        "Scbb804531ac6",
+        "S5e6f05a6d935"
       ]
     },
-    "risk_control": {
-      "score": 3,
-      "rationale": "案例明确保留人工检查与手动填报，但云端模型读取本地文件仍有敏感信息处理问题。",
-      "sources": [
-        "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code"
+    "distribution": {
+      "score": 2,
+      "rationale": "专业团队内部关系能提供信任入口，但外部消费市场已有免费替代，公开资料尚未证明稳定的客户获取与付费转化。",
+      "source_ids": [
+        "S53a3ac8cd121",
+        "S5e6f05a6d935",
+        "Scbb804531ac6"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "公开指南与通用模型编排容易复刻，同类公开技能存在，没有已验证专有数据或分发优势的证据。",
+      "source_ids": [
+        "S60249a89567e",
+        "S196735574731"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "专业人员能建立复核边界，但邮箱权限、API数据流、PDF错误和未交付的核心技能使标准化商用仍有明显工程成本。",
+      "source_ids": [
+        "S85fe5b9383b2",
+        "S476f702778ef",
+        "S619379f92e66"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "有直接复现阻碍反馈和一份邻近技术用户经验，独立成功样本很少；仅提供弱商业支持，不当作客户满意度统计。",
+      "source_ids": [
+        "S619379f92e66",
+        "Sa37d06e695be",
+        "S6628bf0b014d"
       ]
     }
   },
-  "recommendation": "首批最值得优先复现：先做“凭证清单、缺失追踪、分类草稿、合计核对”，保留人工签核。初评分针对该受限流程，不代表税务准确率。",
-  "open_questions": [
-    "原始 skills 或工作流是否公开，授权范围如何限制？",
-    "相同输入复跑是否产生一致合计？哪些分类需要专家？",
-    "三小时是否包含最终复核，模型调用和后续维护成本是多少？"
-  ],
-  "next_experiment": "使用10份合成收据与一份人工标准表，比较字段提取、去重和合计；禁用邮箱写入和自动填报。",
-  "source_checks": [
+  "sections": [
     {
-      "url": "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code",
-      "status": "已读取公开详情；网站为二手案例整理"
+      "id": "customer",
+      "title": "客户、付款人和购买场景",
+      "body": "最适合的使用者是已经理解自己税务情况、却被分散凭证和重复整理拖慢的人：例如既有工资收入又有咨询收入，需要处理多个1099、捐赠记录和扣除项目。作者本人曾做过审计与税务工作；这种背景使他能识别AI给出的错误分类，不能把他的成功直接外推到不懂税务的大众。八问指南遇到外国收入、租赁、K-1、期权等复杂情况会转向专业人员，这进一步限定了可安全自助的范围。\n\n商业上必须分开三个角色。个人是材料提供者，也可能是一次性付费者；税务事务所可以是采购方，但需要的是减少收件与整理时间、保留可审计原文，而不是新聊天入口；最终签字和提交仍由用户或专业人员承担。这里没有公开的付费客户、订阅价格、续费或事务所采购记录。因此，不能把痛点存在等同于有人愿意购买这个具体方案。个人税务主要是年度事件，对持续月费并不天然友好；如果做付费服务，应先证明整理环节的独立价值，不能把全年订阅收入作为默认假设。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S60249a89567e",
+        "S53a3ac8cd121"
+      ]
     },
     {
-      "url": "https://claudeblattman.com/tax-workflow/",
-      "status": "原始报道未读取：代理网络返回403"
+      "id": "workflow",
+      "title": "业务链路与背后的实现",
+      "body": "公开架构是“既有通用代理＋材料接入＋提示词技能＋人工复核＋表格输出”。可直接读取的tax-guide是一份Markdown指南：依次问八个问题，根据收入复杂度与目标分流，输出材料清单、流程和隐私提示。它没有提供独立税法计算引擎，也没有建立机构级数据管道。自动收件依赖Gmail MCP，表格读取可接Google Sheets；最小可用路径则是人工下载文件、让Claude整理本地材料，并用openpyxl等工具生成表格。\n\n编译与复核文档描述了Schedule C、捐赠和医疗费用整理，再通过原文核对及跨年度对比发现异常。它不负责把申报自动提交给IRS，最终数字仍需人工输入税务软件。这意味着“完成一份整理表”与“完成可靠报税”是两个不同交付单位，客户不能因表格看上去完整就免除核查。\n\n更关键的可复现性问题是：公开仓库目前能找到tax-guide，但预期的tax-collect与tax-compile路径并没有交付出来，公开issue也明确指出这个缺口。我们没有执行私人邮箱、真实税表或端到端申报，也不能声称这些核心技能在公开版本中已经实跑验证。要作为内部流程复用，可以参照架构自行补齐；要卖标准化产品，必须先解决代码、连接器权限、输入版本和可追溯输出的工程交付，不能仅发一份教程。",
+      "source_ids": [
+        "S60249a89567e",
+        "Se2dcf79552d8",
+        "S85fe5b9383b2",
+        "S619379f92e66",
+        "S158ecc23657a"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "市场需求和实际可进入范围",
+      "body": "税务材料整理的需求真实存在，但本案例没有提供能支持市场规模、付费转化或留存的经营数据。它展示的是一个个人工作流和教育材料，不是已建立销售漏斗的税务软件公司。需要围绕“材料多、来源散、每年重复、又有足够专业知识复核”的客户细分，而不是把所有纳税人乘一个假定年费来制造市场规模。\n\nIRS当前页面给出免费软件路径：AGI不超过89,000美元的适格用户可用合作方引导式联邦报税，州税与具体合作方资格另有条件；可填表格路径面向各收入层级，但功能和州税覆盖有限。这些服务并不自动解决复杂凭证整理，因此整理环节仍有局部需求；但对收入结构简单、文件只有几份的人，额外购买AI整理器的价值很弱。\n\n较可进入的细分是专业事务所内部的材料准备、缺件清单和原文定位。这里的付费依据应是高峰期减少多少员工工作时间、哪些错误更早被发现、是否减少返工。原始案例没有量化这些指标，因而本报告只支持低成本内部验证，不支持先按大市场规模投入产品开发。美国案例也不能未经重新研究就外推到中国或其他税制。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S5e6f05a6d935",
+        "S53a3ac8cd121"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "现有替代和竞争位置",
+      "body": "第一类替代是已有税务软件与专业服务。IRS免费入口已经提供符合条件的电子报税流程；专业准备人则承担解释、归类、核对和客户信任。这个工作流主要提供资料整理，不能在同一交付口径下宣称用极低API费用替代整个会计服务。要做收费产品，必须说明现有软件或事务所为何不能把同样整理能力嵌入自己的流程。\n\n第二类替代是其他公开技能。robbalian的Claude Tax Filing Skill页面展示从文件夹读材料、计算结果、填官方PDF、生成审阅清单等流程，并提供技能文件。我们只读了公开页面，没有验证正确率，也没有确认该仓库的完整商用许可；因此不能直接把它当成熟竞品或随意拿来销售。但它证明相似代理编排并不稀缺，单纯“让AI帮你报税”的入口很容易遭遇免费或低成本替代。\n\n第三类替代是客户自己用Claude和既有工具。独立技术用户的OpenTaxSolver案例表明，具备脚本与税务知识的人可以自己组装工作流。这类用户恰好是本方案最容易成功的人，也最不一定愿意付费。真正可收费的差异化应是安全接入、逐项原文定位、异常复核、流程嵌入和稳定交付，而不是提示词长度或代理名称。",
+      "source_ids": [
+        "S5e6f05a6d935",
+        "S196735574731",
+        "Sa37d06e695be",
+        "S60249a89567e"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "单位经济与人工成本",
+      "body": "本报告不把作者提到的约三小时和约1,000美元会计费比较当成经过验证的财务基准。同一首页还声明美元金额和教学人物为虚构；这种范围冲突意味着不能把1,000美元当真实替代报价，更不能当未来每个客户的收入。真正要核算的是完成一份材料包需要多少读取、脱敏、核对、补件和客户沟通时间。\n\n下面两个情景全部是经营假设。49美元消费者材料包中，API只占3美元，但45分钟人工复核按30美元每小时就是22.50美元，再计4美元其他交付费和25美元获客摊销，单份可变成本54.50美元，尚未分摊固定费用就已经亏损。便宜模型没有解决人工和获客问题。\n\n120美元事务所材料包的假设则包含60分钟专业处理、每小时45美元人工成本，4美元API、6美元其他可变成本和10美元获客摊销，单份贡献55美元。每月40份、固定成本1,500美元时，月经营贡献只有700美元，未包括税费或未识别责任损失。这个情景财务上能成立，不代表客户会买：按45美元每小时机会成本，120美元价格至少要替事务所省约2.67小时，才刚抵采购价。文档没有证明这样的节省，所以不能据此启动销售。年度季节性也会使淡季固定费用继续发生。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S476f702778ef",
+        "S85fe5b9383b2",
+        "S5e6f05a6d935",
+        "S53a3ac8cd121"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "第一批客户和销售路径",
+      "body": "不建议先做大众广告买量。这个工具涉及个人收入和医疗相关凭证，陌生网站很难靠一句AI宣传取得信任；简单税表用户又有免费软件。若用假定低价吸引大量消费者，获客费和客服解释成本会迅速吃掉毛利。网站、开源仓库和文章带来的注意力也不等于购买意愿，Stars、阅读量或搜索命中数不应拿来当客户数。\n\n优先路径是在已有专业关系的团队内部试点。最合适的对象是已经负责申报、能够判断分类与数字的事务所人员，或者有明确咨询收入的熟练自报税者。交付承诺应限定为缺件清单、结构化材料表、每个数字对应的原文，以及需人工处理的异常列表，不承诺更高退税或免复核。\n\n进入客户验证前，先用合成或合法脱敏材料补齐技能，并对10个不同布局材料包做前后计时。记录实际复核分钟、返工、漏件与总成本。只有专业团队明确愿意为减少的工作付费，才讨论商业交付；对“喜欢这个演示”的评价不算订单。这一阶段不需要平台化、复杂订阅系统或广泛投放，验证不到付费价值就停止向产品开发追加投入。",
+      "source_ids": [
+        "Scbb804531ac6",
+        "S60249a89567e",
+        "S53a3ac8cd121",
+        "S5e6f05a6d935",
+        "S619379f92e66"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "经营壁垒与被替代风险",
+      "body": "当前可见的核心不是独家税法数据库或难以复制的计算引擎，而是公开的工作流设计、提示词分流和通用代理能力。八問清单、材料分类、缺件提示和年度对比可以被熟练团队复刻；另一个公开税务技能已经展示更宽的交付范围。作者网站声明材料以MIT方式共享，但商业复用仍应逐文件确认许可，不能把“网上能看到”当无限制授权。\n\n可能形成经营优势的部分在工作流外围：与事务所收件流程的适配、逐数字原文定位、异常复核的数据结构、客户授权与脱敏、不同机构PDF布局的稳定处理、以及有明确责任分工的长期服务关系。这些能力需要持续投入维护和专业知识。原始项目没有给出它们已形成销售护城河的证据，因此本报告不给高壁垒分。\n\n对已有事务所，这种公开方法反而适合内建：客户关系和专业判断本来就在团队手里，组织材料的成本可在现有业务中吸收。对新创业者，若只能拿同样代理加一层界面，既无法取得差异化，也可能被客户的现有软件或模型平台直接嵌入类似功能而替代。",
+      "source_ids": [
+        "S60249a89567e",
+        "S196735574731",
+        "Se2dcf79552d8",
+        "S85fe5b9383b2"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "交付、授权和责任成本",
+      "body": "隐私与复核不是报告末尾的泛泛风险，它们直接改变能卖什么和交付一单要花多少时间。项目隐私页明确说明：本地PDF文件即使保留在电脑上，被代理读出的完整文本仍会进入云端API。CLAUDE.md规则可以限制显示敏感字段，却不能阻止这种传输；需要处理前脱敏，或者由人输入必要数字。这是卖给事务所时的流程和责任成本，不应从报价中省略。\n\nGmail MCP也并非天然只拥有“税务邮件”权限。文档指出接入后可读整个邮箱，以标签限制搜索只是操作约束。把这一能力交给收费服务，需要清楚的授权、访问范围和可追溯处理记录；对于只有几份文件的客户，人工下载比建立全邮箱接入更合理。\n\n错误页说明PDF跨页提取、漏材料、报销与自付混淆、医疗费用误分及无来源金额等失败机制。文档人物和金额是教学内容，不能把其中比例当生产准确率，但这些机制足以要求逐数字原文确认。IRS要求实际从事有偿报税准备的人取得PTIN，且专业资格并不相同；单纯材料整理软件是否落入该角色，需要按实际服务内容判断，不能一概说所有SaaS都必须持证，或通过“不提供建议”文案就免除经营责任。",
+      "source_ids": [
+        "S85fe5b9383b2",
+        "S476f702778ef",
+        "S53a3ac8cd121"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "用户评价怎样改变判断",
+      "body": "直接反馈中最有用的不是赞美，而是公开仓库issue #6：用户指出tax-guide和文档引用了tax-collect与tax-compile，但这些技能缺失。问题目前开放，作者的回应没有提供补齐路径；当前文件核查与这条反馈一致。这说明外部使用者确实遇到复现摩擦，却不证明已成功完成报税，也不等于有付费客户。\n\n本项目名称的Hacker News故事检索没有命中；仓库问题检索并没有形成足够的独立成功使用样本。Claude税务相关检索能找到很多邻近内容，但其中还混有把AI费用叫“Claude tax”的无关讨论，不能把命中数当本项目口碑。我们只采用可读原文的Simon Safar经验作为邻近反馈：他在已有OpenTaxSolver与脚本基础上借助Claude完成工作，并仍需要双重检查。该人有技术能力和既有流程，这与不懂税务的大众用户有明显差异。\n\n因此，用户反馈只贡献1/5的商业支持分，再乘5%权重，只影响总分1点。它主要加强两个侧面判断：完整交付尚有缺口，熟练使用者能从代理辅助中获益。它没有给出产品转化率、准确率、持续留存或事务所采购证据，不足以推翻“先内用验证，暂不立项通用付费产品”的结论。",
+      "source_ids": [
+        "S619379f92e66",
+        "S158ecc23657a",
+        "S6628bf0b014d",
+        "S1a5cfeeaa950",
+        "S3888ccf04759",
+        "Sa37d06e695be"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "商业判断与可执行选择",
+      "body": "判断是“适合内部效率工具”。具体动作是把公开方法当材料整理与核查的流程设计，先补齐可执行技能，在懂税务的团队内验证；不为一个通用消费者订阅入口投入产品开发和广告预算。理由不是AI完全没有价值，而是当前价值由通用模型与人的专业复核共同提供，公开交付还不完整，又缺少可验证的付费和利润证据。\n\n试点只覆盖资料准备，不自动作税务判断、签字或申报。先建立逐数字原文定位和缺件清单，设计人能实际核对的输出，再谈自动化程度。用10个不同布局的合成或合法脱敏材料包记录正确性、人工工时、返工与全部成本，不能以“AI完成了一个表格”作为验收。\n\n停止投入条件也应具体：若补齐核心技能后仍无法稳定关联每个金额到原文，或者人工脱敏、核查和返工使总处理时间不比原流程减少至少45分钟，就停止追加工程投入；若目标事务所不愿为已测出的节省支付覆盖完整交付成本的价格，就不进入外部商业化。即使10个样本通过，也只证明小范围流程可用，不能推出真实客户税务准确率或支持全面推广。",
+      "source_ids": [
+        "S476f702778ef",
+        "S85fe5b9383b2",
+        "S60249a89567e",
+        "S619379f92e66",
+        "S53a3ac8cd121"
+      ]
     }
-  ]
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Hacker News故事检索",
+        "query": "claudeblattman",
+        "outcome": "返回0条本项目名称故事命中，不能据此说没有使用者或用户差评。"
+      },
+      {
+        "channel": "GitHub公开issue",
+        "query": "chrisblattman/claudeblattman issues state=all",
+        "outcome": "发现issue #6报告核心技能缺失，核对了单独issue与回应；无关issue未计入反馈。"
+      },
+      {
+        "channel": "Hacker News故事与评论检索",
+        "query": "Claude taxes",
+        "outcome": "发现邻近报税经验，也有无关的Claude费用讨论；只对明确读取原文的邻近使用案例作低权重参考。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "S619379f92e66",
+        "directness": "direct_user",
+        "finding": "尝试复现的仓库用户报告两项核心技能缺失，与当前公开文件核查一致。",
+        "bias": "单个复现者的问题报告，不是付费客户样本，也没有结果满意度或准确率数据。"
+      },
+      {
+        "source_id": "Sa37d06e695be",
+        "directness": "adjacent_workflow",
+        "finding": "技术用户借助Claude更新既有OpenTaxSolver及脚本，一晚完成材料过程，仍要求复核。",
+        "bias": "不是本项目用户；自述、技术能力较强、有既有脚本和税务经验，不代表大众效果。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "消费者材料包假设",
+      "unit": "一个年度材料整理包",
+      "currency": "USD",
+      "price": 49,
+      "api_cost": 3,
+      "human_cost": 22.5,
+      "other_variable_cost": 4,
+      "acquisition_cost": 25,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 1000,
+      "assumptions": "全部是待验证的经营假设，不是项目实际报价：人工45分钟×30美元/小时=22.50；API3；支付、存储与支持4；每包获客25；月固定运营1000。未计未识别的责任损失与税费，且月100包仅为税季情景，不是全年稳定销量。",
+      "source_ids": [
+        "S85fe5b9383b2",
+        "S476f702778ef",
+        "S5e6f05a6d935"
+      ]
+    },
+    {
+      "scenario": "事务所白标整理包假设",
+      "unit": "一个完成专业审核的材料包",
+      "currency": "USD",
+      "price": 120,
+      "api_cost": 4,
+      "human_cost": 45,
+      "other_variable_cost": 6,
+      "acquisition_cost": 10,
+      "units_per_month": 40,
+      "fixed_monthly_cost": 1500,
+      "assumptions": "全部是待验证的经营假设，不是项目经营数据：专业人工60分钟×45美元/小时=45；API4；其他交付6；获客摊销10；月固定运营1500。120美元需通过客户付款验证；以45美元/小时机会成本计，至少节省约2.67小时才抵采购价。没有假定获得税务建议或签字责任转移。",
+      "source_ids": [
+        "S53a3ac8cd121",
+        "S85fe5b9383b2",
+        "Se2dcf79552d8"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "公开issue与文件路径核查揭示了完整技能交付的缺口；原文自身的金额虚构声明限制了对费用比较的采信；免费申报入口与另一个公开技能削弱了单纯代理界面的差异化。相邻用户的正面经验依赖既有脚本和复核，不证明本项目具备商业化端到端能力。",
+  "limitations": "没有私人邮箱或真实税表实跑，没有客户访谈、付费订单、留存、真实获客成本或生产准确率数据。两个财务情景是显式假设；文档中的教学错误比例没有当作观测准确率。技术证据限于实际读取的公开指南、流程文档和问题记录，没有声称获得缺失的核心技能。"
 }
