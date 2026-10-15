@@ -196,7 +196,7 @@ def indexes():
         state,record=case_state(case)
         item=(case,state,record)
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
-    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行全流程已通过；未来按时触发待验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
     for case,_,record in completed:
         lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
