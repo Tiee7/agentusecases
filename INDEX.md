@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **19** / 注册案例 **1334**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **20** / 注册案例 **1334**。旧版简略初稿 **0** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -26,6 +26,7 @@
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 | [从税务文件夹到联邦与州税表：草稿自动化有价值，独立报税生意尚无证据](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) | 适合内部效率工具 | 31.5 | 美国个人税务资料整理与报税辅助 | 2026-10-15T15:07:39.086321+00:00 |
+| [Muse寻找无人认领款项：查到钱不等于到账，免费官方入口压缩独立代办利润](reports/find-unclaimed-money-and-start-the-claim.md) | 适合内部效率工具 | 39.0 | 个人资产找回／无人认领财产申领辅助 | 2026-10-15T16:46:05.228548+00:00 |
 | [跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 
 ## 需要重做的旧版简略初稿
@@ -33,7 +34,6 @@
 
 ## 下一批优先案例
 
-- Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
 - Trade stocks via Robinhood MCP · `trade-stocks-via-robinhood-mcp`
 - Produce investment memos with Claude Cowork · `produce-investment-memos-with-claude-cowork`
@@ -43,3 +43,4 @@
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
 - Let AI models trade stocks autonomously with $1k each · `let-ai-models-trade-stocks-autonomously-with-1k-each`
 - Dispute contractor pricing and change orders · `dispute-contractor-pricing-and-change-orders`
+- Track personal finances with a Claude Code assistant · `track-personal-finances-with-a-claude-code-assistant`
