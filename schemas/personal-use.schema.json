@@ -1,0 +1,265 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Tiee7/agentusecases/blob/main/schemas/personal-use.schema.json",
+  "title": "Optional personal-use extension to business record v2",
+  "type": "object",
+  "dependentRequired": {
+    "personal_value": [
+      "try_it"
+    ],
+    "try_it": [
+      "personal_value"
+    ]
+  },
+  "properties": {
+    "personal_value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "level",
+        "reason",
+        "audience",
+        "use",
+        "benefit",
+        "setup_cost",
+        "maintenance_cost",
+        "frequency",
+        "privacy_risk",
+        "error_risk",
+        "source_ids"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "level": {
+          "enum": [
+            "高",
+            "中",
+            "低",
+            "待核实"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1
+        },
+        "use": {
+          "type": "string",
+          "minLength": 1
+        },
+        "benefit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "setup_cost": {
+          "type": "string",
+          "minLength": 1
+        },
+        "maintenance_cost": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frequency": {
+          "type": "string",
+          "minLength": 1
+        },
+        "privacy_risk": {
+          "type": "string",
+          "minLength": 1
+        },
+        "error_risk": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "level": {
+                "enum": [
+                  "高",
+                  "中",
+                  "低"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "source_ids": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "try_it": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_prompt_status",
+        "source_prompt_note",
+        "prerequisites",
+        "tools",
+        "expected_result",
+        "prompts"
+      ],
+      "properties": {
+        "source_prompt_status": {
+          "enum": [
+            "missing",
+            "collected"
+          ]
+        },
+        "source_prompt_note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prerequisites": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tools": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expected_result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "title",
+              "language",
+              "kind",
+              "attribution",
+              "source_url",
+              "source_ids",
+              "text"
+            ],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "language": {
+                "type": "string",
+                "minLength": 1
+              },
+              "kind": {
+                "enum": [
+                  "original",
+                  "adapted",
+                  "ours"
+                ]
+              },
+              "attribution": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "source_ids": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "kind": {
+                      "enum": [
+                        "original",
+                        "adapted"
+                      ]
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "source_url": {
+                      "type": "string",
+                      "pattern": "^https://[^/@]+(?:/|$)"
+                    },
+                    "source_ids": {
+                      "type": "array",
+                      "uniqueItems": true,
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "source_prompt_status": {
+                "const": "collected"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "prompts": {
+                "contains": {
+                  "properties": {
+                    "kind": {
+                      "const": "original"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

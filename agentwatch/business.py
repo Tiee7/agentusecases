@@ -9,6 +9,7 @@ from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlsplit
+from .personal import validate_personal, render_personal
 
 WEIGHTS={'demand':20,'outcome':20,'economics':20,'distribution':15,'moat':10,'execution':10,'feedback':5}
 LABELS={'demand':'付费需求','outcome':'业务价值与效果证据','economics':'单位经济与利润','distribution':'获客与市场进入','moat':'竞争壁垒','execution':'交付与经营风险','feedback':'独立用户反馈信号'}
@@ -150,6 +151,7 @@ def validate(record,receipts,expected_id):
             raise ValueError('Computed economic results must be finite')
     if not record.get('disconfirming_evidence') or not record.get('limitations'):
         raise ValueError('Include contrary evidence and concrete unverified claims')
+    validate_personal(record)
     return record
 
 def economics(model):
@@ -165,7 +167,7 @@ def render(record):
         d=record['scores'][key]
         rationale=d['rationale'].replace('|','\\|').replace('\n',' ')
         lines.append(f"| {LABELS[key]} | {weight}% | {d['score']} | {rationale} [{', '.join(d['source_ids'])}] |")
-    lines += ['','## 已核验事实','']
+    lines += ['', *render_personal(record), '', '## 已核验事实', '']
     for fact in record['facts']:
         lines.append(f"- {fact['statement']} [{', '.join(fact['source_ids'])}]")
     for section in record['sections']:
@@ -196,9 +198,9 @@ def indexes():
         state,record=case_state(case)
         item=(case,state,record)
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
-    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 行业 | 研究时间 |','|---|---|---:|---|---|']
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 行业 | 研究时间 |','|---|---|---:|---|---|---|']
     for case,_,record in completed:
-        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record['industry']} | {record['researched_at']} |")
+        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record.get('personal_value', {}).get('level', '待核实')} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
     for case,_,_ in drafts:
         lines.append(f"- [{case['title']}]({case['report']}) · `{case['id']}`")
@@ -218,6 +220,7 @@ def publish(record_path,evidence_path,expected_id):
     record=json.loads(Path(record_path).read_text())
     receipts=json.loads(Path(evidence_path).read_text())
     validate(record,receipts,expected_id)
+    validate_personal(record, required=True)
     directory=Path('research/evidence');directory.mkdir(parents=True,exist_ok=True)
     # Source receipts carry metadata only; cache paths and full scraped text stay private to the runner.
     clean=[{k:v for k,v in r.items() if k not in ('text_path','links')} for r in receipts]

@@ -1,6 +1,6 @@
 # Agent 研读 · 静态阅读站
 
-暖纸色、深墨色与朱红标记的商业研究刊物。提供已完成深研的搜索、商业判断筛选与排序，独立的全量案例目录，以及包含目录、事实、来源、成本情景和打印排版的长文页。
+暖纸色、深墨色与朱红标记的商业研究刊物。提供已完成深研的搜索、商业判断、自用价值独立筛选与排序，独立的全量案例目录，以及包含目录、事实、来源、成本情景和打印排版的长文页。
 
 ## 本地使用
 
@@ -12,6 +12,7 @@ npm --prefix site test
 ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run build
 npm --prefix site run check:output
 npm --prefix site exec -- playwright install chromium
+npm --prefix site run test:prompt-security
 ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 ```
 
@@ -23,7 +24,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 
 网站使用结构化记录渲染正文，不另存一套报告，不修改既有研究生成与发布流程。来源引用跳转至同页来源条目。分数按既有七项权重重算，经济表按记录中的输入重算。新增研究提交后，下一次静态构建会自动纳入符合条件的报告。
 
-公开投影只包含阅读字段：标题、行业、日期、结论、分析段落、事实、分数、经济情景、反证、限制、来源及其支持范围。不会序列化整个原始记录。目录只输出 ID、标题、类别、研究状态与安全 HTTPS 来源。正文保留研究证据边界，但不发布维护文档、任务说明、执行日志、缓存、认证值或原始 JSON 文件。
+公开投影只包含阅读字段：标题、行业、日期、结论、分析段落、事实、分数、经济情景、反证、限制、来源及其支持范围、自用价值和可复制试用模板。不会序列化整个原始记录。目录只输出 ID、标题、类别、研究状态与安全 HTTPS 来源。正文保留研究证据边界，但不发布维护文档、任务说明、执行日志、缓存、认证值或原始 JSON 文件。
 
 `check:output` 对实际输出文件做白名单检查。单元测试覆盖状态、身份匹配、缺失报告、路径穿越、URL 协议和额外私有字段；浏览器测试覆盖阅读流程、无脚本阅读、三个视口、全部报告与无障碍扫描。
 
@@ -43,3 +44,9 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 ## 设计与验证依据
 
 本环境没有 `taste-skill`、`AGENTS.md` 或本地 `.agents/skills`。已阅读可用 Superdesign 技能，因其外部生成流程与当前限制不符而未调用或安装。直接编写前端；应用已读取的 `vercel:verification` 完整阅读流程验证思路。未使用生成图像或假定存在的品牌素材。技术参考为 [Astro 静态路由](https://docs.astro.build/en/guides/routing/)与 [Astro 的 Vercel 静态部署说明](https://docs.astro.build/en/guides/deploy/vercel/)。
+
+## 自用与复制的验证边界
+
+旧v2记录缺少扩展时显示待核实及原文缺失；新发布流程要求填写扩展。提示词通过Astro文本节点转义、通过textContent复制，不插入HTML，不把提示词拼接到脚本。自动复制失败时提供选择文本的手动回退，无脚本时仍可阅读和选择。`test:prompt-security`构建隔离的合成案例，并在仅本地Chromium中检查中英文、HTML攻击文本和剪贴板原样复制。
+
+本轮验收见 [自用价值与提示词验证](docs/personal-value-verification.md)。仅本地浏览器验收；未重试此前取消的线上GET或浏览器验证，未手动重复部署。

@@ -1,10 +1,10 @@
 name: Reading site checks
 on:
   pull_request:
-    paths: ['site/**', 'registry/cases.json', 'research/*.json', 'reports/*.md', 'vercel.json', '.github/workflows/site-check.yml']
+    paths: ['site/**', 'agentwatch/**', 'tests/**', 'schemas/**', 'registry/cases.json', 'research/*.json', 'reports/*.md', 'vercel.json', '.github/workflows/site-check.yml']
   push:
     branches: [main]
-    paths: ['site/**', 'registry/cases.json', 'research/*.json', 'reports/*.md', 'vercel.json', '.github/workflows/site-check.yml']
+    paths: ['site/**', 'agentwatch/**', 'tests/**', 'schemas/**', 'registry/cases.json', 'research/*.json', 'reports/*.md', 'vercel.json', '.github/workflows/site-check.yml']
 permissions:
   contents: read
 jobs:
@@ -30,4 +30,5 @@ jobs:
       - run: npm --prefix site run check:output
       - run: npx playwright install --with-deps chromium
         working-directory: site
+      - run: npm --prefix site run test:prompt-security
       - run: npm --prefix site run test:e2e

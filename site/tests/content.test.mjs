@@ -11,3 +11,13 @@ test('only completed v2 records with existing reports and matching identity beco
 });
 test('untrusted IDs and nonpublic schemes are rejected',()=>{assert(!safeId('../secret'));assert(!safeId('UpperCase'));assert.equal(safeUrl('javascript:alert(1)'),'');assert.equal(safeUrl('https://user:password@example.org'),'');assert.equal(safeUrl('file:///tmp/secret'),'')});
 test('actual published reports match score, source references and repository eligibility',()=>{const {reports,catalog}=loadContent();assert(reports.length>0);assert(catalog.length>=reports.length);for(const r of reports){const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));assert.equal(raw.schema_version,2);assert.equal(raw.status,'completed');assert(fs.existsSync(path.join(repoRoot,'reports',r.id+'.md')));assert.equal(r.sections.length,10);assert(r.sources.length>=6);assert(r.score>=0&&r.score<=100);assert(r.facts.every(f=>f.refs.length>0));assert(r.sections.every(s=>s.refs.length>0));assert(r.models.length>=2)}});
+test('personal use is independent and old records have honest fallbacks',()=>{
+ const {reports}=loadContent();const r=reports[0];const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));const entry={id:raw.id,url:raw.url};
+ const score=r.score;delete raw.personal_value;delete raw.try_it;
+ const old=projectReport(raw,entry);assert.equal(old.personal.level,'待核实');assert.equal(old.trial.status,'missing');assert.equal(old.trial.prompts.length,0);assert.equal(old.score,score);
+ for(const report of reports){assert(['高','中','低','待核实'].includes(report.personal.level));assert.equal(report.personal.details.length,8);assert(report.personal.refs.length);assert(['missing','collected'].includes(report.trial.status));}
+});
+test('prompt projection preserves literal bilingual text and rejects unsafe source URLs',()=>{
+ const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));const text='中文 </pre><script>globalThis.injected=true</script> & "quote"\nEnglish `code` ${x}';raw.try_it.prompts[0].text=text;raw.try_it.prompts[0].source_url='javascript:alert(1)';
+ const r=projectReport(raw,{id:raw.id,url:raw.url});assert.equal(r.trial.prompts[0].text,text);assert.equal(r.trial.prompts[0].url,'');
+});

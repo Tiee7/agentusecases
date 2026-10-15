@@ -20,6 +20,9 @@ class BusinessTests(unittest.TestCase):
     def tearDown(self):
         os.chdir(self.previous);self.temp.cleanup()
     def test_complete_report_and_exact_mapping(self):
+        from agentwatch.personal import FIELDS
+        self.record['personal_value'] = dict(version=1,level='待核实',reason='Synthetic fixture',source_ids=[],**{k:'Unverified fixture' for k in FIELDS})
+        self.record['try_it'] = dict(source_prompt_status='missing',source_prompt_note='Not collected',prerequisites='Synthetic data',tools='Text editor',expected_result='Draft',prompts=[])
         validate(self.record,self.receipts,'real-case')
         Path('draft.json').write_text(json.dumps(self.record));Path('receipts.json').write_text(json.dumps(self.receipts))
         publish('draft.json','receipts.json','real-case')
@@ -27,6 +30,12 @@ class BusinessTests(unittest.TestCase):
         self.assertIn('reports/real-case.md',Path('INDEX.md').read_text())
         self.assertIn('completed',Path('registry/CATALOG.md').read_text())
         self.assertIsNone(select_case())
+    def test_new_publication_requires_extensions_but_old_validation_works(self):
+        validate(self.record,self.receipts,'real-case')
+        Path('draft.json').write_text(json.dumps(self.record));Path('receipts.json').write_text(json.dumps(self.receipts))
+        with self.assertRaisesRegex(ValueError,'New publications'):
+            publish('draft.json','receipts.json','real-case')
+        self.assertFalse(Path('research/real-case.json').exists())
     def test_aggregate_intro_only_cannot_pass(self):
         bad=copy.deepcopy(self.record);bad['sources']=bad['sources'][:1]
         with self.assertRaises(ValueError):validate(bad,self.receipts,'real-case')
