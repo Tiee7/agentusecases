@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **9** / 注册案例 **1321**。旧版简略初稿 **1** 份不计入完成。
+已完成深度研究 **10** / 注册案例 **1321**。旧版简略初稿 **1** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -17,6 +17,7 @@
 | [流媒体退订代理：历史成功不等于可出售的自动取消服务](reports/cancel-streaming-subscriptions-with-chatgpt-agent.md) | 不建议商业投入 | 28.0 | 消费者订阅管理与个人数字事务 | 2026-10-15T07:13:27.818136+00:00 |
 | [Cowork收据与银行数据整理：适合内部提效，盈利取决于异常复核而非生成速度](reports/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.md) | 适合内部效率工具 | 44.0 | 小微企业费用整理与报税前资料准备 | 2026-10-15T08:13:42.813043+00:00 |
 | [税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润](reports/fill-in-a-tax-organizer-and-review-last-year-s-return.md) | 适合内部效率工具 | 41.0 | 美国个人及小企业税务资料准备 | 2026-10-15T09:11:25.768067+00:00 |
+| [Codex跨应用填表与税表复核：内部助理可用，收费交付尚缺效果证据](reports/fill-forms-and-review-tax-filings-with-codex-computer-use.md) | 适合内部效率工具 | 41.0 | 美国个人税务资料整理与桌面流程自动化 | 2026-10-15T10:13:27.922299+00:00 |
 
 ## 需要重做的旧版简略初稿
 
@@ -25,7 +26,6 @@
 ## 下一批优先案例
 
 - Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
-- Fill forms and review tax filings with Codex computer use · `fill-forms-and-review-tax-filings-with-codex-computer-use`
 - File a complex tax return with OpenClaw · `file-a-complex-tax-return-with-openclaw`
 - Build a spending-insights app from bank transactions · `build-a-spending-insights-app-from-bank-transactions`
 - Appeal a denied travel insurance claim · `appeal-a-denied-travel-insurance-claim`
@@ -34,3 +34,4 @@
 - Dispute contractor pricing and change orders · `dispute-contractor-pricing-and-change-orders`
 - Draft a tax filing from bank statements with Claude Code · `draft-a-tax-filing-from-bank-statements-with-claude-code`
 - Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
+- Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
