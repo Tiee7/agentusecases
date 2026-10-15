@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **18** / 注册案例 **1328**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **19** / 注册案例 **1334**。旧版简略初稿 **0** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -13,7 +13,7 @@
 | [旧姓名无人认领财产查询：适合内部效率工具，免费官方替代压缩独立收费空间](reports/search-state-databases-for-unclaimed-property-under-old-name.md) | 适合内部效率工具 | 34.5 | 美国个人无人认领财产发现与认领辅助 | 2026-10-15T04:29:13.220582+00:00 |
 | [Meta Muse 账单议价与退款：只宜受控试点，节省承诺尚未证明可盈利交付](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
 | [Comcast 降费聊天机器人：能复制协商流程，尚不能复制低成本盈利](reports/negotiate-a-lower-comcast-bill-via-chatbot.md) | 仅建议受控试点 | 39.0 | 美国家庭宽带账单协商 | 2026-10-15T05:08:34.031138+00:00 |
-| [跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
+| [EU261拒赔申诉代理：证据包可试点，€400获批故事不足以支撑全自动索赔生意](reports/dispute-an-airline-s-eu261-delay-compensation-rejection.md) | 仅建议受控试点 | 38.0 | 航空旅客权益／消费者索赔辅助 | 2026-10-15T15:38:32.616651+00:00 |
 | [流媒体退订代理：历史成功不等于可出售的自动取消服务](reports/cancel-streaming-subscriptions-with-chatgpt-agent.md) | 不建议商业投入 | 28.0 | 消费者订阅管理与个人数字事务 | 2026-10-15T07:13:27.818136+00:00 |
 | [Cowork收据与银行数据整理：适合内部提效，盈利取决于异常复核而非生成速度](reports/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.md) | 适合内部效率工具 | 44.0 | 小微企业费用整理与报税前资料准备 | 2026-10-15T08:13:42.813043+00:00 |
 | [税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润](reports/fill-in-a-tax-organizer-and-review-last-year-s-return.md) | 适合内部效率工具 | 41.0 | 美国个人及小企业税务资料准备 | 2026-10-15T09:11:25.768067+00:00 |
@@ -26,6 +26,7 @@
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 | [从税务文件夹到联邦与州税表：草稿自动化有价值，独立报税生意尚无证据](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) | 适合内部效率工具 | 31.5 | 美国个人税务资料整理与报税辅助 | 2026-10-15T15:07:39.086321+00:00 |
+| [跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 
 ## 需要重做的旧版简略初稿
 
@@ -34,7 +35,6 @@
 
 - Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
-- Run an 11-agent team for trading prep · `run-an-11-agent-team-for-trading-prep`
 - Trade stocks via Robinhood MCP · `trade-stocks-via-robinhood-mcp`
 - Produce investment memos with Claude Cowork · `produce-investment-memos-with-claude-cowork`
 - Negotiate a billing credit from AT&T · `negotiate-a-billing-credit-from-at-t`
@@ -42,3 +42,4 @@
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
 - Let AI models trade stocks autonomously with $1k each · `let-ai-models-trade-stocks-autonomously-with-1k-each`
+- Dispute contractor pricing and change orders · `dispute-contractor-pricing-and-change-orders`

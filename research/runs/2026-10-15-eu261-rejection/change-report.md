@@ -1,0 +1,25 @@
+# 案例变化日报
+
+快照：1 · 时间：2026-10-15 23:32:29（北京时间）
+
+目录：1334个；详情采集：5个；全量详情完成：否。
+
+目录移出仅表示sitemap不再列出，不证明案例被删除；lastmod只是网站声明的更新时间。
+
+本次建立目录基线，不将现有案例计为新增。
+
+正文/标题/来源变化 0；采集位置变化 0；已验证未变 0；新观察到详情 0；详情基线 5。
+
+
+排序位置是本采集序列的位置，不是全站统一热门榜。未采集的正文不能声称没有变化。
+
+## 与上轮Git登记表比较
+
+新增6个ID、无移出；这不是历史数据库的lastmod比较。
+
+- `find-unclaimed-money-across-old-addresses`
+- `post-a-word-to-pastebin-and-return-the-link`
+- `reclaim-forgotten-crypto-airdrops-and-deposits`
+- `recover-unidentified-funds-with-a-treasury-skill`
+- `run-web-searches-and-browser-tasks-with-operator`
+- `use-operator-to-book-tables-compare-products-and-fill-forms`
