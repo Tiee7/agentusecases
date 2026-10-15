@@ -1,59 +1,434 @@
 {
-  "title": "Meta Muse 协商账单、退货和取消订阅",
+  "schema_version": 2,
+  "status": "completed",
+  "id": "negotiate-bills-handle-returns-and-cancel-subscriptions",
   "url": "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions",
-  "researched_at": "2026-10-14",
-  "status": "draft",
-  "confidence": "低；仅核对聚合站详情",
-  "evidence_scope": "这是一份初步案头研究：已读取案例详情，原始报道被云环境网络策略拦截；没有运行项目或验证金额、效果与现时产品可用性。维度分数是基于这些有限材料的研究判断，不是性能测评或最终结论。",
-  "summary": "站点转述 Meta 员工使用 Muse 获得账单优惠、退货及宠物保险理赔，并报告总节省2,120.95美元。站点同时指出证据多来自员工活动和轶事，未描述机制和人工参与；Amazon 可能拒绝代理操作。",
-  "dimensions": {
-    "value": {
-      "score": 4,
-      "rationale": "多个可量化省钱任务具有需求价值，但净新增收益和工作量未知。",
-      "sources": [
-        "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions"
+  "title": "Meta Muse 账单议价与退款：只宜受控试点，节省承诺尚未证明可盈利交付",
+  "industry": "美国消费者账单管理与退款代办",
+  "researched_at": "2026-10-15T03:11:48.878088+00:00",
+  "confidence": "中低：已读取10份公开来源，产品架构及竞品流程有一手资料；没有独立到账凭证、成功率、实际人工时长、Muse专项收入或完整条款验证。商业分数针对复制此工作流的独立经营者，不是Meta公司估值或模型能力评分。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "需求具体，但免费平台、既有议价服务和逐商家人工接管压缩独立经营空间。",
+    "reason": "家庭用户确有降低重复支出及减少客服沟通的需求，付款人也是承担账单的个人。可是本案例最醒目的收益来自员工与活动参与者自述，把退款、保险理赔和年化降费合计，不能证明平均增量收益。官方技术说明确认代理具备执行与审批机制，但没有给出该流程成功率和维护成本。独立经营者还要支付获客、逐单核验、失败重试与后续对账费用，面对免费通用代理及已有人工议价服务。只批准限定服务商的人工监督验证，不应据此投入全平台自主代办产品。",
+    "next_action": "建议未来经单独授权开展30个家庭、每户一张通信账单的试点：保留原套餐、逐次确认，比较人工自助基线，跟踪两个账单周期；目标为至少60%受理案件兑现节省、每案总人工不超过30分钟、获客不超过20美元，且按实收与失败成本核算后贡献为正。本轮只完成公开资料研究，没有联系或招募。",
+    "stop_condition": "出现未经同意的套餐变更或错误取消即暂停；完成30案及两个账单周期后，若兑现率低于60%、人工中位数超过30分钟、每受理案获客超过20美元或完整贡献仍不为正，则停止扩张并重估，不能仅凭少数高额退款延长试验。"
+  },
+  "sources": [
+    {
+      "id": "S90e5bd103f1b",
+      "url": "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions",
+      "title": "Negotiate bills, handle returns and cancel subscriptions with Meta Muse | Agent Use Cases",
+      "supports": "核对所选案例身份、原始报道及员工节省自述的范围；不证明实际到账或典型用户收益。"
+    },
+    {
+      "id": "Sad7d9b73b77b",
+      "url": "https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/",
+      "title": "Meta’s Muse AI Agent Is Promising to Save Users $1,000. Businesses Are Already Pushing Back - Tekedia",
+      "supports": "报道记录多种节省自述及其员工、活动自选样本偏差，并报道商家阻断；不是财务审计或完成率统计。"
+    },
+    {
+      "id": "S81786546d1f8",
+      "url": "https://help.rocketmoney.com/en/articles/9744474-bill-negotiation-charge-explained",
+      "title": "Bill Negotiation charge explained | Rocket Money Help Center",
+      "supports": "竞品成功收费为首年年化节省的35%至60%，收费通知、48小时窗口与分期机制。"
+    },
+    {
+      "id": "Sb34735dcc278",
+      "url": "https://help.rocketmoney.com/en/articles/9744501-bill-negotiation-savings-process",
+      "title": "Bill Negotiation savings process | Rocket Money Help Center",
+      "supports": "竞品由团队联系服务商、核验账户并寻找优惠；优惠可能为一次性抵扣或不同期限，不得擅自降级。"
+    },
+    {
+      "id": "Sb09b08eb1e11",
+      "url": "https://help.rocketmoney.com/en/articles/9744564-how-to-submit-a-bill-negotiation",
+      "title": "How to submit a Bill Negotiation | Rocket Money Help Center",
+      "supports": "竞品允许账单照片或账户信息作为输入，每张账单单独处理，优惠通常在后续账单周期体现。"
+    },
+    {
+      "id": "Sd0f6b5ca44d1",
+      "url": "https://news.ycombinator.com/item?id=49914631",
+      "title": "I just want to know how the agent knew what they used ? Did it make calls to can... | Hacker News",
+      "supports": "社区提问者质疑代理如何识别订阅及执行取消，回复仅为推测，不能当直接用户验证。"
+    },
+    {
+      "id": "S9e131eb43dbf",
+      "url": "https://www.aiwithsuny.com/p/meta-muse-review",
+      "title": "I Tried Meta Muse. Can an AI Agent Actually Save Me Money?",
+      "supports": "标题称尝试产品但正文主要讨论官方主张和授权问题，缺少可审计任务流水，故不计直接反馈。"
+    },
+    {
+      "id": "S742124791286",
+      "url": "https://introducing.muse.ai",
+      "title": "How We Designed Muse",
+      "supports": "产品设计团队说明终端、文件系统、浏览器、后台工作、日志及结构化审批卡片；属于厂商设计声明。"
+    },
+    {
+      "id": "Sd0ec2ff62b12",
+      "url": "https://support.apple.com/en-us/118223",
+      "title": "Apple：应用与内容退款流程",
+      "supports": "Apple官方提供原生退款入口，取消订阅和退款是不同操作，批准后到账仍需等待。"
+    },
+    {
+      "id": "Sa02b9db14c7c",
+      "url": "https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/",
+      "title": "Introducing Muse: The World’s First Personal AI Agent Built for Everyone",
+      "supports": "官方发布确认专属虚拟机、浏览器、Sentinel及审批控制和美国分发范围；功能承诺不等于效果审计。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "选中案例明确对应Meta Muse，原始报道为Tekedia；其页面自己说明未交代完整执行机制与用户介入程度。",
+      "source_ids": [
+        "S90e5bd103f1b"
       ]
     },
-    "evidence": {
-      "score": 1,
-      "rationale": "员工活动中的轶事不能证明独立用户效果；原文无法访问，也未核验账单与退款凭证。",
-      "sources": [
-        "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions"
+    {
+      "statement": "Tekedia报道一名Meta员工声称总计节省2120.95美元，混合通信降费、零售退货和宠物理赔；这里只确认报道存在，不确认款项到账。",
+      "source_ids": [
+        "Sad7d9b73b77b"
       ]
     },
-    "feasibility": {
+    {
+      "statement": "原文明确提醒活动参与者和员工样本不代表典型用户，并报道Amazon阻止Muse购物动作；不能外推所有退款通道均不可用。",
+      "source_ids": [
+        "Sad7d9b73b77b"
+      ]
+    },
+    {
+      "statement": "Meta发布说明称Muse运行于专属云端虚拟机和浏览器，另有Sentinel审核对外动作；这是厂商架构说明而非本研究安全实测。",
+      "source_ids": [
+        "Sa02b9db14c7c"
+      ]
+    },
+    {
+      "statement": "Meta发布说明称敏感动作需用户审批，可查看行动记录并撤销应用访问；推出时以美国为范围，免费功能之外另有订阅。",
+      "source_ids": [
+        "Sa02b9db14c7c"
+      ]
+    },
+    {
+      "statement": "Meta产品设计文说明代理具备文件系统与终端，可后台工作，并使用结构化审批卡片；不能据此证明账单任务全程无人工。",
+      "source_ids": [
+        "S742124791286"
+      ]
+    },
+    {
+      "statement": "Rocket Money官方收费规则写明成功议价收取首年年化节省的35%至60%，未成功不收费，通知后通常有48小时窗口。",
+      "source_ids": [
+        "S81786546d1f8"
+      ]
+    },
+    {
+      "statement": "Rocket Money官方说明其团队联系服务商并核验账户；优惠期限有差异，也可能只是一次性抵扣，并承诺未经批准不降级套餐。",
+      "source_ids": [
+        "Sb34735dcc278"
+      ]
+    },
+    {
+      "statement": "Rocket Money官方允许上传近期账单或连接服务商账户，逐账单处理；成功后的优惠通常在1至2个账单周期体现。",
+      "source_ids": [
+        "Sb09b08eb1e11"
+      ]
+    },
+    {
+      "statement": "Apple官方退款说明提供自行提交入口，区分退款申请与取消订阅，通常24至48小时更新申请状态，但批准不代表资金已经到账。",
+      "source_ids": [
+        "Sd0ec2ff62b12"
+      ]
+    },
+    {
+      "statement": "本轮读取的HN线程提出如何识别和取消订阅的问题，回复以不确定措辞推测账单上传，并未提供本人任务完成证明。",
+      "source_ids": [
+        "Sd0f6b5ca44d1"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "账单节省具有明确付款人，竞品已提供收费方案；但没有本案例的付费转化与重复任务频率证据。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb09b08eb1e11"
+      ]
+    },
+    "outcome": {
       "score": 2,
-      "rationale": "涉及商户登录与政策，且站点提到 Amazon 限制，通用执行能力没有得到证明。",
-      "sources": [
-        "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions"
+      "rationale": "存在具体节省自述与可执行产品设计，缺乏独立到账记录和相对人工自助的增量效果。",
+      "source_ids": [
+        "Sad7d9b73b77b",
+        "S742124791286"
       ]
     },
     "economics": {
-      "score": null,
-      "rationale": "未读取真实定价、订阅费用、退款失败成本和维护要求。",
-      "sources": []
+      "score": 2,
+      "rationale": "成功收费有参照，但失败案件仍耗人工，收入兑现慢；两种假设显示利润对成功率与支持成本高度敏感。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11"
+      ]
     },
-    "risk_control": {
-      "score": null,
-      "rationale": "账号授权、退款确认、交易权限及故障恢复均未核验。",
-      "sources": []
+    "distribution": {
+      "score": 1,
+      "rationale": "原厂免费入口与现有服务商占据用户关系；本案没有独立复制者低成本获客或渠道合作证据。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S81786546d1f8"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "浏览器和审批链路可被通用平台覆盖；未见独占服务商接口、专有成交数据或排他渠道。",
+      "source_ids": [
+        "S742124791286",
+        "Sa02b9db14c7c",
+        "Sd0ec2ff62b12"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "官方提供隔离与审批机制，但完整条款未取得，逐商家接受程度、失败恢复和责任成本没有验证。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S742124791286",
+        "Sad7d9b73b77b"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "已查社区、代码讨论及评论站；实际读到的是提问和分析，未取得可核验直接使用结果，缺失不代表差评。",
+      "source_ids": [
+        "Sd0f6b5ca44d1",
+        "S9e131eb43dbf"
+      ]
     }
   },
-  "recommendation": "作为跨网站代理失败边界的研究对象，先核查现时产品可用性与真实授权机制。不要用员工节省金额推断普遍投资回报。",
-  "open_questions": [
-    "Muse 的正式入口、地区与账户资格是什么？",
-    "2,120.95美元包含哪些一次性退款和原本即可获得的优惠？",
-    "是否每个退款、退货和订阅变更都需要用户确认？"
-  ],
-  "next_experiment": "先核查公开产品文档和条款；如有合法可用测试环境，仅做只读订阅清单，不执行购买、退货或取消。",
-  "source_checks": [
+  "sections": [
     {
-      "url": "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions",
-      "status": "已读取公开详情；网站为二手案例整理"
+      "id": "customer",
+      "title": "客户、付款人与付费触发",
+      "body": "最具体的目标客户是美国有多项通信或订阅账单、知道支出偏高但不愿花时间联系客服的家庭。使用者与付款人通常是账户持有人，预算来自已经发生的家庭消费，不应拿企业软件预算推导客单价。任务发生在促销到期、账单异常、发现闲置订阅或退货期限将到时；这类触发并不等于每月都有同等可回收金额。首次盘点清掉历史问题后，后续任务量和节省空间可能下降，持续订阅的留存因此尚未成立。\n\n需要区分三个购买理由：帮用户找到漏项、替用户完成沟通、承担持续跟进。原生退款入口提供现成自助路径，是否获批仍取决于商家规则；代理不能创造退款资格。收入可来自订阅或成功费，但不能把用户少花的钱当成服务收入。研究判断是先切通信账单，不把家具物流和宠物理赔放进同一交付承诺；它们要求不同材料、责任与处理周期。对已经熟悉客服和原生取消入口的人，额外付费的理由很弱。",
+      "source_ids": [
+        "Sad7d9b73b77b",
+        "S81786546d1f8",
+        "Sb09b08eb1e11",
+        "Sd0ec2ff62b12"
+      ]
     },
     {
-      "url": "https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/",
-      "status": "原始报道未读取：代理网络返回403"
+      "id": "workflow",
+      "title": "从账单到兑现的交付链路",
+      "body": "官方设计支持浏览器、终端、后台任务及结构化审批；本研究并未运行Muse，也未看到该员工案例的完整日志。以下是经营者需要验证的目标流程，不是已经核验的原项目实现：取得一张脱敏账单和明确授权，识别账户、套餐及促销期限，核对历史与当前价格，生成不降级条件下的谈判方案，由客户确认后进入服务商渠道。遇到身份核验、验证码、模糊授权或拒绝代理的页面交回客户或人工，不通过绕过限制来增加所谓成功率。\n\n交付不能止于发出一条请求。要保存服务商确认号、原价新价、优惠期限、是否改变合同，以及下一账期核验任务。退款案件另记已提交、已批准、已到账三个状态，退货还涉及实物寄回，不能只因生成标签就记回款。失败恢复应以同一个案件编号防重复提交，取消和续约必须再次确认。审批耗时、客服等待、补材料及核对账单都算交付劳动；通用模型能写文案不代表整个链路自动化完成。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S742124791286",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11",
+        "Sd0ec2ff62b12"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "可进入市场与验证分母",
+      "body": "本案证明的是一些消费者尝试把行政杂务交给代理，不能从宣传活动推算所有家庭的平均节省。没有取得可追踪的活跃付费账户、成功案件总数、失败分母或按服务商划分的结果，也没有充分依据给出总市场规模。报道中聚合了不同性质收益，尤其一次性退货可能只是返还原已支付货款，年化降费则取决于保持套餐与优惠期限，二者不应相加成为稳定年度现金收益。\n\n可服务范围应按入口逐层收缩：目标地区的账单持有人、愿意授权者、有可调整账单者、服务商接受代理者、最终收益高于服务费者。以30案试点作为学习预算而非市场规模，分别记录拒绝授权、无优惠、服务商阻断和已兑现；只统计成功用户会高估机会。Rocket Money公开提供类似付费交付，是需求有商业表达的证据，却不是新进入者能获利的证据。优先挑一个通信类别的原因是输入、合同条件和结果相对可比较，不是已经证明它的成功率最高。",
+      "source_ids": [
+        "Sad7d9b73b77b",
+        "S81786546d1f8",
+        "Sb09b08eb1e11"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "具体替代与竞争位置",
+      "body": "替代一是用户自行进入Apple等平台的原生退款界面或联系客服，直接软件费用低，但占用个人注意力；本研究读取Apple流程仅用于说明可自助的替代，不假定它涵盖AT&T或IKEA。替代二是Rocket Money：已有团队代谈、成功费和通知流程，用户可以用账单上传作为入口，省去新服务从零建立信任的部分成本。替代三是Muse自身，官方说明大部分常用能力免费；单纯把通用代理包一层，难以要求客户重复付费。\n\n竞争应落在结果核验与明确边界，而不是宣称模型更聪明。新服务若能提供可证明的到账台账、逐项授权和简洁退出流程，可能吸引不愿自行管理代理的客户，但这些仍需付费验证。用户转换需要再次提供账单、解释账户限制并承担操作错误风险；低价并不自动抵消转换成本。竞品收费说明还提示年化收费与实际到账可能错位，复制者可以按已兑现收益收费形成差异，不过会延迟收款并增加对账成本。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11",
+        "Sd0ec2ff62b12",
+        "Sa02b9db14c7c"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "两种单位经济及现金口径",
+      "body": "模型的交付单位统一为一件受理并最终结案的通信账单案件，包括失败案。情景A完全是假设：成功率60%，每成功案带来300美元经后续核验的收益，收40%即120美元，故每受理案期望收入72美元。每案模型与浏览器预算3美元，人工30分钟按30美元/小时计15美元，通信、对账及争议准备4美元，获客分摊20美元，总可变成本42美元、贡献30美元。月100案扣1500美元固定成本后贡献1500美元，尚非税后净利润。40%参考竞品收费区间，其余输入不是观测值。\n\n情景B同样是假设：成功率25%、成功案收益150美元、收费40%，每受理案期望收入15美元；技术5、人工90分钟即45、其他8、获客30，总成本88美元，单位亏73，月100案扣1500固定费用后亏8800美元。A的交付毛利在获客前为50美元即69.4%，计获客后贡献率41.7%；不能把二者混写。A按完全成本盈亏平衡需成功率47.5%〔(42+1500/100)/120〕，或在60%成功率下月50案覆盖固定成本。若按实际月度节省收费，72美元并非当月全部到账，需另留应收周转；退款也不直接成为经营者收入。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "第一批客户与获客成本",
+      "body": "本案没有独立经营者的广告投放、转化率或留存数据，不能以原厂社交平台覆盖推算复制者的分发优势。建议的起点是已有家庭财务服务或雇员福利渠道，但这只是未来验证假设，没有声称已有合作。先提供脱敏账单诊断与明确的收费示例，再由客户决定是否授权代谈；相较请求全邮箱或全部银行权限，单账单范围更容易解释价值。转介绍只有在核验到账后才有依据，不能把自选的高收益晒单当持续获客策略。\n\n每受理案20美元获客假设应包含渠道佣金、售前人工和未成交线索成本，不能仅记广告点击费。若十个线索只有一个愿意授权，前面九个的咨询时间也要分摊。企业福利渠道可能降低流量成本，却增加采购周期、报表和信息保护要求，不应称为免费获客。先分别核算直接个人渠道与合作渠道，不把二者混在平均值中。与原厂竞争的合理理由应是可审计结果和服务责任，不是重复介绍代理能浏览网页。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S81786546d1f8",
+        "Sb09b08eb1e11",
+        "Sad7d9b73b77b"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "壁垒与复制边界",
+      "body": "现阶段没有看到本案例拥有可独占数据或服务商接口。公开文档中的浏览器、记忆、后台跟进与审批卡片是通用代理能力；这些可以降低搭建原型难度，但也降低新创业者的差异化。把一套提示词复制出来与经营可持续服务是两件事。真实难点在于不同服务商的核验流程、优惠条件、客户可接受的变更，以及失败时何时交回人工。\n\n潜在可积累资产是按服务商整理的成功和失败原因、优惠兑现周期、处理工时、授权证据及投诉恢复机制，而非堆叠未经验证的节省故事。这些资产需要真实案件与客户许可，本轮没有取得，不能写成现有护城河。即便积累流程，商家也可修改界面或限制代理，原厂可把流程纳入免费能力。因此复制策略最多是一个狭窄服务市场中的可靠运营层，不能凭该案例论证横跨全部零售、保险和通信的独立平台。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S742124791286",
+        "Sad7d9b73b77b"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "权限、交付风险与责任成本",
+      "body": "官方说Sentinel审核外部动作、敏感操作有审批且凭据隔离，说明产品设计考虑了风险；这不是独立安全认证。本轮未取得可读的Muse完整条款，安全专页返回被抓取器拒绝的重定向，不能据此确定责任赔偿、商业转售权或所有集成权限。复制业务前必须补足这些信息，当前不应承诺消费者损失由平台兜底。报道中的Amazon购物阻断只说明外部接受程度存在风险，不证明一切退款操作都会失败。\n\n经营成本应包括账户核验、最小数据收集、授权留痕、客户撤销后停止工作、错误操作后的恢复，以及投诉的人工处理。对通信账单尤其要确认不增加合约锁定、不降低服务、不丢失既有权益；不要为了显示金额下降接受客户未批准的套餐变更。状态查询需区别客服口头承诺和实际账单。没有安全通道时直接停止该案件，把失败时间算入成本，不让重复自动尝试扩大权限。授权和责任不是报告末尾的抽象风险，它们决定能否交付、工时多长和退款准备多大。",
+      "source_ids": [
+        "Sa02b9db14c7c",
+        "S742124791286",
+        "Sad7d9b73b77b",
+        "Sb34735dcc278"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "低权重反馈及证据排除",
+      "body": "本轮实际执行了社区、代码讨论和独立评论站的检索，结果存在大量不相关页面；检索命中数量不是验证强度。沿案例链接读取HN线程后，看到的是对识别订阅和执行取消机制的提问，回复也只是推测上传账单，既不是直接用户结果也不是可测成功率。AI With Suny文章虽然标题称尝试Muse，正文主要转述能力并分析权限，未给出可审计的本人任务流水；评论含推广链接或旁观意见，也不能转成满意用户证据。\n\nTrustpilot搜索能发现Rocket Money评论页面，但本轮证据工具被robots规则拒绝，因此不将页面内投诉或星级作为正式报告事实，更不移植为Muse评价。员工节省故事有利益关联和活动自选偏差，仅保留为报道内容。观察数组留空，独立反馈信号0分，严格占总分5%；意思是缺少独立验证，不是满意度为零。反馈缺口不应阻止分析已读一手流程，却使宣传中的高额收益无法升级为商业效果证据。",
+      "source_ids": [
+        "Sd0f6b5ca44d1",
+        "S9e131eb43dbf",
+        "Sad7d9b73b77b"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "反方审查、试点与停止条件",
+      "body": "最终选择“仅建议受控试点”，评分37/100针对独立复制这项业务的投入优先级。支持方最有力的证据是现成竞品能够按节省收费、官方代理具备明确执行机制，说明这不只是聊天演示；因此也不能因为条款未读到就断言需求不存在。反方最有力的论点是用户本来就能自助争取很多优惠，免费代理和已有团队同时竞争，而失败案件成本由经营者承担，尚无证据证明新服务能以低成本获取并保留用户。\n\n建议的试点需要一个能核对基线的对照：相同账单类型先估计人工自助所需时间，再对比代理加人工审核后的总时间和最终收益，保留所有失败案。30案及两个账单周期只作为早期经营筛查，不能估计罕见安全事件或全年留存。达到授权、兑现率、人工、获客和贡献门槛才讨论扩大；任何未经许可的变更先停。若客户不愿为透明核验与跟进额外付费，就把工作流作为现有服务的内部助手，而不是继续做独立消费者订阅。以上为下一步建议，本轮没有访问真实账户、发送消息或提交申请。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sa02b9db14c7c",
+        "Sad7d9b73b77b",
+        "Sb09b08eb1e11"
+      ]
     }
-  ]
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Reddit社区",
+        "query": "\"Muse\" \"bill\" \"review\" site:reddit.com",
+        "outcome": "搜索返回不相关结果，未找到可纳入的直接体验记录。"
+      },
+      {
+        "channel": "HN社区",
+        "query": "\"Muse\" \"cancel\" site:news.ycombinator.com",
+        "outcome": "搜索未给有效直接体验；沿案例链接另读取49914631，只见机制提问与推测。"
+      },
+      {
+        "channel": "公开代码讨论",
+        "query": "\"Muse\" \"refund\" site:github.com",
+        "outcome": "未获得可对应本产品的任务完成或问题记录，不将同名项目当本案例。"
+      },
+      {
+        "channel": "独立评论站",
+        "query": "Rocket Money bill negotiation review (domains: trustpilot.com)",
+        "outcome": "找到竞品评论页面；证据抓取被robots禁止，未纳入事实、观察或评分。"
+      }
+    ],
+    "observations": []
+  },
+  "unit_economics": [
+    {
+      "scenario": "A：限定服务商可行假设",
+      "unit": "一件受理且最终结案的通信账单案件（含失败，收入按期望值）",
+      "currency": "USD",
+      "price": 72,
+      "api_cost": 3,
+      "human_cost": 15,
+      "other_variable_cost": 4,
+      "acquisition_cost": 20,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 1500,
+      "assumptions": "全部为研究者假设：成功率60%，成功案收益300美元，按40%收费得120美元；每受理案含失败的期望收入0.6×120=72。人工30分钟×30美元/小时=15，技术3、通信对账与争议准备4、含未成交线索的获客20。月100案，固定1500。收费比例只参考竞品，成功率、收益与成本无实测。 收入按完整兑现期确认，不等于当月现金，未计税、资本成本及创始人未列入的薪酬。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11"
+      ]
+    },
+    {
+      "scenario": "B：低成功率与高人工假设",
+      "unit": "一件受理且最终结案的通信账单案件（含失败，收入按期望值）",
+      "currency": "USD",
+      "price": 15,
+      "api_cost": 5,
+      "human_cost": 45,
+      "other_variable_cost": 8,
+      "acquisition_cost": 30,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 1500,
+      "assumptions": "全部为研究者假设：成功率25%，成功案收益150美元，40%收费得60美元；每受理案期望收入0.25×60=15。人工90分钟×30美元/小时=45，技术5、其他8、获客30。月100案，固定1500。其他成本含通信对账及预期争议准备，未验证真实分布。 收入按完整兑现期确认，不等于当月现金，未计税、资本成本及创始人未列入的薪酬。",
+      "source_ids": [
+        "S81786546d1f8",
+        "Sb34735dcc278",
+        "Sb09b08eb1e11"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "反对完全否定商业机会的证据：Rocket Money已有公开成功收费与交付规则，Meta有执行架构，消费者节省确有可收费替代。反对立即商业化的证据：报道自承员工与活动偏差，原生退款及免费代理可替代，新经营者未证明转化与单位成本；典型收益无法由2120.95美元自述推出。商家购物阻断是局部报道，不能泛化为全部渠道被封。",
+  "limitations": "未核验本人账户、收款或完整操作日志，未做产品实测或采访；未取得Muse专项收入、利润、成功率、定价明细、完整服务条款及安全专页。security.muse.ai（含尾斜杠）被抓取器拒绝302，muse.ai/terms与Trustpilot被robots限制，ai.meta.com/muse可读内容不足。均不算已读来源。源码、商家接受率、客户留存和人均工时未知；两种经济模型全部是经营假设，不能称已实现财务结果。",
+  "source_access_failures": [
+    {
+      "id": "S9d4e9a7497fb",
+      "url": "https://security.muse.ai",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T03:07:47.324216+00:00",
+      "status": "blocked",
+      "error": "HTTPError: HTTP Error 302: Found"
+    },
+    {
+      "id": "S3cc49d056088",
+      "url": "https://ai.meta.com/muse/",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T03:07:20.036926+00:00",
+      "status": "blocked",
+      "error": "ValueError: Source has insufficient readable content"
+    },
+    {
+      "id": "Sd1faaf01fcfa",
+      "url": "https://www.trustpilot.com/review/rocketmoney.com",
+      "kind": "feedback",
+      "fetched_at": "2026-10-15T03:07:23.228058+00:00",
+      "status": "blocked",
+      "error": "ValueError: robots.txt disallows this source"
+    },
+    {
+      "id": "Sec9a4ee5e956",
+      "url": "https://security.muse.ai/",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T03:08:16.838068+00:00",
+      "status": "blocked",
+      "error": "HTTPError: HTTP Error 302: Found"
+    },
+    {
+      "id": "S83d8f56c83cb",
+      "url": "https://muse.ai/terms",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T03:08:17.135966+00:00",
+      "status": "blocked",
+      "error": "ValueError: robots.txt disallows this source"
+    }
+  ],
+  "refresh_context": {
+    "fetched_at": "2026-10-15T03:06:09.402961+00:00",
+    "complete_catalog": true,
+    "catalog_count": 1314,
+    "sampled_details": 5,
+    "details_complete": false,
+    "baseline": true,
+    "note": "小时刷新库新基线；与拉取的登记表比较净增3个ID、无移出，分类位置有变；不是全站正文复查。"
+  }
 }

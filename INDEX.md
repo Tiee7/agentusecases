@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **2** / 注册案例 **1311**。旧版简略初稿 **3** 份不计入完成。
+已完成深度研究 **3** / 注册案例 **1314**。旧版简略初稿 **2** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行全流程已通过；未来按时触发待验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -10,18 +10,18 @@
 |---|---|---:|---|---|
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [Claude Code税务凭证整理的商业研究](reports/compile-deductions-and-schedule-c-with-claude-code.md) | 适合内部效率工具 | 45.0 | 美国个人税务资料准备 | 2026-10-15T00:03:06.932856+08:00 |
+| [Meta Muse 账单议价与退款：只宜受控试点，节省承诺尚未证明可盈利交付](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
 
 ## 需要重做的旧版简略初稿
 
-- [Negotiate bills, handle returns and cancel subscriptions](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) · `negotiate-bills-handle-returns-and-cancel-subscriptions`
-- [Prepare federal and state tax returns from a folder](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) · `prepare-federal-and-state-tax-returns-from-a-folder`
 - [Negotiate a lower Comcast bill via chatbot](reports/negotiate-a-lower-comcast-bill-via-chatbot.md) · `negotiate-a-lower-comcast-bill-via-chatbot`
+- [Prepare federal and state tax returns from a folder](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) · `prepare-federal-and-state-tax-returns-from-a-folder`
 
 ## 下一批优先案例
 
-- Negotiate bills, handle returns and cancel subscriptions · `negotiate-bills-handle-returns-and-cancel-subscriptions`
-- Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
 - Negotiate a lower Comcast bill via chatbot · `negotiate-a-lower-comcast-bill-via-chatbot`
+- Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
+- Search state databases for unclaimed property under old names · `search-state-databases-for-unclaimed-property-under-old-name`
 - Cancel and refund subscriptions by searching email and calling · `cancel-and-refund-subscriptions-by-searching-email-and-calli`
 - Cancel streaming subscriptions with ChatGPT Agent · `cancel-streaming-subscriptions-with-chatgpt-agent`
 - Turn forwarded receipts and bank data into expense and tax summaries · `turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s`
