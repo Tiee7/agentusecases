@@ -2,7 +2,7 @@
 
 已完成深度研究 **2** / 注册案例 **1311**。旧版简略初稿 **3** 份不计入完成。
 
-计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务尚未创建，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
+计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行全流程已通过；未来按时触发待验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
 [完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)
 
