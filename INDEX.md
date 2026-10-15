@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **16** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
+已完成深度研究 **17** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -24,6 +24,7 @@
 | [Claude Computer Use 填1040：合成表单演示能否变成可收费交付](reports/fill-out-a-form-1040-with-computer-use.md) | 仅建议受控试点 | 27.0 | 税务资料录入与事务所内部自动化 | 2026-10-15T13:37:37.079875+00:00 |
 | [Manus交易信号脚本：连接与复盘有用，尚不足以经营自动交易产品](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
+| [Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 
 ## 需要重做的旧版简略初稿
 
@@ -32,7 +33,6 @@
 ## 下一批优先案例
 
 - Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
-- Draft a tax filing from bank statements with Claude Code · `draft-a-tax-filing-from-bank-statements-with-claude-code`
 - Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
 - Run an 11-agent team for trading prep · `run-an-11-agent-team-for-trading-prep`
@@ -41,3 +41,4 @@
 - Negotiate a billing credit from AT&T · `negotiate-a-billing-credit-from-at-t`
 - Cancel an Amazon subscription and get a refund · `cancel-an-amazon-subscription-and-get-a-refund`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
+- Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
