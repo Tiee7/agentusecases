@@ -1,0 +1,43 @@
+---
+const { mode='reports', total=0, decisions=[] } = Astro.props;
+---
+<div class="explorer-controls"><label class="search-label"><span>搜索{mode==='reports'?'研究':'目录'}</span><div class="search-box"><span aria-hidden="true">⌕</span><input type="search" name="q" id="search" placeholder={mode==='reports'?'搜索案例、行业或报告内容…':'搜索案例名称或关键词…'} autocomplete="off"/></div></label>
+<label class="select-label"><span>{mode==='reports'?'商业判断':'研究状态'}</span><select id="filter" name="filter"><option value="">全部{mode==='reports'?'判断':'状态'}</option>{mode==='reports'?decisions.map(d=><option value={d}>{d}</option>):<><option value="completed">已完成深研</option><option value="pending">待研究</option></>}</select></label>
+{mode==='reports' && <label class="select-label"><span>排列方式</span><select id="sort" name="sort"><option value="date">最近研究</option><option value="score">商业评分</option></select></label>}
+</div><div class="result-line"><p id="result-count" role="status" aria-live="polite">共 {total} {mode==='reports'?'篇研究':'个案例'}</p><button type="button" id="reset" class="text-button">重置筛选 ↺</button></div>
+<div id="empty" class="empty" hidden><span aria-hidden="true">∅</span><h3>暂时没有匹配的案例</h3><p>换一个关键词，或重置筛选再看看。</p></div>
+<noscript><p class="notice">当前展示全部内容。启用 JavaScript 可使用搜索与筛选。</p></noscript>
+<script>
+const root = document.querySelector<HTMLElement>('[data-explorer]');
+if (root) {
+ const input = root.querySelector<HTMLInputElement>('#search')!;
+ const filter = root.querySelector<HTMLSelectElement>('#filter')!;
+ const sort = root.querySelector<HTMLSelectElement>('#sort');
+ const list = root.querySelector<HTMLElement>('[data-list]')!;
+ const items = [...list.querySelectorAll<HTMLElement>('[data-item]')];
+ const params = new URLSearchParams(location.search);
+ input.value = params.get('q') || ''; filter.value = params.get('filter') || '';
+ if (sort) sort.value = params.get('sort') === 'score' ? 'score' : 'date';
+ let page = Math.max(1, Number(params.get('page')) || 1);
+ const size = Number(root.dataset.pageSize) || items.length;
+ const pagination = root.querySelector<HTMLElement>('[data-pagination]');
+ function update() {
+  const terms = input.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
+  const filtered = items.filter(el => terms.every(t => (el.dataset.search || '').toLocaleLowerCase().includes(t)) && (!filter.value || (el.dataset.decision || el.dataset.status) === filter.value));
+  if (sort) filtered.sort((a,b) => sort.value === 'score' ? Number(b.dataset.score)-Number(a.dataset.score) : (b.dataset.date || '').localeCompare(a.dataset.date || ''));
+  const pages = Math.max(1,Math.ceil(filtered.length/size)); page = Math.min(page,pages);
+  items.forEach(el => el.hidden = true);
+  filtered.forEach((el,i) => { list.append(el); el.hidden = i < (page-1)*size || i >= page*size; });
+  root!.querySelector('#result-count')!.textContent = `找到 ${filtered.length} ${root!.dataset.explorer==='reports'?'篇研究':'个案例'}`;
+  (root!.querySelector('#empty') as HTMLElement).hidden = filtered.length !== 0;
+  if (pagination) { pagination.hidden = pages <= 1; pagination.querySelector('[data-page-label]')!.textContent = `${page} / ${pages}`; (pagination.querySelector('[data-prev]') as HTMLButtonElement).disabled = page === 1; (pagination.querySelector('[data-next]') as HTMLButtonElement).disabled = page === pages; }
+  const query = new URLSearchParams(); if(input.value) query.set('q',input.value); if(filter.value)query.set('filter',filter.value); if(sort?.value==='score')query.set('sort','score'); if(page>1)query.set('page',String(page));
+  history.replaceState(null,'',location.pathname+(query.size?'?'+query.toString():''));
+ }
+ input.addEventListener('input',()=>{page=1;update()}); filter.addEventListener('change',()=>{page=1;update()}); sort?.addEventListener('change',()=>{page=1;update()});
+ root.querySelector('#reset')!.addEventListener('click',()=>{input.value='';filter.value='';if(sort)sort.value='date';page=1;update();input.focus()});
+ pagination?.querySelector('[data-prev]')?.addEventListener('click',()=>{page--;update();root.scrollIntoView({block:'start'})});
+ pagination?.querySelector('[data-next]')?.addEventListener('click',()=>{page++;update();root.scrollIntoView({block:'start'})});
+ update();
+}
+</script>

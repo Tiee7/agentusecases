@@ -54,7 +54,9 @@
 
 可直接阅读 Markdown 报告；需要批量比较时，使用结构化 JSON 和稳定案例 ID。历史批次汇总或介绍型草稿不等于已完成深研；完成状态以版本 2 记录中的 `status: completed` 及总索引为准。
 
-本地校验使用 Python 3.12+ 和标准库，无需第三方依赖：
+仓库同时提供[只读网页阅读版](site/README.md)，支持跨设备阅读、搜索筛选、文章目录及来源跳转。
+
+研究流程的本地校验使用 Python 3.12+ 和标准库，无需第三方依赖：
 
 ```sh
 python -m unittest discover -s tests -q

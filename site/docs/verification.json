@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-15",
+  "story": "Browse completed research or catalog → local search/filter → read complete report → inspect economics and linked sources. Static read-only pages; no API or database.",
+  "content": {
+    "registered_cases": 1334,
+    "completed_reports": 19,
+    "static_pages": 23,
+    "output_files": 25
+  },
+  "checks": {
+    "python_tests": 28,
+    "content_tests": 3,
+    "browser_tests": 15,
+    "viewports": {
+      "desktop": "1440x1000",
+      "tablet": "820x1180",
+      "mobile": "390x844"
+    },
+    "axe": "WCAG 2 A/AA and 2.1 AA: zero detected violations on homepage, catalog, latest report, method page at all three viewports",
+    "overflow": "No horizontal document overflow on all four page types at three viewports",
+    "javascript_disabled": "Homepage and report readable without JavaScript",
+    "source_boundary": "Only completed v2 matching records with report files become report routes; public output allowlist passed",
+    "runtime": "No page errors in search/read navigation test",
+    "manual_visual_review": "Desktop/mobile home, mobile/tablet longform and desktop catalog screenshots inspected"
+  },
+  "resolved_findings": [
+    "Astro moves compiled chunks, so content root now resolves from repository ancestry rather than module URL.",
+    "Ephemeral environment has no writable default Astro config directory; build uses ASTRO_TELEMETRY_DISABLED=1.",
+    "Astro preview background mode did not satisfy Playwright process lifetime; test harness serves built static output via Python.",
+    "Chapter number contrast increased; final accessibility scans pass.",
+    "Desktop TOC test now checks the details.open property, not truthiness of an empty HTML attribute."
+  ],
+  "browser_results": [
+    {
+      "test": "reader can search, filter, reset and follow a report",
+      "project": "desktop",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 554
+        }
+      ]
+    },
+    {
+      "test": "catalog separates unfinished cases and paginates/searches all entries",
+      "project": "desktop",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 322
+        }
+      ]
+    },
+    {
+      "test": "long article has working contents, citations, full economics and responsive width",
+      "project": "desktop",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 4946
+        }
+      ]
+    },
+    {
+      "test": "all research routes and sources render and no internal content routes are shipped",
+      "project": "desktop",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 61
+        }
+      ]
+    },
+    {
+      "test": "without JavaScript the documents and navigation remain readable",
+      "project": "desktop",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 267
+        }
+      ]
+    },
+    {
+      "test": "reader can search, filter, reset and follow a report",
+      "project": "tablet",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 558
+        }
+      ]
+    },
+    {
+      "test": "catalog separates unfinished cases and paginates/searches all entries",
+      "project": "tablet",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 322
+        }
+      ]
+    },
+    {
+      "test": "long article has working contents, citations, full economics and responsive width",
+      "project": "tablet",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 5530
+        }
+      ]
+    },
+    {
+      "test": "all research routes and sources render and no internal content routes are shipped",
+      "project": "tablet",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 73
+        }
+      ]
+    },
+    {
+      "test": "without JavaScript the documents and navigation remain readable",
+      "project": "tablet",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 232
+        }
+      ]
+    },
+    {
+      "test": "reader can search, filter, reset and follow a report",
+      "project": "mobile",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 818
+        }
+      ]
+    },
+    {
+      "test": "catalog separates unfinished cases and paginates/searches all entries",
+      "project": "mobile",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 351
+        }
+      ]
+    },
+    {
+      "test": "long article has working contents, citations, full economics and responsive width",
+      "project": "mobile",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 5476
+        }
+      ]
+    },
+    {
+      "test": "all research routes and sources render and no internal content routes are shipped",
+      "project": "mobile",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 93
+        }
+      ]
+    },
+    {
+      "test": "without JavaScript the documents and navigation remain readable",
+      "project": "mobile",
+      "status": "expected",
+      "attempt_results": [
+        {
+          "status": "passed",
+          "duration_ms": 231
+        }
+      ]
+    }
+  ],
+  "screenshots": {
+    "docs/screenshots/tablet-home.png": "ad82575a472095ed0efff71ad9d4bb010e31885d088d383d0e43d19fe0bf95c8",
+    "docs/screenshots/mobile-method.png": "73dec44bf14489d954893e372ef3879b288e88fd2b1be31bd550a4fac6aca715",
+    "docs/screenshots/desktop-home.png": "e4943d51753461328d5aaf2924fab3114e6402192d5a313e190212edebade6cf",
+    "docs/screenshots/mobile-catalog.png": "e147596c02efe0ff762e2fa57b655a461687bb71b6c3561580ce483c8502d379",
+    "docs/screenshots/tablet-catalog.png": "91a65ed0a46ad639cc14f5bc4864a2edbfa4b6571638d0fa220aa4b02411885c",
+    "docs/screenshots/desktop-method.png": "c73dbc2823ba28bf318ad366f02cec3a1b4d5ad03a8b1ae550cc62847f0e9d10",
+    "docs/screenshots/desktop-report.png": "adfde0e0e88278fcbfcd2d5e6a3b0d7a2caec17507dd9fb4bf469a4060f5b0af",
+    "docs/screenshots/mobile-report.png": "121622ed50d88bb82d8f768ea5cad1521bc27562898d1c061cf30cae7a0583d2",
+    "docs/screenshots/tablet-method.png": "af92b5378ef0b4bce1afa36b24649e674cc6fb828c46c3aef91e110ddb44adf5",
+    "docs/screenshots/mobile-home.png": "58a3c1e32aef20a7da16d2bb0f04d21f40aa39f33596ae228ed7ab3e59b4068e",
+    "docs/screenshots/tablet-report.png": "17cf61c8d535d62d5bc60dfd5d5955f92069f27b6dc53f3221710d0f2d1e575a",
+    "docs/screenshots/desktop-catalog.png": "ad704e3d965ab1bf21eea4cff8d4afc19d1f68ff8789390b0c1fe6429034eba2"
+  },
+  "limits": [
+    "Chromium automated viewport tests do not replace physical-device Safari/Firefox testing.",
+    "No public deployment created; actual-domain acceptance awaits authorized Vercel publication.",
+    "Source links are rendered from checked report records; this web build did not recrawl external source pages."
+  ]
+}
