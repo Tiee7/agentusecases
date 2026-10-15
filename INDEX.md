@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **17** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
+已完成深度研究 **18** / 注册案例 **1328**。旧版简略初稿 **0** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -25,14 +25,13 @@
 | [Manus交易信号脚本：连接与复盘有用，尚不足以经营自动交易产品](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
+| [从税务文件夹到联邦与州税表：草稿自动化有价值，独立报税生意尚无证据](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) | 适合内部效率工具 | 31.5 | 美国个人税务资料整理与报税辅助 | 2026-10-15T15:07:39.086321+00:00 |
 
 ## 需要重做的旧版简略初稿
 
-- [Prepare federal and state tax returns from a folder](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) · `prepare-federal-and-state-tax-returns-from-a-folder`
 
 ## 下一批优先案例
 
-- Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
 - Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
 - Run an 11-agent team for trading prep · `run-an-11-agent-team-for-trading-prep`
@@ -42,3 +41,4 @@
 - Cancel an Amazon subscription and get a refund · `cancel-an-amazon-subscription-and-get-a-refund`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
+- Let AI models trade stocks autonomously with $1k each · `let-ai-models-trade-stocks-autonomously-with-1k-each`
