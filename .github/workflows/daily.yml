@@ -79,7 +79,7 @@ jobs:
           python -m agentwatch.business bootstrap
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add registry/cases.json registry/CATALOG.md INDEX.md
+          git add registry/cases.json registry/CATALOG.md INDEX.md research/*.json reports/*.md
           if ! git diff --cached --quiet; then
             git commit -m "Refresh usecase registry from daily crawl"
             git pull --rebase origin main

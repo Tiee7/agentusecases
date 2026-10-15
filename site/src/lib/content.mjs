@@ -23,6 +23,17 @@ export function safeUrl(value) {
   try { const u = new URL(value); return u.protocol === 'https:' && !u.username && !u.password ? u.href : ''; } catch { return ''; }
 }
 const number = value => typeof value === 'number' && Number.isFinite(value) ? value : 0;
+export function projectSourceTrial(value, expectedUrl) {
+  const empty = {status:'not_observed',agent:'',text:'',url:safeUrl(expectedUrl),observedAt:'',method:'none'};
+  if (!value) return empty;
+  if (value.source_url !== expectedUrl || !safeUrl(value.source_url) || !['available','missing','unparseable','not_observed'].includes(value.status)) return {...empty,status:'unparseable'};
+  if (value.status==='available' && (!text(value.text).trim() || !text(value.agent).trim() || !['ssr','dom'].includes(value.method) || !Number.isFinite(Date.parse(value.observed_at)))) return {...empty,status:'unparseable'};
+  return {status:value.status,agent:value.status==='available'?text(value.agent):'',text:value.status==='available'?text(value.text):'',url:safeUrl(value.source_url),observedAt:text(value.observed_at),method:text(value.method)};
+}
+export const sourceStatusLabels = {available:'已收录源站试用模板',missing:'本次页面未提供可提取模板',unparseable:'本次解析未成功',not_observed:'尚未结构化观测'};
+function sourcePrompt(source) {
+  return {title:'源站试用模板',language:'源站原文',kind:'site_template',attribution:'源站提供的试用模板；不代表案例原作者实际使用的提示词。',url:source.url,refs:[],text:source.text,agent:source.agent,observedAt:source.observedAt};
+}
 // Deliberate public projection: never spread a record or publish its filesystem paths.
 export function projectReport(record, entry) {
   if (record.schema_version !== 2 || record.status !== 'completed' || record.id !== entry.id || record.url !== entry.url) return null;
@@ -32,9 +43,10 @@ export function projectReport(record, entry) {
   const refs = values => (values || []).filter(id => sourceIds.has(id));
   const scores = Object.entries(weights).map(([key,weight]) => ({ key, label:labels[key], weight, value:number(record.scores?.[key]?.score), rationale:text(record.scores?.[key]?.rationale), refs:refs(record.scores?.[key]?.source_ids) }));
   const sections = (record.sections || []).filter(s => ['customer','workflow','market','competition','economics','distribution','moat','execution','feedback','decision'].includes(s.id)).map(s => ({ id:s.id, title:text(s.title), body:text(s.body), refs:refs(s.source_ids) }));
-  return { id:entry.id, title:text(record.title), industry:text(record.industry), category:text(entry.category), date:text(record.researched_at), confidence:text(record.confidence),
+  const sourceTrial = projectSourceTrial(entry.source_trial || record.source_trial, entry.url);
+  return { id:entry.id, sourceTrial, title:text(record.title), industry:text(record.industry), category:text(entry.category), date:text(record.researched_at), confidence:text(record.confidence),
     personal:{level:personalLevels.includes(record.personal_value?.level) ? record.personal_value.level : '待核实', reason:text(record.personal_value?.reason) || '旧记录尚未评估自用价值。', refs:refs(record.personal_value?.source_ids), details:Object.entries(personalFields).map(([key,label]) => ({label,body:text(record.personal_value?.[key]) || '待核实'}))},
-    trial:{status:text(record.try_it?.source_prompt_status) || 'missing', note:text(record.try_it?.source_prompt_note) || '原始提示词尚未收集；暂无试用模板。', prerequisites:text(record.try_it?.prerequisites), tools:text(record.try_it?.tools), expected:text(record.try_it?.expected_result), prompts:(record.try_it?.prompts || []).filter(p => ['original','adapted','ours'].includes(p.kind) && text(p.text)).map(p => ({title:text(p.title),language:text(p.language),kind:p.kind,attribution:text(p.attribution),url:safeUrl(p.source_url),refs:refs(p.source_ids),text:text(p.text)}))},
+    trial:{status:sourceTrial.status==='available'?'collected':text(record.try_it?.source_prompt_status) || 'missing', note:sourceTrial.status==='available' ? '优先展示源站提供的试用模板。下方自编模板仅作补充，未做模型实测。' : text(record.try_it?.source_prompt_note) || '原始提示词尚未收集；暂无试用模板。', prerequisites:text(record.try_it?.prerequisites), tools:text(record.try_it?.tools), expected:text(record.try_it?.expected_result), prompts:[...(sourceTrial.status==='available'?[sourcePrompt(sourceTrial)]:[]), ...(record.try_it?.prompts || []).filter(p => ['original','adapted','ours'].includes(p.kind) && text(p.text)).map(p => ({title:text(p.title),language:text(p.language),kind:p.kind,attribution:text(p.attribution),url:safeUrl(p.source_url),refs:refs(p.source_ids),text:text(p.text)}))]},
     verdict:{ decision:record.verdict.decision, headline:text(record.verdict.headline), reason:text(record.verdict.reason), next:text(record.verdict.next_action), stop:text(record.verdict.stop_condition) },
     score:Math.round(scores.reduce((sum,s) => sum + s.value*s.weight/5,0)*10)/10, scores, sections, sources,
     facts:(record.facts || []).map(f => ({ statement:text(f.statement), refs:refs(f.source_ids) })),
@@ -54,7 +66,7 @@ export function loadContent(root = repoRoot) {
     let report = null;
     if (fs.existsSync(file) && fs.existsSync(reportFile)) report = projectReport(JSON.parse(fs.readFileSync(file,'utf8')),entry);
     if (report) reports.push(report);
-    catalog.push({ id:entry.id, title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url) });
+    catalog.push({ id:entry.id, title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
   }
   reports.sort((a,b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
   return { reports, catalog };

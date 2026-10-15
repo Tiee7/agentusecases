@@ -21,3 +21,8 @@ test('prompt projection preserves literal bilingual text and rejects unsafe sour
  const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));const text='中文 </pre><script>globalThis.injected=true</script> & "quote"\nEnglish `code` ${x}';raw.try_it.prompts[0].text=text;raw.try_it.prompts[0].source_url='javascript:alert(1)';
  const r=projectReport(raw,{id:raw.id,url:raw.url});assert.equal(r.trial.prompts[0].text,text);assert.equal(r.trial.prompts[0].url,'');
 });
+test('source-site templates lead, with separate agent and provenance, without replacing authored supplements',()=>{
+ const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));const entry={id:raw.id,url:raw.url,source_trial:{status:'available',text:'原文 & <tag>\nEnglish',agent:'Manus',source_url:raw.url,observed_at:'2026-10-15T17:00:00Z',method:'dom'}};
+ const r=projectReport(raw,entry);assert.equal(r.trial.prompts[0].kind,'site_template');assert.equal(r.trial.prompts[0].agent,'Manus');assert.equal(r.trial.prompts[0].text,entry.source_trial.text);assert.equal(r.trial.prompts.length,raw.try_it.prompts.length+1);assert(r.trial.prompts[0].attribution.includes('不代表'));
+ entry.source_trial.source_url='https://wrong.test/case';const invalid=projectReport(raw,entry);assert.equal(invalid.sourceTrial.status,'unparseable');assert(!invalid.trial.prompts.some(p=>p.kind==='site_template'));
+});

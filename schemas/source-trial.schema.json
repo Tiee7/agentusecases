@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public source-site suggested trial observation",
+  "type": "object",
+  "required": [
+    "version",
+    "status",
+    "text",
+    "agent",
+    "source_url",
+    "observed_at",
+    "method",
+    "attribution",
+    "html_sha256"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "available",
+        "missing",
+        "unparseable",
+        "not_observed"
+      ]
+    },
+    "text": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "agent": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": "string",
+      "pattern": "^https://"
+    },
+    "observed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "enum": [
+        "ssr",
+        "dom",
+        "none"
+      ]
+    },
+    "attribution": {
+      "const": "源站提供的试用模板；不代表案例原作者实际使用的提示词。"
+    },
+    "html_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "available"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "agent": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "method": {
+            "enum": [
+              "ssr",
+              "dom"
+            ]
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "text": {
+            "type": "null"
+          },
+          "agent": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$id": "https://github.com/Tiee7/agentusecases/blob/main/schemas/source-trial.schema.json"
+}

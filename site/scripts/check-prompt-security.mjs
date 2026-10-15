@@ -14,6 +14,7 @@ let server,browser;
 try {
  for(const dir of ['research','reports','registry','site'])fs.mkdirSync(path.join(tmp,dir));
  fs.writeFileSync(path.join(tmp,'registry/cases.json'),JSON.stringify({cases:[{id,url:record.url,title:record.title}]}));
+ record.source_trial={status:'available',text:prompt,agent:'Synthetic tool',source_url:record.url,observed_at:'2026-10-15T17:00:00Z',method:'dom'};
  record.try_it.prompts[0].text=prompt;record.try_it.prompts[0].source_url='javascript:globalThis.promptInjected=true';
  fs.writeFileSync(path.join(tmp,'research',`${id}.json`),JSON.stringify(record));
  fs.writeFileSync(path.join(tmp,'reports',`${id}.md`),'Synthetic security fixture');
@@ -30,6 +31,10 @@ try {
  assert.equal(await page.locator('#try-it a[href^="javascript:"]').count(),0);
  await page.locator('[data-copy="prompt-0"]').click();
  assert.equal(await page.evaluate(()=>window.copied),prompt);
+ assert.equal(await page.evaluate(()=>window.promptInjected),undefined);
+ await page.goto(`http://127.0.0.1:4323/trials/${id}/`);
+ assert.equal(await page.locator('#source-prompt').textContent(),prompt);
+ await page.locator('#copy-source').click();assert.equal(await page.evaluate(()=>window.copied),prompt);
  assert.equal(await page.evaluate(()=>window.promptInjected),undefined);
  console.log('PASS: isolated Astro build + local Chromium preserve bilingual hostile text and exact clipboard content without execution.');
 } finally {

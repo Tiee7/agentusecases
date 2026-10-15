@@ -18,3 +18,13 @@ test('real browser clipboard preserves both languages',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);await page.goto(`/reports/${reports[0].id}/`);
  for(let i=0;i<2;i++){await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(reports[0].trial.prompts[i].text)}
 });
+test('source trial pages keep literal prompts and do not imply completed research',async({page,context})=>{
+ await context.grantPermissions(['clipboard-read','clipboard-write']);
+ for(const c of catalog.filter(c=>c.sourceTrial.status==='available')){
+  await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(!c.complete)await expect(page.locator('.article-top')).toContainText('尚未完成商业深研');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
+ }
+ for(const r of reports.filter(r=>r.sourceTrial.status==='available')){
+  await page.goto(`/reports/${r.id}/`);await expect(page.locator('#prompt-0')).toHaveText(r.sourceTrial.text);await expect(page.locator('.prompt-card').first()).toContainText('不代表案例原作者');await expect(page.locator('.prompt-card').first()).toContainText(r.sourceTrial.agent);
+ }
+});

@@ -35,12 +35,17 @@ def bootstrap(db_path):
         rows=db.execute('SELECT c.url,o.title,o.body,p.position,p.category FROM catalogs c LEFT JOIN observations o ON o.run_id=c.run_id AND o.url=c.url LEFT JOIN priorities p ON p.run_id=c.run_id AND p.url=c.url WHERE c.run_id=? ORDER BY p.position IS NULL,p.position,c.url',(run,)).fetchall()
     else:
         rows=db.execute('SELECT o.url,o.title,o.body,p.position,p.category FROM observations o LEFT JOIN priorities p ON p.run_id=o.run_id AND p.url=o.url WHERE o.run_id=? ORDER BY p.position IS NULL,p.position,o.url',(run,)).fetchall()
+    from .source_trial import validate_observation, newer_observation
+    trial_table = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='source_trials'").fetchone()
+    trials = {url:json.loads(payload) for url,payload in db.execute('SELECT url,payload FROM source_trials ORDER BY run_id')} if trial_table else {}
     old=read_registry() if REGISTRY.exists() else {'cases':[]}
     existing={c['id']:c for c in old['cases']}
     cases=[]
     for url,title,body,rank,category in rows:
         case_id=safe_id(urlsplit(url).path.rstrip('/').rsplit('/',1)[-1])
         previous=existing.pop(case_id,{})
+        if url in trials:
+            previous['source_trial'] = newer_observation(previous.get('source_trial'), validate_observation(trials[url], url))
         title=title or previous.get('title') or case_id.replace('-',' ')
         original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M) if body else previous.get('original_sources',[])
         cases.append(dict(previous,id=case_id,title=title,url=url,category=category or previous.get('category'),site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=original_sources,listed=True))
@@ -48,7 +53,26 @@ def bootstrap(db_path):
     cases.extend(dict(c,listed=False) for c in existing.values())
     REGISTRY.parent.mkdir(exist_ok=True)
     REGISTRY.write_text(json.dumps({'schema_version':1,'ranking_scope':'public SSR category top, then sitemap order','cases':cases},ensure_ascii=False,indent=2)+'\n')
+    sync_source_trials(cases)
     return len(cases)
+
+def sync_source_trials(cases):
+    from .source_trial import sync_record
+    for case in cases:
+        if not case.get('source_trial'):
+            continue
+        path = Path(case['record'])
+        if not path.exists():
+            continue
+        record = json.loads(path.read_text())
+        if record.get('schema_version') != 2 or record.get('status') != 'completed':
+            continue
+        if record.get('source_trial') == case['source_trial']:
+            continue
+        sync_record(record, case['source_trial'])
+        path.write_text(json.dumps(record,ensure_ascii=False,indent=2)+'\n')
+        Path(case['report']).write_text(render(record))
+
 
 def case_state(case):
     path=Path(case['record'])
@@ -198,9 +222,9 @@ def indexes():
         state,record=case_state(case)
         item=(case,state,record)
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
-    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 行业 | 研究时间 |','|---|---|---:|---|---|---|']
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 源站试用模板 | 行业 | 研究时间 |','|---|---|---:|---|---|---|---|']
     for case,_,record in completed:
-        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record.get('personal_value', {}).get('level', '待核实')} | {record['industry']} | {record['researched_at']} |")
+        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record.get('personal_value', {}).get('level', '待核实')} | {record.get('source_trial', {}).get('status', 'not_observed')} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
     for case,_,_ in drafts:
         lines.append(f"- [{case['title']}]({case['report']}) · `{case['id']}`")
@@ -208,17 +232,21 @@ def indexes():
     for case,_,_ in (drafts+pending)[:10]:
         lines.append(f"- {case['title']} · `{case['id']}`")
     Path('INDEX.md').write_text('\n'.join(lines)+'\n')
-    catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 |','|---|---|---|---|']
+    catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 | 源站试用模板 |','|---|---|---|---|---|']
     for case in cases:
         state,_=case_state(case)
         title=case['title'].replace('|','\\|')
         report=f"[报告](../{case['report']})" if Path(case['report']).exists() else f"`{case['report']}`"
-        catalog.append(f"| `{case['id']}` | [{title}]({case['url']}) | {state} | {report} |")
+        catalog.append(f"| `{case['id']}` | [{title}]({case['url']}) | {state} | {report} | {case.get('source_trial', {}).get('status', 'not_observed')} |")
     Path('registry/CATALOG.md').write_text('\n'.join(catalog)+'\n')
 
 def publish(record_path,evidence_path,expected_id):
     record=json.loads(Path(record_path).read_text())
     receipts=json.loads(Path(evidence_path).read_text())
+    case = select_case(expected_id)
+    if case.get('source_trial'):
+        from .source_trial import sync_record
+        sync_record(record, case['source_trial'])
     validate(record,receipts,expected_id)
     validate_personal(record, required=True)
     directory=Path('research/evidence');directory.mkdir(parents=True,exist_ok=True)

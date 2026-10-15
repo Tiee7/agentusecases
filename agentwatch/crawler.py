@@ -24,7 +24,7 @@ class NoRedirect(HTTPRedirectHandler):
 OPENER = build_opener(NoRedirect)
 
 UA = 'AgentUseCaseWatch/0.1'
-ADAPTER_VERSION = 'public-ssr-v1'
+ADAPTER_VERSION = 'public-ssr-v2-trials'
 RATE_LOCK = threading.Lock()
 NEXT_REQUEST = 0.0
 REQUEST_DELAY = 2.0
@@ -106,6 +106,7 @@ def database(path):
     CREATE TABLE IF NOT EXISTS runs(id INTEGER PRIMARY KEY, fetched_at TEXT, listing_url TEXT, ordering TEXT);
     CREATE TABLE IF NOT EXISTS priorities(run_id INTEGER, url TEXT, position INTEGER, category TEXT, PRIMARY KEY(run_id,url));
     CREATE TABLE IF NOT EXISTS catalogs(run_id INTEGER, url TEXT, lastmod TEXT, PRIMARY KEY(run_id,url));
+    CREATE TABLE IF NOT EXISTS source_trials(run_id INTEGER, url TEXT, payload TEXT, PRIMARY KEY(run_id,url));
     CREATE TABLE IF NOT EXISTS observations(run_id INTEGER, url TEXT, title TEXT, position INTEGER, digest TEXT, body TEXT, PRIMARY KEY(run_id,url));
     ''')
     columns = {r[1] for r in db.execute('PRAGMA table_info(runs)')}
@@ -127,7 +128,14 @@ def save(db, listing, ordering, rows, catalog_rows=None, priorities=None):
         if catalog_rows is not None:
             db.executemany('INSERT INTO catalogs VALUES(?,?,?)', [(run,url,lastmod) for url,lastmod in catalog_rows.items()])
         for position, row in enumerate(rows, 1):
-            digest = hashlib.sha256(row['body'].encode()).hexdigest()
+            content = row['body']
+            if 'source_trial' in row:
+                from .source_trial import validate_observation
+                trial = validate_observation(row['source_trial'], row['url'])
+                # Time and HTML cosmetics are not semantic prompt changes.
+                content += json.dumps({k:trial.get(k) for k in ('status','agent','text')}, ensure_ascii=False, sort_keys=True)
+                db.execute('INSERT INTO source_trials VALUES(?,?,?)', (run,row['url'],json.dumps(trial,ensure_ascii=False)))
+            digest = hashlib.sha256(content.encode()).hexdigest()
             db.execute('INSERT INTO observations VALUES(?,?,?,?,?,?)', (run, row['url'], row['title'], position, digest, row['body']))
             before = old.get(row['url'])
             kind = 'baseline' if previous is None else 'newly_observed' if before is None else 'content_changed' if before[:2] != (row['title'], digest) else 'position_changed' if before[2] != position else 'unchanged'
@@ -195,7 +203,9 @@ def main():
             raise RuntimeError(f'Case title missing: {url}')
         title = ' '.join(page.h1)
         print(f'Fetched {index}/{len(selected)}: {title}', file=sys.stderr, flush=True)
-        return {'url': url, 'title': title, 'body': body}
+        from .source_trial import extract_source_trial
+        trial = extract_source_trial(html, url, datetime.now(timezone.utc).isoformat())
+        return {'url': url, 'title': title, 'body': body, 'source_trial': trial}
     pool = ThreadPoolExecutor(max_workers=args.workers)
     try:
         rows = list(pool.map(collect, enumerate(selected,1)))
@@ -207,6 +217,8 @@ def main():
     db = database(args.db)
     result = save(db, args.listing, args.ordering, rows, catalog_rows, priorities)
     output_root = Path(args.db).parent
+    from .source_trial import export_observations
+    (output_root/'source-trials.json').write_text(json.dumps(export_observations(db, result['run_id']),ensure_ascii=False,indent=2)+'\n')
     (output_root/'catalog.json').write_text(json.dumps(catalog_rows,ensure_ascii=False,indent=2))
     (output_root/'runs').mkdir(parents=True, exist_ok=True)
     (output_root/'runs'/f"{result['run_id']}.json").write_text(json.dumps(result, ensure_ascii=False, indent=2))

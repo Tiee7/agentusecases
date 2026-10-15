@@ -235,31 +235,66 @@
             ]
           }
         }
-      },
-      "allOf": [
-        {
-          "if": {
+      }
+    },
+    "source_trial": {
+      "$ref": "source-trial.schema.json"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "try_it"
+        ],
+        "properties": {
+          "try_it": {
+            "required": [
+              "source_prompt_status"
+            ],
             "properties": {
               "source_prompt_status": {
                 "const": "collected"
               }
             }
-          },
-          "then": {
+          }
+        }
+      },
+      "then": {
+        "anyOf": [
+          {
+            "required": [
+              "source_trial"
+            ],
             "properties": {
-              "prompts": {
-                "contains": {
-                  "properties": {
-                    "kind": {
-                      "const": "original"
+              "source_trial": {
+                "properties": {
+                  "status": {
+                    "const": "available"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "properties": {
+              "try_it": {
+                "properties": {
+                  "prompts": {
+                    "contains": {
+                      "properties": {
+                        "kind": {
+                          "const": "original"
+                        }
+                      }
                     }
                   }
                 }
               }
             }
           }
-        }
-      ]
+        ]
+      }
     }
-  }
+  ]
 }
