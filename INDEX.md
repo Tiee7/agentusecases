@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **12** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
+已完成深度研究 **13** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -19,6 +19,7 @@
 | [税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润](reports/fill-in-a-tax-organizer-and-review-last-year-s-return.md) | 适合内部效率工具 | 41.0 | 美国个人及小企业税务资料准备 | 2026-10-15T09:11:25.768067+00:00 |
 | [Codex跨应用填表与税表复核：内部助理可用，收费交付尚缺效果证据](reports/fill-forms-and-review-tax-filings-with-codex-computer-use.md) | 适合内部效率工具 | 41.0 | 美国个人税务资料整理与桌面流程自动化 | 2026-10-15T10:13:27.922299+00:00 |
 | [OpenClaw复杂报税：低模型费用不等于可复制的代报税生意](reports/file-a-complex-tax-return-with-openclaw.md) | 仅建议受控试点 | 35.5 | 美国小企业税务资料整理与专业复核 | 2026-10-15T11:02:36.633927+00:00 |
+| [Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立](reports/build-a-spending-insights-app-from-bank-transactions.md) | 适合内部效率工具 | 40.0 | 个人财务管理／金融数据应用开发 | 2026-10-15T12:40:06.325402+00:00 |
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 
 ## 需要重做的旧版简略初稿
@@ -28,7 +29,6 @@
 ## 下一批优先案例
 
 - Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
-- Build a spending-insights app from bank transactions · `build-a-spending-insights-app-from-bank-transactions`
 - Appeal a denied travel insurance claim · `appeal-a-denied-travel-insurance-claim`
 - Fill out a Form 1040 with computer use · `fill-out-a-form-1040-with-computer-use`
 - Teach an agent to trade with signals and logging · `teach-an-agent-to-trade-with-signals-and-logging`
@@ -37,3 +37,4 @@
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
 - Run an 11-agent team for trading prep · `run-an-11-agent-team-for-trading-prep`
 - Trade stocks via Robinhood MCP · `trade-stocks-via-robinhood-mcp`
+- Produce investment memos with Claude Cowork · `produce-investment-memos-with-claude-cowork`

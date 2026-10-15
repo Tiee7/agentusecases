@@ -1,0 +1,55 @@
+{
+  "searched_at": "2026-10-15T12:41:06.520409+00:00",
+  "tool": "web.run",
+  "searches": [
+    {
+      "channel": "社区／Reddit",
+      "query": "\"Replit\" \"Plaid\" \"reddit\"",
+      "outcome": "已执行网页检索，返回Reddit首页及Plaid泛页面等，未取得本案直接用户原文；相关性异常，不能推断不存在反馈。"
+    },
+    {
+      "channel": "公开代码／GitHub",
+      "query": "site:github.com \"Replit\" \"Plaid\" \"issues\"",
+      "outcome": "已执行检索，结果以泛Plaid和其他无关页面为主，没有取得本案可核验使用问题；随后只读取得Plaid官方通用教程，不能当用户评价。"
+    },
+    {
+      "channel": "独立评论检索",
+      "query": "\"Replit\" \"Plaid\" \"review\" spending",
+      "outcome": "已执行检索，出现Review词条及无关内容，没有实际读取本案用户体验。"
+    },
+    {
+      "channel": "社区／Reddit（域名过滤复查）",
+      "query": "Replit Plaid spending insights [domains: reddit.com]",
+      "outcome": "批量复查返回平台首页和一般Replit讨论，仍无本案直接反馈，且存在过滤范围外结果。"
+    },
+    {
+      "channel": "公开代码／GitHub（域名过滤复查）",
+      "query": "Replit Plaid [domains: github.com]",
+      "outcome": "未取得本案例直接使用问题，过滤结果可靠性不足。"
+    },
+    {
+      "channel": "社区／Hacker News",
+      "query": "Replit Plaid spending app review [domains: news.ycombinator.com]",
+      "outcome": "批量检索返回无关review类页面，未取得可核验使用者原文。"
+    }
+  ],
+  "final_batch_returned_examples": [
+    {
+      "title": "Replit home",
+      "url": "https://replit.com/"
+    },
+    {
+      "title": "Google Business Reviews",
+      "url": "https://business.google.com/reviews"
+    },
+    {
+      "title": "Review schema",
+      "url": "https://schema.org/Review"
+    },
+    {
+      "title": "What exactly IS replit?",
+      "url": "https://www.reddit.com/r/replit/comments/1kfu5mr/what_exactly_is_replit/"
+    }
+  ],
+  "assessment": "Poor relevance and out-of-domain results despite filters. No directly verified case users. Search snippets not treated as read evidence. Examples are returned discovery links, not independently read source receipts."
+}
