@@ -38,7 +38,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 - Production Branch：`main`。无需环境秘密、服务端 adapter、数据库或付费 API。
 - Git 集成完成后，main 的内容变更应触发新构建。仅成功构建的 `site/dist` 可部署，不要部署仓库根目录作为静态文件目录。
 
-发布前由协调方确认 Vercel 账号、项目权限及适用计划。本开发任务没有创建 Vercel 项目或部署，亦没有变更认证或调用付费服务。发布后还需对实际域名检查 HTTPS、手机阅读、路径与来源链接；本地通过不代替线上验收。
+发布协调方已在用户重新授权后完成生产部署并关联 main 自动发布，详见[2026-10-15 部署回执](docs/deployment-receipt-2026-10-15.md)。已确认 READY 与匿名 HEAD 200；后续完整 GET 和浏览器验收被取消，完整线上验收仍未完成。本地通过不代替线上验收。
 
 ## 设计与验证依据
 
