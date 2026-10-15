@@ -1,0 +1,409 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "fill-in-a-tax-organizer-and-review-last-year-s-return",
+  "url": "https://agentusecases.ai/use-case/fill-in-a-tax-organizer-and-review-last-year-s-return",
+  "title": "税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润",
+  "industry": "美国个人及小企业税务资料准备",
+  "researched_at": "2026-10-15T09:11:25.768067+00:00",
+  "confidence": "中等：公开产品、价格、会计师资料流程可核验；案例为单一作者自述，未取得原始税表、实际退款、客户订单或独立复现实验。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "资料整理可以减轻客户负担，但软件接收、逐项复核和异常解释决定能否省下真实人工。",
+    "reason": "这不是已有客户付费的税务代理公司，而是企业经营者用Claude in Chrome与Claude Code完成自己的年度资料准备。会计师已经提供资料表和接收渠道，独立创业者不能把生成一份PDF等同于完成会计师的工作。原文同时呈现成功与失败：作者认可填表体验，但未形成可复算的净工时；复查发现问题也不能证明无人申报可靠。适合先由已有税务团队将来源映射、缺件清单和人工确认嵌入内部流程。只有当接收方实际减少录入和追问时间、成本覆盖复核与获客，才有依据升级成付费服务。",
+    "next_action": "建议在后续另获客户数据授权后，由一家已有事务所在隔离环境内对20份脱敏历史资料做盲测，覆盖缺文件、跨年度和多实体；验收来源完整性、未知项保留、接收格式、双方总工时与返工。目标是总人工时间比原流程少30%，所有关键金额有证据且经人员确认。本轮没有联系事务所或处理真实客户数据。",
+    "stop_condition": "出现跨客户资料混入、无来源金额被确认或未授权提交即停用。若两批共20份资料均不能节省30%净人工，或拟议99美元/份的渠道服务在50份/月下人工成本超过68美元仍不能降低，则停止对外产品化；这些是建议阈值而非实测成绩。"
+  },
+  "sources": [
+    {
+      "id": "S43c564fef877",
+      "url": "https://agentusecases.ai/use-case/fill-in-a-tax-organizer-and-review-last-year-s-return",
+      "title": "Fill in a tax organizer and review last year's return with Claude in Chrome | Agent Use Cases",
+      "supports": "核验选中案例身份、Chrome到Code的JSON交接及作者自述成效；聚合页不是独立准确率测试。"
+    },
+    {
+      "id": "S58333316475e",
+      "url": "https://claude.com/pricing",
+      "title": "Skip to main content",
+      "supports": "核验当前Claude计划包含Code和Chrome以及团队席位价格、用量和治理差异；不代表无限调用。"
+    },
+    {
+      "id": "Sd9da3a80266f",
+      "url": "https://www.irs.gov/tax-professionals/protect-your-clients-protect-yourself",
+      "title": "Protect your clients; protect yourself | Internal Revenue Service",
+      "supports": "IRS明确专业报税人员需要制定并执行客户数据安全计划；用于界定交付维护成本。"
+    },
+    {
+      "id": "S5100863be7f9",
+      "url": "https://arxiv.org/abs/2507.16126",
+      "title": "[2507.16126] TaxCalcBench: Evaluating Frontier Models on the Tax Calculation Task",
+      "supports": "读取2025年TaxCalcBench研究摘要，支持通用计算与资格判断存在失效模式；不迁移其准确率到2026年产品。"
+    },
+    {
+      "id": "Sdb36a000f8be",
+      "url": "https://taxdome.com/pricing",
+      "title": "Pricing - TaxDome",
+      "supports": "核验TaxDome美国版按席位年费、资料清单、客户门户和工作流等现有竞争能力。"
+    },
+    {
+      "id": "S7dea3b226d0f",
+      "url": "https://www.anthropic.com/legal/commercial-terms",
+      "title": "Commercial Terms of Service \\ Anthropic",
+      "supports": "核验商业服务输入输出权利、核验责任、数据处理和条款适用边界；不推断个人账号转售授权。"
+    },
+    {
+      "id": "S8ee18f608c8a",
+      "url": "https://support.getcanopy.com/en/articles/9504111-use-the-individual-tax-organizer",
+      "title": "Use the Individual Tax Organizer | Canopy Knowledge Base",
+      "supports": "核验Canopy资料清单的接收、附件、复查、重发和下载流程以及该文档列明的定制限制。"
+    },
+    {
+      "id": "S1b85d41b31e6",
+      "url": "https://www.taxprosplus.com/client-tax-organizer/",
+      "title": "Tax Organizer for Individuals & Businesses | Tax Pros Plus",
+      "supports": "真实事务所公开提供免费资料表及上年信息预填，证明传统交付可行但不证明市场规模。"
+    },
+    {
+      "id": "Sf79c3bf4770a",
+      "url": "https://www.freetaxusa.com/",
+      "title": "FreeTaxUSA® - Free Online Tax Filing for Federal Returns",
+      "supports": "核验FreeTaxUSA公开联邦与州申报价格以及计算保证的输入责任边界，构成个人客户替代基线。"
+    },
+    {
+      "id": "Se85a1b18145a",
+      "url": "https://accountants.intuit.com/community/proseries-product-discussions-9/tax-organizer-70811",
+      "title": "Tax Organizer | Community",
+      "supports": "实际读取ProSeries社区的资料表定制和追问经历；属于邻近工作流而非本案例客户评价。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例页面所述流程先让Chrome将网页资料表字段转为JSON，再由Code据税务资料填写，最后由Chrome分批回填。",
+      "source_ids": [
+        "S43c564fef877"
+      ]
+    },
+    {
+      "statement": "案例页明确记录了人工逐页检查，以及缺少女儿社会安全号码时标出缺项；并非无人完成后直接申报。",
+      "source_ids": [
+        "S43c564fef877"
+      ]
+    },
+    {
+      "statement": "聚合页记载模型起初声称申报表没有问题，追问后才承认未核对源文件；这是作者经历转述而非独立测量。",
+      "source_ids": [
+        "S43c564fef877"
+      ]
+    },
+    {
+      "statement": "Claude定价表目前将Code与Chrome列入Pro、Max计划；Team标准席位年付折合20美元/月、月付25美元，不能混作单份成本。",
+      "source_ids": [
+        "S58333316475e"
+      ]
+    },
+    {
+      "statement": "Canopy文档允许发给客户或人员自己填写资料表，并要求逐节检查答案，必要时重发补正，完成后下载。",
+      "source_ids": [
+        "S8ee18f608c8a"
+      ]
+    },
+    {
+      "statement": "Tax Pros Plus公开提供免费的可填写资料表，并说明老客户可申请带上年信息的版本。",
+      "source_ids": [
+        "S1b85d41b31e6"
+      ]
+    },
+    {
+      "statement": "TaxDome美国页面一年承诺价为Essentials每席800美元/年、Pro 1000美元/年、Business 1200美元/年，均预付；Essentials限单人。",
+      "source_ids": [
+        "Sdb36a000f8be"
+      ]
+    },
+    {
+      "statement": "FreeTaxUSA公开联邦申报0美元、州申报15.99美元；其计算保证不承担使用者输入不准确或不完整导致的错误。",
+      "source_ids": [
+        "Sf79c3bf4770a"
+      ]
+    },
+    {
+      "statement": "IRS页面说明专业报税人员须制定并执行客户资料安全计划，并指向Publication 4557等资料。",
+      "source_ids": [
+        "Sd9da3a80266f"
+      ]
+    },
+    {
+      "statement": "TaxCalcBench的2025年论文摘要报告测试模型在其简化联邦申报任务上成功率不足三分之一；不是本案例或当前模型的准确率。",
+      "source_ids": [
+        "S5100863be7f9"
+      ]
+    },
+    {
+      "statement": "Anthropic商业条款要求在使用或分享输出前评估适用性并独立核验事实，且区分商业服务与消费者条款。",
+      "source_ids": [
+        "S7dea3b226d0f"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "年度收集资料和追问有真实流程证据，但需求低频、现有服务已覆盖，新增付费意愿尚未核实。",
+      "source_ids": [
+        "S1b85d41b31e6",
+        "S8ee18f608c8a",
+        "Se85a1b18145a"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "作者自述填表及发现遗漏有方向性价值，但没有原始税表、盲测或复核后净节省数据。",
+      "source_ids": [
+        "S43c564fef877",
+        "S5100863be7f9"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "渠道低返工情景可为正，专业复核、淡季与获客足以转亏，所有测算均为待验证假设。",
+      "source_ids": [
+        "S58333316475e",
+        "Sd9da3a80266f"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "已有事务所关系可提供入口，独立新商家仍要通过安全及接收格式评估，没有成交证据。",
+      "source_ids": [
+        "S1b85d41b31e6",
+        "S8ee18f608c8a",
+        "Sdb36a000f8be"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "字段搬运可被通用代理和现有税务门户复用，尚无独家数据或集成壁垒证据。",
+      "source_ids": [
+        "S58333316475e",
+        "Sdb36a000f8be"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "可限制在资料草稿和人工检查，但权限、数据安全和年度版本维护增加持续运营成本。",
+      "source_ids": [
+        "Sd9da3a80266f",
+        "S7dea3b226d0f",
+        "S43c564fef877"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "只核验了邻近ProSeries用户的定制与追问经历，未取得本方案独立付费客户评价，信号很弱。",
+      "source_ids": [
+        "Se85a1b18145a"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "客户、付款人和购买场景",
+      "body": "适合内部效率工具，首要客户是已有会计师、资料分散且存在多实体或投资收入的美国经营者，以及需要收集这些资料的事务所助理。案例作者是工具使用者和原会计服务付款人，并不是一批已付费的自动化产品客户；网站的热门排序也不是购买意愿。每年整理一轮、补件若干次的频率适合按税季交付，不自然支持个人全年月费。纳税人愿意减少填写负担，事务所则只有在少追问、少录入或能多接单时才愿意从软件与行政预算付款，二者收益不能混算。\n采购的第一道门槛是签约会计师愿意接受什么，而不是模型能生成什么。Canopy的现有流程已经覆盖问卷、附件和补正；Tax Pros Plus也提供免费和上年预填版本。因此买方很可能认为填表本来就是既有服务的一部分。可收费的增量应明确为证据完整的预整理与差异清单，复杂税务结论仍由专业人员负责。不能承诺增加退款，更不能把作者对CPA不满理解为整个市场愿意另付一次费用。",
+      "source_ids": [
+        "S43c564fef877",
+        "S8ee18f608c8a",
+        "S1b85d41b31e6"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "业务链路与背后的实现",
+      "body": "实际案例的核心是跨界面搬运：浏览器识别表单字段，形成JSON结构，Code读取本地资料补值，浏览器回写并由作者逐页确认。聚合页承认长任务中断和用量上限，所以成功交付依赖分批执行与人工接管。本轮没有取得作者脚本或客户门户，不能声称验证了字段覆盖、自动恢复或准确率。\n建议的内部实现须保留每个字段对应的年度、纳税实体、原文页码和提取状态，缺信息保持未知，不把空白解释为零。执行前列清全部输入，核查表单页数和字段数；录入后独立读取显示值，与已确认JSON做逐字段比较。浏览器失效时回退为接收方认可的表格而不是重复点击。旧申报表只作为比较基准，不能与待提取原始资料混在同一证据池；旧值自动预填也必须标注年份。这样才有办法发现“复查”其实在复用旧答案。交付物应是可核对的资料清单、差异表和缺件问题，提交申报仍是另外的责任环节。",
+      "source_ids": [
+        "S43c564fef877",
+        "S8ee18f608c8a"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "市场需求和实际可进入范围",
+      "body": "市场证据支持存在资料收集负担，但不支持以所有美国报税人为可服务市场。免费资料表、Canopy操作文档和ProSeries社区问答分别证明传统需求、现有软件工作流与局部摩擦；它们没有给出本方案成交率、预算或年度留存。低复杂度个人可以使用已有低价申报软件，复杂个人又需要专业判断，通用填表产品夹在二者之间。\n可进入范围应从一家事务所的一种资料表、一个税年、少量同类客户开始，尤其选择已愿意电子提交但资料格式杂乱的人，而不是连文件都不提供的客户。自动化不能创造缺失事实，先决定缺件追问由谁负责。市场规模只能以后按可合作事务所数量、每所符合范围的客户数、实际采用率和每份净收入计算；本轮不借平台自报客户数推导收入。税季集中意味着年内利用率低、临时人员多，月度顺利交付不能直接乘十二当作年利润。若客户只需要上一年信息延续，传统预填已足够，新增代理很难收取溢价。",
+      "source_ids": [
+        "S1b85d41b31e6",
+        "S8ee18f608c8a",
+        "Se85a1b18145a",
+        "Sf79c3bf4770a"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "现有替代和竞争位置",
+      "body": "直接替代不是另一款聊天模型，而是会计师提供的免费资料表、事务所现有门户与原生预填。Tax Pros Plus说明老客户可获得带上年信息的表格；这使“自动填表”本身缺乏独占价值。Canopy已经把发出、上传、核查、补正和下载连起来，其文档虽注明不支持自定义资料表，仍不能由此推断所有门户都有同一缺口。TaxDome还将资料收集、提醒、文档、签名及工作流放在按席位付费的系统内，买方换系统的训练与迁移成本不可忽略。\nTaxDome一年承诺的单人Essentials为800美元，Pro为每席1000美元；这里比较的是整套工作台预算，不是单次填表等价价格。个人端FreeTaxUSA的联邦0美元、州15.99美元构成低价参照，但它与专业复查不是同一交付范围，其计算保证也排除输入错误。独立服务只有在保留现有门户、减少两边净工时、提供来源索引上有位置。生成漂亮税表却让助理重新录入，会让总成本反而增加。",
+      "source_ids": [
+        "S1b85d41b31e6",
+        "S8ee18f608c8a",
+        "Sdb36a000f8be",
+        "Sf79c3bf4770a"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "单位经济与人工成本",
+      "body": "以下全部是经营假设，不是作者收入或真实报价；交付单位为一名客户一个税年的资料清单和疑点包，不包含签字报税或退款保证。渠道顺利情景定价99美元，假设每份行政处理30分钟按30美元/小时计15美元，专业复核20分钟按90美元/小时计30美元，合计人工45美元；安全传输与存储3美元，获客摊销8美元，API为0，因为设想使用获准的席位工具并在固定成本里预算订阅。每月50份，固定1000美元含200美元软件用量预算、800美元模板维护与管理，贡献为43美元/份，月经营贡献1150美元。\n复杂返工情景保持99美元，行政一小时30美元、专业复核45分钟67.5美元，人工97.5美元；其他5美元、获客25美元、固定1200美元、每月20份，单位贡献为负28.5美元，月经营贡献负1770美元。固定费用包含常规维护但不含新产品开发、税费及重大责任赔付，因而不是净利润。顺利情景每月需至少24份覆盖固定费用；若只有四个月旺季各50份、固定费用全年发生，年贡献8600减12000仍亏3400美元。能否减少复核与淡季固定负担，远比省几个模型调用更重要。",
+      "source_ids": [
+        "S58333316475e",
+        "Sd9da3a80266f",
+        "S7dea3b226d0f"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "第一批客户和销售路径",
+      "body": "第一批客户建议来自已有事务所服务关系，而非面向个人投放“AI帮你找回税款”的广告。事务所已有身份确认、资料入口和交付信任，可以决定采用哪个表单，也最容易测量助理追问和录入分钟。拟议经营验证应先让负责人确认验收模板和不含申报的范围，再由已授权历史资料证明收益，最后讨论按份或税季批量收费。本轮只提出下一步，没有发邮件、招募或提交第三方表单。\n销售要分别展示客户端和事务所端的总耗时：客户少填30分钟但会计师多审40分钟不是可出售价值。签约周期还包含权限、安全条款和接收格式评估，不能把公众号读者或案例点赞数当成零获客成本。方案中的8美元渠道摊销是待验证假设，25美元压力情景也不是实测CAC。可用小批量可停止的交付降低承诺，拒绝先做所有软件适配。若负责人只想要更好的原生资料表，应优先配置现有工具，不能为了销售代理而制造新的数据副本。",
+      "source_ids": [
+        "S8ee18f608c8a",
+        "S1b85d41b31e6",
+        "Sdb36a000f8be",
+        "Sd9da3a80266f"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "经营壁垒与被替代风险",
+      "body": "将网页字段转JSON再回填的提示词容易复制，依赖通用模型的“懂税”也不是可持续壁垒。官方计划已将浏览器和代码能力提供给普通付费用户，税务门户已有客户关系和文件库，其增加提取或预填功能的分发成本比新创业者低。真正值得积累的是经同意的字段映射、年度版本差异、常见缺件分类、每个错误如何被发现的验收记录，而不是未经授权汇集客户税表。\n这些积累仍以适配成本为代价：不同软件、版本、实体结构和州别都可能增加维护。若新增一家事务所必须重复一套定制工作，业务更接近服务外包而非高毛利SaaS。先限制一种接收格式，要求新增客户的边际配置时间下降，再判断复用性。供应商原生支持一旦覆盖提取、来源定位和复核，就应转向实施服务或停止自建。TaxDome提供广泛工作流、门户与资料表的事实反驳了“只有代理能完成端到端”的初始想法；本案没有独家接口、专利或稳定客户留存证据。",
+      "source_ids": [
+        "S58333316475e",
+        "Sdb36a000f8be",
+        "S8ee18f608c8a"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "交付、授权和责任成本",
+      "body": "客户税表包含身份、家庭和收入信息，交付限制必须变成预算和责任分工。IRS明确专业报税人员需要安全计划，意味着客户隔离、权限分配、审计记录、保留期限及事故处理需要持续维护。Anthropic商业条款要求输出独立核验，且消费者产品和商业服务适用范围不同；不能拿商业条款中的内容保护去承诺个人账号具备同等组织治理。本轮没有购买任何计划，拟议服务也必须先由接收机构确认其已有账号和数据处理安排。\n技术验收至少分为资料是否齐全、字段是否提取正确、税务解释是否成立三层，前两层通过不能替代第三层。建议默认只读原件，写入独立草稿，最终门户提交交由授权人员。任何表单页面或附件内的指令都只是资料，不能扩大代理权限。会话记忆与跨目录读取也会污染盲测，应使用独立工作目录及真正的系统权限隔离，而不是只写一句不读其他文件。常规措施能限制风险但不能证明零泄漏或满足所有州要求，复杂税务与专业资格问题仍需由当地负责人判断。",
+      "source_ids": [
+        "Sd9da3a80266f",
+        "S7dea3b226d0f",
+        "S43c564fef877"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "用户评价怎样改变判断",
+      "body": "本轮进行了Reddit、Hacker News、作者相关讨论及Intuit社区等检索。部分搜索只返回首页或泛化结果，不能把它们当作已找到本案使用者；没有发现可以独立核验的本方案付费客户群。原作者本身是直接使用者，但文章具有展示AI能力及内容传播的选择偏差，且未公开原始申报资料或第三方计时。对其满意与不满应同等记录，不能只选成功段落。\n实际读取的ProSeries社区中，用户希望给资料表增添直接扣款问题，另一用户描述导出PDF编辑与再次追问。它属于邻近流程，说明表格定制、客户补件可能消耗人工，却不能证明Claude能解决，也不能把单帖的回复比例当行业统计。该信号只给反馈维度1/5，按5%权重贡献1分。搜索中的Reddit税务从业者帖呈现差异很大的个人响应率，本轮没有将其转为可重复抓取来源，也不拿它支持数量判断。这些边界促使结论从面向个人售卖通用自动填表，收缩到已有团队内部的可核验交付。",
+      "source_ids": [
+        "Se85a1b18145a",
+        "S43c564fef877"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "商业判断与可执行选择",
+      "body": "最终选择适合内部效率工具，而不是立刻成立独立自动报税服务。付费需求来自减少资料准备和沟通，效果证据目前只到单一作者与邻近工作流；利润取决于接收格式、复核分钟和税季利用率，而非推理速度。商业评分用于比较投入优先级，不是模型税务能力评分。即使未来模型更强，客户文件缺失和事务所拒收格式也不会自动消失。\n反驳这一保守结论的最有力理由是作者报告找到了人工遗漏，并确实完成了资料表，说明专业人员也有失误，辅助复查可能有价值。但发现一个疑点不等于正确生成整份申报，更不等于客户最终取得现金回款。独立研究TaxCalcBench也提醒应把提取、计算和资格判断分开测试，其旧模型结果不能用来否定当前模型，更不能用于本产品准确率宣传。下一步只做授权后的20份盲测，记录所有失败、双方净时间及接收成功率；人工基准也由第二名人员复核，避免把人工答案当绝对真值。若成本阈值不达标，保留资料整理功能，不继续为外部销售扩大责任。",
+      "source_ids": [
+        "S43c564fef877",
+        "S5100863be7f9",
+        "S8ee18f608c8a",
+        "Se85a1b18145a"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Reddit社区",
+        "query": "site.reddit.com Claude tax organizer review taxes errors",
+        "outcome": "返回Claude社区入口及泛化资料，没有取得本案例独立付费客户评价。"
+      },
+      {
+        "channel": "Hacker News社区",
+        "query": "site.news.ycombinator.com Claude taxes accountant organizer",
+        "outcome": "未返回可核验的本案直接使用记录，不以检索无结果判断满意度。"
+      },
+      {
+        "channel": "Reddit社区",
+        "query": "\"Claude\" \"tax organizer\" review reddit",
+        "outcome": "结果未建立本案直接用户反馈；检索期间出现邻近税务资料表讨论，未纳入统计。"
+      },
+      {
+        "channel": "作者与独立讨论",
+        "query": "\"Alex Willen\" \"taxes\" review",
+        "outcome": "出现同名人物和作者资料，未找到独立复现；排除不同人物的信息。"
+      },
+      {
+        "channel": "厂商用户社区",
+        "query": "site.accountants.intuit.com \"Tax Organizer\" \"January 8, 2026\"",
+        "outcome": "搜索返回泛化Intuit结果；此前搜索发现的ProSeries具体帖已用evidence实际读取，不能归为本案例评价。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Se85a1b18145a",
+        "directness": "adjacent_workflow",
+        "finding": "发帖人希望给资料表增添问题，回复者采用PDF编辑并继续追问客户，显示定制与缺件沟通负担。",
+        "bias": "厂商托管社区、自选发帖和匿名身份，未核验其事务所规模；不代表Claude用户或总体客户响应率。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设A：事务所渠道、资料完整",
+      "unit": "客户年度资料包",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 0,
+      "human_cost": 45,
+      "other_variable_cost": 3,
+      "acquisition_cost": 8,
+      "units_per_month": 50,
+      "fixed_monthly_cost": 1000,
+      "assumptions": "全部为研究者假设：99美元报价未验证；行政30分钟×30美元/小时+专业复核20分钟×90美元/小时=45；3美元安全传输存储、8美元渠道获客；每月50份。固定1000含200软件订阅和用量预算、800维护管理。API=0仅表示设想席位工具而非API调用，不表示模型免费或允许转售；官方价格仅作预算参照，不证明用量足够。未含开发沉没成本、税款及重大赔付。",
+      "source_ids": [
+        "S58333316475e",
+        "Sd9da3a80266f",
+        "S7dea3b226d0f"
+      ]
+    },
+    {
+      "scenario": "假设B：获客较贵、复杂返工",
+      "unit": "客户年度资料包",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 0,
+      "human_cost": 97.5,
+      "other_variable_cost": 5,
+      "acquisition_cost": 25,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 1200,
+      "assumptions": "全部为研究者假设：行政60分钟×30美元/小时+专业复核45分钟×90美元/小时=97.5；5美元存储支持、25美元获客，20份/月，固定1200含200软件用量预算与1000维护管理。API=0同情景A。未计真实税款、退款、额外模型购买或实际付费实验；税季月不能乘十二冒充年结果。",
+      "source_ids": [
+        "S58333316475e",
+        "Sd9da3a80266f",
+        "S7dea3b226d0f"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "传统事务所已经提供免费预填资料表，门户已有补件和确认流程，削弱独立收费理由。原文作者虽认可填表，仍发现生成的税表无法直接被CPA软件接收，Excel更实用；一次复查被旧答案笔记污染，独立重做后又报告了潜在多缴3718美元且漏掉先前找出的项目。该金额是作者对模拟申报的比较，不是实际多缴、退款、节省或本产品收入。原文由网页工具读取，终端抓取403，访问边界见下；不能把这些自述提升为外部审计结论。",
+  "limitations": "原文 https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and 已通过公开网页阅读工具读取（2026-10-15，标题Doing My Taxes With Claude，署名Alex Willen，发布2026-03-05）；evidence终端请求返回Tunnel 403，未绕过限制，未伪称机器重抓成功。核心案例事实可由已抓取聚合页交叉定位；原文补充发现仅为作者自述。未取得私有税表、CPA邮件原件、客户订单、实际退款和真实成本；没有独立测量准确率、净工时或商誉扣除资格，不提供该作者税务结论。2025年论文只读摘要，不能外推到2026年模型。Chrome短链接抓取遇到308，未计为来源；本轮未运行第三方代码、API或真实门户。目录于2026-10-15T09:03:49Z刷新完整1321条和分类top、详情采样5条；本机刷新数据库为新基线，没有上次lastmod可比，登记表ID与起点提交比较无新增移出，不能宣称1321条正文均重读。",
+  "supplemental_original_read": {
+    "url": "https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and",
+    "method": "public web reader; terminal capture blocked",
+    "read_at": "2026-10-15T09:11:25.769187+00:00",
+    "terminal_status": "blocked",
+    "scope": "Public article read; no private tax returns or original CPA correspondence inspected",
+    "notes": "Author narrative on receiver format, contaminated self-check and hypothetical additional tax; not counted among independently re-fetched sources."
+  },
+  "catalog_refresh": {
+    "fetched_at": "2026-10-15T09:03:49.389904+00:00",
+    "complete_catalog": true,
+    "catalog_count": 1321,
+    "detail_sample_count": 5,
+    "ordering": "site_category_top",
+    "database_baseline": true,
+    "registry_comparison_base": "16b4d1deb42414ad945859012a527f9de590352f",
+    "new_registry_ids": [],
+    "removed_registry_ids": [],
+    "lastmod_comparison": "Unavailable: fresh local refresh database; no prior snapshot",
+    "tracked_registry_changed": false
+  }
+}
