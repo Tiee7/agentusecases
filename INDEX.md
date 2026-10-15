@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **15** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
+已完成深度研究 **16** / 注册案例 **1328**。旧版简略初稿 **1** 份不计入完成。
 
 计划由Codex每小时研究一个未完成案例，优先公开分类top。原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -22,6 +22,7 @@
 | [Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立](reports/build-a-spending-insights-app-from-bank-transactions.md) | 适合内部效率工具 | 40.0 | 个人财务管理／金融数据应用开发 | 2026-10-15T12:40:06.325402+00:00 |
 | [Gemini旅行险拒赔申诉：证据整理有用，独立代办生意尚不成立](reports/appeal-a-denied-travel-insurance-claim.md) | 适合内部效率工具 | 36.0 | 旅行保险／消费者申诉辅助 | 2026-10-15T13:08:53.684403+00:00 |
 | [Claude Computer Use 填1040：合成表单演示能否变成可收费交付](reports/fill-out-a-form-1040-with-computer-use.md) | 仅建议受控试点 | 27.0 | 税务资料录入与事务所内部自动化 | 2026-10-15T13:37:37.079875+00:00 |
+| [Manus交易信号脚本：连接与复盘有用，尚不足以经营自动交易产品](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
 | [Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 
 ## 需要重做的旧版简略初稿
@@ -31,7 +32,6 @@
 ## 下一批优先案例
 
 - Prepare federal and state tax returns from a folder · `prepare-federal-and-state-tax-returns-from-a-folder`
-- Teach an agent to trade with signals and logging · `teach-an-agent-to-trade-with-signals-and-logging`
 - Draft a tax filing from bank statements with Claude Code · `draft-a-tax-filing-from-bank-statements-with-claude-code`
 - Find unclaimed money and start the claim · `find-unclaimed-money-and-start-the-claim`
 - Write a parking ticket appeal that got dismissed · `write-a-parking-ticket-appeal-that-got-dismissed`
@@ -40,3 +40,4 @@
 - Produce investment memos with Claude Cowork · `produce-investment-memos-with-claude-cowork`
 - Negotiate a billing credit from AT&T · `negotiate-a-billing-credit-from-at-t`
 - Cancel an Amazon subscription and get a refund · `cancel-an-amazon-subscription-and-get-a-refund`
+- Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`

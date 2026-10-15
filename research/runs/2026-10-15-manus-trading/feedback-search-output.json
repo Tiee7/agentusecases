@@ -1,0 +1,37 @@
+{
+  "method": "web.run live search; selected result summaries retained rather than copyrighted full search result text",
+  "searches": [
+    {
+      "channel": "广域作者及社区检索",
+      "query": "\"mufasadubai\" \"Manus\" trading review reddit",
+      "outcome": "返回Google评论及通用review资料，结果不匹配；未获得可核验作者直接用户原文，不解释为无用户。"
+    },
+    {
+      "channel": "Reddit社区",
+      "query": "site.reddit.com \"Manus\" \"ProjectX\"",
+      "outcome": "结果为Manus首页、应用商店和同名无关内容，未找到目标工作流直接使用者。"
+    },
+    {
+      "channel": "GitHub公开代码",
+      "query": "site.github.com \"mufasadubai\" trading",
+      "outcome": "没有匹配作者项目的可用结果；未取得该脚本源码或问题跟踪，邻近SDK不冒充本项目。"
+    },
+    {
+      "channel": "Reddit社区",
+      "query": "site.reddit.com/r/TopstepX \"API\"",
+      "outcome": "返回Reddit首页与泛交易内容，未取得可归因的邻近工作流使用记录。"
+    },
+    {
+      "channel": "GitHub公开代码",
+      "query": "\"ProjectX\" \"API\" \"issues\" (domains: github.com)",
+      "outcome": "返回GitHub帮助与其他项目，相关性异常；另由发现的SDK页面读取README，但作者文档不计独立用户反馈。"
+    }
+  ],
+  "result_examples": [
+    "Google Business Reviews and schema.org Review for author/Manus query",
+    "Manus homepage, app store, unrelated same-name content and Reddit homepage for narrow Reddit query",
+    "GitHub Support, GitHub Pages, unrelated repositories for ProjectX API issues query"
+  ],
+  "verified_independent_observations": [],
+  "excluded": "Competitor-selected testimonials and SDK maintainer descriptions not counted as independent direct users."
+}

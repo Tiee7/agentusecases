@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    {
+      "id": "S6adbd01635fc",
+      "url": "https://x.com/mufasadubai/status/2026221794277904433",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T14:03:08.857877+00:00",
+      "status": "blocked",
+      "error": "ValueError: robots.txt disallows this source"
+    },
+    {
+      "id": "S69c1464db131",
+      "url": "https://gateway.docs.projectx.com/docs/getting-started/rate-limits",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T14:03:35.780954+00:00",
+      "status": "blocked",
+      "error": "HTTPError: HTTP Error 301: Moved Permanently"
+    },
+    {
+      "id": "S4f7da34f8b7d",
+      "url": "https://gateway.docs.projectx.com/docs/getting-started/connection-urls",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T14:03:38.586879+00:00",
+      "status": "blocked",
+      "error": "HTTPError: HTTP Error 301: Moved Permanently"
+    },
+    {
+      "id": "S097326926070",
+      "url": "https://manus.im/pricing",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T14:03:53.532358+00:00",
+      "status": "fetched",
+      "title": "Manus Plans & Pricing",
+      "characters": 646,
+      "sha256": "a2dc95479e48aa9d0f0108882598d4ae2d9e22fa2e692d315864a0f0db4521d0"
+    },
+    {
+      "id": "S3ddf82d033f3",
+      "url": "https://manus.im/terms",
+      "kind": "primary",
+      "fetched_at": "2026-10-15T14:04:25.534945+00:00",
+      "status": "blocked",
+      "error": "ValueError: Source has insufficient readable content"
+    }
+  ],
+  "notes": [
+    "Original X robots restriction respected; no bypass.",
+    "Manus pricing fetch succeeded mechanically but only navigation was readable, so excluded from substantive source list and no price asserted. Terms insufficient readable content.",
+    "Non-trailing-slash ProjectX docs return 301 to HTTP. Normal HTTPS trailing-slash rate-limits page fetched and verified; no security restriction bypass.",
+    "Search results repeatedly unrelated; absence of discovered feedback is not proof that feedback does not exist."
+  ]
+}
