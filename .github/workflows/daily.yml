@@ -38,7 +38,10 @@ jobs:
           previous_run=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow daily.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId // empty')
           if [ -n "$previous_run" ]; then
             mkdir -p data
-            gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name usecase-history --dir data
+            public_artifact=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$previous_run/artifacts" --jq '.artifacts[] | select(.name == "usecase-history-public") | .id')
+            if [ -n "$public_artifact" ]; then
+              gh run download "$previous_run" --repo "$GITHUB_REPOSITORY" --name usecase-history-public --dir data
+            fi
           fi
       - name: Collect snapshot and prepare next batch
         run: |
@@ -47,10 +50,12 @@ jobs:
           python -m agentwatch.queue
           python -m agentwatch.digest
           cat data/daily-report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Export publication-safe history
+        run: python -m agentwatch.public_history
       - uses: actions/upload-artifact@v4
         with:
-          name: usecase-history
-          path: data/
+          name: usecase-history-public
+          path: data/public-history/
           retention-days: 90
           if-no-files-found: error
   refresh_registry:
@@ -71,7 +76,7 @@ jobs:
           python-version: '3.12'
       - uses: actions/download-artifact@v4
         with:
-          name: usecase-history
+          name: usecase-history-public
           path: data/
       - uses: actions/setup-node@v4
         with:

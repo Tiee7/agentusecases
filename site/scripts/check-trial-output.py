@@ -30,9 +30,10 @@ for case in cases:
     source = case.get('source_trial', {})
     if source.get('status') != 'available':
         continue
-    parser = Prompt()
-    parser.feed((root/'site/dist/trials'/case['id']/'index.html').read_text())
-    assert parser.count == 1 and parser.elements_inside == 0, case['id']
-    assert ''.join(parser.parts) == source['text'], case['id']
+    for section in ('trials','cases'):
+        parser = Prompt()
+        parser.feed((root/'site/dist'/section/case['id']/'index.html').read_text())
+        assert parser.count == 1 and parser.elements_inside == 0, case['id']
+        assert ''.join(parser.parts) == source['text'], case['id']
     count += 1
 print(f'All {count} source-template pages preserve exact text as inert content.')

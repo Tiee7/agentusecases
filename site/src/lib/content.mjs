@@ -46,11 +46,20 @@ export function projectSourceCase(value, expectedUrl) {
   const sections=valid?['introduction','method','outcome'].map((key,i)=>({label:['介绍','方法','结果与限制'][i],en:text(summary.sections?.[key]?.en),zh:text(summary.sections?.[key]?.zh)})):[];
   return {...empty,status:'observed',agents,agentLabel:agents.length?agents.join(' · '):value.agent_status==='custom_or_unnamed'?'自建或未命名 agent':empty.agentLabel,observedAt:value.observed_at,sections:sections.length===3 && sections.every(s=>s.en && s.zh)?sections:[]};
 }
+export function projectArchive(value,entry) {
+  const v=value?.version===1 && value.url===entry.url?value:{};
+  const f=v.fields || {}; const get=k=>f[k]?.status==='observed'?f[k].value:null;
+  const editorial=v.editorial; const sections=editorial?.status==='reviewed' && editorial.format==='detailed_bilingual_restatement' ? ['introduction','method','outcome','notes'].map(key=>({key,items:(editorial.sections?.[key] || []).filter(x=>text(x.en) && text(x.zh)).map(x=>({en:text(x.en),zh:text(x.zh)}))})).filter(s=>s.items.length):[];
+  return {status:v.status==='observed'?'observed':'not_observed',url:safeUrl(entry.url),path:`/cases/${entry.id}/`,observedAt:text(v.observed_at),historical:Boolean(v.capture_basis),bodyHash:text(v.body_sha256),htmlHash:text(v.html_sha256),stale:Boolean(editorial && editorial.based_on_body_sha256!==v.body_sha256),sections,
+  agents:Array.isArray(get('actual_agents'))?get('actual_agents').map(text).filter(Boolean):[], category:text(get('category')?.label),tags:Array.isArray(get('tags'))?get('tags').map(x=>text(x.label)).filter(Boolean):[],author:text(get('author')),wanted:Number.isSafeInteger(get('wanted')) && get('wanted')>=0?get('wanted'):null,sourceDate:text(get('source_date')),addedAt:text(get('added_at')),originals:(Array.isArray(get('original_sources'))?get('original_sources'):(entry.original_sources||[])).map(safeUrl).filter(Boolean),
+  lastAttempt:v.last_attempt?{at:text(v.last_attempt.at || v.last_attempt.attempted_at),status:text(v.last_attempt.status),error:text(v.last_attempt.error)}:null,
+  fields:['title','introduction','method','outcome','notes','actual_agents','original_sources','author','category','tags','wanted','source_date','added_at','try_it'].map(key=>({key,status:text(f[key]?.status)||'not_observed',sha:text(f[key]?.sha256),pending:['introduction','method','outcome','notes'].includes(key) && f[key]?.status==='observed' && !sections.some(s=>s.key===key)}))};
+}
 export function projectAuthorMethod(value, entry) {
   const sources=(entry.original_sources || []).map(safeUrl).filter(Boolean);
-  const fallback={status:'unavailable',source:sources[0] || '',title:'原始案例来源',steps:[],reason:'原帖暂未读取；保留来源链接。'};
+  const fallback={status:'unavailable',source:sources[0] || '',title:'原始案例来源',steps:[],reason:'外部原作者页面尚未取得；这不表示源站案例未读取。'};
   if (!value || value.version!==1 || value.presentation!=='bilingual_summary' || !sources.includes(value.source_url)) return fallback;
-  if (value.status==='unavailable') return {...fallback,title:text(value.source_title)||fallback.title};
+  if (value.status==='unavailable') return {...fallback,title:text(value.source_title)||fallback.title,reason:text(value.unavailable_reason)||fallback.reason};
   if (!['author_summary','reported_summary'].includes(value.status) || !/^[a-f0-9]{64}$/.test(value.source_sha256 || '') || !Number.isFinite(Date.parse(value.accessed_at))) return fallback;
   if (!Array.isArray(value.steps) || !value.steps.length || value.steps.length>6 || value.steps.some(s=>!text(s.en).trim() || !text(s.zh).trim())) return fallback;
   return {status:value.status,source:safeUrl(value.source_url),title:text(value.source_title),steps:value.steps.map(s=>({en:text(s.en),zh:text(s.zh)})),reason:''};
@@ -65,7 +74,7 @@ export function projectReport(record, entry) {
   const scores = Object.entries(weights).map(([key,weight]) => ({ key, label:labels[key], weight, value:number(record.scores?.[key]?.score), rationale:text(record.scores?.[key]?.rationale), refs:refs(record.scores?.[key]?.source_ids) }));
   const sections = (record.sections || []).filter(s => ['customer','workflow','market','competition','economics','distribution','moat','execution','feedback','decision'].includes(s.id)).map(s => ({ id:s.id, title:text(s.title), body:text(s.body), refs:refs(s.source_ids) }));
   const sourceTrial = projectSourceTrial(entry.source_trial || record.source_trial, entry.url);
-  return { id:entry.id, caseTitle:text(entry.title), sourceCase:projectSourceCase(entry.source_case || record.source_case,entry.url), authorMethod:projectAuthorMethod(record.author_method,entry), sourceTrial, title:text(record.title), industry:text(record.industry), category:text(entry.category), date:text(record.researched_at), confidence:text(record.confidence),
+  return { id:entry.id, archive:projectArchive(entry.archive,entry), caseTitle:text(entry.title), sourceCase:projectSourceCase(entry.source_case || record.source_case,entry.url), authorMethod:projectAuthorMethod(record.author_method,entry), sourceTrial, title:text(record.title), industry:text(record.industry), category:text(entry.category), date:text(record.researched_at), confidence:text(record.confidence),
     personal:{level:personalLevels.includes(record.personal_value?.level) ? record.personal_value.level : '待核实', reason:text(record.personal_value?.reason) || '旧记录尚未评估自用价值。', refs:refs(record.personal_value?.source_ids), details:Object.entries(personalFields).map(([key,label]) => ({label,body:text(record.personal_value?.[key]) || '待核实'}))},
     trial:{status:sourceTrial.status==='available'?'collected':text(record.try_it?.source_prompt_status) || 'missing', note:sourceTrial.status==='available' ? '优先展示源站提供的试用模板。下方自编模板仅作补充，未做模型实测。' : text(record.try_it?.source_prompt_note) || '原始提示词尚未收集；暂无试用模板。', prerequisites:text(record.try_it?.prerequisites), tools:text(record.try_it?.tools), expected:text(record.try_it?.expected_result), prompts:[...(sourceTrial.status==='available'?[sourcePrompt(sourceTrial)]:[]), ...(record.try_it?.prompts || []).filter(p => ['original','adapted','ours'].includes(p.kind) && text(p.text)).map(p => ({title:text(p.title),language:text(p.language),kind:p.kind,attribution:text(p.attribution),url:safeUrl(p.source_url),refs:refs(p.source_ids),text:text(p.text)}))]},
     verdict:{ decision:record.verdict.decision, headline:text(record.verdict.headline), reason:text(record.verdict.reason), next:text(record.verdict.next_action), stop:text(record.verdict.stop_condition) },
@@ -82,12 +91,14 @@ export function loadContent(root = repoRoot) {
   for (const entry of registry.cases) {
     if (!safeId(entry.id) || seen.has(entry.id)) throw new Error('Invalid or duplicate catalog ID');
     seen.add(entry.id);
+    const archivePath=path.join(root,'registry','archives',`${entry.id}.json`);
+    if(fs.existsSync(archivePath)) entry.archive=JSON.parse(fs.readFileSync(archivePath,'utf8'));
     const file = path.join(root,'research',`${entry.id}.json`);
     const reportFile = path.join(root,'reports',`${entry.id}.md`);
     let report = null;
     if (fs.existsSync(file) && fs.existsSync(reportFile)) report = projectReport(JSON.parse(fs.readFileSync(file,'utf8')),entry);
     if (report) reports.push(report);
-    catalog.push({ id:entry.id, sourceCase:projectSourceCase(entry.source_case,entry.url), firstSeen:Number.isFinite(Date.parse(entry.first_seen_at)) ? new Date(entry.first_seen_at).toISOString() : '', title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
+    catalog.push({ id:entry.id, archive:projectArchive(entry.archive,entry), sourceCase:projectSourceCase(entry.source_case,entry.url), firstSeen:Number.isFinite(Date.parse(entry.first_seen_at)) ? new Date(entry.first_seen_at).toISOString() : '', title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
   }
   reports.sort((a,b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
   catalog.sort((a,b) => b.firstSeen.localeCompare(a.firstSeen) || a.id.localeCompare(b.id));

@@ -1,4 +1,5 @@
 import json
+import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
@@ -6,7 +7,7 @@ from unittest.mock import patch
 from agentwatch.crawler import main
 
 class FailureTests(unittest.TestCase):
-    def test_failed_detail_does_not_commit_partial_success(self):
+    def test_failed_detail_records_failure_without_successful_observation(self):
         seed={'total':1,'firstPage':[{'id':'money','items':[{'id':'a','title':'A'}]}]}
         payload='10:'+json.dumps(['$', 'node', None, {'seed':seed}])+'\n'
         html='<script>self.__next_f.push([1,'+json.dumps(payload)+'])</script>'
@@ -21,6 +22,10 @@ class FailureTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'db.sqlite3'
             with patch('sys.argv',['crawler','--limit','1','--workers','1','--db',str(path)]),patch('agentwatch.crawler.fetch',fake_fetch):
-                with self.assertRaisesRegex(RuntimeError,'Fixture network failure'):
-                    main()
-            self.assertFalse(path.exists(), 'Failed crawl must not create a successful snapshot')
+                main()
+            db=sqlite3.connect(path)
+            self.assertEqual(db.execute('SELECT count(*) FROM observations').fetchone()[0],0)
+            status,error=db.execute('SELECT status,error FROM fetch_attempts').fetchone()
+            self.assertEqual(status,'failed');self.assertIn('Fixture network failure',error)
+            self.assertEqual(db.execute('SELECT count(*) FROM catalogs').fetchone()[0],1)
+            db.close()

@@ -24,7 +24,7 @@ class NoRedirect(HTTPRedirectHandler):
 OPENER = build_opener(NoRedirect)
 
 UA = 'AgentUseCaseWatch/0.1'
-ADAPTER_VERSION = 'public-ssr-v2-trials'
+ADAPTER_VERSION = 'public-ssr-v3-archives'
 RATE_LOCK = threading.Lock()
 NEXT_REQUEST = 0.0
 REQUEST_DELAY = 2.0
@@ -107,6 +107,8 @@ def database(path):
     CREATE TABLE IF NOT EXISTS priorities(run_id INTEGER, url TEXT, position INTEGER, category TEXT, PRIMARY KEY(run_id,url));
     CREATE TABLE IF NOT EXISTS catalogs(run_id INTEGER, url TEXT, lastmod TEXT, PRIMARY KEY(run_id,url));
     CREATE TABLE IF NOT EXISTS source_trials(run_id INTEGER, url TEXT, payload TEXT, PRIMARY KEY(run_id,url));
+    CREATE TABLE IF NOT EXISTS archive_observations(url TEXT, observed_at TEXT, html_sha256 TEXT, payload TEXT, PRIMARY KEY(url,observed_at));
+    CREATE TABLE IF NOT EXISTS fetch_attempts(url TEXT, attempted_at TEXT, status TEXT, error TEXT, PRIMARY KEY(url,attempted_at));
     CREATE TABLE IF NOT EXISTS observations(run_id INTEGER, url TEXT, title TEXT, position INTEGER, digest TEXT, body TEXT, PRIMARY KEY(run_id,url));
     ''')
     columns = {r[1] for r in db.execute('PRAGMA table_info(runs)')}
@@ -128,6 +130,9 @@ def save(db, listing, ordering, rows, catalog_rows=None, priorities=None):
         if catalog_rows is not None:
             db.executemany('INSERT INTO catalogs VALUES(?,?,?)', [(run,url,lastmod) for url,lastmod in catalog_rows.items()])
         for position, row in enumerate(rows, 1):
+            if row.get('archive'):
+                a=row['archive']
+                db.execute('INSERT OR REPLACE INTO archive_observations VALUES(?,?,?,?)',(row['url'],a['observed_at'],a.get('html_sha256'),json.dumps(a,ensure_ascii=False)))
             content = row['body']
             if 'source_trial' in row:
                 from .source_trial import validate_observation
@@ -189,7 +194,7 @@ def main():
     if not links:
         raise RuntimeError('No cases found: inspect source structure/API; no snapshot saved')
     selected = list(links.items())[:args.limit] if args.limit else list(links.items())
-    def collect(entry):
+    def read_detail(entry):
         index, (url,title) = entry
         if not robots.can_fetch(UA, url):
             raise RuntimeError(f'robots.txt disallows case: {url}')
@@ -204,8 +209,19 @@ def main():
         title = ' '.join(page.h1)
         print(f'Fetched {index}/{len(selected)}: {title}', file=sys.stderr, flush=True)
         from .source_trial import extract_source_trial
-        trial = extract_source_trial(html, url, datetime.now(timezone.utc).isoformat())
-        return {'url': url, 'title': title, 'body': body, 'source_trial': trial}
+        at=datetime.now(timezone.utc).isoformat()
+        trial = extract_source_trial(html, url, at)
+        from .archive import extract, public_observation
+        archive=extract(html,url,at)
+        raw_root=Path(args.db).parent/'source-archive';raw_root.mkdir(parents=True,exist_ok=True)
+        (raw_root/(archive['html_sha256']+'.html')).write_text(html)
+        (raw_root/(archive['html_sha256']+'.json')).write_text(json.dumps(archive,ensure_ascii=False))
+        return {'url': url, 'title': title, 'body': body, 'source_trial': trial, 'archive':public_observation(archive)}
+    def collect(entry):
+        try:
+            return read_detail(entry)
+        except Exception as error:
+            return {'url':entry[1][0],'error':f'{type(error).__name__}: {error}','attempted_at':datetime.now(timezone.utc).isoformat()}
     pool = ThreadPoolExecutor(max_workers=args.workers)
     try:
         rows = list(pool.map(collect, enumerate(selected,1)))
@@ -215,7 +231,13 @@ def main():
     else:
         pool.shutdown(wait=True)
     db = database(args.db)
+    attempts=rows
+    rows=[row for row in attempts if 'error' not in row]
     result = save(db, args.listing, args.ordering, rows, catalog_rows, priorities)
+    with db:
+        for row in attempts:
+            db.execute('INSERT OR REPLACE INTO fetch_attempts VALUES(?,?,?,?)',(row['url'],row.get('attempted_at') or row['archive']['observed_at'],'failed' if 'error' in row else 'fetched',row.get('error')))
+    result['failures']=[row for row in attempts if 'error' in row]
     output_root = Path(args.db).parent
     from .source_trial import export_observations
     (output_root/'source-trials.json').write_text(json.dumps(export_observations(db, result['run_id']),ensure_ascii=False,indent=2)+'\n')

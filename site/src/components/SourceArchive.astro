@@ -1,0 +1,14 @@
+---
+const {archive:a,trial,inline=false}=Astro.props;
+const names={title:'案例标题',introduction:'简介',method:'What they did',outcome:'How it went',notes:'Worth knowing',actual_agents:'实际 Done with agent',original_sources:'外部原始来源',author:'源站显示的作者',category:'分类',tags:'标签',wanted:'Wanted',source_date:'外部来源日期',added_at:'源站收录日期',try_it:'源站试用模板'};
+const labels={introduction:'简介',method:'具体方法',outcome:'结果与数字',notes:'值得知道与限制'};
+---
+<section id="source-case"><p class="eyebrow">SOURCE CASE ARCHIVE</p><h2>源站案例详细档案</h2><p>源站观测：{a.status==='observed'?'已读取':'尚未取得'} · {a.observedAt || '时间未知'}{a.historical && ' · 历史正文缓存'}</p><p>实际 agent（源站标注）：{a.agents.join(' · ') || '未取得'} · 推荐试用工具：{trial?.agent || '未取得'}</p><p>以下为我们整理的源站叙述，未经独立结果验证；不是逐字全文。外部原作者页面是否取得，与本页源站观测分别记录。</p>
+{a.sections.length ? <><p>{a.stale?'源站内容已更新：以下重述对应此前已审核版本，请结合观测哈希核对。':'已审核的详细事实重述 · 英文与对应中文'}</p><div class="method-translation"><div lang="zh-CN"><h3>中文详细整理</h3>{a.sections.map(s=><div><h4>{labels[s.key]}</h4><ul>{s.items.map(x=><li>{x.zh}</li>)}</ul></div>)}</div><details><summary lang="en">English · Detailed case archive</summary><div lang="en"><h3>Detailed English restatement</h3>{a.sections.map(s=><div><h4>{({introduction:'Introduction',method:'What they did',outcome:'How it went',notes:'Worth knowing'})[s.key]}</h4><ul>{s.items.map(x=><li>{x.en}</li>)}</ul></div>)}</div></details></div></>:<p class="notice">本条目的公开详细重述尚待整理。已观测字段和模板如下；没有把这一状态写成源站内容缺失或完整全文档案。</p>}
+<dl class="personal-details"><div><dt>分类</dt><dd>{a.category || '未取得'}</dd></div><div><dt>标签</dt><dd>{a.tags.join(' · ') || '未取得；不代表源站没有标签'}</dd></div><div><dt>源站显示的作者</dt><dd>{a.author || '未取得；不以发布域名推断作者'}</dd></div><div><dt>Wanted</dt><dd>{a.wanted===null?'未取得可核实数字（不是0）':a.wanted}</dd></div><div><dt>外部来源日期</dt><dd>{a.sourceDate || '未取得／源站未标日期'}</dd></div><div><dt>源站收录日期</dt><dd>{a.addedAt || '未取得'}</dd></div></dl>
+<p>源站案例：<a href={a.url} target="_blank" rel="noopener noreferrer">agentusecases.ai ↗</a></p><p>外部原始来源（链接不等于已经读取）：{a.originals.length?a.originals.map(u=><a href={u} target="_blank" rel="noopener noreferrer">{new URL(u).hostname} ↗ </a>):'未取得'}</p>
+{a.lastAttempt && <p>最近抓取尝试：{a.lastAttempt.at} · {a.lastAttempt.status==='fetched'?'成功':'失败；保留此前成功观测'}{a.lastAttempt.error && ` · ${a.lastAttempt.error}`}</p>}
+<details><summary>字段覆盖、时间与哈希</summary><p>原始长文只保留在本地缓存；公开存储提供元数据、哈希与已审核重述，未获得全文转载许可。</p><ul>{a.fields.map(f=><li><strong>{names[f.key]}</strong>：{f.status==='observed'?'已观测':f.status==='unparseable'?'解析失败':'未取得'}{f.pending && ' · 公开重述待整理'}{f.sha && <code class="archive-hash">{f.sha}</code>}</li>)}</ul><p>正文 SHA-256：<code class="archive-hash">{a.bodyHash || '无'}</code></p><p>HTML SHA-256：<code class="archive-hash">{a.htmlHash || '历史缓存没有HTML'}</code></p></details>
+{inline && <p><a href={a.path}>打开独立档案与源站模板 →</a></p>}
+</section>
+<style>.archive-hash{display:block;overflow-wrap:anywhere;font-size:.75rem}.personal-details dd{overflow-wrap:anywhere}</style>

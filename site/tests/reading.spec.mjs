@@ -49,17 +49,26 @@ test('author method precedes analysis, bilingual summary expands, unread sources
  await expect(page.locator('#author-method ol[lang="en"]')).toContainText(available.authorMethod.steps[0].en);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
- const missing=reports.find(r=>r.authorMethod.status==='unavailable');await page.goto(`/reports/${missing.id}/`);await expect(page.locator('#author-method')).toContainText('原帖暂未读取');await expect(page.locator('#author-method li')).toHaveCount(0);await expect(page.locator('#author-method a')).toHaveAttribute('href',missing.authorMethod.source);
+ const missing=reports.find(r=>r.authorMethod.status==='unavailable');await page.goto(`/reports/${missing.id}/`);await expect(page.locator('#author-method')).toContainText(missing.authorMethod.reason);await expect(page.locator('#author-method li')).toHaveCount(0);await expect(page.locator('#author-method a')).toHaveAttribute('href',missing.authorMethod.source);
 });
 test('source case bilingual sections and actual-agent search work',async({page})=>{
- for(const r of reports.filter(r=>r.sourceCase.sections.length)){
+ for(const r of reports.filter(r=>r.archive.sections.length)){
   await page.goto(`/reports/${r.id}/`);
-  await expect(page.locator('#source-case [lang="zh-CN"] h4')).toHaveCount(3);
-  await page.locator('#source-case summary').click();
-  for(const s of r.sourceCase.sections)await expect(page.locator('#source-case details')).toContainText(s.en);
+  await expect(page.locator('#source-case [lang="zh-CN"] h4')).toHaveCount(r.archive.sections.length);
+  await page.locator('#source-case summary').first().click();
+  for(const s of r.archive.sections)for(const item of s.items)await expect(page.locator('#source-case details').first()).toContainText(item.en);
  }
  await page.goto('/catalog/');await page.locator('#search').fill('Grok Bot');
  const expected=catalog.filter(c=>c.sourceCase.agents.includes('Grok Bot'));
  await expect(page.locator('[data-item]:visible')).toHaveCount(Math.min(30,expected.length));
  await expect(page.locator('[data-item]:visible').filter({hasText:'实际 agent：Grok Bot'}).first()).toBeVisible();
+});
+test('independent archives show detailed facts, pending restatements and exact templates',async({page,context})=>{
+ await context.grantPermissions(['clipboard-read','clipboard-write']);
+ for(const c of [catalog.find(c=>c.id==='produce-investment-memos-with-claude-cowork'),catalog.find(c=>!c.complete)]){
+  await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-case')).toContainText('未取得可核实数字（不是0）');
+  if(c.complete)await expect(page.locator('#source-case')).toContainText('Adyen');else await expect(page.locator('#source-case')).toContainText('公开详细重述尚待整理');
+  await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
+ }
 });

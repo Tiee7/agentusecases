@@ -16,7 +16,7 @@ for attempt in 1 2 3; do
   ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run build
   npm --prefix site run check:output
   git diff --check
-  git add registry/cases.json registry/CATALOG.md registry/refresh.json INDEX.md
+  git add registry INDEX.md
   if git diff --cached --quiet; then exit 0; fi
   git commit -m 'Refresh catalog from independent daily crawl'
   candidate=$(git rev-parse HEAD)

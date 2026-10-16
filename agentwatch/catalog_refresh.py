@@ -20,6 +20,8 @@ def refresh(db_path):
     if not observed: raise ValueError('Independent publication requires a complete catalog snapshot')
     sampled = db.execute('SELECT count(*) FROM observations WHERE run_id=?', (run,)).fetchone()[0]
     count = bootstrap(db_path, sync_research=False)
+    from .archive import apply
+    apply(db)
     indexes()
     if research_fingerprints() != before:
         raise RuntimeError('Catalog refresh modified research-owned files; refuse publication')

@@ -38,6 +38,9 @@ def merge(previous, observation):
 
 def latest(db):
     result = {}
+    if db.execute("SELECT 1 FROM sqlite_master WHERE name='public_source_cases'").fetchone():
+        import json
+        result={url:json.loads(payload) for url,payload in db.execute('SELECT url,payload FROM public_source_cases')}
     for url, body, observed_at in db.execute('SELECT o.url,o.body,r.fetched_at FROM observations o JOIN runs r ON r.id=o.run_id ORDER BY r.id'):
         if body:
             result[url] = observe(body, url, observed_at)
