@@ -38,6 +38,7 @@ def bootstrap(db_path):
     from .source_trial import validate_observation, newer_observation
     trial_table = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='source_trials'").fetchone()
     trials = {url:json.loads(payload) for url,payload in db.execute('SELECT url,payload FROM source_trials ORDER BY run_id')} if trial_table else {}
+    first_seen = dict(db.execute("SELECT url, MIN(fetched_at) FROM (SELECT c.url,r.fetched_at FROM catalogs c JOIN runs r ON r.id=c.run_id UNION ALL SELECT o.url,r.fetched_at FROM observations o JOIN runs r ON r.id=o.run_id) GROUP BY url"))
     old=read_registry() if REGISTRY.exists() else {'cases':[]}
     existing={c['id']:c for c in old['cases']}
     cases=[]
@@ -48,7 +49,7 @@ def bootstrap(db_path):
             previous['source_trial'] = newer_observation(previous.get('source_trial'), validate_observation(trials[url], url))
         title=title or previous.get('title') or case_id.replace('-',' ')
         original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M) if body else previous.get('original_sources',[])
-        cases.append(dict(previous,id=case_id,title=title,url=url,category=category or previous.get('category'),site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=original_sources,listed=True))
+        cases.append(dict(previous,first_seen_at=previous.get('first_seen_at') or first_seen.get(url),id=case_id,title=title,url=url,category=category or previous.get('category'),site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=original_sources,listed=True))
     # Retain historical mappings if a case disappears from the current listing.
     cases.extend(dict(c,listed=False) for c in existing.values())
     REGISTRY.parent.mkdir(exist_ok=True)

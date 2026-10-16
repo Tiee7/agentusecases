@@ -21,10 +21,17 @@ test('real browser clipboard preserves both languages',async({page,context})=>{
 test('source trial pages keep literal prompts and do not imply completed research',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);
  for(const c of catalog.filter(c=>c.sourceTrial.status==='available')){
-  await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(!c.complete)await expect(page.locator('.article-top')).toContainText('尚未完成商业深研');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(!c.complete)await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  }
  for(const r of reports.filter(r=>r.sourceTrial.status==='available')){
-  await page.goto(`/reports/${r.id}/`);await expect(page.locator('#prompt-0')).toHaveText(r.sourceTrial.text);await expect(page.locator('.prompt-card').first()).toContainText('不代表案例原作者');await expect(page.locator('.prompt-card').first()).toContainText(r.sourceTrial.agent);
+  await page.goto(`/reports/${r.id}/`);await expect(page.locator('#prompt-0')).toHaveText(r.sourceTrial.text);await expect(page.locator('.prompt-card').first()).toContainText('非作者实际提示词');await expect(page.locator('.prompt-card').first()).toContainText(r.sourceTrial.agent);
  }
+});
+test('home exposes all collections and recent pending cases without implying a report',async({page})=>{
+ await page.goto('/');await expect(page.locator('.collection-links a[href="/catalog/"]')).toContainText(catalog.length.toLocaleString('en-US'));
+ const recent=catalog.filter(c=>c.firstSeen).slice(0,6);await expect(page.locator('[data-recent-id]')).toHaveCount(recent.length);
+ for(const c of recent){const card=page.locator(`[data-recent-id="${c.id}"]`);await expect(card).toContainText(c.title);await expect(card).toContainText(c.complete?'已完成深研':'待研究');if(!c.complete)await expect(card.locator('a[href^="/reports/"]')).toHaveCount(0);}
+ await page.locator('.collection-links a[href="/catalog/"]').click();await expect(page.locator('[data-item]:visible').first()).toContainText(catalog[0].title);
+ await page.locator('#search').fill(catalog[0].id);await expect(page.locator('[data-item]:visible')).toHaveCount(1);
 });

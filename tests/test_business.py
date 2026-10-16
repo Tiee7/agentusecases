@@ -81,6 +81,10 @@ class BusinessTests(unittest.TestCase):
         cases=read_registry()['cases']
         self.assertEqual(len(cases),2)
         self.assertTrue(all(c['listed'] for c in cases))
+        self.assertTrue(all(c['first_seen_at'] for c in cases))
+        dates={c['id']:c['first_seen_at'] for c in cases}
+        bootstrap('sample.sqlite3')
+        self.assertEqual(dates,{c['id']:c['first_seen_at'] for c in read_registry()['cases']})
     def test_generic_sources_cannot_be_misassigned_to_a_case(self):
         registry=json.loads(Path('registry/cases.json').read_text())
         registry['cases'][0]['original_sources']=['https://another-project.test/original']

@@ -30,3 +30,13 @@ test('browser observation intervals render without pretending an exact second',(
  const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));const entry={id:raw.id,url:raw.url,source_trial:{status:'available',text:'Literal',agent:'Manus',source_url:raw.url,observed_at:null,method:'dom',observation_window:{start:'2026-10-15T17:50:39Z',end:'2026-10-15T17:50:47Z',basis:'system_time_bracketing_tool_call'}}};
  const r=projectReport(raw,entry);assert(r.sourceTrial.observedAt.includes('17:50:39Z 至 2026-10-15T17:50:47Z'));assert.equal(r.trial.prompts[0].text,'Literal');entry.source_trial.observation_window.end='2026-10-15T17:00:00Z';assert.equal(projectReport(raw,entry).sourceTrial.status,'unparseable');
 });
+test('catalog uses first collection time, keeps unknown dates last, and never promotes drafts',()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'discovery-fixture-'));
+ try{for(const dir of ['registry','research','reports'])fs.mkdirSync(path.join(root,dir));
+ const cases=[{id:'old',first_seen_at:'2026-01-01T00:00:00Z'},{id:'unknown'},{id:'new',first_seen_at:'2026-10-16T00:00:00Z'}].map(c=>({...c,title:c.id,url:`https://example.org/${c.id}`}));
+ fs.writeFileSync(path.join(root,'registry/cases.json'),JSON.stringify({cases}));
+ let result=loadContent(root);assert.deepEqual(result.catalog.map(c=>c.id),['new','old','unknown']);assert.equal(result.reports.length,0);assert(result.catalog.every(c=>!c.complete));
+ cases.push({id:'newest',title:'newest',url:'https://example.org/newest',first_seen_at:'2026-10-17T00:00:00Z'});fs.writeFileSync(path.join(root,'registry/cases.json'),JSON.stringify({cases}));
+ assert.equal(loadContent(root).catalog[0].id,'newest');
+ }finally{fs.rmSync(root,{recursive:true,force:true})}
+});
