@@ -54,11 +54,14 @@ def extract(html,url,at):
     # Never infer an author from a publisher, domain or related article.
     fields['wanted']=None
     # A number must be visibly attached to the voting button; no API fallback.
-    for button in re.findall(r'<button\b[^>]*>(.*?)</button>',html,re.S):
+    from .wanted import parse_button
+    counts=[]
+    for button in re.findall(r'<button\b[^>]*>(.*?)</button>',html.split('Related use cases')[0],re.S):
         p=Page();p.feed(button);text=' '.join(p.text)
         if 'I want this' in text:
-            m=re.fullmatch(r'I want this\s*(?:\(?([0-9][0-9,]*)\)?)?',text)
-            if m and m[1] is not None: fields['wanted']=int(m[1].replace(',',''))
+            count=parse_button(text)
+            if count is not None: counts.append(count)
+    if len(counts)==1: fields['wanted']=counts[0]
     fields['source_date']=None;fields['added_at']=None
     source_line=next((line for line in scope.text if line.startswith('Source:')),None)
     if source_line:

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "base_commit": "e835ecf70915309cbf463159853c129464dc4652",
+  "checked_at": "2026-10-16T11:02:21.950411+00:00",
+  "status": "blocked_by_robots",
+  "robots": {
+    "url": "https://agentusecases.ai/robots.txt",
+    "http_status": 200,
+    "sha256": "51d00cd61a2ab87afcef01f432f2c5ab991964edac4c64258febbd219c0f061c",
+    "text": "User-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /stats/\nDisallow: /review/\n\nSitemap: https://agentusecases.ai/sitemap.xml\n",
+    "observed_at": "2026-10-16T11:02:21.950411+00:00"
+  },
+  "browser": {
+    "engine": "Playwright Chromium /usr/bin/chromium",
+    "url": "https://agentusecases.ai/use-case/add-61-kid-friendly-mini-games-to-an-app",
+    "http_status": 200,
+    "captured_at": "2026-10-16T11:00:38.198019+00:00",
+    "timestamp_basis": "Local DOM snapshot completion time",
+    "dom_sha256": "33f8baea641d411715e813e28814346350759f4ba878c631c3be23a3c877cb6c",
+    "wanted_button_text": "I want this",
+    "wanted": null,
+    "transport": "Browser route fulfilled from certificate-verified urllib public GET responses; Chromium native certificate store did not trust environment CA. No certificate verification was disabled.",
+    "request_policy": "Only same-origin GET URLs allowed by robots; blocked all other requests before network, blocked service workers. No login or clicks.",
+    "limitations": [
+      "Browser reported two Invalid or unexpected token errors; complete hydration not established.",
+      "No dynamic vote request was observed in this run; API dependency was identified in the publicly served application script."
+    ]
+  },
+  "public_script": {
+    "url": "https://agentusecases.ai/_next/static/immutable/chunks/19ku_ph2u_04-.js",
+    "sha256": "a8a81311dfb0f0354f3dcae892cf4c1229737ae92074956758a0e36de00024b4",
+    "read_at": "2026-10-16T11:00:31.911576+00:00",
+    "finding": "Vote state loads using GET /api/votes. Counts render only when ready and positive, using the separator I want this · N. An unnumbered label cannot establish zero."
+  },
+  "blocked_action": {
+    "action": "Read dynamic Wanted counts",
+    "target": "https://agentusecases.ai/api/votes",
+    "reason": "robots.txt Disallow: /api/; repository instructions also prohibit this endpoint",
+    "request_sent": false,
+    "retry": false
+  },
+  "coverage": {
+    "archive_count": 1359,
+    "wanted_observed": 0,
+    "wanted_unknown": 1359,
+    "full_translations": 7,
+    "pending_translations": 1352
+  },
+  "outcome": "No Wanted field changed. No verified Wanted top 20 or ranked odd/even assignment available. Unknown slug-order groups are provisional only."
+}
