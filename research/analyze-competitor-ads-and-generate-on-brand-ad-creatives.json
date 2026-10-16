@@ -1,0 +1,479 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "analyze-competitor-ads-and-generate-on-brand-ad-creatives",
+  "url": "https://agentusecases.ai/use-case/analyze-competitor-ads-and-generate-on-brand-ad-creatives",
+  "title": "用 Claude Agent SDK 分析竞品广告并生成品牌素材",
+  "industry": "广告创意研究与品牌素材准备",
+  "researched_at": "2026-10-16T16:55:44.734582+00:00",
+  "confidence": "已有完整案例正文与官方SDK、广告透明度、制作工具资料；原案例只证明流程产出自述，未提供投放、收入、客户验收或实际成本记录。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先交付有来源的竞品研究和可编辑素材草稿，再按客户认可与返工工时决定是否扩展",
+    "reason": "持续制作广告的品牌团队和小型代理商有整理竞品、准备创意方向的重复工作，但这条案例只报告完成流程，没有点击、转化或投放回报。初期可出售范围明确的研究与素材准备包：保留公开广告出处、解释创意差异、使用客户授权的品牌资产，由客户审阅。免费模板、成熟创意工具和平台原生自动化已覆盖大量制作能力，单纯拼接工具并不构成收费壁垒。先测人工审阅、修改和客户实际采用率，不以自动运行或素材数量为商业成功标准。",
+    "next_action": "用合成品牌资料做五家竞品、十条可访问公开广告、六个创意概念的离线样例，分别记录事实依据、原创差异、品牌检查和人工分钟；后续客户验证只交付草稿与报告，不接入投放账号，询问愿付范围并跟踪返工。",
+    "stop_condition": "无法追溯多数竞品观察、输出沿用对手独特表达或商标、产品主张缺少依据，先暂停交付。限定包反复超过五点六小时人工且客户不接受相应报价，或客户只认可投放结果而不接受准备包，停止低价扩张。"
+  },
+  "sources": [
+    {
+      "id": "S531a9b65adad",
+      "url": "https://agentusecases.ai/use-case/analyze-competitor-ads-and-generate-on-brand-ad-creatives",
+      "title": "竞品广告分析与品牌素材案例",
+      "supports": "支持Claude Agent SDK构建的Ad Agent工作流和报告产出，未提供投放效果或费用。"
+    },
+    {
+      "id": "Sd69a094d34b1",
+      "url": "https://code.claude.com/docs/en/agent-sdk/overview",
+      "title": "Claude Agent SDK 官方概览",
+      "supports": "支持Python、TypeScript中的工具循环、权限、会话和外部工具接入，说明SDK不是现成广告数据服务。"
+    },
+    {
+      "id": "S44a053f9f149",
+      "url": "https://code.claude.com/docs/en/agent-sdk/cost-tracking",
+      "title": "Claude Agent SDK 成本追踪",
+      "supports": "说明成本字段是客户端估算、会话累计与消息去重规则，结算应核对控制台权威账单。"
+    },
+    {
+      "id": "Se780ebaf01f2",
+      "url": "https://support.google.com/My-Ad-Center-Help/answer/12155361?hl=en",
+      "title": "Google 广告主验证与透明度",
+      "supports": "支持按广告主或网站、地区与日期检索公开广告；不把可见广告解释为销售或利润数据。"
+    },
+    {
+      "id": "Scf668e938c50",
+      "url": "https://www.adcreative.ai/",
+      "title": "AdCreative.ai 产品介绍",
+      "supports": "支持竞品分析、广告文案及多种素材生成等既有产品能力；宣传效果数字不作为研究事实。"
+    },
+    {
+      "id": "Sa641eae150e8",
+      "url": "https://www.adobe.com/express/create/advertisement",
+      "title": "Adobe Express 广告制作工具",
+      "supports": "支持模板、品牌定制、尺寸和安全区域等现有制作替代，不把平台宣传当性能验证。"
+    },
+    {
+      "id": "S44b711bee7fe",
+      "url": "https://www.theguardian.com/technology/2025/jun/02/facebook-instagram-meta-ai-ad-media-advertising",
+      "title": "Guardian 对 Meta 广告自动化方向的报道",
+      "supports": "提供2025年广告平台扩大创作自动化的竞争背景；不据计划报道声称所有功能已完成发布。"
+    },
+    {
+      "id": "S3016aecc0c73",
+      "url": "https://github.com/anthropics/claude-agent-sdk-python/issues/487",
+      "title": "Agent SDK 价格估算问题 #487",
+      "supports": "提供用户报告旧SDK成本估算与新模型价格不匹配、升级后修复的相邻工程体验。"
+    },
+    {
+      "id": "Safb21ae07ea2",
+      "url": "https://arize.com/docs/phoenix/integrations/python/claude-agent-sdk",
+      "title": "Arize Phoenix 的 Claude Agent SDK 追踪",
+      "supports": "支持记录AGENT和TOOL调用轨迹及隐藏输入输出的配置；它是工具厂商文档，不是广告效果评测。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例介绍的是基于Claude Agent SDK构建的自主Ad Agent，流程包含找竞品、分析广告、生成品牌素材和分享报告。",
+      "source_ids": [
+        "S531a9b65adad"
+      ]
+    },
+    {
+      "statement": "源站实际工具标注Claude，建议试用模板推荐Manus；两者不代表同一产品或作者实际提示词。",
+      "source_ids": [
+        "S531a9b65adad"
+      ]
+    },
+    {
+      "statement": "案例未列出点击、转化、广告支出回报、执行耗时或失败率，不能据报告完成推导投放收益。",
+      "source_ids": [
+        "S531a9b65adad"
+      ]
+    },
+    {
+      "statement": "Agent SDK提供Python和TypeScript中的代理循环、工具、权限、会话及外部工具接入能力。",
+      "source_ids": [
+        "Sd69a094d34b1"
+      ]
+    },
+    {
+      "statement": "官方SDK概览区分自托管SDK与托管代理；对外产品不能默认继承个人Claude登录或额度。",
+      "source_ids": [
+        "Sd69a094d34b1"
+      ]
+    },
+    {
+      "statement": "SDK成本文档说明total_cost_usd等字段是客户端估算，不是权威账单，最终应核对控制台或用量成本接口。",
+      "source_ids": [
+        "S44a053f9f149"
+      ]
+    },
+    {
+      "statement": "SDK文档提示同一轮工具消息应按消息ID去重，恢复会话时累计费用包含较早的会话支出。",
+      "source_ids": [
+        "S44a053f9f149"
+      ]
+    },
+    {
+      "statement": "Google说明广告透明度中心可按广告主或网站名搜索，并按展示地区和日期过滤。",
+      "source_ids": [
+        "Se780ebaf01f2"
+      ]
+    },
+    {
+      "statement": "AdCreative.ai公开产品列出广告文案、素材生成与分析能力；其宣传转化数字不是本案例效果。",
+      "source_ids": [
+        "Scf668e938c50"
+      ]
+    },
+    {
+      "statement": "Adobe Express提供广告模板、品牌定制、调整尺寸和安全区域检查等制作功能。",
+      "source_ids": [
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "statement": "SDK问题#487的提交者报告价格估算异常并表示升级解决，维护者在2026年三月将其关闭为已修复。",
+      "source_ids": [
+        "S3016aecc0c73"
+      ]
+    },
+    {
+      "statement": "Phoenix文档说明可追踪代理和工具调用，并通过配置隐藏输入输出；这是运行观测能力而非创意质量判定。",
+      "source_ids": [
+        "Safb21ae07ea2"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "品牌与代理商有重复研究和素材准备任务，但尚无本案例付费订单或续费数据，公开展示不能替代预算验证。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Scf668e938c50",
+        "Sa641eae150e8"
+      ]
+    },
+    "outcome": {
+      "score": 1.5,
+      "rationale": "案例仅说明完成报告和素材，没有客户采用记录、对照或投放结果，不能把自主运行视为经营效果。",
+      "source_ids": [
+        "S531a9b65adad"
+      ]
+    },
+    "economics": {
+      "score": 2.5,
+      "rationale": "固定范围包可控制交付，但审阅、改图和客户修改占主要成本；SDK估算字段还需与实际账单核对。",
+      "source_ids": [
+        "S44a053f9f149",
+        "Sa641eae150e8"
+      ]
+    },
+    "distribution": {
+      "score": 2.5,
+      "rationale": "已有品牌服务客户的代理商可验证准备包，陌生获客和销售周期未测量，不预设低获客成本。",
+      "source_ids": [
+        "Scf668e938c50",
+        "Sa641eae150e8"
+      ]
+    },
+    "moat": {
+      "score": 1.5,
+      "rationale": "品牌资产与行业检查表可积累，但通用研究、文案和图片生成已有成熟产品及平台替代。",
+      "source_ids": [
+        "Scf668e938c50",
+        "Sa641eae150e8",
+        "S44b711bee7fe"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "SDK提供权限与观测能力，但广告取样、品牌一致性、原创差异和错误恢复仍需人工，无法保证平台访问与投放效果。",
+      "source_ids": [
+        "Sd69a094d34b1",
+        "S44a053f9f149",
+        "Se780ebaf01f2",
+        "Safb21ae07ea2"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "直接广告用户反馈未取得；SDK费用问题是已解决的相邻工程体验，仅提示运维成本，不代表创意满意度。",
+      "source_ids": [
+        "S3016aecc0c73"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "客户、付款人与准备任务",
+      "body": "优先验证的客户是持续需要新广告方向、却把大量时间花在查竞品和整理简报上的品牌团队或小型代理商。品牌负责人决定预算，设计或投放人员使用输出；代理商则可能把研究助手纳入已有服务。案例没有客户行业、广告规模或实际订单，不能把所有投广告的商家都算成目标市场，更不能用演示观看量估算预算。\n\n付款理由应是更快形成有依据的创意讨论和可编辑草稿，而不是保证广告更赚钱。一份研究包需要明确品牌、产品、目标人群、地区、渠道和时间范围。客户若已有成熟的品牌与设计流程，接入成本可能很低；没有产品定位、授权素材或主张依据的客户，前期沟通会远超生成时间，不能按同一低价接单。\n\n首次验证要让实际使用者指出上一次准备简报用了多久、哪些信息重复找、哪些素材被退回。若客户只想每月增加几张图片，现有模板工具已经足够；若研究结论无法帮助选择方向，再漂亮的报告也缺乏付费理由。对一次性活动客户，应按交付包看贡献，不默认存在长期订阅。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Scf668e938c50",
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "从公开广告到品牌素材",
+      "body": "案例的Ad Agent基于Claude Agent SDK，源站实际工具写Claude，建议试用却写Manus。应分别保留：前者是案例所述实现，后者是网站提供的复现模板，不能把模板当成作者提示词，也不能宣称两种工具已验证等效。所谓无需节点工作流，描述的是演示中的使用方式，不证明底层工具、账号和运行环境无需准备。\n\n可检验的研究链路先接收品牌说明与授权资产，再列出竞品，限定地区、渠道和时间。每条公开广告保留来源、广告主、采集时间和看得到的信息；无法读取就留下缺口，不把搜索摘要补成完整创意。之后区分事实与解释，按受众、问题、优惠、证明方式、行动号召和视觉布局整理模式，不能只凭相似颜色下结论。\n\n创作阶段从客户产品事实和品牌约束出发，给每个方向写原创差异、文案、构图与素材需求。图片生成、排版、字号和尺寸是后续工具工作，SDK本身不会自动提供可商用图片库。最后交付可编辑草稿、来源表和待确认项，由客户检查。流程在草稿与报告处结束，不登录广告账号、修改预算或发布素材。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Sd69a094d34b1",
+        "Se780ebaf01f2",
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "需求频率与可服务范围",
+      "body": "广告研究和创意准备有重复需求，但不同客户的重复方式不同。新品上线、促销档期和素材疲劳可能触发工作，行业、语言和渠道越多，核验负担越大。初期可限定一种产品类别、一个地区和一种广告格式，验证是否能稳定发现有用差异，再考虑多渠道扩展；本案例没有提供足以计算市场规模的数据。\n\n公开广告库是研究入口，不是竞争对手的经营账本。Google官方说明可按广告主、网站、地区和日期搜索，这帮助界定样本；它并未让每个普通商业广告的销售和利润都变得可见。广告存在、持续运行或出现很多版本，都不能直接证明获客成本低。服务若把这些观察包装成“竞品爆款”，会让后续创意决策建立在未经核实的假设上。\n\n早期指标应看来源是否可追溯、客户是否认可观察、创意是否符合品牌和产品事实、修改需要多久。真实投放结果属于后续单独实验，受出价、受众、落地页与产品影响。准备包可以独立验证价值，但不能借一个完成演示承诺点击或销售提升。若目标客户只愿为可归因收入付费，应另行设计测试与预算，而不是把研究服务伪装成投放托管。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Se780ebaf01f2"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "现有产品与手工替代",
+      "body": "最直接的替代是营销人员人工查看公开广告库，用文档整理判断，再交设计师制作。它的现金支出未必高，却占用研究、筛选和沟通时间。新服务需要在同一组竞品上比较总人工与客户认可程度，不能只比较生成速度。已有内部简报模板和品牌资产的团队，未必需要更换整套系统。\n\nAdCreative.ai已有广告分析、文案和多种素材生成功能；Adobe Express提供模板、品牌定制、尺寸与安全区域检查。两者的功能说明来自厂商，宣传中的转化或效率数字不作为本案例事实。它们仍足以说明图片和文案生成本身不是稀缺能力。客户只需要常见尺寸的草稿时，免费或已有工具可能更合适，定制SDK服务须证明额外价值。\n\nGuardian在2025年报道了Meta扩大广告创作自动化的计划，这是平台竞争方向的背景，不能据该报道宣称计划中的所有功能已上线。对服务商而言，更可持续的差异可能是跨渠道解释、产品事实与品牌审阅，以及把结果接入客户现有流程。单纯拼接网页搜索和图片工具，很容易被现有产品覆盖。",
+      "source_ids": [
+        "Scf668e938c50",
+        "Sa641eae150e8",
+        "S44b711bee7fe",
+        "Sd69a094d34b1"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "人工、工具与返工的完整成本",
+      "body": "案例没有执行时长、用量和账单，无法给出真实单张素材成本。核算必须把竞品取样、来源检查、策略判断、改稿、视觉审核和客户修改算进人工，还要包括图像工具、运行环境、获客及固定维护。Claude Agent SDK的成本字段是客户端估算，恢复会话还涉及累计口径；不能把多个累计值直接相加后向客户结算，应与权威账单核对。\n\n低价包假设交付五家竞品、十条广告观察和六个概念，售价九十九美元。研究与审核三小时按每小时三十美元为九十美元，文本API预算四美元，其他变动成本含图片与导出六美元、返工准备十美元，获客二十美元，单包贡献负三十一美元；每月八包扣一百五十美元固定费用后负三百九十八美元。所有金额和工作量都是设计假设，不是实际报价或工具价目。\n\n限定范围包假设售价二百九十九美元，人工四小时按每小时三十五美元为一百四十美元，API六美元，图片、导出与有限返工合计三十二美元，获客六十五美元，单包贡献五十六美元；每月十包扣三百美元固定费用后为二百六十美元。人工达到五点六小时贡献归零。两种情景均不含投放媒体费、税和无限修改，没有调用任何付费API；实际运行后应替换每一项假设。",
+      "source_ids": [
+        "S44a053f9f149",
+        "Sd69a094d34b1",
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "首批客户与可审核样例",
+      "body": "已有品牌服务客户的营销顾问和代理商，是可提出验证的起点，因为他们知道产品事实和日常退稿原因。这里没有建立合作或联系任何人。先用合成品牌资料制作样例，展示从公开观察到创意方向的推理，让客户能逐项指出哪些有用、哪些是套话，比展示智能体运行录像更能测试购买理由。\n\n样例应包括来源表、观察与解释的区分、几种明显不同的创意方向，以及可编辑的输出格式。报价写清竞品数量、广告样本、语言、格式和修订次数，不承诺无限渠道、所有在投广告或固定销售回报。客户已有模板、图库和协作工具时，优先输出能进入原流程的文件，避免为了体现技术而增加学习成本。\n\n获客验证还要记录沟通、资料补齐、审阅等待、修改与售后的时间。代理商可能带来重复任务，也可能增加白标、格式和审批负担；消费式低价试用则可能吸引只想大量生成图片的人。没有真实成交前，单位经济里的二十或六十五美元获客费只是敏感性输入。是否扩展应看客户实际采用的方向、总人工和付费意愿。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Scf668e938c50",
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "可复用的品牌判断与资料",
+      "body": "通用提示词和自动工具循环不是长期壁垒。可积累的部分是客户确认的产品事实、品牌语气、过去的退稿理由、不同渠道的表达限制和质量检查样例。它们必须能由另一位操作者使用，并稳定减少审阅时间；只有原作者凭直觉才能完成的判断，仍然是个人服务，不会因为包装成agent就自动规模化。\n\n竞品资料的价值也不在截图数量，而在样本选择和解释是否可复核。同一品牌、不同地区和时间的广告可能对应完全不同的活动，应保留上下文。图像或文案生成得更多，未必让策略更清楚。服务应说明为什么某个方向符合客户产品，哪些只是待检验假设，避免照搬对手独特表达来制造表面相似。\n\n客户内部产品计划和未发布素材不能随意汇成共享资产。复用规则与脱敏样例，个人客户资料分开保存并按约定处理。平台与成熟工具会继续补齐基础创作能力；若服务不能在专业判断、质量检查或跨渠道协作上证明优势，就应保持小范围准备服务，或直接使用已有工具，而不是继续开发通用广告生成平台。",
+      "source_ids": [
+        "Sd69a094d34b1",
+        "Scf668e938c50",
+        "Sa641eae150e8",
+        "Se780ebaf01f2"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "可追溯性、品牌与运行成本",
+      "body": "公开来源并不等于可任意复制。研究应围绕信息表达和结构模式，产出客户自己的主张与构图，不沿用对手标志、人物形象或独特文案。客户提供的品牌资产也要明确可用范围；模型不能凭空补出价格、折扣、效果承诺或用户评价。先核对产品事实，再检查字体、标志、尺寸、对比度和平台界面遮挡等视觉问题。\n\n运行侧要限定可用工具、输入目录和输出位置。SDK提供权限和工具机制，但不会替代运营规则。遇到权限拒绝、验证码或安全警告停止该来源，使用其他可访问资料并写清样本缺口；失败步骤不应持续重试耗尽预算。外部网页内容只作为待核验材料，不应改变品牌任务、数据权限或发布范围。\n\n可观测性帮助找出慢在哪里和为什么返工。Phoenix文档能记录代理和工具调用，也提供隐藏输入输出的配置；这不是广告质量评分器。记录应服务于来源追踪和工时核算，避免把客户素材完整复制到额外日志系统。发布、改预算和真实投放另行由人决定，本轮只交付分析与草稿，不需要广告账号或新凭据。",
+      "source_ids": [
+        "Sd69a094d34b1",
+        "S44a053f9f149",
+        "Safb21ae07ea2",
+        "Sa641eae150e8",
+        "Se780ebaf01f2"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "用户体验与已有反证",
+      "body": "本轮检索了AI广告创意的人工审阅体验、AdCreative.ai评价，以及Claude Agent SDK费用问题。没有取得能独立复现本案例的品牌客户或投放对照，产品评论检索也没有形成可引用的完整使用记录。厂商的转化宣传不作为真实用户反馈；搜索摘要不计成已经阅读的测试结果。\n\nSDK公开问题#487提供了具体的相邻工程体验：用户报告旧版本与新模型之间的费用估算不匹配，随后说明升级修复，维护者也将其关闭为已完成。它支持检查版本和账单口径，不支持声称当前所有SDK费用都错误，更不能代表广告素材质量或用户满意度。官方成本文档如今也说明估算字段不是权威账单，应把这一点落实到服务核算。\n\n最有价值的后续证据是同一份品牌简报、同一组公开样本，由人工与研究助手分别完成，比较有效观察、事实错误、品牌退稿和总审阅时间。若之后由客户实际投放，采用独立的测试设计观察结果，不把制作速度当销售收益。反馈项只占百分之五，直接证据不足体现为验证信号弱，不等于客户普遍不满意。",
+      "source_ids": [
+        "S3016aecc0c73",
+        "S44a053f9f149",
+        "S531a9b65adad"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "商业选择与个人试用范围",
+      "body": "商业上建议先小规模试用研究与素材准备包。客户能检查公开来源、原创差异和品牌一致性，服务商也能看到人工和返工是否可控。案例没有真实投放或订单数据，因此不能依据自主完成流程就投入全自动投放产品。先回答客户认可哪些方向、愿意为什么付钱，以及是否比现有工具加人工更省总时间。\n\n自用价值独立评为中，针对已有产品事实、品牌资产和基本广告判断能力的营销人员。可以期待的是减少重复资料整理、形成更多可比较方向和保持来源集中；没有实际计时，不报告节省百分比。准备成本在品牌说明、授权资产和样本范围，维护成本在来源时效、品牌规则、工具版本与审阅。低频活动可按需使用，持续制作团队再考虑周期性研究。\n\n初次试用只处理少量公开广告，要求每项观察有出处、每个概念说明与竞品的差异，并明确尚待确认的产品主张。输出是讨论与编辑起点，不是可直接保证效果的成品。多数观察不可追溯、素材不断退回、或客户只接受无限低价改稿时停止扩大范围；如果已有设计工具更快，保留人工流程就是合理选择。",
+      "source_ids": [
+        "S531a9b65adad",
+        "Sd69a094d34b1",
+        "Scf668e938c50",
+        "Sa641eae150e8",
+        "S44a053f9f149"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "独立媒体与广告工作流",
+        "query": "\"AI ad creative\" \"human\" \"test\" report agency",
+        "outcome": "未取得该Ad Agent的客户测试；另读Guardian的2025年平台自动化报道，仅作竞争背景。"
+      },
+      {
+        "channel": "公开产品用户评价",
+        "query": "\"AdCreative.ai\" \"review\" user results manual",
+        "outcome": "没有取得可核验的完整用户记录；产品官网宣传不计作独立口碑。"
+      },
+      {
+        "channel": "GitHub公开问题",
+        "query": "\"Claude Agent SDK\" \"cost\" \"issues\" github",
+        "outcome": "定位并阅读全文#487；用户与维护者确认升级修复价格估算问题，属于相邻工程反馈。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "S3016aecc0c73",
+        "directness": "adjacent_workflow",
+        "finding": "旧SDK与新模型的费用估算曾不匹配，用户升级后修复；服务核算需要版本和权威账单。",
+        "bias": "单个已修复工程问题，不是广告客户体验或当前故障率，也不能推断投放效果。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：低价竞品与创意准备包",
+      "unit": "五家竞品、十条广告观察、六个创意概念及报告",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 4,
+      "human_cost": 90,
+      "other_variable_cost": 16,
+      "acquisition_cost": 20,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 150,
+      "assumptions": "全部是未实测服务假设，不是模型报价或作者账单：人工3小时×30美元，文本API预算4美元，其他含图片与导出6美元及返工准备10美元，获客20、每月8包和固定150美元。不含媒体投放费、税和无限修改；本轮未调用付费API。",
+      "source_ids": [
+        "S44a053f9f149",
+        "Sa641eae150e8"
+      ]
+    },
+    {
+      "scenario": "假设：限定品牌与渠道的研究审阅包",
+      "unit": "同样规模的研究和概念草稿，附品牌检查与有限修改",
+      "currency": "USD",
+      "price": 299,
+      "api_cost": 6,
+      "human_cost": 140,
+      "other_variable_cost": 32,
+      "acquisition_cost": 65,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 300,
+      "assumptions": "全部为设计假设：人工4小时×35美元，文本API预算6，图片与导出12、有限返工20，获客65、每月10包及固定300美元。人工达到5.6小时单包贡献为零，不含税、媒体费和额外支持。SDK估算仅供预算，实际运行须核对账单。",
+      "source_ids": [
+        "S44a053f9f149",
+        "Sd69a094d34b1",
+        "Sa641eae150e8"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "原案例只证明了流程产出自述，未证明客户采用和投放回报。AdCreative.ai与Adobe Express已经覆盖多种创作能力，平台也有扩展自动化的竞争方向。若手工简报加现有工具更快，定制SDK服务没有额外价值；费用估算也不等于真实交付成本。",
+  "limitations": "缺少完整作者代码、实际提示词、品牌简报、生成文件、执行工时、账单、客户订单和投放对照。无法估算转化、ROAS或真实毛利；两个情景的售价、工时、用量和销量均为假设。未进行真实素材生成、账号接入、投放或第三方联系。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "对能判断产品事实与品牌风格的营销人员，资料整理和创意草稿有辅助价值；净节时与投放效果需各自测试，不能从商业评分换算。",
+    "audience": "已有产品事实、授权品牌资产和基本广告判断能力的品牌运营、营销顾问与设计协作者。",
+    "use": "整理少量公开竞品广告、形成有来源的观察与原创创意方向，准备可编辑报告和素材说明。",
+    "benefit": "推断可减少重复整理并增加可比较方向；没有计时或投放实验，不承诺量化节时与销售收益。",
+    "setup_cost": "准备品牌简报、可用资产、地区渠道、竞品范围、时间区间及需核实的产品主张。",
+    "maintenance_cost": "更新公开样本、品牌约束、工具版本和成本记录，人工审阅文案、构图与输出格式。",
+    "frequency": "新品与活动按需使用；持续制作团队可周期性做小批研究，不必自动无限运行。",
+    "privacy_risk": "未发布产品计划与品牌素材可能进入工具或日志；只提供必要材料并检查存储与共享范围。",
+    "error_risk": "可能把广告可见性误当盈利、混淆品牌或虚构产品主张；逐项附出处，原创表达和人工审阅后再决定后续。",
+    "source_ids": [
+      "S531a9b65adad",
+      "Sd69a094d34b1",
+      "Se780ebaf01f2",
+      "S44a053f9f149",
+      "Sa641eae150e8"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "脱敏品牌简报、产品事实、授权标志与素材、目标地区和渠道；先限定五家竞品与十条公开广告样本。",
+    "tools": "案例为Claude Agent SDK构建的Ad Agent；源站建议试用工具为Manus。个人试用可先用已有公开网页研究与文档能力，图片和排版由已有合适工具准备；不新建凭据或付费API。",
+    "expected_result": "有出处的竞品观察表、六个原创概念及文案构图说明、产品主张待核实项和可分享报告草稿；不包含真实投放和效果承诺。",
+    "prompts": [
+      {
+        "title": "研究公开竞品广告并准备品牌创意草稿",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队编写；不是作者原始提示词或源站Manus模板。",
+        "source_url": null,
+        "source_ids": [],
+        "text": "根据以下品牌简报［产品事实、目标人群、语气、颜色、授权素材、禁止主张］，只读研究［地区］［渠道］的最多5家竞品和10条可访问公开广告。逐条列出官方或公开来源链接、广告主、地区、可见日期和核验时间。把实际可见的信息、你的解释和未披露事项分开，不从持续投放或版本数量推断利润。总结受众、问题、优惠、证明方式、行动号召和视觉布局，然后提出6个符合我品牌的原创概念，给出文案、构图、所需素材、与竞品的差异和产品事实依据。不要复制竞品独特文案、商标或人物形象，不虚构价格、效果承诺或用户评价。仅使用我已授权的资产，无法确认时列待确认项。遇到权限、验证码或安全限制停止该来源。不要登录广告账号、创建凭据、调用付费API、发布广告、更改预算、上传或联系第三方。最后输出可编辑的观察表、概念草稿和人工审阅清单。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Find the top [number] competitors of [my brand and what it sells], look at their current ads on [Meta Ad Library, Google, or TikTok], and summarize their messaging, offers, and visual styles. Then create [number] new ad concepts in my brand style ([colors, tone, logo notes]) and put everything into a shareable report. You're done when the report has the competitor analysis and the ad creatives with short reasoning for each.",
+    "agent": "Manus",
+    "source_url": "https://agentusecases.ai/use-case/analyze-competitor-ads-and-generate-on-brand-ad-creatives",
+    "observed_at": "2026-10-16T06:01:37.759950+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "7ab83dbcd618b7de94401fc2bcca8aa99b903dae44af820941121664addd69da"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/boringmarketer/status/2008607337532014709",
+    "source_title": "boringmarketer 的 Ad Agent 公开帖子",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "X域访问已受限，未重新请求；利用已归档案例分析，不补写作者代码或实际提示词。"
+  },
+  "analysis_depth": "deep",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-competitor-ads-and-generate-on-brand-ad-creatives",
+    "observed_at": "2026-10-16T06:13:11.961061+00:00",
+    "body_sha256": "01a6a5d419d94fc6a9e82d8f6e9be943f370aa3f0d4abbb7943814f3ada56635",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "7100325e0102667449cb5f8aff814a215a1179889615248d8265770cc4b16e69",
+      "How it went": "9befcc21c326c218b93a4921d2718531e7ce7f80fb94f68d42777e70d9f79a6d"
+    },
+    "actual_agents": [
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "catalog_snapshot": {
+    "commit": "0c18bdb8cbe106f2a4d68da14d94af4ee0af2802",
+    "registered_cases": 1359,
+    "refresh_fetched_at": "2026-10-16T06:13:11.961061+00:00",
+    "refresh_observed_cases": 1354,
+    "detail_pages_read": 1354,
+    "new_crawl": false,
+    "pre_publication_main": "862eeadb8f866b10e4f3cfa7f9bd877149d5760f"
+  },
+  "popularity_snapshot": {
+    "source": "Existing public Trending observation",
+    "observed_minute_utc": "2026-10-16T16:20Z",
+    "position": 10,
+    "today_count": 1,
+    "time_precision": "minute",
+    "new_browser_refresh": "blocked by certificate warning; no retry; not a refreshed ranking",
+    "wanted_total_status": "not_observed"
+  }
+}
