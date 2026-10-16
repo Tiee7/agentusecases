@@ -25,7 +25,7 @@ def safe_id(value):
 def read_registry():
     return json.loads(REGISTRY.read_text())
 
-def bootstrap(db_path):
+def bootstrap(db_path, sync_research=True):
     db=sqlite3.connect(f'file:{Path(db_path).resolve()}?mode=ro',uri=True)
     run=db.execute('SELECT MAX(id) FROM runs').fetchone()[0]
     if run is None:
@@ -54,7 +54,8 @@ def bootstrap(db_path):
     cases.extend(dict(c,listed=False) for c in existing.values())
     REGISTRY.parent.mkdir(exist_ok=True)
     REGISTRY.write_text(json.dumps({'schema_version':1,'ranking_scope':'public SSR category top, then sitemap order','cases':cases},ensure_ascii=False,indent=2)+'\n')
-    sync_source_trials(cases)
+    if sync_research:
+        sync_source_trials(cases)
     return len(cases)
 
 def sync_source_trials(cases):
@@ -188,6 +189,8 @@ def economics(model):
 def render(record):
     v=record['verdict']
     lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']} · 证据置信度：{record['confidence']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
+    from .author_method import render_author_method
+    lines = lines[:1] + render_author_method(record) + ['','## 我们的分析'] + lines[1:]
     for key,weight in WEIGHTS.items():
         d=record['scores'][key]
         rationale=d['rationale'].replace('|','\\|').replace('\n',' ')
@@ -250,6 +253,8 @@ def publish(record_path,evidence_path,expected_id):
         sync_record(record, case['source_trial'])
     validate(record,receipts,expected_id)
     validate_personal(record, required=True)
+    from .author_method import validate_author_method
+    validate_author_method(record, case, receipts, required=True)
     directory=Path('research/evidence');directory.mkdir(parents=True,exist_ok=True)
     # Source receipts carry metadata only; cache paths and full scraped text stay private to the runner.
     clean=[{k:v for k,v in r.items() if k not in ('text_path','links')} for r in receipts]
@@ -261,14 +266,14 @@ def publish(record_path,evidence_path,expected_id):
 def main():
     parser=argparse.ArgumentParser()
     sub=parser.add_subparsers(dest='command',required=True)
-    boot=sub.add_parser('bootstrap');boot.add_argument('--db',default='data/history.sqlite3')
+    boot=sub.add_parser('bootstrap');boot.add_argument('--db',default='data/history.sqlite3');boot.add_argument('--catalog-only',action='store_true')
     prep=sub.add_parser('prepare');prep.add_argument('--case-id')
     pub=sub.add_parser('publish');pub.add_argument('--record',default='data/business-draft.json');pub.add_argument('--evidence',required=True);pub.add_argument('--expected-id',required=True)
     check=sub.add_parser('verify-sources');check.add_argument('--record',default='data/business-draft.json');check.add_argument('--evidence',required=True);check.add_argument('--expected-id',required=True)
     sub.add_parser('index')
     args=parser.parse_args()
     if args.command=='bootstrap':
-        print('Registered cases:',bootstrap(args.db));indexes()
+        print('Registered cases:',bootstrap(args.db, sync_research=not args.catalog_only));indexes()
     elif args.command=='prepare':
         case=select_case(args.case_id)
         Path('data').mkdir(exist_ok=True)

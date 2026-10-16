@@ -1,5 +1,19 @@
 # Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意
 
+## 原作者的方法与来源
+
+来源：[Mastering AI · Tax filing preparation](https://www.masteringai.io/guides/claude-code-use-cases)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 汇编引用一位用户把银行对账单和发票交给 Claude Code，准备第一版报税草稿的自述。
+   English summary: The compilation cites a user giving Claude Code bank statements and invoices to prepare a first tax-filing draft.
+
+2. 该自述没有提供原作者的完整步骤；周围的操作指南和示例提示词是编辑补充。
+   English summary: The cited experience does not include the author’s full steps; the surrounding guide and its sample prompt are editorial additions.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。凭证整理有明确用途，但没有公开可复核的正确率、付费客户和低成本交付证据**
 
 该案例可帮助已有会计复核能力的个人或事务所整理流水与发票，不能据此认定独立报税服务成立。案例的全部正确陈述只是汇编转述，Lenny原文公开部分无法核验；低价成熟税务软件已有申报能力，客户愿意支付的应是材料完整性和可证明的复核工时节省。标准资料包情景有正贡献，但人工、追问与获客上升即亏损；账户数据政策和专业责任还带来额外成本。建议把业务边界限制在带凭证索引的内部资料包，先测总工时再决定是否收费。
@@ -35,6 +49,8 @@
 - 错误风险：年份、主体、金额及扣除资格可能混淆；不能自动签署或提交
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

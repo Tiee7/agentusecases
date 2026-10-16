@@ -1,5 +1,22 @@
 # Claude Computer Use 填1040：合成表单演示能否变成可收费交付
 
+## 原作者的方法与来源
+
+来源：[airabbit · Form 1040 experiment](https://dev.to/airabbit/i-asked-claude-to-fill-out-my-tax-return-here-is-what-happened-a02)
+
+作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+
+1. 把合成税务资料放入本地共享文件夹，并使用简化的 Form 1040 网页表单。
+   English summary: Prepare synthetic tax documents in a shared local folder and use a simplified web version of Form 1040.
+
+2. 要求 Claude Computer Use 自行查找资料并填写浏览器表单，而不是把数据直接贴入提示词。
+   English summary: Ask Claude Computer Use to find the documents and fill the browser form, rather than pasting the data into the prompt.
+
+3. 当代理询问已经提供的信息时，作者让它重新阅读最初的指令。
+   English summary: When the agent asks for information already supplied, the author directs it back to the initial instruction.
+
+## 我们的分析
+
 **商业结论：仅建议受控试点。只测试经复核资料的内部录入环节，尚无证据支持向消费者销售自动报税服务。**
 
 案例的真实对象是作者自造资料和简化浏览器表单，既没有真实纳税客户，也没有报税受理记录。完整原文承认地址漏填、邮编不一致及字段间距造成识别问题；工资数字的叙述还与生成脚本冲突，不能当成模型自动纠错的可靠验证。免费联邦申报工具已经提供计算与递交能力，新经营者若只售卖点击填表，付费理由弱。税务事务所内部可验证的是经过人员确认的字段映射能否减少重复录入；只有节省时间超过复核、返工与维护成本，才有继续投入依据。
@@ -35,6 +52,8 @@
 - 错误风险：年份、主体、金额及扣除资格可能混淆；不能自动签署或提交
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

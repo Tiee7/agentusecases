@@ -1,5 +1,22 @@
 # Kudos 电话账单协商：套餐边界、会员经济与到账核验
 
+## 原作者的方法与来源
+
+来源：[Tikue · Kudos founder comment on Hacker News](https://news.ycombinator.com/item?id=47131955)
+
+作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+
+1. 语音代理拨打服务商电话，通过自动语音菜单并等待客服。
+   English summary: The voice agent calls the provider, passes the automated phone menu and waits for a representative.
+
+2. 除非用户明确允许变更，否则只在现有套餐内议价；身份验证时暂停，等待用户提供一次性验证码。
+   English summary: It negotiates within the existing plan unless the user expressly permits changes; verification pauses for the user’s one-time code.
+
+3. 通话结束后，用户收到通话摘要。
+   English summary: Users receive a call summary after the conversation.
+
+## 我们的分析
+
 **商业结论：仅建议受控试点。先验证现有套餐内的到账节省与人工接管成本，再考虑独立销售电话代理。**
 
 付款人是希望降低通信开支且不愿等待客服的账户持有人。Kudos 已把协商纳入年付或终身 Premium，说明这是会员价值的一部分，不能把每次省钱当成项目营业收入。原始创始人案例的大额节省依赖换套餐，而当前帮助文档承诺不换套餐；条款又授予更广泛的账户操作权限。需求与技术链路有依据，但平均成功率、到账持续性及全成本毛利没有独立验证。现阶段只支持在明确授权、禁止服务变更、逐账单验收的窄场景里试点，不支持据宣传数字扩大获客。

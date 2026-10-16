@@ -1,5 +1,19 @@
 # Codex跨应用填表与税表复核：内部助理可用，收费交付尚缺效果证据
 
+## 原作者的方法与来源
+
+来源：[MindStudio · Codex computer use](https://www.mindstudio.ai/blog/openai-codex-computer-use-agents)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 文章转述一名工程师让 Codex 检查个人报税材料并发现错误的经历。
+   English summary: The article recounts an engineer asking Codex to review personal tax paperwork and finding an error.
+
+2. 文章还讨论通过桌面界面阅读 PDF 和填写表格，但没有给出该次税务检查的完整步骤。
+   English summary: It also discusses reading PDFs and filling forms through the desktop interface, but gives no complete sequence for that tax review.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。能减少无接口表单的搬运工作，但单次员工纠错故事不足以支持独立税务服务投入。**
 
 本案例真实对象是通用Codex桌面能力的使用方式，并非已有收入的税务公司。纳税人或事务所员工可以将它用于表单草稿和疑点清单，再由具备判断能力的人逐项核对。原始报道的数千美元错误没有税表与退款记录支撑，不能当成已收回现金。现成报税软件已有低价申报、文档导入和人工答疑，新增服务必须证明在这些替代之后仍节省净工时。界面权限、异常恢复、税务判断和数据保护都会增加成本，故目前只认可内部辅助价值，不据此扩张对外自动报税业务。
@@ -35,6 +49,8 @@
 - 错误风险：年份、主体、金额及扣除资格可能混淆；不能自动签署或提交
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

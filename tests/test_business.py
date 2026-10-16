@@ -23,6 +23,7 @@ class BusinessTests(unittest.TestCase):
         from agentwatch.personal import FIELDS
         self.record['personal_value'] = dict(version=1,level='待核实',reason='Synthetic fixture',source_ids=[],**{k:'Unverified fixture' for k in FIELDS})
         self.record['try_it'] = dict(source_prompt_status='missing',source_prompt_note='Not collected',prerequisites='Synthetic data',tools='Text editor',expected_result='Draft',prompts=[])
+        self.record['author_method']={'version':1,'status':'unavailable','presentation':'bilingual_summary','source_url':'https://publisher0.test/doc','source_title':'Fixture source','steps':[],'unavailable_reason':'Source unavailable'}
         validate(self.record,self.receipts,'real-case')
         Path('draft.json').write_text(json.dumps(self.record));Path('receipts.json').write_text(json.dumps(self.receipts))
         publish('draft.json','receipts.json','real-case')

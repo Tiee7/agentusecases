@@ -1,5 +1,19 @@
 # Cowork收据与银行数据整理：适合内部提效，盈利取决于异常复核而非生成速度
 
+## 原作者的方法与来源
+
+来源：[Christopher Alarcon · Cowork use cases](https://christopheralarcon.com/blog/claude-cowork-use-cases)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 文章引用的一位用户转发收据供整理保存，并收到每周费用报告。
+   English summary: One cited user forwards receipts for storage and receives a weekly expense report.
+
+2. 另一个例子把一年的银行和信用卡交易交给 Cowork，生成年度税务准备摘要。这是报道中的两个不同流程。
+   English summary: A separate example gives Cowork a year of bank and credit-card transactions to produce an annual tax-preparation summary. These are two reported workflows.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。先用于有人工复核的费用底稿整理，尚无证据支持独立自动报税或无人记账服务。**
 
 小微企业老板和记账人员确实要整理分散收据、银行交易与年度资料，但本案例把不同用户的周报和税务摘要合并介绍，并未证明一套商业系统已经可靠交付。官方能力支持文件与表格处理，现有费用管理软件也已有低价收据识别、匹配和审批。价值应落在可回溯底稿、缺件清单和减少人工搬运，不能用输出速度或二手节省时长替代准确率。两种假设测算显示，返工和专业复核足以从微利变为亏损，所以先在内部验证异常率与净节省，再考虑对外收费。
@@ -35,6 +49,8 @@
 - 错误风险：年份、主体、金额及扣除资格可能混淆；不能自动签署或提交
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

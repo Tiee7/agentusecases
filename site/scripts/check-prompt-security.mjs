@@ -13,7 +13,8 @@ const prompt='中文 & "双引号" \'单引号\' </pre><script>globalThis.prompt
 let server,browser;
 try {
  for(const dir of ['research','reports','registry','site'])fs.mkdirSync(path.join(tmp,dir));
- fs.writeFileSync(path.join(tmp,'registry/cases.json'),JSON.stringify({cases:[{id,url:record.url,title:record.title}]}));
+ fs.writeFileSync(path.join(tmp,'registry/cases.json'),JSON.stringify({cases:[{id,url:record.url,title:record.title,original_sources:['https://author.test/story']}]}));
+ record.author_method={version:1,status:'author_summary',presentation:'bilingual_summary',source_url:'https://author.test/story',source_title:'Synthetic author',accessed_at:'2026-10-16T00:00:00Z',source_sha256:'a'.repeat(64),steps:[{en:prompt,zh:prompt}]};
  record.source_trial={status:'available',text:prompt,agent:'Synthetic tool',source_url:record.url,observed_at:'2026-10-15T17:00:00Z',method:'dom'};
  record.try_it.prompts[0].text=prompt;record.try_it.prompts[0].source_url='javascript:globalThis.promptInjected=true';
  fs.writeFileSync(path.join(tmp,'research',`${id}.json`),JSON.stringify(record));
@@ -26,6 +27,8 @@ try {
  browser=await chromium.launch();const page=await browser.newPage();
  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:async text=>{window.copied=text}}}));
  for(let i=0;i<30;i++){try{await page.goto(`http://127.0.0.1:4323/reports/${id}/`);break}catch(e){if(i===29)throw e;await new Promise(r=>setTimeout(r,100));}}
+ assert.equal(await page.locator('#author-method [lang="zh-CN"] li').textContent(),prompt);
+ assert.equal(await page.locator('#author-method script,#author-method img').count(),0);
  assert.equal(await page.locator('#prompt-0').textContent(),prompt);
  assert.equal(await page.locator('#prompt-0 script,#prompt-0 img').count(),0);
  assert.equal(await page.locator('#try-it a[href^="javascript:"]').count(),0);

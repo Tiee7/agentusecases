@@ -1,5 +1,19 @@
 # Muse寻找无人认领款项：查到钱不等于到账，免费官方入口压缩独立代办利润
 
+## 原作者的方法与来源
+
+来源：[ColombiaOne · Nick Grous unclaimed funds](https://colombiaone.com/2026/09/29/meta-muse-ai-agent/)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 报道说 Nick Grous 要求 Muse 上网查找可能属于自己的款项，并收到潜在匹配清单。
+   English summary: The report says Nick Grous asked Muse to search online for money owed to him and received a list of possible matches.
+
+2. Muse 协助整理申请材料，Grous 随后提交正式申请；文章明确当时尚未收到款项。
+   English summary: Muse helped with paperwork, and Grous submitted an official claim. The article says payment had not yet arrived.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。适合本人或已有授权的服务团队整理候选款项与证明材料，尚无证据支持另建通用收费找钱生意。**
 
 本案的价值是降低跨网站查询和准备申领材料的摩擦，不是创造一笔新的收益。媒体报道Muse在约五分钟内找到超过1500美元候选款项，但这属于特定用户自述，不能代表典型可回收金额或服务商收入。NAUPA及州政府已经提供免费查询和申领，用户仍须证明身份与所有权；加州对一般调查员服务还设有收费上限和签约限制。高额、简单、可合法承接的案件在假设中能盈利，但没有证据说明这种案件足以低成本获客；小额案件容易被人工审核和售后成本吞噬。现阶段更适合作为个人或既有专业团队的材料辅助流程，保留本人提交与官方收款，不建议把候选金额当作融资或收费承诺。
@@ -35,6 +49,8 @@
 - 错误风险：同名命中不证明归属；金额未知不能估算，申领需本人核验
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

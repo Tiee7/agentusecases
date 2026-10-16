@@ -1,5 +1,19 @@
 # Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点
 
+## 原作者的方法与来源
+
+来源：[CityView · Counterforce Health](https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 患者提供保险条款、病历及拒赔信，或使用示例拒赔情景。
+   English summary: Patients provide their coverage policy, medical records and denial letter, or use a sample denial scenario.
+
+2. 系统生成带引用的申诉信；报道另介绍正在测试、用于向保险公司跟进的语音代理 Maxwell。
+   English summary: The system drafts a cited appeal letter. The report also describes Maxwell, a voice agent being tested to follow up with insurers.
+
+## 我们的分析
+
 **商业结论：仅建议受控试点。优先验证专科诊所的人工复核申诉服务，暂不投入面向个人收费的全自动电话代理。**
 
 拒赔造成的资料整理和追踪负担真实，独立报道也有诊所人员使用后的正向信号；但 Counterforce 对个人免费，现有替代还包括免费生成器及带提交服务的定价产品，不能将患者获赔当作平台收入。更关键的是，其公开条款限制个人非商业使用、要求自行去标识化，电话模块仍标 Beta，未提供可审计的全流程成功率和单位人工成本。可研究的经营切口是取得适当授权后，为有重复病例的专科诊所提供受控文书与追踪服务；不能直接转售免费端或承诺自主完成拒赔追偿。具体事实与边界见下文来源。

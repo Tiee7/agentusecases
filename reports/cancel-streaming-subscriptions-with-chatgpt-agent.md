@@ -1,5 +1,22 @@
 # 流媒体退订代理：历史成功不等于可出售的自动取消服务
 
+## 原作者的方法与来源
+
+来源：[Tom’s Guide · Subscription cancellation](https://www.tomsguide.com/ai/i-used-chatgpt-to-cancel-my-streaming-subscriptions-heres-how-to-try-it-too)
+
+作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+
+1. 开启代理模式，并明确要取消的具体订阅。
+   English summary: Enable agent mode and name the specific subscription to cancel.
+
+2. 需要登录时由用户接管，再查看代理操作账户菜单。
+   English summary: Take over when login is required, then watch the agent navigate the account menus.
+
+3. 在批准最终确认之前核对取消内容。
+   English summary: Review the cancellation before approving the final confirmation.
+
+## 我们的分析
+
 **商业结论：不建议商业投入。不应基于旧Agent教程建立独立付费退订业务；需求成立，但免费路径、平台迁移与人工成本压缩利润。**
 
 本案例是记者使用通用助手管理个人流媒体账户的体验，不是已形成收入的独立公司。消费者有停止不再使用服务的需求，但从减少续费到愿意另付退订费之间缺少交易证据。Netflix和Apple已有官方取消流程，财务管理竞品也已提供取消协助。当前官方页面又提示旧Agent不再可用，新版云浏览器仍需用户登录、确认并可能被网站阻挡。以低价独立获客、承担人工失败恢复的商业结构很难成立。可以保留个人效率用法，却不应承诺跨站全自动或把预期节省计成自身收入。
@@ -35,6 +52,8 @@
 - 错误风险：误取消、权益丢失或误解退款规则；本人确认后才可操作
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

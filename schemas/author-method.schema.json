@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Author method summary",
+  "type": "object",
+  "required": [
+    "version",
+    "status",
+    "presentation",
+    "source_url",
+    "source_title",
+    "steps"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "author_summary",
+        "reported_summary",
+        "unavailable"
+      ]
+    },
+    "presentation": {
+      "const": "bilingual_summary"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "source_title": {
+      "type": "string"
+    },
+    "source_language": {
+      "type": "string"
+    },
+    "accessed_at": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "unavailable_reason": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": [
+          "en",
+          "zh"
+        ],
+        "properties": {
+          "en": {
+            "type": "string",
+            "minLength": 1
+          },
+          "zh": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "description": "Actual source and receipt matching, language completeness and unavailable-state rules are enforced by agentwatch.author_method."
+}

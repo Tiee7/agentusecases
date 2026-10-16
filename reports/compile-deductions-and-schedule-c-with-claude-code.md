@@ -1,5 +1,22 @@
 # Claude Code税务凭证整理的商业研究
 
+## 原作者的方法与来源
+
+来源：[Chris Blattman · Tax workflow](https://claudeblattman.com/tax-workflow/)
+
+作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+
+1. 汇集捐赠记录、收据、信用卡账单和咨询收入资料。
+   English summary: Collect donation records, receipts, credit-card statements and consulting-income documents.
+
+2. 让 Claude Code 整理交易、解析 CSV 导出文件，生成扣除项目与 Schedule C 所需表格。
+   English summary: Use Claude Code to sort transactions, parse CSV exports and assemble deduction and Schedule C spreadsheets.
+
+3. 手动判断含糊的支出分类，复核汇总数据后再交给报税软件。教程使用虚构人物示例。
+   English summary: Manually classify ambiguous charges and review the compiled data before moving it into tax software. The tutorial uses fictional profiles.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。先用于专业团队的可复核材料整理，不为通用消费者订阅入口立项。**
 
 项目能帮助具备税务知识的人组织材料，但这种价值仍依赖人工脱敏、逐金额复核和最终专业判断。公开的关键收集、编译技能存在交付缺口，独立用户也报告了该问题。消费者已有符合条件的免费申报替代；项目没有提供可验证的付费、获客或单位利润记录。把案例介绍中的费用比较当成创业收入会误判，因此当前应投入小范围内部流程验证，而不是开发大众收费产品。

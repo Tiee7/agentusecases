@@ -42,7 +42,7 @@
 
 研究由登录中的Codex执行，不要求模型API密钥。完整任务指令见[每小时Codex研究任务](tasks/hourly-business-research.md)：每次选择一个未完成案例，公开分类top优先，深入阅读后通过质量检查，再更新独立报告、结构化记录、来源凭据及索引，提交、推送main。每小时是启动频率，研究超过一小时不强行交付短稿，上一轮未完成时不并行启动重复研究。
 
-每轮调研开始前重新运行爬虫，获取完整sitemap、首屏分类top及前5个详情，再更新`registry/cases.json`、`registry/CATALOG.md`和`INDEX.md`，然后选案例。独立的`data/research-refresh/`保存小时刷新历史，不覆盖每日全站详情采集。未采样详情不宣称已经复查，未采样案例不误判为移出。目录刷新成功但研究失败时，仍保留并发布真实索引变化，案例保持未完成。发布文件包含登记表，避免目录与报告对应关系漏提交。
+独立daily爬虫按既有频率批量刷新目录和详情；每篇深研只同步并读取最近已提交的registry、刷新元数据及研究状态，不重复启动爬虫。记录目录提交SHA、真实快照日期和详情覆盖范围；抓取失败时明确使用最近成功快照。目录发布只修改登记表、刷新元数据及派生索引，保护research/reports。研究推送遇目录变化时合并最新登记项、重新生成索引并验证，不用旧目录覆盖新收录。调度与并发发布规则见tasks/hourly-business-research.md。
 
 **当前状态：原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证。** 创建时间为2026-10-15 09:59，首次计划触发为当日11:00，均为北京时间，详见[任务状态](tasks/hourly-business-research.md)。此前误接的API研究工作流已停用并移除，任务文件或每日爬虫本身不代表每小时深研已按时执行。
 
@@ -69,3 +69,9 @@
 本轮用户重新授权源站浏览器核对，由父任务提供两份实际DOM片段及截图；不调用`/api/`、不重试取消的curl，不重试本项目线上GET/浏览器验收。浏览器点击显示Copied只能证明按钮反馈；未取得剪贴板内容时不得宣称源站剪贴板逐字核验。本地站的剪贴板可独立测试，不能替代源站验证。仍不新建研究、不改Wanted、不改调度，最终完成后由父任务排至少5分钟休息。
 
 时间精度补充：浏览器观测只有工具调用前后计时区间时，`observed_at`保持null，以`observation_window.start/end/basis`记录真实区间（basis为system_time_bracketing_tool_call）。离线导入用`--observed-from`与`--observed-until`替代`--observed-at`，结合`--db <history.sqlite3> --apply`持久化并同步已有登记项。不得将区间端点当精确观测秒。两区间重叠且无法确认新旧时保留已有记录，不声称更新更晚。真实DOM路径可以独立交付；未取得真实SSR时测试证据明确写合成SSR，不冒称实测SSR。
+
+## 原作者方法与摘要版权
+
+每次新发布必须填写 author_method，并在报告和阅读站中将原作者方法/来源放在我们的分析之前。实际读取 registry.original_sources 里的来源并保存哈希凭据：作者直接说明标 author_summary；媒体或汇编转述标 reported_summary，不把其编辑建议写成作者实际步骤；无法读取标 unavailable，steps为空并保留链接。源站 Copy prompt、自编模板不属于作者方法。
+
+英文资料提供短英文方法摘要及对应中文翻译，标注摘要而非全文原文。未经许可不复制或翻译整篇受版权保护文章，本字段只接受 bilingual_summary。必要短引文遵守来源限制；本次回填不使用长引文。结构见 schemas/author-method.schema.json，实际来源/凭据校验由 agentwatch.author_method 执行。原始资料也应加入研究sources与读取凭据，以便verify-sources复核。

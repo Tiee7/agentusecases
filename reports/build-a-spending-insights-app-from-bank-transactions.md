@@ -1,5 +1,22 @@
 # Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立
 
+## 原作者的方法与来源
+
+来源：[Plaid · Replit connector walkthrough](https://plaid.com/blog/build-personalized-finance-apps-replit-plaid/)
+
+作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+
+1. 建立 Replit 项目，使用 Plaid 控制台提供的凭据配置 Plaid 连接器。
+   English summary: Create the Replit project and configure its Plaid connector with credentials from the Plaid dashboard.
+
+2. 先使用沙盒数据制作原型，或通过 Plaid Link 连接开发者自己的金融账户。
+   English summary: Use sandbox data to prototype, or connect the builder’s own financial accounts through Plaid Link.
+
+3. 让 Replit 根据分类后的交易数据生成支出仪表盘、摘要或聊天界面。
+   English summary: Ask Replit to use categorized transactions to build a spending dashboard, summary or chat interface.
+
+## 我们的分析
+
 **商业结论：适合内部效率工具。先用于个人自有数据的消费复盘；没有证据支持把五分钟接入演示包装成成熟订阅生意。**
 
 本案可解决有特殊分类和展示需求者反复整理个人流水的问题，但使用者目前也是数据所有者和平台费用承担者。原始公告明确连接器只供构建者访问自己的金融数据，没有命名客户或交付成效；多客户经营要另行验证生产接入、授权与数据隔离。成熟预算软件已有账户汇总、目标和支持服务，而低价新订阅的收入很容易被重连、交易对账及获客吃掉。因此建议把它当作自用工具或验证原型，尚不将教程的建设速度视为商业回报；定制服务仅是待验证的另一种经营假说。
@@ -35,6 +52,8 @@
 - 错误风险：退款、转账和重复交易可能误计消费；必须对账和保留原始行
 
 ## Copy prompt · 动手试用
+
+源站模板状态：尚未结构化观测；不表示源站没有提示词。
 
 本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
 

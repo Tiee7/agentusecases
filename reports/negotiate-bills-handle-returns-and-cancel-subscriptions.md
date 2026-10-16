@@ -1,5 +1,19 @@
 # Meta Muse 账单议价与退款：只宜受控试点，节省承诺尚未证明可盈利交付
 
+## 原作者的方法与来源
+
+来源：[Tekedia · Meta Muse money challenge](https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 文章概述 Muse 查看家庭支出并寻找折扣、退款或取消订阅的机会。
+   English summary: The article describes Muse reviewing household spending and identifying opportunities for discounts, refunds or cancellations.
+
+2. 文章汇集多位用户议价和退货的自述，未提供单一作者的完整操作步骤。
+   English summary: It collects several users’ anecdotes about negotiating bills and handling returns; it does not provide one author’s complete procedure.
+
+## 我们的分析
+
 **商业结论：仅建议受控试点。需求具体，但免费平台、既有议价服务和逐商家人工接管压缩独立经营空间。**
 
 家庭用户确有降低重复支出及减少客服沟通的需求，付款人也是承担账单的个人。可是本案例最醒目的收益来自员工与活动参与者自述，把退款、保险理赔和年化降费合计，不能证明平均增量收益。官方技术说明确认代理具备执行与审批机制，但没有给出该流程成功率和维护成本。独立经营者还要支付获客、逐单核验、失败重试与后续对账费用，面对免费通用代理及已有人工议价服务。只批准限定服务商的人工监督验证，不应据此投入全平台自主代办产品。

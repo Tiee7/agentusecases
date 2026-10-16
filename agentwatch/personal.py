@@ -57,7 +57,7 @@ def render_personal(record):
     lines += ['', '## Copy prompt · 动手试用', *source_lines, '', note, '', '准备条件：' + trial['prerequisites'], '', '工具：' + trial['tools'], '', '预期结果：' + trial['expected_result']]
     for p in trial['prompts']:
         # Indented code keeps arbitrary fences and bilingual prompt text literal.
-        lines += ['', '### ' + p['title'], '', p['attribution'], '', '出处：' + (p.get('source_url') or '本仓库研究团队编写；非源站原文'), '', '依据：' + ', '.join(p['source_ids']), '', *['    ' + line for line in p['text'].splitlines()]]
+        lines += ['', '### ' + p['title'], '', p['attribution'], '', '出处：' + (p.get('source_url') or '本仓库研究团队编写；非源站原文'), '', '依据：' + ', '.join(p['source_ids']), '', *[('    ' + line if line else '') for line in p['text'].splitlines()]]
     return lines
 
 
@@ -67,7 +67,7 @@ def render_source_trial(observation):
     from .source_trial import observation_label
     lines = ['', '### 源站试用模板', '', '状态：' + observation['status'], '', '出处：' + observation['source_url'], '', '观测时间：' + observation_label(observation)]
     if observation['status'] == 'available':
-        lines += ['', '建议运行工具：' + observation['agent'] + '（与案例实际使用的agent分开记录）', '', observation['attribution'], '', *['    ' + line for line in observation['text'].splitlines()]]
+        lines += ['', '建议运行工具：' + observation['agent'] + '（与案例实际使用的agent分开记录）', '', observation['attribution'], '', *[('    ' + line if line else '') for line in observation['text'].splitlines()]]
     else:
         lines += ['', '本次未取得可用模板；缺失、解析失败和未观测分别记录，不推断作者原始提示词。']
     return lines

@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
-import {loadContent,projectReport,safeId,safeUrl,repoRoot} from '../src/lib/content.mjs';
+import {loadContent,projectReport,projectAuthorMethod,safeId,safeUrl,repoRoot} from '../src/lib/content.mjs';
 test('only completed v2 records with existing reports and matching identity become pages',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'reader-fixture-'));try{
   for(const dir of ['registry','research','reports'])fs.mkdirSync(path.join(root,dir));
@@ -39,4 +39,13 @@ test('catalog uses first collection time, keeps unknown dates last, and never pr
  cases.push({id:'newest',title:'newest',url:'https://example.org/newest',first_seen_at:'2026-10-17T00:00:00Z'});fs.writeFileSync(path.join(root,'registry/cases.json'),JSON.stringify({cases}));
  assert.equal(loadContent(root).catalog[0].id,'newest');
  }finally{fs.rmSync(root,{recursive:true,force:true})}
+});
+
+test('author methods reject unregistered sources and incomplete translations; never substitute prompts',()=>{
+ const {reports}=loadContent();assert(reports.some(r=>r.authorMethod.status==='author_summary'));assert(reports.some(r=>r.authorMethod.status==='reported_summary'));
+ const entry={original_sources:['https://author.test/post']};
+ const valid={version:1,presentation:'bilingual_summary',status:'author_summary',source_url:entry.original_sources[0],source_title:'Author',accessed_at:'2026-10-16T00:00:00Z',source_sha256:'a'.repeat(64),steps:[{en:'Read inputs.',zh:'读取输入。'}]};
+ assert.equal(projectAuthorMethod(valid,entry).status,'author_summary');
+ for(const invalid of [undefined,{...valid,source_url:'https://agentusecases.ai/use-case/a'},{...valid,steps:[{en:'No translation'}]},{...valid,source_sha256:''},{...valid,presentation:'full_text'}])assert.equal(projectAuthorMethod(invalid,entry).status,'unavailable');
+ const unavailable=projectAuthorMethod({...valid,status:'unavailable',steps:valid.steps},entry);assert.deepEqual(unavailable.steps,[]);
 });

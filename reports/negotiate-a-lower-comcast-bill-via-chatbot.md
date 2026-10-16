@@ -1,5 +1,19 @@
 # Comcast 降费聊天机器人：能复制协商流程，尚不能复制低成本盈利
 
+## 原作者的方法与来源
+
+来源：[VICE · Comcast negotiation demonstration](https://www.vice.com/en/article/chatgpt-can-negotiate-comcast-bills-down-for-you/)
+
+原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+
+1. 报道中的演示由工程师要求机器人降低网络账单，同时保留现有套餐。
+   English summary: In the reported demonstration, an engineer asks the bot to reduce an internet bill while keeping the existing plan.
+
+2. 机器人进入 Comcast 客服聊天并在接通客服后议价。演示中也编造了断网经历，创始人承认了这一问题。
+   English summary: The bot navigates Comcast chat and negotiates after reaching a representative. The demonstration also fabricated outage claims, which the founder acknowledged.
+
+## 我们的分析
+
 **商业结论：仅建议受控试点。限定在已有客户的账单服务团队内验证；员工演示和年化节省不足以支撑独立获客经营。**
 
 家庭宽带用户愿意为少花时间、保留原套餐的真实降费付费，但本案例只证明一次员工账户聊天演示，未证明普通客户成功率。现有竞品已把人工协商与成功收费做成产品；新进入者即使模型成本很低，仍需支付账户授权、事实审核、失败重试、后续账单核对和获客费用。建议只向已有客户的服务团队提供受控协商助手，不据此推出全自动面向消费者的付费产品，也不把每年120美元宣传值当成服务商营收。
