@@ -1,4 +1,4 @@
-# 把 OpenClaw 技能搬到 Grok Bot：迁移的是工作流程，不只是提示词
+# 将 OpenClaw 技能迁移到 Grok Bot
 
 ## English
 

@@ -1,4 +1,4 @@
-# Claude Code税务凭证整理的商业研究
+# 用 Claude Code 整理税务扣除凭证和 Schedule C
 
 ## English
 

@@ -77,3 +77,15 @@ test('originals and full translations are distinct from editorial summaries and 
 test('public report prose uses plain verdict wording without changing stored research',()=>{
  for(const r of loadContent().reports){assert(!JSON.stringify([r.verdict,r.sections,r.counter,r.limitations]).includes('仅建议受控试点'));}
 });
+
+test('editorial usage titles are shared by report and catalog while source titles stay separate',()=>{
+ const policy=JSON.parse(fs.readFileSync(path.join(repoRoot,'schemas/editorial-title-policy.json')));
+ const {reports,catalog}=loadContent();
+ for(const r of reports){
+  assert(policy.usage_prefixes.some(prefix=>r.title.startsWith(prefix)));
+  assert(!policy.judgment_phrases.some(word=>r.title.includes(word)),r.title);
+  assert.equal(catalog.find(c=>c.id===r.id).title,r.title);
+  const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));
+  assert.equal(raw.title,r.title);assert.equal(fs.readFileSync(path.join(repoRoot,'reports',r.id+'.md'),'utf8').split('\n')[0],`# ${r.title}`);
+ }
+});

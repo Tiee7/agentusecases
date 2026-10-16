@@ -3,7 +3,7 @@ from agentwatch.report import render, WEIGHTS
 
 class ReportTests(unittest.TestCase):
     def record(self):
-        return {'title': 'Fixture', 'url': 'https://example.test/case', 'researched_at': '2026-10-14', 'summary': 'Synthetic fixture, not a real case.'}
+        return {'title': '用测试 agent 整理资料', 'url': 'https://example.test/case', 'researched_at': '2026-10-14', 'summary': 'Synthetic fixture, not a real case.'}
     def test_missing_evidence_not_zero_or_total(self):
         self.assertIn('暂不计算', render(self.record()))
     def test_cited_weighted_score(self):

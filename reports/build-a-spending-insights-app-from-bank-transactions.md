@@ -1,4 +1,4 @@
-# Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立
+# 用 Replit Agent 和 Plaid 构建消费洞察应用
 
 ## English
 

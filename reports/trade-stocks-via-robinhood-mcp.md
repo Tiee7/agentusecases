@@ -1,4 +1,4 @@
-# Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒
+# 用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易
 
 ## English
 

@@ -7,7 +7,9 @@ WEIGHTS = {'value': 25, 'evidence': 25, 'feasibility': 20, 'economics': 15, 'ris
 LABELS = {'value': '需求价值', 'evidence': '效果证据', 'feasibility': '落地可行性', 'economics': '成本与维护', 'risk_control': '风险控制'}
 
 def render(record):
+    from .titles import validate_editorial_title
     title = record['title']
+    validate_editorial_title(title)
     url = record['url']
     lines = [f'# {title}', '', f'案例来源：{url}', f"研究日期：{record['researched_at']}", f"状态：{record.get('status', 'pending')} · 证据置信度：{record.get('confidence', '未标注')}", '', record.get('evidence_scope', ''), '', record['summary'], '', '| 维度 | 权重 | 分数（0–5） | 依据 |', '|---|---:|---:|---|']
     total = 0

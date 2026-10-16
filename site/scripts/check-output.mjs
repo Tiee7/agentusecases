@@ -19,3 +19,16 @@ process.stdout.write(execFileSync('python3',['scripts/check-trial-output.py'],{e
 
 // Exempted text blocks above must equal the recorded source/translation byte-for-byte.
 process.stdout.write(execFileSync('python3',['scripts/check-archive-output.py'],{encoding:'utf8'}));
+
+// Every edited title must agree across all static routes; never rewrite source blocks.
+const escapeHtml=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+for(const r of reports){
+ const title=escapeHtml(r.title);
+ assert(home.includes(`>${title}</a></h3>`),`Card title mismatch: ${r.id}`);
+ for(const route of ['reports','cases',...(r.sourceTrial.status==='available'?['trials']:[])]){
+  const html=fs.readFileSync(`dist/${route}/${r.id}/index.html`,'utf8');
+  assert(html.includes(`<h1>${title}</h1>`),`H1 mismatch: ${route}/${r.id}`);
+  assert(html.includes(`<title>${title}`),`SEO title mismatch: ${route}/${r.id}`);
+ }
+}
+console.log(`Objective titles synchronized across ${reports.length} edited cases, cards and SEO titles.`);

@@ -1,4 +1,4 @@
-# Claude Cowork 投资备忘录：适合内部研究准备，不足以出售无人复核的投研结论
+# 用 Claude Cowork 生成投资备忘录并跟踪投资
 
 ## English
 

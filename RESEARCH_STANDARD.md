@@ -75,3 +75,11 @@
 每次新发布必须填写 author_method，并在报告和阅读站中将原作者方法/来源放在我们的分析之前。实际读取 registry.original_sources 里的来源并保存哈希凭据：作者直接说明标 author_summary；媒体或汇编转述标 reported_summary，不把其编辑建议写成作者实际步骤；无法读取标 unavailable，steps为空并保留链接。源站 Copy prompt、自编模板不属于作者方法。
 
 英文资料提供短英文方法摘要及对应中文翻译，标注摘要而非全文原文。未经许可不复制或翻译整篇受版权保护文章，本字段只接受 bilingual_summary。必要短引文遵守来源限制；本次回填不使用长引文。结构见 schemas/author-method.schema.json，实际来源/凭据校验由 agentwatch.author_method 执行。原始资料也应加入研究sources与读取凭据，以便verify-sources复核。
+
+## 本站编辑标题规范
+
+研究记录 `title`、报告 H1、首页卡片、目录、试用页、SEO title 和总索引使用同一个客观用途标题，例如“用 Claude Cowork 生成投资备忘录并跟踪投资”。标题写实际 agent、动作、任务对象；不写建议、不建议、适合、值得、价值评级、优缺点或商业可行性结论。评价、评分、限制和论证放在正文分析与 verdict 中，不因改标题删除。未知工具可写“用 AI agent …”，不要用源站推荐工具冒充实际工具。
+
+遵守 `schemas/editorial-title-policy.json`，运行 `agentwatch.titles.validate_editorial_title`。发布校验拦截已知评价短语，人工仍需检查是否夹带结论；不能靠避开关键词通过。保持案例 ID、slug 和链接稳定；不改 `registry/cases.json` 的源站标题、归档英文原文／原始标题、译文及引用来源标题。未编辑的源站标题仍按来源原样保留，规范仅约束本站编辑标题。
+
+发布前核对研究 JSON title 与 Markdown H1 一致，重新生成 `python -m agentwatch.business index`，执行仓库与阅读站测试，并确认 reports/cases/trials 的 H1、浏览器标题、首页卡片与目录入口一致。

@@ -122,6 +122,8 @@ def validate(record,receipts,expected_id):
         raise ValueError('Research time must include its timezone')
     if any(not isinstance(record.get(k),str) or not record[k].strip() for k in ('title','industry','confidence')):
         raise ValueError('Report title, industry and confidence are required')
+    from .titles import validate_editorial_title
+    validate_editorial_title(record['title'])
     fetched={r['id']:r for r in receipts if r.get('status')=='fetched'}
     sources=record.get('sources',[])
     ids={s['id'] for s in sources}
@@ -197,6 +199,8 @@ def economics(model):
     return variable,contribution,profit
 
 def render(record):
+    from .titles import validate_editorial_title
+    validate_editorial_title(record.get('title'))
     from .reader_copy import project
     record=project(record)
     v=record['verdict']
@@ -244,8 +248,8 @@ def indexes():
     Path('INDEX.md').write_text('\n'.join(lines)+'\n')
     catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 | 源站试用模板 | 实际 agent（源站标注） |','|---|---|---|---|---|---|']
     for case in cases:
-        state,_=case_state(case)
-        title=case['title'].replace('|','\\|')
+        state,record=case_state(case)
+        title=(record['title'] if state=='completed' else case['title']).replace('|','\\|')
         report=f"[报告](../{case['report']})" if Path(case['report']).exists() else f"`{case['report']}`"
         sc=case.get('source_case', {})
         agents=('、'.join(sc.get('actual_agents', [])) or ('自建或未命名 agent' if sc.get('agent_status')=='custom_or_unnamed' else '尚未观测')).replace('|', '\\|')
