@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "87eea770cd28fdfc0a99bda3713748d72f92e7bc0d6d7029d1e9bba325c9fbe6",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer had Claude Code switch a monorepo to oxlint/oxfmt, restructure the architecture and redesign a site, validating in a loop; the redesign took days instead of weeks.",
+      "sha256": "87eea770cd28fdfc0a99bda3713748d72f92e7bc0d6d7029d1e9bba325c9fbe6"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4c020abbf3d4fcbc074565823484ee56edfd78ce5abf56f486a9230c337cd1fc",
-      "publication": "reviewed_restatement_required"
+      "value": "On a 7-app Cloudflare Workers monorepo of about 1,670 TypeScript files, Claude Code replaced Biome with oxlint and oxfmt, then tsc with tsgo, in separate PRs. It also moved a frontend into feature modules from a spec the developer wrote, and helped redesign his site using a well-kept CLAUDE.md. Each step ran lint, typecheck, tests and build, and he read the output.",
+      "sha256": "4c020abbf3d4fcbc074565823484ee56edfd78ce5abf56f486a9230c337cd1fc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c0aae3e08dfd742efa86a949f3576f66290b62b219ae3fca9b4bd6c6a463618e",
-      "publication": "reviewed_restatement_required"
+      "value": "Lint plus typecheck fell from 29.04s to 1.25s, about 23x faster. The oxlint PR touched more than 700 files. The site redesign took a couple of days instead of roughly two weeks.",
+      "sha256": "c0aae3e08dfd742efa86a949f3576f66290b62b219ae3fca9b4bd6c6a463618e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "177a392db9dcd3ba30a61df53a89b857511dadaf8039e759227345c23ba7fcb5",
-      "publication": "reviewed_restatement_required"
+      "value": "Plan first, split the work into phases with atomic PRs, and measure before and after. Don't merge changes you don't understand.",
+      "sha256": "177a392db9dcd3ba30a61df53a89b857511dadaf8039e759227345c23ba7fcb5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate toolchain, architecture and site design with Claude Code\nA developer had Claude Code switch a monorepo to oxlint/oxfmt, restructure the architecture and redesign a site, validating in a loop; the redesign took days instead of weeks.\nDone with\nCC\nClaude Code\nWhat they did\nOn a 7-app Cloudflare Workers monorepo of about 1,670 TypeScript files, Claude Code replaced Biome with oxlint and oxfmt, then tsc with tsgo, in separate PRs. It also moved a frontend into feature modules from a spec the developer wrote, and helped redesign his site using a well-kept CLAUDE.md. Each step ran lint, typecheck, tests and build, and he read the output.\nHow it went\nLint plus typecheck fell from 29.04s to 1.25s, about 23x faster. The oxlint PR touched more than 700 files. The site redesign took a couple of days instead of roughly two weeks.\nWorth knowing\nPlan first, split the work into phases with atomic PRs, and measure before and after. Don't merge changes you don't understand.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repo at [path], switch the linting and formatting toolchain to [e.g. oxlint and oxfmt], and fix everything that breaks. Run the build, tests, and lint after each change and loop until they all pass. Work on a separate branch, summarize what you changed, and stop when everything is green without merging.\nOriginal source: https://sergioazocar.com/en/blog/how-to-migrate-with-claude-code-and-not-die-trying/",
+    "body_sha256": "8c6be56c3bbbdf777773e5bec50e850676879ce6f603eaeb73ff63ee879844e1",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

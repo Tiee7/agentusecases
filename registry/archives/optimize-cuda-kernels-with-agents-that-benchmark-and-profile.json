@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "bf6fe421b152be5d755798951658c2034f15d866020476c3af51a740a5bf0c83",
-      "publication": "reviewed_restatement_required"
+      "value": "AI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.",
+      "sha256": "bf6fe421b152be5d755798951658c2034f15d866020476c3af51a740a5bf0c83"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5c7eb2cb03a38bdd73010d02840a7a32e673bd56474efa486ad70a180392e72d",
-      "publication": "reviewed_restatement_required"
+      "value": "The user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.",
+      "sha256": "5c7eb2cb03a38bdd73010d02840a7a32e673bd56474efa486ad70a180392e72d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "adbdf3856dc4f6e6c90b721d7ac157e5a93f40bd62645c54d51ab7eefcd7b0ce",
-      "publication": "reviewed_restatement_required"
+      "value": "The README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.",
+      "sha256": "adbdf3856dc4f6e6c90b721d7ac157e5a93f40bd62645c54d51ab7eefcd7b0ce"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5485a4045d2ee77f8f8cf4c39ffdeb23acd618945719e0afb016ff0aef675721",
-      "publication": "reviewed_restatement_required"
+      "value": "Generated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.",
+      "sha256": "5485a4045d2ee77f8f8cf4c39ffdeb23acd618945719e0afb016ff0aef675721"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
+    "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

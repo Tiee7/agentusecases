@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2f530bb49258f4b9eb46a6421eb49e89cf0200afc136d977782eab28fe487df2",
-      "publication": "reviewed_restatement_required"
+      "value": "An assistant named Jackie takes voice or text via Telegram to summarize unread emails, check calendar events and manage Google Tasks.",
+      "sha256": "2f530bb49258f4b9eb46a6421eb49e89cf0200afc136d977782eab28fe487df2"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d290b71a5673be6b2a1cfdd281f54d88edf3964765cbf989287a95e94e08d7a7",
-      "publication": "reviewed_restatement_required"
+      "value": "This n8n workflow starts with a Telegram trigger that checks whether the message is voice or text. Voice files are fetched from Telegram and transcribed with OpenAI. The text goes to Jackie, an agent running on an OpenRouter model. Jackie has tools for Gmail unread email, Google Calendar events by date, and creating and reading Google Tasks. She replies in Telegram using Markdown, drawing on conversation memory and the current date.",
+      "sha256": "d290b71a5673be6b2a1cfdd281f54d88edf3964765cbf989287a95e94e08d7a7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "f4b200492e46aa5bc85f6ab828a1ceabeb78bb8f45d42143fa40f4e041485b02",
-      "publication": "reviewed_restatement_required"
+      "value": "The source describes the design and features but reports no test results, numbers or limitations.",
+      "sha256": "f4b200492e46aa5bc85f6ab828a1ceabeb78bb8f45d42143fa40f4e041485b02"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "556eaca95065d31f5172719e5cd3832aaeea473166a8fe14a45a8a5475a15b41",
-      "publication": "reviewed_restatement_required"
+      "value": "You need four credentials: a Telegram bot token from @BotFather, an OpenAI key for transcription, an OpenRouter key, and Google OAuth2 for Gmail, Calendar and Tasks.",
+      "sha256": "556eaca95065d31f5172719e5cd3832aaeea473166a8fe14a45a8a5475a15b41"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run email, calendar and tasks from a Telegram voice assistant\nAn assistant named Jackie takes voice or text via Telegram to summarize unread emails, check calendar events and manage Google Tasks.\nDone with\nN8\nn8n\nWhat they did\nThis n8n workflow starts with a Telegram trigger that checks whether the message is voice or text. Voice files are fetched from Telegram and transcribed with OpenAI. The text goes to Jackie, an agent running on an OpenRouter model. Jackie has tools for Gmail unread email, Google Calendar events by date, and creating and reading Google Tasks. She replies in Telegram using Markdown, drawing on conversation memory and the current date.\nHow it went\nThe source describes the design and features but reports no test results, numbers or limitations.\nWorth knowing\nYou need four credentials: a Telegram bot token from @BotFather, an OpenAI key for transcription, an OpenRouter key, and Google OAuth2 for Gmail, Calendar and Tasks.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n assistant named [assistant name] that I can talk to by voice or text in Telegram. It should summarize my unread Gmail, list upcoming events from Google Calendar, and add or complete tasks in Google Tasks. It must be read-only for email, and it should confirm with me before creating or changing any calendar event or task; done when it handles \"what's on my plate today?\" correctly.\nOriginal source: https://n8n.io/workflows/8237-personal-life-manager-with-telegram-google-services-and-voice-enabled-ai/",
+    "body_sha256": "aa063ddab0823122002badebba0999547adf5a4586f28ad4d2f627153d140315",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

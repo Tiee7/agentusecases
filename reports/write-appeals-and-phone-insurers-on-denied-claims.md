@@ -1,36 +1,31 @@
 # Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+    Write appeals and phone insurers on denied claims
+    Counterforce Health's AI writes appeal letters against claim denials and a voice agent calls the insurer to follow up for the user.
+    Done with a
+    custom-built or unnamed agent
+    What they did
+    Counterforce Health's founders trained the AI on service-code databases, external-review databases and legal filings from lawsuits against insurers. Users pick a common denial, such as a miscoded surgery, or upload their policy, medical records and denial letter. The AI writes a cited appeal letter in under a minute. A voice AI called Maxwell phones the insurer to follow up, and it is still being tested.
+    How it went
+    Since the January beta, thousands of people have used the letter generator, and three small clinics use it regularly. Maxwell is still in testing, and the founders say they are working on accuracy. The article gives no appeal win rates.
+    Worth knowing
+    The service is free to users. CareYaya's impact fund pays a few cents per letter and $1.50 per 10 minutes of Maxwell calls.
+    Try it yourself
+    with
+    ChatGPT Agent
+    Copy prompt
+    My insurer [name] denied my claim [claim number] for [service]. Write an appeal letter from the denial reason and my policy text below, and then a short phone script for calling the insurer to check on the appeal's status. Stop once I have both documents, and show me anything before it's submitted or sent.
 
-来源：https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：自建或未命名 agent
-
-### 介绍
-
-Counterforce Health combines denial-letter drafting with experimental telephone follow-up.
-
-Counterforce Health 将拒赔申诉信起草与试验中的电话跟进结合。
-
-### 方法
-
-Users provide denial and policy information or choose a common issue. The system uses insurance-related reference material to draft appeals; Maxwell is the voice component being tested.
-
-用户提供拒赔与保单资料或选择常见问题；系统利用保险相关参考资料起草申诉，Maxwell 是正在测试的语音组件。
-
-### 结果与限制
-
-The source reports adoption by individuals and a few clinics but no appeal success rate. Use of the letter generator does not validate the voice agent’s effectiveness.
-
-源站报告个人及少数诊所使用，但没有申诉成功率；信件生成器的使用量不能验证语音 agent 的效果。
+    [paste denial letter and policy text]
+    Original source: https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/
 
 ## 原作者的方法与来源
 
 来源：[CityView · Counterforce Health](https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 患者提供保险条款、病历及拒赔信，或使用示例拒赔情景。
    English summary: Patients provide their coverage policy, medical records and denial letter, or use a sample denial scenario.
@@ -45,7 +40,7 @@ The source reports adoption by individuals and a few clinics but no appeal succe
 拒赔造成的资料整理和追踪负担真实，独立报道也有诊所人员使用后的正向信号；但 Counterforce 对个人免费，现有替代还包括免费生成器及带提交服务的定价产品，不能将患者获赔当作平台收入。更关键的是，其公开条款限制个人非商业使用、要求自行去标识化，电话模块仍标 Beta，未提供可审计的全流程成功率和单位人工成本。可研究的经营切口是取得适当授权后，为有重复病例的专科诊所提供受控文书与追踪服务；不能直接转售免费端或承诺自主完成拒赔追偿。具体事实与边界见下文来源。
 
 案例ID：`write-appeals-and-phone-insurers-on-denied-claims` · 案例来源：https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims
-研究时间：2026-10-15T02:10:45.597629+00:00 · 证据置信度：中等：已读取官网、公开条款、独立报道、实际使用者采访和市场统计；未验证内部代码、生产通话、客户合同、审计效果或财务账本。
+研究时间：2026-10-15T02:10:45.597629+00:00
 
 **商业评分：47.5/100。用户反馈信号占5%。**
 
@@ -78,21 +73,15 @@ The source reports adoption by individuals and a few clinics but no appeal succe
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims
 
-观测时间：2026-10-16T02:51:01.377716+00:00
-
-建议运行工具：ChatGPT Agent（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：ChatGPT Agent
 
     My insurer [name] denied my claim [claim number] for [service]. Write an appeal letter from the denial reason and my policy text below, and then a short phone script for calling the insurer to check on the appeal's status. Stop once I have both documents, and show me anything before it's submitted or sent.
 
     [paste denial letter and policy text]
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -102,9 +91,9 @@ The source reports adoption by individuals and a few clinics but no appeal succe
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：See5f635bd680, Sac74a37c5fec, Sd91666fe223f, S078d7332c465, S940827dd0381, S3958a578682f
 
@@ -117,9 +106,9 @@ The source reports adoption by individuals and a few clinics but no appeal succe
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：See5f635bd680, Sac74a37c5fec, Sd91666fe223f, S078d7332c465, S940827dd0381, S3958a578682f
 
@@ -230,11 +219,7 @@ Counterforce隐私政策允许为模型改进使用资料、条款给了较宽�
 
 ## 用户反馈：可用信号和缺口
 
-本轮实际执行了社区、公开代码及新闻使用者三个渠道的查询，搜索日志如下。社区命中r/healthIT介绍帖，摘要只是读过新闻后的评价，且抓取被robots规则阻止，不将其记成亲身使用体验。GitHub检索结果混有无关项目，没有找到可确认身份的产品仓库和问题追踪，不能用“没找到bug”推断可靠。部分搜索结果相关性较差，因此结合官网原始新闻链接进一步核验。
-
-NBC全文通过仓库读取器成功缓存，尽管网页浏览工具对同一站点报错。报道中Wilmington Health的Tabitha Lee确实被描述为Counterforce直接使用者，她表示写信更省时且收到过迅速批准，这是本次唯一纳入评分的具名直接用户观察。它没有提供连续病例清单、平均回款、人工总时长或未成功者经历，存在报道选材和成功故事偏差。
-
-同篇Stephanie Nixdorf的案例属于Claimable，不属于Counterforce，故不会拿来提高本项目胜诉率。官网匿名或缩写姓名的推荐语、70%或75%等宣传数字也不当作独立评价。反馈维度只给2/5、总权重5%，为总分贡献2分；它支持值得小规模核对业务流程，不能替代效果和经济性证据，更不能作为收费获客宣传中的成功保证。
+NBC采访的Tabitha Lee使用Counterforce减少申诉信准备时间，并报告过当天或次日批准；没有完整效果分母。
 
 依据：See5f635bd680, Sac74a37c5fec, S5c089d36fa26
 
@@ -262,19 +247,11 @@ NBC全文通过仓库读取器成功缓存，尽管网页浏览工具对同一�
 
 假设C：免费个人服务的资助缺口假设：个人零价源于官网；其他均为假设：人工20分钟×45美元/小时=15，文本0.50、其他2、转介获客3、月200件、固定2,000。未把任何未核实的资助计入收入，每月6,100美元负贡献代表所需外部补贴，不是Counterforce实际亏损。；API成本 0.5，人工成本 15，其他可变成本 2，分摊获客成本 3。依据：Sac74a37c5fec, S940827dd0381
 
-## 用户反馈核对（低权重）
-
-- 社区 Reddit · `site:reddit.com "Counterforce Health"`：检索命中r/healthIT介绍帖，摘要为阅读新闻后的讨论；仓库抓取被robots禁止，未作为已读或直接反馈。
-- 公开代码 GitHub · `"Counterforce Health" github issues`：结果缺乏可核对的项目仓库及用户问题记录；未发现不等于不存在，无可纳入使用反馈。
-- 独立媒体用户采访 · `"Counterforce Health" reviews patient`：检索出现媒体报道，随后从官网原始链接取得并读取NBC全文；纳入Tabitha Lee直接使用者描述。
-- 社区 Hacker News · `site:news.ycombinator.com "Counterforce"`：返回多项无关内容，未找到可验证的本产品使用体验，不据此推断用户满意或不满。
-- [See5f635bd680] direct_user：NBC采访的Tabitha Lee使用Counterforce减少申诉信准备时间，并报告过当天或次日批准；没有完整效果分母。；偏差：单个具名从业者经媒体选择的正向案例；非随机抽样，可能受到转介和成功案例选择影响，无独立工时审计。
-
 ## 反证与未核实信息
 
 原始积极假说是低廉模型成本可支撑大规模收费申诉；反证是个人免费承诺、成熟免费生成器、Claimable带配送支持的39.95美元基准及可获资助的免费案件，压低文书价格。公开非商业许可也否定直接转售现有免费端的设想。NBC实际用户表述又反驳工具完全无用的否定论，因此保留受控试点而非直接商业扩张。KFF主要行政拒赔与产品临床论证优势未必匹配，须先分流；任何官网胜率都不能与不同样本的全国统计作因果对比。
 
-未注册、购买或实测产品；没有读取真实患者信息，没有模型API调用、额外付费模型或新API密钥。未取得源码、企业授权合同或数据协议、资助财务、续费、获客成本、分母完整的病例结果和电话成功日志。3次以上反馈检索含低相关结果，Reddit原文被禁止抓取；其摘要不作已读反馈。旧KFF地址301已改用真实新地址读取；错误同名claimable.com及404专业简介均排除正文来源，保留本地访问记录。2024 KFF来源正文的内部申诉总量与其66%比例存在口径不透明，本报告不据此计算成功率。官网免费承诺与条款保留收费权并存，未推断未来一定收费。本轮爬虫于2026-10-15T02:03:44.850024+00:00成功刷新完整sitemap和分类top，目录1,311条、详情只采样5条；新数据库首次建立基线，不能称获得逐次网站变化历史。与此前Git登记表1,296条对照新增15条、无历史ID删除，深研本轮仅1案。
+源码、机构合同、资助财务、续费、获客成本及完整病例结果未知。KFF申诉总量与66%比例的口径不清，免费承诺与条款保留收费权并存。
 
 ## 具体动作与止损条件
 
@@ -295,6 +272,3 @@ NBC全文通过仓库读取器成功缓存，尽管网页浏览工具对同一�
 - [S367b96498aa7] [Fight Health Insurance Professional Version](https://www.fighthealthinsurance.com/pro_version)：支持竞争对手已面向诊所、RCM和药企招募专业用户；页面未公开专业报价，不填写其表单。
 
 结构化记录：[research/write-appeals-and-phone-insurers-on-denied-claims.json](../research/write-appeals-and-phone-insurers-on-denied-claims.json)
-来源读取凭据：[research/evidence/write-appeals-and-phone-insurers-on-denied-claims.json](../research/evidence/write-appeals-and-phone-insurers-on-denied-claims.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

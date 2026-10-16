@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "da280dae3704bc30b240c27ea55e6703b6299e96bc3f81539fcbff65a7ab0c41",
-      "publication": "reviewed_restatement_required"
+      "value": "A commenter has Codex execute mostly on its own with human planning and review, including a portbroker that reserves and injects a port.",
+      "sha256": "da280dae3704bc30b240c27ea55e6703b6299e96bc3f81539fcbff65a7ab0c41"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d3eab250f4ca35d3943f94879ce6435267cff50c5ec690b26298342dd91db9ea",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter describes a split workflow: ChatGPT handled planning, strategy, versioning discipline, and writing the next prompt, while Codex did the implementation, with outputs manually copied back and forth between the two in extended-thinking chats. In a similar setup, another commenter added a small tool called portbroker so an agent could reserve a free port, log it, and inject it into $PORT automatically, reducing manual environment handling during parallel runs.",
+      "sha256": "d3eab250f4ca35d3943f94879ce6435267cff50c5ec690b26298342dd91db9ea"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "490496812069520613d8c4ef0d9cb35347ac69e5532d7251f3afad7fa5a0c41f",
-      "publication": "reviewed_restatement_required"
+      "value": "They say this cut down prompt drift and made multi-agent or parallel local development more stable and predictable. The main drawback mentioned is that the handoff is still manual, with long threads causing slowdown and occasional need to start fresh sessions.",
+      "sha256": "490496812069520613d8c4ef0d9cb35347ac69e5532d7251f3afad7fa5a0c41f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "233a8d03b770ff88e4478716ace0946b0a6b8d014fa33d5e847800f06fe196c9",
-      "publication": "reviewed_restatement_required"
+      "value": "The practical catch is the copy-paste loop between ChatGPT and Codex, plus needing to reset when threads get \"sludge\" from growing too long.",
+      "sha256": "233a8d03b770ff88e4478716ace0946b0a6b8d014fa33d5e847800f06fe196c9"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Codex with low-touch planning and port reservation\nA commenter has Codex execute mostly on its own with human planning and review, including a portbroker that reserves and injects a port.\nDone with\nCX\nCodex\nWhat they did\nThe commenter describes a split workflow: ChatGPT handled planning, strategy, versioning discipline, and writing the next prompt, while Codex did the implementation, with outputs manually copied back and forth between the two in extended-thinking chats. In a similar setup, another commenter added a small tool called portbroker so an agent could reserve a free port, log it, and inject it into $PORT automatically, reducing manual environment handling during parallel runs.\nHow it went\nThey say this cut down prompt drift and made multi-agent or parallel local development more stable and predictable. The main drawback mentioned is that the handoff is still manual, with long threads causing slowdown and occasional need to start fresh sessions.\nWorth knowing\nThe practical catch is the copy-paste loop between ChatGPT and Codex, plus needing to reset when threads get \"sludge\" from growing too long.\nTry it yourself\nwith\nCodex\nCopy prompt\nI've written a plan for [task] in [repo path]: [paste or point to plan file]. Carry it out mostly on your own, and before starting any dev server or test that needs a network port, pick a free port, reserve it, and pass it in through [env var or config setting] so it doesn't clash with other running jobs. When done, summarize what you changed and which checks passed so I can review, and ask me before pushing or deleting anything.\nOriginal source: https://www.reddit.com/r/codex/comments/1ry39bx/use_chatgpt_as_your_development_and_engineering",
+    "body_sha256": "b019a916cdf8eed28d0962f37bfdd7cf4811a98125a01e9ed51c1fb9ebefa249",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

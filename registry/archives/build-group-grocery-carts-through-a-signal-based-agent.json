@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "411b4fde3e04fc51e17ce1ed74cf75abe082a1090a70121315032715c3303651",
-      "publication": "reviewed_restatement_required"
+      "value": "A self-hosted Signal agent drafts a grocery list from past orders, lets group members edit it, then logs into the store and builds and validates the cart; the author finishes checkout manually.",
+      "sha256": "411b4fde3e04fc51e17ce1ed74cf75abe082a1090a70121315032715c3303651"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8f4a7c6c97175f2009bdd547fadba4ae91e79b865362cfc03049986683d87bb0",
-      "publication": "reviewed_restatement_required"
+      "value": "The author runs a self-hosted agent through Signal, with group chat limited to whitelisted accounts. It drafts a starter grocery list from past orders, kept locally or pulled from the store's site. Group members add or remove items. Then the agent uses a custom browser tool to log in, build the cart from the final list, search for extra requested items, and validate the cart.",
+      "sha256": "8f4a7c6c97175f2009bdd547fadba4ae91e79b865362cfc03049986683d87bb0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ee46da6a587dde91753ac06b12e783bf64e916d0b969b5e158a43326955f2dde",
-      "publication": "reviewed_restatement_required"
+      "value": "Cart building works end to end. Checkout isn't automated: the author logs in and does the last two clicks manually, and may add automatic ordering later.",
+      "sha256": "ee46da6a587dde91753ac06b12e783bf64e916d0b969b5e158a43326955f2dde"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "34d7ea092dfde5c9e98bcf838d08ab6d9c4240092da337362324b0e0488ad0c9",
-      "publication": "reviewed_restatement_required"
+      "value": "The author held back from giving the agent spending power, so a manual final checkout is the safeguard if you copy this.",
+      "sha256": "34d7ea092dfde5c9e98bcf838d08ab6d9c4240092da337362324b0e0488ad0c9"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build group grocery carts through a Signal-based agent\nA self-hosted Signal agent drafts a grocery list from past orders, lets group members edit it, then logs into the store and builds and validates the cart; the author finishes checkout manually.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author runs a self-hosted agent through Signal, with group chat limited to whitelisted accounts. It drafts a starter grocery list from past orders, kept locally or pulled from the store's site. Group members add or remove items. Then the agent uses a custom browser tool to log in, build the cart from the final list, search for extra requested items, and validate the cart.\nHow it went\nCart building works end to end. Checkout isn't automated: the author logs in and does the last two clicks manually, and may add automatic ordering later.\nWorth knowing\nThe author held back from giving the agent spending power, so a manual final checkout is the safeguard if you copy this.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up an agent I can message in [Signal group] that drafts a grocery list from our past [store] orders and lets everyone in the group add or remove items. When I say the list is final, log into [store], build the cart, and check that every item is in stock. Stop before checkout and show me the cart and total so I can pay myself.\nOriginal source: https://news.ycombinator.com/item?id=47110375",
+    "body_sha256": "e9b77c9a4543815f9dfe40905152aaa3e4a0a9c6b6118b171310540a971dbad6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

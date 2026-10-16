@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d7d4649fd75d07307e27812134a48b33197bd6dd2e9796e7182ed8639fe14624",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code with Claude in Chrome writes code, opens localhost, clicks through the UI, reads console errors and fixes them without the developer touching the browser.",
+      "sha256": "d7d4649fd75d07307e27812134a48b33197bd6dd2e9796e7182ed8639fe14624"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "524349762708eb4c37a67c303d9583b156c30286ca2b2d72fd26fa0544a459d1",
-      "publication": "reviewed_restatement_required"
+      "value": "The Claude in Chrome extension is connected to Claude Code with `claude --chrome` or `/chrome`. It shares the developer's real Chrome session, including logins, and new domains need approval once. Asked to add a dashboard table filter, Claude wrote the component, opened the page and tried the filter. It spotted that the URL query params weren't updating, fixed the router logic, and confirmed the fix with a reload.",
+      "sha256": "524349762708eb4c37a67c303d9583b156c30286ca2b2d72fd26fa0544a459d1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9cc8cda31a5d295c0bc9c3586aeb8ef7d148737cb5e2ec6f1450242a09c4e0d8",
-      "publication": "reviewed_restatement_required"
+      "value": "The filter example took three iterations with no browser work from the developers. The setup is limited to a developer's own workstation: it needs a visible Chrome window, so no CI or headless runs, and it works in Chrome and Edge only.",
+      "sha256": "9cc8cda31a5d295c0bc9c3586aeb8ef7d148737cb5e2ec6f1450242a09c4e0d8"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "44c4ff51067adba0198e9b034c987bc7ed9bdb2719b3e8bd4e1588b511841a3a",
-      "publication": "reviewed_restatement_required"
+      "value": "Browser interaction uses a lot of tokens, about 7.7% of context per interaction. The authors call API pricing a money pit and say a Max subscription is needed for heavy use.",
+      "sha256": "44c4ff51067adba0198e9b034c987bc7ed9bdb2719b3e8bd4e1588b511841a3a"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Test local web apps and fix errors in one session\nClaude Code with Claude in Chrome writes code, opens localhost, clicks through the UI, reads console errors and fixes them without the developer touching the browser.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nThe Claude in Chrome extension is connected to Claude Code with `claude --chrome` or `/chrome`. It shares the developer's real Chrome session, including logins, and new domains need approval once. Asked to add a dashboard table filter, Claude wrote the component, opened the page and tried the filter. It spotted that the URL query params weren't updating, fixed the router logic, and confirmed the fix with a reload.\nHow it went\nThe filter example took three iterations with no browser work from the developers. The setup is limited to a developer's own workstation: it needs a visible Chrome window, so no CI or headless runs, and it works in Chrome and Edge only.\nWorth knowing\nBrowser interaction uses a lot of tokens, about 7.7% of context per interaction. The authors call API pricing a money pit and say a Max subscription is needed for heavy use.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nStart my app locally with [start command], then open it in Chrome at [localhost URL] and click through [feature or flow]. Read the browser console and network errors, find the cause in the code, and fix it. Repeat until the flow works with no console errors. Then summarize what you changed. Don't commit or push anything without asking me.\nOriginal source: https://www.test-lab.ai/blog/claude-code-chrome-extension-local-testing",
+    "body_sha256": "1c57a93e8261a7d51748cfe9de6f3b35800ecbeda972560a12a6851046881566",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fb86e043b04d6e679860a60205f47879a8de3495144f3d532d56230b3e955a8",
-      "publication": "reviewed_restatement_required"
+      "value": "A custom MCP server exposes list, schedule and cancel appointment tools so an ElevenLabs voice agent can handle customer calls against the company CRM.",
+      "sha256": "8fb86e043b04d6e679860a60205f47879a8de3495144f3d532d56230b3e955a8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5a20996abf4beb283fe91bdc6c82a670c3f04239157d99bc31a1f074049702ee",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter's team runs a custom MCP server exposing tools such as list_appointments, schedule_appointment and cancel_appointment against their CRM. An ElevenLabs voice agent, which handles speech-to-text, the LLM and text-to-speech, connects to it over a Twilio phone line. A system prompt sets tone, guardrails and when to call each tool.",
+      "sha256": "5a20996abf4beb283fe91bdc6c82a670c3f04239157d99bc31a1f074049702ee"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5c6a5766916c2a99ae69dfdfb6cb0bd51a52c879ccbd15e3cffc99f6fd498694",
-      "publication": "reviewed_restatement_required"
+      "value": "The source is a short explanatory comment and reports no results, numbers or shortcomings. It describes the architecture only.",
+      "sha256": "5c6a5766916c2a99ae69dfdfb6cb0bd51a52c879ccbd15e3cffc99f6fd498694"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5d140c49e03a1c819a73b056ae9ace42d28aa8481811f178c2208329bf03e0c3",
-      "publication": "reviewed_restatement_required"
+      "value": "The LLM runs on infrastructure you don't control, so your own hosted MCP server is the only bridge to your CRM; the voice transport (phone, app, browser websocket) is interchangeable.",
+      "sha256": "5d140c49e03a1c819a73b056ae9ace42d28aa8481811f178c2208329bf03e0c3"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let a voice receptionist schedule appointments via MCP\nA custom MCP server exposes list, schedule and cancel appointment tools so an ElevenLabs voice agent can handle customer calls against the company CRM.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter's team runs a custom MCP server exposing tools such as list_appointments, schedule_appointment and cancel_appointment against their CRM. An ElevenLabs voice agent, which handles speech-to-text, the LLM and text-to-speech, connects to it over a Twilio phone line. A system prompt sets tone, guardrails and when to call each tool.\nHow it went\nThe source is a short explanatory comment and reports no results, numbers or shortcomings. It describes the architecture only.\nWorth knowing\nThe LLM runs on infrastructure you don't control, so your own hosted MCP server is the only bridge to your CRM; the voice transport (phone, app, browser websocket) is interchangeable.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild an MCP server in [language] that exposes list_appointments, schedule_appointment, and cancel_appointment tools on top of [CRM or API name]. Make it usable by a voice agent such as ElevenLabs, and include tests with fake data. Stop when the tools pass the tests and give me a short guide for connecting it, with cancellations requiring confirmation.\nOriginal source: https://news.ycombinator.com/item?id=49560285",
+    "body_sha256": "d7365495003c59b4bccb796bc0794924d77ba455a2fb9fc268243bfc868af3c5",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

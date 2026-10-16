@@ -1,36 +1,30 @@
 # Claude Code税务凭证整理的商业研究
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude Code
-
-### 介绍
-
-A researcher used Claude Code to assemble tax-preparation inputs from scattered records.
-
-一位研究者用 Claude Code 将分散资料汇总为报税准备材料。
-
-### 方法
-
-Custom skills collected email attachments and reconciled donations, receipts and statements into deductions and a business schedule; the user reviewed classifications and entered the tax software.
-
-自建技能收集邮件附件，整合捐赠、收据和账单，形成扣除项目及经营附表；用户复核分类并录入报税软件。
-
-### 结果与限制
-
-The reported effort was around three hours. Medical and childcare classification remained manual, so this was assisted preparation rather than autonomous filing.
-
-报告用时约三小时；医疗及托育分类仍由人工完成，属于辅助准备而非自主申报。
+    Compile deductions and Schedule C with Claude Code
+    Claude Code gathered charitable contributions and itemized deductions from sheets, email and statements and built a Schedule C; some categorizing stayed manual.
+    Done with
+    CC
+    Claude Code
+    What they did
+    Chris Blattman built Claude Code skills: one searches Gmail for tax documents, downloads attachments, pulls out key figures and tracks what's missing. Another compiles deductions from a charitable-giving Google Sheet, email receipts and card statements into spreadsheets ready for tax software. It also built a Schedule C for his consulting income. He eyeballed card statements to flag medical and childcare charges, and entered the figures into tax software himself.
+    How it went
+    He says the work took about three hours, versus roughly $1,000 for an accountant. Sorting, filtering and CSV parsing went well, but medical and childcare categorizing stayed manual.
+    Worth knowing
+    Read the privacy page first: local file contents are sent to Anthropic's API when Claude reads them, so never paste SSNs or bank account numbers.
+    Try it yourself
+    with
+    Claude Code
+    Copy prompt
+    Look through [spreadsheets, email export folder, and statements folder] for [year] and compile my charitable contributions and other itemized deductions into one spreadsheet with date, payee, amount, and source file. Then draft a Schedule C from my business income and expenses, marking any lines you couldn't categorize with confidence. Finish when I have both files and a list of open questions for me to resolve.
+    Original source: https://claudeblattman.com/tax-workflow/
 
 ## 原作者的方法与来源
 
 来源：[Chris Blattman · Tax workflow](https://claudeblattman.com/tax-workflow/)
 
-作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+作者方法摘要
 
 1. 汇集捐赠记录、收据、信用卡账单和咨询收入资料。
    English summary: Collect donation records, receipts, credit-card statements and consulting-income documents.
@@ -48,7 +42,7 @@ The reported effort was around three hours. Medical and childcare classification
 项目能帮助具备税务知识的人组织材料，但这种价值仍依赖人工脱敏、逐金额复核和最终专业判断。公开的关键收集、编译技能存在交付缺口，独立用户也报告了该问题。消费者已有符合条件的免费申报替代；项目没有提供可验证的付费、获客或单位利润记录。把案例介绍中的费用比较当成创业收入会误判，因此当前应投入小范围内部流程验证，而不是开发大众收费产品。
 
 案例ID：`compile-deductions-and-schedule-c-with-claude-code` · 案例来源：https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code
-研究时间：2026-10-15T00:03:06.932856+08:00 · 证据置信度：流程与公开文件事实中等；付费、实际利润及生产准确率未被证明
+研究时间：2026-10-15T00:03:06.932856+08:00
 
 **商业评分：45.0/100。用户反馈信号占5%。**
 
@@ -81,19 +75,13 @@ The reported effort was around three hours. Medical and childcare classification
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code
 
-观测时间：2026-10-16T02:51:03.192211+00:00
-
-建议运行工具：Claude Code（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Claude Code
 
     Look through [spreadsheets, email export folder, and statements folder] for [year] and compile my charitable contributions and other itemized deductions into one spreadsheet with date, payee, amount, and source file. Then draft a Schedule C from my business income and expenses, marking any lines you couldn't categorize with confidence. Finish when I have both files and a list of open questions for me to resolve.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -103,9 +91,9 @@ The reported effort was around three hours. Medical and childcare classification
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Scbb804531ac6, S60249a89567e, S53a3ac8cd121, Se2dcf79552d8, S85fe5b9383b2, S619379f92e66, S158ecc23657a, S476f702778ef
 
@@ -118,9 +106,9 @@ The reported effort was around three hours. Medical and childcare classification
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Scbb804531ac6, S60249a89567e, S53a3ac8cd121, Se2dcf79552d8, S85fe5b9383b2, S619379f92e66, S158ecc23657a, S476f702778ef
 
@@ -224,11 +212,9 @@ Gmail MCP也并非天然只拥有“税务邮件”权限。文档指出接入�
 
 ## 用户评价怎样改变判断
 
-直接反馈中最有用的不是赞美，而是公开仓库issue #6：用户指出tax-guide和文档引用了tax-collect与tax-compile，但这些技能缺失。问题目前开放，作者的回应没有提供补齐路径；当前文件核查与这条反馈一致。这说明外部使用者确实遇到复现摩擦，却不证明已成功完成报税，也不等于有付费客户。
+尝试复现的仓库用户报告两项核心技能缺失，与当前公开文件核查一致。
 
-本项目名称的Hacker News故事检索没有命中；仓库问题检索并没有形成足够的独立成功使用样本。Claude税务相关检索能找到很多邻近内容，但其中还混有把AI费用叫“Claude tax”的无关讨论，不能把命中数当本项目口碑。我们只采用可读原文的Simon Safar经验作为邻近反馈：他在已有OpenTaxSolver与脚本基础上借助Claude完成工作，并仍需要双重检查。该人有技术能力和既有流程，这与不懂税务的大众用户有明显差异。
-
-因此，用户反馈只贡献1/5的商业支持分，再乘5%权重，只影响总分1点。它主要加强两个侧面判断：完整交付尚有缺口，熟练使用者能从代理辅助中获益。它没有给出产品转化率、准确率、持续留存或事务所采购证据，不足以推翻“先内用验证，暂不立项通用付费产品”的结论。
+相关体验：技术用户借助Claude更新既有OpenTaxSolver及脚本，一晚完成材料过程，仍要求复核。
 
 依据：S619379f92e66, S158ecc23657a, S6628bf0b014d, S1a5cfeeaa950, S3888ccf04759, Sa37d06e695be
 
@@ -253,19 +239,11 @@ Gmail MCP也并非天然只拥有“税务邮件”权限。文档指出接入�
 
 事务所白标整理包假设假设：全部是待验证的经营假设，不是项目经营数据：专业人工60分钟×45美元/小时=45；API4；其他交付6；获客摊销10；月固定运营1500。120美元需通过客户付款验证；以45美元/小时机会成本计，至少节省约2.67小时才抵采购价。没有假定获得税务建议或签字责任转移。；API成本 4，人工成本 45，其他可变成本 6，分摊获客成本 10。依据：S53a3ac8cd121, S85fe5b9383b2, Se2dcf79552d8
 
-## 用户反馈核对（低权重）
-
-- Hacker News故事检索 · `claudeblattman`：返回0条本项目名称故事命中，不能据此说没有使用者或用户差评。
-- GitHub公开issue · `chrisblattman/claudeblattman issues state=all`：发现issue #6报告核心技能缺失，核对了单独issue与回应；无关issue未计入反馈。
-- Hacker News故事与评论检索 · `Claude taxes`：发现邻近报税经验，也有无关的Claude费用讨论；只对明确读取原文的邻近使用案例作低权重参考。
-- [S619379f92e66] direct_user：尝试复现的仓库用户报告两项核心技能缺失，与当前公开文件核查一致。；偏差：单个复现者的问题报告，不是付费客户样本，也没有结果满意度或准确率数据。
-- [Sa37d06e695be] adjacent_workflow：技术用户借助Claude更新既有OpenTaxSolver及脚本，一晚完成材料过程，仍要求复核。；偏差：不是本项目用户；自述、技术能力较强、有既有脚本和税务经验，不代表大众效果。
-
 ## 反证与未核实信息
 
 公开issue与文件路径核查揭示了完整技能交付的缺口；原文自身的金额虚构声明限制了对费用比较的采信；免费申报入口与另一个公开技能削弱了单纯代理界面的差异化。相邻用户的正面经验依赖既有脚本和复核，不证明本项目具备商业化端到端能力。
 
-没有私人邮箱或真实税表实跑，没有客户访谈、付费订单、留存、真实获客成本或生产准确率数据。两个财务情景是显式假设；文档中的教学错误比例没有当作观测准确率。技术证据限于实际读取的公开指南、流程文档和问题记录，没有声称获得缺失的核心技能。
+缺少真实税表测试、付费订单、留存、获客成本与生产准确率数据；所需的部分核心技能文件缺失。财务情景采用假设参数。
 
 ## 具体动作与止损条件
 
@@ -291,6 +269,3 @@ Gmail MCP也并非天然只拥有“税务邮件”权限。文档指出接入�
 - [S1a5cfeeaa950] [/repos/chrisblattman/claudeblattman/issues](https://api.github.com/repos/chrisblattman/claudeblattman/issues?state=all&per_page=100)：公开仓库问题检索用于发现与税务技能有关的实际反馈，其他无关issue不计作用户评价。
 
 结构化记录：[research/compile-deductions-and-schedule-c-with-claude-code.json](../research/compile-deductions-and-schedule-c-with-claude-code.json)
-来源读取凭据：[research/evidence/compile-deductions-and-schedule-c-with-claude-code.json](../research/evidence/compile-deductions-and-schedule-c-with-claude-code.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "630de91e3b007929f6ba8f0f6c56ebda5cfb2bce633253fdcaa69f0834769a2b",
-      "publication": "reviewed_restatement_required"
+      "value": "A team connected Notion to Claude Code, dispatching one agent per candidate to check data and GitHub evidence against a rubric, producing a ranked shortlist for $65.",
+      "sha256": "630de91e3b007929f6ba8f0f6c56ebda5cfb2bce633253fdcaa69f0834769a2b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "873a2f7ecdb25bb4ef4601dd36bcc7aaec48c8f81f1e7a5fe77d371469e1f23e",
-      "publication": "reviewed_restatement_required"
+      "value": "The team pulled their Notion hiring database into one data file per candidate with the Notion CLI. A script then dispatched 115 Claude agents in parallel. Each agent read markdown rubric files, visited the candidate's GitHub and portfolio links, and returned structured JSON scores. Code computed the rankings, and 10 devil's-advocate agents challenged the top candidates' scores. Code then enforced a 5% cap on the top grade.",
+      "sha256": "873a2f7ecdb25bb4ef4601dd36bcc7aaec48c8f81f1e7a5fe77d371469e1f23e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "27ceb67d581e96cc8de6ba847aae966e14d4542413a3b8f2f3fc000e9927cc1e",
-      "publication": "reviewed_restatement_required"
+      "value": "The run took about 13 minutes and cost about $65, roughly $0.57 per candidate. No one reached S or A, 6 candidates scored B, and adversarial review cut the top two from about 82 to about 75.",
+      "sha256": "27ceb67d581e96cc8de6ba847aae966e14d4542413a3b8f2f3fc000e9927cc1e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d9f8e03187900bb502c90668af2c7f3c3a8672b82d081d232abbc7e293e61f69",
-      "publication": "reviewed_restatement_required"
+      "value": "Cache writes were the largest cost line, because each parallel agent builds its own cache. The authors suggest Sonnet for scoring and Opus only for review to cut cost 70 to 80%.",
+      "sha256": "d9f8e03187900bb502c90668af2c7f3c3a8672b82d081d232abbc7e293e61f69"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Screen 115 job candidates with parallel agents\nA team connected Notion to Claude Code, dispatching one agent per candidate to check data and GitHub evidence against a rubric, producing a ranked shortlist for $65.\nDone with\nCC\nClaude Code\nWhat they did\nThe team pulled their Notion hiring database into one data file per candidate with the Notion CLI. A script then dispatched 115 Claude agents in parallel. Each agent read markdown rubric files, visited the candidate's GitHub and portfolio links, and returned structured JSON scores. Code computed the rankings, and 10 devil's-advocate agents challenged the top candidates' scores. Code then enforced a 5% cap on the top grade.\nHow it went\nThe run took about 13 minutes and cost about $65, roughly $0.57 per candidate. No one reached S or A, 6 candidates scored B, and adversarial review cut the top two from about 82 to about 75.\nWorth knowing\nCache writes were the largest cost line, because each parallel agent builds its own cache. The authors suggest Sonnet for scoring and Opus only for review to cut cost 70 to 80%.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have [number] job candidates in [Notion database/spreadsheet] for the [role] position. Read my scoring rubric: [paste criteria]. Run one sub-agent per candidate to check their data and public evidence like [GitHub/portfolio] against the rubric, then produce a ranked shortlist with a one-paragraph reason for each. Don't contact any candidates or change records. You're done when I have the ranked list and the cost of the run.\nOriginal source: https://happycapy.ai/blog/hiring-dynamic-workflow",
+    "body_sha256": "0bb73b56c9146b985ba4dc1602a0fd7d22bb71a66c3f9a7d4298c6681fb7323b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

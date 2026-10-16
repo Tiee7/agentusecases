@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "dc9fd9aca3cdb4c8398fbc79462295e2e5d65581546ead820c67442f90b917c5",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer runs a fleet of sandboxed Claude Code instances that share files through MCP tools on a virtual filesystem, with an orchestrator handling AWS storage and audit logs.",
+      "sha256": "dc9fd9aca3cdb4c8398fbc79462295e2e5d65581546ead820c67442f90b917c5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d5edc1431e4271e1c1594f4ddc0aec0dc3cd5e948c99ba2cc53d6bfa68a8e67f",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer runs a fleet of sandboxed Claude Code instances that exchange files. Agents get MCP tools to list, upload and download from a virtual filesystem using a custom URI scheme (agentfiles://). An outer orchestrator receives those MCP requests and does the real file work on AWS, so the agents never see credentials or know AWS is involved.",
+      "sha256": "d5edc1431e4271e1c1594f4ddc0aec0dc3cd5e948c99ba2cc53d6bfa68a8e67f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "78132bc1cc38a57791211da736d5933761596a194f5d7d5505d8cb8066a3d364",
-      "publication": "reviewed_restatement_required"
+      "value": "The model adapted well to the unusual filesystem, and the agents stayed fully compartmentalized. Tool request logs plus orchestrator logs give full auditing. The source gives no numbers.",
+      "sha256": "78132bc1cc38a57791211da736d5933761596a194f5d7d5505d8cb8066a3d364"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "66de52542c7164df500ddfa7586283cb49db89c1e016bf4389ef484ce680bd0e",
-      "publication": "reviewed_restatement_required"
+      "value": "Keep storage credentials in the orchestrator and expose only narrow MCP file tools, so sandboxed agents never touch the backend directly.",
+      "sha256": "66de52542c7164df500ddfa7586283cb49db89c1e016bf4389ef484ce680bd0e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run sandboxed Claude Code fleet sharing files via MCP\nA developer runs a fleet of sandboxed Claude Code instances that share files through MCP tools on a virtual filesystem, with an orchestrator handling AWS storage and audit logs.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer runs a fleet of sandboxed Claude Code instances that exchange files. Agents get MCP tools to list, upload and download from a virtual filesystem using a custom URI scheme (agentfiles://). An outer orchestrator receives those MCP requests and does the real file work on AWS, so the agents never see credentials or know AWS is involved.\nHow it went\nThe model adapted well to the unusual filesystem, and the agents stayed fully compartmentalized. Tool request logs plus orchestrator logs give full auditing. The source gives no numbers.\nWorth knowing\nKeep storage credentials in the orchestrator and expose only narrow MCP file tools, so sandboxed agents never touch the backend directly.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a small fleet of sandboxed Claude Code instances that share files through an MCP server exposing a virtual filesystem. Build a minimal prototype with [number] agents, a shared file store backed by [local folder or S3 bucket], and an audit log of every file read and write. Stop when two agents can pass a file to each other and I can read the log, and ask before touching any cloud resources or credentials.\nOriginal source: https://news.ycombinator.com/item?id=49782293",
+    "body_sha256": "e52f438e23f990158b848cca6535ce8d4d303aec952a81796b4613a78a1a1b29",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

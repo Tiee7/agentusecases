@@ -1,36 +1,32 @@
 # 税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/fill-in-a-tax-organizer-and-review-last-year-s-return
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude in Chrome、Claude Code
-
-### 介绍
-
-A user combined browser and coding assistants to complete a tax preparer’s questionnaire.
-
-一位用户结合浏览器和编码助手完成报税机构的资料问卷。
-
-### 方法
-
-Claude in Chrome extracted fields and entered answers in small batches; Claude Code matched documents to fields. The person checked pages and separately requested review of the previous return.
-
-Claude in Chrome 分批提取字段并录入答案，Claude Code 将资料匹配至字段；用户逐页检查，并另行要求复核往年税表。
-
-### 结果与限制
-
-The source reports a completed questionnaire and an accountant-confirmed missed deduction. Premature assurances and lost context made active supervision necessary.
-
-源站报告问卷完成，并发现经会计师确认的漏扣项目；过早声称完成及上下文丢失使主动监督不可少。
+    Fill in a tax organizer and review last year's return
+    Claude in Chrome captured the organizer's fields and entered data, Claude Code filled them in, and Claude reviewed the prior return; it sometimes claimed work was done without the info.
+    Done with
+    CH
+    Claude in Chrome
+    CC
+    Claude Code
+    What they did
+    The CPA's organizer PDF was locked inside a web app, so Claude in Chrome listed its fields as JSON, a few pages at a time. Claude Code filled in the values from his tax documents and flagged missing items such as a daughter's SSN. Claude in Chrome then entered them three pages at a time, and he checked each page. Separately, Claude reviewed the 2024 return and its source documents.
+    How it went
+    The organizer was filled in correctly after review. Claude's 2024 review found a missed goodwill depreciation deduction, which the CPA confirmed. Claude first said everything looked fine without reading the source documents.
+    Worth knowing
+    Claude in Chrome lost track on long runs and hit a usage limit. Use plan mode, and ask it outright whether it read every file and whether anything is missing.
+    Try it yourself
+    with
+    Claude in Chrome
+    Copy prompt
+    Open my tax preparer's online organizer at [URL] and list every field and section it asks for. Then fill in the answers using the documents in [folder], and compare it with my prior-year return at [file path] to flag anything that changed or looks missing. Never fill in a field you don't have data for; leave it blank and list it for me, and pause before submitting anything.
+    Original source: https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +35,7 @@ The source reports a completed questionnaire and an accountant-confirmed missed 
 这不是已有客户付费的税务代理公司，而是企业经营者用Claude in Chrome与Claude Code完成自己的年度资料准备。会计师已经提供资料表和接收渠道，独立创业者不能把生成一份PDF等同于完成会计师的工作。原文同时呈现成功与失败：作者认可填表体验，但未形成可复算的净工时；复查发现问题也不能证明无人申报可靠。适合先由已有税务团队将来源映射、缺件清单和人工确认嵌入内部流程。只有当接收方实际减少录入和追问时间、成本覆盖复核与获客，才有依据升级成付费服务。
 
 案例ID：`fill-in-a-tax-organizer-and-review-last-year-s-return` · 案例来源：https://agentusecases.ai/use-case/fill-in-a-tax-organizer-and-review-last-year-s-return
-研究时间：2026-10-15T09:11:25.768067+00:00 · 证据置信度：中等：公开产品、价格、会计师资料流程可核验；案例为单一作者自述，未取得原始税表、实际退款、客户订单或独立复现实验。
+研究时间：2026-10-15T09:11:25.768067+00:00
 
 **商业评分：41.0/100。用户反馈信号占5%。**
 
@@ -70,9 +66,7 @@ The source reports a completed questionnaire and an accountant-confirmed missed 
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +76,9 @@ The source reports a completed questionnaire and an accountant-confirmed missed 
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S43c564fef877, S8ee18f608c8a, S1b85d41b31e6, Sd9da3a80266f, S7dea3b226d0f
 
@@ -97,9 +91,9 @@ The source reports a completed questionnaire and an accountant-confirmed missed 
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S43c564fef877, S8ee18f608c8a, S1b85d41b31e6, Sd9da3a80266f, S7dea3b226d0f
 
@@ -181,8 +175,7 @@ TaxDome一年承诺的单人Essentials为800美元，Pro为每席1000美元；�
 
 ## 用户评价怎样改变判断
 
-本轮进行了Reddit、Hacker News、作者相关讨论及Intuit社区等检索。部分搜索只返回首页或泛化结果，不能把它们当作已找到本案使用者；没有发现可以独立核验的本方案付费客户群。原作者本身是直接使用者，但文章具有展示AI能力及内容传播的选择偏差，且未公开原始申报资料或第三方计时。对其满意与不满应同等记录，不能只选成功段落。
-实际读取的ProSeries社区中，用户希望给资料表增添直接扣款问题，另一用户描述导出PDF编辑与再次追问。它属于邻近流程，说明表格定制、客户补件可能消耗人工，却不能证明Claude能解决，也不能把单帖的回复比例当行业统计。该信号只给反馈维度1/5，按5%权重贡献1分。搜索中的Reddit税务从业者帖呈现差异很大的个人响应率，本轮没有将其转为可重复抓取来源，也不拿它支持数量判断。这些边界促使结论从面向个人售卖通用自动填表，收缩到已有团队内部的可核验交付。
+相关体验：发帖人希望给资料表增添问题，回复者采用PDF编辑并继续追问客户，显示定制与缺件沟通负担。
 
 依据：Se85a1b18145a, S43c564fef877
 
@@ -204,20 +197,11 @@ TaxDome一年承诺的单人Essentials为800美元，Pro为每席1000美元；�
 
 假设B：获客较贵、复杂返工假设：全部为研究者假设：行政60分钟×30美元/小时+专业复核45分钟×90美元/小时=97.5；5美元存储支持、25美元获客，20份/月，固定1200含200软件用量预算与1000维护管理。API=0同情景A。未计真实税款、退款、额外模型购买或实际付费实验；税季月不能乘十二冒充年结果。；API成本 0，人工成本 97.5，其他可变成本 5，分摊获客成本 25。依据：S58333316475e, Sd9da3a80266f, S7dea3b226d0f
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `site.reddit.com Claude tax organizer review taxes errors`：返回Claude社区入口及泛化资料，没有取得本案例独立付费客户评价。
-- Hacker News社区 · `site.news.ycombinator.com Claude taxes accountant organizer`：未返回可核验的本案直接使用记录，不以检索无结果判断满意度。
-- Reddit社区 · `"Claude" "tax organizer" review reddit`：结果未建立本案直接用户反馈；检索期间出现邻近税务资料表讨论，未纳入统计。
-- 作者与独立讨论 · `"Alex Willen" "taxes" review`：出现同名人物和作者资料，未找到独立复现；排除不同人物的信息。
-- 厂商用户社区 · `site.accountants.intuit.com "Tax Organizer" "January 8, 2026"`：搜索返回泛化Intuit结果；此前搜索发现的ProSeries具体帖已用evidence实际读取，不能归为本案例评价。
-- [Se85a1b18145a] adjacent_workflow：发帖人希望给资料表增添问题，回复者采用PDF编辑并继续追问客户，显示定制与缺件沟通负担。；偏差：厂商托管社区、自选发帖和匿名身份，未核验其事务所规模；不代表Claude用户或总体客户响应率。
-
 ## 反证与未核实信息
 
 传统事务所已经提供免费预填资料表，门户已有补件和确认流程，削弱独立收费理由。原文作者虽认可填表，仍发现生成的税表无法直接被CPA软件接收，Excel更实用；一次复查被旧答案笔记污染，独立重做后又报告了潜在多缴3718美元且漏掉先前找出的项目。该金额是作者对模拟申报的比较，不是实际多缴、退款、节省或本产品收入。原文由网页工具读取，终端抓取403，访问边界见下；不能把这些自述提升为外部审计结论。
 
-原文 https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and 已通过公开网页阅读工具读取（2026-10-15，标题Doing My Taxes With Claude，署名Alex Willen，发布2026-03-05）；evidence终端请求返回Tunnel 403，未绕过限制，未伪称机器重抓成功。核心案例事实可由已抓取聚合页交叉定位；原文补充发现仅为作者自述。未取得私有税表、CPA邮件原件、客户订单、实际退款和真实成本；没有独立测量准确率、净工时或商誉扣除资格，不提供该作者税务结论。2025年论文只读摘要，不能外推到2026年模型。Chrome短链接抓取遇到308，未计为来源；本轮未运行第三方代码、API或真实门户。目录于2026-10-15T09:03:49Z刷新完整1321条和分类top、详情采样5条；本机刷新数据库为新基线，没有上次lastmod可比，登记表ID与起点提交比较无新增移出，不能宣称1321条正文均重读。
+作者税表、CPA邮件原件、实际退款与成本未核实。准确率、净工时和商誉扣除资格仍未知；2025年论文不能直接代表后续模型表现。
 
 ## 具体动作与止损条件
 
@@ -239,6 +223,3 @@ TaxDome一年承诺的单人Essentials为800美元，Pro为每席1000美元；�
 - [Se85a1b18145a] [Tax Organizer | Community](https://accountants.intuit.com/community/proseries-product-discussions-9/tax-organizer-70811)：实际读取ProSeries社区的资料表定制和追问经历；属于邻近工作流而非本案例客户评价。
 
 结构化记录：[research/fill-in-a-tax-organizer-and-review-last-year-s-return.json](../research/fill-in-a-tax-organizer-and-review-last-year-s-return.json)
-来源读取凭据：[research/evidence/fill-in-a-tax-organizer-and-review-last-year-s-return.json](../research/evidence/fill-in-a-tax-organizer-and-review-last-year-s-return.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

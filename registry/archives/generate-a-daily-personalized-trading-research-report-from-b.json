@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "1faab63880cfd0de3297c34dc72734d20a6282e8bd3bd8dbe23d1b41765ad92a",
-      "publication": "reviewed_restatement_required"
+      "value": "Lonnie VanZandt's Claude-based assistant reads his Schwab positions and watchlist via MCP, sweeps news and Fed sources, and writes a daily report.",
+      "sha256": "1faab63880cfd0de3297c34dc72734d20a6282e8bd3bd8dbe23d1b41765ad92a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "367ae632a9eb06fe76941d8459cbfe61909fff14dea237efadf6a69acc419270",
-      "publication": "reviewed_restatement_required"
+      "value": "The Claude agent is given schwab-mcp access that authenticates against the user's own Schwab credentials for a single pull of positions, strike distances, buying power, watchlist and volatility data. It also sweeps wires, Fed releases and primary sources. A standing context prompt then directs it to produce a concise narrative that anchors every claim to the exact account numbers read minutes earlier.",
+      "sha256": "367ae632a9eb06fe76941d8459cbfe61909fff14dea237efadf6a69acc419270"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "de1b50d7033f46a7098d0c675c5f73d4f110683affbde4d5dbeefeb318326eb3",
-      "publication": "reviewed_restatement_required"
+      "value": "Every trading morning the assistant hands over the personalized report tuned to the user's holdings and worldview.",
+      "sha256": "de1b50d7033f46a7098d0c675c5f73d4f110683affbde4d5dbeefeb318326eb3"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3d22ad16f155812bd71b915c80b85182a2a51b057654785be9f3cafab6b487d5",
-      "publication": "reviewed_restatement_required"
+      "value": "Requires the user's own Schwab account for MCP authentication.",
+      "sha256": "3d22ad16f155812bd71b915c80b85182a2a51b057654785be9f3cafab6b487d5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate a daily personalized trading research report from brokerage data\nLonnie VanZandt's Claude-based assistant reads his Schwab positions and watchlist via MCP, sweeps news and Fed sources, and writes a daily report.\nDone with\nCL\nClaude\nWhat they did\nThe Claude agent is given schwab-mcp access that authenticates against the user's own Schwab credentials for a single pull of positions, strike distances, buying power, watchlist and volatility data. It also sweeps wires, Fed releases and primary sources. A standing context prompt then directs it to produce a concise narrative that anchors every claim to the exact account numbers read minutes earlier.\nHow it went\nEvery trading morning the assistant hands over the personalized report tuned to the user's holdings and worldview.\nWorth knowing\nRequires the user's own Schwab account for MCP authentication.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a daily report that reads my positions and watchlist from [brokerage, read-only access], scans [news sources, Fed releases] for items affecting them, and writes a one-page summary with the biggest risks and moves. Save it as [file or email] each morning. Keep access read-only so it never places trades.\nOriginal source: https://x.com/lonniev/status/2106218283426881984",
+    "body_sha256": "7f7d69c609bd9a60e60969e8e90e303aa082974341be28e0f9b7ac0101f900a4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

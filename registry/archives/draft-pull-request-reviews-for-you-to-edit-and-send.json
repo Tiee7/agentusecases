@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c65eef3541adeea7503fa7db2fb306edb5cd1ee87cfbccd1fc0531d6c6a5b7a1",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a review inbox where Claude Code drafts reviews for piled-up PRs and the user can discuss, rewrite or delete findings before sending.",
+      "sha256": "c65eef3541adeea7503fa7db2fb306edb5cd1ee87cfbccd1fc0531d6c6a5b7a1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3626d98247ca4b7a1305138e1ced3c68cb5b476d23bc98c954eee7da301a4f11",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built Cerber to watch GitHub for pull requests requesting their review, run Claude Code through the user’s existing CLI login, and prepare draft reviews in a local web UI. The agent produces a summary, change walkthrough, and proposed inline comments; the user can discuss findings with it, rewrite or delete comments, then manually send the review from their own account.",
+      "sha256": "3626d98247ca4b7a1305138e1ced3c68cb5b476d23bc98c954eee7da301a4f11"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "447d57e73044bfe921786e410ac4204d27a0d146ad1c27429a9395830fc73f3c",
-      "publication": "reviewed_restatement_required"
+      "value": "It helped with a queue that had grown to 15 PRs and avoided unreviewed AI comments being posted straight to GitHub. It still depends on sending code to Anthropic, requires a paid Claude Code subscription, and only auto-sends approvals if you opt in and they meet a confidence threshold.",
+      "sha256": "447d57e73044bfe921786e410ac4204d27a0d146ad1c27429a9395830fc73f3c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "7c0a12da3a79adf9f296e32d9d2ef36c85edc4c9e297603a9e3cfaccc1e60e72",
-      "publication": "reviewed_restatement_required"
+      "value": "By default, review drafts and state stay on your machine, command execution is read-only unless you explicitly trust the author or org, and sending remains manual.",
+      "sha256": "7c0a12da3a79adf9f296e32d9d2ef36c85edc4c9e297603a9e3cfaccc1e60e72"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Draft pull request reviews for you to edit and send\nThe poster built a review inbox where Claude Code drafts reviews for piled-up PRs and the user can discuss, rewrite or delete findings before sending.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster built Cerber to watch GitHub for pull requests requesting their review, run Claude Code through the user’s existing CLI login, and prepare draft reviews in a local web UI. The agent produces a summary, change walkthrough, and proposed inline comments; the user can discuss findings with it, rewrite or delete comments, then manually send the review from their own account.\nHow it went\nIt helped with a queue that had grown to 15 PRs and avoided unreviewed AI comments being posted straight to GitHub. It still depends on sending code to Anthropic, requires a paid Claude Code subscription, and only auto-sends approvals if you opt in and they meet a confidence threshold.\nWorth knowing\nBy default, review drafts and state stay on your machine, command execution is read-only unless you explicitly trust the author or org, and sending remains manual.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the open pull requests in [repo] that are waiting for my review. For each, read the diff and draft a review with specific findings, ordered by importance, and save them to [file or folder] for me to edit. Do not post comments or approve anything; I'll review and send them myself. Finish once every PR has a draft.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1wp0zkk/i_built_a_claude_code_review_inbox_for_the_prs",
+    "body_sha256": "c6e41185b3dccb90167b5004fb489d10388921750d4809fe61009dec02cfb139",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

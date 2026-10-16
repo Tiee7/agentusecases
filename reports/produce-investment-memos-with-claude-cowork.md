@@ -1,36 +1,30 @@
 # Claude Cowork 投资备忘录：适合内部研究准备，不足以出售无人复核的投研结论
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/produce-investment-memos-with-claude-cowork
-观测时间：2026-10-16T06:13:11.961061+00:00
-实际 agent（源站标注）：Claude Cowork
-
-### 介绍
-
-This entry describes a non-programmer using Claude Cowork to assemble a company research package rather than an audited investment service.
-
-此条目描述非程序员用Claude Cowork装配公司研究资料包，并非经审计的投资服务。
-
-### 方法
-
-The source says the workflow organized company files, gathered reports and market data, built valuation scenarios and memos, and reused the procedure for monitoring and another company.
-
-源站称流程组织公司文件、搜集报告与市场数据、生成估值情景及备忘录，并将步骤复用于跟踪和另一家公司。
-
-### 结果与限制
-
-Fast completion is attributed to the author, while download problems are attributed to a commenter. Neither establishes accuracy, customer revenue or investment returns. The tutorial’s device-on scheduling caveat is historical; current official documentation distinguishes cloud tasks from access to local resources.
-
-快速完成来自作者自述，下载问题来自评论者的转述；两者均未证明准确性、客户收入或投资回报。教程要求设备在线的定时任务限制属于历史语境，当前官方文档区分云端任务与本地资源访问。
+    Produce investment memos with Claude Cowork
+    The author walks non-developers through using Claude Cowork to produce a full investment memo in about 15 minutes and track the investment afterwards.
+    Done with
+    CW
+    Claude Cowork
+    What they did
+    The author gave Claude Cowork access to a local folder and had it build a per-company structure. Using plain prompts, it downloaded Adyen's reports, transcripts and yfinance data, then wrote a business overview, an Excel model with a 3-scenario DCF and comps, a thesis memo and a one-pager. It also set up a weekly scheduled update task and turned the workflow into a reusable skill.
+    How it went
+    The Adyen workflow finished in under 15 minutes, and the skill later produced an IREN memo and model in a couple of minutes. A commenter said the filing and transcript downloads often fail for other stocks.
+    Worth knowing
+    Data gathering took about 5 minutes, mostly from hunting for transcripts. The weekly task only runs if the computer is on and Claude is open, and the author says to review the plan before running the skill.
+    Try it yourself
+    with
+    Claude Cowork
+    Copy prompt
+    Write an investment memo on [company or ticker] for me. Cover the business, recent financials, competitors, key risks, valuation, and a clear buy/hold/pass view, citing the sources you used. Save it as a [Word doc or PDF] in my [folder], and also create a simple tracking sheet with the entry price, my thesis, and the dates and metrics I should review. Stop once both files are saved and give me a short summary.
+    Original source: https://investwithai.substack.com/p/9-steps-in-claude-cowork-to-automate
 
 ## 原作者的方法与来源
 
 来源：[9 steps in Claude Cowork to automate your investment analysis](https://investwithai.substack.com/p/9-steps-in-claude-cowork-to-automate)
 
-原作者Substack全文未读取：代理连接返回403；未绕过访问限制。上方源站双语介绍是agentusecases.ai转述的原创摘要，不是原作者方法的独立核验。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ Fast completion is attributed to the author, while download problems are attribu
 现有资料只展示作者演示的文件工作流，没有提供付费客户和可核实利润的证据。对会读财报、能检查公式且已有合法资料的个人或小型研究团队，减少资料搬运与文档装配有实际使用逻辑；对外售卖备忘录则新增数据使用权、人工核查、销售和责任成本。源站转述的十五分钟只描述生成过程，不证明底稿完整、DCF 正确或结论带来超额收益。Microsoft 已提供相近公司研究输出，通用提示词也缺乏排他性。因此先把它当内部研究准备工具，不以自动生成数量作为商业规模证据。
 
 案例ID：`produce-investment-memos-with-claude-cowork` · 案例来源：https://agentusecases.ai/use-case/produce-investment-memos-with-claude-cowork
-研究时间：2026-10-16T06:23:33.837964+00:00 · 证据置信度：中低：已读聚合案例、官方能力与价格、数据工具说明、竞争产品及独立写作用户记录；未读到原作者全文，未运行 Cowork，未核验案例工作簿、客户付款、估值准确性或投资回报。
+研究时间：2026-10-16T06:23:33.837964+00:00
 
 **商业评分：41.0/100。用户反馈信号占5%。**
 
@@ -72,19 +66,13 @@ Fast completion is attributed to the author, while download problems are attribu
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/produce-investment-memos-with-claude-cowork
 
-观测时间：2026-10-16T05:28:49.670708+00:00
-
-建议运行工具：Claude Cowork（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Claude Cowork
 
     Write an investment memo on [company or ticker] for me. Cover the business, recent financials, competitors, key risks, valuation, and a clear buy/hold/pass view, citing the sources you used. Save it as a [Word doc or PDF] in my [folder], and also create a simple tracking sheet with the entry price, my thesis, and the dates and metrics I should review. Stop once both files are saved and give me a short summary.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：准备只含公开或已授权资料的独立目录，写明公司、证券、币种、报告截止日与资料权限；保留原件，指定具备财务知识的人工复核人。使用脱敏或合成数据先试，不连接券商账户。
 
@@ -94,9 +82,9 @@ Fast completion is attributed to the author, while download problems are attribu
 
 ### 内部研究准备模板 · 中文
 
-本仓库编写；非原作者或源站原文；未做模型实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S794f4f1d07d6, S80fa59d0b560
 
@@ -104,9 +92,9 @@ Fast completion is attributed to the author, while download problems are attribu
 
 ### 内部研究准备模板 · English
 
-本仓库编写；非原作者或源站原文；未做模型实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S794f4f1d07d6, S80fa59d0b560
 
@@ -182,8 +170,7 @@ Fast completion is attributed to the author, while download problems are attribu
 
 ## 用户反馈及证据权重
 
-本轮执行了针对Reddit、Hacker News以及原教程评论的多次检索。结果中混有Copilot、通用讨论和无关页面，未取得可核验的本教程直接客户评价，因此不能凭搜索结果宣称有金融用户持续使用或付费。源站确实转述了下载常失败的评论，但原帖连接被代理403阻断，评论者身份、具体股票、执行版本和失败比例均未核对；它只应促使我们测试数据缺失，不应变成统计结论。
-独立读取的Jisc作者Michael Webb记录了自己使用Cowork维护来源文件和核查写作的经历，并提醒保存习惯、格式转换和成本负担。这是可辨识的直接产品使用记录，但对于本研究只能归类为相邻知识工作流：它帮助说明人工审阅与证据目录有价值，不能证明DCF可靠、证券分析有效或客户肯付费。作者也是主动探索AI的自选用户，没有随机对照。故独立反馈只给1/5分，整体权重仍为5%，不能让这一条积极的写作体验抵消金融结果未验证。下一步应收集同一输入上的返工记录与拒收原因，比再搜几条泛泛好评更能改变判断。
+相关体验：使用目录、来源记录和人工保存来协作写作，认为辅助检查有用，但同时报告费用与流程负担；仅支持组织证据和保留人工控制的设计。
 
 依据：S7ce60162c701, S177c64f6382b
 
@@ -205,19 +192,11 @@ Fast completion is attributed to the author, while download problems are attribu
 
 假设B：下载缺失、口径纠错导致两小时复核假设：全部是压力情景假设，不是案例运营数据。价格150保持不变；模型及重试预算15、合法资料和交付20、获客35均待测。人工120分钟×60美元/小时=120。固定800假设含100软件座席+700维护；月10份未验证。下载失败可能完全阻止交付，此情景仍假定能完成，故未包含退款等更坏损失。；API成本 15，人工成本 120，其他可变成本 20，分摊获客成本 35。依据：S7ce60162c701, S58333316475e, S80fa59d0b560
 
-## 用户反馈核对（低权重）
-
-- Reddit社区检索 · `"Claude Cowork" "investment" "review" site:reddit.com`：实际搜索返回大量无关页面与通用社区结果，没有可纳入的该投资模板直接使用者记录。
-- Hacker News社区检索 · `"Claude Cowork" "financial" site:news.ycombinator.com`：实际搜索未取得对应投研工作流的可核验评论，不用检索摘要代替评论原文。
-- 原教程评论检索 · `"9 steps in Claude Cowork" comments`：检索未取得原评论全文；原教程正常读取被代理403阻断，源站转述下载失败仅作待检验线索。
-- 跨社区与独立使用记录检索 · `Claude Cowork investment memo (domains: news.ycombinator.com, reddit.com, investwithai.substack.com)`：结果混入其他域名和Copilot内容；发现Jisc独立写作使用记录，另行成功读取并只列作相邻工作流。
-- [S177c64f6382b] adjacent_workflow：使用目录、来源记录和人工保存来协作写作，认为辅助检查有用，但同时报告费用与流程负担；仅支持组织证据和保留人工控制的设计。；偏差：作者为主动探索AI的自选知识工作者，记录是个人使用体会，无金融任务、对照组、采购规模或投资收益。
-
 ## 反证与未核实信息
 
 有利反证是官方已支持云端连续任务，旧教程的电脑在线限制不能一概用于今天；独立用户也确实觉得有来源文件支撑的辅助检查有用。若已有团队已买座席且只用自己的授权资料，增量投入可能很低。相反，Microsoft直接提供近似研究输出、yfinance数据权利另有限制、源站转述下载失败，都削弱独立收费封装。没有原始模型就不能确定15分钟之后还有多少审核工作，这使盈利情景目前只能作试点门槛。
 
-未取得原作者Substack全文（代理连接403），不尝试替代路径绕过；未核验原评论、技能包、Adyen/IREN输出和计时。未调用Cowork或付费模型API、未安装或运行yfinance、未购买数据、未做真实投资或客户访谈。7份读取资料能支持平台能力、竞争与风险分析，不能证明本案例准确性、付费需求或投资收益。FMP候选价格页返回301且未纳入证据，因此商业数据费仍是假设。独立Jisc反馈只属写作，不是投研验证。目录采用d779649中2026-10-16 06:13:11 UTC的1354/1354完整详情观测；本轮不运行爬虫。
+技能包、Adyen和IREN输出、计时与工作簿准确性未核实。客户付费、投资收益和商业数据费未知；Jisc体验来自写作场景。
 
 ## 具体动作与止损条件
 
@@ -236,6 +215,3 @@ Fast completion is attributed to the author, while download problems are attribu
 - [S719155c62686] [Claude Cowork | Claude by Anthropic](https://claude.com/product/cowork)：支持当前Cowork任务、输出及插件能力的官方说明，说明基础编排功能属于平台而非案例独有资产。
 
 结构化记录：[research/produce-investment-memos-with-claude-cowork.json](../research/produce-investment-memos-with-claude-cowork.json)
-来源读取凭据：[research/evidence/produce-investment-memos-with-claude-cowork.json](../research/evidence/produce-investment-memos-with-claude-cowork.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

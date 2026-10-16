@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ce20ea758c95b8e6fe79a28131741d828eb2e9d14736d428762aaf9e224dc148",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow catches customer replies to order confirmations and forwards support requests into Freshdesk.",
+      "sha256": "ce20ea758c95b8e6fe79a28131741d828eb2e9d14736d428762aaf9e224dc148"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "799450662d0c4c7119a3f93dd4eaafff7704719a252acb1434f75f07a053cf28",
-      "publication": "reviewed_restatement_required"
+      "value": "They built an n8n workflow around a dedicated catch-all Gmail inbox for replies to order-confirmation emails. An AI classifier checked each incoming message to decide whether it was a real support request, and if so the workflow forwarded it into Freshdesk instead of sending every reply to support; the post does not describe any manual review step.",
+      "sha256": "799450662d0c4c7119a3f93dd4eaafff7704719a252acb1434f75f07a053cf28"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3702cb43447a3a9a4839bc6584600463380acc411eda3f0469f0e220ee456fe4",
-      "publication": "reviewed_restatement_required"
+      "value": "It solved the problem of support replies landing in a generic info@ inbox without dumping unrelated mail into the support queue. The author says the first version took about 30 minutes to build, but gives no accuracy or volume numbers.",
+      "sha256": "3702cb43447a3a9a4839bc6584600463380acc411eda3f0469f0e220ee456fe4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "12b69617fa1b41e5bc74daafda079cd77fc3edaebfe108f7d39eb001f3339364",
-      "publication": "reviewed_restatement_required"
+      "value": "The main practical catch is that the source stays high level: it names Gmail, an AI classifier, and Freshdesk, but does not share the workflow, prompt, or classification criteria.",
+      "sha256": "12b69617fa1b41e5bc74daafda079cd77fc3edaebfe108f7d39eb001f3339364"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Route customer reply emails to Freshdesk\nAn n8n workflow catches customer replies to order confirmations and forwards support requests into Freshdesk.\nDone with\nN8\nn8n\nWhat they did\nThey built an n8n workflow around a dedicated catch-all Gmail inbox for replies to order-confirmation emails. An AI classifier checked each incoming message to decide whether it was a real support request, and if so the workflow forwarded it into Freshdesk instead of sending every reply to support; the post does not describe any manual review step.\nHow it went\nIt solved the problem of support replies landing in a generic info@ inbox without dumping unrelated mail into the support queue. The author says the first version took about 30 minutes to build, but gives no accuracy or volume numbers.\nWorth knowing\nThe main practical catch is that the source stays high level: it names Gmail, an AI classifier, and Freshdesk, but does not share the workflow, prompt, or classification criteria.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches [inbox] for customer replies to our order confirmation emails. Classify whether each reply is a support request, and if so create a Freshdesk ticket with the customer's email, order number, and message text. Ignore auto-replies and thank-yous, and finish by testing with two sample replies and showing me the resulting tickets.\nOriginal source: https://www.reddit.com/r/n8n/comments/1njjah9",
+    "body_sha256": "66da36f3cc347457571e6998d30521d00c9e92c19f6c50a811ca909fbab813b4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

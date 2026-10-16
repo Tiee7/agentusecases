@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d53ebae392790a28a4abd4d2e206350a9513fe108033eed482fb1fb5290ad56f",
-      "publication": "reviewed_restatement_required"
+      "value": "A writer had Operator gather financial data for independent schools in the background; it was slow and was stopped after about 25 schools, then the data went to o1 for analysis.",
+      "sha256": "d53ebae392790a28a4abd4d2e206350a9513fe108033eed482fb1fb5290ad56f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ce99e548b3792a95ebfd786d27743081ec894cc89ffe0203e86fd5f6cdaed5d3",
-      "publication": "reviewed_restatement_required"
+      "value": "The writer gave Operator a Google Sheet listing 100 school names, which came from an o3-mini-high query. Operator used its own browser to search ProPublica's Nonprofit Explorer for each school, read the summary financials, and paste them into the sheet. The writer mostly left it running in the background. They then pasted the sheet into o1, which wrote code for an interactive chart dashboard.",
+      "sha256": "ce99e548b3792a95ebfd786d27743081ec894cc89ffe0203e86fd5f6cdaed5d3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "836e8f60ff35c0124f961f70e21dda34164fd036a03580d3ebd076e60f7dab4d",
-      "publication": "reviewed_restatement_required"
+      "value": "Operator was very slow and was stopped after about 25 schools. It rounded numbers inconsistently and sometimes picked the wrong organization. o1's dashboard was usable, though basic and needing label fixes, and the writer chose not to share it.",
+      "sha256": "836e8f60ff35c0124f961f70e21dda34164fd036a03580d3ebd076e60f7dab4d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9a979d3b9b7a4a9d403159526f99343f96020f923434c26fcbd20c9eb8223ddb",
-      "publication": "reviewed_restatement_required"
+      "value": "Check every row. Operator confused schools with common names and began rounding figures after the first few, so the data needs verifying before you analyze it.",
+      "sha256": "9a979d3b9b7a4a9d403159526f99343f96020f923434c26fcbd20c9eb8223ddb"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Collect financial data on 100 independent schools\nA writer had Operator gather financial data for independent schools in the background; it was slow and was stopped after about 25 schools, then the data went to o1 for analysis.\nDone with\nOP\nOperator\nWhat they did\nThe writer gave Operator a Google Sheet listing 100 school names, which came from an o3-mini-high query. Operator used its own browser to search ProPublica's Nonprofit Explorer for each school, read the summary financials, and paste them into the sheet. The writer mostly left it running in the background. They then pasted the sheet into o1, which wrote code for an interactive chart dashboard.\nHow it went\nOperator was very slow and was stopped after about 25 schools. It rounded numbers inconsistently and sometimes picked the wrong organization. o1's dashboard was usable, though basic and needing label fixes, and the writer chose not to share it.\nWorth knowing\nCheck every row. Operator confused schools with common names and began rounding figures after the first few, so the data needs verifying before you analyze it.\nTry it yourself\nwith\nOperator\nCopy prompt\nFor each of these [type of organization, e.g. independent schools] in [region], collect [data points, e.g. tuition, endowment, revenue] from their public websites and filings: [list or source]. Put results in a spreadsheet with a source link per row and mark any missing values. Start with the first [25] and stop there so I can check quality before you continue.\nOriginal source: https://fullstackeducator.substack.com/p/ai-agents-in-action",
+    "body_sha256": "0ff24ad89e03e3a85ace7b6c1bcc84ccd5f57bbf34d762992861a2af06337ea2",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

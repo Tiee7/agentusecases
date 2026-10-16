@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e38ead514b2ffb6eba96086508c859db4d678b0115d5490ab04b6766a5043627",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent built on Sanity queries real content to tell people in India which government schemes they are entitled to.",
+      "sha256": "e38ead514b2ffb6eba96086508c859db4d678b0115d5490ab04b6766a5043627"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b0c36b5e5cfdca94e9f8dd0979f0ab0058afa2ed0aa5ececffeb05639b5065a6",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent runs on Inception's Mercury via the Vercel AI SDK and reaches a Sanity Context MCP endpoint in GROQ mode. It extracts the person's details, reads the schema, and makes one GROQ query for schemes with typed eligibility rules. It then checks every exclusion rule. A second pass formats cards as JSON, and the route attaches the apply and source URLs from the dataset.",
+      "sha256": "b0c36b5e5cfdca94e9f8dd0979f0ab0058afa2ed0aa5ececffeb05639b5065a6"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "952b86db2551e37f5445fa2d2fe7962abf45efd6c73437e13e8990ee37723573",
-      "publication": "reviewed_restatement_required"
+      "value": "Works in English and Kannada with follow-ups. The dataset has 125 schemes, but only 10 flagships have structured rules (33 rules, 11 exclusions). A run takes 30 to 45 seconds. The author did not verify every rule line by line.",
+      "sha256": "952b86db2551e37f5445fa2d2fe7962abf45efd6c73437e13e8990ee37723573"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "46ab5386b8c5dd3aadec0c50f045e78500774d0571c5335bf9d4e3600130bbad",
-      "publication": "reviewed_restatement_required"
+      "value": "The first Knowledge Base route burned 20 tool calls without answering. Switching to GROQ mode fixed it, but it needs a deployed Studio.",
+      "sha256": "46ab5386b8c5dd3aadec0c50f045e78500774d0571c5335bf9d4e3600130bbad"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Tell Indian citizens which government schemes they're owed\nAn agent built on Sanity queries real content to tell people in India which government schemes they are entitled to.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent runs on Inception's Mercury via the Vercel AI SDK and reaches a Sanity Context MCP endpoint in GROQ mode. It extracts the person's details, reads the schema, and makes one GROQ query for schemes with typed eligibility rules. It then checks every exclusion rule. A second pass formats cards as JSON, and the route attaches the apply and source URLs from the dataset.\nHow it went\nWorks in English and Kannada with follow-ups. The dataset has 125 schemes, but only 10 flagships have structured rules (33 rules, 11 exclusions). A run takes 30 to 45 seconds. The author did not verify every rule line by line.\nWorth knowing\nThe first Knowledge Base route burned 20 tool calls without answering. Switching to GROQ mode fixed it, but it needs a deployed Studio.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nI am a [age] year old [occupation] living in [state] in India with household income of about [amount] and [other relevant details like caste category, land, or family]. Search official government sites to find central and state schemes I may be eligible for. For each, give the benefit, eligibility, documents needed, and the official application link. Do not submit any applications or enter personal ID numbers.\nOriginal source: https://dev.to/varshithvhegde/entitled-an-ai-agent-that-tells-indians-which-government-schemes-theyre-owed-built-on-sanity-4dml",
+    "body_sha256": "076a81bdbb88c9624f38514e665da3f3bf50f986e2707babd7adbbf87d8d4bb6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -22,6 +22,8 @@ def refresh(db_path):
     count = bootstrap(db_path, sync_research=False)
     from .archive import apply
     apply(db)
+    from .archive_coverage import update
+    update()
     indexes()
     if research_fingerprints() != before:
         raise RuntimeError('Catalog refresh modified research-owned files; refuse publication')

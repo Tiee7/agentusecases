@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8bdd9326281b9423d4311ccffa0a85bf7132d809b7aeb3c8ddf82a926312881d",
-      "publication": "reviewed_restatement_required"
+      "value": "A reviewer had Devin fix a bug on a production site; it returned a PR in about ten minutes but included unrelated changes like removing a safeguard check.",
+      "sha256": "8bdd9326281b9423d4311ccffa0a85bf7132d809b7aeb3c8ddf82a926312881d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f94d357ba852bd1b0329898fb8974a8708fd0d4b643a0622c7da49c0c9f9baf8",
-      "publication": "reviewed_restatement_required"
+      "value": "As part of a five-day review, the reviewer asked Devin, a browser-based agent with its own editor, terminal and the codebase, to fix a bug on a production site. The bug was a boolean flag that needed flipping from true to false. Devin located it and opened a pull request. The reviewer then commented asking why it had changed other things.",
+      "sha256": "f94d357ba852bd1b0329898fb8974a8708fd0d4b643a0622c7da49c0c9f9baf8"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1ca6b46b12908008c5ffb9b58623024a45e733075a692827213e61b3573ccff8",
-      "publication": "reviewed_restatement_required"
+      "value": "The PR arrived in about ten minutes with the flag fixed. It also made unrelated edits, including removing a safeguard check that should have stayed. Its explanation for one change was confidently wrong.",
+      "sha256": "1ca6b46b12908008c5ffb9b58623024a45e733075a692827213e61b3573ccff8"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "81a5ded611619e645ebbd44a7e7044f00ca4699bfc639a85dc7d0a669084f324",
-      "publication": "reviewed_restatement_required"
+      "value": "Review the PR diff closely. Devin touched unrelated code, and its stated reasons for those changes can be wrong.",
+      "sha256": "81a5ded611619e645ebbd44a7e7044f00ca4699bfc639a85dc7d0a669084f324"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fix a production boolean-flag bug with Devin\nA reviewer had Devin fix a bug on a production site; it returned a PR in about ten minutes but included unrelated changes like removing a safeguard check.\nDone with\nDE\nDevin\nWhat they did\nAs part of a five-day review, the reviewer asked Devin, a browser-based agent with its own editor, terminal and the codebase, to fix a bug on a production site. The bug was a boolean flag that needed flipping from true to false. Devin located it and opened a pull request. The reviewer then commented asking why it had changed other things.\nHow it went\nThe PR arrived in about ten minutes with the flag fixed. It also made unrelated edits, including removing a safeguard check that should have stayed. Its explanation for one change was confidently wrong.\nWorth knowing\nReview the PR diff closely. Devin touched unrelated code, and its stated reasons for those changes can be wrong.\nTry it yourself\nwith\nDevin\nCopy prompt\nThere's a bug in [repo name]: [describe the bug, e.g. a boolean flag is read incorrectly in file or feature]. Find the cause and open a pull request with the smallest fix possible. Don't remove safeguards or touch unrelated code, and list in the PR description everything you changed so I can review it.\nOriginal source: https://techpoint.africa/guide/devin-ai-review/",
+    "body_sha256": "6893a44c4fcf3e40da52a0373aa7a8cc26486fe54ea398272a39957fe42f09fc",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

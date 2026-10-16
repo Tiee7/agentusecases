@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8995c4bb28cc6e49df6a136422b905877bfbe33e9cf75220d859e4e8da210921",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer used Cursor and Warp agents to analyze NestJS database queries and recommend indexes for a production performance problem.",
+      "sha256": "8995c4bb28cc6e49df6a136422b905877bfbe33e9cf75220d859e4e8da210921"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "244231ee68ff9fcfa31496f7614731bf3d472cb8996f270682200dc8f378a2a5",
-      "publication": "reviewed_restatement_required"
+      "value": "A page was slow in production but not in the dev environment. The developer asked a Cursor/Warp agent to list possible causes and the steps to fix them. The agent read the codebase, worked out which database queries NestJS was making, and said which database indexes should be used.",
+      "sha256": "244231ee68ff9fcfa31496f7614731bf3d472cb8996f270682200dc8f378a2a5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c1557483d42e4f631e5f34df106e6b7579226bf977a9f2e06a1c457cf4b64b41",
-      "publication": "reviewed_restatement_required"
+      "value": "After the developer added the recommended indexes, page load performance improved significantly. The source gives no timings or figures.",
+      "sha256": "c1557483d42e4f631e5f34df106e6b7579226bf977a9f2e06a1c457cf4b64b41"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "49a145142eb55cf827e5f2ee9d634b0b0cfe742385663b9e3b085a733091f79d",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent worked from the codebase and produced a list of candidate causes, so the developer still had to apply the indexes and check the result in production.",
+      "sha256": "49a145142eb55cf827e5f2ee9d634b0b0cfe742385663b9e3b085a733091f79d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Troubleshoot a production-only performance issue\nA developer used Cursor and Warp agents to analyze NestJS database queries and recommend indexes for a production performance problem.\nDone with\nCR\nCursor\nWhat they did\nA page was slow in production but not in the dev environment. The developer asked a Cursor/Warp agent to list possible causes and the steps to fix them. The agent read the codebase, worked out which database queries NestJS was making, and said which database indexes should be used.\nHow it went\nAfter the developer added the recommended indexes, page load performance improved significantly. The source gives no timings or figures.\nWorth knowing\nThe agent worked from the codebase and produced a list of candidate causes, so the developer still had to apply the indexes and check the result in production.\nTry it yourself\nwith\nCursor\nCopy prompt\nOur [framework, e.g. NestJS] app is slow in production but not locally, specifically [endpoint or page]. Read the code and database queries involved, identify the slowest or most repeated ones, and recommend indexes or query changes with an explanation of why. You're done when you have a ranked list of fixes with the exact migration or code change for each. Don't run anything against the production database; show me the changes first.\nOriginal source: https://trevorarnold.substack.com/p/december-2025-lessons",
+    "body_sha256": "05ced6497d4648e78ac9fb086d22b444e79bae9026aad1df1561d325cbe0d73b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

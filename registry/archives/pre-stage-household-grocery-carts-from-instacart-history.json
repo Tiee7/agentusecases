@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5130969a042d86eacbacfaf07931d3ddef29719e6b507e9150fb9b3f987ee96",
-      "publication": "reviewed_restatement_required"
+      "value": "An OpenClaw add-on scrapes Instacart order history, predicts what the household is running out of, fills the cart twice weekly and texts; nothing ships until the user taps Place Order.",
+      "sha256": "a5130969a042d86eacbacfaf07931d3ddef29719e6b507e9150fb9b3f987ee96"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "efc0be116cc9f7b91b5021355a0d8c965c3491b0ca4d38ae610651fde263bf0d",
-      "publication": "reviewed_restatement_required"
+      "value": "A nightly script imports each day's Instacart orders into a local SQLite database using Instacart's own item IDs, via a community CLI. A SQL analyzer takes the median days between purchases for each item and marks items due, soon, or not due. On Wednesday and Saturday at 7:45am, a script adds the due items to the cart by ID. At 8am it sends one iMessage. The CLI has no checkout action, so the user places the order.",
+      "sha256": "efc0be116cc9f7b91b5021355a0d8c965c3491b0ca4d38ae610651fde263bf0d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1cf3d94763f1628bb85fc5a65cdfb9a2457fea3f77472613f76a18b834033a72",
-      "publication": "reviewed_restatement_required"
+      "value": "Moving from an LLM clicking through the browser to canonical IDs took accuracy from eleven of fourteen items wrong on a typical run to 100%. The loop is fully deterministic, with no LLM in it.",
+      "sha256": "1cf3d94763f1628bb85fc5a65cdfb9a2457fea3f77472613f76a18b834033a72"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "6abee203163fc3e505430d22c60baa2a63a829d3bac7e9080e99f6f92c9db3d3",
-      "publication": "reviewed_restatement_required"
+      "value": "The earlier browser-clicking LLM version got most items wrong, so use item IDs rather than search. Setup is about 20 minutes, needs an active Instacart session, and the example scheduling uses macOS launchd.",
+      "sha256": "6abee203163fc3e505430d22c60baa2a63a829d3bac7e9080e99f6f92c9db3d3"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Pre-stage household grocery carts from Instacart history\nAn OpenClaw add-on scrapes Instacart order history, predicts what the household is running out of, fills the cart twice weekly and texts; nothing ships until the user taps Place Order.\nDone with\nOC\nOpenClaw\nWhat they did\nA nightly script imports each day's Instacart orders into a local SQLite database using Instacart's own item IDs, via a community CLI. A SQL analyzer takes the median days between purchases for each item and marks items due, soon, or not due. On Wednesday and Saturday at 7:45am, a script adds the due items to the cart by ID. At 8am it sends one iMessage. The CLI has no checkout action, so the user places the order.\nHow it went\nMoving from an LLM clicking through the browser to canonical IDs took accuracy from eleven of fourteen items wrong on a typical run to 100%. The loop is fully deterministic, with no LLM in it.\nWorth knowing\nThe earlier browser-clicking LLM version got most items wrong, so use item IDs rather than search. Setup is about 20 minutes, needs an active Instacart session, and the example scheduling uses macOS launchd.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nLook at my [Instacart] order history, work out what my household is likely running low on, and fill a cart for [store] with those items twice a week. Text me a summary of the cart with quantities and the total. Don't place the order. Wait for me to confirm it.\nOriginal source: https://github.com/kmanan/spratt-skills",
+    "body_sha256": "e185ecbff675112b77734f486efb7060c47d0fcddecfedf5181bcb5914b88e2f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

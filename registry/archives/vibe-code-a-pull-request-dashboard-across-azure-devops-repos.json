@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "09d783d842d20e0f73776fcded6c5b1c34a0b8dfb84ced45b15cc31503aa6059",
-      "publication": "reviewed_restatement_required"
+      "value": "Author used ChatGPT for architecture and the Junie agent in WebStorm to build a dashboard aggregating PRs across four repos, flagging approvals, conflicts and comments, in about 3 hours.",
+      "sha256": "09d783d842d20e0f73776fcded6c5b1c34a0b8dfb84ced45b15cc31503aa6059"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "aa7470a83baf9030fc4cb16a8d1bb0e917dc247630095193426e7f802ed5c582",
-      "publication": "reviewed_restatement_required"
+      "value": "The author described the goals to ChatGPT 5 to get an architecture, then gave that output to the Junie agent in WebStorm to write a Readme and project guidelines. They built it step by step: layout, dummy data, Azure API calls, YouTrack integration, features. PATs stay local. They hand-edited no code but read it and suggested improvements.",
+      "sha256": "aa7470a83baf9030fc4cb16a8d1bb0e917dc247630095193426e7f802ed5c582"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "45e4343b3a677c089567564eb16c7f3c7d4d908381c943fb22aebd2ee115d914",
-      "publication": "reviewed_restatement_required"
+      "value": "After about 3 hours there were three views, and the team loved it. Another hour added their suggestions, and everyone uses it daily. Almost every step worked first try; Junie sometimes got repetitive or inconsistent.",
+      "sha256": "45e4343b3a677c089567564eb16c7f3c7d4d908381c943fb22aebd2ee115d914"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a1a0f1587c5f497248abbe232f5fd6bfa0ce785ae532b95bcf8136cd6aa9a4dc",
-      "publication": "reviewed_restatement_required"
+      "value": "Adding a step to maximize code reuse and centralize configuration fixed the repetition and inconsistency Junie produced. The author says it struggles on their large .NET Maui codebase.",
+      "sha256": "a1a0f1587c5f497248abbe232f5fd6bfa0ce785ae532b95bcf8136cd6aa9a4dc"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Vibe-code a pull request dashboard across Azure DevOps repos\nAuthor used ChatGPT for architecture and the Junie agent in WebStorm to build a dashboard aggregating PRs across four repos, flagging approvals, conflicts and comments, in about 3 hours.\nDone with\nGP\nChatGPT\nWhat they did\nThe author described the goals to ChatGPT 5 to get an architecture, then gave that output to the Junie agent in WebStorm to write a Readme and project guidelines. They built it step by step: layout, dummy data, Azure API calls, YouTrack integration, features. PATs stay local. They hand-edited no code but read it and suggested improvements.\nHow it went\nAfter about 3 hours there were three views, and the team loved it. Another hour added their suggestions, and everyone uses it daily. Almost every step worked first try; Junie sometimes got repetitive or inconsistent.\nWorth knowing\nAdding a step to maximize code reuse and centralize configuration fixed the repetition and inconsistency Junie produced. The author says it struggles on their large .NET Maui codebase.\nTry it yourself\nwith\nCursor\nCopy prompt\nBuild a dashboard that pulls open pull requests from my [Azure DevOps/GitHub] repos [repo names] and shows for each one its approval status, merge conflicts, and unresolved comments. Start with a simple architecture proposal, then build it step by step. Finished means the dashboard runs locally against my real repos with read-only access. Don't push code or change any PRs.\nOriginal source: https://news.ycombinator.com/item?id=45881626",
+    "body_sha256": "d528157dbb9a93131eb50b4cdaa44e6bb17bd6d8bc5e71c53bbc9596d530d560",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

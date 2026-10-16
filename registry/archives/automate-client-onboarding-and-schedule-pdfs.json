@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6043de9f0d63a9f07a148829bf99f48af05085b4e178ff8655ec3e75d27c8060",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow triggered from a Google Sheet generates a PDF training schedule, emails it to the client with reminders, and cleans up the temp file.",
+      "sha256": "6043de9f0d63a9f07a148829bf99f48af05085b4e178ff8655ec3e75d27c8060"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b5f6f8e93803376636c88d9ff8cdfa6b4cf8f814b90057669c4e878854a7b0a1",
-      "publication": "reviewed_restatement_required"
+      "value": "They built two n8n workflows around a Google Sheet. One triggers when a new booking is marked for onboarding, pulls that client’s upcoming sessions, creates a temporary Google Doc, turns it into a personalized PDF, emails the welcome pack with the trainer CC’d, then updates the sheet so it cannot resend; a second 8am workflow checks for sessions 30 or 7 days out and repeats the PDF-and-email process for reminders.",
+      "sha256": "b5f6f8e93803376636c88d9ff8cdfa6b4cf8f814b90057669c4e878854a7b0a1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1673b6e164beb40caec25a334ad84b66c5779d906538a536b1cce53794d31d60",
-      "publication": "reviewed_restatement_required"
+      "value": "The result was that every client automatically got a welcome pack plus 30-day and 7-day reminders with no manual sending. The post says it works well, but gives no hard metrics and the author still thinks parts could be structured more cleanly.",
+      "sha256": "1673b6e164beb40caec25a334ad84b66c5779d906538a536b1cce53794d31d60"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9e514c7db5b10509bfd9ba279e0fd89e152753e8bde7ab9e7385b30b1c0ca66e",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is the temporary-file PDF pipeline: it creates a Google Doc, converts it, attaches it, and deletes it afterward so Drive does not fill up.",
+      "sha256": "9e514c7db5b10509bfd9ba279e0fd89e152753e8bde7ab9e7385b30b1c0ca66e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate client onboarding and schedule PDFs\nAn n8n workflow triggered from a Google Sheet generates a PDF training schedule, emails it to the client with reminders, and cleans up the temp file.\nDone with\nN8\nn8n\nWhat they did\nThey built two n8n workflows around a Google Sheet. One triggers when a new booking is marked for onboarding, pulls that client’s upcoming sessions, creates a temporary Google Doc, turns it into a personalized PDF, emails the welcome pack with the trainer CC’d, then updates the sheet so it cannot resend; a second 8am workflow checks for sessions 30 or 7 days out and repeats the PDF-and-email process for reminders.\nHow it went\nThe result was that every client automatically got a welcome pack plus 30-day and 7-day reminders with no manual sending. The post says it works well, but gives no hard metrics and the author still thinks parts could be structured more cleanly.\nWorth knowing\nThe main catch is the temporary-file PDF pipeline: it creates a Google Doc, converts it, attaches it, and deletes it afterward so Drive does not fill up.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that triggers when a new row is added to my Google Sheet [sheet name] with client name, email, and [program details]. Generate a PDF training schedule from a template, email it to the client with a short welcome message, schedule reminder emails on [days], and delete the temporary PDF afterward. Test it with a dummy row sent to my own email before enabling it for real clients.\nOriginal source: https://www.reddit.com/r/n8n/comments/1rruer8/built_an_n8n_automation_that_handles_client",
+    "body_sha256": "8237aa776ddda43ee0f3dbcea8884b79a783f577cda79aa2d6c9777d23f46824",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

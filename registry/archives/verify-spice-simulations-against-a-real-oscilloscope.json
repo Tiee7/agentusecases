@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "291c4274f37cdeb36c94b36cca1d93fab6d3de72487ba079416324d40616a44a",
-      "publication": "reviewed_restatement_required"
+      "value": "MCP servers for an oscilloscope and SPICE simulator let Claude Code compare simulated circuits with real hardware measurements, closing the loop.",
+      "sha256": "291c4274f37cdeb36c94b36cca1d93fab6d3de72487ba079416324d40616a44a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "192fd96e3cce6e2be3a23a59fc87d5c0e991d02cedfc5369894aafd3959374e2",
-      "publication": "reviewed_restatement_required"
+      "value": "Lucas Gerads gave Claude Code two MCP servers: one for a LeCroy oscilloscope and one wrapping spicelib for SPICE simulation. The demo uses a trivial RC filter driven by a simple microcontroller. Claude compares simulated and measured data. For firmware, he gave it a pinout map and a Makefile with build, flash, ping and erase targets.",
+      "sha256": "192fd96e3cce6e2be3a23a59fc87d5c0e991d02cedfc5369894aafd3959374e2"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e9a827b1724910c058ed495148c37a785d4ca0e20ffceadb50b27086606e3d82",
-      "publication": "reviewed_restatement_required"
+      "value": "The post says the setup became very valuable for validating SPICE circuits and models, and it removed tedious data analysis such as time-axis normalization and alignment. It gives no numbers, and the demo circuit is deliberately trivial.",
+      "sha256": "e9a827b1724910c058ed495148c37a785d4ca0e20ffceadb50b27086606e3d82"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "40665e53b364fff51fe68b65b31b2af8702a085d14ebfbc4ab24eaf7b9efbb90",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude can't see your physical wiring, so tell it what is connected where. Make sure it never reads stale captures, and save raw waveform data to files instead of pasting it into context.",
+      "sha256": "40665e53b364fff51fe68b65b31b2af8702a085d14ebfbc4ab24eaf7b9efbb90"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Verify SPICE simulations against a real oscilloscope\nMCP servers for an oscilloscope and SPICE simulator let Claude Code compare simulated circuits with real hardware measurements, closing the loop.\nDone with\nCC\nClaude Code\nWhat they did\nLucas Gerads gave Claude Code two MCP servers: one for a LeCroy oscilloscope and one wrapping spicelib for SPICE simulation. The demo uses a trivial RC filter driven by a simple microcontroller. Claude compares simulated and measured data. For firmware, he gave it a pinout map and a Makefile with build, flash, ping and erase targets.\nHow it went\nThe post says the setup became very valuable for validating SPICE circuits and models, and it removed tedious data analysis such as time-axis normalization and alignment. It gives no numbers, and the demo circuit is deliberately trivial.\nWorth knowing\nClaude can't see your physical wiring, so tell it what is connected where. Make sure it never reads stale captures, and save raw waveform data to files instead of pasting it into context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a SPICE simulation of [circuit] at [file path] and an oscilloscope reachable at [address] through an MCP server. Run the simulation, capture the real measurement of [signal or test point], and compare them on rise time, amplitude, and frequency. Report the differences and suggest model tweaks. Ask me before changing any hardware settings or sending output to the circuit.\nOriginal source: https://lucasgerads.com/blog/lecroy-mcp-spice-demo/",
+    "body_sha256": "2063ea1d6e25fef3f7821c8eba60338ca43e81c7762c407510c615f99a03ebfc",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

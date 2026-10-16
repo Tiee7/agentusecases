@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d44b2342eb8e7bd4f93647dc6a0f5667903378c2a124331eb149bdf70e5ebb68",
-      "publication": "reviewed_restatement_required"
+      "value": "Hermes Agent handled payables, bank import, bill posting and Stripe reconciliation alongside a human accountant, but needed 7 corrections including a tax-amount bug.",
+      "sha256": "d44b2342eb8e7bd4f93647dc6a0f5667903378c2a124331eb149bdf70e5ebb68"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3974e516a1b22accf48334afb29ccdbb1b9a05abf011086f3297d9a1dd31f9aa",
-      "publication": "reviewed_restatement_required"
+      "value": "The founder connected Hermes Agent to Gmail, Zoho Books, Aspire bank, Stripe and Telegram, and uploaded a 72-account chart of accounts. The agent wrote its own Python scripts against the official APIs, with no MCP servers. It ingested and classified documents, posted draft bills, imported bank transactions, matched them, and queued exceptions. He messaged-corrected its mistakes and ran it in parallel with a human accountant's books.",
+      "sha256": "3974e516a1b22accf48334afb29ccdbb1b9a05abf011086f3297d9a1dd31f9aa"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "36e7a917e63c9643e70579d997d8a9257e4611121cee09dbc7441a68ddbd5a34",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup took about 6–8 hours. The author estimates an 85–90% cut in routine month-end work. Seven corrections were needed, including bills posted without tax and over-eager matching. Stripe went smoothly: 145 transactions, 36 payouts.",
+      "sha256": "36e7a917e63c9643e70579d997d8a9257e4611121cee09dbc7441a68ddbd5a34"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "2301c84641700a31085981b5f1f37cd37dcbd0ba19315b257a9f628240b4f73b",
-      "publication": "reviewed_restatement_required"
+      "value": "Sync the chart of accounts, currencies and tax codes from live Zoho each run, and set a rule that bills post at the full amount payable.",
+      "sha256": "2301c84641700a31085981b5f1f37cd37dcbd0ba19315b257a9f628240b4f73b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate SaaS bookkeeping and reconciliation in Zoho Books\nHermes Agent handled payables, bank import, bill posting and Stripe reconciliation alongside a human accountant, but needed 7 corrections including a tax-amount bug.\nDone with\nHA\nHermes Agent\nWhat they did\nThe founder connected Hermes Agent to Gmail, Zoho Books, Aspire bank, Stripe and Telegram, and uploaded a 72-account chart of accounts. The agent wrote its own Python scripts against the official APIs, with no MCP servers. It ingested and classified documents, posted draft bills, imported bank transactions, matched them, and queued exceptions. He messaged-corrected its mistakes and ran it in parallel with a human accountant's books.\nHow it went\nSetup took about 6–8 hours. The author estimates an 85–90% cut in routine month-end work. Seven corrections were needed, including bills posted without tax and over-eager matching. Stripe went smoothly: 145 transactions, 36 payouts.\nWorth knowing\nSync the chart of accounts, currencies and tax codes from live Zoho each run, and set a rule that bills post at the full amount payable.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp with monthly bookkeeping in [Zoho Books or my accounting tool]: import the bank feed for [month], draft bills from [folder or inbox of vendor invoices], and reconcile [Stripe or payment processor] payouts against invoices. Double check tax amounts on every bill. Pause and show me a summary of the entries before posting anything, and list anything you're unsure about for my accountant to review.\nOriginal source: https://satvasolutions.com/blog/how-we-automated-accounting-ai-agent",
+    "body_sha256": "6cc0eb6fd8bcb66de5aeb8e3226a2c5a9b6e57c912b1e55f456e901f981dfb0d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

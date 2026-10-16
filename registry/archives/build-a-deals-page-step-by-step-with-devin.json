@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9afb06e8119d6127b012c0f8270e37a2fa76185f7944530509ac2ad18d29d3f2",
-      "publication": "reviewed_restatement_required"
+      "value": "An engineer had Devin implement a deals page in steps; it opened a PR in under 10 minutes, but CI failed, it added unnecessary changes and gave a false answer about a library.",
+      "sha256": "9afb06e8119d6127b012c0f8270e37a2fa76185f7944530509ac2ad18d29d3f2"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "58ed4b8103fb955d07f720f7643b01fa5309790743f26c252011e2e2aeeffc7d",
-      "publication": "reviewed_restatement_required"
+      "value": "The engineer connected the backend and frontend repos to Devin through its GitHub integration and had it set up its own environment. She gave it the Deal schema and a DB diagram, plus PR numbers for related unmerged work. Devin split the task into separate sessions, opened a PR for the first piece, and retried CI lint and TypeScript fixes. Each later part got its own session, with PRs based on the earlier ones.",
+      "sha256": "58ed4b8103fb955d07f720f7643b01fa5309790743f26c252011e2e2aeeffc7d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6b4936605c2522e56f43c777f8722cfa046a357ec85789b8dc0db9cfe6ce91cb",
-      "publication": "reviewed_restatement_required"
+      "value": "The first PR opened in under 10 minutes but failed CI. Later PRs were acceptable but carried extra changes, and Devin wrongly said Joi wasn't used elsewhere. The final session, getting the project running locally, hit usage limits.",
+      "sha256": "6b4936605c2522e56f43c777f8722cfa046a357ec85789b8dc0db9cfe6ce91cb"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c296f11ca7ea0d84927163348c51d71eee89ac48de657a1c2ce8021bab60404e",
-      "publication": "reviewed_restatement_required"
+      "value": "Separate sessions don't share context, so the split can't be run in parallel. She used all 150 ACUs in under a week, and the docs say performance degrades past 10 ACUs per session.",
+      "sha256": "c296f11ca7ea0d84927163348c51d71eee89ac48de657a1c2ce8021bab60404e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a deals page step by step with Devin\nAn engineer had Devin implement a deals page in steps; it opened a PR in under 10 minutes, but CI failed, it added unnecessary changes and gave a false answer about a library.\nDone with\nDE\nDevin\nWhat they did\nThe engineer connected the backend and frontend repos to Devin through its GitHub integration and had it set up its own environment. She gave it the Deal schema and a DB diagram, plus PR numbers for related unmerged work. Devin split the task into separate sessions, opened a PR for the first piece, and retried CI lint and TypeScript fixes. Each later part got its own session, with PRs based on the earlier ones.\nHow it went\nThe first PR opened in under 10 minutes but failed CI. Later PRs were acceptable but carried extra changes, and Devin wrongly said Joi wasn't used elsewhere. The final session, getting the project running locally, hit usage limits.\nWorth knowing\nSeparate sessions don't share context, so the split can't be run in parallel. She used all 150 ACUs in under a week, and the docs say performance degrades past 10 ACUs per session.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn [repo name], implement a [page or feature, e.g. deals page] in small steps: [step 1], then [step 2], then [step 3]. Open a PR after the steps, make sure CI passes, and don't add changes outside the scope. If you're unsure how a library works, check its docs and tell me what you verified versus what you assumed.\nOriginal source: https://qubika.com/blog/devin-ai-coding-agent/",
+    "body_sha256": "637faad287c7d2425b2dbfe0801de45d9aff8328848b5653a3ba029d1599de32",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

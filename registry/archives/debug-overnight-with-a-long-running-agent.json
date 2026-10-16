@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2699d63b1d6f1a1ca4f4e5c902ac6184d163dbb18c2967b8d6d4d14328555944",
-      "publication": "reviewed_restatement_required"
+      "value": "The author leaves Codex CLI running for hours to add debug prints and test hypotheses against a reproducing unit test, often only to find the bug.",
+      "sha256": "2699d63b1d6f1a1ca4f4e5c902ac6184d163dbb18c2967b8d6d4d14328555944"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a9f8396431800f043a777349b5400ac2effc5514eac343f786376d05d5cd78f6",
-      "publication": "reviewed_restatement_required"
+      "value": "The author starts Codex running for a few hours overnight on a bug they can't explain. The key requirement is a deterministic unit test that reproduces the bug through the app's front door. The agent then grinds through the tedious work on its own: adding debug prints throughout the code and testing hypotheses about the cause.",
+      "sha256": "a9f8396431800f043a777349b5400ac2effc5514eac343f786376d05d5cd78f6"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f6aa99ce631d9c3d95419ded6666edbf319d33f65743516aad5543d16071f0f",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no numbers or specific results. The author calls it an ideal use case and says they do it routinely, though it doesn't say how often the agent actually finds the bug.",
+      "sha256": "5f6aa99ce631d9c3d95419ded6666edbf319d33f65743516aad5543d16071f0f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "21508fd2d4c215db1bc5f1ba9c95998192b4a1daf392891c58aad2080a81f33b",
-      "publication": "reviewed_restatement_required"
+      "value": "Write a deterministic reproducing test first, entering through the app's front door; the approach depends on the agent having a repeatable pass/fail signal to test hypotheses against.",
+      "sha256": "21508fd2d4c215db1bc5f1ba9c95998192b4a1daf392891c58aad2080a81f33b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Debug overnight with a long-running agent\nThe author leaves Codex CLI running for hours to add debug prints and test hypotheses against a reproducing unit test, often only to find the bug.\nDone with\nCX\nCodex\nWhat they did\nThe author starts Codex running for a few hours overnight on a bug they can't explain. The key requirement is a deterministic unit test that reproduces the bug through the app's front door. The agent then grinds through the tedious work on its own: adding debug prints throughout the code and testing hypotheses about the cause.\nHow it went\nThe source gives no numbers or specific results. The author calls it an ideal use case and says they do it routinely, though it doesn't say how often the agent actually finds the bug.\nWorth knowing\nWrite a deterministic reproducing test first, entering through the app's front door; the approach depends on the agent having a repeatable pass/fail signal to test hypotheses against.\nTry it yourself\nwith\nCodex\nCopy prompt\nThere is a bug in [project] that reproduces with the test [test name or path]. Form hypotheses about the cause, add temporary debug prints, run the test, and keep testing hypotheses until you find the root cause. Stop when you can explain the cause with evidence from the output, then list the debug prints you added and remove them. Propose a fix but do not apply it without asking me.\nOriginal source: https://news.ycombinator.com/item?id=46993231",
+    "body_sha256": "913d52aed58e48154bd5af0ec9c387cace997767fd27a868765eb26b0ac844f4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

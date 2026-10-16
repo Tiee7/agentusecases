@@ -1,36 +1,30 @@
 # ChatGPT停车罚单申诉：75美元撤单故事证明写作辅助，未证明收费代办生意
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/write-a-parking-ticket-appeal-that-got-dismissed
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：ChatGPT
-
-### 介绍
-
-A driver used ChatGPT to improve a challenge to a parking penalty.
-
-一位驾驶者用 ChatGPT 改善停车罚单申诉表达。
-
-### 方法
-
-The driver supplied the ticket and surrounding circumstances, removed invented details from the draft, and personally sent the appeal to local officials.
-
-驾驶者提供罚单及事情背景，删除草稿中虚构的细节，再自行向当地官员发送申诉。
-
-### 结果与限制
-
-The account reports dismissal of a $75 ticket after a next-day response. It illustrates assisted writing with human fact-checking, not autonomous legal representation.
-
-叙述称次日收到回应后撤销了 75 美元罚单，体现人工核实事实下的辅助写作，并非自主法律代理。
+    Write a parking ticket appeal that got dismissed
+    The poster used ChatGPT to draft an appeal of a street-sweeping parking ticket, and the ticket was dismissed.
+    Done with
+    GP
+    ChatGPT
+    What they did
+    The poster fed ChatGPT-4 the specifics of a $75 street-sweeping ticket, the city sewage project that had pushed parking more than a mile away, and the fact they were sick and forgot to move the car. ChatGPT drafted a polite but firm email to the city council; the poster edited hallucinated details, sent it themself, and then heard back from the city manager and maintenance head.
+    How it went
+    The city manager replied the next day, and the head of maintenance said the ticket was dismissed with no further action required. In comments, the poster and others said ChatGPT mainly improved the writing rather than creating the underlying argument.
+    Worth knowing
+    The main catch was manual editing: the poster says ChatGPT hallucinated some details, so they tweaked the draft before sending it.
+    Try it yourself
+    with
+    ChatGPT Agent
+    Copy prompt
+    Help me appeal a parking ticket. Details: [ticket number, date, location, violation, city]. My situation: [why it was unfair, such as unclear signs, wrong time, or an emergency]. Look up the city's appeal rules and deadline, then draft a short, polite appeal letter with a list of evidence I should attach. Show me the draft before I submit anything.
+    Original source: https://www.reddit.com/r/ChatGPT/comments/144mzb5
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/ChatGPT/comments/144mzb5)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The account reports dismissal of a $75 ticket after a next-day response. It illu
 本案描述的是一名车主用ChatGPT-4组织邮件、删改幻觉后自行发送，并非代理独立完成申诉。75美元只是据称被免除的罚款，不是产品收入，也没有对照证明AI提高撤销概率。纽约和旧金山官方流程显示，正确收件渠道、期限与证据比措辞更重要；原案例所在城市尚未核实，不能照搬其向市议会发邮件的路径。免费或低价写作替代已存在，收费方仍需承担材料核对、解释拒绝结果与维护各地规则的成本。现阶段只支持在已有合法授权的工作流中验证内部省时，不支持以胜诉承诺投放获客。
 
 案例ID：`write-a-parking-ticket-appeal-that-got-dismissed` · 案例来源：https://agentusecases.ai/use-case/write-a-parking-ticket-appeal-that-got-dismissed
-研究时间：2026-10-15T17:07:05.830613+00:00 · 证据置信度：官方流程与产品条款为实际读取的一手资料；本案例撤销结果仅见聚合站转述，原帖被robots限制，未取得处罚决定、原始邮件或城市身份。
+研究时间：2026-10-15T17:07:05.830613+00:00
 
 **商业评分：29.0/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The account reports dismissal of a $75 ticket after a next-day response. It illu
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The account reports dismissal of a $75 ticket after a next-day response. It illu
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Scc5d2ca16c58, Sf5690141ae3c, Sc1184229e781, Se49ecdba223a
 
@@ -97,9 +89,9 @@ The account reports dismissal of a $75 ticket after a next-day response. It illu
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Scc5d2ca16c58, Sf5690141ae3c, Sc1184229e781, Se49ecdba223a
 
@@ -181,8 +173,7 @@ OpenAI个人条款要求对输入具有必要许可、核验输出，并禁止�
 
 ## 用户评价怎样改变判断
 
-原案例Reddit链接已通过证据工具尝试读取，robots禁止访问；没有尝试代理、镜像或换接口绕过。故不能把聚合页转述当作亲自读过的原帖，无法核对评论上下文、用户身份、原始邮件、撤销决定或失败样本。检索覆盖Reddit、GitHub及新闻采访；部分网页检索返回明显不相关结果，本轮如实记为未发现可用证据，不能据此宣布没有负面评价或没有开源项目。GitHub公开仓库搜索parking ticket ChatGPT返回空列表也仅代表该次检索结果。
-实际读取NPR的2017年报道后，可以确认其采访了一名使用相邻工具DoNotPay的用户Dan Lear，他自述获得撤销。它为“问答起草降低表达障碍”提供有限历史信号，却没有证明本例ChatGPT的效果、2026年的付费需求或规模化成功率。该报道中的创办人数字属于利益相关方陈述，不能充当独立审计。反馈只占5%，给1/5而非高分；这1分来自历史相邻体验，并非直接使用者群体满意度。LogicBalls自站评分与宣传用户数不进入独立用户观察。
+相关体验：2017年NPR采访Dan Lear，其称使用DoNotPay生成信件后罚单获撤销；只支持历史相邻流程可帮助表达。
 
 依据：Scc5d2ca16c58, S10eb73d66862, S0f8551dafdf0
 
@@ -204,20 +195,11 @@ OpenAI个人条款要求对输入具有必要许可、核验输出，并禁止�
 
 假设B：消费者单案广告获客假设：全部为研究者假设：收费19在交付时确认不保证成功；人工25分钟×30/小时=12.5，含接案复核客服；模型0.2、支付存储客服杂费2.3、获客12；固定600含基础管理和规则维护。罚款不是服务收入，拒绝后的额外争议与退款未计会使结果更差。；API成本 0.2，人工成本 12.5，其他可变成本 2.3，分摊获客成本 12。依据：Scc5d2ca16c58, S0f8551dafdf0, Se49ecdba223a
 
-## 用户反馈核对（低权重）
-
-- Reddit社区检索 · `site.reddit.com/r/ChatGPT/comments/144mzb5`：检索没有返回可用原帖文本；直接证据读取robots blocked，仅保留聚合转述。
-- GitHub代码渠道检索 · `site.github.com ChatGPT parking ticket appeal issues`：网页检索返回不相关结果，未得到可核验项目问题或直接反馈；不据此推断项目不存在。
-- Reddit社区检索 · `site.reddit.com ChatGPT parking ticket appeal hallucinated sewage`：返回结果未提供本案例可读直接反馈；原帖受限，无法核对完整评论。
-- GitHub公开仓库 · `gh search repos "parking ticket ChatGPT" --limit 5`：实际返回空列表；限定查询下未发现候选，不等于不存在相关项目。
-- 新闻用户采访 · `ChatGPT parking fine appeal Millie Houlton 2023`：检索结果主要不相关，出现不同的英国争议报道未混入本案；另沿案例页既有NPR链接实际读取2017年Dan Lear相邻工具采访。
-- [S10eb73d66862] adjacent_workflow：2017年NPR采访Dan Lear，其称使用DoNotPay生成信件后罚单获撤销；只支持历史相邻流程可帮助表达。；偏差：媒体挑选的单个成功故事，工具与时间不同，无失败分母及付费测试；不能迁移为本案成功率。
-
 ## 反证与未核实信息
 
 最强反证不是模型不会写，而是用户原本已拥有申诉理由：NPR历史采访与本案聚合转述均无法隔离写作工具的增量作用。官方数字渠道与现有免费生成器压低独立收费空间；纽约明确外部联系不改变期限，直接否定把原例市议会邮件路径普适化。即使已有渠道情景盈利，人工每案多7分钟即使月经营贡献从400变成负300，说明模型低成本不能代表可规模化利润。
 
-未取得本案原始Reddit正文、城市身份、75美元罚单、完整提示词、邮件、撤销决定或成功失败分母；原帖因robots被阻，未绕过。未确认当前ChatGPT具体套餐、模型单价、商用集成许可、地方代理资格、客户付费及售后成本；未运行陌生代码、产品实测或离线对照。纽约和旧金山规则仅为经营比较，并非认定原案例管辖地；NPR为2017年历史采访，LogicBalls为厂商页面。搜索出现不相关结果使反馈覆盖有限，所有经济参数是情景假设，不是预算承诺。
+原案城市、罚单、完整提示词、撤销决定及成功率分母未知。当前模型成本、地方代理资格和客户付费待确认；纽约与旧金山仅为经营比较场景。
 
 ## 具体动作与止损条件
 
@@ -235,6 +217,3 @@ OpenAI个人条款要求对输入具有必要许可、核验输出，并禁止�
 - [Sc1184229e781] [OpenAI Terms of Use（2026-01-01）](https://openai.com/policies/terms-of-use/)：支持个人服务条款要求核验输出、输入授权及不可分享账号；企业和API适用另列条款，不据此认证商业部署许可。
 
 结构化记录：[research/write-a-parking-ticket-appeal-that-got-dismissed.json](../research/write-a-parking-ticket-appeal-that-got-dismissed.json)
-来源读取凭据：[research/evidence/write-a-parking-ticket-appeal-that-got-dismissed.json](../research/evidence/write-a-parking-ticket-appeal-that-got-dismissed.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

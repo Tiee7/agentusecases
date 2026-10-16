@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4a287b1c9869b09b2e8fc1a7325b3fced133163c769694212e69e6ac71a8f71d",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer sends tasks via Telegram/OpenClaw into Linear, where Cyrus routes each to the right repo and model and opens PRs for review.",
+      "sha256": "4a287b1c9869b09b2e8fc1a7325b3fced133163c769694212e69e6ac71a8f71d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "54f29dc581a61c549c8e01a14566de5431f37096af746a4321ed32bb0e2b94d1",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer sends tasks through Telegram/OpenClaw into a single Linear account that acts as the control plane across several projects. In Cyrus, they set up labels and routing so it knows which git repo to build worktrees from. Labels also select the model, such as codex or claude variants. Cyrus then opens PRs for review.",
+      "sha256": "54f29dc581a61c549c8e01a14566de5431f37096af746a4321ed32bb0e2b94d1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "078a802e7b5b0ec66f2e524fc9df30bdbd92673d24592908dc7ac5a9fd98b76d",
-      "publication": "reviewed_restatement_required"
+      "value": "The setup lets the developer work more hands-off, with PRs arriving across multiple repos for review. No numbers are given. For hands-on work they use Orca instead, a desktop UI with Linear and GitHub integrations.",
+      "sha256": "078a802e7b5b0ec66f2e524fc9df30bdbd92673d24592908dc7ac5a9fd98b76d"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Route Linear tickets to PRs across multiple repos\nA developer sends tasks via Telegram/OpenClaw into Linear, where Cyrus routes each to the right repo and model and opens PRs for review.\nDone with\nOC\nOpenClaw\nWhat they did\nThe developer sends tasks through Telegram/OpenClaw into a single Linear account that acts as the control plane across several projects. In Cyrus, they set up labels and routing so it knows which git repo to build worktrees from. Labels also select the model, such as codex or claude variants. Cyrus then opens PRs for review.\nHow it went\nThe setup lets the developer work more hands-off, with PRs arriving across multiple repos for review. No numbers are given. For hands-on work they use Orca instead, a desktop UI with Linear and GitHub integrations.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a flow where I send a task by [Telegram or another chat app] and you create a Linear ticket for it in [team name]. Route each ticket to the right repo from [list of repos] and the right model, and have the coding agent open a pull request for review. Stop when one test task has gone from message to open PR, and never merge anything without my approval.\nOriginal source: https://news.ycombinator.com/item?id=49615716",
+    "body_sha256": "2a75e052a8b24f72c6c0513288197dcdc8c0ae6108f9426935047b6a12148627",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

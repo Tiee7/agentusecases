@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0ae89876c7cb1c69ad7dea5552b19cac94aa36bbc338e14fbe5009c6a38889f3",
-      "publication": "reviewed_restatement_required"
+      "value": "Author built TextWeb, a text-grid browser so LLM agents can fill out job applications without costly vision models.",
+      "sha256": "0ae89876c7cb1c69ad7dea5552b19cac94aa36bbc338e14fbe5009c6a38889f3"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4ce2f35f629a1ccde859fba791147c306abf38c47cbe7d55b3e7e99fe6fc773d",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built TextWeb, which loads a page in headless Chromium and pulls out each visible element's position, text, and whether it's interactive. It maps these onto a character grid that keeps the on-screen layout. Interactive elements get numbers, so an agent issues commands like click 3 or type 7 followed by text. Any LLM can read it.",
+      "sha256": "4ce2f35f629a1ccde859fba791147c306abf38c47cbe7d55b3e7e99fe6fc773d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d51e91e77198178d02ab4b6fa9cf7e15bfc50a48f01da79edc2f8609f2598d6f",
-      "publication": "reviewed_restatement_required"
+      "value": "Each page comes out as roughly 2-5KB of text instead of a roughly 1MB screenshot, so no vision model is needed. The post gives no results from actual job applications and asks for feedback on the grid format.",
+      "sha256": "d51e91e77198178d02ab4b6fa9cf7e15bfc50a48f01da79edc2f8609f2598d6f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5b819cd56c21bd1a5a423a135f1524fe09cec68903b5a4f48204dfcc77916ed",
-      "publication": "reviewed_restatement_required"
+      "value": "It installs with npm install -g textweb and plugs in through an MCP server, function-calling definitions, LangChain, CrewAI, an HTTP API, a CLI, or a Node.js library.",
+      "sha256": "a5b819cd56c21bd1a5a423a135f1524fe09cec68903b5a4f48204dfcc77916ed"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let agents fill out web forms using text-grid page rendering\nAuthor built TextWeb, a text-grid browser so LLM agents can fill out job applications without costly vision models.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built TextWeb, which loads a page in headless Chromium and pulls out each visible element's position, text, and whether it's interactive. It maps these onto a character grid that keeps the on-screen layout. Interactive elements get numbers, so an agent issues commands like click 3 or type 7 followed by text. Any LLM can read it.\nHow it went\nEach page comes out as roughly 2-5KB of text instead of a roughly 1MB screenshot, so no vision model is needed. The post gives no results from actual job applications and asks for feedback on the grid format.\nWorth knowing\nIt installs with npm install -g textweb and plugs in through an MCP server, function-calling definitions, LangChain, CrewAI, an HTTP API, a CLI, or a Node.js library.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a small tool that renders a web page as a text grid, listing each form field, button, and link with a reference number, so an LLM agent can fill out forms without screenshots. Test it on [job application or form URL] using placeholder data and show me the filled fields. Never submit the form.\nOriginal source: https://news.ycombinator.com/item?id=47073885",
+    "body_sha256": "4f229382ae3c7225b48c86f88f348587b056405fd44eb4ee5f5a48fe8c7a2d15",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

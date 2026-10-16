@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "44582b8bbf536fef50f13e1aa291da98879e5ece3dd1a8c9d9c6a0585dc918d1",
-      "publication": "reviewed_restatement_required"
+      "value": "A browser D&D 5e dungeon crawl where an AI dungeon master runs the game for a three-character party without inventing rules.",
+      "sha256": "44582b8bbf536fef50f13e1aa291da98879e5ece3dd1a8c9d9c6a0585dc918d1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3b081cfb04b3c57704e840cfb7701028c99ef52afbd57390b732879a612bae15",
-      "publication": "reviewed_restatement_required"
+      "value": "The Goblin Warren is a browser D&D game. The AI dungeon master queries two Sanity Context MCP endpoints: a knowledge base for rule prose and GROQ for exact stats. The server prefetches both, the model gets one optional tool round, and citations no lookup returned are stripped. Claude Code agents built the Sanity layer.",
+      "sha256": "3b081cfb04b3c57704e840cfb7701028c99ef52afbd57390b732879a612bae15"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "00f3e7b97e87417d4d88c6229b79641d47eb1c21e8e4bc200786cc6b650b0e5b",
-      "publication": "reviewed_restatement_required"
+      "value": "Rules answers came back in about 1.3–2.2 seconds. The knowledge base flagged six 2014/2024 edition conflicts in its own entries for review.",
+      "sha256": "00f3e7b97e87417d4d88c6229b79641d47eb1c21e8e4bc200786cc6b650b0e5b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "1ea7f26c416ed4f824971f6f0ae0c3551ed6e7a8e570b4e1ec4b1caa6272d172",
-      "publication": "reviewed_restatement_required"
+      "value": "Use an org token with the Context Viewer role. A project token returns 403 contextGrantRequired, which cost the author an hour. The knowledge base is capped at roughly 150 documents.",
+      "sha256": "1ea7f26c416ed4f824971f6f0ae0c3551ed6e7a8e570b4e1ec4b1caa6272d172"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a D&D dungeon crawl with an AI dungeon master\nA browser D&D 5e dungeon crawl where an AI dungeon master runs the game for a three-character party without inventing rules.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe Goblin Warren is a browser D&D game. The AI dungeon master queries two Sanity Context MCP endpoints: a knowledge base for rule prose and GROQ for exact stats. The server prefetches both, the model gets one optional tool round, and citations no lookup returned are stripped. Claude Code agents built the Sanity layer.\nHow it went\nRules answers came back in about 1.3–2.2 seconds. The knowledge base flagged six 2014/2024 edition conflicts in its own entries for review.\nWorth knowing\nUse an org token with the Context Viewer role. A project token returns 403 contextGrantRequired, which cost the author an hour. The knowledge base is capped at roughly 150 documents.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nAct as the dungeon master for a D&D 5e dungeon crawl for a party of three: [character 1 name, class, level], [character 2 name, class, level], [character 3 name, class, level]. Use only official 5e rules, ask me to roll or make the choices, and tell me when you are unsure of a rule rather than inventing one. Run one full dungeon of about [number] rooms and end with a short recap of loot and XP.\nOriginal source: https://dev.to/prime_299792/the-goblin-warren-an-ai-dungeon-master-that-never-invents-a-rule-4d66",
+    "body_sha256": "b20c8c5ecb0b14d7192d5f4f3f651abcb709bb46bf372dd0e6cd5de593739be5",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

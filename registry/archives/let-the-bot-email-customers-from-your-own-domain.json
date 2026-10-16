@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f7fc83a1bd30ff8d0d9e22e2f2d4c9bb153c720bcacfd977cc78ed13665d0c82",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster set up a custom-domain mailbox as an MCP connector for Grok Bot, plus a webhook so new mail triggers an automation.",
+      "sha256": "f7fc83a1bd30ff8d0d9e22e2f2d4c9bb153c720bcacfd977cc78ed13665d0c82"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e6a06c7a4c6be0edb635422bba917a6edd2f7e4ffee2c4341ebdc6de2d4e8e59",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster found Grok Bot’s built-in mail too limited for customer-facing use, so they created a mailbox on their own domain and connected it to Grok as a custom MCP connector. Because incoming mail does not wake the bot automatically, they also added a webhook that starts a Grok automation on each new message; they note the webhook had to use Grok’s signed whsec_ secret format, not a bearer token.",
+      "sha256": "e6a06c7a4c6be0edb635422bba917a6edd2f7e4ffee2c4341ebdc6de2d4e8e59"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "54745c3337a0e8256dc56056ba64018a9b2361fce5229eba6ca6775810dd206c",
-      "publication": "reviewed_restatement_required"
+      "value": "It gave them a customer-facing address on their own domain and an inbox they could open themselves, while still letting the bot react to mail as it arrived. They say Grok’s native mail works for signups and verification codes, but shares one address across bots and has no inbox view or automatic trigger.",
+      "sha256": "54745c3337a0e8256dc56056ba64018a9b2361fce5229eba6ca6775810dd206c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b2ba427e8086aab31e780560d57b5e8922012b72410ff1106a9bedee82ebdf24",
-      "publication": "reviewed_restatement_required"
+      "value": "Their main gotcha was that Grok automation webhooks rejected bearer-token requests with 400s; only signed requests using the provided whsec_ secret worked.",
+      "sha256": "b2ba427e8086aab31e780560d57b5e8922012b72410ff1106a9bedee82ebdf24"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let the bot email customers from your own domain\nThe poster set up a custom-domain mailbox as an MCP connector for Grok Bot, plus a webhook so new mail triggers an automation.\nDone with\nGB\nGrok Bot\nWhat they did\nThe poster found Grok Bot’s built-in mail too limited for customer-facing use, so they created a mailbox on their own domain and connected it to Grok as a custom MCP connector. Because incoming mail does not wake the bot automatically, they also added a webhook that starts a Grok automation on each new message; they note the webhook had to use Grok’s signed whsec_ secret format, not a bearer token.\nHow it went\nIt gave them a customer-facing address on their own domain and an inbox they could open themselves, while still letting the bot react to mail as it arrived. They say Grok’s native mail works for signups and verification codes, but shares one address across bots and has no inbox view or automatic trigger.\nWorth knowing\nTheir main gotcha was that Grok automation webhooks rejected bearer-token requests with 400s; only signed requests using the provided whsec_ secret worked.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nConnect to the mailbox [address@mydomain.com] so you can read and draft email as my business. When a new customer email arrives, categorize it, look up relevant details in [system or docs], and draft a reply in my tone. Show me each draft and wait for my approval before sending, until I say a category is safe to send automatically.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1x2iafb/grokbot_email_after_a_day_the_limits_nobody",
+    "body_sha256": "d8f14e608bcdf668409650b06197247c746a352386b8c9a2983e3b248cd4f4ef",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

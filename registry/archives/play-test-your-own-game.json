@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "fbc01f64628e81ca42f01407c6d19a32d8ef8b5b1829749d27cb35e1e76788c5",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer built an agentic test harness so an AI could play their game and help with play-testing.",
+      "sha256": "fbc01f64628e81ca42f01407c6d19a32d8ef8b5b1829749d27cb35e1e76788c5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ab33a860e60efc2789c970db29a12cb12845af70be8145691627f724d6efc489",
-      "publication": "reviewed_restatement_required"
+      "value": "The game is a browser-based, turn-based crossword dungeon. Claude wrote a node.js wrapper that leaves the game files alone. It adds a text renderer and synthetic key events, served over HTTP. The AI played via curl calls, built fixtures to reproduce bugs, and was told to playtest each milestone feature before moving on.",
+      "sha256": "ab33a860e60efc2789c970db29a12cb12845af70be8145691627f724d6efc489"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0e2ffd6ebd4b73a7ee3ec27ca997c23b9284d2087113660b00d2379136f70869",
-      "publication": "reviewed_restatement_required"
+      "value": "Milestone 13, with five new special encounters, took 12 minutes and about 120k tokens. The AI caught and fixed a cage bug on its own. Manual playtesting was still needed and found more bugs, but it took under 30 minutes.",
+      "sha256": "0e2ffd6ebd4b73a7ee3ec27ca997c23b9284d2087113660b00d2379136f70869"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "096aa60efcf40f01e9ea77c49a94ee9dcc8972b00190d5e13bd06e4d5188c85c",
-      "publication": "reviewed_restatement_required"
+      "value": "It ran on Claude Code with Sonnet 4.6 on the Pro plan; the approach suits text-heavy, turn-based games better than screenshot-driven browser automation.",
+      "sha256": "096aa60efcf40f01e9ea77c49a94ee9dcc8972b00190d5e13bd06e4d5188c85c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Play-test your own game\nA developer built an agentic test harness so an AI could play their game and help with play-testing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe game is a browser-based, turn-based crossword dungeon. Claude wrote a node.js wrapper that leaves the game files alone. It adds a text renderer and synthetic key events, served over HTTP. The AI played via curl calls, built fixtures to reproduce bugs, and was told to playtest each milestone feature before moving on.\nHow it went\nMilestone 13, with five new special encounters, took 12 minutes and about 120k tokens. The AI caught and fixed a cage bug on its own. Manual playtesting was still needed and found more bugs, but it took under 30 minutes.\nWorth knowing\nIt ran on Claude Code with Sonnet 4.6 on the Pro plan; the approach suits text-heavy, turn-based games better than screenshot-driven browser automation.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at my game in [path] and build a test harness that lets an AI agent play it: expose the game state as text or JSON and accept actions like [moves or inputs]. Then have the agent play [number] sessions and report bugs, balance problems, and confusing moments. Finished means a written play-test report with steps to reproduce each issue.\nOriginal source: https://blog.jeffschomay.com/letting-ai-play-my-game",
+    "body_sha256": "297438b3f57228a82f7e6646507c61a82bf4fa1bb88aef9cbd0b97c5fd5ec2a4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

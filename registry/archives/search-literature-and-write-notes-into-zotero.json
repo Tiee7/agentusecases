@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "05288ad7ff4541bbcf7c6e135bdb3f7fd8bca9c27d4533871f6e87f44996dc09",
-      "publication": "reviewed_restatement_required"
+      "value": "A researcher uses Claude to search Google Scholar, follow citations, query a Zotero library in natural language, and write summary notes into Zotero or Obsidian.",
+      "sha256": "05288ad7ff4541bbcf7c6e135bdb3f7fd8bca9c27d4533871f6e87f44996dc09"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "14358385b1b9e075585fc7c6298de89631c4409e12dc328cc8f256a9a4a837cc",
-      "publication": "reviewed_restatement_required"
+      "value": "Pin Shuai runs Claude Code with the Paper Search MCP to find top-cited papers and the papers citing them. A Zotero MCP, backed by Zotero's local API and a search database, lets Claude query his library in natural language. He asks for a summary of one paper's findings and knowledge gaps based on his own annotations. Claude asks a few clarifying questions, then writes the note into Zotero or Obsidian.",
+      "sha256": "14358385b1b9e075585fc7c6298de89631c4409e12dc328cc8f256a9a4a837cc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c03c352b5b97519d4d8ce29a6baa15fd658beb2ffdfff2aa73af38ba456aa3f4",
-      "publication": "reviewed_restatement_required"
+      "value": "The note appears in Zotero when he opens it, and library search saves time on hundreds of entries. He hasn't tested having Claude write a literature review from the retrieved papers.",
+      "sha256": "c03c352b5b97519d4d8ce29a6baa15fd658beb2ffdfff2aa73af38ba456aa3f4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "36432374baf7e1fac058cabc03a672a459f2db2243d95f0a339c0e825bfaa062",
-      "publication": "reviewed_restatement_required"
+      "value": "Searching your own Zotero library keeps Claude from hallucinating papers that don't exist. The setup needs the Zotero local API enabled and a database build, with a slower full-text option.",
+      "sha256": "36432374baf7e1fac058cabc03a672a459f2db2243d95f0a339c0e825bfaa062"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Search literature and write notes into Zotero\nA researcher uses Claude to search Google Scholar, follow citations, query a Zotero library in natural language, and write summary notes into Zotero or Obsidian.\nDone with\nCL\nClaude\nWhat they did\nPin Shuai runs Claude Code with the Paper Search MCP to find top-cited papers and the papers citing them. A Zotero MCP, backed by Zotero's local API and a search database, lets Claude query his library in natural language. He asks for a summary of one paper's findings and knowledge gaps based on his own annotations. Claude asks a few clarifying questions, then writes the note into Zotero or Obsidian.\nHow it went\nThe note appears in Zotero when he opens it, and library search saves time on hundreds of entries. He hasn't tested having Claude write a literature review from the retrieved papers.\nWorth knowing\nSearching your own Zotero library keeps Claude from hallucinating papers that don't exist. The setup needs the Zotero local API enabled and a database build, with a slower full-text option.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSearch the literature on [research topic] and find the [number] most relevant papers, following key citations from them. Write a short summary note for each paper into [Zotero library or Obsidian vault path], including title, authors, year, main findings, and how it relates to [my project]. Finish with an index note linking them all, and ask before modifying any existing notes.\nOriginal source: https://groundwater.usu.edu/blog/2026/Academic-Usecase-with-Claude/",
+    "body_sha256": "90bce9c87b9224f4c36546b6f7d295ad49fbf93d253dba83da7e562a79217c1d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

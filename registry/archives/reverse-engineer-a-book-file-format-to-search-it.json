@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "78744e51868210aa28f890e5049f9dd663918181529716103caf18eb39de0521",
-      "publication": "reviewed_restatement_required"
+      "value": "After the RAG indexer crashed on an uploaded book, Claude used Unix commands to work out the file format and grep the book manually.",
+      "sha256": "78744e51868210aa28f890e5049f9dd663918181529716103caf18eb39de0521"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "af43bb1f5974d9ab7e5efe0190ed1f15e6d63c11ed516b19d07a9021eec1bb3a",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter uploaded a book into the project context on Claude's web chat. The RAG indexer crashed on the file. Claude then used a series of Unix commands to work out the book's file format, and searched the contents with grep by hand. The source doesn't say whether the commenter prompted any of these steps.",
+      "sha256": "af43bb1f5974d9ab7e5efe0190ed1f15e6d63c11ed516b19d07a9021eec1bb3a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "209df893164a721382af80594b9b9741e5d5a0280a10973e3b4309bbdfdbafd6",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude got around the crashed indexer and could search the book anyway. The commenter found this surprising. The source gives no details on accuracy, the file format, or how long it took.",
+      "sha256": "209df893164a721382af80594b9b9741e5d5a0280a10973e3b4309bbdfdbafd6"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse-engineer a book file format to search it\nAfter the RAG indexer crashed on an uploaded book, Claude used Unix commands to work out the file format and grep the book manually.\nDone with\nCL\nClaude\nWhat they did\nThe commenter uploaded a book into the project context on Claude's web chat. The RAG indexer crashed on the file. Claude then used a series of Unix commands to work out the book's file format, and searched the contents with grep by hand. The source doesn't say whether the commenter prompted any of these steps.\nHow it went\nClaude got around the crashed indexer and could search the book anyway. The commenter found this surprising. The source gives no details on accuracy, the file format, or how long it took.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a file at [path to file] that my tools can't read properly, and it is a [book/document, format if known]. Use command-line tools to inspect its structure, work out the format, and extract the readable text into a plain text file. Then search it for [topic or phrase] and show me the matching passages with their locations. Don't modify the original file.\nOriginal source: https://news.ycombinator.com/item?id=49512445",
+    "body_sha256": "f3072e4a74cae7747a537a90350136e453dfd090d970bbf6b5ae5acb1954d477",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

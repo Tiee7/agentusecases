@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "65c49fe5f54d8cb70ada7a8779adc2d3d92981f9268b3e61306d7209a6c43d09",
-      "publication": "reviewed_restatement_required"
+      "value": "ForensicDbg is a post-mortem debugger for native Windows x64/x86 crashes with an MCP server so AI agents can debug from interpreted, interlinked crash data.",
+      "sha256": "65c49fe5f54d8cb70ada7a8779adc2d3d92981f9268b3e61306d7209a6c43d09"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "09e51cb2194b36cd72e607440b12b12b9341de9f3e3f256be6312070f980443b",
-      "publication": "reviewed_restatement_required"
+      "value": "ForensicDbg is a post-mortem debugger for x86 and x64 Windows crash dumps. Its MCP server runs over stdio and works with AI tools that support that. It gives the agent output that is already interpreted and labeled, such as the faulting thread, frame and instruction, validated callstacks, and deduced types. The agent works from that instead of raw dump data.",
+      "sha256": "09e51cb2194b36cd72e607440b12b12b9341de9f3e3f256be6312070f980443b"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b9e313157b92ac803fcf7e2645f257e7b11eb1543b5acacda92411c1f0e3c042",
-      "publication": "reviewed_restatement_required"
+      "value": "The page shows one example: the agent traced a crash to a missing null check in a text window's selection code and proposed a guard. It gives no benchmarks or token figures.",
+      "sha256": "b9e313157b92ac803fcf7e2645f257e7b11eb1543b5acacda92411c1f0e3c042"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "647555bec120249ddefbeb056a471fd2a1cdd3b73482ba154c3b9a28302dea48",
-      "publication": "reviewed_restatement_required"
+      "value": "The tool is in a private beta, so you need to request an invite, and the page says little about setup; there is a separate MCP setup guide.",
+      "sha256": "647555bec120249ddefbeb056a471fd2a1cdd3b73482ba154c3b9a28302dea48"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Debug Windows crash dumps with an AI agent via MCP\nForensicDbg is a post-mortem debugger for native Windows x64/x86 crashes with an MCP server so AI agents can debug from interpreted, interlinked crash data.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nForensicDbg is a post-mortem debugger for x86 and x64 Windows crash dumps. Its MCP server runs over stdio and works with AI tools that support that. It gives the agent output that is already interpreted and labeled, such as the faulting thread, frame and instruction, validated callstacks, and deduced types. The agent works from that instead of raw dump data.\nHow it went\nThe page shows one example: the agent traced a crash to a missing null check in a text window's selection code and proposed a guard. It gives no benchmarks or token figures.\nWorth knowing\nThe tool is in a private beta, so you need to request an invite, and the page says little about setup; there is a separate MCP setup guide.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a Windows crash dump at [path to .dmp file]. Use the debugging tools or MCP server available to analyze it and tell me the likely root cause, the faulting call stack, and the exact function and line if symbols exist. Finish with a short report listing evidence for your conclusion and suggested fixes, and don't change any code until I approve.\nOriginal source: https://www.forensicdbg.com",
+    "body_sha256": "551368dbb403751e46e8e760a97825fc21de139c08aa47ee089aaaacc6121ccc",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

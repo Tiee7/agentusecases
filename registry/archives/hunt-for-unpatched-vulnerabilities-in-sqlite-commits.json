@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a13eb337d93373c6c33acf2247bbbdd4c9b1e9350175801642d8d92b1573c262",
-      "publication": "reviewed_restatement_required"
+      "value": "Google's Big Sleep agent reviewed recent SQLite commits starting from a patched bug and found an exploitable flaw, which was fixed before release.",
+      "sha256": "a13eb337d93373c6c33acf2247bbbdd4c9b1e9350175801642d8d92b1573c262"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8a40976c63006ff329a28e51ff378000158a836431f6bd1d9cd1009334d129da",
-      "publication": "reviewed_restatement_required"
+      "value": "A Gemini 1.5 Pro agent ran in Project Zero's Naptime framework, which gives it a code browser, debugger, reporter tool and a sandbox for Python scripts. Researchers gave it a previously fixed SQLite bug, plus recent commit messages and diffs, and asked it to look for unresolved similar issues. It linked the old bug to other code, wrote a test case, triggered a crash, and produced a root-cause analysis.",
+      "sha256": "8a40976c63006ff329a28e51ff378000158a836431f6bd1d9cd1009334d129da"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e4fc385e575804c097062e57a75b5a720b54dc40cc1adc261ea1721193e79daf",
-      "publication": "reviewed_restatement_required"
+      "value": "It found a stack buffer underflow in seriesBestIndex, and SQLite fixed it the same day, before any release. Fuzzing for 150 CPU hours failed to rediscover it. The team calls Big Sleep highly experimental.",
+      "sha256": "e4fc385e575804c097062e57a75b5a720b54dc40cc1adc261ea1721193e79daf"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "02bc11e05095bc4e593e66dcbce74ba1c8357a411743c40640864feb86c196c8",
-      "publication": "reviewed_restatement_required"
+      "value": "The bug was in a development version only. The researchers think a target-specific fuzzer would likely be at least as effective as the agent today.",
+      "sha256": "02bc11e05095bc4e593e66dcbce74ba1c8357a411743c40640864feb86c196c8"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Hunt for unpatched vulnerabilities in SQLite commits\nGoogle's Big Sleep agent reviewed recent SQLite commits starting from a patched bug and found an exploitable flaw, which was fixed before release.\nDone with\nGE\nGemini\nWhat they did\nA Gemini 1.5 Pro agent ran in Project Zero's Naptime framework, which gives it a code browser, debugger, reporter tool and a sandbox for Python scripts. Researchers gave it a previously fixed SQLite bug, plus recent commit messages and diffs, and asked it to look for unresolved similar issues. It linked the old bug to other code, wrote a test case, triggered a crash, and produced a root-cause analysis.\nHow it went\nIt found a stack buffer underflow in seriesBestIndex, and SQLite fixed it the same day, before any release. Fuzzing for 150 CPU hours failed to rediscover it. The team calls Big Sleep highly experimental.\nWorth knowing\nThe bug was in a development version only. The researchers think a target-specific fuzzer would likely be at least as effective as the agent today.\nTry it yourself\nwith\nGemini\nCopy prompt\nIn this repo [path or URL], review the commits from the last [time period or number], starting with the fix for [known patched bug or commit]. Look for similar flaws that the fix may have missed, especially [bug class, e.g. memory safety]. Write a report listing each suspect commit, why it looks vulnerable, and how you'd confirm it. Don't modify the code or disclose anything publicly.\nOriginal source: https://www.scworld.com/news/googles-big-sleep-llm-agent-discovers-exploitable-bug-in-sqlite",
+    "body_sha256": "02488013e6d4817c3c304955b6629c40474bf9c40b1e0f05c262a56c6a94e95d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

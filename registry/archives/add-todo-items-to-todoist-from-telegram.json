@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0c2416bc7fd27fd875f6cb506027d7e9ca5c949d8dd5a370f76eed08d92d91b4",
-      "publication": "reviewed_restatement_required"
+      "value": "A Telegram bot with an LLM and an orchestration platform (n8n or windmill) adds todos to the author's Todoist account from natural language messages.",
+      "sha256": "0c2416bc7fd27fd875f6cb506027d7e9ca5c949d8dd5a370f76eed08d92d91b4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a8c148b44761fcb485a55729aed240b6a6c8e00006a9ddbed951e3a68d459403",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter uses an orchestration platform, either n8n or windmill.dev, connected to a Telegram bot. An LLM handles the natural language side, so a message sent to the bot gets turned into a todo item and added to their Todoist account. They describe it as a more controlled alternative to OpenClaw.",
+      "sha256": "a8c148b44761fcb485a55729aed240b6a6c8e00006a9ddbed951e3a68d459403"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ebcd05f9b2557ca1ba571d42bf46034bd733db82afc17755a981ea4cf5d83311",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter says they do this themselves and that it covers the use case of adding home todos from elsewhere. The comment gives no numbers, setup steps, or limitations.",
+      "sha256": "ebcd05f9b2557ca1ba571d42bf46034bd733db82afc17755a981ea4cf5d83311"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "10dc6d4756587f3079b831ba6a703bd640679a9f7ab93f21b9ad4af6bc44c0fc",
-      "publication": "reviewed_restatement_required"
+      "value": "The comment is brief and gives no workflow details, so expect to design the Telegram trigger, LLM step, and Todoist action yourself in n8n or windmill.",
+      "sha256": "10dc6d4756587f3079b831ba6a703bd640679a9f7ab93f21b9ad4af6bc44c0fc"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Add todo items to Todoist from Telegram\nA Telegram bot with an LLM and an orchestration platform (n8n or windmill) adds todos to the author's Todoist account from natural language messages.\nDone with\nN8\nn8n\nWhat they did\nThe commenter uses an orchestration platform, either n8n or windmill.dev, connected to a Telegram bot. An LLM handles the natural language side, so a message sent to the bot gets turned into a todo item and added to their Todoist account. They describe it as a more controlled alternative to OpenClaw.\nHow it went\nThe commenter says they do this themselves and that it covers the use case of adding home todos from elsewhere. The comment gives no numbers, setup steps, or limitations.\nWorth knowing\nThe comment is brief and gives no workflow details, so expect to design the Telegram trigger, LLM step, and Todoist action yourself in n8n or windmill.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow where I message a Telegram bot like 'remind me to [task] by [day]' and it adds a task to my Todoist with the right title and due date. Use an LLM step to parse the message. Finished means a test message creates a correct task in my [Todoist project], and the bot replies to confirm what it added.\nOriginal source: https://news.ycombinator.com/item?id=47728484",
+    "body_sha256": "698085c7f183cd77881957192f13d28fd7ad4ce4d7764ced7b59ee0ea0e8bc63",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

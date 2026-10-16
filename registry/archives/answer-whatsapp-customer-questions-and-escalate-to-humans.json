@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5b6ae067856e799d02c4f693a2585fa315f128ba7d2a808388d8484a98c2fd6a",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n and OpenAI agent answers WhatsApp questions from a knowledge base and escalates low-confidence cases to a human on Telegram with full context.",
+      "sha256": "5b6ae067856e799d02c4f693a2585fa315f128ba7d2a808388d8484a98c2fd6a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "947e5cc94e6347660cd42781ec54a788a5194c551208e56572d9971b37d417d9",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow takes each incoming WhatsApp message and assembles the conversation history plus the company knowledge base. OpenAI drafts a reply grounded in that content, and a confidence check decides whether it can be answered reliably. Confident answers go back on WhatsApp. Otherwise the case goes to the human team on Telegram with the full conversation attached.",
+      "sha256": "947e5cc94e6347660cd42781ec54a788a5194c551208e56572d9971b37d417d9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9ce5d78326f00e0d77bda100c8137b629892f4856a2e24c608f5ffba989f2dea",
-      "publication": "reviewed_restatement_required"
+      "value": "The README gives no measured results, only design goals: cover routine questions, give round-the-clock coverage, and keep a human on unreliable cases. The exported n8n workflow JSON was still being added.",
+      "sha256": "9ce5d78326f00e0d77bda100c8137b629892f4856a2e24c608f5ffba989f2dea"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5e7b958ecb02558da6213c5b12be74b535e92402fbdf06a601a289c2c79b1a2",
-      "publication": "reviewed_restatement_required"
+      "value": "The repo documents architecture only, with no workflow file yet and no description of how confidence is scored, so you would have to design that check yourself.",
+      "sha256": "a5e7b958ecb02558da6213c5b12be74b535e92402fbdf06a601a289c2c79b1a2"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Answer WhatsApp customer questions and escalate to humans\nAn n8n and OpenAI agent answers WhatsApp questions from a knowledge base and escalates low-confidence cases to a human on Telegram with full context.\nDone with\nN8\nn8n\nWhat they did\nAn n8n workflow takes each incoming WhatsApp message and assembles the conversation history plus the company knowledge base. OpenAI drafts a reply grounded in that content, and a confidence check decides whether it can be answered reliably. Confident answers go back on WhatsApp. Otherwise the case goes to the human team on Telegram with the full conversation attached.\nHow it went\nThe README gives no measured results, only design goals: cover routine questions, give round-the-clock coverage, and keep a human on unreliable cases. The exported n8n workflow JSON was still being added.\nWorth knowing\nThe repo documents architecture only, with no workflow file yet and no description of how confidence is scored, so you would have to design that check yourself.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that answers customer questions on WhatsApp using an AI agent grounded in [my knowledge base, e.g. a Google Doc or FAQ sheet]. When the agent's confidence is low or the customer asks for a human, forward the full conversation to me on Telegram and let me reply from there. Done when a test question gets a correct answer and a deliberately tricky one gets escalated to me with context.\nOriginal source: https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
+    "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ecc51e813609f5fdd9c3d2dc648a322870d493fed47e0036db6b9b5f77746fcf",
-      "publication": "reviewed_restatement_required"
+      "value": "A Swift developer feeds error symptoms and code to ChatGPT to get a starting lead on the cause, then reviews the code it produces.",
+      "sha256": "ecc51e813609f5fdd9c3d2dc648a322870d493fed47e0036db6b9b5f77746fcf"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6d2c71b5ec4a59396ac27de5de2004a1e8bca1d2dc19b022005f96f081fff92d",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer writes Swift and pastes an error's symptoms along with the relevant code into ChatGPT, asking what it thinks is going on. They use it like Stack Overflow, but faster and interactive. They review all the code it gives back and have not yet used any of it verbatim.",
+      "sha256": "6d2c71b5ec4a59396ac27de5de2004a1e8bca1d2dc19b022005f96f081fff92d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4b5b6112bd25c5b40f7178fa2726c19c1cddbfd57ad1262e6dc484dae548fab5",
-      "publication": "reviewed_restatement_required"
+      "value": "Per the commenter, it usually gives a good starting point in about half a minute, versus roughly half an hour working it out alone. They found it better than Claude for Swift and it picked up their style.",
+      "sha256": "4b5b6112bd25c5b40f7178fa2726c19c1cddbfd57ad1262e6dc484dae548fab5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "349f3a783cac54b4f8831f0839be1989acc8c7cfebc8f8b4fa242bc6ac919cb7",
-      "publication": "reviewed_restatement_required"
+      "value": "Treat the answer as a lead, not a fix: the author still reviews everything and hasn't used generated code verbatim.",
+      "sha256": "349f3a783cac54b4f8831f0839be1989acc8c7cfebc8f8b4fa242bc6ac919cb7"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Diagnose Swift errors with ChatGPT from symptoms and code\nA Swift developer feeds error symptoms and code to ChatGPT to get a starting lead on the cause, then reviews the code it produces.\nDone with\nGP\nChatGPT\nWhat they did\nThe developer writes Swift and pastes an error's symptoms along with the relevant code into ChatGPT, asking what it thinks is going on. They use it like Stack Overflow, but faster and interactive. They review all the code it gives back and have not yet used any of it verbatim.\nHow it went\nPer the commenter, it usually gives a good starting point in about half a minute, versus roughly half an hour working it out alone. They found it better than Claude for Swift and it picked up their style.\nWorth knowing\nTreat the answer as a lead, not a fix: the author still reviews everything and hasn't used generated code verbatim.\nTry it yourself\nwith\nCodex\nCopy prompt\nI'm getting this error in my [language/framework] project: [paste error message or describe symptoms]. Here is the relevant code: [paste code or file path]. Find the most likely causes ranked by probability, tell me how to confirm each, and propose a minimal fix as a diff. Don't apply any changes until I've reviewed the diff.\nOriginal source: https://news.ycombinator.com/item?id=46201198",
+    "body_sha256": "3a5a823a3a3f89cac37fb1198a14e1b72fc44ff0a346b16051965c53cc8c8a27",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

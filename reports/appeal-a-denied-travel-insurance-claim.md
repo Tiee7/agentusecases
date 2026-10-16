@@ -1,36 +1,30 @@
 # Gemini旅行险拒赔申诉：证据整理有用，独立代办生意尚不成立
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/appeal-a-denied-travel-insurance-claim
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Gemini
-
-### 介绍
-
-An insurance dispute illustrates AI assistance with policy interpretation and correspondence.
-
-保险争议案例展示了 AI 对保单理解和申诉沟通的辅助作用。
-
-### 方法
-
-The claimant supplied Gemini with policy and claim documents, then added missing trip facts and later rejection letters to refine the appeal.
-
-申请人向 Gemini 提供保单和理赔资料，补充行程事实及后续拒赔信，逐轮完善申诉。
-
-### 结果与限制
-
-The source reports reimbursement of a flight-change charge after several reviews over roughly five weeks; this was not an instant settlement.
-
-源站转述，经约五周、多轮复核后改签费获赔，并非即时解决。
+    Appeal a denied travel insurance claim
+    The poster used Gemini during the appeal of a rejected travel insurance claim and says the appeal succeeded.
+    Done with
+    GE
+    Gemini
+    What they did
+    The poster uploaded the full travel-insurance policy PDF plus all claim correspondence to Gemini and asked whether the denial fit the policy terms. Gemini reviewed the policy language, said the claim looked valid, suggested an appeal approach, then drafted a professional appeal after the poster added missing trip details; when a second denial arrived, they fed that back into the same thread and Gemini helped build a more detailed rebuttal.
+    How it went
+    The insurer later reversed course and reimbursed the airline change fee after a final internal review. The poster says the process still took multiple rounds over about five weeks, with Gemini helping most on document analysis and tone.
+    Worth knowing
+    The timeline in the post was roughly three weeks to the first denial, two weeks to the second, and then payment after the final appeal.
+    Try it yourself
+    with
+    Gemini
+    Copy prompt
+    My travel insurance claim for [trip and incident] was denied for this reason: [denial reason]. Here are my policy terms and the denial letter: [paste or attach]. Identify which policy clauses support me, list the evidence I should gather, and draft an appeal letter that I can review before I send it.
+    Original source: https://www.reddit.com/r/GeminiAI/comments/1wdxo80/how_gemini_helped_me_successfully_appeal_a
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/GeminiAI/comments/1wdxo80/how_gemini_helped_me_successfully_appeal_a)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The source reports reimbursement of a flight-change charge after several reviews
 案例展示的是消费者借助通用Gemini阅读保单、修改申诉信并自行推进流程，不是已有客户收入的独立产品。聚合页转述最终报销改签费，但原帖和付款凭证未能核实，更没有成功率、人工时长或收费证据。官方资料确认文档分析可用，同时指出长文会遗漏内容、敏感数据有留存及人工审阅边界。英国消费者已有免费的保险申诉渠道，专业代办还涉及授权、收费披露和持续跟进成本。因此较合理的投入是已有合规服务团队的内部证据整理与复核工具，先测减少审核时间，暂不建设面向消费者的自动追回平台。
 
 案例ID：`appeal-a-denied-travel-insurance-claim` · 案例来源：https://agentusecases.ai/use-case/appeal-a-denied-travel-insurance-claim
-研究时间：2026-10-15T13:08:53.684403+00:00 · 证据置信度：产品能力、英国申诉流程与美国保障边界有一手资料；原帖受robots限制，赔付仅为聚合页转述，原案辖区、保单与回款均未独立核验。
+研究时间：2026-10-15T13:08:53.684403+00:00
 
 **商业评分：36.0/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The source reports reimbursement of a flight-change charge after several reviews
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The source reports reimbursement of a flight-change charge after several reviews
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S4c0b30844db9, S4a85624a315e, Sac4de13a51fa, S2827a0241f65, Sca5612d28dad, S1acba5cfdb50, Sf27cb88a97db
 
@@ -97,9 +89,9 @@ The source reports reimbursement of a flight-change charge after several reviews
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S4c0b30844db9, S4a85624a315e, Sac4de13a51fa, S2827a0241f65, Sca5612d28dad, S1acba5cfdb50, Sf27cb88a97db
 
@@ -181,8 +173,7 @@ The source reports reimbursement of a flight-change charge after several reviews
 
 ## 用户评价怎样改变判断
 
-已执行三次不同渠道的反馈检索：Reddit的Gemini旅行保险申诉，Trustpilot的拒赔申诉体验，以及GitHub的Gemini旅行险申诉问题。返回结果相关性较差，包括保险网站首页、旅行社区泛页面和投保建议，并未获得本案的可核验直接使用者原文。检索失败既不证明不存在用户，也不能当负面口碑。本案登记的原始Reddit链接在证据工具读取时被robots禁止，已停止访问，没有换代理或其他路径绕过限制。
-聚合页的转述只能用于确定调查对象与待核查的工作流；所谓最终报销和约五周不能当作已验证回款、成功率或用户满意度。原作者若成功发帖也可能有幸存者偏差、选择偏差；保险公司为何改变决定没有原始文件支撑。FOS对AI的说明是流程方的官方经验指引，不是本工具用户评价；NAIC与FCA资料同样不冒充评论。因而反馈信号按标准记0/5，仅占总分5%。判断主要来自产品能力、免费替代和交付成本。将来只有取得合法授权的完整失败与成功样本，才可更新这一维度。
+暂无直接用户反馈。
 
 依据：S4c0b30844db9, Sca5612d28dad
 
@@ -204,18 +195,11 @@ The source reports reimbursement of a flight-change charge after several reviews
 
 假设B：已有合规团队的流程包增量预算假设：全部为研究者情景。收入60是现有流程包可分摊收入或内部预算占位，未证明真实收款；人工30分钟×30英镑/小时；模型1、其他3、渠道分摊5及固定1500均是假设。单位贡献36，月贡献2100；人工90分钟则成本45、单位贡献6、月贡献-900。现有资质及组织为前提，从零建立的总成本未包含；不得称公司净利润。；API成本 1，人工成本 15，其他可变成本 3，分摊获客成本 5。依据：S2827a0241f65, Sca5612d28dad, Sf27cb88a97db
 
-## 用户反馈核对（低权重）
-
-- 社区／Reddit · `site:reddit.com/r/GeminiAI "travel insurance" "appeal"`：已执行，返回旅行险首页与泛旅行社区等，未取得该案例直接使用原文；登记原帖robots限制。
-- 评论平台／Trustpilot · `site:trustpilot.com travel insurance appeal denied claim`：已执行，结果相关性不足，出现保险和旅游泛页面，未取得可引用的本案例评论。
-- 公开代码／GitHub · `site:github.com travel insurance appeal Gemini issues`：已执行，没有取得对应项目代码或直接使用反馈，结果包含无关域名；不能据此断定无项目存在。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 最有力的反证来自接收投诉的FOS：申诉无需法律腔，AI添入错误或无关论点反而延误处理，说明更快生成更长文本并非价值。免费渠道和通用文件助手压低单独写信收费空间。但FCA承认付费理赔管理服务的存在，说明免费替代并未消灭省心服务需求；因此选择内部效率验证而不是笼统否定辅助价值。原案二手描述的多轮补充与五周等待，也反驳无人化即刻追回的商业叙事。
 
-未获取原帖全文（robots禁止）、保单、拒赔信、赔付款或原作者身份；未核实原案国家、保险公司、金额、Gemini版本和套餐。无真实客户、收入、成功率、准确率、人工工时与获客数据；没有实测模型或提交理赔。英国为经营分析场景而非原案辖区，美国资料仅对照保障边界。保险商资料候选出现404、301或空正文，未当作已读内容；Google定价页面未提供可核实的本案套餐报价，模型预算均是假设。法律／监管具体适用范围、机构数据处理合同和责任保险价格仍需另行确认。所有建议试验均未执行；仅使用现有Codex能力，不创建密钥或调用额外付费模型。
+保单、拒赔理由、赔付款及原案司法辖区未核实。成功率、人工工时、客户收入与模型成本未知；英国仅作为经营分析场景。
 
 ## 具体动作与止损条件
 
@@ -234,6 +218,3 @@ The source reports reimbursement of a flight-change charge after several reviews
 - [Sac4de13a51fa] [Should I Get Travel Insurance?](https://content.naic.org/article/should-i-get-travel-insurance)：支持美国旅行险保障、除外、CFAR限制与州监管求助路径，不提供本案成功率或市场规模。
 
 结构化记录：[research/appeal-a-denied-travel-insurance-claim.json](../research/appeal-a-denied-travel-insurance-claim.json)
-来源读取凭据：[research/evidence/appeal-a-denied-travel-insurance-claim.json](../research/evidence/appeal-a-denied-travel-insurance-claim.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

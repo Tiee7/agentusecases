@@ -1,4 +1,4 @@
-"""Export crawl continuity without redistributing unlicensed source prose/HTML."""
+"""Export case-text history without HTML caches or unrelated workspace files."""
 import sqlite3
 import json
 from .source_case import latest
@@ -11,7 +11,6 @@ def export(source='data/history.sqlite3',target='data/public-history/history.sql
     public.execute('CREATE TABLE IF NOT EXISTS public_source_cases(url TEXT PRIMARY KEY,payload TEXT)')
     for url,value in latest(public).items():
         public.execute('INSERT OR REPLACE INTO public_source_cases VALUES(?,?)',(url,json.dumps(value)))
-    public.execute("UPDATE observations SET body='' ")
     public.commit();public.execute('VACUUM');public.close()
 
 if __name__=='__main__':export()

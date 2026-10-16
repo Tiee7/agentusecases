@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a4bc0df6f0b39b02ada967d4aa0c3f26c1df06bf79af7544f91ffba0c4cf3452",
-      "publication": "reviewed_restatement_required"
+      "value": "Multi-agent n8n workflow finds company URLs, scrapes prospect websites and summarizes opportunities that sales teams can use to tailor outreach.",
+      "sha256": "a4bc0df6f0b39b02ada967d4aa0c3f26c1df06bf79af7544f91ffba0c4cf3452"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8f6fecce4fbbe9a90ff87e7a5fea8ffc369693c9c79d7d112ced86c41d50b19e",
-      "publication": "reviewed_restatement_required"
+      "value": "A chat trigger starts an n8n workflow. A first agent on o4-mini picks relevant company URLs. Bright Data's Web Unblocker node fetches each page's HTML, and a Code node cleans it. Other agents on gpt-5 summarize page by page, a Merge node combines the summaries, and a final prompt synthesizes the opportunities.",
+      "sha256": "8f6fecce4fbbe9a90ff87e7a5fea8ffc369693c9c79d7d112ced86c41d50b19e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "68cebc08372c7ee8f172e7dea837b43ea5e97410c5601cf80dbb55e5ffb84261",
-      "publication": "reviewed_restatement_required"
+      "value": "It produces a list of business opportunities per prospect site for tailoring outreach. The source gives no numbers or accuracy results. A single all-in-one prompt gave irrelevant, poorly synthesized output.",
+      "sha256": "68cebc08372c7ee8f172e7dea837b43ea5e97410c5601cf80dbb55e5ffb84261"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "fc31d677158eaef9df4591ce813f83c468b6a5464555916da6f3a24f64d15236",
-      "publication": "reviewed_restatement_required"
+      "value": "Split the work into separate prompts (URL extraction, per-page summary, final synthesis) and use a cheaper model for URL filtering. A single prompt performed poorly.",
+      "sha256": "fc31d677158eaef9df4591ce813f83c468b6a5464555916da6f3a24f64d15236"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find prospects and summarize business opportunities for sales\nMulti-agent n8n workflow finds company URLs, scrapes prospect websites and summarizes opportunities that sales teams can use to tailor outreach.\nDone with\nN8\nn8n\nWhat they did\nA chat trigger starts an n8n workflow. A first agent on o4-mini picks relevant company URLs. Bright Data's Web Unblocker node fetches each page's HTML, and a Code node cleans it. Other agents on gpt-5 summarize page by page, a Merge node combines the summaries, and a final prompt synthesizes the opportunities.\nHow it went\nIt produces a list of business opportunities per prospect site for tailoring outreach. The source gives no numbers or accuracy results. A single all-in-one prompt gave irrelevant, poorly synthesized output.\nWorth knowing\nSplit the work into separate prompts (URL extraction, per-page summary, final synthesis) and use a cheaper model for URL filtering. A single prompt performed poorly.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes a list of [industry or search terms] and finds company website URLs, scrapes each homepage and about page, and has an AI step summarize what the company does and 2-3 opportunities where [my product or service] could help. Save each result as a row in a Google Sheet with the company, URL, summary and a suggested outreach angle. Stop after one test run of [5] companies and show me the sheet; do not send any outreach.\nOriginal source: https://dev.to/inforeole/the-unstoppable-lead-generation-engine-a-multi-agent-ai-workflow-with-n8n-bright-data-4k3j",
+    "body_sha256": "9118695588471dbf007cbcb1e51cf29c6963b0667b46874252e744c2f4ef1df6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

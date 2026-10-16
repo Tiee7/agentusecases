@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "bef4607c6008b19668905791aea6400487cc476f730a471acd802acced2e7cf7",
-      "publication": "reviewed_restatement_required"
+      "value": "n8n workflows find roofing businesses, log them in Sheets, personalize outreach, place voice calls, and classify call outcomes back into the sheet.",
+      "sha256": "bef4607c6008b19668905791aea6400487cc476f730a471acd802acced2e7cf7"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e4996e43acd248048cd3a29aa7a853d9ed87c19070052ddf5c687d6187cb14c0",
-      "publication": "reviewed_restatement_required"
+      "value": "Two n8n workflows. Discovery pulls roofing businesses for a target city through Apify and Google Places, filters them, checks phone numbers and duplicates, and writes them to Google Sheets. Outreach picks one lead, with follow-ups first, and checks local calling hours. It then searches for competitor info (SerpAPI), has OpenAI write an opener, calls through Vapi, polls the call status, and has AI classify the outcome into the sheet.",
+      "sha256": "e4996e43acd248048cd3a29aa7a853d9ed87c19070052ddf5c687d6187cb14c0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "bb80948247443444bba56d06720e3f2880913f8d9a17f36fde3be684aeb754c7",
-      "publication": "reviewed_restatement_required"
+      "value": "The article gives no results, volumes or conversion numbers. It presents the architecture and lessons: define lead states first, keep timing, routing and retries in deterministic logic, and plan for API failures.",
+      "sha256": "bb80948247443444bba56d06720e3f2880913f8d9a17f36fde3be684aeb754c7"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0b6788b94f8fc24061e5e7a7a4059b6763f378ba9b2d029b8947696002bb4126",
-      "publication": "reviewed_restatement_required"
+      "value": "The state-to-timezone mapping and business-plus-phone dedupe have gaps. Commenters note that some states span two time zones and that phone formats need normalizing before comparing.",
+      "sha256": "0b6788b94f8fc24061e5e7a7a4059b6763f378ba9b2d029b8947696002bb4126"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find roofing leads and run AI voice outreach\nn8n workflows find roofing businesses, log them in Sheets, personalize outreach, place voice calls, and classify call outcomes back into the sheet.\nDone with\nN8\nn8n\nWhat they did\nTwo n8n workflows. Discovery pulls roofing businesses for a target city through Apify and Google Places, filters them, checks phone numbers and duplicates, and writes them to Google Sheets. Outreach picks one lead, with follow-ups first, and checks local calling hours. It then searches for competitor info (SerpAPI), has OpenAI write an opener, calls through Vapi, polls the call status, and has AI classify the outcome into the sheet.\nHow it went\nThe article gives no results, volumes or conversion numbers. It presents the architecture and lessons: define lead states first, keep timing, routing and retries in deterministic logic, and plan for API failures.\nWorth knowing\nThe state-to-timezone mapping and business-plus-phone dedupe have gaps. Commenters note that some states span two time zones and that phone formats need normalizing before comparing.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me n8n workflows that find [type of local business] in [city/region] using [lead source], log name, phone, and website in a Google Sheet, and draft a personalized outreach script for each. Then set up voice calls through [voice AI provider] and write each call outcome (interested, not interested, no answer, callback) back to the sheet. Do not place any calls until you have shown me the script, the first batch of numbers, and the calling hours for my approval.\nOriginal source: https://dev.to/olamilekanadebayo55cmyk/how-i-built-an-n8n-ai-voice-outreach-workflow-for-roofing-leads-36ge",
+    "body_sha256": "f7919013cbc184c9b2419748eaa05c18026837c8a1460f38ea1d9e1c634a154a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

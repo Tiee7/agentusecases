@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "34c8565009677a91e297ea343e35ba1563bc0499e73b8d55a5829edf0b3a8135",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built a documentation crawler for their AI agents that pulled 60 pages of clean Markdown in 49 seconds.",
+      "sha256": "34c8565009677a91e297ea343e35ba1563bc0499e73b8d55a5829edf0b3a8135"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e1795550a9856ff6abd8dedcc6c6512c181b2a8dc9ceb2e07765476e9dd1e99a",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built pulpie-mcp, an MCP server with four tools: fetch, save, crawl and list. It runs a local extraction model behind a backend that starts automatically. Claude was asked to crawl a 60-page docs site. It found pages through robots.txt and sitemaps, used four concurrent workers, and wrote Markdown files with frontmatter to disk instead of returning them to the context window.",
+      "sha256": "e1795550a9856ff6abd8dedcc6c6512c181b2a8dc9ceb2e07765476e9dd1e99a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fa694ef1bf960cd642abb8f29b5527503e757192886124f10233c164cd2904d",
-      "publication": "reviewed_restatement_required"
+      "value": "Total time was about 49 seconds: roughly 10 for backend cold start and 37 for crawling and saving 60 pages. Untested on client-rendered pages, which may come back empty. PDFs aren't supported.",
+      "sha256": "8fa694ef1bf960cd642abb8f29b5527503e757192886124f10233c164cd2904d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0a3e14d0c317abacdd804155072a348d7bb6615e8ec71b07383c0cf4f1e75bc0",
-      "publication": "reviewed_restatement_required"
+      "value": "The model is licensed CC BY-NC 4.0 (non-commercial), and it has only been tested on Linux with an NVIDIA GPU, using about 420 MB of VRAM.",
+      "sha256": "0a3e14d0c317abacdd804155072a348d7bb6615e8ec71b07383c0cf4f1e75bc0"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Crawl documentation into clean Markdown for AI agents\nThe author built a documentation crawler for their AI agents that pulled 60 pages of clean Markdown in 49 seconds.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built pulpie-mcp, an MCP server with four tools: fetch, save, crawl and list. It runs a local extraction model behind a backend that starts automatically. Claude was asked to crawl a 60-page docs site. It found pages through robots.txt and sitemaps, used four concurrent workers, and wrote Markdown files with frontmatter to disk instead of returning them to the context window.\nHow it went\nTotal time was about 49 seconds: roughly 10 for backend cold start and 37 for crawling and saving 60 pages. Untested on client-rendered pages, which may come back empty. PDFs aren't supported.\nWorth knowing\nThe model is licensed CC BY-NC 4.0 (non-commercial), and it has only been tested on Linux with an NVIDIA GPU, using about 420 MB of VRAM.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a crawler that takes the documentation site [docs URL], follows its internal links, and saves each page as clean Markdown (no nav or footer) in a folder called docs-md, one file per page. Respect robots.txt and rate limit politely. Done when you have crawled the whole site and given me a count of pages saved and a list of any that failed.\nOriginal source: https://dev.to/sizzlebop/i-gave-my-ai-agents-their-own-documentation-crawler-and-pulled-60-pages-of-clean-markdown-in-49-2cl7",
+    "body_sha256": "6008233d5eba52316161f74880b6c1988891f8ee5b81e2c56524a28841a6eaf2",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

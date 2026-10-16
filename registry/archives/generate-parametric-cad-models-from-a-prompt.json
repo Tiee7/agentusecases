@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "32c18eb558155b5f6f82a04c6635419452b196d0b6ec6dd7ac30e6d7ff46a102",
-      "publication": "reviewed_restatement_required"
+      "value": "An open-source text-to-CAD tool that produces 3D models from text and image references by generating CAD as code.",
+      "sha256": "32c18eb558155b5f6f82a04c6635419452b196d0b6ec6dd7ac30e6d7ff46a102"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ba11078a14e1f20e890529a6dc6a31c3a38a6c032dfeb9374f853400e4cb8ee8",
-      "publication": "reviewed_restatement_required"
+      "value": "You describe a part in plain English, optionally with reference images. The app uses Claude to write OpenSCAD code, which runs in the browser through WebAssembly and shows a live Three.js preview. It pulls out adjustable dimensions as sliders, so you can change sizes without asking the AI to regenerate. You can export STL, SCAD or DXF.",
+      "sha256": "ba11078a14e1f20e890529a6dc6a31c3a38a6c032dfeb9374f853400e4cb8ee8"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d6f17111b2ef72c32da397b60bb94ab1e3fa2a1ad5f1ad5f4e0e04cd2f869685",
-      "publication": "reviewed_restatement_required"
+      "value": "The README's benchmark gallery shows single prompts producing parametric models, from knurled knobs and threaded bolts to a V8 engine with 22 dimension controls. It gives no failure rates or accuracy measurements.",
+      "sha256": "d6f17111b2ef72c32da397b60bb94ab1e3fa2a1ad5f1ad5f4e0e04cd2f869685"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c0b326da212468e59d33f4d755aa45896401a6784206ee61095265138ef07f12",
-      "publication": "reviewed_restatement_required"
+      "value": "Self-hosting needs Node, the Supabase CLI, ngrok for webhooks, and your own API keys (Anthropic and others). The hosted demo at adam.new/cadam needs no install.",
+      "sha256": "c0b326da212468e59d33f4d755aa45896401a6784206ee61095265138ef07f12"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate parametric CAD models from a prompt\nAn open-source text-to-CAD tool that produces 3D models from text and image references by generating CAD as code.\nDone with\nCL\nClaude\nWhat they did\nYou describe a part in plain English, optionally with reference images. The app uses Claude to write OpenSCAD code, which runs in the browser through WebAssembly and shows a live Three.js preview. It pulls out adjustable dimensions as sliders, so you can change sizes without asking the AI to regenerate. You can export STL, SCAD or DXF.\nHow it went\nThe README's benchmark gallery shows single prompts producing parametric models, from knurled knobs and threaded bolts to a V8 engine with 22 dimension controls. It gives no failure rates or accuracy measurements.\nWorth knowing\nSelf-hosting needs Node, the Supabase CLI, ngrok for webhooks, and your own API keys (Anthropic and others). The hosted demo at adam.new/cadam needs no install.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a parametric CAD script in [CadQuery or OpenSCAD] for [describe the part, e.g. a wall bracket for a 25mm pipe], with named variables for all key dimensions at the top. Run it and export an [STL or STEP] file to this folder. Stop when the file exports without errors and show me the list of parameters I can change.\nOriginal source: https://github.com/Adam-CAD/CADAM",
+    "body_sha256": "81877ede7ad97de08c6343702f4c477a1ab75f7b711a22ddbb6ffe1154fbdf1f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

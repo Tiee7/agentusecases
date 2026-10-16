@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2407e57607d7ceba14241457bdecc0f40374983ca0e38c35788fb0c011a47fbe",
-      "publication": "reviewed_restatement_required"
+      "value": "Cursor Agent writes and maintains interlinked markdown pages from user-supplied sources, summarizing and cross-referencing, with Obsidian used to browse.",
+      "sha256": "2407e57607d7ceba14241457bdecc0f40374983ca0e38c35788fb0c011a47fbe"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "015c076de4706b5573d4fcd5c0ac74ad890ca190f8990ecd31eef66affc772df",
-      "publication": "reviewed_restatement_required"
+      "value": "The vault folder is opened in both Cursor and Obsidian. Sources go into an immutable raw/ folder, and an AGENTS.md file sets the wiki's conventions. The user tells the agent to ingest one source. It writes a summary, updates the index and related pages, and appends to a log. The user reads the summaries and steers. Later, lint passes check for contradictions and orphan pages.",
+      "sha256": "015c076de4706b5573d4fcd5c0ac74ad890ca190f8990ecd31eef66affc772df"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "f53719b63eaeb00f4fd21eaa2ce37659942755d46600aa2e1c66bfb3ec17fee2",
-      "publication": "reviewed_restatement_required"
+      "value": "The source is a pattern description, not a report with results. It says one source can touch 10–15 pages and that the index approach works at roughly 100 sources without search infrastructure.",
+      "sha256": "f53719b63eaeb00f4fd21eaa2ce37659942755d46600aa2e1c66bfb3ec17fee2"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "478dbe08c50e0ad5001ac3e7071d9a61f9e03c55463da872de26ad01afc7b66d",
-      "publication": "reviewed_restatement_required"
+      "value": "Ingest sources one at a time and review the summaries. The author does this, though batch ingest with less supervision is possible. Add a search tool such as qmd once the index stops being enough.",
+      "sha256": "478dbe08c50e0ad5001ac3e7071d9a61f9e03c55463da872de26ad01afc7b66d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a personal research wiki from papers and articles\nCursor Agent writes and maintains interlinked markdown pages from user-supplied sources, summarizing and cross-referencing, with Obsidian used to browse.\nDone with\nCR\nCursor\nWhat they did\nThe vault folder is opened in both Cursor and Obsidian. Sources go into an immutable raw/ folder, and an AGENTS.md file sets the wiki's conventions. The user tells the agent to ingest one source. It writes a summary, updates the index and related pages, and appends to a log. The user reads the summaries and steers. Later, lint passes check for contradictions and orphan pages.\nHow it went\nThe source is a pattern description, not a report with results. It says one source can touch 10–15 pages and that the index approach works at roughly 100 sources without search infrastructure.\nWorth knowing\nIngest sources one at a time and review the summaries. The author does this, though batch ingest with less supervision is possible. Add a search tool such as qmd once the index stops being enough.\nTry it yourself\nwith\nCursor\nCopy prompt\nRead the sources in [folder of papers and articles] on [topic] and build a wiki of interlinked markdown pages in [wiki folder]: one page per [concept / paper / person], each with a summary and links to related pages. Add an index page. Finish when every source is covered and links resolve, and ask me before overwriting any existing file.\nOriginal source: https://github.com/rbarok/obsidian-cursor-knowledge-graph/blob/main/cursor-obsidian.md",
+    "body_sha256": "f54291fd309a07de34cfe17e843a0312a0d3e00335c0171746a93f52fbcb49b0",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

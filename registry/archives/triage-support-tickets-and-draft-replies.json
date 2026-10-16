@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "94bf500d26b6dba142201157fce703161ad82a90156fbb0843e1c5c74b30188c",
-      "publication": "reviewed_restatement_required"
+      "value": "A Claude Code skill builds scripts against support, billing and database APIs to list and triage tickets, gather billing context, draft replies, and run refunds and cancellations.",
+      "sha256": "94bf500d26b6dba142201157fce703161ad82a90156fbb0843e1c5c74b30188c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d0a4654927e4f353042951a36dc6e96a3e2d1177f113015864c155c81555f802",
-      "publication": "reviewed_restatement_required"
+      "value": "The skill interviews you about your support stack, then writes TypeScript scripts for your ticketing, billing and database APIs, plus response templates. Once built, the agent lists and triages every open ticket, proposes the most urgent one, pulls billing and customer context, and drafts a reply. You approve before anything is sent, refunded or closed.",
+      "sha256": "d0a4654927e4f353042951a36dc6e96a3e2d1177f113015864c155c81555f802"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3f41c23b493e78cc3f0b33c93fb13c8d9c27908b4d4df28db1a7c992f9ed8432",
-      "publication": "reviewed_restatement_required"
+      "value": "For the Lex setup (HelpScout, Stripe, PostgreSQL), the author built 15 scripts and 6 templates. He says it handles about 80% of support tasks with yes/no approvals.",
+      "sha256": "3f41c23b493e78cc3f0b33c93fb13c8d9c27908b4d4df28db1a7c992f9ed8432"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a6532c6a50f9616a6aaf22b0b689521bb36eb87fc4de98daa20e5ce02608c173",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup takes roughly 30-60 minutes for core scripts and templates, and you need API credentials. Database access is read-only, and the README says nothing goes out without your approval.",
+      "sha256": "a6532c6a50f9616a6aaf22b0b689521bb36eb87fc4de98daa20e5ce02608c173"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Triage support tickets and draft replies\nA Claude Code skill builds scripts against support, billing and database APIs to list and triage tickets, gather billing context, draft replies, and run refunds and cancellations.\nDone with\nCC\nClaude Code\nWhat they did\nThe skill interviews you about your support stack, then writes TypeScript scripts for your ticketing, billing and database APIs, plus response templates. Once built, the agent lists and triages every open ticket, proposes the most urgent one, pulls billing and customer context, and drafts a reply. You approve before anything is sent, refunded or closed.\nHow it went\nFor the Lex setup (HelpScout, Stripe, PostgreSQL), the author built 15 scripts and 6 templates. He says it handles about 80% of support tasks with yes/no approvals.\nWorth knowing\nSetup takes roughly 30-60 minutes for core scripts and templates, and you need API credentials. Database access is read-only, and the README says nothing goes out without your approval.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite scripts that connect to my [support tool] and [billing tool] APIs using the credentials in [env file], list open tickets, and sort them by urgency. For each ticket, pull the customer's billing context and draft a reply in a file for me to review. Do not send any reply, issue any refund, or cancel any account; pause and show me the exact action first.\nOriginal source: https://github.com/nbashaw/claude-cs",
+    "body_sha256": "f71893ea996768c372c90deeb07324ec7c4a700bee07132e38039429d0d357f3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "42ff70955cfae4cd61814e7d026e55826b57dfc3ee68594ae69e063d94224ab0",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster wants a persistent Claude agent that watches Slack and call transcripts, spots tasks, and drafts the Claude Code prompts, removing them from the loop.",
+      "sha256": "42ff70955cfae4cd61814e7d026e55826b57dfc3ee68594ae69e063d94224ab0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4a8267549ea9360d1eea09a6b7f3107d26e1baad07fac7e777756b5c141492bf",
-      "publication": "reviewed_restatement_required"
+      "value": "The post itself is a request, not a finished build: the poster says their company’s Claude enterprise setup already connects to Slack, call recordings/transcripts, a data warehouse, a knowledge base, Google Workspace, and internal tools, and they want a permanent agent to watch Slack and transcripts, identify tasks, draft Claude Code prompts, and let them approve or tweak before running. In comments, the most concrete similar setup described is a small always-on Slack app on a Mac that listens for mentions and alerts, starts Claude Code in headless mode per Slack thread, keeps phase one read-only, and gates write actions, sends, and higher-risk changes behind approval buttons.",
+      "sha256": "4a8267549ea9360d1eea09a6b7f3107d26e1baad07fac7e777756b5c141492bf"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9236de1a6051acbdbbc637dfff1c70459d896fda85c94ca7afe046c12fc208af",
-      "publication": "reviewed_restatement_required"
+      "value": "No outcome is reported by the original poster because they are asking for advice. A commenter who built a similar system says it was a \"total game changer,\" but gives no hard metrics; others warn quality can drop without strong approval, deduping, and read-only staging.",
+      "sha256": "9236de1a6051acbdbbc637dfff1c70459d896fda85c94ca7afe046c12fc208af"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "24222ad2514cc60ca40f6680c666e0d459574dbda850381366d97ab418314b8e",
-      "publication": "reviewed_restatement_required"
+      "value": "Most actionable catch: start read-only, separate task extraction from execution, and dedupe requests because the same ask may appear in both Slack and call transcripts.",
+      "sha256": "24222ad2514cc60ca40f6680c666e0d459574dbda850381366d97ab418314b8e"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn Slack and call transcripts into Claude Code tasks\nThe poster wants a persistent Claude agent that watches Slack and call transcripts, spots tasks, and drafts the Claude Code prompts, removing them from the loop.\nDone with\nCL\nClaude\nCC\nClaude Code\nWhat they did\nThe post itself is a request, not a finished build: the poster says their company’s Claude enterprise setup already connects to Slack, call recordings/transcripts, a data warehouse, a knowledge base, Google Workspace, and internal tools, and they want a permanent agent to watch Slack and transcripts, identify tasks, draft Claude Code prompts, and let them approve or tweak before running. In comments, the most concrete similar setup described is a small always-on Slack app on a Mac that listens for mentions and alerts, starts Claude Code in headless mode per Slack thread, keeps phase one read-only, and gates write actions, sends, and higher-risk changes behind approval buttons.\nHow it went\nNo outcome is reported by the original poster because they are asking for advice. A commenter who built a similar system says it was a \"total game changer,\" but gives no hard metrics; others warn quality can drop without strong approval, deduping, and read-only staging.\nWorth knowing\nMost actionable catch: start read-only, separate task extraction from execution, and dedupe requests because the same ask may appear in both Slack and call transcripts.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead the [Slack export or channel folder] and the call transcripts in [folder path], and find action items that could be handed to a coding agent for [project name]. For each one, draft a clear, ready-to-run Claude Code prompt and note which message or transcript it came from. Save them as a single list in [file path], and don't run any of the tasks or send any messages yourself.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x0an42/serious_work_question_ive_become_a_human_api",
+    "body_sha256": "1536b4fc9a8326d6a12b48251f7efa39df7a8c60af6eecde1af747e84dc8e260",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

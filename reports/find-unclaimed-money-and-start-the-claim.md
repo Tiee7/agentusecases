@@ -1,36 +1,30 @@
 # Muse寻找无人认领款项：查到钱不等于到账，免费官方入口压缩独立代办利润
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/find-unclaimed-money-and-start-the-claim
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Meta Muse
-
-### 介绍
-
-An analyst used Meta Muse to look for property or funds registered in his name.
-
-一位分析师用 Meta Muse 查找登记在自己名下的财产或资金。
-
-### 方法
-
-Muse identified possible matches and assisted with paperwork, while the claimant submitted the official application.
-
-Muse 找到可能匹配的记录并辅助填写材料，正式申请由本人提交。
-
-### 结果与限制
-
-The report describes over $1,500 located in roughly five minutes, but no payment yet. Identity checks and official approval remained outstanding.
-
-报道描述约五分钟内找到逾 1,500 美元，但尚未付款，仍需身份核验及官方批准。
+    Find unclaimed money and start the claim
+    Meta's Muse agent found over $1,500 in unclaimed funds in about five minutes and helped fill out paperwork; the claim was filed but unpaid.
+    Done with
+    MM
+    Meta Muse
+    What they did
+    Nick Grous, an investment analyst at ARK Invest, asked Meta's Muse agent to search the internet for money that might belong to him. Muse returned a list of unclaimed property and funds under his name and helped complete much of the paperwork. Grous then filed the official claim himself.
+    How it went
+    Muse found more than $1,500 in about five minutes. Grous had not received any money when the article ran, because government offices still have to verify and approve the claim.
+    Worth knowing
+    Approval isn't guaranteed. You still verify and submit the claim yourself, and Muse asks permission before sensitive actions such as sending email. Muse was US-only at launch.
+    Try it yourself
+    with
+    Meta Muse
+    Copy prompt
+    Search the official unclaimed property sites for [state(s) I have lived in] and [national site if relevant] using my name [full name] and variations like [maiden name, nicknames, old addresses]. List every match with the amount, holder and state. For any claim, walk me through the paperwork, prefill what you can, and pause to show me the form before submitting anything or entering my SSN.
+    Original source: https://colombiaone.com/2026/09/29/meta-muse-ai-agent/
 
 ## 原作者的方法与来源
 
 来源：[ColombiaOne · Nick Grous unclaimed funds](https://colombiaone.com/2026/09/29/meta-muse-ai-agent/)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 报道说 Nick Grous 要求 Muse 上网查找可能属于自己的款项，并收到潜在匹配清单。
    English summary: The report says Nick Grous asked Muse to search online for money owed to him and received a list of possible matches.
@@ -45,7 +39,7 @@ The report describes over $1,500 located in roughly five minutes, but no payment
 本案的价值是降低跨网站查询和准备申领材料的摩擦，不是创造一笔新的收益。媒体报道Muse在约五分钟内找到超过1500美元候选款项，但这属于特定用户自述，不能代表典型可回收金额或服务商收入。NAUPA及州政府已经提供免费查询和申领，用户仍须证明身份与所有权；加州对一般调查员服务还设有收费上限和签约限制。高额、简单、可合法承接的案件在假设中能盈利，但没有证据说明这种案件足以低成本获客；小额案件容易被人工审核和售后成本吞噬。现阶段更适合作为个人或既有专业团队的材料辅助流程，保留本人提交与官方收款，不建议把候选金额当作融资或收费承诺。
 
 案例ID：`find-unclaimed-money-and-start-the-claim` · 案例来源：https://agentusecases.ai/use-case/find-unclaimed-money-and-start-the-claim
-研究时间：2026-10-15T16:46:05.228548+00:00 · 证据置信度：官方查询、申领和加州收费边界有一手证据；案例耗时和候选金额为媒体转述。当前到账状态、商业客户、收费及规模经济未独立核实。
+研究时间：2026-10-15T16:46:05.228548+00:00
 
 **商业评分：39.0/100。用户反馈信号占5%。**
 
@@ -76,9 +70,7 @@ The report describes over $1,500 located in roughly five minutes, but no payment
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -88,9 +80,9 @@ The report describes over $1,500 located in roughly five minutes, but no payment
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S287ed9a0dfdf, Sd46ae4f22409, S2bb00e5f9162, S742124791286, Sa02b9db14c7c, S889745999a77
 
@@ -103,9 +95,9 @@ The report describes over $1,500 located in roughly five minutes, but no payment
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S287ed9a0dfdf, Sd46ae4f22409, S2bb00e5f9162, S742124791286, Sa02b9db14c7c, S889745999a77
 
@@ -181,7 +173,7 @@ USAGov确认州政府持有多数无人认领款，也指出不存在覆盖全�
 
 ## 用户反馈：区分报道时点与后续线索
 
-反馈严格占5%，本轮独立验证信号记0，不代表用户不满意。已在X作者身份、Reddit社区和GitHub公开项目三个渠道检索。ColombiaOne实际读到的报道转述Grous认为有价值，但正文同时明确当时尚未收款；这是一位自选成功发现样本，既没有对照手工时间也没有投资回报分母。后续搜索命中GrousARK的一条X结果，摘要称两张申领支票收到其中一张；原帖读取被robots禁止，无法确认时间、金额及是否与本案全部候选对应，因此保留为未核实更新线索，不计作事实来源。案例页链接的Reddit经历和另一条讨论同样无法在允许访问范围内取得原文，不能把摘要与推荐帖子拼成第二次独立验证。GitHub搜索未返回可归属本案例的完整项目，不能据此宣称世界上不存在相关代码。最终措辞应是“9月29日报道时未到账，目前未核实”，而非“到今天仍没拿到钱”。本案的正面宣传不能替代多案件准确率、回款率和实际付费验证。
+暂无直接用户反馈。
 
 依据：S287ed9a0dfdf, Sa2a6b0345109, Sd46ae4f22409
 
@@ -202,18 +194,11 @@ A：高额简单案件，研究者条件假设假设：全部参数为假设。�
 
 B：普通小额案件，研究者压力假设假设：全部参数为假设，80美元财产并非已观察到的平均值，收费10%、回款且可收费概率50%，预期收入80×10%×50%=4。每案人工20/60×30=10，模型摊销1、通信与资料维护2、获客15，月100案、固定600。即使回款率100%，8美元收入仍小于28美元可变成本。没有实际采购模型API；此处api_cost是使用摊销占位，不是已发生费用或Muse报价。；API成本 1，人工成本 10，其他可变成本 2，分摊获客成本 15。依据：S889745999a77, Sc9d1113aec45, Sa02b9db14c7c
 
-## 用户反馈核对（低权重）
-
-- X原始作者／社交平台 · `"Nick Grous" "Muse" "unclaimed"; "Nick Grous" "received" "unclaimed" Muse`：找到原发现帖及后续声称收到一张支票的结果；原帖robots禁止。后续结果仅为更新线索，未计已核验到账事实，不能把9月29日未到账外推到现在。
-- Reddit社区 · `site:reddit.com "Muse" "unclaimed money"; "Muse" "unclaimed" "review" reddit`：发现案例页所列r/MetaAI经历和r/AI_Agents讨论；直接读取robots禁止，未把推荐内容或摘要当真实已读用户评价。
-- GitHub代码与问题 · `site:github.com "Muse" "unclaimed property"`：本次结果未提供可归属于Nick Grous/Muse申领案例的完整实现或直接用户issue，大部分为不相关结果；不证明不存在相关代码。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 反对完全否定用例的证据：官方确实存在财产与申领流程，媒体报道的材料辅助有明确任务边界，已有授权的专业团队可能节省工时；后续X搜索还出现一张支票到账的积极线索。但该原帖不可读取，不算已核实更新。反对独立商业投入的证据：查询及申领免费，通用平台已经提供基础能力，州政府仍需审核证明，加州一般收费被限定且有签约时点要求。高额单例不证明可获得大量同类客户。
 
-没有当事人完整任务日志、姓名地址匹配证据、官方申请回执、到账记录或服务商收费记录；约五分钟与超过1500美元均为媒体转述的单案声称。当前是否收到全部或部分款项未独立核实；搜索摘要中的积极更新没有计入事实。Meta功能与安全描述为厂商声明；精确订阅价、单任务用量和商业批量使用许可未确认，muse.ai/terms被robots禁止。四份X/Reddit原文也被robots禁止，未绕过限制。加州规定仅代表读取页面的适用范围，不能当作全国统一合规结论。未向任何州提交搜索表单或真人申领、未联系用户、未购买或调用额外付费模型。本轮没有技术实测或客户验证；内部工时和两种经营模型全部为研究者假设。
+申请回执和到账记录未知，约五分钟与超过1500美元属于单案转述。订阅价、单任务用量与批量服务适用范围未确认；加州规则仅适用于对应范围。
 
 ## 具体动作与止损条件
 
@@ -233,6 +218,3 @@ B：普通小额案件，研究者压力假设假设：全部参数为假设，8
 - [S889745999a77] [﻿](https://www.sco.ca.gov/upd_investigator_about.html)：加州控制官消费者说明调查员合同、一般10%收费上限、县级遗产例外和签约时点；只适用于其说明范围，不推广为全国法律。
 
 结构化记录：[research/find-unclaimed-money-and-start-the-claim.json](../research/find-unclaimed-money-and-start-the-claim.json)
-来源读取凭据：[research/evidence/find-unclaimed-money-and-start-the-claim.json](../research/evidence/find-unclaimed-money-and-start-the-claim.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

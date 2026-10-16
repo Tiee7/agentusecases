@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a08fccb85d2d83382b78def16e5adb236da52040c6427b078e07fb751bacf796",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude built a spreadsheet of Medicare prices per code on a $195,628 hospital bill; the user then wrote the letter and negotiated about $163,000 off himself, so Claude only analyzed.",
+      "sha256": "a08fccb85d2d83382b78def16e5adb236da52040c6427b078e07fb751bacf796"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "2e58f3e81fec4df0b8909eebd8e50bdef83233e7583b51957e26135222dfe3d1",
-      "publication": "reviewed_restatement_required"
+      "value": "Matt Rosenberg got the hospital to send its coded UB-04 form. He asked Claude to build a spreadsheet of Medicare payments per CPT code and flag anything needing more research. Claude asked about insurance type, location and year, then found unbundled charges, an inpatient-only bypass charge and a ventilation charge. He had ChatGPT check the work, spot-checked it himself for 20 minutes, then wrote the letter.",
+      "sha256": "2e58f3e81fec4df0b8909eebd8e50bdef83233e7583b51957e26135222dfe3d1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d3bb5492c5c9d427ac4fe67bc99649441968c44b70cef7c8c53cc3cf22bb681a",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude estimated Medicare would have paid about $28,675 against $195,628. The hospital countered at $36,356, and they settled near $32,500, which is roughly $163,000 off.",
+      "sha256": "d3bb5492c5c9d427ac4fe67bc99649441968c44b70cef7c8c53cc3cf22bb681a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "31588c787d89b7653cee1e42f85c93e5b909347957a499e1135e8ba0ca662670",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude's first spreadsheet showed zeros for bundled codes, so you have to ask follow-up questions. Rosenberg also verified the analysis and advises against using AI as your lawyer.",
+      "sha256": "31588c787d89b7653cee1e42f85c93e5b909347957a499e1135e8ba0ca662670"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Cut a hospital bill using Claude's Medicare price analysis\nClaude built a spreadsheet of Medicare prices per code on a $195,628 hospital bill; the user then wrote the letter and negotiated about $163,000 off himself, so Claude only analyzed.\nDone with\nCL\nClaude\nWhat they did\nMatt Rosenberg got the hospital to send its coded UB-04 form. He asked Claude to build a spreadsheet of Medicare payments per CPT code and flag anything needing more research. Claude asked about insurance type, location and year, then found unbundled charges, an inpatient-only bypass charge and a ventilation charge. He had ChatGPT check the work, spot-checked it himself for 20 minutes, then wrote the letter.\nHow it went\nClaude estimated Medicare would have paid about $28,675 against $195,628. The hospital countered at $36,356, and they settled near $32,500, which is roughly $163,000 off.\nWorth knowing\nClaude's first spreadsheet showed zeros for bundled codes, so you have to ask follow-up questions. Rosenberg also verified the analysis and advises against using AI as your lawyer.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'll paste an itemized hospital bill totaling [amount] with its billing codes. For each code, look up the Medicare reimbursement rate and build a spreadsheet comparing billed charge, Medicare price, and the multiple. Highlight the biggest gaps and any duplicate or questionable charges, then suggest talking points for a negotiation letter that I'll write myself.\nOriginal source: https://www.aol.com/articles/used-claude-negotiate-163-000-100601051.html",
+    "body_sha256": "c7e5fb0f016b543082c397abeea0d8102a684fd0a48a9855308c0f6d9a2e4533",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -1,36 +1,30 @@
 # Manus交易信号脚本：连接与复盘有用，尚不足以经营自动交易产品
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/teach-an-agent-to-trade-with-signals-and-logging
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Manus
-
-### 介绍
-
-A trader describes building a signal-and-recordkeeping workflow with Manus.
-
-一位交易者描述用 Manus 搭建信号通知和记录流程。
-
-### 方法
-
-Manus proposed Python code connecting market data to Telegram alerts and spreadsheet/CSV logs. The user configured the bot and credentials.
-
-Manus 提出 Python 代码方案，将市场数据连接到 Telegram 通知及电子表格、CSV 日志；用户配置机器人及凭据。
-
-### 结果与限制
-
-The setup was described as running, with testing planned next. The source does not establish profitable trading or validated strategy performance.
-
-当时声称系统已运行，测试安排在之后；源站没有证明交易盈利或策略性能经过验证。
+    Teach an agent to trade with signals and logging
+    @mufasadubai had Manus write a Python script using ProjectX APIs for realtime charts, set up Telegram signals and log trades to Google Sheets and CSV.
+    Done with
+    MA
+    Manus
+    What they did
+    Manus suggested running a Python script on the user's command terminal that pulled realtime charts via ProjectX APIs. The script sent trading signals through a Telegram bot the user set up with API keys. It also logged trade metadata to Google Sheets and a CSV file.
+    How it went
+    The system is now running and will be tested the next day; the user plans to review logs later with Manus to refine the strategy.
+    Worth knowing
+    Setup took a while due to creating the Telegram bot and integrating the keys.
+    Try it yourself
+    with
+    Manus
+    Copy prompt
+    Write a Python script that connects to [broker or market data API] for realtime charts on [instrument or market], applies this signal rule: [describe rule]. Send each signal to my Telegram chat via [bot token placeholder] and log every signal to a Google Sheet and a CSV file. Run it in paper or simulation mode only, and you're done when a test signal shows up in Telegram and both logs. Never place real trades or move money without asking me first.
+    Original source: https://x.com/mufasadubai/status/2026221794277904433
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/mufasadubai/status/2026221794277904433)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The setup was described as running, with testing planned next. The source does n
 这个案例能支持的商业价值是把已有交易规则编成脚本、减少抄写日志与盯盘提醒的机械工作。真正付款人若存在，应是已有合规平台账户、懂得判断策略的个人交易者，而不是购买“AI赚钱”的大众。案例停留在搭建后准备测试，没有代码、成交对账或收益曲线可核验。官方资料又显示API密钥有完整交易权限，当前TopstepX接口不支持Live funded账户，订单必须来自个人设备。低价托管无法轻易覆盖设置、断线、令牌和日志对账的人力；已有付费连接平台与开源SDK压缩差异化。故不据此启动独立交易信号订阅或代操业务，保留本地模拟日志工具的有限价值。
 
 案例ID：`teach-an-agent-to-trade-with-signals-and-logging` · 案例来源：https://agentusecases.ai/use-case/teach-an-agent-to-trade-with-signals-and-logging
-研究时间：2026-10-15T14:10:28.450641+00:00 · 证据置信度：案例身份中等：仅取得聚合站转述，原始X帖robots禁止读取；当前平台规则和成本较高置信，实际运行、策略收益、付费与留存均未核验。completed表示研究完成，不表示产品验证成功。
+研究时间：2026-10-15T14:10:28.450641+00:00
 
 **商业评分：25.0/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The setup was described as running, with testing planned next. The source does n
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The setup was described as running, with testing planned next. The source does n
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S97f3c74a7367, S4477faa03ea9, Sdd260b00cb5e, Sdebf4c64fff0, S69b841c7350d, S78531cd091fe
 
@@ -97,9 +89,9 @@ The setup was described as running, with testing planned next. The source does n
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S97f3c74a7367, S4477faa03ea9, Sdd260b00cb5e, Sdebf4c64fff0, S69b841c7350d, S78531cd091fe
 
@@ -193,9 +185,7 @@ The setup was described as running, with testing planned next. The source does n
 
 ## 用户评价怎样改变判断
 
-实际检索覆盖Reddit社区、GitHub公开项目及广域作者搜索，记录了具体查询。搜索结果多次偏离关键词，返回平台首页或无关资料，因此只能说本轮未获得可核验反馈，不能说整个网络不存在用户，也不能把搜索摘要转为已读原文。原始X帖被robots禁止读取，没有绕过；聚合页对作者的转述也只有准备测试，没有独立确认运行效果。
-
-TradersPost定价页确实包含精选客户赞言，但属于竞争产品和供应商挑选展示，身份、收益、样本分布及是否存在激励均未独立核验；不将其当本案例口碑，也不计入5%的独立用户信号。公开SDK的星标或作者功能宣称同样不等于用户满意度。反馈项为0代表独立证据缺失，不是用户给零星。这个缺口影响的是外部可迁移性和付费信心：今后最有价值的证据应是匿名化的连续失败记录、支持时长、退款与续费，以及不同用户设备下的对账结果，而不是更多一键生成脚本截图。
+暂无直接用户反馈。
 
 依据：S97f3c74a7367, S8eebd11a7152, S092089fd1f7b
 
@@ -218,20 +208,11 @@ TradersPost定价页确实包含精选客户赞言，但属于竞争产品和供
 
 假设B：标准化窄范围高价月度支持假设：全部经营数为研究者假设。每小时60美元；每月维护20分钟=20，首次设置120分钟=120分6月摊20，人工40。接口工具缓冲2、存储设备杂项及小额售后准备5。获客60分6月摊10。固定600为共享软件维护、测试及工具预算，未核实Manus价格。客户平台API与账户费自行支付；获客、6月留存、99月费及20客均未验证。单位贡献42（42.42%）、月贡献240（总收入1980的12.12%），为税前经营贡献而非净利。；API成本 2，人工成本 40，其他可变成本 5，分摊获客成本 10。依据：S4477faa03ea9, S8eebd11a7152, S69b841c7350d, S78531cd091fe
 
-## 用户反馈核对（低权重）
-
-- 广域作者及社区检索 · `"mufasadubai" "Manus" trading review reddit`：返回Google评论及通用review资料，结果不匹配；未获得可核验作者直接用户原文，不解释为无用户。
-- Reddit社区 · `site.reddit.com "Manus" "ProjectX"`：结果为Manus首页、应用商店和同名无关内容，未找到目标工作流直接使用者。
-- GitHub公开代码 · `site.github.com "mufasadubai" trading`：没有匹配作者项目的可用结果；未取得该脚本源码或问题跟踪，邻近SDK不冒充本项目。
-- Reddit社区 · `site.reddit.com/r/TopstepX "API"`：返回Reddit首页与泛交易内容，未取得可归因的邻近工作流使用记录。
-- GitHub公开代码 · `"ProjectX" "API" "issues" (domains: github.com)`：返回GitHub帮助与其他项目，相关性异常；另由发现的SDK页面读取README，但作者文档不计独立用户反馈。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 支持商业化的最强反证是组件已公开可用、标准通知与表格有低成本额度，竞品的正价格说明自动化接入有收费品类，故不能把整个领域判成无价值。相反，案例本身只到准备测试，官方接入受模拟账户与部署限制、上游有服务收缩，且公开SDK可替代基础实现，不能把有用工具直接外推为有利润公司。TradersPost连接器“不提供行情”与Topstep平台“提供行情”属于不同范围，未选择性删去冲突。
 
-原始X帖robots禁止，作者身份细节、源码、具体策略、部署配置、测试完成与收益均未独立确认；没有成交对账、工时、付款、留存或退款数据。Manus价格页仅返回导航，条款页可读内容不足；不声称其精确订阅或法律许可已核实。ProjectX最初无尾斜杠文档返回HTTP降级301，采用同一公开文档HTTPS尾斜杠版本成功；未绕过访问控制。多次搜索相关性差，独立用户反馈缺失。只读公开资料，没有安装运行外部SDK、联系第三方、创建密钥、购买或提交表单，也无真实账户、模型API或交易测试。模型收益是假设的工具服务收入，不是交易收益。
+源码、策略、部署配置、测试结果、成交对账与收益未知。Manus精确订阅价及商业使用范围未确认；经营模型计算的是工具服务收入。
 
 ## 具体动作与止损条件
 
@@ -253,6 +234,3 @@ TradersPost定价页确实包含精选客户赞言，但属于竞争产品和供
 - [S092089fd1f7b] [GitHub - TexasCoding/project-x-py: A high-performance Python SDK for the ProjectX Trading Platform Gateway API. This library enables developers to build sophisticated trading strategies and applications by providing comprehensive access to futures trading operations, historical market data, real-time streaming, technical analysis, and advanced market microstructure tools · GitHub](https://github.com/TexasCoding/project-x-py)：替代开源SDK的公开README、MIT许可标识、事件数据与CSV导出示例以及版本迁移事项；仅静态文档审阅，非安装运行或盈利验证。
 
 结构化记录：[research/teach-an-agent-to-trade-with-signals-and-logging.json](../research/teach-an-agent-to-trade-with-signals-and-logging.json)
-来源读取凭据：[research/evidence/teach-an-agent-to-trade-with-signals-and-logging.json](../research/evidence/teach-an-agent-to-trade-with-signals-and-logging.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

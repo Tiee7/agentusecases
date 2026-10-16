@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "46907b463bd9dafc75780f18298007e2b1a918c4a0089f06502baabc165fbe62",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code pulled a month of transactions over MCP and matched bank rows to receipts, proposing categories; it reconciled 200 rows but miscategorized 11, caught in a manual audit.",
+      "sha256": "46907b463bd9dafc75780f18298007e2b1a918c4a0089f06502baabc165fbe62"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f641f2362244b58b59216f918d84e3870a8bbcd5fb0f8b4a8d713ccf3b310ca",
-      "publication": "reviewed_restatement_required"
+      "value": "Rather than pasting a CSV into chat, the author had Claude Code build a re-runnable pipeline. It pulled the month's transactions from the accounting platform over MCP, matched bank rows to receipts by amount and date, drafted a category with a reason for each row, and flagged rows it was unsure about. The author reviewed the flagged rows and sampled the rest.",
+      "sha256": "5f641f2362244b58b59216f918d84e3870a8bbcd5fb0f8b4a8d713ccf3b310ca"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9536e614597b22c6e59665b1a821c338f46728d6abbd787a4c49af151bf3f246",
-      "publication": "reviewed_restatement_required"
+      "value": "It reconciled 200 transactions and miscategorized 11 (94.5%). The errors were judgment calls: 5 on business intent, 4 on local tax rules, 2 on edge cases. Seven of the 11 were already in its flagged set of 18.",
+      "sha256": "9536e614597b22c6e59665b1a821c338f46728d6abbd787a4c49af151bf3f246"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9c14e9322451572a7d2623eaa2e4673cb2580b50c04e1f1c2e288ad011140715",
-      "publication": "reviewed_restatement_required"
+      "value": "Telling the agent never to guess silently turned a 200-row audit into an 18-row review plus a sample. Even so, four errors surfaced only in the spot-check.",
+      "sha256": "9c14e9322451572a7d2623eaa2e4673cb2580b50c04e1f1c2e288ad011140715"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reconcile monthly business transactions\nClaude Code pulled a month of transactions over MCP and matched bank rows to receipts, proposing categories; it reconciled 200 rows but miscategorized 11, caught in a manual audit.\nDone with\nCC\nClaude Code\nWhat they did\nRather than pasting a CSV into chat, the author had Claude Code build a re-runnable pipeline. It pulled the month's transactions from the accounting platform over MCP, matched bank rows to receipts by amount and date, drafted a category with a reason for each row, and flagged rows it was unsure about. The author reviewed the flagged rows and sampled the rest.\nHow it went\nIt reconciled 200 transactions and miscategorized 11 (94.5%). The errors were judgment calls: 5 on business intent, 4 on local tax rules, 2 on edge cases. Seven of the 11 were already in its flagged set of 18.\nWorth knowing\nTelling the agent never to guess silently turned a 200-row audit into an 18-row review plus a sample. Even so, four errors surfaced only in the spot-check.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReconcile my business transactions for [month] using [bank export/accounting tool] and the receipts in [folder]. Match each bank row to a receipt, propose a category from [my chart of accounts], and mark low-confidence matches separately. Don't post or change anything in my books. You're done when I have a table of matches and a list of items needing my review, so I can spot-check the categories.\nOriginal source: https://dev.to/kenimo49/i-let-claude-code-run-a-month-of-my-business-books-it-reconciled-200-transactions-and-513d",
+    "body_sha256": "690d4896df8e90c1c7d369e43d64cd199c002f1730e8d346fd6fcde6c013adaf",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "30cfd187720ddc79704af6b289570f369ed77fce783997e6bbc4fc2df21230c8",
-      "publication": "reviewed_restatement_required"
+      "value": "A Claude Code-built agent checked ESPN every 30 minutes and sent each 2026 World Cup final score, written up in a persona, to a 3-person Signal group, with a code check on scores.",
+      "sha256": "30cfd187720ddc79704af6b289570f369ed77fce783997e6bbc4fc2df21230c8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "fb3cd993347fe4fcff681aaa8cd00ee1eb285f17638c29fef35565d0d816ec95",
-      "publication": "reviewed_restatement_required"
+      "value": "Built with Claude Code in one evening. A macOS LaunchDaemon runs a Python script every 30 minutes. It pulls ESPN's public scoreboard, finds finished matches not yet sent, and has Claude Haiku write each result as the persona Claudia. A plain non-AI check confirms the score appears before sending through signal-cli. If the check fails, it sends the plain score line.",
+      "sha256": "fb3cd993347fe4fcff681aaa8cd00ee1eb285f17638c29fef35565d0d816ec95"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b332325d277f1a7dc6ba136b44498b2e47e192107179ec6a60569f2697b40304",
-      "publication": "reviewed_restatement_required"
+      "value": "All 104 matches were sent over 39 days with no duplicates or send errors. 101 got persona write-ups and 3 fell back to plain lines. One shipped bug reported a penalty-shootout win as a 1–1 tie before it was fixed.",
+      "sha256": "b332325d277f1a7dc6ba136b44498b2e47e192107179ec6a60569f2697b40304"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "fa22a6c84c39847135aa22e860cd46c856cfdef267fc8a42798f8cc11659f183",
-      "publication": "reviewed_restatement_required"
+      "value": "Fetch yesterday's and today's ESPN scoreboards, and check match status so shootouts aren't read as draws. Cost was pennies, one short Haiku call per match.",
+      "sha256": "fa22a6c84c39847135aa22e860cd46c856cfdef267fc8a42798f8cc11659f183"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Text every World Cup final score to a friends' Signal group\nA Claude Code-built agent checked ESPN every 30 minutes and sent each 2026 World Cup final score, written up in a persona, to a 3-person Signal group, with a code check on scores.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nBuilt with Claude Code in one evening. A macOS LaunchDaemon runs a Python script every 30 minutes. It pulls ESPN's public scoreboard, finds finished matches not yet sent, and has Claude Haiku write each result as the persona Claudia. A plain non-AI check confirms the score appears before sending through signal-cli. If the check fails, it sends the plain score line.\nHow it went\nAll 104 matches were sent over 39 days with no duplicates or send errors. 101 got persona write-ups and 3 fell back to plain lines. One shipped bug reported a penalty-shootout win as a 1–1 tie before it was fixed.\nWorth knowing\nFetch yesterday's and today's ESPN scoreboards, and check match status so shootouts aren't read as draws. Cost was pennies, one short Haiku call per match.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small agent that checks [ESPN or another scores site] every [30 minutes] during [tournament or season] and texts each final score for [team or league] to my [Signal/WhatsApp] group, written in the voice of [a persona, e.g. a dramatic sports announcer]. Add a code check so it only sends a score once the game is final and never sends the same result twice. Before you send anything to the group, show me a sample message and wait for my okay.\nOriginal source: https://github.com/bronsonelliott/worldcup-scores-bot-public",
+    "body_sha256": "a97510bfef4838bb0eca515bcbb79081e192d3dc8942430d38b788ada6e6d6ab",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

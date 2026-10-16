@@ -1,36 +1,30 @@
 # Meta Muse 账单议价与退款：只宜受控试点，节省承诺尚未证明可盈利交付
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Meta Muse
-
-### 介绍
-
-This entry gathers anecdotes about Muse handling household spending and service disputes.
-
-此条目汇集了 Muse 处理家庭消费及服务争议的个案叙述。
-
-### 方法
-
-Reported tasks span bill negotiation, returns, insurance paperwork and subscription cancellation, but the source does not specify the operational steps or division of labor.
-
-报告任务涵盖账单议价、退货、保险材料及退订，但源站没有具体执行步骤或人机分工。
-
-### 结果与限制
-
-An employee claimed $2,120.95 in savings. Employee promotion and retailer restrictions weaken any inference of repeatable savings for ordinary users.
-
-一名员工声称节省 2,120.95 美元；员工推广背景及零售商限制削弱了对普通用户可重复节省的推断。
+    Negotiate bills, handle returns and cancel subscriptions
+    A Meta employee said Muse negotiated an AT&T bill, found Amazon returns, returned IKEA furniture and filed a vet claim; another had a forgotten subscription cancelled and refunded.
+    Done with
+    MM
+    Meta Muse
+    What they did
+    Muse is Meta's consumer agent, launched September 8. It is meant to review finances, find discounts, cancel subscriptions and negotiate with companies. One Meta employee posted that it negotiated an AT&T bill, identified Amazon returns, returned IKEA furniture and filed a vet claim. Another user said it found a forgotten book subscription, cancelled it and got a refund. The article doesn't describe the mechanics or the user's role.
+    How it went
+    The Meta employee reported $2,120.95 saved in total. The article says these are anecdotes, many from Meta's own #MuseMoneyChallenge and from employees, and that users may have been able to get the same savings themselves.
+    Worth knowing
+    Amazon blocked Muse from placing cart orders, citing its terms of service, so agent actions on retailer sites may be refused.
+    Try it yourself
+    with
+    Meta Muse
+    Copy prompt
+    I want to lower my [provider, e.g. AT&T] bill, which is currently [amount] a month, and cancel [subscription name]. Research the provider's retention offers and cancellation steps, then draft what I should say or send to get a lower rate or a refund. Show me every message or form before it is sent or submitted, and finish with a summary of what I'd save.
+    Original source: https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/
 
 ## 原作者的方法与来源
 
 来源：[Tekedia · Meta Muse money challenge](https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 文章概述 Muse 查看家庭支出并寻找折扣、退款或取消订阅的机会。
    English summary: The article describes Muse reviewing household spending and identifying opportunities for discounts, refunds or cancellations.
@@ -45,7 +39,7 @@ An employee claimed $2,120.95 in savings. Employee promotion and retailer restri
 家庭用户确有降低重复支出及减少客服沟通的需求，付款人也是承担账单的个人。可是本案例最醒目的收益来自员工与活动参与者自述，把退款、保险理赔和年化降费合计，不能证明平均增量收益。官方技术说明确认代理具备执行与审批机制，但没有给出该流程成功率和维护成本。独立经营者还要支付获客、逐单核验、失败重试与后续对账费用，面对免费通用代理及已有人工议价服务。只批准限定服务商的人工监督验证，不应据此投入全平台自主代办产品。
 
 案例ID：`negotiate-bills-handle-returns-and-cancel-subscriptions` · 案例来源：https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions
-研究时间：2026-10-15T03:11:48.878088+00:00 · 证据置信度：中低：已读取10份公开来源，产品架构及竞品流程有一手资料；没有独立到账凭证、成功率、实际人工时长、Muse专项收入或完整条款验证。商业分数针对复制此工作流的独立经营者，不是Meta公司估值或模型能力评分。
+研究时间：2026-10-15T03:11:48.878088+00:00
 
 **商业评分：37.0/100。用户反馈信号占5%。**
 
@@ -78,19 +72,13 @@ An employee claimed $2,120.95 in savings. Employee promotion and retailer restri
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions
 
-观测时间：2026-10-16T02:51:07.253574+00:00
-
-建议运行工具：Meta Muse（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Meta Muse
 
     I want to lower my [provider, e.g. AT&T] bill, which is currently [amount] a month, and cancel [subscription name]. Research the provider's retention offers and cancellation steps, then draft what I should say or send to get a lower rate or a refund. Show me every message or form before it is sent or submitted, and finish with a summary of what I'd save.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -100,9 +88,9 @@ An employee claimed $2,120.95 in savings. Employee promotion and retailer restri
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sad7d9b73b77b, S81786546d1f8, Sb09b08eb1e11, Sd0ec2ff62b12, Sa02b9db14c7c, S742124791286, Sb34735dcc278
 
@@ -115,9 +103,9 @@ An employee claimed $2,120.95 in savings. Employee promotion and retailer restri
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sad7d9b73b77b, S81786546d1f8, Sb09b08eb1e11, Sd0ec2ff62b12, Sa02b9db14c7c, S742124791286, Sb34735dcc278
 
@@ -207,9 +195,7 @@ An employee claimed $2,120.95 in savings. Employee promotion and retailer restri
 
 ## 低权重反馈及证据排除
 
-本轮实际执行了社区、代码讨论和独立评论站的检索，结果存在大量不相关页面；检索命中数量不是验证强度。沿案例链接读取HN线程后，看到的是对识别订阅和执行取消机制的提问，回复也只是推测上传账单，既不是直接用户结果也不是可测成功率。AI With Suny文章虽然标题称尝试Muse，正文主要转述能力并分析权限，未给出可审计的本人任务流水；评论含推广链接或旁观意见，也不能转成满意用户证据。
-
-Trustpilot搜索能发现Rocket Money评论页面，但本轮证据工具被robots规则拒绝，因此不将页面内投诉或星级作为正式报告事实，更不移植为Muse评价。员工节省故事有利益关联和活动自选偏差，仅保留为报道内容。观察数组留空，独立反馈信号0分，严格占总分5%；意思是缺少独立验证，不是满意度为零。反馈缺口不应阻止分析已读一手流程，却使宣传中的高额收益无法升级为商业效果证据。
+暂无直接用户反馈。
 
 依据：Sd0f6b5ca44d1, S9e131eb43dbf, Sad7d9b73b77b
 
@@ -232,19 +218,11 @@ A：限定服务商可行假设假设：全部为研究者假设：成功率60%�
 
 B：低成功率与高人工假设假设：全部为研究者假设：成功率25%，成功案收益150美元，40%收费得60美元；每受理案期望收入0.25×60=15。人工90分钟×30美元/小时=45，技术5、其他8、获客30。月100案，固定1500。其他成本含通信对账及预期争议准备，未验证真实分布。 收入按完整兑现期确认，不等于当月现金，未计税、资本成本及创始人未列入的薪酬。；API成本 5，人工成本 45，其他可变成本 8，分摊获客成本 30。依据：S81786546d1f8, Sb34735dcc278, Sb09b08eb1e11
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `"Muse" "bill" "review" site:reddit.com`：搜索返回不相关结果，未找到可纳入的直接体验记录。
-- HN社区 · `"Muse" "cancel" site:news.ycombinator.com`：搜索未给有效直接体验；沿案例链接另读取49914631，只见机制提问与推测。
-- 公开代码讨论 · `"Muse" "refund" site:github.com`：未获得可对应本产品的任务完成或问题记录，不将同名项目当本案例。
-- 独立评论站 · `Rocket Money bill negotiation review (domains: trustpilot.com)`：找到竞品评论页面；证据抓取被robots禁止，未纳入事实、观察或评分。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 反对完全否定商业机会的证据：Rocket Money已有公开成功收费与交付规则，Meta有执行架构，消费者节省确有可收费替代。反对立即商业化的证据：报道自承员工与活动偏差，原生退款及免费代理可替代，新经营者未证明转化与单位成本；典型收益无法由2120.95美元自述推出。商家购物阻断是局部报道，不能泛化为全部渠道被封。
 
-未核验本人账户、收款或完整操作日志，未做产品实测或采访；未取得Muse专项收入、利润、成功率、定价明细、完整服务条款及安全专页。security.muse.ai（含尾斜杠）被抓取器拒绝302，muse.ai/terms与Trustpilot被robots限制，ai.meta.com/muse可读内容不足。均不算已读来源。源码、商家接受率、客户留存和人均工时未知；两种经济模型全部是经营假设，不能称已实现财务结果。
+账户结果、收款、完整日志、商家接受率、定价、收入与留存未知。服务条款与安全安排仍需确认，成本模型采用假设。
 
 ## 具体动作与止损条件
 
@@ -266,6 +244,3 @@ B：低成功率与高人工假设假设：全部为研究者假设：成功率2
 - [Sa02b9db14c7c] [Introducing Muse: The World’s First Personal AI Agent Built for Everyone](https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/)：官方发布确认专属虚拟机、浏览器、Sentinel及审批控制和美国分发范围；功能承诺不等于效果审计。
 
 结构化记录：[research/negotiate-bills-handle-returns-and-cancel-subscriptions.json](../research/negotiate-bills-handle-returns-and-cancel-subscriptions.json)
-来源读取凭据：[research/evidence/negotiate-bills-handle-returns-and-cancel-subscriptions.json](../research/evidence/negotiate-bills-handle-returns-and-cancel-subscriptions.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

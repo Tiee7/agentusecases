@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "42a5b3cc55d2664507d923f7af89766d01e2a6cd77f633d0e5fb6d4bf858c82f",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code with the Chrome extension parsed Amazon invoice PDFs and spotted duplicates, but couldn't upload files and was slow, so the user had to step in.",
+      "sha256": "42a5b3cc55d2664507d923f7af89766d01e2a6cd77f633d0e5fb6d4bf858c82f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4963551c147f9fa2a5ab40029df9a0493f4c7dcedc76206eb6cd4e777d87847f",
-      "publication": "reviewed_restatement_required"
+      "value": "The user exported 2025 Amazon invoice PDFs showing FSA-eligible amounts. They told Claude Code to read each PDF's eligible amount and order date, then submit a reimbursement claim in the already-open Optum portal through the Chrome extension. Claude parsed the PDFs and flagged two duplicates. The extension couldn't upload files, and ChatGPT agent mode and Claude Desktop also failed. Claude Code with Playwright MCP worked.",
+      "sha256": "4963551c147f9fa2a5ab40029df9a0493f4c7dcedc76206eb6cd4e777d87847f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b8ab43d4cf7a201beac99ba501b44622c8ee1fe4e11424837f78a9bbcc510396",
-      "publication": "reviewed_restatement_required"
+      "value": "Playwright MCP could upload files and ran faster. After the first submission Claude Code wrote a script for the rest, and about a dozen claims were submitted in roughly two minutes.",
+      "sha256": "b8ab43d4cf7a201beac99ba501b44622c8ee1fe4e11424837f78a9bbcc510396"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4db524bd2c2e48b56050f2da58e16712627bb3e8f12342f88a50ec46f3709018",
-      "publication": "reviewed_restatement_required"
+      "value": "The Chrome extension needed other Chrome extensions disabled to take screenshots, and it took nearly a minute to find a button. Playwright MCP avoided both problems.",
+      "sha256": "4db524bd2c2e48b56050f2da58e16712627bb3e8f12342f88a50ec46f3709018"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "File FSA reimbursement claims from invoice PDFs\nClaude Code with the Chrome extension parsed Amazon invoice PDFs and spotted duplicates, but couldn't upload files and was slow, so the user had to step in.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nThe user exported 2025 Amazon invoice PDFs showing FSA-eligible amounts. They told Claude Code to read each PDF's eligible amount and order date, then submit a reimbursement claim in the already-open Optum portal through the Chrome extension. Claude parsed the PDFs and flagged two duplicates. The extension couldn't upload files, and ChatGPT agent mode and Claude Desktop also failed. Claude Code with Playwright MCP worked.\nHow it went\nPlaywright MCP could upload files and ran faster. After the first submission Claude Code wrote a script for the rest, and about a dozen claims were submitted in roughly two minutes.\nWorth knowing\nThe Chrome extension needed other Chrome extensions disabled to take screenshots, and it took nearly a minute to find a button. Playwright MCP avoided both problems.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nParse the invoice PDFs in [folder path] to extract amounts, dates and vendors for my FSA reimbursement claims, flagging any duplicates. Produce a clean summary spreadsheet ready for me to manually upload to my FSA portal, since file uploads may need to be done by hand.\nOriginal source: https://b2.broom9.com/?p=14418",
+    "body_sha256": "ecbf0481f48906c35f5fd3b34a7c0e2e74a473462bf3af19c76be774ec985961",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

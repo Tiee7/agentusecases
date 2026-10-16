@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a54ee3fcb2c9494ad785648eea32d215366d7094a2b4995496d3971981ccb273",
-      "publication": "reviewed_restatement_required"
+      "value": "A DevOps engineer uses Cursor with a Kubernetes MCP to pull prod logs and suggest fixes, and to repair a broken docker-compose file.",
+      "sha256": "a54ee3fcb2c9494ad785648eea32d215366d7094a2b4995496d3971981ccb273"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "91aa64d9bd4f2ea7e95df5178611c4d6efedaf1f8be9fbd3ba8b2abd74a1c85a",
-      "publication": "reviewed_restatement_required"
+      "value": "With a Kubernetes MCP enabled in Cursor, Rajesh Sood asks in plain language for the logs of a named prod pod. Cursor pulls them and suggests fixes without him running kubectl. For a broken docker-compose.yml, he turned on the agent setting that runs commands automatically. He told it to keep retrying a compose dry-run until the build errors cleared.",
+      "sha256": "91aa64d9bd4f2ea7e95df5178611c4d6efedaf1f8be9fbd3ba8b2abd74a1c85a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cef0ddd1e9f6439c13b10597f684b8b5e3a988591fb5f9364ef975e57196c9a3",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says the agent iterated on its own until the compose file passed. The article gives no numbers, and no example output from the prod log debugging.",
+      "sha256": "cef0ddd1e9f6439c13b10597f684b8b5e3a988591fb5f9364ef975e57196c9a3"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a8364a166a371424e819211f901bcc05db27d6cf6a45dec532a66afd878d0716",
-      "publication": "reviewed_restatement_required"
+      "value": "He says Cursor once hallucinated secrets from a .env file; adding .env to .cursorignore fixed it. He also advises committing often, because agent changes can go wrong.",
+      "sha256": "a8364a166a371424e819211f901bcc05db27d6cf6a45dec532a66afd878d0716"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Debug prod pods and docker-compose with Cursor\nA DevOps engineer uses Cursor with a Kubernetes MCP to pull prod logs and suggest fixes, and to repair a broken docker-compose file.\nDone with\nCR\nCursor\nWhat they did\nWith a Kubernetes MCP enabled in Cursor, Rajesh Sood asks in plain language for the logs of a named prod pod. Cursor pulls them and suggests fixes without him running kubectl. For a broken docker-compose.yml, he turned on the agent setting that runs commands automatically. He told it to keep retrying a compose dry-run until the build errors cleared.\nHow it went\nThe author says the agent iterated on its own until the compose file passed. The article gives no numbers, and no example output from the prod log debugging.\nWorth knowing\nHe says Cursor once hallucinated secrets from a .env file; adding .env to .cursorignore fixed it. He also advises committing often, because agent changes can go wrong.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to my Kubernetes cluster via MCP, pull recent logs for [pod/deployment name], diagnose the issue, and suggest a fix. Also check my docker-compose.yml for errors and propose corrected version, showing me the diff before applying any changes.\nOriginal source: https://medium.com/@soodrajesh/advanced-tips-and-tricks-for-cursor-ide-7dc236ff9870",
+    "body_sha256": "d3ab8e3493cb7e4e0081c461d50f46b2daee9c313b3ce078639489a5c9dd6e6e",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

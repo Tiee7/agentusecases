@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5fbea7205bb03e68bf5802c2c48dd1669ee03bc5495293d85d5d6eaf723f728",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow checks product URLs from a Google Sheet three times a day, compares prices, emails changes and logs every check.",
+      "sha256": "a5fbea7205bb03e68bf5802c2c48dd1669ee03bc5495293d85d5d6eaf723f728"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "45adaccba9fd89d5a80321661395b0902d5a22b7786667e9beaf7537ddcf396d",
-      "publication": "reviewed_restatement_required"
+      "value": "A seven-node n8n workflow runs at 9am, 3pm and 9pm. It reads product names, URLs and last prices from a Google Sheet, fetches each page and pulls the price out with a regex in a code node. It compares that to the last price, emails an alert through Gmail if it changed, and logs results to a history sheet.",
+      "sha256": "45adaccba9fd89d5a80321661395b0902d5a22b7786667e9beaf7537ddcf396d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9510f02ce0238aa354b24f3184fee856ef2a5e290019c4e68449ee1c628d8cab",
-      "publication": "reviewed_restatement_required"
+      "value": "The author tracks 12 products, including 4 direct competitors, and says they now match competitor price drops within the hour instead of noticing days later. Logged history also revealed a competitor's Friday price-drop pattern.",
+      "sha256": "9510f02ce0238aa354b24f3184fee856ef2a5e290019c4e68449ee1c628d8cab"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d6ad9cce3edc5f416aa0d629e7123f9dae688278ea4e2ff5ae703dd63054f5cd",
-      "publication": "reviewed_restatement_required"
+      "value": "Some sites return 403 to scrapers, and the regex price extraction may need adjusting for other formats. A User-Agent header or an official API can help.",
+      "sha256": "d6ad9cce3edc5f416aa0d629e7123f9dae688278ea4e2ff5ae703dd63054f5cd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor Amazon and eBay prices and email on changes\nAn n8n workflow checks product URLs from a Google Sheet three times a day, compares prices, emails changes and logs every check.\nDone with\nN8\nn8n\nWhat they did\nA seven-node n8n workflow runs at 9am, 3pm and 9pm. It reads product names, URLs and last prices from a Google Sheet, fetches each page and pulls the price out with a regex in a code node. It compares that to the last price, emails an alert through Gmail if it changed, and logs results to a history sheet.\nHow it went\nThe author tracks 12 products, including 4 direct competitors, and says they now match competitor price drops within the hour instead of noticing days later. Logged history also revealed a competitor's Friday price-drop pattern.\nWorth knowing\nSome sites return 403 to scrapers, and the regex price extraction may need adjusting for other formats. A User-Agent header or an official API can help.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that reads product URLs from my Google Sheet [sheet name], checks the current Amazon or eBay price three times a day, and compares it to the last saved price. If the price changed, email me to [my email] with old and new prices, and log every check in the sheet. It's done when a test run updates the sheet and a simulated change sends one email.\nOriginal source: https://dev.to/flowkithq/stop-checking-competitor-prices-manually-automate-it-with-n8n-free-workflow-json-2li3",
+    "body_sha256": "dae9896066efc68a02da73076c3c20d1456d0a32edd6b5e6d8343fd6087842c3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

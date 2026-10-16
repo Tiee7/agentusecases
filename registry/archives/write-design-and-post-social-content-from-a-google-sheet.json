@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d16908d90eeb17f3ef43afe3268d6c0c2c6a902e2e64ff77eac79defd11733e5",
-      "publication": "reviewed_restatement_required"
+      "value": "An automation built with Make, OpenAI, Cloudinary and Buffer writes captions, designs content and posts it across social platforms from a sheet.",
+      "sha256": "d16908d90eeb17f3ef43afe3268d6c0c2c6a902e2e64ff77eac79defd11733e5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "61e337cfbca74358b9eebbd4f168cf5fdf2f1f3868e5d0dddbaf9de0625b90c1",
-      "publication": "reviewed_restatement_required"
+      "value": "The setup starts with one Google Sheets row carrying the post idea, audience and tone. In Make, the flow uses OpenAI to write a caption, generates an image with DALL·E or another image model, uploads that image to Cloudinary, writes the assets back to the sheet, then sends a Slack approval notice before Buffer publishes the post; the person checks the caption and image in Slack and approves it.",
+      "sha256": "61e337cfbca74358b9eebbd4f168cf5fdf2f1f3868e5d0dddbaf9de0625b90c1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f045e6723d68f1347f3452dd1f4c036341f980d63ebcc09b69939eacb8f685c",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster says it turns a sheet row into a published social post in under two minutes and can handle the caption, image and posting end to end. They describe it as consistent, but still keep a human approval step before anything goes live.",
+      "sha256": "5f045e6723d68f1347f3452dd1f4c036341f980d63ebcc09b69939eacb8f685c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b734fb245964e331585a37c61df2011895267ae9c109277dedde8d8a2d83c31b",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is that it is not fully hands-off: approval happens in Slack before publishing, and the builder says they got Make stable by adding error handling and filters.",
+      "sha256": "b734fb245964e331585a37c61df2011895267ae9c109277dedde8d8a2d83c31b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write, design and post social content from a Google Sheet\nAn automation built with Make, OpenAI, Cloudinary and Buffer writes captions, designs content and posts it across social platforms from a sheet.\nDone with\nMK\nMake\nWhat they did\nThe setup starts with one Google Sheets row carrying the post idea, audience and tone. In Make, the flow uses OpenAI to write a caption, generates an image with DALL·E or another image model, uploads that image to Cloudinary, writes the assets back to the sheet, then sends a Slack approval notice before Buffer publishes the post; the person checks the caption and image in Slack and approves it.\nHow it went\nThe poster says it turns a sheet row into a published social post in under two minutes and can handle the caption, image and posting end to end. They describe it as consistent, but still keep a human approval step before anything goes live.\nWorth knowing\nThe main catch is that it is not fully hands-off: approval happens in Slack before publishing, and the builder says they got Make stable by adding error handling and filters.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that reads rows from my Google Sheet [sheet link] containing post topics, writes captions in [brand voice] using OpenAI, creates an image for each, and queues them in Buffer for [platforms]. Mark each row as done once it's queued. Run it on one test row and show me the caption, image and scheduled time before anything is posted publicly.\nOriginal source: https://www.reddit.com/r/automation/comments/1lff4ph/i_built_an_automation_that_writes_designs_and",
+    "body_sha256": "2f43ce4b84f0a9ca1db795752f9da85f8a699a0af0444f63fb9e36b4bfd302ed",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

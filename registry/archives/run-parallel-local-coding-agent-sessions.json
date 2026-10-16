@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "58e07280544e176ddc5775da95770cb49c0ac754bc3f1dc6f02e817ff15f8a07",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer runs up to 10 coding agent sessions at once, using Claude Code and local models on RTX 3090s with cached contexts for daily development work.",
+      "sha256": "58e07280544e176ddc5775da95770cb49c0ac754bc3f1dc6f02e817ff15f8a07"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3d7e2d099249c165a041147fcf968f904506ce895efb6339220640bf719e1c56",
-      "publication": "reviewed_restatement_required"
+      "value": "Roark66 runs coding agents on RTX 3090s with 24GB each, using Claude Code alongside local models. They keep up to 10 agent sessions open at once, though never more than 5 are active at the same moment. Because they control inference, they keep full contexts cached in RAM and can save the cache to disk, so a session isn't re-read in full after sitting idle.",
+      "sha256": "3d7e2d099249c165a041147fcf968f904506ce895efb6339220640bf719e1c56"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a9aea455d574998b0d41bd2db98cc31dd5ad262033d205b93a0cbb3a102ab96d",
-      "publication": "reviewed_restatement_required"
+      "value": "Holding about 15 full contexts cached in RAM pushes their local cache utilisation to 95% or more. They say their usage of roughly 1.3B input tokens a week would cost thousands of USD at API prices.",
+      "sha256": "a9aea455d574998b0d41bd2db98cc31dd5ad262033d205b93a0cbb3a102ab96d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "e50726ec9458b979172f5de25174067f624c81e30b8040d2992420a600224e33",
-      "publication": "reviewed_restatement_required"
+      "value": "Cloud caches expire after 5 minutes or 1 hour, so an idle 500k context gets billed as full input again; local caching avoids that, but you need enough RAM to hold the contexts.",
+      "sha256": "e50726ec9458b979172f5de25174067f624c81e30b8040d2992420a600224e33"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run parallel local coding agent sessions\nA developer runs up to 10 coding agent sessions at once, using Claude Code and local models on RTX 3090s with cached contexts for daily development work.\nDone with\nCC\nClaude Code\nWhat they did\nRoark66 runs coding agents on RTX 3090s with 24GB each, using Claude Code alongside local models. They keep up to 10 agent sessions open at once, though never more than 5 are active at the same moment. Because they control inference, they keep full contexts cached in RAM and can save the cache to disk, so a session isn't re-read in full after sitting idle.\nHow it went\nHolding about 15 full contexts cached in RAM pushes their local cache utilisation to 95% or more. They say their usage of roughly 1.3B input tokens a week would cost thousands of USD at API prices.\nWorth knowing\nCloud caches expire after 5 minutes or 1 hour, so an idle 500k context gets billed as full input again; local caching avoids that, but you need enough RAM to hold the contexts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to work on [N] separate tasks in my repo at [path] at the same time. For each task, create its own git worktree and branch, work on it independently, run the tests, and summarize what changed. The tasks are: [task 1], [task 2], [task 3]. Stop when each branch has a passing diff ready for my review, and do not merge anything.\nOriginal source: https://news.ycombinator.com/item?id=49992657",
+    "body_sha256": "878496a9cdd070409f6551ff645d5b609add1a2e3b9df4c4b5b5053170b1d189",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

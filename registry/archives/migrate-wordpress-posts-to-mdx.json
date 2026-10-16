@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f199855587b7562403baef719eef086eefc264f9c51303ff0c5c55770bedb8af",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code pulled posts from the WordPress REST API and converted them to MDX with frontmatter, migrating 367 posts and 5 pages in one session.",
+      "sha256": "f199855587b7562403baef719eef086eefc264f9c51303ff0c5c55770bedb8af"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "01d8455863d3e76b7e3c05d22b34919934c5e947653b8b07f10b45169e364642",
-      "publication": "reviewed_restatement_required"
+      "value": "Pauline gave Claude Code, running as a terminal agent, one goal. It was to extract all posts from her WordPress REST API, convert them to MDX with frontmatter, and save them into year-based folders. It handled API rate-limiting, turned the HTML into Markdown, and re-ran its script after an encoding error. She says she directed and reviewed while doing other things.",
+      "sha256": "01d8455863d3e76b7e3c05d22b34919934c5e947653b8b07f10b45169e364642"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a593c26ac855bc0e9244c75295c9fae627dbe2dc2139be6ff951bd02c13c5a28",
-      "publication": "reviewed_restatement_required"
+      "value": "All 367 posts and 5 pages moved to local MDX in one afternoon, which she puts at about 4 hours. Old posts with broken image tags stalled the build, and Claude fixed them with a regex across the directory.",
+      "sha256": "a593c26ac855bc0e9244c75295c9fae627dbe2dc2139be6ff951bd02c13c5a28"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9411ecbe2e8779144992fff4cb57f647cc04fddaf536e9d35ce9b2027909e191",
-      "publication": "reviewed_restatement_required"
+      "value": "Expect build failures from messy legacy HTML, such as broken image tags. Let the agent read the build errors and fix them in bulk.",
+      "sha256": "9411ecbe2e8779144992fff4cb57f647cc04fddaf536e9d35ce9b2027909e191"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate WordPress posts to MDX\nClaude Code pulled posts from the WordPress REST API and converted them to MDX with frontmatter, migrating 367 posts and 5 pages in one session.\nDone with\nCC\nClaude Code\nWhat they did\nPauline gave Claude Code, running as a terminal agent, one goal. It was to extract all posts from her WordPress REST API, convert them to MDX with frontmatter, and save them into year-based folders. It handled API rate-limiting, turned the HTML into Markdown, and re-ran its script after an encoding error. She says she directed and reviewed while doing other things.\nHow it went\nAll 367 posts and 5 pages moved to local MDX in one afternoon, which she puts at about 4 hours. Old posts with broken image tags stalled the build, and Claude fixed them with a regex across the directory.\nWorth knowing\nExpect build failures from messy legacy HTML, such as broken image tags. Let the agent read the build errors and fix them in bulk.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nPull all posts and pages from my WordPress site at [site URL] using the REST API and convert each one to an MDX file with frontmatter (title, date, slug, tags, [other fields]). Save them in [folder path] in my project. Finish by giving me a count of posts and pages converted and a list of any that had formatting problems you couldn't fix cleanly.\nOriginal source: https://www.pawlean.com/posts/migrate-wordpress-to-mdx-claude-code",
+    "body_sha256": "0c2694a3a2272da547a98dc781bf89ffafae4c034313001f2e2b517c0177f6de",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

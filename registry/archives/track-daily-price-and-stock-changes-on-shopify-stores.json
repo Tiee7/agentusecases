@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "38811955d7343b17e7ac8cd1def2e76c4ccd5f1c898b5c32dfdbe52ecb21fc07",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent reads a Shopify store's public product feed daily and reports new, removed, price and stock changes, e.g. 692 products at allbirds.com.",
+      "sha256": "38811955d7343b17e7ac8cd1def2e76c4ccd5f1c898b5c32dfdbe52ecb21fc07"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "282630b212110066eddfa4ad570504ff2707432259905de68330f63b76dcb96d",
-      "publication": "reviewed_restatement_required"
+      "value": "The Store Price Tracker tool reads a Shopify store's public products.json feed, up to 250 products per page, and keeps a daily snapshot, because the feed has no price history. Each answer compares the latest snapshot with the previous day's: new and removed products, price changes and per-variant stock changes. It checks robots.txt first, identifies itself, and backs off on 429 responses.",
+      "sha256": "282630b212110066eddfa4ad570504ff2707432259905de68330f63b76dcb96d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cca2b4823c655231abbfde2e5f64b94197128f9aacc7c3ea17bf8f8f848c318a",
-      "publication": "reviewed_restatement_required"
+      "value": "Across three stores, allbirds.com showed 692 products, 0 price changes and 10 stock changes. gymshark.com had 10,027 products read, 6 new, 0 price changes and 266 stock changes. Kylie Cosmetics (247 products) was only just added.",
+      "sha256": "cca2b4823c655231abbfde2e5f64b94197128f9aacc7c3ea17bf8f8f848c318a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "35ae842acc125798834c74ac39525d6473e37c79ae6927137a0f67fdcd93db9a",
-      "publication": "reviewed_restatement_required"
+      "value": "On very large catalogs the read stops at a page limit, so removed products can't be counted. The /cart.json Shopify check also returns 404 on custom storefronts such as gymshark.",
+      "sha256": "35ae842acc125798834c74ac39525d6473e37c79ae6927137a0f67fdcd93db9a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track daily price and stock changes on Shopify stores\nAn agent reads a Shopify store's public product feed daily and reports new, removed, price and stock changes, e.g. 692 products at allbirds.com.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe Store Price Tracker tool reads a Shopify store's public products.json feed, up to 250 products per page, and keeps a daily snapshot, because the feed has no price history. Each answer compares the latest snapshot with the previous day's: new and removed products, price changes and per-variant stock changes. It checks robots.txt first, identifies itself, and backs off on 429 responses.\nHow it went\nAcross three stores, allbirds.com showed 692 products, 0 price changes and 10 stock changes. gymshark.com had 10,027 products read, 6 new, 0 price changes and 266 stock changes. Kylie Cosmetics (247 products) was only just added.\nWorth knowing\nOn very large catalogs the read stops at a page limit, so removed products can't be counted. The /cart.json Shopify check also returns 404 on custom storefronts such as gymshark.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a small script that reads the public products feed of [store URL, e.g. store.com/products.json] each day and saves a snapshot. Compare each day to the previous one and report new products, removed products, price changes and stock changes in a short summary. Run it once now to create the first snapshot and show me the product count, then set it up to run daily at [time].\nOriginal source: https://tools.openkrill.app/blog/shopify-products-json-price-tracker",
+    "body_sha256": "66f6db4e1276991c9afd84e2616bbc195c92e0f7335cc11beb83b898c21bf426",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

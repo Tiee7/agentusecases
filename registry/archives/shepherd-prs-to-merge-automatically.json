@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e9846791329e0c6c0521627b4c881e07680693e7267c6de5812371cc008fac14",
-      "publication": "reviewed_restatement_required"
+      "value": "Bots check PRs every 30 minutes, send failures back to a cloud agent, review clean PRs and auto-merge high-confidence, low-risk ones.",
+      "sha256": "e9846791329e0c6c0521627b4c881e07680693e7267c6de5812371cc008fac14"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "bf81c815421d65a7e61da1a3fb016ad80186928665b222bae64ab30e79d4fc2d",
-      "publication": "reviewed_restatement_required"
+      "value": "Each engineer bot keeps a shared Notion database of PRs. Every 30 minutes it checks each PR for Bugbot or security comments, failing CI and merge conflicts. Problems go back to the cloud agent, and the row moves to Working. Clean PRs are marked Ready for Review and get a review run. Highly confident, low-blast-radius PRs are merged automatically. The author reviews the rest.",
+      "sha256": "bf81c815421d65a7e61da1a3fb016ad80186928665b222bae64ab30e79d4fc2d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3b7ee60ff0eb1b04152079d2fae47c34a2768e368af2546faae75c585c4e15b5",
-      "publication": "reviewed_restatement_required"
+      "value": "The author finds tasks ready to merge almost every morning. The fleet manages over 200 cloud agents at once, up from about 15 by hand. The source gives no merge-rate figures.",
+      "sha256": "3b7ee60ff0eb1b04152079d2fae47c34a2768e368af2546faae75c585c4e15b5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "e23541868e9c5123776489ecdb5418b0d3f4fb3bc2224f6305a08e9a9544a67a",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says rapid transcript-checking routines, like the 5-minute P0 mode, burn tokens faster than expected, so keep them for true urgency.",
+      "sha256": "e23541868e9c5123776489ecdb5418b0d3f4fb3bc2224f6305a08e9a9544a67a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Shepherd PRs to merge automatically\nBots check PRs every 30 minutes, send failures back to a cloud agent, review clean PRs and auto-merge high-confidence, low-risk ones.\nDone with\nGB\nGrok Bot\nWhat they did\nEach engineer bot keeps a shared Notion database of PRs. Every 30 minutes it checks each PR for Bugbot or security comments, failing CI and merge conflicts. Problems go back to the cloud agent, and the row moves to Working. Clean PRs are marked Ready for Review and get a review run. Highly confident, low-blast-radius PRs are merged automatically. The author reviews the rest.\nHow it went\nThe author finds tasks ready to merge almost every morning. The fleet manages over 200 cloud agents at once, up from about 15 by hand. The source gives no merge-rate figures.\nWorth knowing\nThe author says rapid transcript-checking routines, like the 5-minute P0 mode, burn tokens faster than expected, so keep them for true urgency.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nEvery 30 minutes, check open pull requests in [repo]. Send failing PRs back to a coding agent to fix, and review the clean ones. Only auto-merge a PR if you are highly confident and it is low-risk, such as [examples]; otherwise ping me with a summary. Pause and ask me before merging anything that touches [sensitive areas].\nOriginal source: https://x.ai/bot/guides/grok-bot-for-engineering",
+    "body_sha256": "ef22e556799780063c4cc644649b6fe204aee2f604332a494724cb3458f547c8",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

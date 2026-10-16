@@ -1,36 +1,30 @@
 # 旧姓名无人认领财产查询：适合内部效率工具，免费官方替代压缩独立收费空间
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/search-state-databases-for-unclaimed-property-under-old-name
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude
-
-### 介绍
-
-A community post proposes searching for forgotten property across former residences and names.
-
-一篇社区帖子提出按曾居住地区及曾用名寻找遗忘财产。
-
-### 方法
-
-Claude is asked to consult official databases and return traceable matches with claim links. A commenter recommends rejecting matches without precise source evidence.
-
-用户要求 Claude 检索官方数据库并返回可追溯匹配及申领链接；评论者建议剔除缺少精确来源的匹配。
-
-### 结果与限制
-
-No personal payout or success rate is provided. Suggestions to use other products in comments do not establish which tool performed the original case.
-
-没有提供个人到账金额或成功率；评论中的其他产品建议不能证明原案例实际使用的工具。
+    Search state databases for unclaimed property under old names
+    The poster asked Claude to search unclaimed property databases in every state they lived in, using their name and old names.
+    Done with
+    CL
+    Claude
+    What they did
+    The poster had Claude search official unclaimed-property databases using their current and old names plus every state they had lived in. The prompt told it to use official sources such as MissingMoney.com and each state treasury site, then return any matches with the source, amount if shown, and the link to start a claim; a commenter added that each claim should cite the exact database row or page or be dropped.
+    How it went
+    The post presents this as a reliable way to surface forgotten funds tied to old addresses or past names, but it gives no personal recovery amount or success-rate numbers. Comments say Claude Cowork could run it, while one person said Gemini did not work for them.
+    Worth knowing
+    The main catch is to search and claim only through official sites; the post says charging a fee, percentage, subscription, or asking for bank login to release your money is a red flag.
+    Try it yourself
+    with
+    Claude in Chrome
+    Copy prompt
+    Search the official unclaimed property databases for each state I've lived in: [list of states]. Search under my name [full name] and previous names [maiden or old names], plus my past addresses [cities], and give me a table of any matches with amount, holder and claim link. Do not submit any claim or enter personal ID numbers, and pause and show me the details first.
+    Original source: https://www.reddit.com/r/PromptEngineering/comments/1vrij5c/about_1_in_7_people_have_unclaimed_money_sitting
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/PromptEngineering/comments/1vrij5c/about_1_in_7_people_have_unclaimed_money_sitting)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ No personal payout or success rate is provided. Suggestions to use other product
 建议把此工作流用于本人或已有客户授权的资料整理，不投入独立面向消费者的收费搜索产品。真实需求是避免旧姓名、旧地址造成遗漏，付款人却尚未被验证：财产所有人可免费查询并认领，服务商只有在复杂证据整理中才可能增加价值。案例没有实际回款数据，邻近开源项目明确不收费且仍在早期测试；人工核对同名记录、处理证件和补材料的成本不会因生成表格消失。可保留低成本内部助手，商业扩张须先证明相对人工免费流程的净增益。
 
 案例ID：`search-state-databases-for-unclaimed-property-under-old-name` · 案例来源：https://agentusecases.ai/use-case/search-state-databases-for-unclaimed-property-under-old-name
-研究时间：2026-10-15T04:29:13.220582+00:00 · 证据置信度：官方免费查询与认领规则证据较强；案例原帖受robots限制，仅能核验聚合页。邻近项目为作者自述和说明文档，没有独立回款、付费客户或生产性能证据。
+研究时间：2026-10-15T04:29:13.220582+00:00
 
 **商业评分：34.5/100。用户反馈信号占5%。**
 
@@ -72,19 +66,13 @@ No personal payout or success rate is provided. Suggestions to use other product
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/search-state-databases-for-unclaimed-property-under-old-name
 
-观测时间：2026-10-16T02:51:05.287382+00:00
-
-建议运行工具：Claude in Chrome（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Claude in Chrome
 
     Search the official unclaimed property databases for each state I've lived in: [list of states]. Search under my name [full name] and previous names [maiden or old names], plus my past addresses [cities], and give me a table of any matches with amount, holder and claim link. Do not submit any claim or enter personal ID numbers, and pause and show me the details first.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -94,9 +82,9 @@ No personal payout or success rate is provided. Suggestions to use other product
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Se54e9a9007c2, Sd46ae4f22409, S2bb00e5f9162, S73111fb3abeb, S889745999a77
 
@@ -109,9 +97,9 @@ No personal payout or success rate is provided. Suggestions to use other product
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Se54e9a9007c2, Sd46ae4f22409, S2bb00e5f9162, S73111fb3abeb, S889745999a77
 
@@ -191,8 +179,7 @@ No personal payout or success rate is provided. Suggestions to use other product
 
 ## 用户评价怎样改变判断
 
-本轮执行了六条搜索，覆盖Reddit社区、BBB投诉检索和Trustpilot评论渠道。返回中存在大量不相关泛化结果；只有邻近认领流程的Reddit线索较相关，但读取仍受robots限制。不能把搜索摘要、聚合页转述“Gemini没用”或“Cowork能跑”当作已核验直接用户评价，更不能对几条评论计算满意度。原始案例没有拿到可读全文，直接用户反馈项因此记零，含义是没有独立验证信号，不是用户给零分。
-Bryan的文章和README是邻近项目作者对自身探索的说明，不是付费客户评价。他提到初步正面回应但没有可核对的用户原话、成功认领样本或回款分布，本报告没有把它放入独立反馈观察。现有反馈不足以改变免费替代和人工成本主导的判断。后续若取得授权测试，应记录所有尝试的失败、误配、补材料和退出情况，避免只采纳找到大额记录的成功故事；反馈权重严格为5%。
+暂无直接用户反馈。
 
 依据：Se54e9a9007c2, S556e4cae4a36, S73111fb3abeb
 
@@ -214,21 +201,11 @@ Bryan的文章和README是邻近项目作者对自身探索的说明，不是付
 
 假设：独立外售高接触假设：所有金额及任务量为假设，人工45分钟×30美元/小时；没有把候选资产当收入，不含认领保证。收费合法性未验证，不能作为实际出售建议；算力是预算，不是实测API账单。；API成本 1，人工成本 22.5，其他可变成本 3，分摊获客成本 20。依据：Sd46ae4f22409, S889745999a77
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `site.reddit.com "1vrij5c" unclaimed money`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- Reddit社区 · `site.reddit.com unclaimed property MissingMoney claim experience`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- BBB投诉 · `unclaimed property finder complaints BBB fees missingmoney`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- Reddit社区 · `"Claude" "unclaimed money" "reddit"`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- Trustpilot评论 · `"MissingMoney" "review" "Trustpilot"`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- Reddit社区 · `"unclaimed property" "experience" "reddit"`：搜索未提供可读取的直接用户验证；多数结果不相关，邻近Reddit线索因robots受限未纳入事实或评价。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 免费查询并未消灭复杂材料服务：NAUPA仍要求确权文件，加州允许符合条件的调查员收费。但这支持专业服务的可能需求，不证明本案例能交付。邻近项目约1000万美元仅为作者称已联系的候选记录价值，其README明确不收费且在早期测试，直接反驳据此推导可观收入的乐观判断。
 
-原始Reddit帖和邻近社区页面受robots限制，无法核对评论；未运行项目、未做真实或合成搜索实验、未查询个人信息、未提交表单、未注册购买或联系第三方。未取得该案例独立代码、产品定价、条款、付费客户、回款率或审计数据。公开README不是完整代码。无全国费率结论，无可靠TAM及成功率估计。目录于2026-10-15T04:25:31Z完整刷新1314条、采样5条；小时数据库为新基线，相对上轮登记ID集合无变化，不能证明未采样正文无变化。
+本案例独立代码、定价、付费客户、回款率与审计数据未知。现有资料不足以估算全国费率、可靠市场规模或成功率。
 
 ## 具体动作与止损条件
 
@@ -247,6 +224,3 @@ Bryan的文章和README是邻近项目作者对自身探索的说明，不是付
 - [S73111fb3abeb] [/brshallo/escheat-finder/main/README.md](https://raw.githubusercontent.com/brshallo/escheat-finder/main/README.md)：邻近项目公开README说明早期测试、不收费、不代申领、过滤和人工置信度筛选，仓库并非完整可复现实现。
 
 结构化记录：[research/search-state-databases-for-unclaimed-property-under-old-name.json](../research/search-state-databases-for-unclaimed-property-under-old-name.json)
-来源读取凭据：[research/evidence/search-state-databases-for-unclaimed-property-under-old-name.json](../research/evidence/search-state-databases-for-unclaimed-property-under-old-name.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

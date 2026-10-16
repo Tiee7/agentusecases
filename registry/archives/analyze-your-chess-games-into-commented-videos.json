@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4da9bbd1fe2c82b1fa20155144ab416071fc253f9c4f47f915e6baba876a0542",
-      "publication": "reviewed_restatement_required"
+      "value": "A Claude Code skill uses Claude vision plus Stockfish and your audio notes to turn a Lichess game into a commented video analysis.",
+      "sha256": "4da9bbd1fe2c82b1fa20155144ab416071fc253f9c4f47f915e6baba876a0542"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "24e750f6e40aa0c6c4fc50c900f4590da972b188339e7c871ab7985ad307944f",
-      "publication": "reviewed_restatement_required"
+      "value": "The author recorded themselves thinking aloud during a 15+10 rapid game, then gave Claude Code the Lichess link and the mp3. Claude transcribed it locally with whisper.cpp and matched sentences to moves using PGN clock times. It ran a Stockfish sweep, and subagents questioned the engine about each mistake. A verifier pass checked the result, then a storyboard became a narrated video.",
+      "sha256": "24e750f6e40aa0c6c4fc50c900f4590da972b188339e7c871ab7985ad307944f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "502ce5dadbedd7c97888fff09e42cc5596ec6a60f7c753fe5e2061ee026a424f",
-      "publication": "reviewed_restatement_required"
+      "value": "It produced an annotated PGN, an HTML board and a 6:49 narrated video with subtitles for the author's real game. The author says errors are rare but the AI can still get things wrong.",
+      "sha256": "502ce5dadbedd7c97888fff09e42cc5596ec6a60f7c753fe5e2061ee026a424f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "edbb87829be8616987d4c7fc4f6fe3108f4c97d9c99f1f1a929e7c615d1437fd",
-      "publication": "reviewed_restatement_required"
+      "value": "A full run takes about an hour of processing, so use it on slow games where you took time to think, not on blitz.",
+      "sha256": "edbb87829be8616987d4c7fc4f6fe3108f4c97d9c99f1f1a929e7c615d1437fd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze your chess games into commented videos\nA Claude Code skill uses Claude vision plus Stockfish and your audio notes to turn a Lichess game into a commented video analysis.\nDone with\nCC\nClaude Code\nWhat they did\nThe author recorded themselves thinking aloud during a 15+10 rapid game, then gave Claude Code the Lichess link and the mp3. Claude transcribed it locally with whisper.cpp and matched sentences to moves using PGN clock times. It ran a Stockfish sweep, and subagents questioned the engine about each mistake. A verifier pass checked the result, then a storyboard became a narrated video.\nHow it went\nIt produced an annotated PGN, an HTML board and a 6:49 narrated video with subtitles for the author's real game. The author says errors are rare but the AI can still get things wrong.\nWorth knowing\nA full run takes about an hour of processing, so use it on slow games where you took time to think, not on blitz.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nTake my chess game from Lichess at [game URL] and analyze it with Stockfish to find the biggest mistakes and best moves. Combine that with my notes in [audio file or text file] and produce a commented video walkthrough of the game. Stop when the video file is saved and give me a short list of the key moments covered.\nOriginal source: https://github.com/brumar/chess-postmortem-skills",
+    "body_sha256": "52cf25273cc4b518dc969a45227cc457149b8957287e2e09fd6f7266a89c2808",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

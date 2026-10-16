@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8dc2384bf1c1bf1a71cf73127e6bccb28f906f6c667ae577eee32fba05654ff4",
-      "publication": "reviewed_restatement_required"
+      "value": "A consultant built a Claude agent that reads support Gmail, looks up orders, applies refund policy, drafts replies for human approval and creates triage records with optional Slack alerts.",
+      "sha256": "8dc2384bf1c1bf1a71cf73127e6bccb28f906f6c667ae577eee32fba05654ff4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f31fbd5220aad9d9e3b496b07033aeae638a434a7516869d47684743749442d1",
-      "publication": "reviewed_restatement_required"
+      "value": "For a fictional kitchenware brand demo, the consultant kept the returns policy and brand voice guide in Claude Projects. Gmail and Sheets connectors gave Claude the unread support emails and an orders sheet with final-sale, gift and prior-return flags. For each email it matched the order, walked a decision tree, and wrote a triage record with a drafted reply. Escalation flags sent edge cases to human review, and nothing was sent without a click.",
+      "sha256": "f31fbd5220aad9d9e3b496b07033aeae638a434a7516869d47684743749442d1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5d6b260199a91c174b27badf05513dcb20a0d389f8239141446f42634cee8efc",
-      "publication": "reviewed_restatement_required"
+      "value": "The author estimates 12–18 support hours saved weekly, assuming about 70% of requests are routine. Rough spots: right decisions sometimes cite the wrong policy section, tone on hard cases is imperfect, and there is no memory across interactions.",
+      "sha256": "5d6b260199a91c174b27badf05513dcb20a0d389f8239141446f42634cee8efc"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f03f0f9cc57cad54eae6fd73d965e080b64638b65e8438a0386ba5e02d57fe25",
-      "publication": "reviewed_restatement_required"
+      "value": "Cost is roughly $0.05 per email, about $4 a day at 80 emails. Keep the prompt thin and make policy changes in the policy and voice documents.",
+      "sha256": "f03f0f9cc57cad54eae6fd73d965e080b64638b65e8438a0386ba5e02d57fe25"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Triage support emails and draft refund-policy replies\nA consultant built a Claude agent that reads support Gmail, looks up orders, applies refund policy, drafts replies for human approval and creates triage records with optional Slack alerts.\nDone with\nCL\nClaude\nWhat they did\nFor a fictional kitchenware brand demo, the consultant kept the returns policy and brand voice guide in Claude Projects. Gmail and Sheets connectors gave Claude the unread support emails and an orders sheet with final-sale, gift and prior-return flags. For each email it matched the order, walked a decision tree, and wrote a triage record with a drafted reply. Escalation flags sent edge cases to human review, and nothing was sent without a click.\nHow it went\nThe author estimates 12–18 support hours saved weekly, assuming about 70% of requests are routine. Rough spots: right decisions sometimes cite the wrong policy section, tone on hard cases is imperfect, and there is no memory across interactions.\nWorth knowing\nCost is roughly $0.05 per email, about $4 a day at 80 emails. Keep the prompt thin and make policy changes in the policy and voice documents.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nWatch the support inbox [Gmail address or label]. For each new email, look up the order in [order system], apply our refund policy: [paste policy], and write a draft reply saved in Gmail without sending. Create a triage record in [tool] with category and urgency, and post a Slack alert to [channel] for anything urgent. Never send a reply or issue a refund without my approval.\nOriginal source: https://medium.com/@nitin_26346/building-a-customer-support-triage-agent-with-claude-a-walkthrough-89a812cc09bf",
+    "body_sha256": "dbc94c036c648683771ec219f02c4dccfd9145b4c92b2d88ad4754f29c830e71",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "30576de7fbccfe3d65918ff28ba428fcf0f847330085f5834759b5ae0a075823",
-      "publication": "reviewed_restatement_required"
+      "value": "The author had Claude run --help on Atlassian and GitLab CLIs, saved the actions as Markdown, and built lightweight agent plugins that cut token use.",
+      "sha256": "30576de7fbccfe3d65918ff28ba428fcf0f847330085f5834759b5ae0a075823"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e968c20f09d20b32ccb1b1af28cef003aa696dbfee86d3a9c550541805da619e",
-      "publication": "reviewed_restatement_required"
+      "value": "After finding the Jira and GitLab MCPs used too many tokens, the author installed the Atlassian and GitLab CLIs instead. They had Claude recursively run --help on each CLI and save every available action into separate Markdown files. Those files became two lightweight plugins, acli-skills and glab-skills, so the agent stops re-discovering commands each time.",
+      "sha256": "e968c20f09d20b32ccb1b1af28cef003aa696dbfee86d3a9c550541805da619e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4cbaca04dbb1da3472304f7503310c1eee7497eaf531d85c46f3ddcbd2c04138",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says the plugins do what the MCPs did with significantly less token consumption. No measured figures are given. Both repositories were open-sourced.",
+      "sha256": "4cbaca04dbb1da3472304f7503310c1eee7497eaf531d85c46f3ddcbd2c04138"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d1d08a896a09b9f49791f02d7936efbe17fde53aa8d7347193bc03c4e7a422a8",
-      "publication": "reviewed_restatement_required"
+      "value": "The author still finds MCPs worthwhile for rapid prototyping and internal tools, especially sampling and progress notifications for long-running tasks, so this swap suits single-purpose integrations.",
+      "sha256": "d1d08a896a09b9f49791f02d7936efbe17fde53aa8d7347193bc03c4e7a422a8"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Replace token-heavy Jira and GitLab MCPs with CLI skills\nThe author had Claude run --help on Atlassian and GitLab CLIs, saved the actions as Markdown, and built lightweight agent plugins that cut token use.\nDone with\nCC\nClaude Code\nWhat they did\nAfter finding the Jira and GitLab MCPs used too many tokens, the author installed the Atlassian and GitLab CLIs instead. They had Claude recursively run --help on each CLI and save every available action into separate Markdown files. Those files became two lightweight plugins, acli-skills and glab-skills, so the agent stops re-discovering commands each time.\nHow it went\nThe author says the plugins do what the MCPs did with significantly less token consumption. No measured figures are given. Both repositories were open-sourced.\nWorth knowing\nThe author still finds MCPs worthwhile for rapid prototyping and internal tools, especially sampling and progress notifications for long-running tasks, so this swap suits single-purpose integrations.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI use the [Jira, GitLab, or other] command line tool and want to replace its token-heavy MCP server with a lightweight skill. Run --help on the CLI and its subcommands, then write a Markdown skill file listing the common actions I need, such as [create ticket, list merge requests, comment], with exact example commands. Stop when the skill works on one real read-only task, and ask me before running any command that creates, changes or deletes anything.\nOriginal source: https://news.ycombinator.com/item?id=49788468",
+    "body_sha256": "6034ea85ef4392cb7d3d2e01ed88d981dc08651fbd4c3bf7bbd56f28b79e7296",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

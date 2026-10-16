@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e0860feddd054a05753e6764584f3916ddad5cc23c66fe27ec39a99c57b53a28",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenClaw monitors RSS feeds, scores items, compiles a digest with intros and sends a Telegram preview; the owner approves and it sends.",
+      "sha256": "e0860feddd054a05753e6764584f3916ddad5cc23c66fe27ec39a99c57b53a28"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "711c88f81dab96581fbaa8535ea0ec74997adeec3c8d3653ff169fdae6d6418d",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide builds five markdown skills wired together by cron jobs and a heartbeat. Every 6 hours the agent pulls about 120 RSS feeds plus Reddit and Hacker News into an inbox. Wednesday night it scores items on relevance, recency, source authority and engagement, with penalties for repeats. Thursday it writes intros in the editor's voice and sends a Telegram preview. The editor replies approve or asks for changes.",
+      "sha256": "711c88f81dab96581fbaa8535ea0ec74997adeec3c8d3653ff169fdae6d6418d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "76fa12f49ea5c0a06abdd301121866b35be818cb97e2b21b84e7008426d2952b",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide claims about 18 minutes of human time per issue, against roughly four hours done manually. Compilation intros can miss nuance, so it advises against sending without review.",
+      "sha256": "76fa12f49ea5c0a06abdd301121866b35be818cb97e2b21b84e7008426d2952b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "daaaa0b0b48bc3517d32e1c2e5c102b8844f7cf7221f5d8c4f5ba6b0f17359f5",
-      "publication": "reviewed_restatement_required"
+      "value": "Estimated API cost is $2.40-3.00 per issue, under $15 a month. Start Buttondown sends as drafts for the first few issues to check formatting.",
+      "sha256": "daaaa0b0b48bc3517d32e1c2e5c102b8844f7cf7221f5d8c4f5ba6b0f17359f5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Curate a weekly newsletter from RSS feeds\nOpenClaw monitors RSS feeds, scores items, compiles a digest with intros and sends a Telegram preview; the owner approves and it sends.\nDone with\nOC\nOpenClaw\nWhat they did\nThe guide builds five markdown skills wired together by cron jobs and a heartbeat. Every 6 hours the agent pulls about 120 RSS feeds plus Reddit and Hacker News into an inbox. Wednesday night it scores items on relevance, recency, source authority and engagement, with penalties for repeats. Thursday it writes intros in the editor's voice and sends a Telegram preview. The editor replies approve or asks for changes.\nHow it went\nThe guide claims about 18 minutes of human time per issue, against roughly four hours done manually. Compilation intros can miss nuance, so it advises against sending without review.\nWorth knowing\nEstimated API cost is $2.40-3.00 per issue, under $15 a month. Start Buttondown sends as drafts for the first few issues to check formatting.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nMonitor these RSS feeds: [feed URLs]. Each week, score items for relevance to [topic/audience], pick the top [10], and write a digest with a short intro and one line per item. Send me a preview on [Telegram], and only send it to [newsletter tool/list] after I reply approve.\nOriginal source: https://sfailabs.com/guides/openclaw-newsletter-curation",
+    "body_sha256": "6c6bb3d66d7e830e0a7f39569f5c591156632319e40862feb74e4f10874e4e45",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

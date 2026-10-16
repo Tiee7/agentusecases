@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2354516c09c9d6be2330736121aa8b75f376c7c394e96e7e6b09a4e0fa334057",
-      "publication": "reviewed_restatement_required"
+      "value": "A Reddit user gave Claude Code a BIOS dump; it disassembled it, found the signature check and patched it, unlocking hidden settings after flashing (secondhand account).",
+      "sha256": "2354516c09c9d6be2330736121aa8b75f376c7c394e96e7e6b09a4e0fa334057"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "676d87a5773ab107fc4457357ab6b7335c4d23ee86d90a13f0d8777c0c4054ce",
-      "publication": "reviewed_restatement_required"
+      "value": "A Reddit user gave Claude a raw BIOS dump from their laptop and asked it to unlock hidden firmware menus. Claude disassembled the binary, found the RSA signature-check function, and patched the verifier so it always returns true. The owner then flashed the modified firmware themselves. The article says there was no step-by-step prompting.",
+      "sha256": "676d87a5773ab107fc4457357ab6b7335c4d23ee86d90a13f0d8777c0c4054ce"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d83bea2971eacde66052430823e07546cba12f831a56f24b71c2a72f741c5a06",
-      "publication": "reviewed_restatement_required"
+      "value": "After flashing, the owner could reach settings the manufacturer hid. The article is secondhand, relayed from X posts, and gives no laptop model, prompts, or timings.",
+      "sha256": "d83bea2971eacde66052430823e07546cba12f831a56f24b71c2a72f741c5a06"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f11afc75298e5a9cd4028a4ca0b0ba81c9b214758a5d304e951c85dc65a649eb",
-      "publication": "reviewed_restatement_required"
+      "value": "Flashing firmware with a disabled signature check carries risk; the source gives no details on backups or recovery, so check those before trying this.",
+      "sha256": "f11afc75298e5a9cd4028a4ca0b0ba81c9b214758a5d304e951c85dc65a649eb"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Patch laptop BIOS to unlock hidden firmware menus\nA Reddit user gave Claude Code a BIOS dump; it disassembled it, found the signature check and patched it, unlocking hidden settings after flashing (secondhand account).\nDone with\nCC\nClaude Code\nWhat they did\nA Reddit user gave Claude a raw BIOS dump from their laptop and asked it to unlock hidden firmware menus. Claude disassembled the binary, found the RSA signature-check function, and patched the verifier so it always returns true. The owner then flashed the modified firmware themselves. The article says there was no step-by-step prompting.\nHow it went\nAfter flashing, the owner could reach settings the manufacturer hid. The article is secondhand, relayed from X posts, and gives no laptop model, prompts, or timings.\nWorth knowing\nFlashing firmware with a disabled signature check carries risk; the source gives no details on backups or recovery, so check those before trying this.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a firmware dump for my own [laptop model] at [file path]. Disassemble it, explain how the settings menus are gated and where any signature check happens, and propose a patch to unlock the hidden options. Work only on a copy of the file and don't flash anything; show me the proposed patch and the recovery risks first so I can decide.\nOriginal source: https://enterprisedna.co/resources/ai-pulse/ai-pulse-2026-07-22-a-reddit-user-had-claude-code-reverse-engineer-their-laptop/",
+    "body_sha256": "7cdc8985fd2ea021582b51d34d5c1a761785cd078f013b6b2be0702926bf3b21",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

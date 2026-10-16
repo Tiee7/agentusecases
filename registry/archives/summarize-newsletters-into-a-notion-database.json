@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "7bf7964fd2a129365223416f3d907084000efa5c129e3a39239dbec85569c4ac",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow retrieves newsletters, summarizes them with an LLM and stores them in Notion, splitting long summaries to fit block limits.",
+      "sha256": "7bf7964fd2a129365223416f3d907084000efa5c129e3a39239dbec85569c4ac"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f6e56ae690fe9c5aee70ab1b4074ecbb8db77649a1a4f90211fb82dbbedb0f4",
-      "publication": "reviewed_restatement_required"
+      "value": "The n8n workflow reads unread emails over IMAP, then filters by date and by a list of allowed senders. An OpenAI-backed summarization chain turns each remaining newsletter into bullet points that keep source URLs. Summaries over 1,950 characters are split by a code node. The first chunk creates the Notion page, and the later chunks are appended to that page by its URL.",
+      "sha256": "5f6e56ae690fe9c5aee70ab1b4074ecbb8db77649a1a4f90211fb82dbbedb0f4"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9e08e940ad3e31077da4b73452ba4a882ca2c82fce0ea1ae6633b4db154a9678",
-      "publication": "reviewed_restatement_required"
+      "value": "In the walkthrough, 15 unread emails were narrowed to 3 summaries, all written to Notion. The author's multi-email chunking fix worked. The IMAP filter rules were unreliable, and the author chose the wrong summarization method at first.",
+      "sha256": "9e08e940ad3e31077da4b73452ba4a882ca2c82fce0ea1ae6633b4db154a9678"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "242df945b7cec59da4e8c8bf4549cfbac8a25a09f90d6fa3649a09ca06df4149",
-      "publication": "reviewed_restatement_required"
+      "value": "Only OpenAI ran reliably. Claude hit token limits mid-run after tokens were already spent, and local Llama2 errored. The author planned to switch from map-reduce to the simpler stuff method.",
+      "sha256": "242df945b7cec59da4e8c8bf4549cfbac8a25a09f90d6fa3649a09ca06df4149"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Summarize newsletters into a Notion database\nAn n8n workflow retrieves newsletters, summarizes them with an LLM and stores them in Notion, splitting long summaries to fit block limits.\nDone with\nN8\nn8n\nWhat they did\nThe n8n workflow reads unread emails over IMAP, then filters by date and by a list of allowed senders. An OpenAI-backed summarization chain turns each remaining newsletter into bullet points that keep source URLs. Summaries over 1,950 characters are split by a code node. The first chunk creates the Notion page, and the later chunks are appended to that page by its URL.\nHow it went\nIn the walkthrough, 15 unread emails were narrowed to 3 summaries, all written to Notion. The author's multi-email chunking fix worked. The IMAP filter rules were unreliable, and the author chose the wrong summarization method at first.\nWorth knowing\nOnly OpenAI ran reliably. Claude hit token limits mid-run after tokens were already spent, and local Llama2 errored. The author planned to switch from map-reduce to the simpler stuff method.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls newsletters from my [email label or folder], summarizes each one with an AI model into a title, sender, 5 key bullets and a link, and saves them to my Notion database [database name]. If a summary is longer than Notion's block limit, split it across several blocks. You're done when a test run saves my last [number] newsletters correctly; show me the workflow before activating it.\nOriginal source: https://medium.com/@syrom_85473/a-practical-n8n-workflow-example-from-a-to-z-part-2-aggregating-newsletter-summaries-in-a-688f30f69352",
+    "body_sha256": "bf99e048a37ad47d2b9fc9c42b4b286c8ae2fb32f51abce2aea52de7106a2a1f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

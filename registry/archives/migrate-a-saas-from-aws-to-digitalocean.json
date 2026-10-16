@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c10a0b71b2c9335653b042d2e95eac1f2b7ab14f51ba8cb5a01358dd332e59ae",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer used Claude Code as a pair programmer for provisioning, database seeding, SSL, DNS cutover and production debugging, finishing in about four hours with zero downtime by his account.",
+      "sha256": "c10a0b71b2c9335653b042d2e95eac1f2b7ab14f51ba8cb5a01358dd332e59ae"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a21dae360300cfd8cea1b17dd708ce68fa481526cce38f94d13e37aaaf361426",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer asked Claude Code to build GitHub Actions workflows that bootstrap DigitalOcean: droplet, managed Postgres, Spaces, Docker setup. Claude read failed run logs with the gh CLI, found the cause, and patched the workflows. It fixed the psql SSL setting, rewrote the database dump's owner references, generated Cloudflare origin certificates for nginx, and fixed the SPA routing proxy.",
+      "sha256": "a21dae360300cfd8cea1b17dd708ce68fa481526cce38f94d13e37aaaf361426"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "80ce18b2b99af4071aae265c3dccb734238d1e202bfa006de9f8db9284afed27",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says the migration took four hours with zero downtime, moving 29 tables and 3000+ rows. Monthly cost fell from about $120 to about $44. The 4-hour and zero-downtime figures are his own claims.",
+      "sha256": "80ce18b2b99af4071aae265c3dccb734238d1e202bfa006de9f8db9284afed27"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "cf6e8f9f790cbe604a451ca17b402376d72cd0c4929001ecf50fa38dfe79d29c",
-      "publication": "reviewed_restatement_required"
+      "value": "Check that env var names match what your code reads. A VITE_API_URL versus VITE_API_BASE mismatch left the frontend calling localhost and cost 20 minutes.",
+      "sha256": "cf6e8f9f790cbe604a451ca17b402376d72cd0c4929001ecf50fa38dfe79d29c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate a SaaS from AWS to DigitalOcean\nA developer used Claude Code as a pair programmer for provisioning, database seeding, SSL, DNS cutover and production debugging, finishing in about four hours with zero downtime by his account.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer asked Claude Code to build GitHub Actions workflows that bootstrap DigitalOcean: droplet, managed Postgres, Spaces, Docker setup. Claude read failed run logs with the gh CLI, found the cause, and patched the workflows. It fixed the psql SSL setting, rewrote the database dump's owner references, generated Cloudflare origin certificates for nginx, and fixed the SPA routing proxy.\nHow it went\nThe author says the migration took four hours with zero downtime, moving 29 tables and 3000+ rows. Monthly cost fell from about $120 to about $44. The 4-hour and zero-downtime figures are his own claims.\nWorth knowing\nCheck that env var names match what your code reads. A VITE_API_URL versus VITE_API_BASE mismatch left the frontend calling localhost and cost 20 minutes.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nAct as my pair programmer to migrate my app from [current host, e.g. AWS] to [new host, e.g. DigitalOcean]. First inspect the repo and write a step-by-step plan covering provisioning, database migration, SSL, DNS cutover, and rollback. Work through it with me one step at a time, and pause and show me the command or change before anything that touches production, DNS, or deletes data.\nOriginal source: https://dev.to/anand_rathnas_d5b608cc3de/how-claude-code-helped-me-migrate-from-aws-to-digitalocean-in-4-hours-with-live-traffic-hmg",
+    "body_sha256": "713af366bf1bca7708d328c631325e6115df60ce82d897c8e25dc58cb60c27d2",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

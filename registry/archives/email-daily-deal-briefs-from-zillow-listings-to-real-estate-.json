@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2c6703ed5fbc7910075d4b91ca91cb3d7aaea2b15c131e8b5f0ac656345a1c51",
-      "publication": "reviewed_restatement_required"
+      "value": "A Zillow scraper feeds Claude to produce daily briefs on new listings, price cuts and outreach scripts, emailed to 47 paying real estate agents.",
+      "sha256": "2c6703ed5fbc7910075d4b91ca91cb3d7aaea2b15c131e8b5f0ac656345a1c51"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "0d4d64caecef4be70ae2f22e9cf78c5230ea3129d65ab5acfa65c8efc3e44b46",
-      "publication": "reviewed_restatement_required"
+      "value": "A Zillow scraper feeds yesterday's listings into Claude each morning. Claude generates a one-page Deal Intel Brief listing five same-day showings, price cuts that indicate motivated sellers, and three copy-paste outreach scripts. The finished brief is emailed automatically at 6:45am; the operator only manages subscriptions and sales.",
+      "sha256": "0d4d64caecef4be70ae2f22e9cf78c5230ea3129d65ab5acfa65c8efc3e44b46"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "eeac8c058287c9ba95403073da1f26407f7cbb10691d6d01722c51b935e5ea22",
-      "publication": "reviewed_restatement_required"
+      "value": "47 agents pay $149 monthly, producing $10,237 in revenue last month at a total stack cost of $74. No shortfalls are stated.",
+      "sha256": "eeac8c058287c9ba95403073da1f26407f7cbb10691d6d01722c51b935e5ea22"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "6bf1129e602e6014295fbabadb2e42ac1aec1cb1a3e528114a383279ed00dc1d",
-      "publication": "reviewed_restatement_required"
+      "value": "The entire stack costs $74 per month.",
+      "sha256": "6bf1129e602e6014295fbabadb2e42ac1aec1cb1a3e528114a383279ed00dc1d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Email daily deal briefs from Zillow listings to real estate agents\nA Zillow scraper feeds Claude to produce daily briefs on new listings, price cuts and outreach scripts, emailed to 47 paying real estate agents.\nDone with\nCL\nClaude\nWhat they did\nA Zillow scraper feeds yesterday's listings into Claude each morning. Claude generates a one-page Deal Intel Brief listing five same-day showings, price cuts that indicate motivated sellers, and three copy-paste outreach scripts. The finished brief is emailed automatically at 6:45am; the operator only manages subscriptions and sales.\nHow it went\n47 agents pay $149 monthly, producing $10,237 in revenue last month at a total stack cost of $74. No shortfalls are stated.\nWorth knowing\nThe entire stack costs $74 per month.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every morning: pull new listings and price cuts in [market] from [data source], have an AI step write a short brief with top deals and a sample outreach script for each, and email it to my subscriber list in [email tool]. Send the first run to me only as a test, and wait for my go-ahead before it emails the full list.\nOriginal source: https://x.com/0xAI42exe/status/2067231788632584658",
+    "body_sha256": "f2f1fe39c9045fd4976dc63f64113eb71af6be9b104f22d9c0f72309b0a207d0",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

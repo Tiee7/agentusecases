@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "50fcaf0d76d14e0fcc9f4561ed2593518d4e92566c8a23edad359f245cf4fa3d",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n pipeline turns RSS news into AI articles with SEO metadata and images, publishes to WordPress and logs them; the author notes generic content and duplicates as problems.",
+      "sha256": "50fcaf0d76d14e0fcc9f4561ed2593518d4e92566c8a23edad359f245cf4fa3d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5ef7a488443b11440a59f75fe24d17023e611c2e6329e8d10c136f8ccf9b970a",
-      "publication": "reviewed_restatement_required"
+      "value": "A scheduled n8n workflow pulls RSS news from the last 24 hours and filters it down to niche-relevant topics. An AI step writes the title, intro, structured body, conclusion and SEO metadata, and a second step generates a featured image. The workflow then posts to the WordPress API with status publish and stores the topic, publish date and URL.",
+      "sha256": "5ef7a488443b11440a59f75fe24d17023e611c2e6329e8d10c136f8ccf9b970a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "723a26609265588eb63e4bd5d8551175bb28513222eb899f4ae292887774b3ae",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no traffic or volume results. The author lists generic content, duplicate posts and SEO gaps as what breaks, and suggests enforced structure, the tracking log and added metadata as fixes.",
+      "sha256": "723a26609265588eb63e4bd5d8551175bb28513222eb899f4ae292887774b3ae"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8f05c0e5be4f884cee32f9665eec121a4a2e61d74be9f312c1eb438ddfaccd92",
-      "publication": "reviewed_restatement_required"
+      "value": "The example request sets status to publish, so posts go live with no review step; the source never mentions human review. The full template is in a linked tutorial.",
+      "sha256": "8f05c0e5be4f884cee32f9665eec121a4a2e61d74be9f312c1eb438ddfaccd92"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Publish AI-written blog posts from trending news to WordPress\nAn n8n pipeline turns RSS news into AI articles with SEO metadata and images, publishes to WordPress and logs them; the author notes generic content and duplicates as problems.\nDone with\nN8\nn8n\nWhat they did\nA scheduled n8n workflow pulls RSS news from the last 24 hours and filters it down to niche-relevant topics. An AI step writes the title, intro, structured body, conclusion and SEO metadata, and a second step generates a featured image. The workflow then posts to the WordPress API with status publish and stores the topic, publish date and URL.\nHow it went\nThe source gives no traffic or volume results. The author lists generic content, duplicate posts and SEO gaps as what breaks, and suggests enforced structure, the tracking log and added metadata as fixes.\nWorth knowing\nThe example request sets status to publish, so posts go live with no review step; the source never mentions human review. The full template is in a linked tutorial.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls news from [RSS feeds about my topic], skips any story already covered by checking a log sheet, and writes an original article with SEO title, meta description and a featured image that adds [my own angle or opinion] rather than a generic rewrite. Save it as a WordPress draft, not published, and log it. Finish when one test article appears as a draft for me to review.\nOriginal source: https://dev.to/grewup/automate-blog-publishing-with-n8n-ai-wordpress-full-workflowpublished-true-56cl",
+    "body_sha256": "75cde11ac110070c6e4f408e8eafd2e055f6119f3e7827372457999ff5e9e3c4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

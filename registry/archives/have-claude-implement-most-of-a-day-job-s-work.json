@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "77bba92c2f9b99804f812114fd449fd35c578a895ef821371bd31420888c58a1",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster gives Claude work tasks and has it implement most of the functionality, though the last 10% still takes the most time.",
+      "sha256": "77bba92c2f9b99804f812114fd449fd35c578a895ef821371bd31420888c58a1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f54ca988fda12ce8618bc1ddb7206c38d2189a4ffd74abee6280c75bb46a47db",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a simple .NET console app around Claude CLI and GitLab. Every 15 minutes it pulls assigned issues, classifies whether each one is ready, drafts a GitLab reply for unclear tickets, or starts Claude on the repo plus the issue text and image attachments; Claude then works on a new branch, opens a PR, and later applies PR comments, while the poster manually reviews and adjusts drafts before posting or merging.",
+      "sha256": "f54ca988fda12ce8618bc1ddb7206c38d2189a4ffd74abee6280c75bb46a47db"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "260f712bc173e40a3a0a80ec836364bd3cfa2380b1de57d4fb33749ddc9c04e5",
-      "publication": "reviewed_restatement_required"
+      "value": "They say it automated about 80% of the job and cut their hands-on time to roughly 2-3 hours a day for review and testing. On a recent masterdata feature, Claude produced most of a 2-3 hour task in 15-20 minutes, but the poster says it only works because they check every PR and still fix issues like style-guide adherence.",
+      "sha256": "260f712bc173e40a3a0a80ec836364bd3cfa2380b1de57d4fb33749ddc9c04e5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f17af5af0194b8ae1d313d9e44fd191885a12daec1498df1700638e0807fc0a8",
-      "publication": "reviewed_restatement_required"
+      "value": "Their practical catch was usage limits: they were on Claude Max, only started new implementations with more than 20% tokens left, and let the loop run overnight.",
+      "sha256": "f17af5af0194b8ae1d313d9e44fd191885a12daec1498df1700638e0807fc0a8"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Have Claude implement most of a day job's work\nThe poster gives Claude work tasks and has it implement most of the functionality, though the last 10% still takes the most time.\nDone with\nCL\nClaude\nWhat they did\nThe poster built a simple .NET console app around Claude CLI and GitLab. Every 15 minutes it pulls assigned issues, classifies whether each one is ready, drafts a GitLab reply for unclear tickets, or starts Claude on the repo plus the issue text and image attachments; Claude then works on a new branch, opens a PR, and later applies PR comments, while the poster manually reviews and adjusts drafts before posting or merging.\nHow it went\nThey say it automated about 80% of the job and cut their hands-on time to roughly 2-3 hours a day for review and testing. On a recent masterdata feature, Claude produced most of a 2-3 hour task in 15-20 minutes, but the poster says it only works because they check every PR and still fix issues like style-guide adherence.\nWorth knowing\nTheir practical catch was usage limits: they were on Claude Max, only started new implementations with more than 20% tokens left, and let the loop run overnight.\nTry it yourself\nwith\nClaude\nCopy prompt\nHere is a work task: [describe the task, requirements, and any relevant code or docs]. Implement as much of it as you can, then list what is left unfinished or uncertain, especially edge cases, testing, and integration points. Finish with a checklist of the remaining steps I should handle myself.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1shngqm/i_automated_most_of_my_job",
+    "body_sha256": "de97e0350e4a6196cb584fc6b2c5996d9a0b6416bfc01fae370b29e2deec5da4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

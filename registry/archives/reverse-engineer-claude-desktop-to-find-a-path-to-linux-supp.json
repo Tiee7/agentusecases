@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c15af57b183c4e5a047fe5f55af617dafb63a11f3aefcf7dec9734af488b7b42",
-      "publication": "reviewed_restatement_required"
+      "value": "A maintainer pointed Claude at the minified Claude Desktop app to find why Cowork only runs on macOS; it found the VM and sandbox layers and mapped a route to Linux.",
+      "sha256": "c15af57b183c4e5a047fe5f55af617dafb63a11f3aefcf7dec9734af488b7b42"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "1e53da121a425fa46bc867f0e510a875fd2f7c7bd717faa74f8e566ea92deb0d",
-      "publication": "reviewed_restatement_required"
+      "value": "The maintainer of a Linux repackaging script for Claude Desktop extracted the app's minified JavaScript from the Windows installer and ran it through prettier. Claude then went through roughly 170,000 lines, renamed the obfuscated symbols, and documented the architecture. A contributor found x64 VM image URLs, and the maintainer downloaded and inspected that image.",
+      "sha256": "1e53da121a425fa46bc867f0e510a875fd2f7c7bd717faa74f8e566ea92deb0d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4d0d1e303bac004a45d6b0b934c4e3c3e634ec4e7515202c24f5ece59b395b70",
-      "publication": "reviewed_restatement_required"
+      "value": "It found a macOS-only Swift addon driving a Linux VM, with bubblewrap and seccomp inside it. It laid out three Linux routes: stub the addon, add bubblewrap, or run Firecracker. Nothing was implemented.",
+      "sha256": "4d0d1e303bac004a45d6b0b934c4e3c3e634ec4e7515202c24f5ece59b395b70"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "1c0efd014b65aea4c48817f97df2f24ad05d569b85f2eb48668e431690fc7609",
-      "publication": "reviewed_restatement_required"
+      "value": "Minified symbol names change with each release, so re-trace the patterns instead of searching for the names in this write-up (analysis covers version 1.1.799).",
+      "sha256": "1c0efd014b65aea4c48817f97df2f24ad05d569b85f2eb48668e431690fc7609"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse engineer Claude Desktop to find a path to Linux support\nA maintainer pointed Claude at the minified Claude Desktop app to find why Cowork only runs on macOS; it found the VM and sandbox layers and mapped a route to Linux.\nDone with\nCC\nClaude Code\nCW\nClaude Cowork\nWhat they did\nThe maintainer of a Linux repackaging script for Claude Desktop extracted the app's minified JavaScript from the Windows installer and ran it through prettier. Claude then went through roughly 170,000 lines, renamed the obfuscated symbols, and documented the architecture. A contributor found x64 VM image URLs, and the maintainer downloaded and inspected that image.\nHow it went\nIt found a macOS-only Swift addon driving a Linux VM, with bubblewrap and seccomp inside it. It laid out three Linux routes: stub the addon, add bubblewrap, or run Firecracker. Nothing was implemented.\nWorth knowing\nMinified symbol names change with each release, so re-trace the patterns instead of searching for the names in this write-up (analysis covers version 1.1.799).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReverse engineer [the app or binary] by inspecting its minified or compiled code to understand how a specific feature works or why it's limited to a certain platform, then write up what you find including any architectural layers involved. Produce a clear technical summary and a proposed path forward, stopping short of modifying or redistributing the original software.\nOriginal source: https://aaddrick.com/blog/reverse-engineering-claude-desktops-cowork-mode-a-deep-dive-into-vm-isolation-and-linux-possibilities",
+    "body_sha256": "cdca044a263bce7d1beb05d81915def869475168cac4faee3b51a2e48f628dae",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -1,36 +1,30 @@
 # 流媒体退订代理：历史成功不等于可出售的自动取消服务
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/cancel-streaming-subscriptions-with-chatgpt-agent
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：ChatGPT Agent
-
-### 介绍
-
-A writer tested browser-based assistance for ending three streaming memberships.
-
-一位作者测试了通过浏览器辅助取消三项流媒体会员。
-
-### 方法
-
-After the writer handled login, ChatGPT Agent navigated each provider’s cancellation screens under supervision and sought final approval.
-
-作者自行登录后，ChatGPT Agent 在监督下逐一操作退订页面，并取得最终确认。
-
-### 结果与限制
-
-The writer reports success for Peacock, Disney and Netflix. That experience does not establish compatibility with other providers’ anti-bot controls.
-
-作者报告 Peacock、Disney 和 Netflix 均退订成功，但不能据此认定其他服务商的反机器人限制也可通过。
+    Cancel streaming subscriptions with ChatGPT Agent
+    A writer had the agent cancel Peacock, Disney and Netflix after logging in; it needed a nudge and may be blocked on some sites.
+    Done with
+    GA
+    ChatGPT Agent
+    What they did
+    The writer turned on ChatGPT Agent (Plus or Pro) and asked it to cancel Peacock, Disney and Netflix. She typed her credentials into the login screens herself. The agent worked in a controlled browser, reading pages as screenshots and clicking through the cancellation menus one service at a time. She watched it work and approved the final confirmation.
+    How it went
+    She had no problems cancelling all three. She says results vary by site: some have anti-bot defenses, and Amazon Prime and Google One may block or flag the agent.
+    Worth knowing
+    Stick to low-stakes tasks and don't hand over credentials you wouldn't want exposed. OpenAI warns against using agent mode for financial actions, so confirm the final click yourself.
+    Try it yourself
+    with
+    ChatGPT Agent
+    Copy prompt
+    I want to cancel my subscriptions to [service 1, service 2, service 3]. I will log in when you ask. Go through each cancellation flow, decline retention offers, and stop at the final confirm button to show me the end date and any charges before I approve. When done, give me a list of what was cancelled and what you could not cancel.
+    Original source: https://www.tomsguide.com/ai/i-used-chatgpt-to-cancel-my-streaming-subscriptions-heres-how-to-try-it-too
 
 ## 原作者的方法与来源
 
 来源：[Tom’s Guide · Subscription cancellation](https://www.tomsguide.com/ai/i-used-chatgpt-to-cancel-my-streaming-subscriptions-heres-how-to-try-it-too)
 
-作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+作者方法摘要
 
 1. 开启代理模式，并明确要取消的具体订阅。
    English summary: Enable agent mode and name the specific subscription to cancel.
@@ -48,7 +42,7 @@ The writer reports success for Peacock, Disney and Netflix. That experience does
 本案例是记者使用通用助手管理个人流媒体账户的体验，不是已形成收入的独立公司。消费者有停止不再使用服务的需求，但从减少续费到愿意另付退订费之间缺少交易证据。Netflix和Apple已有官方取消流程，财务管理竞品也已提供取消协助。当前官方页面又提示旧Agent不再可用，新版云浏览器仍需用户登录、确认并可能被网站阻挡。以低价独立获客、承担人工失败恢复的商业结构很难成立。可以保留个人效率用法，却不应承诺跨站全自动或把预期节省计成自身收入。
 
 案例ID：`cancel-streaming-subscriptions-with-chatgpt-agent` · 案例来源：https://agentusecases.ai/use-case/cancel-streaming-subscriptions-with-chatgpt-agent
-研究时间：2026-10-15T07:13:27.818136+00:00 · 证据置信度：案例身份、官方流程及产品迁移证据较强；效果限于记者自述，当前跨站成功率、成交价格、客户留存和经营利润均未验证。
+研究时间：2026-10-15T07:13:27.818136+00:00
 
 **商业评分：28.0/100。用户反馈信号占5%。**
 
@@ -79,9 +73,7 @@ The writer reports success for Peacock, Disney and Netflix. That experience does
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -91,9 +83,9 @@ The writer reports success for Peacock, Disney and Netflix. That experience does
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S0b6d957f9bb4, S257e47c9d3f2, Sf61f6cefae19, S082d360448fb, S4108ee09d4ec, Sc1184229e781
 
@@ -106,9 +98,9 @@ The writer reports success for Peacock, Disney and Netflix. That experience does
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S0b6d957f9bb4, S257e47c9d3f2, Sf61f6cefae19, S082d360448fb, S4108ee09d4ec, Sc1184229e781
 
@@ -191,8 +183,11 @@ Rocket Money已把订阅识别、预算和真人取消助手放在同一个产�
 
 ## 用户评价怎样改变判断
 
-执行了社区与媒体体验两类检索，其中Reddit及OpenAI社区的退订关键词查询返回大量无关结果，不能据此断言不存在反馈，也不拿搜索摘要补成已读用户评论。另读到一个OpenAI社区帖子：发帖人称付费账户的旧Agent入口缺失，后续非员工解释产品迁移，支持账号也回应旧模式已退出。这是相邻可用性信号，不是流媒体取消成功或失败数据，且身份和工单状况无法独立审计。
-直接体验主要来自Tom’s Guide作者。原文声称三个服务取消顺利，后续文章却着重导航帮助和本人确认，两者可以是不同任务模式，并非足以证明作者说谎；它们反驳的是读者把体验理解为完全自动且可重复交付。文章有联盟链接披露，属于记者自选样本而非随机消费者调查，同一作者复用不能倍增样本量。Rocket Money首页精选好评由厂商筛选且注明可能编辑，不纳入独立用户评分。反馈维度给1/5、总权重5%，承认有限直接体验价值，绝不把缺乏大量反馈写成普遍差评。
+作者称本人登录后取消三个订阅没有遇到问题；没有公开账单回执、计时或成功率分母。
+
+同一作者后续说明仍需本人登录和确认，主要价值是选择服务和导航指导。
+
+相关体验：社区用户报告旧Agent入口消失，后续回复指出产品迁移；不能证明退订工作流结果。
 
 依据：S0b6d957f9bb4, Sae6f0546405d, S688da9b6ba3a, Sed16b3d05cb7
 
@@ -214,21 +209,11 @@ Rocket Money已把订阅识别、预算和真人取消助手放在同一个产�
 
 假设B：冷启动获客、复杂代扣与重试假设：全部数字为压力假设，不是已观察统计；同样由客户自持工具。人工30分钟×30美元/小时=15美元，包含失败订单分摊与回访；其他2美元含退款及支持费用，获客10美元按完成单分摊，月固定600美元用于更多流程维护与管理；价格维持9美元检验成本敏感性。API不额外使用，平台能力与额度仍是约束。无已实现节省、退款或收入，未计税及初始建设。；API成本 0，人工成本 15，其他可变成本 2，分摊获客成本 10。依据：Sf61f6cefae19, S4108ee09d4ec, Sed16b3d05cb7, S0cfdd4c3ce00
 
-## 用户反馈核对（低权重）
-
-- 社区—Reddit · `site.reddit.com ChatGPT agent cancel streaming subscriptions experience`：实际查询返回无关词条及媒体页面，未取得可核验直接用户退订帖；搜索失配限制覆盖，不能解释为没有用户。
-- 社区—OpenAI · `site.community.openai.com agent cancel subscription streaming`：未找到可据以确认退订结果的直接用户材料；后续产品可用性检索发现并实际读取旧Agent入口缺失帖，仅算邻近工作流。
-- 媒体—用户体验 · `ChatGPT agent cancel subscriptions review streaming Tom guide`：发现原报道及同一作者后续报道，两篇均实际读取；两次叙述不是两个独立用户样本。
-- 社区—Reddit复检 · `"ChatGPT agent" "cancel" review (domains: reddit.com)`：结果主要为无关取消词条，未用结果摘要充当用户反馈。
-- [S0b6d957f9bb4] direct_user：作者称本人登录后取消三个订阅没有遇到问题；没有公开账单回执、计时或成功率分母。；偏差：媒体作者自选任务，有联盟链接披露；无法独立复核完成状态。
-- [Sae6f0546405d] direct_user：同一作者后续说明仍需本人登录和确认，主要价值是选择服务和导航指导。；偏差：与原案例为同一作者且仍属媒体体验，不增加独立样本数。
-- [S688da9b6ba3a] adjacent_workflow：社区用户报告旧Agent入口消失，后续回复指出产品迁移；不能证明退订工作流结果。；偏差：自选投诉及平台社区，账号和工单未经独立验证；回复中普通成员声明非员工。
-
 ## 反证与未核实信息
 
 原报道确有正面亲历，不能因商业结论低分否认历史用例。但同作者后续强调人类登录确认，Netflix/Apple提供直接官方路径，新版云浏览器并不保证每个网站任务完成，旧产品说明又已发生迁移。这些反证推翻“无需人工、可以马上大规模收费”的初始设想。反过来，Rocket Money把取消协助列为Premium内容，说明服务可能有打包价值；它不足以证明单点产品可承担获客成本，故仍不建议独立投入。
 
-未登录、取消或购买任何真实服务，未提交第三方表单，未联系用户或厂商，未调用额外付费模型API、创建密钥或运行外部安装脚本。未做合成实验，桌面验证仅为下一步建议。没有项目收入、利润、订单量、真实人工时长、单次资源消耗、退款回执、下一账期扣款验证或客户留存；竞品统一成交价未核实。旧Agent官方页面内容混杂，已保留冲突并用新版文档定位迁移方向，不推断具体下线日期或当前Netflix等站点支持率。只核验公开文档，不能保证所有地区、账户和代扣渠道一致。目录于2026-10-15T07:05:54.594148+00:00真实完整刷新1314例，5条详情采样，新建小时数据库为baseline且登记ID与拉取后main一致；未将baseline称为新增，未采样详情未宣称复查，目录刷新不算深研。仓库及祖先路径未找到AGENTS.md，遵循仓库任务与研究标准；启动时工作区干净且未见其他研究进程。
+缺少取消回执、后续账期扣款、实际耗时、资源消耗与客户留存数据。不同地区、账户和代扣渠道的成功率未知。
 
 ## 具体动作与止损条件
 
@@ -251,6 +236,3 @@ Rocket Money已把订阅识别、预算和真人取消助手放在同一个产�
 - [Sae6f0546405d] [I asked ChatGPT which streaming services to cancel this month — then used Agent mode to do it | Tom's Guide](https://www.tomsguide.com/ai/i-asked-chatgpt-which-streaming-services-to-cancel-this-month-then-used-agent-mode-to-do-it)：同一作者2026年后续体验明确仍需本人登录确认，描述导航指导而非全自动；不当成第二个独立样本。
 
 结构化记录：[research/cancel-streaming-subscriptions-with-chatgpt-agent.json](../research/cancel-streaming-subscriptions-with-chatgpt-agent.json)
-来源读取凭据：[research/evidence/cancel-streaming-subscriptions-with-chatgpt-agent.json](../research/evidence/cancel-streaming-subscriptions-with-chatgpt-agent.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

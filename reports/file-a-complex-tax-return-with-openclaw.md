@@ -1,36 +1,30 @@
 # OpenClaw复杂报税：低模型费用不等于可复制的代报税生意
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/file-a-complex-tax-return-with-openclaw
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：OpenClaw
-
-### 介绍
-
-An OpenClaw user describes preparing a complicated personal and business tax return.
-
-一位 OpenClaw 用户描述了复杂个人与经营税表的准备过程。
-
-### 方法
-
-The agent reconstructed financial history from documents and prepared transaction summaries. When browser control failed, the person entered the tax software while following its instructions.
-
-Agent 从文件重建财务历史并汇总交易；浏览器控制失败后，用户根据其指引手工录入报税软件。
-
-### 结果与限制
-
-The user reports a lengthy return and savings on software and a penalty calculation. An estimated K-1 and manual corrections prevent treating this as independently verified tax accuracy.
-
-用户报告生成较长税表，并节省软件费用和部分罚金；K-1 估算及人工纠正意味着不能视作准确性已独立验证。
+    File a complex tax return with OpenClaw
+    OpenClaw built a Schedule C P&L from bank transactions, guided TurboTax entry for 4+ hours and caught an error in a prior accountant's work.
+    Done with
+    OC
+    OpenClaw
+    What they did
+    User uploaded purchase agreements, K-1s, prior returns back to 2012, bank statements, and balance sheets to OpenClaw. The agent read them chronologically, reconstructed entity history and cost basis across LLC-to-S-corp conversions and sales, prepared a summary.md, built Schedule C P&L from bank transactions, researched TurboTax plans, and dictated entries screen-by-screen while the user clicked through forms and recategorized one transaction.
+    How it went
+    Produced a 137-page return with $125K federal due after $40K estimated payments already made; saved $500 on the TurboTax plan and ~$3,700 via annualized income method on Form 2210. Browser automation failed so user drove TurboTax; K-1 had to be estimated.
+    Worth knowing
+    Total cost was $129 TurboTax + $23.90 in tokens versus $8,000 CPA the prior year.
+    Try it yourself
+    with
+    OpenClaw
+    Copy prompt
+    Using my bank transaction exports in [folder or account], build a Schedule C profit and loss for [year] for my business [business type]. Sort expenses into the right categories, list anything ambiguous for me to decide, and double-check last year's return at [file path] for inconsistencies. Then guide me through entering it in [tax software], and pause before anything is filed or submitted.
+    Original source: https://x.com/dvassallo/status/2039450517143974105
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/dvassallo/status/2039450517143974105)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The user reports a lengthy return and savings on software and a penalty calculat
 案例反映复杂小企业主整理历史交易、实体变更与报税资料的真实工作类型，但没有证明一个可销售、可承责的自动报税产品。聚合页转述的低token费用遗漏了用户四小时以上操作、资料准备与专业复核；还明确记录浏览器自动化失败和K-1估计。付款人更适合定位为已有客户与复核能力的税务事务所，购买可追溯底稿而非未经核实的节税承诺。现有税务软件已有导入和人工服务，只有底稿减少复核总工时且不增加重大遗漏，才有继续试点的理由。
 
 案例ID：`file-a-complex-tax-return-with-openclaw` · 案例来源：https://agentusecases.ai/use-case/file-a-complex-tax-return-with-openclaw
-研究时间：2026-10-15T11:02:36.633927+00:00 · 证据置信度：平台能力与竞争选项有一手文档；案例经过聚合站转述，原始X帖被robots阻止。没有取得税表、账单、受理回执、独立复核或重复客户数据，案例效果置信度低。
+研究时间：2026-10-15T11:02:36.633927+00:00
 
 **商业评分：35.5/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The user reports a lengthy return and savings on software and a penalty calculat
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The user reports a lengthy return and savings on software and a penalty calculat
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sc6deb953d3da, S53a3ac8cd121, Sf79c3bf4770a, S0b5c4741d1c1, S3a5eec5af298
 
@@ -97,9 +89,9 @@ The user reports a lengthy return and savings on software and a penalty calculat
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sc6deb953d3da, S53a3ac8cd121, Sf79c3bf4770a, S0b5c4741d1c1, S3a5eec5af298
 
@@ -182,8 +174,7 @@ OpenClaw官方README显示模型和执行框架可替换，项目为开源助手
 
 ## 用户评价怎样改变判断
 
-本轮执行了至少六个检索，覆盖X作者、Reddit社区、GitHub问题和Hacker News讨论。返回结果多数是泛化税务页面、字面关键词误匹配或作者其他经历，没有取得能核验的本案例直接使用者全文或可比工作流评论。检索结果不等于证明不存在反馈；这里只能说当前检索未获得合格证据。原始X链接读取被robots明确阻止，未用镜像绕过，也未把聚合站描述当作独立读取的原帖。
-因此用户反馈维度给0分，含义是没有独立验证信号，而不是用户满意度为零。聚合页中的个人故事仍可用于确定要验证的流程和失败点，但不算一条直接用户观察。社区热度、星标和搜索摘要均未计入分数。即使未来读取到作者全文，它也只是自选样本，需要区分技术熟练使用者与普通企业主，并对同年资料、正确性与最终受理状态进行独立对照。反馈仅占5%，不能因没有评论就抹去业务任务，也不能因一句省钱故事掩盖复核成本和商业责任。
+暂无直接用户反馈。
 
 依据：Sc6deb953d3da, S0b5c4741d1c1
 
@@ -205,21 +196,11 @@ OpenClaw官方README显示模型和执行框架可替换，项目为开源助手
 
 复杂资料与高返工（研究者假设）假设：全部为研究者假设。助理240分钟×40美元/小时=160，专业审核360分钟×90美元/小时=540；模型重试50、隔离及返工准备60、获客摊销150；每月10单固定1200。不计尚无法量化的重大错误赔偿，因此不是最坏情景；同样不含由客户另付的软件申报费。；API成本 50，人工成本 700，其他可变成本 60，分摊获客成本 150。依据：Sc6deb953d3da, S3a5eec5af298, S53a3ac8cd121
 
-## 用户反馈核对（低权重）
-
-- X与作者检索 · `"dvassallo" "OpenClaw" tax return`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- Reddit社区 · `site:reddit.com OpenClaw taxes tax return`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- GitHub问题 · `site:github.com/openclaw/openclaw issues tax return`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- 公开网页评论 · `"OpenClaw" "taxes" "review"`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- Hacker News社区 · `"OpenClaw" "tax" site:news.ycombinator.com`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- Reddit社区 · `"OpenClaw" "tax" site:reddit.com`：2026-10-15实时检索已执行；返回泛化税务、词义或作者其他网页，未取得可核验的本案例直接用户评价。不把无关结果或摘要计为已读来源。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 反证不是泛化的模型风险：本案例聚合页明确承认浏览器失败、用户操作超过4小时、交易被人工改类和K-1估计；这些直接削弱全自动与低人工叙事。成熟TurboTax已有导入和签署专家服务，FreeTaxUSA提供免费联邦申报，反驳了必须新增代理才能低价报税的假设。即使原作者确实比上年少花钱，服务范围和正确性也未对齐，不能推出可复制的经营利润。
 
-原始X帖因robots限制未读取，未绕过；没有原税表、发票、正式K-1、IRS受理或检查结果，聚合站所有案例数字均为转述。没有本案例代码、配置、版本、提示、模型价目与调用日志；只阅读官方README和安全文档，没有安装或运行项目。没有联系客户、注册、支付、提交表单或接入真实税务系统；未验证需求、报价、转化、准确率和法律责任。搜索返回结果相关性较差，未能排除存在更多独立用户证据。单位经济纯属可复算情景，未覆盖未知重大索赔。
+原始税表、正式K-1与IRS受理结果未核实。代码配置、模型版本、调用成本、准确率和客户需求未知；经济情景未覆盖重大索赔。
 
 ## 具体动作与止损条件
 
@@ -238,6 +219,3 @@ OpenClaw官方README显示模型和执行框架可替换，项目为开源助手
 - [Sf79c3bf4770a] [FreeTaxUSA® - Free Online Tax Filing for Federal Returns](https://www.freetaxusa.com/)：官方页面展示联邦免费、州税15.99美元以及Schedule C和K-1收入支持；不表示可处理所有复杂实体申报。
 
 结构化记录：[research/file-a-complex-tax-return-with-openclaw.json](../research/file-a-complex-tax-return-with-openclaw.json)
-来源读取凭据：[research/evidence/file-a-complex-tax-return-with-openclaw.json](../research/evidence/file-a-complex-tax-return-with-openclaw.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

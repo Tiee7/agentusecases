@@ -1,36 +1,30 @@
 # EU261拒赔申诉代理：证据包可试点，€400获批故事不足以支撑全自动索赔生意
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/dispute-an-airline-s-eu261-delay-compensation-rejection
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Grok Bot
-
-### 介绍
-
-The source recounts a passenger challenging an airline’s refusal of delay compensation.
-
-源站描述一位乘客对航空公司拒付延误赔偿提出异议。
-
-### 方法
-
-A Grok-based agent used flight information to dispute the stated cause and drafted correspondence; the user authorized the outgoing message.
-
-基于 Grok 的 agent 利用航班信息质疑拒赔理由并起草邮件，发送前由用户授权。
-
-### 结果与限制
-
-The account claims approval of €400 before landing. Approval is the reported result; the summary does not establish receipt of the money.
-
-叙述声称落地前获批 400 欧元；已报告的是批准，并不能证明款项到账。
+    Dispute an airline's EU261 delay compensation rejection
+    A Grok-based agent checked flight data, argued the crew issue wasn't extraordinary, and sent an approved email, winning €400 before landing.
+    Done with
+    GB
+    Grok Bot
+    What they did
+    The agent received mail access and the prompt to check, file, and argue rejections for refunds. It pulled the airline's flight status data showing crew rotation with clear weather, concluded crew issues were not extraordinary under EU261, drafted the email, and sent only after the user typed "go" and approved.
+    How it went
+    The airline approved the €400 claim before the user's flight landed.
+    Worth knowing
+    User must approve every email before it sends.
+    Try it yourself
+    with
+    ChatGPT Agent
+    Copy prompt
+    My airline rejected my EU261 delay compensation claim for [flight number and date]. Look up the actual flight data and the EU261 rules, then draft a reply arguing that the stated reason ([reason the airline gave, e.g. crew issue]) is not an extraordinary circumstance. You are done when I have a ready-to-send email with the evidence and the compensation amount I should claim. Show me the email and wait for my approval before sending it.
+    Original source: https://x.com/nexor404/status/2106808072622727647
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/nexor404/status/2106808072622727647)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The account claims approval of €400 before landing. Approval is the reported r
 旅客已经收到拒赔且保留航班与往来邮件时，有明确的潜在现金收益和行动障碍；但付款人仍是低频个人消费者，免费航空公司投诉及消费者中心援助压低纯写信服务的价格。案例页转述的€400获批既不是服务商收入，也没有到账凭证。AirHelp出售的是包含授权、追索和可能法律行动的完整服务，不能把其35%收费套给一封AI邮件。当前适合用脱敏历史材料验证事实抽取、引用与人工审稿成本，再申请另行授权的客户验证；不支持直接投入获客广告或无人值守代诉。
 
 案例ID：`dispute-an-airline-s-eu261-delay-compensation-rejection` · 案例来源：https://agentusecases.ai/use-case/dispute-an-airline-s-eu261-delay-compensation-rejection
-研究时间：2026-10-15T15:38:32.616651+00:00 · 证据置信度：流程与公开竞品收费中等置信；案例实际获赔、原始航班、模型表现和客户付费低置信。原始X受robots限制；未验证到账或真实交付。
+研究时间：2026-10-15T15:38:32.616651+00:00
 
 **商业评分：38.0/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The account claims approval of €400 before landing. Approval is the reported r
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The account claims approval of €400 before landing. Approval is the reported r
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S4875b2f8d801, S6a14e84e1f8e, S123e72ad9d2a, S5536a1c4dfc0, S3b295a170021, S97eaff3ea745
 
@@ -97,9 +89,9 @@ The account claims approval of €400 before landing. Approval is the reported r
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S4875b2f8d801, S6a14e84e1f8e, S123e72ad9d2a, S5536a1c4dfc0, S3b295a170021, S97eaff3ea745
 
@@ -175,7 +167,7 @@ The account claims approval of €400 before landing. Approval is the reported r
 
 ## 用户评价怎样改变判断
 
-反馈权重严格为5%，本轮给独立用户信号0分，含义是没有取得可复核的直接使用证据，而非满意度差。已分别检索社交平台身份与案例、Reddit航空申诉讨论、GitHub公开项目或问题，结果多数不相关或指向同源聚合页。原始nexor404帖的直接读取被robots禁止，不能把聚合转述当再次独立验证。Reddit找到Iberia拒赔及相邻索赔经历线索，但直接抓取亦被robots阻止，所以没有把搜索摘要记为已读用户评论，也没有计入评分。Botcurrent指向同一个X来源，不是第二个独立成功案例；其他Grok功能评价不能证明EU261业务能力。即便原始帖后来可读，作者自选成功样本也只能形成弱证据，无法说明失败率、到账等待期、人工修改量或付费意愿。真正能改变商业结论的是带完整输入、引用、人工修改记录和最终结案状态的连续样本，特别是失败与退款案件。我们因此让官方流程和实际成本约束主导判断，没有用零散口碑抵消交付风险。
+暂无直接用户反馈。
 
 依据：S4875b2f8d801, S6a14e84e1f8e, S97eaff3ea745
 
@@ -196,18 +188,11 @@ A：人工审核证据包，研究者假设假设：全部经营输入为假设�
 
 B：成功收费受理案件，研究者压力情景假设：平均赔偿€400仅作情景锚点；假设成功费25%含税、VAT20%仅作模型税率、最终回款率35%，预期净收入400×0.25/1.2×0.35=€29.1667。人工45/60×€30=€22.50，模型摊销€2，数据与外部升级处理准备€6，获客€25，100受理案/月，固定€1500。所有案件均发生这些成本；无保证真实诉讼费用足够，未计收款周期融资成本，故可能仍低估亏损。固定分摊€15后盈亏回款率(55.5+15)/(400×.25/1.2)=84.6%。；API成本 2，人工成本 22.5，其他可变成本 6，分摊获客成本 25。依据：Se09571f37524, S97eaff3ea745, S4875b2f8d801
 
-## 用户反馈核对（低权重）
-
-- 社交平台／作者身份 · `"nexor404" "EU261"; "nexor404" "compensation"; Grok Bot EU261 nexor404 review airline compensation`：发现同源聚合和不相关作者互动，未取得原帖；原始X被robots禁止，不计独立用户证据。
-- Reddit社区 · `site:reddit.com "Grok" "compensation" airline; site:reddit.com/r/travel EU261 AI appeal rejection`：命中Iberia拒赔及邻近索赔经历线索，但未核验为本工具用户；Reddit原文robots禁止，不将摘要当已读评论。
-- GitHub公开代码与问题 · `site:github.com "grok" "EU261"; site:github.com Grok EU261 airline compensation issues`：本轮返回结果未提供可归属此案例的公开仓库或用户issue，多数结果不相关。不能据此证明不存在仓库。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 有利反证：AirHelp收费和消费者中心投诉流程说明痛点真实，免费渠道也无法消除旅客时间成本，因此允许受控试点。否定商业扩张的证据：SAS鼓励直接投诉，Grok已有通用功能，AirHelp承担授权和法律流程而非仅写信；本案只有聚合页的获批声称。不能由天气晴朗推断所有机组延误均必赔，也不能把一个案件的赔偿额算成产品营业额。
 
-原始X与Reddit被robots禁止；欧盟指南首次503后重试取得正文；欧盟理事会搜索命中的修订新闻被robots禁止，未作为生效法律事实；EUR-Lex返回正文不足，未计来源。未取得本案航班号、承运人、日期、完整邮件、航班数据证据、批准函或银行到账；未取得工作流代码、精确配置、项目订价、收入、客户规模、实际模型成本、律师报价或经营资格意见。读取官方Bot功能并不验证本案实现，通用Grok和Bot不能混称为同一业务配置。没有用户访谈或付费产品实测，没有登录、提交表单、联系厂商、购买或调用额外付费模型；没有足够市场规模证据，因此未给TAM。所有未来试点、价格、转化及单位经济数字均为建议或假设。
+航班信息、完整邮件、批准函与到账记录未核实。实现配置、模型成本、客户规模及法律服务报价未知；单位经济为试点假设。
 
 ## 具体动作与止损条件
 
@@ -227,6 +212,3 @@ B：成功收费受理案件，研究者压力情景假设：平均赔偿€400�
 - [S3b295a170021] [AI teammates that finish the work | Grok Bot](https://x.ai/bot)：Grok Bot官方页面说明应用操作、共享云电脑、按用户隔离、周用量及额外token计费；不证明本案例配置或商业授权。
 
 结构化记录：[research/dispute-an-airline-s-eu261-delay-compensation-rejection.json](../research/dispute-an-airline-s-eu261-delay-compensation-rejection.json)
-来源读取凭据：[research/evidence/dispute-an-airline-s-eu261-delay-compensation-rejection.json](../research/evidence/dispute-an-airline-s-eu261-delay-compensation-rejection.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

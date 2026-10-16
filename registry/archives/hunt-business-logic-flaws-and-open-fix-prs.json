@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ed6f33de3d5e5ed8034960418fc6526697e39eb919d7f22b1db6e3156eec05b0",
-      "publication": "reviewed_restatement_required"
+      "value": "Parallel Devin agents each read part of a codebase, find business-logic and auth bypass flaws, confirm them in a sandbox, then open remediation PRs (vendor description).",
+      "sha256": "ed6f33de3d5e5ed8034960418fc6526697e39eb919d7f22b1db6e3156eec05b0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "21475ffe536aaa46be5da29d68ab6a21c4f27d25b2ee18346ce0548f5db1d5f0",
-      "publication": "reviewed_restatement_required"
+      "value": "Parallel agents each take a segment of the codebase and reason across files for business-logic flaws, chained auth bypasses and cross-service exploit paths. Devin then combines the findings into full attack paths and reproduces each one in an isolated sandbox. Once a vulnerability is confirmed, it writes the patch and opens a PR for review. Scan profiles can be generated from existing threat model documents.",
+      "sha256": "21475ffe536aaa46be5da29d68ab6a21c4f27d25b2ee18346ce0548f5db1d5f0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0b1a0afbd14331cc48a41e68d3292f1944e1a82f69e6184b9645e808c81e929c",
-      "publication": "reviewed_restatement_required"
+      "value": "On Cognition's own 50-vulnerability benchmark, Devin Security scored 72% recall at $90.23 per run, against 68% for Claude Security at $131.87. This is a vendor benchmark, not an independent one.",
+      "sha256": "0b1a0afbd14331cc48a41e68d3292f1944e1a82f69e6184b9645e808c81e929c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "18a6361f5a1a462390a2fc98be0c2859aaa8c2b3de7089e9520c3053de3fa53c",
-      "publication": "reviewed_restatement_required"
+      "value": "The first full scan sets the baseline. Later scans cover only changed code, so cost falls over time, and batch size per profile controls depth and cost.",
+      "sha256": "18a6361f5a1a462390a2fc98be0c2859aaa8c2b3de7089e9520c3053de3fa53c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Hunt business-logic flaws and open fix PRs\nParallel Devin agents each read part of a codebase, find business-logic and auth bypass flaws, confirm them in a sandbox, then open remediation PRs (vendor description).\nDone with\nDE\nDevin\nWhat they did\nParallel agents each take a segment of the codebase and reason across files for business-logic flaws, chained auth bypasses and cross-service exploit paths. Devin then combines the findings into full attack paths and reproduces each one in an isolated sandbox. Once a vulnerability is confirmed, it writes the patch and opens a PR for review. Scan profiles can be generated from existing threat model documents.\nHow it went\nOn Cognition's own 50-vulnerability benchmark, Devin Security scored 72% recall at $90.23 per run, against 68% for Claude Security at $131.87. This is a vendor benchmark, not an independent one.\nWorth knowing\nThe first full scan sets the baseline. Later scans cover only changed code, so cost falls over time, and batch size per profile controls depth and cost.\nTry it yourself\nwith\nDevin\nCopy prompt\nReview my codebase [repo name] for business-logic flaws and authentication or authorization bypasses. Split it into parts and examine each, then try to confirm every suspected issue in a sandbox, not on production. Finish with a ranked list of confirmed findings, and open a draft pull request with a fix for each one. Do not merge anything or touch live systems.\nOriginal source: https://cognition.com/blog/introducing-devin-security-swarm",
+    "body_sha256": "22279bfbe3b91f2edbcd7d2b81b8c25b102c282697d373ed3e83ef7cc907f0fd",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

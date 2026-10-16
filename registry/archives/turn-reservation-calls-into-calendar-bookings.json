@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9a579f155d8d897513859f10435c145015a4cbd8db15686230fc6f1cc1c4fb00",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow takes Vapi call transcripts, extracts reservation details, creates Calendar events, logs to Sheets and sends follow-ups.",
+      "sha256": "9a579f155d8d897513859f10435c145015a4cbd8db15686230fc6f1cc1c4fb00"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "24fc6e46128d0bd9000b5fc0e3830dd291f85e5b57f279aba50b2189a07fefc7",
-      "publication": "reviewed_restatement_required"
+      "value": "When Vapi finishes a call, it posts the transcript to an n8n webhook, and an IF node lets only call_ended events through. A Groq-hosted Llama model turns the transcript into fixed JSON: name, phone, email, guests, date, time and requests, plus a drafted confirmation email. n8n then creates the Google Calendar event, appends to Sheets and Supabase, and sends Gmail and Twilio SMS confirmations.",
+      "sha256": "24fc6e46128d0bd9000b5fc0e3830dd291f85e5b57f279aba50b2189a07fefc7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d1d8754ee722684192d83e6295ad5d95f044c700ca1353948341577e27d0ba8c",
-      "publication": "reviewed_restatement_required"
+      "value": "The authors give no booking counts or test results. They put running cost at about $60–100 a month and argue that recovering one lost reservation a week pays for it. They flag double-booking as an open risk.",
+      "sha256": "d1d8754ee722684192d83e6295ad5d95f044c700ca1353948341577e27d0ba8c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "646a6051c91fef6c754aad77693cf6c84b55599282c00d30d7ea0a69b53bb9dd",
-      "publication": "reviewed_restatement_required"
+      "value": "Add an availability check before the calendar insert, or two callers can get the same slot. Cost is roughly $60–100 a month, or $0.10–0.12 per call minute.",
+      "sha256": "646a6051c91fef6c754aad77693cf6c84b55599282c00d30d7ea0a69b53bb9dd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn reservation calls into calendar bookings\nAn n8n workflow takes Vapi call transcripts, extracts reservation details, creates Calendar events, logs to Sheets and sends follow-ups.\nDone with\nN8\nn8n\nWhat they did\nWhen Vapi finishes a call, it posts the transcript to an n8n webhook, and an IF node lets only call_ended events through. A Groq-hosted Llama model turns the transcript into fixed JSON: name, phone, email, guests, date, time and requests, plus a drafted confirmation email. n8n then creates the Google Calendar event, appends to Sheets and Supabase, and sends Gmail and Twilio SMS confirmations.\nHow it went\nThe authors give no booking counts or test results. They put running cost at about $60–100 a month and argue that recovering one lost reservation a week pays for it. They flag double-booking as an open risk.\nWorth knowing\nAdd an availability check before the calendar insert, or two callers can get the same slot. Cost is roughly $60–100 a month, or $0.10–0.12 per call minute.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives call transcripts from [Vapi or my voice-agent tool], extracts the guest name, phone number, date, time and party size, and creates a Google Calendar event on [my calendar]. It should also log each booking to a Google Sheet and draft a follow-up message. It's done when a sample transcript produces a calendar event and a sheet row; pause and show me the follow-up before anything is sent.\nOriginal source: https://www.clixlogix.com/n8n-ai-receptionist-24-7-booking-agent/",
+    "body_sha256": "80e3a6edc499a4f4b1e3d719bf09a35db3f2e7f105a1ab1653550a867ce98239",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

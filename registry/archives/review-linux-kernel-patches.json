@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6f67a64fed9465c75f5f63a3cd02810f9ea82514d4474cbaabd943da97537eb7",
-      "publication": "reviewed_restatement_required"
+      "value": "Google engineers launched Sashiko, an agentic AI code reviewer for the Linux kernel.",
+      "sha256": "6f67a64fed9465c75f5f63a3cd02810f9ea82514d4474cbaabd943da97537eb7"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "52dee1a58ca89401d3591d26fb437c7a215f04775743d2376cf7206d3a01175b",
-      "publication": "reviewed_restatement_required"
+      "value": "Roman Gushchin's team at Google spent several months building Sashiko, an agentic code review system, and used it internally before release. It is now open source and covers every submission to the Linux kernel mailing list. It was designed for Gemini 3.1 Pro but should also work with Claude and probably other LLMs.",
+      "sha256": "52dee1a58ca89401d3591d26fb437c7a215f04775743d2376cf7206d3a01175b"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "42449c2873697e9ee14e18b4d67096e44118a432a7d14767a3c5ff305a9d86f4",
-      "publication": "reviewed_restatement_required"
+      "value": "On 1,000 recent upstream issues with Fixes: tags, it found about 53% of the bugs, and human reviewers had missed all of them. Gushchin acknowledges that 53% may not sound impressive.",
+      "sha256": "42449c2873697e9ee14e18b4d67096e44118a432a7d14767a3c5ff305a9d86f4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "160e33fa16374a4aa7960b9f4a832501057412589538e2ed07a93ecead7d6df5",
-      "publication": "reviewed_restatement_required"
+      "value": "Google is paying for the token budget and infrastructure while hosting moves to the Linux Foundation, so running this yourself means covering your own LLM costs.",
+      "sha256": "160e33fa16374a4aa7960b9f4a832501057412589538e2ed07a93ecead7d6df5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Review Linux kernel patches\nGoogle engineers launched Sashiko, an agentic AI code reviewer for the Linux kernel.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nRoman Gushchin's team at Google spent several months building Sashiko, an agentic code review system, and used it internally before release. It is now open source and covers every submission to the Linux kernel mailing list. It was designed for Gemini 3.1 Pro but should also work with Claude and probably other LLMs.\nHow it went\nOn 1,000 recent upstream issues with Fixes: tags, it found about 53% of the bugs, and human reviewers had missed all of them. Gushchin acknowledges that 53% may not sound impressive.\nWorth knowing\nGoogle is paying for the token budget and infrastructure while hosting moves to the Linux Foundation, so running this yourself means covering your own LLM costs.\nTry it yourself\nwith\nCodex\nCopy prompt\nAct as a code reviewer for this patch or diff: [paste diff or give branch name] in the repo at [path]. Check for bugs, memory or concurrency problems, missing error handling, and unclear naming, citing exact lines. Finish with a prioritized list of findings and a one-paragraph verdict on whether it's ready to merge.\nOriginal source: https://www.phoronix.com/news/Sashiko-Linux-AI-Code-Review",
+    "body_sha256": "802ee1fe24f24b4bf87e3baf32b543c27dcb63c8b4378cf3fb1fa9095b1a71da",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

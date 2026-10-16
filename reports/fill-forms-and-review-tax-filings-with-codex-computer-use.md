@@ -1,36 +1,30 @@
 # Codex跨应用填表与税表复核：内部助理可用，收费交付尚缺效果证据
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/fill-forms-and-review-tax-filings-with-codex-computer-use
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Codex
-
-### 介绍
-
-A secondary article describes OpenAI staff experimenting with Codex for document and interface tasks.
-
-一篇二手文章描述 OpenAI 员工用 Codex 处理文档及界面任务。
-
-### 方法
-
-Computer interaction was used for forms and PDFs, including checking one employee’s tax documents when direct integration was unavailable.
-
-操作对象包括表单和 PDF，并在缺乏直接集成时检查了一位员工的税务文件。
-
-### 结果与限制
-
-The article attributes a financially meaningful correction to the review, but gives neither reproducible steps nor measured reliability.
-
-文章称复核发现了具有财务价值的错误，但没有可复现步骤或可靠性测量。
+    Fill forms and review tax filings with Codex computer use
+    Secondhand accounts of OpenAI staff using Codex computer use for forms and PDFs, including one tax filing review that caught an error worth thousands.
+    Done with
+    CX
+    Codex
+    What they did
+    This is a secondhand write-up of OpenAI engineers describing Codex computer use. The agent works through a visible on-screen pointer, clicking and typing in apps and sites that have no API or connector. Staff described asking it to fill out forms, dig through PDFs, and review one engineer's personal tax paperwork.
+    How it went
+    The tax review caught an error in the user's favor worth thousands of dollars. The article gives no timings, step-by-step details or failure cases, and only a single tax example.
+    Worth knowing
+    Connectors like Slack or email are faster and use fewer tokens than clicking through a UI, so use computer use mainly where no integration exists.
+    Try it yourself
+    with
+    Codex
+    Copy prompt
+    Open [form or PDF file path] and fill in the fields using the details in [source documents folder]. Then review my [tax year] filing against those documents and list any numbers that look wrong or inconsistent. Do not submit or sign anything; stop and show me the filled form and your list of concerns first.
+    Original source: https://www.mindstudio.ai/blog/openai-codex-computer-use-agents
 
 ## 原作者的方法与来源
 
 来源：[MindStudio · Codex computer use](https://www.mindstudio.ai/blog/openai-codex-computer-use-agents)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 文章转述一名工程师让 Codex 检查个人报税材料并发现错误的经历。
    English summary: The article recounts an engineer asking Codex to review personal tax paperwork and finding an error.
@@ -45,7 +39,7 @@ The article attributes a financially meaningful correction to the review, but gi
 本案例真实对象是通用Codex桌面能力的使用方式，并非已有收入的税务公司。纳税人或事务所员工可以将它用于表单草稿和疑点清单，再由具备判断能力的人逐项核对。原始报道的数千美元错误没有税表与退款记录支撑，不能当成已收回现金。现成报税软件已有低价申报、文档导入和人工答疑，新增服务必须证明在这些替代之后仍节省净工时。界面权限、异常恢复、税务判断和数据保护都会增加成本，故目前只认可内部辅助价值，不据此扩张对外自动报税业务。
 
 案例ID：`fill-forms-and-review-tax-filings-with-codex-computer-use` · 案例来源：https://agentusecases.ai/use-case/fill-forms-and-review-tax-filings-with-codex-computer-use
-研究时间：2026-10-15T10:13:27.922299+00:00 · 证据置信度：中低：功能、条款、竞争价格和历史市场数据可核验；核心税表收益仅二手转述，未验证退税、准确率、付费客户和生产交付。
+研究时间：2026-10-15T10:13:27.922299+00:00
 
 **商业评分：41.0/100。用户反馈信号占5%。**
 
@@ -76,9 +70,7 @@ The article attributes a financially meaningful correction to the review, but gi
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -88,9 +80,9 @@ The article attributes a financially meaningful correction to the review, but gi
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S83fcfd0ec21b, Sec21f0dba848, Sf79c3bf4770a, S9f3198b59407, S53cd13bd410c, S10c8236f2e22, Sd9da3a80266f, S8ef4acb72250
 
@@ -103,9 +95,9 @@ The article attributes a financially meaningful correction to the review, but gi
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S83fcfd0ec21b, Sec21f0dba848, Sf79c3bf4770a, S9f3198b59407, S53cd13bd410c, S10c8236f2e22, Sd9da3a80266f, S8ef4acb72250
 
@@ -195,9 +187,7 @@ IRS的PTIN页面与数据保护要求提示，收费税务准备和纯机械搬�
 
 ## 用户评价怎样影响判断
 
-已执行针对Reddit税务使用、OpenAI社区税表复核及GitHub电脑操作问题等检索，跨社区与代码问题两类渠道。搜索结果噪声很大，没有找到能核对到本案例完整税务交付的独立用户记录。案例页另列Reddit非编程使用讨论与X十年税务资料帖，读取时两站均由robots规则禁止；没有绕过，也没有把案例页对帖子内容的概括冒充已读用户证言。原文员工故事属于二手且与产品存在利益关系，不计作独立税务口碑。
-
-实际读到的GitHub #26536是相邻Computer Use工作流：报告Windows插件不可用；评论有修复后恢复和后续版本仍复现的自述。它提示配置与版本排障要计成本，并不证明税务复核成功或失败，也不能估计故障比例。报告者为自选样本，身份及诊断未独立复现，部分回复经Codex Connector发布，机器人查重不是用户体验。本研究仅给反馈1/5，占总分1分；该分表示有限的相邻运行信号，而不是税务用户满意度。若将来有匿名化前后工时、字段差异和负责人签核的连续记录，才足以提升业务效果判断。
+相关体验：Windows桌面插件可用性问题存在公开报告，后续既有恢复自述也有复现；支持为配置和排障留成本。
 
 依据：S8ef4acb72250, S83fcfd0ec21b, S9f3198b59407
 
@@ -220,18 +210,11 @@ IRS的PTIN页面与数据保护要求提示，收费税务准备和纯机械搬�
 
 研究者假设：权限及资料异常压力单假设：全部经营输入为情景假设：人工60分钟×60美元/小时，包含授权排障、沟通及复核；其他8、获客20为每单假设，月量30体现吞吐及需求下滑。固定费与标准情景同为1200，API0不表示免费交付。单贡献-28、月余额-2040，不是观测损失。；API成本 0，人工成本 60，其他可变成本 8，分摊获客成本 20。依据：Sec21f0dba848, S8ef4acb72250, Sd9da3a80266f
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `"Codex" "tax" "review" site:reddit.com`：检索结果噪声大，未获得可核验本税务流程直接评价；案例页链接到Reddit后实际读取受robots禁止。
-- OpenAI社区 · `"Codex" "tax" site:community.openai.com`：未找到支持本案例税务结果的直接用户记录；不能由未检出推断没有使用者。
-- GitHub公开问题 · `site:github.com/openai/codex/issues computer use forms`：发现并实际读取#26536桌面插件不可用问题，归为邻近工作流，非税务案例反馈。
-- [S8ef4acb72250] adjacent_workflow：Windows桌面插件可用性问题存在公开报告，后续既有恢复自述也有复现；支持为配置和排障留成本。；偏差：自选故障样本，无总体基数；未复现诊断、未验证身份；不能推导税务准确率、退款或普遍故障率。
-
 ## 反证与未核实信息
 
 反对立即商业化：原文仅一例员工个人税务纠错二手故事，没有审计后的税表或回款；FreeTaxUSA已有低价复核和原生流程，Windows前台占用与插件问题又会增加交付成本。反对完全否定：无接口表单仍可能有小范围转录价值，机构内部可复用授权与模板；因此结论保留内部验证，但不升级为已验证服务。
 
-未找到工程师原始访谈/演示或税务凭据；数千美元仅报道转述，不是已确认退款或收入。没有客户数、续费、售价、模型版本、提示词记录、耗时、税务错误率、赔偿或利润数据。未运行真实表单与完整技术实验；未验证各税务软件自动化条款或具体业务的专业资格适用性。Reddit与X反馈读取被robots禁止，查询有噪声，缺少直接税务用户评价。IRS数量为2025历史窗口，不能作为2026最新规模。两种经济模型均为假设。本轮仓库中不存在AGENTS.md及项目.agents/skills；使用现有任务文档流程。爬虫18:06:25北京时间完成1321目录及5详情，新库基线且登记表与上轮无变化；未把刷新计为深研。
+数千美元结果来自报道转述，缺少退款凭证。客户数、售价、模型配置、耗时、税务错误率及赔偿数据未知；市场数量使用2025年历史窗口。
 
 ## 具体动作与止损条件
 
@@ -252,6 +235,3 @@ IRS的PTIN页面与数据保护要求提示，收费税务准备和纯机械搬�
 - [S9f3198b59407] [Fill forms and review tax filings with Codex computer use with Codex | Agent Use Cases](https://agentusecases.ai/use-case/fill-forms-and-review-tax-filings-with-codex-computer-use)：当前案例身份、原始来源映射、单一税表故事的二手性质和不提交不签名的尝试边界。
 
 结构化记录：[research/fill-forms-and-review-tax-filings-with-codex-computer-use.json](../research/fill-forms-and-review-tax-filings-with-codex-computer-use.json)
-来源读取凭据：[research/evidence/fill-forms-and-review-tax-filings-with-codex-computer-use.json](../research/evidence/fill-forms-and-review-tax-filings-with-codex-computer-use.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

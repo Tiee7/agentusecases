@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6eb2ea9eace8fadc0a94a84c46df447de1dc5af93d6494737dc824c6a794d586",
-      "publication": "reviewed_restatement_required"
+      "value": "Google's Big Sleep agent reported about 20 security flaws in open-source software, following its SQLite find.",
+      "sha256": "6eb2ea9eace8fadc0a94a84c46df447de1dc5af93d6494737dc824c6a794d586"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4294f2973675aeda328105e4b3df9223106cd1075f19d5b6f21691725b3f2944",
-      "publication": "reviewed_restatement_required"
+      "value": "Big Sleep, built by Google DeepMind and Project Zero, was pointed at widely used open-source projects. It found and reported 20 previously unknown vulnerabilities, mostly in FFmpeg and ImageMagick. The article gives no detail on the agent's workflow or on how much human review was involved. It does describe the earlier SQLite case, where the agent traced the root cause of a flaw that Google's threat intelligence team had only seen signs of being exploited.",
+      "sha256": "4294f2973675aeda328105e4b3df9223106cd1075f19d5b6f21691725b3f2944"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "104fe2dc5f4e3c205bbd6cf07398e8ee945ce12c2c7a4a914b08a9f873fd50a6",
-      "publication": "reviewed_restatement_required"
+      "value": "20 flaws were reported, and their details are withheld under standard disclosure procedures. The article says nothing on severity or fix status for these 20. The earlier SQLite bug (CVE-2025-6965) was rated 7.2 on CVSS.",
+      "sha256": "104fe2dc5f4e3c205bbd6cf07398e8ee945ce12c2c7a4a914b08a9f873fd50a6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "260ff7fc1b70302a146a68f8268878a77319100cfe91c89817dab572dbb7fc93",
-      "publication": "reviewed_restatement_required"
+      "value": "The specifics of the 20 flaws are not public yet, so you can't check them. The article also doesn't say how many reports were valid or how much human triage was needed.",
+      "sha256": "260ff7fc1b70302a146a68f8268878a77319100cfe91c89817dab572dbb7fc93"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find security flaws in open-source software\nGoogle's Big Sleep agent reported about 20 security flaws in open-source software, following its SQLite find.\nDone with\nGE\nGemini\nWhat they did\nBig Sleep, built by Google DeepMind and Project Zero, was pointed at widely used open-source projects. It found and reported 20 previously unknown vulnerabilities, mostly in FFmpeg and ImageMagick. The article gives no detail on the agent's workflow or on how much human review was involved. It does describe the earlier SQLite case, where the agent traced the root cause of a flaw that Google's threat intelligence team had only seen signs of being exploited.\nHow it went\n20 flaws were reported, and their details are withheld under standard disclosure procedures. The article says nothing on severity or fix status for these 20. The earlier SQLite bug (CVE-2025-6965) was rated 7.2 on CVSS.\nWorth knowing\nThe specifics of the 20 flaws are not public yet, so you can't check them. The article also doesn't say how many reports were valid or how much human triage was needed.\nTry it yourself\nwith\nGemini\nCopy prompt\nClone [open-source repository URL] and review its [language] code for likely security flaws such as memory safety bugs, injection, unsafe input parsing, and hardcoded secrets. Write up each finding in a file with the file path, a short explanation, and how severe you think it is. Do not change any code or open any issues or pull requests. Stop once you have a ranked list of your top [number] findings.\nOriginal source: https://www.computing.co.uk/news/2025/security/big-sleep-finds-20-flaws-in-open-source-software",
+    "body_sha256": "1d457f8a3935eb7ff89cae81348fa84ce749570f8ccb85b21a78aeab331d8c48",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "dc124cb7a933ffc74ecdb25b97dd7efcf3b318a2360b18778bb063cce810a861",
-      "publication": "reviewed_restatement_required"
+      "value": "A poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.",
+      "sha256": "dc124cb7a933ffc74ecdb25b97dd7efcf3b318a2360b18778bb063cce810a861"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3a4531a90f94ee9e6ad3d88033398876ee75d1333d7e6c277e8387df91c497b8",
-      "publication": "reviewed_restatement_required"
+      "value": "The thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.",
+      "sha256": "3a4531a90f94ee9e6ad3d88033398876ee75d1333d7e6c277e8387df91c497b8"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cb4eeb0e86b4004975b356dd1926e9638e5665b2b33ff07874a09eef86838b0a",
-      "publication": "reviewed_restatement_required"
+      "value": "The reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.",
+      "sha256": "cb4eeb0e86b4004975b356dd1926e9638e5665b2b33ff07874a09eef86838b0a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fe2ffd5efe44c90f6974e99da0276b1865cb2534a728504b6e9c044b520da9d",
-      "publication": "reviewed_restatement_required"
+      "value": "One prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.",
+      "sha256": "8fe2ffd5efe44c90f6974e99da0276b1865cb2534a728504b6e9c044b520da9d"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
+    "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

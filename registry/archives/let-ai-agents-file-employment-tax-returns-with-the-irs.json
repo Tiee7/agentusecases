@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9c0901fcb42200cb638894d84bb4933a5188b3d632288a77ed2ca8fd788ae902",
-      "publication": "reviewed_restatement_required"
+      "value": "An MCP server in development lets agents submit tax returns (employment forms 941 and 940 first) to the IRS as a tool call; it is still in IRS certification and not yet live.",
+      "sha256": "9c0901fcb42200cb638894d84bb4933a5188b3d632288a77ed2ca8fd788ae902"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c66a9c2a193ae773b43952bf738e3c5a3b13f0408c7d2e51a8549c1653932ef7",
-      "publication": "reviewed_restatement_required"
+      "value": "The builder is making an MCP server that exposes IRS return submission as a tool call, so an agent can file after AI prepares the return. It starts with employment forms 941 and 940, then corporate and individual returns. Right now the work is IRS ATS certification, which involves credentialing, schema validation and SOAP handshakes.",
+      "sha256": "c66a9c2a193ae773b43952bf738e3c5a3b13f0408c7d2e51a8549c1653932ef7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "007be4621a936aac728dc7aa27d0e07cde4734742a027397603e46bd63ba1588",
-      "publication": "reviewed_restatement_required"
+      "value": "Nothing is live yet. The server is still finalizing IRS certification, and an early access sandbox is planned to open only after it passes. No filings or results are reported.",
+      "sha256": "007be4621a936aac728dc7aa27d0e07cde4734742a027397603e46bd63ba1588"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4c348c2bf4c0acc873d0e3f72c394c27d0ed008b3d3a26ba5e25947f00ab9e13",
-      "publication": "reviewed_restatement_required"
+      "value": "Certification is a gauntlet and requires annual re-certification, so expect an ongoing maintenance burden; the source gives no cost or timeline.",
+      "sha256": "4c348c2bf4c0acc873d0e3f72c394c27d0ed008b3d3a26ba5e25947f00ab9e13"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let AI agents file employment tax returns with the IRS\nAn MCP server in development lets agents submit tax returns (employment forms 941 and 940 first) to the IRS as a tool call; it is still in IRS certification and not yet live.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe builder is making an MCP server that exposes IRS return submission as a tool call, so an agent can file after AI prepares the return. It starts with employment forms 941 and 940, then corporate and individual returns. Right now the work is IRS ATS certification, which involves credentialing, schema validation and SOAP handshakes.\nHow it went\nNothing is live yet. The server is still finalizing IRS certification, and an early access sandbox is planned to open only after it passes. No filings or results are reported.\nWorth knowing\nCertification is a gauntlet and requires annual re-certification, so expect an ongoing maintenance burden; the source gives no cost or timeline.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a small MCP server that exposes a tool called [tool name, e.g. submit_form_941] to prepare and validate employment tax return data for [business name] and [quarter]. It should check required fields, compute totals from the payroll file at [path], and output the final form data. Finish with a dry-run output and stop before sending anything to a real tax authority.\nOriginal source: https://news.ycombinator.com/item?id=47769711",
+    "body_sha256": "982c8942d514191d31bd867b88fd3fc00f3788bba04d48aa800f45b0bb56867c",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

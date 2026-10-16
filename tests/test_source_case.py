@@ -39,3 +39,10 @@ class SourceCaseTests(unittest.TestCase):
                 for section in s['sections'].values():self.assertTrue(section['en'] and section['zh'])
                 record=json.loads(Path(c['record']).read_text());self.assertEqual(record['source_case']['source_url'],value['source_url'])
         # Coverage is a dated receipt, not a quota: future source changes invalidate summaries.
+
+    def test_report_generation_uses_original_not_editorial(self):
+        from agentwatch.source_case import render
+        c=next(c for c in json.loads(Path('registry/cases.json').read_text())['cases'] if c['id']=='produce-investment-memos-with-claude-cowork')
+        a=json.loads(Path('registry/archives',c['id']+'.json').read_text());result='\n'.join(render(c['source_case']))
+        self.assertIn('## English',result);self.assertIn('\n'.join('    '+x if x else '' for x in a['source_text']['body'].splitlines()),result)
+        self.assertNotIn('原创双语摘要',result);self.assertNotIn('观测时间',result);self.assertNotIn('## 中文',result)

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a60792754fa6c7c3c80258efe69e84a210006acbd587bc219f581558b2cb34b0",
-      "publication": "reviewed_restatement_required"
+      "value": "Jeff Adams used the Claude Chrome extension to collect meeting minutes into text files and load them into a notebook, taking 3-4 hours over three sessions.",
+      "sha256": "a60792754fa6c7c3c80258efe69e84a210006acbd587bc219f581558b2cb34b0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "287149864101c55df1c873d9ebd8fc1175bedce68aeb9ebfc57f788539cc7649",
-      "publication": "reviewed_restatement_required"
+      "value": "With the W3C minutes archive page open, Jeff had Claude in Chrome (Haiku model) visit each 2022–2024 meeting page. It extracted the exact text as markdown in a code block. He tested one meeting first. When a full year was too much, they switched to one month at a time. He pasted each month into a yearly text file and spot-checked the results.",
+      "sha256": "287149864101c55df1c873d9ebd8fc1175bedce68aeb9ebfc57f788539cc7649"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a0f8e3dc850f71d87d879aa37e8d743143c41014724fc45508606605f41bd853",
-      "publication": "reviewed_restatement_required"
+      "value": "Three years of minutes ended up in three text files, one per year, and were loaded into NotebookLM. Spot checks found no errors. It took 3–4 hours over three sessions, with one usage limit hit.",
+      "sha256": "a0f8e3dc850f71d87d879aa37e8d743143c41014724fc45508606605f41bd853"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ad8f1f9b8819987ea36709765137d2b0c071bf8935aa095f7ec82aa4749c7d15",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent stalled after 3–4 months of a year, so ask for one month at a time. A usage limit also forced a four-hour wait.",
+      "sha256": "ad8f1f9b8819987ea36709765137d2b0c071bf8935aa095f7ec82aa4749c7d15"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Gather three years of meeting minutes into text files\nJeff Adams used the Claude Chrome extension to collect meeting minutes into text files and load them into a notebook, taking 3-4 hours over three sessions.\nDone with\nCH\nClaude in Chrome\nCW\nClaude Cowork\nWhat they did\nWith the W3C minutes archive page open, Jeff had Claude in Chrome (Haiku model) visit each 2022–2024 meeting page. It extracted the exact text as markdown in a code block. He tested one meeting first. When a full year was too much, they switched to one month at a time. He pasted each month into a yearly text file and spot-checked the results.\nHow it went\nThree years of minutes ended up in three text files, one per year, and were loaded into NotebookLM. Spot checks found no errors. It took 3–4 hours over three sessions, with one usage limit hit.\nWorth knowing\nThe agent stalled after 3–4 months of a year, so ask for one month at a time. A usage limit also forced a four-hour wait.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nGo to [website where our meeting minutes are posted] and collect the minutes for [meeting body] from [start year] to [end year]. Save each one as a separate text file named with its date in [folder], and give me a list of any meetings you couldn't find or read. Work in batches of [20] and tell me when each batch is done so I can check it.\nOriginal source: https://lists.w3.org/Archives/Public/public-maturity/2026Feb/0004.html",
+    "body_sha256": "de4d8f27fa9ac43ef53db2277d097bbceff715ee9b3e3db7663f9538b4848ca9",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

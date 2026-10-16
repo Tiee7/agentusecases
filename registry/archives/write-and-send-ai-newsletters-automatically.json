@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f652a828ae842a5c8124f42313c5ec472e43978898a180cb2ba16f34d3fa787c",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n agent finds a trending AI topic, writes a newsletter with Gemini, formats it and emails it to subscribers without manual work.",
+      "sha256": "f652a828ae842a5c8124f42313c5ec472e43978898a180cb2ba16f34d3fa787c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f378535441615079c0443c24b615f19e67c3a435dd9cc817e9cd48e5196e39e6",
-      "publication": "reviewed_restatement_required"
+      "value": "A schedule trigger starts an n8n workflow daily or weekly. One Gemini node picks a trending AI topic from the last 24–48 hours, and a second writes a structured HTML newsletter. A JavaScript Code node strips escape characters and metadata. The workflow then reads subscriber emails from a Google Sheet, aggregates them, and sends the email through Gmail.",
+      "sha256": "f378535441615079c0443c24b615f19e67c3a435dd9cc817e9cd48e5196e39e6"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "51b0d34424d6b353c9c4596a87847b52334da38e08f18426bdaf2c6a867cff0f",
-      "publication": "reviewed_restatement_required"
+      "value": "The article says the workflow runs on schedule with no manual effort and produces a styled email with a gradient header and topic badge. It gives no usage numbers or measured results.",
+      "sha256": "51b0d34424d6b353c9c4596a87847b52334da38e08f18426bdaf2c6a867cff0f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "03ae840f5dc92c0deff662d5b50af90132843819bb2b427ffafa640817cfea31",
-      "publication": "reviewed_restatement_required"
+      "value": "Raw Gemini output needed cleanup code to avoid broken email layouts, and the author advises reviewing the first few outputs manually before fully automating.",
+      "sha256": "03ae840f5dc92c0deff662d5b50af90132843819bb2b427ffafa640817cfea31"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write and send AI newsletters automatically\nAn n8n agent finds a trending AI topic, writes a newsletter with Gemini, formats it and emails it to subscribers without manual work.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA schedule trigger starts an n8n workflow daily or weekly. One Gemini node picks a trending AI topic from the last 24–48 hours, and a second writes a structured HTML newsletter. A JavaScript Code node strips escape characters and metadata. The workflow then reads subscriber emails from a Google Sheet, aggregates them, and sends the email through Gmail.\nHow it went\nThe article says the workflow runs on schedule with no manual effort and produces a styled email with a gradient header and topic badge. It gives no usage numbers or measured results.\nWorth knowing\nRaw Gemini output needed cleanup code to avoid broken email layouts, and the author advises reviewing the first few outputs manually before fully automating.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that runs every [day/week], finds a trending topic in [niche, e.g. AI] from [sources], and uses Gemini to write a newsletter in this voice: [tone description]. Format it as clean HTML and prepare it to send to my subscriber list in [email tool or sheet]. Before the send step is enabled, pause and show me the full draft and recipient count so I can approve it.\nOriginal source: https://dev.to/techstuff/automating-ai-newsletters-with-n8n-the-newsletter-agent-workflow-2agj",
+    "body_sha256": "68c8c997849f70949d9e29114c114e4fa63a593d1eaa1630a37a40b81f798441",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

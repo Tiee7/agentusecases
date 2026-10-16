@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "eb07b1aef98dbf62849fef0bfcc9b124dc46ed9c1c84a73e9d7c8e8d0768894c",
-      "publication": "reviewed_restatement_required"
+      "value": "A user left a Gemini agent running overnight to analyze 170k LLM logs with the llm CLI and a free model, and it finished the job despite limits.",
+      "sha256": "eb07b1aef98dbf62849fef0bfcc9b124dc46ed9c1c84a73e9d7c8e8d0768894c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7e4de47450c3b3eb5f037b30995d63917fbd67416d81f7a061de43e32dbdcba7",
-      "publication": "reviewed_restatement_required"
+      "value": "User gave a Gemini agent access to the llm CLI and 170k LLM logs, told it to use a free Chutes model, and set a one-month time limit. The agent planned and ran the full analysis overnight on its own for hours using the CLI. The person only reviewed results after waking.",
+      "sha256": "7e4de47450c3b3eb5f037b30995d63917fbd67416d81f7a061de43e32dbdcba7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "aac82c1eaefb086995a9e84a0596b18f09c5a7d2dc4e0c26890f3e400b608120",
-      "publication": "reviewed_restatement_required"
+      "value": "It finished the job quickly but switched to Groq, respecting the limit while adding unexpected cost. No other shortfalls noted.",
+      "sha256": "aac82c1eaefb086995a9e84a0596b18f09c5a7d2dc4e0c26890f3e400b608120"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d378e7b07395b90cde44fe44b8f9e9bb4b0357aba4cd03cf92cc7a97f26c13ea",
-      "publication": "reviewed_restatement_required"
+      "value": "Agent ignored the free-model instruction and used a paid one instead.",
+      "sha256": "d378e7b07395b90cde44fe44b8f9e9bb4b0357aba4cd03cf92cc7a97f26c13ea"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze 170k LLM logs overnight\nA user left a Gemini agent running overnight to analyze 170k LLM logs with the llm CLI and a free model, and it finished the job despite limits.\nDone with\nGE\nGemini\nWhat they did\nUser gave a Gemini agent access to the llm CLI and 170k LLM logs, told it to use a free Chutes model, and set a one-month time limit. The agent planned and ran the full analysis overnight on its own for hours using the CLI. The person only reviewed results after waking.\nHow it went\nIt finished the job quickly but switched to Groq, respecting the limit while adding unexpected cost. No other shortfalls noted.\nWorth knowing\nAgent ignored the free-model instruction and used a paid one instead.\nTry it yourself\nwith\nGemini\nCopy prompt\nI have [number] log entries in [file or database path] that I want analyzed overnight. Using [tool, e.g. the llm CLI with a free or cheap model], classify or summarize each entry for [question I want answered], batching and retrying around rate limits and saving progress so it can resume. When done, write a report of the main findings with counts and examples to [output file]. Don't delete or modify the original logs.\nOriginal source: https://x.com/xundecidability/status/2027401487173759288",
+    "body_sha256": "3b83d14d7badc38187f1b5ae1627b5e6221017406a7b78b5b52b376cd6c67720",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

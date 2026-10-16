@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "43478507d140011e9fac6cac7ce2b0129ab98743a451c21d43039f49782c688f",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code is pointed at transcripts and PDFs to produce theme summaries, evidence tables and annotated bibliographies; a UX researcher runs 50-transcript studies this way.",
+      "sha256": "43478507d140011e9fac6cac7ce2b0129ab98743a451c21d43039f49782c688f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "926275fbe600685c4123992b760fd91640315acd828e56c955da2b2a8ff87404",
-      "publication": "reviewed_restatement_required"
+      "value": "Transcripts go in one folder, one file per interview with consistent names, plus a CLAUDE.md holding research questions, a codebook and a rule to quote only verbatim text with file names. Claude codes them in batches of 5 to 8, or via parallel subagents, and writes themes.md and evidence tables. PDFs go in a papers folder for the bibliography. Claude then searches each quote in its source file.",
+      "sha256": "926275fbe600685c4123992b760fd91640315acd828e56c955da2b2a8ff87404"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b3c696899fb11d0ecaeff57aa2a2f2b75b742fd76fe1592418569b27dcf38c08",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide says one typed question replaces an hour of Ctrl+F, and Else van der Berg runs 50-transcript studies this way. Timing figures are illustrative, not benchmarked. One audit found 7.7% of supposedly verbatim quotes missing from sources.",
+      "sha256": "b3c696899fb11d0ecaeff57aa2a2f2b75b742fd76fe1592418569b27dcf38c08"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c53c7e17455a3712e642a799f8bba5a066f9ac581d98f66ad17009a574718212",
-      "publication": "reviewed_restatement_required"
+      "value": "Pin the codebook before launching parallel agents, or you get incompatible theme lists. Always run the quote verification pass, and de-identify transcripts, since file contents are sent to Anthropic.",
+      "sha256": "c53c7e17455a3712e642a799f8bba5a066f9ac581d98f66ad17009a574718212"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Synthesize interview transcripts and PDFs for research\nClaude Code is pointed at transcripts and PDFs to produce theme summaries, evidence tables and annotated bibliographies; a UX researcher runs 50-transcript studies this way.\nDone with\nCC\nClaude Code\nWhat they did\nTranscripts go in one folder, one file per interview with consistent names, plus a CLAUDE.md holding research questions, a codebook and a rule to quote only verbatim text with file names. Claude codes them in batches of 5 to 8, or via parallel subagents, and writes themes.md and evidence tables. PDFs go in a papers folder for the bibliography. Claude then searches each quote in its source file.\nHow it went\nThe guide says one typed question replaces an hour of Ctrl+F, and Else van der Berg runs 50-transcript studies this way. Timing figures are illustrative, not benchmarked. One audit found 7.7% of supposedly verbatim quotes missing from sources.\nWorth knowing\nPin the codebook before launching parallel agents, or you get incompatible theme lists. Always run the quote verification pass, and de-identify transcripts, since file contents are sent to Anthropic.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead all the interview transcripts and PDFs in [folder path] for my study on [research question]. Produce a theme summary, an evidence table with a quote and source file for each theme, and an annotated bibliography. Mark any theme supported by fewer than [number] sources as tentative, and save everything as separate files in a new output folder.\nOriginal source: https://ccforeveryone.com/guides/claude-code-for-researchers",
+    "body_sha256": "e3a64610f17c4a1ca8f9e961596c964780d60f1b9a555f7f7ee1a3000b5abfd5",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

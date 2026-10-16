@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a6fc56ed0d799e5bd133ae09bc424c1cb55b4e7c04887b6773d94826e201c04a",
-      "publication": "reviewed_restatement_required"
+      "value": "Linus Torvalds used Claude to write code, unit tests, docs, debug hooks and review for a kernel memory management problem, running benchmarks himself; a race condition still slipped in.",
+      "sha256": "a6fc56ed0d799e5bd133ae09bc424c1cb55b4e7c04887b6773d94826e201c04a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3d2252cb6d4e3f149569d20f97ca820e4822249000964a904ed018756a73f030",
-      "publication": "reviewed_restatement_required"
+      "value": "According to the post, Linus Torvalds had Claude work on a Linux kernel memory management problem. Claude wrote the code, the unit tests and the documentation, added a debug hook, and acted as code reviewer. Torvalds kept only one job, which was running the benchmarks.",
+      "sha256": "3d2252cb6d4e3f149569d20f97ca820e4822249000964a904ed018756a73f030"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "63b86a7d5f9e4c13bc4d44067bde0285ad18ac1d48cf599f4de1719c84769cfc",
-      "publication": "reviewed_restatement_required"
+      "value": "A race condition still got into the result. The post gives no benchmark numbers or other details, and the text is cut off after a short opening.",
+      "sha256": "63b86a7d5f9e4c13bc4d44067bde0285ad18ac1d48cf599f4de1719c84769cfc"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b941411ae98b09b1ac62e4d85db2b550b985dba4ccde5ff6d63b7f2b4e657a95",
-      "publication": "reviewed_restatement_required"
+      "value": "Having the AI review its own code did not catch the race condition, so concurrency bugs still need a human or separate checks.",
+      "sha256": "b941411ae98b09b1ac62e4d85db2b550b985dba4ccde5ff6d63b7f2b4e657a95"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fix a Linux kernel memory management problem with Claude\nLinus Torvalds used Claude to write code, unit tests, docs, debug hooks and review for a kernel memory management problem, running benchmarks himself; a race condition still slipped in.\nDone with\nCL\nClaude\nWhat they did\nAccording to the post, Linus Torvalds had Claude work on a Linux kernel memory management problem. Claude wrote the code, the unit tests and the documentation, added a debug hook, and acted as code reviewer. Torvalds kept only one job, which was running the benchmarks.\nHow it went\nA race condition still got into the result. The post gives no benchmark numbers or other details, and the text is cut off after a short opening.\nWorth knowing\nHaving the AI review its own code did not catch the race condition, so concurrency bugs still need a human or separate checks.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm working on [describe the bug or change] in [repo/path]. Write the fix, unit tests, documentation and any debug hooks, then review your own change specifically for race conditions and locking problems. Give me benchmark or test commands to run myself, and finish with a summary of the change and any risks you still see. Don't commit or push anything until I've reviewed the diff.\nOriginal source: https://bsky.app/profile/gaudipern.bsky.social/post/3mxwjtes4a22p",
+    "body_sha256": "a5f6b406563ebac74b4d8a1650dc716b6d0cdf295b8b31ca8ff098d56e893e69",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

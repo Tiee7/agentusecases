@@ -197,8 +197,10 @@ def economics(model):
     return variable,contribution,profit
 
 def render(record):
+    from .reader_copy import project
+    record=project(record)
     v=record['verdict']
-    lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']} · 证据置信度：{record['confidence']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
+    lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
     from .author_method import render_author_method
     from .source_case import render as render_source_case
     lines = lines[:1] + render_source_case(record.get('source_case')) + render_author_method(record) + ['','## 我们的分析'] + lines[1:]
@@ -217,17 +219,10 @@ def render(record):
         lines.append(f"| {model['scenario']} / {model['unit']} ({model['currency']}) | {model['price']:.2f} | {variable:.2f} | {contribution:.2f} | {model['units_per_month']} | {model['fixed_monthly_cost']:.2f} | {profit:.2f} |")
     for model in record['unit_economics']:
         lines += ['',f"{model['scenario']}假设：{model['assumptions']}；API成本 {model['api_cost']}，人工成本 {model['human_cost']}，其他可变成本 {model['other_variable_cost']}，分摊获客成本 {model['acquisition_cost']}。依据：{', '.join(model['source_ids'])}"]
-    lines += ['','## 用户反馈核对（低权重）','']
-    for search in record['feedback']['searches']:
-        lines.append(f"- {search['channel']} · `{search['query']}`：{search['outcome']}")
-    for observation in record['feedback']['observations']:
-        lines.append(f"- [{observation['source_id']}] {observation['directness']}：{observation['finding']}；偏差：{observation['bias']}")
-    if not record['feedback']['observations']:
-        lines.append('- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。')
     lines += ['','## 反证与未核实信息','',record['disconfirming_evidence'],'',record['limitations'],'','## 具体动作与止损条件','',v['next_action'],'',f"停止投入条件：{v['stop_condition']}",'','## 来源与对应关系','']
     for source in record['sources']:
         lines.append(f"- [{source['id']}] [{source['title']}]({source['url']})：{source['supports']}")
-    lines += ['',f"结构化记录：[research/{record['id']}.json](../research/{record['id']}.json)",f"来源读取凭据：[research/evidence/{record['id']}.json](../research/evidence/{record['id']}.json)",'','评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。']
+    lines += ['',f"结构化记录：[research/{record['id']}.json](../research/{record['id']}.json)"]
     return '\n'.join(lines)+'\n'
 
 def indexes():

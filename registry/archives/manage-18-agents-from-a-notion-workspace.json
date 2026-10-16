@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c45ae67e236c0f6df9aa1ec424b2d36deb3ef97f3b86a7efd265c967f4a93a6e",
-      "publication": "reviewed_restatement_required"
+      "value": "Notion used as the control plane for a fleet of 18 OpenClaw agents.",
+      "sha256": "c45ae67e236c0f6df9aa1ec424b2d36deb3ef97f3b86a7efd265c967f4a93a6e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a9d47f5c16f943b0bf7010c0530e458a935f6dad0dab6833fd2cd8e7dc0727eb",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built AgentOps, a Node/React server that uses Notion as its only database through the Notion API (MCP). Four Notion databases hold the agent registry, task queue, run log and alerts. A runtime polls Notion every 10 seconds and skips paused agents. Tasks created in Notion get dispatched. Prompts and configs sync both ways, and the fleet can be backed up or exported as JSON.",
+      "sha256": "a9d47f5c16f943b0bf7010c0530e458a935f6dad0dab6833fd2cd8e7dc0727eb"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d0494a96855bbbb42f4cf8435d158dc6f68cc8f68f551d36565db278b9062f75",
-      "publication": "reviewed_restatement_required"
+      "value": "It tracked 18 agents, 78 logged runs and over 128K tokens. The author says migrating between instances takes minutes. A commenter raised concurrency concerns, and the author replied that the workloads are cron-based and run one at a time.",
+      "sha256": "d0494a96855bbbb42f4cf8435d158dc6f68cc8f68f551d36565db278b9062f75"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "2fe7c6519b13e0586e6d1d617f51b3cbd4c3f6a6ba99316f4fa134dbcdd97cf4",
-      "publication": "reviewed_restatement_required"
+      "value": "Designed as a single poller over cron-style jobs, so concurrent writes from many agents were not tested. Secrets are redacted before configs sync to Notion.",
+      "sha256": "2fe7c6519b13e0586e6d1d617f51b3cbd4c3f6a6ba99316f4fa134dbcdd97cf4"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Manage 18 agents from a Notion workspace\nNotion used as the control plane for a fleet of 18 OpenClaw agents.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author built AgentOps, a Node/React server that uses Notion as its only database through the Notion API (MCP). Four Notion databases hold the agent registry, task queue, run log and alerts. A runtime polls Notion every 10 seconds and skips paused agents. Tasks created in Notion get dispatched. Prompts and configs sync both ways, and the fleet can be backed up or exported as JSON.\nHow it went\nIt tracked 18 agents, 78 logged runs and over 128K tokens. The author says migrating between instances takes minutes. A commenter raised concurrency concerns, and the author replied that the workloads are cron-based and run one at a time.\nWorth knowing\nDesigned as a single poller over cron-style jobs, so concurrent writes from many agents were not tested. Secrets are redacted before configs sync to Notion.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me set up a small team of [number] agents, each with a clear job such as [job 1, job 2, job 3], and track their tasks and status in [Notion or another workspace]. Create a task board where I can assign work and see results from each agent. Before any agent sends messages or changes things outside the board, pause and show me what it plans to do.\nOriginal source: https://dev.to/aws-heroes/i-turned-notion-into-a-control-plane-for-my-18-openclaw-ai-agents-5624",
+    "body_sha256": "d195b13af29b9ae83368499b484d89027204924fb99949fb35b203faa5fa1e65",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

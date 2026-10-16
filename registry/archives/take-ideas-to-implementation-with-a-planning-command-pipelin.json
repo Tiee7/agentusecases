@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e6340065edc044740813a35cba1c5ef780474099e4d0e270cc9b25e7bc094563",
-      "publication": "reviewed_restatement_required"
+      "value": "A solo SaaS founder uses a custom five-command agent flow (intent, impact analysis, planning, execution, review) with lint guardrails to ship features in a production product.",
+      "sha256": "e6340065edc044740813a35cba1c5ef780474099e4d0e270cc9b25e7bc094563"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ead7628ea0bb02334d7d208ff009f186090c2943499c4b343a20b94f4259db5a",
-      "publication": "reviewed_restatement_required"
+      "value": "The founder built five chained commands (intent, impact analysis, iterative planning, execution orchestration, review/demo) that all update one plan file in git, which he reviews at each stage. A shared CONTRIBUTING.md guides agents, ESLint rules run as post-edit hooks, and a Bash-approval script screens commands. When the agent misbehaves, it writes a new rule with tests.",
+      "sha256": "ead7628ea0bb02334d7d208ff009f186090c2943499c4b343a20b94f4259db5a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "bf2cbae9042db5d695880d9a7f4e2298bdc167c3b2e560aec166d0f02e0aed5d",
-      "publication": "reviewed_restatement_required"
+      "value": "An orchestrator script turning plans into workflows cut token spend to about 20% and runtime from 5-6 hours to 20-30 minutes. He still reviews most code via git diff, and calls it mostly clean.",
+      "sha256": "bf2cbae9042db5d695880d9a7f4e2298bdc167c3b2e560aec166d0f02e0aed5d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5146a60feee429bd0724d1c17e09313ae9bb556a09403fda0c34b57c024d86dc",
-      "publication": "reviewed_restatement_required"
+      "value": "The guardrails grew incrementally: each unwanted agent action or approval prompt became a new lint rule or approval rule, so expect to keep investing in them.",
+      "sha256": "5146a60feee429bd0724d1c17e09313ae9bb556a09403fda0c34b57c024d86dc"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Take ideas to implementation with a planning-command pipeline\nA solo SaaS founder uses a custom five-command agent flow (intent, impact analysis, planning, execution, review) with lint guardrails to ship features in a production product.\nDone with\nCC\nClaude Code\nWhat they did\nThe founder built five chained commands (intent, impact analysis, iterative planning, execution orchestration, review/demo) that all update one plan file in git, which he reviews at each stage. A shared CONTRIBUTING.md guides agents, ESLint rules run as post-edit hooks, and a Bash-approval script screens commands. When the agent misbehaves, it writes a new rule with tests.\nHow it went\nAn orchestrator script turning plans into workflows cut token spend to about 20% and runtime from 5-6 hours to 20-30 minutes. He still reviews most code via git diff, and calls it mostly clean.\nWorth knowing\nThe guardrails grew incrementally: each unwanted agent action or approval prompt became a new lint rule or approval rule, so expect to keep investing in them.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a planning pipeline for my project in [repo or product name] as custom slash commands: one to capture intent, one for impact analysis, one for planning, one for execution, and one for review. Make the execution step run [my lint and test commands] and stop if they fail. Test it on this small feature: [feature idea]. Stop when the feature has gone through all five steps and I have a reviewed diff, and do not commit or push without asking me.\nOriginal source: https://news.ycombinator.com/item?id=49586883",
+    "body_sha256": "bc7c043e92fb04299651c0285224ff8cc6a27878b71a120bbcac9ddf69f11d66",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

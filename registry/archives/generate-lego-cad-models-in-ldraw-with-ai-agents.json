@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "1e0981380de75510eaf6c87bb4fee2fd7da2bd6351a18a37cbedeaefa787611d",
-      "publication": "reviewed_restatement_required"
+      "value": "A toolset and docs let ChatGPT and Claude agents write LDraw source files that become LEGO CAD models, packaged as a dockerized web app.",
+      "sha256": "1e0981380de75510eaf6c87bb4fee2fd7da2bd6351a18a37cbedeaefa787611d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5c79bdf4dd88852205d977e05bb334aa6d129bb0c868b2ea7d1d256c9a81c6eb",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent takes a prompt, reads the repo's instruction docs, and plans the parts and submodels. It does not place bricks directly. It writes a plan file, then Python generator scripts that output the LDraw file. It uses tools for part search, collision and gap detection, and headless rendering, and loops render, inspect and adjust until it judges the model finished.",
+      "sha256": "5c79bdf4dd88852205d977e05bb334aa6d129bb0c868b2ea7d1d256c9a81c6eb"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8737a7479b4ea51c3914cc1d2cb4c6cdf86b34c4e9eb870f88fffdbb8295c59e",
-      "publication": "reviewed_restatement_required"
+      "value": "It produces LDraw source, several viewers, and a Blender-editable glb file. The author says only expensive high-end models can build large, correct models. Generation is slow, spaceships are weak, and VR on Meta Quest 3 has many issues.",
+      "sha256": "8737a7479b4ea51c3914cc1d2cb4c6cdf86b34c4e9eb870f88fffdbb8295c59e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "cc888d95f0f0f8bae689f77537726995bbeb0098d2b79a8ed8677ee156bbab6a",
-      "publication": "reviewed_restatement_required"
+      "value": "The Docker build needs about 5 GB of disk. Without a TypeSafe API key, part search falls back to full-text search, which may give worse models.",
+      "sha256": "cc888d95f0f0f8bae689f77537726995bbeb0098d2b79a8ed8677ee156bbab6a"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate LEGO CAD models in LDraw with AI agents\nA toolset and docs let ChatGPT and Claude agents write LDraw source files that become LEGO CAD models, packaged as a dockerized web app.\nDone with\nGP\nChatGPT\nCL\nClaude\nWhat they did\nThe agent takes a prompt, reads the repo's instruction docs, and plans the parts and submodels. It does not place bricks directly. It writes a plan file, then Python generator scripts that output the LDraw file. It uses tools for part search, collision and gap detection, and headless rendering, and loops render, inspect and adjust until it judges the model finished.\nHow it went\nIt produces LDraw source, several viewers, and a Blender-editable glb file. The author says only expensive high-end models can build large, correct models. Generation is slow, spaceships are weak, and VR on Meta Quest 3 has many issues.\nWorth knowing\nThe Docker build needs about 5 GB of disk. Without a TypeSafe API key, part search falls back to full-text search, which may give worse models.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite an LDraw file (.ldr) for a LEGO model of [object, e.g. a small red sports car] using real LDraw part numbers and colors, and place the parts so they connect properly. Then validate the file, render a preview image if you can, and fix any floating or overlapping parts. Finish by giving me the final .ldr file and a parts list.\nOriginal source: https://github.com/anteloc/ldraw-nova",
+    "body_sha256": "eae60383fe0f6fb451561912e94bf2977ad4aa09c8fae66cdf54bd3d894212aa",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c04755e61a09eb9fef239b127b4d10591c01ebd25c1018582fa4cf02becc6246",
-      "publication": "reviewed_restatement_required"
+      "value": "The author runs two OpenClaw agents with 12 cron jobs covering inbox scanning, article indexing, research digests, Search Console analysis, site audits and health monitoring.",
+      "sha256": "c04755e61a09eb9fef239b127b4d10591c01ebd25c1018582fa4cf02becc6246"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b86b5d21df72c721d975fcce6449a69e64b468a60b0632df36915eda7d252554",
-      "publication": "reviewed_restatement_required"
+      "value": "Jenny Ouyang runs two OpenClaw agents on one Oracle Cloud ARM server. One is a personal assistant with memory, and the other is a website-building bot she shares with her business partner. Twelve cron jobs run on a schedule. Twice a day the inbox job reads new newsletter posts and searches her memory database for related work of hers. It saves the results to a database and a markdown report, which she reviews via Telegram or GitHub. She writes every comment herself.",
+      "sha256": "b86b5d21df72c721d975fcce6449a69e64b468a60b0632df36915eda7d252554"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "56b13f886742976e1b1a0114e45fc08481d94c5ce76d710879541b36116fd783",
-      "publication": "reviewed_restatement_required"
+      "value": "The inbox scanning works well for her. The jobs don't yet trigger each other, so handoffs are still manual. One agent wiped a database while debugging a seed conflict, and she restored it from backups.",
+      "sha256": "56b13f886742976e1b1a0114e45fc08481d94c5ce76d710879541b36116fd783"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9b239115ef9f693fd9635da3aaa6e9fc8117df683a1bfd1366058a6154bbf29a",
-      "publication": "reviewed_restatement_required"
+      "value": "Give agents scoped credentials with no DROP permission, keep automatic backups, and bind the gateway to localhost. Setup took longer than the documentation suggested.",
+      "sha256": "9b239115ef9f693fd9635da3aaa6e9fc8117df683a1bfd1366058a6154bbf29a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run cron agents for inbox, research and site audits\nThe author runs two OpenClaw agents with 12 cron jobs covering inbox scanning, article indexing, research digests, Search Console analysis, site audits and health monitoring.\nDone with\nOC\nOpenClaw\nWhat they did\nJenny Ouyang runs two OpenClaw agents on one Oracle Cloud ARM server. One is a personal assistant with memory, and the other is a website-building bot she shares with her business partner. Twelve cron jobs run on a schedule. Twice a day the inbox job reads new newsletter posts and searches her memory database for related work of hers. It saves the results to a database and a markdown report, which she reviews via Telegram or GitHub. She writes every comment herself.\nHow it went\nThe inbox scanning works well for her. The jobs don't yet trigger each other, so handoffs are still manual. One agent wiped a database while debugging a seed conflict, and she restored it from backups.\nWorth knowing\nGive agents scoped credentials with no DROP permission, keep automatic backups, and bind the gateway to localhost. Setup took longer than the documentation suggested.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up scheduled jobs for me: every morning scan my inbox at [email account] and send me a short summary of what needs a reply, every week compile a research digest on [topic], and every month audit [my website URL] for broken links and slow pages. Send each result to me in [chat app] as a short list. Do not send, delete, or archive any email without showing me first; after setting up the jobs, show me the schedule and stop.\nOriginal source: https://buildtolaunch.substack.com/p/openclaw-ai-agent-one-person-business",
+    "body_sha256": "5762734a5aa781990184426e059d727e2eeb908ad2f8591641e95792c7abf926",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

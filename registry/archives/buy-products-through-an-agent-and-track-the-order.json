@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b96809fa690dac62bd2d29f12f828c792a268a53021577c8166c43eacf679667",
-      "publication": "reviewed_restatement_required"
+      "value": "Per Rye, a user had his OpenClaw agent find products and check out via Rye's checkout API, with items delivered and order status polled afterwards.",
+      "sha256": "b96809fa690dac62bd2d29f12f828c792a268a53021577c8166c43eacf679667"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6f4ef9dea160f5cf7a137c309991789678ba505abc0b186ef13f31805db5eb25",
-      "publication": "reviewed_restatement_required"
+      "value": "Ryan Eade installed Rye's free buy-anything skill in OpenClaw. He gives the agent a product URL, and it takes shipping details from saved memory or asks for them. The card is tokenized through Stripe, so card numbers never enter the chat. Rye's API handles pricing, tax, shipping and placing the order. The agent then polls order status and reports the confirmation and total.",
+      "sha256": "6f4ef9dea160f5cf7a137c309991789678ba505abc0b186ef13f31805db5eb25"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "28e9c3c2a681d8c3d4ab64abac9611ffce838787837d972754b69e10447e1289",
-      "publication": "reviewed_restatement_required"
+      "value": "Per Rye, Ryan made real purchases that were delivered, and he says it is 100x better than his Alexa flow. The skill handled the Amazon purchase challenge on a podcast demo. The source gives no cost or failure data.",
+      "sha256": "28e9c3c2a681d8c3d4ab64abac9611ffce838787837d972754b69e10447e1289"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "88397db5e471a08c173e3acb532462835ca6d2f331deeed27229cea251097866",
-      "publication": "reviewed_restatement_required"
+      "value": "You need a Rye API key. The skill asks you to set a maximum purchase price before the first order, and the API rejects any order above it.",
+      "sha256": "88397db5e471a08c173e3acb532462835ca6d2f331deeed27229cea251097866"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Buy products through an agent and track the order\nPer Rye, a user had his OpenClaw agent find products and check out via Rye's checkout API, with items delivered and order status polled afterwards.\nDone with\nOC\nOpenClaw\nWhat they did\nRyan Eade installed Rye's free buy-anything skill in OpenClaw. He gives the agent a product URL, and it takes shipping details from saved memory or asks for them. The card is tokenized through Stripe, so card numbers never enter the chat. Rye's API handles pricing, tax, shipping and placing the order. The agent then polls order status and reports the confirmation and total.\nHow it went\nPer Rye, Ryan made real purchases that were delivered, and he says it is 100x better than his Alexa flow. The skill handled the Amazon purchase challenge on a podcast demo. The source gives no cost or failure data.\nWorth knowing\nYou need a Rye API key. The skill asks you to set a maximum purchase price before the first order, and the API rejects any order above it.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nFind [product description] from a reputable seller, with a budget under [amount] and delivery to [address] by [date]. Show me the top options with price, shipping, and a link, and let me pick. Before you check out, pause and show me the item, total, and shipping address, then after I approve, place the order and check its status until it ships.\nOriginal source: https://rye.com/blog/openclaw-buy-anything-skill-agentic-checkout",
+    "body_sha256": "a1040640e540e6927a5cb24fb391fa166f43a4d4c02b002bdd6183222633fbe8",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fcac8dd7c34df3e4aed30fa522616aace502319c614242d24e4573a495f11ef",
-      "publication": "reviewed_restatement_required"
+      "value": "Answer.AI tried Devin on an observability integration, an nbdev migration and a vulnerability review; it found some real issues, hallucinated others, and failed the migration.",
+      "sha256": "8fcac8dd7c34df3e4aed30fa522616aace502319c614242d24e4573a495f11ef"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "252bd9f27152d3d48293403816296609148ee3fde5a8eedfbedf7e9f3d3f8cdc",
-      "publication": "reviewed_restatement_required"
+      "value": "Answer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, about 20 real tasks. These included generating and uploading synthetic data to Braintrust, migrating a Python project to nbdev, and a security review of a repo under 700 lines. People checked the output and often took over.",
+      "sha256": "252bd9f27152d3d48293403816296609148ee3fde5a8eedfbedf7e9f3d3f8cdc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c43d13b7fe0076f5f0fc8ae8929dc6e91ee1b70fbb6ecbc7e5f548e101b6b0c7",
-      "publication": "reviewed_restatement_required"
+      "value": "The Braintrust integration was abandoned and redone in Cursor. The nbdev migration failed on basic setup. The security review found some real issues but also false positives and hallucinated ones. Overall 14 failures, 3 successes and 3 inconclusive.",
+      "sha256": "c43d13b7fe0076f5f0fc8ae8929dc6e91ee1b70fbb6ecbc7e5f548e101b6b0c7"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b78e80a5cf6f05151280dda8cf618f65ec84fd1bec4be24024ea61ce1c1209b8",
-      "publication": "reviewed_restatement_required"
+      "value": "Devin pressed on with impossible tasks for days. The authors suggest a single focused LLM call for something like a small-repo security review.",
+      "sha256": "b78e80a5cf6f05151280dda8cf618f65ec84fd1bec4be24024ea61ce1c1209b8"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Test Devin on integrations, migration and security review\nAnswer.AI tried Devin on an observability integration, an nbdev migration and a vulnerability review; it found some real issues, hallucinated others, and failed the migration.\nDone with\nDE\nDevin\nCR\nCursor\nWhat they did\nAnswer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, about 20 real tasks. These included generating and uploading synthetic data to Braintrust, migrating a Python project to nbdev, and a security review of a repo under 700 lines. People checked the output and often took over.\nHow it went\nThe Braintrust integration was abandoned and redone in Cursor. The nbdev migration failed on basic setup. The security review found some real issues but also false positives and hallucinated ones. Overall 14 failures, 3 successes and 3 inconclusive.\nWorth knowing\nDevin pressed on with impossible tasks for days. The authors suggest a single focused LLM call for something like a small-repo security review.\nTry it yourself\nwith\nDevin\nCopy prompt\nTake on three tasks in my repo [repo name]: add an integration with [observability tool], migrate [a module or tool] to [target tool or version], and review the code for security vulnerabilities. For each one, tell me how you verified your results, and clearly mark any finding you could not confirm. Open separate pull requests for the work and do not merge anything.\nOriginal source: https://www.answer.ai/posts/2025-01-08-devin",
+    "body_sha256": "9960e72c5582f4f19ac5333fe4a338b8836a566fd5429903aa28bebd8f1c6a04",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

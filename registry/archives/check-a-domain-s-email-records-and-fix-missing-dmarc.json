@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "31674e31c294386b1e489c3f1d837d4c56fefdfa5b7a9b2b27a14b1e03b6d6e5",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent ran a mail check on its own domain, found no DMARC record, and after one TXT record was added the score rose from 80 to 96.",
+      "sha256": "31674e31c294386b1e489c3f1d837d4c56fefdfa5b7a9b2b27a14b1e03b6d6e5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7314225521e9ce67e7ca8d1f35bcfcab3f6cfc7c0b9325fdd22041cd743b9ca9",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenKrill ran its own domain, openkrill.app, through the Domain Mail Check tool. The check tested 10 rules and flagged a missing DMARC record. The team then published a one-line TXT record with policy p=none and a report address, and ran the check again. The source doesn't describe the agent's steps in detail.",
+      "sha256": "7314225521e9ce67e7ca8d1f35bcfcab3f6cfc7c0b9325fdd22041cd743b9ca9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cbf5d40753e04751e92e0b738d01095b8124b40f1d40ffd754c262699dc0a63f",
-      "publication": "reviewed_restatement_required"
+      "value": "The score rose from 80 (\"almost\") to 96 (\"ready\"), and the tool now tests 12 rules. It still flags the weak p=none policy and an unknown DKIM selector.",
+      "sha256": "cbf5d40753e04751e92e0b738d01095b8124b40f1d40ffd754c262699dc0a63f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5ddc8ffe1442398d72edccf33565a182a2b31cc2705173f74d706ca4170b22c7",
-      "publication": "reviewed_restatement_required"
+      "value": "A ready verdict reads only public DNS. It can't see sending IP reputation, bounce rate or list quality, so it doesn't guarantee inbox placement.",
+      "sha256": "5ddc8ffe1442398d72edccf33565a182a2b31cc2705173f74d706ca4170b22c7"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Check a domain's email records and fix missing DMARC\nAn agent ran a mail check on its own domain, found no DMARC record, and after one TXT record was added the score rose from 80 to 96.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOpenKrill ran its own domain, openkrill.app, through the Domain Mail Check tool. The check tested 10 rules and flagged a missing DMARC record. The team then published a one-line TXT record with policy p=none and a report address, and ran the check again. The source doesn't describe the agent's steps in detail.\nHow it went\nThe score rose from 80 (\"almost\") to 96 (\"ready\"), and the tool now tests 12 rules. It still flags the weak p=none policy and an unknown DKIM selector.\nWorth knowing\nA ready verdict reads only public DNS. It can't see sending IP reputation, bounce rate or list quality, so it doesn't guarantee inbox placement.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCheck the email setup for my domain [yourdomain.com]. Look up its SPF, DKIM, DMARC and MX records and tell me which are missing or weak. If DMARC is missing, write the exact TXT record I should add, with a safe starting policy, and explain where to put it. Do not change any DNS settings yourself. Once I add the record, recheck the domain and report the new status.\nOriginal source: https://tools.openkrill.app/blog/cold-email-domain-check-before-after-dmarc",
+    "body_sha256": "e2249caade0bb226d29b84f70fd9b083fffe99da5bb828ce38dc9fe7d89c2fd1",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

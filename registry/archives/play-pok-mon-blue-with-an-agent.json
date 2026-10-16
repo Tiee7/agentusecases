@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ddee079705fed1b654514d87bfb07a0942fcfe4a1362fd161c1b7b44e7a97241",
-      "publication": "reviewed_restatement_required"
+      "value": "The Gemini Plays Pokémon agent reads game RAM and screenshots, turns actions into button presses, and uses pathfinder and boulder-puzzle sub-agents.",
+      "sha256": "ddee079705fed1b654514d87bfb07a0942fcfe4a1362fd161c1b7b44e7a97241"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "da053dbc76fb863c816ffdb7eb16afc4d5f10249964ac0c5b14db1cf3e9ff041",
-      "publication": "reviewed_restatement_required"
+      "value": "An independent developer, Joel Zhang, built a harness that gives Gemini 2.5 Pro a subset of Game Boy RAM as text, overlaid on a screenshot. Gemini picks actions that become button presses. The harness summarizes history every 100 turns and runs a critic instance every 25 turns. It also provides pathfinder and boulder-puzzle sub-agents, which are prompted Gemini instances.",
+      "sha256": "da053dbc76fb863c816ffdb7eb16afc4d5f10249964ac0c5b14db1cf3e9ff041"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "502e01fb8b6b3f371f9bf2f9b2a482ffb6b088a24a47985af98775266e04c3e8",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent beat Pokémon Blue in 813 hours on run 1, then in 406.5 hours on a fully autonomous second run. It looped on long contexts, hallucinated items from other games, and handled raw pixels poorly.",
+      "sha256": "502e01fb8b6b3f371f9bf2f9b2a482ffb6b088a24a47985af98775266e04c3e8"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f7448c77fd578d082c4f59ee8f31fddbb47813084ef3206ad28aeee00e23b0d0",
-      "publication": "reviewed_restatement_required"
+      "value": "The model struggled to read raw screen pixels, so the RAM-to-text translation was needed. Behavior also degraded once context grew well past 100k tokens.",
+      "sha256": "f7448c77fd578d082c4f59ee8f31fddbb47813084ef3206ad28aeee00e23b0d0"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Play Pokémon Blue with an agent\nThe Gemini Plays Pokémon agent reads game RAM and screenshots, turns actions into button presses, and uses pathfinder and boulder-puzzle sub-agents.\nDone with\nGE\nGemini\nWhat they did\nAn independent developer, Joel Zhang, built a harness that gives Gemini 2.5 Pro a subset of Game Boy RAM as text, overlaid on a screenshot. Gemini picks actions that become button presses. The harness summarizes history every 100 turns and runs a critic instance every 25 turns. It also provides pathfinder and boulder-puzzle sub-agents, which are prompted Gemini instances.\nHow it went\nThe agent beat Pokémon Blue in 813 hours on run 1, then in 406.5 hours on a fully autonomous second run. It looped on long contexts, hallucinated items from other games, and handled raw pixels poorly.\nWorth knowing\nThe model struggled to read raw screen pixels, so the RAM-to-text translation was needed. Behavior also degraded once context grew well past 100k tokens.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me build an agent that plays [game, e.g. Pokémon Blue] in an emulator at [emulator path or setup]. It should read the game state from [RAM or screenshots], decide on an action, and send it as button presses, with a simple helper for [subtask, e.g. pathfinding]. You're done when it can play for [number] steps on its own and log what it decided at each step.\nOriginal source: https://arxiv.org/pdf/2507.06261",
+    "body_sha256": "6d9c9a330f6ad1f82b656eb2a404aff12276d269710d8ae51a59653d1d1ad50d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

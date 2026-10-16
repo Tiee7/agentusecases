@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "3e188a766de0b287b9f219295c012e86d2744efeed4837e8d9e22b1652457ad3",
-      "publication": "reviewed_restatement_required"
+      "value": "Agents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.",
+      "sha256": "3e188a766de0b287b9f219295c012e86d2744efeed4837e8d9e22b1652457ad3"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d9dfac25dd855deadb6eba7322d0af2f81da2e0e4224bb2f40b3e77fbaf9cf64",
-      "publication": "reviewed_restatement_required"
+      "value": "Foremerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.",
+      "sha256": "d9dfac25dd855deadb6eba7322d0af2f81da2e0e4224bb2f40b3e77fbaf9cf64"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7dd7dc2d9980f0e211c7954729ceb4ff2afd72161314f4242e9eb5b815ae713e",
-      "publication": "reviewed_restatement_required"
+      "value": "The second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.",
+      "sha256": "7dd7dc2d9980f0e211c7954729ceb4ff2afd72161314f4242e9eb5b815ae713e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "079433c5d0cd26f79ed057dabc96c998adf4f20f3cbc93f4baf0807d5dcac79b",
-      "publication": "reviewed_restatement_required"
+      "value": "This is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.",
+      "sha256": "079433c5d0cd26f79ed057dabc96c998adf4f20f3cbc93f4baf0807d5dcac79b"
     },
     "actual_agents": {
       "status": "observed",
@@ -94,7 +90,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
+    "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

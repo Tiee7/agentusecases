@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "115e8feb2da5d62585f898af9c302f67483e57ca440a860da6fc7290b57c284f",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code did most of the work to make desktop Office 365 run under Wine on Linux without virtualization, packaged as a Nix flake.",
+      "sha256": "115e8feb2da5d62585f898af9c302f67483e57ca440a860da6fc7290b57c284f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8997c36fa40127198cfbe2fbb4f823fae1021b8740933b89f17d6a3f063330ec",
-      "publication": "reviewed_restatement_required"
+      "value": "The repo is a Nix flake that runs click-to-run Microsoft 365 through umu-launcher and GE-Proton instead of stock Wine. Each blocker was found by reading Wine and Click-to-Run logs and fixed with a small shim DLL or registry change. These cover licensing, missing Windows APIs, sign-in errors and Direct2D rendering. The README doesn't describe the agent's role.",
+      "sha256": "8997c36fa40127198cfbe2fbb4f823fae1021b8740933b89f17d6a3f063330ec"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cdc0e4fd1a1372f5161489876c8011d3e10f48280f09aa82f736e0676a7e790a",
-      "publication": "reviewed_restatement_required"
+      "value": "The full suite installs and Word starts, and sign-in with a personal account works. Licensing was never verified because the test account had no subscription. Excel, PowerPoint and Outlook are installed but untested.",
+      "sha256": "cdc0e4fd1a1372f5161489876c8011d3e10f48280f09aa82f736e0676a7e790a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "37a633a081b2dcd1eae9f115275ec8070a36b647cc78539dc6b3a0a952827bea",
-      "publication": "reviewed_restatement_required"
+      "value": "The install downloads several GB and the installer window looks frozen for long stretches. A Microsoft 365 licence is required, and sign-in needs a 680 MB WebView2 install.",
+      "sha256": "37a633a081b2dcd1eae9f115275ec8070a36b647cc78539dc6b3a0a952827bea"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Get Microsoft Office running on Linux via Wine\nClaude Code did most of the work to make desktop Office 365 run under Wine on Linux without virtualization, packaged as a Nix flake.\nDone with\nCC\nClaude Code\nWhat they did\nThe repo is a Nix flake that runs click-to-run Microsoft 365 through umu-launcher and GE-Proton instead of stock Wine. Each blocker was found by reading Wine and Click-to-Run logs and fixed with a small shim DLL or registry change. These cover licensing, missing Windows APIs, sign-in errors and Direct2D rendering. The README doesn't describe the agent's role.\nHow it went\nThe full suite installs and Word starts, and sign-in with a personal account works. Licensing was never verified because the test account had no subscription. Excel, PowerPoint and Outlook are installed but untested.\nWorth knowing\nThe install downloads several GB and the installer window looks frozen for long stretches. A Microsoft 365 licence is required, and sign-in needs a 680 MB WebView2 install.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to run [Windows desktop app, e.g. Microsoft Office] on [Linux distro] using Wine, without a virtual machine. Work in this folder, try Wine configurations until the app installs and launches, and package the setup as [Nix flake / shell script] so I can reproduce it. Finish by writing a short README of the steps and any known issues, and ask me before installing system-wide packages or deleting anything.\nOriginal source: https://github.com/Tombert/office365_flake",
+    "body_sha256": "25f1b6db4b07cf7739006a5a92067ca39db01c970353c25c56480f7247f94274",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

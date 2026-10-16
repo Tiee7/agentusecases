@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0b038cb6738b4e1cbe7135c5d699174f66d255fab1377bf803245dc0d220b39a",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent used MCP tools to read robots.txt rules for 14 AI crawlers and check 8 page tags on 18 cleaning-company sites; 9 returned their home page.",
+      "sha256": "0b038cb6738b4e1cbe7135c5d699174f66d255fab1377bf803245dc0d220b39a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "11fd2074687bb8921f355b9237a5289bf32c26a37b7b0e22978cbf2db4a94808",
-      "publication": "reviewed_restatement_required"
+      "value": "The authors took domains with \"cleaning\" in the name from the Tranco top-1M list and filtered them down to 18 service firms. For each site they called two Site Check tools. One read robots.txt, headers and redirects for 14 named AI crawlers. The other checked 8 page tags. Site selection and filtering were done by hand from page titles.",
+      "sha256": "11fd2074687bb8921f355b9237a5289bf32c26a37b7b0e22978cbf2db4a94808"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3bcfc9b02b17ae96032e58fd2041a042fbdddf5eb5b43cfe8a33c822ad6244be",
-      "publication": "reviewed_restatement_required"
+      "value": "9 of 18 sites returned their home page. Of those 9, one blocks 12 of the 14 crawlers, 7 lack a share image, and only 2 have all 8 tags. The other 9 sites gave a 403, a CDN error or no answer.",
+      "sha256": "3bcfc9b02b17ae96032e58fd2041a042fbdddf5eb5b43cfe8a33c822ad6244be"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a41dbad6362633a715c81fd9c058550d27dc8424187dc4bf2e6359e691bb078b",
-      "publication": "reviewed_restatement_required"
+      "value": "A refused or failed fetch doesn't show what AI bots receive, and firewall or CDN rules can block bots that robots.txt allows. Treat 9 sites as a snapshot, not a survey.",
+      "sha256": "a41dbad6362633a715c81fd9c058550d27dc8424187dc4bf2e6359e691bb078b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Audit cleaning-company sites for AI crawler access\nAn agent used MCP tools to read robots.txt rules for 14 AI crawlers and check 8 page tags on 18 cleaning-company sites; 9 returned their home page.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe authors took domains with \"cleaning\" in the name from the Tranco top-1M list and filtered them down to 18 service firms. For each site they called two Site Check tools. One read robots.txt, headers and redirects for 14 named AI crawlers. The other checked 8 page tags. Site selection and filtering were done by hand from page titles.\nHow it went\n9 of 18 sites returned their home page. Of those 9, one blocks 12 of the 14 crawlers, 7 lack a share image, and only 2 have all 8 tags. The other 9 sites gave a 403, a CDN error or no answer.\nWorth knowing\nA refused or failed fetch doesn't show what AI bots receive, and firewall or CDN rules can block bots that robots.txt allows. Treat 9 sites as a snapshot, not a survey.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHere is a list of [number] company websites: [list of domains]. For each one, fetch robots.txt and report whether it allows or blocks major AI crawlers such as GPTBot, ClaudeBot, PerplexityBot and Google-Extended. Also check the homepage for meta tags that affect AI or search access, and flag any site that returns its homepage instead of a real robots.txt. Finish with a single table of results and a short list of the biggest gaps.\nOriginal source: https://tools.openkrill.app/blog/ai-crawlers-cleaning-company-sites",
+    "body_sha256": "3f3cd59b18eb556d75d99d5805a8cb53a1eac21550aa006cace2ab13fe9017e8",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

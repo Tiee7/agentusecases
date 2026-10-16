@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cce3a56f046b97c4701007a29600669d6999c678c14bb743d00262117664c467",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n AI workflow reads labeled payment emails in Gmail, pulls the top three takeaways from each and sends a Sunday digest.",
+      "sha256": "cce3a56f046b97c4701007a29600669d6999c678c14bb743d00262117664c467"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "19d691cfb95345f4f4554d5c4c653828e3f093d06d9e5c43cc54c0d7d924f5a4",
-      "publication": "reviewed_restatement_required"
+      "value": "The author labels payment emails in Gmail, then builds an n8n workflow that runs Sunday at 8 AM. It fetches the past week's labeled messages, aggregates them, and truncates the text to 100K characters. An AI Agent node running gpt-4o-mini through OpenRouter writes the digest from a system-message template. A code node converts the markdown to HTML, and Gmail sends it.",
+      "sha256": "19d691cfb95345f4f4554d5c4c653828e3f093d06d9e5c43cc54c0d7d924f5a4"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0dd63c45bff7fc5131d04bffb28062c6d74fee57ea592b76651e0c659be2fbd6",
-      "publication": "reviewed_restatement_required"
+      "value": "The author gets about 15 payment notifications a week, and the workflow turns them into one weekly digest email. The post gives no measured results beyond a successful test run.",
+      "sha256": "0dd63c45bff7fc5131d04bffb28062c6d74fee57ea592b76651e0c659be2fbd6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4e4d5861dde6a93b51ae36609a7a4b76bdb017695f7a8c65abd12f554e0c33bd",
-      "publication": "reviewed_restatement_required"
+      "value": "Truncating to 100K characters keeps the combined email text within what OpenAI can handle. Without the formatting code node, the email shows raw markdown symbols.",
+      "sha256": "4e4d5861dde6a93b51ae36609a7a4b76bdb017695f7a8c65abd12f554e0c33bd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Email a weekly digest of payment notification emails\nAn n8n AI workflow reads labeled payment emails in Gmail, pulls the top three takeaways from each and sends a Sunday digest.\nDone with\nN8\nn8n\nWhat they did\nThe author labels payment emails in Gmail, then builds an n8n workflow that runs Sunday at 8 AM. It fetches the past week's labeled messages, aggregates them, and truncates the text to 100K characters. An AI Agent node running gpt-4o-mini through OpenRouter writes the digest from a system-message template. A code node converts the markdown to HTML, and Gmail sends it.\nHow it went\nThe author gets about 15 payment notifications a week, and the workflow turns them into one weekly digest email. The post gives no measured results beyond a successful test run.\nWorth knowing\nTruncating to 100K characters keeps the combined email text within what OpenAI can handle. Without the formatting code node, the email shows raw markdown symbols.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that every Sunday reads emails under Gmail label [payment notifications] from the past week, has AI pull the top three takeaways from each, and compiles them into one digest. Send the digest to [my email]. It's finished when a test run produces a digest from the last week's labeled emails.\nOriginal source: https://mariannanakos.substack.com/p/n8n-tutorial-built-an-ai-workflow",
+    "body_sha256": "95a913e090ce1325518b7365ebf564549673f8c4af7153810ac7be3aa407f1dd",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

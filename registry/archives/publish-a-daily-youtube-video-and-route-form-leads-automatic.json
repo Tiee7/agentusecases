@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e86a95e8dab0a530a4ed0334427a2d61c94a8ccdca8b1386ada09587a1ace21f",
-      "publication": "reviewed_restatement_required"
+      "value": "Reviewers use Make workflows with Gemini to generate ideas, create and title a daily YouTube video, and route Google Form responses into a CRM with follow-ups.",
+      "sha256": "e86a95e8dab0a530a4ed0334427a2d61c94a8ccdca8b1386ada09587a1ace21f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "9b757a209fb7bae8a11dd1307c23c9b7afafe25a7259051770cbfb187391d4d0",
-      "publication": "reviewed_restatement_required"
+      "value": "One reviewer, a CTO, tried to build a Make workflow that a scheduler starts each evening. It asked Gemini for ideas, triggered a video API to make a video from the prompt, then had the Gemini API write a title, aiming to upload to YouTube with no manual steps. Separately, Amrit Dash uses Make to read Google Form responses, pass them into a monday.com CRM, and send email or text follow-ups.",
+      "sha256": "9b757a209fb7bae8a11dd1307c23c9b7afafe25a7259051770cbfb187391d4d0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c714b0c3e4f304136714c2b221ef01a7115646a8e095d7a2c304654bfc2aa204",
-      "publication": "reviewed_restatement_required"
+      "value": "The YouTube workflow was never finished. The reviewer found API keys and error handling hard and rebuilt it in Python. The form-to-CRM setup works at scale, with over 600 automated processes.",
+      "sha256": "c714b0c3e4f304136714c2b221ef01a7115646a8e095d7a2c304654bfc2aa204"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "1c5e4a41b8dfaa7012b4df9c9578a9b99c0fdd0523f194d052dc40a361e62557",
-      "publication": "reviewed_restatement_required"
+      "value": "Start with a very simple workflow. The YouTube builder said complex error handling in Make's visual builder got messy fast, and the form-to-CRM user runs 1.5 to 2 million operations a month, which makes the bill substantial.",
+      "sha256": "1c5e4a41b8dfaa7012b4df9c9578a9b99c0fdd0523f194d052dc40a361e62557"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Publish a daily YouTube video and route form leads automatically\nReviewers use Make workflows with Gemini to generate ideas, create and title a daily YouTube video, and route Google Form responses into a CRM with follow-ups.\nDone with\nMK\nMake\nGE\nGemini\nWhat they did\nOne reviewer, a CTO, tried to build a Make workflow that a scheduler starts each evening. It asked Gemini for ideas, triggered a video API to make a video from the prompt, then had the Gemini API write a title, aiming to upload to YouTube with no manual steps. Separately, Amrit Dash uses Make to read Google Form responses, pass them into a monday.com CRM, and send email or text follow-ups.\nHow it went\nThe YouTube workflow was never finished. The reviewer found API keys and error handling hard and rebuilt it in Python. The form-to-CRM setup works at scale, with over 600 automated processes.\nWorth knowing\nStart with a very simple workflow. The YouTube builder said complex error handling in Make's visual builder got messy fast, and the form-to-CRM user runs 1.5 to 2 million operations a month, which makes the bill substantial.\nTry it yourself\nwith\nMake\nCopy prompt\nSet up a Make scenario with two parts. First, every day at [time], use Gemini to come up with a video idea about [topic], write a title and description, and put them in [Google Sheet or Doc] for my review. Second, when someone submits my Google Form [form name], add them to [CRM or sheet] and draft a follow-up email. Pause and show me the draft video details and follow-up emails before anything is published or sent.\nOriginal source: https://aws.amazon.com/marketplace/reviews/reviews-list/prodview-pdindd434qtpi",
+    "body_sha256": "83a2eb135de93610eaaf21a0fe970baf7b64b8dc269d76406a7ab67920e4e09d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

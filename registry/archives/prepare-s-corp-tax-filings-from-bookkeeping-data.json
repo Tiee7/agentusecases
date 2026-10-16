@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "fd84d87c94ca86352478e8fff88ed24a86ef6e02e43648ff0aba53d81e03cd67",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code wrote scripts parsing QuickBooks and bank statements, and Codex reviewed the code and caught errors like a wrong Schedule L mapping.",
+      "sha256": "fd84d87c94ca86352478e8fff88ed24a86ef6e02e43648ff0aba53d81e03cd67"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7b22283ceb0bd70208caae7010fcf9434046418bec701b4cee6e8cb484e9dd9",
-      "publication": "reviewed_restatement_required"
+      "value": "The author put QuickBooks exports and bank statements in a private Git repo. Claude Code (Opus 4.6) wrote Python scripts that parse the data and compute the S-Corp forms. Codex, on a high-reasoning model, reviewed the scripts, and the two went back and forth until they agreed the code was right. The author directed the work and checked the results.",
+      "sha256": "a7b22283ceb0bd70208caae7010fcf9434046418bec701b4cee6e8cb484e9dd9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "66fae0b0ba407e2a36fdf77444b0ba115be2545d014ed7da279cb2178f5669d0",
-      "publication": "reviewed_restatement_required"
+      "value": "Codex flagged three findings on the 1120S scripts. The worst was a Schedule L Line 18 computed from total liabilities rather than other current liabilities. The author also found his own 2025 bookkeeping mistakes.",
+      "sha256": "66fae0b0ba407e2a36fdf77444b0ba115be2545d014ed7da279cb2178f5669d0"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "491c199776511446c41829d019c9c283d34a81610b9524c2ec11b3da9d276559",
-      "publication": "reviewed_restatement_required"
+      "value": "The author has used a CPA since 1996 and describes directing and checking the work himself. The post gives no cost or time figures and does not say whether the filings were submitted.",
+      "sha256": "491c199776511446c41829d019c9c283d34a81610b9524c2ec11b3da9d276559"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Prepare S-Corp tax filings from bookkeeping data\nClaude Code wrote scripts parsing QuickBooks and bank statements, and Codex reviewed the code and caught errors like a wrong Schedule L mapping.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe author put QuickBooks exports and bank statements in a private Git repo. Claude Code (Opus 4.6) wrote Python scripts that parse the data and compute the S-Corp forms. Codex, on a high-reasoning model, reviewed the scripts, and the two went back and forth until they agreed the code was right. The author directed the work and checked the results.\nHow it went\nCodex flagged three findings on the 1120S scripts. The worst was a Schedule L Line 18 computed from total liabilities rather than other current liabilities. The author also found his own 2025 bookkeeping mistakes.\nWorth knowing\nThe author has used a CPA since 1996 and describes directing and checking the work himself. The post gives no cost or time figures and does not say whether the filings were submitted.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn [folder], write scripts that parse my QuickBooks export and bank statements for [year] and produce the figures needed for my S-Corp return (income statement, Schedule L, and shareholder items). Then review your own code and numbers against the source data and list any mismatches or mappings you're unsure about. Done means a summary file of figures, tied back to source rows, that I can hand to my accountant.\nOriginal source: https://common-sense.com/insights/doing-taxes-with-ai-coding-agents/",
+    "body_sha256": "bd11d36396123f1a21fcc9ec622af297a59924d7db7541d94252fb229eda5ad7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

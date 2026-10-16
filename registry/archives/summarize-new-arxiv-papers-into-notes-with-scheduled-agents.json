@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "479f1c0dd36e0d2c5925f653a8a8e6490958fe1b7b16f1d1df05abb70823c364",
-      "publication": "reviewed_restatement_required"
+      "value": "Scheduled scripts produce a daily arXiv digest, and a nightly script launches Claude Code agents to summarize each saved PDF into a notes folder.",
+      "sha256": "479f1c0dd36e0d2c5925f653a8a8e6490958fe1b7b16f1d1df05abb70823c364"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d14ac36e518b197a4c1ce09835d4bb7102adc977fde94c6d89a8635002a397ae",
-      "publication": "reviewed_restatement_required"
+      "value": "A Python script driven by a topic file searches arXiv each morning, and Google Scholar weekly. It skips papers it has already seen and writes a dated Markdown digest. The user scans the digest and saves worthwhile PDFs into topic source folders. A nightly script then starts a Claude Code agent for each new PDF, using a summary skill, and saves the summary in the matching notes folder.",
+      "sha256": "d14ac36e518b197a4c1ce09835d4bb7102adc977fde94c6d89a8635002a397ae"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "f60b474d53d9ac683de94d4f380f59c5c69f267b262c470ffba842ec41f8f573",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no measured results. It describes the target as each saved PDF being summarized by the next digest run, with summaries covering method, sample, findings, effect sizes and limitations.",
+      "sha256": "f60b474d53d9ac683de94d4f380f59c5c69f267b262c470ffba842ec41f8f573"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d4058a090feeeb94e2ad982b84a1a4369e0454c4ba9577182ee294ef6249a6d5",
-      "publication": "reviewed_restatement_required"
+      "value": "Keep the manual PDF selection step. It keeps the summarization queue small, and a vague summary prompt tends to just restate the abstract.",
+      "sha256": "d4058a090feeeb94e2ad982b84a1a4369e0454c4ba9577182ee294ef6249a6d5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Summarize new arXiv papers into notes with scheduled agents\nScheduled scripts produce a daily arXiv digest, and a nightly script launches Claude Code agents to summarize each saved PDF into a notes folder.\nDone with\nCC\nClaude Code\nWhat they did\nA Python script driven by a topic file searches arXiv each morning, and Google Scholar weekly. It skips papers it has already seen and writes a dated Markdown digest. The user scans the digest and saves worthwhile PDFs into topic source folders. A nightly script then starts a Claude Code agent for each new PDF, using a summary skill, and saves the summary in the matching notes folder.\nHow it went\nThe source gives no measured results. It describes the target as each saved PDF being summarized by the next digest run, with summaries covering method, sample, findings, effect sizes and limitations.\nWorth knowing\nKeep the manual PDF selection step. It keeps the summarization queue small, and a vague summary prompt tends to just restate the abstract.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a daily job that fetches new arXiv papers in [categories] matching [keywords] and saves a digest to [folder]. Add a nightly job that launches an agent to summarize each PDF I've saved in [PDF folder] into a markdown note in [notes folder], with key claims, methods, and limitations. Finish by showing me the schedule entries and one sample note.\nOriginal source: https://www.chatprd.ai/how-i-ai/workflows/how-to-automate-academic-research-with-claude-code-and-python-scripts",
+    "body_sha256": "e2714602f4a83238320e3f87dae0126c3d34a2c7761b44a97e973c71ebe97198",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

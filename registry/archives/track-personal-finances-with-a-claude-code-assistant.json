@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "539812243cfed01222828608c4df8c725a2288b3752199466f0906520551de7b",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built a Claude Code financial assistant using macro data over MCP and his own financials to track his finances, assess health and support investment decisions.",
+      "sha256": "539812243cfed01222828608c4df8c725a2288b3752199466f0906520551de7b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "55d11b7d5c0e6538cc2f667c9fb9e78c2f0954f8916c52c436284196c7bad602",
-      "publication": "reviewed_restatement_required"
+      "value": "The author connected the Baselight MCP to Claude Code, then had Claude generate a repo of markdown files: CLAUDE.md for behavior, YAML and markdown files for memory (portfolio, decisions, action plans), and saved SQL queries. He wrote no code and no markdown by hand. Each run queries Baselight for macro data, then analyses his portfolio. Git hooks encrypt sensitive data.",
+      "sha256": "55d11b7d5c0e6538cc2f667c9fb9e78c2f0954f8916c52c436284196c7bad602"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0674ef1e8bd055b48bfb21ea77707edf02511d750372ed815a6d0e1a6fab9251",
-      "publication": "reviewed_restatement_required"
+      "value": "The assistant, called Mr. Malone, runs analyses against his own portfolio and stores action plans for later sessions. The post gives no quantitative results, and he says LLMs can be unreliable and stochastic.",
+      "sha256": "0674ef1e8bd055b48bfb21ea77707edf02511d750372ed815a6d0e1a6fab9251"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "75c505b1f760c483c31e76cb4ff69c7aaddb8c2d94ec15f82871db25efbe5cd5",
-      "publication": "reviewed_restatement_required"
+      "value": "He built and used the assistant in one Claude Code session, which mixed contexts, and he kept the repo private and encrypted because the data is sensitive.",
+      "sha256": "75c505b1f760c483c31e76cb4ff69c7aaddb8c2d94ec15f82871db25efbe5cd5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,59 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "editorial": {
+    "status": "reviewed",
+    "format": "detailed_bilingual_restatement",
+    "based_on_body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+    "reviewed_at": "2026-10-16T09:47:33.935832+00:00",
+    "sections": {
+      "introduction": [
+        {
+          "en": "Mr. Malone is described as a persistent personal-analysis workspace: macroeconomic data and portfolio context are brought together, with decisions retained for later sessions. No financial performance claim accompanies it.",
+          "zh": "Mr. Malone被描述为可保留上下文的个人分析工作区：把宏观数据与组合情况结合，并为后续会话保存决策；叙述没有附带财务绩效结论。"
+        }
+      ],
+      "method": [
+        {
+          "en": "Claude Code used Baselight MCP for macro queries and generated repository files for behavior, portfolio memory, decisions, action plans and reusable SQL. The author said neither code nor Markdown was handwritten. Subsequent runs queried data and assessed the portfolio against that stored context.",
+          "zh": "Claude Code通过Baselight MCP查询宏观数据，生成行为说明、组合记忆、决策、行动计划及可复用SQL等仓库文件。作者称没有手写代码或Markdown；后续运行查询数据，并结合保存的上下文分析组合。"
+        }
+      ],
+      "outcome": [
+        {
+          "en": "The reported deliverable is a working assistant and retained action plans, rather than a measured return or time saving. The account also says construction and use happened within one session, mixing the two contexts.",
+          "zh": "据述交付物是可用助手及持续保存的行动计划，并非已测量的投资回报或节省时长。叙述还称构建与使用发生在同一会话，两个阶段的上下文有所混合。"
+        }
+      ],
+      "notes": [
+        {
+          "en": "A private repository and encryption through Git hooks were reported protections for sensitive records; their effectiveness was not audited here. The author’s warning about variable, unreliable model behavior means stored recommendations still require human judgment.",
+          "zh": "据述敏感记录使用私有仓库及Git hooks加密保护，但此处未审计其有效性。作者对模型不稳定与不可靠的提醒意味着，保存下来的建议仍需要人的判断。"
+        }
+      ]
+    },
+    "attribution": "Original structured synthesis of source-reported facts and explicit evidence limits; not full text, a full translation, or independent outcome verification.",
+    "external_source_status": "not_read_in_this_batch",
+    "quotation_policy": "No source quotation needed; tool names, numbers and interface command tokens retained as facts."
+  },
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track personal finances with a Claude Code assistant\nThe author built a Claude Code financial assistant using macro data over MCP and his own financials to track his finances, assess health and support investment decisions.\nDone with\nCC\nClaude Code\nWhat they did\nThe author connected the Baselight MCP to Claude Code, then had Claude generate a repo of markdown files: CLAUDE.md for behavior, YAML and markdown files for memory (portfolio, decisions, action plans), and saved SQL queries. He wrote no code and no markdown by hand. Each run queries Baselight for macro data, then analyses his portfolio. Git hooks encrypt sensitive data.\nHow it went\nThe assistant, called Mr. Malone, runs analyses against his own portfolio and stores action plans for later sessions. The post gives no quantitative results, and he says LLMs can be unreliable and stochastic.\nWorth knowing\nHe built and used the assistant in one Claude Code session, which mixed contexts, and he kept the repo private and encrypted because the data is sensitive.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a personal finance assistant using my data in [folder or export files]. Summarize my income, spending, debts and savings, assess my financial health, and flag [concerns like runway or high-interest debt]. Keep everything local and don't make any transactions. You're done when I have a one-page report and a list of three questions or decisions I should consider next.\nOriginal source: https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
+    "body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+    "translated_at": "2026-10-16T09:50:50.639679+00:00",
+    "body": "使用Claude Code助手跟踪个人财务\n作者使用MCP提供的宏观数据及自己的财务资料，构建了Claude Code财务助手，用于跟踪财务、评估状况并支持投资决策。\n实际使用\nClaude Code\n具体做法\n作者把Baselight MCP连接到Claude Code，再让Claude生成一个Markdown文件仓库：用CLAUDE.md规定行为，用YAML和Markdown文件保存记忆，包括组合、决策和行动计划，并保存SQL查询。他没有手写代码或Markdown。每次运行都会向Baselight查询宏观数据，然后分析他的投资组合。Git hooks会加密敏感数据。\n结果如何\n这个名为Mr. Malone的助手会分析作者自己的组合，并保存行动计划供后续会话使用。文章没有给出量化结果；作者表示，大语言模型可能不可靠，输出具有随机性。\n值得知道\n他在同一次Claude Code会话中构建并使用了助手，因此混合了上下文。由于数据敏感，他将仓库保持私有，并进行了加密。\n自行试用\n推荐工具\nClaude Code\n复制提示词\n使用[文件夹或导出文件]中的我的数据，构建个人财务助手。总结收入、支出、债务和储蓄，评估财务健康状况，并标记[需要关注的问题，例如资金可支撑时间或高息债务]。所有内容保留在本地，不进行任何交易。生成一页报告及三个我应考虑的问题或决策后结束。\n原始来源：https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
+    "body_sha256": "735b3772dfbb71e436b9f30dec1c6c009dda5506b7491a9c0fa0c9c4489f4788",
+    "scope": "All captured case prose, source template and original links; decorative agent initials omitted."
+  }
 }

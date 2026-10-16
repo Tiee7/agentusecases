@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4b90996bba2d4abbcc00016d17dbfd5de827733bfdd47d219f6b3f6eb34645a4",
-      "publication": "reviewed_restatement_required"
+      "value": "A PCWorld writer asked Claude to book a table for three in Midtown Manhattan via the Resy connector; it picked a restaurant but the exchange was clunky, with raw JSON and permission prompts.",
+      "sha256": "4b90996bba2d4abbcc00016d17dbfd5de827733bfdd47d219f6b3f6eb34645a4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "54fb676476b8e5b9888ea093b5cc4797f54caefebf6cf3e622566ef71c6831fb",
-      "publication": "reviewed_restatement_required"
+      "value": "The writer added the Resy connector to Claude through Customize > Connectors, then chatted about where to eat near his Midtown apartment (table for three, around 6:30 pm). Claude suggested The Smith and pulled up availability. A raw JSON permission prompt appeared and he clicked Always allow. Claude couldn't complete the booking itself, so he tapped the 7:15 slot and finished on Resy's site.",
+      "sha256": "54fb676476b8e5b9888ea093b5cc4797f54caefebf6cf3e622566ef71c6831fb"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9aed08261e806ea89fee6d2cdaee4b64b3178ac34df1140aeb58794cae1bf34b",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude picked a good restaurant and showed open slots, but the writer still had to finish the reservation on Resy himself. He concluded the Resy app on his iPhone would have been faster.",
+      "sha256": "9aed08261e806ea89fee6d2cdaee4b64b3178ac34df1140aeb58794cae1bf34b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0cb0af1da0c44707ac773e95a58bddbe3be942c9c77aca75e5310e24982b7de1",
-      "publication": "reviewed_restatement_required"
+      "value": "The connector only exposes the tool calls the developers defined, so it can show availability but not book. Expect to finish the reservation yourself on Resy.",
+      "sha256": "0cb0af1da0c44707ac773e95a58bddbe3be942c9c77aca75e5310e24982b7de1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book a restaurant table through a Resy connector\nA PCWorld writer asked Claude to book a table for three in Midtown Manhattan via the Resy connector; it picked a restaurant but the exchange was clunky, with raw JSON and permission prompts.\nDone with\nCL\nClaude\nWhat they did\nThe writer added the Resy connector to Claude through Customize > Connectors, then chatted about where to eat near his Midtown apartment (table for three, around 6:30 pm). Claude suggested The Smith and pulled up availability. A raw JSON permission prompt appeared and he clicked Always allow. Claude couldn't complete the booking itself, so he tapped the 7:15 slot and finished on Resy's site.\nHow it went\nClaude picked a good restaurant and showed open slots, but the writer still had to finish the reservation on Resy himself. He concluded the Resy app on his iPhone would have been faster.\nWorth knowing\nThe connector only exposes the tool calls the developers defined, so it can show availability but not book. Expect to finish the reservation yourself on Resy.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen Resy in my browser and find a table for [number] people in [neighborhood, city] on [date] around [time], serving [cuisine or budget]. Show me up to three options with times and any cancellation policy. Pause and wait for me to choose before booking, and show the booking details before you confirm. Finish when I have a confirmation.\nOriginal source: https://www.pcworld.com/article/3123989/chatgpt-and-claude-tried-to-book-my-dinner-it-got-clunky-fast.html",
+    "body_sha256": "ca375498317fd9e5e67b726d6608c70a37caa2c41ab20ae08dae585d82dc05b1",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

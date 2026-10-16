@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "42e5e3d4e896f102ceb5fdcb9096d73fabc7392dc62c291906c54ad887732bb9",
-      "publication": "reviewed_restatement_required"
+      "value": "A framework of multiple LLM agents that collaborate on financial trading decisions.",
+      "sha256": "42e5e3d4e896f102ceb5fdcb9096d73fabc7392dc62c291906c54ad887732bb9"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4b1b5a93527180385aea02dc264292970f678cbcb636eaccbf26af0c50157b85",
-      "publication": "reviewed_restatement_required"
+      "value": "You install the repo, set an API key for an LLM provider, and pick a ticker and date in the CLI or through the Python TradingAgentsGraph call. Analyst agents cover fundamentals, sentiment, news and technicals. Bullish and bearish researchers then debate, a trader proposes a decision, and risk managers review it. The Portfolio Manager approves or rejects, and approved orders go to a simulated exchange.",
+      "sha256": "4b1b5a93527180385aea02dc264292970f678cbcb636eaccbf26af0c50157b85"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3c9ed9d6c4b3b2dd7364d2c7b59ea4a1faf0e1b98e73d4826614232bc4dcdf82",
-      "publication": "reviewed_restatement_required"
+      "value": "The source reports no benchmark results. It says outputs vary between runs and backtest returns may not match published figures, so the framework is a research scaffold and not a strategy with a fixed return.",
+      "sha256": "3c9ed9d6c4b3b2dd7364d2c7b59ea4a1faf0e1b98e73d4826614232bc4dcdf82"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8a72f92647a5c943b7f3a9f271e0d04604cccde0cee5e696aa9bf8e69e9d454e",
-      "publication": "reviewed_restatement_required"
+      "value": "Runs aren't reproducible, because LLM sampling and live news and social data change. Reasoning models ignore the temperature setting, so use a non-reasoning model for steadier output.",
+      "sha256": "8a72f92647a5c943b7f3a9f271e0d04604cccde0cee5e696aa9bf8e69e9d454e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run multi-agent LLM financial trading analysis\nA framework of multiple LLM agents that collaborate on financial trading decisions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou install the repo, set an API key for an LLM provider, and pick a ticker and date in the CLI or through the Python TradingAgentsGraph call. Analyst agents cover fundamentals, sentiment, news and technicals. Bullish and bearish researchers then debate, a trader proposes a decision, and risk managers review it. The Portfolio Manager approves or rejects, and approved orders go to a simulated exchange.\nHow it went\nThe source reports no benchmark results. It says outputs vary between runs and backtest returns may not match published figures, so the framework is a research scaffold and not a strategy with a fixed return.\nWorth knowing\nRuns aren't reproducible, because LLM sampling and live news and social data change. Reasoning models ignore the temperature setting, so use a non-reasoning model for steadier output.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a small multi-agent research project in this folder where separate LLM agents act as a fundamentals analyst, a news analyst, a technical analyst and a risk manager for [ticker or list of tickers]. Have them debate and produce one written recommendation per ticker with reasoning, using only [free data source, e.g. yfinance]. This is paper analysis only, so never connect to a brokerage or place trades, and stop once you have run it on one ticker and saved the report.\nOriginal source: https://github.com/TauricResearch/TradingAgents",
+    "body_sha256": "7e6b1cab9d54def96b1985cba3f3c185037ff0447d3794c35123f26489fa2f55",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

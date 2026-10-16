@@ -1,36 +1,30 @@
 # 跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/cancel-and-refund-subscriptions-by-searching-email-and-calli
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Grok Bot
-
-### 介绍
-
-A user describes delegating two difficult subscription cancellations to Grok Bot.
-
-一位用户描述将两项难以取消的订阅交给 Grok Bot 处理。
-
-### 方法
-
-The workflow combined email searches, account access, provider calls and follow-up messages; the person still helped with authentication.
-
-流程结合邮件检索、账户访问、供应商电话和后续邮件，身份验证仍需本人协助。
-
-### 结果与限制
-
-The account claims cancellation and refunds within about ten minutes, without stating amounts. Extensive personal-data access limits how safely this can be copied.
-
-当事人声称约十分钟内取消并退款，但未披露金额；广泛的个人数据授权限制了可安全复制的范围。
+    Cancel and refund subscriptions by searching email and calling
+    Grok Bot read email across two accounts, logged into systems, phoned providers and sent emails, cancelling and refunding two long-pending subscriptions in about ten minutes.
+    Done with
+    GB
+    Grok Bot
+    What they did
+    The author had tried for months to cancel two subscriptions, and Claude got close but stalled on the last step. He gave the same task to Grok Bot on his personal devices. It read years of email across two accounts, logged into systems, phoned a couple of providers using a bot that places calls from his number, and sent a few emails.
+    How it went
+    About ten minutes later both subscriptions were cancelled and refunded. The author doesn't give the refund amounts.
+    Worth knowing
+    He gave the agent access to all his personal data and calls that risky. Logins and 2FA still needed him at least once, and he says enterprise use is a different risk question.
+    Try it yourself
+    with
+    Grok Bot
+    Copy prompt
+    Search my email accounts [email 1, email 2] for charges or sign-up messages from [service or subscription name], then work out how to cancel it and request a refund for [amount or period]. Walk me through the cancel and refund steps, and pause and show me before you submit any form, send any email or confirm any cancellation. You're done when I've confirmed the cancellation and refund request, and you've given me a summary of what was sent.
+    Original source: https://moxiegtm.substack.com/p/how-to-cancel-claude-and-move-2x
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://moxiegtm.substack.com/p/how-to-cancel-claude-and-move-2x)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The account claims cancellation and refunds within about ten minutes, without st
 该案例适合验证个人代理能否把取消流程闭环，不足以证明可复制的退款服务。聚合站转述两笔订阅约十分钟取消退款，却没有商户名、退款金额、流水或失败样本，原文当前无法读取。付款人应是时间价值高且遇到复杂取消的消费者；普通订阅用户已有商户自助渠道、Apple退款入口及Rocket Money人工礼宾。若经营者承担账户授权、电话沟通、退款追踪和误取消恢复，成本主要在人工及获客，而不是模型调用。建议限定商户与账户，在逐笔确认和明确交付状态下验证，暂不开发通用全自动退款产品。
 
 案例ID：`cancel-and-refund-subscriptions-by-searching-email-and-calli` · 案例来源：https://agentusecases.ai/use-case/cancel-and-refund-subscriptions-by-searching-email-and-calli
-研究时间：2026-10-15T06:04:21.480348+00:00 · 证据置信度：中低：已读取8份公开资料；案例原文403，成果仅能追溯至聚合站转述；官方功能和退款流程可核对，未验证真实到账、客户付费或电话执行。
+研究时间：2026-10-15T06:04:21.480348+00:00
 
 **商业评分：36.0/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The account claims cancellation and refunds within about ten minutes, without st
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The account claims cancellation and refunds within about ten minutes, without st
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S72f639f8d6c0, Sed16b3d05cb7, Sd0ec2ff62b12, Sb32151c6bb0c, S3b295a170021, S8b2d1f972071
 
@@ -97,9 +89,9 @@ The account claims cancellation and refunds within about ten minutes, without st
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S72f639f8d6c0, Sed16b3d05cb7, Sd0ec2ff62b12, Sb32151c6bb0c, S3b295a170021, S8b2d1f972071
 
@@ -182,8 +174,7 @@ The account claims cancellation and refunds within about ten minutes, without st
 
 ## 用户评价怎样改变判断
 
-本轮执行了社区、评论平台和代码讨论三类检索。Rocket Money相关Reddit查询出现大量无关结果，不能算找到使用者。Trustpilot查询只返回门户页面，无法验证针对本工作流的评论。Grok Bot的GitHub查询未取得可对应本案例的使用记录。另搜Grok Bot订阅操作出现Reddit体验帖，但证据工具明确robots禁止访问，停止读取，不引用搜索摘要作为真实用户证据。
-聚合站自述、官方DevRel指南和Rocket Money挑选的首页好评都带有明显选择偏差；首页还说明评价可能编辑过。它们分别可用于定位案例、了解设计与竞争定位，不能充当独立用户满意度。特别是原始Substack本轮连接403且浏览工具也无法打开，所以没有把“用了十分钟”升格为直接用户核验。没有可靠反馈不意味着产品差评，而是缺少能提高投入信心的独立验证信号，因此本维度0分、权重仍为5%。后续需要实际任务的前后凭证与失败分母，不能用社交点赞或平台总评分弥补。
+暂无直接用户反馈。
 
 依据：S72f639f8d6c0, Sb32151c6bb0c, Sed16b3d05cb7
 
@@ -205,19 +196,11 @@ The account claims cancellation and refunds within about ten minutes, without st
 
 假设：电话与多轮接管复杂辅助假设：全部输入为研究者情景；人工60分钟×30美元/小时；用量3、通信存储支付5、获客20、固定工具维护400；未用退款金额作收入，不按共享个人账户降低成本。实际电话与token费用未核实。；API成本 3，人工成本 30，其他可变成本 5，分摊获客成本 20。依据：S3b295a170021, Sb32151c6bb0c, Sd0ec2ff62b12
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `site:reddit.com subscription cancellation Rocket Money refund experience`：主要返回无关页面，未取得对应工作流可核验用户原文。
-- Trustpilot评论平台 · `site:trustpilot.com Rocket Money cancellation subscription reviews`：返回Trustpilot门户，未取得可对应的具体评论。
-- GitHub代码讨论 · `"Grok Bot" review site:github.com`：未发现可对应该案例的代码讨论或交付凭证。
-- Reddit社区补充 · `"Grok Bot" "cancel" "subscriptions"`：出现邻近体验帖子；对r/cursor帖子执行来源读取时robots禁止，未绕过，不计已读反馈。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 Rocket Money已经把人工取消作为Premium卖点，反驳“消费者绝不为便利付费”；Apple自助入口与平台自带电脑则反驳“必须购买独立代办”。Apple退款等待也反驳把十分钟操作当作普遍到账时效。竞品页面自身规模数字矛盾，不采信较大的一个。
 
-原始Substack连接403，浏览工具亦打不开；Reddit证据读取被robots拒绝，未绕过。未读到作者退款凭证、商户身份、电话技术或代码；没有独立客户、收入、利润、任务成功率、实际支付意愿与获客数据。未核验企业适用合同及电话规则，未运行产品或合成实验，不宣称生产验证。目录完整刷新1314例、详情5例、公开首屏分类top；本环境刷新库为新基线，不能声称历史正文无变化。与拉取的登记表比较无文件变化。研究仅使用当前Codex账号与公开网页，没有付费模型API、密钥创建、联系第三方或提交表单。
+退款凭证、商户身份、电话实现、任务成功率与客户付费情况未知。企业适用合同与电话规则仍需核实。
 
 ## 具体动作与止损条件
 
@@ -237,6 +220,3 @@ Rocket Money已经把人工取消作为Premium卖点，反驳“消费者绝不�
 - [S7d23e0f01a83] [Rocket Money订阅管理页面](https://www.rocketmoney.com/feature/manage-subscriptions)：支持订阅列表及代取消服务，页面两套取消数量矛盾故不作为市场规模数据。
 
 结构化记录：[research/cancel-and-refund-subscriptions-by-searching-email-and-calli.json](../research/cancel-and-refund-subscriptions-by-searching-email-and-calli.json)
-来源读取凭据：[research/evidence/cancel-and-refund-subscriptions-by-searching-email-and-calli.json](../research/evidence/cancel-and-refund-subscriptions-by-searching-email-and-calli.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

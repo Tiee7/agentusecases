@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "705d311c80d58345b3aef01538e41ceff85fa2508f68ffa0a896c9c7db36123d",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n AI agent triggers on each new PR, fetches diffs, calls an LLM for a review, and posts comments and labels back on the PR.",
+      "sha256": "705d311c80d58345b3aef01538e41ceff85fa2508f68ffa0a896c9c7db36123d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c5bc5a1cc78597e954a46a60fe99fe910dd6347c6e7e6b3553a4f10747151f59",
-      "publication": "reviewed_restatement_required"
+      "value": "A GitHub Trigger node in n8n fires when a PR is opened. An HTTP Request node calls GitHub's pull request files API, and a Code node merges each filename and diff into a prompt that casts the model as a senior iOS developer. The agent runs on an OpenAI chat model and reads a Google Sheet of team Swift best practices as a tool. GitHub nodes then post the comment and add a ReviewedByAI label.",
+      "sha256": "c5bc5a1cc78597e954a46a60fe99fe910dd6347c6e7e6b3553a4f10747151f59"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "31ea2c05083d471e6c197934df98d4516a641379944e17c5615a8edb73cde03b",
-      "publication": "reviewed_restatement_required"
+      "value": "In a test PR adding iota cryptocurrency support, the agent posted a comment and applied the label. The comment was one general comment, not line-level. Reviews were often too verbose and could miss the core problems.",
+      "sha256": "31ea2c05083d471e6c197934df98d4516a641379944e17c5615a8edb73cde03b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "2896f994b1336411c31e0861d7fe488d86d852e3fb4e77ad8a7562f9d4b433f5",
-      "publication": "reviewed_restatement_required"
+      "value": "Validate each node's output as you build it. Inline comments would need a loop over each file's diff and line numbers, which the author lists as a next step and did not build.",
+      "sha256": "2896f994b1336411c31e0861d7fe488d86d852e3fb4e77ad8a7562f9d4b433f5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Review GitHub pull requests automatically\nAn n8n AI agent triggers on each new PR, fetches diffs, calls an LLM for a review, and posts comments and labels back on the PR.\nDone with\nN8\nn8n\nWhat they did\nA GitHub Trigger node in n8n fires when a PR is opened. An HTTP Request node calls GitHub's pull request files API, and a Code node merges each filename and diff into a prompt that casts the model as a senior iOS developer. The agent runs on an OpenAI chat model and reads a Google Sheet of team Swift best practices as a tool. GitHub nodes then post the comment and add a ReviewedByAI label.\nHow it went\nIn a test PR adding iota cryptocurrency support, the agent posted a comment and applied the label. The comment was one general comment, not line-level. Reviews were often too verbose and could miss the core problems.\nWorth knowing\nValidate each node's output as you build it. Inline comments would need a loop over each file's diff and line numbers, which the author lists as a next step and did not build.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow triggered when a new pull request opens in my GitHub repo [owner/repo]. It should fetch the diff, ask an AI model to review it for bugs, readability and missing tests, then post the review as a comment and add a label such as [label names]. You're done when a test PR gets a useful review comment; pause and show me the comment and label before anything is posted to GitHub.\nOriginal source: https://medium.com/@anirbanmukherjee1311/automate-github-code-reviews-with-n8ns-ai-agent-0b20be449c6c",
+    "body_sha256": "621bb769277426afb51a394d614b98e9911d602564442db20c65f1c29bf32122",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

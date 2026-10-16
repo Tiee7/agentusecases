@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "dff9b32d4711edb8fc4fca15c31a4ba4ae3530778a86fec609b1cc5a94405269",
-      "publication": "reviewed_restatement_required"
+      "value": "A homeowner built an add-on and MCP server so Cursor could write and deploy Home Assistant automations for per-room temperature control, iterating through five versions over a weekend.",
+      "sha256": "dff9b32d4711edb8fc4fca15c31a4ba4ae3530778a86fec609b1cc5a94405269"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "0f7a4cbcacc663d690591a70be7404770069b0924d40b1d5ad57f1e1b06f2b94",
-      "publication": "reviewed_restatement_required"
+      "value": "The homeowner used Home Assistant with Zigbee radiator valves and a relay wired in parallel with the old thermostat as a fallback. After the first version, manual YAML copying became tedious, so they built an add-on and MCP server. Cursor could then edit, deploy and restart automations from the IDE. Every change was committed to a local Git repository.",
+      "sha256": "0f7a4cbcacc663d690591a70be7404770069b0924d40b1d5ad57f1e1b06f2b94"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8d1d85a6b4018a15ea59c3164f879e0928239f8b71410049c597fab8a7220ebf",
-      "publication": "reviewed_restatement_required"
+      "value": "Five versions of the control logic in one weekend. The final one switches the boiler off slightly early so the radiators coast to target, which improved comfort and saved a noticeable amount of energy. The source gives no figures.",
+      "sha256": "8d1d85a6b4018a15ea59c3164f879e0928239f8b71410049c597fab8a7220ebf"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "339902a7a7b796f2440cba6ceab2d1ef114adab0edba41b02581afa0ebc89f13",
-      "publication": "reviewed_restatement_required"
+      "value": "Building the deployment tooling after version one was what made fast iteration possible, and the Git commits allow safe rollback.",
+      "sha256": "339902a7a7b796f2440cba6ceab2d1ef114adab0edba41b02581afa0ebc89f13"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate per-room heating control in Home Assistant\nA homeowner built an add-on and MCP server so Cursor could write and deploy Home Assistant automations for per-room temperature control, iterating through five versions over a weekend.\nDone with\nCR\nCursor\nWhat they did\nThe homeowner used Home Assistant with Zigbee radiator valves and a relay wired in parallel with the old thermostat as a fallback. After the first version, manual YAML copying became tedious, so they built an add-on and MCP server. Cursor could then edit, deploy and restart automations from the IDE. Every change was committed to a local Git repository.\nHow it went\nFive versions of the control logic in one weekend. The final one switches the boiler off slightly early so the radiators coast to target, which improved comfort and saved a noticeable amount of energy. The source gives no figures.\nWorth knowing\nBuilding the deployment tooling after version one was what made fast iteration possible, and the Git commits allow safe rollback.\nTry it yourself\nwith\nCursor\nCopy prompt\nOpen my Home Assistant config folder [path or SSH host] and help me set up per-room heating control for [list of rooms] using my [thermostat / TRV / sensor entities]. Write the automations with target temperatures and schedules of [your schedule], explain each one, and stop once they pass a config check. Show me the diff and wait for my approval before deploying anything to the live system.\nOriginal source: https://coolver.github.io/home-assistant-cursor-agent/",
+    "body_sha256": "bed5bf6610f8bc97466eaa9601a8db691bb0865bbb8d1f94eca503920222181a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

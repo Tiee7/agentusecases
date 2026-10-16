@@ -1,36 +1,28 @@
 # Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/trade-stocks-via-robinhood-mcp
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：ChatGPT Agent
-
-### 介绍
-
-A trading-challenge post describes account actions through a Robinhood MCP connection.
-
-一篇交易挑战帖子描述经 Robinhood MCP 连接执行账户操作。
-
-### 方法
-
-The source attributes selling TSM and buying HOOD to ChatGPT Agent in a challenge benchmarked against VOO.
-
-源站将卖出 TSM、买入 HOOD 的操作归于 ChatGPT Agent，挑战以 VOO 为比较基准。
-
-### 结果与限制
-
-The cached entry reports neither comparative returns nor operational failures. Executed actions alone do not demonstrate investment performance.
-
-缓存条目既未报告对比收益，也未报告操作失败；仅有操作记录不足以证明投资表现。
+    Trade stocks via Robinhood MCP
+    A ChatGPT agent sold TSM shares and bought HOOD shares as part of an ongoing agentic trading challenge.
+    Done with
+    GA
+    ChatGPT Agent
+    What they did
+    The setup was a Robinhood MCP for an agentic trading challenge against $VOO. The ChatGPT agent sold TSM shares and bought HOOD shares.
+    How it went
+    No results or shortfalls are reported.
+    Try it yourself
+    with
+    ChatGPT Agent
+    Copy prompt
+    Look at my brokerage account's current holdings and propose a trade: sell [amount or shares] of [ticker to sell] and buy [ticker to buy], with a short reason for each. Don't place any orders yet. Show me the exact order details, including quantity, order type, and estimated cost, and wait for my explicit approval before executing.
+    Original source: https://x.com/pdxjimsmith/status/2070617072921686525
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/pdxjimsmith/status/2070617072921686525)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +31,7 @@ The cached entry reports neither comparative returns nor operational failures. E
 该案例展示的是自然语言代理与券商执行接口的连接，聚合页没有给出挑战收益、回撤、费用后表现或付费客户。即便成交转述属实，也不能证明选股有超额收益。潜在付款人是自主管理证券账户的个人，但官方已提供外部MCP接入和原生Agents，第三方需要额外证明可持续的审核或记录价值。人工复核、接口维护、敏感数据与交易责任使低价订阅很容易亏损；本轮没有证据支持靠自动买卖本身建立独立经营优势。
 
 案例ID：`trade-stocks-via-robinhood-mcp` · 案例来源：https://agentusecases.ai/use-case/trade-stocks-via-robinhood-mcp
-研究时间：2026-10-16T03:04:14.394660+00:00 · 证据置信度：官方接入、权限和替代产品证据较强；案例成交仅聚合站转述，原始X帖受robots限制；无经核验的收益、付费或留存数据。
+研究时间：2026-10-16T03:04:14.394660+00:00
 
 **商业评分：20.0/100。用户反馈信号占5%。**
 
@@ -72,19 +64,13 @@ The cached entry reports neither comparative returns nor operational failures. E
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/trade-stocks-via-robinhood-mcp
 
-观测时间：2026-10-16T02:51:50.667265+00:00
-
-建议运行工具：ChatGPT Agent（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：ChatGPT Agent
 
     Look at my brokerage account's current holdings and propose a trade: sell [amount or shares] of [ticker to sell] and buy [ticker to buy], with a short reason for each. Don't place any orders yet. Show me the exact order details, including quantity, order type, and estimated cost, and wait for my explicit approval before executing.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：使用教学虚构持仓，不输入真实账号、凭据或个人交易记录；准备人工逐字段检查。源站原文涉及账户动作，展示不代表本轮执行授权。
 
@@ -94,9 +80,9 @@ The cached entry reports neither comparative returns nor operational failures. E
 
 ### 我们编写的离线核对模板
 
-我们编写；非源站原文；未做模型实测
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sae8e1cd80bce
 
@@ -104,9 +90,9 @@ The cached entry reports neither comparative returns nor operational failures. E
 
 ### Our offline review template
 
-我们编写；非源站原文；未做模型实测
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sae8e1cd80bce
 
@@ -183,8 +169,7 @@ Alpaca官方MCP是另一种技术替代，提供纸面交易和工具范围设�
 
 ## 用户评价怎样改变判断
 
-本轮检索覆盖Reddit社区、GitHub问题和原始作者X线索。部分搜索返回大量无关页面，不能据此判断用户没有意见。原始X帖因robots限制未读取；Medium评论返回403，未绕过，也没有用摘要替代完整用户体验。找到并读取的是Vibe-Trading的GitHub #381：提交者报告连接授权成功后工具名不匹配，账户信息读取失败；维护者随后说明修复并合并，页面已关闭。
-这属于相邻工作流的一次自选故障报告，不是本案例作者、不是ChatGPT代理整体效果测试，更不是当前所有Robinhood接入都失败。它改变的是维护成本判断：仅鉴权通过不足以确认交付成功，工具发现与兼容检查需要纳入验收。修复说明又构成反证，不能把故障无限延长到今天。反馈信号给1/5，只占总分5%，原因是确有可追溯体验但迁移范围很窄。没有样本分母、购买记录、满意度或留存数据，不计算失败率，不写用户普遍差评，也不把缺少正面证据等同于用户不满意。
+相关体验：工具名兼容问题曾阻断账户读取；维护者次日说明修复合并，提示接入验收及持续维护需求，不证明交易收益。
 
 依据：Sfeaf545396cb, S335b26ecb72b
 
@@ -206,19 +191,11 @@ Alpaca官方MCP是另一种技术替代，提供纸面交易和工具范围设�
 
 研究者假设：支持密集假设：所有数值均为研究者敏感性假设，非来源报价或实际经营数据：月价29、模型预算3、其他变动2、获客摊销5美元；人工50分钟×假设30美元/小时=25美元；每月100账户、固定1000美元。来源仅说明维护与复核为何必要，不支持这些假设金额。未计税、法律咨询、事故赔偿及资本成本，不适用于实盘执行收益估算。；API成本 3，人工成本 25，其他可变成本 2，分摊获客成本 5。依据：Sae8e1cd80bce, S335b26ecb72b
 
-## 用户反馈核对（低权重）
-
-- Reddit社区检索 · `"Robinhood MCP" reddit experience review`：返回结果夹杂无关review页面，未取得可核验的本案例用户评价；不能当作无用户意见。
-- GitHub问题检索 · `"Robinhood MCP" github issues`：找到并实际读取Vibe-Trading #381：历史工具名不匹配、已关闭修复；其他项目不与案例混同。
-- X作者线索检索 · `"pdxjimsmith" "Robinhood" trading`：未取得原作者可核验正文；已登记的原始X地址robots禁止，访问失败凭据保留。
-- Reddit社区检索 · `site:reddit.com "Robinhood" "agentic" "experiences"`：此次结果主要为通用agentic页面，没有可用的特定案例评论。
-- [S335b26ecb72b] adjacent_workflow：工具名兼容问题曾阻断账户读取；维护者次日说明修复合并，提示接入验收及持续维护需求，不证明交易收益。；偏差：单个GitHub故障提交者自选样本，维护者回应带有项目立场；非本案例作者，修复后状态不能用旧故障代替。
-
 ## 反证与未核实信息
 
 官方接入和原生Agents证明这一工作流并非纯概念；Alpaca有纸面环境可降低研发试错；GitHub故障已修复，不能说当前不可用。但没有本案例经核验收益或付款证据，平台替代反而削弱通用封装层价值。
 
-未读取受robots限制的原始X帖；Medium返回403、发布公告与一个猜测支持URL读取失败，均不算证据。只核实公开页面，没有安装MCP、连接账户、下单或模型实测。无实际交易日志、投资回报、用户规模、定价、人工工时和获客成本；情景数字均是假设。源站提示词是站方建议，不是原作者原始运行prompt。
+实际交易日志、投资回报、用户规模、定价、人工工时及获客成本未知。经济情景采用假设参数。
 
 ## 具体动作与止损条件
 
@@ -237,6 +214,3 @@ Alpaca官方MCP是另一种技术替代，提供纸面交易和工具范围设�
 - [S335b26ecb72b] [[Bug] Robinhood MCP connector uses outdated tool names and cannot read account information against current Robinhood Agentic Trading MCP · Issue #381 · HKUDS/Vibe-Trading · GitHub](https://github.com/HKUDS/Vibe-Trading/issues/381)：Vibe-Trading用户报告Robinhood连接器工具名称不匹配，维护者次日说明修复；属于相邻工作流反馈。
 
 结构化记录：[research/trade-stocks-via-robinhood-mcp.json](../research/trade-stocks-via-robinhood-mcp.json)
-来源读取凭据：[research/evidence/trade-stocks-via-robinhood-mcp.json](../research/evidence/trade-stocks-via-robinhood-mcp.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

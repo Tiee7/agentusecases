@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4c92305ae5a5c96558b8121d316fc1d80e659c8cdc0a53f3b303d0868f47b645",
-      "publication": "reviewed_restatement_required"
+      "value": "A non-coder had Claude Code build a finance tracker that pulls bank emails, categorizes spending, and runs nightly on a Raspberry Pi.",
+      "sha256": "4c92305ae5a5c96558b8121d316fc1d80e659c8cdc0a53f3b303d0868f47b645"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "eea682a2a5652e86b6fd48f046165b472b7dd08a170e250e0392cc9ac30bf316",
-      "publication": "reviewed_restatement_required"
+      "value": "Fahad Hasin, who says he knows little coding, had Claude Code build a personal finance tracker that runs on a Raspberry Pi 5 he already owned. It combines bank update emails from several accounts and payment methods, categorizes spending, and adds context from merchant emails. A local Llama 3.2:3B model does the categorizing. A cron job runs it nightly with no manual steps.",
+      "sha256": "eea682a2a5652e86b6fd48f046165b472b7dd08a170e250e0392cc9ac30bf316"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4ce08e214844313b697a3a2930878194654c12ec477507b102c6f78f2d45f8ab",
-      "publication": "reviewed_restatement_required"
+      "value": "He says it works better than he expected, and the nightly run needs no manual steps. The post gives no accuracy figures, and the author admits he can't judge the code quality.",
+      "sha256": "4ce08e214844313b697a3a2930878194654c12ec477507b102c6f78f2d45f8ab"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7f9199fa4dd2968eef76a6eb0f41dc962656505760e3fc5f10ab4c4a119374e",
-      "publication": "reviewed_restatement_required"
+      "value": "Local model means no token costs and no third party seeing your transactions; the author says a small miscategorisation is tolerable here.",
+      "sha256": "a7f9199fa4dd2968eef76a6eb0f41dc962656505760e3fc5f10ab4c4a119374e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track personal finances nightly from bank emails\nA non-coder had Claude Code build a finance tracker that pulls bank emails, categorizes spending, and runs nightly on a Raspberry Pi.\nDone with\nCC\nClaude Code\nWhat they did\nFahad Hasin, who says he knows little coding, had Claude Code build a personal finance tracker that runs on a Raspberry Pi 5 he already owned. It combines bank update emails from several accounts and payment methods, categorizes spending, and adds context from merchant emails. A local Llama 3.2:3B model does the categorizing. A cron job runs it nightly with no manual steps.\nHow it went\nHe says it works better than he expected, and the nightly run needs no manual steps. The post gives no accuracy figures, and the author admits he can't judge the code quality.\nWorth knowing\nLocal model means no token costs and no third party seeing your transactions; the author says a small miscategorisation is tolerable here.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a personal finance tracker that pulls transaction emails from my inbox, categorizes spending automatically, and runs on a schedule to keep an updated log. Have it produce a daily or weekly summary I can review, and confirm the categorization logic with me before running unattended long-term.\nOriginal source: https://fahadhasin.substack.com/p/40-how-i-am-using-claude-code",
+    "body_sha256": "21d39c85f1c57531e686bc309a722884971921e1f5617ea04e3b34713ca6b39c",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

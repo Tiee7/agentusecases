@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8afa4260320c82239311ea3bb887beaa93a9990338d9584c874ed79a429d1a3b",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n Telegram agent reads links sent to it, summarises and categorises them into Google Sheets, and answers questions from the library using Supabase semantic search.",
+      "sha256": "8afa4260320c82239311ea3bb887beaa93a9990338d9584c874ed79a429d1a3b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "2563a3e68fa3ab5eef393b1e71cd509965e668ef8b5e66f18d24a1afe7a5dad3",
-      "publication": "reviewed_restatement_required"
+      "value": "A Telegram AI agent sorts each message: a URL is saved, a question is searched, anything else gets a short how-to reply. Saving goes through a webhook that normalises the URL, reads the page with Jina Reader, and has an AI librarian write a summary and reuse existing categories. It then upserts into Google Sheets by URL and re-embeds the full text into Supabase. Two search tools cover the Sheet and the page text.",
+      "sha256": "2563a3e68fa3ab5eef393b1e71cd509965e668ef8b5e66f18d24a1afe7a5dad3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "59979d6901756c27656057fdcf1e8587ed33b4483dabcf2316da11136345fd76",
-      "publication": "reviewed_restatement_required"
+      "value": "The author describes the workflow as working: re-sent links update the existing card instead of duplicating, and unreadable pages are not filed. The post gives no usage numbers or benchmarks.",
+      "sha256": "59979d6901756c27656057fdcf1e8587ed33b4483dabcf2316da11136345fd76"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a4a64d26bd77032c1467f3b58d04232da171dec016887a7eb227234e7880036c",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup needs a Telegram bot token, Supabase (the free tier is fine), Gemini embeddings, a shared Header Auth credential, and your own webhook URL in the save_link tool.",
+      "sha256": "a4a64d26bd77032c1467f3b58d04232da171dec016887a7eb227234e7880036c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Save and search links via a Telegram second brain\nAn n8n Telegram agent reads links sent to it, summarises and categorises them into Google Sheets, and answers questions from the library using Supabase semantic search.\nDone with\nN8\nn8n\nWhat they did\nA Telegram AI agent sorts each message: a URL is saved, a question is searched, anything else gets a short how-to reply. Saving goes through a webhook that normalises the URL, reads the page with Jina Reader, and has an AI librarian write a summary and reuse existing categories. It then upserts into Google Sheets by URL and re-embeds the full text into Supabase. Two search tools cover the Sheet and the page text.\nHow it went\nThe author describes the workflow as working: re-sent links update the existing card instead of duplicating, and unreadable pages are not filed. The post gives no usage numbers or benchmarks.\nWorth knowing\nSetup needs a Telegram bot token, Supabase (the free tier is fine), Gemini embeddings, a shared Header Auth credential, and your own webhook URL in the save_link tool.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow with a Telegram bot that I can send links to. For each link it should fetch the page, write a short summary, assign a category from [my list of categories], and add a row to my Google Sheet [sheet name]. It should also answer questions like 'what did I save about [topic]?' by searching the saved summaries. You're done when I can send one test link and then ask a question that returns it; show me the plan before activating the bot.\nOriginal source: https://community.n8n.io/t/second-brain-on-telegram-save-and-search-your-links-google-sheets-supabase-rag/304330",
+    "body_sha256": "a081643c2ad412c238b3c3ee187e64baee45c3d230ec0e03fdeffe2e6d1d8f6e",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "97ed7c893f3398d95ce4949e5f8a2e59ad45734a91f1fb3f460dd6ef78416290",
-      "publication": "reviewed_restatement_required"
+      "value": "Manus was tested on 11 hotel booking engines and got through date and room selection on 8, but handed back at payment details so no booking was completed.",
+      "sha256": "97ed7c893f3398d95ce4949e5f8a2e59ad45734a91f1fb3f460dd6ef78416290"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a9e3c038146112bf8a85d039cc710db89c88ffca807c601de14c53159e96e7a2",
-      "publication": "reviewed_restatement_required"
+      "value": "Triptease gave Manus the same one-line prompt on each of 11 booking engines, asking for a room at a named hotel for September 15 to 17. Manus went to the hotel's own site first, then clicked through the date picker and room choice. It stopped at the guest and payment form so a person could enter details. It never held card details.",
+      "sha256": "a9e3c038146112bf8a85d039cc710db89c88ffca807c601de14c53159e96e7a2"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5be429b97fb05b3b3003ad96fc0847baa2c6c6683455efcaeca867b83abdba46",
-      "publication": "reviewed_restatement_required"
+      "value": "Manus succeeded on 8 of 11 engines, 3 of them with delays. It failed on D Edge and Travelanium because of CAPTCHAs, and on Simple Booking because of its date selector. Each time it fell back to Booking.com.",
+      "sha256": "5be429b97fb05b3b3003ad96fc0847baa2c6c6683455efcaeca867b83abdba46"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "fabc1cce7125133374b1e6d0f3b1e55e8bdc65948470d2ee26c0b017dfe4648a",
-      "publication": "reviewed_restatement_required"
+      "value": "Date pickers that show months side by side worked best. A length-of-stay picker or a CAPTCHA sent Manus to Booking.com, and it still can't finish payment itself.",
+      "sha256": "fabc1cce7125133374b1e6d0f3b1e55e8bdc65948470d2ee26c0b017dfe4648a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book hotel rooms across booking engines\nManus was tested on 11 hotel booking engines and got through date and room selection on 8, but handed back at payment details so no booking was completed.\nDone with\nMA\nManus\nWhat they did\nTriptease gave Manus the same one-line prompt on each of 11 booking engines, asking for a room at a named hotel for September 15 to 17. Manus went to the hotel's own site first, then clicked through the date picker and room choice. It stopped at the guest and payment form so a person could enter details. It never held card details.\nHow it went\nManus succeeded on 8 of 11 engines, 3 of them with delays. It failed on D Edge and Travelanium because of CAPTCHAs, and on Simple Booking because of its date selector. Each time it fell back to Booking.com.\nWorth knowing\nDate pickers that show months side by side worked best. A length-of-stay picker or a CAPTCHA sent Manus to Booking.com, and it still can't finish payment itself.\nTry it yourself\nwith\nManus\nCopy prompt\nGo to [hotel website or booking engine URL] and go through the booking flow for a [room type] from [check-in date] to [check-out date] for [number] guests. Stop at the payment details page and show me the room, price, and cancellation terms. Don't enter any payment information or submit the booking.\nOriginal source: https://www.hotelnewsresource.com/article137200.html",
+    "body_sha256": "9fee2dc69cc7eed24199cb77b1a400a1ed80f82314eac339269fec95c107067a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

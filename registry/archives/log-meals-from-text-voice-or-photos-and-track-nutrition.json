@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e91346bee96d4d6933567fdae773169f676a0bfa338673576276be8ca334f989",
-      "publication": "reviewed_restatement_required"
+      "value": "A Telegram AI agent in n8n logs meals sent as text, voice or photos, estimates calories and macros, tracks goals in Google Sheets and sends daily reports.",
+      "sha256": "e91346bee96d4d6933567fdae773169f676a0bfa338673576276be8ca334f989"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7942e875b3ce80fb4d1aae8f4ce8dd0e1be65b92a95339498e68a1cf6af8d791",
-      "publication": "reviewed_restatement_required"
+      "value": "A Telegram trigger checks whether the user is registered. New users are onboarded with calorie and protein targets, with no weight or height stored. A Gemini-powered agent handles text, transcribed voice and food photos. It logs estimated calories and macros to a Meals sheet and keeps goals in a Profile sheet. A report step builds daily summaries with progress bars.",
+      "sha256": "7942e875b3ce80fb4d1aae8f4ce8dd0e1be65b92a95339498e68a1cf6af8d791"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1fe91be60ae3adb308c742d2bcc0c640cd85c2105f349371993446e1c36e8902",
-      "publication": "reviewed_restatement_required"
+      "value": "The source describes the template and its features but gives no test results or accuracy figures. Nutrition values are AI estimates from descriptions or photos.",
+      "sha256": "1fe91be60ae3adb308c742d2bcc0c640cd85c2105f349371993446e1c36e8902"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "fe1d01c28bb9bac3ed80724939ad4e2a343ad6ca7711f6fbf80655288a1e35b2",
-      "publication": "reviewed_restatement_required"
+      "value": "You need Telegram bot, Google Sheets and Gemini (or compatible LLM) credentials, plus two sheets with the exact column layouts the template specifies.",
+      "sha256": "fe1d01c28bb9bac3ed80724939ad4e2a343ad6ca7711f6fbf80655288a1e35b2"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Log meals from text, voice or photos and track nutrition\nA Telegram AI agent in n8n logs meals sent as text, voice or photos, estimates calories and macros, tracks goals in Google Sheets and sends daily reports.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA Telegram trigger checks whether the user is registered. New users are onboarded with calorie and protein targets, with no weight or height stored. A Gemini-powered agent handles text, transcribed voice and food photos. It logs estimated calories and macros to a Meals sheet and keeps goals in a Profile sheet. A report step builds daily summaries with progress bars.\nHow it went\nThe source describes the template and its features but gives no test results or accuracy figures. Nutrition values are AI estimates from descriptions or photos.\nWorth knowing\nYou need Telegram bot, Google Sheets and Gemini (or compatible LLM) credentials, plus two sheets with the exact column layouts the template specifies.\nTry it yourself\nwith\nn8n\nCopy prompt\nCreate an n8n workflow with a Telegram bot where I can send a meal as text, voice note or photo, and Gemini estimates calories and macros. Log each meal in a Google Sheet at [sheet link], compare the totals with my daily goals of [calories, protein, etc.], and send me a summary every evening at [time]. Done when three test meals appear in the sheet and a daily report arrives in Telegram.\nOriginal source: https://n8n.io/workflows/7756-nutrition-tracker-and-meal-logger-with-telegram-gemini-ai-and-google-sheets/",
+    "body_sha256": "0d2c34ae778e0a7700209b90de2e9afb508ec951a66719b4ce4cdc8b00e90f9b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

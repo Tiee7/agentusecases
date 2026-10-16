@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f7431dcf5a551ca0c4155c95fa8e2714852ef121deeed87f9899364178d2280b",
-      "publication": "reviewed_restatement_required"
+      "value": "A builder used Claude Code with FreeCAD and Claude Vision to design, print, and assemble a 5-DOF servo arm with vision and voice control.",
+      "sha256": "f7431dcf5a551ca0c4155c95fa8e2714852ef121deeed87f9899364178d2280b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ebcf079cddb94bcebbe205669bcf6ade46200cb51231a9d79514fdf6023d94a8",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code wrote one Python macro that FreeCAD re-rendered live, building every part of the arm from boolean operations. The builder iterated by conversation, then printed and assembled the arm. For control, a laptop script sent Whisper speech and a webcam frame to Claude Vision. Claude returned JSON actions, local inverse-kinematics code converted target pixels to servo angles, and an ESP32 drove the servos.",
+      "sha256": "ebcf079cddb94bcebbe205669bcf6ade46200cb51231a9d79514fdf6023d94a8"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3e981d8cebfb8e6f3d7c3bf935ba3bd4b6fb5df5b7cc7c3fbdce86aa4250b09b",
-      "publication": "reviewed_restatement_required"
+      "value": "About 30 hours from design to assembly produced four working servos. The gripper is not built, there is no feedback loop, and the pixel-to-world calibration is only approximate.",
+      "sha256": "3e981d8cebfb8e6f3d7c3bf935ba3bd4b6fb5df5b7cc7c3fbdce86aa4250b09b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "023ff2200714e147521ef7d5bf480fcab739416116fb9025355718be1dba4d2e",
-      "publication": "reviewed_restatement_required"
+      "value": "Expect print fixes. The builder taped two servos, glued a lid, reprinted the base turntable, and replaced a failed print-in-place hinge. FreeCAD's macro runner also needs ASCII-only scripts.",
+      "sha256": "023ff2200714e147521ef7d5bf480fcab739416116fb9025355718be1dba4d2e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Design and build a robotic arm with no CAD experience\nA builder used Claude Code with FreeCAD and Claude Vision to design, print, and assemble a 5-DOF servo arm with vision and voice control.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code wrote one Python macro that FreeCAD re-rendered live, building every part of the arm from boolean operations. The builder iterated by conversation, then printed and assembled the arm. For control, a laptop script sent Whisper speech and a webcam frame to Claude Vision. Claude returned JSON actions, local inverse-kinematics code converted target pixels to servo angles, and an ESP32 drove the servos.\nHow it went\nAbout 30 hours from design to assembly produced four working servos. The gripper is not built, there is no feedback loop, and the pixel-to-world calibration is only approximate.\nWorth knowing\nExpect print fixes. The builder taped two servos, glued a lid, reprinted the base turntable, and replaced a failed print-in-place hinge. FreeCAD's macro runner also needs ASCII-only scripts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a [N]-DOF robotic arm from scratch using FreeCAD via MCP, including part files ready for 3D printing and a servo control script, even though I have no CAD experience. Guide me through printing, assembly, and wiring, stopping to confirm before any step that involves ordering parts.\nOriginal source: https://hiitzroman.com/blog/robotic-arm-with-claude-code-and-freecad",
+    "body_sha256": "aa53c8371dce1b7ccbb6878df786073f9dc53e1bfa9bbdfc8f6c0eebb5ef5fa4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

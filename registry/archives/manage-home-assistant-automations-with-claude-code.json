@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "85d11328f72da09d87f337cd1a6c57e6ced01d6149dc7085689389cf38512107",
-      "publication": "reviewed_restatement_required"
+      "value": "Adam uses Claude Code via an MCP server to search entities, read automation traces and build and debug automations like a shed motion light.",
+      "sha256": "85d11328f72da09d87f337cd1a6c57e6ced01d6149dc7085689389cf38512107"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7edfc5a3301c26225c5ddd8aec99bc2f49949d6d86a5dd0afa8e47f42c36b5bd",
-      "publication": "reviewed_restatement_required"
+      "value": "Adam keeps his Home Assistant automations as YAML files in a git repo. Claude Code reaches HA through an MCP server to search entities, read traces and reload configs. For each change it edits the file, copies it to HA with scp, reloads automations and commits. For the shed motion light, it first planned: it read his existing motion automations, checked for conflicts and asked clarifying questions.",
+      "sha256": "7edfc5a3301c26225c5ddd8aec99bc2f49949d6d86a5dd0afa8e47f42c36b5bd"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8da27895ba6bb41f41f5be257b8e1e7c2185db8fdd15685ab92ebe8286e45a4d",
-      "publication": "reviewed_restatement_required"
+      "value": "A noisy camera automation was traced to home-to-home GPS updates and fixed in under two minutes. A brightness tweak took four messages. The shed light automation snapshots each light's state, so lights that were already on stay on.",
+      "sha256": "8da27895ba6bb41f41f5be257b8e1e7c2185db8fdd15685ab92ebe8286e45a4d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "48096c7d7b459fe7c630803b6c14b813c7a1da4e70f7de26df451610e06df290",
-      "publication": "reviewed_restatement_required"
+      "value": "He wrote project skills files covering his conventions and known device quirks, which Claude loads automatically. This helps it match existing patterns.",
+      "sha256": "48096c7d7b459fe7c630803b6c14b813c7a1da4e70f7de26df451610e06df290"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Manage Home Assistant automations with Claude Code\nAdam uses Claude Code via an MCP server to search entities, read automation traces and build and debug automations like a shed motion light.\nDone with\nCC\nClaude Code\nWhat they did\nAdam keeps his Home Assistant automations as YAML files in a git repo. Claude Code reaches HA through an MCP server to search entities, read traces and reload configs. For each change it edits the file, copies it to HA with scp, reloads automations and commits. For the shed motion light, it first planned: it read his existing motion automations, checked for conflicts and asked clarifying questions.\nHow it went\nA noisy camera automation was traced to home-to-home GPS updates and fixed in under two minutes. A brightness tweak took four messages. The shed light automation snapshots each light's state, so lights that were already on stay on.\nWorth knowing\nHe wrote project skills files covering his conventions and known device quirks, which Claude loads automatically. This helps it match existing patterns.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to my Home Assistant instance at [URL] through an MCP server using the access token I'll provide. Search my entities for [room or device type], then help me build an automation that [describe trigger and action, e.g. turns on the shed light when motion is detected after dark]. Show me the automation before you save it, and if something misbehaves, read the trace and explain what went wrong. Stop when the automation runs correctly in a test.\nOriginal source: https://blog.beguelin.com/2026/04/claude-code-home-assistant/",
+    "body_sha256": "c4a062fd048b0e645fde4ddf4d31711c4c70bc970c9a9b1abece8d31e4a318b4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

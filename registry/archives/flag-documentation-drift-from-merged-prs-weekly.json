@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e09ae498559a9554f6ba5d12c7bc06d36738d336b1a60c6e7dde3a26bcb89adc",
-      "publication": "reviewed_restatement_required"
+      "value": "A weekly Hermes cron job checks merged PRs for changes to tool schemas, CLI commands, config options or env variables to flag docs needing updates.",
+      "sha256": "e09ae498559a9554f6ba5d12c7bc06d36738d336b1a60c6e7dde3a26bcb89adc"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "afb054e7bc0d6ee7d7c94179b63535a81fd2801132c87f3df4de4f3d3001c3ab",
-      "publication": "reviewed_restatement_required"
+      "value": "A Hermes cron job runs Mondays at 9am. It uses the gh CLI to list the last 30 merged PRs in the hermes-agent repo, keeps those from the past 7 days, and checks whether they touched tool, CLI, config or env-var code. For each such PR it checks whether the matching docs page changed in the same PR, then sends a Telegram report.",
+      "sha256": "afb054e7bc0d6ee7d7c94179b63535a81fd2801132c87f3df4de4f3d3001c3ab"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "848379dfaec58a04ee0d127770d50620c9de66945344e6ab67dc245d9aaebfaf",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives a copy-paste blueprint and no measured results. Output is a list of gaps where code changed but docs didn't. If everything is in sync, the agent replies [SILENT] and nothing is sent.",
+      "sha256": "848379dfaec58a04ee0d127770d50620c9de66945344e6ab67dc245d9aaebfaf"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a4d8ec24c765160ed2be132457d271dd74c1a25054cc5c766d31173eab87426b",
-      "publication": "reviewed_restatement_required"
+      "value": "The prompt hardcodes this repo's file paths and fetches only 30 merged PRs, so adapt the paths and raise the limit if more than 30 PRs merge in a week.",
+      "sha256": "a4d8ec24c765160ed2be132457d271dd74c1a25054cc5c766d31173eab87426b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Flag documentation drift from merged PRs weekly\nA weekly Hermes cron job checks merged PRs for changes to tool schemas, CLI commands, config options or env variables to flag docs needing updates.\nDone with\nHA\nHermes Agent\nWhat they did\nA Hermes cron job runs Mondays at 9am. It uses the gh CLI to list the last 30 merged PRs in the hermes-agent repo, keeps those from the past 7 days, and checks whether they touched tool, CLI, config or env-var code. For each such PR it checks whether the matching docs page changed in the same PR, then sends a Telegram report.\nHow it went\nThe source gives a copy-paste blueprint and no measured results. Output is a list of gaps where code changed but docs didn't. If everything is in sync, the agent replies [SILENT] and nothing is sent.\nWorth knowing\nThe prompt hardcodes this repo's file paths and fetches only 30 merged PRs, so adapt the paths and raise the limit if more than 30 PRs merge in a week.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nEvery [day and time], check the pull requests merged into [repo name] over the past week. Flag any that changed [tool schemas, CLI commands, config options, or environment variables] and list which docs pages in [docs path] likely need updating. Send me a short report with PR links and stop there without editing any docs.\nOriginal source: https://hermes-agent.nousresearch.com/docs/guides/automation-blueprints",
+    "body_sha256": "183cab42d8ab5fcdaf9e6bd8a7d5d11f1dc8ff677cef3e8f456579cce9737ddf",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

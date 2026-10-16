@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f4b7726c5deea04b0bd0580db335e7e6da08f16cad1e9fbbe11bd1245154fe04",
-      "publication": "reviewed_restatement_required"
+      "value": "A Claude Code system triages email at 5:30 AM, preps the calendar, updates tasks, adds drive-time events from traffic data and time-blocks the day.",
+      "sha256": "f4b7726c5deea04b0bd0580db335e7e6da08f16cad1e9fbbe11bd1245154fe04"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "fb3215e87a6c6adcc996e3ced46eb94bd6c596997a83259413d676d0351e3a59",
-      "publication": "reviewed_restatement_required"
+      "value": "The author runs Claude Code with MCP servers for Google Calendar, Gmail, Todoist and Google Maps (Directions API) for drive times. Scheduled tasks run email triage at 5:30 AM and calendar prep at 5:45 AM. In the morning, one command starts six parallel subagents, and a time-block workflow builds the day's schedule. Emails are sorted into Dispatch, Prep, Yours or Skip so the human stays in control.",
+      "sha256": "fb3215e87a6c6adcc996e3ced46eb94bd6c596997a83259413d676d0351e3a59"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9ec3555881d15344d200fbce7ec5f52f5b5229aa6aff3e3b09ff70f6b894242b",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says the task list and calendar, including traffic-based drive-time events, are current by 6:15 AM. The source gives no measured results beyond that. Most of the guide is paywalled.",
+      "sha256": "9ec3555881d15344d200fbce7ec5f52f5b5229aa6aff3e3b09ff70f6b894242b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ef111286bed6e18d80d42fdd561ee51e56939bf61546dca1b741b5e4f0a4a41e",
-      "publication": "reviewed_restatement_required"
+      "value": "The author puts the cost at about $100/month and suggests planning a weekend to build it. The full agent and command files are behind a paywall.",
+      "sha256": "ef111286bed6e18d80d42fdd561ee51e56939bf61546dca1b741b5e4f0a4a41e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run an overnight chief of staff for email and calendar\nA Claude Code system triages email at 5:30 AM, preps the calendar, updates tasks, adds drive-time events from traffic data and time-blocks the day.\nDone with\nCC\nClaude Code\nWhat they did\nThe author runs Claude Code with MCP servers for Google Calendar, Gmail, Todoist and Google Maps (Directions API) for drive times. Scheduled tasks run email triage at 5:30 AM and calendar prep at 5:45 AM. In the morning, one command starts six parallel subagents, and a time-block workflow builds the day's schedule. Emails are sorted into Dispatch, Prep, Yours or Skip so the human stays in control.\nHow it went\nThe author says the task list and calendar, including traffic-based drive-time events, are current by 6:15 AM. The source gives no measured results beyond that. Most of the guide is paywalled.\nWorth knowing\nThe author puts the cost at about $100/month and suggests planning a weekend to build it. The full agent and command files are behind a paywall.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me an overnight chief-of-staff routine that runs at [time, e.g. 5:30 AM] each weekday. It should triage my email into [categories], prep my calendar for the day, update my task list at [path or app], add drive-time events using traffic from [home or work address], and propose a time-blocked schedule. Have it write a morning summary I can read in two minutes. It should never send emails or accept invitations without my approval, only draft them. Stop when a test run produces a full summary.\nOriginal source: https://www.the-ai-corner.com/p/claude-code-chief-of-staff-system",
+    "body_sha256": "165fa59a658feaf5c53deaf53fde378eb8851e4ea2504ee981875600e3b6ef05",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

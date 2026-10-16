@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "684d44fe5dd26e33a273891ba18838eca76b5173879c80159fb29d2a163374f7",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow scans a travel agency's daily trip sheet and sends WhatsApp checklists 3 days before departure and welcome-back messages a day after return.",
+      "sha256": "684d44fe5dd26e33a273891ba18838eca76b5173879c80159fb29d2a163374f7"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "586c98cabc9c9d48357a3fc29017935d69326de971d193f34ee05435d4393a2a",
-      "publication": "reviewed_restatement_required"
+      "value": "The n8n workflow runs daily on a schedule trigger. It reads a Google Sheet of trips, checks dates against today, and if the status column shows no prior message it calls WhatsApp to send either the pre-departure checklist three days out or the welcome-back note one day after return then marks the row updated.",
+      "sha256": "586c98cabc9c9d48357a3fc29017935d69326de971d193f34ee05435d4393a2a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c64703ea4d332728afc00181b2afa22b20cfb0f84cab1a98b4941af0546f2db8",
-      "publication": "reviewed_restatement_required"
+      "value": "On a test sheet of ten trips only the right customers received messages on the right days.",
+      "sha256": "c64703ea4d332728afc00181b2afa22b20cfb0f84cab1a98b4941af0546f2db8"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Send travel checklists and welcome-back messages\nAn n8n workflow scans a travel agency's daily trip sheet and sends WhatsApp checklists 3 days before departure and welcome-back messages a day after return.\nDone with\nN8\nn8n\nWhat they did\nThe n8n workflow runs daily on a schedule trigger. It reads a Google Sheet of trips, checks dates against today, and if the status column shows no prior message it calls WhatsApp to send either the pre-departure checklist three days out or the welcome-back note one day after return then marks the row updated.\nHow it went\nOn a test sheet of ten trips only the right customers received messages on the right days.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that reads my [Google Sheet of daily trips] each morning. For trips departing in 3 days, send the traveler a WhatsApp packing and documents checklist, and for trips that ended yesterday, send a welcome-back message asking for [feedback]. Do a test run that shows me the messages it would send to [test number] and wait for my okay before enabling live sends.\nOriginal source: https://x.com/tongshishak/status/2109727045395665020",
+    "body_sha256": "f80a55a03c5c28375477b8bb10bcb9b669486304893d0624d13ae7d78fff8a07",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9910374bd7b220b010d2987fa1326c29968509bbe1052cbb6a8aa2f6b3b37e55",
-      "publication": "reviewed_restatement_required"
+      "value": "A cookbook shows a GitHub bot that triages issues, reviews PRs, answers questions with citations, flags AI-slop contributions, and opens patch PRs for human review.",
+      "sha256": "9910374bd7b220b010d2987fa1326c29968509bbe1052cbb6a8aa2f6b3b37e55"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "81565140e334c2ceb1ca8e04f0f98028c9d4c7fd2e2c92fbd52413a4aa5c4e90",
-      "publication": "reviewed_restatement_required"
+      "value": "The bot runs on OpenCode in GitHub Actions with Muse Spark. Each agent is a markdown file with its own tool allow-list. Events route to agents: a PR runs review, a new issue runs triage, and an agent-fix label runs bugfix. A maintainer's /oc comment goes to an orchestrator agent. Bugfix reproduces the bug, patches it, adds a test, runs pytest and opens a PR. It cannot merge.",
+      "sha256": "81565140e334c2ceb1ca8e04f0f98028c9d4c7fd2e2c92fbd52413a4aa5c4e90"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5d74f0e51a8709ac0f1e96ed681e8d9bd8c8d722f5c315c76e7d409bb688f25e",
-      "publication": "reviewed_restatement_required"
+      "value": "Sample outputs show triage asking for a repro, review flagging emoji churn as slop, and a prompt injection being flagged. No benchmark is reported yet. Long review turns sometimes return empty, so re-run.",
+      "sha256": "5d74f0e51a8709ac0f1e96ed681e8d9bd8c8d722f5c315c76e7d409bb688f25e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8c27d39687d979c15018228874f38bff1012d9d45b9812a464f2f2c38539ac58",
-      "publication": "reviewed_restatement_required"
+      "value": "Prompts are tuned for Python, pytest and uv, so adapt AGENTS.md and the agent files. The allow-lists are not a sandbox; human gates and branch protection are the real boundary.",
+      "sha256": "8c27d39687d979c15018228874f38bff1012d9d45b9812a464f2f2c38539ac58"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Triage issues and open fix PRs with a GitHub bot\nA cookbook shows a GitHub bot that triages issues, reviews PRs, answers questions with citations, flags AI-slop contributions, and opens patch PRs for human review.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe bot runs on OpenCode in GitHub Actions with Muse Spark. Each agent is a markdown file with its own tool allow-list. Events route to agents: a PR runs review, a new issue runs triage, and an agent-fix label runs bugfix. A maintainer's /oc comment goes to an orchestrator agent. Bugfix reproduces the bug, patches it, adds a test, runs pytest and opens a PR. It cannot merge.\nHow it went\nSample outputs show triage asking for a repro, review flagging emoji churn as slop, and a prompt injection being flagged. No benchmark is reported yet. Long review turns sometimes return empty, so re-run.\nWorth knowing\nPrompts are tuned for Python, pytest and uv, so adapt AGENTS.md and the agent files. The allow-lists are not a sandbox; human gates and branch protection are the real boundary.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a GitHub bot for [owner/repo] that triages new issues with labels, reviews pull requests, answers questions with citations to the repo's docs or code, and flags low-effort AI-generated contributions. For clear small bugs it should open a patch PR for human review only. Build it, test it on a few existing issues in dry-run mode, and show me the output before it posts any comments or opens any PRs.\nOriginal source: https://dev.meta.ai/docs/cookbook/github-agent",
+    "body_sha256": "9ce3c4e514dfe55327602de9d5a2b02b49f1c9a1aeb6ec75691fddafe917223b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "76fdaac98c15ec72dc323ee7422dfdb98bc2161b722bc25ddb0ed1d1d516b90c",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent checks what happened to a flight, works out compensation owed under the law, and fills in the airline's claim form, stopping before Submit.",
+      "sha256": "76fdaac98c15ec72dc323ee7422dfdb98bc2161b722bc25ddb0ed1d1d516b90c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ef2338b276ccd011143b50de185859730217cf940640163e40cb56782aba8648",
-      "publication": "reviewed_restatement_required"
+      "value": "Given a flight number and date, the agent converts the airline code, scrapes FlightAware gate times, and cross-checks them against AirHelp. A model reads the regulation live from legislation.gov.uk, and a built-in table of rules checks the amounts. It then fills Air India's claim form in a cloud browser, with an injected lock that blocks any submission.",
+      "sha256": "ef2338b276ccd011143b50de185859730217cf940640163e40cb56782aba8648"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d394565081be345262a8fa3a42e4a758dcb8f34e5519542d2ae6a5aba0f2b07c",
-      "publication": "reviewed_restatement_required"
+      "value": "On Air India AI162 it found a 207-minute delay and an entitlement of £260 to £520. A full claim takes two to five minutes. A small model mis-filled fields, and 8 of 10 submit-trap pages got past the first text-based rule.",
+      "sha256": "d394565081be345262a8fa3a42e4a758dcb8f34e5519542d2ae6a5aba0f2b07c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c6020d62abc0d61dfd3836d6b54df8e04c914a3cfbe7731e423f98b9c439fc74",
-      "publication": "reviewed_restatement_required"
+      "value": "Each claim costs about 14 Anakin credits. Use a capable model (gpt-5-mini worked, gpt-4.1-nano mis-filled fields), and block submits in the page itself, not by matching button text.",
+      "sha256": "c6020d62abc0d61dfd3836d6b54df8e04c914a3cfbe7731e423f98b9c439fc74"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill in flight delay compensation claim forms\nAn agent checks what happened to a flight, works out compensation owed under the law, and fills in the airline's claim form, stopping before Submit.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nGiven a flight number and date, the agent converts the airline code, scrapes FlightAware gate times, and cross-checks them against AirHelp. A model reads the regulation live from legislation.gov.uk, and a built-in table of rules checks the amounts. It then fills Air India's claim form in a cloud browser, with an injected lock that blocks any submission.\nHow it went\nOn Air India AI162 it found a 207-minute delay and an entitlement of £260 to £520. A full claim takes two to five minutes. A small model mis-filled fields, and 8 of 10 submit-trap pages got past the first text-based rule.\nWorth knowing\nEach claim costs about 14 Anakin credits. Use a capable model (gpt-5-mini worked, gpt-4.1-nano mis-filled fields), and block submits in the page itself, not by matching button text.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nCheck what happened to my flight [flight number] on [date] using public flight tracking sites, and work out whether I'm owed compensation under [EU261/other rule]. Then open [airline]'s claim form and fill it in using my details: [name, booking reference, contact info]. Stop before clicking Submit and show me the completed form and the amount you're claiming.\nOriginal source: https://dev.to/imarpan/i-built-an-ai-agent-that-fills-in-your-flight-delay-claim-ncb",
+    "body_sha256": "9826e429215e14a1bcfe76f806157d9b1b572fa3ab84bdaf0a580f555edb5c5e",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

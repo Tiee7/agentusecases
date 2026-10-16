@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "29ab64ccc59da9c47ac43493391fd8e44a2a0b84f6009c560fb04d4b206892ec",
-      "publication": "reviewed_restatement_required"
+      "value": "Alexa sends spoken answers to ChatGPT, which organizes them into a formatted list of tasks for the household workflow.",
+      "sha256": "29ab64ccc59da9c47ac43493391fd8e44a2a0b84f6009c560fb04d4b206892ec"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6028b9d59c2e2ee628d1a454c999045322e09844b96a62a2c6dbfb3957d454f4",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built this in Home Assistant: Alexa asks follow-up questions through Alexa Actions, then the spoken replies are sent to Home Assistant’s openai conversation.process service so ChatGPT turns the free-form answer into a bracketed list like [item1,item2,...]. A Home Assistant automation loops over that returned list and creates the items in Todoist through the Todoist integration; the human just speaks the items and ends with no/stop/nothing.",
+      "sha256": "6028b9d59c2e2ee628d1a454c999045322e09844b96a62a2c6dbfb3957d454f4"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "13b59b4776452a73dc1251570c9179f8a5ddb8d3433132cca1ebd5789edacc09",
-      "publication": "reviewed_restatement_required"
+      "value": "It worked for shopping-style capture, with the example splitting one spoken answer into separate Todoist items such as potatoes, 7 cans of cola, and eggs. The post gives no reliability metrics and says the author was relatively new to Home Assistant.",
+      "sha256": "13b59b4776452a73dc1251570c9179f8a5ddb8d3433132cca1ebd5789edacc09"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9bef8e96bfd688f05dcd7a44e18e001738bb1738d1e92afeebbce840d46cdf03",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is that the source only sketches the flow; detailed instructions were not in the post itself, only a later comment saying a GitHub link was added.",
+      "sha256": "9bef8e96bfd688f05dcd7a44e18e001738bb1738d1e92afeebbce840d46cdf03"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn spoken answers into a Todoist task list\nAlexa sends spoken answers to ChatGPT, which organizes them into a formatted list of tasks for the household workflow.\nDone with\nA+\nAlexa+\nGP\nChatGPT\nWhat they did\nThe poster built this in Home Assistant: Alexa asks follow-up questions through Alexa Actions, then the spoken replies are sent to Home Assistant’s openai conversation.process service so ChatGPT turns the free-form answer into a bracketed list like [item1,item2,...]. A Home Assistant automation loops over that returned list and creates the items in Todoist through the Todoist integration; the human just speaks the items and ends with no/stop/nothing.\nHow it went\nIt worked for shopping-style capture, with the example splitting one spoken answer into separate Todoist items such as potatoes, 7 cans of cola, and eggs. The post gives no reliability metrics and says the author was relatively new to Home Assistant.\nWorth knowing\nThe main catch is that the source only sketches the flow; detailed instructions were not in the post itself, only a later comment saying a GitHub link was added.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nWhen I send a spoken or typed list of things to do to [Alexa/ChatGPT/trigger], organize it into separate tasks with a clear title, due date if mentioned, and a priority. Add each to my [Todoist project]. Before creating the tasks, show me the formatted list and wait for my approval; finish when all approved tasks appear in Todoist.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1g80kdw/alexa_todoist_chatgpt",
+    "body_sha256": "97b5bc1c0aa893c243fc996a3cbbcb6ed0ff535e0b17eed87ffaafe12302944b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

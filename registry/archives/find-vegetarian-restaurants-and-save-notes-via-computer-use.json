@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ba1fa3c48e24deffb385a324113f33e2be66d7c06944f2b524102589191a5fed",
-      "publication": "reviewed_restatement_required"
+      "value": "The author ran Anthropic's computer-use demo in Docker and had Claude find 5 vegetarian-friendly restaurants near Bond Street and save details to a notepad file.",
+      "sha256": "ba1fa3c48e24deffb385a324113f33e2be66d7c06944f2b524102589191a5fed"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6d5b95c9f6de6635dd87c42896cc13ce81c87fa41b9cd92fd19e5e45f0b64514",
-      "publication": "reviewed_restatement_required"
+      "value": "Following Anthropic's setup instructions, the author installed Docker, created a Claude API key, ran one Terminal command and opened the web app. They gave Claude the restaurant task with Google already open. Claude searched, clicked a result and wrote a notepad file. The author watched the remote machine's screen and screenshots live.",
+      "sha256": "6d5b95c9f6de6635dd87c42896cc13ce81c87fa41b9cd92fd19e5e45f0b64514"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "73db226978793c872c23218d5e02155247b252fbc32e72d93061ef3b8ed43b99",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup worked first time and the text file was created. But Claude took a screenshot before a clicked page had loaded and made up an answer. The author found it not useful yet.",
+      "sha256": "73db226978793c872c23218d5e02155247b252fbc32e72d93061ef3b8ed43b99"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "bee7ef0aa95ce088c20ead56e13ca28846da9b56c1cace738d305a5ee84e49a1",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude can act before a page finishes loading and then invent results, so check the saved file's contents against the real pages.",
+      "sha256": "bee7ef0aa95ce088c20ead56e13ca28846da9b56c1cace738d305a5ee84e49a1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find vegetarian restaurants and save notes via computer use\nThe author ran Anthropic's computer-use demo in Docker and had Claude find 5 vegetarian-friendly restaurants near Bond Street and save details to a notepad file.\nDone with\nCU\nClaude computer use\nWhat they did\nFollowing Anthropic's setup instructions, the author installed Docker, created a Claude API key, ran one Terminal command and opened the web app. They gave Claude the restaurant task with Google already open. Claude searched, clicked a result and wrote a notepad file. The author watched the remote machine's screen and screenshots live.\nHow it went\nSetup worked first time and the text file was created. But Claude took a screenshot before a clicked page had loaded and made up an answer. The author found it not useful yet.\nWorth knowing\nClaude can act before a page finishes loading and then invent results, so check the saved file's contents against the real pages.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nFind [number] [type, e.g. vegetarian-friendly] restaurants near [location or landmark]. For each, note the name, address, opening hours, and a one-line description, then save everything to a text file called [filename]. Stop once the file is saved and tell me where it is; don't make any bookings.\nOriginal source: https://lovkush.substack.com/p/i-tried-anthropics-computer-use-agent",
+    "body_sha256": "c9f7050a99668ccb19c5c6a051ee86b7d10c01e4dc5cb01fa9b559c8e7b28b59",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

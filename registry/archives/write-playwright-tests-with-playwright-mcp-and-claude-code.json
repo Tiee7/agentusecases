@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c058153b69f4e7f7d12f20e855e5af2ea73d70a38692d4584e56c946fca5be44",
-      "publication": "reviewed_restatement_required"
+      "value": "A walkthrough of using Playwright MCP with Claude Code to generate Playwright tests in minutes.",
+      "sha256": "c058153b69f4e7f7d12f20e855e5af2ea73d70a38692d4584e56c946fca5be44"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "635b26425c186940ba568aafc5ab7c3984fccc5202d00591858a276d96ebc948",
-      "publication": "reviewed_restatement_required"
+      "value": "The Playwright MCP server is registered with Claude Code, loaded with a saved logged-in session through storage state. A three-part prompt carries the environment facts, a plain-English scenario, and standing rules. The agent explores the live app through the accessibility tree, writes the test, runs it, and fixes failures itself. A person reviews the code and the scenario's meaning.",
+      "sha256": "635b26425c186940ba568aafc5ab7c3984fccc5202d00591858a276d96ebc948"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "bfbd9a9b9c6767c025b77b7e77ffcd61bd106f6bd6af2bc16d33d5d63434e185",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent produced a runnable test with locators read from the live page. It also fixed a strict-mode locator error on its own. It struggles with long flows, changing data, deep conditionals, and OAuth. The source gives no timing numbers.",
+      "sha256": "bfbd9a9b9c6767c025b77b7e77ffcd61bd106f6bd6af2bc16d33d5d63434e185"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b4a49f3fc8d593b9aabbf8950a8e0ac889935cd0ab060acb2a0370d1d3a20f8c",
-      "publication": "reviewed_restatement_required"
+      "value": "Add .auth/ to .gitignore before committing, because this setup saves the session outside Playwright's default ignored path, and run the test with --repeat-each 5 to check for flakiness.",
+      "sha256": "b4a49f3fc8d593b9aabbf8950a8e0ac889935cd0ab060acb2a0370d1d3a20f8c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write Playwright tests with Playwright MCP and Claude Code\nA walkthrough of using Playwright MCP with Claude Code to generate Playwright tests in minutes.\nDone with\nCC\nClaude Code\nWhat they did\nThe Playwright MCP server is registered with Claude Code, loaded with a saved logged-in session through storage state. A three-part prompt carries the environment facts, a plain-English scenario, and standing rules. The agent explores the live app through the accessibility tree, writes the test, runs it, and fixes failures itself. A person reviews the code and the scenario's meaning.\nHow it went\nThe agent produced a runnable test with locators read from the live page. It also fixed a strict-mode locator error on its own. It struggles with long flows, changing data, deep conditionals, and OAuth. The source gives no timing numbers.\nWorth knowing\nAdd .auth/ to .gitignore before committing, because this setup saves the session outside Playwright's default ignored path, and run the test with --repeat-each 5 to check for flakiness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up Playwright MCP in this project, then open [app URL] and explore the flow for [user journey, e.g. sign up and checkout]. Write Playwright tests that cover it using stable locators, and run them until they pass. Finish by showing me the test files and the passing run output.\nOriginal source: https://dev.to/jakobnorlin/how-to-write-playwright-tests-in-minutes-with-playwright-mcp-and-claude-code-1o0d",
+    "body_sha256": "bf7a7576c04f8cec350c1651b96f8e78ebde2494339b0a456e31487bdb77f0fd",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "3219872488e5d28470a47dffde5e272d857175f4ae516a35effa24a819553e40",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer built a custom Gemini CLI command that reads a blog draft from disk and critiques it for technical errors, used in an iterative editing loop.",
+      "sha256": "3219872488e5d28470a47dffde5e272d857175f4ae516a35effa24a819553e40"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "1a2ff66a2ad70917755c59d499700a9bd2fa95a4ba29d75bf21045300c714a9b",
-      "publication": "reviewed_restatement_required"
+      "value": "Connie Leung had Gemini CLI generate a critique.toml custom command from a natural-language prompt, then refined it by hand and saved it in .gemini/commands. The prompt casts the model as a DevRel editor. She runs it on a draft by piping the file or referencing it with @draft.md, using Gemini 3 Pro Preview, then applies the fixes and reruns.",
+      "sha256": "1a2ff66a2ad70917755c59d499700a9bd2fa95a4ba29d75bf21045300c714a9b"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e18555314949e5ebdc93f42ae6029c0a41b0aaeb81c402f0e2ec439bb7f974c4",
-      "publication": "reviewed_restatement_required"
+      "value": "The critique flagged three problems in her Angular/Firebase project: a white screen on initialization failure, a fetch interval that was too long in dev mode, and validation that stopped at the first missing environment variable. She fixed all three. No timing figures are given.",
+      "sha256": "e18555314949e5ebdc93f42ae6029c0a41b0aaeb81c402f0e2ec439bb7f974c4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d587236b6241fd9548594e9deafcfe532e2bc417c58e790df912494139da8721",
-      "publication": "reviewed_restatement_required"
+      "value": "The command flags issues in the code inside the post. The fixes shown were written and applied by the author, so check each suggestion yourself.",
+      "sha256": "d587236b6241fd9548594e9deafcfe532e2bc417c58e790df912494139da8721"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Critique blog post drafts for technical errors\nA developer built a custom Gemini CLI command that reads a blog draft from disk and critiques it for technical errors, used in an iterative editing loop.\nDone with\nGE\nGemini\nWhat they did\nConnie Leung had Gemini CLI generate a critique.toml custom command from a natural-language prompt, then refined it by hand and saved it in .gemini/commands. The prompt casts the model as a DevRel editor. She runs it on a draft by piping the file or referencing it with @draft.md, using Gemini 3 Pro Preview, then applies the fixes and reruns.\nHow it went\nThe critique flagged three problems in her Angular/Firebase project: a white screen on initialization failure, a fetch interval that was too long in dev mode, and validation that stopped at the first missing environment variable. She fixed all three. No timing figures are given.\nWorth knowing\nThe command flags issues in the code inside the post. The fixes shown were written and applied by the author, so check each suggestion yourself.\nTry it yourself\nwith\nGemini\nCopy prompt\nCreate a custom Gemini CLI command called /critique that reads the blog draft at [path to draft file] and reviews it for technical errors, such as wrong facts, incorrect code, outdated advice and unclear explanations. It should return a numbered list of issues, each with the quoted passage, why it is wrong and a suggested fix. Do not edit the draft file; just report findings so I can revise and run it again.\nOriginal source: https://dev.to/railsstudent/automating-devrel-how-i-use-gemini-cli-and-gemini-3-to-catch-bugs-in-my-blog-posts-3koo",
+    "body_sha256": "780f45aa70ed8dd95617d3343d2d5b2582b6ed54f41630e4c3ea025524db0c6b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

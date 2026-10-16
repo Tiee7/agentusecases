@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "522bf7ba7bb15235c7207f5ae20e0eca135b1d875a35c92f96fc6ea77de2b779",
-      "publication": "reviewed_restatement_required"
+      "value": "Pulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.",
+      "sha256": "522bf7ba7bb15235c7207f5ae20e0eca135b1d875a35c92f96fc6ea77de2b779"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "059bb2b021392c92043ae34e0c6999553a3b4f026e462980b10db22a25661764",
-      "publication": "reviewed_restatement_required"
+      "value": "Optio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.",
+      "sha256": "059bb2b021392c92043ae34e0c6999553a3b4f026e462980b10db22a25661764"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2ca64b4adc71644eecfc93d48899891fc4bf9aa187b2c5985622e7f4079e02b5",
-      "publication": "reviewed_restatement_required"
+      "value": "The README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.",
+      "sha256": "2ca64b4adc71644eecfc93d48899891fc4bf9aa187b2c5985622e7f4079e02b5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "7888f2363918429b6519acde01b14242449d46320809729e701b44c651a17481",
-      "publication": "reviewed_restatement_required"
+      "value": "It needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.",
+      "sha256": "7888f2363918429b6519acde01b14242449d46320809729e701b44c651a17481"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
+    "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

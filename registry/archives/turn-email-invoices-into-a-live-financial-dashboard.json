@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f33b8cd227d7bdf0233ffd550ab935c4585875079431397a57a96f24b9a36fe",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow scans emailed invoices, extracts supplier, amount, date and description, and feeds a real-time Google Sheets dashboard.",
+      "sha256": "5f33b8cd227d7bdf0233ffd550ab935c4585875079431397a57a96f24b9a36fe"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "eb55ecabaa32ff6584db9cd6680c64044468ef5b888891d57f997c34cfb84750",
-      "publication": "reviewed_restatement_required"
+      "value": "The workflow watches Gmail for incoming invoice emails, then uses AI to classify each one as an expense or income and extract fields including supplier, amount, date, description, and category. It writes the structured data into Google Sheets, where the sheet itself powers a live dashboard showing totals, net profit, and category breakdowns; the Reddit post does not describe a manual review step.",
+      "sha256": "eb55ecabaa32ff6584db9cd6680c64044468ef5b888891d57f997c34cfb84750"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7feaed8bb69cdb050a6fafed5a8fdc823ed944bcb35f47ce27f32a0224a68e4",
-      "publication": "reviewed_restatement_required"
+      "value": "The stated result is a real-time finance dashboard tracking total income, total expenses, net profit, and spending by category. The post shares no hard metrics, error rates, or before-and-after time savings.",
+      "sha256": "a7feaed8bb69cdb050a6fafed5a8fdc823ed944bcb35f47ce27f32a0224a68e4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "6ed57f83bed74d7ede378d9c2f86d22b2878aaf3d925c910a9319d4f6d4fc763",
-      "publication": "reviewed_restatement_required"
+      "value": "The source is high level only: it explains the flow and dashboard outputs, but gives no template, run cost, or setup time in the post text shown.",
+      "sha256": "6ed57f83bed74d7ede378d9c2f86d22b2878aaf3d925c910a9319d4f6d4fc763"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn email invoices into a live financial dashboard\nAn n8n workflow scans emailed invoices, extracts supplier, amount, date and description, and feeds a real-time Google Sheets dashboard.\nDone with\nN8\nn8n\nWhat they did\nThe workflow watches Gmail for incoming invoice emails, then uses AI to classify each one as an expense or income and extract fields including supplier, amount, date, description, and category. It writes the structured data into Google Sheets, where the sheet itself powers a live dashboard showing totals, net profit, and category breakdowns; the Reddit post does not describe a manual review step.\nHow it went\nThe stated result is a real-time finance dashboard tracking total income, total expenses, net profit, and spending by category. The post shares no hard metrics, error rates, or before-and-after time savings.\nWorth knowing\nThe source is high level only: it explains the flow and dashboard outputs, but gives no template, run cost, or setup time in the post text shown.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that watches [Gmail label or inbox] for emails with invoice attachments, extracts supplier, amount, date, and description from each, and appends a row to the Google Sheet [sheet name]. Add a second tab with totals by supplier and month for a live dashboard. Finished means a test invoice shows up correctly in the sheet; flag any invoice it cannot read instead of guessing.\nOriginal source: https://www.reddit.com/r/n8n/comments/1o27rk5/i_built_an_ai_accountant_in_n8n_that_turns_email",
+    "body_sha256": "eeaf267b89d50a241402c36f9fa9625ddd14465f009400ba26bee07b8e390a94",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

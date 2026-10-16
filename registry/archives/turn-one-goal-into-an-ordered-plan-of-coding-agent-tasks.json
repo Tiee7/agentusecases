@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ee1c0a4ddcd32bef9dce617a262db33a3881826efa441b17a7a29ad5c70b87d3",
-      "publication": "reviewed_restatement_required"
+      "value": "Ordewell takes a single goal and breaks it into an ordered plan of tasks for coding agents.",
+      "sha256": "ee1c0a4ddcd32bef9dce617a262db33a3881826efa441b17a7a29ad5c70b87d3"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "136aa79f48b8efddfcd93dbd956790e90a996a8c836e35d8243282526eddbfb2",
-      "publication": "reviewed_restatement_required"
+      "value": "You give Ordewell a goal. A planner, which can be a coding agent running read-only, researches the repo and asks clarifying questions. It then commits a plan where each task has its own runner, model, effort and mode. You can edit the plan before running it. On run, it starts a real coding-agent session per AI task, in parallel where dependencies allow, and passes each task its predecessors' results.",
+      "sha256": "136aa79f48b8efddfcd93dbd956790e90a996a8c836e35d8243282526eddbfb2"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "f961497aadde0e217e057496d9382c9e87a1502c268e30c3c1b63493d7505c3b",
-      "publication": "reviewed_restatement_required"
+      "value": "In the README's example, a rate-limiting goal became a four-task plan (three AI, one manual) that finished with 4 completed, 0 failed. A task passes only when its completion marker appears in the runner's output. No benchmarks are given.",
+      "sha256": "f961497aadde0e217e057496d9382c9e87a1502c268e30c3c1b63493d7505c3b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5d4a3a20339890112d8d8aec12531a1fc353ffc98279fe314707d677789d36c",
-      "publication": "reviewed_restatement_required"
+      "value": "The TUI needs tmux, and Windows users must run it under WSL. Parallelism defaults to 3 concurrent sessions (configurable from 1 to 5).",
+      "sha256": "a5d4a3a20339890112d8d8aec12531a1fc353ffc98279fe314707d677789d36c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn one goal into an ordered plan of coding-agent tasks\nOrdewell takes a single goal and breaks it into an ordered plan of tasks for coding agents.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou give Ordewell a goal. A planner, which can be a coding agent running read-only, researches the repo and asks clarifying questions. It then commits a plan where each task has its own runner, model, effort and mode. You can edit the plan before running it. On run, it starts a real coding-agent session per AI task, in parallel where dependencies allow, and passes each task its predecessors' results.\nHow it went\nIn the README's example, a rate-limiting goal became a four-task plan (three AI, one manual) that finished with 4 completed, 0 failed. A task passes only when its completion marker appears in the runner's output. No benchmarks are given.\nWorth knowing\nThe TUI needs tmux, and Windows users must run it under WSL. Parallelism defaults to 3 concurrent sessions (configurable from 1 to 5).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have one goal: [describe your goal]. Read my repo at [path] and break this goal into an ordered plan of small coding tasks, noting which tasks depend on others and what done looks like for each. Save the plan as PLAN.md and stop there without changing any code, so I can review it first.\nOriginal source: https://github.com/ordewell/ordewell",
+    "body_sha256": "c56060f9d0c3b320cb3e8bc89ab0488be45d7e5ee7e05e8076984bf57bf94bd0",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

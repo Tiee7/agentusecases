@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d6edfb269c6c4ec927deff08ca27b965304027401e85f90eb4fee7e4821d9916",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.",
+      "sha256": "d6edfb269c6c4ec927deff08ca27b965304027401e85f90eb4fee7e4821d9916"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ee6c3965f39b02df7e7447be97b53c05031dbed2b8453f537910f3127f73efa5",
-      "publication": "reviewed_restatement_required"
+      "value": "Miguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.",
+      "sha256": "ee6c3965f39b02df7e7447be97b53c05031dbed2b8453f537910f3127f73efa5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "599ccb0840a5d99a5c9eb18a8599368056d0bce3327f8ccb865542c49bd34a03",
-      "publication": "reviewed_restatement_required"
+      "value": "It finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.",
+      "sha256": "599ccb0840a5d99a5c9eb18a8599368056d0bce3327f8ccb865542c49bd34a03"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "bdd6e0eacef0902219290f60ad18485842ccf8c34d5d4a0e3f5adaeb207ba064",
-      "publication": "reviewed_restatement_required"
+      "value": "Each improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.",
+      "sha256": "bdd6e0eacef0902219290f60ad18485842ccf8c34d5d4a0e3f5adaeb207ba064"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let an agent extend its own code inside a Docker sandbox\nAn agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\nDone with\nCL\nClaude\nWhat they did\nMiguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.\nHow it went\nIt finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.\nWorth knowing\nEach improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a Docker sandbox where an agent can add new capabilities to its own source code in [repo path]. Each change should run the tests, be committed if they pass, and be rolled back if they fail, with a log of what happened. Finish by having it add [first capability, e.g. a web search tool] and show me the commit and test results; pause before any change that touches files outside the sandbox.\nOriginal source: https://news.ycombinator.com/item?id=47329087",
+    "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

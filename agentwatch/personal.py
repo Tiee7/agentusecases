@@ -47,27 +47,20 @@ def validate_personal(record, required=False):
 def render_personal(record):
     value = record.get('personal_value')
     if not value:
-        return ['## 自用价值', '', '待核实：旧记录尚未评估。', '', '## Copy prompt · 动手试用', '', '旧记录尚无自编试用模板。', *render_source_trial(record.get('source_trial'))]
+        return ['## 自用价值', '', '待核实', '', '## Copy prompt · 动手试用', '', '暂无自编模板', *render_source_trial(record.get('source_trial'))]
     trial = record['try_it']
     lines = ['## 自用价值：' + value['level'], '', value['reason'], '', '依据：' + ', '.join(value['source_ids'])]
     lines += ['', *[f"- {label}：{value[key]}" for key, label in FIELDS.items()]]
     observation = record.get('source_trial')
     source_lines = render_source_trial(observation)
-    note = '下面为我们编写的补充模板，非源站原文，未做模型实测。' if observation and observation['status']=='available' else trial['source_prompt_note']
+    note = '自编试用模板'
     lines += ['', '## Copy prompt · 动手试用', *source_lines, '', note, '', '准备条件：' + trial['prerequisites'], '', '工具：' + trial['tools'], '', '预期结果：' + trial['expected_result']]
     for p in trial['prompts']:
         # Indented code keeps arbitrary fences and bilingual prompt text literal.
-        lines += ['', '### ' + p['title'], '', p['attribution'], '', '出处：' + (p.get('source_url') or '本仓库研究团队编写；非源站原文'), '', '依据：' + ', '.join(p['source_ids']), '', *[('    ' + line if line else '') for line in p['text'].splitlines()]]
+        lines += ['', '### ' + p['title'], '', {'ours':'自编模板','adapted':'改写模板','original':'原文模板'}.get(p['kind'],'模板'), '', '出处：' + (p.get('source_url') or '研究团队自编'), '', '依据：' + ', '.join(p['source_ids']), '', *[('    ' + line if line else '') for line in p['text'].splitlines()]]
     return lines
 
 
 def render_source_trial(observation):
-    if not observation:
-        return ['', '源站模板状态：尚未结构化观测；不表示源站没有提示词。']
-    from .source_trial import observation_label
-    lines = ['', '### 源站试用模板', '', '状态：' + observation['status'], '', '出处：' + observation['source_url'], '', '观测时间：' + observation_label(observation)]
-    if observation['status'] == 'available':
-        lines += ['', '建议运行工具：' + observation['agent'] + '（与案例实际使用的agent分开记录）', '', observation['attribution'], '', *[('    ' + line if line else '') for line in observation['text'].splitlines()]]
-    else:
-        lines += ['', '本次未取得可用模板；缺失、解析失败和未观测分别记录，不推断作者原始提示词。']
-    return lines
+    if not observation or observation['status']!='available':return []
+    return ['', '### 源站试用模板', '', '出处：'+observation['source_url'], '', '建议工具：'+observation['agent'], '', *[('    '+line if line else '') for line in observation['text'].splitlines()]]

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9c75dad4402f6f0bef4fd24d9c6b1477072890895442e8e637f0d0d6e1e6b5ef",
-      "publication": "reviewed_restatement_required"
+      "value": "A /newsletter command in Claude Code finds the week's posts, drafts in the author's voice, gets approval, then creates and schedules the broadcast in Kit in about two minutes.",
+      "sha256": "9c75dad4402f6f0bef4fd24d9c6b1477072890895442e8e637f0d0d6e1e6b5ef"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "94e54a538e7bcbe9138a532ff89f1e258a76a89b01eab4fedde5d81e8589341f",
-      "publication": "reviewed_restatement_required"
+      "value": "Sid wrote a Claude Code skill, a markdown file, with a Kit v4 API key kept in .env. On /newsletter it reads the site's content index for posts from the last 7 days and drafts a short email using his voice rules. He reviews and approves the draft. It then creates the Kit broadcast through the API and schedules it for the time he gives.",
+      "sha256": "94e54a538e7bcbe9138a532ff89f1e258a76a89b01eab4fedde5d81e8589341f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1a1fc2ed64005f6b32ced6ab73448deba7232c7887ea8d3ff0dd0cd2412a0188",
-      "publication": "reviewed_restatement_required"
+      "value": "The whole run takes about two minutes, down from 30+ minutes by hand. He went from about two newsletters a month, sometimes none, to one every week.",
+      "sha256": "1a1fc2ed64005f6b32ced6ab73448deba7232c7887ea8d3ff0dd0cd2412a0188"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "31901fb0dbb30ed2c5d2825bf29fbab06e3cf7e87ec97a92aba3edfdbbe7097a",
-      "publication": "reviewed_restatement_required"
+      "value": "Kit's API can't create forms, sequences or automations, only broadcasts, subscribers and tags. Auto-generating opt-ins and sequences per post isn't possible yet.",
+      "sha256": "31901fb0dbb30ed2c5d2825bf29fbab06e3cf7e87ec97a92aba3edfdbbe7097a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Draft and schedule a weekly newsletter\nA /newsletter command in Claude Code finds the week's posts, drafts in the author's voice, gets approval, then creates and schedules the broadcast in Kit in about two minutes.\nDone with\nCC\nClaude Code\nWhat they did\nSid wrote a Claude Code skill, a markdown file, with a Kit v4 API key kept in .env. On /newsletter it reads the site's content index for posts from the last 7 days and drafts a short email using his voice rules. He reviews and approves the draft. It then creates the Kit broadcast through the API and schedules it for the time he gives.\nHow it went\nThe whole run takes about two minutes, down from 30+ minutes by hand. He went from about two newsletters a month, sometimes none, to one every week.\nWorth knowing\nKit's API can't create forms, sequences or automations, only broadcasts, subscribers and tags. Auto-generating opt-ins and sequences per post isn't possible yet.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a reusable /newsletter command for me. When I run it, it should find the posts I published this week in [folder or site URL], draft a newsletter in my voice using [2-3 past newsletters as style examples], and show me the draft for edits. Do not create or schedule anything in [email tool, e.g. Kit] until I approve; before that step, pause and show me exactly what will be sent and when.\nOriginal source: https://sidbharath.com/blog/automate-email-newsletter-claude-code/",
+    "body_sha256": "95185b29f881ca3e2929e1bcf1f65e2db96b9a3cf316f586e3f8b594adb49737",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -1,36 +1,30 @@
 # Claude Computer Use 填1040：合成表单演示能否变成可收费交付
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/fill-out-a-form-1040-with-computer-use
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude computer use
-
-### 介绍
-
-A synthetic-data experiment tested whether computer interaction could populate a simplified tax form.
-
-一项使用模拟数据的实验测试电脑操作能否填写简化税表。
-
-### 方法
-
-Claude accessed fabricated documents in a shared folder and a Firefox form. The tester redirected it to the instructions after redundant questions; a PDF-based approach had failed.
-
-Claude 读取共享文件夹中的虚构文件并操作 Firefox 表单；出现重复提问后，测试者要求重读指令，先前的 PDF 方案未成功。
-
-### 结果与限制
-
-The cached account stops before the final accuracy assessment. It supports a setup description, not a successful filing or correctness claim.
-
-缓存叙述在最终准确性评估前结束，只支持设置过程的描述，不能据此宣称申报成功或结果正确。
+    Fill out a Form 1040 with computer use
+    A tester gave Claude Computer Use data stored on disk and checked whether it could find the fields and fill a simplified Form 1040 accurately.
+    Done with
+    CU
+    Claude computer use
+    What they did
+    The tester put made-up tax documents (W-2, 1099s, 1098, property tax and charity receipts) in a folder shared between Claude Computer Use and his Mac. He prompted it to fill a simplified web version of the 1040 in Firefox from that folder. It listed the files, then took screenshots of the form. He had to tell it to re-read the prompt after it asked for information he'd already given.
+    How it went
+    The excerpt ends as Claude starts working on the form, so the accuracy results are not in this post. They are in the full blog post it links to.
+    Worth knowing
+    A PDF editor version didn't work for Claude Computer Use, which the author suspects is a driver or compatibility issue. He switched to a browser-based form.
+    Try it yourself
+    with
+    Claude computer use
+    Copy prompt
+    Use the data in [folder or file] to fill in a simplified Form 1040 at [PDF path or website], finding each field yourself. When done, list every field you filled with the value and its source, and flag any that you couldn't find or weren't sure about. Don't submit or e-file anything; stop with the completed form for me to review.
+    Original source: https://dev.to/airabbit/i-asked-claude-to-fill-out-my-tax-return-here-is-what-happened-a02
 
 ## 原作者的方法与来源
 
 来源：[airabbit · Form 1040 experiment](https://dev.to/airabbit/i-asked-claude-to-fill-out-my-tax-return-here-is-what-happened-a02)
 
-作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+作者方法摘要
 
 1. 把合成税务资料放入本地共享文件夹，并使用简化的 Form 1040 网页表单。
    English summary: Prepare synthetic tax documents in a shared local folder and use a simplified web version of Form 1040.
@@ -48,7 +42,7 @@ The cached account stops before the final accuracy assessment. It supports a set
 案例的真实对象是作者自造资料和简化浏览器表单，既没有真实纳税客户，也没有报税受理记录。完整原文承认地址漏填、邮编不一致及字段间距造成识别问题；工资数字的叙述还与生成脚本冲突，不能当成模型自动纠错的可靠验证。免费联邦申报工具已经提供计算与递交能力，新经营者若只售卖点击填表，付费理由弱。税务事务所内部可验证的是经过人员确认的字段映射能否减少重复录入；只有节省时间超过复核、返工与维护成本，才有继续投入依据。
 
 案例ID：`fill-out-a-form-1040-with-computer-use` · 案例来源：https://agentusecases.ai/use-case/fill-out-a-form-1040-with-computer-use
-研究时间：2026-10-15T13:37:37.079875+00:00 · 证据置信度：原文与作者完整博客已读取，确认是2024年合成数据实验；对演示范围判断较强，对真实客户、当前模型效果与财务表现无实测证据。
+研究时间：2026-10-15T13:37:37.079875+00:00
 
 **商业评分：27.0/100。用户反馈信号占5%。**
 
@@ -79,9 +73,7 @@ The cached account stops before the final accuracy assessment. It supports a set
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -91,9 +83,9 @@ The cached account stops before the final accuracy assessment. It supports a set
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S58ee3a604ae5, S5c340d961423, Sdcc022a3ede6, Sf79c3bf4770a, Sf3fa4bc0e5de, S10c8236f2e22, S7dea3b226d0f
 
@@ -106,9 +98,9 @@ The cached account stops before the final accuracy assessment. It supports a set
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S58ee3a604ae5, S5c340d961423, Sdcc022a3ede6, Sf79c3bf4770a, Sf3fa4bc0e5de, S10c8236f2e22, S7dea3b226d0f
 
@@ -184,7 +176,7 @@ FreeTaxUSA本次官网报价为联邦0美元、州15.99美元，并提供电子�
 
 ## 用户评价怎样改变判断
 
-按要求进行了三次反馈检索，覆盖Reddit社区、GitHub问题讨论和作者开发者文章评论；搜索结果主要返回宽泛的Claude及税务页面，未定位可核验的直接采用者，搜索能力不足也可能造成漏检。DEV原文读取时显示0条评论；这只说明该页面没有可读评论，不能证明没有人尝试。作者自己的8/10与6/10属于开发者自评，且同一作者的博客和DEV转载不能算两个独立用户。没有把FreeTaxUSA官网星级、旁观者AI看法或其他税务工作流评价迁移到本案。反馈维度因此记0分、权重5%，代表缺少独立验证信号，不代表用户不满意。结论主要由实验范围、观察到的填错和替代成本驱动。后续若有直接使用者，也应要求其提供匿名化错误清单、总耗时与复核过程，不能只采信“成功填完”的主观评价或宣传截图。
+暂无直接用户反馈。
 
 依据：S58ee3a604ae5, S5c340d961423, Sf79c3bf4770a
 
@@ -205,18 +197,11 @@ FreeTaxUSA本次官网报价为联邦0美元、州15.99美元，并提供电子�
 
 假设B：消费者外售与返工压力假设：全部为研究者假设；报价29未经客户验证，API2为重试预算非实测，人工30分钟×45/小时含返工，其他2.5为运行支持，获客12按份摊销，固定1500为维护管理；不含税务赔偿和利润税。；API成本 2，人工成本 22.5，其他可变成本 2.5，分摊获客成本 12。依据：S5c340d961423, Sf79c3bf4770a, S7dea3b226d0f
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `site:reddit.com Claude computer use 1040 tax return review`：本轮网页检索返回宽泛税务及Claude结果，未获得可核验本案用户评价，不从无命中推断无人使用。
-- GitHub issues/discussions · `site:github.com anthropic computer use tax 1040 issues`：未定位与作者具体1040实验对应的公开使用问题或讨论；未将通用模型讨论冒充本案例反馈。
-- 开发者社区与博客评论 · `"airabbit" "tax" "Claude" review comments`：结果为宽泛Claude页面；直接读取已知DEV原文显示Top comments (0)，作者自评与博客属于同一主体。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 完整博客承认身份字段填写错误；工资95,000/75,000/5,000的内部叙述冲突无法支持其自动纠错归因。PDF路径失败而简化网页成功，意味着演示更换了难度。反过来，2024技术局限不能直接推为2026模型现状；若新对照实验能证明更低总成本，应重评。
 
-未测试任何模型或真实报税系统，未联系作者或客户；无当前模型基准、可复现全程日志、付费客户、价格、收入、利润、退款或留存。6/10是作者主观评分，不是60%准确率。未核实截图中的全部字段和具体税务计算，不复制合成身份号码。Free File旧URL读取遇HTTP 301失败，另读IRS公开申报页面；搜索结果较宽泛，反馈缺失不能等同负面。市场监管说明只用于交付范围分析，不构成个案税务或法律建议。
+6/10是作者主观评分。全部字段与税务计算、当前模型表现、客户付费、收入和留存未核实。
 
 ## 具体动作与止损条件
 
@@ -237,6 +222,3 @@ FreeTaxUSA本次官网报价为联邦0美元、州15.99美元，并提供电子�
 - [S598248b213cd] [File your tax return | Internal Revenue Service](https://www.irs.gov/filing/individuals/how-to-file)：IRS公开列举免费文件填写、免费申报及其他申报渠道，证明市场存在低价与免费替代。
 
 结构化记录：[research/fill-out-a-form-1040-with-computer-use.json](../research/fill-out-a-form-1040-with-computer-use.json)
-来源读取凭据：[research/evidence/fill-out-a-form-1040-with-computer-use.json](../research/evidence/fill-out-a-form-1040-with-computer-use.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

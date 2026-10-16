@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "04f399a8197fe5ee646ba7cd13ddfda3edcc145ce4d01cf04abd7249b3834021",
-      "publication": "reviewed_restatement_required"
+      "value": "The author had Cursor run Terraform against Postgres via MCP; the apply hit a permissions error and he finished from the terminal.",
+      "sha256": "04f399a8197fe5ee646ba7cd13ddfda3edcc145ce4d01cf04abd7249b3834021"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "27961f346933f8f92420d9cb2bcffc20c403bff396f9eda5dfa05fc2e9182a5a",
-      "publication": "reviewed_restatement_required"
+      "value": "Weston Platter installed the tfmcp server and added it to Cursor's mcp.json, pointing it at a local Terraform directory. He wrote a main.tf for a Postgres role, database and schema, then had the agent run plan and apply. When the apply failed, he ran it in the terminal and granted CREATEROLE and CREATEDB through psql.",
+      "sha256": "27961f346933f8f92420d9cb2bcffc20c403bff396f9eda5dfa05fc2e9182a5a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "055952f948702af877fbe93736d50f77320fb2cb2c561204e1196bacee13cfb0",
-      "publication": "reviewed_restatement_required"
+      "value": "The MCP never showed the actual Terraform errors. Cursor's own Run tool displayed them and suggested setting superuser = false, after which apply worked. He concluded tfmcp made the workflow no easier than the command line.",
+      "sha256": "055952f948702af877fbe93736d50f77320fb2cb2c561204e1196bacee13cfb0"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0684a7dbc74c23d1c9feaa06fe88acb3a1e714f815bb6431b35a8afdf213b00b",
-      "publication": "reviewed_restatement_required"
+      "value": "The MCP hid the Terraform error output, so be ready to run commands directly. Also, an MCP is third-party code running on your machine.",
+      "sha256": "0684a7dbc74c23d1c9feaa06fe88acb3a1e714f815bb6431b35a8afdf213b00b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Terraform plan and apply through an MCP agent\nThe author had Cursor run Terraform against Postgres via MCP; the apply hit a permissions error and he finished from the terminal.\nDone with\nCR\nCursor\nWhat they did\nWeston Platter installed the tfmcp server and added it to Cursor's mcp.json, pointing it at a local Terraform directory. He wrote a main.tf for a Postgres role, database and schema, then had the agent run plan and apply. When the apply failed, he ran it in the terminal and granted CREATEROLE and CREATEDB through psql.\nHow it went\nThe MCP never showed the actual Terraform errors. Cursor's own Run tool displayed them and suggested setting superuser = false, after which apply worked. He concluded tfmcp made the workflow no easier than the command line.\nWorth knowing\nThe MCP hid the Terraform error output, so be ready to run commands directly. Also, an MCP is third-party code running on your machine.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to my Terraform project and database via MCP, run a terraform plan against [resource/environment], and summarize what will change. Pause and show me the exact plan before running apply, since this will modify infrastructure.\nOriginal source: https://masterpoint.io/blog/using-mcps-to-run-terraform/",
+    "body_sha256": "3a355b52e5617c6bb5e0112bf7ab181025f8d09ea96531b8b56aa9141aacf061",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

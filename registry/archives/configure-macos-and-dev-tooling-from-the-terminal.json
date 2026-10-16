@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f462145a2738d42396b152624d7bab24bb9813ebae1c2a8f8d02838e2a3deb5f",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini CLI ran defaults write commands to set Dock auto-hide, and was also used to install Docker and configure Git GPG signing.",
+      "sha256": "f462145a2738d42396b152624d7bab24bb9813ebae1c2a8f8d02838e2a3deb5f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "50fca001bb976258581d3dd6b418b0f5b8d1da83bd278d41d49d6cb54a1c5a1c",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide's system-troubleshooting tip says you can run Gemini CLI outside a code project and ask it to install Docker, configure Git GPG signing, or edit dotfiles. It may search the web for instructions, then run shell commands, showing each command or diff for approval. In one user example, it ran the defaults write commands for Dock auto-hide and no delay.",
+      "sha256": "50fca001bb976258581d3dd6b418b0f5b8d1da83bd278d41d49d6cb54a1c5a1c"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "701367e4a046c15ff60e9e4a0b691b35dfbfd1f682dc679e0953dc3b256d6de3",
-      "publication": "reviewed_restatement_required"
+      "value": "The source reports the Dock change worked, with the AI running the right defaults write commands. It gives no timings or results for the Docker or GPG tasks, and offers no measured outcomes.",
+      "sha256": "701367e4a046c15ff60e9e4a0b691b35dfbfd1f682dc679e0953dc3b256d6de3"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "68ffcef81835a3641f99a3e7495801ae2e963b15671116f1e6a2ee73f66d9a4c",
-      "publication": "reviewed_restatement_required"
+      "value": "Approve each command yourself, since system-level changes can be wide-reaching. You can ask Gemini to explain a command, such as a defaults write, before running it.",
+      "sha256": "68ffcef81835a3641f99a3e7495801ae2e963b15671116f1e6a2ee73f66d9a4c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Configure macOS and dev tooling from the terminal\nGemini CLI ran defaults write commands to set Dock auto-hide, and was also used to install Docker and configure Git GPG signing.\nDone with\nGE\nGemini\nWhat they did\nThe guide's system-troubleshooting tip says you can run Gemini CLI outside a code project and ask it to install Docker, configure Git GPG signing, or edit dotfiles. It may search the web for instructions, then run shell commands, showing each command or diff for approval. In one user example, it ran the defaults write commands for Dock auto-hide and no delay.\nHow it went\nThe source reports the Dock change worked, with the AI running the right defaults write commands. It gives no timings or results for the Docker or GPG tasks, and offers no measured outcomes.\nWorth knowing\nApprove each command yourself, since system-level changes can be wide-reaching. You can ask Gemini to explain a command, such as a defaults write, before running it.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me set up my [macOS or other OS] machine from the terminal. I want to [settings to change, e.g. auto-hide the Dock], install [tools, e.g. Docker], and configure [e.g. Git commit signing with GPG]. Show me each command and what it does before you run it, and tell me when each setup step has worked. Pause before anything that needs admin rights or changes my existing keys or settings.\nOriginal source: https://addyosmani.com/blog/gemini-cli/",
+    "body_sha256": "863cdf2c8ed7bddd0d6afcecbfa34b9e9a1ac215d77e77ef0cbb67b3bae61505",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "bc7f0bda1ebe84dfff90dc3e69da2a65bc0ee178a2a6bb4c2694484e06897bc1",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.",
+      "sha256": "bc7f0bda1ebe84dfff90dc3e69da2a65bc0ee178a2a6bb4c2694484e06897bc1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "29e824a203edeb6a0b28f8164da341d04dc983fc6ec9f0af24192153cc9229d0",
-      "publication": "reviewed_restatement_required"
+      "value": "The author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.",
+      "sha256": "29e824a203edeb6a0b28f8164da341d04dc983fc6ec9f0af24192153cc9229d0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6a0cd9f223c9f52cdb26b5e6c938f46502781ec4e4dec0d824f3c179727bcd55",
-      "publication": "reviewed_restatement_required"
+      "value": "Over a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.",
+      "sha256": "6a0cd9f223c9f52cdb26b5e6c938f46502781ec4e4dec0d824f3c179727bcd55"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "125e49ddbf33b75e784cd29da7a670f726cc80e10e9c22b6364f77fb9e3d3e4c",
-      "publication": "reviewed_restatement_required"
+      "value": "Plan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.",
+      "sha256": "125e49ddbf33b75e784cd29da7a670f726cc80e10e9c22b6364f77fb9e3d3e4c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find and fix flaky tests in a broken CI pipeline overnight\nClaude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\nDone with\nCC\nClaude Code\nWhat they did\nThe author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.\nHow it went\nOver a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.\nWorth knowing\nPlan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the last [number] CI runs for [repo name] and rank the tests by how often they flake. For the worst [number], reproduce the failure locally, find the cause, and propose a fix on a separate branch. Run each fix [number] times to confirm it's stable, discard any fix that doesn't hold, and summarize what worked. Don't merge anything without showing me the diff first.\nOriginal source: https://news.ycombinator.com/item?id=47970174",
+    "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c0a3fe859d2d8cb1cb019676bdb7f21659d369e2a0f1a57bd0424d22efecaa22",
-      "publication": "reviewed_restatement_required"
+      "value": "Poster gave a Claude Code agent access to about 2M papers to search before each attempt; it found techniques it otherwise wouldn't know and beat a baseline agent.",
+      "sha256": "c0a3fe859d2d8cb1cb019676bdb7f21659d369e2a0f1a57bd0424d22efecaa22"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "37d5049a39481e4bbbf89cac185afd9c8795058c6ad0f4e2d215b9abb741f281",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster ran two identical Claude Code agents on the same job: optimize a small language model. One used only its built-in knowledge; the other was connected to Paper Lantern, an MCP search tool over 2M+ open-source computer science papers, and searched the literature before each attempt, scanning 520 papers, surfacing 25 ideas, and applying them with human-readable guidance.",
+      "sha256": "37d5049a39481e4bbbf89cac185afd9c8795058c6ad0f4e2d215b9abb741f281"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "42e43772c09a74f5f430c2872c73e7beef0ed39ebed0c39e0e889a6c3ffe2284",
-      "publication": "reviewed_restatement_required"
+      "value": "The paper-enabled agent improved the model by 4.05% versus 3.67% for the baseline, and the poster says about 15 of the 25 suggested paper-based ideas worked. They also say the better config stayed 12+ minutes ahead on a 2-hour run, though commenters questioned how strong and general the result was.",
+      "sha256": "42e43772c09a74f5f430c2872c73e7beef0ed39ebed0c39e0e889a6c3ffe2284"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5aa0598d0d4697fc2cab516278555ff2ed05663c3478055e38e15f6b1f90616a",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is overhead: the system reads full papers and adds research cost, and the poster says it is meant for areas with active research communities.",
+      "sha256": "5aa0598d0d4697fc2cab516278555ff2ed05663c3478055e38e15f6b1f90616a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give a coding agent a paper corpus to find new techniques\nPoster gave a Claude Code agent access to about 2M papers to search before each attempt; it found techniques it otherwise wouldn't know and beat a baseline agent.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster ran two identical Claude Code agents on the same job: optimize a small language model. One used only its built-in knowledge; the other was connected to Paper Lantern, an MCP search tool over 2M+ open-source computer science papers, and searched the literature before each attempt, scanning 520 papers, surfacing 25 ideas, and applying them with human-readable guidance.\nHow it went\nThe paper-enabled agent improved the model by 4.05% versus 3.67% for the baseline, and the poster says about 15 of the 25 suggested paper-based ideas worked. They also say the better config stayed 12+ minutes ahead on a 2-hour run, though commenters questioned how strong and general the result was.\nWorth knowing\nThe main catch is overhead: the system reads full papers and adds research cost, and the poster says it is meant for areas with active research communities.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBefore each attempt at improving [my project/benchmark], search the paper collection at [path or search tool] for techniques relevant to [problem], and note which paper inspired any idea you try. Then implement and test the idea against the current baseline score of [score]. Keep a log of ideas tried, source papers, and results, and stop after [number] experiments with a summary of what helped.\nOriginal source: https://www.reddit.com/r/artificial/comments/1s6afwm/i_tested_what_happens_when_you_give_an_ai_coding",
+    "body_sha256": "8732e11598fb7cf4263562e6fca9a985515648baba5fda6e4719c3cc6972b6f3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "9851299d051ba572cfa119f9e8ac3b2ccb11631ee864536528317edb7d371e19",
-      "publication": "reviewed_restatement_required"
+      "value": "Kent C. Dodds had Cursor's agent look up migration docs, plan and upgrade Remix v2 to React Router v7 and xstate in his site.",
+      "sha256": "9851299d051ba572cfa119f9e8ac3b2ccb11631ee864536528317edb7d371e19"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "340b2f31adf24f737c90dbfeefa009eaba1b6e50de062a5bc4ee665782dc93a9",
-      "publication": "reviewed_restatement_required"
+      "value": "Kent asked Cursor to list outdated packages grouped by upgrade difficulty, then upgraded them in separate conversations: easy, medium, then majors one at a time. For xstate and Remix, he told it to read migration docs first. He ran the Remix to React Router v7 move as a long-running background agent, answered its plan questions, and fed it route output to fix routing.",
+      "sha256": "340b2f31adf24f737c90dbfeefa009eaba1b6e50de062a5bc4ee665782dc93a9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b655f1b0136266729d78dd57beee2eabc6bc64f20ca79545b0d0c510e47c182e",
-      "publication": "reviewed_restatement_required"
+      "value": "Everything went smoothly except routing after the switch to react-router-auto-routes, which needed a correction. Kent merged after a few BugBot and CodeRabbit fix rounds. The migration took about a day and touched over 17k lines.",
+      "sha256": "b655f1b0136266729d78dd57beee2eabc6bc64f20ca79545b0d0c510e47c182e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ca20a50d553ce8c153e944fa7582d4ef0a35af8f0361d6aa99a17eb0ab35e20d",
-      "publication": "reviewed_restatement_required"
+      "value": "Kent says it worked because the site already had good tests and docs, and giving the agent a way to check itself, like comparing route listings, made it perform much better.",
+      "sha256": "ca20a50d553ce8c153e944fa7582d4ef0a35af8f0361d6aa99a17eb0ab35e20d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Upgrade site dependencies and frameworks with Cursor\nKent C. Dodds had Cursor's agent look up migration docs, plan and upgrade Remix v2 to React Router v7 and xstate in his site.\nDone with\nCR\nCursor\nWhat they did\nKent asked Cursor to list outdated packages grouped by upgrade difficulty, then upgraded them in separate conversations: easy, medium, then majors one at a time. For xstate and Remix, he told it to read migration docs first. He ran the Remix to React Router v7 move as a long-running background agent, answered its plan questions, and fed it route output to fix routing.\nHow it went\nEverything went smoothly except routing after the switch to react-router-auto-routes, which needed a correction. Kent merged after a few BugBot and CodeRabbit fix rounds. The migration took about a day and touched over 17k lines.\nWorth knowing\nKent says it worked because the site already had good tests and docs, and giving the agent a way to check itself, like comparing route listings, made it perform much better.\nTry it yourself\nwith\nCursor\nCopy prompt\nLook up the official migration docs for upgrading [old framework/library] to [new framework/library] in my project, then plan and carry out the upgrade step by step, running tests after each change. Stop and show me a summary of all changes before committing anything.\nOriginal source: https://kentcdodds.com/blog/how-i-used-cursor-to-migrate-frameworks",
+    "body_sha256": "7bab0000c1753fce9c4fb080bd9eeb6fde6b211fa58dc7ae315452ff7eec2ac6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

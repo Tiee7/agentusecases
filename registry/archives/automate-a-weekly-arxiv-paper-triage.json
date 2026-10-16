@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "42fefc8b51fbbc907d72cf5b47beeae933d1a7ca7cbc9609a4217685f2646f42",
-      "publication": "reviewed_restatement_required"
+      "value": "A weekly Codex automation searches arXiv for keywords, logs new papers to a CSV, sorts them into keep/skim/drop buckets and can check claims against Zotero.",
+      "sha256": "42fefc8b51fbbc907d72cf5b47beeae933d1a7ca7cbc9609a4217685f2646f42"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3de6bcf7a70ec84fa8ee5a4e651f470394e1240b4b1cb3267918d1f02a11417d",
-      "publication": "reviewed_restatement_required"
+      "value": "A weekly Codex automation searches arXiv for the author's keywords, such as AI alignment. It saves results to a CSV so only new papers are triaged each run. Each paper gets a label: keep, skim, drop, duplicate, outside scope or weak method. Promising ones go to a Zotero inbox, where they are embedded in a vector database. The author reads the papers himself.",
+      "sha256": "3de6bcf7a70ec84fa8ee5a4e651f470394e1240b4b1cb3267918d1f02a11417d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "00e92c12dc2796be577ecab6d216afa9b14c00cb254437174e62b77ba3e24e16",
-      "publication": "reviewed_restatement_required"
+      "value": "The author says that checking claims against scoped Zotero collections leads to fewer hallucinated related-work citations and less double-checking. The post gives no numbers, and he stresses that he still verifies the evidence himself.",
+      "sha256": "00e92c12dc2796be577ecab6d216afa9b14c00cb254437174e62b77ba3e24e16"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "63ac37c04e4a223068d431e48f4cda3ad7efa33bf166276afacb8b0e8b9f9b02",
-      "publication": "reviewed_restatement_required"
+      "value": "Start with this triage workflow before automating more, since maintaining an over-built system can cost more time than it saves. The post doesn't explain how Zotero connects to the vector database.",
+      "sha256": "63ac37c04e4a223068d431e48f4cda3ad7efa33bf166276afacb8b0e8b9f9b02"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate a weekly arXiv paper triage\nA weekly Codex automation searches arXiv for keywords, logs new papers to a CSV, sorts them into keep/skim/drop buckets and can check claims against Zotero.\nDone with\nCX\nCodex\nWhat they did\nA weekly Codex automation searches arXiv for the author's keywords, such as AI alignment. It saves results to a CSV so only new papers are triaged each run. Each paper gets a label: keep, skim, drop, duplicate, outside scope or weak method. Promising ones go to a Zotero inbox, where they are embedded in a vector database. The author reads the papers himself.\nHow it went\nThe author says that checking claims against scoped Zotero collections leads to fewer hallucinated related-work citations and less double-checking. The post gives no numbers, and he stresses that he still verifies the evidence himself.\nWorth knowing\nStart with this triage workflow before automating more, since maintaining an over-built system can cost more time than it saves. The post doesn't explain how Zotero connects to the vector database.\nTry it yourself\nwith\nCodex\nCopy prompt\nSet up a weekly automation that searches arXiv for new papers matching [keywords or topics], logs them to a CSV with title, authors, date, link, and one-line summary, and sorts each into keep, skim, or drop based on [my research interests]. Stop when the CSV is updated and give me the keep list. Don't delete past entries.\nOriginal source: https://aisagroup.substack.com/p/how-i-use-codex-to-automate-parts",
+    "body_sha256": "fc8f25a7f28e9f1aab6a0a0568816a1b8704c51beab9570f6dfc9c915b167515",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

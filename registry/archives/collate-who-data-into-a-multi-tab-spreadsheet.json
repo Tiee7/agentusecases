@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2cc934e6e36a6a05b016f88339b3ce1bff909657a266600a0e4c580d95424f27",
-      "publication": "reviewed_restatement_required"
+      "value": "Testers had ChatGPT Agent navigate the WHO site, extract the latest data and organise it by indicator, country and trend; it often fails on logins or dynamic pages.",
+      "sha256": "2cc934e6e36a6a05b016f88339b3ce1bff909657a266600a0e4c580d95424f27"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "40c943e26e11ff2495c87cc090932eebee7a37b5a0a876f7383c9fe7a62c929c",
-      "publication": "reviewed_restatement_required"
+      "value": "In ChatGPT Agent mode, the testers gave a single prompt asking it to retrieve the most recent publicly available World Health Organisation data. The agent navigated the WHO site by itself, pulled out the relevant figures and arranged them into a multi-tab spreadsheet. The tabs were sorted by indicators, countries and trends. The source doesn't describe any human steps beyond the prompt.",
+      "sha256": "40c943e26e11ff2495c87cc090932eebee7a37b5a0a876f7383c9fe7a62c929c"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5269af4b8dce140eaa88fba69a369000378b31dc2954b61b12ff6e803edcd504",
-      "publication": "reviewed_restatement_required"
+      "value": "The source says the agent produced a clean multi-tab spreadsheet. It gives no figures on accuracy or time. It also warns that agent outputs often need reformatting or correction.",
+      "sha256": "5269af4b8dce140eaa88fba69a369000378b31dc2954b61b12ff6e803edcd504"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "2457cdd7f4fc12ebc5271951fc1975d55586e99bc6220f4fa0cfc29036de7f4c",
-      "publication": "reviewed_restatement_required"
+      "value": "Agents often fail on sites with logins, unsupported browser states or dynamic single-page apps, so check the output and be ready to fix or reformat it.",
+      "sha256": "2457cdd7f4fc12ebc5271951fc1975d55586e99bc6220f4fa0cfc29036de7f4c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Collate WHO data into a multi-tab spreadsheet\nTesters had ChatGPT Agent navigate the WHO site, extract the latest data and organise it by indicator, country and trend; it often fails on logins or dynamic pages.\nDone with\nGA\nChatGPT Agent\nWhat they did\nIn ChatGPT Agent mode, the testers gave a single prompt asking it to retrieve the most recent publicly available World Health Organisation data. The agent navigated the WHO site by itself, pulled out the relevant figures and arranged them into a multi-tab spreadsheet. The tabs were sorted by indicators, countries and trends. The source doesn't describe any human steps beyond the prompt.\nHow it went\nThe source says the agent produced a clean multi-tab spreadsheet. It gives no figures on accuracy or time. It also warns that agent outputs often need reformatting or correction.\nWorth knowing\nAgents often fail on sites with logins, unsupported browser states or dynamic single-page apps, so check the output and be ready to fix or reformat it.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nGo to [data source website, e.g. WHO data portal] and pull the latest figures on [indicator] for [list of countries]. Build a spreadsheet with tabs organized by indicator, country and trend over time, with source links and the date of each data point. Finish when it's complete, and list any pages you couldn't access because of logins or dynamic content.\nOriginal source: https://timeundertension.substack.com/p/chatgpt-agents-are-here-we-put-them",
+    "body_sha256": "d03942007d9bae9b0c1bdf0669dd8d02b395c6a4368ac25c3bcc2759e1effac6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

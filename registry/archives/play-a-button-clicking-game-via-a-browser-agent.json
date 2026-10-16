@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8ac69766d3e691ac1323f5e0ef7ce84cfaedc6609b249cf5d45258fcff066edd",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.",
+      "sha256": "8ac69766d3e691ac1323f5e0ef7ce84cfaedc6609b249cf5d45258fcff066edd"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "63da120e3bd15523620bdbee7b775edf33afd8f37eb8e5d5d04ca6ae9f7083c1",
-      "publication": "reviewed_restatement_required"
+      "value": "Guillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.",
+      "sha256": "63da120e3bd15523620bdbee7b775edf33afd8f37eb8e5d5d04ca6ae9f7083c1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3554e05b9d9a2e0d3afa8d0dbdb1995091afb6b26f0ce49fdd8f154237aeada4",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.",
+      "sha256": "3554e05b9d9a2e0d3afa8d0dbdb1995091afb6b26f0ce49fdd8f154237aeada4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "12b79769152edd3d86c93723b869d53c8564bcf70687b62395a1d330631a31a1",
-      "publication": "reviewed_restatement_required"
+      "value": "Send a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.",
+      "sha256": "12b79769152edd3d86c93723b869d53c8564bcf70687b62395a1d330631a31a1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Play a button-clicking game via a browser agent\nA developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\nDone with\nGE\nGemini\nWhat they did\nGuillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.\nHow it went\nThe agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.\nWorth knowing\nSend a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse browser control to open [URL of a simple web game] and play it by looking at screenshots and clicking, for about [number] moves. Report whether your clicks landed where you intended, and note any mismatch between screenshot coordinates and actual click positions. Stop when you've finished the moves and summarize how it went.\nOriginal source: https://glaforge.dev/posts/2025/11/03/driving-a-web-browser-with-gemini-computer-use-model-in-java/",
+    "body_sha256": "60a3f1ce5b0b09d1a41b79483e8c95801c95d99cf28a530ea66b5359a7b50687",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

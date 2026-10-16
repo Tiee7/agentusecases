@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c952ecf08d458f4dbf777d3ae839a261536047ab87078b6be29b206c6a444f66",
-      "publication": "reviewed_restatement_required"
+      "value": "The author used autopilot to iterate until done and /fleet to split work across parallel subagents, noting overhead on small tasks.",
+      "sha256": "c952ecf08d458f4dbf777d3ae839a261536047ab87078b6be29b206c6a444f66"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c107def45181305040821a4274677ced15a29a3f60939386d7d5b10e724e6a4e",
-      "publication": "reviewed_restatement_required"
+      "value": "Daniel Ward turned on /experimental, then used autopilot mode, which loops until a large task is done without the ask_user tool. He pairs it with /plan for a guiding plan and /fleet, which spins up parallel subagents, including custom agents. He caps loops with a flag when he can't watch the run.",
+      "sha256": "c107def45181305040821a4274677ced15a29a3f60939386d7d5b10e724e6a4e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "255fa11a6c3ad213226d3fa140bd28759b39f69335916eeb49f66b2db6f9a1c9",
-      "publication": "reviewed_restatement_required"
+      "value": "Autopilot lets Copilot finish a big task without repeated prompting, which suits quick proofs-of-concept. Fleet adds orchestration overhead that slows prompts, so small tasks may do better without it.",
+      "sha256": "255fa11a6c3ad213226d3fa140bd28759b39f69335916eeb49f66b2db6f9a1c9"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3a6751ea95f16d9693e3aab1c57020cde9a7048262437d8f354978a06fff5801",
-      "publication": "reviewed_restatement_required"
+      "value": "Set --max-autopilot-continues if you can't monitor the run. The CLI recommends yolo mode for autopilot, and Ward avoids autopilot for production work because it makes review harder.",
+      "sha256": "3a6751ea95f16d9693e3aab1c57020cde9a7048262437d8f354978a06fff5801"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Iterate on tasks with Copilot CLI autopilot and fleet\nThe author used autopilot to iterate until done and /fleet to split work across parallel subagents, noting overhead on small tasks.\nDone with\nGH\nGitHub Copilot\nWhat they did\nDaniel Ward turned on /experimental, then used autopilot mode, which loops until a large task is done without the ask_user tool. He pairs it with /plan for a guiding plan and /fleet, which spins up parallel subagents, including custom agents. He caps loops with a flag when he can't watch the run.\nHow it went\nAutopilot lets Copilot finish a big task without repeated prompting, which suits quick proofs-of-concept. Fleet adds orchestration overhead that slows prompts, so small tasks may do better without it.\nWorth knowing\nSet --max-autopilot-continues if you can't monitor the run. The CLI recommends yolo mode for autopilot, and Ward avoids autopilot for production work because it makes review harder.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nUsing Copilot CLI in [repo path], work on [task] in autopilot mode and keep iterating until [definition of done, e.g. all tests pass]. If the task has clearly separate parts, such as [part A] and [part B], use /fleet to split them across parallel subagents; otherwise stay with a single agent. When you finish, summarize what was done and flag anything you weren't sure about.\nOriginal source: https://daninacan.com/10-cool-things-you-can-do-with-github-copilot-cli/",
+    "body_sha256": "4c52e8d7da497baea2511efe466d23e6f471384a648b56b6376de55d30216aa7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

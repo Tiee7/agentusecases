@@ -1,36 +1,29 @@
 # Kudos 电话账单协商：套餐边界、会员经济与到账核验
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：自建或未命名 agent
-
-### 介绍
-
-Kudos describes a dedicated voice agent for negotiating recurring service bills.
-
-Kudos 描述了专门用于持续性服务账单议价的语音 agent。
-
-### 方法
-
-It calls providers, handles telephone menus and hold time, and asks for discounts. Plan changes require user willingness, and verification codes require user participation.
-
-它致电服务商、处理电话菜单及等待，并争取优惠；更改套餐需用户同意，验证码也需用户参与。
-
-### 结果与限制
-
-Examples claim annual savings of $840 and $276. They are illustrative outcomes, not a guaranteed rate; the source labels the agent as custom or unnamed.
-
-示例声称每年分别节省 840 和 276 美元，不代表保证收益；源站将实际 agent 标为自建或未命名。
+    Negotiate retention discounts on bills by phone
+    A voice agent calls service providers, navigates IVR menus, waits on hold and negotiates retention discounts for users, pausing for OTP verification.
+    Done with a
+    custom-built or unnamed agent
+    What they did
+    Kudos built a voice agent that phones a service provider for the user, works through IVR menus, waits on hold, and asks for a retention discount. By default it negotiates within the existing plan and only changes plans if the user says they're open to it. When a provider requires an OTP, the agent pauses and the user enters the code.
+    How it went
+    The co-founder saved $840 a year on T-Mobile after allowing plan changes, and an Xfinity example cut $276 a year. Savings vary and aren't guaranteed; many results are only loyalty discounts.
+    Worth knowing
+    Tell the agent up front that you're open to plan changes; without that it only negotiates the existing plan, and be present to read out the OTP when asked.
+    Try it yourself
+    with
+    Manus
+    Copy prompt
+    Help me lower my [provider, e.g. internet/phone] bill, currently [amount] per month on account [account reference]. Research current competitor offers and prepare a retention-call script with my target price of [amount]. Do not call or submit anything until you've shown me the script and I approve, and pause whenever the provider needs a verification code.
+    Original source: https://news.ycombinator.com/item?id=47131955
 
 ## 原作者的方法与来源
 
 来源：[Tikue · Kudos founder comment on Hacker News](https://news.ycombinator.com/item?id=47131955)
 
-作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+作者方法摘要
 
 1. 语音代理拨打服务商电话，通过自动语音菜单并等待客服。
    English summary: The voice agent calls the provider, passes the automated phone menu and waits for a representative.
@@ -48,7 +41,7 @@ Examples claim annual savings of $840 and $276. They are illustrative outcomes, 
 付款人是希望降低通信开支且不愿等待客服的账户持有人。Kudos 已把协商纳入年付或终身 Premium，说明这是会员价值的一部分，不能把每次省钱当成项目营业收入。原始创始人案例的大额节省依赖换套餐，而当前帮助文档承诺不换套餐；条款又授予更广泛的账户操作权限。需求与技术链路有依据，但平均成功率、到账持续性及全成本毛利没有独立验证。现阶段只支持在明确授权、禁止服务变更、逐账单验收的窄场景里试点，不支持据宣传数字扩大获客。
 
 案例ID：`negotiate-retention-discounts-on-bills-by-phone` · 案例来源：https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone
-研究时间：2026-10-15T12:10:36.206078+00:00 · 证据置信度：中等：已读原始创始人帖、当前官方帮助与条款、竞争价格和一条直接使用者评论；未取得真实账单、收入、成功率或当前结账报价，也未实测呼叫。
+研究时间：2026-10-15T12:10:36.206078+00:00
 
 **商业评分：54.0/100。用户反馈信号占5%。**
 
@@ -81,19 +74,13 @@ Examples claim annual savings of $840 and $276. They are illustrative outcomes, 
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone
 
-观测时间：2026-10-15T17:50:39Z 至 2026-10-15T17:50:47Z（工具调用前后计时区间）
-
-建议运行工具：Manus（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Manus
 
     Help me lower my [provider, e.g. internet/phone] bill, currently [amount] per month on account [account reference]. Research current competitor offers and prepare a retention-call script with my target price of [amount]. Do not call or submit anything until you've shown me the script and I approve, and pause whenever the provider needs a verification code.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -103,9 +90,9 @@ Examples claim annual savings of $840 and $276. They are illustrative outcomes, 
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Seffca3ff0e16, S6eefcbce0ed1, Sd45b2eadfa1f, S5d4a74c81b24, S1aeb850e29e5, Sb81ff185508f
 
@@ -118,9 +105,9 @@ Examples claim annual savings of $840 and $276. They are illustrative outcomes, 
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Seffca3ff0e16, S6eefcbce0ed1, Sd45b2eadfa1f, S5d4a74c81b24, S1aeb850e29e5, Sb81ff185508f
 
@@ -212,9 +199,9 @@ Kudos已有钱包、浏览器扩展和移动端，帮助中心把入口放在Can
 
 ## 用户评价怎样改变判断
 
-已做Reddit、HN、Trustpilot及公开代码渠道检索，部分查询返回大量不相关结果，这只代表本轮检索质量不足，不能断言互联网不存在其他反馈。直接读取原始HN能核实作者说明，提问者赞许产品并未说明自己用过，因此不计独立用户验证；创始人自用也不计独立评价。Trustpilot页面被robots限制，未绕过，其搜索摘要和整体星级不进入评分。[S1aeb850e29e5]
-App Store实际读取到Crosshorn的“Helpful-but”评论，作者说互联网账单协商为其省钱，同时提到界面衔接与其他卡片推荐的错误。这是一条功能直接使用自述，金额、账单和身份均未外部核验；后半段卡片推荐问题不能冒充语音代理错误。评论抓取中重复出现的同一内容已按一个人去重。另一用户抱怨在连接财务账户后才看到付款要求，第三位批评付费墙，这些属于相邻会员体验，提供的是转化和信任风险线索。[Sf9d3490e2c98]
-这使结论从“完全没有直接用户信号”上调到“存在少量正向使用自述”，但没有提高成功率假设。整款应用评分包含奖励与钱包功能，开发者回应不是第二位独立用户，评论也可能受自选样本、版本和促销影响。评分仅1/5，按5%权重贡献1分，不用赞美或投诉替代实账本验证。
+Crosshorn在Helpful-but评论称互联网账单协商节省，同时指出应用衔接欠佳；未披露节省金额。
+
+相关体验：Misleading Onboarding与Need to Pay for ALL Features分别质疑先连接再见价格和频繁付费墙；不证明电话协商失败。
 
 依据：S1aeb850e29e5, Sf9d3490e2c98
 
@@ -237,21 +224,11 @@ App Store实际读取到Crosshorn的“Helpful-but”评论，作者说互联网
 
 假设B：高频重拨与人工接管压力假设：保持假设年费96；每会员月1次请求、合计60分钟，传输60×0.014=0.84，语音/LLM/编排预算1.56，共2.40；人工20分钟×36美元/小时=12；其他支付存储退款准备2；CAC36按12月摊销=3；固定1000/月。成本是所有成功失败请求的期望值，未把失败剔除。月收入8000、可变19400、固定1000，月贡献-12400。实际用量、工资、留存和获客均未取得。；API成本 2.4，人工成本 12，其他可变成本 2，分摊获客成本 3。依据：Sb81ff185508f, S1aeb850e29e5, Seffca3ff0e16, Sd45b2eadfa1f
 
-## 用户反馈核对（低权重）
-
-- Reddit社区检索 · `Kudos bill negotiation site:reddit.com`：已执行；主要返回不相关结果，未取得可归属本功能的Reddit直接用户原文。
-- HN社区检索 · `Kudos bill negotiation site:news.ycombinator.com`：检索结果噪声大；另循登记原始链接实际读取47131955，作者为创始人、提问者未声称使用。
-- 独立评价平台检索 · `Kudos bill negotiation reviews trustpilot`：首轮结果不相关；后以"joinkudos.com" site:trustpilot.com找到公司页，读取被robots拒绝，未将摘要计为评价。
-- 公开代码检索 · `"joinkudos.com" site:github.com`：执行检索未取得可核验本协商实现及用户问题的项目代码，不声称存在开源实现。
-- 应用商店（检索后原文核对） · `"joinkudos.com" pricing bill negotiation`：同批检索发现App Store应用页并实际读取；核实一条直接协商自述及相邻会员抱怨，去除重复呈现和开发者回应。
-- [Sf9d3490e2c98] direct_user：Crosshorn在Helpful-but评论称互联网账单协商节省，同时指出应用衔接欠佳；未披露节省金额。；偏差：公开匿名账号自选评论，不能独立核实身份和账单，也不代表整体用户成功率。
-- [Sf9d3490e2c98] adjacent_workflow：Misleading Onboarding与Need to Pay for ALL Features分别质疑先连接再见价格和频繁付费墙；不证明电话协商失败。；偏差：整款应用体验、时间与版本不统一，未实测重现，不用评论中的价格当统一现价。
-
 ## 反证与未核实信息
 
 历史840美元年化节省依赖换套餐，当前帮助承诺不改套餐，不能据此前者推导后者效果；条款授权范围又比帮助更广，需运行验证。Kudos条款明确Premium及Lifetime不收协商佣金，推翻把年化节省直接抽成当实际收入的模型。Rekoope已有相似功能及价格，证明基础语音能力容易替代；其演示看板明确不是客户数据。App Store有直接成功自述，反驳“完全无真实使用线索”，但未支持成功率；付费墙投诉也不能证明协商无效。
 
-未注册、登录、连接账单、外呼、付款、提交表单或运行陌生代码；未取得可核验账单、通话原音、客户访谈、真实收入、付费人数、留存、CAC、成功率分母、退款率和人工分钟。未查到可归属本产品的公开协商实现。官网根域读取301、www首页可读内容不足，转读公开帮助及条款；Trustpilot被robots限制。App Store多组SKU不代表当前统一结账价格，Premium平均节省等厂商数字未独立验证。条款与帮助差异是证据发现，不作法律有效性结论。所有成本情景和试点阈值为研究者假设；本轮未使用额外付费模型API或创建密钥。
+缺少账单、通话记录、成功率分母、退款率与人工工时数据。App Store多组SKU尚不能确定统一结账价格，条款与帮助说明存在差异。
 
 ## 具体动作与止损条件
 
@@ -274,6 +251,3 @@ App Store实际读取到Crosshorn的“Helpful-but”评论，作者说互联网
 - [S2df36af37577] [Rekoope: an AI agent that fights your bills](https://rekoope.com/)：Rekoope电话工作流与首页明确标为非真实客户的示例看板，不能把示例节省当市场业绩。
 
 结构化记录：[research/negotiate-retention-discounts-on-bills-by-phone.json](../research/negotiate-retention-discounts-on-bills-by-phone.json)
-来源读取凭据：[research/evidence/negotiate-retention-discounts-on-bills-by-phone.json](../research/evidence/negotiate-retention-discounts-on-bills-by-phone.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

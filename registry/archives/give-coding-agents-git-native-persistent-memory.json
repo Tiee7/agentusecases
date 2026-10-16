@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6ebb449600c8dfc45d14a71e295af03e7725c7e18ff9c35b005681b8a34857a5",
-      "publication": "reviewed_restatement_required"
+      "value": "A tool that stores persistent memory for AI coding agents in git so context carries across sessions.",
+      "sha256": "6ebb449600c8dfc45d14a71e295af03e7725c7e18ff9c35b005681b8a34857a5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "73c46bb5907391fd7df3efb719eb62ef84f211d3e11487088dd86ead89226419",
-      "publication": "reviewed_restatement_required"
+      "value": "You build a Go binary, then run a bootstrap command on a project. It creates a knowledge/ folder of Markdown files with YAML frontmatter, an agent skill, and an AGENTS.md. Agents reach the memory through the CLI or an MCP server over stdio, which works with Claude Code, Cursor and Codex. The convention tells agents to search before writing and to load only the index pages they need.",
+      "sha256": "73c46bb5907391fd7df3efb719eb62ef84f211d3e11487088dd86ead89226419"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "f4e16f4d1ae7fc6e7b65d7689882b46625e5449ae4da5601d0bd345f3adc2c80",
-      "publication": "reviewed_restatement_required"
+      "value": "The README claims search under 300µs, about 4ms to validate 50+ concepts, and an 80% token reduction. Those figures come from the project's own benchmarks and comparison table, and the README doesn't show independent results.",
+      "sha256": "f4e16f4d1ae7fc6e7b65d7689882b46625e5449ae4da5601d0bd345f3adc2c80"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "58a03a2c3d061d4291116e177d303d47950740b3a3dc31e689130508873296e0",
-      "publication": "reviewed_restatement_required"
+      "value": "The repo is new, with one commit and 3 stars. The 80% token claim comes from a benchmark you can rerun with make benchmark against a local LLM.",
+      "sha256": "58a03a2c3d061d4291116e177d303d47950740b3a3dc31e689130508873296e0"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give coding agents git-native persistent memory\nA tool that stores persistent memory for AI coding agents in git so context carries across sessions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou build a Go binary, then run a bootstrap command on a project. It creates a knowledge/ folder of Markdown files with YAML frontmatter, an agent skill, and an AGENTS.md. Agents reach the memory through the CLI or an MCP server over stdio, which works with Claude Code, Cursor and Codex. The convention tells agents to search before writing and to load only the index pages they need.\nHow it went\nThe README claims search under 300µs, about 4ms to validate 50+ concepts, and an 80% token reduction. Those figures come from the project's own benchmarks and comparison table, and the README doesn't show independent results.\nWorth knowing\nThe repo is new, with one commit and 3 stars. The 80% token claim comes from a benchmark you can rerun with make benchmark against a local LLM.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up persistent memory for coding agents in this repository by storing notes in a [folder name, e.g. .agent-memory] directory tracked in git. Create a simple format for recording decisions, conventions, and open tasks, and add instructions so future sessions read it first and update it at the end. Show me the files you plan to commit before you commit anything.\nOriginal source: https://github.com/okf-memory/okf-agent-memory",
+    "body_sha256": "0dc03e3367354d8abed112821a8dd5c5bc0b28a1a4333e0e38fb2c59b4212bed",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

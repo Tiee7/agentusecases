@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cd20352a7c0ee1d62b6002f08b491c78171ec339c7aaa7e0571bcbe03135f380",
-      "publication": "reviewed_restatement_required"
+      "value": "ChatGPT Agent filled in medication, dosage and number of days on a clinic's website, while the user entered sensitive data manually.",
+      "sha256": "cd20352a7c0ee1d62b6002f08b491c78171ec339c7aaa7e0571bcbe03135f380"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ec8c5c9ab78004b113a664538bc922dd6964f29b325188546f139a16bc472a35",
-      "publication": "reviewed_restatement_required"
+      "value": "One commenter tested agent mode on a clinic’s prescription refill form. They put the medication information into the prompt, and the agent filled in the medication name, dosage, and number of days on the website; the person handled the sensitive fields manually instead of having the agent enter them.",
+      "sha256": "ec8c5c9ab78004b113a664538bc922dd6964f29b325188546f139a16bc472a35"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "85e19a183665889b793c03744cca1e550fd5d61ca9572452c948236bcd5723a4",
-      "publication": "reviewed_restatement_required"
+      "value": "In that test, it completed the non-sensitive prescription details correctly. The only stated limitation was that sensitive information still had to be entered by the user.",
+      "sha256": "85e19a183665889b793c03744cca1e550fd5d61ca9572452c948236bcd5723a4"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill out a prescription order form on a clinic site\nChatGPT Agent filled in medication, dosage and number of days on a clinic's website, while the user entered sensitive data manually.\nDone with\nGA\nChatGPT Agent\nWhat they did\nOne commenter tested agent mode on a clinic’s prescription refill form. They put the medication information into the prompt, and the agent filled in the medication name, dosage, and number of days on the website; the person handled the sensitive fields manually instead of having the agent enter them.\nHow it went\nIn that test, it completed the non-sensitive prescription details correctly. The only stated limitation was that sensitive information still had to be entered by the user.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nGo to [clinic website URL] and fill in the prescription order form with this medication: [name], dosage: [dose], for [number] days. Leave all personal and medical identity fields blank for me to complete myself. Stop before submitting and show me what is filled in so I can review it and submit it myself.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1m8k3xh/agent_mode_just_released_on_plus",
+    "body_sha256": "52c892bde75b9a0900f2b1e6b66cf10cc0fcb0977ee7f3a61a7642ae6f92aecf",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

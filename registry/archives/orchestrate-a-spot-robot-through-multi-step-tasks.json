@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "869fced4159760fcfedd22f14a52bb0e6a5c439678b32156d7b4294dc175e7ca",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini Robotics ER 2 drives a Boston Dynamics Spot, watching video to confirm tasks like tying a trash bag are done before moving on.",
+      "sha256": "869fced4159760fcfedd22f14a52bb0e6a5c439678b32156d7b4294dc175e7ca"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f24469aa0b88216e092f1fb32b24ed697c65c5e70bc9e59fb20379862609d55f",
-      "publication": "reviewed_restatement_required"
+      "value": "Developers declare low-level controls, such as Boston Dynamics Spot's navigation and manipulator APIs, as tools. They stream video, audio or text into Gemini Robotics ER 2 through the Gemini Live API. The model sequences the steps, watches the video to track progress and confirm a task is finished, then moves on. The published Spot demo fetches objects, such as a popcorn snack, on a spoken command.",
+      "sha256": "f24469aa0b88216e092f1fb32b24ed697c65c5e70bc9e59fb20379862609d55f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3859f96163939a1a2a590686e62dccb375fcfcb591af63a79dcc835ec53a8646",
-      "publication": "reviewed_restatement_required"
+      "value": "On progress classification, which sorts each video frame into five progress bands, it reached 57.4% accuracy. On moment-finding it reached 91.3% accuracy with a 0.96s mean absolute distance. The post gives no Spot success rate for tying a trash bag.",
+      "sha256": "3859f96163939a1a2a590686e62dccb375fcfcb591af63a79dcc835ec53a8646"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "001871908cf904907be5affc243b877fab17205a3745ceeac2673c51b6503624",
-      "publication": "reviewed_restatement_required"
+      "value": "The Spot demo code is on GitHub, and the model is available as a preview through the Gemini API and Google AI Studio.",
+      "sha256": "001871908cf904907be5affc243b877fab17205a3745ceeac2673c51b6503624"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Orchestrate a Spot robot through multi-step tasks\nGemini Robotics ER 2 drives a Boston Dynamics Spot, watching video to confirm tasks like tying a trash bag are done before moving on.\nDone with\nGE\nGemini\nWhat they did\nDevelopers declare low-level controls, such as Boston Dynamics Spot's navigation and manipulator APIs, as tools. They stream video, audio or text into Gemini Robotics ER 2 through the Gemini Live API. The model sequences the steps, watches the video to track progress and confirm a task is finished, then moves on. The published Spot demo fetches objects, such as a popcorn snack, on a spoken command.\nHow it went\nOn progress classification, which sorts each video frame into five progress bands, it reached 57.4% accuracy. On moment-finding it reached 91.3% accuracy with a 0.96s mean absolute distance. The post gives no Spot success rate for tying a trash bag.\nWorth knowing\nThe Spot demo code is on GitHub, and the model is available as a preview through the Gemini API and Google AI Studio.\nTry it yourself\nwith\nGemini\nCopy prompt\nWrite a Python program that breaks the task [multi-step task, e.g. tidy the workbench] into steps for a robot or simulator I have called [robot or simulator name]. After each step, have it check a camera frame or video clip from [source] to confirm the step is done before moving to the next. Show me the plan and code before running anything on real hardware. Stop when the program completes all steps in a simulated run.\nOriginal source: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
+    "body_sha256": "4274ff582bf1ffa2ba6a73fc163d0ca981605d998bbb8e4e3376cf7509b5462a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

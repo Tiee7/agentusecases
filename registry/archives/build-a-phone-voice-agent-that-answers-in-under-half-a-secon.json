@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "433f87de9a7982608f273fa4b3e03404094e30a0b1bf79eb7dd21c8dd9112041",
-      "publication": "reviewed_restatement_required"
+      "value": "A from-scratch voice agent averaging about 400ms end to end, with streaming speech-to-text, LLM, and text-to-speech and clean barge-ins.",
+      "sha256": "433f87de9a7982608f273fa4b3e03404094e30a0b1bf79eb7dd21c8dd9112041"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c18e21e5ce4cd34df856059766bfef043e9ac7ec48c94151c9e55d0586f56b52",
-      "publication": "reviewed_restatement_required"
+      "value": "A FastAPI server takes Twilio's audio over a WebSocket and sends it to Deepgram Flux, which handles transcription and turn detection. When a turn ends, the transcript goes to an LLM, tokens stream into ElevenLabs TTS, and the audio goes straight back to Twilio. A barge-in cancels the LLM and TTS and flushes Twilio's buffer. Pre-connected TTS sockets are kept warm.",
+      "sha256": "c18e21e5ce4cd34df856059766bfef043e9ac7ec48c94151c9e55d0586f56b52"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4a83d898d9ff05003fd8a36186c51b7dc0a1bbda03ed7a7571846c3f59ca033d",
-      "publication": "reviewed_restatement_required"
+      "value": "Run locally, latency was about 1.7s. Deploying in the EU cut it to about 790ms, slightly better than Vapi's estimate of about 840ms. Swapping gpt-4o-mini for Groq's llama-3.3-70b brought it to about 400ms. The first turn was slower.",
+      "sha256": "4a83d898d9ff05003fd8a36186c51b7dc0a1bbda03ed7a7571846c3f59ca033d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4773876f21cc04345562e407aa0792e53e1ec3d95e6d17583a80b619f7a9c715",
-      "publication": "reviewed_restatement_required"
+      "value": "The build took about a day and roughly $100 in API credits. Keep the server in the same region as Twilio, Deepgram and ElevenLabs, because location halved latency.",
+      "sha256": "4773876f21cc04345562e407aa0792e53e1ec3d95e6d17583a80b619f7a9c715"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a phone voice agent that answers in under half a second\nA from-scratch voice agent averaging about 400ms end to end, with streaming speech-to-text, LLM, and text-to-speech and clean barge-ins.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA FastAPI server takes Twilio's audio over a WebSocket and sends it to Deepgram Flux, which handles transcription and turn detection. When a turn ends, the transcript goes to an LLM, tokens stream into ElevenLabs TTS, and the audio goes straight back to Twilio. A barge-in cancels the LLM and TTS and flushes Twilio's buffer. Pre-connected TTS sockets are kept warm.\nHow it went\nRun locally, latency was about 1.7s. Deploying in the EU cut it to about 790ms, slightly better than Vapi's estimate of about 840ms. Swapping gpt-4o-mini for Groq's llama-3.3-70b brought it to about 400ms. The first turn was slower.\nWorth knowing\nThe build took about a day and roughly $100 in API credits. Keep the server in the same region as Twilio, Deepgram and ElevenLabs, because location halved latency.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a phone voice agent in [language, e.g. Python] for [use case, e.g. answering calls for a dental office] using streaming speech-to-text, an LLM, and streaming text-to-speech, with the goal of responding in under 500ms and handling interruptions cleanly. Scaffold the project, wire up [providers, e.g. Deepgram, an LLM API, ElevenLabs, Twilio], and add latency logging. Finish when a test call works and the log shows average latency; ask before making any real phone calls or purchasing numbers.\nOriginal source: https://www.ntik.me/posts/voice-agent",
+    "body_sha256": "69e8cb7563054ad29c413493dd67a4968afcda50e7a0d0991a6660c175719d33",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

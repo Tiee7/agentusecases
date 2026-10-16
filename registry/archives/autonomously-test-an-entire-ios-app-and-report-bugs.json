@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e18270ed9deeaa56a691f789d6cae541a939e24266cd1da3bbb7351bce5dedee",
-      "publication": "reviewed_restatement_required"
+      "value": "A tool lets Claude Code drive an iOS app through the accessibility tree, tap every screen, and return a structured bug summary.",
+      "sha256": "e18270ed9deeaa56a691f789d6cae541a939e24266cd1da3bbb7351bce5dedee"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "53bd8057c46963259a97193acb86db8dc11a779678c5ca43958ba2a0cfbd7df9",
-      "publication": "reviewed_restatement_required"
+      "value": "The tool is ios-builder by MobAI. It connects Claude Code to an iOS simulator or real device and handles the build through GitHub Actions. From a single prompt, Claude reads the accessibility tree and screenshots, taps buttons, fills forms, and opens every screen and flow. It then pulls the debug logs, checks them for errors, and writes a structured summary.",
+      "sha256": "53bd8057c46963259a97193acb86db8dc11a779678c5ca43958ba2a0cfbd7df9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d99c8ffbd71770ef26ab2257a0e44b49c9f2c4ded32274c183f666981556a618",
-      "publication": "reviewed_restatement_required"
+      "value": "The article says a demo took eight minutes and found every bug the developer had missed, with no XCUITest scripts or test cases. It gives no bug counts and no details on false positives.",
+      "sha256": "d99c8ffbd71770ef26ab2257a0e44b49c9f2c4ded32274c183f666981556a618"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9123a3540ad23e4756843780ed8f32ea06b23d44b510710901f43ad35e0d022c",
-      "publication": "reviewed_restatement_required"
+      "value": "The article is a short, member-only overview that covers installation only. Check the ios-builder repo for the actual prompts and setup requirements before relying on it.",
+      "sha256": "9123a3540ad23e4756843780ed8f32ea06b23d44b510710901f43ad35e0d022c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Autonomously test an entire iOS app and report bugs\nA tool lets Claude Code drive an iOS app through the accessibility tree, tap every screen, and return a structured bug summary.\nDone with\nCC\nClaude Code\nWhat they did\nThe tool is ios-builder by MobAI. It connects Claude Code to an iOS simulator or real device and handles the build through GitHub Actions. From a single prompt, Claude reads the accessibility tree and screenshots, taps buttons, fills forms, and opens every screen and flow. It then pulls the debug logs, checks them for errors, and writes a structured summary.\nHow it went\nThe article says a demo took eight minutes and found every bug the developer had missed, with no XCUITest scripts or test cases. It gives no bug counts and no details on false positives.\nWorth knowing\nThe article is a short, member-only overview that covers installation only. Check the ios-builder repo for the actual prompts and setup requirements before relying on it.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRun my iOS app from [project path] in the simulator and drive it through the accessibility tree, tapping through every reachable screen. Report bugs as a structured list with screen, steps to reproduce, expected versus actual behavior, and severity. Stop once every screen has been visited, and don't modify any code.\nOriginal source: https://medium.com/coding-nexus/someone-built-a-tool-that-lets-claude-code-autonomously-test-your-entire-ios-app-5256d0a49703",
+    "body_sha256": "9ca2b07bfad246d9ed438de212cf069e35832351a1cd5d65d10401dae0d1dcc3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

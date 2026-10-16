@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "036adef1aa95de8f81fd1b7952ff4be986d9dbde154ff0f5c88c647bc951b9c0",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenAI's internal OpenClaw agent Androidclaw uses Git, GitHub and logs to investigate broken builds, trace problems to incidents, and sometimes prepare and merge fixes.",
+      "sha256": "036adef1aa95de8f81fd1b7952ff4be986d9dbde154ff0f5c88c647bc951b9c0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "20237fe55581a0ba37c4dd58fb487d60b01217548362d966d11ccf57f871a73f",
-      "publication": "reviewed_restatement_required"
+      "value": "Androidclaw is a persistent OpenClaw agent at OpenAI. It works across company context, Git, GitHub and logging systems. According to RJ Marsan of OpenAI's technical staff, it investigates broken builds, finds the relevant pull request, and traces product problems back to incidents. In some cases it prepares and merges the fix.",
+      "sha256": "20237fe55581a0ba37c4dd58fb487d60b01217548362d966d11ccf57f871a73f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "85a1c5f1c24d9a7849676622da121b4bb42c75a53aa86a8453c14a1813ecc9a9",
-      "publication": "reviewed_restatement_required"
+      "value": "Marsan said it has been well-adopted internally and called tracing issues and publishing fixes \"Kinda game changing.\" The article gives no metrics, and it says only \"in some cases\" for the fixes.",
+      "sha256": "85a1c5f1c24d9a7849676622da121b4bb42c75a53aa86a8453c14a1813ecc9a9"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "71374137f18c8efc412c0f74481d5c1ef500a6d545b709d95ae679ec66401702",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent that can fix builds needs broad access to repos, logs and CI. The article flags that privilege risk, and it says OpenClaw Enterprise is recommended only for internal pilots.",
+      "sha256": "71374137f18c8efc412c0f74481d5c1ef500a6d545b709d95ae679ec66401702"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Investigate broken builds and merge fixes\nOpenAI's internal OpenClaw agent Androidclaw uses Git, GitHub and logs to investigate broken builds, trace problems to incidents, and sometimes prepare and merge fixes.\nDone with\nOC\nOpenClaw\nWhat they did\nAndroidclaw is a persistent OpenClaw agent at OpenAI. It works across company context, Git, GitHub and logging systems. According to RJ Marsan of OpenAI's technical staff, it investigates broken builds, finds the relevant pull request, and traces product problems back to incidents. In some cases it prepares and merges the fix.\nHow it went\nMarsan said it has been well-adopted internally and called tracing issues and publishing fixes \"Kinda game changing.\" The article gives no metrics, and it says only \"in some cases\" for the fixes.\nWorth knowing\nAn agent that can fix builds needs broad access to repos, logs and CI. The article flags that privilege risk, and it says OpenClaw Enterprise is recommended only for internal pilots.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nOur build on [repo/branch] is broken. Check recent commits, PRs, and the CI logs at [log URL] to find the cause and the change that introduced it. Write up what you found, and if the fix is small, prepare it as a PR. Show me the diff before opening or merging anything.\nOriginal source: https://venturebeat.com/orchestration/openclaw-launches-free-enterprise-control-plane-for-persistent-ai-agents-backed-by-openai-red-hat-and-nvidia",
+    "body_sha256": "8cc6abeda4a7e739ac880f747e147bd2f8d6a504c26c02ed937097c636db735c",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

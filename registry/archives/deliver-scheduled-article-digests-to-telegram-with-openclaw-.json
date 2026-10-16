@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "235c71e6feb5aeb0c9e4b284a5043a14967eb9560b8fd01a5e28b27472115129",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer fixed OpenClaw cron jobs that ran without delivering by turning thinking mode off, after which six articles reached Telegram in 30 seconds.",
+      "sha256": "235c71e6feb5aeb0c9e4b284a5043a14967eb9560b8fd01a5e28b27472115129"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "967ec541700a39980652834a4ce614e35a00d058528097ec71b6ddd1b70bf614",
-      "publication": "reviewed_restatement_required"
+      "value": "The cron job scanned RSS feeds, filtered articles and wrote a digest. A separate announce agent then forwarded the digest to Telegram. With thinking on, the model did all its work inside the thinking block, so the summary was empty and nothing was sent. The developer set thinking to off in the heartbeat config, using DeepSeek Chat as the heartbeat/cron model, and added isolated sessions.",
+      "sha256": "967ec541700a39980652834a4ce614e35a00d058528097ec71b6ddd1b70bf614"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "feaa6966394539400c23806e21b67482d1e4f28c8d45dc07f9f7a83235675bba",
-      "publication": "reviewed_restatement_required"
+      "value": "With thinking enabled, jobs averaged 88 seconds and delivered nothing across five test runs. With thinking off, the same job took 30 seconds and delivered six articles to Telegram on the first attempt.",
+      "sha256": "feaa6966394539400c23806e21b67482d1e4f28c8d45dc07f9f7a83235675bba"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4469144b1c008bf13ddcc8384b883236a95131e333ad51a0729b6368c46f71cd",
-      "publication": "reviewed_restatement_required"
+      "value": "The delivered:true status only means the announce agent ran without error, so confirm in Telegram. A daily digest cost about $0.03/day on OpenRouter.",
+      "sha256": "4469144b1c008bf13ddcc8384b883236a95131e333ad51a0729b6368c46f71cd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Deliver scheduled article digests to Telegram with OpenClaw cron jobs\nA developer fixed OpenClaw cron jobs that ran without delivering by turning thinking mode off, after which six articles reached Telegram in 30 seconds.\nDone with\nOC\nOpenClaw\nWhat they did\nThe cron job scanned RSS feeds, filtered articles and wrote a digest. A separate announce agent then forwarded the digest to Telegram. With thinking on, the model did all its work inside the thinking block, so the summary was empty and nothing was sent. The developer set thinking to off in the heartbeat config, using DeepSeek Chat as the heartbeat/cron model, and added isolated sessions.\nHow it went\nWith thinking enabled, jobs averaged 88 seconds and delivered nothing across five test runs. With thinking off, the same job took 30 seconds and delivered six articles to Telegram on the first attempt.\nWorth knowing\nThe delivered:true status only means the announce agent ran without error, so confirm in Telegram. A daily digest cost about $0.03/day on OpenRouter.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nMy scheduled job that sends [N] article digests to [Telegram] at [time] runs but nothing arrives. Check the cron job settings and logs, find why delivery fails (try turning thinking mode off), and fix it. Finish by running it once so the digest actually shows up in Telegram, and ask before changing other jobs.\nOriginal source: https://blog.rezvov.com/openclaw-troubleshooting-no-reply-workflow-auto-delivery-failures",
+    "body_sha256": "b55ca11291724f0ba0877dfc5acb13bd21d89e7234c8e324ce1aac25711ebfea",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

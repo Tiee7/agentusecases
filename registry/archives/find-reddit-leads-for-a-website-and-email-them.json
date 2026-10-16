@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "7c3b4f7c7903159fdd14db2708f8f9f122d1cde323ce96f464e944c03f5ac37c",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow takes a website URL, works out industry and keywords, monitors Reddit for relevant posts and emails potential leads to the user.",
+      "sha256": "7c3b4f7c7903159fdd14db2708f8f9f122d1cde323ce96f464e944c03f5ac37c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e01ef81ac187fe9ff8f0b8f2a53f29f7e01cd639f74c6add534e9c1c70ad0d3a",
-      "publication": "reviewed_restatement_required"
+      "value": "A user submits their website URL and email through a form. The workflow analyzes the site to find the industry and keywords, then searches Reddit and filters posts by upvotes over 15, non-empty text and age under 90 days. An AI agent (GPT-4.1-mini via OpenRouter) judges each post's relevance and summarizes it.",
+      "sha256": "e01ef81ac187fe9ff8f0b8f2a53f29f7e01cd639f74c6add534e9c1c70ad0d3a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "242e94d5f702dd3cb131e00a3a988b61babd538f87d5b4ddaa6ffc5fe8645858",
-      "publication": "reviewed_restatement_required"
+      "value": "Relevant posts are saved to Google Sheets and sent to the user as an HTML email of potential leads. The page gives no results or lead-quality numbers.",
+      "sha256": "242e94d5f702dd3cb131e00a3a988b61babd538f87d5b4ddaa6ffc5fe8645858"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a8f75fa10212c24a15242678cfec5ca096a38caa758eab41d0ec718d6333d4bc",
-      "publication": "reviewed_restatement_required"
+      "value": "You need OAuth credentials for Reddit (a Reddit app), Google Sheets and Gmail, plus an OpenRouter API key. The template is listed at $20.",
+      "sha256": "a8f75fa10212c24a15242678cfec5ca096a38caa758eab41d0ec718d6333d4bc"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find Reddit leads for a website and email them\nAn n8n workflow takes a website URL, works out industry and keywords, monitors Reddit for relevant posts and emails potential leads to the user.\nDone with\nN8\nn8n\nWhat they did\nA user submits their website URL and email through a form. The workflow analyzes the site to find the industry and keywords, then searches Reddit and filters posts by upvotes over 15, non-empty text and age under 90 days. An AI agent (GPT-4.1-mini via OpenRouter) judges each post's relevance and summarizes it.\nHow it went\nRelevant posts are saved to Google Sheets and sent to the user as an HTML email of potential leads. The page gives no results or lead-quality numbers.\nWorth knowing\nYou need OAuth credentials for Reddit (a Reddit app), Google Sheets and Gmail, plus an OpenRouter API key. The template is listed at $20.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow where I give it my website URL [URL]. It should work out my industry and a list of keywords, then check Reddit every [few hours] for new posts where someone is asking for help that my business could solve. Email me a digest with the post link, a one-line reason it is a good lead, and a suggested reply, and pause for my approval before it posts or messages anyone on Reddit.\nOriginal source: https://n8n.io/workflows/3935-ai-marketing-agent-for-lead-generation-reddit-openrouter-gmail/",
+    "body_sha256": "a9f906e6ed3a5735b4c50ed25325771d9912a4564b57c6eac3e6894b430282f7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f9f7f82fd1957da0138ab96a8952bdd3537138ce919c6de3eaa75f0667a70b1b",
-      "publication": "reviewed_restatement_required"
+      "value": "A small-hotel owner in Riga runs scheduled Cowork tasks that use Claude in Chrome to check reservations and verify check-ins in the Booking.com admin panel.",
+      "sha256": "f9f7f82fd1957da0138ab96a8952bdd3537138ce919c6de3eaa75f0667a70b1b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "bfdea06d07716d72f6f24293cea515efd1a01607d9c5171da1f8105040627bfc",
-      "publication": "reviewed_restatement_required"
+      "value": "The owner runs daily scheduled Cowork tasks that use Claude in Chrome to open the Booking.com admin panel, check reservations and verify guest check-ins. Each run showed a permission dialog he had to click through. He had Claude debug it. Claude had him run console commands in DevTools and traced the cause in the extension's code.",
+      "sha256": "bfdea06d07716d72f6f24293cea515efd1a01607d9c5171da1f8105040627bfc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "75868f18b2369be778d12b368300ddb000c30e3f18654bedd6c1fe5c81fcb563",
-      "publication": "reviewed_restatement_required"
+      "value": "The tasks ran, but each one needed a manual approval click. Claude found the root cause and proposed fixes, but the extension is closed source, so nothing was patched. He filed a GitHub issue.",
+      "sha256": "75868f18b2369be778d12b368300ddb000c30e3f18654bedd6c1fe5c81fcb563"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b13aaa74da9341726d9369c8763dafa038946aeae7b496fa9cff97ee8691ce79",
-      "publication": "reviewed_restatement_required"
+      "value": "Expect to click \"Allow\" on the browser permission dialog every scheduled run, because approvals aren't saved. The article doesn't say whether Anthropic has fixed this.",
+      "sha256": "b13aaa74da9341726d9369c8763dafa038946aeae7b496fa9cff97ee8691ce79"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Check hotel reservations and guest check-ins on Booking.com\nA small-hotel owner in Riga runs scheduled Cowork tasks that use Claude in Chrome to check reservations and verify check-ins in the Booking.com admin panel.\nDone with\nCW\nClaude Cowork\nCH\nClaude in Chrome\nWhat they did\nThe owner runs daily scheduled Cowork tasks that use Claude in Chrome to open the Booking.com admin panel, check reservations and verify guest check-ins. Each run showed a permission dialog he had to click through. He had Claude debug it. Claude had him run console commands in DevTools and traced the cause in the extension's code.\nHow it went\nThe tasks ran, but each one needed a manual approval click. Claude found the root cause and proposed fixes, but the extension is closed source, so nothing was patched. He filed a GitHub issue.\nWorth knowing\nExpect to click \"Allow\" on the browser permission dialog every scheduled run, because approvals aren't saved. The article doesn't say whether Anthropic has fixed this.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nSet up a recurring task that logs into my Booking.com admin panel via Claude in Chrome to check upcoming reservations and verify which guests have checked in, then send me a daily summary. Pause and show me before it sends any messages to guests or makes changes in the system.\nOriginal source: https://medium.com/@dmitry.v.bychkov/claude-reverse-engineered-its-own-chrome-extension-to-find-a-bug-its-creators-missed-b1b5072cab03",
+    "body_sha256": "644f7a66d399fbbc7b6980e65456d7e5d81503ff2c129553efc09f73ee09ed61",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

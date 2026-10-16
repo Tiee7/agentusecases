@@ -1,36 +1,30 @@
 # Cowork收据与银行数据整理：适合内部提效，盈利取决于异常复核而非生成速度
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude Cowork
-
-### 介绍
-
-A collection of Cowork anecdotes includes recurring expenses and annual tax preparation.
-
-一组 Cowork 个案包含周期性费用整理与年度报税准备。
-
-### 方法
-
-One workflow accumulated forwarded receipts for a weekly report; another summarized downloaded bank and card transactions. A separate household example organized maintenance history.
-
-一个流程汇集转发收据生成周报，另一个汇总下载的银行及信用卡交易；家居维护历史整理是独立示例。
-
-### 结果与限制
-
-Users describe faster preparation, including one estimate of five hours saved, but financial accuracy was not measured. Results from unrelated file tasks are not finance-task benchmarks.
-
-用户描述准备速度提高，其中一例估计节省五小时，但没有测量财务准确性；其他文件任务的结果不能作为财务任务基准。
+    Turn forwarded receipts and bank data into expense and tax summaries
+    Users report Cowork building a Monday expense report from forwarded receipts and a tax-prep summary from a year of transactions, plus home maintenance logs.
+    Done with
+    CW
+    Claude Cowork
+    What they did
+    The article collects user reports. One user forwards anything resembling a receipt, and Cowork stores them through the week and emails an expense report every Monday morning. Another downloaded a year of bank and credit-card transactions and gave them to Cowork for an annual tax-prep summary. A homeowner had it go through 10 years of email for repairs and build a maintenance schedule synced to Google Calendar.
+    How it went
+    The tax summary arrived in minutes instead of days, and a LinkedIn user reported about 5 hours saved. The home log captured dates, contractors and costs. The source gives no accuracy figures for the finance tasks.
+    Worth knowing
+    Skim the output before relying on it: a related file-renaming test got only about 70% of names right, and heavy agentic use can hit the weekly cap on the $20 Pro plan.
+    Try it yourself
+    with
+    Claude Cowork
+    Copy prompt
+    Every Monday, collect the receipts I forwarded to [email/folder] and build an expense report spreadsheet with date, vendor, amount and category. Also take [bank export file or folder] covering [year] and write a tax-prep summary of income, deductible expenses and anything unclear. Finish by listing the receipts that need my review, and don't send the report to anyone without asking me.
+    Original source: https://christopheralarcon.com/blog/claude-cowork-use-cases
 
 ## 原作者的方法与来源
 
 来源：[Christopher Alarcon · Cowork use cases](https://christopheralarcon.com/blog/claude-cowork-use-cases)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 文章引用的一位用户转发收据供整理保存，并收到每周费用报告。
    English summary: One cited user forwards receipts for storage and receives a weekly expense report.
@@ -45,7 +39,7 @@ Users describe faster preparation, including one estimate of five hours saved, b
 小微企业老板和记账人员确实要整理分散收据、银行交易与年度资料，但本案例把不同用户的周报和税务摘要合并介绍，并未证明一套商业系统已经可靠交付。官方能力支持文件与表格处理，现有费用管理软件也已有低价收据识别、匹配和审批。价值应落在可回溯底稿、缺件清单和减少人工搬运，不能用输出速度或二手节省时长替代准确率。两种假设测算显示，返工和专业复核足以从微利变为亏损，所以先在内部验证异常率与净节省，再考虑对外收费。
 
 案例ID：`turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s` · 案例来源：https://agentusecases.ai/use-case/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s
-研究时间：2026-10-15T08:13:42.813043+00:00 · 证据置信度：官方产品、价格和记录保存要求可核验；案例成效主要为二手用户转述，原帖受访问限制。没有真实账单、付费订单或模型准确率实测。
+研究时间：2026-10-15T08:13:42.813043+00:00
 
 **商业评分：44.0/100。用户反馈信号占5%。**
 
@@ -76,9 +70,7 @@ Users describe faster preparation, including one estimate of five hours saved, b
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -88,9 +80,9 @@ Users describe faster preparation, including one estimate of five hours saved, b
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S8e58f48d8cf2, S024aa9fc225e, S19ec47cdc056, S719155c62686, S7dea3b226d0f
 
@@ -103,9 +95,9 @@ Users describe faster preparation, including one estimate of five hours saved, b
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S8e58f48d8cf2, S024aa9fc225e, S19ec47cdc056, S719155c62686, S7dea3b226d0f
 
@@ -189,8 +181,7 @@ Users describe faster preparation, including one estimate of five hours saved, b
 
 ## 真实反馈与证据边界
 
-完成社区、职业社交与媒体三类检索。原文章将“周一收到费用报告”和“约节省5小时”指向Reddit及LinkedIn；实际读取均因robots规则阻挡，本轮没有换入口绕过，也没有把摘要当完整原帖。这些仍能作为“作者这样转述”的证据，却不能获得直接财务用户反馈分。搜索多次出现无关结果，报告如实记录检索覆盖有限，不据此断言无人使用。
-WIRED的独立记者原文可读，文件整理成功而邮件批量归档受挫，属于相关但不同任务的亲历。文中厂商员工说自己做费用报销，利益关系明确，不把这句话当独立消费者验证。只保留记者对邻近工作流的观察，反馈项给1/5且权重5%。原汇编提到另一项文件重命名约70%正确，这个分母、任务与财务提取完全不同，不能借来估算收据准确率或税务风险。Zoho官网展示客户节省与精选评价同样属于厂商自选宣传，本报告仅用它核验产品供给，不用其数字证明本案效果。
+相关体验：记者亲自试文件整理及邮件操作，简单整理可用，批量归档遇到失败；只支持一般执行能力仍需检查。
 
 依据：S8e58f48d8cf2, Saae4193ce887, S8050cd85f5e3, S19ec47cdc056
 
@@ -212,19 +203,11 @@ WIRED的独立记者原文可读，文件整理成功而邮件批量归档受挫
 
 假设B：散客、退款转账与大量缺件假设：全部为压力假设，不是已观测比例；整理90分钟×30美元/小时=45，专业复核45分钟×60美元/小时=45，人工共90。其他8、获客20；固定500沿用A的2席位50+维护300+存储管理150。没有额外API开支或本轮购买；任务超过计划额度时不能把超出计算当免费。两种情景统一只提供底稿，不含税务申报签字。；API成本 0，人工成本 90，其他可变成本 8，分摊获客成本 20。依据：S58333316475e, S024aa9fc225e, S7dea3b226d0f, S07ea2cc4f269
 
-## 用户反馈核对（低权重）
-
-- 社区—Reddit · `Claude Cowork expenses receipts accounting review reddit`：实际搜索返回无关及邻近结果；进一步追原文章Reddit链接，robots禁止读取，未取得直接费用工作流原帖。
-- 社区—Reddit复检 · `Claude Cowork expense receipts review site:reddit.com/r/ClaudeAI`：结果混有无关页面和媒体报道，不足以验证原案例的财务交付；未用摘要补写原帖。
-- 职业社交—LinkedIn · `Claude Cowork tax preparation five hours Brendan Howe LinkedIn`：查询结果失配；原文章所链LinkedIn帖子实际抓取被robots禁止，5小时只保留为作者转述。
-- 独立媒体体验 · `Claude Cowork receipts expense review Wired Reece Rogers`：发现并实际读取WIRED记者体验，有文件成功和邮件失败，但不是收据/税务准确率试验。
-- [S8050cd85f5e3] adjacent_workflow：记者亲自试文件整理及邮件操作，简单整理可用，批量归档遇到失败；只支持一般执行能力仍需检查。；偏差：早期版本、小样本、部分任务由厂商建议；不适用于当前财务抽取准确率。
-
 ## 反证与未核实信息
 
 本案并非一个经审计的完整系统：周报与年度摘要来自不同用户，原帖因robots不可读。廉价Zoho已有收据及费用体系；合成例表明总额一致仍能掩盖分类错误，完整财务交付需要人审。另一方面，文件处理与记录需求确有一手依据，内部辅助仍值得受控验证。原文约70%属于命名测试，约5小时属于未核验社交转述，均没有被当财务准确率、收入或现金节省。
 
-未调用Claude或任何额外付费模型API、未创建密钥；未连接真实邮箱、银行或报税系统，未购买、注册、填表或联系第三方。测试只运行本地Python合成整数数据，验证控制逻辑而非OCR/LLM性能或税务资格。Reddit与LinkedIn来源被robots拒绝，两个官方安全指南URL均返回301而被现有抓取器阻止，未跟随或绕过，不能称已读安全指南。已读官方产品、商业条款与品牌合并公告代为界定能力和责任，但完整地区适用性、保留期限与具体客户权限仍未知。没有实际订单、客户留存、财务准确率、生产定时任务稳定性或会计验收。2026-10-15T08:04:23.920326+00:00完成全目录及SSR分类top刷新：1321例，较上轮新增7、移出0、lastmod变化0，5个采样详情未变；未采样详情不宣称复查。目录刷新不计深研。启动时工作区干净且无其他研究进程或代理，仓库研究标准与流程未变化，仍未发现AGENTS.md。
+仅有合成整数数据的控制逻辑测试，OCR、模型性能、财务准确率和会计验收仍未知。客户留存、定时任务稳定性、地区适用范围与数据保留条件未确认。
 
 ## 具体动作与止损条件
 
@@ -246,6 +229,3 @@ WIRED的独立记者原文可读，文件整理成功而邮件批量归档受挫
 - [Sc8cbec2f2549] [Claude Cowork and chat are now one Claude | Claude by Anthropic](https://claude.com/resources/articles/cowork-is-now-claude)：核验2026年9月官方宣布Cowork与Chat合并及逐计划发布，说明旧教程界面与今日部署可能不同。
 
 结构化记录：[research/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.json](../research/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.json)
-来源读取凭据：[research/evidence/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.json](../research/evidence/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

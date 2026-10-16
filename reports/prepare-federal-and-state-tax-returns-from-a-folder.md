@@ -1,36 +1,30 @@
 # 从税务文件夹到联邦与州税表：草稿自动化有价值，独立报税生意尚无证据
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/prepare-federal-and-state-tax-returns-from-a-folder
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude
-
-### 介绍
-
-A media account relays a Reddit user’s experience producing tax drafts with Claude.
-
-一篇媒体文章转述 Reddit 用户用 Claude 生成税表草稿的经历。
-
-### 方法
-
-The user supplied a local document folder, answered follow-up questions and compared the calculations with a separate tax-software run.
-
-用户提供本地文件夹、回答追问，再用另一套报税软件的结果作对照。
-
-### 结果与限制
-
-The user claims two years of federal and state returns in fifteen minutes with matching results. This is self-report, and electronic filing was not part of the workflow.
-
-用户声称十五分钟完成两年的联邦及州税表且结果一致；这属于自述，流程不包含电子申报。
+    Prepare federal and state tax returns from a folder
+    A Redditor pointed Claude at their tax folder and asked it to do their taxes; they say returns for 2024 and 2025 came back in 15 minutes and matched TurboTax, but needed mailing.
+    Done with
+    CL
+    Claude
+    What they did
+    The Redditor sqlgenius pointed Claude at the tax folder on their computer and typed a short "do my taxes" request. Claude read the tax forms, asked a few follow-up questions, and carried over the Redditor's prior trading losses. To check it, the Redditor ran the same information through TurboTax.
+    How it went
+    The Redditor says Claude produced federal and state returns for 2024 and 2025 in 15 minutes, and that TurboTax gave the same results. This is a self-reported Reddit claim. Experts quoted say it fits simple returns better than complex ones.
+    Worth knowing
+    Claude can't e-file, so the returns must be mailed. The taxpayer is liable for any errors, and AI may use stale tax rules.
+    Try it yourself
+    with
+    Claude Code
+    Copy prompt
+    Look through the folder [path to your tax folder] containing my [tax year] tax documents. Work out my federal and [state] returns, list every figure you pulled and which file it came from, and flag anything missing or ambiguous. Finish with a draft summary I can check against my tax software; do not file or send anything, and ask me before changing any files.
+    Original source: https://www.inc.com/melissa-angell/claude-did-this-redditors-taxes-they-claim-intuit-is-cooked/91328075
 
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.inc.com/melissa-angell/claude-did-this-redditors-taxes-they-claim-intuit-is-cooked/91328075)
 
-原帖暂未读取；保留来源链接。
+方法摘要未收录
 
 ## 我们的分析
 
@@ -39,7 +33,7 @@ The user claims two years of federal and state returns in fifteen minutes with m
 本例的购买动机是省去整理税务文件、反复录入与追查往年亏损的时间，使用者和潜在付款人均是个人纳税人。但现有证据只支持一个经报道转述的个人实验，未证明准确申报、独立获客或付费需求。免费联邦申报和低价州申报压低收费空间，人工复核、跨年核对和失败追责会消耗毛利。建议在既有专业团队内作为可追溯资料整理工具评估，由成熟税务软件与专业人员完成计算核验和交付；不把该案例包装成已验证创业项目。
 
 案例ID：`prepare-federal-and-state-tax-returns-from-a-folder` · 案例来源：https://agentusecases.ai/use-case/prepare-federal-and-state-tax-returns-from-a-folder
-研究时间：2026-10-15T15:07:39.086321+00:00 · 证据置信度：官方制度、竞品公开报价和工具权限文档证据较强；本案例只有二手自述，原始税表、逐行比对、申报回执、客户收入和州别均未验证。
+研究时间：2026-10-15T15:07:39.086321+00:00
 
 **商业评分：31.5/100。用户反馈信号占5%。**
 
@@ -70,9 +64,7 @@ The user claims two years of federal and state returns in fifteen minutes with m
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -82,9 +74,9 @@ The user claims two years of federal and state returns in fifteen minutes with m
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S61707de8f134, Sf79c3bf4770a, S10c8236f2e22, S7538e94c51dd, S329f4c5dd969, Sdeb19815dd04, S8ac8edab81d7
 
@@ -97,9 +89,9 @@ The user claims two years of federal and state returns in fifteen minutes with m
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S61707de8f134, Sf79c3bf4770a, S10c8236f2e22, S7538e94c51dd, S329f4c5dd969, Sdeb19815dd04, S8ac8edab81d7
 
@@ -182,8 +174,7 @@ FreeTaxUSA是具体可比对象：联邦0美元，州15.99美元，包含资本�
 
 ## 用户评价怎样改变判断
 
-执行了三次反馈检索：精确用户名sqlgenius与taxes、Reddit渠道Claude/taxes/folder、Hacker News渠道Claude/taxes。返回结果主要是无关通用税务或网站首页，未取得可核验直接体验；检索无有效结果不等于没有用户。目录附加的ClaudeAI帖子在读取器遇到robots拒绝，未绕过访问限制。Inc原报道在本地读取器403，但公开网页工具可读，明确将关键效果归为作者自述；报道还写作者持有看空Intuit的头寸，这构成额外利益偏差。原始帖文、税表和完整比较过程均未取得。
-因此独立反馈项记0/5，表示未建立独立可复核信号，不能理解成用户满意度为零。媒体重复同一故事不算第二位用户，附带另一个帖子也不能自动合并为同一项目的客户。专家对复杂税表和现行规则的提醒是行业判断，不是产品使用评价。若后续获得逐行比对与申报接受回执，可提升效果可信度，但仍不能据一例推出市场付费；需要分开测量直接用户结果、专业复核成本和实际成交。
+暂无直接用户反馈。
 
 依据：S61707de8f134, S8ac8edab81d7
 
@@ -205,18 +196,11 @@ FreeTaxUSA是具体可比对象：联邦0美元，州15.99美元，包含资本�
 
 假设：既有团队内部或B2B资料包假设：全部输入均为研究者假设。人工20分钟×60美元/小时；其他5美元含存储、集成支持和返工预留；既有关系获客5美元/份；固定1200美元/月。60美元若为内部预算不等于现金收入；复核45分钟则人工45美元、月贡献负1040美元。未计税费及无法量化的责任损失，不可直接年化。；API成本 3，人工成本 20，其他可变成本 5，分摊获客成本 5。依据：S10c8236f2e22, Sf79c3bf4770a, S8ac8edab81d7
 
-## 用户反馈核对（低权重）
-
-- 公开网页精确用户名 · `"sqlgenius" "taxes"`：实际执行，返回通用税务与网站首页，未得到可核验原帖。
-- Reddit社区 · `site.reddit.com "Claude" "taxes" "folder"`：实际执行，未得到相关可核验直接体验；目录附加Reddit链接被robots拒绝。
-- Hacker News技术社区 · `site.news.ycombinator.com "Claude" "taxes"`：实际执行，结果未返回相关完整讨论，不将无关条目当用户证据。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 最强正面反证：双年度整理与亏损结转有实际复杂度，IRS Free File只支持当年，因此不能用当年免费方案完全否定需求。最强负面反证：FreeTaxUSA支持亏损结转并有往年入口，原作者还需TurboTax复核，未证明替代而可能重复劳动。当前判断因此停在内部效率工具。
 
-未读取原始Reddit帖子、税表和回执；未复现模型工作流；不知州别、模型版本、文档量及实际人工耗时。Inc读取器403，网页工具实际读取了公开报道：https://www.inc.com/melissa-angell/claude-did-this-redditors-taxes-they-claim-intuit-is-cooked/91328075 （2026-04-13）；作为补充来源而非伪造fetched凭据，不计入八份重新抓取来源。原文关键自述与利益偏差仅转述、不验证真实性。没有收入、利润、客户数、转化率或独立效果数据。当前官方页面和报价不回溯代表原实验时点。未完成逐州合规、商业条款和数据处理合同审查；研究结论不是具体纳税建议。
+原始税表、回执、州别、模型版本、文档量及人工耗时未知。收入、转化率和独立效果数据缺失，逐州服务规则及数据处理安排仍需确认。
 
 ## 具体动作与止损条件
 
@@ -236,6 +220,3 @@ FreeTaxUSA是具体可比对象：联邦0美元，州15.99美元，包含资本�
 - [S5e6f05a6d935] [E-file: Do your taxes for free | Internal Revenue Service](https://www.irs.gov/e-file-do-your-taxes-for-free)：核对IRS Free File免费替代、当年申报限制、州申报差异及拒收后修正流程，界定可进入市场。
 
 结构化记录：[research/prepare-federal-and-state-tax-returns-from-a-folder.json](../research/prepare-federal-and-state-tax-returns-from-a-folder.json)
-来源读取凭据：[research/evidence/prepare-federal-and-state-tax-returns-from-a-folder.json](../research/evidence/prepare-federal-and-state-tax-returns-from-a-folder.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

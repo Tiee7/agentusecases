@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b48aebb201540b781e095f3b498b9fe717fad7ae89ffbb02aa8dea4a36973752",
-      "publication": "reviewed_restatement_required"
+      "value": "Dan Malone runs OpenClaw as an always-on Claude agent connected to Home Assistant through ha-mcp, controlling his lights and fixing his automations.",
+      "sha256": "b48aebb201540b781e095f3b498b9fe717fad7ae89ffbb02aa8dea4a36973752"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "70138a18a20507c094e0b682be9f9b32e94cbc358375bde5d955d7cf57b8ad9e",
-      "publication": "reviewed_restatement_required"
+      "value": "Dan runs OpenClaw in its own LXC container on his Proxmox server, next to Home Assistant, and connects it through ha-mcp. He chats with it over Telegram. When his landing motion lights failed, the agent found two dead Hue bulbs. It couldn't edit the blueprint automation, so it deleted it and rebuilt it as a native one. Dan then asked for weekend nap schedules.",
+      "sha256": "70138a18a20507c094e0b682be9f9b32e94cbc358375bde5d955d7cf57b8ad9e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "516d6e37e32398defc4bc98ebe248496a9df18b1aa2d64704af5c7928061419b",
-      "publication": "reviewed_restatement_required"
+      "value": "The fix took about five minutes of typing in Telegram. Dan estimates the Home Assistant UI would have taken at least an hour. The agent also updated his dashboard to show the new automation.",
+      "sha256": "516d6e37e32398defc4bc98ebe248496a9df18b1aa2d64704af5c7928061419b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d07919011c085dbd5afd1d10446964309c7f1ce6e1e4115ef209d99dbed86d7b",
-      "publication": "reviewed_restatement_required"
+      "value": "Costs add up on per-token API billing, because debugging automations burns a lot of context. Dan rides on his roughly $200/month Claude Max plan, and he runs the agent sandboxed in an isolated container.",
+      "sha256": "d07919011c085dbd5afd1d10446964309c7f1ce6e1e4115ef209d99dbed86d7b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Control lights and fix automations in Home Assistant via OpenClaw\nDan Malone runs OpenClaw as an always-on Claude agent connected to Home Assistant through ha-mcp, controlling his lights and fixing his automations.\nDone with\nOC\nOpenClaw\nWhat they did\nDan runs OpenClaw in its own LXC container on his Proxmox server, next to Home Assistant, and connects it through ha-mcp. He chats with it over Telegram. When his landing motion lights failed, the agent found two dead Hue bulbs. It couldn't edit the blueprint automation, so it deleted it and rebuilt it as a native one. Dan then asked for weekend nap schedules.\nHow it went\nThe fix took about five minutes of typing in Telegram. Dan estimates the Home Assistant UI would have taken at least an hour. The agent also updated his dashboard to show the new automation.\nWorth knowing\nCosts add up on per-token API billing, because debugging automations burns a lot of context. Dan rides on his roughly $200/month Claude Max plan, and he runs the agent sandboxed in an isolated container.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my Home Assistant at [address] and review my automations. Find any that are broken, failing or never triggering, explain what is wrong, and propose fixes. Show me each proposed change and wait for my approval before saving it, then test the ones that are fixed and report the results.\nOriginal source: https://www.dan-malone.com/blog/openclaw-home-assistant",
+    "body_sha256": "498cb31bd00077e80ff2558e223237f9b8c527ee48d900bb6092bda4cdfa1a18",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

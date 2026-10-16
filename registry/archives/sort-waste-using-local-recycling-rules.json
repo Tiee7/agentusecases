@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5d802fb9628f2fce84e1a85c02219f557438c9602d3f8b832ed1a77a51e32e5d",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini Robotics-ER 1.5 looks up local recycling rules online, then plans and sorts objects into compost, recycling and trash bins.",
+      "sha256": "5d802fb9628f2fce84e1a85c02219f557438c9602d3f8b832ed1a77a51e32e5d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c0d66c251969b762f14c8d51d65ffb6b5ad1416ae0737464159144bff7cae120",
-      "publication": "reviewed_restatement_required"
+      "value": "The post frames this as a use case for the model acting as a robot's high-level reasoning layer. It would use Google Search to find local recycling guidelines, identify the objects in view, and plan the sort. It would then call a vision-language-action model or user-defined functions to move items. The shown demo prompts it to explain the sort and point to each object.",
+      "sha256": "c0d66c251969b762f14c8d51d65ffb6b5ad1416ae0737464159144bff7cae120"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2e108c9e9805361de3d99f2e3a4a4c147c7c0275a68810a3d2f99e832cdd5671",
-      "publication": "reviewed_restatement_required"
+      "value": "The post shows only a rendered animation of a spatially grounded sorting plan, with text interleaved with points. It gives no success rates for end-to-end sorting. The model is in preview.",
+      "sha256": "2e108c9e9805361de3d99f2e3a4a4c147c7c0275a68810a3d2f99e832cdd5671"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b5f8282c0cf1020484cc824421662f57e3d3c2e83cbb26b8ddb911945a767bd5",
-      "publication": "reviewed_restatement_required"
+      "value": "Model-level safety filters don't replace real robot safety engineering. The post says developers still need emergency stops, collision avoidance and risk assessments.",
+      "sha256": "b5f8282c0cf1020484cc824421662f57e3d3c2e83cbb26b8ddb911945a767bd5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Sort waste using local recycling rules\nGemini Robotics-ER 1.5 looks up local recycling rules online, then plans and sorts objects into compost, recycling and trash bins.\nDone with\nGE\nGemini\nWhat they did\nThe post frames this as a use case for the model acting as a robot's high-level reasoning layer. It would use Google Search to find local recycling guidelines, identify the objects in view, and plan the sort. It would then call a vision-language-action model or user-defined functions to move items. The shown demo prompts it to explain the sort and point to each object.\nHow it went\nThe post shows only a rendered animation of a spatially grounded sorting plan, with text interleaved with points. It gives no success rates for end-to-end sorting. The model is in preview.\nWorth knowing\nModel-level safety filters don't replace real robot safety engineering. The post says developers still need emergency stops, collision avoidance and risk assessments.\nTry it yourself\nwith\nGemini\nCopy prompt\nWrite a program that takes a photo of items from [image folder] and sorts each into compost, recycling, or trash. Look up the rules for [my city or waste provider] online and cite the source page for each rule you use. Output a table of item, bin, and reason, and flag any items you are unsure about. Stop once every item in the photos is sorted.\nOriginal source: https://developers.googleblog.com/building-the-next-generation-of-physical-agents-with-gemini-robotics-er-15/",
+    "body_sha256": "f54df91dd44cf06874f266ff8ed57093122bfb49a8895f105d3f76096b798839",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

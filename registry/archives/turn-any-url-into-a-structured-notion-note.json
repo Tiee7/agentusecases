@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8770df142932c1098727ab6abc6fee3ca698316cc9658ab1b2d3e6940924aece",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow fetches a submitted URL, strips it to readable content, has OpenAI summarise it into structured fields, and saves a Notion note.",
+      "sha256": "8770df142932c1098727ab6abc6fee3ca698316cc9658ab1b2d3e6940924aece"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "9079102c3453cc82779752006219876f61216edcc8ee7fe2e7ec81330218e44a",
-      "publication": "reviewed_restatement_required"
+      "value": "A webhook receives a URL, an HTTP Request node fetches the page, and a Code node removes scripts, styles and tags, then truncates the text to 8,000 characters. OpenAI, in JSON output mode, returns title, summary, key insights and tags. The Notion node maps these to six properties with no parsing step.",
+      "sha256": "9079102c3453cc82779752006219876f61216edcc8ee7fe2e7ec81330218e44a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "faba69dcf794e231d57b73f2d67b5e8463c095c51a341d70009df9f3faf76bd1",
-      "publication": "reviewed_restatement_required"
+      "value": "Stripping the HTML first cut the payload from about 60K tokens to under 4K. Summaries improved and cost dropped significantly. JavaScript-heavy single-page apps return empty shell HTML, and some sites block requests.",
+      "sha256": "faba69dcf794e231d57b73f2d67b5e8463c095c51a341d70009df9f3faf76bd1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5d0a52cacea9a6147b2bb0d20a961e33e72d86145bb09272cec285c9362412e9",
-      "publication": "reviewed_restatement_required"
+      "value": "Share the Notion database with your n8n integration first, or the write fails silently. Adding a Mozilla/5.0 User-Agent header clears most 403 errors.",
+      "sha256": "5d0a52cacea9a6147b2bb0d20a961e33e72d86145bb09272cec285c9362412e9"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn any URL into a structured Notion note\nAn n8n workflow fetches a submitted URL, strips it to readable content, has OpenAI summarise it into structured fields, and saves a Notion note.\nDone with\nN8\nn8n\nWhat they did\nA webhook receives a URL, an HTTP Request node fetches the page, and a Code node removes scripts, styles and tags, then truncates the text to 8,000 characters. OpenAI, in JSON output mode, returns title, summary, key insights and tags. The Notion node maps these to six properties with no parsing step.\nHow it went\nStripping the HTML first cut the payload from about 60K tokens to under 4K. Summaries improved and cost dropped significantly. JavaScript-heavy single-page apps return empty shell HTML, and some sites block requests.\nWorth knowing\nShare the Notion database with your n8n integration first, or the write fails silently. Adding a Mozilla/5.0 User-Agent header clears most 403 errors.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that starts from a webhook or form where I submit a [URL]. It should fetch the page, strip it down to readable text, ask an AI model to produce a title, a 3-sentence summary, key points and 3 tags, then create a new note in my Notion database [database name] with those fields. You're done when a test URL I submit produces a correctly filled Notion note; show me the draft workflow before you activate it.\nOriginal source: https://community.n8n.io/t/turns-any-article-into-a-structured-notion-note/297566",
+    "body_sha256": "ed74b1ba703321cf50d267f0d70b7e74324a0833d6a836525e5e8910c8e8d44f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

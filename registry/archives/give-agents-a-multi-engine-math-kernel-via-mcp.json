@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0a49f969feca780b276f8278a51d4abe996d6adb170f88f090902f233215fb88",
-      "publication": "reviewed_restatement_required"
+      "value": "MathKernel is an evidence-aware multi-engine mathematics kernel exposed as an MCP server for agents to use.",
+      "sha256": "0a49f969feca780b276f8278a51d4abe996d6adb170f88f090902f233215fb88"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "821b40eeb6223a249cab33c32244934063cc9afff37fcd9bbbc6a4b4b62de9d4",
-      "publication": "reviewed_restatement_required"
+      "value": "MathKernel runs as an MCP server (mathkernel-mcp, stdio, 162 math_ tools). The model parses and plans, and the kernel does the computing across SymPy, Z3, Lean, mpmath and numba/CUDA. A typical session discovers capabilities, parses an expression, creates a context, then calls math_reason to solve and verify. Long sweeps go through async jobs. Every result carries a trust label and a derivation trail.",
+      "sha256": "821b40eeb6223a249cab33c32244934063cc9afff37fcd9bbbc6a4b4b62de9d4"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "4e7556ea22d7932c7226ddeafd07b7da77eee570828f5e9f2f457977d52c50c0",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no benchmark or outcome numbers. It documents the design: trust is capped at the weakest evidence, and decimal inputs drop a result to numeric, which blocks Lean and SMT proofs.",
+      "sha256": "4e7556ea22d7932c7226ddeafd07b7da77eee570828f5e9f2f457977d52c50c0"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "1fd5db0051f43f81dd197cfb040621307aadbba0787a8553671bc50c0933d405",
-      "publication": "reviewed_restatement_required"
+      "value": "Lean 4 and Mathlib install on first server start unless MATHKERNEL_SKIP_LEAN_INSTALL=1 is set. CUDA needs the extra nvidia pip packages, otherwise it falls back to CPU.",
+      "sha256": "1fd5db0051f43f81dd197cfb040621307aadbba0787a8553671bc50c0933d405"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give agents a multi-engine math kernel via MCP\nMathKernel is an evidence-aware multi-engine mathematics kernel exposed as an MCP server for agents to use.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMathKernel runs as an MCP server (mathkernel-mcp, stdio, 162 math_ tools). The model parses and plans, and the kernel does the computing across SymPy, Z3, Lean, mpmath and numba/CUDA. A typical session discovers capabilities, parses an expression, creates a context, then calls math_reason to solve and verify. Long sweeps go through async jobs. Every result carries a trust label and a derivation trail.\nHow it went\nThe source gives no benchmark or outcome numbers. It documents the design: trust is capped at the weakest evidence, and decimal inputs drop a result to numeric, which blocks Lean and SMT proofs.\nWorth knowing\nLean 4 and Mathlib install on first server start unless MATHKERNEL_SKIP_LEAN_INSTALL=1 is set. CUDA needs the extra nvidia pip packages, otherwise it falls back to CPU.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect the MCP server for [math tool, e.g. MathKernel or a computer algebra system] to this project, then use it to solve [math problem or set of equations] and show the result along with which engine produced it and how it was verified. If engines disagree, flag it and explain. Done means I get the answer, the evidence for it, and a note on any assumptions you made.\nOriginal source: https://github.com/Staatsgeheim/MathKernel",
+    "body_sha256": "ecdede2f1eb9591b02fcce68560536e294464dc8ed1a21152e5be93a101dd6af",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

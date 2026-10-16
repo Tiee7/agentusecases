@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cae667df50060c39c7cc4b810a698a0f29097d137920701e38a449507442af0a",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code automates checking whether companies fit the target and creates personalized openers, saving manual prospect checking.",
+      "sha256": "cae667df50060c39c7cc4b810a698a0f29097d137920701e38a449507442af0a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "002030c9dfa6c16c595100f88772ab4365f2b76f31eb2604ebce45e6943e4308",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster starts with a broad company list exported from Apollo, then runs it through an AI segmentation tool they built with Claude Code. The tool scrapes each company website and labels it yes or no against their ICP; they remove the no companies, re-import the yes companies into Apollo, and then pull lead emails from those filtered accounts.",
+      "sha256": "002030c9dfa6c16c595100f88772ab4365f2b76f31eb2604ebce45e6943e4308"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "16373e47bdf70a285eb9aa3f2120d539c6934d30a80422fce0b8f9b9b9d492a5",
-      "publication": "reviewed_restatement_required"
+      "value": "It let them build highly segmented lists at bulk scale without doing the prospect checking by hand. In the thread, this example is about fit-checking and list building; it does not give numbers or describe the email-opener workflow in detail.",
+      "sha256": "16373e47bdf70a285eb9aa3f2120d539c6934d30a80422fce0b8f9b9b9d492a5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ac5cc8c843ce3be10fa5c258b466fe5f6a6754a6d3132969c03ce3d7eb77a1d9",
-      "publication": "reviewed_restatement_required"
+      "value": "The key catch is that the post only describes the segmentation flow at a high level, not the exact prompt, stack, cost, or time needed to reproduce it.",
+      "sha256": "ac5cc8c843ce3be10fa5c258b466fe5f6a6754a6d3132969c03ce3d7eb77a1d9"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Check prospect fit and write cold email openers\nClaude Code automates checking whether companies fit the target and creates personalized openers, saving manual prospect checking.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster starts with a broad company list exported from Apollo, then runs it through an AI segmentation tool they built with Claude Code. The tool scrapes each company website and labels it yes or no against their ICP; they remove the no companies, re-import the yes companies into Apollo, and then pull lead emails from those filtered accounts.\nHow it went\nIt let them build highly segmented lists at bulk scale without doing the prospect checking by hand. In the thread, this example is about fit-checking and list building; it does not give numbers or describe the email-opener workflow in detail.\nWorth knowing\nThe key catch is that the post only describes the segmentation flow at a high level, not the exact prompt, stack, cost, or time needed to reproduce it.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHere is my ideal customer profile: [industry, company size, signals that make a good fit]. Go through the companies in [path/to/companies file], check each one's website against this profile, and mark each as fit, not fit, or unsure with a one-line reason and source link. For the companies that fit, write a personalized email opener, then save the results to a new file without contacting anyone.\nOriginal source: https://www.reddit.com/r/coldemail/comments/1tbzhw3/claude_code_for_cold_email",
+    "body_sha256": "77c966ebceec6edcbef67c4151899fa6e90e7a96e592e018809e76866cf716d5",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

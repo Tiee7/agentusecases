@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "abf847b323f9fb1209903a53238d619470e70bfc9bc1044727df231f542ff52c",
-      "publication": "reviewed_restatement_required"
+      "value": "An OpenClaw agent sends a Telegram morning briefing, drafts weekly client status emails sent after one-tap approval, and chases follow-ups, cutting admin from about 9 hours to 20 minutes.",
+      "sha256": "abf847b323f9fb1209903a53238d619470e70bfc9bc1044727df231f542ff52c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "89c7d65717dabbf229ac5d4caefed0eaed528d601038195d90e303d3fe8b7721",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenClaw runs on an always-on Mac Mini with Claude as the model. Three skill files and a Lobster workflow do the work. Weekday 8AM, it checks GitHub PRs and Slack for action items and posts a Telegram briefing. Fridays it drafts a client status email from merged PRs and closed Linear tickets. The author replies \"send\" to send it through Gmail.",
+      "sha256": "89c7d65717dabbf229ac5d4caefed0eaed528d601038195d90e303d3fe8b7721"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6aee0d5aa7b30badfdc2e72338d111eab3247165fea0082fd15935ed60efbd1d",
-      "publication": "reviewed_restatement_required"
+      "value": "The author reports admin falling from about 9 hours a week to about 20 minutes, with setup taking 47 minutes. The status email tone needed two rounds of refinement.",
+      "sha256": "6aee0d5aa7b30badfdc2e72338d111eab3247165fea0082fd15935ed60efbd1d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a368898b30bdbfff3328b86f075b087f40f1a51ac21e780973dd79d4604b044c",
-      "publication": "reviewed_restatement_required"
+      "value": "The author runs with the sandbox disabled to give the agent shell access to the gh and linear CLIs, and advises starting sandboxed and enabling only the tools each skill needs.",
+      "sha256": "a368898b30bdbfff3328b86f075b087f40f1a51ac21e780973dd79d4604b044c"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate freelance admin with a morning briefing agent\nAn OpenClaw agent sends a Telegram morning briefing, drafts weekly client status emails sent after one-tap approval, and chases follow-ups, cutting admin from about 9 hours to 20 minutes.\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw runs on an always-on Mac Mini with Claude as the model. Three skill files and a Lobster workflow do the work. Weekday 8AM, it checks GitHub PRs and Slack for action items and posts a Telegram briefing. Fridays it drafts a client status email from merged PRs and closed Linear tickets. The author replies \"send\" to send it through Gmail.\nHow it went\nThe author reports admin falling from about 9 hours a week to about 20 minutes, with setup taking 47 minutes. The status email tone needed two rounds of refinement.\nWorth knowing\nThe author runs with the sandbox disabled to give the agent shell access to the gh and linear CLIs, and advises starting sandboxed and enabling only the tools each skill needs.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery weekday at [time] send me a Telegram morning briefing covering my calendar, unanswered client emails and tasks due today. Every [day] draft a short status email for each of my clients [client names] based on my recent work notes and emails, then message me each draft so I can approve it with one tap. Do not send any email until I approve it, and flag any client who hasn't replied in [number] days with a suggested follow-up.\nOriginal source: https://dev.to/farooqshabbir/i-built-a-247-freelance-operations-agent-with-openclaw-it-runs-my-business-while-i-sleep-4lde",
+    "body_sha256": "7f6577583596cf1f792a68cdac140c448dcfb6672157004d27e968d5f1889f34",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d23c5f2ad66a3ab49cf1bcd8023dcaf248f7ab56cf4a5c01ededb61e5e39eb36",
-      "publication": "reviewed_restatement_required"
+      "value": "A scheduled bot pulls vendor, date, amount and invoice number from PDFs, bundles a month with an index, and waits for approval before sending to the accountant.",
+      "sha256": "d23c5f2ad66a3ab49cf1bcd8023dcaf248f7ab56cf4a5c01ededb61e5e39eb36"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "2c5f9b6ba3bfde2157baaa81a4d035173db5d90ff2de34067e4d4a56bb1c92b5",
-      "publication": "reviewed_restatement_required"
+      "value": "The shared Grok Bot template runs on a schedule rather than waiting to be asked. It reads each invoice PDF and extracts the vendor, date, amount and invoice number. It then bundles a whole month with an index. It holds the bundle until the owner approves it, and only then does anything go to the accountant.",
+      "sha256": "2c5f9b6ba3bfde2157baaa81a4d035173db5d90ff2de34067e4d4a56bb1c92b5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d9f2ee858a43a7018122fe4df4fed172d22dca3125f8dcdbd353295ab0819771",
-      "publication": "reviewed_restatement_required"
+      "value": "The page gives no results, numbers or time savings, and no examples of its output. It only describes what the bot is set up to do.",
+      "sha256": "d9f2ee858a43a7018122fe4df4fed172d22dca3125f8dcdbd353295ab0819771"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c97a075e4cf49363d9bfd6cdd6ca13a867f8b19a67afd2c4d7af1e0c86319ae8",
-      "publication": "reviewed_restatement_required"
+      "value": "Adding the bot copies the shared instructions into your account. Read them before installing, and don't paste in any key or password it asks for.",
+      "sha256": "c97a075e4cf49363d9bfd6cdd6ca13a867f8b19a67afd2c4d7af1e0c86319ae8"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Bundle monthly vendor invoices for the accountant\nA scheduled bot pulls vendor, date, amount and invoice number from PDFs, bundles a month with an index, and waits for approval before sending to the accountant.\nDone with\nGB\nGrok Bot\nWhat they did\nThe shared Grok Bot template runs on a schedule rather than waiting to be asked. It reads each invoice PDF and extracts the vendor, date, amount and invoice number. It then bundles a whole month with an index. It holds the bundle until the owner approves it, and only then does anything go to the accountant.\nHow it went\nThe page gives no results, numbers or time savings, and no examples of its output. It only describes what the bot is set up to do.\nWorth knowing\nAdding the bot copies the shared instructions into your account. Read them before installing, and don't paste in any key or password it asks for.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nOn the [day] of each month, collect vendor invoice PDFs from [folder or inbox] and extract vendor, date, amount, and invoice number into an index spreadsheet. Bundle the month's invoices and the index into one package. Before sending anything to [accountant's email], pause and show me the bundle and the draft email for approval.\nOriginal source: https://grokbot.dev/marketplace/invoice-hunter/",
+    "body_sha256": "5fc6170cff9baceb171be152a0fce06b6aa78d684d77a9631c967159c67d49d6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

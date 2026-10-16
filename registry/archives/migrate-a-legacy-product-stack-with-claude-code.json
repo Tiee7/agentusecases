@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "940ab9065059db1caf2bbbb9a7e66880fe823cb87a7bf31d79944ad4162491f8",
-      "publication": "reviewed_restatement_required"
+      "value": "An engineer ran a proof-of-concept that consolidated 4 repos into 2, moved MySQL to PostgreSQL, upgraded frameworks and replaced the auth model, in about 15 work days.",
+      "sha256": "940ab9065059db1caf2bbbb9a7e66880fe823cb87a7bf31d79944ad4162491f8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e654ac829ae94321c9b79510a1426f3f3de02c2ad68b4b6bdb9e4dcebc38ce36",
-      "publication": "reviewed_restatement_required"
+      "value": "The engineer wrote layered CLAUDE.md context files and gave Claude Code the legacy repos, read-only MySQL and PostgreSQL connections, and a reference implementation. Claude drafted the design, and parallel reviewer agents stress-tested it. Claude then made 19 Jira tickets. Each ticket got a design doc and plan doc that he reviewed, then ran in its own git worktree, with CI monitored through a loop.",
+      "sha256": "e654ac829ae94321c9b79510a1426f3f3de02c2ad68b4b6bdb9e4dcebc38ce36"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c87028161816a4f7c75031ecf121fd8e354b8533f3892605777e3eb633b2396b",
-      "publication": "reviewed_restatement_required"
+      "value": "About 15 work days produced roughly 50 tickets and 580 passing tests, with 95%+ API coverage and zero bugs or vulnerabilities at QA handoff. AI review caught only 30-40% of issues, and the Jira MCP could not link tickets.",
+      "sha256": "c87028161816a4f7c75031ecf121fd8e354b8533f3892605777e3eb633b2396b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b61150fbd068291debc080886c045dc6b90f9e0171b94c9e4b164a60b6580187",
-      "publication": "reviewed_restatement_required"
+      "value": "Cost was close to $5,000 in Bedrock tokens, mostly up front. Also, the Confluence MCP silently truncated pages over about 5KB, overwriting two large design docs.",
+      "sha256": "b61150fbd068291debc080886c045dc6b90f9e0171b94c9e4b164a60b6580187"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate a legacy product stack with Claude Code\nAn engineer ran a proof-of-concept that consolidated 4 repos into 2, moved MySQL to PostgreSQL, upgraded frameworks and replaced the auth model, in about 15 work days.\nDone with\nCC\nClaude Code\nWhat they did\nThe engineer wrote layered CLAUDE.md context files and gave Claude Code the legacy repos, read-only MySQL and PostgreSQL connections, and a reference implementation. Claude drafted the design, and parallel reviewer agents stress-tested it. Claude then made 19 Jira tickets. Each ticket got a design doc and plan doc that he reviewed, then ran in its own git worktree, with CI monitored through a loop.\nHow it went\nAbout 15 work days produced roughly 50 tickets and 580 passing tests, with 95%+ API coverage and zero bugs or vulnerabilities at QA handoff. AI review caught only 30-40% of issues, and the Jira MCP could not link tickets.\nWorth knowing\nCost was close to $5,000 in Bedrock tokens, mostly up front. Also, the Confluence MCP silently truncated pages over about 5KB, overwriting two large design docs.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want a proof-of-concept migration of [legacy product] from [current stack, e.g. 4 repos, MySQL, old framework version] to [target stack, e.g. 2 repos, PostgreSQL, current framework]. Start by reading the codebases and writing a phased migration plan with risks, then execute the first phase on a new branch with tests passing. Pause for my review before merging anything or running changes against any real database.\nOriginal source: https://dev.to/aws-builders/the-setup-is-the-strategy-how-i-orchestrated-a-product-migration-with-claude-code-b92",
+    "body_sha256": "2c9bff015354b83e86f9f11438c362e0a46d4650083d776262de6b6ac4885eee",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

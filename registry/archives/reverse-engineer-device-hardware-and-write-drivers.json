@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5b51f7e9077c1e71069d759aa4f7b4d993b8a7afa897d6a090d05bb6651cb9c4",
-      "publication": "reviewed_restatement_required"
+      "value": "A user points Claude at their own electronics to write drivers, such as one for an old printer that stopped working on a new macOS, with the user acting as its hands for diagnosis.",
+      "sha256": "5b51f7e9077c1e71069d759aa4f7b4d993b8a7afa897d6a090d05bb6651cb9c4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "1d30ab514137c12bd987abbd41b45f9f83252c068b8d6b6c84d4986606ea45ae",
-      "publication": "reviewed_restatement_required"
+      "value": "The commenter connected a device over USB to a computer and let Claude probe it. For an old printer that stopped working on a newer macOS, Claude wrote the drivers and had the user run physical checks: whether grayscale worked, how page 1 and 2 quality compared, unloading paper to expose an error, then reloading it to test duplex.",
+      "sha256": "1d30ab514137c12bd987abbd41b45f9f83252c068b8d6b6c84d4986606ea45ae"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "be1dbcb7e75891f9a256d1e56c279384839fce03561bb8758b942e800d6fad7d",
-      "publication": "reviewed_restatement_required"
+      "value": "The printer worked again with the new drivers. The commenter also says they did the same for remotes and a Rodecaster, though no details are given. This is one anecdote, not a tested method.",
+      "sha256": "be1dbcb7e75891f9a256d1e56c279384839fce03561bb8758b942e800d6fad7d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "fff440997767c2b7ea7dd834cdba60af45799abbe5ff9cab51b797553623c254",
-      "publication": "reviewed_restatement_required"
+      "value": "It mostly costs tokens, but the commenter says it works best on devices that aren't heavily locked down, such as phones.",
+      "sha256": "fff440997767c2b7ea7dd834cdba60af45799abbe5ff9cab51b797553623c254"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse engineer device hardware and write drivers\nA user points Claude at their own electronics to write drivers, such as one for an old printer that stopped working on a new macOS, with the user acting as its hands for diagnosis.\nDone with\nCL\nClaude\nWhat they did\nThe commenter connected a device over USB to a computer and let Claude probe it. For an old printer that stopped working on a newer macOS, Claude wrote the drivers and had the user run physical checks: whether grayscale worked, how page 1 and 2 quality compared, unloading paper to expose an error, then reloading it to test duplex.\nHow it went\nThe printer worked again with the new drivers. The commenter also says they did the same for remotes and a Rodecaster, though no details are given. This is one anecdote, not a tested method.\nWorth knowing\nIt mostly costs tokens, but the commenter says it works best on devices that aren't heavily locked down, such as phones.\nTry it yourself\nwith\nClaude\nCopy prompt\nI have an old [device, e.g. printer or scanner] that no longer works on [my OS and version]. Help me write a driver for it: tell me what to run or check on the device, I'll report back exactly what I see, and use that to work out how it communicates. Finished means working driver code, build and install steps, and a way for me to test that it works. Pause and ask before anything that could change the device's firmware or my system settings.\nOriginal source: https://news.ycombinator.com/item?id=50106153",
+    "body_sha256": "6d9676ed7eacaa7cca5755205061284697ced34597c0ebaaa3199ec9f84ca64a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

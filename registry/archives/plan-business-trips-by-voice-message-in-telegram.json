@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0354a14046ccfa3e1c107a34bf284ce74ce14c4a98b62074f61b7c6a4fa7488f",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow transcribes Telegram voice notes, extracts destinations, dates and lodging needs, and searches flights and hotels for business travel.",
+      "sha256": "0354a14046ccfa3e1c107a34bf284ce74ce14c4a98b62074f61b7c6a4fa7488f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d47f4f54084f8c396452ff78989db2d73ab7d3e0f32fbcf087aebd0be21c38bd",
-      "publication": "reviewed_restatement_required"
+      "value": "A Telegram bot triggers the n8n workflow and pulls out the text or audio. OpenAI transcribes voice messages, and DeepSeek extracts locations, dates and accommodation needs. SerpAPI then searches flights (airlines, times, prices) and hotels, with the check-out date calculated automatically. DeepSeek writes a structured plan with links and sends it back in Telegram.",
+      "sha256": "d47f4f54084f8c396452ff78989db2d73ab7d3e0f32fbcf087aebd0be21c38bd"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "70439443f90b63c2ba7f66b3122c77c5b8721e62f95800050991e954be05875b",
-      "publication": "reviewed_restatement_required"
+      "value": "The source describes the design and setup only. It gives no results, timings or accuracy figures. It says the prompts can be edited to change the output, and it does not report any testing.",
+      "sha256": "70439443f90b63c2ba7f66b3122c77c5b8721e62f95800050991e954be05875b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0f563548bfa52f60447feea1b75975bfd6b40cd16daf80c4e0f7e34556a823ce",
-      "publication": "reviewed_restatement_required"
+      "value": "You need Telegram, OpenAI, SerpAPI and DeepSeek credentials and an n8n instance with HTTPS for the webhook. The template is listed for $29.",
+      "sha256": "0f563548bfa52f60447feea1b75975bfd6b40cd16daf80c4e0f7e34556a823ce"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Plan business trips by voice message in Telegram\nAn n8n workflow transcribes Telegram voice notes, extracts destinations, dates and lodging needs, and searches flights and hotels for business travel.\nDone with\nN8\nn8n\nWhat they did\nA Telegram bot triggers the n8n workflow and pulls out the text or audio. OpenAI transcribes voice messages, and DeepSeek extracts locations, dates and accommodation needs. SerpAPI then searches flights (airlines, times, prices) and hotels, with the check-out date calculated automatically. DeepSeek writes a structured plan with links and sends it back in Telegram.\nHow it went\nThe source describes the design and setup only. It gives no results, timings or accuracy figures. It says the prompts can be edited to change the output, and it does not report any testing.\nWorth knowing\nYou need Telegram, OpenAI, SerpAPI and DeepSeek credentials and an n8n instance with HTTPS for the webhook. The template is listed for $29.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow where I send a Telegram voice note like 'I need to be in [city] from [date] to [date], hotel near [area]'. It should transcribe the audio, extract destination, dates and lodging needs, then search flights and hotels using [my preferred search API]. It's done when it replies in Telegram with the top 3 options of each; never book anything, only present choices.\nOriginal source: https://n8n.io/workflows/3087-travel-ai-agent-ai-powered-travel-planner/",
+    "body_sha256": "82c7d3dd35b28e9b5d1d7c0494b6bc86379806a833b7db98e6716c3a3cbcb707",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

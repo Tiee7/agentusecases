@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cf5eab40f7fb5e0d656b1a4fb0169c2b42ea9b25059a897194fe69da1ffcc454",
-      "publication": "reviewed_restatement_required"
+      "value": "Brian built a Hermes agent that watches Resy for openings at favorite NYC restaurants and books tables, but it had no rate limits and got his account suspended.",
+      "sha256": "cf5eab40f7fb5e0d656b1a4fb0169c2b42ea9b25059a897194fe69da1ffcc454"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b0965094038a0df8f0904d8f21d604a1e3851ec825ea96bb3d56eea3d6786af2",
-      "publication": "reviewed_restatement_required"
+      "value": "Brian spun up a Hermes subagent inside his personal agent Hannah (which used Obsidian as the brain and Telegram as the interface) to monitor Resy for openings at a few favorite NYC restaurants and book tables for date nights. The subagent ran checks on its own with no rate limits configured. It operated by repeatedly querying the site whenever it detected availability.",
+      "sha256": "b0965094038a0df8f0904d8f21d604a1e3851ec825ea96bb3d56eea3d6786af2"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "eeb40742881b5fdb6ef2a32c8f572ba14b8ce60afb3b91fcfc1f0f99be7bf543",
-      "publication": "reviewed_restatement_required"
+      "value": "The subagent secured openings effectively until Resy suspended the account for hammering their system and violating TOS. After repeated support requests he received a one-time reinstatement.",
+      "sha256": "eeb40742881b5fdb6ef2a32c8f572ba14b8ce60afb3b91fcfc1f0f99be7bf543"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "dcb71f1220ff66efb177e275944b8942e5c7b55026e95826c96e64926e382702",
-      "publication": "reviewed_restatement_required"
+      "value": "No rate limits were set on the subagent's Resy queries, which caused the immediate suspension.",
+      "sha256": "dcb71f1220ff66efb177e275944b8942e5c7b55026e95826c96e64926e382702"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor Resy and book date night tables\nBrian built a Hermes agent that watches Resy for openings at favorite NYC restaurants and books tables, but it had no rate limits and got his account suspended.\nDone with\nHA\nHermes Agent\nWhat they did\nBrian spun up a Hermes subagent inside his personal agent Hannah (which used Obsidian as the brain and Telegram as the interface) to monitor Resy for openings at a few favorite NYC restaurants and book tables for date nights. The subagent ran checks on its own with no rate limits configured. It operated by repeatedly querying the site whenever it detected availability.\nHow it went\nThe subagent secured openings effectively until Resy suspended the account for hammering their system and violating TOS. After repeated support requests he received a one-time reinstatement.\nWorth knowing\nNo rate limits were set on the subagent's Resy queries, which caused the immediate suspension.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nWatch Resy for openings at [list of restaurants] in [city] for [party size] on [days and times]. Check at a gentle rate of no more than once every [number] minutes to avoid getting my account blocked. When a table opens, message me with the details and book it only after I approve.\nOriginal source: https://x.com/bdistel/status/2089421994450170039",
+    "body_sha256": "069f8edc15f56ab7dc57ed80d091a4c1b4dd4c01ec0e0ab93578bdcac271ccea",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

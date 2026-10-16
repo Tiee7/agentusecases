@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d476204b4486824d0054e0e96835ae89d2e2b671451c073b2ffecbe85c3477d0",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude in Chrome runs weekly to scrape Substack ranking data into a dataset, and Cowork analyzes it and writes a weekly report.",
+      "sha256": "d476204b4486824d0054e0e96835ae89d2e2b671451c073b2ffecbe85c3477d0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "88d661fd97ff5c5eef57a7a6e16b5927d1473b06cf4d7c0cb6577c65b5b3a8a5",
-      "publication": "reviewed_restatement_required"
+      "value": "Frank Andrade prompts Claude in Chrome to scrape the first 250 rows of Reletter's Substack charts (rank, newsletter, date, free/paid) into a CSV, then converts that prompt into a task that runs every Tuesday. A Cowork task at 5:10 PM reads the saved folder and builds a spreadsheet of the biggest rank gains, losses and new entrants, for paid and free separately.",
+      "sha256": "88d661fd97ff5c5eef57a7a6e16b5927d1473b06cf4d7c0cb6577c65b5b3a8a5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2c8d63c4ae4a78f7c1d0a95236cea813ef5d40920c04e71093695820bca56726",
-      "publication": "reviewed_restatement_required"
+      "value": "Each week the scrape takes a couple of minutes, and Cowork drops the analysis spreadsheet into his folder. The source gives no accuracy checks or other figures.",
+      "sha256": "2c8d63c4ae4a78f7c1d0a95236cea813ef5d40920c04e71093695820bca56726"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "54fd377e52c2972d2dc56cb034b0b839eab351d66d02ce751ead5daa9ad75600",
-      "publication": "reviewed_restatement_required"
+      "value": "Scheduled tasks only run while the computer is awake and the Claude desktop app is open, and each run draws on your daily usage allowance.",
+      "sha256": "54fd377e52c2972d2dc56cb034b0b839eab351d66d02ce751ead5daa9ad75600"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Scrape weekly Substack rankings and write a report\nClaude in Chrome runs weekly to scrape Substack ranking data into a dataset, and Cowork analyzes it and writes a weekly report.\nDone with\nCH\nClaude in Chrome\nCW\nClaude Cowork\nWhat they did\nFrank Andrade prompts Claude in Chrome to scrape the first 250 rows of Reletter's Substack charts (rank, newsletter, date, free/paid) into a CSV, then converts that prompt into a task that runs every Tuesday. A Cowork task at 5:10 PM reads the saved folder and builds a spreadsheet of the biggest rank gains, losses and new entrants, for paid and free separately.\nHow it went\nEach week the scrape takes a couple of minutes, and Cowork drops the analysis spreadsheet into his folder. The source gives no accuracy checks or other figures.\nWorth knowing\nScheduled tasks only run while the computer is awake and the Claude desktop app is open, and each run draws on your daily usage allowance.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nGo to [ranking page URL, such as a Substack leaderboard for my category] and scrape the top [50] entries with rank, name, and any visible stats into a spreadsheet, adding a column for today's date. Append to the existing file at [file location] if it exists. Stop when the data is saved and tell me how many rows were added, so I can run the same job weekly.\nOriginal source: https://artificialcorner.com/p/claude-automates",
+    "body_sha256": "40c3e0fac6bc811e02b929424ba1ae45fa7e0ef36013587a1b9eb5c030258fe3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

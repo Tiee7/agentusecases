@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e20f65c5161af8e91fbd4c924c75b1e2ef37e265ad4d2878f51e60f3ea7bf2fa",
-      "publication": "reviewed_restatement_required"
+      "value": "The author uses Claude Code CLI with Sonnet to get the source of their 1991 386+ assembly game compiling again.",
+      "sha256": "e20f65c5161af8e91fbd4c924c75b1e2ef37e265ad4d2878f51e60f3ea7bf2fa"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "27e256a499c9be807a688281c886f724b8a6e892a9848ecadbb545f43faebd68",
-      "publication": "reviewed_restatement_required"
+      "value": "The author took the full source of an unpublished 1991 386+ assembly game and set up UASM, which is MASM-compatible, with DOSBox for running results. Using Claude Code CLI with Sonnet, they got the old build utilities compiling. They also asked the model to locate bugs mentioned in their own old code comments.",
+      "sha256": "27e256a499c9be807a688281c886f724b8a6e892a9848ecadbb545f43faebd68"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7bbb390f1fc0573a6a53ea8a46daa4bc9a48ab0940baee9d0c2361ccc5d46ce2",
-      "publication": "reviewed_restatement_required"
+      "value": "The picture converters and sprite extractor now compile and run in DOSBox, but the main game doesn't compile yet; the author expects a few more hours. Sonnet 4.6 immediately spotted a clash with a reserved name, incbin.",
+      "sha256": "7bbb390f1fc0573a6a53ea8a46daa4bc9a48ab0940baee9d0c2361ccc5d46ce2"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0d56bdd8cab40aca0f09790c0ceec01de4024bd38bf144c7e5aec2e8c85f3aa7",
-      "publication": "reviewed_restatement_required"
+      "value": "Old macro names may now be reserved words in modern assemblers; here a macro called incbin blocked UASM compilation until the model pointed it out.",
+      "sha256": "0d56bdd8cab40aca0f09790c0ceec01de4024bd38bf144c7e5aec2e8c85f3aa7"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Recompile a 1991 assembly PC game with Claude Code\nThe author uses Claude Code CLI with Sonnet to get the source of their 1991 386+ assembly game compiling again.\nDone with\nCC\nClaude Code\nWhat they did\nThe author took the full source of an unpublished 1991 386+ assembly game and set up UASM, which is MASM-compatible, with DOSBox for running results. Using Claude Code CLI with Sonnet, they got the old build utilities compiling. They also asked the model to locate bugs mentioned in their own old code comments.\nHow it went\nThe picture converters and sprite extractor now compile and run in DOSBox, but the main game doesn't compile yet; the author expects a few more hours. Sonnet 4.6 immediately spotted a clash with a reserved name, incbin.\nWorth knowing\nOld macro names may now be reserved words in modern assemblers; here a macro called incbin blocked UASM compilation until the model pointed it out.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have the source code of an old [language, e.g. 386 assembly] project at [path to folder] that I last built in [year]. Work out which assembler, linker and tools it needs, set up a way to build it on my [OS], and fix errors until it compiles and runs. Explain each change you make, and ask me before you delete or overwrite any original files.\nOriginal source: https://news.ycombinator.com/item?id=47689685",
+    "body_sha256": "31f4853ce66024aea7deeeae51f1d7c69786ef3333461e36b478ef8b08686d56",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

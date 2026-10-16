@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "16d94f7676150f0397c6fc6b5e63889b416d9e98a39e1e8cd943a64413991697",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n template agent with persistent memory runs a fantasy RPG over Telegram voice messages, narrating scenes, resolving dice rolls and saving state.",
+      "sha256": "16d94f7676150f0397c6fc6b5e63889b416d9e98a39e1e8cd943a64413991697"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ec8597a86b1a43f93fda319a25d4c45f3626c00902835d4678b125e7af33ba70",
-      "publication": "reviewed_restatement_required"
+      "value": "The player sends voice messages to a Telegram bot. Groq speech-to-text transcribes them, and an n8n agent loads the saved game state from memory. A strict system prompt sets the rules, turn flow and narration. When an action needs a dice roll, the agent waits for the player to authorize it, then rolls and resolves the outcome. State changes are emitted as structured data and saved. Groq text-to-speech voices the reply.",
+      "sha256": "ec8597a86b1a43f93fda319a25d4c45f3626c00902835d4678b125e7af33ba70"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "5217cb3bcd490c4ddec84116a44fc1c96130b619c2ed9c29e1bc3897c7044891",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no playtest results or numbers. It describes a working template for solo fantasy campaigns that keeps its state between turns.",
+      "sha256": "5217cb3bcd490c4ddec84116a44fc1c96130b619c2ed9c29e1bc3897c7044891"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "91feb6386db1e8c306713eca6f540cd086cb241c9dd0856a66aaa150abd17e64",
-      "publication": "reviewed_restatement_required"
+      "value": "You need a Groq API token (the free tier works) and a Telegram bot token.",
+      "sha256": "91feb6386db1e8c306713eca6f540cd086cb241c9dd0856a66aaa150abd17e64"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Play a voice-driven RPG with an AI Dungeon Master\nAn n8n template agent with persistent memory runs a fantasy RPG over Telegram voice messages, narrating scenes, resolving dice rolls and saving state.\nDone with\nN8\nn8n\nWhat they did\nThe player sends voice messages to a Telegram bot. Groq speech-to-text transcribes them, and an n8n agent loads the saved game state from memory. A strict system prompt sets the rules, turn flow and narration. When an action needs a dice roll, the agent waits for the player to authorize it, then rolls and resolves the outcome. State changes are emitted as structured data and saved. Groq text-to-speech voices the reply.\nHow it went\nThe source gives no playtest results or numbers. It describes a working template for solo fantasy campaigns that keeps its state between turns.\nWorth knowing\nYou need a Groq API token (the free tier works) and a Telegram bot token.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow where I play a [genre, e.g. fantasy] RPG with an AI Dungeon Master over Telegram voice messages. It should transcribe my voice, narrate the next scene, resolve any dice rolls, reply with audio, and save character and story state so the game continues across sessions. You're done when I can play two turns and the second turn remembers the first; start with a character named [name].\nOriginal source: https://n8n.io/workflows/11787-play-rpg-with-groq-dungeon-master-via-telegram-voice-messages/",
+    "body_sha256": "911049a0788b0f8cd82833fcfc2bcc371001ff4167a30684d448c1d64433a5d9",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

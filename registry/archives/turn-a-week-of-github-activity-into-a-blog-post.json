@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b3f0b3dab14ac81ba58a7e528b78a6fae172964dfd751e3cd5b2c16451a57ffd",
-      "publication": "reviewed_restatement_required"
+      "value": "A three-agent pipeline that drafts weekly posts from commit history and publishes to Notion and DEV.",
+      "sha256": "b3f0b3dab14ac81ba58a7e528b78a6fae172964dfd751e3cd5b2c16451a57ffd"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "c345823715e369fd67ddc30ed93b0b3dd9a7cefa5173165d5d9f309737a1b65d",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built DevNotion on Mastra, run by a Sunday GitHub Actions cron. A GraphQL call pulls the week's commits, PRs, issues, reviews and language stats with no LLM. Gemini then writes a first-person post, with a deterministic fallback if it fails. The publisher creates a DEV.to draft and a Notion planner page with tables.",
+      "sha256": "c345823715e369fd67ddc30ed93b0b3dd9a7cefa5173165d5d9f309737a1b65d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e66bbd6546cfe97a05710cd09a4bc61e5028fc79e6c07124f6547676bc7d30a1",
-      "publication": "reviewed_restatement_required"
+      "value": "It reliably produces a draft each week, which the author edits before publishing. The source gives no engagement figures. Gemini gave the best output among the models tried, including Ollama and Groq ones.",
+      "sha256": "e66bbd6546cfe97a05710cd09a4bc61e5028fc79e6c07124f6547676bc7d30a1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "23e412c0d579836665baaac060c22840bed058544f837fe5b12d65180e14fa36",
-      "publication": "reviewed_restatement_required"
+      "value": "Asking Gemini for native structured output added 20-40 seconds per call. Plain text with YAML frontmatter parsing was 3-4x faster, and Notion needs rate limiting.",
+      "sha256": "23e412c0d579836665baaac060c22840bed058544f837fe5b12d65180e14fa36"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn a week of GitHub activity into a blog post\nA three-agent pipeline that drafts weekly posts from commit history and publishes to Notion and DEV.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built DevNotion on Mastra, run by a Sunday GitHub Actions cron. A GraphQL call pulls the week's commits, PRs, issues, reviews and language stats with no LLM. Gemini then writes a first-person post, with a deterministic fallback if it fails. The publisher creates a DEV.to draft and a Notion planner page with tables.\nHow it went\nIt reliably produces a draft each week, which the author edits before publishing. The source gives no engagement figures. Gemini gave the best output among the models tried, including Ollama and Groq ones.\nWorth knowing\nAsking Gemini for native structured output added 20-40 seconds per call. Plain text with YAML frontmatter parsing was 3-4x faster, and Notion needs rate limiting.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a weekly workflow that pulls my commits and pull requests from [GitHub repo or username] for the past 7 days, has one step summarize the changes, a second draft a blog post in [tone], and a third format it for [Notion and DEV]. Save the output as a draft in Notion. Finished means I can review a draft each week, and the workflow must pause for my approval before publishing anything publicly.\nOriginal source: https://dev.to/yashksaini/i-built-a-3-agent-pipeline-that-turns-my-github-activity-into-weekly-blog-posts-on-notion-devto-1ndn",
+    "body_sha256": "987efd9769a06da03c1c457bb408a9bf9ab971e773824615da4454baef348dac",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

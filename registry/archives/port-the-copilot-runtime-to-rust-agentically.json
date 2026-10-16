@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f465c02b846840ae206e001dc0c7f8737cd01ddfaa494b4f751285a6f8a50bd7",
-      "publication": "reviewed_restatement_required"
+      "value": "Microsoft reportedly used agents to port its Copilot runtime to Rust for $120K, according to the headline.",
+      "sha256": "f465c02b846840ae206e001dc0c7f8737cd01ddfaa494b4f751285a6f8a50bd7"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3982d227c8e32092a5dd3775bd477e51dc61e9e81bc1b8d84d0882917b63f559",
-      "publication": "reviewed_restatement_required"
+      "value": "Microsoft used Copilot, driven by several LLMs picked for their strengths, to rewrite the TypeScript Copilot runtime in Rust one module at a time. The port was a direct replacement and did not restructure the runtime. On the 30,000-line session.ts, one session read the docs, spawned 15 child sessions in separate worktrees, and had them coordinate with each other.",
+      "sha256": "3982d227c8e32092a5dd3775bd477e51dc61e9e81bc1b8d84d0882917b63f559"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9c615ec5e4ff26fc887b3f560fd501d19a494c75648193739ded84fdd98d5ecf",
-      "publication": "reviewed_restatement_required"
+      "value": "Agents turned 430,000 lines of TypeScript into 800,000 lines of Rust over 14.5 weeks and 135+ releases. A benchmark ran 15.9x faster and memory fell from 1,383 MB to 126 MB, but a few dozen regressions appeared.",
+      "sha256": "9c615ec5e4ff26fc887b3f560fd501d19a494c75648193739ded84fdd98d5ecf"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4f88cc771f438fc6d1ae03a27e723dbd9159595be4501c15bd9bf50d177a7e1e",
-      "publication": "reviewed_restatement_required"
+      "value": "Cost was about $120K in tokens plus roughly three weeks of a developer's time. Compiling did not mean correct, so regressions still got through.",
+      "sha256": "4f88cc771f438fc6d1ae03a27e723dbd9159595be4501c15bd9bf50d177a7e1e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Port the Copilot runtime to Rust agentically\nMicrosoft reportedly used agents to port its Copilot runtime to Rust for $120K, according to the headline.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMicrosoft used Copilot, driven by several LLMs picked for their strengths, to rewrite the TypeScript Copilot runtime in Rust one module at a time. The port was a direct replacement and did not restructure the runtime. On the 30,000-line session.ts, one session read the docs, spawned 15 child sessions in separate worktrees, and had them coordinate with each other.\nHow it went\nAgents turned 430,000 lines of TypeScript into 800,000 lines of Rust over 14.5 weeks and 135+ releases. A benchmark ran 15.9x faster and memory fell from 1,383 MB to 126 MB, but a few dozen regressions appeared.\nWorth knowing\nCost was about $120K in tokens plus roughly three weeks of a developer's time. Compiling did not mean correct, so regressions still got through.\nTry it yourself\nwith\nCodex\nCopy prompt\nI want to port [component or module] in [repo path] from [source language] to Rust using an agentic workflow. Start by reading the code and proposing a phased porting plan with test checkpoints, and wait for my approval. Then port one module at a time, keeping the existing tests passing, and finish with a summary of what's ported, what's left, and an estimate of effort.\nOriginal source: https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
+    "body_sha256": "4f370e3c5457e68595ec3c094f6a34458408364e070414d4b2ac4537215d5126",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

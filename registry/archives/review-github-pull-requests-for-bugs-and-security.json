@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a65d664edf2569756e7eb4672c6fb4a467144ef88fe740e2d434334e177d6fd8",
-      "publication": "reviewed_restatement_required"
+      "value": "A Hermes tutorial reads a PR diff and returns a structured review of bugs, security and code quality, then turns it into a skill that watches repos and sends summaries.",
+      "sha256": "a65d664edf2569756e7eb4672c6fb4a467144ef88fe740e2d434334e177d6fd8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4c155dcfb05c4fd09a0e1c47470e7b7360010736b214a50817fc6836001cec2a",
-      "publication": "reviewed_restatement_required"
+      "value": "With the gh CLI authenticated and the Hermes gateway running, you first ask Hermes in chat to fetch a PR diff and review it. You then add a code-review skill with a severity-based output format, and teach it team conventions through memory. A cron job runs every 2 hours, reviews recent PRs in the listed repos, and delivers a summary to Telegram.",
+      "sha256": "4c155dcfb05c4fd09a0e1c47470e7b7360010736b214a50817fc6836001cec2a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "cd401ee22634a00725e7b06a221819c9d2b04de7599668a745463aecd2cefaa4",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no review results. It says the skill and remembered conventions make reviews less generic, and estimates 3-5 GitHub API requests per PR review.",
+      "sha256": "cd401ee22634a00725e7b06a221819c9d2b04de7599668a745463aecd2cefaa4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "cc06cac6f80c955e3c24bf12151fb443602f2f76bff35a6d0f7659b929dad886",
-      "publication": "reviewed_restatement_required"
+      "value": "Reviews posted back to GitHub appear under whichever account gh is authenticated as, and that token needs repo scope.",
+      "sha256": "cc06cac6f80c955e3c24bf12151fb443602f2f76bff35a6d0f7659b929dad886"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Review GitHub pull requests for bugs and security\nA Hermes tutorial reads a PR diff and returns a structured review of bugs, security and code quality, then turns it into a skill that watches repos and sends summaries.\nDone with\nHA\nHermes Agent\nWhat they did\nWith the gh CLI authenticated and the Hermes gateway running, you first ask Hermes in chat to fetch a PR diff and review it. You then add a code-review skill with a severity-based output format, and teach it team conventions through memory. A cron job runs every 2 hours, reviews recent PRs in the listed repos, and delivers a summary to Telegram.\nHow it went\nThe source gives no review results. It says the skill and remembered conventions make reviews less generic, and estimates 3-5 GitHub API requests per PR review.\nWorth knowing\nReviews posted back to GitHub appear under whichever account gh is authenticated as, and that token needs repo scope.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nReview the pull request at [PR URL] and return a structured report with sections for bugs, security issues, and code quality, each with file and line references and a severity. Then turn this into a reusable routine that checks [repo name] for new PRs every [interval] and sends me a short summary. Show me the routine and wait for approval before posting any comments on GitHub.\nOriginal source: https://hermes-agent.nousresearch.com/docs/guides/github-pr-review-agent",
+    "body_sha256": "c8747e35d77c306a4a28b1ba19dd1f96797b4d927c33779171581aba4c05cdab",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

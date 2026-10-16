@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c7cc749a99dba77b2282ffdb3b9d52415e0b7d894bce2b4053042144c026afd3",
-      "publication": "reviewed_restatement_required"
+      "value": "The author ran Claude's computer use in a Docker demo to book a flight from New Delhi to Mumbai; Claude opened Firefox and started the search, but the outcome isn't shown.",
+      "sha256": "c7cc749a99dba77b2282ffdb3b9d52415e0b7d894bce2b4053042144c026afd3"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8ffbc221d5208fd9845a1aa9a83afdefea5565341453db39e95d8230ba24f79c",
-      "publication": "reviewed_restatement_required"
+      "value": "The author ran Anthropic's computer use demo in Docker with an API key and prompted Claude to book a New Delhi to Mumbai flight for 1 December 2024. Claude opened Firefox and went to makemytrip.com. It stalled on a sign-in popup until the author added a prompt telling it to close it. It then filled in the cities and navigated the calendar.",
+      "sha256": "8ffbc221d5208fd9845a1aa9a83afdefea5565341453db39e95d8230ba24f79c"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1585132ea21a388cb7d26c0ec58894f515d24905e3cc6a73209c749397217ee6",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude did not complete the booking. It got through the search form, including cities and date, after the popup was cleared and an error was retried. The author calls this a beta limitation.",
+      "sha256": "1585132ea21a388cb7d26c0ec58894f515d24905e3cc6a73209c749397217ee6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c51bc598392b343a88eac2e87f9612fd665eb93d9d64f77bdcdc622994c3272a",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude struggled with the popup and needed a follow-up prompt from the author to get past it. Anthropic advises a sandboxed container and human sign-off on any financial transaction.",
+      "sha256": "c51bc598392b343a88eac2e87f9612fd665eb93d9d64f77bdcdc622994c3272a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book a New Delhi to Mumbai flight with computer use\nThe author ran Claude's computer use in a Docker demo to book a flight from New Delhi to Mumbai; Claude opened Firefox and started the search, but the outcome isn't shown.\nDone with\nCU\nClaude computer use\nWhat they did\nThe author ran Anthropic's computer use demo in Docker with an API key and prompted Claude to book a New Delhi to Mumbai flight for 1 December 2024. Claude opened Firefox and went to makemytrip.com. It stalled on a sign-in popup until the author added a prompt telling it to close it. It then filled in the cities and navigated the calendar.\nHow it went\nClaude did not complete the booking. It got through the search form, including cities and date, after the popup was cleared and an error was retried. The author calls this a beta limitation.\nWorth knowing\nClaude struggled with the popup and needed a follow-up prompt from the author to get past it. Anthropic advises a sandboxed container and human sign-off on any financial transaction.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nOpen a browser and search for flights from [origin city] to [destination city] on [date], and compare the [number] cheapest and the [number] fastest options in a short list with airline, times and price. Stop at the passenger details page without entering anything. Show me your top pick and wait for my go-ahead before filling in any details, paying or submitting anything.\nOriginal source: https://rittikajindal.medium.com/my-first-hand-experience-with-claudes-computer-use-when-ai-takes-control-a0f78445a6c7",
+    "body_sha256": "71b8c03e7d5e943694ad6cb79d34974a90ea5f26fbe71a3926cf3ffd2eec8c27",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

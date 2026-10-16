@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "70c19dbae08f8e968c8fc7448bd7a580c98259803d27817aef7257c8c9595b40",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code reads a trade log, writes and runs Python, pulls live Yahoo Finance data and exports Robinhood trade history to build an Excel portfolio tracker.",
+      "sha256": "70c19dbae08f8e968c8fc7448bd7a580c98259803d27817aef7257c8c9595b40"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ef546b4ab8fffa693e9ab79c2236ad61463fefd84f07cec3168bb10e4594a5e7",
-      "publication": "reviewed_restatement_required"
+      "value": "The author gives Claude Code the path to an Excel Trade_Log, the starting capital and the start date. He tells it to use Excel formulas rather than hardcoded values. Claude reads the log, pulls prices and company data through yfinance, and builds the workbook sheets. The user then checks that the formulas recalculate. Broker pulls (including Robinhood via robin_stocks) and a daily update script are follow-up prompts.",
+      "sha256": "ef546b4ab8fffa693e9ab79c2236ad61463fefd84f07cec3168bb10e4594a5e7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6932b563d21f152c4410366490fe058a7b5718a0308f760d88e3025c0ba50317",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide describes a workbook with a dashboard, positions, equity curve, risk metrics and stress tests. It gives no measured results. It admits Claude will sometimes hardcode values or misunderstand, and the user then has to tell it to fix them.",
+      "sha256": "6932b563d21f152c4410366490fe058a7b5718a0308f760d88e3025c0ba50317"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f28549b5427f7bb31d7fa7071957b3f3cf9f62b22a0e783a85fa2820100167a9",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Pro is $20/month, and heavy builds may hit usage limits (Max is $100). Write the output to a new file, and change a price to confirm the formulas update.",
+      "sha256": "f28549b5427f7bb31d7fa7071957b3f3cf9f62b22a0e783a85fa2820100167a9"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build an Excel portfolio tracker from trade logs\nClaude Code reads a trade log, writes and runs Python, pulls live Yahoo Finance data and exports Robinhood trade history to build an Excel portfolio tracker.\nDone with\nCC\nClaude Code\nWhat they did\nThe author gives Claude Code the path to an Excel Trade_Log, the starting capital and the start date. He tells it to use Excel formulas rather than hardcoded values. Claude reads the log, pulls prices and company data through yfinance, and builds the workbook sheets. The user then checks that the formulas recalculate. Broker pulls (including Robinhood via robin_stocks) and a daily update script are follow-up prompts.\nHow it went\nThe guide describes a workbook with a dashboard, positions, equity curve, risk metrics and stress tests. It gives no measured results. It admits Claude will sometimes hardcode values or misunderstand, and the user then has to tell it to fix them.\nWorth knowing\nClaude Pro is $20/month, and heavy builds may hit usage limits (Max is $100). Write the output to a new file, and change a price to confirm the formulas update.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a trade log at [file path, e.g. a CSV exported from my broker]. Write and run Python that reads it, pulls current prices from Yahoo Finance, and builds an Excel portfolio tracker showing each position's cost basis, current value, gain/loss, and allocation. Save it as [filename].xlsx in this folder and tell me how to refresh it. Don't log into any account or change anything; work only from the exported file.\nOriginal source: https://mispricedassets.substack.com/p/building-an-institutional-grade-portfolio",
+    "body_sha256": "076216f6597ff8a75d61dacebdea2daad3a73c92168d565e5dc042166270d90d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "664586b56fabbd19c45c050bb9a594f5ce5cdcae16252c56f8e0d99314873834",
-      "publication": "reviewed_restatement_required"
+      "value": "Answer.AI had Devin fetch an author's recent papers and research transcript summarization; it got stuck parsing HTML and returned generic results, rated a failure.",
+      "sha256": "664586b56fabbd19c45c050bb9a594f5ce5cdcae16252c56f8e0d99314873834"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d346e1fe33c0c266003f696db8636660f3a2bf073f1aeb1b8310c93f691fc090",
-      "publication": "reviewed_restatement_required"
+      "value": "Answer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, two tasks. One was grabbing an author's 25 most recent Google Scholar papers with Playwright, skipping paywalls. The other was researching transcript summarization with accurate timestamps. They then rated the results.",
+      "sha256": "d346e1fe33c0c266003f696db8636660f3a2bf073f1aeb1b8310c93f691fc090"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0190e6ccce9f32781eaf73c7b3c8b6a93a2855cef72d6066592ade2415232dad",
-      "publication": "reviewed_restatement_required"
+      "value": "Both failed. On the scraping task Devin got stuck parsing HTML and went to sleep. On the research task it returned related but unhelpful material and code that missed the core problem.",
+      "sha256": "0190e6ccce9f32781eaf73c7b3c8b6a93a2855cef72d6066592ade2415232dad"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8b74c7d992e9387a4955205b53514ba02be1f9833e4c639eacc1bea8647f022f",
-      "publication": "reviewed_restatement_required"
+      "value": "Across 20 tasks Devin had 14 failures and 3 successes. One research success, a Discord bot, worked because the goal was loose pseudocode-level guidance.",
+      "sha256": "8b74c7d992e9387a4955205b53514ba02be1f9833e4c639eacc1bea8647f022f"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Try Devin on research tasks (mostly failed)\nAnswer.AI had Devin fetch an author's recent papers and research transcript summarization; it got stuck parsing HTML and returned generic results, rated a failure.\nDone with\nDE\nDevin\nWhat they did\nAnswer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, two tasks. One was grabbing an author's 25 most recent Google Scholar papers with Playwright, skipping paywalls. The other was researching transcript summarization with accurate timestamps. They then rated the results.\nHow it went\nBoth failed. On the scraping task Devin got stuck parsing HTML and went to sleep. On the research task it returned related but unhelpful material and code that missed the core problem.\nWorth knowing\nAcross 20 tasks Devin had 14 failures and 3 successes. One research success, a Discord bot, worked because the goal was loose pseudocode-level guidance.\nTry it yourself\nwith\nDevin\nCopy prompt\nResearch [author or topic] by finding their [number] most recent papers and writing a one-paragraph summary of each, with links to the sources. Then give me a short overview of the main themes across them. If a page can't be read, tell me which one and why instead of guessing, and stop once you have a cited summary I can check.\nOriginal source: https://www.answer.ai/posts/2025-01-08-devin.html",
+    "body_sha256": "fc9f5e7b5253a78ac9fc4abc6c24c828880db4e206f9e9e6a909e1a4e2d1d421",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

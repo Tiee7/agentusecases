@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7be236b829261323bcd9939f1c2514d6ff836d6881748112a7896c74bde7fd6",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini detects objects and writes robot API code, and with 10 in-context demos an ALOHA robot packed boxes and folded a dress; voice commands became robot plans.",
+      "sha256": "a7be236b829261323bcd9939f1c2514d6ff836d6881748112a7896c74bde7fd6"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8b035879c87514bde3684f0d0b9b886c012d8e95ed66ab85d5ee4042b0b4cf3b",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini 2.5 was given a robot control API (detect object, get grasp pose, move/open/close gripper) and wrote Python plans zero-shot, such as putting a banana in a bowl. For ALOHA box packing and dress folding, 10 demonstrations of interleaved reasoning and actions were added to context. For voice, the same API calls were defined as Live API function-calling tools, with the camera feed streamed in.",
+      "sha256": "8b035879c87514bde3684f0d0b9b886c012d8e95ed66ab85d5ee4042b0b4cf3b"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e9de2494c94906577c2ecc0e33a94d4bdb10515178f3a42befa0604bd4595469",
-      "publication": "reviewed_restatement_required"
+      "value": "Gemini produced two feasible banana plans, one of which re-planned around the right arm's reach limit. ALOHA packed boxes and folded a dress from the in-context demos. The post gives no success rates.",
+      "sha256": "e9de2494c94906577c2ecc0e33a94d4bdb10515178f3a42befa0604bd4595469"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "833799e164be05014a42dc789972a1a5b9485de9bc347bff44b147bfb4b95588",
-      "publication": "reviewed_restatement_required"
+      "value": "The ALOHA setup is in an open-source Colab with example demonstrations. The Live API voice console is on GitHub, and Gemini Robotics-ER access requires a trusted tester waitlist.",
+      "sha256": "833799e164be05014a42dc789972a1a5b9485de9bc347bff44b147bfb4b95588"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Control robots with generated code and voice commands\nGemini detects objects and writes robot API code, and with 10 in-context demos an ALOHA robot packed boxes and folded a dress; voice commands became robot plans.\nDone with\nGE\nGemini\nWhat they did\nGemini 2.5 was given a robot control API (detect object, get grasp pose, move/open/close gripper) and wrote Python plans zero-shot, such as putting a banana in a bowl. For ALOHA box packing and dress folding, 10 demonstrations of interleaved reasoning and actions were added to context. For voice, the same API calls were defined as Live API function-calling tools, with the camera feed streamed in.\nHow it went\nGemini produced two feasible banana plans, one of which re-planned around the right arm's reach limit. ALOHA packed boxes and folded a dress from the in-context demos. The post gives no success rates.\nWorth knowing\nThe ALOHA setup is in an open-source Colab with example demonstrations. The Live API voice console is on GitHub, and Gemini Robotics-ER access requires a trusted tester waitlist.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me build a simulated robot arm controller in [simulator or language]. Use a vision model to detect objects in [image or camera feed], then write code that calls my robot API [API description] to [task, e.g. pack items into a box]. Run it in simulation only, and show me the generated code before anything is run on real hardware. Stop when the task succeeds in simulation three times in a row.\nOriginal source: https://developers.googleblog.com/gemini-25-for-robotics-and-embodied-intelligence/",
+    "body_sha256": "70208f7ad4a46adb549ce9ad9d3eacec23a280480f6cca10f4d20db50389073f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

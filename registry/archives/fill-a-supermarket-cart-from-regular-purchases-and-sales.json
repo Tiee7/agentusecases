@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0ad810fe5976019b3ff3bf02df019f2c1491edb776c7adeb9075129175d9b8b8",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer built a Claude Code skill using Silpo's MCP server to re-add usual groceries, check sales and fill the real cart within a budget, leaving checkout to the human.",
+      "sha256": "0ad810fe5976019b3ff3bf02df019f2c1491edb776c7adeb9075129175d9b8b8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e891387b111a41105cdbbec470720bd922527c4b65870e803cb2dde59edfa3e3",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer wrote silpo-agent-cli, a terminal CLI and Claude Code skill that talks to Silpo's official MCP server. You give Claude a plain-language instruction, such as reordering usual groceries, swapping in a sale brand and staying under 1500 UAH. Claude reads purchase history, weighs costs, checks stock and fills the real cart. It stops at a ready cart, and the human handles checkout, delivery address and payment.",
+      "sha256": "e891387b111a41105cdbbec470720bd922527c4b65870e803cb2dde59edfa3e3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ddf95723e0bf214379034139a8b1d27d02c49cdfcd6e76be9b6699a960e98ca0",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no measured results. It says weekly shopping is about 80% repeat purchases, and re-adding them by hand takes 15–20 minutes. It includes a demo GIF and video but no test data.",
+      "sha256": "ddf95723e0bf214379034139a8b1d27d02c49cdfcd6e76be9b6699a960e98ca0"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d40b9aef57c0146d454fb1764066c893f90b5c52b1c324b8f37c446751a89aed",
-      "publication": "reviewed_restatement_required"
+      "value": "Checkout, address and payment are deliberately left to the user, so the cart still needs your review. Install with pip or run it through uvx.",
+      "sha256": "d40b9aef57c0146d454fb1764066c893f90b5c52b1c324b8f37c446751a89aed"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill a supermarket cart from regular purchases and sales\nA developer built a Claude Code skill using Silpo's MCP server to re-add usual groceries, check sales and fill the real cart within a budget, leaving checkout to the human.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer wrote silpo-agent-cli, a terminal CLI and Claude Code skill that talks to Silpo's official MCP server. You give Claude a plain-language instruction, such as reordering usual groceries, swapping in a sale brand and staying under 1500 UAH. Claude reads purchase history, weighs costs, checks stock and fills the real cart. It stops at a ready cart, and the human handles checkout, delivery address and payment.\nHow it went\nThe source gives no measured results. It says weekly shopping is about 80% repeat purchases, and re-adding them by hand takes 15–20 minutes. It includes a demo GIF and video but no test data.\nWorth knowing\nCheckout, address and payment are deliberately left to the user, so the cart still needs your review. Install with pip or run it through uvx.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a skill that connects to [supermarket]'s MCP server, re-adds my usual groceries from [list or past orders], checks current sales for them, and fills the real cart within a budget of [amount]. Suggest cheaper swaps where there are sales but ask me before swapping. Stop when the cart is filled and show me the cart and total; do not check out.\nOriginal source: https://dev.to/mit9/real-world-agentic-e-commerce-rebuilding-my-grocery-cart-with-claude-and-mcp-3b82",
+    "body_sha256": "57eae48e76673fa6715ce4656254f854d4e39a51165c44e6971649169a726afe",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

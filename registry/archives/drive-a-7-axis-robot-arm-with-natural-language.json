@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "392bb71a0e86ddfc0df6fa6bfeaee13bbb7d44dd0ca03eaab408c1d67fe3f19b",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenClaw is taught a skill and rules for the NERO arm, then writes and runs Python control scripts from plain-language movement requests.",
+      "sha256": "392bb71a0e86ddfc0df6fa6bfeaee13bbb7d44dd0ca03eaab408c1d67fe3f19b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "85a958fd6707838c000a2f511b6accb88defc959e43baf59315c7d6a0dc627e0",
-      "publication": "reviewed_restatement_required"
+      "value": "After installing OpenClaw (the article suggests the Qwen model), the author adds a skill folder holding a skill file and an API reference for the pyAgxArm SDK. These set rules for connecting over CAN, enabling the arm before switching modes, units, and waiting for each motion to finish. OpenClaw then generates Python scripts from plain-language movement requests.",
+      "sha256": "85a958fd6707838c000a2f511b6accb88defc959e43baf59315c7d6a0dc627e0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ddc0f9044b61ca0c773b428f60fb21fa00dd337a0349f6beda81e8fcfc529205",
-      "publication": "reviewed_restatement_required"
+      "value": "The article is a setup walkthrough and a demo video link. It reports no measured results, success rates, or example prompts with outputs.",
+      "sha256": "ddc0f9044b61ca0c773b428f60fb21fa00dd337a0349f6beda81e8fcfc529205"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0a83d1a5f315ef30b2410587f04cfbd85f97745896529fd90b894c2f400cf0f1",
-      "publication": "reviewed_restatement_required"
+      "value": "The skill only generates code. You must set up CAN, install pyAgxArm and power the arm yourself, and the skill advises clearing the workspace and testing with small, slow moves first.",
+      "sha256": "0a83d1a5f315ef30b2410587f04cfbd85f97745896529fd90b894c2f400cf0f1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Drive a 7-axis robot arm with natural language\nOpenClaw is taught a skill and rules for the NERO arm, then writes and runs Python control scripts from plain-language movement requests.\nDone with\nOC\nOpenClaw\nWhat they did\nAfter installing OpenClaw (the article suggests the Qwen model), the author adds a skill folder holding a skill file and an API reference for the pyAgxArm SDK. These set rules for connecting over CAN, enabling the arm before switching modes, units, and waiting for each motion to finish. OpenClaw then generates Python scripts from plain-language movement requests.\nHow it went\nThe article is a setup walkthrough and a demo video link. It reports no measured results, success rates, or example prompts with outputs.\nWorth knowing\nThe skill only generates code. You must set up CAN, install pyAgxArm and power the arm yourself, and the skill advises clearing the workspace and testing with small, slow moves first.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI have a [robot arm model] with an SDK at [SDK docs link or path]. Read the docs and write a skill file with the safety rules: [joint limits, speed cap, workspace bounds]. Then, when I ask for a movement in plain language, write a Python script to do it and show me the script before running it on the arm. Finish when you can complete [simple test move, e.g. move to home position and back] safely.\nOriginal source: https://www.hackster.io/agilexrobotics/controlling-the-nero-robotic-arm-with-openclaw-6f5b94",
+    "body_sha256": "1d5bc3fdd18c75923d83e1a197e1418aea5626224934ec9ba4942d5724c0726e",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

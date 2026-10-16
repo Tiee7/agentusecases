@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "bd4a3b754ccfcf5b9a7496595ead1871e0b779786226693ca1a8c41b93bd21f4",
-      "publication": "reviewed_restatement_required"
+      "value": "An in-browser copilot fills PDF form fields from data sources or user input, helps with foreign-language forms, and explains contract clauses before signing.",
+      "sha256": "bd4a3b754ccfcf5b9a7496595ead1871e0b779786226693ca1a8c41b93bd21f4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "85b4a6bf84816927e742c17f1fd2f0f489bb9f9b6a47e86d81234c3e2778750e",
-      "publication": "reviewed_restatement_required"
+      "value": "The copilot runs inside a browser-based PDF editor and uses LLM tool calling to fill form fields. It can draw values from existing data sources such as a CRM or EHR through MCP/RAG, or from what the user types. Each change appears live in the editor, and the user can correct any field with one click. The LLM is bring-your-own, local or hosted.",
+      "sha256": "85b4a6bf84816927e742c17f1fd2f0f489bb9f9b6a47e86d81234c3e2778750e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ce8116f8011679ea41b27c3132bf77ee8e32c9311b15712d8cab6fca9c223155",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no metrics. The author says a commenter found a bug where mangled form labels sent to the LLM put values in wrong fields, and that it is now fixed.",
+      "sha256": "ce8116f8011679ea41b27c3132bf77ee8e32c9311b15712d8cab6fca9c223155"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fd3b6d19941c31a719fd6c60c8c9ec8ab625409ff5cc3f31cb329d9ad42ef1a",
-      "publication": "reviewed_restatement_required"
+      "value": "Check that the form labels passed to the LLM are clean; mangled labels caused values to land in the wrong fields.",
+      "sha256": "8fd3b6d19941c31a719fd6c60c8c9ec8ab625409ff5cc3f31cb329d9ad42ef1a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill PDF forms with an AI copilot using tool calling\nAn in-browser copilot fills PDF form fields from data sources or user input, helps with foreign-language forms, and explains contract clauses before signing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe copilot runs inside a browser-based PDF editor and uses LLM tool calling to fill form fields. It can draw values from existing data sources such as a CRM or EHR through MCP/RAG, or from what the user types. Each change appears live in the editor, and the user can correct any field with one click. The LLM is bring-your-own, local or hosted.\nHow it went\nThe source gives no metrics. The author says a commenter found a bug where mangled form labels sent to the LLM put values in wrong fields, and that it is now fixed.\nWorth knowing\nCheck that the form labels passed to the LLM are clean; mangled labels caused values to land in the wrong fields.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nHelp me fill out the PDF form at [URL or file] using the details I give you: [name, address, other info]. If the form is in [language], translate each field for me, and flag any contract clause I should understand before signing. Pause and show me every filled field before I sign or submit anything.\nOriginal source: https://news.ycombinator.com/item?id=47995318",
+    "body_sha256": "b944f26b4bea48d2db5fbb1e14338b757a362f5855363f6f3404057fb849611f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "69a79158f2e6ab54d222c2055e0c561f91fe27124fe7b9c45e9a6aab7b27161e",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code wrote ~2,400 lines of C++ firmware for an ESP32 e-ink fridge magnet shopping list synced with a phone web app, now used by the family.",
+      "sha256": "69a79158f2e6ab54d222c2055e0c561f91fe27124fe7b9c45e9a6aab7b27161e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "fe1e00a2ca88e9adcc7ac1e8793c5bcd79596085a35656d6cac9c451470e55dc",
-      "publication": "reviewed_restatement_required"
+      "value": "The repo holds about 2,400 lines of C++ firmware for the M5Stack PaperMono, an ESP32-S3 with an e-paper touchscreen. A small FastAPI and SQLite server sits between the device and a phone web UI. The device syncs over Wi-Fi hourly, on tap, and after edits. The server can optionally ask the Claude Code CLI to file new items by aisle.",
+      "sha256": "fe1e00a2ca88e9adcc7ac1e8793c5bcd79596085a35656d6cac9c451470e55dc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "879d35512c7779b7869d97b403db521dd1a54e603d5d7a75bbfe7a2343e5cbec",
-      "publication": "reviewed_restatement_required"
+      "value": "It works as a fridge shopping list grouped by aisle, with offline use and queued edits. The README calls it a personal project running on one device at home, tested only on the C153 model.",
+      "sha256": "879d35512c7779b7869d97b403db521dd1a54e603d5d7a75bbfe7a2343e5cbec"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ccba15dd023021b6ceabb7b2f055e3ee3d56050f8a2155c817067ad9bf65424b",
-      "publication": "reviewed_restatement_required"
+      "value": "Wi-Fi credentials are compiled into the firmware and the server has no authentication, so keep it on your LAN. Back up the device flash before flashing, because it holds the unit's calibration data.",
+      "sha256": "ccba15dd023021b6ceabb7b2f055e3ee3d56050f8a2155c817067ad9bf65424b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build e-ink fridge shopping list firmware\nClaude Code wrote ~2,400 lines of C++ firmware for an ESP32 e-ink fridge magnet shopping list synced with a phone web app, now used by the family.\nDone with\nCC\nClaude Code\nWhat they did\nThe repo holds about 2,400 lines of C++ firmware for the M5Stack PaperMono, an ESP32-S3 with an e-paper touchscreen. A small FastAPI and SQLite server sits between the device and a phone web UI. The device syncs over Wi-Fi hourly, on tap, and after edits. The server can optionally ask the Claude Code CLI to file new items by aisle.\nHow it went\nIt works as a fridge shopping list grouped by aisle, with offline use and queued edits. The README calls it a personal project running on one device at home, tested only on the C153 model.\nWorth knowing\nWi-Fi credentials are compiled into the firmware and the server has no authentication, so keep it on your LAN. Back up the device flash before flashing, because it holds the unit's calibration data.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite firmware in C++ for an [ESP32 board with e-ink display model] that shows a shared shopping list and syncs with a simple web app I can use from my phone. Build the project, explain how to wire and flash it, and include a way to add and check off items. Stop when the code compiles and I have step-by-step flashing instructions.\nOriginal source: https://github.com/seamusc/papermono-shopping-list",
+    "body_sha256": "c90f149f9c83d29c16707455ceaf65710bfa405a0e872a98d7dfd60ade8b1846",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

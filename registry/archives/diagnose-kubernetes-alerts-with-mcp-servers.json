@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ef343da2706d51ddb14001b72895c06d0bdb05c266abba6b27b774132400ebc0",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n agent triggered by Alertmanager queries Kubernetes, Grafana and other MCP servers and posts a diagnostic report with root-cause hypotheses in a Mattermost thread.",
+      "sha256": "ef343da2706d51ddb14001b72895c06d0bdb05c266abba6b27b774132400ebc0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "34a2b0895c82da7df2d9eb5ed7e3ff687094286bd7f6e6cb9e269f5fe7b6ef0b",
-      "publication": "reviewed_restatement_required"
+      "value": "An Alertmanager webhook starts an n8n workflow. It deduplicates alerts over 48 hours and fetches the triggering PromQL expression from the Prometheus Rules API. An AI agent then investigates through Kubernetes, Grafana, DigitalOcean and GitHub MCP servers, plus a Qdrant store of internal docs. It is read-only. The workflow finds the original Mattermost alert post and replies in its thread.",
+      "sha256": "34a2b0895c82da7df2d9eb5ed7e3ff687094286bd7f6e6cb9e269f5fe7b6ef0b"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "245bc9dd52ae697f891daa56e15b68106797efdd9aaa6d55a2ccfa7978e759ea",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no measured results. It describes a report with a summary, an event timeline, up to two root-cause hypotheses and troubleshooting steps. The author is still weighing extra data sources, such as database stats and pipeline status.",
+      "sha256": "245bc9dd52ae697f891daa56e15b68106797efdd9aaa6d55a2ccfa7978e759ea"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "09184c4c16f020bd839cd130303d7b25e040c720c4fee496b058c1cabf4da756",
-      "publication": "reviewed_restatement_required"
+      "value": "Limit tool retries to one per failed call to avoid loops, and strip noisy labels like job and instance from the prompt. You must configure your own MCP endpoints and credentials.",
+      "sha256": "09184c4c16f020bd839cd130303d7b25e040c720c4fee496b058c1cabf4da756"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Diagnose Kubernetes alerts with MCP servers\nAn n8n agent triggered by Alertmanager queries Kubernetes, Grafana and other MCP servers and posts a diagnostic report with root-cause hypotheses in a Mattermost thread.\nDone with\nN8\nn8n\nWhat they did\nAn Alertmanager webhook starts an n8n workflow. It deduplicates alerts over 48 hours and fetches the triggering PromQL expression from the Prometheus Rules API. An AI agent then investigates through Kubernetes, Grafana, DigitalOcean and GitHub MCP servers, plus a Qdrant store of internal docs. It is read-only. The workflow finds the original Mattermost alert post and replies in its thread.\nHow it went\nThe source gives no measured results. It describes a report with a summary, an event timeline, up to two root-cause hypotheses and troubleshooting steps. The author is still weighing extra data sources, such as database stats and pipeline status.\nWorth knowing\nLimit tool retries to one per failed call to avoid loops, and strip noisy labels like job and instance from the prompt. You must configure your own MCP endpoints and credentials.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives Alertmanager webhooks and starts an AI agent connected to my MCP servers for [Kubernetes, Grafana, other tools]. The agent should investigate the alert read-only, then post a diagnostic report with evidence and ranked root-cause hypotheses as a thread reply in [Mattermost channel]. You're done when a sample alert produces a report; it must not change anything in the cluster, and show me the report before the first post.\nOriginal source: https://community.n8n.io/t/ai-alert-assistant-automated-incident-diagnostics-with-5-mcp-servers-alertmanager-ai-agent-mattermost/285369",
+    "body_sha256": "acb6f6e33eb8ea155664788d1006f816fdf0ef70e16a125b406e65867ab0e707",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

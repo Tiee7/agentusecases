@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "798673146e67517ca248545bfcff145e4e60faf8ca5d552b0493676e8674ec89",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent runs a transaction flow, creates Stripe checkout links, verifies payment before delivering a service, and asks the owner on Telegram to approve refunds or disputes.",
+      "sha256": "798673146e67517ca248545bfcff145e4e60faf8ca5d552b0493676e8674ec89"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "113eb2bdd2e32ce856681895bc95bd55a7ed8db18190858c3aee2bf3685e4052",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent follows a fixed lifecycle: explore, propose, transact, deliver, complete. It generates Stripe checkout links for a service and checks that payment went through before delivering. It runs locally with no UI or hosting, serving customers through messaging platforms or a web widget. For refunds or disputes it messages the owner on Telegram and acts on their reply.",
+      "sha256": "113eb2bdd2e32ce856681895bc95bd55a7ed8db18190858c3aee2bf3685e4052"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "35b774eec1d172346146842fb74c3859f7e6b9f686ae1e076182edb43b6914d7",
-      "publication": "reviewed_restatement_required"
+      "value": "The source is a short feature description from the project's author and reports no results, numbers, or customer outcomes. It says the aim is to make this easy for non-technical business owners.",
+      "sha256": "35b774eec1d172346146842fb74c3859f7e6b9f686ae1e076182edb43b6914d7"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "0001b1be2f6bac7a6434fb990c186b5b3690f839f197f23274cafe82fe4617c4",
-      "publication": "reviewed_restatement_required"
+      "value": "Refunds and disputes wait on the owner's Telegram reply, so someone must be reachable to approve them.",
+      "sha256": "0001b1be2f6bac7a6434fb990c186b5b3690f839f197f23274cafe82fe4617c4"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Sell services through an agent that takes payment and delivers\nAn agent runs a transaction flow, creates Stripe checkout links, verifies payment before delivering a service, and asks the owner on Telegram to approve refunds or disputes.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent follows a fixed lifecycle: explore, propose, transact, deliver, complete. It generates Stripe checkout links for a service and checks that payment went through before delivering. It runs locally with no UI or hosting, serving customers through messaging platforms or a web widget. For refunds or disputes it messages the owner on Telegram and acts on their reply.\nHow it went\nThe source is a short feature description from the project's author and reports no results, numbers, or customer outcomes. It says the aim is to make this easy for non-technical business owners.\nWorth knowing\nRefunds and disputes wait on the owner's Telegram reply, so someone must be reachable to approve them.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that takes a customer request for [service I sell], creates a Stripe checkout link for [price], and waits for payment confirmation before delivering [deliverable]. If a refund or dispute comes in, send me a Telegram message with the details and wait for my approval before acting. Finish with a test run using Stripe test mode, and don't enable live payments until I confirm.\nOriginal source: https://news.ycombinator.com/item?id=48075299",
+    "body_sha256": "ea8d3df7c06dfb4374e5c965a085c6d66b718afee6183ad1e5cacb4486e5595f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

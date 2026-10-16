@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c2bc22dbbf4861660a6009e8ac26167df1d5a4a878a9686ae4f57ab5c23c3c46",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent read 25 open jobs each at five companies and measured how long each had been posted, e.g. 21 of 25 at Figma were 60+ days old.",
+      "sha256": "c2bc22dbbf4861660a6009e8ac26167df1d5a4a878a9686ae4f57ab5c23c3c46"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e23b410c3a70e2ca69d37205238de750465c8a67aad8ba777e9b1ec6ac8ae7d1",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent used a tool called Company Jobs Finder. It found each company's Greenhouse board, read the public API's first-published date for the first 25 listed jobs at Stripe, Airbnb, Figma, Databricks and Anthropic, and computed each posting's age. It needs no key. Filters for keyword, location and remote work are available.",
+      "sha256": "e23b410c3a70e2ca69d37205238de750465c8a67aad8ba777e9b1ec6ac8ae7d1"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1906619d465d0cb5223719861632df2f87db9575d8ecc4be487cca804b0b9ea1",
-      "publication": "reviewed_restatement_required"
+      "value": "Figma had 21 of 25 postings at 60+ days, with a median age of 269 days. Stripe had 7, Airbnb 8, Databricks 13 and Anthropic 9. Databricks had the oldest posting, at 1,031 days.",
+      "sha256": "1906619d465d0cb5223719861632df2f87db9575d8ecc4be487cca804b0b9ea1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "345b463455abc103f690fc7e7c697e787da132838bd54c819a9addcc3fe03ec6",
-      "publication": "reviewed_restatement_required"
+      "value": "The sample is only the first 25 jobs in each board's own order, and reposts reset a posting's age, so old postings don't prove ghost jobs.",
+      "sha256": "345b463455abc103f690fc7e7c697e787da132838bd54c819a9addcc3fe03ec6"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Measure how long jobs stay open at tech companies\nAn agent read 25 open jobs each at five companies and measured how long each had been posted, e.g. 21 of 25 at Figma were 60+ days old.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent used a tool called Company Jobs Finder. It found each company's Greenhouse board, read the public API's first-published date for the first 25 listed jobs at Stripe, Airbnb, Figma, Databricks and Anthropic, and computed each posting's age. It needs no key. Filters for keyword, location and remote work are available.\nHow it went\nFigma had 21 of 25 postings at 60+ days, with a median age of 269 days. Stripe had 7, Airbnb 8, Databricks 13 and Anthropic 9. Databricks had the oldest posting, at 1,031 days.\nWorth knowing\nThe sample is only the first 25 jobs in each board's own order, and reposts reset a posting's age, so old postings don't prove ghost jobs.\nTry it yourself\nwith\nClaude\nCopy prompt\nFor each of these companies: [company names], look at their careers pages and sample about [25] open roles. Find out how long each role has been posted and report what share are older than [60] days. Give me a table per company and one sentence on what the numbers suggest. Stop once every company has a sample, and note any company where posting dates were not available.\nOriginal source: https://tools.openkrill.app/blog/greenhouse-open-jobs-and-job-age",
+    "body_sha256": "55ebeac7c9c64b4bbf4036ae8d63376f542ef5ca045a78eb9f9e6445fdccde7f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

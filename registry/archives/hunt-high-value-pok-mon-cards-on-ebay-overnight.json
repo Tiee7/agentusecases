@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "856827daa1975be4258357056961d149496dfff50467f41929fbf5478ee6b9c0",
-      "publication": "reviewed_restatement_required"
+      "value": "An engineer built a Codex agent that browses eBay listings, extracts PSA certificate numbers and cross-references known prices while he sleeps.",
+      "sha256": "856827daa1975be4258357056961d149496dfff50467f41929fbf5478ee6b9c0"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a26375c507851ed1e46173adb5b9bcdbe04353b136bc0fc9d54560b44b67baf5",
-      "publication": "reviewed_restatement_required"
+      "value": "Alessio Finelli gave the Codex agent a sparse skill file with rules on target cards, batch size of 5, and grading companies. The agent browses eBay listings on its own, extracts PSA certificate numbers, cross-references known prices, and flags underpriced high-value cards. He steps in only to review flags for his physical shop.",
+      "sha256": "a26375c507851ed1e46173adb5b9bcdbe04353b136bc0fc9d54560b44b67baf5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "106d048e031b2072f6cd3bc4a33d60026afa96faeb55b460ce43960720b69305",
-      "publication": "reviewed_restatement_required"
+      "value": "It works as his power buyer, surfacing underpriced cards before others see them.",
+      "sha256": "106d048e031b2072f6cd3bc4a33d60026afa96faeb55b460ce43960720b69305"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "e0f48525c89b184017d5632d7afff649f84c7178e396674ed9961fd421903088",
-      "publication": "reviewed_restatement_required"
+      "value": "Limit batches to 5 listings to avoid eBay bans; run on a cloud VPS.",
+      "sha256": "e0f48525c89b184017d5632d7afff649f84c7178e396674ed9961fd421903088"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Hunt high-value Pokémon cards on eBay overnight\nAn engineer built a Codex agent that browses eBay listings, extracts PSA certificate numbers and cross-references known prices while he sleeps.\nDone with\nCX\nCodex\nWhat they did\nAlessio Finelli gave the Codex agent a sparse skill file with rules on target cards, batch size of 5, and grading companies. The agent browses eBay listings on its own, extracts PSA certificate numbers, cross-references known prices, and flags underpriced high-value cards. He steps in only to review flags for his physical shop.\nHow it went\nIt works as his power buyer, surfacing underpriced cards before others see them.\nWorth knowing\nLimit batches to 5 listings to avoid eBay bans; run on a cloud VPS.\nTry it yourself\nwith\nCodex\nCopy prompt\nWrite and run an agent that browses [marketplace, e.g. eBay] listings for [item type, e.g. graded Pokémon cards] under [max price], extracts each listing's [certificate or serial number], and compares it to prices in [price source or file]. Save listings that look underpriced by at least [percent]% to a file called [output file] with the link, price, and reference price. Stop after running it once on [number] listings and show me the results and how to schedule it overnight. Don't buy, bid, or message any sellers.\nOriginal source: https://x.com/Scantor22/status/2078497019446894953",
+    "body_sha256": "f3379e1c7d0b6678b2883fe7ef192f18a08e96ff4e445c79ffe9e8a6012581cb",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

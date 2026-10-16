@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cabd1df315ed4f325bfec0aa5b2786958a06dfac9f538fba17a68f83206a60ca",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster is experimenting with an LLM agent that reads 10-Ks and handles normalized earnings, ROIC, owner earnings and a rough reverse DCF.",
+      "sha256": "cabd1df315ed4f325bfec0aa5b2786958a06dfac9f538fba17a68f83206a60ca"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4069d517d28b195efefca37474ae002a4c1277b8154786e752df8534879d4034",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster was testing an LLM investing assistant that read 10-Ks and tried to produce normalized earnings, ROIC, owner earnings, and a rough reverse DCF. In the thread, they say they first used EDGAR/XBRL Companyfacts, then easier APIs, but ran into custom tags, footnotes, and backtest leakage; commenters pushed a workflow that combines structured headline figures with retrieval over filing text, stores source passages and year-by-year claims outside the chat, and leaves the human to verify tricky comparability issues.",
+      "sha256": "4069d517d28b195efefca37474ae002a4c1277b8154786e752df8534879d4034"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a1fc5ae5f03ed3f55128ce6c820e5177dd71bd7d387a5600ca51d8ac968fe20b",
-      "publication": "reviewed_restatement_required"
+      "value": "The source reports no performance results, only problems and partial fixes: feeding whole filing histories hit context limits, chunking led to missed evidence and invented facts, and backtests looked unrealistically good because of restatements and filing lag. The poster’s takeaway was that retrieval with citations, sanity checks, and point-in-time inputs made the setup more trustworthy but did not solve cross-company footnote comparisons.",
+      "sha256": "a1fc5ae5f03ed3f55128ce6c820e5177dd71bd7d387a5600ca51d8ac968fe20b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "aa193582c59416b1aa38ea4081bbba98e61fd681ab671e02baeabf0bb03c01cb",
-      "publication": "reviewed_restatement_required"
+      "value": "Most practical advice was about avoiding false confidence: process filings once, keep extracted structure and passage locations, and only run new filings afterward to control cost.",
+      "sha256": "aa193582c59416b1aa38ea4081bbba98e61fd681ab671e02baeabf0bb03c01cb"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze 10-Ks for value investing\nThe poster is experimenting with an LLM agent that reads 10-Ks and handles normalized earnings, ROIC, owner earnings and a rough reverse DCF.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster was testing an LLM investing assistant that read 10-Ks and tried to produce normalized earnings, ROIC, owner earnings, and a rough reverse DCF. In the thread, they say they first used EDGAR/XBRL Companyfacts, then easier APIs, but ran into custom tags, footnotes, and backtest leakage; commenters pushed a workflow that combines structured headline figures with retrieval over filing text, stores source passages and year-by-year claims outside the chat, and leaves the human to verify tricky comparability issues.\nHow it went\nThe source reports no performance results, only problems and partial fixes: feeding whole filing histories hit context limits, chunking led to missed evidence and invented facts, and backtests looked unrealistically good because of restatements and filing lag. The poster’s takeaway was that retrieval with citations, sanity checks, and point-in-time inputs made the setup more trustworthy but did not solve cross-company footnote comparisons.\nWorth knowing\nMost practical advice was about avoiding false confidence: process filings once, keep extracted structure and passage locations, and only run new filings afterward to control cost.\nTry it yourself\nwith\nClaude\nCopy prompt\nAnalyze the latest 10-K for [company name or ticker], which I'll attach or link: [file or URL]. Calculate normalized earnings, ROIC, and owner earnings, showing each adjustment and the line items you used. Then build a rough reverse DCF showing what growth the current price of [price] implies at a [discount rate]% discount rate. Finish with a one-page summary that notes your assumptions and anything you were unsure about.\nOriginal source: https://www.reddit.com/r/ValueInvesting/comments/1x52d8o/anyone_building_a_value_investing_agent_what_are",
+    "body_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

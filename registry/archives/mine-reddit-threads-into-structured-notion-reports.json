@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c31f2830da12bbf717b4886871a9758224361a1157c9b03463ec41fdb73e4e2f",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow scrapes Reddit posts and comments via Bright Data, extracts concerns and themes with Gemini, and writes reports to Notion.",
+      "sha256": "c31f2830da12bbf717b4886871a9758224361a1157c9b03463ec41fdb73e4e2f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b8af8f3874fd167012eabad88c75107aeb7dd0870976a22049cc847c512dbb58",
-      "publication": "reviewed_restatement_required"
+      "value": "A schedule trigger runs the n8n workflow on a chosen subreddit. It reads the subreddit's RSS feed for recent post URLs and batches them to Bright Data, polling every 30 seconds until the snapshot is ready. It downloads titles, comments and upvotes, and a Gemini agent turns them into marketing insights. Those are converted to Notion blocks on a new page.",
+      "sha256": "b8af8f3874fd167012eabad88c75107aeb7dd0870976a22049cc847c512dbb58"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0bafd37a41f1e6427385ae7546d00873dc78d1283b7aa0db3b40bdcb66d9fc7f",
-      "publication": "reviewed_restatement_required"
+      "value": "The author demos it on the SkincareAddiction subreddit and says it runs end to end without manual steps. No volume or accuracy numbers are given. Multi-subreddit support and Notion databases remain future work.",
+      "sha256": "0bafd37a41f1e6427385ae7546d00873dc78d1283b7aa0db3b40bdcb66d9fc7f"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "15ea13a877d4cfa15f9384abb36836261bae6deba87e6e888d7eab0331bb8806",
-      "publication": "reviewed_restatement_required"
+      "value": "The hardest part was converting the agent's Markdown output into valid Notion blocks, which meant learning the Notion API's blocks and page IDs. The workflow is shared as a GitHub Gist.",
+      "sha256": "15ea13a877d4cfa15f9384abb36836261bae6deba87e6e888d7eab0331bb8806"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Mine Reddit threads into structured Notion reports\nAn n8n workflow scrapes Reddit posts and comments via Bright Data, extracts concerns and themes with Gemini, and writes reports to Notion.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA schedule trigger runs the n8n workflow on a chosen subreddit. It reads the subreddit's RSS feed for recent post URLs and batches them to Bright Data, polling every 30 seconds until the snapshot is ready. It downloads titles, comments and upvotes, and a Gemini agent turns them into marketing insights. Those are converted to Notion blocks on a new page.\nHow it went\nThe author demos it on the SkincareAddiction subreddit and says it runs end to end without manual steps. No volume or accuracy numbers are given. Multi-subreddit support and Notion databases remain future work.\nWorth knowing\nThe hardest part was converting the agent's Markdown output into valid Notion blocks, which meant learning the Notion API's blocks and page IDs. The workflow is shared as a GitHub Gist.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that takes a Reddit thread or search URL from [trigger, e.g. form or chat message], scrapes the posts and comments with [scraping service], and uses Gemini to extract the main concerns, recurring themes, and notable quotes. Write one structured report per run into my Notion database [database name] with fields for [fields, e.g. topic, themes, concerns, source URL]. Test it on [example Reddit URL] and show me the resulting Notion page before activating it.\nOriginal source: https://dev.to/kichuman28/unstoppable-reddit-research-agent-real-time-insights-with-n8n-bright-data-34g0",
+    "body_sha256": "c0fd998bcec0ed0e4bc6af25896185f4a4b9f7b3a59f43ff0f4472804e5599ad",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

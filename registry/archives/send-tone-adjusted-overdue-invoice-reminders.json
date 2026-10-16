@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "20d6a84c69a0eafb0b22fa7da6a7b5a5843ab486323b281a92ea6be30380c02c",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n agent checks customer payment statuses, finds overdue invoices, picks a polite or firmer tone by days overdue, and emails reminders, skipping already-reminded customers.",
+      "sha256": "20d6a84c69a0eafb0b22fa7da6a7b5a5843ab486323b281a92ea6be30380c02c"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "40cf12f5c9ccb664e71b2f16e90959948151870e61a4949682d1926e0b38a765",
-      "publication": "reviewed_restatement_required"
+      "value": "The author ran n8n locally in Docker and built a chat-triggered AI agent using Gemini (gemini-2.0-flash-lite) with simple memory. It had two tools: a Data Table read (getInvoices) and a Gmail SMTP email sender. The prompt tells it to filter for past-due, positive-balance, Pending rows, skip Reminded ones, and soften or firm up the tone by days overdue.",
+      "sha256": "40cf12f5c9ccb664e71b2f16e90959948151870e61a4949682d1926e0b38a765"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "fc6c7a90483d531fa2d5135cf659e4dff9d997146b41ea01ecfd493b155f3062",
-      "publication": "reviewed_restatement_required"
+      "value": "The source describes the finished workflow, which runs from one chat command and returns a JSON summary of emails sent. It reports no test results, numbers, or example outputs.",
+      "sha256": "fc6c7a90483d531fa2d5135cf659e4dff9d997146b41ea01ecfd493b155f3062"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3975a592798953cb02c8bc0c17a6ec4ce41ca448f3564ee715d235fa6a060154",
-      "publication": "reviewed_restatement_required"
+      "value": "Gmail sending needs an app password, and the agent filters the rows itself from a full-table fetch. The source doesn't mention updating Status to Reminded after sending.",
+      "sha256": "3975a592798953cb02c8bc0c17a6ec4ce41ca448f3564ee715d235fa6a060154"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Send tone-adjusted overdue invoice reminders\nAn n8n agent checks customer payment statuses, finds overdue invoices, picks a polite or firmer tone by days overdue, and emails reminders, skipping already-reminded customers.\nDone with\nN8\nn8n\nWhat they did\nThe author ran n8n locally in Docker and built a chat-triggered AI agent using Gemini (gemini-2.0-flash-lite) with simple memory. It had two tools: a Data Table read (getInvoices) and a Gmail SMTP email sender. The prompt tells it to filter for past-due, positive-balance, Pending rows, skip Reminded ones, and soften or firm up the tone by days overdue.\nHow it went\nThe source describes the finished workflow, which runs from one chat command and returns a JSON summary of emails sent. It reports no test results, numbers, or example outputs.\nWorth knowing\nGmail sending needs an app password, and the agent filters the rows itself from a full-table fetch. The source doesn't mention updating Status to Reminded after sending.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every [day or week], reads invoices from [accounting tool or spreadsheet], and finds ones overdue. For each, write a reminder email that's polite if under [number] days overdue and firmer after that, and skip customers already reminded in the last [number] days. Log each reminder in [sheet or database]. Before any email is sent, show me the list of recipients and the draft text for approval.\nOriginal source: https://dev.to/canankorkut/build-your-first-ai-agent-with-n8n-32pf",
+    "body_sha256": "540312ccf8597dbc2dd3902d2a9a243cd4af9a80bede3a82ed72d2ad7ccefaef",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

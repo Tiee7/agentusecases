@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c9e1debb14daf57ec4bc80a5262629284239c0cd6d0154fa1834b0bc25d08df4",
-      "publication": "reviewed_restatement_required"
+      "value": "A local Qwen model on a Pi reads car OBD data and the manual to answer car questions, controls AC and locks via cloud, and alerts other agents to a breakdown so they can look up train tickets.",
+      "sha256": "c9e1debb14daf57ec4bc80a5262629284239c0cd6d0154fa1834b0bc25d08df4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8fd280e7706cd79f0158f7a0db04c9daccd2695f74f425b57cd229d0fb394f3e",
-      "publication": "reviewed_restatement_required"
+      "value": "A Raspberry Pi 5 (16 GB) rides in the car and runs a local Qwen3.6-35B model through llama.cpp. It reads live OBD data over a Bluetooth ELM327 adapter and answers voice questions from the 489-page owner's manual, with page citations. It posts to a chat room as an agent. The repo says cloud lock and window commands work through Home Assistant, and that precondition (AC) is only the next planned command.",
+      "sha256": "8fd280e7706cd79f0158f7a0db04c9daccd2695f74f425b57cd229d0fb394f3e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "812ce7507060ec66ccfb328205c6b25c9d521d36dd7935fba8035a50cf2c1ed9",
-      "publication": "reviewed_restatement_required"
+      "value": "The model runs at about 3.5 tokens/s generation, and the voice, manual and OBD loops are marked proven on a real car. The README does not mention train tickets. Preconditioning and agent-to-agent cases are listed as enabled, not demonstrated.",
+      "sha256": "812ce7507060ec66ccfb328205c6b25c9d521d36dd7935fba8035a50cf2c1ed9"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f971e242d60d66ba448d1a51afb8cd1f44cae030a8a3c2cecaf7242a6b3e9724",
-      "publication": "reviewed_restatement_required"
+      "value": "Loading the 14 GB model from microSD takes about three minutes, and generation is slow. Smaller models run faster on the Pi but suit simple questions better.",
+      "sha256": "f971e242d60d66ba448d1a51afb8cd1f44cae030a8a3c2cecaf7242a6b3e9724"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run an offline car assistant on a Raspberry Pi\nA local Qwen model on a Pi reads car OBD data and the manual to answer car questions, controls AC and locks via cloud, and alerts other agents to a breakdown so they can look up train tickets.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA Raspberry Pi 5 (16 GB) rides in the car and runs a local Qwen3.6-35B model through llama.cpp. It reads live OBD data over a Bluetooth ELM327 adapter and answers voice questions from the 489-page owner's manual, with page citations. It posts to a chat room as an agent. The repo says cloud lock and window commands work through Home Assistant, and that precondition (AC) is only the next planned command.\nHow it went\nThe model runs at about 3.5 tokens/s generation, and the voice, manual and OBD loops are marked proven on a real car. The README does not mention train tickets. Preconditioning and agent-to-agent cases are listed as enabled, not demonstrated.\nWorth knowing\nLoading the 14 GB model from microSD takes about three minutes, and generation is slow. Smaller models run faster on the Pi but suit simple questions better.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp me build an offline car assistant on a [Raspberry Pi model] using a local model. It should read OBD data from my [car make/model/year] through a [OBD adapter type] and answer questions using the owner's manual PDF at [path]. Finish with a working script I can run and a test question answered from live or sample data; pause before sending any commands that change car settings, such as locks or AC.\nOriginal source: https://github.com/ThinkOffApp/CarWatch",
+    "body_sha256": "51a25ce5313d9f3a15d216063e322d9862026ced1692b1350f4501b23b536993",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

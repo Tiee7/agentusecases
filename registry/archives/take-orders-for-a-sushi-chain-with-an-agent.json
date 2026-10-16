@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ad3e6412f160645c72cf150a714f590243db175c3115a6a90bf4757325fbc2cf",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a Claude agent that takes orders for a seven-location sushi chain, using menu, allergen, delivery zone, hours and promo data.",
+      "sha256": "ad3e6412f160645c72cf150a714f590243db175c3115a6a90bf4757325fbc2cf"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6e9423b02294d0ada2de520f9a0bdf00546d85301a056c60f52f033440c18e91",
-      "publication": "reviewed_restatement_required"
+      "value": "The builder wired Instagram DMs from Meta’s API into Claude Sonnet 4.6, giving it a knowledge base for all seven locations: menu items, ingredients, calories, allergens, delivery zones, hours, prep times, promos, and conversation rules. The agent chats with customers, answers menu questions, collects address and quantity, offers add-ons, sends a bank payment link, then pushes confirmed orders to the kitchen and logs them in the CRM and an owner dashboard; humans still handle calls, voice notes, photos, or explicit requests for a person.",
+      "sha256": "6e9423b02294d0ada2de520f9a0bdf00546d85301a056c60f52f033440c18e91"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a645adda8a5015f0c3da640319eea00c9504baff95c38dcfa715007c092591b5",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster says the agent handles plain-text order chats almost entirely on its own, gets orders right about 98% of the time, and rarely needs human takeover beyond non-text cases. They also say roughly 97% of the large prompt is served from cache, cutting that portion of Claude input cost by about 90%, but allergen mistakes and stale menu data were raised as the key risk.",
+      "sha256": "a645adda8a5015f0c3da640319eea00c9504baff95c38dcfa715007c092591b5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5e834c720924c4cfee66888d1bdd4ebadc0e53140e96a779feccc6104352793e",
-      "publication": "reviewed_restatement_required"
+      "value": "The main practical catch is keeping menu and allergen data current; the post says the economics only worked because Claude prompt caching avoided reprocessing the full seven-location context on most messages.",
+      "sha256": "5e834c720924c4cfee66888d1bdd4ebadc0e53140e96a779feccc6104352793e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Take orders for a sushi chain with an agent\nThe poster built a Claude agent that takes orders for a seven-location sushi chain, using menu, allergen, delivery zone, hours and promo data.\nDone with\nCL\nClaude\nWhat they did\nThe builder wired Instagram DMs from Meta’s API into Claude Sonnet 4.6, giving it a knowledge base for all seven locations: menu items, ingredients, calories, allergens, delivery zones, hours, prep times, promos, and conversation rules. The agent chats with customers, answers menu questions, collects address and quantity, offers add-ons, sends a bank payment link, then pushes confirmed orders to the kitchen and logs them in the CRM and an owner dashboard; humans still handle calls, voice notes, photos, or explicit requests for a person.\nHow it went\nThe poster says the agent handles plain-text order chats almost entirely on its own, gets orders right about 98% of the time, and rarely needs human takeover beyond non-text cases. They also say roughly 97% of the large prompt is served from cache, cutting that portion of Claude input cost by about 90%, but allergen mistakes and stale menu data were raised as the key risk.\nWorth knowing\nThe main practical catch is keeping menu and allergen data current; the post says the economics only worked because Claude prompt caching avoided reprocessing the full seven-location context on most messages.\nTry it yourself\nwith\nClaude\nCopy prompt\nAct as an order-taking agent for [restaurant name], which has [number] locations. Use the menu, allergen info, delivery zones, hours and promotions I paste below to take customer orders, ask which location they want, warn about allergens, and confirm the delivery address is in a zone. Finish each order by reading back the items and total, and ask the customer to confirm before it's marked as placed. Here is my data: [menu, allergens, zones, hours, promos].\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1ubktm6/i_put_a_claude_agent_in_charge_of_taking_orders",
+    "body_sha256": "d919f881c5499793b4d727813d6071444e49a8caf3ad4ece59cbc1dd3635c781",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

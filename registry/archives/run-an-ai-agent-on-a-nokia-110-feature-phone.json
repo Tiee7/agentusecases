@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6ef5685f1fcb51a41d48eaddea675c27427f7f77bf4aef246a10171c19208c0a",
-      "publication": "reviewed_restatement_required"
+      "value": "Author reverse-engineered a 48MB-RAM Nokia 110 to run an AI agent on it and automate a few actions.",
+      "sha256": "6ef5685f1fcb51a41d48eaddea675c27427f7f77bf4aef246a10171c19208c0a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b7930f9661d0253157b1bcbe60e6eceebfc8a21141e3afd90b010650c476bcc0",
-      "publication": "reviewed_restatement_required"
+      "value": "The author studied the Nokia 110 4G firmware and boot process, then ran custom code in RAM through the Calculator entry point. They turned Calculator into a chat app that sends typed messages to the DeepSeek chat API and acts on tool calls. OpenAI Codex helped build it. Because of the 48MB memory limit, they wrote a minimal custom agent, used smaller builds, compressed the payload and reused buffers.",
+      "sha256": "b7930f9661d0253157b1bcbe60e6eceebfc8a21141e3afd90b010650c476bcc0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "149df9310e24142bd19dc8698cf151476281e67c912af82f4705cf63c61046b9",
-      "publication": "reviewed_restatement_required"
+      "value": "It works as a prototype. Over mobile data, unplugged, it can answer questions, check the battery, switch the torch on and off, start a call and set an alarm. It is not permanent.",
+      "sha256": "149df9310e24142bd19dc8698cf151476281e67c912af82f4705cf63c61046b9"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8330bbeac6cd5d1398a2e724291a752fa9ea3554562ddb9b2764eeb939802478",
-      "publication": "reviewed_restatement_required"
+      "value": "The code is loaded into RAM from a computer and is lost on restart or power-off, so it must be reloaded each time. The source code isn't published.",
+      "sha256": "8330bbeac6cd5d1398a2e724291a752fa9ea3554562ddb9b2764eeb939802478"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run an AI agent on a Nokia 110 feature phone\nAuthor reverse-engineered a 48MB-RAM Nokia 110 to run an AI agent on it and automate a few actions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author studied the Nokia 110 4G firmware and boot process, then ran custom code in RAM through the Calculator entry point. They turned Calculator into a chat app that sends typed messages to the DeepSeek chat API and acts on tool calls. OpenAI Codex helped build it. Because of the 48MB memory limit, they wrote a minimal custom agent, used smaller builds, compressed the payload and reused buffers.\nHow it went\nIt works as a prototype. Over mobile data, unplugged, it can answer questions, check the battery, switch the torch on and off, start a call and set an alarm. It is not permanent.\nWorth knowing\nThe code is loaded into RAM from a computer and is lost on restart or power-off, so it must be reloaded each time. The source code isn't published.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have an old [device model, e.g. feature phone or small embedded gadget] with about [RAM amount] of RAM, and I want it to trigger a simple action: [e.g. send a text to a script that toggles a light]. Help me work out what the device can do, write the smallest working code or bridge to connect it to an AI agent, and test it. Stop when I can press [a key or send a message] on the device and see the action happen, and tell me each step to run on my own hardware before you change anything.\nOriginal source: https://github.com/anupray95/AI-Agent-on-a-NOKIA",
+    "body_sha256": "bfbb49da57577141d74691a549b7484e709c56dc4af3e4721e2736915435c47f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -31,7 +31,7 @@ test('source trial pages keep literal prompts and do not imply completed researc
   const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  }
  for(const r of reports.filter(r=>r.sourceTrial.status==='available')){
-  await page.goto(`/reports/${r.id}/`);await expect(page.locator('#prompt-0')).toHaveText(r.sourceTrial.text);await expect(page.locator('.prompt-card').first()).toContainText('非作者实际提示词');await expect(page.locator('.prompt-card').first()).toContainText(r.sourceTrial.agent);
+  await page.goto(`/reports/${r.id}/`);await expect(page.locator('#prompt-0')).toHaveText(r.sourceTrial.text);await expect(page.locator('.prompt-card').first()).toContainText('源站试用模板');await expect(page.locator('.prompt-card').first()).toContainText(r.sourceTrial.agent);
  }
 });
 test('home keeps collection navigation without a recent collection section',async({page})=>{
@@ -49,26 +49,43 @@ test('author method precedes analysis, bilingual summary expands, unread sources
  await expect(page.locator('#author-method ol[lang="en"]')).toContainText(available.authorMethod.steps[0].en);
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
- const missing=reports.find(r=>r.authorMethod.status==='unavailable');await page.goto(`/reports/${missing.id}/`);await expect(page.locator('#author-method')).toContainText(missing.authorMethod.reason);await expect(page.locator('#author-method li')).toHaveCount(0);await expect(page.locator('#author-method a')).toHaveAttribute('href',missing.authorMethod.source);
+ const missing=reports.find(r=>r.authorMethod.status==='unavailable');await page.goto(`/reports/${missing.id}/`);await expect(page.locator('#author-method')).toContainText('方法摘要未收录');await expect(page.locator('#author-method li')).toHaveCount(0);await expect(page.locator('#author-method a')).toHaveAttribute('href',missing.authorMethod.source);
 });
-test('source case bilingual sections and actual-agent search work',async({page})=>{
- for(const r of reports.filter(r=>r.archive.sections.length)){
-  await page.goto(`/reports/${r.id}/`);
-  await expect(page.locator('#source-case [lang="zh-CN"] h4')).toHaveCount(r.archive.sections.length);
-  await page.locator('#source-case summary').first().click();
-  for(const s of r.archive.sections)for(const item of s.items)await expect(page.locator('#source-case details').first()).toContainText(item.en);
- }
+test('case originals and original-agent search work',async({page})=>{
+ for(const r of reports){await page.goto(`/reports/${r.id}/`);await expect(page.locator('#source-original')).toHaveText(r.archive.sourceText);await expect(page.locator('.editorial-summary')).toHaveCount(0);}
  await page.goto('/catalog/');await page.locator('#search').fill('Grok Bot');
  const expected=catalog.filter(c=>c.sourceCase.agents.includes('Grok Bot'));
  await expect(page.locator('[data-item]:visible')).toHaveCount(Math.min(30,expected.length));
- await expect(page.locator('[data-item]:visible').filter({hasText:'实际 agent：Grok Bot'}).first()).toBeVisible();
+ await expect(page.locator('[data-item]:visible').filter({hasText:'原始agent：Grok Bot'}).first()).toBeVisible();
 });
 test('independent archives show detailed facts, pending restatements and exact templates',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);
- for(const c of [catalog.find(c=>c.id==='produce-investment-memos-with-claude-cowork'),catalog.find(c=>!c.complete)]){
-  await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-case')).toContainText('未取得可核实数字（不是0）');
-  if(c.complete)await expect(page.locator('#source-case')).toContainText('Adyen');else await expect(page.locator('#source-case')).toContainText('公开详细重述尚待整理');
+ for(const c of [catalog.find(c=>c.id==='produce-investment-memos-with-claude-cowork'),catalog.find(c=>!c.archive.sections.length)]){
+  await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-case dt').filter({hasText:/^(Wanted|发布日期|外部来源日期)$/})).toHaveCount(0);await expect(page.locator('.case-tools')).toContainText('原始agent：');
+  if(c.complete)await expect(page.locator('#source-case')).toContainText('Adyen');else await expect(page.locator('.editorial-summary')).toHaveCount(0);
   await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  }
+});
+
+test('source originals and full Chinese translations render without becoming business research',async({page})=>{
+ for(const c of catalog.filter(c=>c.archive.translationText).slice(0,7)){
+  await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-original')).toHaveText(c.archive.sourceText);await expect(page.locator('#source-translation')).toHaveText(c.archive.translationText);
+  if(!c.complete)await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ }
+ const pending=catalog.find(c=>!c.archive.translationText);await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-translation')).toHaveCount(0);
+});
+
+test('reader copy stays concise while source records keep provenance',async({page})=>{
+ const translated=catalog.find(c=>c.archive.translationText);const pending=catalog.find(c=>!c.archive.translationText);const unread=reports.find(r=>r.authorMethod.status==='unavailable');
+ for(const url of ['/', '/catalog/', '/method/', `/cases/${translated.id}/`, `/cases/${pending.id}/`, `/reports/${unread.id}/`, `/trials/${translated.id}/`]){
+  await page.goto(url);for(const phrase of ['不代表源站没有标签','不以发布域名推断作者','外部原作者页面是否取得','字段覆盖、时间与哈希','非作者实际提示词','不是0','元数据不等于完整正文','已收录源站试用模板 · 源站建议模板，不是作者实际提示词或本站自编模板。','（链接不等于已经读取）','原始长文只保留在本地缓存；公开存储提供元数据、哈希与已审核重述，未获得全文转载许可。','实际 agent（源站标注）','源站观测：已读取','已审核的详细事实重述 · 英文与对应中文','中文详细整理','English · Detailed case archive','以下为我们整理的源站叙述，未经独立结果验证；不是逐字全文。外部原作者页面是否取得，与本页源站观测分别记录。'])await expect(page.locator('body')).not.toContainText(phrase);
+ }
+ await page.goto(`/reports/${unread.id}/`);await expect(page.locator('#author-method')).toContainText('方法摘要未收录');await expect(page.locator('#author-method')).not.toContainText(unread.authorMethod.reason);
+ await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-case')).toContainText('暂无标签');
+});
+test('catalog action links share a column and source reading panels collapse cleanly',async({page},testInfo)=>{
+ await page.goto('/catalog/');const row=page.locator('[data-item]:visible').first();await expect(row.locator(':scope > .catalog-actions')).toHaveCount(1);await expect(row.locator('.catalog-actions a')).toHaveCount(3);
+ const actions=await row.locator('.catalog-actions').boundingBox();const title=await row.locator('.catalog-title').boundingBox();if(page.viewportSize().width>=700)expect(actions.x).toBeGreaterThan(title.x+title.width);else expect(actions.y).toBeGreaterThan(title.y);
+ const c=catalog.find(c=>c.archive.translationText);await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-translation')).toBeVisible();await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).toBeVisible();await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).not.toBeVisible();await page.locator('.source-translation summary').click();await expect(page.locator('#source-translation')).not.toBeVisible();await page.locator('#source-trial').scrollIntoViewIfNeeded();await expect(page.locator('#source-prompt')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

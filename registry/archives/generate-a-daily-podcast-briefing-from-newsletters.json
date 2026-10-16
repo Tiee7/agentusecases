@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6c302b64f9063c397caeeff40d676fba4c565948b22ba7903554d0ba0bcb5a07",
-      "publication": "reviewed_restatement_required"
+      "value": "The author tested Cowork on a morning podcast from newsletters via Readwise and n8n MCP, plus video and 3D print design, noting what worked and what failed.",
+      "sha256": "6c302b64f9063c397caeeff40d676fba4c565948b22ba7903554d0ba0bcb5a07"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "2b01e5f4674e54c13034d454ea4757e99a43f8018d736966b68ce4bde1f33a8d",
-      "publication": "reviewed_restatement_required"
+      "value": "Newsletters are forwarded to Readwise. Because Cowork has no network access, the author ran n8n as an MCP server with a workflow that calls the Readwise API. Cowork fetched the previous day's articles through it and wrote a two-page Word briefing with an executive summary. It then tried to turn the briefing into a 2-3 minute MP3.",
+      "sha256": "2b01e5f4674e54c13034d454ea4757e99a43f8018d736966b68ce4bde1f33a8d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "fa6b90c3b8b1dc87a584e702bc025befaa65018a6d5bc8446ded72a9a00364b6",
-      "publication": "reviewed_restatement_required"
+      "value": "The briefing document worked and the n8n bridge ran without problems. Audio failed: with no access to a good text-to-speech model, Cowork fell back to the local Flite library, and the result was robotic and not worth listening to.",
+      "sha256": "fa6b90c3b8b1dc87a584e702bc025befaa65018a6d5bc8446ded72a9a00364b6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "cb423d52ee67c718a62ed55c6270e927c70289619eeaf077875df6052902a0ee",
-      "publication": "reviewed_restatement_required"
+      "value": "Cowork can't reach cloud text-to-speech models. The author plans to rebuild this in Claude Code, which can call the Readwise API directly and use ElevenLabs or OpenAI TTS.",
+      "sha256": "cb423d52ee67c718a62ed55c6270e927c70289619eeaf077875df6052902a0ee"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate a daily podcast briefing from newsletters\nThe author tested Cowork on a morning podcast from newsletters via Readwise and n8n MCP, plus video and 3D print design, noting what worked and what failed.\nDone with\nCW\nClaude Cowork\nN8\nn8n\nWhat they did\nNewsletters are forwarded to Readwise. Because Cowork has no network access, the author ran n8n as an MCP server with a workflow that calls the Readwise API. Cowork fetched the previous day's articles through it and wrote a two-page Word briefing with an executive summary. It then tried to turn the briefing into a 2-3 minute MP3.\nHow it went\nThe briefing document worked and the n8n bridge ran without problems. Audio failed: with no access to a good text-to-speech model, Cowork fell back to the local Flite library, and the result was robotic and not worth listening to.\nWorth knowing\nCowork can't reach cloud text-to-speech models. The author plans to rebuild this in Claude Code, which can call the Readwise API directly and use ElevenLabs or OpenAI TTS.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nEvery morning at [time], gather the newsletters I received in [email or Readwise source], pick the most important stories on [my topics], and write a [number]-minute podcast-style script. Save it to [folder] as a text file, and turn it into audio if a tool is connected. Tell me which steps worked and which didn't.\nOriginal source: https://ishyshkova.substack.com/p/claude-cowork-review-real-use-cases",
+    "body_sha256": "3f9df89654b116ba0c21a364c8f6da0f9ddb32954623395d1cb3cd2eebb34fc2",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

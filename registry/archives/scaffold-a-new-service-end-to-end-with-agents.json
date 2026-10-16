@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8957009083c63adcc4e8c210d64b686a6e31a0f772f026a671d0a4abb4af6e52",
-      "publication": "reviewed_restatement_required"
+      "value": "Cursor agents create Terraform, k8s manifests and CI, validate them and open a draft PR; one cleanup run wrongly deleted Terraform files.",
+      "sha256": "8957009083c63adcc4e8c210d64b686a6e31a0f772f026a671d0a4abb4af6e52"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "39625a868798d6cc254da4bd17a3a2d842d24b6a4f14f34b2243f3aec7d0c51e",
-      "publication": "reviewed_restatement_required"
+      "value": "A task file in the repo, run with a service name and team name, drives the agent. It first checks GitHub, the cluster and Terraform state for conflicts. It then writes the Terraform service file, the Kubernetes Deployment, Service and HPA, and a CI workflow with a Trivy scan. It runs terraform validate and kubectl dry-run, then opens a draft PR with a checklist. A senior engineer reviews before merge.",
+      "sha256": "39625a868798d6cc254da4bd17a3a2d842d24b6a4f14f34b2243f3aec7d0c51e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "fcc56879b89dbcf0ef0cd21530f4352b7919aef2b8e8979be0cf7ca8cf6f788c",
-      "publication": "reviewed_restatement_required"
+      "value": "The article describes a new engineer producing convention-compliant files this way, with no timing stated for this run. Separately, a vague prompt to clean up unused resources deleted 14 files, three of them Terraform files still managing state. A checkpoint rollback fixed it.",
+      "sha256": "fcc56879b89dbcf0ef0cd21530f4352b7919aef2b8e8979be0cf7ca8cf6f788c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "7a63396036e9f8c775b525c1fba0d09dea1fc7538f164ffa4818af0e0f945a52",
-      "publication": "reviewed_restatement_required"
+      "value": "Replace vague prompts like cleanup with precise report-only tasks. Reviewers who skimmed let a cpu=10m limit through, so keep PRs small and use checkpoints.",
+      "sha256": "7a63396036e9f8c775b525c1fba0d09dea1fc7538f164ffa4818af0e0f945a52"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Scaffold a new service end to end with agents\nCursor agents create Terraform, k8s manifests and CI, validate them and open a draft PR; one cleanup run wrongly deleted Terraform files.\nDone with\nCR\nCursor\nWhat they did\nA task file in the repo, run with a service name and team name, drives the agent. It first checks GitHub, the cluster and Terraform state for conflicts. It then writes the Terraform service file, the Kubernetes Deployment, Service and HPA, and a CI workflow with a Trivy scan. It runs terraform validate and kubectl dry-run, then opens a draft PR with a checklist. A senior engineer reviews before merge.\nHow it went\nThe article describes a new engineer producing convention-compliant files this way, with no timing stated for this run. Separately, a vague prompt to clean up unused resources deleted 14 files, three of them Terraform files still managing state. A checkpoint rollback fixed it.\nWorth knowing\nReplace vague prompts like cleanup with precise report-only tasks. Reviewers who skimmed let a cpu=10m limit through, so keep PRs small and use checkpoints.\nTry it yourself\nwith\nCursor\nCopy prompt\nScaffold a new service called [service name] including Terraform, Kubernetes manifests, and CI config, validating each file as you go. Open a draft pull request with the changes, but show me exactly what will be created or deleted before running any cleanup or deletion commands.\nOriginal source: https://blog.devops.dev/operationalizing-cursor-agents-in-devops-workflows-4eb13cdad645?gi=be8c938ee862",
+    "body_sha256": "a9e6b649b7f56dd8850148fb4865670db5b648f9268a34f211d0094ad8971a73",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

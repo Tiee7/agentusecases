@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b4aa160ed7ac13782e875cad6d44de0b00bb73f147f297f0d7decd4ec4b5956e",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow built for a client matches invoice data to a Google Sheets inventory, creates ERP purchase orders and notifies purchasing; about 90% of invoices are handled automatically.",
+      "sha256": "b4aa160ed7ac13782e875cad6d44de0b00bb73f147f297f0d7decd4ec4b5956e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "04992f5b58d2398acbe35c253ab4dca6609a2ebaa64ff3cfd3897bada498e0a4",
-      "publication": "reviewed_restatement_required"
+      "value": "A 23-node n8n workflow watches the client's Gmail for invoice emails, pulls out the PDF attachments and sends them to OpenAI's vision model to extract vendor, amount, items and dates. It checks the data against a Google Sheets inventory. If items match and amounts look reasonable, it creates an ERP purchase order, posts to Slack and replies to the sender.",
+      "sha256": "04992f5b58d2398acbe35c253ab4dca6609a2ebaa64ff3cfd3897bada498e0a4"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8c3ebee61ded7eaf54fb2d0197f346628451986f5a42ea77196540f68439685d",
-      "publication": "reviewed_restatement_required"
+      "value": "The client went from manually handling 40-50 invoices a week to about 90% processed automatically, saving roughly 8-10 hours weekly. The author built it in 3 days, mostly handling edge cases, then trained the operations manager in about 2 hours.",
+      "sha256": "8c3ebee61ded7eaf54fb2d0197f346628451986f5a42ea77196540f68439685d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "8f6e4820225a58fdfb8b06ffe04ad2f87eb10a94fa34020f14e22d3d6ff2cbac",
-      "publication": "reviewed_restatement_required"
+      "value": "n8n counts every node run as an execution, so each invoice uses about 23. At 200 invoices a month, the author says the Pro plan is the minimum.",
+      "sha256": "8f6e4820225a58fdfb8b06ffe04ad2f87eb10a94fa34020f14e22d3d6ff2cbac"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Validate invoices against inventory and create purchase orders\nAn n8n workflow built for a client matches invoice data to a Google Sheets inventory, creates ERP purchase orders and notifies purchasing; about 90% of invoices are handled automatically.\nDone with\nN8\nn8n\nWhat they did\nA 23-node n8n workflow watches the client's Gmail for invoice emails, pulls out the PDF attachments and sends them to OpenAI's vision model to extract vendor, amount, items and dates. It checks the data against a Google Sheets inventory. If items match and amounts look reasonable, it creates an ERP purchase order, posts to Slack and replies to the sender.\nHow it went\nThe client went from manually handling 40-50 invoices a week to about 90% processed automatically, saving roughly 8-10 hours weekly. The author built it in 3 days, mostly handling edge cases, then trained the operations manager in about 2 hours.\nWorth knowing\nn8n counts every node run as an execution, so each invoice uses about 23. At 200 invoices a month, the author says the Pro plan is the minimum.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that triggers when a new invoice arrives at [email inbox or folder], extracts the vendor, line items and quantities, and checks them against my inventory in [Google Sheets link]. If items are low or match a reorder rule, create a purchase order in [ERP or tool] and notify [purchasing contact] on [Slack or email]. Send anything it can't match to a review list instead of acting on it, and pause to show me the purchase order it is about to create before you enable the live version.\nOriginal source: https://dev.to/nova_gg/n8n-review-2026-i-used-it-for-8-months-to-build-ai-agents-honest-verdict-kif",
+    "body_sha256": "47a295503c83bddfd1780d5c5e546ce708f5510391ee45988a51938ed00f97a6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

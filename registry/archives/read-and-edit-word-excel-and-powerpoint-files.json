@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2e6f7b8b4d4255aa1b9888f2b027d80ca0d26305feae0dcd98c11a30d8485bbc",
-      "publication": "reviewed_restatement_required"
+      "value": "OfficeCLI is an office suite built for agents to read and edit Microsoft Office files.",
+      "sha256": "2e6f7b8b4d4255aa1b9888f2b027d80ca0d26305feae0dcd98c11a30d8485bbc"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "858ea5d3be7fff6a4613a7d07ee56212450de318209aa560d480f38fec3a1aec",
-      "publication": "reviewed_restatement_required"
+      "value": "OfficeCLI is a single binary with no Office install needed. Running its install command adds a skill to detected agents such as Claude Code, Cursor, Windsurf and GitHub Copilot. The agent then uses commands like create, add, set, get and view to build or edit .docx, .xlsx and .pptx files. It can render pages to HTML or PNG to check its own work, and a live browser preview updates after each command.",
+      "sha256": "858ea5d3be7fff6a4613a7d07ee56212450de318209aa560d480f38fec3a1aec"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ff4ae634dbe2feff77657391eaf85c026d497743bba655accda8ec631f5748c4",
-      "publication": "reviewed_restatement_required"
+      "value": "The README shows sample decks, Word documents and spreadsheets that it says agents made with no templates or manual editing. It gives no benchmarks or failure cases.",
+      "sha256": "ff4ae634dbe2feff77657391eaf85c026d497743bba655accda8ec631f5748c4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3a991d4995e453a603509a921c4ae8173f613762c393d09a64f1259d9c1b009d",
-      "publication": "reviewed_restatement_required"
+      "value": "Rendering to PNG screenshots works by piping HTML through a headless browser, so the look-and-fix loop may need one available. The binary also checks for updates in the background by default.",
+      "sha256": "3a991d4995e453a603509a921c4ae8173f613762c393d09a64f1259d9c1b009d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Read and edit Word, Excel, and PowerPoint files\nOfficeCLI is an office suite built for agents to read and edit Microsoft Office files.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOfficeCLI is a single binary with no Office install needed. Running its install command adds a skill to detected agents such as Claude Code, Cursor, Windsurf and GitHub Copilot. The agent then uses commands like create, add, set, get and view to build or edit .docx, .xlsx and .pptx files. It can render pages to HTML or PNG to check its own work, and a live browser preview updates after each command.\nHow it went\nThe README shows sample decks, Word documents and spreadsheets that it says agents made with no templates or manual editing. It gives no benchmarks or failure cases.\nWorth knowing\nRendering to PNG screenshots works by piping HTML through a headless browser, so the look-and-fix loop may need one available. The binary also checks for updates in the background by default.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have an Office file at [file path]. Read it and [task, e.g. update the figures in the Excel sheet, fix the formatting in the Word doc, rework slides 3 to 6 in the PowerPoint]. Save the result as a new copy named [new file name], leave the original untouched, and give me a short list of everything you changed.\nOriginal source: https://github.com/iOfficeAI/OfficeCLI",
+    "body_sha256": "42e05b07d1e5c0fa7232fa48102a4b2bfe8a24bdd6ea04cef531fe10db1d55f7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

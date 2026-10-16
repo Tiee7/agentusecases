@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ff99ffabef0c5d09d2b6459c57a0b57c0eb2b0777c73e7479d18fb7223829788",
-      "publication": "reviewed_restatement_required"
+      "value": "Several OpenClaw agents with separate identities set up Terraform infrastructure, did coding work, code reviews, merges and built a CD and GitOps system.",
+      "sha256": "ff99ffabef0c5d09d2b6459c57a0b57c0eb2b0777c73e7479d18fb7223829788"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "37aa69065e96e5a3f802c4ba5afbe23dd28ae143095074d06acace5cc4fbc339",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster ran multiple OpenClaw agents, each with its own Google Workspace email, Git account, and EC2 instance. The agents could assume AWS roles in a development account and used Redis pub/sub they set up themselves to coordinate work across Terraform repos, coding tasks, reviews, merges, and building a CD/GitOps system, while the human mainly assigned big tasks over Telegram.",
+      "sha256": "37aa69065e96e5a3f802c4ba5afbe23dd28ae143095074d06acace5cc4fbc339"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "c3413adae55f94c17f8870ffbcd7bcc1deda957713bc6f86dad3662cc43cbbff",
-      "publication": "reviewed_restatement_required"
+      "value": "They say the setup delivered overnight, with large projects completed and operational by morning, effectively acting like a team of “10x engineers.” It broke down after they switched models from Claude to openai-codex/gpt-5.4, which they say stopped reliably finishing the work.",
+      "sha256": "c3413adae55f94c17f8870ffbcd7bcc1deda957713bc6f86dad3662cc43cbbff"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5dd1af71ddd2de03364f1f2bef2295bf035cdb00ed649afc558995253d8a2aba",
-      "publication": "reviewed_restatement_required"
+      "value": "The key catch was model cost and reliability: Anthropic Max became too expensive for their OpenClaw use, and the cheaper replacement reportedly could not complete complex multi-step jobs.",
+      "sha256": "5dd1af71ddd2de03364f1f2bef2295bf035cdb00ed649afc558995253d8a2aba"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run OpenClaw agents for Terraform infra and GitOps from Telegram\nSeveral OpenClaw agents with separate identities set up Terraform infrastructure, did coding work, code reviews, merges and built a CD and GitOps system.\nDone with\nOC\nOpenClaw\nWhat they did\nThe poster ran multiple OpenClaw agents, each with its own Google Workspace email, Git account, and EC2 instance. The agents could assume AWS roles in a development account and used Redis pub/sub they set up themselves to coordinate work across Terraform repos, coding tasks, reviews, merges, and building a CD/GitOps system, while the human mainly assigned big tasks over Telegram.\nHow it went\nThey say the setup delivered overnight, with large projects completed and operational by morning, effectively acting like a team of “10x engineers.” It broke down after they switched models from Claude to openai-codex/gpt-5.4, which they say stopped reliably finishing the work.\nWorth knowing\nThe key catch was model cost and reliability: Anthropic Max became too expensive for their OpenClaw use, and the cheaper replacement reportedly could not complete complex multi-step jobs.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up separate agents on my [Telegram or chat app] for [infrastructure setup, code review, and deployment]. Using my [GitHub repo], have the infra agent write Terraform for [cloud provider and resources], have the review agent comment on pull requests, and have the deploy agent run a GitOps pipeline for [environment]. Finished means a working pipeline from merged PR to deployed change. Pause and show me the plan before applying any Terraform, merging, or deleting anything.\nOriginal source: https://www.reddit.com/r/openclaw/comments/1spb1jz/my_openclaw_agents_were_great_until",
+    "body_sha256": "c50f374155206098ef2f9775f87dd2b236dbd4c08ad6f478d1d99ec4fc043931",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

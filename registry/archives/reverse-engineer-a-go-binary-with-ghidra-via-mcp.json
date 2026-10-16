@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "281b3076cc6611d46196922f641ba14da6b89fc8b6ed6093b54e800d9b995a71",
-      "publication": "reviewed_restatement_required"
+      "value": "Huli had Cursor drive GhidraMCP to identify a Golang binary, list its routes and find a path traversal, but it missed the SQL injection check.",
+      "sha256": "281b3076cc6611d46196922f641ba14da6b89fc8b6ed6093b54e800d9b995a71"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8b0193fdb9d0db02471567977b4cecbc245e64856b87f993ad86d5466545945f",
-      "publication": "reviewed_restatement_required"
+      "value": "Huli built a stripped Golang gin server with a deliberate SQL injection and path traversal, loaded it into Ghidra with the GolangAnalyzerExtension, then connected GhidraMCP to Cursor so the agent could call Ghidra's decompiler itself. Prompted only to identify the binary and its functions, it autonomously queried MCP, then was asked to reconstruct the Go source and check for vulnerabilities.",
+      "sha256": "8b0193fdb9d0db02471567977b4cecbc245e64856b87f993ad86d5466545945f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6eb3c8bdb55dc90c17aed2059a46bc041237a922f10afb79878a4bdbb308179b",
-      "publication": "reviewed_restatement_required"
+      "value": "Using Cursor's composer 1.5, it correctly recovered routes, libraries, and file structure (with minor route-name errors) and found the path traversal bug but reconstructed the SQL injection code as already fixed, missing it. Switching to Opus 4.6 on the same prompt caught both vulnerabilities but still mislabeled some routes.",
+      "sha256": "6eb3c8bdb55dc90c17aed2059a46bc041237a922f10afb79878a4bdbb308179b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "ff05cee86296ce20b6f25b14109ced50fd62a4ff0055673bbf3103ba40dba325",
-      "publication": "reviewed_restatement_required"
+      "value": "Results varied heavily by model: a weaker model (composer 1.5) missed the SQL injection that a stronger model (Opus 4.6) caught with the same prompt.",
+      "sha256": "ff05cee86296ce20b6f25b14109ced50fd62a4ff0055673bbf3103ba40dba325"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse engineer a Go binary with Ghidra via MCP\nHuli had Cursor drive GhidraMCP to identify a Golang binary, list its routes and find a path traversal, but it missed the SQL injection check.\nDone with\nCR\nCursor\nWhat they did\nHuli built a stripped Golang gin server with a deliberate SQL injection and path traversal, loaded it into Ghidra with the GolangAnalyzerExtension, then connected GhidraMCP to Cursor so the agent could call Ghidra's decompiler itself. Prompted only to identify the binary and its functions, it autonomously queried MCP, then was asked to reconstruct the Go source and check for vulnerabilities.\nHow it went\nUsing Cursor's composer 1.5, it correctly recovered routes, libraries, and file structure (with minor route-name errors) and found the path traversal bug but reconstructed the SQL injection code as already fixed, missing it. Switching to Opus 4.6 on the same prompt caught both vulnerabilities but still mislabeled some routes.\nWorth knowing\nResults varied heavily by model: a weaker model (composer 1.5) missed the SQL injection that a stronger model (Opus 4.6) caught with the same prompt.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to Ghidra via MCP and analyze this Go binary [path/name] to identify its routes and endpoints, then look for vulnerabilities like path traversal or SQL injection. Give me a report of what it found, and flag anything uncertain for me to double check manually.\nOriginal source: https://blog.huli.tw/2026/03/01/en/reverse-engineering-with-ai-ghidra-mcp/",
+    "body_sha256": "8b378a3493b8ae4b2d81d7fbfab3289213e4bdab52d5752a2e0040b23a61dabf",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

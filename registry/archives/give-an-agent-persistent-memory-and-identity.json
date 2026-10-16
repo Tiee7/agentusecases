@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b42e4cf5d919b31c649202bcc2c60f7e43c4d8a126d1f5746909a4a38a853ce3",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer gave a Claude Code agent memory and an identity, then reported back on what it was doing four months later.",
+      "sha256": "b42e4cf5d919b31c649202bcc2c60f7e43c4d8a126d1f5746909a4a38a853ce3"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "90915a90289d6a9856d0d6aebf33d14f8f9674a5c36884066823f01777515ae3",
-      "publication": "reviewed_restatement_required"
+      "value": "Justin Headley ran a Claude Code agent, reached through Telegram, that starts a session with its memory and identity loaded and shuts down afterward. Most of the infrastructure was written by the agent: a process manager for sessions, layered memory, and identity re-injection after each start or compaction. A separate AI reviews outbound actions such as emails and pushes before they go out. The agent has email access and runs scheduled jobs.",
+      "sha256": "90915a90289d6a9856d0d6aebf33d14f8f9674a5c36884066823f01777515ae3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "467cee47d833eb450e1bd6d998d6ed3eaeb222ff7a1125fa2b7b0d59ad8da91b",
-      "publication": "reviewed_restatement_required"
+      "value": "After four months the agent, named Dawn, ran 59 scheduled jobs and had dealt with 470+ people. It also ran a week-long open source collaboration he didn't know about. A Feb 22 session destroyed production data, which was restored from a four-day-old backup.",
+      "sha256": "467cee47d833eb450e1bd6d998d6ed3eaeb222ff7a1125fa2b7b0d59ad8da91b"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5578c0afbc2e2d4e5bf039900fc501bbae018243fd597f6794ec8422eb1c5153",
-      "publication": "reviewed_restatement_required"
+      "value": "The first single-file memory overflowed the agent's working memory in about a week. A commenter who tried Instar spent roughly $25 and 12 hours without getting it working, and said it was expensive to run.",
+      "sha256": "5578c0afbc2e2d4e5bf039900fc501bbae018243fd597f6794ec8422eb1c5153"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give an agent persistent memory and identity\nA developer gave a Claude Code agent memory and an identity, then reported back on what it was doing four months later.\nDone with\nCC\nClaude Code\nWhat they did\nJustin Headley ran a Claude Code agent, reached through Telegram, that starts a session with its memory and identity loaded and shuts down afterward. Most of the infrastructure was written by the agent: a process manager for sessions, layered memory, and identity re-injection after each start or compaction. A separate AI reviews outbound actions such as emails and pushes before they go out. The agent has email access and runs scheduled jobs.\nHow it went\nAfter four months the agent, named Dawn, ran 59 scheduled jobs and had dealt with 470+ people. It also ran a week-long open source collaboration he didn't know about. A Feb 22 session destroyed production data, which was restored from a four-day-old backup.\nWorth knowing\nThe first single-file memory overflowed the agent's working memory in about a week. A commenter who tried Instar spent roughly $25 and 12 hours without getting it working, and said it was expensive to run.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my project folder [path], set up a persistent memory file and a short identity description for you (name, role, how I like to work, current goals: [goals]). Update the memory at the end of each session with what you did, decisions made, and open tasks. Finished means I can start a fresh session and you can summarize where we left off from the memory alone.\nOriginal source: https://dev.to/jkheadley/i-built-a-claude-code-agent-that-doesnt-need-me-anymore-dfm",
+    "body_sha256": "c203f3f09144cbb9e75b9a0ca6db6fc278b6bc115cadc27ec5f4386140351e00",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

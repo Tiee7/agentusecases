@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e99701e5d3003cf5c93bdf526447c4cbe1b8307624299bc78244947243bd74ea",
-      "publication": "reviewed_restatement_required"
+      "value": "Graphify C# lets coding agents find symbol usages in C# codebases with compiler-level accuracy.",
+      "sha256": "e99701e5d3003cf5c93bdf526447c4cbe1b8307624299bc78244947243bd74ea"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "98ea9d806451a1d4c28f2da00f023d1addcb7ab9e304b0f1bd39a39663f71f4f",
-      "publication": "reviewed_restatement_required"
+      "value": "You install a .NET global tool and run it on a .sln or .csproj. It loads the project through MSBuild and asks Roslyn to resolve every symbol. The output is one JSON file of nodes and edges (calls, references, implements, inherits, overrides). An included skill file tells Codex or Claude Code when to refresh the index and how to follow the edges. An optional watcher keeps the index current.",
+      "sha256": "98ea9d806451a1d4c28f2da00f023d1addcb7ab9e304b0f1bd39a39663f71f4f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "b7c003934c51a14c534f2399e5616108b3c7c849cd41d2292aed84b6eb68b6df",
-      "publication": "reviewed_restatement_required"
+      "value": "The README's example is an internal method whose single compiler-resolved caller was a test, which shows how test-only usage can be spotted. It gives no benchmarks. Reflection, dependency injection and dynamic calls are not captured.",
+      "sha256": "b7c003934c51a14c534f2399e5616108b3c7c849cd41d2292aed84b6eb68b6df"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b27c49c5dbcb973bd9d4cb9c7133cf15f928ed7a4a4f59add711425360051f1a",
-      "publication": "reviewed_restatement_required"
+      "value": "Zero inbound edges means only zero observed static references, so deletion candidates still need human judgment. SDKs, packages and MSBuild inputs must be available locally.",
+      "sha256": "b27c49c5dbcb973bd9d4cb9c7133cf15f928ed7a4a4f59add711425360051f1a"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give coding agents compiler-accurate Find Usages for C#\nGraphify C# lets coding agents find symbol usages in C# codebases with compiler-level accuracy.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou install a .NET global tool and run it on a .sln or .csproj. It loads the project through MSBuild and asks Roslyn to resolve every symbol. The output is one JSON file of nodes and edges (calls, references, implements, inherits, overrides). An included skill file tells Codex or Claude Code when to refresh the index and how to follow the edges. An optional watcher keeps the index current.\nHow it went\nThe README's example is an internal method whose single compiler-resolved caller was a test, which shows how test-only usage can be spotted. It gives no benchmarks. Reflection, dependency injection and dynamic calls are not captured.\nWorth knowing\nZero inbound edges means only zero observed static references, so deletion candidates still need human judgment. SDKs, packages and MSBuild inputs must be available locally.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my C# solution at [path], find every usage of [class or method name], including interface implementations and overrides, using the compiler's semantic info (for example Roslyn) rather than text search. Give me a list of file and line for each usage, grouped by project. Do not edit any files; stop once the list is complete and tell me how you verified it was accurate.\nOriginal source: https://github.com/zachsaw/graphify-csharp",
+    "body_sha256": "a758dbfbac0192834c0ae5ffa951d9999acb028501838a49d5fac23b78be331e",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

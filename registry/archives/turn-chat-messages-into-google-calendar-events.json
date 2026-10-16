@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f16e38fc0bfd18941bcc1111a0cddcc5c0e4e00d3abaf63a86893f2fc063c1d9",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n calendar agent takes a chat message, extracts event title, location and times, and creates a Google Calendar entry.",
+      "sha256": "f16e38fc0bfd18941bcc1111a0cddcc5c0e4e00d3abaf63a86893f2fc063c1d9"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "caea9fdce34dff5e1301b3a86a43cce1e690b1a184ea1584bf04156b1fdacf65",
-      "publication": "reviewed_restatement_required"
+      "value": "The tutorial builds an n8n workflow with a chat trigger, an AI Agent node on an OpenAI chat model, and a Google Calendar node. The prompt tells the agent to resolve relative dates against the current time and default to 60 minutes. The agent calls a Date & Time tool to produce Unix timestamps, then returns structured JSON. Those fields are mapped into a calendar event.",
+      "sha256": "caea9fdce34dff5e1301b3a86a43cce1e690b1a184ea1584bf04156b1fdacf65"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2e574e934ae9a5d06df7e2e687e7a9a996c2302463320f152f579036266c5d2e",
-      "publication": "reviewed_restatement_required"
+      "value": "The article says the workflow creates events, and the Google Calendar node returns an htmlLink to the new event. It shows no test results, accuracy figures or failure cases.",
+      "sha256": "2e574e934ae9a5d06df7e2e687e7a9a996c2302463320f152f579036266c5d2e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7898d87ade5a79c1126e0774d0374dc701846bd95038d0d1454eabcb9b049cc",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup uses n8n's free OpenAI credits, a Google OAuth2 sign-in, and a free n8n cloud trial or self-hosting. A public chat URL lets others book events on your calendar.",
+      "sha256": "a7898d87ade5a79c1126e0774d0374dc701846bd95038d0d1454eabcb9b049cc"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn chat messages into Google Calendar events\nAn n8n calendar agent takes a chat message, extracts event title, location and times, and creates a Google Calendar entry.\nDone with\nN8\nn8n\nWhat they did\nThe tutorial builds an n8n workflow with a chat trigger, an AI Agent node on an OpenAI chat model, and a Google Calendar node. The prompt tells the agent to resolve relative dates against the current time and default to 60 minutes. The agent calls a Date & Time tool to produce Unix timestamps, then returns structured JSON. Those fields are mapped into a calendar event.\nHow it went\nThe article says the workflow creates events, and the Google Calendar node returns an htmlLink to the new event. It shows no test results, accuracy figures or failure cases.\nWorth knowing\nSetup uses n8n's free OpenAI credits, a Google OAuth2 sign-in, and a free n8n cloud trial or self-hosting. A public chat URL lets others book events on your calendar.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that takes a chat message like 'Dinner with [person] at [place] on [day] at [time]' and extracts the event title, location, start and end times. Have it create an event in my [Google Calendar name] and reply in the chat with the details. If the time or date is missing or ambiguous, have it ask me before creating anything, and stop once a test message produces a correct event.\nOriginal source: https://www.freecodecamp.org/news/how-to-build-ai-workflows-with-n8n/",
+    "body_sha256": "a8f9aefcc2bc65e503ef86a05ce6be57df70435c9a245d54812dd81381171ec5",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ba2c38da7643cc72422efb76f0a4751db899e8d3fc742b361afebd3ba916d0ca",
-      "publication": "reviewed_restatement_required"
+      "value": "A Duke staff member tested Cowork on a receipt PDF; it crashed partway, though it handled a folder of PDFs and wrote results to an outputs folder.",
+      "sha256": "ba2c38da7643cc72422efb76f0a4751db899e8d3fc742b361afebd3ba916d0ca"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "eb2a67f56a11c9bc6948eb353648cf712556036fdf94a3d9918d9f80383524af",
-      "publication": "reviewed_restatement_required"
+      "value": "Stephen Toback pointed Cowork at a purchasing-card receipt PDF and asked it to extract the data and produce a cover sheet for his report, a job he normally does by hand. Cowork ran a Python script in its local Linux VM, hit an error, debugged it, and wrote the output files itself. He also pointed it at a folder of PDFs.",
+      "sha256": "eb2a67f56a11c9bc6948eb353648cf712556036fdf94a3d9918d9f80383524af"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2825786cc876f4db705f4cfd9bd7ea85c690f7bf9f27e3764bc1bb991021d1b0",
-      "publication": "reviewed_restatement_required"
+      "value": "The receipt workflow worked and the result files appeared in the outputs folder. Cowork then hung when his connectivity dropped. Restarting the app and the computer didn't fix it, and recovery required clearing the app's stored data.",
+      "sha256": "2825786cc876f4db705f4cfd9bd7ea85c690f7bf9f27e3764bc1bb991021d1b0"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "5f6b4c8fe4fe5ea763c8e85f37c044dc4eae0e0b1dd895187e867b318d87cc17",
-      "publication": "reviewed_restatement_required"
+      "value": "Cowork's reasoning runs in Anthropic's cloud, so a connectivity drop mid-task can break the session. Avoid relying on it for time-sensitive work. Output files are ordinary files and survive the crash.",
+      "sha256": "5f6b4c8fe4fe5ea763c8e85f37c044dc4eae0e0b1dd895187e867b318d87cc17"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Extract purchasing-card receipt data into a report cover sheet\nA Duke staff member tested Cowork on a receipt PDF; it crashed partway, though it handled a folder of PDFs and wrote results to an outputs folder.\nDone with\nCW\nClaude Cowork\nWhat they did\nStephen Toback pointed Cowork at a purchasing-card receipt PDF and asked it to extract the data and produce a cover sheet for his report, a job he normally does by hand. Cowork ran a Python script in its local Linux VM, hit an error, debugged it, and wrote the output files itself. He also pointed it at a folder of PDFs.\nHow it went\nThe receipt workflow worked and the result files appeared in the outputs folder. Cowork then hung when his connectivity dropped. Restarting the app and the computer didn't fix it, and recovery required clearing the app's stored data.\nWorth knowing\nCowork's reasoning runs in Anthropic's cloud, so a connectivity drop mid-task can break the session. Avoid relying on it for time-sensitive work. Output files are ordinary files and survive the crash.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nI have purchasing-card receipts as PDFs in [folder path]. Extract vendor, date, amount and the business purpose from each one, and fill a cover sheet in the format of [template file or describe columns]. Process the files one at a time and save results to an outputs folder so progress isn't lost. List any receipts that couldn't be read.\nOriginal source: https://sites.duke.edu/ddmc/2026/02/24/what-claude-cowork-actually-does-and-what-it-doesnt/",
+    "body_sha256": "99b21beb7410fad7828d3f1732867fa0edf4f86ff7682c31b49eb5a367c28f5a",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "48c7a72b0404a85d8167d08ce43ef5956af57331ae85bd15c1bc8485507cbe37",
-      "publication": "reviewed_restatement_required"
+      "value": "Poster built an agent skill that starts from seed papers, searches backward and forward, screens candidates, and iteratively refines a literature review.",
+      "sha256": "48c7a72b0404a85d8167d08ce43ef5956af57331ae85bd15c1bc8485507cbe37"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "783200d79ba790ec671091361bba69edba6886156c20551fe4ca2c94e48e9441",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster made a lightweight agent skill for literature reviews because general chatbots were missing relevant papers and citation tracing. The skill starts from seed papers, follows references backward and citations forward, screens the papers it finds, and iteratively refines the review; the workflow is partly hard-coded/scripted and meant to run inside tools such as Claude Code, Codex, Gemini CLI, or OpenClaw.",
+      "sha256": "783200d79ba790ec671091361bba69edba6886156c20551fe4ca2c94e48e9441"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "91fd7413a6970ba90adf20472dbebdd99070c849994d736608aaf3b25c98ba1e",
-      "publication": "reviewed_restatement_required"
+      "value": "In the poster’s tests, the final review was better than a generic AI-generated document, especially on coverage and paper selection. No quantitative results or specific failure cases are given in the thread.",
+      "sha256": "91fd7413a6970ba90adf20472dbebdd99070c849994d736608aaf3b25c98ba1e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "43dafce7590a366d49eb6515d78fd38f7bf137d1f020fb700c270d54803e857b",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is that the workflow is only partly autonomous: it is partly hard-coded/scripted rather than a fully open-ended agent.",
+      "sha256": "43dafce7590a366d49eb6515d78fd38f7bf137d1f020fb700c270d54803e857b"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run academic literature reviews from seed papers\nPoster built an agent skill that starts from seed papers, searches backward and forward, screens candidates, and iteratively refines a literature review.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster made a lightweight agent skill for literature reviews because general chatbots were missing relevant papers and citation tracing. The skill starts from seed papers, follows references backward and citations forward, screens the papers it finds, and iteratively refines the review; the workflow is partly hard-coded/scripted and meant to run inside tools such as Claude Code, Codex, Gemini CLI, or OpenClaw.\nHow it went\nIn the poster’s tests, the final review was better than a generic AI-generated document, especially on coverage and paper selection. No quantitative results or specific failure cases are given in the thread.\nWorth knowing\nThe main catch is that the workflow is only partly autonomous: it is partly hard-coded/scripted rather than a fully open-ended agent.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRun a literature review on [topic] starting from these seed papers: [titles or DOIs]. Search backward through their references and forward through papers that cite them, screen candidates against these criteria: [inclusion criteria], and repeat until new rounds turn up nothing relevant. Deliver a table of included papers with a summary of each and a short written synthesis of the main themes, plus a list of excluded papers with reasons.\nOriginal source: https://www.reddit.com/r/AIToolBench/comments/1su9rqu/i_built_a_agent_skill_for_academic_literature",
+    "body_sha256": "a995041d1741a5de67d46edb53c6555227b3733ee883d292c41baf8bdf32a799",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

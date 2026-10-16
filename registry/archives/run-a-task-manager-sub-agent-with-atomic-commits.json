@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "7065a50a32e2fa298a3f616448ced83d7c1aebd537a10d4dc3d03e3d274a5221",
-      "publication": "reviewed_restatement_required"
+      "value": "A poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.",
+      "sha256": "7065a50a32e2fa298a3f616448ced83d7c1aebd537a10d4dc3d03e3d274a5221"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "35c27588c3817b318e6b67edefba0464660db74c7ca02aadab4a5f83a97fc562",
-      "publication": "reviewed_restatement_required"
+      "value": "In the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.",
+      "sha256": "35c27588c3817b318e6b67edefba0464660db74c7ca02aadab4a5f83a97fc562"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ae69efbfb7fcfed02cf38a2edc1300df5bafb528476bf94ab0693d77012239a3",
-      "publication": "reviewed_restatement_required"
+      "value": "The reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.",
+      "sha256": "ae69efbfb7fcfed02cf38a2edc1300df5bafb528476bf94ab0693d77012239a3"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "05eb1d7967f293d07ac5c023250f41aa19122296a828a3666000ccf3d6747f8a",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.",
+      "sha256": "05eb1d7967f293d07ac5c023250f41aa19122296a828a3666000ccf3d6747f8a"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a task-manager sub-agent with atomic commits\nA poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\nDone with\nCC\nClaude Code\nWhat they did\nIn the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.\nHow it went\nThe reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.\nWorth knowing\nThe main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a Claude Code sub-agent called task-manager for [project]. It should fetch the next open task from [task file or tracker], hand it to me to work on, mark it complete when done, and require an atomic commit with a commit ID before closing any task. Finish by running it on one sample task and showing me the result.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1mzt2b3/not_sure_if_people_already_do_this",
+    "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

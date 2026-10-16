@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "99ad9b9b1d88cf5130dc04b312422718933d98b9eddf3c1364ac1f57d6161a72",
-      "publication": "reviewed_restatement_required"
+      "value": "RemainderBot uses a founder's goals and task lists to write PRs with spare Claude and Codex quota, producing 111 PRs including call prep and prototypes.",
+      "sha256": "99ad9b9b1d88cf5130dc04b312422718933d98b9eddf3c1364ac1f57d6161a72"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "9efef4782961a61ede29865889c7e3b962cc1f890de0d01a42cea4f84e076850",
-      "publication": "reviewed_restatement_required"
+      "value": "The founder points RemainderBot at a goals file and task-list sources. It runs by hand or as a cronjob. In cron mode it checks remaining subscription quota and time until the weekly reset, picks a task, works on a new branch, and opens a PR. The founder reviews PRs on GitHub, and comments and merge decisions shape later tasks.",
+      "sha256": "9efef4782961a61ede29865889c7e3b962cc1f890de0d01a42cea4f84e076850"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6f760da07cc74675377683eec94261544acb0296a663a64c60e28ecbf94fb2b8",
-      "publication": "reviewed_restatement_required"
+      "value": "It produced 111 PRs, including customer call prep, a census of 31 GitHub orgs' agent setup files, and standalone prototypes for demos. The source gives no accuracy figures; the author asks users to report mistakes.",
+      "sha256": "6f760da07cc74675377683eec94261544acb0296a663a64c60e28ecbf94fb2b8"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "01cb28dd27ae99ba63f07cb34a4cd7d33cd51ed63add4543278a2945e37e16b3",
-      "publication": "reviewed_restatement_required"
+      "value": "Needs git, the claude or codex CLI, and an authenticated gh. A single small run with a 20-minute deadline costs a few percent of weekly quota.",
+      "sha256": "01cb28dd27ae99ba63f07cb34a4cd7d33cd51ed63add4543278a2945e37e16b3"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Spend leftover AI quota on reviewable PRs\nRemainderBot uses a founder's goals and task lists to write PRs with spare Claude and Codex quota, producing 111 PRs including call prep and prototypes.\nDone with\nCL\nClaude\nCX\nCodex\nWhat they did\nThe founder points RemainderBot at a goals file and task-list sources. It runs by hand or as a cronjob. In cron mode it checks remaining subscription quota and time until the weekly reset, picks a task, works on a new branch, and opens a PR. The founder reviews PRs on GitHub, and comments and merge decisions shape later tasks.\nHow it went\nIt produced 111 PRs, including customer call prep, a census of 31 GitHub orgs' agent setup files, and standalone prototypes for demos. The source gives no accuracy figures; the author asks users to report mistakes.\nWorth knowing\nNeeds git, the claude or codex CLI, and an authenticated gh. A single small run with a 20-minute deadline costs a few percent of weekly quota.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead my goals in [path to goals file] and my task list in [path or link to task list]. Pick up to [number] small, well-defined tasks I could use help with, such as call prep notes, prototypes, or small fixes, and do each on its own branch and open it as a pull request in [repo] with a short description of what you did and why. Do not merge anything, and stop once you have opened the PRs and given me a list of them.\nOriginal source: https://news.ycombinator.com/item?id=50073611",
+    "body_sha256": "eac9c849f66d206b628905a2ad970ef3aa0b0af8a1bb1d99252517cf83f0ce79",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -1,36 +1,30 @@
 # Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/draft-a-tax-filing-from-bank-statements-with-claude-code
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Claude Code
-
-### 介绍
-
-A guide includes a brief user anecdote about drafting tax paperwork with Claude Code.
-
-一篇指南收录了用户用 Claude Code 起草税务材料的简短经历。
-
-### 方法
-
-Statements and invoices served as inputs. Folder organization and professional review are the guide’s suggested practice, not a fully observed execution trace.
-
-输入为银行账单和发票；文件夹整理及专业复核属于指南建议，并非完整观察到的执行记录。
-
-### 结果与限制
-
-A user describes the draft positively, but the source provides no audit or financial outcome. Screenshot-processing results belong to another example.
-
-用户对草稿评价积极，但源站没有审计或财务结果；截图处理数据来自另一个案例。
+    Draft a tax filing from bank statements with Claude Code
+    A roundup of user reports, including one who had Claude Code draft a tax filing from bank statements and invoices, and another who organized 1,400 screenshots.
+    Done with
+    CC
+    Claude Code
+    What they did
+    The source is a roundup of user reports, so the tax example is a single quoted line from Lenny's Newsletter. The user had Claude Code go through their bank statements and invoices and prepare a first draft of a tax filing. The guide suggests sorting documents into folders by income, business expenses, medical expenses and donations first. It also says to review the draft with an accountant.
+    How it went
+    The quoted user said it got everything right. The 1,400-screenshot organizer reported that batch renaming was surprisingly slow, taking 20+ seconds for 8-10 images, but still faster than doing it by hand.
+    Worth knowing
+    The tax claim is one unverified quote with no figures, so have an accountant check the draft. For large screenshot batches, expect slow renaming and consider running it overnight.
+    Try it yourself
+    with
+    Claude Code
+    Copy prompt
+    In [folder path] I have bank statements and invoices for [tax year]. Read them and draft a summary of income, deductible expenses by category and totals in a spreadsheet, flagging anything unclear or missing. Don't file or submit anything; stop and show me the draft and your list of questions so I can review it with [my accountant or tax software].
+    Original source: https://www.masteringai.io/guides/claude-code-use-cases
 
 ## 原作者的方法与来源
 
 来源：[Mastering AI · Tax filing preparation](https://www.masteringai.io/guides/claude-code-use-cases)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 汇编引用一位用户把银行对账单和发票交给 Claude Code，准备第一版报税草稿的自述。
    English summary: The compilation cites a user giving Claude Code bank statements and invoices to prepare a first tax-filing draft.
@@ -45,7 +39,7 @@ A user describes the draft positively, but the source provides no audit or finan
 该案例可帮助已有会计复核能力的个人或事务所整理流水与发票，不能据此认定独立报税服务成立。案例的全部正确陈述只是汇编转述，Lenny原文公开部分无法核验；低价成熟税务软件已有申报能力，客户愿意支付的应是材料完整性和可证明的复核工时节省。标准资料包情景有正贡献，但人工、追问与获客上升即亏损；账户数据政策和专业责任还带来额外成本。建议把业务边界限制在带凭证索引的内部资料包，先测总工时再决定是否收费。
 
 案例ID：`draft-a-tax-filing-from-bank-statements-with-claude-code` · 案例来源：https://agentusecases.ai/use-case/draft-a-tax-filing-from-bank-statements-with-claude-code
-研究时间：2026-10-15T14:42:30.692240+00:00 · 证据置信度：中低：10份公开来源已读取；案例身份明确，税务效果只有转述，上游公开部分受付费墙限制；无真实财务数据或模型实测。
+研究时间：2026-10-15T14:42:30.692240+00:00
 
 **商业评分：36.5/100。用户反馈信号占5%。**
 
@@ -76,9 +70,7 @@ A user describes the draft positively, but the source provides no audit or finan
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -88,9 +80,9 @@ A user describes the draft positively, but the source provides no audit or finan
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sceaae3fa97f4, Sfd6bbdd51906, S024aa9fc225e, S06b2864aaa7d, S7dea3b226d0f, Sd9da3a80266f, S10c8236f2e22
 
@@ -103,9 +95,9 @@ A user describes the draft positively, but the source provides no audit or finan
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sceaae3fa97f4, Sfd6bbdd51906, S024aa9fc225e, S06b2864aaa7d, S7dea3b226d0f, Sd9da3a80266f, S10c8236f2e22
 
@@ -188,8 +180,7 @@ IRS说明专业报税准备者需要安全计划；PTIN页面也提示收费准�
 
 ## 用户评价怎样改变判断
 
-本轮执行了社区定向、MasteringAI评论和GitHub代码讨论三次不同搜索，结果混有官方产品页、无关主题和其他编程体验，未发现可核验的本税务草稿直接用户记录。这代表检索可见性有限，不代表网上不存在评论。未将搜索摘要或MasteringAI站内星级当作税务效果；也没有读取付费墙后的内容。已实际读取Lenny公开文章：其具名读者Martin Merschroth报告发票命名和整理，可作为相邻工作流信号；未核验其身份、输入或输出，原文选样来自自愿分享，且文章有付费订阅利益。
-因此反馈项仅0.5/5，折合总分0.5/100。它支持资料整理“有人实际使用”，不能支持银行流水分类全部正确、产生合法扣除、成功申报或节省会计费。目录也明确提示单句未经核实，强化了降低结论强度的必要。若未来有完整前后对照记录和专业盲审，可能提高业务效果分；没有这些证据时，再多点赞和转载都不会改变关键判断。评论只占5%权重，决定性证据仍应是端到端工时、异常率和客户付款。
+相关体验：公开文章具名读者报告用Claude Code重命名与整理发票；不是银行流水税务草稿的准确性验证。
 
 依据：Se7947d38ed0f, Sceaae3fa97f4, Sfd6bbdd51906
 
@@ -211,18 +202,11 @@ IRS说明专业报税准备者需要安全计划；PTIN页面也提示收费准�
 
 假设B：直客混乱资料包假设：150分钟×40美元/小时人工；每包模型预算8、存储交付与返工准备12、获客摊销35、售价120，20包/月，固定1000。所有输入均为研究者假设而非已实现经营数据。固定支出包括席位、维护、基础管理；模型用量预算独立列示，不重复计个人Pro月费。未调用任何付费模型API。未含所得税与重大事故赔付，不能称为净利润。；API成本 8，人工成本 100，其他可变成本 12，分摊获客成本 35。依据：S58333316475e, S06b2864aaa7d, Sf79c3bf4770a
 
-## 用户反馈核对（低权重）
-
-- 社区定向网页搜索 · `"Claude Code" "bank statements" "tax" site:reddit.com`：返回Claude官方页及无关编程社区讨论，没有可核验本案例税务直接用户；搜索相关性有限，未将摘要当作已读反馈。
-- 独立评论与厂商相关网页 · `"masteringai.io" "tax" review`：返回咨询/培训介绍和课程讨论，不能证明这项税务流程交付；厂商总体评分不纳入。
-- 公开代码与讨论定向搜索 · `"Claude Code" "tax filing" site:github.com`：返回多项无关GitHub结果，未找到本案例代码、税务缺陷记录或可复现用户结果；不据此声称没有项目。
-- [Se7947d38ed0f] adjacent_workflow：公开文章具名读者报告用Claude Code重命名与整理发票；不是银行流水税务草稿的准确性验证。；偏差：读者自愿分享、编辑挑选，文章有订阅利益；身份与文件结果未独立核验。
-
 ## 反证与未核实信息
 
 FreeTaxUSA的低价申报能力反驳生成税表本身具有高收费价值；其输入责任边界也说明材料整理可能仍有补充价值。Lenny公开部分的具名发票整理体验反驳工具完全无用，但不能证明税务正确。案例页明确承认单句未经核实；文章的500美元/小时不能作为实际节省。无证据表明本案例已形成税务服务收入。
 
-原用户国别、主体、税年、材料规模、实际申报、CPA复核、错误率、收入利润及工时均未知。美国商业化范围为研究情景而非原用户身份。上游付费内容未绕过；搜索结果相关性有限，未核验直接用户。没有专用代码或可复现实验，未调用付费模型、未操作税务账户、未联系客户。价格与条款仅为本次读取时点，税务资格要求需结合实际服务范围进一步专业判断。
+用户国别、税年、主体、材料量、申报结果、CPA复核、错误率与工时未知。美国商业化范围仅为分析场景，服务资格需按实际范围确认。
 
 ## 具体动作与止损条件
 
@@ -244,6 +228,3 @@ FreeTaxUSA的低价申报能力反驳生成税表本身具有高收费价值；�
 - [S7dea3b226d0f] [Anthropic Commercial Terms](https://www.anthropic.com/legal/commercial-terms)：核实输入授权责任、输出责任和不保证输出准确完整无误；不得把模型提供商合同当作报税结果担保。
 
 结构化记录：[research/draft-a-tax-filing-from-bank-statements-with-claude-code.json](../research/draft-a-tax-filing-from-bank-statements-with-claude-code.json)
-来源读取凭据：[research/evidence/draft-a-tax-filing-from-bank-statements-with-claude-code.json](../research/evidence/draft-a-tax-filing-from-bank-statements-with-claude-code.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "603954a258e05af07ccfc40d8479866556887303320c95664fd6134b076768c4",
-      "publication": "reviewed_restatement_required"
+      "value": "A Home Assistant presence sensor triggers n8n, where a Deepseek agent picks a brightness for the time of day and sets the lights.",
+      "sha256": "603954a258e05af07ccfc40d8479866556887303320c95664fd6134b076768c4"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ae53a49386fdddf755f982cc83dd3bfb97ff874973c1f05123f511d2755e3edf",
-      "publication": "reviewed_restatement_required"
+      "value": "n8n runs as a Home Assistant add-on. A Home Assistant automation fires when the presence sensor goes from Clear to Detected and calls an n8n webhook through a REST command. In n8n, a Deepseek agent prompted as a lighting designer picks a brightness percentage for the current time. A final node calls Home Assistant's turn_on service for the light with that value.",
+      "sha256": "ae53a49386fdddf755f982cc83dd3bfb97ff874973c1f05123f511d2755e3edf"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "84e235f36243cdb5482db50fb78f4d1f44be2a6e06c4cf988e68b10632f43dd5",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no measured results. It presents the workflow as working and says it is meant to avoid harsh night lighting and dim mornings. Brightness is the only attribute it actually sets.",
+      "sha256": "84e235f36243cdb5482db50fb78f4d1f44be2a6e06c4cf988e68b10632f43dd5"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3602e857549913205857caff7240de78ef70b9017406068100b33cad025b6762",
-      "publication": "reviewed_restatement_required"
+      "value": "Use the Home Assistant IP address in the webhook URL, not the default hostname. The article calls this the main connectivity fix and recommends at least 4GB RAM.",
+      "sha256": "3602e857549913205857caff7240de78ef70b9017406068100b33cad025b6762"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Set lighting brightness with an AI agent on presence\nA Home Assistant presence sensor triggers n8n, where a Deepseek agent picks a brightness for the time of day and sets the lights.\nDone with\nN8\nn8n\nWhat they did\nn8n runs as a Home Assistant add-on. A Home Assistant automation fires when the presence sensor goes from Clear to Detected and calls an n8n webhook through a REST command. In n8n, a Deepseek agent prompted as a lighting designer picks a brightness percentage for the current time. A final node calls Home Assistant's turn_on service for the light with that value.\nHow it went\nThe source gives no measured results. It presents the workflow as working and says it is meant to avoid harsh night lighting and dim mornings. Brightness is the only attribute it actually sets.\nWorth knowing\nUse the Home Assistant IP address in the webhook URL, not the default hostname. The article calls this the main connectivity fix and recommends at least 4GB RAM.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow triggered when the presence sensor [sensor name] in Home Assistant detects someone in [room]. Have an AI agent pick a light brightness from 1 to 100 based on the time of day and [other rules, e.g. sunset or movie mode], then set [light entity] to that level. Done when I can test it at three different times of day and see a sensible brightness each time.\nOriginal source: https://growwstacks.com/blog/n8n-home-assistant-ai-lighting-automation",
+    "body_sha256": "97aa4267bdfa1920c647feba768d73d30ec2ee8508371957d326d46082ed83d4",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

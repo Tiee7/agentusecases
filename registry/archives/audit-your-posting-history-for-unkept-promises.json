@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "cd741dacb319667a01e033a9d2eae62f52a56f22df10cb6dc6db606c1deabb39",
-      "publication": "reviewed_restatement_required"
+      "value": "An agent was given the author's social posting history and found a promise the author had never actually made.",
+      "sha256": "cd741dacb319667a01e033a9d2eae62f52a56f22df10cb6dc6db606c1deabb39"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "f00393604a4bd01484e9c88889c19282945ab5504fe777f3da4021049ecd4bfb",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built a Claude-written skill that calls list_posts, reads her last twenty posts, and looks for topics already covered and threads left hanging. It flagged two July LinkedIn posts as an unfinished Zapier promise. They were Zapier review test posts. She corrected it, then added filters and a rule that the agent must ask rather than assert.",
+      "sha256": "f00393604a4bd01484e9c88889c19282945ab5504fe777f3da4021049ecd4bfb"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "01d8062e4767ea090db6f6357fc13b7516538c0414f899a2f56271d206f237f9",
-      "publication": "reviewed_restatement_required"
+      "value": "The skill now offers three angles to choose from and stops at the draft. Three early failures shaped it: test posts read as promises, a missing outside article, and a draft that passed the slop checker but still read as slop.",
+      "sha256": "01d8062e4767ea090db6f6357fc13b7516538c0414f899a2f56271d206f237f9"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "bcb6232b59cf0952cb98f75135c4ddac295921d41ba7df47a438caf5263a2f06",
-      "publication": "reviewed_restatement_required"
+      "value": "Test or QA posts in your feed look like real posts to an agent. Filter them out, and make it ask whether a history-based inference is right before relying on it.",
+      "sha256": "bcb6232b59cf0952cb98f75135c4ddac295921d41ba7df47a438caf5263a2f06"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Audit your posting history for unkept promises\nAn agent was given the author's social posting history and found a promise the author had never actually made.\nDone with\nCL\nClaude\nWhat they did\nThe author built a Claude-written skill that calls list_posts, reads her last twenty posts, and looks for topics already covered and threads left hanging. It flagged two July LinkedIn posts as an unfinished Zapier promise. They were Zapier review test posts. She corrected it, then added filters and a rule that the agent must ask rather than assert.\nHow it went\nThe skill now offers three angles to choose from and stops at the draft. Three early failures shaped it: test posts read as promises, a missing outside article, and a draft that passed the slop checker but still read as slop.\nWorth knowing\nTest or QA posts in your feed look like real posts to an agent. Filter them out, and make it ask whether a history-based inference is right before relying on it.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHere is an export of my posts from [platform] at [file path]. Find every place I promised or committed to something, like a future post, project, or reply, and check whether I followed through. Give me a table of the promise, date, and status, and flag any that are ambiguous or that you can't find evidence I actually made. Read-only; do not post or contact anyone.\nOriginal source: https://dev.to/eugeniya_ivanova_4a58eadc/i-gave-an-agent-my-posting-history-it-found-a-promise-i-never-made-4n62",
+    "body_sha256": "f08115acfb91a70956509e7207a262f15db36e79a3c2718fb0b271a1471000c8",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

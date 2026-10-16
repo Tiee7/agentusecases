@@ -41,8 +41,8 @@ def render_author_method(record):
     m = record.get('author_method')
     if not m: return []
     lines = ['','## 原作者的方法与来源','',f"来源：[{m['source_title']}]({m['source_url']})"]
-    if m['status'] == 'unavailable': return lines + ['',m['unavailable_reason']]
-    label = '作者方法摘要' if m['status'] == 'author_summary' else '原始报道摘要 · 非作者原文'
-    lines += ['', label + ' · 中文为英文摘要的翻译（非全文转载）']
+    if m['status'] == 'unavailable': return lines + ['', '方法摘要未收录']
+    label = '作者方法摘要' if m['status'] == 'author_summary' else '报道摘要'
+    lines += ['', label]
     for i,s in enumerate(m['steps'],1): lines += ['',f"{i}. {s['zh']}",f"   English summary: {s['en']}"]
     return lines

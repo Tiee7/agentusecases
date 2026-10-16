@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "89ec24f74df24947898b054b39457759a3b62ce6631a85360ff04bd18033c643",
-      "publication": "reviewed_restatement_required"
+      "value": "A built AI system reads a denied claim, pulls the patient's record and drafts a formal appeal letter for human review before sending.",
+      "sha256": "89ec24f74df24947898b054b39457759a3b62ce6631a85360ff04bd18033c643"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "ba38a0bcfc20e263fa1e1077f42ffe8dd5a15f4224be76d78588338cd40170b7",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n automation triggers the moment a claim is marked Denied, filters anything already appealed, then pulls the full patient record, prescriptions, and test results tied to that patient ID. One AI call identifies the likely denial reason and drafts the formal appeal letter citing the clinical details.",
+      "sha256": "ba38a0bcfc20e263fa1e1077f42ffe8dd5a15f4224be76d78588338cd40170b7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "83d3f42d81364ad2876cbbf30c7523dd3c6d117c06535d4afc506e094868d86a",
-      "publication": "reviewed_restatement_required"
+      "value": "It outputs a real Google Doc with the letter, updates a tracking sheet, and sends a branded email to staff with a review link. No results or metrics are stated.",
+      "sha256": "83d3f42d81364ad2876cbbf30c7523dd3c6d117c06535d4afc506e094868d86a"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Draft appeals for denied insurance claims\nA built AI system reads a denied claim, pulls the patient's record and drafts a formal appeal letter for human review before sending.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAn n8n automation triggers the moment a claim is marked Denied, filters anything already appealed, then pulls the full patient record, prescriptions, and test results tied to that patient ID. One AI call identifies the likely denial reason and drafts the formal appeal letter citing the clinical details.\nHow it went\nIt outputs a real Google Doc with the letter, updates a tracking sheet, and sends a branded email to staff with a review link. No results or metrics are stated.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a tool that reads a denied insurance claim from [file or folder], pulls the relevant patient record details from [source], and drafts a formal appeal letter citing the denial reason and supporting evidence. It should save the draft for human review and never send anything by itself. Finish by running it on one sample denial and showing me the resulting letter.\nOriginal source: https://x.com/Tariere5/status/2104521353386766588",
+    "body_sha256": "d1cc6c3c2c4628c5aed7285c5abc81801eda030a121703eee774cebf5858750f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

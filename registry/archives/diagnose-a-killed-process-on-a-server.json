@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "47e9a15a8c61a037e65e300b35c7c38b1c9850aa753ea1c5505e290fc3ff3d3e",
-      "publication": "reviewed_restatement_required"
+      "value": "Codex CLI over SSH found the OOM killer in kernel logs on a 2 GB droplet with no swap and listed fixes by risk without changing anything.",
+      "sha256": "47e9a15a8c61a037e65e300b35c7c38b1c9850aa753ea1c5505e290fc3ff3d3e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b37ce69dc9915d9629422fd268f0a0615933b6d7b871c9c309662b91860b1308",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude Code kept dying within seconds on the author's Ubuntu droplet. He ran Codex CLI on his Mac and gave it the SSH command for the server, plus the symptom and no hints. Codex asked approval to connect, then checked memory, processes and limits. It grepped the kernel log via journalctl for kill and OOM messages.",
+      "sha256": "b37ce69dc9915d9629422fd268f0a0615933b6d7b871c9c309662b91860b1308"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "45b117d9125b35947c777889a6a19d3e8cdc020260278edd89632bd2472d21e6",
-      "publication": "reviewed_restatement_required"
+      "value": "Codex found the OOM killer ending claude at about 860 MB on a 1.9 GB droplet with no swap, with MySQL using about 786 MB. It ranked fixes and changed nothing.",
+      "sha256": "45b117d9125b35947c777889a6a19d3e8cdc020260278edd89632bd2472d21e6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "6d48d842a48e537f457bff8db7c08f6e7be11668953f49b1eec20e767f3cc471",
-      "publication": "reviewed_restatement_required"
+      "value": "The author resized the droplet, which caused its own problems. He says in hindsight that the first fix Codex listed, a 2 GB swap file, was cheaper.",
+      "sha256": "6d48d842a48e537f457bff8db7c08f6e7be11668953f49b1eec20e767f3cc471"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Diagnose a killed process on a server\nCodex CLI over SSH found the OOM killer in kernel logs on a 2 GB droplet with no swap and listed fixes by risk without changing anything.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nClaude Code kept dying within seconds on the author's Ubuntu droplet. He ran Codex CLI on his Mac and gave it the SSH command for the server, plus the symptom and no hints. Codex asked approval to connect, then checked memory, processes and limits. It grepped the kernel log via journalctl for kill and OOM messages.\nHow it went\nCodex found the OOM killer ending claude at about 860 MB on a 1.9 GB droplet with no swap, with MySQL using about 786 MB. It ranked fixes and changed nothing.\nWorth knowing\nThe author resized the droplet, which caused its own problems. He says in hindsight that the first fix Codex listed, a 2 GB swap file, was cheaper.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nMy server at [user@host] has a process that keeps getting killed, namely [service name]. Connect over SSH and investigate read-only: check kernel logs, memory, swap, and service logs to find the cause. Finish with a diagnosis and a list of possible fixes ranked by risk. Do not change any settings, install anything, or restart services without showing me the exact command and getting my approval first.\nOriginal source: https://flaviocopes.com/server-process-killed/",
+    "body_sha256": "d5de899f118b6022ca233eac341d1a279a9902e56964bb40b38a3a79c7ad2285",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

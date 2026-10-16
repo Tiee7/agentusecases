@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c5550f6a1368daa35a6322fd5732038ae51042d2841ac9194bde75b78b36c267",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude computer use produced 70 files for a planned feature but the code didn't work, so the author went back to manual work.",
+      "sha256": "c5550f6a1368daa35a6322fd5732038ae51042d2841ac9194bde75b78b36c267"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5ae5353c959d5293720b2b135ddd7a5ffa5510796c6e4d8a4c51b44d75aceb1f",
-      "publication": "reviewed_restatement_required"
+      "value": "The user discussed the feature deliverables and agreed on a concrete plan with Claude, then granted it full autonomous control to implement the entire feature. Claude generated 70 files on its own without further input or tests. The user reviewed the output afterward.",
+      "sha256": "5ae5353c959d5293720b2b135ddd7a5ffa5510796c6e4d8a4c51b44d75aceb1f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d66cc0b8c2a278e7155436e8b6fa3d62fcc5e6da42a9c17232a392de89769613",
-      "publication": "reviewed_restatement_required"
+      "value": "The code did not work. The user deleted the branch, cleared the session, and returned to using Claude only for incremental pair-programming steps.",
+      "sha256": "d66cc0b8c2a278e7155436e8b6fa3d62fcc5e6da42a9c17232a392de89769613"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b3832af13f5e4d539e38c3eadd2b7f3f221129719cada06356fc7ab96e38c4d2",
-      "publication": "reviewed_restatement_required"
+      "value": "The full autonomous run produced unusable output after the agreed plan, prompting immediate abandonment.",
+      "sha256": "b3832af13f5e4d539e38c3eadd2b7f3f221129719cada06356fc7ab96e38c4d2"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Deliver a software feature autonomously (partial)\nClaude computer use produced 70 files for a planned feature but the code didn't work, so the author went back to manual work.\nDone with\nCU\nClaude computer use\nWhat they did\nThe user discussed the feature deliverables and agreed on a concrete plan with Claude, then granted it full autonomous control to implement the entire feature. Claude generated 70 files on its own without further input or tests. The user reviewed the output afterward.\nHow it went\nThe code did not work. The user deleted the branch, cleared the session, and returned to using Claude only for incremental pair-programming steps.\nWorth knowing\nThe full autonomous run produced unusable output after the agreed plan, prompting immediate abandonment.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nIn my repo at [repo path], implement this feature: [feature description]. First write a short plan and the list of files you'll change, and wait for my okay. Then build it in small steps, running the tests after each step. Stop when the tests pass and I can run [command] to see it working, and don't delete files without asking.\nOriginal source: https://x.com/ckathanasiadis/status/2105674952623964339",
+    "body_sha256": "3ebf8cac84e4b54e1b7b5d8de57d0f20730e34257e73f6650aa0d303cdc9cbe7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

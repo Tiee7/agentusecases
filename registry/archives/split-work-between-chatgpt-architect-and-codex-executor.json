@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "59197b5f8b0ac9d641c6d0a54de1f88394736f19c854dd90227a65c099bab10e",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a bridge where ChatGPT plans and reviews while Codex does the local execution work.",
+      "sha256": "59197b5f8b0ac9d641c6d0a54de1f88394736f19c854dd90227a65c099bab10e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "3e2616d16757eff0c9bf814ffe1687ba9393c8551886553c9c85905f2d9ba38e",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster used MCP-style local file access to connect ChatGPT with a local Codex setup, after seeing ChatGPT handle a local CAD task by asking clarifying questions and working with subagents for nearly an hour. They then built a small workflow layer that assigns ChatGPT the planning and review role, while Codex handles local execution steps like touching files, running commands, and checking results, with basic safety boundaries added by the poster.",
+      "sha256": "3e2616d16757eff0c9bf814ffe1687ba9393c8551886553c9c85905f2d9ba38e"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d58420a7b3146d3be169313c329a13a388f8678728b643c02341cc594bfa464e",
-      "publication": "reviewed_restatement_required"
+      "value": "The immediate CAD test showed stronger high-level capability from ChatGPT than Codex, though the CAD output itself was only so-so. The bridge itself is presented as experimental, with no performance numbers yet and the author asking others how they would design the workflow.",
+      "sha256": "d58420a7b3146d3be169313c329a13a388f8678728b643c02341cc594bfa464e"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "e7c7aff2a0d8cacfabf43b92056951ec1c6ced91415b3364924f8ca2f15b2ed3",
-      "publication": "reviewed_restatement_required"
+      "value": "It was built for the Windows version of Codex, and the author said using computer-use directly inside native apps like the ChatGPT desktop app usually failed, so they bypassed that with Codex web Chrome control.",
+      "sha256": "e7c7aff2a0d8cacfabf43b92056951ec1c6ced91415b3364924f8ca2f15b2ed3"
     },
     "actual_agents": {
       "status": "observed",
@@ -94,6 +90,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Split work between ChatGPT architect and Codex executor\nThe poster built a bridge where ChatGPT plans and reviews while Codex does the local execution work.\nDone with\nGP\nChatGPT\nCX\nCodex\nWhat they did\nThe poster used MCP-style local file access to connect ChatGPT with a local Codex setup, after seeing ChatGPT handle a local CAD task by asking clarifying questions and working with subagents for nearly an hour. They then built a small workflow layer that assigns ChatGPT the planning and review role, while Codex handles local execution steps like touching files, running commands, and checking results, with basic safety boundaries added by the poster.\nHow it went\nThe immediate CAD test showed stronger high-level capability from ChatGPT than Codex, though the CAD output itself was only so-so. The bridge itself is presented as experimental, with no performance numbers yet and the author asking others how they would design the workflow.\nWorth knowing\nIt was built for the Windows version of Codex, and the author said using computer-use directly inside native apps like the ChatGPT desktop app usually failed, so they bypassed that with Codex web Chrome control.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nI'm using ChatGPT as the planner and reviewer for [project or repo path], and you're the executor. Read the plan I paste below, carry it out step by step in the local repo, and run [tests or build command] after each step. When finished, give me a short summary of what changed, the files touched, and any test results that I can paste back to ChatGPT for review. Pause and ask me before deleting files or pushing anything. Plan: [paste plan from ChatGPT]\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1uow2ld/i_built_a_bridge_between_chatgpt_and_codex",
+    "body_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

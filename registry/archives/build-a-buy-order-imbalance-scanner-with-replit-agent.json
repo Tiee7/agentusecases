@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f765b97ba9c7c2bcfcddbb2bc6663bed7a3b4da289d8205d7ce3fea3094e40bd",
-      "publication": "reviewed_restatement_required"
+      "value": "A commenter says Replit's agent built a working scanner for buy order imbalances using demo credits.",
+      "sha256": "f765b97ba9c7c2bcfcddbb2bc6663bed7a3b4da289d8205d7ce3fea3094e40bd"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e3a9585e9c6e867265343050720ced51f91452b4b55f31f80356cffd6f4c4af3",
-      "publication": "reviewed_restatement_required"
+      "value": "In the comments, one reader says they used Replit’s AI agent to build a working scanner for buy order imbalances while trading U.S. and Australian stocks. The source gives almost no build detail beyond that it was done with Replit Agent and only the included demo credits, and the commenter frames the value mainly as getting something functional without prior experience.",
+      "sha256": "e3a9585e9c6e867265343050720ced51f91452b4b55f31f80356cffd6f4c4af3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "93a5f9744150ea7749976cf8f809d91f5907e449ef95636367474ff70412e893",
-      "publication": "reviewed_restatement_required"
+      "value": "The stated result was a working scanner, which the commenter found impressive for a novice. They gave no performance metrics, implementation specifics, or limits, so the outcome is only lightly substantiated by the thread.",
+      "sha256": "93a5f9744150ea7749976cf8f809d91f5907e449ef95636367474ff70412e893"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "32aa120eff3a9b40da30fc863a96e9cc8ae1af91955b5db34dfc31ee6adbfb72",
-      "publication": "reviewed_restatement_required"
+      "value": "The clearest practical catch is that the commenter says they did it using only demo credits and had no experience in the field.",
+      "sha256": "32aa120eff3a9b40da30fc863a96e9cc8ae1af91955b5db34dfc31ee6adbfb72"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,59 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "editorial": {
+    "status": "reviewed",
+    "format": "detailed_bilingual_restatement",
+    "based_on_body_sha256": "9b1a93cafe399e968052209a4dd0b27dc4fec80d41dd9ddc7843e9c5aadae916",
+    "reviewed_at": "2026-10-16T09:47:33.935832+00:00",
+    "sections": {
+      "introduction": [
+        {
+          "en": "The evidence here supports a narrow claim: a novice commenter said Replit Agent produced a usable market scanner. It does not establish a validated trading signal.",
+          "zh": "此处证据只能支持较窄的说法：一位新手评论者称Replit Agent做出了可用的市场扫描器，不能据此确认交易信号有效。"
+        }
+      ],
+      "method": [
+        {
+          "en": "The stated target was an excess of buy orders relative to sell orders, in the context of US and Australian equities. The commenter attributed construction to Replit Agent and included demonstration credits; the source does not identify the market-data connection or detection logic.",
+          "zh": "目标是在美股和澳股交易背景下发现买单相对卖单偏多的情况。评论者称使用Replit Agent及附带体验额度完成构建；源站没有说明行情连接方式或检测逻辑。"
+        }
+      ],
+      "outcome": [
+        {
+          "en": "“Working” is the commenter’s assessment of functionality. There are no reported accuracy, latency, coverage or return measurements, so functional completion and economic usefulness remain separate questions.",
+          "zh": "“能工作”是评论者对功能的评价。没有准确率、延迟、覆盖范围或收益测量，因此功能完成与经济价值仍是不同问题。"
+        }
+      ],
+      "notes": [
+        {
+          "en": "Demo-credit use does not establish an ongoing operating budget. A reproducible account would still need its data source, definition of imbalance and a recorded example output; none is available in this captured narrative.",
+          "zh": "使用体验额度不能证明长期运行预算。要复现仍需要行情来源、失衡定义及输出实例，而这些内容不在本次已取得的叙述中。"
+        }
+      ]
+    },
+    "attribution": "Original structured synthesis of source-reported facts and explicit evidence limits; not full text, a full translation, or independent outcome verification.",
+    "external_source_status": "not_read_in_this_batch",
+    "quotation_policy": "No source quotation needed; tool names, numbers and interface command tokens retained as facts."
+  },
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a buy-order imbalance scanner with Replit Agent\nA commenter says Replit's agent built a working scanner for buy order imbalances using demo credits.\nDone with\nRA\nReplit Agent\nWhat they did\nIn the comments, one reader says they used Replit’s AI agent to build a working scanner for buy order imbalances while trading U.S. and Australian stocks. The source gives almost no build detail beyond that it was done with Replit Agent and only the included demo credits, and the commenter frames the value mainly as getting something functional without prior experience.\nHow it went\nThe stated result was a working scanner, which the commenter found impressive for a novice. They gave no performance metrics, implementation specifics, or limits, so the outcome is only lightly substantiated by the thread.\nWorth knowing\nThe clearest practical catch is that the commenter says they did it using only demo credits and had no experience in the field.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nBuild a scanner that watches [market or ticker list] using [data source or demo credentials] and flags when buy orders significantly outweigh sell orders, with a threshold of [ratio]. Show the results in a simple dashboard and make it clear that it is read-only with no trading. Finish when it runs on live or demo data and shows at least one example flag.\nOriginal source: https://www.reddit.com/r/replit/comments/1fahuge/buyer_beware_replits_ai_agent_review",
+    "body_sha256": "9b1a93cafe399e968052209a4dd0b27dc4fec80d41dd9ddc7843e9c5aadae916",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "9b1a93cafe399e968052209a4dd0b27dc4fec80d41dd9ddc7843e9c5aadae916",
+    "translated_at": "2026-10-16T09:50:50.638601+00:00",
+    "body": "用Replit Agent构建买单失衡扫描器\n一位评论者称，使用体验额度，Replit的agent构建出了能够工作的买单失衡扫描器。\n实际使用\nReplit Agent\n具体做法\n评论区的一位读者说，他在交易美国和澳大利亚股票时，使用Replit的AI agent构建出了可用的买单失衡扫描器。除了使用Replit Agent以及仅消耗附带体验额度之外，来源几乎没有提供构建细节。评论者认为，其主要价值在于让没有相关经验的人也能得到一个能工作的工具。\n结果如何\n据述结果是一个能工作的扫描器，评论者认为这对新手而言令人印象深刻。他没有给出性能指标、具体实现或限制，因此帖子对结果的支持相当有限。\n值得知道\n最明确的实际情况是，评论者称自己仅使用体验额度完成，而且此前没有相关领域经验。\n自行试用\n推荐工具\nReplit Agent\n复制提示词\n构建一个扫描器，使用[数据来源或演示凭据]监测[市场或股票代码清单]，在买单明显多于卖单时标记，阈值为[比例]。在简单仪表盘中展示结果，并明确它是只读工具，不执行交易。当它能基于实时或演示数据运行，并显示至少一个标记实例时结束。\n原始来源：https://www.reddit.com/r/replit/comments/1fahuge/buyer_beware_replits_ai_agent_review",
+    "body_sha256": "a297654c7a6ee4510ae71f6bad2d447f5437e5bc2379affe0ee263e27e6b6f3b",
+    "scope": "All captured case prose, source template and original links; decorative agent initials omitted."
+  }
 }

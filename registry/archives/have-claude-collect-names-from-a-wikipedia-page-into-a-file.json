@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4472e1662d3e627bfdb06071ebb5acf02b7488a4aeb497cbfca4f667416e4b58",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster tried Claude Computer Use to open Firefox, search Wikipedia, find all names on a page and save them to a text file.",
+      "sha256": "4472e1662d3e627bfdb06071ebb5acf02b7488a4aeb497cbfca4f667416e4b58"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8ba43a767d9e785658f4a4c3b9c70d02a93615bde3c9606373f63c7fae48f3ad",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster used Claude Computer Use to control Firefox, go to Wikipedia, search for a topic, then identify all the names on the page and save them into a text file. From the comments, they ran Anthropic’s provided Docker image locally with their API key, and the task completed in about a minute with no manual editing described.",
+      "sha256": "8ba43a767d9e785658f4a4c3b9c70d02a93615bde3c9606373f63c7fae48f3ad"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8f5baf3c3dd9b3952f2ae2f91e2183d211aeae9bbf35f347313ddee65fe7b356",
-      "publication": "reviewed_restatement_required"
+      "value": "It seemed to work for this simple extraction task. The main downside was cost: the run used nearly 100,000 tokens and cost about $0.31, which the poster felt was too expensive for hobby use.",
+      "sha256": "8f5baf3c3dd9b3952f2ae2f91e2183d211aeae9bbf35f347313ddee65fe7b356"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "56ab530fc379179a1757584ab69811c5364030d6d30b53ecc4553ce594eadc2d",
-      "publication": "reviewed_restatement_required"
+      "value": "The clearest catch is cost from screenshots: this trivial, roughly one-minute run was already about 31 cents.",
+      "sha256": "56ab530fc379179a1757584ab69811c5364030d6d30b53ecc4553ce594eadc2d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Have Claude collect names from a Wikipedia page into a file\nThe poster tried Claude Computer Use to open Firefox, search Wikipedia, find all names on a page and save them to a text file.\nDone with\nCU\nClaude computer use\nWhat they did\nThe poster used Claude Computer Use to control Firefox, go to Wikipedia, search for a topic, then identify all the names on the page and save them into a text file. From the comments, they ran Anthropic’s provided Docker image locally with their API key, and the task completed in about a minute with no manual editing described.\nHow it went\nIt seemed to work for this simple extraction task. The main downside was cost: the run used nearly 100,000 tokens and cost about $0.31, which the poster felt was too expensive for hobby use.\nWorth knowing\nThe clearest catch is cost from screenshots: this trivial, roughly one-minute run was already about 31 cents.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nOpen [browser] and go to the Wikipedia page for [topic]. Find every person's name mentioned on the page and save them, one per line with no duplicates, to a text file called [filename] in [folder]. Then tell me how many names you found and stop.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1gat8i7",
+    "body_sha256": "f88343a7763fe934fd45ef16c5e99e477078017b5d3715609bb4e894369a86d7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

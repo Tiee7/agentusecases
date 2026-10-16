@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "a9d8a37e9cf28fda1bb5c7933714bc1eee74010a26b26ed3cfb5a543c1038651",
-      "publication": "reviewed_restatement_required"
+      "value": "An MCP server that consults MDN docs, reports browser compatibility, and analyzes your CSS for the agent.",
+      "sha256": "a9d8a37e9cf28fda1bb5c7933714bc1eee74010a26b26ed3cfb5a543c1038651"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "5c0b78914b593ae481ef74755ced3bad1f4ca19452ddb7eea3e7660c3c3b3b91",
-      "publication": "reviewed_restatement_required"
+      "value": "You add the server to Claude Code, VS Code or another MCP client with an npx command. The agent can then call tools to fetch MDN docs for a CSS feature, pull browser compatibility data, and analyze pasted CSS or a project's built CSS files. Analysis returns a short summary by default, and you ask in plain language.",
+      "sha256": "5c0b78914b593ae481ef74755ced3bad1f4ca19452ddb7eea3e7660c3c3b3b91"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "bb4257eeea75a267207aebf2319ada6844b363c75f5099323ad4040a6d07e36d",
-      "publication": "reviewed_restatement_required"
+      "value": "The README gives no real-world results. It lists first fetches at about 400-500ms and cached ones at about 100ms. Summary analysis costs roughly 1-2k tokens.",
+      "sha256": "bb4257eeea75a267207aebf2319ada6844b363c75f5099323ad4040a6d07e36d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "53e35afe746a3490c0200cf197024a20e5bc02c176b8ea6ee2271ee95c6f857e",
-      "publication": "reviewed_restatement_required"
+      "value": "Full 150+ metric analysis uses about 10k+ tokens, so keep the default summary mode. It needs Node 20+ and native build tools for the SQLite cache.",
+      "sha256": "53e35afe746a3490c0200cf197024a20e5bc02c176b8ea6ee2271ee95c6f857e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write better CSS with an MDN-aware helper\nAn MCP server that consults MDN docs, reports browser compatibility, and analyzes your CSS for the agent.\nDone with\nCC\nClaude Code\nWhat they did\nYou add the server to Claude Code, VS Code or another MCP client with an npx command. The agent can then call tools to fetch MDN docs for a CSS feature, pull browser compatibility data, and analyze pasted CSS or a project's built CSS files. Analysis returns a short summary by default, and you ask in plain language.\nHow it went\nThe README gives no real-world results. It lists first fetches at about 400-500ms and cached ones at about 100ms. Summary analysis costs roughly 1-2k tokens.\nWorth knowing\nFull 150+ metric analysis uses about 10k+ tokens, so keep the default summary mode. It needs Node 20+ and native build tools for the SQLite cache.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview the CSS in [path to stylesheet or project] and check each questionable property or feature against MDN docs for browser support in [browsers, e.g. the last 2 versions of Safari and Chrome]. Fix issues you find, like unsupported properties or redundant rules, and explain each change. Finish with a short compatibility report listing what's safe to ship and what needs a fallback.\nOriginal source: https://github.com/stolinski/css-mcp",
+    "body_sha256": "595e0b4bf9f154e9e480022110fe0d193bf82312524cf92835d44055e6987580",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

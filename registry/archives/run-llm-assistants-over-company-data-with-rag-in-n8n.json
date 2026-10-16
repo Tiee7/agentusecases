@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "42cf758383f7d9a3b7699572e90712022f6045a5789132bcb89d9784e733ed13",
-      "publication": "reviewed_restatement_required"
+      "value": "A commenter used multiple LLM assistants in an n8n project at their company, handling AutoCAD Forge API calls, parsing, embedding and RAG across company data.",
+      "sha256": "42cf758383f7d9a3b7699572e90712022f6045a5789132bcb89d9784e733ed13"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6a8bdd78bbe6b7f09651362252011495877bfc0e5e70dd5b5365402f5779d23c",
-      "publication": "reviewed_restatement_required"
+      "value": "In a company n8n project, the commenter says they set up multiple LLM assistants that handled AutoCAD Forge API calls and worked over company information using parsing, embeddings, and RAG. They describe the system as easier to start than a Python project, but say the LLMs sometimes routed requests to the wrong Supabase and often needed humans dealing with revised engineering drawings and desired SMP schemes.",
+      "sha256": "6a8bdd78bbe6b7f09651362252011495877bfc0e5e70dd5b5365402f5779d23c"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "62da0a8703cad0a091b28e34ca5a2b0c05e14bdaa84b5eb70936a22b039482dd",
-      "publication": "reviewed_restatement_required"
+      "value": "It worked well enough for much of the job, but they say responses were inconsistent: API work was painful, information spread badly between assistants, and the RAG/parsing setup was harder to build in n8n than in Python.",
+      "sha256": "62da0a8703cad0a091b28e34ca5a2b0c05e14bdaa84b5eb70936a22b039482dd"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "6be0c713c35c73252c117399925a4a0f41af2f0db519cd4be6941171bce178de",
-      "publication": "reviewed_restatement_required"
+      "value": "Their main catch is tradeoff: n8n was easier to get started with, but they say a Python script could have handled some Forge API work in only a few hours.",
+      "sha256": "6be0c713c35c73252c117399925a4a0f41af2f0db519cd4be6941171bce178de"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run LLM assistants over company data with RAG in n8n\nA commenter used multiple LLM assistants in an n8n project at their company, handling AutoCAD Forge API calls, parsing, embedding and RAG across company data.\nDone with\nN8\nn8n\nWhat they did\nIn a company n8n project, the commenter says they set up multiple LLM assistants that handled AutoCAD Forge API calls and worked over company information using parsing, embeddings, and RAG. They describe the system as easier to start than a Python project, but say the LLMs sometimes routed requests to the wrong Supabase and often needed humans dealing with revised engineering drawings and desired SMP schemes.\nHow it went\nIt worked well enough for much of the job, but they say responses were inconsistent: API work was painful, information spread badly between assistants, and the RAG/parsing setup was harder to build in n8n than in Python.\nWorth knowing\nTheir main catch is tradeoff: n8n was easier to get started with, but they say a Python script could have handled some Forge API work in only a few hours.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that lets me ask questions in [chat or Slack] about our company data stored in [Google Drive, Notion, or database]. It should parse and split those documents, embed them into a vector store, and answer using retrieval with a citation to the source document. Only read the data, never modify or delete anything. The job is done when it correctly answers [three test questions] and shows its sources.\nOriginal source: https://www.reddit.com/r/n8n/comments/1r3qalu/most_ai_agent_workflows_are_just_glorified_ifelse",
+    "body_sha256": "f8e04ef38a02b83946631bfca0394ae2bfcf16fc44a7f7cabf756c254b6c5df7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

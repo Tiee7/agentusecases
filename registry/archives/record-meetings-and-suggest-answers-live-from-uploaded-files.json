@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "545139cb9c4f3b5279160fd5b60977a984be2c2cd2b509e948bb3a5f1b3461b6",
-      "publication": "reviewed_restatement_required"
+      "value": "An open-source Mac recorder transcribes calls and, using the user's uploaded files, suggests answers when it hears questions.",
+      "sha256": "545139cb9c4f3b5279160fd5b60977a984be2c2cd2b509e948bb3a5f1b3461b6"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "eca4b5ca1e49961b465f88c07d657b1286ac17c1ed80b1db6ddf9619ab78b6d0",
-      "publication": "reviewed_restatement_required"
+      "value": "The user adds PDF, text or markdown files to Parrot's knowledge base. These are indexed on the Mac. Parrot records system audio and the mic with no bot joining, and transcribes with Whisper locally. While the call runs, an assistant (Claude, Ollama or another model the user picks) shows answer cards that cite the source document. The user can pause it.",
+      "sha256": "eca4b5ca1e49961b465f88c07d657b1286ac17c1ed80b1db6ddf9619ab78b6d0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "615025193f30b3473bdfe3d518be0b023259bd637f0dcd395c2747d6ac062344",
-      "publication": "reviewed_restatement_required"
+      "value": "The site quotes about $0.07 per hour of calls with cloud cards and $0.00 fully local. It gives no accuracy measurements. Cards need a model, and cloud models receive transcript text.",
+      "sha256": "615025193f30b3473bdfe3d518be0b023259bd637f0dcd395c2747d6ac062344"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "987d09ee88af50de8baaee94c3c81afaf148658b39df8bb030d3c49a55e71ccd",
-      "publication": "reviewed_restatement_required"
+      "value": "It needs macOS 14 or later on Apple Silicon. Fully local mode uses Ollama, while cloud mode needs your own API keys, and transcript text goes to the provider you choose.",
+      "sha256": "987d09ee88af50de8baaee94c3c81afaf148658b39df8bb030d3c49a55e71ccd"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Record meetings and suggest answers live from uploaded files\nAn open-source Mac recorder transcribes calls and, using the user's uploaded files, suggests answers when it hears questions.\nDone with\nCL\nClaude\nWhat they did\nThe user adds PDF, text or markdown files to Parrot's knowledge base. These are indexed on the Mac. Parrot records system audio and the mic with no bot joining, and transcribes with Whisper locally. While the call runs, an assistant (Claude, Ollama or another model the user picks) shows answer cards that cite the source document. The user can pause it.\nHow it went\nThe site quotes about $0.07 per hour of calls with cloud cards and $0.00 fully local. It gives no accuracy measurements. Cards need a model, and cloud models receive transcript text.\nWorth knowing\nIt needs macOS 14 or later on Apple Silicon. Fully local mode uses Ollama, while cloud mode needs your own API keys, and transcript text goes to the provider you choose.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a local tool that transcribes a live meeting from [audio source] and, whenever it hears a question, searches the documents in [folder path] and suggests a short answer with the source file named. Done means I can run it on a test recording and see the questions and suggested answers listed with timestamps. Keep everything on my machine and tell me before installing anything.\nOriginal source: https://openparrot.app",
+    "body_sha256": "62161e7de6ab1a7acfdb924f6532056f116e6bc71c5e87c1a646015c4993c7d3",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

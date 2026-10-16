@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d11c454c80697b8ca259770cf1faec449b7df47f8e316ecab838fdf2b484c6e5",
-      "publication": "reviewed_restatement_required"
+      "value": "An MCP lets AI agents edit Word documents, handling the OOXML mechanics, originally built for pharma regulatory document editing.",
+      "sha256": "d11c454c80697b8ca259770cf1faec449b7df47f8e316ecab838fdf2b484c6e5"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "921b5a9eec172c82e2245d0a54c46ffcfcd1bbd8819927346e58e600ac636483",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent edits a clean HTML version of the Word file instead of raw OOXML. A small fine-tuned model (3–8B, LoRA) turns each changed block's HTML into OOXML. A deterministic locator finds the matching block, then tracked changes are computed by diffing and patched into the .docx. The post doesn't mention pharma.",
+      "sha256": "921b5a9eec172c82e2245d0a54c46ffcfcd1bbd8819927346e58e600ac636483"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8559c7d348b67b978fac3317d0f391ccabd82413b9a3c72644a42dd95775f7c8",
-      "publication": "reviewed_restatement_required"
+      "value": "On the vendor's own 279-task benchmark, it was 2.7–2.9x cheaper and 2.7–3.5x faster than Anthropic's DOCX skill, with a higher pass rate. Pass rate on hyperlinks was only 25%.",
+      "sha256": "8559c7d348b67b978fac3317d0f391ccabd82413b9a3c72644a42dd95775f7c8"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "976caba8b347fc9484bcbb0620c89ac425dad1a07e390002d68a7ff52cb6789e",
-      "publication": "reviewed_restatement_required"
+      "value": "The benchmark is the vendor's own. Comments, image attachment and latent styles aren't supported yet.",
+      "sha256": "976caba8b347fc9484bcbb0620c89ac425dad1a07e390002d68a7ff52cb6789e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let agents edit Word documents via MCP\nAn MCP lets AI agents edit Word documents, handling the OOXML mechanics, originally built for pharma regulatory document editing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent edits a clean HTML version of the Word file instead of raw OOXML. A small fine-tuned model (3–8B, LoRA) turns each changed block's HTML into OOXML. A deterministic locator finds the matching block, then tracked changes are computed by diffing and patched into the .docx. The post doesn't mention pharma.\nHow it went\nOn the vendor's own 279-task benchmark, it was 2.7–2.9x cheaper and 2.7–3.5x faster than Anthropic's DOCX skill, with a higher pass rate. Pass rate on hyperlinks was only 25%.\nWorth knowing\nThe benchmark is the vendor's own. Comments, image attachment and latent styles aren't supported yet.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nOpen the Word document at [file path] and make these edits: [describe the changes, e.g. update section 3 wording, fix numbering, and add tracked changes]. Keep the original formatting and use tracked changes so I can review everything. Save the result as a new copy rather than overwriting the original, and list every change you made.\nOriginal source: https://www.vespper.com/blog/launching-vespper-docx-mcp",
+    "body_sha256": "9dd150691bb4fba2097ca20a681e2fb18d5e7b64562f67b3ccbba6bc15a36f85",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

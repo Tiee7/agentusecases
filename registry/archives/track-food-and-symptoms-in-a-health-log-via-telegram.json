@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "e776d7482d7ad873b59530aa000a20e9116085b8590300931c3d51b349cb3b46",
-      "publication": "reviewed_restatement_required"
+      "value": "An OpenClaw agent logs meals and symptoms from Telegram messages into a markdown file, sends reminders, and runs a weekly pattern analysis; this is a tutorial-style setup.",
+      "sha256": "e776d7482d7ad873b59530aa000a20e9116085b8590300931c3d51b349cb3b46"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "1a335312bbd073531917d2edaa6334bae096591c837d71ee0693f6d0f29fd0f6",
-      "publication": "reviewed_restatement_required"
+      "value": "You message a Telegram topic with what you ate or how you feel. The agent appends a timestamped entry to a markdown health log in its memory folder. Cron reminders go out at 8 AM, 1 PM and 7 PM. Every Sunday it analyzes the week's log and posts the patterns it finds back to the same topic. It needs no skills, only a prompt and a cron job.",
+      "sha256": "1a335312bbd073531917d2edaa6334bae096591c837d71ee0693f6d0f29fd0f6"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "656ad2085c07a3e3012c68543ac8953623480bcdd09e1f067e4b5cc6e3515f70",
-      "publication": "reviewed_restatement_required"
+      "value": "The article gives no measured results. It describes the kind of pattern the analysis should catch, such as dairy followed by headaches three Wednesdays running. It calls this the lowest-effort project on its list.",
+      "sha256": "656ad2085c07a3e3012c68543ac8953623480bcdd09e1f067e4b5cc6e3515f70"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "e74c64903b8b28497eb1328590e8977a1caa0be03897813adbb906810e86061d",
-      "publication": "reviewed_restatement_required"
+      "value": "The article says setup takes under an hour if OpenClaw is already running. It also advises binding OpenClaw to 127.0.0.1 first, because the default exposes it on every network interface.",
+      "sha256": "e74c64903b8b28497eb1328590e8977a1caa0be03897813adbb906810e86061d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track food and symptoms in a health log via Telegram\nAn OpenClaw agent logs meals and symptoms from Telegram messages into a markdown file, sends reminders, and runs a weekly pattern analysis; this is a tutorial-style setup.\nDone with\nOC\nOpenClaw\nWhat they did\nYou message a Telegram topic with what you ate or how you feel. The agent appends a timestamped entry to a markdown health log in its memory folder. Cron reminders go out at 8 AM, 1 PM and 7 PM. Every Sunday it analyzes the week's log and posts the patterns it finds back to the same topic. It needs no skills, only a prompt and a cron job.\nHow it went\nThe article gives no measured results. It describes the kind of pattern the analysis should catch, such as dairy followed by headaches three Wednesdays running. It calls this the lowest-effort project on its list.\nWorth knowing\nThe article says setup takes under an hour if OpenClaw is already running. It also advises binding OpenClaw to 127.0.0.1 first, because the default exposes it on every network interface.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a health log I can use through Telegram. When I message what I ate or any symptoms, add a timestamped entry to a markdown file, remind me at [times] to log, and every [Sunday] send me a summary of patterns between foods and symptoms. Finish by logging a test entry and showing me the file. Treat the summary as observations only, not medical advice.\nOriginal source: https://www.datacamp.com/blog/openclaw-projects",
+    "body_sha256": "bab8ddf178c8e218c2071023fd8dc470a3fd673054a09904eec68900331338f8",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

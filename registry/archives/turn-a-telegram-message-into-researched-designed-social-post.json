@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "c5373dda3aa833d9e030cebb4deb54642728754bfec748ac99d6b50039a30daa",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n agent takes a Telegram message, researches the topic, designs the posts and publishes them to social media.",
+      "sha256": "c5373dda3aa833d9e030cebb4deb54642728754bfec748ac99d6b50039a30daa"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4a4eb99cb118a5fd4997cc58644d94de064561c53cb3cb4c890ffee5b92eed65",
-      "publication": "reviewed_restatement_required"
+      "value": "The setup is an n8n workflow triggered by a Telegram message containing a topic. From there, the AI chooses a post format, Blotato researches the topic and returns structured information, the workflow creates either an infographic or slideshow video, then runs an async create-wait-retrieve-publish sequence that posts to Instagram and LinkedIn and sends a confirmation back to Telegram.",
+      "sha256": "4a4eb99cb118a5fd4997cc58644d94de064561c53cb3cb4c890ffee5b92eed65"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7da726801fc573c712b9a3a85ea3c072ceb5823dbe226c95399f07003f3b51e1",
-      "publication": "reviewed_restatement_required"
+      "value": "The stated result is end-to-end social post production and publishing from a single Telegram prompt, with no manual editing or uploading. The post gives no performance numbers and the visible comments add no details on failures or quality limits.",
+      "sha256": "7da726801fc573c712b9a3a85ea3c072ceb5823dbe226c95399f07003f3b51e1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "af14a045a1a01dacdf613377c94f8c8c66bd56825efeccc22dfb31d77b272225",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch is that it depends on async orchestration inside n8n and on Blotato for research and asset generation; the post points to a template rather than explaining the workflow step by step.",
+      "sha256": "af14a045a1a01dacdf613377c94f8c8c66bd56825efeccc22dfb31d77b272225"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn a Telegram message into researched, designed social posts\nAn n8n agent takes a Telegram message, researches the topic, designs the posts and publishes them to social media.\nDone with\nN8\nn8n\nWhat they did\nThe setup is an n8n workflow triggered by a Telegram message containing a topic. From there, the AI chooses a post format, Blotato researches the topic and returns structured information, the workflow creates either an infographic or slideshow video, then runs an async create-wait-retrieve-publish sequence that posts to Instagram and LinkedIn and sends a confirmation back to Telegram.\nHow it went\nThe stated result is end-to-end social post production and publishing from a single Telegram prompt, with no manual editing or uploading. The post gives no performance numbers and the visible comments add no details on failures or quality limits.\nWorth knowing\nThe main catch is that it depends on async orchestration inside n8n and on Blotato for research and asset generation; the post points to a template rather than explaining the workflow step by step.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that starts when I send a message to my Telegram bot with a topic. It should research the topic on the web, write a post for [platforms, e.g. LinkedIn and X] in [my brand voice], and generate a matching image. Before anything is published, send me the drafts back in Telegram and wait for my approval; the job is done when an approved post goes live on my accounts.\nOriginal source: https://www.reddit.com/r/n8n/comments/1re2fo2/i_built_an_ai_content_agent_in_n8n_that",
+    "body_sha256": "458fb8215f19e136dc3aa03d9148016732d6c5da057d7946794ed34652d27c5f",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "870f8aeb109f812ac2bf698f6430d23cf4906c23f8c9e75552ccaa41314bbab1",
-      "publication": "reviewed_restatement_required"
+      "value": "An MCP server exposing 110 Ghidra tools for AI-assisted reverse engineering.",
+      "sha256": "870f8aeb109f812ac2bf698f6430d23cf4906c23f8c9e75552ccaa41314bbab1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a8448c341d22138fd46c38bac61f9f71534c527f16ca43002bc175439c5c49c9",
-      "publication": "reviewed_restatement_required"
+      "value": "A Ghidra plugin starts an HTTP server on localhost, and a Python bridge exposes it to MCP clients such as Claude or Cursor. The agent decompiles functions, follows call graphs and cross-references, and renames, retypes and comments in batches. A person builds and deploys the plugin and enables it in CodeBrowser.",
+      "sha256": "a8448c341d22138fd46c38bac61f9f71534c527f16ca43002bc175439c5c49c9"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7710d081e4ac7ab0d946c3444e28b8b2d5ae142bb4f33feb52b852fa3c38196a",
-      "publication": "reviewed_restatement_required"
+      "value": "The README now lists 253 tools, not 110. It claims 93% fewer API calls from batching, and says it was refined over hundreds of documented functions. It gives no benchmark of results.",
+      "sha256": "7710d081e4ac7ab0d946c3444e28b8b2d5ae142bb4f33feb52b852fa3c38196a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a68defedcf22b4f82c77de9034f97e29fff1f09cff14c1b1ecdc8fb2906dca00",
-      "publication": "reviewed_restatement_required"
+      "value": "Lazy tool loading is on by default because Gemini rejects the full tool list. Script-running endpoints are off unless you set GHIDRA_MCP_ALLOW_SCRIPTS, and the server has no authentication on localhost.",
+      "sha256": "a68defedcf22b4f82c77de9034f97e29fff1f09cff14c1b1ecdc8fb2906dca00"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse-engineer binaries in Ghidra\nAn MCP server exposing 110 Ghidra tools for AI-assisted reverse engineering.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA Ghidra plugin starts an HTTP server on localhost, and a Python bridge exposes it to MCP clients such as Claude or Cursor. The agent decompiles functions, follows call graphs and cross-references, and renames, retypes and comments in batches. A person builds and deploys the plugin and enables it in CodeBrowser.\nHow it went\nThe README now lists 253 tools, not 110. It claims 93% fewer API calls from batching, and says it was refined over hundreds of documented functions. It gives no benchmark of results.\nWorth knowing\nLazy tool loading is on by default because Gemini rejects the full tool list. Script-running endpoints are off unless you set GHIDRA_MCP_ALLOW_SCRIPTS, and the server has no authentication on localhost.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to the Ghidra MCP server I have set up and open the binary at [path to binary]. Identify its main functions, rename them based on what they do, and list any suspicious behavior such as network calls or file writes. Finish with a short written summary of what the program does and the functions that support that conclusion.\nOriginal source: https://github.com/bethington/ghidra-mcp",
+    "body_sha256": "aa8d8e9863460dd1a9d27f32c148c57cbb214024e2ded265a01d1955d3789277",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

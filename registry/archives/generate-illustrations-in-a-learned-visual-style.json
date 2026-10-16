@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "4168ef8f899fb47bb1c0f95907cbde297b161cbfe68effe412c8853f06a17fd2",
-      "publication": "reviewed_restatement_required"
+      "value": "A designer Hermes profile learns a style from reference designs, writes a skill for it, then crafts prompts and generates and saves images via Nano Banana.",
+      "sha256": "4168ef8f899fb47bb1c0f95907cbde297b161cbfe68effe412c8853f06a17fd2"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b673a8835e3910f0721a8bab2e876242420073249ebee215c03ae867c61748d7",
-      "publication": "reviewed_restatement_required"
+      "value": "A separate designer profile has its own SOUL.md describing a hand-drawn whiteboard style. The user pastes reference illustrations and asks it to study palette, line weight and composition. Using skill_manage, it writes a style skill with a Python script that calls Nano Banana (Gemini 2.5 Flash Image) via OpenRouter, then tests the script on a sample prompt. After that, it writes style-informed prompts and saves images.",
+      "sha256": "b673a8835e3910f0721a8bab2e876242420073249ebee215c03ae867c61748d7"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "66b1bad395cac41632de3b7ebe63962c3e84ff0146203b99b36bdeedd633cb81",
-      "publication": "reviewed_restatement_required"
+      "value": "The source says the designer writes the skill, saves it under the profile's skills folder and verifies the script runs. It shows example images but reports no quality measures or numbers.",
+      "sha256": "66b1bad395cac41632de3b7ebe63962c3e84ff0146203b99b36bdeedd633cb81"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "01eea1f18b88b4ce33a41f7b1d9fa597e12f84be820e7dcdb31037f1a1781d1f",
-      "publication": "reviewed_restatement_required"
+      "value": "The script needs OPENROUTER_API_KEY. Creating the profile with --clone copies it from your default setup. Otherwise set it with hermes config set.",
+      "sha256": "01eea1f18b88b4ce33a41f7b1d9fa597e12f84be820e7dcdb31037f1a1781d1f"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate illustrations in a learned visual style\nA designer Hermes profile learns a style from reference designs, writes a skill for it, then crafts prompts and generates and saves images via Nano Banana.\nDone with\nHA\nHermes Agent\nWhat they did\nA separate designer profile has its own SOUL.md describing a hand-drawn whiteboard style. The user pastes reference illustrations and asks it to study palette, line weight and composition. Using skill_manage, it writes a style skill with a Python script that calls Nano Banana (Gemini 2.5 Flash Image) via OpenRouter, then tests the script on a sample prompt. After that, it writes style-informed prompts and saves images.\nHow it went\nThe source says the designer writes the skill, saves it under the profile's skills folder and verifies the script runs. It shows example images but reports no quality measures or numbers.\nWorth knowing\nThe script needs OPENROUTER_API_KEY. Creating the profile with --clone copies it from your default setup. Otherwise set it with hermes config set.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nStudy the reference images in [folder] and describe the visual style in detail: colors, line work, composition, and mood. Save that description as a reusable skill, then use it to write prompts and generate [number] illustrations of [subjects] with [image generator]. Save the images to [folder] and stop when I have a set that matches the references.\nOriginal source: https://blog.dailydoseofds.com/p/hermes-agent-masterclass",
+    "body_sha256": "d13dbec17fd29d3671437d3bf99dc9addaaa296d6483562706be487377385e86",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

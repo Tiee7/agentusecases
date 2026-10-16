@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "3555a052ad634c9a5f42e3acf5cb3fe12cb10172e5aabe739e84664bb71cf562",
-      "publication": "reviewed_restatement_required"
+      "value": "A Rete rule engine decides loans, fraud and triage cases, then RAG over policy documents has an LLM explain the verdict, with an MCP server available.",
+      "sha256": "3555a052ad634c9a5f42e3acf5cb3fe12cb10172e5aabe739e84664bb71cf562"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7537e5ca4dfea7a4347e40b5a9565075abc6d032d100bc85f510cffb32fc1f83",
-      "publication": "reviewed_restatement_required"
+      "value": "The page describes a design in which a Rete rule engine makes the decision, so it is repeatable and auditable. Retrieval-augmented generation over your own documents then supplies the reasons behind the verdict. The source text I could read is only a short description, with no setup steps or details of agent actions.",
+      "sha256": "7537e5ca4dfea7a4347e40b5a9565075abc6d032d100bc85f510cffb32fc1f83"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "6f2099f5a510e52b38100259497cea60ba23a0186d8a035f26be606beb292481",
-      "publication": "reviewed_restatement_required"
+      "value": "The source states no results, numbers or limitations. It only describes the split in which rules decide what happens and retrieval explains why.",
+      "sha256": "6f2099f5a510e52b38100259497cea60ba23a0186d8a035f26be606beb292481"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "869634d3b4412168fd9c481a8a367261d126a8b103c5295580c7fa5addc47896",
-      "publication": "reviewed_restatement_required"
+      "value": "The fetched page held only a meta description, so check the site directly for setup, MCP details and costs.",
+      "sha256": "869634d3b4412168fd9c481a8a367261d126a8b103c5295580c7fa5addc47896"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Make auditable rule-based decisions with RAG-written explanations\nA Rete rule engine decides loans, fraud and triage cases, then RAG over policy documents has an LLM explain the verdict, with an MCP server available.\nDone with\nCL\nClaude\nWhat they did\nThe page describes a design in which a Rete rule engine makes the decision, so it is repeatable and auditable. Retrieval-augmented generation over your own documents then supplies the reasons behind the verdict. The source text I could read is only a short description, with no setup steps or details of agent actions.\nHow it went\nThe source states no results, numbers or limitations. It only describes the split in which rules decide what happens and retrieval explains why.\nWorth knowing\nThe fetched page held only a meta description, so check the site directly for setup, MCP details and costs.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a small rule-based decision engine for [use case, e.g. loan approvals] using the rules in [policy document or list of rules]. For each case I give it, output the decision, the exact rules that fired, and a plain-English explanation grounded in quotes from the policy document. Done means it correctly handles these [5] sample cases and I can review the audit trail for each.\nOriginal source: https://ai-rete-rag.com/",
+    "body_sha256": "59ebda452f33afd54286596c18fa76e5d652587ff9652594c6895ec67bd1105d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

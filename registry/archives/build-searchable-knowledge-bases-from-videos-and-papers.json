@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "6ebf5ee3ec3997b16a6df87e52c5e8e6ce4df248edffa84a13b4accb202b67e1",
-      "publication": "reviewed_restatement_required"
+      "value": "An OpenClaw agent runs a YouTube summariser and a paper-condensing tool, saving Markdown into two indexed knowledge bases for videos and papers.",
+      "sha256": "6ebf5ee3ec3997b16a6df87e52c5e8e6ce4df248edffa84a13b4accb202b67e1"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "31ebf7c243f51e82d5af933716b77f210d4c0f2ba1baadfa729d1ca334d6ca82",
-      "publication": "reviewed_restatement_required"
+      "value": "On the Mac mini where OpenClaw runs, the author installed youtube-summariser with pip and Tobi's QMD with bun, and handled the packages and LLM API keys himself. He then asked the agent, Eve, to learn both tools and build its own YouTube knowledge base. He wired in his paper-fluff-cutter, which saves paper essentials as Markdown that QMD can index.",
+      "sha256": "31ebf7c243f51e82d5af933716b77f210d4c0f2ba1baadfa729d1ca334d6ca82"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "3ca48736683dee62dd49cbfa25851a8e6fd2cf8355c5dd4da4250b3cf8d6ad10",
-      "publication": "reviewed_restatement_required"
+      "value": "He ended up with two dense, searchable knowledge bases, one for videos and one for papers. The agent answered questions from the YouTube one well. The source gives no numbers or benchmarks.",
+      "sha256": "3ca48736683dee62dd49cbfa25851a8e6fd2cf8355c5dd4da4250b3cf8d6ad10"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "7c112a16bf5fe73d7fbb46720d69bb7fc97d87ce10e0d64222d73200f187f5a1",
-      "publication": "reviewed_restatement_required"
+      "value": "Markdown output is what lets QMD index and search the content easily. The author installed the packages manually instead of having the agent do it.",
+      "sha256": "7c112a16bf5fe73d7fbb46720d69bb7fc97d87ce10e0d64222d73200f187f5a1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build searchable knowledge bases from videos and papers\nAn OpenClaw agent runs a YouTube summariser and a paper-condensing tool, saving Markdown into two indexed knowledge bases for videos and papers.\nDone with\nOC\nOpenClaw\nWhat they did\nOn the Mac mini where OpenClaw runs, the author installed youtube-summariser with pip and Tobi's QMD with bun, and handled the packages and LLM API keys himself. He then asked the agent, Eve, to learn both tools and build its own YouTube knowledge base. He wired in his paper-fluff-cutter, which saves paper essentials as Markdown that QMD can index.\nHow it went\nHe ended up with two dense, searchable knowledge bases, one for videos and one for papers. The agent answered questions from the YouTube one well. The source gives no numbers or benchmarks.\nWorth knowing\nMarkdown output is what lets QMD index and search the content easily. The author installed the packages manually instead of having the agent do it.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up two Markdown knowledge bases for me, one for videos and one for papers. When I send a [YouTube link or paper PDF/URL], summarize it in [200-300] words with key takeaways, save it as a .md file in the right folder, and update an index file listing title, date, and tags. Confirm each save with the file path, and ask before deleting or overwriting any existing file.\nOriginal source: https://notesfromzero.substack.com/p/building-knowledge-bases-for-my-openclaw",
+    "body_sha256": "d8590c0003fbd51e81426b7738de2181c482c42920eb0eb9599cf878d5a2a061",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

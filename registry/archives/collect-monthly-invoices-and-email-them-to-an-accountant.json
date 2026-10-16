@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "b12c9d39a8870c6d8465951d42faa076786dcae7ae0ca42e4da055dca9c33518",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a bot that logs into each site monthly, grabs the invoice, and emails it to their accountant.",
+      "sha256": "b12c9d39a8870c6d8465951d42faa076786dcae7ae0ca42e4da055dca9c33518"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8ead1687b2cda669ebc8b976b94e4b252a4b244172ff40eb77fe70a33f33ffe0",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster made a Chrome extension called Severino for recurring vendor bills like AWS, Vercel, GitHub, Google Cloud, Twilio, and Slack. It runs in the user’s browser with sessions they are already logged into, pulls the invoice PDF from each provider portal, and emails it to the accountant; for familiar providers it follows saved \"recipes,\" and for a new provider an AI mode reads page text, suggests what to click once, and saves that flow.",
+      "sha256": "8ead1687b2cda669ebc8b976b94e4b252a4b244172ff40eb77fe70a33f33ffe0"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "418cc195028fb3b0c12e22bd13a8b73be5600bfd19b67bc93442dba6c393e1a1",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster says they have been using it themselves and that it gets invoices to their accountant automatically each month, avoiding the usual chasing on the 3rd. They also say it still fails on some MFA flows, like phone-push verification, and Gmail invoice scraping was not shipped yet.",
+      "sha256": "418cc195028fb3b0c12e22bd13a8b73be5600bfd19b67bc93442dba6c393e1a1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "445b06d583048342c481df20ad0d1e398ab38789d3da66e00051b8f59834f328",
-      "publication": "reviewed_restatement_required"
+      "value": "What leaves the machine is only billing-page text, not cookies, tokens, or screenshots, and the poster says known providers usually run without AI after the first setup.",
+      "sha256": "445b06d583048342c481df20ad0d1e398ab38789d3da66e00051b8f59834f328"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,6 +89,13 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found"
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Collect monthly invoices and email them to an accountant\nThe poster built a bot that logs into each site monthly, grabs the invoice, and emails it to their accountant.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster made a Chrome extension called Severino for recurring vendor bills like AWS, Vercel, GitHub, Google Cloud, Twilio, and Slack. It runs in the user’s browser with sessions they are already logged into, pulls the invoice PDF from each provider portal, and emails it to the accountant; for familiar providers it follows saved \"recipes,\" and for a new provider an AI mode reads page text, suggests what to click once, and saves that flow.\nHow it went\nThe poster says they have been using it themselves and that it gets invoices to their accountant automatically each month, avoiding the usual chasing on the 3rd. They also say it still fails on some MFA flows, like phone-push verification, and Gmail invoice scraping was not shipped yet.\nWorth knowing\nWhat leaves the machine is only billing-page text, not cookies, tokens, or screenshots, and the poster says known providers usually run without AI after the first setup.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nEach month, help me collect invoices from [list of sites or vendors]. Open each site, download the latest invoice as a PDF, and save it to [folder] named [Vendor-YYYY-MM]. When all are collected, draft one email to [accountant's email] with the files attached and show me the draft. Do not send it until I approve, and ask me to log in myself whenever a site needs credentials.\nOriginal source: https://www.reddit.com/r/AccountingDepartment/comments/1vm8o9g/i_got_tired_of_manually_downloading_invoices_for",
+    "body_sha256": "65bf57510f500d6aa64c9e246df72ea5470b82ca5711c22c6a4e2d7bd36077f7",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

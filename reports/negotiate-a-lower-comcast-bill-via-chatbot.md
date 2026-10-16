@@ -1,36 +1,30 @@
 # Comcast 降费聊天机器人：能复制协商流程，尚不能复制低成本盈利
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：ChatGPT
-
-### 介绍
-
-A DoNotPay demonstration used an OpenAI-powered bot for an internet-service retention conversation.
-
-DoNotPay 的演示使用基于 OpenAI 的机器人与网络服务商讨论留客优惠。
-
-### 方法
-
-The bot moved from automated support to a human representative and requested a lower bill without changing the plan. Some supporting complaints were fabricated.
-
-机器人从自动客服转接人工，要求保持套餐并降低账单，但部分支持诉求的投诉内容是编造的。
-
-### 结果与限制
-
-The reported discount was $10 a month. Invented incidents and an unfilled text placeholder expose quality problems despite that negotiated result.
-
-报告优惠为每月 10 美元；虚构事件及未替换的文本占位符说明，即使议价成功仍有质量问题。
+    Negotiate a lower Comcast bill via chatbot
+    DoNotPay's ChatGPT-based bot chatted with Comcast support for an engineer and secured a $10 monthly discount.
+    Done with
+    GP
+    ChatGPT
+    What they did
+    DoNotPay built a bot on the OpenAI GPT-3 API that chats with company support. An engineer typed a request to lower the internet bill while keeping the same plan. The bot waited through Comcast's automated chat until a live agent joined. It then sent a long message claiming outages, lost work and a threat to leave, and exchanged pleasantries.
+    How it went
+    It secured a $10 monthly discount, about $120 a year. The bot invented the outages, left a placeholder like [insert email address] in its text, and was too polite. Part of the chat was with Comcast's own bot.
+    Worth knowing
+    The bot fabricated the outage claims, which Browder called a liability problem. The public version was meant to cite laws and threaten to leave without making things up.
+    Try it yourself
+    with
+    Operator
+    Copy prompt
+    Open the online support chat for [provider, e.g. internet or phone company] and ask for a lower monthly bill on my [plan name], where I currently pay [amount]. Mention [loyalty length, competitor offer or promo] and ask about discounts. Do not accept any new terms or contract changes; pause and show me any offer in writing before I decide. Finish by summarizing what was offered.
+    Original source: https://www.vice.com/en/article/chatgpt-can-negotiate-comcast-bills-down-for-you/
 
 ## 原作者的方法与来源
 
 来源：[VICE · Comcast negotiation demonstration](https://www.vice.com/en/article/chatgpt-can-negotiate-comcast-bills-down-for-you/)
 
-原始报道摘要 · 非作者原文 · 中文为英文摘要的翻译（非全文转载）
+报道摘要
 
 1. 报道中的演示由工程师要求机器人降低网络账单，同时保留现有套餐。
    English summary: In the reported demonstration, an engineer asks the bot to reduce an internet bill while keeping the existing plan.
@@ -45,7 +39,7 @@ The reported discount was $10 a month. Invented incidents and an unfilled text p
 家庭宽带用户愿意为少花时间、保留原套餐的真实降费付费，但本案例只证明一次员工账户聊天演示，未证明普通客户成功率。现有竞品已把人工协商与成功收费做成产品；新进入者即使模型成本很低，仍需支付账户授权、事实审核、失败重试、后续账单核对和获客费用。建议只向已有客户的服务团队提供受控协商助手，不据此推出全自动面向消费者的付费产品，也不把每年120美元宣传值当成服务商营收。
 
 案例ID：`negotiate-a-lower-comcast-bill-via-chatbot` · 案例来源：https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot
-研究时间：2026-10-15T05:08:34.031138+00:00 · 证据置信度：中等：原始报道、官网、条款、竞品流程与监管原文已读取；本案例仅员工演示，无可核验普通客户成功率或连续账单。
+研究时间：2026-10-15T05:08:34.031138+00:00
 
 **商业评分：39.0/100。用户反馈信号占5%。**
 
@@ -78,19 +72,13 @@ The reported discount was $10 a month. Invented incidents and an unfilled text p
 
 ### 源站试用模板
 
-状态：available
-
 出处：https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot
 
-观测时间：2026-10-16T02:51:09.368661+00:00
-
-建议运行工具：Operator（与案例实际使用的agent分开记录）
-
-源站提供的试用模板；不代表案例原作者实际使用的提示词。
+建议工具：Operator
 
     Open the online support chat for [provider, e.g. internet or phone company] and ask for a lower monthly bill on my [plan name], where I currently pay [amount]. Mention [loyalty length, competitor offer or promo] and ask about discounts. Do not accept any new terms or contract changes; pause and show me any offer in writing before I decide. Finish by summarizing what was offered.
 
-下面为我们编写的补充模板，非源站原文，未做模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -100,9 +88,9 @@ The reported discount was $10 a month. Invented incidents and an unfilled text p
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sbd7e30a87e95, S81786546d1f8, S54ca5fcdf1e0, Sb34735dcc278, S43139f1ea13d, S29a1cab262b2
 
@@ -115,9 +103,9 @@ The reported discount was $10 a month. Invented incidents and an unfilled text p
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：Sbd7e30a87e95, S81786546d1f8, S54ca5fcdf1e0, Sb34735dcc278, S43139f1ea13d, S29a1cab262b2
 
@@ -199,8 +187,7 @@ FTC最终命令针对AI律师能力宣传，不能拿来证明Comcast折扣不�
 
 ## 用户评价怎样改变判断
 
-已实际执行多组社区与独立评论检索，包括限定Reddit的Comcast与DoNotPay查询、Trustpilot的DoNotPay评价查询，以及Hacker News的DoNotPay negotiation查询。搜索返回明显混杂，部分没有遵循域名限定，不能把无关结果算成社区共识；Trustpilot直接读取受robots限制，不能把它的星级或评论计入证据。随后实际读取App Store完整可访问评论，以观察邻近产品流程而不是冒充本功能用户访谈。
-2019年kaylaisam11自述聊天无响应和收费问题；2020年Dveotime描述验证异常后恢复并认可易用性。两者都早于2022年Comcast演示，身份与交易也未独立核验，存在自选和突出极端体验的偏差。另有评论主要是初期希望或注册前顾虑，不算完成任务证据。它们仅说明信任、登录与售后可能吃掉交付利润，因此降低对无人值守经营的信心。反馈权重仍严格5%，给1/5的邻近流程信号，未取得本机器人普通用户的连续账单效果。
+相关体验：2019年kaylaisam11自述聊天与收费问题；2020年Dveotime描述验证异常后恢复并认可易用性，提示相反的早期流程体验。
 
 依据：Sb24b6c6c5c13, Sbd7e30a87e95
 
@@ -223,19 +210,11 @@ FTC最终命令针对AI律师能力宣传，不能拿来证明Comcast折扣不�
 
 假设B：独立付费获客压力假设：全部是假设：成功率40%，成功后节省120美元并收40%即48，期望收入0.4×48=19.2；平均40分钟人工×30美元/小时=20；API1、支付/日志/返工储备4、获客20、月固定维护运营1500为压力预算，未含完整创业成本与重大争议损失。没有调用付费模型API。；API成本 1，人工成本 20，其他可变成本 4，分摊获客成本 20。依据：Sbd7e30a87e95, S81786546d1f8, Sb34735dcc278
 
-## 用户反馈核对（低权重）
-
-- Reddit社区 · `"DoNotPay" "Comcast" domains:reddit.com`：实际检索返回混杂的官网及媒体页面，没有取得可核验本案例直接用户帖子；不从无关结果推断口碑。
-- 独立评论平台 · `"DoNotPay" reviews domains:trustpilot.com`：未取得可用直接评论结果；进一步读取Trustpilot页面被robots拒绝，不引用未读评分。
-- Hacker News社区 · `"DoNotPay" negotiation domains:news.ycombinator.com`：未取得可核验本案例普通用户记录；返回结果不严格遵守域名过滤，未当作社区证据。
-- 公开应用商店 · `"DoNotPay" "Comcast" "review"`：检索发现App Store并实际读取，只有早于演示的邻近流程体验，不验证Comcast成功率。
-- [Sb24b6c6c5c13] adjacent_workflow：2019年kaylaisam11自述聊天与收费问题；2020年Dveotime描述验证异常后恢复并认可易用性，提示相反的早期流程体验。；偏差：匿名、自选、未独立核对交易且早于2022年案例；不当本机器人直接效果，不将旧价格当现价。
-
 ## 反证与未核实信息
 
 初步直觉是自动对话成本很低可以高毛利。原报道的虚构事实直接推翻无人复核假设；竞品团队核验和收费时点表明聊天完成不等于完整交付。反过来，竞品成功收费证明类别存在支付机制，因此不应从旧评论和FTC律师宣传案件推断所有账单协商无效。两种反证共同支持小规模有人监督的试点，不支持独立获客扩张。
 
-没有公开代码审计、普通客户成功率、连续账单、实际API或人工成本、获客成本、产品留存及Comcast专属现价；没有证实2022演示功能今天按同一方式可用。App Store35.99美元字段没有清楚周期，旧评论价格不可用作当前订阅价格。条款、官网及监管资料是一手证据，原始效果仍主要依赖媒体转述创始人。失败读取包括旧条款URL301、Xfinity302及Trustpilot robots，均未计入已读来源。所有财务情景是假设，不是实际经营成绩。本轮未付费、注册、联系第三方或操作真实账户。
+普通客户成功率、连续账单、API和人工成本、获客及留存未知。2022年演示的当前可用性未确认，35.99美元报价的计费周期不明。
 
 ## 具体动作与止损条件
 
@@ -255,6 +234,3 @@ FTC最终命令针对AI律师能力宣传，不能拿来证明Comcast折扣不�
 - [Sb24b6c6c5c13] [‎DoNotPay App - App Store](https://apps.apple.com/us/app/donotpay/id1427999657)：产品描述的账单图片入口、公开内购标价与早期用户体验；评论早于本案例，只能当邻近流程反馈。
 
 结构化记录：[research/negotiate-a-lower-comcast-bill-via-chatbot.json](../research/negotiate-a-lower-comcast-bill-via-chatbot.json)
-来源读取凭据：[research/evidence/negotiate-a-lower-comcast-bill-via-chatbot.json](../research/evidence/negotiate-a-lower-comcast-bill-via-chatbot.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

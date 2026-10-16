@@ -27,7 +27,7 @@ def observe(body, url, observed_at):
             'body_sha256': hashlib.sha256(body.encode()).hexdigest(), 'hash_scope': 'observations.body UTF-8',
             'section_sha256': sections, 'actual_agents': agents, 'agent_status': status,
             'agent_basis': 'source Done with; source attribution, not independent verification',
-            'publication': 'facts_and_original_summary_only', 'license_status': 'no_republication_license_found'}
+            'publication': 'source_case_metadata'}
 
 def merge(previous, observation):
     if previous and previous.get('observed_at', '') > observation['observed_at']:
@@ -47,17 +47,20 @@ def latest(db):
     return result
 
 def render(value):
-    if not value:
-        return []
-    lines = ['', '## 源站案例介绍、方法与结果', '', 'agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验', '',
-             f"来源：{value['source_url']}", f"观测时间：{value.get('observed_at', '未观测')}",
-             '实际 agent（源站标注）：' + ('、'.join(value.get('actual_agents', [])) or ('自建或未命名 agent' if value.get('agent_status') == 'custom_or_unnamed' else '尚未观测'))]
-    summary = value.get('summary', {})
-    if summary.get('based_on_sha256') == value.get('body_sha256'):
-        for key, label in [('introduction','介绍'),('method','方法'),('outcome','结果与限制')]:
-            section = summary.get('sections', {}).get(key)
-            if section:
-                lines += ['', '### '+label, '', section['en'], '', section['zh']]
-    else:
-        lines += ['', '摘要尚未复核。']
+    """Render captured original and matching full translation, never summary substitutes."""
+    import json
+    from pathlib import Path
+    from urllib.parse import urlsplit
+    if not value:return []
+    key=urlsplit(value.get('source_url','')).path.rstrip('/').rsplit('/',1)[-1]
+    if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,199}',key):return []
+    path=Path('registry/archives')/(key+'.json')
+    if not path.exists():return []
+    archive=json.loads(path.read_text());source=archive.get('source_text',{})
+    if archive.get('url')!=value.get('source_url') or not source.get('body'):return []
+    if hashlib.sha256(source['body'].encode()).hexdigest()!=archive.get('body_sha256'):return []
+    lines=['','## English','','\n'.join('    '+line if line else '' for line in source['body'].splitlines())]
+    translation=archive.get('translation',{})
+    if translation.get('based_on_body_sha256')==archive.get('body_sha256') and translation.get('body') and hashlib.sha256(translation['body'].encode()).hexdigest()==translation.get('body_sha256'):
+        lines+=['','## 中文','','\n'.join('    '+line if line else '' for line in translation['body'].splitlines())]
     return lines

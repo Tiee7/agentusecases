@@ -13,21 +13,18 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "7427225d0310daec00f65824c87cbf4e69e69c21034320e527f5ddc8ecfa7ac9",
-      "publication": "reviewed_restatement_required"
+      "value": "A Grok setup of research, classifier, builder, tester, reviewer, and security bots maps repos, makes minimal changes, runs tests and lint, and opens draft PRs; the author reports over 1,000 PRs.",
+      "sha256": "7427225d0310daec00f65824c87cbf4e69e69c21034320e527f5ddc8ecfa7ac9"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a7984e50fa8322ccb65dfc5ff9397c2278ec3379b3d56777c6c1338afe2ebf92",
-      "publication": "reviewed_restatement_required"
+      "value": "The author set up six sequential Grok bots. The first reads the issue and maps the repo to relevant files and prior PRs, passing only useful context. The second classifies the task and risk level to route it. The builder writes the smallest possible code change. A tester bot then runs tests, lint, type checks and builds, feeding failures back to the builder. A separate reviewer examines the diff for regressions and missing tests. A final security bot checks secrets, auth and dependencies before opening a draft PR.",
+      "sha256": "a7984e50fa8322ccb65dfc5ff9397c2278ec3379b3d56777c6c1338afe2ebf92"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "31a04ea86ac0cd04614a4edd3b151e4a5d522f72af4f4e5b6edb5f1cc5852059",
-      "publication": "reviewed_restatement_required"
+      "value": "The loop produced over 1,000 PRs. No shortfalls are stated.",
+      "sha256": "31a04ea86ac0cd04614a4edd3b151e4a5d522f72af4f4e5b6edb5f1cc5852059"
     },
     "notes": {
       "status": "not_observed",
@@ -92,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a multi-bot team that opens draft PRs\nA Grok setup of research, classifier, builder, tester, reviewer, and security bots maps repos, makes minimal changes, runs tests and lint, and opens draft PRs; the author reports over 1,000 PRs.\nDone with\nGB\nGrok Bot\nWhat they did\nThe author set up six sequential Grok bots. The first reads the issue and maps the repo to relevant files and prior PRs, passing only useful context. The second classifies the task and risk level to route it. The builder writes the smallest possible code change. A tester bot then runs tests, lint, type checks and builds, feeding failures back to the builder. A separate reviewer examines the diff for regressions and missing tests. A final security bot checks secrets, auth and dependencies before opening a draft PR.\nHow it went\nThe loop produced over 1,000 PRs. No shortfalls are stated.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nSet up a team of bots for my repo [repo URL]: one maps the codebase, one classifies the task from [issue tracker or label], one builds a minimal change, one runs tests and lint, one reviews, and one checks security. Each task should end in a draft pull request with a summary of what changed and the test results. Never merge or push to the main branch; leave every PR as a draft for me to review.\nOriginal source: https://x.com/0xMorlex/status/2106722078544007517",
+    "body_sha256": "0bb93393ab393f5913074c96333a917a050bf3b436d4843d7129f3333f079e44",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

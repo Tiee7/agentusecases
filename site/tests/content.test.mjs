@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
-import {loadContent,projectReport,projectAuthorMethod,safeId,safeUrl,repoRoot} from '../src/lib/content.mjs';
+import {loadContent,projectReport,projectAuthorMethod,projectArchive,safeId,safeUrl,repoRoot} from '../src/lib/content.mjs';
 test('only completed v2 records with existing reports and matching identity become pages',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'reader-fixture-'));try{
   for(const dir of ['registry','research','reports'])fs.mkdirSync(path.join(root,dir));
@@ -62,4 +62,14 @@ test('detailed archives keep reviewed provenance, unknown counts, and original f
  for(const c of catalog){assert.equal(c.archive.status,'observed');assert.equal(c.archive.bodyHash.length,64);assert(c.archive.wanted===null || (Number.isSafeInteger(c.archive.wanted) && c.archive.wanted>=0))}
  const r=reports.find(r=>r.id==='produce-investment-memos-with-claude-cowork');assert.match(r.authorMethod.reason,/403/);assert.equal(r.archive.status,'observed');const prose=JSON.stringify(r.archive.sections);for(const word of ['Adyen','IREN','yfinance','DCF'])assert(prose.includes(word));
  const entry={original_sources:['https://example.com/source']};assert.equal(projectAuthorMethod({version:1,presentation:'bilingual_summary',status:'unavailable',source_url:entry.original_sources[0],unavailable_reason:'HTTP 403; external page not read'},entry).reason,'HTTP 403; external page not read');
+});
+
+test('originals and full translations are distinct from editorial summaries and version checked',()=>{
+ const {catalog}=loadContent();assert.equal(catalog.filter(c=>c.archive.sourceText).length,catalog.length);
+ const translated=catalog.filter(c=>c.archive.translationText);assert(translated.length>=7);
+ for(const c of translated){assert(c.archive.translationText.length>0);}
+ const c=catalog.find(c=>c.archive.translationText);const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'registry/archives',c.id+'.json')));
+ assert.equal(projectArchive(raw,{id:c.id,url:raw.url}).sourceText,raw.source_text.body);
+ raw.translation.based_on_body_sha256='0'.repeat(64);const stale=projectArchive(raw,{id:c.id,url:raw.url});assert.equal(stale.translationText,'');assert(stale.translationStale);
+ raw.source_text.body+='tampered';assert.equal(projectArchive(raw,{id:c.id,url:raw.url}).sourceText,'');
 });

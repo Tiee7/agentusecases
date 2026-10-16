@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "38dcbabec9cd9d1cfcbdcd111173170f9780327d8874a5c28a4d5330f0b74121",
-      "publication": "reviewed_restatement_required"
+      "value": "An MCP server lets Claude Code hand web navigation, login-walled pages and research to Comet while it keeps coding, then returns results.",
+      "sha256": "38dcbabec9cd9d1cfcbdcd111173170f9780327d8874a5c28a4d5330f0b74121"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b034715b7cac67b578f966ad4a72f698f808cf0675aed2bca5febaa23997b936",
-      "publication": "reviewed_restatement_required"
+      "value": "You add the comet-mcp server to Claude Code's MCP config and install the Perplexity Comet browser. The server launches Comet with remote debugging and talks to it over CDP. Claude sends high-level goals such as researching a topic or logging into GitHub. Comet does the clicks, scrolling and searching, and Claude polls progress and gets the results back.",
+      "sha256": "b034715b7cac67b578f966ad4a72f698f808cf0675aed2bca5febaa23997b936"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "d33e10a6ae451575ba474938a0dcf21c10e15eb485c99ef9dbd0aca5835aa8d6",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no benchmarks or measured results. It shows a demo of research and login-flow delegation, and it presents the approach as keeping Claude's context focused on coding.",
+      "sha256": "d33e10a6ae451575ba474938a0dcf21c10e15eb485c99ef9dbd0aca5835aa8d6"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "4ada017764adba7bcc12aebfb42fc12b0afc32c9da7b2819e9b280a9d3ee37cf",
-      "publication": "reviewed_restatement_required"
+      "value": "Needs Node 18+ and Comet installed. On WSL2 you must enable mirrored networking, and port 9222 has to be free.",
+      "sha256": "4ada017764adba7bcc12aebfb42fc12b0afc32c9da7b2819e9b280a9d3ee37cf"
     },
     "actual_agents": {
       "status": "observed",
@@ -93,7 +89,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Delegate web research from Claude Code to Comet\nAn MCP server lets Claude Code hand web navigation, login-walled pages and research to Comet while it keeps coding, then returns results.\nDone with\nCC\nClaude Code\nPC\nPerplexity Comet\nWhat they did\nYou add the comet-mcp server to Claude Code's MCP config and install the Perplexity Comet browser. The server launches Comet with remote debugging and talks to it over CDP. Claude sends high-level goals such as researching a topic or logging into GitHub. Comet does the clicks, scrolling and searching, and Claude polls progress and gets the results back.\nHow it went\nThe source gives no benchmarks or measured results. It shows a demo of research and login-flow delegation, and it presents the approach as keeping Claude's context focused on coding.\nWorth knowing\nNeeds Node 18+ and Comet installed. On WSL2 you must enable mirrored networking, and port 9222 has to be free.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up an MCP server so that you can hand web research and browsing tasks to Perplexity Comet while you keep working on [my project] in [repo path]. Walk me through installing and configuring it, then test it by asking Comet to look up [a documentation page or question] and return a short summary. Tell me before you install anything or change my config files.\nOriginal source: https://github.com/hanzili/comet-mcp",
+    "body_sha256": "27d554244bba0da4148fcd03df103190874eafd1032eb1e62402c82db34b5cbc",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

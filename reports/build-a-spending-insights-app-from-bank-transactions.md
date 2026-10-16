@@ -1,36 +1,30 @@
 # Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立
 
-## 源站案例介绍、方法与结果
+## English
 
-agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
-
-来源：https://agentusecases.ai/use-case/build-a-spending-insights-app-from-bank-transactions
-观测时间：2026-10-14T15:02:21.299781+00:00
-实际 agent（源站标注）：Replit Agent
-
-### 介绍
-
-This is a vendor proposal for a personal finance application, rather than a documented customer deployment.
-
-这是供应商提出的个人财务应用方案，尚非有记录的客户上线案例。
-
-### 方法
-
-A builder configures Plaid credentials and a Replit connector, links test or personal banking data, and requests a transaction dashboard.
-
-开发者配置 Plaid 凭据与 Replit 连接器，接入测试或本人银行数据，再要求生成交易看板。
-
-### 结果与限制
-
-The source supplies setup guidance but no measured performance or completed-app outcome. Sandbox data allows an initial trial without a live bank connection.
-
-源站提供设置指引，但没有完成应用的效果测量；可先使用沙箱数据试做，无需接入真实银行。
+    Build a spending-insights app from bank transactions
+    Plaid describes a Replit connector that lets non-coders prompt the Replit agent to build an app reading their own bank transactions (vendor post, no named user).
+    Done with
+    RA
+    Replit Agent
+    What they did
+    You set up a Replit account and a Plaid dashboard account, then copy your client ID and secret into Replit, which stores them in a vault. Next you add Plaid as a connector and link your bank, or use sandbox data first. Then you prompt the Replit agent to build a dashboard, summary, or chat interface from the categorized transactions. The post doesn't show the agent's own steps.
+    How it went
+    The post reports no results from a finished app. It says setup takes about five minutes and lists example questions, such as comparing dining spend month to month. A live build demo was scheduled for May 7.
+    Worth knowing
+    You can prototype with Plaid's sandbox synthetic data before linking a real account, and builders can only access their own financial data.
+    Try it yourself
+    with
+    Replit Agent
+    Copy prompt
+    Build me a web app that connects to my own bank account through Plaid and reads my recent transactions. It should group spending by [categories, e.g. groceries, dining, subscriptions] and show a monthly chart plus a list of my biggest [number] expenses. Use Plaid sandbox test data first, and stop once the dashboard loads and I can see the chart; ask me before connecting any real account or storing any credentials.
+    Original source: https://plaid.com/blog/build-personalized-finance-apps-replit-plaid/
 
 ## 原作者的方法与来源
 
 来源：[Plaid · Replit connector walkthrough](https://plaid.com/blog/build-personalized-finance-apps-replit-plaid/)
 
-作者方法摘要 · 中文为英文摘要的翻译（非全文转载）
+作者方法摘要
 
 1. 建立 Replit 项目，使用 Plaid 控制台提供的凭据配置 Plaid 连接器。
    English summary: Create the Replit project and configure its Plaid connector with credentials from the Plaid dashboard.
@@ -48,7 +42,7 @@ The source supplies setup guidance but no measured performance or completed-app 
 本案可解决有特殊分类和展示需求者反复整理个人流水的问题，但使用者目前也是数据所有者和平台费用承担者。原始公告明确连接器只供构建者访问自己的金融数据，没有命名客户或交付成效；多客户经营要另行验证生产接入、授权与数据隔离。成熟预算软件已有账户汇总、目标和支持服务，而低价新订阅的收入很容易被重连、交易对账及获客吃掉。因此建议把它当作自用工具或验证原型，尚不将教程的建设速度视为商业回报；定制服务仅是待验证的另一种经营假说。
 
 案例ID：`build-a-spending-insights-app-from-bank-transactions` · 案例来源：https://agentusecases.ai/use-case/build-a-spending-insights-app-from-bank-transactions
-研究时间：2026-10-15T12:40:06.325402+00:00 · 证据置信度：集成能力、价格页与文档证据较强；本案来自厂商教学与合作公告，没有命名付费客户、实际留存、收入或节省结果。代码证据是Plaid通用教程，不是本案生成应用。未登录、连接银行、购买或调用模型API。
+研究时间：2026-10-15T12:40:06.325402+00:00
 
 **商业评分：40.0/100。用户反馈信号占5%。**
 
@@ -79,9 +73,7 @@ The source supplies setup guidance but no measured performance or completed-app 
 
 ## Copy prompt · 动手试用
 
-源站模板状态：尚未结构化观测；不表示源站没有提示词。
-
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+自编试用模板
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
@@ -91,9 +83,9 @@ The source supplies setup guidance but no measured performance or completed-app 
 
 ### 中文试用模板
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S51a2ec82096a, S3014a39d736f, Sd54fb2d02ea8, S88e4584e2d24, S4159634449f2, S1eee8ca8c5bc, S19e08cd4b4e1, Sdd30f4cc743f
 
@@ -106,9 +98,9 @@ The source supplies setup guidance but no measured performance or completed-app 
 
 ### English trial template
 
-我们编写的模板（非源站或原作者提示词）；依据既有报告设计，未实测。
+自编模板
 
-出处：本仓库研究团队编写；非源站原文
+出处：研究团队自编
 
 依据：S51a2ec82096a, S3014a39d736f, Sd54fb2d02ea8, S88e4584e2d24, S4159634449f2, S1eee8ca8c5bc, S19e08cd4b4e1, Sdd30f4cc743f
 
@@ -204,9 +196,7 @@ Plaid与Replit的合作公告、连接器入口和演示活动是供应商自己
 
 ## 用户评价怎样改变判断
 
-本轮对Reddit、GitHub问题／项目和Hacker News分别进行了检索，另有不限定域名的评论查询。返回结果大量偏离完整问题，包括平台首页、词条和无关评论格式资料；即便明确限定域名也出现范围外结果。记录这类搜索质量限制，是为了避免把“本轮没找到”写成“网上没有用户”。没有拿搜索摘要当已读用户原文，也没有虚构负面反馈。
-
-原始公告由合作方撰写，聚合站还明确提示无命名用户和完成应用结果，因此两者都不是独立用户体验。YNAB页面的精选用户评价属于竞争者自己展示的营销素材，不给本案加分；一般Replit使用讨论也不能证明其Plaid消费应用好用或不好用。当前observations留空，反馈维度0/5、权重严格5%，表示缺少独立验证。它并不独立决定结论：即使忽略评论，只有自有数据范围、费用未知、维护负担和成熟替代已经足以限制投入。未来最有价值的反馈应能附具体输入覆盖、纠错过程、持续使用频率和付款行为，并区分开发者乐趣与消费者效用。本轮未联系任何用户，这些证据仍缺失。
+暂无直接用户反馈。
 
 依据：S51a2ec82096a, Se9f882d38e18, Sd54fb2d02ea8
 
@@ -231,21 +221,11 @@ Plaid与Replit的合作公告、连接器入口和演示活动是供应商自己
 
 假设B：一次性个人定制与交接假设：全部为未经成交验证的研究者假设：300收入；额外模型开发用量5；需求澄清、分类验收及交接合计3小时×40美元=120；第三方开发环境／测试托管预算15；获客60；10单；固定300含开发平台20和280维护／运营预算。客户自己持有账户、平台及长期数据费用另付，此报价不含无限维护，也不假定可以代持凭据或处理多个客户的数据。可变200、贡献100、月贡献700；每单额外2小时返工使贡献20、月贡献-100。税、保险和不可预见事故未量化，700不是净利润或实际收入。；API成本 5，人工成本 120，其他可变成本 15，分摊获客成本 60。依据：S51a2ec82096a, Sd66542f783c6, Saa1c87efee14, Sdd30f4cc743f
 
-## 用户反馈核对（低权重）
-
-- 社区／Reddit · `"Replit" "Plaid" "reddit"`：已执行网页检索，返回Reddit首页及Plaid泛页面等，未取得本案直接用户原文；相关性异常，不能推断不存在反馈。
-- 公开代码／GitHub · `site:github.com "Replit" "Plaid" "issues"`：已执行检索，结果以泛Plaid和其他无关页面为主，没有取得本案可核验使用问题；随后只读取得Plaid官方通用教程，不能当用户评价。
-- 独立评论检索 · `"Replit" "Plaid" "review" spending`：已执行检索，出现Review词条及无关内容，没有实际读取本案用户体验。
-- 社区／Reddit（域名过滤复查） · `Replit Plaid spending insights [domains: reddit.com]`：批量复查返回平台首页和一般Replit讨论，仍无本案直接反馈，且存在过滤范围外结果。
-- 公开代码／GitHub（域名过滤复查） · `Replit Plaid [domains: github.com]`：未取得本案例直接使用问题，过滤结果可靠性不足。
-- 社区／Hacker News · `Replit Plaid spending app review [domains: news.ycombinator.com]`：批量检索返回无关review类页面，未取得可核验使用者原文。
-- 没有取得可核验的直接用户反馈，不将缺失反馈描述为差评或好评。
-
 ## 反证与未核实信息
 
 支持更积极投入的反证是：供应商已提供原生连接器、公开教程和自用数据路径，已有Replit订阅者的边际成本可能较低；YNAB的公开收费也表明此类需求可有支付预算。但这些不能证明本案有付费客户。相反，原始公告只允许访问自己的数据；官方更新频率通常每天1至4次，削弱“实时”承诺；分类填充不是准确率，增改删与重连把工作从生成界面转向持续维护。定制交付正贡献情景仅每单多2小时返工就转为月亏，因此保留自用结论。
 
-未取得本案生成应用代码、真实运行日志、命名客户、收入、利润、实际节省时间、准确率或留存；未完成真实银行或Sandbox API实测，未生成任何密钥。只读源码是Plaid通用教程，不是本案。Plaid本项目生产单价、适用生产资格、第三方服务合同与跨客户使用范围未确认。已读旧launch-checklist标记不再更新，未作为当前条件来源；最初尝试的2025报告expenses URL返回404，随后从美联储SHED首页找到并读取2026发布的2025年调查摘要。反馈搜索出现相关性和域名过滤异常，无可核验直接用户评价，不把搜索缺失视为负面口碑。政策仅用来识别交付责任，未逐条审阅全部条款或提供法律结论。数据目录原文与临时草稿不入Git；非敏感研究记录、访问失败摘要与抓取验证凭据入Git。
+应用代码、运行记录、准确率、留存与收入未知。Plaid生产单价、项目资格及跨客户使用范围仍需确认。
 
 ## 具体动作与止损条件
 
@@ -268,6 +248,3 @@ Plaid与Replit的合作公告、连接器入口和演示活动是供应商自己
 - [S1eee8ca8c5bc] [Plaid Transactions教程源码 transactions.js](https://github.com/plaid/tutorial-resources/blob/main/transactions/finished/server/routes/transactions.js)：只读查看fetchNewSyncData与syncTransactions，核实分页、重试、增改删和游标持久化；不是本案仓库，也未运行或安装。
 
 结构化记录：[research/build-a-spending-insights-app-from-bank-transactions.json](../research/build-a-spending-insights-app-from-bank-transactions.json)
-来源读取凭据：[research/evidence/build-a-spending-insights-app-from-bank-transactions.json](../research/evidence/build-a-spending-insights-app-from-bank-transactions.json)
-
-评分是对商业投入优先级的判断。事实、推断与测算假设分别标注；没有声称线下访谈或付费产品实测。

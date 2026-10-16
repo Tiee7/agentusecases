@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d226d2b59fc211a9e904ed6588b88a3781e228cb9bbcf7e21e01d1ace23fab50",
-      "publication": "reviewed_restatement_required"
+      "value": "Linus Torvalds is working on a sizable Linux kernel patch written with Claude Code, per the headline.",
+      "sha256": "d226d2b59fc211a9e904ed6588b88a3781e228cb9bbcf7e21e01d1ace23fab50"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "7c6b428011a9b6e4ef9554ee33a91eb620fd2499efcb249ce35059914f50a81c",
-      "publication": "reviewed_restatement_required"
+      "value": "Torvalds pushed a branch called noref-filemap-read-with-llm to his main kernel repository. It aims to let the page cache be read without folio references, because small reads of one file from many threads contend on folio reference counting. His patch message says Claude Code, working under his direction, produced the code, the test programs, the review and the first draft of the cover letter. He ran the measurements on his own machine.",
+      "sha256": "7c6b428011a9b6e4ef9554ee33a91eb620fd2499efcb249ce35059914f50a81c"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "e8d6bca914ce3eac7e2457d1168640fe20a2031c0894c7556dde6c90c89a27ec",
-      "publication": "reviewed_restatement_required"
+      "value": "Phoronix calls the performance impact significant, pointing to a results chart. The patches are only on a branch so far, and whether they get merged for the Linux 7.4 window is still open.",
+      "sha256": "e8d6bca914ce3eac7e2457d1168640fe20a2031c0894c7556dde6c90c89a27ec"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "73de3e9f0f80ec4c5dc71525a74116c27fd4c0c132ccea11a748e31e0a9a446d",
-      "publication": "reviewed_restatement_required"
+      "value": "The author's disclosure in the patch message shows how Torvalds credited the AI: it did the code, tests and review, while the measurements were run by him personally.",
+      "sha256": "73de3e9f0f80ec4c5dc71525a74116c27fd4c0c132ccea11a748e31e0a9a446d"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write a Linux kernel improvement with Claude Code\nLinus Torvalds is working on a sizable Linux kernel patch written with Claude Code, per the headline.\nDone with\nCC\nClaude Code\nWhat they did\nTorvalds pushed a branch called noref-filemap-read-with-llm to his main kernel repository. It aims to let the page cache be read without folio references, because small reads of one file from many threads contend on folio reference counting. His patch message says Claude Code, working under his direction, produced the code, the test programs, the review and the first draft of the cover letter. He ran the measurements on his own machine.\nHow it went\nPhoronix calls the performance impact significant, pointing to a results chart. The patches are only on a branch so far, and whether they get merged for the Linux 7.4 window is still open.\nWorth knowing\nThe author's disclosure in the patch message shows how Torvalds credited the AI: it did the code, tests and review, while the measurements were run by him personally.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my project at [path to repo], I want to improve [specific area, e.g. a driver, a scheduler path, or a utility function]. First read the relevant code and the project's contribution guidelines, then explain your plan in a few sentences. Once I approve, write the change as a clean patch with a commit message in the project's style, run the existing tests, and stop when the patch builds and passes. Do not push or submit anything; show me the diff first.\nOriginal source: https://www.phoronix.com/news/Linus-Torvalds-Claude-Code",
+    "body_sha256": "5745e4eab95976bae1b59ecf1b2a17d4a2c8db8b7c1d9d47642f35313cf85923",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

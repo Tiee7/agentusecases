@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "47c00f340b930e4752aaf01beaf204c5670e6560e2bf48827c750604a8909e96",
-      "publication": "reviewed_restatement_required"
+      "value": "Anthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.",
+      "sha256": "47c00f340b930e4752aaf01beaf204c5670e6560e2bf48827c750604a8909e96"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "4fb496cace5b62870ec72c5ced25a13ef99c21f0c7f3eeaec01b67b9167bc49f",
-      "publication": "reviewed_restatement_required"
+      "value": "Nicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.",
+      "sha256": "4fb496cace5b62870ec72c5ced25a13ef99c21f0c7f3eeaec01b67b9167bc49f"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7d55c8aea53c93e836ccfc58a91d02c3ec46ce6e588e05910db466671772bd34",
-      "publication": "reviewed_restatement_required"
+      "value": "About 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.",
+      "sha256": "7d55c8aea53c93e836ccfc58a91d02c3ec46ce6e588e05910db466671772bd34"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d84b820836df4124716b7210a01f9a49424b54d0348ab891e86816e40f7ef533",
-      "publication": "reviewed_restatement_required"
+      "value": "It cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.",
+      "sha256": "d84b820836df4124716b7210a01f9a49424b54d0348ab891e86816e40f7ef533"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a C compiler with a team of parallel agents\nAnthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\nDone with\nCL\nClaude\nWhat they did\nNicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.\nHow it went\nAbout 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.\nWorth knowing\nIt cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [tool, e.g. a Markdown-to-HTML converter in Python] from scratch with a spec-first approach. First write a short spec and a test suite in this folder, then split the work into independent pieces and use sub-agents to implement them in parallel. Stop when all tests pass, and give me a summary of what each sub-agent built and any tests you had to skip.\nOriginal source: https://www.anthropic.com/engineering/building-c-compiler",
+    "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

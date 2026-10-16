@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "738d0bd985c1cd296857e3f95cfca2b88078c3c66b2bd68f41679ac96b6508b9",
-      "publication": "reviewed_restatement_required"
+      "value": "Poster built a morning news briefing with ChatGPT, ElevenLabs and Home Assistant that is read aloud through their home setup, replacing Alexa.",
+      "sha256": "738d0bd985c1cd296857e3f95cfca2b88078c3c66b2bd68f41679ac96b6508b9"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "08234fa69cb3aee0b2db0098f6da725e7f954addc1c81a25b80f9fc45cbb42c3",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster used n8n to run a 6:30 a.m. workflow that asked Perplexity for factual stories from a fixed list of outlets, cleaned that output, then had ChatGPT rewrite it as a short spoken script. ElevenLabs turned the script into an MP3, which was saved to the poster’s NAS and automatically played through a Home Assistant Voice PE speaker in the kitchen; in comments, the poster clarified the AI services were cloud-based, not actually local.",
+      "sha256": "08234fa69cb3aee0b2db0098f6da725e7f954addc1c81a25b80f9fc45cbb42c3"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "31f870a1474698cb4bc27567d835db7f873b990f723e1cf87025ee7480e286b4",
-      "publication": "reviewed_restatement_required"
+      "value": "It replaced the poster’s Alexa flash briefing with a calmer custom bulletin and they shared a sample audio result, but they said it still needed better pauses and maybe a different voice. Cost-wise, they estimated about $3 to $4 a month for Perplexity API usage and about $10 for OpenAI, including other calls.",
+      "sha256": "31f870a1474698cb4bc27567d835db7f873b990f723e1cf87025ee7480e286b4"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "d5e9817b28f5f0f6724ffe659f57ebf499f71c460f42b99e97d795eae34ccd50",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch was that the setup was not truly local, and the poster said ChatGPT voice sounded better than ElevenLabs but was limited to 4096 characters.",
+      "sha256": "d5e9817b28f5f0f6724ffe659f57ebf499f71c460f42b99e97d795eae34ccd50"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate a spoken daily news bulletin at home\nPoster built a morning news briefing with ChatGPT, ElevenLabs and Home Assistant that is read aloud through their home setup, replacing Alexa.\nDone with\nGP\nChatGPT\nWhat they did\nThe poster used n8n to run a 6:30 a.m. workflow that asked Perplexity for factual stories from a fixed list of outlets, cleaned that output, then had ChatGPT rewrite it as a short spoken script. ElevenLabs turned the script into an MP3, which was saved to the poster’s NAS and automatically played through a Home Assistant Voice PE speaker in the kitchen; in comments, the poster clarified the AI services were cloud-based, not actually local.\nHow it went\nIt replaced the poster’s Alexa flash briefing with a calmer custom bulletin and they shared a sample audio result, but they said it still needed better pauses and maybe a different voice. Cost-wise, they estimated about $3 to $4 a month for Perplexity API usage and about $10 for OpenAI, including other calls.\nWorth knowing\nThe main catch was that the setup was not truly local, and the poster said ChatGPT voice sounded better than ElevenLabs but was limited to 4096 characters.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery morning at [time], gather the top headlines from [news sources or topics], plus my weather for [city] and today's calendar. Write a 2-minute spoken-style briefing, convert it to audio with [text-to-speech service], and play it on my [smart speaker/Home Assistant device]. Done when the briefing plays on schedule; tell me before changing any device settings.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1og2mcn/goodbye_alexa_hello_local_ai_news_my_home",
+    "body_sha256": "c91e9d1eb85594f526c04c48a8dd7a678a13b417c776dce2dd976f5dcc921821",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

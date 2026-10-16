@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 import path from 'node:path';
 // Resolve from the command directory, not import.meta.url (Astro moves build chunks).
 function findRepository(start) {
@@ -33,12 +34,12 @@ export function projectSourceTrial(value, expectedUrl) {
   if (value.status==='available' && (!text(value.text).trim() || !text(value.agent).trim() || !['ssr','dom'].includes(value.method) || !(validWindow || (!w && Number.isFinite(Date.parse(value.observed_at)))))) return {...empty,status:'unparseable'};
   return {status:value.status,agent:value.status==='available'?text(value.agent):'',text:value.status==='available'?text(value.text):'',url:safeUrl(value.source_url),observedAt:observedLabel,method:text(value.method)};
 }
-export const sourceStatusLabels = {available:'已收录源站试用模板',missing:'模板暂未取得',unparseable:'模板暂不可用',not_observed:'模板尚未收录'};
+export const sourceStatusLabels = {available:'源站试用模板',missing:'模板未收录',unparseable:'模板未收录',not_observed:'模板未收录'};
 function sourcePrompt(source) {
   return {title:'源站试用模板',language:'源站原文',kind:'site_template',attribution:'源站提供的试用模板；不代表案例原作者实际使用的提示词。',url:source.url,refs:[],text:source.text,agent:source.agent,observedAt:source.observedAt};
 }
 export function projectSourceCase(value, expectedUrl) {
-  const empty={status:'not_observed',url:safeUrl(expectedUrl),agents:[],agentLabel:'实际 agent 尚未观测',observedAt:'',sections:[]};
+  const empty={status:'not_observed',url:safeUrl(expectedUrl),agents:[],agentLabel:'未收录',observedAt:'',sections:[]};
   if (!value || value.version!==1 || value.source_url!==expectedUrl || value.status!=='observed' || !/^[a-f0-9]{64}$/.test(value.body_sha256 || '') || !Number.isFinite(Date.parse(value.observed_at))) return empty;
   const agents=value.agent_status==='observed' && Array.isArray(value.actual_agents)?value.actual_agents.map(text).filter(Boolean):[];
   const summary=value.summary;
@@ -48,9 +49,13 @@ export function projectSourceCase(value, expectedUrl) {
 }
 export function projectArchive(value,entry) {
   const v=value?.version===1 && value.url===entry.url?value:{};
+  const source=v.source_text; const translated=v.translation;
+  const matches=(body,hash)=>typeof body==='string' && body.length>0 && createHash('sha256').update(body).digest('hex')===hash;
+  const sourceText=source?.format==='extracted_page_text' && source.body_sha256===v.body_sha256 && matches(source.body,source.body_sha256)?source.body:'';
+  const translationText=translated?.status==='available' && translated.format==='full_extracted_text_translation' && translated.based_on_body_sha256===v.body_sha256 && matches(translated.body,translated.body_sha256)?translated.body:'';
   const f=v.fields || {}; const get=k=>f[k]?.status==='observed'?f[k].value:null;
   const editorial=v.editorial; const sections=editorial?.status==='reviewed' && editorial.format==='detailed_bilingual_restatement' ? ['introduction','method','outcome','notes'].map(key=>({key,items:(editorial.sections?.[key] || []).filter(x=>text(x.en) && text(x.zh)).map(x=>({en:text(x.en),zh:text(x.zh)}))})).filter(s=>s.items.length):[];
-  return {status:v.status==='observed'?'observed':'not_observed',url:safeUrl(entry.url),path:`/cases/${entry.id}/`,observedAt:text(v.observed_at),historical:Boolean(v.capture_basis),bodyHash:text(v.body_sha256),htmlHash:text(v.html_sha256),stale:Boolean(editorial && editorial.based_on_body_sha256!==v.body_sha256),sections,
+  return {sourceText,translationText,translationStale:Boolean(translated && translated.based_on_body_sha256!==v.body_sha256),status:v.status==='observed'?'observed':'not_observed',url:safeUrl(entry.url),path:`/cases/${entry.id}/`,observedAt:text(v.observed_at),historical:Boolean(v.capture_basis),bodyHash:text(v.body_sha256),htmlHash:text(v.html_sha256),stale:Boolean(editorial && editorial.based_on_body_sha256!==v.body_sha256),sections,
   agents:Array.isArray(get('actual_agents'))?get('actual_agents').map(text).filter(Boolean):[], category:text(get('category')?.label),tags:Array.isArray(get('tags'))?get('tags').map(x=>text(x.label)).filter(Boolean):[],author:text(get('author')),wanted:Number.isSafeInteger(get('wanted')) && get('wanted')>=0?get('wanted'):null,sourceDate:text(get('source_date')),addedAt:text(get('added_at')),originals:(Array.isArray(get('original_sources'))?get('original_sources'):(entry.original_sources||[])).map(safeUrl).filter(Boolean),
   lastAttempt:v.last_attempt?{at:text(v.last_attempt.at || v.last_attempt.attempted_at),status:text(v.last_attempt.status),error:text(v.last_attempt.error)}:null,
   fields:['title','introduction','method','outcome','notes','actual_agents','original_sources','author','category','tags','wanted','source_date','added_at','try_it'].map(key=>({key,status:text(f[key]?.status)||'not_observed',sha:text(f[key]?.sha256),pending:['introduction','method','outcome','notes'].includes(key) && f[key]?.status==='observed' && !sections.some(s=>s.key===key)}))};
@@ -87,6 +92,7 @@ export function projectReport(record, entry) {
 }
 export function loadContent(root = repoRoot) {
   const registry = JSON.parse(fs.readFileSync(path.join(root,'registry/cases.json'),'utf8'));
+  const notePath=path.join(root,'registry/reading-notes.json');const notes=fs.existsSync(notePath)?JSON.parse(fs.readFileSync(notePath,'utf8')).limitations || {}:{};
   const catalog = [], reports = [], seen = new Set();
   for (const entry of registry.cases) {
     if (!safeId(entry.id) || seen.has(entry.id)) throw new Error('Invalid or duplicate catalog ID');
@@ -96,7 +102,13 @@ export function loadContent(root = repoRoot) {
     const file = path.join(root,'research',`${entry.id}.json`);
     const reportFile = path.join(root,'reports',`${entry.id}.md`);
     let report = null;
-    if (fs.existsSync(file) && fs.existsSync(reportFile)) report = projectReport(JSON.parse(fs.readFileSync(file,'utf8')),entry);
+    if (fs.existsSync(file) && fs.existsSync(reportFile)) {
+      const record=JSON.parse(fs.readFileSync(file,'utf8'));
+      if(notes[record.id])record.limitations=notes[record.id];
+      const feedback=(record.feedback?.observations || []).map(x=>(x.directness==='adjacent_workflow'?'相关体验：':'')+text(x.finding)).join('\n\n') || '暂无直接用户反馈。';
+      record.sections=(record.sections || []).map(s=>s.id==='feedback'?{...s,body:feedback}:s);
+      report=projectReport(record,entry);
+    }
     if (report) reports.push(report);
     catalog.push({ id:entry.id, archive:projectArchive(entry.archive,entry), sourceCase:projectSourceCase(entry.source_case,entry.url), firstSeen:Number.isFinite(Date.parse(entry.first_seen_at)) ? new Date(entry.first_seen_at).toISOString() : '', title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
   }

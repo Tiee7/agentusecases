@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "d66f51618c45c8794cf6d2b36c0dcc6b28f7bf46ba700b1e25e185f028dc7044",
-      "publication": "reviewed_restatement_required"
+      "value": "A custom integration sends voice requests and exposed entities to an n8n workflow that can use AI and trigger automations, speaking the reply back.",
+      "sha256": "d66f51618c45c8794cf6d2b36c0dcc6b28f7bf46ba700b1e25e185f028dc7044"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "40029156b3101d1f4df7a1244d72d6a89252d44972a9ebef576a3e72f720af08",
-      "publication": "reviewed_restatement_required"
+      "value": "You install the Webhook Conversation custom integration through HACS and point it at the production webhook URL of an n8n webhook node, in a workflow that is set active. Home Assistant sends the conversation history, the user's query and the exposed entities with states, areas and aliases. An n8n agent node handles it and returns JSON, and the reply is spoken. For controlling devices, one user added the Home Assistant call service node.",
+      "sha256": "40029156b3101d1f4df7a1244d72d6a89252d44972a9ebef576a3e72f720af08"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "11fadc283d8aff0694a98d637924bcfdf764dd4bd41b64c0f804e72e8f473e2d",
-      "publication": "reviewed_restatement_required"
+      "value": "Users got state and attribute queries working, plus device control through n8n's Home Assistant nodes. Continued conversation reportedly triggers when a reply ends in a question mark. The integration doesn't support tool calls directly, and a 403 error appeared when the webhook required authentication.",
+      "sha256": "11fadc283d8aff0694a98d637924bcfdf764dd4bd41b64c0f804e72e8f473e2d"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "71e459003afea2d006c6481f62d32f9cae1366832ae4612fd93274141623cde6",
-      "publication": "reviewed_restatement_required"
+      "value": "The integration times out after 30 seconds by default, so slow multi-tool agent runs fail with an intent recognition error unless you raise the timeout.",
+      "sha256": "71e459003afea2d006c6481f62d32f9cae1366832ae4612fd93274141623cde6"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Use n8n workflows as a Home Assistant voice agent\nA custom integration sends voice requests and exposed entities to an n8n workflow that can use AI and trigger automations, speaking the reply back.\nDone with\nN8\nn8n\nWhat they did\nYou install the Webhook Conversation custom integration through HACS and point it at the production webhook URL of an n8n webhook node, in a workflow that is set active. Home Assistant sends the conversation history, the user's query and the exposed entities with states, areas and aliases. An n8n agent node handles it and returns JSON, and the reply is spoken. For controlling devices, one user added the Home Assistant call service node.\nHow it went\nUsers got state and attribute queries working, plus device control through n8n's Home Assistant nodes. Continued conversation reportedly triggers when a reply ends in a question mark. The integration doesn't support tool calls directly, and a 403 error appeared when the webhook required authentication.\nWorth knowing\nThe integration times out after 30 seconds by default, so slow multi-tool agent runs fail with an intent recognition error unless you raise the timeout.\nTry it yourself\nwith\nn8n\nCopy prompt\nSet up an n8n workflow that acts as a voice agent for my Home Assistant at [Home Assistant URL]. It should receive the spoken request and list of exposed entities, use an AI model to decide what to do, call the matching Home Assistant services, and return a short reply to be spoken back. Start with only [list of safe entities, e.g. lights, media player] and exclude locks and alarms; you're done when I can say \"[example command]\" and it works.\nOriginal source: https://community.home-assistant.io/t/webhook-conversation/917228",
+    "body_sha256": "5ef802bdce2883a11c053750d03fd72e3c8770fa138b0934f510759d45f1533c",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

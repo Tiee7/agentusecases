@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "8b6e17224ca5824b732aaa91e2835ea959609bfaabba2fda6ef0f280f14ed95e",
-      "publication": "reviewed_restatement_required"
+      "value": "A custom integration built with Claude Code extracts data from vendor PDFs and creates categorized invoices in QuickBooks Online.",
+      "sha256": "8b6e17224ca5824b732aaa91e2835ea959609bfaabba2fda6ef0f280f14ed95e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "2db11bf593c347795a6888901d901919f2845c6588586ad84b0ffae83e24600a",
-      "publication": "reviewed_restatement_required"
+      "value": "Eamonn Cottrell had already built, with Claude Code, an integration that reads vendor PDFs, categorizes items and creates QuickBooks Online invoices. He reopened the project and had Claude Code remove the remaining manual steps. It added PDF attachment through the QuickBooks attachment API, a prompt that asks for a category on unknown items and updates the master list itself, file cleanup, and duplicate checking.",
+      "sha256": "2db11bf593c347795a6888901d901919f2845c6588586ad84b0ffae83e24600a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "da1a6707b67ea55fb14ddd1d773b17e9662aad0f3a32e7ca4545823fbc34b45c",
-      "publication": "reviewed_restatement_required"
+      "value": "On a test run for another vendor workflow, it found 40 PDFs, created the QuickBooks records, attached the PDFs and cleaned up on its own. He says the workflow once took hours and now takes minutes. He tested duplicate protection by deliberately running the process twice.",
+      "sha256": "da1a6707b67ea55fb14ddd1d773b17e9662aad0f3a32e7ca4545823fbc34b45c"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "1001800fa3eaa7b883fca30d3d9c8539f39aa715edfe4e90be5a74dc4efd7cc3",
-      "publication": "reviewed_restatement_required"
+      "value": "He had never built a QuickBooks integration before, and the existing invoice-creation logic was left untouched while each improvement was added.",
+      "sha256": "1001800fa3eaa7b883fca30d3d9c8539f39aa715edfe4e90be5a74dc4efd7cc3"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Extract vendor PDFs and create QuickBooks invoices\nA custom integration built with Claude Code extracts data from vendor PDFs and creates categorized invoices in QuickBooks Online.\nDone with\nCC\nClaude Code\nWhat they did\nEamonn Cottrell had already built, with Claude Code, an integration that reads vendor PDFs, categorizes items and creates QuickBooks Online invoices. He reopened the project and had Claude Code remove the remaining manual steps. It added PDF attachment through the QuickBooks attachment API, a prompt that asks for a category on unknown items and updates the master list itself, file cleanup, and duplicate checking.\nHow it went\nOn a test run for another vendor workflow, it found 40 PDFs, created the QuickBooks records, attached the PDFs and cleaned up on its own. He says the workflow once took hours and now takes minutes. He tested duplicate protection by deliberately running the process twice.\nWorth knowing\nHe had never built a QuickBooks integration before, and the existing invoice-creation logic was left untouched while each improvement was added.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a workflow that extracts line-item data from vendor PDF invoices in [folder/email], categorizes expenses, and creates matching invoices in QuickBooks Online. Pause and show me the first few invoices it would create before it posts anything to QuickBooks.\nOriginal source: https://www.gotsheet.xyz/p/i-automated-quickbooks-w-claude-code",
+    "body_sha256": "955d69f587db89b8f5c5df1e2d4452078df550c43849cdd34d21c45fd47fe7a9",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "df1a2f3dba83edab64c98e865229651ba8292d4b85e7fd40332d3ee54292168a",
-      "publication": "reviewed_restatement_required"
+      "value": "The author uses Claude Code to maintain the NixOS config repo for their self-hosted machines, blocked from running nixos-rebuild switch and reviewing each change before applying it manually.",
+      "sha256": "df1a2f3dba83edab64c98e865229651ba8292d4b85e7fd40332d3ee54292168a"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "70b1666acc340ec94290d8de4ba8e00b29fd4abc3015482c8652a13758de6707",
-      "publication": "reviewed_restatement_required"
+      "value": "The author keeps one config repo that defines all their NixOS machines, two refurbished 32GB Lenovo laptops used as self-hosting servers, and has Claude Code work on it. Claude is restricted from running nixos-rebuild switch. The author reviews each change and runs the switch manually.",
+      "sha256": "70b1666acc340ec94290d8de4ba8e00b29fd4abc3015482c8652a13758de6707"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "044cd01b331ccb36c5f8995d245228530c62f53c229cfd45f51deff6305aa113",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no results or numbers for the Claude workflow itself. It only says the review-then-switch setup is how they manage the machines, which run services like Nextcloud, Vaultwarden and Jellyfin.",
+      "sha256": "044cd01b331ccb36c5f8995d245228530c62f53c229cfd45f51deff6305aa113"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c35ba2ebcf6666700778dc4c6ef00d54d60f8e43ea7c83eb47392e09f4f592c3",
-      "publication": "reviewed_restatement_required"
+      "value": "Block nixos-rebuild switch for the agent so every change to a live machine gets human review before it is applied.",
+      "sha256": "c35ba2ebcf6666700778dc4c6ef00d54d60f8e43ea7c83eb47392e09f4f592c3"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Manage NixOS server configs with Claude Code\nThe author uses Claude Code to maintain the NixOS config repo for their self-hosted machines, blocked from running nixos-rebuild switch and reviewing each change before applying it manually.\nDone with\nCC\nClaude Code\nWhat they did\nThe author keeps one config repo that defines all their NixOS machines, two refurbished 32GB Lenovo laptops used as self-hosting servers, and has Claude Code work on it. Claude is restricted from running nixos-rebuild switch. The author reviews each change and runs the switch manually.\nHow it went\nThe source gives no results or numbers for the Claude workflow itself. It only says the review-then-switch setup is how they manage the machines, which run services like Nextcloud, Vaultwarden and Jellyfin.\nWorth knowing\nBlock nixos-rebuild switch for the agent so every change to a live machine gets human review before it is applied.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me maintain the NixOS config repo at [path to repo] for my machines [machine names]. Make this change: [describe change, such as adding a service or updating a package]. You may edit files and run dry builds, but never run nixos-rebuild switch. Show me the full diff and a plain-language explanation so I can review and apply it myself.\nOriginal source: https://news.ycombinator.com/item?id=50017667",
+    "body_sha256": "291f3522055d7cca68f722c00a923f22c77b816afcebfcc01b6daf643e2c964d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

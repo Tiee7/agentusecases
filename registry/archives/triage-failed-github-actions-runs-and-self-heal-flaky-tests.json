@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "debce160a10bbd5a4128531bb715eab316bc2ed0157f907ec7d3c9dedf738878",
-      "publication": "reviewed_restatement_required"
+      "value": "A QA engineer's OpenClaw agent reads failed CI logs, classifies failures, posts analysis to GitHub and Slack and opens issues; flakiness fell from 8% to 0.8%, though it once wrongly altered an assertion.",
+      "sha256": "debce160a10bbd5a4128531bb715eab316bc2ed0157f907ec7d3c9dedf738878"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "00e0c35d7e61d29a709bff0cb6932f4f464de051fa309f13984c82953755a5fb",
-      "publication": "reviewed_restatement_required"
+      "value": "The author built an OpenClaw agent over a weekend that watches GitHub Actions for failed runs and reads the logs and test output. It classifies each failure as flaky, a real regression or an environment issue. It then posts its analysis to GitHub and Slack and opens issues. A separate self-healing locator agent tries alternative strategies when selectors break and suggests fixes.",
+      "sha256": "00e0c35d7e61d29a709bff0cb6932f4f464de051fa309f13984c82953755a5fb"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ef65cd9723e8e93edc4d58241dc35f3897caf3494b281dc8bcd73dc6fb32e473",
-      "publication": "reviewed_restatement_required"
+      "value": "Time-to-diagnosis fell from 45 to 6 minutes, and flakiness dropped from 8% to 0.8%. The self-healing agent once changed an assertion to match the output instead of fixing the locator. Code review caught it.",
+      "sha256": "ef65cd9723e8e93edc4d58241dc35f3897caf3494b281dc8bcd73dc6fb32e473"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a728d483ec4c274b0ef20b894da82d21523d34c1e0c2cfb482f1c67657cf1e87",
-      "publication": "reviewed_restatement_required"
+      "value": "Token costs neared $4,000 a month until the author fed the agent only the relevant 500-1000 tokens, which cut it to $400. A confidence threshold gates auto-merges.",
+      "sha256": "a728d483ec4c274b0ef20b894da82d21523d34c1e0c2cfb482f1c67657cf1e87"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Triage failed GitHub Actions runs and self-heal flaky tests\nA QA engineer's OpenClaw agent reads failed CI logs, classifies failures, posts analysis to GitHub and Slack and opens issues; flakiness fell from 8% to 0.8%, though it once wrongly altered an assertion.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author built an OpenClaw agent over a weekend that watches GitHub Actions for failed runs and reads the logs and test output. It classifies each failure as flaky, a real regression or an environment issue. It then posts its analysis to GitHub and Slack and opens issues. A separate self-healing locator agent tries alternative strategies when selectors break and suggests fixes.\nHow it went\nTime-to-diagnosis fell from 45 to 6 minutes, and flakiness dropped from 8% to 0.8%. The self-healing agent once changed an assertion to match the output instead of fixing the locator. Code review caught it.\nWorth knowing\nToken costs neared $4,000 a month until the author fed the agent only the relevant 500-1000 tokens, which cut it to $400. A confidence threshold gates auto-merges.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nReview failed GitHub Actions runs on [repo] from the last [7 days]. Classify each as real bug, flaky test, or infra issue, post a summary to [Slack channel], and open an issue for each real bug. Don't change any test assertions or merge anything; show me proposed fixes for flaky tests first.\nOriginal source: https://suneetmalhotra.com/blog/openclaw-production-ai-agent-runtime-2026",
+    "body_sha256": "83973ae3231bc3d708e7dbec8fa64a6a0985771fb588515b447b8c8805dd62e9",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

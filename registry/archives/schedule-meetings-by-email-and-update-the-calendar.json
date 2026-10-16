@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5df7b2c360d8370dcf011cc5b6e572d0703b8522eea243858bb17cc7825a493d",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built an agent that reads emails, checks calendar availability, replies with a meeting time and adds it to the calendar.",
+      "sha256": "5df7b2c360d8370dcf011cc5b6e572d0703b8522eea243858bb17cc7825a493d"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6c4a0d14faddde6fdc459732640b662e1fd4d789f4aa5640e30f3266ab2a8dfc",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster built a background agent that scans their inbox for meeting requests, pulls the proposed date and time from the email, checks their calendar for conflicts, and either confirms the slot or suggests alternatives before blocking the time on the calendar. In comments, they said it uses limited permissions, no free-form actions, encrypted handling, and explicit authorization; for their use case it also accounts for in-person appointments, travel time, and distance between meetings.",
+      "sha256": "6c4a0d14faddde6fdc459732640b662e1fd4d789f4aa5640e30f3266ab2a8dfc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "7d309290c521bf34f966355a3ba8073a6983077b4bd5162aef95ec5bafbef304",
-      "publication": "reviewed_restatement_required"
+      "value": "They said they had used it for about a month and estimated it saved 3–4 hours a week of scheduling. The main shortcoming raised in the thread was trust: people were uneasy about giving inbox access, and the poster did not share a detailed technical implementation.",
+      "sha256": "7d309290c521bf34f966355a3ba8073a6983077b4bd5162aef95ec5bafbef304"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "3de5cb85016edf279560549336e5da7ff131ff0836eb7e53502445d6c1ca5071",
-      "publication": "reviewed_restatement_required"
+      "value": "The clearest practical catch is that this only made sense for them because existing scheduling tools did not handle travel time between in-person appointments.",
+      "sha256": "3de5cb85016edf279560549336e5da7ff131ff0836eb7e53502445d6c1ca5071"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Schedule meetings by email and update the calendar\nThe poster built an agent that reads emails, checks calendar availability, replies with a meeting time and adds it to the calendar.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster built a background agent that scans their inbox for meeting requests, pulls the proposed date and time from the email, checks their calendar for conflicts, and either confirms the slot or suggests alternatives before blocking the time on the calendar. In comments, they said it uses limited permissions, no free-form actions, encrypted handling, and explicit authorization; for their use case it also accounts for in-person appointments, travel time, and distance between meetings.\nHow it went\nThey said they had used it for about a month and estimated it saved 3–4 hours a week of scheduling. The main shortcoming raised in the thread was trust: people were uneasy about giving inbox access, and the poster did not share a detailed technical implementation.\nWorth knowing\nThe clearest practical catch is that this only made sense for them because existing scheduling tools did not handle travel time between in-person appointments.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nBuild an agent that watches [email account] for meeting requests, checks my [calendar] for open slots in [working hours and time zone], and drafts a reply proposing a time. When the other person confirms, add the event to the calendar. Have it save replies as drafts for my approval before sending anything, and tell me when the setup is ready to test.\nOriginal source: https://www.reddit.com/r/SideProject/comments/1pton6u/i_built_an_ai_agent_that_reads_my_emails",
+    "body_sha256": "431971bfed16d7a1b6864f09ee25b57faccdb38b00d27ba2ce1cdcb3549876dc",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

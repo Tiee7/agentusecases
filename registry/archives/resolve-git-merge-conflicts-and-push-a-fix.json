@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "15242dcfaebdfb8610807c60b21507c66b78344d2591586d78b76f36dbe4cab9",
-      "publication": "reviewed_restatement_required"
+      "value": "A tutorial shows Scout comparing both sides of merge conflicts, proposing a merged file for review, then committing and pushing to a branch.",
+      "sha256": "15242dcfaebdfb8610807c60b21507c66b78344d2591586d78b76f36dbe4cab9"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "31f506d19bd7914153bf59c41f799d01a50a3e80c5ad324fbc0aa75f1b0ca224",
-      "publication": "reviewed_restatement_required"
+      "value": "After a git pull leaves conflict markers in a file, you point Scout at that file. It reads the markers, compares both versions of the code, and proposes a merged file for you to review. The article describes committing and pushing to a branch as a separate Scout workflow. Scout checks the diff, drafts a commit message, creates the branch and pushes. By default you approve each command before it runs.",
+      "sha256": "31f506d19bd7914153bf59c41f799d01a50a3e80c5ad324fbc0aa75f1b0ca224"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "9c2ccd1dbaaab01bc98bf77b5898b96f53ecf59d2af0f369f79bfb83d1ecf1a7",
-      "publication": "reviewed_restatement_required"
+      "value": "The article describes the workflow but reports no measured results, timings or real-repo example. Merge resolution is covered in only a few sentences, and the article doesn't say how well it handles complex conflicts.",
+      "sha256": "9c2ccd1dbaaab01bc98bf77b5898b96f53ecf59d2af0f369f79bfb83d1ecf1a7"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "62ce064ea57e782ad47d673bae0a166644e773ca1490d3099d3202c48d595bc5",
-      "publication": "reviewed_restatement_required"
+      "value": "Scout needs enterprise access: Frontier preview enrollment, an Intune device policy, and Microsoft 365 Copilot plus GitHub Copilot Business or Enterprise licenses. Personal accounts can't sign in.",
+      "sha256": "62ce064ea57e782ad47d673bae0a166644e773ca1490d3099d3202c48d595bc5"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Resolve git merge conflicts and push a fix\nA tutorial shows Scout comparing both sides of merge conflicts, proposing a merged file for review, then committing and pushing to a branch.\nDone with\nMS\nMicrosoft Scout\nWhat they did\nAfter a git pull leaves conflict markers in a file, you point Scout at that file. It reads the markers, compares both versions of the code, and proposes a merged file for you to review. The article describes committing and pushing to a branch as a separate Scout workflow. Scout checks the diff, drafts a commit message, creates the branch and pushes. By default you approve each command before it runs.\nHow it went\nThe article describes the workflow but reports no measured results, timings or real-repo example. Merge resolution is covered in only a few sentences, and the article doesn't say how well it handles complex conflicts.\nWorth knowing\nScout needs enterprise access: Frontier preview enrollment, an Intune device policy, and Microsoft 365 Copilot plus GitHub Copilot Business or Enterprise licenses. Personal accounts can't sign in.\nTry it yourself\nwith\nMicrosoft Scout\nCopy prompt\nMy repo at [path to repo] has merge conflicts after merging [branch A] into [branch B]. Compare both sides of each conflicted file, explain what each side changed, and propose a merged version for me to review. Once I approve, run [test command] to confirm nothing broke, then pause and show me the commit and push details before pushing to [branch name].\nOriginal source: https://www.fdaytalk.com/microsoft-scout-for-developers/",
+    "body_sha256": "8d0d70d38503695b2c16b1d5dc5f56868adc951d56c9c1be44c6cd7010b92e7d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ea3b0a6be41a6dc1162a779f3ceceea7d960baff34805608f0002fcf71734657",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude in Chrome negotiated a $100 credit from AT&T in a billing dispute with no human involvement, one of five use cases tested.",
+      "sha256": "ea3b0a6be41a6dc1162a779f3ceceea7d960baff34805608f0002fcf71734657"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "6e7cb256ef4e7d930c3c5bdc9b35a7a4e75fce0ba7a27f7c38c3fae07efa1419",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude in Chrome is an extension that runs in the user's own browser, with their logins, and can read pages, click, and fill forms. In the AT&T case it handled a real billing dispute and negotiated the credit with no human involved. The visible part of the source doesn't describe the prompts or the steps it took.",
+      "sha256": "6e7cb256ef4e7d930c3c5bdc9b35a7a4e75fce0ba7a27f7c38c3fae07efa1419"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "df24d5c47eac28e2bc5d38f87c1e5497de23332fb10197224dcd1c7cb1fb0336",
-      "publication": "reviewed_restatement_required"
+      "value": "Claude got a $100 credit from AT&T. The detailed walkthrough is behind a paywall, so how the negotiation went and what limits came up aren't visible.",
+      "sha256": "df24d5c47eac28e2bc5d38f87c1e5497de23332fb10197224dcd1c7cb1fb0336"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a6a85d1dd95ecd5341532a887ff4a6e4f4acd53d99422d2b2421bee8b7bd0f00",
-      "publication": "reviewed_restatement_required"
+      "value": "The full account and prompts are paywalled. The author also warns that data-heavy tasks should be split into subtasks, and recommends safety-checking automations before activating them.",
+      "sha256": "a6a85d1dd95ecd5341532a887ff4a6e4f4acd53d99422d2b2421bee8b7bd0f00"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,59 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "editorial": {
+    "status": "reviewed",
+    "format": "detailed_bilingual_restatement",
+    "based_on_body_sha256": "03c7ddb31ae5911f9acd4bb28d7460c6cf736a4f24b6f2dcc3d8274b5a976441",
+    "reviewed_at": "2026-10-16T09:47:33.935832+00:00",
+    "sections": {
+      "introduction": [
+        {
+          "en": "The useful distinction in this account is between the reported account credit and the unavailable negotiation trace. The source attributes the browser work to Claude in Chrome.",
+          "zh": "本例应把声称取得的账户抵扣与尚不可见的协商过程分开理解。源站将浏览器操作归于Claude in Chrome。"
+        }
+      ],
+      "method": [
+        {
+          "en": "The extension worked inside an already authenticated browser and handled a billing dispute. Reading account pages and interacting with support were possible in that session; the public account does not expose the sequence of messages or the instructions used.",
+          "zh": "扩展在已有登录状态的浏览器中处理账单争议，可以读取账户页面并与客服交互；公开叙述没有给出消息顺序或实际指令。"
+        }
+      ],
+      "outcome": [
+        {
+          "en": "The reported benefit is a $100 credit, not documented cash income. The source says no person intervened in that negotiation, but supplies no public transaction record here.",
+          "zh": "据述获得100美元账户抵扣，不能把它计成已证明的现金收入。源站称协商期间无人介入，但此处没有公开交易凭据。"
+        }
+      ],
+      "notes": [
+        {
+          "en": "The detailed account is paywalled. Consequently the approval boundary and failure cases remain unknown. Separately, the source relays advice to divide data-heavy work and inspect automations before activation; that advice is not evidence that these checks occurred in the dispute.",
+          "zh": "详细经过位于付费内容中，因此授权边界和失败情形仍未知。源站另转述应拆分大量数据任务、启用自动化前检查的建议；这些建议不能证明本次协商实际执行过相应检查。"
+        }
+      ]
+    },
+    "attribution": "Original structured synthesis of source-reported facts and explicit evidence limits; not full text, a full translation, or independent outcome verification.",
+    "external_source_status": "not_read_in_this_batch",
+    "quotation_policy": "No source quotation needed; tool names, numbers and interface command tokens retained as facts."
+  },
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Negotiate a billing credit from AT&T\nClaude in Chrome negotiated a $100 credit from AT&T in a billing dispute with no human involvement, one of five use cases tested.\nDone with\nCH\nClaude in Chrome\nWhat they did\nClaude in Chrome is an extension that runs in the user's own browser, with their logins, and can read pages, click, and fill forms. In the AT&T case it handled a real billing dispute and negotiated the credit with no human involved. The visible part of the source doesn't describe the prompts or the steps it took.\nHow it went\nClaude got a $100 credit from AT&T. The detailed walkthrough is behind a paywall, so how the negotiation went and what limits came up aren't visible.\nWorth knowing\nThe full account and prompts are paywalled. The author also warns that data-heavy tasks should be split into subtasks, and recommends safety-checking automations before activating them.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nGo to [company]'s support chat or billing page and negotiate a credit or refund for [describe the billing issue], referencing my account history and the specific overcharge. Show me the proposed resolution and what you're about to submit before finalizing anything on my account.\nOriginal source: https://natesnewsletter.substack.com/p/five-things-claudes-chrome-extension",
+    "body_sha256": "03c7ddb31ae5911f9acd4bb28d7460c6cf736a4f24b6f2dcc3d8274b5a976441",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "03c7ddb31ae5911f9acd4bb28d7460c6cf736a4f24b6f2dcc3d8274b5a976441",
+    "translated_at": "2026-10-16T09:50:50.637201+00:00",
+    "body": "向AT&T协商账单抵扣\n在测试的五个用例之一中，Claude in Chrome在无人介入的情况下，就账单争议向AT&T协商取得了100美元抵扣。\n实际使用\nClaude in Chrome\n具体做法\nClaude in Chrome是一款在用户自己的浏览器中运行的扩展，使用用户已有的登录状态，能够读取页面、点击和填写表单。在AT&T案例中，它处理了一起真实账单争议，无需人工参与便协商取得了抵扣。来源公开可见的部分没有描述提示词或执行步骤。\n结果如何\nClaude从AT&T取得了100美元抵扣。详细过程位于付费内容之后，因此无法看到协商如何进行，以及遇到了哪些限制。\n值得知道\n完整经过与提示词需要付费阅读。作者还提醒，应把数据量大的任务拆成子任务，并建议在启用自动化之前先做安全检查。\n自行试用\n推荐工具\nClaude in Chrome\n复制提示词\n前往[公司]的客服聊天或账单页面，为[描述账单问题]协商抵扣或退款，参考我的账户历史以及具体多收的费用。在最终确认账户上的任何操作之前，向我展示拟议解决方案和你即将提交的内容。\n原始来源：https://natesnewsletter.substack.com/p/five-things-claudes-chrome-extension",
+    "body_sha256": "0882be401362f7e1aa8e18f8df72fa60ab2bcbfbcaa29630d61c91d300daaed7",
+    "scope": "All captured case prose, source template and original links; decorative agent initials omitted."
+  }
 }

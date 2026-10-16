@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "2fbb799d8c33025768a029d06a18a50fda0bee4a33473ff373981c385e4f617b",
-      "publication": "reviewed_restatement_required"
+      "value": "Recruiters run OpenClaw to monitor GitHub for new contributors overnight, score resume folders against a job description, and draft WhatsApp replies held for human approval.",
+      "sha256": "2fbb799d8c33025768a029d06a18a50fda0bee4a33473ff373981c385e4f617b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b09a6559f3c5746109ad505db6526e973985aab110aa1ff427a6b17ab779c826",
-      "publication": "reviewed_restatement_required"
+      "value": "OpenClaw runs on a dedicated machine such as a Mac Mini. A 6 AM scheduled task uses the browser skill to visit chosen GitHub repos, pull contributors, filter for recent activity and send a Telegram digest. For screening, the recruiter drops PDF resumes and a JD into the workspace, and the agent returns a ranked CSV with rationales. For replies, it drafts a response and sends it to the recruiter on WhatsApp, and sends it only after the recruiter says yes.",
+      "sha256": "b09a6559f3c5746109ad505db6526e973985aab110aa1ff427a6b17ab779c826"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "8bba6a2c686418e42bed2d12fed83875e43867d2c88c1a805c5075ac4920ad97",
-      "publication": "reviewed_restatement_required"
+      "value": "The guide says API costs run roughly $10 to $30 a month for light use and $100 to $200 for heavy use. It gives no measured sourcing results. LinkedIn scraping is fragile, and a clean first workflow takes most of a day.",
+      "sha256": "8bba6a2c686418e42bed2d12fed83875e43867d2c88c1a805c5075ac4920ad97"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "b8a04270b82d0193de074b20d14505a6d6d824ca82fe5d301eacde9e2d2a32d2",
-      "publication": "reviewed_restatement_required"
+      "value": "Sandboxing, approval prompts and workspace limits ship with 2.0 but are off by default, so turn them on before pointing the agent at candidate data.",
+      "sha256": "b8a04270b82d0193de074b20d14505a6d6d824ca82fe5d301eacde9e2d2a32d2"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Source and screen candidates and reply over WhatsApp\nRecruiters run OpenClaw to monitor GitHub for new contributors overnight, score resume folders against a job description, and draft WhatsApp replies held for human approval.\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw runs on a dedicated machine such as a Mac Mini. A 6 AM scheduled task uses the browser skill to visit chosen GitHub repos, pull contributors, filter for recent activity and send a Telegram digest. For screening, the recruiter drops PDF resumes and a JD into the workspace, and the agent returns a ranked CSV with rationales. For replies, it drafts a response and sends it to the recruiter on WhatsApp, and sends it only after the recruiter says yes.\nHow it went\nThe guide says API costs run roughly $10 to $30 a month for light use and $100 to $200 for heavy use. It gives no measured sourcing results. LinkedIn scraping is fragile, and a clean first workflow takes most of a day.\nWorth knowing\nSandboxing, approval prompts and workspace limits ship with 2.0 but are off by default, so turn them on before pointing the agent at candidate data.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery night, check GitHub for new contributors to [repos or topics] who match [skills, location] and add them to [sheet]. Also score the resumes in [folder] against this job description: [paste JD], with a one-line reason each. Draft WhatsApp replies to [candidates or contacts], but hold them for my approval and never send without it.\nOriginal source: https://www.glozo.com/blog/openclaw-for-recruiters",
+    "body_sha256": "c8f29e3966c2bb92db794bfacfcea2ee314114ced5353b329609977f6ba7acca",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

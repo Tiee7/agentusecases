@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "5657d90d554f6d47fe6d4baf0258b7ac1731277487f64b9af7483ea3387084a8",
-      "publication": "reviewed_restatement_required"
+      "value": "A developer used ChatGPT Agent mode to extract revenue growth, free cash flow and net cash from 10-Q filings with source URLs, feeding a multi-agent valuation and sentiment workflow.",
+      "sha256": "5657d90d554f6d47fe6d4baf0258b7ac1731277487f64b9af7483ea3387084a8"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "8267a1a2eff511c7d251a19e55a2dc74db971d5d8f8f2769f406b21b0cbf798a",
-      "publication": "reviewed_restatement_required"
+      "value": "The developer prompted ChatGPT Agent mode, chosen for its web search, to produce fundamentals for four tickers (AAPL, MSFT, NVDA, TSLA) from SEC 10-Q filings. For each metric the agent returned a value, trend direction, 1-5 score, explanation, filing URL and the exact derivation. Claude helped write the prompts. A Fundamental agent in a LangGraph workflow then used the output.",
+      "sha256": "8267a1a2eff511c7d251a19e55a2dc74db971d5d8f8f2769f406b21b0cbf798a"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "ebd618323fe02f4549d55ff8ef77463130773c8f6f52fe6f1f72823f9ddddf87",
-      "publication": "reviewed_restatement_required"
+      "value": "The agent output fed a working pipeline that combined valuation, sentiment and fundamental votes and backtested the picks over 63 trading days. The README states no accuracy figures for the extracted numbers.",
+      "sha256": "ebd618323fe02f4549d55ff8ef77463130773c8f6f52fe6f1f72823f9ddddf87"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "075f0597d2e765592f1cd9738b7a95004ed569cb566e4fcc3c7f850184a5f817",
-      "publication": "reviewed_restatement_required"
+      "value": "Use only filings public before your decision date; the author limited decision dates to August 2024 to avoid leakage. The whole prototype took roughly 8-10 hours.</parameter>",
+      "sha256": "075f0597d2e765592f1cd9738b7a95004ed569cb566e4fcc3c7f850184a5f817"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Pull stock fundamentals from SEC filings for valuation\nA developer used ChatGPT Agent mode to extract revenue growth, free cash flow and net cash from 10-Q filings with source URLs, feeding a multi-agent valuation and sentiment workflow.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe developer prompted ChatGPT Agent mode, chosen for its web search, to produce fundamentals for four tickers (AAPL, MSFT, NVDA, TSLA) from SEC 10-Q filings. For each metric the agent returned a value, trend direction, 1-5 score, explanation, filing URL and the exact derivation. Claude helped write the prompts. A Fundamental agent in a LangGraph workflow then used the output.\nHow it went\nThe agent output fed a working pipeline that combined valuation, sentiment and fundamental votes and backtested the picks over 63 trading days. The README states no accuracy figures for the extracted numbers.\nWorth knowing\nUse only filings public before your decision date; the author limited decision dates to August 2024 to avoid leakage. The whole prototype took roughly 8-10 hours.</parameter>\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nFor [ticker symbols], open the latest 10-Q on SEC EDGAR and extract revenue growth year over year, free cash flow, and net cash or debt. Put the results in a table with a source URL for every number, and flag any figure you couldn't confirm. Stop when every ticker has all three metrics or an explicit note on why it's missing.\nOriginal source: https://github.com/phanhpp/Multi-Agent-Stock-Analysis-System",
+    "body_sha256": "188fda0acae5f3938d43fc386e781433675c92b1fb4f120475a0b8d07313a2bd",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "ec75f10d862363656c74a31764d264402929f84647132d1579c4e4fc36c8441f",
-      "publication": "reviewed_restatement_required"
+      "value": "A self-hosted n8n workflow extracts accounting data from uploaded receipts and invoices with OpenAI, then after user review files the originals and appends data to a yearly sheet.",
+      "sha256": "ec75f10d862363656c74a31764d264402929f84647132d1579c4e4fc36c8441f"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "446aa8499362674f93bb82c421769b862148de60a5973cfd29e2521d3434e976",
-      "publication": "reviewed_restatement_required"
+      "value": "Users upload an image or PDF through a web page to an n8n webhook, which looks up the user by token in Google Sheets. Images go to OpenAI vision. PDFs have their text extracted first, then analyzed. The model returns structured JSON (date, merchant, gross amount, VAT rate, category) for the user to review and edit. On save, the file goes into a Drive user/month folder, and the data is appended to a yearly sheet.",
+      "sha256": "446aa8499362674f93bb82c421769b862148de60a5973cfd29e2521d3434e976"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "01cef151e9e6a1db8ba02138c4b6385a6a6b6411c489f9d6195be8bec37e6db1",
-      "publication": "reviewed_restatement_required"
+      "value": "The source gives no accuracy or time-saving figures. It describes a working prototype with a demo video. The public repo holds sanitized exports that won't run until you configure your own credentials and IDs.",
+      "sha256": "01cef151e9e6a1db8ba02138c4b6385a6a6b6411c489f9d6195be8bec37e6db1"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "f931adbfa7a1212ae9396dcf6e8cb51f671c485f776a5e4fef339edb033729ff",
-      "publication": "reviewed_restatement_required"
+      "value": "You need your own OpenAI, Google Drive and Sheets OAuth credentials, a user lookup sheet, a base Drive folder and an n8n webhook domain. The token lookup is a prototype stand-in for real authentication.",
+      "sha256": "f931adbfa7a1212ae9396dcf6e8cb51f671c485f776a5e4fef339edb033729ff"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Extract invoice data and file it into a bookkeeping sheet\nA self-hosted n8n workflow extracts accounting data from uploaded receipts and invoices with OpenAI, then after user review files the originals and appends data to a yearly sheet.\nDone with\nN8\nn8n\nWhat they did\nUsers upload an image or PDF through a web page to an n8n webhook, which looks up the user by token in Google Sheets. Images go to OpenAI vision. PDFs have their text extracted first, then analyzed. The model returns structured JSON (date, merchant, gross amount, VAT rate, category) for the user to review and edit. On save, the file goes into a Drive user/month folder, and the data is appended to a yearly sheet.\nHow it went\nThe source gives no accuracy or time-saving figures. It describes a working prototype with a demo video. The public repo holds sanitized exports that won't run until you configure your own credentials and IDs.\nWorth knowing\nYou need your own OpenAI, Google Drive and Sheets OAuth credentials, a user lookup sheet, a base Drive folder and an n8n webhook domain. The token lookup is a prototype stand-in for real authentication.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a self-hosted n8n workflow where I upload receipts or invoices to [folder or form], and OpenAI extracts vendor, date, totals, tax and invoice number. Show me the extracted data for review, then on approval file the original in [Drive folder] and append a row to my [year] bookkeeping sheet. It's done when a sample invoice flows through; do not file or write anything until I approve.\nOriginal source: https://github.com/Fabiano225/ai-invoice-automation",
+    "body_sha256": "56aaeee0ef3b637df0ef1560a1ff09832b711a20be89152aacaa142be8d2a939",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

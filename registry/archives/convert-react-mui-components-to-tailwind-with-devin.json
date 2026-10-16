@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "04001d8d14e3e89f53646bb8eaad03fa4c1b615ca0dd585272975da5d5d8626e",
-      "publication": "reviewed_restatement_required"
+      "value": "Lumos used Devin for routine tasks like MUI-to-Tailwind conversion, which went well, and its unit-test feedback loop reduced rewrites.",
+      "sha256": "04001d8d14e3e89f53646bb8eaad03fa4c1b615ca0dd585272975da5d5d8626e"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "a5b198cb2db8bdc0b32547faecf468cadc0e362b1e557477bc252f7bebf7168d",
-      "publication": "reviewed_restatement_required"
+      "value": "Lumos engineers gave Devin a short prompt to convert React MUI components to Tailwind using their own styles, and it opened a PR. Before that, they let it run unit tests and filled its Knowledge feature with codebase-specific guidance. Engineers then reviewed the PR.",
+      "sha256": "a5b198cb2db8bdc0b32547faecf468cadc0e362b1e557477bc252f7bebf7168d"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "2654b2b459765485884c7d50ede07c258e11a48358dea294f12bc7d0663c2953",
-      "publication": "reviewed_restatement_required"
+      "value": "The conversion went quite well, but the PR wasn't ready to merge as-is. They think linting and pre-commit hooks might have fixed that. Overall, Devin pushed 44 PRs in 48 days, and 19 were merged.",
+      "sha256": "2654b2b459765485884c7d50ede07c258e11a48358dea294f12bc7d0663c2953"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a95d00984355b91cdca49b079d957b0c59c84a54489838ef2b404c8d652133ff",
-      "publication": "reviewed_restatement_required"
+      "value": "Typical Devin PRs cost $5 to $40, averaging about $20. Each command is capped at 10 ACUs (about $20), and a simple deletion PR cost about $5.",
+      "sha256": "a95d00984355b91cdca49b079d957b0c59c84a54489838ef2b404c8d652133ff"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Convert React MUI components to Tailwind with Devin\nLumos used Devin for routine tasks like MUI-to-Tailwind conversion, which went well, and its unit-test feedback loop reduced rewrites.\nDone with\nDE\nDevin\nWhat they did\nLumos engineers gave Devin a short prompt to convert React MUI components to Tailwind using their own styles, and it opened a PR. Before that, they let it run unit tests and filled its Knowledge feature with codebase-specific guidance. Engineers then reviewed the PR.\nHow it went\nThe conversion went quite well, but the PR wasn't ready to merge as-is. They think linting and pre-commit hooks might have fixed that. Overall, Devin pushed 44 PRs in 48 days, and 19 were merged.\nWorth knowing\nTypical Devin PRs cost $5 to $40, averaging about $20. Each command is capped at 10 ACUs (about $20), and a simple deletion PR cost about $5.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn [repo name], convert the React components in [folder path] from [current styling library, e.g. MUI] to [target, e.g. Tailwind], keeping the look and behavior the same. Run the existing unit tests after each component and fix failures before moving on. Open a PR when all tests pass, with a short list of components converted and anything you couldn't convert.\nOriginal source: https://www.lumos.com/blog/cognitions-devin-your-new-junior-engineer",
+    "body_sha256": "899dd8b5b933ea1d5e63ef8b8c9f85c85620ec32be37f449c6ed267df325a876",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

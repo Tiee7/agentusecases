@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0c42776589a3cf4efb01cf53134c0eab91e1688b95c914136cc4f5e79d797176",
-      "publication": "reviewed_restatement_required"
+      "value": "An n8n workflow turns a topic into up to three Tavily searches, compiles a Markdown report with an agent, and pushes it to a Notion page.",
+      "sha256": "0c42776589a3cf4efb01cf53134c0eab91e1688b95c914136cc4f5e79d797176"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "633f695a89a58cf4d99b5d6b5b24b26d8bdde957494d9b26faf2372034e66baf",
-      "publication": "reviewed_restatement_required"
+      "value": "A webhook passes the user's topic to a Strategy Agent, which asks 2–3 clarifying questions and then creates a Notion database page. The workflow generates up to three search queries. For each one, Tavily finds the top link and extracts its content. A Final Report Agent writes a Markdown report from the combined content. Gemini converts it to HTML in chunks, and the chunks are pushed into the Notion page.",
+      "sha256": "633f695a89a58cf4d99b5d6b5b24b26d8bdde957494d9b26faf2372034e66baf"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "032076c9aa24d5f672a0673ed232a1ac77b615c340dd8645aab046ad4b0c23d3",
-      "publication": "reviewed_restatement_required"
+      "value": "The workflow returns the Notion report link to the user with no manual steps after the clarifying questions. The source gives no quality, speed or cost figures. Each query uses only its single top-ranked source.",
+      "sha256": "032076c9aa24d5f672a0673ed232a1ac77b615c340dd8645aab046ad4b0c23d3"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "92e1ea0133b44f518206c02575b6d6d83e59dde0f10f8726bcd14e100f2edcbe",
-      "publication": "reviewed_restatement_required"
+      "value": "You need keys for Tavily, Notion, an OpenRouter or OpenAI model, and Google Gemini, plus a Notion database ID connected in n8n.",
+      "sha256": "92e1ea0133b44f518206c02575b6d6d83e59dde0f10f8726bcd14e100f2edcbe"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate deep research reports into Notion\nAn n8n workflow turns a topic into up to three Tavily searches, compiles a Markdown report with an agent, and pushes it to a Notion page.\nDone with\nN8\nn8n\nWhat they did\nA webhook passes the user's topic to a Strategy Agent, which asks 2–3 clarifying questions and then creates a Notion database page. The workflow generates up to three search queries. For each one, Tavily finds the top link and extracts its content. A Final Report Agent writes a Markdown report from the combined content. Gemini converts it to HTML in chunks, and the chunks are pushed into the Notion page.\nHow it went\nThe workflow returns the Notion report link to the user with no manual steps after the clarifying questions. The source gives no quality, speed or cost figures. Each query uses only its single top-ranked source.\nWorth knowing\nYou need keys for Tavily, Notion, an OpenRouter or OpenAI model, and Google Gemini, plus a Notion database ID connected in n8n.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes a research topic [topic] and runs up to three web searches with Tavily. An AI agent should then compile the findings into a Markdown report with headings, key findings and source links, and save it as a new page in my Notion [parent page or database]. You're done when one test topic produces a finished Notion page; confirm the Notion destination with me before it writes anything.\nOriginal source: https://n8n.io/workflows/7160-deep-research-agent-automated-research-and-notion-report-builder/",
+    "body_sha256": "f8e584da4b388378e971a4c44aea0ee4931608a2cf4cc4fb753ff848cce2992d",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

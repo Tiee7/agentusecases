@@ -8,7 +8,6 @@ from .crawler import Page
 from .site import detail
 
 FIELDS = ('title','introduction','method','outcome','notes','actual_agents','original_sources','author','category','tags','wanted','source_date','added_at','try_it')
-NARRATIVES = {'introduction','method','outcome','notes'}
 
 def sha(value):
     return hashlib.sha256(value.encode()).hexdigest()
@@ -72,19 +71,21 @@ def extract(html,url,at):
     return {'version':1,'url':url,'observed_at':at,'html_sha256':sha(html),'body_sha256':sha(body),'body':body,'fields':fields,'trial':trial,'source_date_label':'undated' if 'Undated' in scope.text else None}
 
 def public_observation(raw):
+    parsed=urlsplit(raw['url'])
+    if parsed.scheme!='https' or parsed.netloc!='agentusecases.ai' or not parsed.path.startswith('/use-case/'):
+        raise ValueError('Only source case URLs belong in this archive')
     fields={}
     for name in FIELDS:
         value=raw['fields'].get(name)
         status='observed' if value is not None and value!='' and value!=[] else 'not_observed'
         field={'status':status,'value':None,'sha256':sha(json.dumps(value,ensure_ascii=False,sort_keys=True)) if status=='observed' else None}
         if status=='observed':
-            if name in NARRATIVES:field['publication']='reviewed_restatement_required'
-            elif name=='try_it':field['publication']='existing_source_trial_field'
+            if name=='try_it':field['publication']='existing_source_trial_field'
             else:field['value']=value
         else:field['reason']='Not present in the captured public page; not a zero or proof of absence.'
         fields[name]=field
     if raw.get('source_date_label')=='undated':fields['source_date']['reason']='Source explicitly labels the external publication date Undated.'
-    return {'version':1,'url':raw['url'],'observed_at':raw['observed_at'],'html_sha256':raw['html_sha256'],'body_sha256':raw['body_sha256'],'status':'observed','fields':fields,'publication':'original_structured_restatement_not_full_text','license_status':'no_republication_license_found'}
+    return {'version':1,'url':raw['url'],'observed_at':raw['observed_at'],'html_sha256':raw['html_sha256'],'body_sha256':raw['body_sha256'],'status':'observed','fields':fields,'publication':'source_case_text_and_separate_editorial', 'source_text':{'format':'extracted_page_text','language':'en','body':raw.get('body',''),'body_sha256':raw['body_sha256'],'archived_at':raw['observed_at'],'scope':'Captured case text; external linked articles and HTML excluded.'}}
 
 def store_local(db,html,url,at,root=Path('data/source-archive')):
     raw=extract(html,url,at);root.mkdir(parents=True,exist_ok=True)
@@ -104,6 +105,9 @@ def apply(db,root=Path('registry/archives')):
         old=json.loads(path.read_text()) if path.exists() else {}
         if (old.get('observed_at') or '')>at:continue
         if old.get('editorial'):value['editorial']=old['editorial']
+        if old.get('translation'):value['translation']=old['translation']
+        if not value.get('source_text',{}).get('body') and old.get('body_sha256')==value.get('body_sha256') and old.get('source_text'):
+            value['source_text']=old['source_text']
         path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
     if db.execute("SELECT 1 FROM sqlite_master WHERE name='fetch_attempts'").fetchone():
         for url,at,status,error in db.execute('SELECT url,attempted_at,status,error FROM fetch_attempts ORDER BY attempted_at'):
@@ -126,7 +130,7 @@ def cached(body,url,at,entry):
         stop=next((i for i in range(start,len(lines)) if lines[i].startswith('Original source:')),len(lines))
         agent=lines[start-2] if start>=2 else None
         fields['try_it']={'agent':agent,'text':'\n'.join(lines[start:stop]).strip()}
-    raw={'url':url,'observed_at':at,'html_sha256':None,'body_sha256':sha(body),'fields':fields}
+    raw={'url':url,'observed_at':at,'html_sha256':None,'body_sha256':sha(body),'fields':fields,'body':body}
     rawroot=Path('data/source-archive');rawroot.mkdir(parents=True,exist_ok=True)
     (rawroot/('body-'+raw['body_sha256']+'.json')).write_text(json.dumps(dict(raw,body=body),ensure_ascii=False,indent=2)+'\n')
     out=public_observation(raw);out['capture_basis']='historical extracted body; HTML and omitted fields unavailable'

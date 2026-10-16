@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "0e4ea5527416c027fa8f13066251ab2420a10a7f208499d983b0a5db042e47a2",
-      "publication": "reviewed_restatement_required"
+      "value": "Scout runs a linter, fixes a syntax error, re-runs it, reviews staged changes, writes a commit message and pushes to a new branch, shown as a walkthrough.",
+      "sha256": "0e4ea5527416c027fa8f13066251ab2420a10a7f208499d983b0a5db042e47a2"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "d70a833e02256005a3b0c0fa3289dd5d22ca2e60c2f98a667f359a734255ae01",
-      "publication": "reviewed_restatement_required"
+      "value": "Scout connects to the local terminal through an MCP bridge and works only inside a workspace folder you set. It ran a linter, read the output, opened the file to fix a syntax error and re-ran the linter. For Git, it ran git status and git diff, wrote a conventional commit message, created the branch and pushed. By default you click to confirm each command.",
+      "sha256": "d70a833e02256005a3b0c0fa3289dd5d22ca2e60c2f98a667f359a734255ae01"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "462e951fbb91d635b6063c0839b3f3a820fd1779970c78f82190f7bc68e84e24",
-      "publication": "reviewed_restatement_required"
+      "value": "The article describes the workflow as a walkthrough and gives no measured results, timings or failure cases. It states that the lint-fix loop and the commit-and-push flow work as described.",
+      "sha256": "462e951fbb91d635b6063c0839b3f3a820fd1779970c78f82190f7bc68e84e24"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "c24bbb7fe0ec7a2197d13b25abe36e20131992d26d90941a1e98ddbbebf4046e",
-      "publication": "reviewed_restatement_required"
+      "value": "Scout needs an enterprise setup: Frontier preview enrollment, an Intune policy, and both Microsoft 365 Copilot and GitHub Copilot Business or Enterprise licenses. Personal accounts won't work.",
+      "sha256": "c24bbb7fe0ec7a2197d13b25abe36e20131992d26d90941a1e98ddbbebf4046e"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Lint, fix, commit and push code from the terminal\nScout runs a linter, fixes a syntax error, re-runs it, reviews staged changes, writes a commit message and pushes to a new branch, shown as a walkthrough.\nDone with\nMS\nMicrosoft Scout\nWhat they did\nScout connects to the local terminal through an MCP bridge and works only inside a workspace folder you set. It ran a linter, read the output, opened the file to fix a syntax error and re-ran the linter. For Git, it ran git status and git diff, wrote a conventional commit message, created the branch and pushed. By default you click to confirm each command.\nHow it went\nThe article describes the workflow as a walkthrough and gives no measured results, timings or failure cases. It states that the lint-fix loop and the commit-and-push flow work as described.\nWorth knowing\nScout needs an enterprise setup: Frontier preview enrollment, an Intune policy, and both Microsoft 365 Copilot and GitHub Copilot Business or Enterprise licenses. Personal accounts won't work.\nTry it yourself\nwith\nMicrosoft Scout\nCopy prompt\nIn my project at [path to repo], run [linter command] and fix any errors it reports, then re-run it until it passes. Review the staged changes and draft a clear commit message, then pause and show me the diff and message before you commit. After I approve, commit and push to a new branch named [branch name].\nOriginal source: https://www.thewindowsclub.com/microsoft-scout-for-developers-automating-git-and-shell-commands",
+    "body_sha256": "3fdb086dab4c87adf931db07f4f587b786150411c52296ae7143e8e94efbbf6b",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

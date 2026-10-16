@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "17991bef2e4ac6d7284564541148162d8ac488dca538d3981e9e492e7faa4786",
-      "publication": "reviewed_restatement_required"
+      "value": "The author connected Claude to Ghidra through MCP to analyze and rename functions in an Atari River Raid ROM.",
+      "sha256": "17991bef2e4ac6d7284564541148162d8ac488dca538d3981e9e492e7faa4786"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "fe4c5d05ecf1815cfeaf36cdd837f5d8f25f00d6dacdf74ae1e1bbf6f6164779",
-      "publication": "reviewed_restatement_required"
+      "value": "The author ran an open-source Ghidra MCP server so Claude could inspect an unlabeled 8 kB Atari ROM, imported as 6502 only. Claude inferred the Atari platform from hardware registers and located the lives-decrement code. The author did the rebasing (twice) by hand and applied the one-byte patch outside Ghidra.",
+      "sha256": "fe4c5d05ecf1815cfeaf36cdd837f5d8f25f00d6dacdf74ae1e1bbf6f6164779"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "0bd118c282424838c2f190f9af458e7f9e5268680136e53183174d4fc4966325",
-      "publication": "reviewed_restatement_required"
+      "value": "Swapping DEY for NOP froze the lives counter at 3 in an emulator. Claude wrongly guessed the game was Centipede and struggled with sprite data. The MCP tools couldn't rebase or write the binary.",
+      "sha256": "0bd118c282424838c2f190f9af458e7f9e5268680136e53183174d4fc4966325"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a324fc7edbb52d252ebabdf76b632408cd41f04ef4c69b194e0993da61dfbcf1",
-      "publication": "reviewed_restatement_required"
+      "value": "Setup was a chain of four components, and some tool calls took about 30 seconds each, so interactive use felt slow.",
+      "sha256": "a324fc7edbb52d252ebabdf76b632408cd41f04ef4c69b194e0993da61dfbcf1"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Reverse engineer a classic game ROM via Ghidra MCP\nThe author connected Claude to Ghidra through MCP to analyze and rename functions in an Atari River Raid ROM.\nDone with\nCL\nClaude\nWhat they did\nThe author ran an open-source Ghidra MCP server so Claude could inspect an unlabeled 8 kB Atari ROM, imported as 6502 only. Claude inferred the Atari platform from hardware registers and located the lives-decrement code. The author did the rebasing (twice) by hand and applied the one-byte patch outside Ghidra.\nHow it went\nSwapping DEY for NOP froze the lives counter at 3 in an emulator. Claude wrongly guessed the game was Centipede and struggled with sprite data. The MCP tools couldn't rebase or write the binary.\nWorth knowing\nSetup was a chain of four components, and some tool calls took about 30 seconds each, so interactive use felt slow.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to Ghidra via MCP and load this [ROM or binary file]. Analyze the disassembled functions, infer their purpose from behavior and strings, and rename them with descriptive labels, producing an annotated function map when done.\nOriginal source: https://quesma.com/blog/ghidra-mcp-unlimited-lives/",
+    "body_sha256": "a85c28a6403355de82865c056251f27aa5544b1cd34ed1fa4b2b8c72dab489bf",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "fd5778a03a04dbe1e41822ccd8e1fb93a565df81c9f0009d7551f720a5f6de33",
-      "publication": "reviewed_restatement_required"
+      "value": "A Cursor plugin and subagent lets an agent capture screenshots and click through UI flows of a Godot 4 game like a player.",
+      "sha256": "fd5778a03a04dbe1e41822ccd8e1fb93a565df81c9f0009d7551f720a5f6de33"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "e806c7ceff8d5baca5173ffff2b88c592f551886a86db6dd02bfa161e0568ced",
-      "publication": "reviewed_restatement_required"
+      "value": "You install a Godot plugin, skills, a command and a subagent. The caller gives the studio-playtester subagent a slice with criteria, a scene and an action. The agent inspects the scene's unique node names and InputMap, writes a JSON flow under res://agent/, and runs it through the plugin's CLI. Button presses go in as mapped input actions, and screenshots land in out/.",
+      "sha256": "e806c7ceff8d5baca5173ffff2b88c592f551886a86db6dd02bfa161e0568ced"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "85f4c8abd228cca1b46734895325fdfe170db4bcb933e8553458f203d139d56a",
-      "publication": "reviewed_restatement_required"
+      "value": "Each run ends in AGENT_OK or AGENT_FAIL, and the agent reports PASS/FAIL. A script error or unmapped input counts as a failure. The source gives no measured results beyond a boot-to-race demo.",
+      "sha256": "85f4c8abd228cca1b46734895325fdfe170db4bcb933e8553458f203d139d56a"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "a92909564cddbe7f2dac7d4cf858f2e3b1e4a80a9e968dad398a4e6ff69328b9",
-      "publication": "reviewed_restatement_required"
+      "value": "Capture and flow runs need a real game window. If the debug scene is missing, the agent returns NEED_SETUP and stops, and it won't build one.",
+      "sha256": "a92909564cddbe7f2dac7d4cf858f2e3b1e4a80a9e968dad398a4e6ff69328b9"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Playtest a Godot 4 game with a Cursor agent\nA Cursor plugin and subagent lets an agent capture screenshots and click through UI flows of a Godot 4 game like a player.\nDone with\nCR\nCursor\nWhat they did\nYou install a Godot plugin, skills, a command and a subagent. The caller gives the studio-playtester subagent a slice with criteria, a scene and an action. The agent inspects the scene's unique node names and InputMap, writes a JSON flow under res://agent/, and runs it through the plugin's CLI. Button presses go in as mapped input actions, and screenshots land in out/.\nHow it went\nEach run ends in AGENT_OK or AGENT_FAIL, and the agent reports PASS/FAIL. A script error or unmapped input counts as a failure. The source gives no measured results beyond a boot-to-race demo.\nWorth knowing\nCapture and flow runs need a real game window. If the debug scene is missing, the agent returns NEED_SETUP and stops, and it won't build one.\nTry it yourself\nwith\nCursor\nCopy prompt\nSet up an agent that can launch my Godot 4 game, take screenshots, and click through the main UI flows like a player would. Have it report any broken buttons, dead ends, or visual glitches it finds.\nOriginal source: https://github.com/Joelnicolass/godot-studio-playtest",
+    "body_sha256": "f52803adcdb08d0b54602cb7de4f124ab7d9ec9bc5558e38a51f0ec382758a83",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

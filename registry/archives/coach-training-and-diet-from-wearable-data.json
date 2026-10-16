@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "fff79641a87c25b654c641c79835b4cfa3d19aa9b236681c7a94ed98ad328fcd",
-      "publication": "reviewed_restatement_required"
+      "value": "The poster uses Claude with Apple Health, nutrition and lifting app data, plus medication and bloodwork files, and has it maintain an HTML dashboard.",
+      "sha256": "fff79641a87c25b654c641c79835b4cfa3d19aa9b236681c7a94ed98ad328fcd"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "876b04e8228472f527389be483855fa558e54e1f2590b6f4ea3391cd87af3dcc",
-      "publication": "reviewed_restatement_required"
+      "value": "One commenter described a setup very close to this: Garmin data is pulled hourly into an InfluxDB on their server, and Claude Code runs there on a scheduled daily morning task. Claude reads load, stress, sleep and related metrics, calculates a training-readiness score itself, builds and adjusts the training plan, and publishes the result to a small webpage they host for phone access; they also gave it an initial full export plus years of Garmin, Strava, and .fit history for context.",
+      "sha256": "876b04e8228472f527389be483855fa558e54e1f2590b6f4ea3391cd87af3dcc"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "1c46a5e09f954e4ef2fa6ed06dc391b506bc19cd2cb98d18ff64ef753e147ee2",
-      "publication": "reviewed_restatement_required"
+      "value": "They said it keeps daily training specific enough to avoid burnout or overtraining and can notice rough periods like vacation, long work weeks, and time-zone travel. The post gives no quantified results, only that long-term history improved context for future goals.",
+      "sha256": "1c46a5e09f954e4ef2fa6ed06dc391b506bc19cd2cb98d18ff64ef753e147ee2"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "9a4bdaffca3ae2b10ab55f69c8b3babc272914d787cde5103d3e2cb77d164244",
-      "publication": "reviewed_restatement_required"
+      "value": "The main catch they mention is setup: hourly polling plus a scheduled Claude Code task on your own server, with a big historical import at the start.",
+      "sha256": "9a4bdaffca3ae2b10ab55f69c8b3babc272914d787cde5103d3e2cb77d164244"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Coach training and diet from wearable data\nThe poster uses Claude with Apple Health, nutrition and lifting app data, plus medication and bloodwork files, and has it maintain an HTML dashboard.\nDone with\nCL\nClaude\nWhat they did\nOne commenter described a setup very close to this: Garmin data is pulled hourly into an InfluxDB on their server, and Claude Code runs there on a scheduled daily morning task. Claude reads load, stress, sleep and related metrics, calculates a training-readiness score itself, builds and adjusts the training plan, and publishes the result to a small webpage they host for phone access; they also gave it an initial full export plus years of Garmin, Strava, and .fit history for context.\nHow it went\nThey said it keeps daily training specific enough to avoid burnout or overtraining and can notice rough periods like vacation, long work weeks, and time-zone travel. The post gives no quantified results, only that long-term history improved context for future goals.\nWorth knowing\nThe main catch they mention is setup: hourly polling plus a scheduled Claude Code task on your own server, with a big historical import at the start.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm going to upload my [Apple Health export, nutrition log, lifting app data] plus [bloodwork or medication notes]. Analyze trends in my training, recovery and diet toward my goal of [goal], then build me an HTML dashboard I can update each week with new data. Finish with three specific changes to try this week, and flag anything that sounds like a question for my doctor rather than guessing.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x2c0v0/has_anyone_used_claude_as_a_training_and_diet",
+    "body_sha256": "41e99d0e8f87b14a6bf05e0a861a69771db87e36dc06de021f2111b7b40d20b6",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }

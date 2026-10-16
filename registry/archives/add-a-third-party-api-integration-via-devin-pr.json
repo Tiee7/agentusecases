@@ -13,27 +13,23 @@
     },
     "introduction": {
       "status": "observed",
-      "value": null,
-      "sha256": "f0434f243792e89b7577897b2de662403e6bfbfd820be38902e1d9f99ee4946b",
-      "publication": "reviewed_restatement_required"
+      "value": "Devin opened a PR with the endpoint and backend wiring that was merged, but missed API key logic, code style and abstraction, needing review fixes.",
+      "sha256": "f0434f243792e89b7577897b2de662403e6bfbfd820be38902e1d9f99ee4946b"
     },
     "method": {
       "status": "observed",
-      "value": null,
-      "sha256": "b2d9fea2e08159f668f81e1242d8e0ea73e899d63d7f85ecd7f2a2c8d49c5ce5",
-      "publication": "reviewed_restatement_required"
+      "value": "The author asked Devin, through its Slack integration, to build a token-generation endpoint for a third-party service from the docs link. The prompt said to add it to an existing microservice and use the existing CDK secrets logic for the API key. Devin posted a plan, then opened a GitHub PR. The author left review comments on the PR, and Devin pushed fixes.",
+      "sha256": "b2d9fea2e08159f668f81e1242d8e0ea73e899d63d7f85ecd7f2a2c8d49c5ce5"
     },
     "outcome": {
       "status": "observed",
-      "value": null,
-      "sha256": "a57ae84da5259fd3106a9033510698e3554487b8d03490e3e1c1cb3607cbf775",
-      "publication": "reviewed_restatement_required"
+      "value": "After 2-3 review rounds the code was production-ready, tests passed, and the PR merged. The whole task took about an hour, against roughly 15 minutes if done by hand. The author spent about 5 minutes reviewing.",
+      "sha256": "a57ae84da5259fd3106a9033510698e3554487b8d03490e3e1c1cb3607cbf775"
     },
     "notes": {
       "status": "observed",
-      "value": null,
-      "sha256": "baa4494cb9a8eed54f40b84a606609882c242fca8d22dde9631c91436f12271f",
-      "publication": "reviewed_restatement_required"
+      "value": "Devin left out the third-party API key in its calls and didn't put the client logic in the shared clients library, so review the PR as you would a junior's.",
+      "sha256": "baa4494cb9a8eed54f40b84a606609882c242fca8d22dde9631c91436f12271f"
     },
     "actual_agents": {
       "status": "observed",
@@ -92,7 +88,14 @@
       "publication": "existing_source_trial_field"
     }
   },
-  "publication": "original_structured_restatement_not_full_text",
-  "license_status": "no_republication_license_found",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable"
+  "publication": "source_case_text_and_separate_editorial",
+  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Add a third-party API integration via Devin PR\nDevin opened a PR with the endpoint and backend wiring that was merged, but missed API key logic, code style and abstraction, needing review fixes.\nDone with\nDE\nDevin\nWhat they did\nThe author asked Devin, through its Slack integration, to build a token-generation endpoint for a third-party service from the docs link. The prompt said to add it to an existing microservice and use the existing CDK secrets logic for the API key. Devin posted a plan, then opened a GitHub PR. The author left review comments on the PR, and Devin pushed fixes.\nHow it went\nAfter 2-3 review rounds the code was production-ready, tests passed, and the PR merged. The whole task took about an hour, against roughly 15 minutes if done by hand. The author spent about 5 minutes reviewing.\nWorth knowing\nDevin left out the third-party API key in its calls and didn't put the client logic in the shared clients library, so review the PR as you would a junior's.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn the repo [repo URL], add an integration with [third-party API] including the endpoint, backend wiring, and config for the API key via [env var or secrets approach]. Follow the existing code style and abstractions in [folder or file] and add tests. Open a pull request listing what you changed and any assumptions, and stop there without merging.\nOriginal source: https://dev.to/prpatel05/a-real-world-coding-story-devin-ai-as-my-co-pilot-548",
+    "body_sha256": "34e8a84426b082d8d9949229b70bcba40e07fa7ab88a921a004d9fb331e65a01",
+    "archived_at": "2026-10-16T09:49:29.479545+00:00",
+    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+  }
 }
