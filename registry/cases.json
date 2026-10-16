@@ -3,32 +3,27 @@
   "ranking_scope": "public SSR category top, then sitemap order",
   "cases": [
     {
-      "id": "negotiate-retention-discounts-on-bills-by-phone",
-      "title": "Negotiate retention discounts on bills by phone",
-      "url": "https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone",
+      "id": "write-appeals-and-phone-insurers-on-denied-claims",
+      "title": "Write appeals and phone insurers on denied claims",
+      "url": "https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims",
       "category": "money",
       "site_top_position": 1,
-      "report": "reports/negotiate-retention-discounts-on-bills-by-phone.md",
-      "record": "research/negotiate-retention-discounts-on-bills-by-phone.json",
+      "report": "reports/write-appeals-and-phone-insurers-on-denied-claims.md",
+      "record": "research/write-appeals-and-phone-insurers-on-denied-claims.json",
       "original_sources": [
-        "https://news.ycombinator.com/item?id=47131955"
+        "https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/"
       ],
       "listed": true,
       "source_trial": {
         "version": 1,
         "status": "available",
-        "text": "Help me lower my [provider, e.g. internet/phone] bill, currently [amount] per month on account [account reference]. Research current competitor offers and prepare a retention-call script with my target price of [amount]. Do not call or submit anything until you've shown me the script and I approve, and pause whenever the provider needs a verification code.",
-        "agent": "Manus",
-        "source_url": "https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone",
-        "observed_at": null,
-        "method": "dom",
+        "text": "My insurer [name] denied my claim [claim number] for [service]. Write an appeal letter from the denial reason and my policy text below, and then a short phone script for calling the insurer to check on the appeal's status. Stop once I have both documents, and show me anything before it's submitted or sent.\n\n[paste denial letter and policy text]",
+        "agent": "ChatGPT Agent",
+        "source_url": "https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims",
+        "observed_at": "2026-10-16T02:51:01.377716+00:00",
+        "method": "ssr",
         "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
-        "html_sha256": "9d93bc00a26b0457a84de899067ce546e6b2b3a9369e6ef3afc64062ecfe9985",
-        "observation_window": {
-          "start": "2026-10-15T17:50:39Z",
-          "end": "2026-10-15T17:50:47Z",
-          "basis": "system_time_bracketing_tool_call"
-        }
+        "html_sha256": "b008c18fc0df9ed4f0d13cdfabc00c85613415991d3c09d79d9a96816b2f1659"
       }
     },
     {
@@ -42,7 +37,18 @@
       "original_sources": [
         "https://claudeblattman.com/tax-workflow/"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "Look through [spreadsheets, email export folder, and statements folder] for [year] and compile my charitable contributions and other itemized deductions into one spreadsheet with date, payee, amount, and source file. Then draft a Schedule C from my business income and expenses, marking any lines you couldn't categorize with confidence. Finish when I have both files and a list of open questions for me to resolve.",
+        "agent": "Claude Code",
+        "source_url": "https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code",
+        "observed_at": "2026-10-16T02:51:03.192211+00:00",
+        "method": "ssr",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "cf4e5b2c01ff7eda2604979b5982f01e951c1b67080b1851c8f6b643baaec1e4"
+      }
     },
     {
       "id": "search-state-databases-for-unclaimed-property-under-old-name",
@@ -55,7 +61,18 @@
       "original_sources": [
         "https://www.reddit.com/r/PromptEngineering/comments/1vrij5c/about_1_in_7_people_have_unclaimed_money_sitting"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "Search the official unclaimed property databases for each state I've lived in: [list of states]. Search under my name [full name] and previous names [maiden or old names], plus my past addresses [cities], and give me a table of any matches with amount, holder and claim link. Do not submit any claim or enter personal ID numbers, and pause and show me the details first.",
+        "agent": "Claude in Chrome",
+        "source_url": "https://agentusecases.ai/use-case/search-state-databases-for-unclaimed-property-under-old-name",
+        "observed_at": "2026-10-16T02:51:05.287382+00:00",
+        "method": "ssr",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "2fa1768f429900bf63c9bd92d413b0bb1a9f4324248c296e930b61881f213181"
+      }
     },
     {
       "id": "negotiate-bills-handle-returns-and-cancel-subscriptions",
@@ -68,7 +85,18 @@
       "original_sources": [
         "https://www.tekedia.com/metas-muse-ai-agent-is-promising-to-save-users-1000-businesses-are-already-pushing-back/"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "I want to lower my [provider, e.g. AT&T] bill, which is currently [amount] a month, and cancel [subscription name]. Research the provider's retention offers and cancellation steps, then draft what I should say or send to get a lower rate or a refund. Show me every message or form before it is sent or submitted, and finish with a summary of what I'd save.",
+        "agent": "Meta Muse",
+        "source_url": "https://agentusecases.ai/use-case/negotiate-bills-handle-returns-and-cancel-subscriptions",
+        "observed_at": "2026-10-16T02:51:07.253574+00:00",
+        "method": "ssr",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "941b9a6e2f15a8ac5ca7f77834475a731e9b1bff305126c82570aa7d1d6d8987"
+      }
     },
     {
       "id": "negotiate-a-lower-comcast-bill-via-chatbot",
@@ -81,7 +109,18 @@
       "original_sources": [
         "https://www.vice.com/en/article/chatgpt-can-negotiate-comcast-bills-down-for-you/"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "Open the online support chat for [provider, e.g. internet or phone company] and ask for a lower monthly bill on my [plan name], where I currently pay [amount]. Mention [loyalty length, competitor offer or promo] and ask about discounts. Do not accept any new terms or contract changes; pause and show me any offer in writing before I decide. Finish by summarizing what was offered.",
+        "agent": "Operator",
+        "source_url": "https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot",
+        "observed_at": "2026-10-16T02:51:09.368661+00:00",
+        "method": "ssr",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "f7d96612f20561e62a2ccfb613570ac7042ec9339fc86d18a727adbfe885fa62"
+      }
     },
     {
       "id": "dispute-an-airline-s-eu261-delay-compensation-rejection",
@@ -214,17 +253,33 @@
       "listed": true
     },
     {
-      "id": "write-appeals-and-phone-insurers-on-denied-claims",
-      "title": "Write appeals and phone insurers on denied claims",
-      "url": "https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims",
+      "id": "negotiate-retention-discounts-on-bills-by-phone",
+      "title": "Negotiate retention discounts on bills by phone",
+      "url": "https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone",
       "category": "money",
       "site_top_position": 16,
-      "report": "reports/write-appeals-and-phone-insurers-on-denied-claims.md",
-      "record": "research/write-appeals-and-phone-insurers-on-denied-claims.json",
+      "report": "reports/negotiate-retention-discounts-on-bills-by-phone.md",
+      "record": "research/negotiate-retention-discounts-on-bills-by-phone.json",
       "original_sources": [
-        "https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/"
+        "https://news.ycombinator.com/item?id=47131955"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "Help me lower my [provider, e.g. internet/phone] bill, currently [amount] per month on account [account reference]. Research current competitor offers and prepare a retention-call script with my target price of [amount]. Do not call or submit anything until you've shown me the script and I approve, and pause whenever the provider needs a verification code.",
+        "agent": "Manus",
+        "source_url": "https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone",
+        "observed_at": null,
+        "method": "dom",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "9d93bc00a26b0457a84de899067ce546e6b2b3a9369e6ef3afc64062ecfe9985",
+        "observation_window": {
+          "start": "2026-10-15T17:50:39Z",
+          "end": "2026-10-15T17:50:47Z",
+          "basis": "system_time_bracketing_tool_call"
+        }
+      }
     },
     {
       "id": "draft-a-tax-filing-from-bank-statements-with-claude-code",
@@ -302,7 +357,18 @@
       "original_sources": [
         "https://x.com/pdxjimsmith/status/2070617072921686525"
       ],
-      "listed": true
+      "listed": true,
+      "source_trial": {
+        "version": 1,
+        "status": "available",
+        "text": "Look at my brokerage account's current holdings and propose a trade: sell [amount or shares] of [ticker to sell] and buy [ticker to buy], with a short reason for each. Don't place any orders yet. Show me the exact order details, including quantity, order type, and estimated cost, and wait for my explicit approval before executing.",
+        "agent": "ChatGPT Agent",
+        "source_url": "https://agentusecases.ai/use-case/trade-stocks-via-robinhood-mcp",
+        "observed_at": "2026-10-16T02:51:50.667265+00:00",
+        "method": "ssr",
+        "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+        "html_sha256": "276e9943595b271142d0c3e4a9c3527bde2370a459bed55fa203fc9438fff6fd"
+      }
     },
     {
       "id": "produce-investment-memos-with-claude-cowork",
@@ -1273,6 +1339,17 @@
       "original_sources": [
         "https://aisagroup.substack.com/p/how-i-use-codex-to-automate-parts"
       ],
+      "listed": true
+    },
+    {
+      "id": "automate-browser-tasks-by-reading-clicking-and-filling-forms",
+      "title": "automate browser tasks by reading clicking and filling forms",
+      "url": "https://agentusecases.ai/use-case/automate-browser-tasks-by-reading-clicking-and-filling-forms",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/automate-browser-tasks-by-reading-clicking-and-filling-forms.md",
+      "record": "research/automate-browser-tasks-by-reading-clicking-and-filling-forms.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -3768,6 +3845,17 @@
       "listed": true
     },
     {
+      "id": "call-insurers-for-appeal-status-updates",
+      "title": "call insurers for appeal status updates",
+      "url": "https://agentusecases.ai/use-case/call-insurers-for-appeal-status-updates",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/call-insurers-for-appeal-status-updates.md",
+      "record": "research/call-insurers-for-appeal-status-updates.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "call-local-stores-to-check-toy-stock",
       "title": "Call local stores to check toy stock",
       "url": "https://agentusecases.ai/use-case/call-local-stores-to-check-toy-stock",
@@ -3804,6 +3892,17 @@
       "original_sources": [
         "https://www.reddit.com/r/ChatGPT/comments/1x3tsz4/chatgpt_helped_me_get_my_adobe_subscription"
       ],
+      "listed": true
+    },
+    {
+      "id": "cancel-seven-subscriptions-and-close-the-accounts",
+      "title": "cancel seven subscriptions and close the accounts",
+      "url": "https://agentusecases.ai/use-case/cancel-seven-subscriptions-and-close-the-accounts",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/cancel-seven-subscriptions-and-close-the-accounts.md",
+      "record": "research/cancel-seven-subscriptions-and-close-the-accounts.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -4090,6 +4189,17 @@
       "original_sources": [
         "https://x.com/victorpaycro/status/1975970999574331429"
       ],
+      "listed": true
+    },
+    {
+      "id": "click-through-apps-and-upload-photos-in-the-browser",
+      "title": "click through apps and upload photos in the browser",
+      "url": "https://agentusecases.ai/use-case/click-through-apps-and-upload-photos-in-the-browser",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/click-through-apps-and-upload-photos-in-the-browser.md",
+      "record": "research/click-through-apps-and-upload-photos-in-the-browser.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -7229,6 +7339,17 @@
       "listed": true
     },
     {
+      "id": "fix-a-linux-kernel-memory-management-problem-with-claude",
+      "title": "fix a linux kernel memory management problem with claude",
+      "url": "https://agentusecases.ai/use-case/fix-a-linux-kernel-memory-management-problem-with-claude",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/fix-a-linux-kernel-memory-management-problem-with-claude.md",
+      "record": "research/fix-a-linux-kernel-memory-management-problem-with-claude.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "fix-a-production-boolean-flag-bug-with-devin",
       "title": "Fix a production boolean-flag bug with Devin",
       "url": "https://agentusecases.ai/use-case/fix-a-production-boolean-flag-bug-with-devin",
@@ -8672,6 +8793,17 @@
       "listed": true
     },
     {
+      "id": "let-claude-browse-sites-and-fill-forms-in-a-side-panel",
+      "title": "let claude browse sites and fill forms in a side panel",
+      "url": "https://agentusecases.ai/use-case/let-claude-browse-sites-and-fill-forms-in-a-side-panel",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/let-claude-browse-sites-and-fill-forms-in-a-side-panel.md",
+      "record": "research/let-claude-browse-sites-and-fill-forms-in-a-side-panel.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "let-claude-buy-a-game-autonomously",
       "title": "Let Claude buy a game autonomously",
       "url": "https://agentusecases.ai/use-case/let-claude-buy-a-game-autonomously",
@@ -9578,6 +9710,17 @@
       "listed": true
     },
     {
+      "id": "navigate-insurer-phone-menus-to-reach-a-human",
+      "title": "navigate insurer phone menus to reach a human",
+      "url": "https://agentusecases.ai/use-case/navigate-insurer-phone-menus-to-reach-a-human",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/navigate-insurer-phone-menus-to-reach-a-human.md",
+      "record": "research/navigate-insurer-phone-menus-to-reach-a-human.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "negotiate-a-car-purchase-between-dealers",
       "title": "Negotiate a car purchase between dealers",
       "url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-between-dealers",
@@ -9747,6 +9890,17 @@
       "listed": true
     },
     {
+      "id": "orchestrate-the-full-research-loop-with-parallel-agents",
+      "title": "orchestrate the full research loop with parallel agents",
+      "url": "https://agentusecases.ai/use-case/orchestrate-the-full-research-loop-with-parallel-agents",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/orchestrate-the-full-research-loop-with-parallel-agents.md",
+      "record": "research/orchestrate-the-full-research-loop-with-parallel-agents.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "orchestrate-video-generation-from-the-command-line",
       "title": "Orchestrate video generation from the command line",
       "url": "https://agentusecases.ai/use-case/orchestrate-video-generation-from-the-command-line",
@@ -9913,6 +10067,17 @@
       "original_sources": [
         "https://www.reddit.com/r/TeslaLounge/comments/1wnfpvm/grok_bot_is_now_available_in_your_tesla"
       ],
+      "listed": true
+    },
+    {
+      "id": "organize-a-desktop-folder-with-computer-use",
+      "title": "organize a desktop folder with computer use",
+      "url": "https://agentusecases.ai/use-case/organize-a-desktop-folder-with-computer-use",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/organize-a-desktop-folder-with-computer-use.md",
+      "record": "research/organize-a-desktop-folder-with-computer-use.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -12184,6 +12349,17 @@
       "listed": true
     },
     {
+      "id": "reverse-engineer-device-hardware-and-write-drivers",
+      "title": "reverse engineer device hardware and write drivers",
+      "url": "https://agentusecases.ai/use-case/reverse-engineer-device-hardware-and-write-drivers",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/reverse-engineer-device-hardware-and-write-drivers.md",
+      "record": "research/reverse-engineer-device-hardware-and-write-drivers.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "reverse-engineer-legacy-systems-without-source-code",
       "title": "Reverse engineer legacy systems without source code",
       "url": "https://agentusecases.ai/use-case/reverse-engineer-legacy-systems-without-source-code",
@@ -12431,6 +12607,17 @@
       "listed": true
     },
     {
+      "id": "run-a-24-7-life-ops-agent-for-media-server-and-personal-admi",
+      "title": "run a 24 7 life ops agent for media server and personal admi",
+      "url": "https://agentusecases.ai/use-case/run-a-24-7-life-ops-agent-for-media-server-and-personal-admi",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/run-a-24-7-life-ops-agent-for-media-server-and-personal-admi.md",
+      "record": "research/run-a-24-7-life-ops-agent-for-media-server-and-personal-admi.json",
+      "original_sources": [],
+      "listed": true
+    },
+    {
       "id": "run-a-business-assistant-that-resumes-project-work",
       "title": "Run a business assistant that resumes project work",
       "url": "https://agentusecases.ai/use-case/run-a-business-assistant-that-resumes-project-work",
@@ -12571,6 +12758,17 @@
       "original_sources": [
         "https://x.com/codyschneider/status/2044551369235784037"
       ],
+      "listed": true
+    },
+    {
+      "id": "run-a-daily-updated-local-business-directory-autonomously",
+      "title": "run a daily updated local business directory autonomously",
+      "url": "https://agentusecases.ai/use-case/run-a-daily-updated-local-business-directory-autonomously",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/run-a-daily-updated-local-business-directory-autonomously.md",
+      "record": "research/run-a-daily-updated-local-business-directory-autonomously.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -12961,6 +13159,17 @@
       "original_sources": [
         "https://www.firecrawl.dev/blog/ai-software-factory"
       ],
+      "listed": true
+    },
+    {
+      "id": "run-an-automated-seo-growth-workflow-for-a-website",
+      "title": "run an automated seo growth workflow for a website",
+      "url": "https://agentusecases.ai/use-case/run-an-automated-seo-growth-workflow-for-a-website",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/run-an-automated-seo-growth-workflow-for-a-website.md",
+      "record": "research/run-an-automated-seo-growth-workflow-for-a-website.json",
+      "original_sources": [],
       "listed": true
     },
     {
@@ -15310,6 +15519,17 @@
       "original_sources": [
         "https://www.reddit.com/r/AIPersonalAssistant/comments/1t1wo9v/how_to_turn_your_ai_into_a_personal_assistant"
       ],
+      "listed": true
+    },
+    {
+      "id": "start-deep-research-tasks-on-your-computer-from-your-phone",
+      "title": "start deep research tasks on your computer from your phone",
+      "url": "https://agentusecases.ai/use-case/start-deep-research-tasks-on-your-computer-from-your-phone",
+      "category": null,
+      "site_top_position": null,
+      "report": "reports/start-deep-research-tasks-on-your-computer-from-your-phone.md",
+      "record": "research/start-deep-research-tasks-on-your-computer-from-your-phone.json",
+      "original_sources": [],
       "listed": true
     },
     {

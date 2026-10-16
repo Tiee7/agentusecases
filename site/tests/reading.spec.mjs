@@ -10,13 +10,13 @@ test('independent personal value filter persists and combines with commercial fi
 });
 test('both prompt languages copy exact literal text, with a manual fallback',async({page})=>{
  await page.addInitScript(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async text=>{window.copiedPrompt=text}}})});await page.goto(`/reports/${reports[0].id}/`);
- await expect(page.locator('#try-it')).toContainText('未提取并核验');await expect(page.locator('.copy-prompt')).toHaveCount(2);
- for(let i=0;i<2;i++){await expect(page.locator(`#prompt-${i}`)).toHaveText(reports[0].trial.prompts[i].text);await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>window.copiedPrompt)).toBe(reports[0].trial.prompts[i].text);}
+ await expect(page.locator('.copy-prompt')).toHaveCount(reports[0].trial.prompts.length);
+ for(let i=0;i<reports[0].trial.prompts.length;i++){await expect(page.locator(`#prompt-${i}`)).toHaveText(reports[0].trial.prompts[i].text);await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>window.copiedPrompt)).toBe(reports[0].trial.prompts[i].text);}
  await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{value:{writeText:async()=>{throw new Error('denied')}}})});await page.locator('[data-copy="prompt-0"]').click();await expect(page.locator('.copy-status').first()).toContainText('手动复制');expect(await page.evaluate(()=>getSelection().toString())).toBe(reports[0].trial.prompts[0].text);
 });
 test('real browser clipboard preserves both languages',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);await page.goto(`/reports/${reports[0].id}/`);
- for(let i=0;i<2;i++){await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(reports[0].trial.prompts[i].text)}
+ for(let i=0;i<reports[0].trial.prompts.length;i++){await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(reports[0].trial.prompts[i].text)}
 });
 test('source trial pages keep literal prompts and do not imply completed research',async({page,context})=>{
  await context.grantPermissions(['clipboard-read','clipboard-write']);

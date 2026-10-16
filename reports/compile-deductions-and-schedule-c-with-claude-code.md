@@ -36,7 +36,21 @@
 
 ## Copy prompt · 动手试用
 
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+### 源站试用模板
+
+状态：available
+
+出处：https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code
+
+观测时间：2026-10-16T02:51:03.192211+00:00
+
+建议运行工具：Claude Code（与案例实际使用的agent分开记录）
+
+源站提供的试用模板；不代表案例原作者实际使用的提示词。
+
+    Look through [spreadsheets, email export folder, and statements folder] for [year] and compile my charitable contributions and other itemized deductions into one spreadsheet with date, payee, amount, and source file. Then draft a Schedule C from my business income and expenses, marking any lines you couldn't categorize with confidence. Finish when I have both files and a list of open questions for me to resolve.
+
+下面为我们编写的补充模板，非源站原文，未做模型实测。
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 

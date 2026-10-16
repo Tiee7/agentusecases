@@ -36,7 +36,21 @@
 
 ## Copy prompt · 动手试用
 
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+### 源站试用模板
+
+状态：available
+
+出处：https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot
+
+观测时间：2026-10-16T02:51:09.368661+00:00
+
+建议运行工具：Operator（与案例实际使用的agent分开记录）
+
+源站提供的试用模板；不代表案例原作者实际使用的提示词。
+
+    Open the online support chat for [provider, e.g. internet or phone company] and ask for a lower monthly bill on my [plan name], where I currently pay [amount]. Mention [loyalty length, competitor offer or promo] and ask about discounts. Do not accept any new terms or contract changes; pause and show me any offer in writing before I decide. Finish by summarizing what was offered.
+
+下面为我们编写的补充模板，非源站原文，未做模型实测。
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 
