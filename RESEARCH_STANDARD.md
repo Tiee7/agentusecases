@@ -46,7 +46,7 @@
 
 **当前状态：原生定时任务已创建并启用，首次立即执行及2026-10-15 11:00（北京时间）首个计划触发轮的研究、发布和远端回读均已通过；后续轮次仍需逐轮验证。** 创建时间为2026-10-15 09:59，首次计划触发为当日11:00，均为北京时间，详见[任务状态](tasks/hourly-business-research.md)。此前误接的API研究工作流已停用并移除，任务文件或每日爬虫本身不代表每小时深研已按时执行。
 
-研究失败、来源不够、执行器不可用或校验失败时，不把案例计为完成，也不发布伪完成报告。每日爬虫继续在GitHub Actions北京时间09:00运行，成功后同步完整案例登记表和索引。来源验证检查访问记录、引用、完整性与计算，不代替Codex逐条判断证据是否支持结论。
+完整深研标记 `analysis_depth: deep`。外部原帖无法取得时如实标记并继续利用已有正文、归档和可访问资料；材料不足时保存 `analysis_depth: brief` 的有依据简要分析，另存 `research/brief/<id>.json` 和对应简报，不计入 completed v2 深研。研究失败、执行器不可用或深研校验失败时，不发布伪完成深研。每日爬虫继续在GitHub Actions北京时间09:00运行，成功后同步完整案例登记表和索引。来源验证检查访问记录、引用、完整性与计算，不代替Codex逐条判断证据是否支持结论。
 
 ## 自用价值与可复制试用（新研究必填，历史v2兼容）
 
@@ -66,7 +66,7 @@
 
 已授权的浏览器保存HTML可离线导入：`python -m agentwatch.source_trial --html <file> --url <case-url> --observed-at <timezone-aware-time> --output <observation.json>`。不发生网络读取；必须保留真实浏览器观察时间和资料来源，不能把导入时间冒充抓取时间。数据库表`source_trials`按run及URL持久化；爬虫导出`data/source-trials.json`，bootstrap同步到registry及已完成research记录并重渲染报告，未研究案例不新建完成记录。阅读站优先源站模板，自编中英文模板作为补充；未深研案例可从目录进入独立试用页。
 
-本轮用户重新授权源站浏览器核对，由父任务提供两份实际DOM片段及截图；不调用`/api/`、不重试取消的curl，不重试本项目线上GET/浏览器验收。浏览器点击显示Copied只能证明按钮反馈；未取得剪贴板内容时不得宣称源站剪贴板逐字核验。本地站的剪贴板可独立测试，不能替代源站验证。仍不新建研究、不改Wanted、不改调度，最终完成后由父任务排至少5分钟休息。
+本轮用户重新授权源站浏览器核对，由父任务提供两份实际DOM片段及截图；不调用`/api/`、不重试取消的curl，不重试本项目线上GET/浏览器验收。浏览器点击显示Copied只能证明按钮反馈；未取得剪贴板内容时不得宣称源站剪贴板逐字核验。本地站的剪贴板可独立测试，不能替代源站验证。仍不新建研究、不改Wanted、不改调度，当前继续流程以 tasks/hourly-business-research.md 为准，无额外冷却。
 
 时间精度补充：浏览器观测只有工具调用前后计时区间时，`observed_at`保持null，以`observation_window.start/end/basis`记录真实区间（basis为system_time_bracketing_tool_call）。离线导入用`--observed-from`与`--observed-until`替代`--observed-at`，结合`--db <history.sqlite3> --apply`持久化并同步已有登记项。不得将区间端点当精确观测秒。两区间重叠且无法确认新旧时保留已有记录，不声称更新更晚。真实DOM路径可以独立交付；未取得真实SSR时测试证据明确写合成SSR，不冒称实测SSR。
 

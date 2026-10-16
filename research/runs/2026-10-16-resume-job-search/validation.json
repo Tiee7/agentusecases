@@ -1,0 +1,60 @@
+{
+  "case_id": "hunt-jobs-tailor-resumes-and-apply-automatically",
+  "analysis_depth": "deep",
+  "validated_at": "2026-10-16T16:46:34.798760+00:00",
+  "python_tests": {
+    "passed": 69
+  },
+  "content_tests": {
+    "passed": 14
+  },
+  "build": "passed",
+  "public_output": "passed; 1359 originals, 15 translations, 31 reports; no private records or raw snapshot JSON shipped",
+  "browser_tests": {
+    "initial_run": {
+      "passed": 57,
+      "failed": 3,
+      "cause": "Catalog test assumed all completed reports fit on one 30-item page; actual completed count reached31."
+    },
+    "correction": "Only test changed: check per-page count, page labels and complete report identity set across all filtered pages. No product UI change.",
+    "affected_test_rerun": {
+      "passed": 3,
+      "projects": [
+        "desktop",
+        "tablet",
+        "mobile"
+      ]
+    },
+    "final_covered_tests": 60,
+    "browser": "existing system Chromium, no certificate bypass"
+  },
+  "targeted_case_browser": {
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "reports",
+      "trials"
+    ],
+    "objective_titles_match": true,
+    "exact_english_and_chinese": true,
+    "chinese_default_open_english_collapsed": true,
+    "source_date": "2026-10-06",
+    "no_promotion": true,
+    "zero_page_errors": true,
+    "no_horizontal_overflow": true
+  },
+  "prompt_security": "passed, same assertions with existing system Chromium",
+  "translation": "All archived editorial prose, template and original link translated paragraph by paragraph. Decorative DE only omitted. Complete later public English snapshot retained separately; promotion not projected into reading pages.",
+  "workflow_docs": [
+    "two serial research lanes; no cooldown",
+    "independent branch completion decoupled from production acceptance",
+    "inaccessible original author source nonblocking",
+    "deep and brief records separate"
+  ],
+  "private_preferences": "local ignored file only; not committed",
+  "main_merge": "not performed"
+}

@@ -236,7 +236,7 @@ def indexes():
         state,record=case_state(case)
         item=(case,state,record)
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
-    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 源站试用模板 | 行业 | 研究时间 |','|---|---|---:|---|---|---|---|']
+    lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 源站试用模板 | 行业 | 研究时间 |','|---|---|---:|---|---|---|---|']
     for case,_,record in completed:
         lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record.get('personal_value', {}).get('level', '待核实')} | {record.get('source_trial', {}).get('status', 'not_observed')} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
