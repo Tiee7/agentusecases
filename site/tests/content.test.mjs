@@ -73,3 +73,7 @@ test('originals and full translations are distinct from editorial summaries and 
  raw.translation.based_on_body_sha256='0'.repeat(64);const stale=projectArchive(raw,{id:c.id,url:raw.url});assert.equal(stale.translationText,'');assert(stale.translationStale);
  raw.source_text.body+='tampered';assert.equal(projectArchive(raw,{id:c.id,url:raw.url}).sourceText,'');
 });
+
+test('public report prose uses plain verdict wording without changing stored research',()=>{
+ for(const r of loadContent().reports){assert(!JSON.stringify([r.verdict,r.sections,r.counter,r.limitations]).includes('仅建议受控试点'));}
+});
