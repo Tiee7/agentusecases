@@ -36,7 +36,21 @@
 
 ## Copy prompt · 动手试用
 
-本次未提取并核验源站 Copy prompt 原文。旧报告可能提及站方建议或原作者提示词，但不等于已收集完整提示词；以下均为我们编写的实用模板，未经过模型实测。
+### 源站试用模板
+
+状态：available
+
+出处：https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone
+
+观测时间：2026-10-15T17:50:39Z 至 2026-10-15T17:50:47Z（工具调用前后计时区间）
+
+建议运行工具：Manus（与案例实际使用的agent分开记录）
+
+源站提供的试用模板；不代表案例原作者实际使用的提示词。
+
+    Help me lower my [provider, e.g. internet/phone] bill, currently [amount] per month on account [account reference]. Research current competitor offers and prepare a retention-call script with my target price of [amount]. Do not call or submit anything until you've shown me the script and I approve, and pause whenever the provider needs a verification code.
+
+下面为我们编写的补充模板，非源站原文，未做模型实测。
 
 准备条件：先准备合成或脱敏样例，保留原始依据和人工复核人；已有工具可用即可，不要求新账号、密钥或付费API。
 

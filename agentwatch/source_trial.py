@@ -12,6 +12,25 @@ ATTRIBUTION = '源站提供的试用模板；不代表案例原作者实际使�
 STATUSES = ('available', 'missing', 'unparseable', 'not_observed')
 
 
+def observation_bounds(value):
+    window = value.get('observation_window')
+    if window is not None:
+        if value.get('observed_at') is not None or not isinstance(window, dict) or window.get('basis') != 'system_time_bracketing_tool_call':
+            raise ValueError('Bracketed observations must preserve their interval, not invent an exact time')
+        start = datetime.fromisoformat(window.get('start', ''))
+        end = datetime.fromisoformat(window.get('end', ''))
+    else:
+        start = end = datetime.fromisoformat(value.get('observed_at') or '')
+    if start.tzinfo is None or end.tzinfo is None or start > end:
+        raise ValueError('Source observation requires an ordered timezone-aware time or interval')
+    return start, end
+
+
+def observation_label(value):
+    window = value.get('observation_window')
+    return f"{window['start']} 至 {window['end']}（工具调用前后计时区间）" if window else value.get('observed_at') or '未观测'
+
+
 def validate_observation(value, expected_url):
     if not isinstance(value, dict) or value.get('version') != 1 or value.get('status') not in STATUSES:
         raise ValueError('Invalid source trial observation')
@@ -19,9 +38,7 @@ def validate_observation(value, expected_url):
     if value.get('source_url') != expected_url or parts.scheme != 'https' or not parts.netloc or parts.username or parts.password:
         raise ValueError('Source trial must belong to the case public HTTPS URL')
     if value['status'] != 'not_observed':
-        stamp = datetime.fromisoformat(value.get('observed_at', ''))
-        if stamp.tzinfo is None:
-            raise ValueError('Source observation time needs timezone')
+        observation_bounds(value)
     if value.get('method') not in ('ssr', 'dom', 'none'):
         raise ValueError('Invalid source trial extraction method')
     if value.get('attribution') != ATTRIBUTION:
@@ -88,7 +105,7 @@ def flight_values(document):
                 pass
         for match in re.finditer(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', script):
             payload = json.loads(match[1])
-            for line in payload.splitlines():
+            for line in payload.split('\n'):
                 if ':' not in line:
                     continue
                 try:
@@ -159,10 +176,11 @@ def dom_trial(document):
             labels.append(text.strip())
     agent = next((m.group(1).strip() for label in labels if (m := re.search(r'\bwith\s+(.+)$', label))), None)
     unique = list(dict.fromkeys(prompts))
-    return active, agent, unique[0] if len(unique) == 1 else None
+    marker_present = any(n['tag'] in ('p','h2','h3','h4') and node_text(n).strip().startswith('Try it yourself') for n in nodes(document.root))
+    return active or marker_present, agent, unique[0] if len(unique) == 1 else None
 
 
-def extract_source_trial(html, source_url, observed_at):
+def extract_source_trial(html, source_url, observed_at=None, observation_window=None):
     case_id = urlsplit(source_url).path.rstrip('/').rsplit('/', 1)[-1]
     document = Document(); document.feed(html)
     candidates = [candidate for value in flight_values(document) for candidate in find_trials(value)]
@@ -173,6 +191,8 @@ def extract_source_trial(html, source_url, observed_at):
     base = {'version':1, 'status':'missing', 'text':None, 'agent':None, 'source_url':source_url,
             'observed_at':observed_at, 'method':'none', 'attribution':ATTRIBUTION,
             'html_sha256':hashlib.sha256(html.encode()).hexdigest()}
+    if observation_window is not None:
+        base['observation_window'] = observation_window
     if len(unique) == 1:
         trial = next(iter(unique.values()))
         if isinstance(trial, dict) and all(isinstance(trial.get(k), str) and trial[k].strip() and not re.fullmatch(r'\$[a-f0-9]+', trial[k]) for k in ('prompt','agent')):
@@ -200,7 +220,7 @@ def newer_observation(previous, candidate):
         return candidate
     if candidate.get('status') == 'not_observed':
         return previous
-    return candidate if datetime.fromisoformat(candidate['observed_at']) >= datetime.fromisoformat(previous['observed_at']) else previous
+    return candidate if observation_bounds(candidate)[0] >= observation_bounds(previous)[1] or observation_bounds(candidate) == observation_bounds(previous) else previous
 
 
 def apply_observations(observations):
@@ -227,12 +247,21 @@ def main():
     parser = argparse.ArgumentParser(description='Import an authorized saved public HTML fixture; no network requests')
     parser.add_argument('--html', required=True)
     parser.add_argument('--url', required=True)
-    parser.add_argument('--observed-at', required=True)
+    parser.add_argument('--observed-at')
+    parser.add_argument('--observed-from')
+    parser.add_argument('--observed-until')
     parser.add_argument('--output', required=True)
     parser.add_argument('--db', help='Optional SQLite observation history for this saved browser fixture')
     parser.add_argument('--apply', action='store_true', help='Update only the existing registered case and its completed report')
     args = parser.parse_args()
-    result = extract_source_trial(Path(args.html).read_text(), args.url, args.observed_at)
+    window = None
+    if args.observed_from or args.observed_until:
+        if args.observed_at or not (args.observed_from and args.observed_until):
+            parser.error('Provide an exact observed-at OR both interval bounds')
+        window = dict(start=args.observed_from,end=args.observed_until,basis='system_time_bracketing_tool_call')
+    elif not args.observed_at:
+        parser.error('Observation time or interval is required')
+    result = extract_source_trial(Path(args.html).read_text(), args.url, args.observed_at, window)
     Path(args.output).write_text(json.dumps(result, ensure_ascii=False, indent=2)+'\n')
     if args.db:
         from .crawler import database, save

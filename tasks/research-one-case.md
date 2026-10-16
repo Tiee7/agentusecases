@@ -34,3 +34,5 @@
 已授权的浏览器保存HTML可离线导入：`python -m agentwatch.source_trial --html <file> --url <case-url> --observed-at <timezone-aware-time> --output <observation.json>`。不发生网络读取；必须保留真实浏览器观察时间和资料来源，不能把导入时间冒充抓取时间。数据库表`source_trials`按run及URL持久化；爬虫导出`data/source-trials.json`，bootstrap同步到registry及已完成research记录并重渲染报告，未研究案例不新建完成记录。阅读站优先源站模板，自编中英文模板作为补充；未深研案例可从目录进入独立试用页。
 
 本轮用户重新授权源站浏览器核对，由父任务提供两份实际DOM片段及截图；不调用`/api/`、不重试取消的curl，不重试本项目线上GET/浏览器验收。浏览器点击显示Copied只能证明按钮反馈；未取得剪贴板内容时不得宣称源站剪贴板逐字核验。本地站的剪贴板可独立测试，不能替代源站验证。仍不新建研究、不改Wanted、不改调度，最终完成后由父任务排至少5分钟休息。
+
+时间精度补充：浏览器观测只有工具调用前后计时区间时，`observed_at`保持null，以`observation_window.start/end/basis`记录真实区间（basis为system_time_bracketing_tool_call）。离线导入用`--observed-from`与`--observed-until`替代`--observed-at`，结合`--db <history.sqlite3> --apply`持久化并同步已有登记项。不得将区间端点当精确观测秒。两区间重叠且无法确认新旧时保留已有记录，不声称更新更晚。真实DOM路径可以独立交付；未取得真实SSR时测试证据明确写合成SSR，不冒称实测SSR。

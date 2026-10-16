@@ -64,7 +64,8 @@ def render_personal(record):
 def render_source_trial(observation):
     if not observation:
         return ['', '源站模板状态：尚未结构化观测；不表示源站没有提示词。']
-    lines = ['', '### 源站试用模板', '', '状态：' + observation['status'], '', '出处：' + observation['source_url'], '', '观测时间：' + (observation.get('observed_at') or '未观测')]
+    from .source_trial import observation_label
+    lines = ['', '### 源站试用模板', '', '状态：' + observation['status'], '', '出处：' + observation['source_url'], '', '观测时间：' + observation_label(observation)]
     if observation['status'] == 'available':
         lines += ['', '建议运行工具：' + observation['agent'] + '（与案例实际使用的agent分开记录）', '', observation['attribution'], '', *['    ' + line for line in observation['text'].splitlines()]]
     else:

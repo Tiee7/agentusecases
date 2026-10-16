@@ -63,6 +63,28 @@
         "string",
         "null"
       ]
+    },
+    "observation_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "start",
+        "end",
+        "basis"
+      ],
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "end": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "basis": {
+          "const": "system_time_bracketing_tool_call"
+        }
+      }
     }
   },
   "allOf": [
@@ -84,10 +106,6 @@
             "type": "string",
             "minLength": 1
           },
-          "observed_at": {
-            "type": "string",
-            "format": "date-time"
-          },
           "method": {
             "enum": [
               "ssr",
@@ -105,6 +123,46 @@
             "type": "null"
           }
         }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "available",
+              "missing",
+              "unparseable"
+            ]
+          }
+        }
+      },
+      "then": {
+        "oneOf": [
+          {
+            "required": [
+              "observation_window"
+            ],
+            "properties": {
+              "observed_at": {
+                "type": "null"
+              }
+            }
+          },
+          {
+            "not": {
+              "required": [
+                "observation_window"
+              ]
+            },
+            "properties": {
+              "observed_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        ]
       }
     }
   ],

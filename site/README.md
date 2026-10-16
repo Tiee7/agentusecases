@@ -50,3 +50,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 旧v2记录缺少扩展时显示待核实及原文缺失；新发布流程要求填写扩展。提示词通过Astro文本节点转义、通过textContent复制，不插入HTML，不把提示词拼接到脚本。自动复制失败时提供选择文本的手动回退，无脚本时仍可阅读和选择。`test:prompt-security`构建隔离的合成案例，并在仅本地Chromium中检查中英文、HTML攻击文本和剪贴板原样复制。
 
 本轮验收见 [自用价值与提示词验证](docs/personal-value-verification.md)。仅本地浏览器验收；未重试此前取消的线上GET或浏览器验证，未手动重复部署。
+
+## 源站模板收录
+
+源站SSR/DOM建议模板独立保存在source_trial，优先展示，其建议agent不当作案例作者实际工具。两份真实DOM目前分别进入账单协商报告与Reconcile目录试用页；后者没有深研记录，仍标待研究。页面原样呈现时间区间，并保留自编模板作为补充。source_trial的available/missing/unparseable/not_observed分别代表已取得、本次未提取到、解析失败、未观测；后面三者均不证明源站不存在模板。查看[完整验证和边界](docs/source-trial-verification.md)。

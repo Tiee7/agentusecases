@@ -27,10 +27,13 @@ export function projectSourceTrial(value, expectedUrl) {
   const empty = {status:'not_observed',agent:'',text:'',url:safeUrl(expectedUrl),observedAt:'',method:'none'};
   if (!value) return empty;
   if (value.source_url !== expectedUrl || !safeUrl(value.source_url) || !['available','missing','unparseable','not_observed'].includes(value.status)) return {...empty,status:'unparseable'};
-  if (value.status==='available' && (!text(value.text).trim() || !text(value.agent).trim() || !['ssr','dom'].includes(value.method) || !Number.isFinite(Date.parse(value.observed_at)))) return {...empty,status:'unparseable'};
-  return {status:value.status,agent:value.status==='available'?text(value.agent):'',text:value.status==='available'?text(value.text):'',url:safeUrl(value.source_url),observedAt:text(value.observed_at),method:text(value.method)};
+  const w=value.observation_window;
+  const validWindow=w && value.observed_at===null && w.basis==='system_time_bracketing_tool_call' && Number.isFinite(Date.parse(w.start)) && Number.isFinite(Date.parse(w.end)) && Date.parse(w.start)<=Date.parse(w.end);
+  const observedLabel=validWindow?`${w.start} 至 ${w.end}（工具调用前后计时区间）`:text(value.observed_at);
+  if (value.status==='available' && (!text(value.text).trim() || !text(value.agent).trim() || !['ssr','dom'].includes(value.method) || !(validWindow || (!w && Number.isFinite(Date.parse(value.observed_at)))))) return {...empty,status:'unparseable'};
+  return {status:value.status,agent:value.status==='available'?text(value.agent):'',text:value.status==='available'?text(value.text):'',url:safeUrl(value.source_url),observedAt:observedLabel,method:text(value.method)};
 }
-export const sourceStatusLabels = {available:'已收录源站试用模板',missing:'本次页面未提供可提取模板',unparseable:'本次解析未成功',not_observed:'尚未结构化观测'};
+export const sourceStatusLabels = {available:'已收录源站试用模板',missing:'本次未提取到模板（不表示不存在）',unparseable:'本次解析未成功',not_observed:'尚未结构化观测'};
 function sourcePrompt(source) {
   return {title:'源站试用模板',language:'源站原文',kind:'site_template',attribution:'源站提供的试用模板；不代表案例原作者实际使用的提示词。',url:source.url,refs:[],text:source.text,agent:source.agent,observedAt:source.observedAt};
 }

@@ -26,3 +26,7 @@ test('source-site templates lead, with separate agent and provenance, without re
  const r=projectReport(raw,entry);assert.equal(r.trial.prompts[0].kind,'site_template');assert.equal(r.trial.prompts[0].agent,'Manus');assert.equal(r.trial.prompts[0].text,entry.source_trial.text);assert.equal(r.trial.prompts.length,raw.try_it.prompts.length+1);assert(r.trial.prompts[0].attribution.includes('不代表'));
  entry.source_trial.source_url='https://wrong.test/case';const invalid=projectReport(raw,entry);assert.equal(invalid.sourceTrial.status,'unparseable');assert(!invalid.trial.prompts.some(p=>p.kind==='site_template'));
 });
+test('browser observation intervals render without pretending an exact second',()=>{
+ const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));const entry={id:raw.id,url:raw.url,source_trial:{status:'available',text:'Literal',agent:'Manus',source_url:raw.url,observed_at:null,method:'dom',observation_window:{start:'2026-10-15T17:50:39Z',end:'2026-10-15T17:50:47Z',basis:'system_time_bracketing_tool_call'}}};
+ const r=projectReport(raw,entry);assert(r.sourceTrial.observedAt.includes('17:50:39Z 至 2026-10-15T17:50:47Z'));assert.equal(r.trial.prompts[0].text,'Literal');entry.source_trial.observation_window.end='2026-10-15T17:00:00Z';assert.equal(projectReport(raw,entry).sourceTrial.status,'unparseable');
+});

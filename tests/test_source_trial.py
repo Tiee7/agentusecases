@@ -17,7 +17,7 @@ def ssr(value):
 
 class SourceTrialTests(unittest.TestCase):
     def test_scoped_ssr_preserves_special_characters_and_separates_agent(self):
-        prompt='中文 "quote" & <script>evil()</script>\nEnglish `code` ${value} \\ path'
+        prompt='中文 "quote" & <script>evil()</script>\nEnglish `code` ${value} \\ path\u2028段落\u2029end'
         html=ssr({'id':'example','agent':'Custom-built','tryIt':{'agent':'Manus','prompt':prompt},'related':[{'id':'wrong','tryIt':{'agent':'Wrong','prompt':'AD'}}]})
         r=extract_source_trial(html,URL,STAMP)
         self.assertEqual((r['status'],r['agent'],r['text'],r['method']),('available','Manus',prompt,'ssr'))
@@ -105,3 +105,21 @@ class SourceTrialTests(unittest.TestCase):
                 apply_observations({URL:older});self.assertEqual(json.loads(Path('research/example.json').read_text())['source_trial']['text'],'Full source prompt')
                 with self.assertRaises(ValueError):apply_observations({'https://unknown.test/case':trial})
             finally:os.chdir(previous)
+
+    def test_bracketed_observation_is_not_an_invented_exact_timestamp(self):
+        from agentwatch.source_trial import newer_observation, observation_label
+        window={'start':'2026-10-15T17:50:39Z','end':'2026-10-15T17:50:47Z','basis':'system_time_bracketing_tool_call'}
+        html=Path('tests/fixtures/source-trials/retention-prompt-dom.html').read_text()
+        r=extract_source_trial(html,URL,observation_window=window)
+        self.assertIsNone(r['observed_at']);self.assertEqual(r['observation_window'],window)
+        self.assertIn('17:50:39Z 至',observation_label(r))
+        with self.assertRaises(ValueError):validate_observation(dict(r,observed_at=STAMP),URL)
+        with self.assertRaises(ValueError):validate_observation(dict(r,observation_window=dict(window,start=window['end'],end=window['start'])),URL)
+        old=extract_source_trial(html,URL,STAMP)
+        self.assertEqual(newer_observation(old,r),r)
+        overlap=extract_source_trial(html,URL,'2026-10-15T17:50:40Z')
+        self.assertEqual(newer_observation(r,overlap),r)
+
+    def test_broken_dom_marker_is_failure_not_absence(self):
+        r=extract_source_trial('<p>Try it yourself with Manus</p><button>Copy prompt</button>',URL,STAMP)
+        self.assertEqual(r['status'],'unparseable');self.assertIsNone(r['text'])
