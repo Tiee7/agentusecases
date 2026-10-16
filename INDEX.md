@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **23** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **24** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
 
 研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -31,6 +31,7 @@
 | [跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
 | [Claude Cowork 投资备忘录：适合内部研究准备，不足以出售无人复核的投研结论](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
+| [让 AI 帮卖闲置：先节省上架时间，再谈代卖生意](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
 
 ## 需要重做的旧版简略初稿
 
