@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **27** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **28** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
 
 研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -32,6 +32,7 @@
 | [Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
 | [Claude Cowork 投资备忘录：适合内部研究准备，不足以出售无人复核的投研结论](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [四个AI模拟炒股：适合学习实验，不宜出售自动赚钱服务](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
+| [销售代理找网页设计客户：名单能辅助筛选，成交仍需验证](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [把 OpenClaw 技能搬到 Grok Bot：迁移的是工作流程，不只是提示词](reports/move-openclaw-skills-to-grok-bot.md) | 建议先小规模试用 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
 | [11个代理做交易准备：先验证分工能否减少复核工作](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
 | [让 AI 帮卖闲置：先节省上架时间，再谈代卖生意](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
