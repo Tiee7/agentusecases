@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **31** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **32** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -33,6 +33,7 @@
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [用四个 AI 模型各管理 1,000 美元模拟股票组合](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
 | [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
+| [用 Claude Code 和 Claude for Word 起草文件并衔接法律工作流](reports/automate-legal-drafting-and-workflows-with-claude-code.md) | 适合内部效率工具 | 38.0 | 中 | available | 律师内部文书处理与知识工作流 | 2026-10-16T17:12:27.645268+00:00 |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [用 Resume 智能体搜索岗位、定制简历并跟踪申请](reports/hunt-jobs-tailor-resumes-and-apply-automatically.md) | 仅建议受控试点 | 42.0 | 中 | available | 求职岗位筛选与申请材料准备 | 2026-10-16T16:41:28.042672+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
