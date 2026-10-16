@@ -1,0 +1,481 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "let-ai-models-trade-stocks-autonomously-with-1k-each",
+  "url": "https://agentusecases.ai/use-case/let-ai-models-trade-stocks-autonomously-with-1k-each",
+  "title": "四个AI模拟炒股：适合学习实验，不宜出售自动赚钱服务",
+  "industry": "投资研究与模拟交易",
+  "researched_at": "2026-10-16T11:48:16.607003+00:00",
+  "confidence": "原帖、V1代码与余额表能说明实验过程；没有真实成交、客户付费和可持续超额收益的证明。",
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "阶段赢家后来明显回落，现有流程也不足以交付可靠的自动投资服务",
+    "reason": "这项实验能帮助开发者理解模型如何在同样限制下作决定，但不能支持向普通投资者出售自动赚钱服务。四个模型各从1000美元模拟资金开始；按作者公布的余额表复算，到原定截止日3月31日，四个账户合计从4000降至3690.07美元。一个组合领先不等于可以提前挑出赢家。程序还涉及剪贴板交接、挂单和异常处理，售后、模型调用与客户解释成本会消耗低价订阅收入。若另做研究工具，应出售可复现的比较和故障诊断，而不能把实验收益当产品承诺。",
+    "next_action": "先用已公开余额表和合成订单制作一份离线复盘样张，核对每个余额变化、拒单原因和模型版本；如另立研究工具项目，再验证3个明确有预算的研究团队是否愿为同一交付付费。",
+    "stop_condition": "研究工具连续两轮只能吸引围观、不能获得预算确认，或每团队每月人工服务超过6小时且无法提价时停止；不得用真实资金试错来替代产品需求验证。"
+  },
+  "sources": [
+    {
+      "id": "Sd5964c1ff234",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1rq33za/chatgpt_vs_gemini_vs_claude_vs_perplexity_i_gave",
+      "title": "作者的九周模拟交易帖",
+      "supports": "说明四个模拟账户的设置、九周阶段成绩、作者不覆盖模型决定的说法及讨论中的实验改进建议。"
+    },
+    {
+      "id": "Sbeab63fe9391",
+      "url": "https://github.com/Seve1995/ai-portfolio-experiment",
+      "title": "AI Portfolio Experiment 当前项目说明",
+      "supports": "区分当前18代理V2实验与原帖四模型V1实验；新版结构不能作为旧实验已经实现的功能。"
+    },
+    {
+      "id": "Sc375d91e348d",
+      "url": "https://docs.alpaca.markets/us/docs/paper-trading",
+      "title": "Alpaca：Paper Trading",
+      "supports": "说明模拟成交规则、免费模拟环境及其未计入市场冲击、延迟滑点和股息等差异。"
+    },
+    {
+      "id": "Sfcd00c314743",
+      "url": "https://docs.alpaca.markets/us/docs/about-market-data-api",
+      "title": "Alpaca：Market Data API",
+      "supports": "说明个人数据Basic与99美元月费方案的覆盖差别；商业合作另有方案，不能直接套个人价格。"
+    },
+    {
+      "id": "S0482a51c289d",
+      "url": "https://www.quantconnect.com/pricing/",
+      "title": "QuantConnect：定价与功能",
+      "supports": "比较免费回测、社区支持与按席位、计算资源和数据组合的付费方案，判断客户替代选择。"
+    },
+    {
+      "id": "Se6592070cda0",
+      "url": "https://www.finra.org/investors/insights/artificial-intelligence-and-investment-fraud",
+      "title": "FINRA：AI与投资欺诈投资者提示",
+      "supports": "说明AI输出可能错误、保证收益宣传及平台注册核查问题；不据此对本项目作欺诈认定。"
+    },
+    {
+      "id": "Sb1abb3d0839d",
+      "url": "https://github.com/Seve1995/ai-portfolio-experiment/issues",
+      "title": "作者仓库公开Issues列表",
+      "supports": "记录本次公开开放问题列表没有结果，不能据此推断没有用户、没有故障或已有付费客户。"
+    },
+    {
+      "id": "S59cdc4197711",
+      "url": "https://raw.githubusercontent.com/Seve1995/ai-portfolio-experiment/08169121c677e8f0738d03fc321751ed85fb7a16/v1/scripts/execute_trade.py",
+      "title": "V1交易执行脚本（固定版本）",
+      "supports": "核对剪贴板输入、重复订单检查、交易前账户检查与下单流程，仅阅读代码未运行交易。"
+    },
+    {
+      "id": "Sf078a8b9f6aa",
+      "url": "https://raw.githubusercontent.com/Seve1995/ai-portfolio-experiment/08169121c677e8f0738d03fc321751ed85fb7a16/v1/scripts/generate_prompt.py",
+      "title": "V1提示词生成脚本（固定版本）",
+      "supports": "核对账户持仓与挂单输入、风险预算、买入过滤条件、剪贴板交接和2026年3月31日截止日期。"
+    },
+    {
+      "id": "Scab559969ac6",
+      "url": "https://raw.githubusercontent.com/Seve1995/ai-portfolio-experiment/08169121c677e8f0738d03fc321751ed85fb7a16/v1/logs/performance.csv",
+      "title": "V1组合余额CSV（固定版本）",
+      "supports": "复算1月5日至3月31日各组合余额变化、合计变化和记录日期上的回撤；数据由项目作者提供。"
+    },
+    {
+      "id": "Sf46614ebf6cf",
+      "url": "https://forum.alpaca.markets/t/paper-trading-market-orders-fill-delay/18681",
+      "title": "Alpaca社区：模拟市价单成交延迟",
+      "supports": "提供邻近工作流中两位用户对分钟级成交延迟的报告，不能用来断言本案例发生同样故障。"
+    },
+    {
+      "id": "S08c19082d6a9",
+      "url": "https://seve1995.github.io/ai-portfolio-experiment/",
+      "title": "作者实验仪表盘",
+      "supports": "确认四个1000美元组合的公开展示入口；静态页面数字是加载占位符，最终余额采用仓库CSV。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者原帖设置四个各1000美元的Alpaca模拟账户，比较ChatGPT、Gemini、Claude和Perplexity。",
+      "source_ids": [
+        "Sd5964c1ff234"
+      ]
+    },
+    {
+      "statement": "原帖报告九周ChatGPT为+21.1%、Perplexity为+1.1%、Gemini为−6.6%、Claude为−11.5%，属于阶段模拟结果。",
+      "source_ids": [
+        "Sd5964c1ff234"
+      ]
+    },
+    {
+      "statement": "V1提示词生成器把2026年3月31日设为实验结束日期，并把生成文本复制到剪贴板。",
+      "source_ids": [
+        "Sf078a8b9f6aa"
+      ]
+    },
+    {
+      "statement": "V1执行器从剪贴板解析CSV或Markdown交易表，并检查已有持仓与待买订单以跳过部分重复买入。",
+      "source_ids": [
+        "S59cdc4197711"
+      ]
+    },
+    {
+      "statement": "作者CSV在2026年3月31日列出ChatGPT 1058.32、Gemini 854.68、Claude 800.23、Perplexity 976.84美元；按各1000美元起点计算变化为+5.832%、−14.532%、−19.977%、−2.316%。",
+      "source_ids": [
+        "Scab559969ac6"
+      ]
+    },
+    {
+      "statement": "四模型3月31日余额合计3690.07美元，相对4000美元起点下降7.7483%；同表SP500从1000变为948.23，下降5.177%。这是公布余额的算术复算。",
+      "source_ids": [
+        "Scab559969ac6"
+      ]
+    },
+    {
+      "statement": "Alpaca说明模拟交易不计入订单市场冲击、延迟滑点、监管费用和股息，成交数量也不按实际可用流动性核验。",
+      "source_ids": [
+        "Sc375d91e348d"
+      ]
+    },
+    {
+      "statement": "Alpaca个人Basic股票实时数据限于IEX；Algo Trader Plus页面价格为99美元/月，股票覆盖扩展至全美交易所。",
+      "source_ids": [
+        "Sfcd00c314743"
+      ]
+    },
+    {
+      "statement": "QuantConnect定价页列出免费回测和社区支持，付费资源可按席位、计算节点、数据及支持组合。",
+      "source_ids": [
+        "S0482a51c289d"
+      ]
+    },
+    {
+      "statement": "当前项目README描述的是六模型乘三种风险设定的18代理V2实验，与原帖四模型V1不同。",
+      "source_ids": [
+        "Sbeab63fe9391"
+      ]
+    },
+    {
+      "statement": "Alpaca论坛2026年4月9日的两位发帖者报告模拟订单等待数分钟，属于其他用户的相关流程体验。",
+      "source_ids": [
+        "Sf46614ebf6cf"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 2,
+      "rationale": "公开讨论证明有人对比较模型感兴趣，但未找到愿为这套自动投资流程持续付费的客户或续费记录。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "Sb1abb3d0839d"
+      ]
+    },
+    "outcome": {
+      "score": 1,
+      "rationale": "一个阶段赢家后来回落，四组合合计落后同表基准，不能用短期模拟成绩证明稳定投资价值。",
+      "source_ids": [
+        "Scab559969ac6",
+        "Sd5964c1ff234"
+      ]
+    },
+    "economics": {
+      "score": 1,
+      "rationale": "低价订阅承担逐日研究与人工解释后容易亏损；高价研究服务的收入和服务工时仍只是待验证假设。",
+      "source_ids": [
+        "Sfcd00c314743",
+        "S59cdc4197711",
+        "S0482a51c289d"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "公开帖子和仪表盘能吸引技术读者，但观看实验到购买稳定研究服务之间仍缺少可见转化路径。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "S08c19082d6a9"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "代码和回测替代品已公开，提示词和结果榜单易复制，尚未形成独有数据或客户流程依赖。",
+      "source_ids": [
+        "Sbeab63fe9391",
+        "S0482a51c289d"
+      ]
+    },
+    "execution": {
+      "score": 1,
+      "rationale": "剪贴板交接、异步订单和数据覆盖差异增加维护量，模拟环境也不能证明实盘成交质量。",
+      "source_ids": [
+        "S59cdc4197711",
+        "Sc375d91e348d",
+        "Sf46614ebf6cf"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "未找到本项目独立付费使用者的核验结果；相关平台用户投诉用于设计故障检查，不作为项目口碑。",
+      "source_ids": [
+        "Sb1abb3d0839d",
+        "Sf46614ebf6cf"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "谁会使用，谁会付钱",
+      "body": "这个案例最清楚的使用者是想比较模型行为的个人开发者，而不是已经委托资金的投资客户。普通投资者会被阶段收益吸引，但他们购买的实际是收益、可理解的风险和遇到问题时有人处理。当前实验没有给出这种完整服务，也没有展示持续付费或续费。不能把帖子热度、收藏和想试一试的人数换算成付费需求。\n\n更窄的潜在付款人是需要做模型评测的研究团队、金融科技产品组或教学团队。这里的需求是假设：他们可能为相同输入下的决策对照、异常案例和可重复实验付费。预算应来自研发或课程，而非客户投资本金。购买前需要回答谁每周读结果、结果改变哪项决定、原来用什么工具以及能少做多少手工核对。若团队只想看收益排行榜，免费仪表盘已经能满足相当部分需求。\n\n所以客户验证应先围绕一份明确的交付物：一月四模型对照、输入版本、决策记录和失败原因。每个客户独立计算服务工时，不能用多个客户共享一套投资建议来制造低成本假象。没有实际付款之前，研究服务只是另一个待验证方向，不应把它写成这项实验已经找到了商业模式。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "S08c19082d6a9",
+        "Sb1abb3d0839d"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "从提示词到成交，哪里仍需人处理",
+      "body": "V1生成器读取现金、持仓和未完成订单，把统一市场数据与限制写进当天提示词，再复制到剪贴板。执行器从剪贴板读取模型给出的表格，识别动作、股票、数量、限价及止损等字段，做持仓、重复买单和购买力检查后提交。这里能确认的是一段段工具链，不能从代码推出四个网页模型之间已经完成无人值守交接。作者不覆盖模型选择，与操作员不参与复制和检查，是两件事。\n\n实际交付还要解决输出格式变动、缺字段、旧行情、模型超时、挂单尚未撤销及重复执行。可靠的流程应为每次决策保存唯一编号，在收到成交状态前保持等待；出现字段异常先停在草稿状态，不用猜测修补后继续交易。这些是产品需要补齐的设计要求，并非本案例已经全部完成的功能。特别是执行脚本的dry-run仍先初始化账户连接，不能把这个参数当作绝对离线保障。\n\n对自用者，更省事的第一步是用已导出的持仓和价格表生成建议表，再人工核对，不连接券商。想比较模型时，固定输入日期、可用信息和模型版本，记录HOLD与拒绝交易，而不是只保存买入成功的日子。复盘重点是模型为何改变决定和程序有没有正确处理状态，不是每次都强迫它下单。",
+      "source_ids": [
+        "S59cdc4197711",
+        "Sf078a8b9f6aa"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "需求在哪里，市场不能怎样推算",
+      "body": "自动投资话题很容易得到关注，因为它把复杂研究压缩成一个直观问题：能不能替我赚钱。但注意力不等于预算，模拟账户余额也不是服务商收入。这个项目能证明一个人愿意持续展示实验，不能证明一群投资者愿意在亏损月份继续付费。因此不以模型使用人数乘订阅价估算市场，也不把四个1000美元账户当成管理资产规模。\n\n可以进入的范围应按具体工作量划定。若一个团队每周手工对照多家模型、逐条检查交易格式并编写复盘，统一实验记录才有价值；若它已经使用成熟回测平台，新增工具必须减少一个明确步骤，而不是再建一个排行榜。教学团队看重易读的失败案例，研发团队看重可重跑和版本控制，这两类客户的采购理由也不相同。它们都不能由九周收益宣传直接推导出来。\n\nAlpaca已有个人和合作伙伴不同的数据产品，说明个人实验的环境不能直接当作多人商业交付条件。扩展时要重新核对数据展示和使用范围，确认客户数量增长是否增加授权与支持成本。当前更合理的市场验证单位是一个愿意付费的团队和一项重复任务，而不是散户总人数。先限定四模型、日频、模拟环境，才能判断需求是否足够集中。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "Sfcd00c314743",
+        "S0482a51c289d"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "免费替代已经解决了什么",
+      "body": "最直接的替代是作者自己的公开代码和日志。懂Python的人可以阅读提示词、检查交易表和复算结果，未必愿意为包装后的同类页面付费。更简单的替代是表格加人工操作：每天保存一次模型输出，每周对照现金或指数，既能学习，也不必维护券商自动执行。对于只想知道模型能否稳定作出一致判断的人，这个低复杂度方案往往更符合目的。\n\n成熟量化平台则解决数据、回测和运行资源。QuantConnect已经列出免费回测和社区支持，付费方案提供更多团队与计算能力。这里不把其免费功能等同于原案例的全流程，也不声称用户能零成本接入所有数据；竞争含义是基础实验平台并不稀缺，新服务必须证明自己省去了平台之外的工作，例如把混乱的模型解释变成可审查的决策差异。\n\n与人工分析师相比，模型能快速生成候选解释，但客户仍需要核对消息日期、计算和交易限制。若卖方最终逐条重做研究，节省的调用时间会被复核抵消。可区分的交付应是统一实验设计、错误归类和重复运行的结果，而不是宣称有一个更聪明的提示词。客户转用现有免费工具的成本很低，这会限制低价订阅的定价空间。",
+      "source_ids": [
+        "Sbeab63fe9391",
+        "S0482a51c289d",
+        "Sf078a8b9f6aa"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "收入和成本要按服务算，不按涨幅算",
+      "body": "以下两种测算都是假设，用来检验服务边界，不是作者营收。29美元/月的个人订阅，假设每人分摊模型研究8美元、人工半小时按40美元/小时计20美元、基础服务4美元、获客摊销10美元，可变成本合计42美元，单位贡献为负13美元；50名订阅者、每月固定成本150美元时，月经营贡献为负800美元。即使模拟账户上涨，卖方仍可能亏钱。\n\n另一种是600美元/月的研究团队复盘包：模型调用60美元、人工4小时按50美元计200美元、存储及运行40美元、获客摊销75美元，单位贡献225美元，贡献率37.5%；8个团队、固定成本400美元时，月经营贡献1400美元。这个价格没有成交证明，且范围仅为模拟评测和报告，不含荐股、代客交易与商业数据转售。客户所需行情授权另行确认，不能把Alpaca个人99美元套餐直接认作服务商的商用许可证。\n\n第二种情景也很脆弱：若每客户模型费用变成180美元、人工升到6小时，单位贡献只剩5美元，8个客户仍月亏360美元。因此应实记每次失败重跑、答疑和对账工时；限制模型次数、交付范围和修改轮次。创业判断取决于客户是否为这些工作付费，以及复核量能否下降，不取决于哪一周净值曲线最好看。",
+      "source_ids": [
+        "Sfcd00c314743",
+        "S59cdc4197711",
+        "S0482a51c289d"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "第一批客户从哪里来",
+      "body": "作者已经展示了一个可理解的获客入口：公开对比四个模型并展示变化。它适合让技术读者发现项目，却容易吸引期待短期赚钱的人。如果商业产品实际交付的是研究工具，沿用赢家收益作为销售主张会带来错误预期；一次亏损或排名反转就可能增加退款和客服负担。内容应展示完整期间、失败日和模型变更，让读者先理解自己买到的是哪项工作。\n\n研究工具的第一批客户应来自已经进行模型比较的开发团队、教学项目和金融科技研究组。可准备一份不用登录即可阅读的离线样张，围绕一个真实难题展示输入、输出和错误归因。后续验证重点是对方是否给出预算、愿否提供可用的非敏感测试资料，以及是否会重复使用同一报告。这里提出的是进入市场的方案，没有开展联系，也没有声称已有试用客户。\n\n销售与交付应采用固定范围：四种模型、日频输入、约定复盘次数。额外券商、数据源、模型和定制计算分别计价，否则技术爱好者提出的免费功能请求会持续扩大工时。不要以粉丝数量预测成交；更有用的指标是完成一次样张后愿意为下一周期付费的团队数，以及每个团队真正占用的支持时间。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "S08c19082d6a9",
+        "S0482a51c289d"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "真正难复制的东西还没有形成",
+      "body": "模型名称、提示词和净值图都很容易复制。作者公开了代码，成熟平台已经提供回测基础设施，新的包装站点很难仅凭这几项形成长期价格优势。模型供应商增加研究和工具调用能力后，简单的提示词编排也会更快成为通用功能。把同一套公共内容换成另一个界面，不足以让客户持续留存。\n\n若要形成积累，应围绕客户允许使用的实验资料建立长期错误分类、版本对照和复现工具。例如同样输入下哪些模型经常忽略挂单、错误计算数量、在缺数据时仍作出肯定判断；修复后错误是否降低，团队能否把这些结果用于选择模型。这些是潜在能力，需要真实工作量和连续记录支撑，目前不能给它们计入已有壁垒。客户数据也不能未经约定混用为共享训练资产。\n\n当前仓库已演进为18个代理的V2，说明实验设计仍在变化。新版增加机制本身是积极探索，但不能证明旧方案已成熟，也不能使三个月前的表现自动适用于新版本。服务必须允许客户固定版本、重跑旧任务、导出结果并理解变更。只有当这些能力确实嵌入客户日常流程，且迁移会丢失有用的历史比较时，才值得重新评估壁垒。",
+      "source_ids": [
+        "Sbeab63fe9391",
+        "S0482a51c289d",
+        "S59cdc4197711"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "自动化的成本集中在异常处理",
+      "body": "最容易低估的交付工作不是让模型给出BUY或SELL，而是确认数据仍有效、建议可解析、账户处于正确环境、订单到底有没有完成。已有执行器做了一些重复买入与购买力检查，但代码阅读并没有证明所有错误路径都安全。网络超时以后直接重试，可能面对一个已经提交却尚未回报的订单；模型字段看似正常，也可能对应过期价格或错误股票。\n\nAlpaca明确说明模拟环境缺少市场冲击、延迟滑点等因素，因此模拟表现不能替代真实成交能力。社区还出现了模拟成交等待数分钟的报告；这不是该项目必然失败的证明，却足以要求产品保存状态、等待确认并说明为何暂停。监控、人工接管与客户解释要进入成本表，不能只计算模型调用费用。\n\n若面向客户收取投资相关服务费用，服务范围、适用地区与资质问题需要单独确认。FINRA的投资者提示强调核查平台与避免保证收益宣传；它不是对这个项目的违法认定。当前最可控的交付范围是离线研究和模拟复盘，不收集真实券商凭据，不代客户下单。即使未来扩大范围，也应先确认职责、数据使用权和异常责任，而不是在提示词末尾写一句风险提示就上线。",
+      "source_ids": [
+        "S59cdc4197711",
+        "Sc375d91e348d",
+        "Sf46614ebf6cf",
+        "Se6592070cda0"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "读者兴趣与真实使用反馈分开看",
+      "body": "原帖评论对实验设计提出了具体问题：一个模型只跑一个组合，难以区分偶然押中与可重复能力；随机组合对照、多次独立运行和更长区间能改善比较。这些建议改变了后续验证方法，但评论者大多是在讨论结果，并非购买或实际部署本项目的客户，不能转成满意度或续费证据。关于模型版本中途变化的讨论，也提示比较需要保留版本信息。\n\n公开仓库的开放Issues列表本次没有结果，这只能说明该列表没有展示匹配项，不能说明程序没有故障或被大量用户验证。另一个渠道是Alpaca社区：两位相关工作流用户报告模拟市价单等待数分钟。论坛容易集中出现问题样本，个别体验不能代表总体故障率，但它给出了可检查的交付问题——提交成功与成交完成之间必须有状态核对。\n\n三次检索围绕项目评价、项目问题和模拟成交体验进行，没有获得本项目独立付费客户的长期使用报告。因此独立用户反馈项记0分，含义是没有足够的项目使用验证。研究结论主要依赖实际流程、完整期间余额与成本分析，不靠围观点赞，也不把别的用户的交易收益叙述拿来补足本项目效果。",
+      "source_ids": [
+        "Sd5964c1ff234",
+        "Sb1abb3d0839d",
+        "Sf46614ebf6cf"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "值得保留的是实验，不能直接卖的是收益承诺",
+      "body": "对自动投资生意，本轮结论是不建议商业投入。原帖的九周赢家很醒目，但到原定3月31日终点，ChatGPT余额仅较起点高5.832%，四模型合计反而下降7.7483%。这不是否定模型未来的全部用途，而是说明当前项目不能证明卖方能够稳定给客户增加收益；事后挑出最好的一个模型，也不能替代事前可执行的选择方法。\n\n对个人开发者，保留实验有意义：用同样资料比较决定、研究持仓和挂单处理、学习如何记录失败。第一步无需真实资金、无需新增凭据，也不必运行作者交易脚本。用已公开日志完成复盘，增加持有现金、同表指数和预先固定规则的对照；先验证报告能否忠实复算，再讨论如何提高流程可靠性。学习价值来自理解过程，而不是复制某只上涨股票。\n\n如果后续另做面向团队的研究服务，先限定为固定范围的离线对照报告，验证3个预算明确的客户是否愿为重复交付付费。连续两轮仍只有观看者，或每客户服务工时超过6小时却不能提价，就停止扩展。只有付费、交付负担和复现质量同时成立，才重新讨论商业投入；不得把一轮更漂亮的收益曲线作为跳过这些检查的理由。",
+      "source_ids": [
+        "Scab559969ac6",
+        "Sd5964c1ff234",
+        "Sf078a8b9f6aa",
+        "S0482a51c289d"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "社区与项目评价搜索",
+        "query": "\"ai-portfolio-experiment\" review",
+        "outcome": "找到原作者Reddit实验帖与公开仪表盘，未找到可核验的独立付费客户报告。"
+      },
+      {
+        "channel": "公开代码问题搜索",
+        "query": "\"ai-portfolio-experiment\" issues",
+        "outcome": "检索并打开项目公开Issues页，开放问题视图无结果。"
+      },
+      {
+        "channel": "经纪平台用户社区",
+        "query": "\"Alpaca\" \"paper trading\" \"fill\" forum",
+        "outcome": "找到并阅读2026年4月模拟成交延迟讨论，归为邻近工作流体验。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sf46614ebf6cf",
+        "directness": "adjacent_workflow",
+        "finding": "Alpaca社区两位用户报告模拟市价单等待数分钟。这提示流程应区分提交与成交、处理等待和重试；它不是本项目用户的评价。",
+        "bias": "论坛问题样本自选，无法据两位用户推算故障率；交易频率与本案例日频流程不同。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：个人订阅",
+      "unit": "订阅者月",
+      "currency": "USD",
+      "price": 29,
+      "api_cost": 8,
+      "human_cost": 20,
+      "other_variable_cost": 4,
+      "acquisition_cost": 10,
+      "units_per_month": 50,
+      "fixed_monthly_cost": 150,
+      "assumptions": "所有输入均为经营假设；人工每人每月0.5小时×40美元，调用8美元、基础运行4美元、获客10美元按订阅月摊销，固定费用150美元。模拟资金和账户涨幅不计收入；不含真实交易或商业行情再分发。",
+      "source_ids": [
+        "Sfcd00c314743",
+        "S59cdc4197711"
+      ]
+    },
+    {
+      "scenario": "假设：团队模拟研究复盘包",
+      "unit": "研究团队月",
+      "currency": "USD",
+      "price": 600,
+      "api_cost": 60,
+      "human_cost": 200,
+      "other_variable_cost": 40,
+      "acquisition_cost": 75,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 400,
+      "assumptions": "所有收入与用量均为假设；人工4小时×50美元，调用60美元，运行存储40美元，获客摊销75美元，月固定成本400美元。仅做固定范围模拟研究；客户自有获许可数据，额外商用数据授权未计入并需另报。若调用升至180美元、人工升至6小时，月经营贡献变为−360美元。",
+      "source_ids": [
+        "Sfcd00c314743",
+        "S0482a51c289d",
+        "S59cdc4197711"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "原帖九周ChatGPT领先，但公开余额到3月31日的合计结果落后同表指数；同时现存V1代码通过剪贴板交接，而当前README已是不同的V2实验。阶段表现、自动化程度和版本变化共同削弱直接销售自动投资服务的理由。",
+  "limitations": "没有实盘成交、真实客户收入、续费或完整服务工时。余额复算使用作者公开CSV，未独立核对券商账户及资金流；本次没有运行交易或调用付费模型。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "适合会读Python的开发者学习模型比较和模拟交易流程；可以先离线复盘，但不能据此判断真实投资收益。",
+    "audience": "想学习模型评测、交易状态管理的开发者或课程学习者。",
+    "use": "固定输入后比较四种模型建议，核对余额和错误处理。",
+    "benefit": "形成可比较的决策日志，理解空仓、集中持仓和版本变化；没有测量节省时间。",
+    "setup_cost": "先用公开余额CSV和文本表格即可；阅读代码需要Python基础，无需新增账户或凭据。",
+    "maintenance_cost": "若持续实验，需要每日检查输入日期、输出格式及结果，模型版本变更后重做比较。",
+    "frequency": "学习时按日记录、按周复盘；并非每次都需要产生交易。",
+    "privacy_risk": "离线合成数据无真实账户资料；不要把券商凭据或真实持仓放进公开日志。",
+    "error_risk": "过期消息、格式错误和偶然押中都可能误导判断；模拟结果不等于实盘收益。",
+    "source_ids": [
+      "Sf078a8b9f6aa",
+      "S59cdc4197711",
+      "Scab559969ac6",
+      "Sc375d91e348d"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "一份公开余额CSV或合成价格与订单表；明确日期、起始现金和比较基准。",
+    "tools": "现有对话工具与本地表格或Python标准库；不用新增API凭据。",
+    "expected_result": "一份可手工复核的余额变化、最大回撤和异常清单；不产生任何订单。",
+    "prompts": [
+      {
+        "title": "离线复盘四个模型的模拟组合",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编的离线模板",
+        "source_url": null,
+        "source_ids": [
+          "Scab559969ac6"
+        ],
+        "text": "请只使用我提供的CSV做离线复盘，不联网、不登录账户、不下单。输入为[日期、各组合余额和基准余额]，起止日期为[开始日]至[结束日]。先检查日期重复、缺值、余额口径和是否有入金出金；无法判断的项目列为待补。按末值/初值−1计算余额变化，按各记录日相对此前最高值计算最大回撤；如资金流未知，不称为时间加权收益。逐项展示公式和使用的数值，区分单组合与合计。不要根据结果推荐股票、推算年化收益或把赢家当作未来最佳模型。最后列出三项影响可比性的具体问题。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Every weekday before the market opens, review a paper-trading portfolio of $[1000] and suggest trades based on [your strategy or risk level], using only simulated money. Record each decision with a one-sentence reason and the portfolio value in a running log. After [number] weeks, summarize performance against [benchmark, e.g. S&P 500]. Do not place any real orders; show me any proposed trade for approval first.",
+    "agent": "Gemini",
+    "source_url": "https://agentusecases.ai/use-case/let-ai-models-trade-stocks-autonomously-with-1k-each",
+    "observed_at": "2026-10-16T05:28:59.680890+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "6d552a23313243eda8d85fdb80bef3d8119ef2d2122d86e0bcefb743f400595c"
+  },
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/let-ai-models-trade-stocks-autonomously-with-1k-each",
+    "observed_at": "2026-10-16T06:13:11.961061+00:00",
+    "body_sha256": "533ca21885ae54b8d3c772f195c4cf700b6f2ed1115088e58f9ed7c2970feaa7",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "bb12aa0a4b03d82b3a695ebb36ca0e92be650613dc299e444cf2a7e172d23ec5",
+      "How it went": "c2cd0422d69510d76cf79279e8c10f25935ff8ab04bff14eeaec2b5d79e8df42",
+      "Worth knowing": "7514aeeaac0a15167b911f59786d1fd2ab9a082b288afd4363f22a0252197402"
+    },
+    "actual_agents": [
+      "Gemini"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1rq33za/chatgpt_vs_gemini_vs_claude_vs_perplexity_i_gave",
+    "source_title": "作者的四模型模拟交易实验帖",
+    "source_language": "en",
+    "accessed_at": "2026-10-16T11:43:17+00:00",
+    "source_sha256": "d9642097f2192ebffdc5a8b4a59860d68b708be34920a13d597d800a7e2845fb",
+    "steps": [
+      {
+        "en": "Start four Alpaca paper portfolios with $1,000 each and give the four model services the same weekday pre-market task with Deep Research enabled.",
+        "zh": "建立四个各1000美元的Alpaca模拟组合，在工作日开盘前给四个模型服务同样的任务，并启用Deep Research。"
+      },
+      {
+        "en": "Restrict decisions to buying, selling, holding or cancelling; the author says they did not override model decisions and published logs through Python tooling and GitHub.",
+        "zh": "将决定限制为买入、卖出、持有或撤销；作者称没有覆盖模型决定，并通过Python工具和GitHub公开日志。"
+      },
+      {
+        "en": "Compare the nine-week results and continue the experiment toward three months, rather than treating an early leader as a guaranteed future winner.",
+        "zh": "比较九周阶段结果，并计划继续到三个月，而不是把早期领先者视为未来必胜者。"
+      }
+    ]
+  }
+}
