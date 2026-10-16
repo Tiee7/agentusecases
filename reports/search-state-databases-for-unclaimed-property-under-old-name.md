@@ -1,5 +1,31 @@
 # 旧姓名无人认领财产查询：适合内部效率工具，免费官方替代压缩独立收费空间
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/search-state-databases-for-unclaimed-property-under-old-name
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude
+
+### 介绍
+
+A community post proposes searching for forgotten property across former residences and names.
+
+一篇社区帖子提出按曾居住地区及曾用名寻找遗忘财产。
+
+### 方法
+
+Claude is asked to consult official databases and return traceable matches with claim links. A commenter recommends rejecting matches without precise source evidence.
+
+用户要求 Claude 检索官方数据库并返回可追溯匹配及申领链接；评论者建议剔除缺少精确来源的匹配。
+
+### 结果与限制
+
+No personal payout or success rate is provided. Suggestions to use other products in comments do not establish which tool performed the original case.
+
+没有提供个人到账金额或成功率；评论中的其他产品建议不能证明原案例实际使用的工具。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/PromptEngineering/comments/1vrij5c/about_1_in_7_people_have_unclaimed_money_sitting)

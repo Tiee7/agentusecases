@@ -1,5 +1,31 @@
 # Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/trade-stocks-via-robinhood-mcp
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：ChatGPT Agent
+
+### 介绍
+
+A trading-challenge post describes account actions through a Robinhood MCP connection.
+
+一篇交易挑战帖子描述经 Robinhood MCP 连接执行账户操作。
+
+### 方法
+
+The source attributes selling TSM and buying HOOD to ChatGPT Agent in a challenge benchmarked against VOO.
+
+源站将卖出 TSM、买入 HOOD 的操作归于 ChatGPT Agent，挑战以 VOO 为比较基准。
+
+### 结果与限制
+
+The cached entry reports neither comparative returns nor operational failures. Executed actions alone do not demonstrate investment performance.
+
+缓存条目既未报告对比收益，也未报告操作失败；仅有操作记录不足以证明投资表现。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/pdxjimsmith/status/2070617072921686525)

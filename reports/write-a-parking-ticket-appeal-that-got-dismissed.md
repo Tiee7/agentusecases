@@ -1,5 +1,31 @@
 # ChatGPT停车罚单申诉：75美元撤单故事证明写作辅助，未证明收费代办生意
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/write-a-parking-ticket-appeal-that-got-dismissed
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：ChatGPT
+
+### 介绍
+
+A driver used ChatGPT to improve a challenge to a parking penalty.
+
+一位驾驶者用 ChatGPT 改善停车罚单申诉表达。
+
+### 方法
+
+The driver supplied the ticket and surrounding circumstances, removed invented details from the draft, and personally sent the appeal to local officials.
+
+驾驶者提供罚单及事情背景，删除草稿中虚构的细节，再自行向当地官员发送申诉。
+
+### 结果与限制
+
+The account reports dismissal of a $75 ticket after a next-day response. It illustrates assisted writing with human fact-checking, not autonomous legal representation.
+
+叙述称次日收到回应后撤销了 75 美元罚单，体现人工核实事实下的辅助写作，并非自主法律代理。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/ChatGPT/comments/144mzb5)

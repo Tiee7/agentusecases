@@ -1,5 +1,31 @@
 # 税务资料清单与上年申报复查：先打通会计师接收流程，再讨论自动化利润
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/fill-in-a-tax-organizer-and-review-last-year-s-return
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude in Chrome、Claude Code
+
+### 介绍
+
+A user combined browser and coding assistants to complete a tax preparer’s questionnaire.
+
+一位用户结合浏览器和编码助手完成报税机构的资料问卷。
+
+### 方法
+
+Claude in Chrome extracted fields and entered answers in small batches; Claude Code matched documents to fields. The person checked pages and separately requested review of the previous return.
+
+Claude in Chrome 分批提取字段并录入答案，Claude Code 将资料匹配至字段；用户逐页检查，并另行要求复核往年税表。
+
+### 结果与限制
+
+The source reports a completed questionnaire and an accountant-confirmed missed deduction. Premature assurances and lost context made active supervision necessary.
+
+源站报告问卷完成，并发现经会计师确认的漏扣项目；过早声称完成及上下文丢失使主动监督不可少。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://theautomatedoperator.substack.com/p/claude-almost-nails-my-taxes-and)

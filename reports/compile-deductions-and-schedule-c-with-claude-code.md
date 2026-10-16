@@ -1,5 +1,31 @@
 # Claude Code税务凭证整理的商业研究
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/compile-deductions-and-schedule-c-with-claude-code
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude Code
+
+### 介绍
+
+A researcher used Claude Code to assemble tax-preparation inputs from scattered records.
+
+一位研究者用 Claude Code 将分散资料汇总为报税准备材料。
+
+### 方法
+
+Custom skills collected email attachments and reconciled donations, receipts and statements into deductions and a business schedule; the user reviewed classifications and entered the tax software.
+
+自建技能收集邮件附件，整合捐赠、收据和账单，形成扣除项目及经营附表；用户复核分类并录入报税软件。
+
+### 结果与限制
+
+The reported effort was around three hours. Medical and childcare classification remained manual, so this was assisted preparation rather than autonomous filing.
+
+报告用时约三小时；医疗及托育分类仍由人工完成，属于辅助准备而非自主申报。
+
 ## 原作者的方法与来源
 
 来源：[Chris Blattman · Tax workflow](https://claudeblattman.com/tax-workflow/)

@@ -1,5 +1,31 @@
 # Muse寻找无人认领款项：查到钱不等于到账，免费官方入口压缩独立代办利润
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/find-unclaimed-money-and-start-the-claim
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Meta Muse
+
+### 介绍
+
+An analyst used Meta Muse to look for property or funds registered in his name.
+
+一位分析师用 Meta Muse 查找登记在自己名下的财产或资金。
+
+### 方法
+
+Muse identified possible matches and assisted with paperwork, while the claimant submitted the official application.
+
+Muse 找到可能匹配的记录并辅助填写材料，正式申请由本人提交。
+
+### 结果与限制
+
+The report describes over $1,500 located in roughly five minutes, but no payment yet. Identity checks and official approval remained outstanding.
+
+报道描述约五分钟内找到逾 1,500 美元，但尚未付款，仍需身份核验及官方批准。
+
 ## 原作者的方法与来源
 
 来源：[ColombiaOne · Nick Grous unclaimed funds](https://colombiaone.com/2026/09/29/meta-muse-ai-agent/)

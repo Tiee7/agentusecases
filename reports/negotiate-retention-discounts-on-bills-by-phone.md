@@ -1,5 +1,31 @@
 # Kudos 电话账单协商：套餐边界、会员经济与到账核验
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/negotiate-retention-discounts-on-bills-by-phone
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：自建或未命名 agent
+
+### 介绍
+
+Kudos describes a dedicated voice agent for negotiating recurring service bills.
+
+Kudos 描述了专门用于持续性服务账单议价的语音 agent。
+
+### 方法
+
+It calls providers, handles telephone menus and hold time, and asks for discounts. Plan changes require user willingness, and verification codes require user participation.
+
+它致电服务商、处理电话菜单及等待，并争取优惠；更改套餐需用户同意，验证码也需用户参与。
+
+### 结果与限制
+
+Examples claim annual savings of $840 and $276. They are illustrative outcomes, not a guaranteed rate; the source labels the agent as custom or unnamed.
+
+示例声称每年分别节省 840 和 276 美元，不代表保证收益；源站将实际 agent 标为自建或未命名。
+
 ## 原作者的方法与来源
 
 来源：[Tikue · Kudos founder comment on Hacker News](https://news.ycombinator.com/item?id=47131955)

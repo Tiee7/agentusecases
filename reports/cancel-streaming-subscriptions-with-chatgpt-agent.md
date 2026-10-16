@@ -1,5 +1,31 @@
 # 流媒体退订代理：历史成功不等于可出售的自动取消服务
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/cancel-streaming-subscriptions-with-chatgpt-agent
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：ChatGPT Agent
+
+### 介绍
+
+A writer tested browser-based assistance for ending three streaming memberships.
+
+一位作者测试了通过浏览器辅助取消三项流媒体会员。
+
+### 方法
+
+After the writer handled login, ChatGPT Agent navigated each provider’s cancellation screens under supervision and sought final approval.
+
+作者自行登录后，ChatGPT Agent 在监督下逐一操作退订页面，并取得最终确认。
+
+### 结果与限制
+
+The writer reports success for Peacock, Disney and Netflix. That experience does not establish compatibility with other providers’ anti-bot controls.
+
+作者报告 Peacock、Disney 和 Netflix 均退订成功，但不能据此认定其他服务商的反机器人限制也可通过。
+
 ## 原作者的方法与来源
 
 来源：[Tom’s Guide · Subscription cancellation](https://www.tomsguide.com/ai/i-used-chatgpt-to-cancel-my-streaming-subscriptions-heres-how-to-try-it-too)

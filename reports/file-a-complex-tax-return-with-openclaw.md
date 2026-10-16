@@ -1,5 +1,31 @@
 # OpenClaw复杂报税：低模型费用不等于可复制的代报税生意
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/file-a-complex-tax-return-with-openclaw
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：OpenClaw
+
+### 介绍
+
+An OpenClaw user describes preparing a complicated personal and business tax return.
+
+一位 OpenClaw 用户描述了复杂个人与经营税表的准备过程。
+
+### 方法
+
+The agent reconstructed financial history from documents and prepared transaction summaries. When browser control failed, the person entered the tax software while following its instructions.
+
+Agent 从文件重建财务历史并汇总交易；浏览器控制失败后，用户根据其指引手工录入报税软件。
+
+### 结果与限制
+
+The user reports a lengthy return and savings on software and a penalty calculation. An estimated K-1 and manual corrections prevent treating this as independently verified tax accuracy.
+
+用户报告生成较长税表，并节省软件费用和部分罚金；K-1 估算及人工纠正意味着不能视作准确性已独立验证。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/dvassallo/status/2039450517143974105)

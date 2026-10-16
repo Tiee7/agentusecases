@@ -36,7 +36,7 @@ test('home keeps collection navigation without a recent collection section',asyn
 test('author method precedes analysis, bilingual summary expands, unread sources stay explicit',async({page})=>{
  const available=reports.find(r=>r.authorMethod.status==='author_summary');
  await page.goto(`/reports/${available.id}/`);
- await expect(page.locator('.prose section').first()).toHaveAttribute('id','author-method');
+ await expect(page.locator('.prose section').first()).toHaveAttribute('id','source-case');
  await expect(page.locator('#author-method')).toContainText('作者方法摘要');
  await expect(page.locator('#author-method [lang="zh-CN"] li')).toHaveCount(available.authorMethod.steps.length);
  await page.locator('#author-method summary').click();await expect(page.locator('#author-method ol[lang="en"]')).toBeVisible();
@@ -44,4 +44,16 @@ test('author method precedes analysis, bilingual summary expands, unread sources
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  const missing=reports.find(r=>r.authorMethod.status==='unavailable');await page.goto(`/reports/${missing.id}/`);await expect(page.locator('#author-method')).toContainText('原帖暂未读取');await expect(page.locator('#author-method li')).toHaveCount(0);await expect(page.locator('#author-method a')).toHaveAttribute('href',missing.authorMethod.source);
+});
+test('source case bilingual sections and actual-agent search work',async({page})=>{
+ for(const r of reports.filter(r=>r.sourceCase.sections.length)){
+  await page.goto(`/reports/${r.id}/`);
+  await expect(page.locator('#source-case [lang="zh-CN"] h4')).toHaveCount(3);
+  await page.locator('#source-case summary').click();
+  for(const s of r.sourceCase.sections)await expect(page.locator('#source-case details')).toContainText(s.en);
+ }
+ await page.goto('/catalog/');await page.locator('#search').fill('Grok Bot');
+ const expected=catalog.filter(c=>c.sourceCase.agents.includes('Grok Bot'));
+ await expect(page.locator('[data-item]:visible')).toHaveCount(Math.min(30,expected.length));
+ await expect(page.locator('[data-item]:visible').filter({hasText:'实际 agent：Grok Bot'}).first()).toBeVisible();
 });

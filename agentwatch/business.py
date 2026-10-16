@@ -39,6 +39,8 @@ def bootstrap(db_path, sync_research=True):
     trial_table = db.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='source_trials'").fetchone()
     trials = {url:json.loads(payload) for url,payload in db.execute('SELECT url,payload FROM source_trials ORDER BY run_id')} if trial_table else {}
     first_seen = dict(db.execute("SELECT url, MIN(fetched_at) FROM (SELECT c.url,r.fetched_at FROM catalogs c JOIN runs r ON r.id=c.run_id UNION ALL SELECT o.url,r.fetched_at FROM observations o JOIN runs r ON r.id=o.run_id) GROUP BY url"))
+    from .source_case import latest, merge
+    source_cases = latest(db)
     old=read_registry() if REGISTRY.exists() else {'cases':[]}
     existing={c['id']:c for c in old['cases']}
     cases=[]
@@ -47,6 +49,8 @@ def bootstrap(db_path, sync_research=True):
         previous=existing.pop(case_id,{})
         if url in trials:
             previous['source_trial'] = newer_observation(previous.get('source_trial'), validate_observation(trials[url], url))
+        if url in source_cases:
+            previous['source_case'] = merge(previous.get('source_case'), source_cases[url])
         title=title or previous.get('title') or case_id.replace('-',' ')
         original_sources=re.findall(r'^Original source: (https://\S+)$',body,re.M) if body else previous.get('original_sources',[])
         cases.append(dict(previous,first_seen_at=previous.get('first_seen_at') or first_seen.get(url),id=case_id,title=title,url=url,category=category or previous.get('category'),site_top_position=rank,report=f'reports/{case_id}.md',record=f'research/{case_id}.json',original_sources=original_sources,listed=True))
@@ -190,7 +194,8 @@ def render(record):
     v=record['verdict']
     lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']} · 证据置信度：{record['confidence']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
     from .author_method import render_author_method
-    lines = lines[:1] + render_author_method(record) + ['','## 我们的分析'] + lines[1:]
+    from .source_case import render as render_source_case
+    lines = lines[:1] + render_source_case(record.get('source_case')) + render_author_method(record) + ['','## 我们的分析'] + lines[1:]
     for key,weight in WEIGHTS.items():
         d=record['scores'][key]
         rationale=d['rationale'].replace('|','\\|').replace('\n',' ')
@@ -236,18 +241,22 @@ def indexes():
     for case,_,_ in (drafts+pending)[:10]:
         lines.append(f"- {case['title']} · `{case['id']}`")
     Path('INDEX.md').write_text('\n'.join(lines)+'\n')
-    catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 | 源站试用模板 |','|---|---|---|---|---|']
+    catalog=['# 完整案例目录','', '已生成的报告可点击；待研究案例列出固定目标路径。目录移出的案例仍保留ID。','', '| ID | 案例 / 来源 | 状态 | 对应报告 | 源站试用模板 | 实际 agent（源站标注） |','|---|---|---|---|---|---|']
     for case in cases:
         state,_=case_state(case)
         title=case['title'].replace('|','\\|')
         report=f"[报告](../{case['report']})" if Path(case['report']).exists() else f"`{case['report']}`"
-        catalog.append(f"| `{case['id']}` | [{title}]({case['url']}) | {state} | {report} | {case.get('source_trial', {}).get('status', 'not_observed')} |")
+        sc=case.get('source_case', {})
+        agents=('、'.join(sc.get('actual_agents', [])) or ('自建或未命名 agent' if sc.get('agent_status')=='custom_or_unnamed' else '尚未观测')).replace('|', '\\|')
+        catalog.append(f"| `{case['id']}` | [{title}]({case['url']}) | {state} | {report} | {case.get('source_trial', {}).get('status', 'not_observed')} | {agents} |")
     Path('registry/CATALOG.md').write_text('\n'.join(catalog)+'\n')
 
 def publish(record_path,evidence_path,expected_id):
     record=json.loads(Path(record_path).read_text())
     receipts=json.loads(Path(evidence_path).read_text())
     case = select_case(expected_id)
+    if case.get('source_case'):
+        record['source_case'] = case['source_case']
     if case.get('source_trial'):
         from .source_trial import sync_record
         sync_record(record, case['source_trial'])

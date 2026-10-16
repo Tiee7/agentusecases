@@ -1,5 +1,31 @@
 # 跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/cancel-and-refund-subscriptions-by-searching-email-and-calli
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Grok Bot
+
+### 介绍
+
+A user describes delegating two difficult subscription cancellations to Grok Bot.
+
+一位用户描述将两项难以取消的订阅交给 Grok Bot 处理。
+
+### 方法
+
+The workflow combined email searches, account access, provider calls and follow-up messages; the person still helped with authentication.
+
+流程结合邮件检索、账户访问、供应商电话和后续邮件，身份验证仍需本人协助。
+
+### 结果与限制
+
+The account claims cancellation and refunds within about ten minutes, without stating amounts. Extensive personal-data access limits how safely this can be copied.
+
+当事人声称约十分钟内取消并退款，但未披露金额；广泛的个人数据授权限制了可安全复制的范围。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://moxiegtm.substack.com/p/how-to-cancel-claude-and-move-2x)

@@ -1,5 +1,31 @@
 # Codex跨应用填表与税表复核：内部助理可用，收费交付尚缺效果证据
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/fill-forms-and-review-tax-filings-with-codex-computer-use
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Codex
+
+### 介绍
+
+A secondary article describes OpenAI staff experimenting with Codex for document and interface tasks.
+
+一篇二手文章描述 OpenAI 员工用 Codex 处理文档及界面任务。
+
+### 方法
+
+Computer interaction was used for forms and PDFs, including checking one employee’s tax documents when direct integration was unavailable.
+
+操作对象包括表单和 PDF，并在缺乏直接集成时检查了一位员工的税务文件。
+
+### 结果与限制
+
+The article attributes a financially meaningful correction to the review, but gives neither reproducible steps nor measured reliability.
+
+文章称复核发现了具有财务价值的错误，但没有可复现步骤或可靠性测量。
+
 ## 原作者的方法与来源
 
 来源：[MindStudio · Codex computer use](https://www.mindstudio.ai/blog/openai-codex-computer-use-agents)

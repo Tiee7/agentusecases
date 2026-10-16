@@ -1,5 +1,31 @@
 # Cowork收据与银行数据整理：适合内部提效，盈利取决于异常复核而非生成速度
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude Cowork
+
+### 介绍
+
+A collection of Cowork anecdotes includes recurring expenses and annual tax preparation.
+
+一组 Cowork 个案包含周期性费用整理与年度报税准备。
+
+### 方法
+
+One workflow accumulated forwarded receipts for a weekly report; another summarized downloaded bank and card transactions. A separate household example organized maintenance history.
+
+一个流程汇集转发收据生成周报，另一个汇总下载的银行及信用卡交易；家居维护历史整理是独立示例。
+
+### 结果与限制
+
+Users describe faster preparation, including one estimate of five hours saved, but financial accuracy was not measured. Results from unrelated file tasks are not finance-task benchmarks.
+
+用户描述准备速度提高，其中一例估计节省五小时，但没有测量财务准确性；其他文件任务的结果不能作为财务任务基准。
+
 ## 原作者的方法与来源
 
 来源：[Christopher Alarcon · Cowork use cases](https://christopheralarcon.com/blog/claude-cowork-use-cases)

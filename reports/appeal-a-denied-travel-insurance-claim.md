@@ -1,5 +1,31 @@
 # Gemini旅行险拒赔申诉：证据整理有用，独立代办生意尚不成立
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/appeal-a-denied-travel-insurance-claim
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Gemini
+
+### 介绍
+
+An insurance dispute illustrates AI assistance with policy interpretation and correspondence.
+
+保险争议案例展示了 AI 对保单理解和申诉沟通的辅助作用。
+
+### 方法
+
+The claimant supplied Gemini with policy and claim documents, then added missing trip facts and later rejection letters to refine the appeal.
+
+申请人向 Gemini 提供保单和理赔资料，补充行程事实及后续拒赔信，逐轮完善申诉。
+
+### 结果与限制
+
+The source reports reimbursement of a flight-change charge after several reviews over roughly five weeks; this was not an instant settlement.
+
+源站转述，经约五周、多轮复核后改签费获赔，并非即时解决。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.reddit.com/r/GeminiAI/comments/1wdxo80/how_gemini_helped_me_successfully_appeal_a)

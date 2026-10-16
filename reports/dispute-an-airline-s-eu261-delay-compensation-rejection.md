@@ -1,5 +1,31 @@
 # EU261拒赔申诉代理：证据包可试点，€400获批故事不足以支撑全自动索赔生意
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/dispute-an-airline-s-eu261-delay-compensation-rejection
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Grok Bot
+
+### 介绍
+
+The source recounts a passenger challenging an airline’s refusal of delay compensation.
+
+源站描述一位乘客对航空公司拒付延误赔偿提出异议。
+
+### 方法
+
+A Grok-based agent used flight information to dispute the stated cause and drafted correspondence; the user authorized the outgoing message.
+
+基于 Grok 的 agent 利用航班信息质疑拒赔理由并起草邮件，发送前由用户授权。
+
+### 结果与限制
+
+The account claims approval of €400 before landing. Approval is the reported result; the summary does not establish receipt of the money.
+
+叙述声称落地前获批 400 欧元；已报告的是批准，并不能证明款项到账。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/nexor404/status/2106808072622727647)

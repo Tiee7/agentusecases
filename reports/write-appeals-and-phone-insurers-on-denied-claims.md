@@ -1,5 +1,31 @@
 # Counterforce Health：免费拒赔申诉工具有需求，诊所商业交付只宜受控试点
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/write-appeals-and-phone-insurers-on-denied-claims
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：自建或未命名 agent
+
+### 介绍
+
+Counterforce Health combines denial-letter drafting with experimental telephone follow-up.
+
+Counterforce Health 将拒赔申诉信起草与试验中的电话跟进结合。
+
+### 方法
+
+Users provide denial and policy information or choose a common issue. The system uses insurance-related reference material to draft appeals; Maxwell is the voice component being tested.
+
+用户提供拒赔与保单资料或选择常见问题；系统利用保险相关参考资料起草申诉，Maxwell 是正在测试的语音组件。
+
+### 结果与限制
+
+The source reports adoption by individuals and a few clinics but no appeal success rate. Use of the letter generator does not validate the voice agent’s effectiveness.
+
+源站报告个人及少数诊所使用，但没有申诉成功率；信件生成器的使用量不能验证语音 agent 的效果。
+
 ## 原作者的方法与来源
 
 来源：[CityView · Counterforce Health](https://www.cityviewnc.com/stories/counterforce-health-an-nc-based-company-uses-ai-to-fight-health-insurance-denials/)

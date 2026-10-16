@@ -49,3 +49,11 @@ test('author methods reject unregistered sources and incomplete translations; ne
  for(const invalid of [undefined,{...valid,source_url:'https://agentusecases.ai/use-case/a'},{...valid,steps:[{en:'No translation'}]},{...valid,source_sha256:''},{...valid,presentation:'full_text'}])assert.equal(projectAuthorMethod(invalid,entry).status,'unavailable');
  const unavailable=projectAuthorMethod({...valid,status:'unavailable',steps:valid.steps},entry);assert.deepEqual(unavailable.steps,[]);
 });
+
+test('source case summaries have bilingual provenance and actual agents never use recommendations',()=>{
+ const {reports,catalog}=loadContent();
+ for(const r of reports.filter(r=>r.sourceCase.sections.length)){assert.equal(r.sourceCase.sections.length,3);assert(r.sourceCase.sections.every(s=>s.en && s.zh));}
+ const eu=reports.find(r=>r.id==='dispute-an-airline-s-eu261-delay-compensation-rejection');assert.deepEqual(eu.sourceCase.agents,['Grok Bot']);
+ const phone=catalog.find(c=>c.id==='negotiate-retention-discounts-on-bills-by-phone');assert.deepEqual(phone.sourceCase.agents,[]);assert.equal(phone.sourceCase.agentLabel,'自建或未命名 agent');
+ assert(catalog.filter(c=>c.sourceCase.status==='not_observed').every(c=>c.sourceCase.agents.length===0));
+});

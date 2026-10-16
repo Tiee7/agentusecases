@@ -1,5 +1,31 @@
 # Claude Code银行流水报税草稿：资料整理可用，正确性转述不足以支撑代报税生意
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/draft-a-tax-filing-from-bank-statements-with-claude-code
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude Code
+
+### 介绍
+
+A guide includes a brief user anecdote about drafting tax paperwork with Claude Code.
+
+一篇指南收录了用户用 Claude Code 起草税务材料的简短经历。
+
+### 方法
+
+Statements and invoices served as inputs. Folder organization and professional review are the guide’s suggested practice, not a fully observed execution trace.
+
+输入为银行账单和发票；文件夹整理及专业复核属于指南建议，并非完整观察到的执行记录。
+
+### 结果与限制
+
+A user describes the draft positively, but the source provides no audit or financial outcome. Screenshot-processing results belong to another example.
+
+用户对草稿评价积极，但源站没有审计或财务结果；截图处理数据来自另一个案例。
+
 ## 原作者的方法与来源
 
 来源：[Mastering AI · Tax filing preparation](https://www.masteringai.io/guides/claude-code-use-cases)

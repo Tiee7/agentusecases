@@ -1,5 +1,31 @@
 # 从税务文件夹到联邦与州税表：草稿自动化有价值，独立报税生意尚无证据
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/prepare-federal-and-state-tax-returns-from-a-folder
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude
+
+### 介绍
+
+A media account relays a Reddit user’s experience producing tax drafts with Claude.
+
+一篇媒体文章转述 Reddit 用户用 Claude 生成税表草稿的经历。
+
+### 方法
+
+The user supplied a local document folder, answered follow-up questions and compared the calculations with a separate tax-software run.
+
+用户提供本地文件夹、回答追问，再用另一套报税软件的结果作对照。
+
+### 结果与限制
+
+The user claims two years of federal and state returns in fifteen minutes with matching results. This is self-report, and electronic filing was not part of the workflow.
+
+用户声称十五分钟完成两年的联邦及州税表且结果一致；这属于自述，流程不包含电子申报。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://www.inc.com/melissa-angell/claude-did-this-redditors-taxes-they-claim-intuit-is-cooked/91328075)

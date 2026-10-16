@@ -1,5 +1,31 @@
 # Manus交易信号脚本：连接与复盘有用，尚不足以经营自动交易产品
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/teach-an-agent-to-trade-with-signals-and-logging
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Manus
+
+### 介绍
+
+A trader describes building a signal-and-recordkeeping workflow with Manus.
+
+一位交易者描述用 Manus 搭建信号通知和记录流程。
+
+### 方法
+
+Manus proposed Python code connecting market data to Telegram alerts and spreadsheet/CSV logs. The user configured the bot and credentials.
+
+Manus 提出 Python 代码方案，将市场数据连接到 Telegram 通知及电子表格、CSV 日志；用户配置机器人及凭据。
+
+### 结果与限制
+
+The setup was described as running, with testing planned next. The source does not establish profitable trading or validated strategy performance.
+
+当时声称系统已运行，测试安排在之后；源站没有证明交易盈利或策略性能经过验证。
+
 ## 原作者的方法与来源
 
 来源：[原始案例来源](https://x.com/mufasadubai/status/2026221794277904433)

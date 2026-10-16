@@ -68,3 +68,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 单篇先显示案例名称、原作者的方法与来源，再显示我们的分析。author_method 三种状态分别是作者方法摘要、原始报道摘要（非作者原文）、原帖暂未读取。摘要采用英文与对应中文翻译；中文默认显示，英文可展开，均可在无脚本环境阅读。来源URL必须匹配登记的原始来源，成功读取凭据支持每个摘要；不把源站介绍、Copy prompt或自编模板视为作者原话。当前22篇中12篇取得摘要来源、10篇保留不可读状态，不算新增深研。
 
 独立daily爬虫只发布目录及刷新元数据，不改research/reports；最新源站模板仍由registry投影。深研读取最近已提交目录，不在每篇前重爬。流程见[逐案任务](../tasks/hourly-business-research.md)。
+
+## 源站案例与实际 agent
+
+22 篇研读现优先展示 agentusecases.ai 的介绍、方法与结果：英文原创摘要和对应中文翻译，非源站全文；之后保留外部原作者的方法与分析。目录从 Done with 观测实际 agent，不使用 Try it yourself 推荐工具作替代。覆盖、许可检查、哈希、缺失清单与同步机制见[本轮记录](docs/source-case-verification.md)。

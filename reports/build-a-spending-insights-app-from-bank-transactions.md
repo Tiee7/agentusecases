@@ -1,5 +1,31 @@
 # Replit＋Plaid消费洞察应用：自用可行，多客户生意尚未成立
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/build-a-spending-insights-app-from-bank-transactions
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Replit Agent
+
+### 介绍
+
+This is a vendor proposal for a personal finance application, rather than a documented customer deployment.
+
+这是供应商提出的个人财务应用方案，尚非有记录的客户上线案例。
+
+### 方法
+
+A builder configures Plaid credentials and a Replit connector, links test or personal banking data, and requests a transaction dashboard.
+
+开发者配置 Plaid 凭据与 Replit 连接器，接入测试或本人银行数据，再要求生成交易看板。
+
+### 结果与限制
+
+The source supplies setup guidance but no measured performance or completed-app outcome. Sandbox data allows an initial trial without a live bank connection.
+
+源站提供设置指引，但没有完成应用的效果测量；可先使用沙箱数据试做，无需接入真实银行。
+
 ## 原作者的方法与来源
 
 来源：[Plaid · Replit connector walkthrough](https://plaid.com/blog/build-personalized-finance-apps-replit-plaid/)

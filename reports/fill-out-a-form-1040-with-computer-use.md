@@ -1,5 +1,31 @@
 # Claude Computer Use 填1040：合成表单演示能否变成可收费交付
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/fill-out-a-form-1040-with-computer-use
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：Claude computer use
+
+### 介绍
+
+A synthetic-data experiment tested whether computer interaction could populate a simplified tax form.
+
+一项使用模拟数据的实验测试电脑操作能否填写简化税表。
+
+### 方法
+
+Claude accessed fabricated documents in a shared folder and a Firefox form. The tester redirected it to the instructions after redundant questions; a PDF-based approach had failed.
+
+Claude 读取共享文件夹中的虚构文件并操作 Firefox 表单；出现重复提问后，测试者要求重读指令，先前的 PDF 方案未成功。
+
+### 结果与限制
+
+The cached account stops before the final accuracy assessment. It supports a setup description, not a successful filing or correctness claim.
+
+缓存叙述在最终准确性评估前结束，只支持设置过程的描述，不能据此宣称申报成功或结果正确。
+
 ## 原作者的方法与来源
 
 来源：[airabbit · Form 1040 experiment](https://dev.to/airabbit/i-asked-claude-to-fill-out-my-tax-return-here-is-what-happened-a02)

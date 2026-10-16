@@ -1,5 +1,31 @@
 # Comcast 降费聊天机器人：能复制协商流程，尚不能复制低成本盈利
 
+## 源站案例介绍、方法与结果
+
+agentusecases.ai 的原创双语摘要 · 非全文 · 非独立结果核验
+
+来源：https://agentusecases.ai/use-case/negotiate-a-lower-comcast-bill-via-chatbot
+观测时间：2026-10-14T15:02:21.299781+00:00
+实际 agent（源站标注）：ChatGPT
+
+### 介绍
+
+A DoNotPay demonstration used an OpenAI-powered bot for an internet-service retention conversation.
+
+DoNotPay 的演示使用基于 OpenAI 的机器人与网络服务商讨论留客优惠。
+
+### 方法
+
+The bot moved from automated support to a human representative and requested a lower bill without changing the plan. Some supporting complaints were fabricated.
+
+机器人从自动客服转接人工，要求保持套餐并降低账单，但部分支持诉求的投诉内容是编造的。
+
+### 结果与限制
+
+The reported discount was $10 a month. Invented incidents and an unfilled text placeholder expose quality problems despite that negotiated result.
+
+报告优惠为每月 10 美元；虚构事件及未替换的文本占位符说明，即使议价成功仍有质量问题。
+
 ## 原作者的方法与来源
 
 来源：[VICE · Comcast negotiation demonstration](https://www.vice.com/en/article/chatgpt-can-negotiate-comcast-bills-down-for-you/)
