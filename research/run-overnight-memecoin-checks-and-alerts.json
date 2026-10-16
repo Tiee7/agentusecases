@@ -1,0 +1,444 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "run-overnight-memecoin-checks-and-alerts",
+  "url": "https://agentusecases.ai/use-case/run-overnight-memecoin-checks-and-alerts",
+  "title": "用 Grok Bot 夜间巡检迷因币并发送提醒",
+  "industry": "链上信息筛选与研究提醒",
+  "researched_at": "2026-10-16T16:08:47.863325+00:00",
+  "confidence": "案例站转述与公开技术文档可核对；X原帖不可读，无交易流水、费用账单或独立结果验证。可说明只读巡检的实现与成本结构，不能验证交易策略收益。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证带证据的巡检和人工复核，再判断是否值得持续使用",
+    "reason": "已经有链上检查清单的研究者，可以把跨站核对、截图与提醒整理成只读工作台；付款人若是小型研究团队，买的应是资料完整度、及时性和较少重复劳动。案例没有客户、账单或独立收益证据，摘要与结果段的时间口径还不同。数据刷新、额度及人工复核均可能吃掉低价订阅毛利。因此先做内部观察试点，按误报、漏报和有效提醒成本判断价值，暂不把9,320美元声称作为对外销售依据。",
+    "next_action": "用20个已人工标注的历史样例验证合约匹配、证据日期、缺失状态和提醒规则，再做7晚只读观察；预设目标为关键字段来源和时间记录完整、无未知项误标安全、人工整理时间减少25%，这些是试验目标而非既有结果。",
+    "stop_condition": "若无法满足数据使用或额度条件、旧数据反复生成新提醒、重要风险样例被误标安全，或总人工负担不降，停止扩大；没有付费用户验证前不扩建订阅业务。"
+  },
+  "sources": [
+    {
+      "id": "Sce3e3e1cac0e",
+      "url": "https://agentusecases.ai/use-case/run-overnight-memecoin-checks-and-alerts",
+      "title": "Run overnight memecoin checks and alerts with Grok Bot | Agent Use Cases",
+      "supports": "案例站的原始agent、流程、数字、试用模板与人工交易描述，非独立收益证明。"
+    },
+    {
+      "id": "Sc4950a0f5b6d",
+      "url": "https://docs.dexscreener.com/api/reference",
+      "title": "/api/reference",
+      "supports": "DEX Screener查询字段、不同端点限流以及可空值，支持只读行情初筛。"
+    },
+    {
+      "id": "S88e0764325b4",
+      "url": "https://docs.dexscreener.com/api/api-terms-and-conditions",
+      "title": "/api/api-terms-and-conditions",
+      "supports": "API商业使用、转售与直接竞争限制，影响外部服务可经营范围。"
+    },
+    {
+      "id": "Sa06d65be4b05",
+      "url": "https://api.rugcheck.xyz/swagger/doc.json",
+      "title": "/swagger/doc.json",
+      "supports": "RugCheck详细及摘要风险报告、缓存与付费刷新条件，可作原生检查替代。"
+    },
+    {
+      "id": "S4fd0ee57804e",
+      "url": "https://docs.bubblemaps.io/data/api/tokens/map",
+      "title": "Get Token Bubble Map - Bubblemaps B2B",
+      "supports": "Bubblemaps基础图谱范围、缓存时间头、参数及25 credits基础费用与附加消耗。"
+    },
+    {
+      "id": "S0f5c801553eb",
+      "url": "https://docs.bubblemaps.io/data/api/authentication",
+      "title": "Authentication - Bubblemaps B2B",
+      "supports": "Bubblemaps API鉴权、月度credits、额度及IP限流，不能据此取得美元价格。"
+    },
+    {
+      "id": "Se6592070cda0",
+      "url": "https://www.finra.org/investors/insights/artificial-intelligence-and-investment-fraud",
+      "title": "Artificial Intelligence (AI) and Investment Fraud | FINRA.org",
+      "supports": "AI生成投资信息可能过期、错误或被操纵，收益宣传不能代替验证。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例站实际agent和试用建议工具均为Grok Bot；正文描述侦察、检查、报告角色及真人jev最终决定。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    {
+      "statement": "摘要称整夜执行3,140次，而结果段称30天检查3,140种币；两个口径均未获得独立核验。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    {
+      "statement": "单次演示耗时4分钟、侦察员每5分钟观察、模板每4分钟运行是三个不同表述，不能合并成确定调度。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    {
+      "statement": "结果段转述跳过2,980种、160条提醒、52笔交易及获利9,320美元；未提供原始交易记录和本金。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    {
+      "statement": "案例站说明机器人没有钱包密钥，所有交易由真人使用限额钱包手动执行，并未声称自动下单。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    {
+      "statement": "DEX Screener接口提供交易对、价格、成交量和流动性等字段，部分字段可为空；文档为不同端点标注不同频率限制。",
+      "source_ids": [
+        "Sc4950a0f5b6d"
+      ]
+    },
+    {
+      "statement": "DEX Screener条款允许受限的商业用途，同时禁止直接竞争及未经授权转售API服务；不能推断任意数据再分发均获许可。",
+      "source_ids": [
+        "S88e0764325b4"
+      ]
+    },
+    {
+      "statement": "RugCheck接口提供详细与摘要报告；强制重新生成报告的refresh参数限付费API key，文档列出429限流响应。",
+      "source_ids": [
+        "Sa06d65be4b05"
+      ]
+    },
+    {
+      "statement": "Bubblemaps map基础请求为25 credits，return_nodes=true与refresh=true各增25；基础覆盖前80个持有人。",
+      "source_ids": [
+        "S4fd0ee57804e"
+      ]
+    },
+    {
+      "statement": "Bubblemaps图谱可能缓存，更新时间在X-Dt-Update响应头；API需key并有月度credits，额度用尽可返回429。",
+      "source_ids": [
+        "S4fd0ee57804e",
+        "S0f5c801553eb"
+      ]
+    },
+    {
+      "statement": "FINRA投资者材料说明AI信息可能不准确、不完整、过期或受操纵，不能据AI输出直接验证盈利能力。",
+      "source_ids": [
+        "Se6592070cda0"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 2,
+      "rationale": "重复跨站核查是明确工作，但没有研究团队采购、付费续用或预算记录。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    },
+    "outcome": {
+      "score": 1,
+      "rationale": "数字来自转述且时间口径冲突，无独立收益和节时验证，角色分工只证明所述流程。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Se6592070cda0"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "只读服务成本可建模，但数据报价和人工负担未知，低价订阅毛利容易被持续复核吞掉。",
+      "source_ids": [
+        "S4fd0ee57804e",
+        "S0f5c801553eb",
+        "Sa06d65be4b05"
+      ]
+    },
+    "distribution": {
+      "score": 1,
+      "rationale": "缺少销售转化和渠道数据，收益叙事不能替代可审阅的报告样张与客户验证。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Se6592070cda0"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "原生API已提供多数查询和风险报告，单纯编排多个代理缺少难复制的经营资产。",
+      "source_ids": [
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "人工保留交易权限有明确边界，但缓存、缺失、合约错配与额度仍需维护和接管。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e",
+        "S0f5c801553eb"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "三次公开检索未找到可核验的本流程独立使用反馈，零代表缺少验证而非负面满意度。",
+      "source_ids": [
+        "Sce3e3e1cac0e"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "使用者、付款人与任务",
+      "body": "合适的直接使用者是已经有固定链上检查清单、知道如何识别合约地址与数据时间的个人研究者。若对外提供服务，付款人更可能是需要统一夜间资料的小型研究团队或负责人，预算来自研究工具与信息整理，而不是把所有关注迷因币的人都算作购买客户。其重复任务是从多个页面找候选、核查、保存证据、处理提醒；只有这些步骤本来频繁发生，自动整理才有可验证价值。\n案例没有团队采购、付费订阅或客户访谈。新手若只想照搬盈利提示词，还缺少最重要的筛选与排除规则，配置负担可能超过手工看少量报告。不能把作者交易盈利当作另一个人购买工具的预算。应先了解研究者每晚检查多少对象、哪些字段重复获取、第二天如何复核，及其对旧数据和漏报的容忍度。一个已有高质量原生监控面板的人，未必愿意为了多代理界面迁移；付款理由必须落实到更完整的证据、更少重复操作或更易审核的队列。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "巡检步骤与人工决策",
+      "body": "源站说用户录制一次耗时4分钟的跨站流程，由Grok Bot云电脑复现；侦察员每5分钟观察新币和KOL，检查员重复核对，报告员写一句话结论并截图，真人jev决定和手动交易。原始录屏、阈值、排除条件和各角色完整提示词未提供。源站的Copy prompt是编辑提供的试用模板，不能据此补成作者的全部实现，也没有证据说明代理自动买卖。\n第一版应先统一链和合约地址，用它们跨站匹配，避免简称相同导致检查错币。然后保存来源、抓取时间、数据更新时间、规则版本及每项结果，明确区分未触发、缺失、缓存过旧和访问失败。DEX Screener可提供初筛行情；RugCheck与Bubblemaps分别提供风险报告与持有人关系。数据获得后再按明确规则生成可追溯报告，同一对象同一事件去重并设提醒冷却。真人只接收需要复核的变化，获取失败进入异常队列，不能被当作安全通过；工作流结束于信息交付。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "可服务范围与需求验证",
+      "body": "案例说明存在高频信息核查场景，却没有证明市场愿为同样流程付多少钱。将单个交易者的盈利截图或自述推广为所有迷因币交易者的普遍需求，会混淆交易风险偏好与工具采购。实际可进入范围应先收敛到明确的链、候选来源、研究时段和使用人数，再计算这些人每天需要人工处理的检查与提醒量。更多代币覆盖可能增加噪声，不会自动提升购买意愿。\n可以验证的服务是夜间研究准备、证据归档和条件提醒，而不是预测稳赚买点。FINRA指出AI投资信息可能错误、过期或受到操纵，这使时间戳与来源核对成为交付质量的一部分，但不代表已有客户愿意额外付费。先确认现有研究者是否因跨站操作而漏记证据、错过复核，以及是否愿用小范围报告替代部分手工流程。公开材料不足以估计总市场金额、订阅转化率或可持续收入；若潜在客户只接受收益保证，这条信息工具服务就没有得到合适的需求验证。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Se6592070cda0"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "原生检查工具与替代流程",
+      "body": "具体替代包括直接打开DEX Screener查看交易对行情、使用RugCheck原生风险报告，以及在Bubblemaps检查持有人关系。对少量候选而言，人工加表格已能保留来源，省去多代理协调和夜间浏览器维护。API脚本则更容易统一字段、处理限流与记录日志，但仍要维护鉴权和schema。浏览器复现适合现有页面上的人工流程，却增加页面定位、登录状态、截图识别和失效处理负担。\n本案例可增加的价值是跨来源统一审核队列和规则解释，不是重新发明风险分数。RugCheck缓存与刷新条件、Bubblemaps图谱时间和覆盖范围都需要在整合后仍然呈现，否则漂亮报告会遮蔽原生工具已有的限制。客户若只需要一个风险分数，直接用原站通常更简单；只有多来源核对确实减少人工负担时，整合层才有购买理由。GMGN新接口及旧白名单不能混用，现有已核验资料不足以给出本研究所需套餐报价，不能把替代API方案描述成已经取得权限且免费。",
+      "source_ids": [
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e",
+        "S0f5c801553eb"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "用量与单位交付成本",
+      "body": "原作者没有披露模型、云执行、数据、截图存储和人工复核账单，9,320美元声称也没有说明本金、手续费、滑点或税费，不能倒推出运营净利。按结果段30天口径计算，平均每天约104.7个对象；160条提醒占3,140个对象约5.10%，是筛选比例而非准确率。即使每次相当于4分钟人工流程，累计209.3小时也只是等效操作量，未扣设置、复核和故障，不是已验证节时。\n用量假设可以先算清：每晚8小时、每5分钟一轮、每轮一个对象、每月30天，共2,880轮。若每轮请求一次Bubblemaps基础图谱，需72,000 credits；同时返回节点并强制刷新则216,000 credits。每轮20个对象会扩大20倍，且美元价格尚缺。假设每用户每月收费199美元，数据和模型60美元、人工120美元、平台、云执行与通知存储50美元、获客摊销30美元，单位贡献为负61美元；十名用户再扣100美元固定费为负710美元。能否改善要靠实测调用与复核时间，不能只降低模型单价。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "S4fd0ee57804e",
+        "S0f5c801553eb"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "试点交付与获客路径",
+      "body": "第一批验证对象应是已有研究清单、愿意展示自己如何复核的使用者。先交付脱敏历史样例的报告，标出每个判断的字段、时间、链接和未知项，再由对方用原流程进行对照。报告能否让其更快发现资料不全，比宣传检查次数更接近采购问题。试点不要一开始覆盖所有链和全部站点，明确数据来源、时段与候选上限，有助于解释成本和异常处理责任。\n目前没有已完成访谈、付费试点或稳定销售渠道的证据，本研究也没有联系任何人。建议将报价锚定在经过核实的交付范围，而非按自述利润分成。对于想要定制规则的团队，可以比较一次设置服务与持续订阅，要求对方说明谁审核提醒及谁维护规则；若没有人愿意承担这部分，全天运行也难变成可交付服务。对外材料应展示已测的覆盖率、证据完整度、有效提醒成本和失败状态；没有测试的利润与响应速度不能用作承诺。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Se6592070cda0",
+        "S88e0764325b4"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "数据整合与经营积累",
+      "body": "侦察、检查、报告三个角色是容易复制的分工，多Agent数量本身不形成客户留存。DEX Screener、RugCheck和Bubblemaps已提供大量结构化查询能力，通用模型可以按固定格式总结。若系统只是把这些结果抄到聊天窗口，客户切换到原站、脚本或其他整合工具的成本很低，毛利不足以支撑复杂平台投入。\n可能逐步形成积累的是人工标注样例、可解释的规则版本、跨站实体匹配、失效案例和每条提醒的人工处理反馈。但这些资产必须实际收集、获得适当使用权限并被证明改善下一轮判断，不能把它们写成作者已经具备的优势。数据转售与直接竞争限制也会影响可保存和可交付内容。真正的差异要用更少重复提醒、可恢复的异常处理和更低复核成本衡量；若扩展站点后维护量同比增加而质量没有改善，说明整合尚未形成经营优势，应保持小工具范围。",
+      "source_ids": [
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e",
+        "S88e0764325b4"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "数据时间、权限与失败处理",
+      "body": "只读流程不需要交易私钥。原文明确真人最终决定，试用模板也禁止买卖和转账；这有助于限定执行边界，但不能消除错误信息影响人工判断的风险。RugCheck的强制刷新要求付费key，Bubblemaps可能返回缓存且月度credits用尽会限流，因此“成功取得响应”不等于“数据是新的”。必须记录更新时间，旧数据、限流、空值和异常响应分别标识，暂停不符合新鲜度要求的判断。\nDEX Screener条款允许受限商业用途，同时限制直接竞争和未经授权转售，外售研究台需要先确认具体数据使用范围，不能把免费访问等同于无限制再分发。当前资料也不足以判断任何司法辖区的金融牌照要求。外部网页内容应只作为数据，不允许其中的指令改变工具权限或输出对象。提醒渠道与额度要预先界定，避免重复事件耗尽预算或产生持续打扰；数据失败时保留可追溯状态并交人工处理，而不是通过不断重试绕过站点限制。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e",
+        "S0f5c801553eb",
+        "S88e0764325b4"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "独立反馈与结果证据",
+      "body": "本轮执行了三个针对Grok Bot迷因币使用、RugCheck误报和Bubblemaps接口问题的公开检索，覆盖一般网页及公开代码社区。没有获得可核验的本套流程独立用户记录，搜索结果中出现无关内容，不将其算作评价；也未从受限X原帖推断评论或交易明细。独立反馈评分为零，只表示缺少验证信号，不能解释为用户满意度或策略胜率为零。\n原文数字本身还存在重要歧义：摘要把3,140次放在整夜，结果段放在30天；52笔交易与160条提醒也没有一一对应说明。若仅计算52除以160得到32.5%，最多是条件性笔数之比，不能称为成交转化率或胜率。筛掉2,980个对象可能代表严格规则，也可能包含无法获取数据的对象，缺少日志不能确定。对盈利声称最有价值的后续证据是完整期间的持仓、费用和亏损记录，以及提醒与人工决策的时间对应；这些目前都没有。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Se6592070cda0"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "投入判断与后续检验",
+      "body": "商业判断是适合内部效率工具，评分29/100，自用价值另列为中。可复用的是候选发现、逐项核验、证据报告和真人审核；它对已有流程的人有辅助价值，却不足以支撑收益服务或无人照看的策略销售。先把人工清单和失败定义写清楚，再考虑运行频率，不能因为模板写4分钟就把它当成已优化的调度参数。\n建议用20个人工标注的历史样例核对同币匹配、字段来源和日期，然后做7晚纯观察，保留所有失败及被跳过对象。试验目标可设为关键字段有来源和时间、未知不误标安全、人工整理时间减少25%；这些都是待测门槛。若数据许可、配额或更新能力无法满足，或增加提醒只增加人工负担，停止扩大。第二种商业情景可假设1500美元定制设置服务，但必须验证客户愿付、配置与文档工时及后续维护范围；只有少量真实付费交付后才有依据讨论订阅和规模，不从单一盈利自述推算市场回报。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e",
+        "S0f5c801553eb",
+        "S88e0764325b4"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"Grok Bot\" \"memecoin\" \"review\" -site:x.com -site:reddit.com -site:substack.com",
+        "outcome": "未找到可读取并核验的本流程独立使用反馈；不复用案例自述为独立评价。"
+      },
+      {
+        "channel": "公开代码社区",
+        "query": "\"rugcheck\" \"false positive\" site:github.com",
+        "outcome": "结果无可核验的本案例或对应产品使用记录；无关误报词条未采用。"
+      },
+      {
+        "channel": "公开代码社区",
+        "query": "\"Bubblemaps\" \"API\" \"issue\" site:github.com",
+        "outcome": "未取得可作为实际用户反馈的相关记录；不将接口文档当用户口碑。"
+      }
+    ],
+    "observations": []
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：只读巡检订阅",
+      "unit": "研究用户/月",
+      "currency": "USD",
+      "price": 199,
+      "api_cost": 60,
+      "human_cost": 120,
+      "other_variable_cost": 50,
+      "acquisition_cost": 30,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 100,
+      "assumptions": "全部为待验证规划值，无客户或实售。API/模型/数据预算60美元不是服务商报价；人工4小时×30美元包括规则维护与异常复核，平台、云执行、通知和截图存储预算50美元，非已获套餐报价，获客摊销30美元。单位贡献-61美元，十用户减固定100美元后-710美元；若人工升到8小时则单位贡献-181美元。来源credits不可直接换算为已知美元成本。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "S4fd0ee57804e",
+        "S0f5c801553eb",
+        "Sa06d65be4b05"
+      ]
+    },
+    {
+      "scenario": "假设：给研究团队定制只读工作台",
+      "unit": "验收完成的设置项目",
+      "currency": "USD",
+      "price": 1500,
+      "api_cost": 50,
+      "human_cost": 800,
+      "other_variable_cost": 50,
+      "acquisition_cost": 150,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 500,
+      "assumptions": "全部为假设，非作者业务收入。人工20小时×40美元含清单梳理、字段映射、样例校验、文档与培训；API/数据试用预算50美元非已取得套餐报价，云执行与存储等其他50美元、获客150美元，月固定500美元。单位贡献450美元，四单减固定后1300美元；人工30小时则贡献50美元、月度-300美元。持续数据订阅与维护需客户另定范围，不能包含无上限后续支持。",
+      "source_ids": [
+        "Sce3e3e1cac0e",
+        "Sc4950a0f5b6d",
+        "Sa06d65be4b05",
+        "S4fd0ee57804e"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "时间口径不一致，筛选率不能说明准确率，52笔交易没有胜负或费用记录；原生查询工具已覆盖多数检查。缺少客户付费与数据美元报价，人工复核可使低价订阅亏损，不能用9,320美元转述覆盖这些反证。",
+  "limitations": "可核验材料未包含原始录屏、完整规则、交易流水、本金、费用账单或客户访谈；GMGN所需套餐与配额未确定，不混用新旧API口径。官方文档只证明接口与限制，不能证明作者实际调用方式。经济模型与试验阈值均为假设；原文整夜与30天的不同口径保留，筛选比例不作为准确率、胜率或投资回报。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "对已有清单和重复检查量的研究者，证据汇总与提醒队列可供试用；收益是流程层面的推断，未测量节时或投资表现，与商业分数分别判断。",
+    "audience": "能区分链和合约、理解信息时效并愿意逐项复核的个人研究者或小型团队。",
+    "use": "把跨站检查整理为有来源和时间的只读记录，供人工审核。",
+    "benefit": "有机会减少重复切换页面和漏记证据；不能据原文数量推算已节省工时或利润。",
+    "setup_cost": "准备人工标注样例、候选范围、字段定义、排除和提醒条件；先用提供的截图或导出资料即可。",
+    "maintenance_cost": "每日看失败、数据年龄、额度和重复提醒，每周抽样核对漏报误报；浏览器与API分别需维护页面或schema。",
+    "frequency": "按真实研究需要设置；原文5分钟观察、模板4分钟间隔与4分钟单次耗时不同，无最佳频率证据。",
+    "privacy_risk": "只读研究不需要钱包私钥；不上传不必要个人资料，确认数据与提醒渠道用途。",
+    "error_risk": "旧数据、错币匹配和缺失项可能被当作通过；风险分数或图谱聚类不等于安全或有利交易。",
+    "source_ids": [
+      "Sce3e3e1cac0e",
+      "Sc4950a0f5b6d",
+      "Sa06d65be4b05",
+      "S4fd0ee57804e",
+      "S0f5c801553eb"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "准备链与合约地址、允许使用的历史截图或导出、规则清单、人工标签、数据年龄阈值与候选上限。",
+    "tools": "现有对话工具可先处理提供的材料；后续浏览器或API能力、查询权限及费用需另核实，本模板不创建凭据或调用收费服务。",
+    "expected_result": "形成带来源、时间、缺失状态及触发原因的观察报告；以下自编模板未实测，不能承诺交易结果。",
+    "prompts": [
+      {
+        "title": "按提供的资料整理代币检查报告",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非源站或原作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "Sce3e3e1cac0e",
+          "Sc4950a0f5b6d",
+          "Sa06d65be4b05",
+          "S4fd0ee57804e"
+        ],
+        "text": "请只根据我提供的[历史截图或导出资料、来源链接、抓取与更新时间]，按[链与合约地址]匹配[候选对象]。依据[检查与排除规则、数据年龄上限]逐项核对，输出对象、来源、时间、证据、通过/未触发/缺失/过期/无法判断、触发原因与待人工复核项。简称不能作为唯一匹配键，未知不能视为安全。只对[提醒条件]已由证据满足的对象在报告内标记，并按[冷却规则]去重。不要连接钱包、读取密钥、买卖或转账，不创建凭据、不调用额外收费API、不绕过访问限制，也不实际发送消息。先用[20个标注样例]列出判断差异，生成报告后停止，由我决定是否继续观察。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'll teach you my routine for checking [type of token or asset] across [sites]. Once it's right, run it every [4 minutes] overnight, write a short report on each pass, and send me an alert only when [my criteria] is met. Don't buy, sell, or move any funds. Alerts and reports only, and I'll decide what to do.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/run-overnight-memecoin-checks-and-alerts",
+    "observed_at": "2026-10-16T06:04:01.770566+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c69a12154f50d2e8cfb953552ede5071b9226a2ce9a64cdf0ab8ac34c19f5fa9"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/Hrundel75/status/2108901142264487999",
+    "source_title": "迷因币夜间巡检的X原帖",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原帖已返回403，未读取或再次请求；不将案例站转述或试用模板当作作者原始方法。"
+  },
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-overnight-memecoin-checks-and-alerts",
+    "observed_at": "2026-10-16T06:13:11.961061+00:00",
+    "body_sha256": "a62fc06916ac0d786833f763175aadb163ab35211c3754c2aaa2e9fe0e2be641",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d9a86fe47f2d3ea9e384c15434abdfcfa109a4e33a60112eb37673e613d014f3",
+      "How it went": "ceaf9fef078f4402de6052df2095a044639fb119c29dcbb17d373080a7bb61c0",
+      "Worth knowing": "3ba6824140e3f7cfe31f6901c74d1ca79dde845bbe41b3eb5ddcb4c0b662b36e"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  }
+}
