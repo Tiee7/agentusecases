@@ -45,4 +45,4 @@ class SourceCaseTests(unittest.TestCase):
         c=next(c for c in json.loads(Path('registry/cases.json').read_text())['cases'] if c['id']=='produce-investment-memos-with-claude-cowork')
         a=json.loads(Path('registry/archives',c['id']+'.json').read_text());result='\n'.join(render(c['source_case']))
         self.assertIn('## English',result);self.assertIn('\n'.join('    '+x if x else '' for x in a['source_text']['body'].splitlines()),result)
-        self.assertNotIn('原创双语摘要',result);self.assertNotIn('观测时间',result);self.assertNotIn('## 中文',result)
+        self.assertNotIn('原创双语摘要',result);self.assertNotIn('观测时间',result);self.assertIn('## 中文',result);self.assertIn('\n'.join('    '+x if x else '' for x in a['translation']['body'].splitlines()),result)

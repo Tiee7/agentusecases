@@ -82,10 +82,28 @@ test('reader copy stays concise while source records keep provenance',async({pag
   await page.goto(url);for(const phrase of ['不代表源站没有标签','不以发布域名推断作者','外部原作者页面是否取得','字段覆盖、时间与哈希','非作者实际提示词','不是0','元数据不等于完整正文','已收录源站试用模板 · 源站建议模板，不是作者实际提示词或本站自编模板。','（链接不等于已经读取）','原始长文只保留在本地缓存；公开存储提供元数据、哈希与已审核重述，未获得全文转载许可。','实际 agent（源站标注）','源站观测：已读取','已审核的详细事实重述 · 英文与对应中文','中文详细整理','English · Detailed case archive','以下为我们整理的源站叙述，未经独立结果验证；不是逐字全文。外部原作者页面是否取得，与本页源站观测分别记录。'])await expect(page.locator('body')).not.toContainText(phrase);
  }
  await page.goto(`/reports/${unread.id}/`);await expect(page.locator('#author-method')).toContainText('方法摘要未收录');await expect(page.locator('#author-method')).not.toContainText(unread.authorMethod.reason);
- await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-case')).toContainText('暂无标签');
+ await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-case')).not.toContainText('暂无标签');
 });
 test('catalog action links share a column and source reading panels collapse cleanly',async({page},testInfo)=>{
  await page.goto('/catalog/');const row=page.locator('[data-item]:visible').first();await expect(row.locator(':scope > .catalog-actions')).toHaveCount(1);await expect(row.locator('.catalog-actions a')).toHaveCount(3);
  const actions=await row.locator('.catalog-actions').boundingBox();const title=await row.locator('.catalog-title').boundingBox();if(page.viewportSize().width>=700)expect(actions.x).toBeGreaterThan(title.x+title.width);else expect(actions.y).toBeGreaterThan(title.y);
  const c=catalog.find(c=>c.archive.translationText);await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-translation')).toBeVisible();await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).toBeVisible();await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).not.toBeVisible();await page.locator('.source-translation summary').click();await expect(page.locator('#source-translation')).not.toBeVisible();await page.locator('#source-trial').scrollIntoViewIfNeeded();await expect(page.locator('#source-prompt')).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+});
+
+for(const route of ['reports','cases'])test(`Cowork ${route}: full Chinese first, compact metadata and responsive date`,async({page},testInfo)=>{
+ const id='produce-investment-memos-with-claude-cowork';const a=catalog.find(c=>c.id===id).archive;
+ expect(a.translationText).toContain('买入／持有／不买入');
+ await page.goto(`/${route}/${id}/`);
+ await expect(page.locator('#source-translation')).toBeVisible();await expect(page.locator('#source-translation')).toHaveText(a.translationText);
+ await expect(page.locator('#source-original')).not.toBeVisible();await expect(page.locator('#source-original')).toHaveText(a.sourceText);
+ await expect(page.locator('#source-case dt').filter({hasText:/^标签$/})).toHaveCount(0);
+ await expect(page.locator('#source-case')).not.toContainText('暂无标签');await expect(page.locator('#source-case')).not.toContainText('仅建议受控试点');
+ const date=page.locator('.case-added');await expect(date).toHaveText('收录于 2026-10-03');
+ const box=await date.boundingBox(),row=await page.locator('.case-meta').boundingBox(),tools=await page.locator('.case-tools').boundingBox();
+ expect(Math.abs(box.x+box.width-row.x-row.width)).toBeLessThan(2);
+ if(testInfo.project.name==='desktop')expect(Math.abs(box.y-tools.y)).toBeLessThan(10);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.locator('#source-case').scrollIntoViewIfNeeded();await page.screenshot({path:`test-results/${testInfo.project.name}-cowork-${route}.png`});
+ await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).toBeVisible();
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
