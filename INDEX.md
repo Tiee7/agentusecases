@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **22** / 注册案例 **1354**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **23** / 注册案例 **1354**。旧版简略初稿 **0** 份不计入完成。
 
 研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -30,13 +30,13 @@
 | [ChatGPT停车罚单申诉：75美元撤单故事证明写作辅助，未证明收费代办生意](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |
 | [跨邮箱取消订阅与退款：执行便利成立，独立代办生意尚未成立](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [Robinhood MCP 股票交易：接入成立，独立代客选股生意缺少效果与壁垒](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
+| [Claude Cowork 投资备忘录：适合内部研究准备，不足以出售无人复核的投研结论](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 
 ## 需要重做的旧版简略初稿
 
 
 ## 下一批优先案例
 
-- Produce investment memos with Claude Cowork · `produce-investment-memos-with-claude-cowork`
 - Negotiate a billing credit from AT&T · `negotiate-a-billing-credit-from-at-t`
 - Cancel an Amazon subscription and get a refund · `cancel-an-amazon-subscription-and-get-a-refund`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
@@ -46,3 +46,4 @@
 - Track personal finances with a Claude Code assistant · `track-personal-finances-with-a-claude-code-assistant`
 - Add 61 kid-friendly mini-games to an app · `add-61-kid-friendly-mini-games-to-an-app`
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
+- Add a third-party API integration via Devin PR · `add-a-third-party-api-integration-via-devin-pr`

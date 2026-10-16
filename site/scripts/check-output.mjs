@@ -1,3 +1,4 @@
+import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {loadContent} from '../src/lib/content.mjs';
 const {reports,catalog}=loadContent();const allowed=new Set(['index.html','404.html','catalog/index.html','method/index.html','favicon.svg',...reports.map(r=>`reports/${r.id}/index.html`),...catalog.filter(c=>c.sourceTrial.status==='available').map(c=>`trials/${c.id}/index.html`)]);
 const files=fs.readdirSync('dist',{recursive:true}).filter(f=>fs.statSync(path.join('dist',f)).isFile());
@@ -13,3 +14,5 @@ for(const phrase of ['证据先于结论','没有验证的成功，不写成确�
 console.log(`Discovery synchronization passed: ${catalog.length} catalog cases and ${reports.length} reports.`);
 
 for(const r of reports){const html=fs.readFileSync(`dist/reports/${r.id}/index.html`,'utf8');assert(html.indexOf('id="author-method"')<html.indexOf('id="verdict"'));assert(html.includes('原作者的方法与来源'));}
+
+process.stdout.write(execFileSync('python3',['scripts/check-trial-output.py'],{encoding:'utf8'}));

@@ -19,8 +19,14 @@ test('real browser clipboard preserves both languages',async({page,context})=>{
  for(let i=0;i<reports[0].trial.prompts.length;i++){await page.locator(`[data-copy="prompt-${i}"]`).click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(reports[0].trial.prompts[i].text)}
 });
 test('source trial pages keep literal prompts and do not imply completed research',async({page,context})=>{
+ test.setTimeout(180000);
+ // All template text is checked in check:output; exercise shared browser UI once per tool,
+ // plus interval observations and the newest report. This scales with the UI, not crawl size.
+ const representatives=new Map();
+ for(const c of catalog.filter(c=>c.sourceTrial.status==='available')){if(!representatives.has(c.sourceTrial.agent))representatives.set(c.sourceTrial.agent,c);if(c.sourceTrial.observedAt.includes('时间区间'))representatives.set(c.id,c);}
+ const newest=catalog.find(c=>c.id===reports[0].id);if(newest?.sourceTrial.status==='available')representatives.set(newest.id,newest);
  await context.grantPermissions(['clipboard-read','clipboard-write']);
- for(const c of catalog.filter(c=>c.sourceTrial.status==='available')){
+ for(const c of representatives.values()){
   await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(!c.complete)await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  }
