@@ -107,3 +107,16 @@ for(const route of ['reports','cases'])test(`Cowork ${route}: full Chinese first
  await page.locator('.source-original summary').click();await expect(page.locator('#source-original')).toBeVisible();
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });
+
+test('integrated stock and resale reports preserve full translated reading on both routes',async({page},testInfo)=>{
+ for(const id of ['let-ai-models-trade-stocks-autonomously-with-1k-each','sell-your-unused-items-online-with-an-agent']){
+  const a=catalog.find(c=>c.id===id).archive;expect(a.translationText.length).toBeGreaterThan(100);
+  for(const route of ['reports','cases']){
+   await page.goto(`/${route}/${id}/`);
+   await expect(page.locator('#source-translation')).toBeVisible();await expect(page.locator('#source-translation')).toHaveText(a.translationText);
+   await expect(page.locator('#source-original')).not.toBeVisible();await expect(page.locator('#source-original')).toHaveText(a.sourceText);
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+   if(route==='reports'){await expect(page.locator('#sources li')).toHaveCount(reports.find(r=>r.id===id).sources.length);await page.locator('#source-case').scrollIntoViewIfNeeded();await page.screenshot({path:`test-results/${testInfo.project.name}-${id}.png`});}
+  }
+ }
+});
