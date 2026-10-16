@@ -1,0 +1,475 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "hunt-jobs-tailor-resumes-and-apply-automatically",
+  "url": "https://agentusecases.ai/use-case/hunt-jobs-tailor-resumes-and-apply-automatically",
+  "title": "用 Resume 智能体搜索岗位、定制简历并跟踪申请",
+  "industry": "求职岗位筛选与申请材料准备",
+  "researched_at": "2026-10-16T16:41:28.042672+00:00",
+  "confidence": "岗位、排班与材料链路可从案例和官方能力说明拆解；工具归属存在Devin标签与x.ai正文矛盾，三次面试和一份录用仅为单人自述，不能估算转化率。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证限定排班与薪资的岗位研究包，再依据审阅工时和客户认可决定是否收费扩展",
+    "reason": "案例中的具体需求是寻找符合现有日程和财务要求的工作，这比单纯增加申请数量更容易定义交付价值。可以先交付经核验的岗位清单、真实履历对应的材料草稿和状态表，由本人决定申请。单个成功故事没有申请总数、对照、工时和账单，尚不足以支持无人审阅自动投递产品。免费追踪工具也已覆盖基础整理；只有细分领域核验节省的人工与客户认可超过收费，有限范围服务才有继续投入的依据。",
+    "next_action": "用一份合成基础简历和同一职业方向的十个公开官方岗位做只读样例；逐项核对排班、薪资、资格、简历事实和重复项，记录研究与审阅分钟。后续客户验证只测试固定范围研究包的愿付价格，不承诺面试或录用。",
+    "stop_condition": "大部分岗位的排班或资格无法核验、材料出现无依据履历、客户只要无审阅海投、交付必须依赖平台禁止的操作时收缩。十岗位包人工超过一百五十六分钟且价格不能覆盖成本，不扩大固定低价服务。"
+  },
+  "sources": [
+    {
+      "id": "S85b592d5db0d",
+      "url": "https://agentusecases.ai/use-case/hunt-jobs-tailor-resumes-and-apply-automatically",
+      "title": "搜寻岗位、定制简历并自动申请",
+      "supports": "支持案例正文、三次面试和一份录用自述，以及Devin标签与x.ai工具叙述差异。"
+    },
+    {
+      "id": "S3b295a170021",
+      "url": "https://x.ai/bot",
+      "title": "Grok Bot 官方能力与价格",
+      "supports": "支持持久云电脑、共享机器、周用量及个人月价，不能据此推算固定每次申请成本。"
+    },
+    {
+      "id": "Sf0ade3c1b0e6",
+      "url": "https://x.ai/bot/guides/templates-for-grok-bot",
+      "title": "Grok Bot 官方模板说明",
+      "supports": "支持模板包含指令、技能和部分上下文，个体连接和自定义脚本仍需另行准备。"
+    },
+    {
+      "id": "Sa02dcba687a9",
+      "url": "https://docs.devin.ai/work-with-devin/computer-use",
+      "title": "Devin Computer Use 官方文档",
+      "supports": "支持阅读屏幕、点击、输入和表单交互能力，不证明案例使用Devin或投递效果。"
+    },
+    {
+      "id": "Scd17502d0b57",
+      "url": "https://devin.ai/pricing",
+      "title": "Devin 官方价格",
+      "supports": "用于比较Free、Pro、Max和团队收费及日周用量规则，不把开发套餐当作求职成本实账。"
+    },
+    {
+      "id": "Sdedf56167aa3",
+      "url": "https://docs.x.ai/developers/pricing",
+      "title": "Grok API 官方价格",
+      "supports": "支持Grok4.7全球端点短上下文输入输出与搜索费率，仅作为假设算例依据。"
+    },
+    {
+      "id": "Sad9424023276",
+      "url": "https://www.tealhq.com/tools/job-tracker",
+      "title": "Teal 职位申请追踪工具",
+      "supports": "支持免费岗位追踪、材料管理和检查清单等具体替代，不把推广数字视为效果验证。"
+    },
+    {
+      "id": "S95c6e056a41e",
+      "url": "https://www.businessinsider.com/how-applicants-use-ai-in-job-search-poll-2025-8",
+      "title": "Business Insider 求职读者体验",
+      "supports": "提供相邻材料准备中事实错误与人工复核的体验，非本案例用户的投递效果。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例页面标注Devin且试用区推荐Devin，正文却写用户向x.ai上的Resume bot描述需求，两处归属不同。",
+      "source_ids": [
+        "S85b592d5db0d"
+      ]
+    },
+    {
+      "statement": "案例所述初始输入包含期望工作类型、工作时间和薪资，随后搜索、排序并生成定制材料与状态记录。",
+      "source_ids": [
+        "S85b592d5db0d"
+      ]
+    },
+    {
+      "statement": "源站报告三次面试、一份录用和下一周开始工作，但未披露申请总数、总耗时或账单。",
+      "source_ids": [
+        "S85b592d5db0d"
+      ]
+    },
+    {
+      "statement": "源站示范提示词要求申请前逐份展示并等待批准，不能据此认定作者实际采用该提示词。",
+      "source_ids": [
+        "S85b592d5db0d"
+      ]
+    },
+    {
+      "statement": "Grok Bot 官网个人Premium、Super、Ultra月价分别为三十、一百、二百美元，含周用量。",
+      "source_ids": [
+        "S3b295a170021"
+      ]
+    },
+    {
+      "statement": "Grok Bot 官网说明同一用户的Bots共享持久云电脑、文件、浏览器和登录，隔离边界按用户而非Bot。",
+      "source_ids": [
+        "S3b295a170021"
+      ]
+    },
+    {
+      "statement": "官方模板说明模板不是完整克隆，自定义代码和脚本不随模板自动转移，用户仍需处理自己的连接。",
+      "source_ids": [
+        "Sf0ade3c1b0e6"
+      ]
+    },
+    {
+      "statement": "Devin官方Computer Use文档说明可在桌面中点击、输入、操作网页和表单，但未验证本案例归属。",
+      "source_ids": [
+        "Sa02dcba687a9"
+      ]
+    },
+    {
+      "statement": "Devin价格页列出Free零美元、Pro每月二十美元、Max每月二百美元；Teams另有八十美元基础费和每完整开发席位四十美元。",
+      "source_ids": [
+        "Scd17502d0b57"
+      ]
+    },
+    {
+      "statement": "Devin价格页说明付费额度按日和周刷新，超出包含额度可按API价格购买额外用量。",
+      "source_ids": [
+        "Scd17502d0b57"
+      ]
+    },
+    {
+      "statement": "Grok4.7全球API短上下文未缓存输入每百万token二美元、输出六美元，Web Search每千次调用五美元。",
+      "source_ids": [
+        "Sdedf56167aa3"
+      ]
+    },
+    {
+      "statement": "Teal官网列出免费岗位追踪、笔记、关键词和材料整理功能，构成研究包的现有替代。",
+      "source_ids": [
+        "Sad9424023276"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "明确的排班与最低薪资约束能形成可核验需求，但尚无付费订单，不能用Wanted或单次录用推断预算。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sad9424023276"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "三次面试与一份录用属于具体结果自述，但没有申请分母、对照与记录，不能估算转化或因果收益。",
+      "source_ids": [
+        "S85b592d5db0d"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "API算例较低但不含多数交付劳动，复核与获客可能耗尽毛利，需用实际工时检验限定研究包报价。",
+      "source_ids": [
+        "Sdedf56167aa3",
+        "S3b295a170021",
+        "Scd17502d0b57"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "职业辅导与特定排班群体是可提出验证的渠道，尚无接洽或成交数据，不假设低成本持续获客。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sad9424023276"
+      ]
+    },
+    "moat": {
+      "score": 1.5,
+      "rationale": "细分资格和排班核验可积累规则，但通用筛选、材料生成和追踪已有替代，尚无可复用交付优势证据。",
+      "source_ids": [
+        "Sad9424023276",
+        "Sf0ade3c1b0e6"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "官方支持通用桌面与模板能力，但连接、共享登录、平台规则和材料错误需要人工控制，不能保证跨ATS投递。",
+      "source_ids": [
+        "S3b295a170021",
+        "Sf0ade3c1b0e6",
+        "Sa02dcba687a9"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "相邻求职材料体验提示事实复核负担，未获得直接复现本案例的用户证据，不能视为满意度调查。",
+      "source_ids": [
+        "S95c6e056a41e",
+        "S85b592d5db0d"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "用户约束与付款理由",
+      "body": "这条案例的核心需求是找到能配合已有生活安排、又达到最低收入要求的工作。排班、薪资和地点属于可核验的硬条件，比笼统要求“找一份好工作”更容易定义结果。适用人群可能包括已有兼职、照护责任或固定上课时间的求职者；这是根据需求作出的细分推断，来源没有披露作者的具体身份或家庭状况，不能把推断写成客户事实。\n\n个人求职者自己付款，也承担最终履历与申请声明的责任；职业辅导团队则可能为减少工作人员搜索和改稿时间购买研究包。对前者，交付要说明岗位为何适合自己的时间；对后者，来源、字段一致性和可复核事实更重要。案例里没有任何服务订单，因此两类付款理由都需要验证，不能因为作者获得录用就推断其愿意购买同类服务。\n\n首次准备应明确薪资币种与税前税后、允许工作的时段及其时区、最远通勤、远程限制、工作许可和必要资格。无法同时满足的条件先由本人取舍，不能用一个综合分数掩盖硬条件冲突。若客户只想尽可能多地投递而不愿澄清约束，研究包很难证明增量价值，也不宜承诺申请数量。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sad9424023276"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "从真实履历到岗位与版本记录",
+      "body": "原页面的Devin标签与正文x.ai Resume bot叙述有冲突，必须分别保留。正文可拆出描述需求、搜索排序、定制材料和跟踪状态四个环节，却没有完整系统指令、连接配置和逐步运行记录。三次面试与录用也不能证明具体由哪个平台完成。源站示范提示词是复现建议，并非作者原始提示词；这里提出的流程另行设计，不替原作者补写操作。\n\n准备一份本人确认的基础简历后，先只读研究公开雇主招聘官网及官方ATS。每个岗位记录官方链接、岗位编号、更新时间、地点、排班、已披露薪资和资格。硬条件不满足就排除，未披露就列待确认。只有通过硬条件的岗位才按匹配理由排序，避免模型把一份薪资很高却时间冲突的工作推到最前。\n\n材料草稿只重排和改写已有事实，每条业绩或任职描述能回指基础简历。保留岗位编号、简历版本和短附言，方便本人审阅并避免重复。真实申请由本人依据目标平台允许的方式处理，研究过程不登录招聘账号、不填表或联系雇主。模板与桌面能力能支持准备工作，但不能代替对岗位和履历的逐项检查。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sf0ade3c1b0e6",
+        "Sa02dcba687a9"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "小范围需求与验证指标",
+      "body": "案例中已有日程和财务要求提示了一种可缩小的需求：同类岗位里，哪些真正满足特定工作时段和最低收入。不同职业披露排班和薪资的方式可能不同，服务不能同时覆盖所有行业。可先限定一个地区和一个职业方向，选公开信息足够的雇主，验证研究者是否能稳定筛出可用候选项，而不是先假设整个招聘市场都可自动化。\n\n市场验证应看客户认可的有效岗位，而不是抓到了多少链接。一个岗位虽然仍开放，也可能要求本人没有的工作许可或固定夜班；只有客户确认愿意进一步查看，才算候选交付有意义。有效岗位占比、硬条件漏筛、本人审阅分钟和退回原因，比本轮没有分母的面试数字更适合衡量早期服务质量。\n\n求职需求有阶段性，拿到工作后客户往往会停止使用。因此不能预设长期订阅或稳定复购，按批收费和辅导团队内部使用是两种待测方向。若多数目标岗位根本不披露必要排班信息，扩大搜索只会增加人工确认，服务应缩小到有充分公开信息的范围。本案例没有市场规模或预算调查，不据一个录用故事外推收入。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sad9424023276"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "Grok Bot、Devin与已有整理工具",
+      "body": "工具选择应跟随可验证能力。Grok Bot正文与任务描述相近，官方提供云电脑、例行任务和上下文；模板文档则说明导入的是指令、技能和部分配置，个人连接与自定义脚本并不会自动出现。Devin官方Computer Use支持通用屏幕、点击、输入和表单交互，也可做材料准备，但这只能说明能力可用于构建流程，不能解决源站工具归属差异或证明复现成功。\n\n当前公开个人月价中，Grok Bot的Premium、Super、Ultra为三十、一百、二百美元；Devin Free为零，Pro二十、Max二百美元，Teams另收八十美元基础费及每完整开发席位四十美元。上述是读取日标价，不是作者账单。Devin付费额度按日周刷新，Grok Bot包含周用量；不能按任意岗位数量平摊成确定单次价格，也不应为个人求职默认购买团队套餐。\n\nTeal和普通表格已能保存岗位、笔记、关键词、版本与进度，免费层构成明确替代。新增服务要在硬条件核验、行业理解和事实检查上提供价值。已有适用订阅的人可先用当前能力做只读样例；无需为一个没有成本对照的成功故事更换平台。",
+      "source_ids": [
+        "S3b295a170021",
+        "Sf0ade3c1b0e6",
+        "Sa02dcba687a9",
+        "Scd17502d0b57",
+        "Sad9424023276"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "工具算例与完整交付成本",
+      "body": "作者没有披露套餐和用量，无法恢复真实单次申请成本。自行开发的预算算例可按Grok4.7全球端点短上下文计算：十岗位一批，所有请求合计二十万未缓存输入token、两万输出token、五十次Web Search，而且每个请求均低于二十万输入token阈值，文本与搜索费用为零点四美元、零点一二美元和零点二五美元，合计零点七七美元。长上下文、推理、附件、浏览器与重试另算；这不是Grok Bot订阅计费公式。\n\n若每岗位人工审核五分钟，十岗位共五十分钟，按每小时二十美元假设为十六点六七美元，加上述API已为十七点四四美元，仍未包括获客、基础设施、返工和客服。低价二十九美元研究包再假设其他四美元、获客八美元，单包贡献负零点四四美元；每月二十包扣一百美元固定成本后负一百零八点八美元。忽视人工会把亏损错看成高毛利。\n\n限定领域包假设九十九美元，人工九十分钟按每小时三十美元计四十五美元，API零点七七、其他五、获客十五美元，单包贡献三十三点二三美元；每月十二包扣一百八十美元固定成本后为二百一十八点七六美元。人工约一百五十六点四六分钟时单包贡献归零。所有工时、收费和销量都是未实测设计假设，不是实际经营结果，也不是建议售价。",
+      "source_ids": [
+        "Sdedf56167aa3",
+        "S3b295a170021",
+        "Scd17502d0b57"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "交付样例与首批客户",
+      "body": "第一批验证对象可来自已经服务同类职业的辅导人员或目标排班群体。这里没有建立合作、发送消息或进行实际销售。应先制作不含真人隐私的样例，展示一个岗位如何通过或不通过硬条件、材料如何对应真实履历、缺失信息如何被列出。客户能检查这种样例，才可能判断是否愿意为更完整的研究包付费。\n\n销售范围要具体，例如某地区某职业的十个已核验岗位、一份基础简历改稿和有限次数修订，不承诺全网覆盖、固定面试数或录用。三次面试和一份录用只能作为来源中的个人故事，不能用作自己的服务业绩。Wanted十六和今日票二是不同时间范围的公开兴趣信号，都不是付款行为，也不足以代替客户访谈或真实成交。\n\n后续如果验证付费需求，应记录售前沟通、材料补充次数、研究时间、修订、退款和来源时效，而不只看生成材料速度。辅导机构可能已有客户和信任，但会增加统一格式、白标和复核要求；个人渠道则可能更难回收获客费用。单位经济中的十五美元或八美元获客费用只是敏感性输入，需要实测后再决定是否扩张。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "Sad9424023276"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "细分核验规则与复用边界",
+      "body": "可积累的能力是具体岗位领域的硬条件解释、排班口径、资格检查和履历事实映射。它们比通用提示词更接近客户交付，但本轮没有证明这些规则能跨客户减少工时。应让第二位研究者在相同简历和岗位样例上复用检查表，比较遗漏和分歧；若仍完全依赖创始人个人经验，所谓产品化只是把人工隐藏到后台。\n\n模板分享降低了启动门槛，也降低了通用工作流的差异化。官方说明模板不是完整克隆，新用户仍需建立自己的连接，复杂脚本也可能缺失。出售复制模板本身很容易被平台或公开资料替代；帮助客户澄清硬条件、检查材料和管理版本，才有可能形成可持续服务。即便如此，也要与免费追踪产品和自行使用模型比较。\n\n客户的个人履历与账号不能被当作随意汇集的训练资产。复用的是脱敏规则、字段和质量样例，个人材料按约定处理。岗位链接会失效，旧库数量不是长期壁垒；行业理解必须持续更新。只有重复交付后有效岗位占比稳定、审阅时间下降、客户仍愿付费，才有理由讨论进一步开发软件。",
+      "source_ids": [
+        "Sf0ade3c1b0e6",
+        "S3b295a170021",
+        "Sad9424023276"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "账号、平台与材料责任",
+      "body": "Grok Bot官网明确同一用户的多个Bot共享电脑、文件、浏览器和登录。将客户A和客户B分成不同Bot并不构成账户隔离，不能据名称认为各自只会看到自己的简历。商业服务若接入不同人的真实材料，必须明确实际用户边界与文件访问；本轮只做公开资料与合成材料准备，不接收或搬运真实求职账号。\n\n模板导入也不能被当作已经拥有原作者的权限或运行环境。安装前检查说明与连接需求，只启用当前任务需要的能力；没有必要为读取公开岗位开放邮箱或聊天记录。官方Computer Use提供桌面交互不等于目标招聘网站允许自动化，页面有验证码、权限拒绝或安全警告时停止该来源，不能用另一个账号或路径继续执行被拒动作。\n\n材料错误的后果由真实求职者承担，因此服务必须保留事实来源和本人确认点。工作许可、薪资声明、背景问题和法律性承诺交本人处理，定制简历不增加不存在的学历、职务或业绩。岗位关闭、链接失效和重复申请也应有恢复办法。交付范围写明核验日期和更新次数，否则无期限返工会吃掉预期贡献。",
+      "source_ids": [
+        "S3b295a170021",
+        "Sf0ade3c1b0e6",
+        "Sa02dcba687a9"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "现有体验与待验证结果",
+      "body": "本轮检索了Resume与作者账号线索、公开代码问题和AI求职材料体验。没有取得本案例的完整模板运行记录或可核验复现；公开目录摘要只能作为查证线索，不能当作完整模板指令。源站的三次面试、一份录用具体而有限，没有总申请数、筛选范围和比较基线，不能计算成功率，更不能把入职时间归因于某个模型。\n\nBusiness Insider的读者反馈指出相邻材料工作流会混淆职责或虚构经历，支持把本人核对列入人工成本。读者自行选择回复，使用方式也并非本案例，不能估算错误发生率或代表所有用户满意度。它给出的实用问题是材料是否能逐句核对，而不是证明自动申请普遍有效或普遍无效。\n\n下一份有价值的反馈应比较同一批岗位：人工独立筛选与研究助手输出各自漏了哪些硬条件，客户审阅用了多久，材料中有没有无来源事实。记录有效岗位、拒绝理由与总人工，面试和录用留作后续观察。反馈仅占商业评分百分之五，直接证据不足时低分不等于用户满意度差；再多热门票数也不能替代可重复质量与付费验证。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "S95c6e056a41e"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "试用范围与继续条件",
+      "body": "商业上建议先小规模试用限定职业方向的岗位研究和材料准备包。它能把日程、薪资和真实经历转成可检查输出，又不需要一开始承担跨多个ATS无人值守投递的支持负担。本案例还没有证明付费需求、获客效率或正贡献，所以不以一次录用和低token单价推动产品开发。要先回答谁认可交付、谁付钱、审阅和返工需要多久。\n\n自用价值独立评为中，适合有明确工作时段和最低薪资、能审阅自身履历的人。预期收益是集中比较岗位、减少遗漏和保持材料版本一致；尚未计时，不提供节省百分比。准备成本包括真实基础简历、条件与样例，维护成本包括岗位状态、重复项、版本和实际额度。求职活跃期小批按周使用，结束后无需继续运行。\n\n停止条件应落到可见结果：关键岗位信息大多无法核验，硬条件被总分掩盖，材料出现编造，或客户只接受无审阅海投，便收缩范围。收费包人工持续超过约一百五十六分钟且不能提高价格时，停止扩张。试用从公开只读研究与草稿开始，真实申请由本人按平台允许方式决定；是否继续看有效岗位与总人工改善，不看生成了多少份文档。",
+      "source_ids": [
+        "S85b592d5db0d",
+        "S3b295a170021",
+        "Sdedf56167aa3",
+        "Sad9424023276"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "网页模板与作者线索",
+        "query": "\"Grok Bot\" \"Resume\" \"ItsMeTrueG\"",
+        "outcome": "未取得完整Resume模板或作者运行记录；公开目录摘要不计已读原始指令。"
+      },
+      {
+        "channel": "GitHub公开问题",
+        "query": "site:github.com \"job\" \"resume\" \"Grok Bot\" issues",
+        "outcome": "没有取得可核验且对应本案例的具体问题全文，不补造直接用户反馈。"
+      },
+      {
+        "channel": "独立媒体读者体验",
+        "query": "AI job search resume user experience hallucinated work history review",
+        "outcome": "结果包含此前已读的Business Insider求职材料读者体验；复用公开缓存，作为相邻工作流反馈。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "S95c6e056a41e",
+        "directness": "adjacent_workflow",
+        "finding": "相邻求职材料使用者需要检查职责混淆与虚构经历，提示复核是实际交付劳动。",
+        "bias": "媒体读者自选样本，非Resume案例复现，不代表错误率、满意度或付费意愿。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：低价十岗位研究包",
+      "unit": "十个官方岗位核对与材料草稿，不含真实投递",
+      "currency": "USD",
+      "price": 29,
+      "api_cost": 0.77,
+      "human_cost": 16.67,
+      "other_variable_cost": 4,
+      "acquisition_cost": 8,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 100,
+      "assumptions": "仅API费率为读取日官方数字；全部数量、工时、价格和销量为假设。每个请求输入均低于200k阈值，全批200k未缓存输入、20k输出、50次Web Search，全球费率算得0.77美元；不含额外推理、附件和浏览器。人工10×5分钟、20美元/小时，四舍五入16.67；其他4、获客8、月固定100。不是作者账单，未调用API。",
+      "source_ids": [
+        "Sdedf56167aa3"
+      ]
+    },
+    {
+      "scenario": "假设：限定职业方向的研究审阅包",
+      "unit": "十个官方岗位核对、定制材料及有限修订，不含真实投递",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 0.77,
+      "human_cost": 45,
+      "other_variable_cost": 5,
+      "acquisition_cost": 15,
+      "units_per_month": 12,
+      "fixed_monthly_cost": 180,
+      "assumptions": "API沿用同批0.77美元假设；人工90分钟×30美元/小时，其他5、获客15、每月12包和固定180美元均未实测。人工约156.46分钟时单包贡献为零。未含税、追加支持和额外运行消耗；Grok Bot订阅不是此API计费公式。",
+      "source_ids": [
+        "Sdedf56167aa3",
+        "S3b295a170021",
+        "Scd17502d0b57"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "源站Devin标签与x.ai正文不一致，不能用Devin官方通用能力证明成功故事归属；三次面试与一份录用没有申请分母。模板不完整复制连接和脚本，增加准备成本。免费岗位追踪和已有模型可覆盖基础整理，人工筛选也可能比服务更快。",
+  "limitations": "未披露搜索与投递数量、真实工时、套餐账单、人工改稿和录用薪资；无法计算面试率、录用率或实际回报。没有真实账户投递、客户接洽或付费实验；成本模型的工作量与售价均为假设。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "对排班与薪资条件明确且能复核真实履历的求职者，岗位筛选和版本整理有辅助价值；净节时和求职结果仍需自己的小批记录。",
+    "audience": "已有固定日程、最低薪资与目标职业方向，愿意本人审阅材料的求职者。",
+    "use": "按硬条件研究公开官方岗位、解释排序、准备真实履历对应的简历与短附言，整理申请追踪草稿。",
+    "benefit": "推断可集中比较条件并减少遗漏；不承诺面试、录用或任何未测量节时。",
+    "setup_cost": "整理本人确认的基础简历、薪资币种、排班时区、地点、工作许可与硬性资格；检查当前工具和额度。",
+    "maintenance_cost": "核对岗位开放状态、版本与重复项，维护事实来源，记录人工审阅及实际用量。",
+    "frequency": "求职活跃期按周处理少量岗位；获得工作或条件改变后停止或重设。",
+    "privacy_risk": "简历包含身份与经历；同一用户多个Grok Bot共享文件和登录，不能按Bot名称隔离不同人的材料。",
+    "error_risk": "可能把缺失排班猜成符合、漏资格或增加虚构业绩；硬条件先行、事实逐句追溯，提交由本人处理。",
+    "source_ids": [
+      "S85b592d5db0d",
+      "S3b295a170021",
+      "Sf0ade3c1b0e6",
+      "S95c6e056a41e"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "真实且脱敏的基础简历、岗位方向、薪资币种与底线、可工作时间及其时区、地点和资格限制。",
+    "tools": "案例标签与建议模板写Devin，正文写x.ai Resume bot，归属差异保留。研究试用可用已有可访问公开网页与生成文档的助手；Grok Bot和Devin均提供通用交互能力，是否可用以当前账户为准，不为试用购买套餐或API。",
+    "expected_result": "最多十个官方岗位的去重核对表、硬条件排除理由、选中岗位的事实可追溯材料草稿和申请记录表草稿；本人处理真实提交。",
+    "prompts": [
+      {
+        "title": "按排班和薪资研究岗位并起草材料",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队编写；不是原作者提示词或源站复现模板。",
+        "source_url": null,
+        "source_ids": [],
+        "text": "根据我提供的真实基础简历和条件，只读研究公开雇主招聘官网及官方 ATS，找出最多 10 个仍在招聘的［岗位］。地点为［地点／远程］，最低薪资为［范围及币种］，可工作的时间为［时间及其时区］，其他硬条件为［条件］。逐项列出官方链接、岗位编号、核验时间、已披露薪资、地点／远程政策、排班、必需资格、我的匹配依据及缺口。不要把未披露信息猜成符合。对我选中的岗位，根据真实履历起草定制简历和短附言，列明事实来源和需要我补充的问题。不要登录招聘账号，不填写或提交申请，不联系雇主，不更改表格或账户；遇到访问限制就停止该来源并说明。最后提供去重后的岗位清单和申请追踪表草稿。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Find open [job title] roles in [location/remote] that match my needs: [pay range, schedule, other preferences]. Rank the top [10] and, using my resume at [file/link], draft a tailored resume and cover note for each. Do not submit any application until I've reviewed it; show me each one and wait for my approval.",
+    "agent": "Devin",
+    "source_url": "https://agentusecases.ai/use-case/hunt-jobs-tailor-resumes-and-apply-automatically",
+    "observed_at": "2026-10-16T05:59:09.757171+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "06dde9c107bd56c9281eb9bf19787b71689ef4a99a8926e0667147aff8d30e68"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/ItsMeTrueG/status/2107417874738639053",
+    "source_title": "ItsMeTrueG 关于 Resume 求职机器人的公开帖子",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原始X帖子此前返回HTTP403，未重试；案例正文可分析，但不能据其补写作者原始步骤。"
+  },
+  "analysis_depth": "deep",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/hunt-jobs-tailor-resumes-and-apply-automatically",
+    "observed_at": "2026-10-16T06:13:11.961061+00:00",
+    "body_sha256": "47b7a0e8994a27f5e3929c904b5882a47edcbfa6cd121d31d4d4422c237ca82a",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "f7f39839d8367abaa91957c6b3e577d78dca041a17be8bc7e8f72cd3bf2a656c",
+      "How it went": "59a118c57ffcf9215337b741441fb3842c78200dcf1feb571fd52da180ada025"
+    },
+    "actual_agents": [
+      "Devin"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "tool_attribution": {
+    "source_label": "Devin",
+    "source_prose": "Resume bot at x.ai",
+    "resolution": "unresolved; preserve both labels without asserting a verified platform attribution",
+    "third_party_directory_lead": "https://grokbot.dev/marketplace/resume/",
+    "directory_status": "search-summary lead only; not fetched instructions"
+  },
+  "catalog_snapshot": {
+    "commit": "0c18bdb8cbe106f2a4d68da14d94af4ee0af2802",
+    "registered_cases": 1359,
+    "refresh_fetched_at": "2026-10-16T06:13:11.961061+00:00",
+    "refresh_observed_cases": 1354,
+    "detail_pages_read": 1354,
+    "new_crawl": false
+  },
+  "popularity_snapshot": {
+    "trending": {
+      "observed_minute_utc": "2026-10-16T16:20Z",
+      "position": 9,
+      "today_count": 2
+    },
+    "wanted": {
+      "observed_minute_utc": "2026-10-16T16:26Z",
+      "total": 16,
+      "label": "I want this · 16"
+    },
+    "time_precision": "minute",
+    "interaction": "read only; no vote or save",
+    "metrics_not_interchangeable": true
+  }
+}
