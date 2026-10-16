@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **29** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **30** / 注册案例 **1359**。旧版简略初稿 **0** 份不计入完成。
 
 研究按串行互斥执行，每轮完成后至少休息5分钟；调度由父任务管理，本轮不修改调度。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -32,6 +32,7 @@
 | [用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [用四个 AI 模型各管理 1,000 美元模拟股票组合](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
+| [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
 | [用 11 个 agent 分工完成交易前准备](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
