@@ -1,8 +1,10 @@
 import {execFileSync} from 'node:child_process';
 import fs from 'node:fs';import path from 'node:path';import assert from 'node:assert/strict';import {loadContent} from '../src/lib/content.mjs';
 const {reports,catalog}=loadContent();const allowed=new Set(['index.html','404.html','catalog/index.html','method/index.html','favicon.svg',...catalog.map(c=>`cases/${c.id}/index.html`),...reports.map(r=>`reports/${r.id}/index.html`),...catalog.filter(c=>c.sourceTrial.status==='available').map(c=>`trials/${c.id}/index.html`)]);
+// Check exact text and inert markup before exempting archive containers below.
+process.stdout.write(execFileSync('python3',['scripts/check-archive-output.py'],{encoding:'utf8'}));
 const files=fs.readdirSync('dist',{recursive:true}).filter(f=>fs.statSync(path.join('dist',f)).isFile());
-for(const file of files){assert(allowed.has(file)||/^_astro\/[\w.-]+\.(css|js)$/.test(file),`Unexpected public file: ${file}`);const body=fs.readFileSync(path.join('dist',file),'utf8').replace(/<pre\b(?=[^>]*\bid="source-(?:original|translation)")[^>]*>[\s\S]*?<\/pre>/g,'');assert(!/GH_TOKEN|["\s]\/workspace\/|data\/source-cache|verify-sources|git push|hourly-business-research|remote-readback|BEGIN PRIVATE KEY/.test(body),`Internal data in ${file}`)}
+for(const file of files){assert(allowed.has(file)||/^_astro\/[\w.-]+\.(css|js)$/.test(file),`Unexpected public file: ${file}`);const body=fs.readFileSync(path.join('dist',file),'utf8').replace(/<(pre|div)\b(?=[^>]*\bid="source-(?:original|translation)")[^>]*>[\s\S]*?<\/\1>/g,'');assert(!/GH_TOKEN|["\s]\/workspace\/|data\/source-cache|verify-sources|git push|hourly-business-research|remote-readback|BEGIN PRIVATE KEY/.test(body),`Internal data in ${file}`)}
 for(const required of allowed)assert(files.includes(required),`Missing public file: ${required}`);
 console.log(`Public output allowlist passed: ${files.length} files, ${reports.length} reports; no raw JSON, logs, task files, caches or source maps.`);
 
@@ -16,9 +18,6 @@ console.log(`Discovery synchronization passed: ${catalog.length} catalog cases a
 for(const r of reports){const html=fs.readFileSync(`dist/reports/${r.id}/index.html`,'utf8');assert(html.indexOf('id="author-method"')<html.indexOf('id="verdict"'));assert(html.includes('原作者的方法与来源'));}
 
 process.stdout.write(execFileSync('python3',['scripts/check-trial-output.py'],{encoding:'utf8'}));
-
-// Exempted text blocks above must equal the recorded source/translation byte-for-byte.
-process.stdout.write(execFileSync('python3',['scripts/check-archive-output.py'],{encoding:'utf8'}));
 
 // Every edited title must agree across all static routes; never rewrite source blocks.
 const escapeHtml=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');

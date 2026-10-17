@@ -1,5 +1,18 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import os from 'node:os';import path from 'node:path';
 import {loadContent,projectReport,projectAuthorMethod,projectArchive,safeId,safeUrl,repoRoot} from '../src/lib/content.mjs';
+import {archiveLines,archiveEndings} from '../src/lib/archive-text.mjs';
+test('archive presentation preserves blank lines, indentation and every newline without interpreting markup',()=>{
+ const body='\n  中文标题  \r\n\r\n  具体做法  \r\n正文 <script>alert(1)</script> & literal\n \t\n结果如何\r保留尾空格  \n';
+ const lines=archiveLines(body);
+ assert.equal(lines.map(line=>line.text+line.ending).join(''),body);
+ assert.equal(lines[0].kind,'blank');assert.equal(lines[1].kind,'title');
+ assert.equal(lines.find(line=>line.text==='  具体做法  ').kind,'heading');
+ assert.equal(lines.find(line=>line.text.includes('<script>')).kind,'paragraph');
+ assert.equal(lines.at(-1).text,'保留尾空格  ');
+ assert(lines.every(line=>Object.hasOwn(archiveEndings,line.ending)));
+ assert.equal(archiveEndings['\r\n'],'&#13;\n');
+ assert.deepEqual(archiveLines(''),[]);
+});
 test('only completed v2 records with existing reports and matching identity become pages',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'reader-fixture-'));try{
   for(const dir of ['registry','research','reports'])fs.mkdirSync(path.join(root,dir));
