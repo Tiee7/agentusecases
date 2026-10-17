@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-the-bot-email-customers-from-your-own-domain",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:57:17.119344+00:00",
+  "html_sha256": "5c9ef587ef65dff9e8bff4fcf8a9f89069dc3da03031b6a0dc7253a78cdff7d8",
   "body_sha256": "d8f14e608bcdf668409650b06197247c746a352386b8c9a2983e3b248cd4f4ef",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let the bot email customers from your own domain\nThe poster set up a custom-domain mailbox as an MCP connector for Grok Bot, plus a webhook so new mail triggers an automation.\nDone with\nGB\nGrok Bot\nWhat they did\nThe poster found Grok Bot’s built-in mail too limited for customer-facing use, so they created a mailbox on their own domain and connected it to Grok as a custom MCP connector. Because incoming mail does not wake the bot automatically, they also added a webhook that starts a Grok automation on each new message; they note the webhook had to use Grok’s signed whsec_ secret format, not a bearer token.\nHow it went\nIt gave them a customer-facing address on their own domain and an inbox they could open themselves, while still letting the bot react to mail as it arrived. They say Grok’s native mail works for signups and verification codes, but shares one address across bots and has no inbox view or automatic trigger.\nWorth knowing\nTheir main gotcha was that Grok automation webhooks rejected bearer-token requests with 400s; only signed requests using the provided whsec_ secret worked.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nConnect to the mailbox [address@mydomain.com] so you can read and draft email as my business. When a new customer email arrives, categorize it, look up relevant details in [system or docs], and draft a reply in my tone. Show me each draft and wait for my approval before sending, until I say a category is safe to send automatically.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1x2iafb/grokbot_email_after_a_day_the_limits_nobody",
     "body_sha256": "d8f14e608bcdf668409650b06197247c746a352386b8c9a2983e3b248cd4f4ef",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:57:17.119344+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:57:17.119344+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

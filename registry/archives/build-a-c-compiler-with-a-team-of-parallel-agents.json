@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-c-compiler-with-a-team-of-parallel-agents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:20:52.882850+00:00",
+  "html_sha256": "fce8243c8f12dc85bd680142d64947b5ce7b846320fe3cb2739ac46b13914e73",
   "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build a C compiler with a team of parallel agents\nAnthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\nDone with\nCL\nClaude\nWhat they did\nNicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.\nHow it went\nAbout 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.\nWorth knowing\nIt cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [tool, e.g. a Markdown-to-HTML converter in Python] from scratch with a spec-first approach. First write a short spec and a test suite in this folder, then split the work into independent pieces and use sub-agents to implement them in parallel. Stop when all tests pass, and give me a summary of what each sub-agent built and any tests you had to skip.\nOriginal source: https://www.anthropic.com/engineering/building-c-compiler",
     "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:20:52.882850+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:20:52.882850+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

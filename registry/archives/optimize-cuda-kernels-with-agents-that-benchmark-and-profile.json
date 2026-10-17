@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/optimize-cuda-kernels-with-agents-that-benchmark-and-profile",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:24.975755+00:00",
+  "html_sha256": "d5a2d2969276a04614de0c1573ac1c71f980f0b5ebe3307b2b0867b113933dfc",
   "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
     "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:24.975755+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:24.975755+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

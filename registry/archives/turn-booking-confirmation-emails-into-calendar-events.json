@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-booking-confirmation-emails-into-calendar-events",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:59:43.022779+00:00",
+  "html_sha256": "60ef35429bbe4aa4360738da12f2941267d58e9ec48cd401efc4a41eafab6f81",
   "body_sha256": "d542c56a48695e80e8d7e45b64619bb3d9e13fa08ac4449f8a04f19373d0436e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn booking confirmation emails into calendar events\nAn n8n workflow extracts details from booking emails and PDF attachments and creates calendar events in a dedicated calendar, built for a CEO's flooded inbox.\nDone with\nN8\nn8n\nWhat they did\nThe workflow watches Gmail for emails a person labels \"Events,\" then extracts date, time, location, confirmation number, vendor, and notes from the email body plus any PDF attachments. In n8n, the email body is first wrapped into a PDF, both sources are parsed in parallel through one extractor pipeline, the results are merged with attachment data taking priority, and the workflow either creates an event in a separate Google Calendar with a link back to the email or flags the message for review and sends a missing-fields notification.\nHow it went\nIt was built for a CEO whose inbox was full of travel and booking confirmations, so the result was automatic event creation in a dedicated \"Auto-imported\" calendar instead of manual entry. The author says it does not yet have a dedicated step for confirmations containing multiple events in one message.\nWorth knowing\nThe main catch is that a human still has to label the Gmail message \"Events\" to trigger the workflow.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches my Gmail inbox for booking confirmation emails (flights, hotels, restaurants, [other types]). Extract the event name, date, time, location, and confirmation number from the email body or PDF attachment, then create an event in a dedicated Google Calendar called [calendar name]. It is done when a test confirmation email I forward shows up correctly as a calendar event; skip anything it can't parse and notify me instead of guessing.\nOriginal source: https://www.reddit.com/r/n8n/comments/1tc4fpb/built_an_n8n_workflow_that_turns_any_booking",
     "body_sha256": "d542c56a48695e80e8d7e45b64619bb3d9e13fa08ac4449f8a04f19373d0436e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:59:43.022779+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:59:43.022779+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

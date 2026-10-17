@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/audit-and-rewrite-marketing-copy-to-strip-unverified-claims",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:58.900055+00:00",
+  "html_sha256": "affcbe52d1af4f4a3171fd63f53ac3787aaa5f87d0ad098aa4918e010051f471",
   "body_sha256": "ac3467d67e8550d5d5de6e5c0cb57a913210bca8d50c4e9e4f2a0181e56e6f89",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Audit and rewrite marketing copy to strip unverified claims\nA dual-agent system scores landing page, cold email and pitch deck copy against strict rubrics, then rewrites it to remove fluff and unsupported claims.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe builder made two agents on gpt-4o-mini with low temperature and fixed seeds. The evaluator scores copy against mode-specific rubrics (landing page, cold email, pitch deck) and caps Specificity at 7/10 when no verifiable metrics exist. The rewriter is forbidden from strengthening claims, turns unproven percentages into defensible outcomes, and strips Markdown.\nHow it went\nThe source is a launch post and reports no results or numbers from real use. It invites users to try to bypass the guardrails and gives brutal feedback, with 5 free credits on sign-in.\nWorth knowing\nA hidden watermark in the rewritten text stops users re-auditing already optimized copy and wasting credits; credit deductions use Firestore transactions to avoid race conditions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead my marketing copy in [file path for landing page, cold email, or pitch deck]. Score each section against a strict rubric: every claim must be specific and verifiable, with no fluff, superlatives, or unsupported numbers. Then write a revised version that removes or flags every unsupported claim, and give me a table of what you changed and why.\nOriginal source: https://news.ycombinator.com/item?id=47232478",
     "body_sha256": "ac3467d67e8550d5d5de6e5c0cb57a913210bca8d50c4e9e4f2a0181e56e6f89",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:58.900055+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:58.900055+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

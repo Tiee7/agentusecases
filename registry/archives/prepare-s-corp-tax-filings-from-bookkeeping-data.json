@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/prepare-s-corp-tax-filings-from-bookkeeping-data",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:24.876297+00:00",
+  "html_sha256": "eae1364276bbb8de241fae74ecdd86799875520ae17362b794eb328e2e7b8450",
   "body_sha256": "bd11d36396123f1a21fcc9ec622af297a59924d7db7541d94252fb229eda5ad7",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Prepare S-Corp tax filings from bookkeeping data\nClaude Code wrote scripts parsing QuickBooks and bank statements, and Codex reviewed the code and caught errors like a wrong Schedule L mapping.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe author put QuickBooks exports and bank statements in a private Git repo. Claude Code (Opus 4.6) wrote Python scripts that parse the data and compute the S-Corp forms. Codex, on a high-reasoning model, reviewed the scripts, and the two went back and forth until they agreed the code was right. The author directed the work and checked the results.\nHow it went\nCodex flagged three findings on the 1120S scripts. The worst was a Schedule L Line 18 computed from total liabilities rather than other current liabilities. The author also found his own 2025 bookkeeping mistakes.\nWorth knowing\nThe author has used a CPA since 1996 and describes directing and checking the work himself. The post gives no cost or time figures and does not say whether the filings were submitted.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn [folder], write scripts that parse my QuickBooks export and bank statements for [year] and produce the figures needed for my S-Corp return (income statement, Schedule L, and shareholder items). Then review your own code and numbers against the source data and list any mismatches or mappings you're unsure about. Done means a summary file of figures, tied back to source rows, that I can hand to my accountant.\nOriginal source: https://common-sense.com/insights/doing-taxes-with-ai-coding-agents/",
     "body_sha256": "bd11d36396123f1a21fcc9ec622af297a59924d7db7541d94252fb229eda5ad7",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:24.876297+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:24.876297+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

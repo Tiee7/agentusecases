@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/set-lighting-brightness-with-an-ai-agent-on-presence",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:33.070299+00:00",
+  "html_sha256": "3a0e23d5c339160b8b1747df44b33db52742f7d02fdd009ffa60ed8126da4d88",
   "body_sha256": "97aa4267bdfa1920c647feba768d73d30ec2ee8508371957d326d46082ed83d4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Set lighting brightness with an AI agent on presence\nA Home Assistant presence sensor triggers n8n, where a Deepseek agent picks a brightness for the time of day and sets the lights.\nDone with\nN8\nn8n\nWhat they did\nn8n runs as a Home Assistant add-on. A Home Assistant automation fires when the presence sensor goes from Clear to Detected and calls an n8n webhook through a REST command. In n8n, a Deepseek agent prompted as a lighting designer picks a brightness percentage for the current time. A final node calls Home Assistant's turn_on service for the light with that value.\nHow it went\nThe source gives no measured results. It presents the workflow as working and says it is meant to avoid harsh night lighting and dim mornings. Brightness is the only attribute it actually sets.\nWorth knowing\nUse the Home Assistant IP address in the webhook URL, not the default hostname. The article calls this the main connectivity fix and recommends at least 4GB RAM.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow triggered when the presence sensor [sensor name] in Home Assistant detects someone in [room]. Have an AI agent pick a light brightness from 1 to 100 based on the time of day and [other rules, e.g. sunset or movie mode], then set [light entity] to that level. Done when I can test it at three different times of day and see a sensible brightness each time.\nOriginal source: https://growwstacks.com/blog/n8n-home-assistant-ai-lighting-automation",
     "body_sha256": "97aa4267bdfa1920c647feba768d73d30ec2ee8508371957d326d46082ed83d4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:33.070299+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:33.070299+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/configure-macos-and-dev-tooling-from-the-terminal",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:59:31.121203+00:00",
+  "html_sha256": "2989c012d27d7f7e9cf2cab0133189239d801bea0ea1daff4cb5ed6c7d2aa2bb",
   "body_sha256": "863cdf2c8ed7bddd0d6afcecbfa34b9e9a1ac215d77e77ef0cbb67b3bae61505",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Configure macOS and dev tooling from the terminal\nGemini CLI ran defaults write commands to set Dock auto-hide, and was also used to install Docker and configure Git GPG signing.\nDone with\nGE\nGemini\nWhat they did\nThe guide's system-troubleshooting tip says you can run Gemini CLI outside a code project and ask it to install Docker, configure Git GPG signing, or edit dotfiles. It may search the web for instructions, then run shell commands, showing each command or diff for approval. In one user example, it ran the defaults write commands for Dock auto-hide and no delay.\nHow it went\nThe source reports the Dock change worked, with the AI running the right defaults write commands. It gives no timings or results for the Docker or GPG tasks, and offers no measured outcomes.\nWorth knowing\nApprove each command yourself, since system-level changes can be wide-reaching. You can ask Gemini to explain a command, such as a defaults write, before running it.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me set up my [macOS or other OS] machine from the terminal. I want to [settings to change, e.g. auto-hide the Dock], install [tools, e.g. Docker], and configure [e.g. Git commit signing with GPG]. Show me each command and what it does before you run it, and tell me when each setup step has worked. Pause before anything that needs admin rights or changes my existing keys or settings.\nOriginal source: https://addyosmani.com/blog/gemini-cli/",
     "body_sha256": "863cdf2c8ed7bddd0d6afcecbfa34b9e9a1ac215d77e77ef0cbb67b3bae61505",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:59:31.121203+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:59:31.121203+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

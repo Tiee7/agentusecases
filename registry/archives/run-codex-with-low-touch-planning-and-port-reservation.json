@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-codex-with-low-touch-planning-and-port-reservation",
-  "observed_at": "2026-10-16T09:06:42.196414+00:00",
-  "html_sha256": "a90428744e4b944073ea23f6b314ba93367c57d7b9c053551a0a116b9822edb4",
+  "observed_at": "2026-10-17T06:05:05.043608+00:00",
+  "html_sha256": "4bcb660dccb072fe1420de9e9486fa3f1caba2a041ad517968b322ebec58f0f7",
   "body_sha256": "b019a916cdf8eed28d0962f37bfdd7cf4811a98125a01e9ed51c1fb9ebefa249",
   "status": "observed",
   "fields": {
@@ -95,7 +95,12 @@
     "language": "en",
     "body": "Run Codex with low-touch planning and port reservation\nA commenter has Codex execute mostly on its own with human planning and review, including a portbroker that reserves and injects a port.\nDone with\nCX\nCodex\nWhat they did\nThe commenter describes a split workflow: ChatGPT handled planning, strategy, versioning discipline, and writing the next prompt, while Codex did the implementation, with outputs manually copied back and forth between the two in extended-thinking chats. In a similar setup, another commenter added a small tool called portbroker so an agent could reserve a free port, log it, and inject it into $PORT automatically, reducing manual environment handling during parallel runs.\nHow it went\nThey say this cut down prompt drift and made multi-agent or parallel local development more stable and predictable. The main drawback mentioned is that the handoff is still manual, with long threads causing slowdown and occasional need to start fresh sessions.\nWorth knowing\nThe practical catch is the copy-paste loop between ChatGPT and Codex, plus needing to reset when threads get \"sludge\" from growing too long.\nTry it yourself\nwith\nCodex\nCopy prompt\nI've written a plan for [task] in [repo path]: [paste or point to plan file]. Carry it out mostly on your own, and before starting any dev server or test that needs a network port, pick a free port, reserve it, and pass it in through [env var or config setting] so it doesn't clash with other running jobs. When done, summarize what you changed and which checks passed so I can review, and ask me before pushing or deleting anything.\nOriginal source: https://www.reddit.com/r/codex/comments/1ry39bx/use_chatgpt_as_your_development_and_engineering",
     "body_sha256": "b019a916cdf8eed28d0962f37bfdd7cf4811a98125a01e9ed51c1fb9ebefa249",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:05:05.043608+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:05.043608+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

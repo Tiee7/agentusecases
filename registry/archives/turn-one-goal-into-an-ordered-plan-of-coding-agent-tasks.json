@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-one-goal-into-an-ordered-plan-of-coding-agent-tasks",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:57.031135+00:00",
+  "html_sha256": "ccd9a2be639fc1211784574074e53fd91ccb404913e8ecd82116bf44fa24e905",
   "body_sha256": "c56060f9d0c3b320cb3e8bc89ab0488be45d7e5ee7e05e8076984bf57bf94bd0",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn one goal into an ordered plan of coding-agent tasks\nOrdewell takes a single goal and breaks it into an ordered plan of tasks for coding agents.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou give Ordewell a goal. A planner, which can be a coding agent running read-only, researches the repo and asks clarifying questions. It then commits a plan where each task has its own runner, model, effort and mode. You can edit the plan before running it. On run, it starts a real coding-agent session per AI task, in parallel where dependencies allow, and passes each task its predecessors' results.\nHow it went\nIn the README's example, a rate-limiting goal became a four-task plan (three AI, one manual) that finished with 4 completed, 0 failed. A task passes only when its completion marker appears in the runner's output. No benchmarks are given.\nWorth knowing\nThe TUI needs tmux, and Windows users must run it under WSL. Parallelism defaults to 3 concurrent sessions (configurable from 1 to 5).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have one goal: [describe your goal]. Read my repo at [path] and break this goal into an ordered plan of small coding tasks, noting which tasks depend on others and what done looks like for each. Save the plan as PLAN.md and stop there without changing any code, so I can review it first.\nOriginal source: https://github.com/ordewell/ordewell",
     "body_sha256": "c56060f9d0c3b320cb3e8bc89ab0488be45d7e5ee7e05e8076984bf57bf94bd0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:57.031135+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:57.031135+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

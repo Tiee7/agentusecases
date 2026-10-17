@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-and-score-leads-from-social-post-engagers",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:03.035911+00:00",
+  "html_sha256": "427f068fa2075cf223f99aa2e5b093148738a8c1812939e91436453db86f2eec",
   "body_sha256": "004136824020e9ae18582173a087fb250dad098014a77dd60bbebffc2082339c",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Find and score leads from social post engagers\nA Cowork agent scrapes LinkedIn post engagers via Apify, enriches via Apollo, scores them against an ideal customer, and drafts outreach for the best fits.\nDone with\nCW\nClaude Cowork\nWhat they did\nPietro connects Apify and Apollo to Claude, then points Cowork at a folder holding his company, ideal customer and offer details. Given a LinkedIn post URL, the agent picks an Apify scraper to pull commenters, enriches them through Apollo (which checks before spending credits), scores each 0–5 for fit, and drafts DMs for the 4s and 5s. He then saves the workflow as a skill.\nHow it went\nHe reports a 48% response rate on the DMs, and says up to 400 signups per live event come from this. The source gives no sample sizes or details on how the scoring held up.\nWorth knowing\nSave the whole skill folder, not just SKILL.md, because it holds the scoring rules and setup notes. Save the skill manually once the run finishes.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nFind people who engaged with this LinkedIn post: [post URL]. Enrich each one with their role, company and email, then score them 1 to 10 against my ideal customer: [describe job titles, company size, industry]. Save a spreadsheet ranked by score and draft a short outreach message for the top [number] fits. Save the drafts for my review and do not send anything.\nOriginal source: https://pietromontaldo.substack.com/p/find-leads-with-claude-cowork",
     "body_sha256": "004136824020e9ae18582173a087fb250dad098014a77dd60bbebffc2082339c",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:03.035911+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:03.035911+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

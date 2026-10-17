@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-a-spoken-daily-news-bulletin-at-home",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:50:51.089119+00:00",
+  "html_sha256": "1762e3d601f55a3c1a2b8f816ad0df464e2943d761419801887060c6a60fe277",
   "body_sha256": "c91e9d1eb85594f526c04c48a8dd7a678a13b417c776dce2dd976f5dcc921821",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-07",
+      "sha256": "76d1562084b80ede48b8bcaa3acf2f92b835f1559225588120cbf9ee68496244"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate a spoken daily news bulletin at home\nPoster built a morning news briefing with ChatGPT, ElevenLabs and Home Assistant that is read aloud through their home setup, replacing Alexa.\nDone with\nGP\nChatGPT\nWhat they did\nThe poster used n8n to run a 6:30 a.m. workflow that asked Perplexity for factual stories from a fixed list of outlets, cleaned that output, then had ChatGPT rewrite it as a short spoken script. ElevenLabs turned the script into an MP3, which was saved to the poster’s NAS and automatically played through a Home Assistant Voice PE speaker in the kitchen; in comments, the poster clarified the AI services were cloud-based, not actually local.\nHow it went\nIt replaced the poster’s Alexa flash briefing with a calmer custom bulletin and they shared a sample audio result, but they said it still needed better pauses and maybe a different voice. Cost-wise, they estimated about $3 to $4 a month for Perplexity API usage and about $10 for OpenAI, including other calls.\nWorth knowing\nThe main catch was that the setup was not truly local, and the poster said ChatGPT voice sounded better than ElevenLabs but was limited to 4096 characters.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery morning at [time], gather the top headlines from [news sources or topics], plus my weather for [city] and today's calendar. Write a 2-minute spoken-style briefing, convert it to audio with [text-to-speech service], and play it on my [smart speaker/Home Assistant device]. Done when the briefing plays on schedule; tell me before changing any device settings.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1og2mcn/goodbye_alexa_hello_local_ai_news_my_home",
     "body_sha256": "c91e9d1eb85594f526c04c48a8dd7a678a13b417c776dce2dd976f5dcc921821",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:50:51.089119+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:50:51.089119+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

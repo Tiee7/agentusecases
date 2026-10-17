@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/route-linear-tickets-to-prs-across-multiple-repos",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:17.190782+00:00",
+  "html_sha256": "6b9302f550ab5788cfc1dbf3b1ba060b8dfdc7d29ddc641eb60fb7eddded4d32",
   "body_sha256": "2a75e052a8b24f72c6c0513288197dcdc8c0ae6108f9426935047b6a12148627",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Route Linear tickets to PRs across multiple repos\nA developer sends tasks via Telegram/OpenClaw into Linear, where Cyrus routes each to the right repo and model and opens PRs for review.\nDone with\nOC\nOpenClaw\nWhat they did\nThe developer sends tasks through Telegram/OpenClaw into a single Linear account that acts as the control plane across several projects. In Cyrus, they set up labels and routing so it knows which git repo to build worktrees from. Labels also select the model, such as codex or claude variants. Cyrus then opens PRs for review.\nHow it went\nThe setup lets the developer work more hands-off, with PRs arriving across multiple repos for review. No numbers are given. For hands-on work they use Orca instead, a desktop UI with Linear and GitHub integrations.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a flow where I send a task by [Telegram or another chat app] and you create a Linear ticket for it in [team name]. Route each ticket to the right repo from [list of repos] and the right model, and have the coding agent open a pull request for review. Stop when one test task has gone from message to open PR, and never merge anything without my approval.\nOriginal source: https://news.ycombinator.com/item?id=49615716",
     "body_sha256": "2a75e052a8b24f72c6c0513288197dcdc8c0ae6108f9426935047b6a12148627",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:17.190782+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:17.190782+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:20:42.873994+00:00",
+  "html_sha256": "236a49acacecab6d61f47067d721b7e0f45d3e136d890a4f92df1e4a50cb1986",
   "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,7 +90,14 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn vet charges into ready-to-send pet insurance claims\nA personal OpenClaw agent spots vet charges in the bank feed, finds the invoice in Gmail, fills the insurer's PDF form, drafts the email and tracks replies for the owner to review and send.\nDone with\nOC\nOpenClaw\nWhat they did\nThe owner uploads a bank CSV by hand, since the agent never stores bank logins. On a 15-minute tick the agent flags vet charges, searches Gmail for the matching invoice, and uses an LLM (Gemini) to extract it, falling back to OCR for scans. It fills the Petcover PDF, creates a Gmail draft, and asks on Telegram when unsure. It never sends.\nHow it went\nAcross ten live approval letters, its settlement arithmetic check passed to the cent, and a second check raised questions on five. Early bugs: its own request emails false-matched 12 claims, and old acknowledgements pushed two settled claims backwards.\nWorth knowing\nGmail OAuth in testing mode expires every 7 days, so you must re-authenticate regularly; the free Gemini tier needed a chain of fallback models once daily limits ran out.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nScan my [bank account or statement] for vet charges from the last [timeframe], find the matching invoices in my email, and fill out [insurer]'s claim form with them. Draft the claim email with the form and invoice attached, and finish by showing me the drafted claim. Don't send anything until I approve it.\nOriginal source: https://github.com/jagberg/Me.OpenClaw",
+    "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
+    "archived_at": "2026-10-17T05:20:42.873994+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
   "editorial": {
     "status": "reviewed",
     "format": "detailed_bilingual_restatement",
@@ -125,14 +133,6 @@
     "external_source_status": "not_read_in_this_batch",
     "quotation_policy": "No source quotation needed; tool names, numbers and interface command tokens retained as facts."
   },
-  "source_text": {
-    "format": "extracted_page_text",
-    "language": "en",
-    "body": "Turn vet charges into ready-to-send pet insurance claims\nA personal OpenClaw agent spots vet charges in the bank feed, finds the invoice in Gmail, fills the insurer's PDF form, drafts the email and tracks replies for the owner to review and send.\nDone with\nOC\nOpenClaw\nWhat they did\nThe owner uploads a bank CSV by hand, since the agent never stores bank logins. On a 15-minute tick the agent flags vet charges, searches Gmail for the matching invoice, and uses an LLM (Gemini) to extract it, falling back to OCR for scans. It fills the Petcover PDF, creates a Gmail draft, and asks on Telegram when unsure. It never sends.\nHow it went\nAcross ten live approval letters, its settlement arithmetic check passed to the cent, and a second check raised questions on five. Early bugs: its own request emails false-matched 12 claims, and old acknowledgements pushed two settled claims backwards.\nWorth knowing\nGmail OAuth in testing mode expires every 7 days, so you must re-authenticate regularly; the free Gemini tier needed a chain of fallback models once daily limits ran out.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nScan my [bank account or statement] for vet charges from the last [timeframe], find the matching invoices in my email, and fill out [insurer]'s claim form with them. Draft the claim email with the form and invoice attached, and finish by showing me the drafted claim. Don't send anything until I approve it.\nOriginal source: https://github.com/jagberg/Me.OpenClaw",
-    "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
-  },
   "translation": {
     "status": "available",
     "format": "full_extracted_text_translation",
@@ -142,5 +142,10 @@
     "body": "把兽医费用转成可发送的宠物保险理赔材料\n一个个人OpenClaw agent从银行流水中识别兽医费用，在Gmail找到发票，填写保险公司的PDF表单，起草邮件并跟踪回复，供主人审阅和发送。\n实际使用\nOpenClaw\n具体做法\n主人手动上传银行CSV，因为agent从不保存银行登录凭据。agent每十五分钟运行一次，标记兽医费用，在Gmail搜索对应发票，并使用大语言模型Gemini提取内容；扫描件则回退使用OCR。它填写Petcover PDF，建立Gmail草稿，遇到不确定情况时通过Telegram询问。它从不发送邮件。\n结果如何\n在十份真实批准信上，它的结算算术检查准确到分；另一项检查对其中五份提出疑问。早期错误包括：把自己发出的请求邮件误匹配到十二笔理赔，以及旧的确认邮件让两笔已结算理赔的状态倒退。\n值得知道\n测试模式下的Gmail OAuth每七天失效，因此必须定期重新认证；免费Gemini额度在每日用尽后，需要一串备用模型来接续。\n自行试用\n推荐工具\nOpenClaw\n复制提示词\n扫描我最近[时间范围]的[银行账户或对账单]，找出兽医费用，在邮件中找到相应发票，并用它们填写[保险公司]的理赔表。起草理赔邮件，附上表单与发票，最后向我展示理赔草稿。未经我批准，不要发送任何内容。\n原始来源：https://github.com/jagberg/Me.OpenClaw",
     "body_sha256": "ae8c30ff8315bae1b70a16f457f226fc7b6762ffe9c20884ac76180f0838c5b2",
     "scope": "All captured case prose, source template and original links; decorative agent initials omitted."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:20:42.873994+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

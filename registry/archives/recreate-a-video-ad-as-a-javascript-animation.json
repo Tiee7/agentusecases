@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/recreate-a-video-ad-as-a-javascript-animation",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:20.978879+00:00",
+  "html_sha256": "9b4b645ec77f19750ed25f2f07be99a0f0f4db0d6dd38fdd5d545e7d0922bf51",
   "body_sha256": "f4b81630026a6f357abbe928f312bd225e6045248d3675f7babc698d578ceeb1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Recreate a video ad as a JavaScript animation\nThe author had Claude recreate a downloaded ad video as a pure JavaScript animation with the original audio, working autonomously with ffmpeg in under an hour.\nDone with\nCL\nClaude\nWhat they did\nThe author downloaded a ChatGPT ad from YouTube, extracted its audio, and gave Claude (Opus 5.5) access to ffmpeg. A prompt asked for a pure JavaScript recreation using the same audio, with subtle animations captured and high production value. The author left and told it to work autonomously until done.\nHow it went\nIt finished in under an hour in one go. The only visible difference from the original was the logo at the end of the video.\nWorth knowing\nThe prompt stressed quality, asked the agent to work autonomously, and supplied both the video and audio files; the author says this was an experiment and the original belongs to OpenAI.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a video file at [path to ad video]. Use ffmpeg to analyze its frames and audio, then recreate it as a pure JavaScript animation in a single HTML file, keeping the original audio track in sync. Work on your own and compare against the original as you go. Stop when I can open the HTML file in a browser and it matches the video's look and timing, and do not upload or publish anything.\nOriginal source: https://news.ycombinator.com/item?id=49942596",
     "body_sha256": "f4b81630026a6f357abbe928f312bd225e6045248d3675f7babc698d578ceeb1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:20.978879+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:20.978879+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

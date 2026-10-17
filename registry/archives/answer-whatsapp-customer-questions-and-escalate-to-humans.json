@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:55.073645+00:00",
+  "html_sha256": "750512e743af37786781cadf339bde0ccdc7f6dcaf08fe25fe173d868f8b6a5d",
   "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Answer WhatsApp customer questions and escalate to humans\nAn n8n and OpenAI agent answers WhatsApp questions from a knowledge base and escalates low-confidence cases to a human on Telegram with full context.\nDone with\nN8\nn8n\nWhat they did\nAn n8n workflow takes each incoming WhatsApp message and assembles the conversation history plus the company knowledge base. OpenAI drafts a reply grounded in that content, and a confidence check decides whether it can be answered reliably. Confident answers go back on WhatsApp. Otherwise the case goes to the human team on Telegram with the full conversation attached.\nHow it went\nThe README gives no measured results, only design goals: cover routine questions, give round-the-clock coverage, and keep a human on unreliable cases. The exported n8n workflow JSON was still being added.\nWorth knowing\nThe repo documents architecture only, with no workflow file yet and no description of how confidence is scored, so you would have to design that check yourself.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that answers customer questions on WhatsApp using an AI agent grounded in [my knowledge base, e.g. a Google Doc or FAQ sheet]. When the agent's confidence is low or the customer asks for a human, forward the full conversation to me on Telegram and let me reply from there. Done when a test question gets a correct answer and a deliberately tricky one gets escalated to me with context.\nOriginal source: https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
     "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:55.073645+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:55.073645+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

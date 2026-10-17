@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/audit-ad-accounts-across-six-platforms",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:46:36.963667+00:00",
+  "html_sha256": "880f37dba76821255300191af56a6d9987613bf94567154ee0c3b91a4b7e9496",
   "body_sha256": "0b6098c1cdfa85f6726e5ddec32ec2ad361454c249d558230c0e13849801aae4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Audit ad accounts across six platforms\nA Claude Code skill runs parallel subagents performing 190 audit checks across ad platforms and produces a prioritized action plan.\nDone with\nCC\nClaude Code\nWhat they did\nThe Claude Ads skill is run via one command that launches six parallel subagents. They execute 190 checks (74 on Google, 46 on Meta, plus the rest on YouTube, LinkedIn, TikTok, and Microsoft Ads), apply the 3x Kill Rule to flag campaigns, enforce per-platform budget rules, run compliance checks for housing/credit/finance/healthcare, and pull from 11 industry templates. The user grants ad-account access and executes the command; subagents produce the consolidated output autonomously.\nHow it went\nIt outputs a single Ads Health Score and revenue-impact-ranked action plan that replaced a $4,000/month agency. No performance metrics or shortfalls are stated.\nWorth knowing\nFree, open-source MIT project with 714 GitHub stars.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run ads on [list of platforms, e.g. Google, Meta, LinkedIn]. Using the exports or reports in [folder path], check each account for wasted spend, weak targeting, missing tracking and poor creative performance. Finish with a single prioritized action plan ranked by likely impact, with a short reason for each item. Do not change anything in the accounts; this is read-only.\nOriginal source: https://x.com/ihteshamali/status/2042392207425225067",
     "body_sha256": "0b6098c1cdfa85f6726e5ddec32ec2ad361454c249d558230c0e13849801aae4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:46:36.963667+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:46:36.963667+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-terraform-plan-and-apply-through-an-mcp-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:57.046969+00:00",
+  "html_sha256": "2de6e70c0f9f4aa5f902698c33393dbd08ca0d9b647fd76f47e6e215db2c08d3",
   "body_sha256": "3a355b52e5617c6bb5e0112bf7ab181025f8d09ea96531b8b56aa9141aacf061",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run Terraform plan and apply through an MCP agent\nThe author had Cursor run Terraform against Postgres via MCP; the apply hit a permissions error and he finished from the terminal.\nDone with\nCR\nCursor\nWhat they did\nWeston Platter installed the tfmcp server and added it to Cursor's mcp.json, pointing it at a local Terraform directory. He wrote a main.tf for a Postgres role, database and schema, then had the agent run plan and apply. When the apply failed, he ran it in the terminal and granted CREATEROLE and CREATEDB through psql.\nHow it went\nThe MCP never showed the actual Terraform errors. Cursor's own Run tool displayed them and suggested setting superuser = false, after which apply worked. He concluded tfmcp made the workflow no easier than the command line.\nWorth knowing\nThe MCP hid the Terraform error output, so be ready to run commands directly. Also, an MCP is third-party code running on your machine.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to my Terraform project and database via MCP, run a terraform plan against [resource/environment], and summarize what will change. Pause and show me the exact plan before running apply, since this will modify infrastructure.\nOriginal source: https://masterpoint.io/blog/using-mcps-to-run-terraform/",
     "body_sha256": "3a355b52e5617c6bb5e0112bf7ab181025f8d09ea96531b8b56aa9141aacf061",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:57.046969+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:57.046969+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

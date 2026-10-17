@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-and-deploy-a-hacker-news-scraper-app",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:29:26.905340+00:00",
+  "html_sha256": "3fde715c78f4362bf47e444ceb26824b02dd8ae53d21fa3b2fba4416a7a6fafb",
   "body_sha256": "b07007e51654e33f04428cadaf2f2198c4cccfbab6710085ac384fe21bbc8b18",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build and deploy a Hacker News scraper app\nReplit Agent generated a scraper, database models, API endpoints and front end that stores and shows Hacker News items, then deployed it.\nDone with\nRA\nReplit Agent\nWhat they did\nThe author gave Replit Agent a three-line prompt: continuously scrape Hacker News, store the items in Postgres, and render them in a front end. The agent proposed a plan, which the author approved. It then generated a Flask and SQLAlchemy scraper, database models, API endpoints and HTML templates. The author checked the app and clicked Deploy.\nHow it went\nThe result was a working app that scrapes Hacker News, stores items in Postgres and displays them. The post gives no timings or metrics and shows no problems during the build.\nWorth knowing\nReplit Agent needed a Core or Teams plan and was in early access, so the post warns of possible errors or unexpected behavior.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nBuild an app that scrapes [website, e.g. the Hacker News front page] on a schedule, stores each item's title, link, score and time in a database, and shows them in a simple front-end list with API endpoints to fetch them. You're done when the list displays freshly scraped items and the app is running in the preview. Show me the scraping frequency and target before you deploy it.\nOriginal source: https://neon.com/blog/building-a-news-app-with-replit-agent-a-step-by-step-guide",
     "body_sha256": "b07007e51654e33f04428cadaf2f2198c4cccfbab6710085ac384fe21bbc8b18",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:29:26.905340+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:29:26.905340+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

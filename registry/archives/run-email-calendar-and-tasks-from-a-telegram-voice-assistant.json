@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-email-calendar-and-tasks-from-a-telegram-voice-assistant",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:43.072071+00:00",
+  "html_sha256": "cf367f0b8a52f2d1d2d1eff7fc53d48f9437ddfb840249aa8d37e9e1c4350153",
   "body_sha256": "aa063ddab0823122002badebba0999547adf5a4586f28ad4d2f627153d140315",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run email, calendar and tasks from a Telegram voice assistant\nAn assistant named Jackie takes voice or text via Telegram to summarize unread emails, check calendar events and manage Google Tasks.\nDone with\nN8\nn8n\nWhat they did\nThis n8n workflow starts with a Telegram trigger that checks whether the message is voice or text. Voice files are fetched from Telegram and transcribed with OpenAI. The text goes to Jackie, an agent running on an OpenRouter model. Jackie has tools for Gmail unread email, Google Calendar events by date, and creating and reading Google Tasks. She replies in Telegram using Markdown, drawing on conversation memory and the current date.\nHow it went\nThe source describes the design and features but reports no test results, numbers or limitations.\nWorth knowing\nYou need four credentials: a Telegram bot token from @BotFather, an OpenAI key for transcription, an OpenRouter key, and Google OAuth2 for Gmail, Calendar and Tasks.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n assistant named [assistant name] that I can talk to by voice or text in Telegram. It should summarize my unread Gmail, list upcoming events from Google Calendar, and add or complete tasks in Google Tasks. It must be read-only for email, and it should confirm with me before creating or changing any calendar event or task; done when it handles \"what's on my plate today?\" correctly.\nOriginal source: https://n8n.io/workflows/8237-personal-life-manager-with-telegram-google-services-and-voice-enabled-ai/",
     "body_sha256": "aa063ddab0823122002badebba0999547adf5a4586f28ad4d2f627153d140315",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:43.072071+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:43.072071+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

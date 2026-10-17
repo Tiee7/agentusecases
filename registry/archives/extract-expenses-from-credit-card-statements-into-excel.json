@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/extract-expenses-from-credit-card-statements-into-excel",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:41.035409+00:00",
+  "html_sha256": "c003b4a57c633d1867a185a831461bb083e096286e6aa55d525484b40daff10d",
   "body_sha256": "8391c80dd9caf8e3cceded10bfe9d41317cda3a10ac17c5a2bc2d24cbd063f52",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Extract expenses from credit card statements into Excel\nThe author had Claude Code read a folder of credit card statements, learn his patterns, and put relevant expenses into an Excel sheet, saving hours; he plans to review subscriptions next.\nDone with\nCC\nClaude Code\nWhat they did\nThe author put all her personal credit card statements in one folder and ran Claude Code from inside it. She asked it to find likely business expenses to be reimbursed. It first talked through the early statements with her to learn her patterns and ask about anything unclear. At the end it wrote the relevant expenses to an Excel sheet in the same folder.\nHow it went\nShe says it saved her hours. She gives no accuracy figures or error rates. Reviewing and cancelling unneeded subscriptions is her planned next step.\nWorth knowing\nClaude Code needs a Claude Pro ($20/month) or Max ($100-200/month) subscription. The post also notes that employer data-protection rules may limit use with work data.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead all the credit card statements in [folder path] and work out which charges are [type of expense, e.g. business or reimbursable]. Put them into an Excel file with columns for date, merchant, amount, and category, and flag any charges you're unsure about instead of guessing. Finish with a short list of recurring subscriptions you found, but don't change or delete any of my original files.\nOriginal source: https://technicallycurious.substack.com/p/claude-code-for-business-users-getting",
     "body_sha256": "8391c80dd9caf8e3cceded10bfe9d41317cda3a10ac17c5a2bc2d24cbd063f52",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:41.035409+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:41.035409+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

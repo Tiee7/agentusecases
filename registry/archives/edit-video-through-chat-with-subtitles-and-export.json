@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/edit-video-through-chat-with-subtitles-and-export",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:35.002752+00:00",
+  "html_sha256": "9a66d17935c6de884f22d8918dafa6c584e15cc91f13c44a2e15708875ab08e0",
   "body_sha256": "a8611ea3953d868ce9e6baae328b139056b1950d13b8c081452f0e3846829108",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Edit video through chat with subtitles and export\nA developer built an OpenClaw skill that sends chat requests like Chinese subtitles and mp4 export to a backend video editor and returns the result.\nDone with\nOC\nOpenClaw\nWhat they did\nThe developer wrote an OpenClaw skill whose SKILL.md tells the agent how to route chat requests. Export, credit balance and upload go straight to API calls. Everything else streams to the NemoVideo backend over SSE. The agent strips the backend's GUI-style instructions, and when an edit returns no text it compares timeline state before and after and reports the difference. It then polls the render and sends back the file.\nHow it went\nThe author's example, Chinese subtitles plus mp4 export, took about 90 seconds and returned an mp4 with burned-in subtitles. About 30% of edits come back with no text, and aspect-ratio changes need full regeneration.\nWorth knowing\nDon't retry silent edits, because retries caused duplicate edits and double credit charges. Export is free, but asking the backend to export triggers a new generation that costs credits.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI'll send you a video file and an editing request in chat, like [add Chinese subtitles and export as mp4]. Run it through [video editing tool or ffmpeg], then send back the finished file. Show me the planned edits first, and don't overwrite my original file.\nOriginal source: https://dev.to/weizhang_dev/how-i-built-an-ai-video-editor-as-an-openclaw-skill-103j",
     "body_sha256": "a8611ea3953d868ce9e6baae328b139056b1950d13b8c081452f0e3846829108",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:35.002752+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:35.002752+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/summarize-new-arxiv-papers-into-notes-with-scheduled-agents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:52:27.092260+00:00",
+  "html_sha256": "21db2f9f62022fb003e756a028b3a430671bad11c8173460eac0d909dc2300b6",
   "body_sha256": "e2714602f4a83238320e3f87dae0126c3d34a2c7761b44a97e973c71ebe97198",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Summarize new arXiv papers into notes with scheduled agents\nScheduled scripts produce a daily arXiv digest, and a nightly script launches Claude Code agents to summarize each saved PDF into a notes folder.\nDone with\nCC\nClaude Code\nWhat they did\nA Python script driven by a topic file searches arXiv each morning, and Google Scholar weekly. It skips papers it has already seen and writes a dated Markdown digest. The user scans the digest and saves worthwhile PDFs into topic source folders. A nightly script then starts a Claude Code agent for each new PDF, using a summary skill, and saves the summary in the matching notes folder.\nHow it went\nThe source gives no measured results. It describes the target as each saved PDF being summarized by the next digest run, with summaries covering method, sample, findings, effect sizes and limitations.\nWorth knowing\nKeep the manual PDF selection step. It keeps the summarization queue small, and a vague summary prompt tends to just restate the abstract.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a daily job that fetches new arXiv papers in [categories] matching [keywords] and saves a digest to [folder]. Add a nightly job that launches an agent to summarize each PDF I've saved in [PDF folder] into a markdown note in [notes folder], with key claims, methods, and limitations. Finish by showing me the schedule entries and one sample note.\nOriginal source: https://www.chatprd.ai/how-i-ai/workflows/how-to-automate-academic-research-with-claude-code-and-python-scripts",
     "body_sha256": "e2714602f4a83238320e3f87dae0126c3d34a2c7761b44a97e973c71ebe97198",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:52:27.092260+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:52:27.092260+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

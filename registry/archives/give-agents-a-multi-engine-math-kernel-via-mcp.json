@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-agents-a-multi-engine-math-kernel-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:55.040451+00:00",
+  "html_sha256": "60ca40f50a96f4a238d66e4499f502fa252e5938cea90ebf68b2f466d8d52873",
   "body_sha256": "ecdede2f1eb9591b02fcce68560536e294464dc8ed1a21152e5be93a101dd6af",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Give agents a multi-engine math kernel via MCP\nMathKernel is an evidence-aware multi-engine mathematics kernel exposed as an MCP server for agents to use.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMathKernel runs as an MCP server (mathkernel-mcp, stdio, 162 math_ tools). The model parses and plans, and the kernel does the computing across SymPy, Z3, Lean, mpmath and numba/CUDA. A typical session discovers capabilities, parses an expression, creates a context, then calls math_reason to solve and verify. Long sweeps go through async jobs. Every result carries a trust label and a derivation trail.\nHow it went\nThe source gives no benchmark or outcome numbers. It documents the design: trust is capped at the weakest evidence, and decimal inputs drop a result to numeric, which blocks Lean and SMT proofs.\nWorth knowing\nLean 4 and Mathlib install on first server start unless MATHKERNEL_SKIP_LEAN_INSTALL=1 is set. CUDA needs the extra nvidia pip packages, otherwise it falls back to CPU.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect the MCP server for [math tool, e.g. MathKernel or a computer algebra system] to this project, then use it to solve [math problem or set of equations] and show the result along with which engine produced it and how it was verified. If engines disagree, flag it and explain. Done means I get the answer, the evidence for it, and a note on any assumptions you made.\nOriginal source: https://github.com/Staatsgeheim/MathKernel",
     "body_sha256": "ecdede2f1eb9591b02fcce68560536e294464dc8ed1a21152e5be93a101dd6af",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:55.040451+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:55.040451+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

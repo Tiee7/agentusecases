@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/order-groceries-online-with-a-local-llm-skill",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:55.015928+00:00",
+  "html_sha256": "1f9a6d0a9170db5afdf496e5cc343c9db1a1a59fa4eff07ebef409e25e0fa166",
   "body_sha256": "b0bd425e81a47628c96e7138cff776dc759d194776198efa7461ed1516691a1a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Order groceries online with a local LLM skill\nThe author built a grocery skill for a local Qwen 3.6 27B model that knows their fridge contents, past orders and real-time stock, and it ordered products for them online.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a grocery shopping skill for a local Qwen 3.6 27B model. It gives the model a loose picture of what's in their fridge, about 10 representative past orders covering preferences and local shops and SKUs, and real-time in-stock information. With that in context, the model placed an online grocery order.\nHow it went\nThe order went through while the author was cooking pasta, and they say the local model fully solved the real-time stock problem that cooking-ingredient delivery products never did. Open-ended or ambitious tasks still go faster with Claude or ChatGPT.\nWorth knowing\nIt works best when the answer is already in the context, so the effort goes into building a knowledge base: fridge contents, order history, and live stock data.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nBuild me a grocery skill that reads my fridge list in [file or note], my past orders from [store], and current stock at [store website]. Then fill a cart with what I'm running low on for [number] days of meals. Pause and show me the cart and total before checkout, and stop once I've approved the order.\nOriginal source: https://news.ycombinator.com/item?id=48519023",
     "body_sha256": "b0bd425e81a47628c96e7138cff776dc759d194776198efa7461ed1516691a1a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:55.015928+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:55.015928+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

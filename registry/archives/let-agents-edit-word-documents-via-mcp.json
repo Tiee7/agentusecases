@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-agents-edit-word-documents-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:26.996693+00:00",
+  "html_sha256": "031fafe38170d6aaf926e756c0b742ed35585ed33c9467f0a71b0ae3be549d96",
   "body_sha256": "9dd150691bb4fba2097ca20a681e2fb18d5e7b64562f67b3ccbba6bc15a36f85",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let agents edit Word documents via MCP\nAn MCP lets AI agents edit Word documents, handling the OOXML mechanics, originally built for pharma regulatory document editing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent edits a clean HTML version of the Word file instead of raw OOXML. A small fine-tuned model (3–8B, LoRA) turns each changed block's HTML into OOXML. A deterministic locator finds the matching block, then tracked changes are computed by diffing and patched into the .docx. The post doesn't mention pharma.\nHow it went\nOn the vendor's own 279-task benchmark, it was 2.7–2.9x cheaper and 2.7–3.5x faster than Anthropic's DOCX skill, with a higher pass rate. Pass rate on hyperlinks was only 25%.\nWorth knowing\nThe benchmark is the vendor's own. Comments, image attachment and latent styles aren't supported yet.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nOpen the Word document at [file path] and make these edits: [describe the changes, e.g. update section 3 wording, fix numbering, and add tracked changes]. Keep the original formatting and use tracked changes so I can review everything. Save the result as a new copy rather than overwriting the original, and list every change you made.\nOriginal source: https://www.vespper.com/blog/launching-vespper-docx-mcp",
     "body_sha256": "9dd150691bb4fba2097ca20a681e2fb18d5e7b64562f67b3ccbba6bc15a36f85",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:26.996693+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:26.996693+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

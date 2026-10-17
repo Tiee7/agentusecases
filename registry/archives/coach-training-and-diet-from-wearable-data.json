@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/coach-training-and-diet-from-wearable-data",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:02:29.147834+00:00",
+  "html_sha256": "1fd4283259c1032ce4eb1e613c44d818a5288116a0018654291ca5f8d9ff9d06",
   "body_sha256": "41e99d0e8f87b14a6bf05e0a861a69771db87e36dc06de021f2111b7b40d20b6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-14",
+      "sha256": "ffabbde475be33a5fe34128904c9a6af10d2bb26db6fb1fd1d24b5824297d5a7"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Coach training and diet from wearable data\nThe poster uses Claude with Apple Health, nutrition and lifting app data, plus medication and bloodwork files, and has it maintain an HTML dashboard.\nDone with\nCL\nClaude\nWhat they did\nOne commenter described a setup very close to this: Garmin data is pulled hourly into an InfluxDB on their server, and Claude Code runs there on a scheduled daily morning task. Claude reads load, stress, sleep and related metrics, calculates a training-readiness score itself, builds and adjusts the training plan, and publishes the result to a small webpage they host for phone access; they also gave it an initial full export plus years of Garmin, Strava, and .fit history for context.\nHow it went\nThey said it keeps daily training specific enough to avoid burnout or overtraining and can notice rough periods like vacation, long work weeks, and time-zone travel. The post gives no quantified results, only that long-term history improved context for future goals.\nWorth knowing\nThe main catch they mention is setup: hourly polling plus a scheduled Claude Code task on your own server, with a big historical import at the start.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm going to upload my [Apple Health export, nutrition log, lifting app data] plus [bloodwork or medication notes]. Analyze trends in my training, recovery and diet toward my goal of [goal], then build me an HTML dashboard I can update each week with new data. Finish with three specific changes to try this week, and flag anything that sounds like a question for my doctor rather than guessing.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x2c0v0/has_anyone_used_claude_as_a_training_and_diet",
     "body_sha256": "41e99d0e8f87b14a6bf05e0a861a69771db87e36dc06de021f2111b7b40d20b6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:02:29.147834+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:02:29.147834+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

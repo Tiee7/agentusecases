@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-parametric-cad-models-from-a-prompt",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:12.990284+00:00",
+  "html_sha256": "7a93bf4b43b5d62ec7c9a650d756c6bfd96cb0340c18d4f46f30cbc2ad1f703d",
   "body_sha256": "81877ede7ad97de08c6343702f4c477a1ab75f7b711a22ddbb6ffe1154fbdf1f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate parametric CAD models from a prompt\nAn open-source text-to-CAD tool that produces 3D models from text and image references by generating CAD as code.\nDone with\nCL\nClaude\nWhat they did\nYou describe a part in plain English, optionally with reference images. The app uses Claude to write OpenSCAD code, which runs in the browser through WebAssembly and shows a live Three.js preview. It pulls out adjustable dimensions as sliders, so you can change sizes without asking the AI to regenerate. You can export STL, SCAD or DXF.\nHow it went\nThe README's benchmark gallery shows single prompts producing parametric models, from knurled knobs and threaded bolts to a V8 engine with 22 dimension controls. It gives no failure rates or accuracy measurements.\nWorth knowing\nSelf-hosting needs Node, the Supabase CLI, ngrok for webhooks, and your own API keys (Anthropic and others). The hosted demo at adam.new/cadam needs no install.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a parametric CAD script in [CadQuery or OpenSCAD] for [describe the part, e.g. a wall bracket for a 25mm pipe], with named variables for all key dimensions at the top. Run it and export an [STL or STEP] file to this folder. Stop when the file exports without errors and show me the list of parameters I can change.\nOriginal source: https://github.com/Adam-CAD/CADAM",
     "body_sha256": "81877ede7ad97de08c6343702f4c477a1ab75f7b711a22ddbb6ffe1154fbdf1f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:12.990284+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:12.990284+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

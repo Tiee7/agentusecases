@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/shortlist-business-trip-hotels-into-a-google-sheet",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:39.049433+00:00",
+  "html_sha256": "19872880f16d723bbff498a91e83f49006cc6b417ff406b9128a5348da88fa47",
   "body_sha256": "619fc98eaa88718decb12a88ff2b7ee1b81d11a21c1c14eeab91d3c03ae01d5c",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Shortlist business-trip hotels into a Google Sheet\nA Claude in Chrome shortcut searches Booking.com for hotels near downtown under a price cap and logs each with price, rating, distance, amenities and booking link in a Google Sheet.\nDone with\nCH\nClaude in Chrome\nWhat they did\nYou create a /hotel-picker shortcut in Claude in Chrome that starts from Booking.com. It applies the Hotels-only, distance and 4-star-plus filters, then checks Booking.com and TripAdvisor reviews. You set up a Google Sheet with headers. A prompt gives Claude the trip, dates, price cap and sheet URL, and it adds a row per hotel.\nHow it went\nThe source says results come back in about 10–15 minutes as a top-10 list sorted by value. It gives no tested results or accuracy numbers.\nWorth knowing\nNeeds a Claude Pro account. Use a dedicated Chrome profile to limit logins, and don't click in the active tab. If anti-bot protections trigger, ask Claude to type slowly.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nSearch Booking.com for hotels near [location] under [price cap] per night, and log each match into a Google Sheet with price, rating, distance from downtown, amenities and the booking link. Stop once you have a shortlist of at least [number] options for me to review.\nOriginal source: https://app.therundown.ai/guides/use-claudes-chrome-extension-to-quickly-book-business-trips",
     "body_sha256": "619fc98eaa88718decb12a88ff2b7ee1b81d11a21c1c14eeab91d3c03ae01d5c",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:39.049433+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:39.049433+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

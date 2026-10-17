@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-e-ink-fridge-shopping-list-firmware",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:35.000033+00:00",
+  "html_sha256": "de87967a03bce1afebce698c7a60d5d639abc2546b7fa96d4d3427355ac0a668",
   "body_sha256": "c90f149f9c83d29c16707455ceaf65710bfa405a0e872a98d7dfd60ade8b1846",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build e-ink fridge shopping list firmware\nClaude Code wrote ~2,400 lines of C++ firmware for an ESP32 e-ink fridge magnet shopping list synced with a phone web app, now used by the family.\nDone with\nCC\nClaude Code\nWhat they did\nThe repo holds about 2,400 lines of C++ firmware for the M5Stack PaperMono, an ESP32-S3 with an e-paper touchscreen. A small FastAPI and SQLite server sits between the device and a phone web UI. The device syncs over Wi-Fi hourly, on tap, and after edits. The server can optionally ask the Claude Code CLI to file new items by aisle.\nHow it went\nIt works as a fridge shopping list grouped by aisle, with offline use and queued edits. The README calls it a personal project running on one device at home, tested only on the C153 model.\nWorth knowing\nWi-Fi credentials are compiled into the firmware and the server has no authentication, so keep it on your LAN. Back up the device flash before flashing, because it holds the unit's calibration data.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite firmware in C++ for an [ESP32 board with e-ink display model] that shows a shared shopping list and syncs with a simple web app I can use from my phone. Build the project, explain how to wire and flash it, and include a way to add and check off items. Stop when the code compiles and I have step-by-step flashing instructions.\nOriginal source: https://github.com/seamusc/papermono-shopping-list",
     "body_sha256": "c90f149f9c83d29c16707455ceaf65710bfa405a0e872a98d7dfd60ade8b1846",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:35.000033+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:35.000033+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

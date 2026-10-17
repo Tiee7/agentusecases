@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/repair-formal-proofs-for-a-verified-garbage-collector",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:35:03.063228+00:00",
+  "html_sha256": "2234c63357b368deedf2b26a6e705f5ccb4f25f3e1b5fbeea8547b555570597d",
   "body_sha256": "085e87942c7ed347b238c5e4a9b49e525dddaf4ca59e05369bc2ba00ffea7739",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Repair formal proofs for a verified garbage collector\nCodex edited files and ran builds to repair CertiGC proofs; it handled local repair well, but humans had to check that its invariants preserved the specification.\nDone with\nCX\nCodex\nWhat they did\nCodex had repository access, edited Rocq proof files, ran targeted make builds, and used a rocq-mcp server to inspect proof states. It repaired the VST proofs first, then the graph-isomorphism theorem. It proposed the recorded-backward-edge invariant, and the author reviewed it. He required discussion before any Definition changed and refused new VST preconditions without evidence.\nHow it went\nThe branch compiled and merged upstream as PR 30. The main theorem was accepted April 29, and a later audit removed a stale no-backward-edge premise. It was a single case, not a controlled study.\nWorth knowing\nExpect heavy supervision: about 59 active Codex hours, 415 human prompts and 13,305 tool calls over ten days, with no measured speedup.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my [Coq/Lean/Isabelle] project at [folder], the proof [file or lemma] is broken after [change you made]. Edit the files, run the build, and repair the proof with the smallest local changes. Do not weaken or change any specification or invariant without asking me first, and finish with a list of every statement you altered so I can review it.\nOriginal source: https://arxiv.org/pdf/2606.21167",
     "body_sha256": "085e87942c7ed347b238c5e4a9b49e525dddaf4ca59e05369bc2ba00ffea7739",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:35:03.063228+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:35:03.063228+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

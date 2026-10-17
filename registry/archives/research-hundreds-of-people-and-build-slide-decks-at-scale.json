@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+  "observed_at": "2026-10-17T06:05:15.039594+00:00",
+  "html_sha256": "7ecd49c2547d1260449bb094fc2cd7735660f3e14655dc287ba3bd17831f65dc",
+  "body_sha256": "8df30448596eb134a5d0904e839a8652ccc0164b5ecdc0e86f4de0ea6a20a285",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Research hundreds of people and build slide decks at scale",
+      "sha256": "8080a1ebf9eb8c326ddc8e1f6705e6d62e8ccbcda9b06c072a10857685677e95"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Guide describes using Manus for large research jobs like profiling the top 250 AI researchers, turning event exports into slide decks, and deploying websites.",
+      "sha256": "a5601ab2eaaebe24f7cef4357606ecfe32e88d717cc730eee9fecf0f95bba18c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post says Manus handles big research jobs by splitting them into many parallel sub-tasks, like spinning up 250 sub-agents to profile one AI researcher each and finishing in 10–15 minutes. It also describes feeding in structured inputs such as a Luma event export or a Google Sheet, then having Manus scrape sites, call connected tools like SimilarWeb, and assemble outputs such as slide decks or a deployed searchable website; the person provides the prompt, files, templates, APIs, and any brand rules.",
+      "sha256": "64a2247df69426b91ed7a850b18c9cc41c06ca310b1aa43b557a33f059d75844"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The reported outputs are production-ready assets at scale: a 250-profile research pass in 10–15 minutes, event-export slide decks with charts, and public websites built from a sheet of 100 papers. The post presents these as examples and prompt patterns, but gives little detail on verification or failures.",
+      "sha256": "b98f3835ee527bc5e33dae488d7f852b93a8322d617007e908671eba185692c0"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is setup: results depend on supplying connectors, attached templates/files, and clear project or knowledge rules so Manus follows brand and formatting requirements.",
+      "sha256": "175befdcc426546a58e5c3120bdf702ee3b350ccad772cbd78d80c0766efb0a4"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Manus"
+      ],
+      "sha256": "06665110ecda10951d4c2148a9f08bd0fcd2965a4b1c1d03f7fc65f7d7dbf990"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/promptingmagic/comments/1qruaq7/the_complete_guide_to_metas_ai_agent_manus_the"
+      ],
+      "sha256": "35f39d68b37c895246fe1c139ba67fa10338ef9dc1db630b1a53e78d5cbca746"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-16",
+      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d50d1069a7a2b8f2c6afc0fba2dfbc68134f577ae1da325344526d3e6e6b2089",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Research hundreds of people and build slide decks at scale\nGuide describes using Manus for large research jobs like profiling the top 250 AI researchers, turning event exports into slide decks, and deploying websites.\nDone with\nMA\nManus\nWhat they did\nThe post says Manus handles big research jobs by splitting them into many parallel sub-tasks, like spinning up 250 sub-agents to profile one AI researcher each and finishing in 10–15 minutes. It also describes feeding in structured inputs such as a Luma event export or a Google Sheet, then having Manus scrape sites, call connected tools like SimilarWeb, and assemble outputs such as slide decks or a deployed searchable website; the person provides the prompt, files, templates, APIs, and any brand rules.\nHow it went\nThe reported outputs are production-ready assets at scale: a 250-profile research pass in 10–15 minutes, event-export slide decks with charts, and public websites built from a sheet of 100 papers. The post presents these as examples and prompt patterns, but gives little detail on verification or failures.\nWorth knowing\nThe main catch is setup: results depend on supplying connectors, attached templates/files, and clear project or knowledge rules so Manus follows brand and formatting requirements.\nTry it yourself\nwith\nManus\nCopy prompt\nResearch [list or group, e.g. the top 100 people in a field] and build a spreadsheet with [columns, e.g. name, employer, notable work, source link] for each. Use public sources only and cite a link for every row. When the sheet is complete, turn the key findings into a [number]-slide deck, and flag any rows where you were unsure of the facts.\nOriginal source: https://www.reddit.com/r/promptingmagic/comments/1qruaq7/the_complete_guide_to_metas_ai_agent_manus_the",
+    "body_sha256": "8df30448596eb134a5d0904e839a8652ccc0164b5ecdc0e86f4de0ea6a20a285",
+    "archived_at": "2026-10-17T06:05:15.039594+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:15.039594+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

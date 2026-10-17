@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-deals-page-step-by-step-with-devin",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:00:35.114330+00:00",
+  "html_sha256": "f5b8f24877e97de28004f2c1c1ce873d19d2344a38a74b11d335d4ee08fc5bd5",
   "body_sha256": "637faad287c7d2425b2dbfe0801de45d9aff8328848b5653a3ba029d1599de32",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build a deals page step by step with Devin\nAn engineer had Devin implement a deals page in steps; it opened a PR in under 10 minutes, but CI failed, it added unnecessary changes and gave a false answer about a library.\nDone with\nDE\nDevin\nWhat they did\nThe engineer connected the backend and frontend repos to Devin through its GitHub integration and had it set up its own environment. She gave it the Deal schema and a DB diagram, plus PR numbers for related unmerged work. Devin split the task into separate sessions, opened a PR for the first piece, and retried CI lint and TypeScript fixes. Each later part got its own session, with PRs based on the earlier ones.\nHow it went\nThe first PR opened in under 10 minutes but failed CI. Later PRs were acceptable but carried extra changes, and Devin wrongly said Joi wasn't used elsewhere. The final session, getting the project running locally, hit usage limits.\nWorth knowing\nSeparate sessions don't share context, so the split can't be run in parallel. She used all 150 ACUs in under a week, and the docs say performance degrades past 10 ACUs per session.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn [repo name], implement a [page or feature, e.g. deals page] in small steps: [step 1], then [step 2], then [step 3]. Open a PR after the steps, make sure CI passes, and don't add changes outside the scope. If you're unsure how a library works, check its docs and tell me what you verified versus what you assumed.\nOriginal source: https://qubika.com/blog/devin-ai-coding-agent/",
     "body_sha256": "637faad287c7d2425b2dbfe0801de45d9aff8328848b5653a3ba029d1599de32",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:00:35.114330+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:00:35.114330+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

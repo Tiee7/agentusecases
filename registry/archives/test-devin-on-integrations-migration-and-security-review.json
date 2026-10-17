@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/test-devin-on-integrations-migration-and-security-review",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:51.121806+00:00",
+  "html_sha256": "9a0ee558ca5a4becd119567d18863ee38f1cbbac579d005be163e835a08511a8",
   "body_sha256": "9960e72c5582f4f19ac5333fe4a338b8836a566fd5429903aa28bebd8f1c6a04",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Test Devin on integrations, migration and security review\nAnswer.AI tried Devin on an observability integration, an nbdev migration and a vulnerability review; it found some real issues, hallucinated others, and failed the migration.\nDone with\nDE\nDevin\nCR\nCursor\nWhat they did\nAnswer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, about 20 real tasks. These included generating and uploading synthetic data to Braintrust, migrating a Python project to nbdev, and a security review of a repo under 700 lines. People checked the output and often took over.\nHow it went\nThe Braintrust integration was abandoned and redone in Cursor. The nbdev migration failed on basic setup. The security review found some real issues but also false positives and hallucinated ones. Overall 14 failures, 3 successes and 3 inconclusive.\nWorth knowing\nDevin pressed on with impossible tasks for days. The authors suggest a single focused LLM call for something like a small-repo security review.\nTry it yourself\nwith\nDevin\nCopy prompt\nTake on three tasks in my repo [repo name]: add an integration with [observability tool], migrate [a module or tool] to [target tool or version], and review the code for security vulnerabilities. For each one, tell me how you verified your results, and clearly mark any finding you could not confirm. Open separate pull requests for the work and do not merge anything.\nOriginal source: https://www.answer.ai/posts/2025-01-08-devin",
     "body_sha256": "9960e72c5582f4f19ac5333fe4a338b8836a566fd5429903aa28bebd8f1c6a04",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:51.121806+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:51.121806+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-investment-analysis-from-live-market-data",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:43:49.064525+00:00",
+  "html_sha256": "b4351e9c076c042cdf56450e3de7fdf1593ebc246f37f59ad8b88053edaec573",
   "body_sha256": "667746037c9a1a66706eef80d62e7b5371db070c08cb734879172c33d712dc5f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,14 +90,13 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate investment analysis from live market data\nThe poster built a personal wealth advisor in Claude Code that feeds live market data, macro indicators and news into investment analysis.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster used Claude Code CLI to build a personal wealth advisor that pulled live market data, macro indicators and news into one workflow, then fed it to Claude with a CFA-style system prompt. In comments, they say a memory system let it recall and revisit earlier calls from weeks prior, which improved analysis quality; the person built the setup and used Claude’s output rather than handing decisions over fully.\nHow it went\nThey say the goal was analysis beyond generic stock tips, but the thread excerpt gives no performance numbers or verified investing results. What’s shown is a personalized research workflow, with the strongest claimed benefit being better output from retained memory.\nWorth knowing\nThe main catch mentioned is that the memory layer mattered a lot: being able to reference what it said two weeks earlier noticeably changed output quality.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small personal investment research tool in this folder. It should pull live market data for [tickers or funds I hold], key macro indicators like [rates, inflation, unemployment], and recent news, then write a short analysis of how these affect my portfolio of [brief description]. It is done when I can run one command and get a dated report with sources, and it should not place any trades.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1sdtgof/used_claude_code_to_build_myself_a_personal",
     "body_sha256": "667746037c9a1a66706eef80d62e7b5371db070c08cb734879172c33d712dc5f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:43:49.064525+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "translation": {
     "status": "available",
@@ -107,5 +107,10 @@
     "body": "根据实时市场数据生成投资分析\n发帖者用 Claude Code 搭建了一位个人财富顾问，将实时市场数据、宏观指标和新闻输入投资分析流程。\n使用的 Agent\nClaude Code\n他们做了什么\n发帖者使用 Claude Code 命令行工具搭建了一位个人财富顾问，将实时市场数据、宏观指标和新闻汇集到同一套工作流程中，再配合一段 CFA 风格的系统提示词，将这些内容交给 Claude。发帖者在评论中称，一套记忆系统让它能够回忆并重新审视数周前的判断，从而改善了分析质量；这个人搭建了整套系统并参考 Claude 的输出，而没有把决策完全交出去。\n结果如何\n他们说，目标是获得超越泛泛股票建议的分析，但帖子摘录没有给出表现数据，也没有经过核实的投资结果。展示出来的是一套个性化研究流程，其中声称最明显的收益是保留记忆后输出有所改善。\n需要知道的事\n提到的主要关键点是记忆层影响很大：能够引用自己两周前说过的话，明显改变了输出质量。\n自己试试\n推荐工具\nClaude Code\n复制提示词\n在这个文件夹里，为我搭建一个小型个人投资研究工具。它应获取[我持有的股票或基金代码]的实时市场数据、[利率、通胀、失业率]等关键宏观指标，以及近期新闻，然后简要分析这些因素如何影响我的投资组合[简短描述]。当我能够运行一条命令，得到一份带日期和来源的报告时，任务就算完成；它不应执行任何交易。\n原始来源：https://www.reddit.com/r/ClaudeAI/comments/1sdtgof/used_claude_code_to_build_myself_a_personal",
     "body_sha256": "7236390e62e59e9127d0be330d68ef755059576974eb3d4ea6b8929415672ac6",
     "scope": "Faithful full translation of archived title, case prose, headings, agent, source trial and original link; decorative initials omitted. Live-data and memory claims retained as written; analysis separate."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:43:49.064525+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

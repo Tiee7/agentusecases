@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/debug-windows-crash-dumps-with-an-ai-agent-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:50.991210+00:00",
+  "html_sha256": "8b945b7c14bc1a74fff990f0e990a4f5ff4e3f07c77294277bf4b721ee14d58e",
   "body_sha256": "551368dbb403751e46e8e760a97825fc21de139c08aa47ee089aaaacc6121ccc",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Debug Windows crash dumps with an AI agent via MCP\nForensicDbg is a post-mortem debugger for native Windows x64/x86 crashes with an MCP server so AI agents can debug from interpreted, interlinked crash data.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nForensicDbg is a post-mortem debugger for x86 and x64 Windows crash dumps. Its MCP server runs over stdio and works with AI tools that support that. It gives the agent output that is already interpreted and labeled, such as the faulting thread, frame and instruction, validated callstacks, and deduced types. The agent works from that instead of raw dump data.\nHow it went\nThe page shows one example: the agent traced a crash to a missing null check in a text window's selection code and proposed a guard. It gives no benchmarks or token figures.\nWorth knowing\nThe tool is in a private beta, so you need to request an invite, and the page says little about setup; there is a separate MCP setup guide.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a Windows crash dump at [path to .dmp file]. Use the debugging tools or MCP server available to analyze it and tell me the likely root cause, the faulting call stack, and the exact function and line if symbols exist. Finish with a short report listing evidence for your conclusion and suggested fixes, and don't change any code until I approve.\nOriginal source: https://www.forensicdbg.com",
     "body_sha256": "551368dbb403751e46e8e760a97825fc21de139c08aa47ee089aaaacc6121ccc",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:50.991210+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:50.991210+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

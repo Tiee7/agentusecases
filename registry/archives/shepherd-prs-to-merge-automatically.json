@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/shepherd-prs-to-merge-automatically",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:55:17.005313+00:00",
+  "html_sha256": "4c89e8723fed4bfe811267e9c2c461c72a1150a5facf6ff2cf476e950edd8de5",
   "body_sha256": "ef22e556799780063c4cc644649b6fe204aee2f604332a494724cb3458f547c8",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Shepherd PRs to merge automatically\nBots check PRs every 30 minutes, send failures back to a cloud agent, review clean PRs and auto-merge high-confidence, low-risk ones.\nDone with\nGB\nGrok Bot\nWhat they did\nEach engineer bot keeps a shared Notion database of PRs. Every 30 minutes it checks each PR for Bugbot or security comments, failing CI and merge conflicts. Problems go back to the cloud agent, and the row moves to Working. Clean PRs are marked Ready for Review and get a review run. Highly confident, low-blast-radius PRs are merged automatically. The author reviews the rest.\nHow it went\nThe author finds tasks ready to merge almost every morning. The fleet manages over 200 cloud agents at once, up from about 15 by hand. The source gives no merge-rate figures.\nWorth knowing\nThe author says rapid transcript-checking routines, like the 5-minute P0 mode, burn tokens faster than expected, so keep them for true urgency.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nEvery 30 minutes, check open pull requests in [repo]. Send failing PRs back to a coding agent to fix, and review the clean ones. Only auto-merge a PR if you are highly confident and it is low-risk, such as [examples]; otherwise ping me with a summary. Pause and ask me before merging anything that touches [sensitive areas].\nOriginal source: https://x.ai/bot/guides/grok-bot-for-engineering",
     "body_sha256": "ef22e556799780063c4cc644649b6fe204aee2f604332a494724cb3458f547c8",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:55:17.005313+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:55:17.005313+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

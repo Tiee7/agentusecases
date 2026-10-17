@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-cron-agents-for-inbox-research-and-site-audits",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:53:57.000806+00:00",
+  "html_sha256": "217c4e14a2db310bd07a654fb192b74f22d71844023f6c1254600be013703a2f",
   "body_sha256": "5762734a5aa781990184426e059d727e2eeb908ad2f8591641e95792c7abf926",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run cron agents for inbox, research and site audits\nThe author runs two OpenClaw agents with 12 cron jobs covering inbox scanning, article indexing, research digests, Search Console analysis, site audits and health monitoring.\nDone with\nOC\nOpenClaw\nWhat they did\nJenny Ouyang runs two OpenClaw agents on one Oracle Cloud ARM server. One is a personal assistant with memory, and the other is a website-building bot she shares with her business partner. Twelve cron jobs run on a schedule. Twice a day the inbox job reads new newsletter posts and searches her memory database for related work of hers. It saves the results to a database and a markdown report, which she reviews via Telegram or GitHub. She writes every comment herself.\nHow it went\nThe inbox scanning works well for her. The jobs don't yet trigger each other, so handoffs are still manual. One agent wiped a database while debugging a seed conflict, and she restored it from backups.\nWorth knowing\nGive agents scoped credentials with no DROP permission, keep automatic backups, and bind the gateway to localhost. Setup took longer than the documentation suggested.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up scheduled jobs for me: every morning scan my inbox at [email account] and send me a short summary of what needs a reply, every week compile a research digest on [topic], and every month audit [my website URL] for broken links and slow pages. Send each result to me in [chat app] as a short list. Do not send, delete, or archive any email without showing me first; after setting up the jobs, show me the schedule and stop.\nOriginal source: https://buildtolaunch.substack.com/p/openclaw-ai-agent-one-person-business",
     "body_sha256": "5762734a5aa781990184426e059d727e2eeb908ad2f8591641e95792c7abf926",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:53:57.000806+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:53:57.000806+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-a-1997-pc-game-and-make-it-run-on-modern-ha",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:02:07.129488+00:00",
+  "html_sha256": "ed5045019094467cbdf34a10c7be5fd1c9231f4914d70aae561206c0db52110b",
   "body_sha256": "8f1091471ddcc5044aa6bd0fa1237a2c759d911e8b357d94e4bc343b5253388b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Reverse-engineer a 1997 PC game and make it run on modern hardware\nClaude Code got an old DirectX game running on modern hardware, decompiled much of it, built a headless parallel runner, and now writes full level guides with screenshots.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code got the 1997 game running on modern hardware in about 30 minutes, setting up a basic reverse-engineering environment along the way. Over further iterations it decompiled most of the game. At the user's request it extended a shimmed DirectX DLL to run headlessly on a Windows Private Desktop, allowing parallel instances. It mapped memory addresses and scripts, and the user nudged it and checked its work.\nHow it went\nClaude now writes full level guides with decent screenshots of key moments, zero-shot. The user's goal of making the game look as it did in their memory is still in progress.\nWorth knowing\nAsk the agent to build helper tools that expose how the game is built, so you can verify its work and steer it. Headless runs also avoid computer-use sessions taking over your PC.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have an old Windows game from [year] installed in [folder path] that won't run on my modern computer. Figure out why it fails, get it running (compatibility layers or wrappers are fine), and tell me exactly what you changed. When it launches and reaches the main menu, stop and show me how to start it myself. Don't delete or overwrite any original game files; work on a copy.\nOriginal source: https://news.ycombinator.com/item?id=50080674",
     "body_sha256": "8f1091471ddcc5044aa6bd0fa1237a2c759d911e8b357d94e4bc343b5253388b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:02:07.129488+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:02:07.129488+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

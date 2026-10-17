@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-updated-research-reports-on-followed-companies",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:52:51.127423+00:00",
+  "html_sha256": "c2a09a38ff22281c63610c24ed12925452c47cd7e6bdf0ae65032d82ad09da84",
   "body_sha256": "2555ef73c645e204625a45a86c98db41b16e377fd0fb77a582d255d3aff09210",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate updated research reports on followed companies\nThe poster built and open-sourced a custom stock-research agent that produces updated reports on companies they follow.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster said they built a stock-research agent on top of paid real-time market-data subscriptions because ChatGPT’s answers were too dated for investing. In comments, they said it uses Polygon real-time stocks and options data, can run code on that data to answer screening-style requests like finding today’s inside-day patterns, and is available as a CLI plus a free web version; people still had to test outputs and report mistakes.\nHow it went\nThe reported benefit was fresher research and the ability to answer data-driven trading queries ChatGPT alone could not. It fell short in important ways: the author said it was mostly US-focused, a user found a bad CHF/USD conversion and weak non-US handling, and the “open source” claim was challenged because the full backend was proprietary.\nWorth knowing\nCopying this means paying for real-time data, and the source specifically names Polygon as the feed the author was buying.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small research agent that, for each company on my list [tickers], pulls the latest filings, news, and price data from [sources] and writes an updated report in [folder]. Each report should cover what changed since the last one, key numbers, and risks. You're done when I can run one command to refresh all reports; test it on [two tickers] and show me the output first.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1mdrdbh/built_my_own_agent_for_stock_research_and",
     "body_sha256": "2555ef73c645e204625a45a86c98db41b16e377fd0fb77a582d255d3aff09210",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:52:51.127423+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:52:51.127423+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

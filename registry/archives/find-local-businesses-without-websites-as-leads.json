@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-local-businesses-without-websites-as-leads",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:37:55.106305+00:00",
+  "html_sha256": "145fb383ed21e7233124cb09af43666da52d1cb3ed1b7c87dcdc39bba2f896be",
   "body_sha256": "5b2b1016ef658503febb237b73b6658e39cd1e15ac426dd885dd47d7d84d597a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Find local businesses without websites as leads\nHermes spawned sub-agents per area to scrape Northwest London plumbers lacking websites, filtered them, and returned three qualified leads with pitch angles.\nDone with\nHA\nHermes Agent\nWhat they did\nIn a live demo, the prompt asked Hermes to scrape the web for Northwest London plumbers with no website and return three qualified leads for an AI-built website pitch. Hermes spawned a sub-agent for each area to scrape. It then ran a disqualification pass, keeping leads with real addresses, a clear profile and a natural pitch angle.\nHow it went\nIt returned three leads, each with a tailored pitch angle. One example was Oliver Plumbers Limited. It also added legal caveats and a pre-outreach checklist that nobody had asked for.\nWorth knowing\nNo website found in search doesn't mean none exists, since a business might only have a WhatsApp profile. Verify each lead before outreach. The demo ran on a $0.24/hour CPU instance.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nFind [type of local business, e.g. plumbers] in [area] that have no website. Split the area into sub-areas and search each one, then filter out duplicates and businesses that look closed. Return [number] qualified leads with name, phone, source link, and a suggested pitch angle for [my service]. Don't contact anyone; show me the list before any outreach.\nOriginal source: https://www.mindstudio.ai/blog/5-autonomous-tasks-hermes-agent-handles-better-than-openclaw-real-output-examples",
     "body_sha256": "5b2b1016ef658503febb237b73b6658e39cd1e15ac426dd885dd47d7d84d597a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:37:55.106305+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:37:55.106305+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

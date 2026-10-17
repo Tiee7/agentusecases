@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/measure-how-long-jobs-stay-open-at-tech-companies",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:58:55.122066+00:00",
+  "html_sha256": "28a2a4defa0c3cd4fd433b7dc189d0e25f4c25732e955ce3f4b4e3b9efa38b52",
   "body_sha256": "55ebeac7c9c64b4bbf4036ae8d63376f542ef5ca045a78eb9f9e6445fdccde7f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-11",
+      "sha256": "bf253a0ae8de03aa5d8511050196f1032ff74d2010f83e689b41c1bad94fea67"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Measure how long jobs stay open at tech companies\nAn agent read 25 open jobs each at five companies and measured how long each had been posted, e.g. 21 of 25 at Figma were 60+ days old.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent used a tool called Company Jobs Finder. It found each company's Greenhouse board, read the public API's first-published date for the first 25 listed jobs at Stripe, Airbnb, Figma, Databricks and Anthropic, and computed each posting's age. It needs no key. Filters for keyword, location and remote work are available.\nHow it went\nFigma had 21 of 25 postings at 60+ days, with a median age of 269 days. Stripe had 7, Airbnb 8, Databricks 13 and Anthropic 9. Databricks had the oldest posting, at 1,031 days.\nWorth knowing\nThe sample is only the first 25 jobs in each board's own order, and reposts reset a posting's age, so old postings don't prove ghost jobs.\nTry it yourself\nwith\nClaude\nCopy prompt\nFor each of these companies: [company names], look at their careers pages and sample about [25] open roles. Find out how long each role has been posted and report what share are older than [60] days. Give me a table per company and one sentence on what the numbers suggest. Stop once every company has a sample, and note any company where posting dates were not available.\nOriginal source: https://tools.openkrill.app/blog/greenhouse-open-jobs-and-job-age",
     "body_sha256": "55ebeac7c9c64b4bbf4036ae8d63376f542ef5ca045a78eb9f9e6445fdccde7f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:58:55.122066+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:58:55.122066+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

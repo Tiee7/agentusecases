@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-personal-doorman-agent-on-a-7-vps",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:38.963834+00:00",
+  "html_sha256": "58f8f36f284a4079b7fd9424c05613e1876b2ca774a4abf28ec7e8e958732552",
   "body_sha256": "7dd0723df5dcee5e466ac52454c54ec71b70d05357cbe02675cce2f7f4c030ed",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run a personal doorman agent on a $7 VPS\nA public agent greets site visitors over IRC while a private one handles email and scheduling, capped at $2 a day.\nDone with\nCL\nClaude\nWhat they did\nGeorge Larson ran nullclaw, a small Zig agent, on a cheap VPS. It joined his own IRC server, which visitors reached through a web client. It answered questions using preloaded context and cloned public GitHub repos to check claims. For scheduling and contact requests it called a private agent, ironclaw, over the A2A protocol through Tailscale. Ironclaw held the email and calendar access. He wrote the A2A client tool himself.\nHow it went\nIt worked for visitors, with Haiku handling chat and Sonnet handling repo reading. The agent was imperfect, and the whole system was decommissioned after running from March to June 2026.\nWorth knowing\nThe agent was the easy part. The hardening, DNS, TLS and Cloudflare setup took longer, and the handoff needs strict limits on what the public agent can pass on.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up two agents on my small VPS: a public one that greets visitors to [my website or chat channel] and answers basic questions about [me or my project], and a private one that reads my [email account] and helps with scheduling on [calendar]. Cap total spending at [$2] a day and stop when both are running and you've shown me the config and cost limits. Pause and show me any email or calendar invite before sending it.\nOriginal source: https://georgelarson.me/writing/2026-03-23-nullclaw-doorman/",
     "body_sha256": "7dd0723df5dcee5e466ac52454c54ec71b70d05357cbe02675cce2f7f4c030ed",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:38.963834+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:38.963834+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

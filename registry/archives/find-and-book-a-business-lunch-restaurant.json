@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-and-book-a-business-lunch-restaurant",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:13.023206+00:00",
+  "html_sha256": "e346447f08a793a37df8f6768df26883ce9d821b8da153c15500f4ab2f78db9d",
   "body_sha256": "a1d64533aef77319357f13cb7d960f0e088b939ce1187b028ab89a9613da0022",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Find and book a business lunch restaurant\nNN/G tester had ChatGPT's agent find and book Brennan's in Houston; it took about 11 minutes and needed human help with details and guest count.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe tester gave a terse prompt asking for a business lunch near a Houston address. The agent ran 10 searches over 96 sources and suggested three restaurants. After the tester chose Brennan's, it asked for the guest count, worked through the booking form, and picked 12:15 when noon was unavailable. It ticked the shellfish-allergy option. The tester typed in personal details, and the agent asked for approval before submitting.\nHow it went\nThe reservation was confirmed, but the form step alone took the agent 11 minutes against about 2 for the tester. The 10-minute table hold expired, though the booking went through anyway.\nWorth knowing\nThe agent never asked clarifying questions about budget, cuisine or attendees, and its suggestions left out menus and prices. Expect to supply personal details yourself and approve the final submission.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nFind a restaurant in [city] suitable for a business lunch on [date] at [time] for [number] guests, in the [cuisine or price range] range. Check availability, pick the best option, and get to the reservation step. Ask me about any details you are unsure of, such as guest count or special requests, and pause to show me exactly what you are about to submit before you book.\nOriginal source: https://www.nngroup.com/articles/impressions-chatgpt-agent/",
     "body_sha256": "a1d64533aef77319357f13cb7d960f0e088b939ce1187b028ab89a9613da0022",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:13.023206+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:13.023206+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/drive-desktop-apps-with-an-agent-to-move-files",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:54:23.098428+00:00",
+  "html_sha256": "01c5a611de856e94c2ea95cf4686b4e1ba72c1a529bc14420ec622b39dc854ad",
   "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
     "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:54:23.098428+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:54:23.098428+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

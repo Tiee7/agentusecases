@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/route-customer-reply-emails-to-freshdesk",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:59:47.124237+00:00",
+  "html_sha256": "68440cdbc0240c0605daf8c32ec72cec25b09cfa96fc1981c126ab54cb7442d7",
   "body_sha256": "66da36f3cc347457571e6998d30521d00c9e92c19f6c50a811ca909fbab813b4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Route customer reply emails to Freshdesk\nAn n8n workflow catches customer replies to order confirmations and forwards support requests into Freshdesk.\nDone with\nN8\nn8n\nWhat they did\nThey built an n8n workflow around a dedicated catch-all Gmail inbox for replies to order-confirmation emails. An AI classifier checked each incoming message to decide whether it was a real support request, and if so the workflow forwarded it into Freshdesk instead of sending every reply to support; the post does not describe any manual review step.\nHow it went\nIt solved the problem of support replies landing in a generic info@ inbox without dumping unrelated mail into the support queue. The author says the first version took about 30 minutes to build, but gives no accuracy or volume numbers.\nWorth knowing\nThe main practical catch is that the source stays high level: it names Gmail, an AI classifier, and Freshdesk, but does not share the workflow, prompt, or classification criteria.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches [inbox] for customer replies to our order confirmation emails. Classify whether each reply is a support request, and if so create a Freshdesk ticket with the customer's email, order number, and message text. Ignore auto-replies and thank-yous, and finish by testing with two sample replies and showing me the resulting tickets.\nOriginal source: https://www.reddit.com/r/n8n/comments/1njjah9",
     "body_sha256": "66da36f3cc347457571e6998d30521d00c9e92c19f6c50a811ca909fbab813b4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:59:47.124237+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:59:47.124237+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

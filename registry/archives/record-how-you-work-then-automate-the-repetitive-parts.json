@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/record-how-you-work-then-automate-the-repetitive-parts",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:29.114582+00:00",
+  "html_sha256": "3ab029a8fb9b2d4261bf14be23ae81499b2468d74bcc1bccd92782b753c0886f",
   "body_sha256": "352a9c5b682155e02d50294c0e488429928a443757a92937cef79b812159bf85",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Record how you work, then automate the repetitive parts\nScreenpipe records screen and audio locally and gives agents a searchable memory to turn repeated tasks into procedures.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nScreenpipe runs in the background and captures a screenshot plus the OS accessibility tree whenever something meaningful happens, such as an app switch, click, or typing pause. It falls back to OCR when needed, and transcribes audio locally. Everything goes into a local SQLite index with an authenticated API on port 3030, plus MCP and skills. An agent is then asked to find repeated work, build SOPs, or automate it.\nHow it went\nThe source gives no results or measurements for these automations, only example prompts. It states the local models are meant to use under 1% CPU and 400 MB RAM. It is a launch post, not a case study.\nWorth knowing\nCommercial use needs a paid license; personal, nonprofit, educational and research use is free. You can try it with npx screenpipe record, no account needed.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI do this task repeatedly: [describe task and the apps involved]. Help me write it up as a clear step-by-step procedure, then build a script or reusable instruction file in [folder path] that automates it. Run it once on a safe test case, and pause before any step that sends, submits, pays, or deletes.\nOriginal source: https://news.ycombinator.com/item?id=49024620",
     "body_sha256": "352a9c5b682155e02d50294c0e488429928a443757a92937cef79b812159bf85",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:29.114582+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:29.114582+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

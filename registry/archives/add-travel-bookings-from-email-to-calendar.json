@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/add-travel-bookings-from-email-to-calendar",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:22.977263+00:00",
+  "html_sha256": "d99048e6c534772d963eb657b47a934644123d4f7f514cccfbf65d7bfa577740",
   "body_sha256": "2189be73b65209f2127926ad33a8a80605dd61077490afc5bccb2a8ff9c8d15a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Add travel bookings from email to calendar\nThe author runs Claude Code from a fixed folder with saved scripts to process new travel booking emails into their calendar.\nDone with\nCC\nClaude Code\nWhat they did\nThe author keeps a numbered Johnny.Decimal folder tree, with one folder holding saved scripts and documentation for adding travel bookings to their calendar. They jump to it with a small command, `jd tripsy`, launch `claude` there, and tell it a new email has arrived. Earlier conversations can be picked up with `/resume`.\nHow it went\nThe source says the process works with that single prompt and calls it done, but it gives no numbers, error rates, or details of what the scripts do.\nWorth knowing\nThe trick is a static, well-named folder per task, where Claude Code finds its saved scripts and docs each time, rather than any special tooling.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOpen this folder: [path to your travel folder]. Search my email for new travel booking confirmations from [date range] (flights, hotels, rentals) and add each one to my calendar with the dates, times, confirmation number and address. Save the steps as a reusable script so I can rerun it later, and show me the list of events you plan to add before creating any of them.\nOriginal source: https://news.ycombinator.com/item?id=49949563",
     "body_sha256": "2189be73b65209f2127926ad33a8a80605dd61077490afc5bccb2a8ff9c8d15a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:22.977263+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:22.977263+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

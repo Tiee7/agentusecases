@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/design-and-build-a-robotic-arm-with-no-cad-experience",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:30.923318+00:00",
+  "html_sha256": "26dbcb894ef8b7e2402deda03ff2cbfb1e25b3b85f90365d9e13b00db663a58b",
   "body_sha256": "aa53c8371dce1b7ccbb6878df786073f9dc53e1bfa9bbdfc8f6c0eebb5ef5fa4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Design and build a robotic arm with no CAD experience\nA builder used Claude Code with FreeCAD and Claude Vision to design, print, and assemble a 5-DOF servo arm with vision and voice control.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code wrote one Python macro that FreeCAD re-rendered live, building every part of the arm from boolean operations. The builder iterated by conversation, then printed and assembled the arm. For control, a laptop script sent Whisper speech and a webcam frame to Claude Vision. Claude returned JSON actions, local inverse-kinematics code converted target pixels to servo angles, and an ESP32 drove the servos.\nHow it went\nAbout 30 hours from design to assembly produced four working servos. The gripper is not built, there is no feedback loop, and the pixel-to-world calibration is only approximate.\nWorth knowing\nExpect print fixes. The builder taped two servos, glued a lid, reprinted the base turntable, and replaced a failed print-in-place hinge. FreeCAD's macro runner also needs ASCII-only scripts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a [N]-DOF robotic arm from scratch using FreeCAD via MCP, including part files ready for 3D printing and a servo control script, even though I have no CAD experience. Guide me through printing, assembly, and wiring, stopping to confirm before any step that involves ordering parts.\nOriginal source: https://hiitzroman.com/blog/robotic-arm-with-claude-code-and-freecad",
     "body_sha256": "aa53c8371dce1b7ccbb6878df786073f9dc53e1bfa9bbdfc8f6c0eebb5ef5fa4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:30.923318+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:30.923318+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

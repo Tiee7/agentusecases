@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-charting-tool-from-blood-test-pdfs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:50:41.091919+00:00",
+  "html_sha256": "44e17fe51d7c979243ac682c4c423dee423ed37d1ee7067d34f2f0fc9fd4bd96",
   "body_sha256": "5e44d08b5cad6836bcaf7b18a0afff8fba730d272645032d9c7c8f874d8ee174",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-07",
+      "sha256": "76d1562084b80ede48b8bcaa3acf2f92b835f1559225588120cbf9ee68496244"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build a charting tool from blood test PDFs\nMatt Stockton gave Claude his MyChart blood test PDFs and it produced a web app charting results over time and flagging abnormal values in about five minutes.\nDone with\nCL\nClaude\nWhat they did\nMatt Stockton downloaded several recent blood test PDFs from MyChart, whose formats vary by test and year. He attached them to one Claude prompt with his age and gender. The prompt asked for an interactive browser tool that highlights abnormalities and recommended actions, and it invited Claude to ask questions first.\nHow it went\nWith limited prompting, Claude built an app that charted results over time, flagged abnormal values and added general health insights, all in about five minutes. He thinks a more detailed prompt would improve it.\nWorth knowing\nHe stresses that this needs strong human guidance and oversight. It is not a replacement for doctors or enterprise-grade tools.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have blood test PDFs in [folder path]. Extract every result with its date and reference range, then build a simple local web page that charts each marker over time and highlights values outside the range. You are done when I can open the page and see the charts. Keep the data on my computer and do not upload it anywhere.\nOriginal source: https://mattstockton.com/2024/07/18/unstructured-medical-data-with-llms.html",
     "body_sha256": "5e44d08b5cad6836bcaf7b18a0afff8fba730d272645032d9c7c8f874d8ee174",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:50:41.091919+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:50:41.091919+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

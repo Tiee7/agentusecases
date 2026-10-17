@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-parallel-local-coding-agent-sessions",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:01.147608+00:00",
+  "html_sha256": "5159c2d10c3cff81a3deb55ced4b79331daad0aa9359ac13b40374099e7edeae",
   "body_sha256": "878496a9cdd070409f6551ff645d5b609add1a2e3b9df4c4b5b5053170b1d189",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run parallel local coding agent sessions\nA developer runs up to 10 coding agent sessions at once, using Claude Code and local models on RTX 3090s with cached contexts for daily development work.\nDone with\nCC\nClaude Code\nWhat they did\nRoark66 runs coding agents on RTX 3090s with 24GB each, using Claude Code alongside local models. They keep up to 10 agent sessions open at once, though never more than 5 are active at the same moment. Because they control inference, they keep full contexts cached in RAM and can save the cache to disk, so a session isn't re-read in full after sitting idle.\nHow it went\nHolding about 15 full contexts cached in RAM pushes their local cache utilisation to 95% or more. They say their usage of roughly 1.3B input tokens a week would cost thousands of USD at API prices.\nWorth knowing\nCloud caches expire after 5 minutes or 1 hour, so an idle 500k context gets billed as full input again; local caching avoids that, but you need enough RAM to hold the contexts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to work on [N] separate tasks in my repo at [path] at the same time. For each task, create its own git worktree and branch, work on it independently, run the tests, and summarize what changed. The tasks are: [task 1], [task 2], [task 3]. Stop when each branch has a passing diff ready for my review, and do not merge anything.\nOriginal source: https://news.ycombinator.com/item?id=49992657",
     "body_sha256": "878496a9cdd070409f6551ff645d5b609add1a2e3b9df4c4b5b5053170b1d189",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:01.147608+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:01.147608+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

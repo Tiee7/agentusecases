@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-food-and-symptoms-in-a-health-log-via-telegram",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:50:37.095197+00:00",
+  "html_sha256": "adb0298f20bef7ee9eaf9554006cd734e32f6b81a7d866b54cb561f38697222a",
   "body_sha256": "bab8ddf178c8e218c2071023fd8dc470a3fd673054a09904eec68900331338f8",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-07",
+      "sha256": "76d1562084b80ede48b8bcaa3acf2f92b835f1559225588120cbf9ee68496244"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Track food and symptoms in a health log via Telegram\nAn OpenClaw agent logs meals and symptoms from Telegram messages into a markdown file, sends reminders, and runs a weekly pattern analysis; this is a tutorial-style setup.\nDone with\nOC\nOpenClaw\nWhat they did\nYou message a Telegram topic with what you ate or how you feel. The agent appends a timestamped entry to a markdown health log in its memory folder. Cron reminders go out at 8 AM, 1 PM and 7 PM. Every Sunday it analyzes the week's log and posts the patterns it finds back to the same topic. It needs no skills, only a prompt and a cron job.\nHow it went\nThe article gives no measured results. It describes the kind of pattern the analysis should catch, such as dairy followed by headaches three Wednesdays running. It calls this the lowest-effort project on its list.\nWorth knowing\nThe article says setup takes under an hour if OpenClaw is already running. It also advises binding OpenClaw to 127.0.0.1 first, because the default exposes it on every network interface.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a health log I can use through Telegram. When I message what I ate or any symptoms, add a timestamped entry to a markdown file, remind me at [times] to log, and every [Sunday] send me a summary of patterns between foods and symptoms. Finish by logging a test entry and showing me the file. Treat the summary as observations only, not medical advice.\nOriginal source: https://www.datacamp.com/blog/openclaw-projects",
     "body_sha256": "bab8ddf178c8e218c2071023fd8dc470a3fd673054a09904eec68900331338f8",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:50:37.095197+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:50:37.095197+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

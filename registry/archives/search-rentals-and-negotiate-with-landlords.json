@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/search-rentals-and-negotiate-with-landlords",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:55.009236+00:00",
+  "html_sha256": "ecdda041131ed13a77677a1ec554a605ae6ca474333b71bd2466e2052668b9e2",
   "body_sha256": "70f03b0a221ee1ed5d940603a284e519b53956fd8745ac8fe57079dd57729a54",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Search rentals and negotiate with landlords\nAn OpenClaw agent used browser automation to send 8 listing inquiries, tracked replies in a sheet and negotiated rent over three rounds in one example; showcase-style page.\nDone with\nOC\nOpenClaw\nWhat they did\nThe agent drove a real browser (Browser Skill with Playwright MCP or browser-use) to open each of 8 listings, find the contact method and send the same three-question template. It logged send status and replies in a tracking sheet. For negotiation, the user set a target and walk-away price, and the agent ran the rounds itself, saving the conversation log for review.\nHow it went\nIn the negotiation example, the landlord moved from $3,200 to $2,980 plus one month free after three rounds. The page gives no results for the 8 inquiries, and its examples read as illustrative rather than a documented run.\nWorth knowing\nSet an explicit walk-away price and tell the agent not to open with your lowest number. The page says it should stop and report back once the landlord comes under your limit.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSearch [rental sites] for [property type] in [area] under [budget] with [must-haves]. Shortlist the best [number] listings, log them in a table with price, link and contact, and draft an inquiry for each. Pause and show me each message before sending. You're done when I've approved the messages and have a tracking table ready to update with replies.\nOriginal source: https://openclawcases.com/cases/openclaw-rental",
     "body_sha256": "70f03b0a221ee1ed5d940603a284e519b53956fd8745ac8fe57079dd57729a54",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:55.009236+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:55.009236+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

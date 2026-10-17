@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/debug-overnight-with-a-long-running-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:55.123358+00:00",
+  "html_sha256": "58d5089e55bfcd75629b22e4ead6436f70ccde7bee5dc28b145d3fbe86fc9625",
   "body_sha256": "913d52aed58e48154bd5af0ec9c387cace997767fd27a868765eb26b0ac844f4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Debug overnight with a long-running agent\nThe author leaves Codex CLI running for hours to add debug prints and test hypotheses against a reproducing unit test, often only to find the bug.\nDone with\nCX\nCodex\nWhat they did\nThe author starts Codex running for a few hours overnight on a bug they can't explain. The key requirement is a deterministic unit test that reproduces the bug through the app's front door. The agent then grinds through the tedious work on its own: adding debug prints throughout the code and testing hypotheses about the cause.\nHow it went\nThe source gives no numbers or specific results. The author calls it an ideal use case and says they do it routinely, though it doesn't say how often the agent actually finds the bug.\nWorth knowing\nWrite a deterministic reproducing test first, entering through the app's front door; the approach depends on the agent having a repeatable pass/fail signal to test hypotheses against.\nTry it yourself\nwith\nCodex\nCopy prompt\nThere is a bug in [project] that reproduces with the test [test name or path]. Form hypotheses about the cause, add temporary debug prints, run the test, and keep testing hypotheses until you find the root cause. Stop when you can explain the cause with evidence from the output, then list the debug prints you added and remove them. Propose a fix but do not apply it without asking me.\nOriginal source: https://news.ycombinator.com/item?id=46993231",
     "body_sha256": "913d52aed58e48154bd5af0ec9c387cace997767fd27a868765eb26b0ac844f4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:55.123358+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:55.123358+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

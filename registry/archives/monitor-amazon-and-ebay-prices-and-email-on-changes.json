@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-amazon-and-ebay-prices-and-email-on-changes",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:17.056851+00:00",
+  "html_sha256": "833b4779596fb6432f93ea05647a9b56f7d68b6697caae5063df26451365ded4",
   "body_sha256": "dae9896066efc68a02da73076c3c20d1456d0a32edd6b5e6d8343fd6087842c3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Monitor Amazon and eBay prices and email on changes\nAn n8n workflow checks product URLs from a Google Sheet three times a day, compares prices, emails changes and logs every check.\nDone with\nN8\nn8n\nWhat they did\nA seven-node n8n workflow runs at 9am, 3pm and 9pm. It reads product names, URLs and last prices from a Google Sheet, fetches each page and pulls the price out with a regex in a code node. It compares that to the last price, emails an alert through Gmail if it changed, and logs results to a history sheet.\nHow it went\nThe author tracks 12 products, including 4 direct competitors, and says they now match competitor price drops within the hour instead of noticing days later. Logged history also revealed a competitor's Friday price-drop pattern.\nWorth knowing\nSome sites return 403 to scrapers, and the regex price extraction may need adjusting for other formats. A User-Agent header or an official API can help.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that reads product URLs from my Google Sheet [sheet name], checks the current Amazon or eBay price three times a day, and compares it to the last saved price. If the price changed, email me to [my email] with old and new prices, and log every check in the sheet. It's done when a test run updates the sheet and a simulated change sends one email.\nOriginal source: https://dev.to/flowkithq/stop-checking-competitor-prices-manually-automate-it-with-n8n-free-workflow-json-2li3",
     "body_sha256": "dae9896066efc68a02da73076c3c20d1456d0a32edd6b5e6d8343fd6087842c3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:17.056851+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:17.056851+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

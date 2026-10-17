@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-support-emails-and-draft-replies-for-human-review",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:26.956297+00:00",
+  "html_sha256": "2fa93f436475285dcedf1649816fcb16582b4ed5efa67443c2bcf0a7465dd9de",
   "body_sha256": "67ce4b7b647bf98fb472e59c1bae1d842e19fc648f15497bd8cba0d3f87458e6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage support emails and draft replies for human review\nAn n8n workflow classifies, prioritizes and summarizes each support email, drafts a reply and posts it to Slack for a person to send.\nDone with\nN8\nn8n\nWhat they did\nA five-node n8n workflow polls Gmail for new support emails. Each one goes to an OpenAI-compatible model (gpt-4o-mini in the shared JSON), which returns a category, an urgency, a one-sentence summary and a 3-5 sentence draft reply. The results are logged to a Google Sheet and posted to Slack. A person reviews the draft and sends it, since the author kept sending manual on purpose.\nHow it went\nThe author says it takes about 20 minutes to wire up and that the drafts are good. No volume or time-saved figures are given. Commenters found bugs: one email per poll is processed, and the sender shows as an object.\nWorth knowing\nBefore production, fix the Code node so it handles every email in a poll (it uses .first()), use from.text for the sender, and add JSON parse error handling and a spam filter.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches [support inbox] and, for each new email, classifies the topic, assigns a priority of low, medium or high, and writes a two-line summary. Have it draft a reply using [link to FAQ or policies] and post the summary and draft to [Slack channel] for a person to review. It must never send the reply itself; you're done when a test email produces a Slack post I can approve.\nOriginal source: https://community.n8n.io/t/ai-support-inbox-triage-classify-prioritize-draft-the-reply-human-still-sends/311971",
     "body_sha256": "67ce4b7b647bf98fb472e59c1bae1d842e19fc648f15497bd8cba0d3f87458e6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:26.956297+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:26.956297+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

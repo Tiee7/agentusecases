@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/write-and-send-ai-newsletters-automatically",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:43.203154+00:00",
+  "html_sha256": "9e6642f814747db1eeb3c6a63fd93e39d130f570be0198783b2fcd624e5360b2",
   "body_sha256": "68c8c997849f70949d9e29114c114e4fa63a593d1eaa1630a37a40b81f798441",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Write and send AI newsletters automatically\nAn n8n agent finds a trending AI topic, writes a newsletter with Gemini, formats it and emails it to subscribers without manual work.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA schedule trigger starts an n8n workflow daily or weekly. One Gemini node picks a trending AI topic from the last 24–48 hours, and a second writes a structured HTML newsletter. A JavaScript Code node strips escape characters and metadata. The workflow then reads subscriber emails from a Google Sheet, aggregates them, and sends the email through Gmail.\nHow it went\nThe article says the workflow runs on schedule with no manual effort and produces a styled email with a gradient header and topic badge. It gives no usage numbers or measured results.\nWorth knowing\nRaw Gemini output needed cleanup code to avoid broken email layouts, and the author advises reviewing the first few outputs manually before fully automating.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that runs every [day/week], finds a trending topic in [niche, e.g. AI] from [sources], and uses Gemini to write a newsletter in this voice: [tone description]. Format it as clean HTML and prepare it to send to my subscriber list in [email tool or sheet]. Before the send step is enabled, pause and show me the full draft and recipient count so I can approve it.\nOriginal source: https://dev.to/techstuff/automating-ai-newsletters-with-n8n-the-newsletter-agent-workflow-2agj",
     "body_sha256": "68c8c997849f70949d9e29114c114e4fa63a593d1eaa1630a37a40b81f798441",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:43.203154+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:43.203154+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

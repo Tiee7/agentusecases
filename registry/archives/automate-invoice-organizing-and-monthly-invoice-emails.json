@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-invoice-organizing-and-monthly-invoice-emails",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:33.074498+00:00",
+  "html_sha256": "82c5e6a0d9599bb3e944a37c59c0db7547c3731aa5a690d5082c9882a7063212",
   "body_sha256": "700fba049373eb2824001f0916e1e67fb65d4e135bbdb9aac27d534012695f3e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Automate invoice organizing and monthly invoice emails\nThe author demos Cursor sorting inconsistently named invoice files and handling monthly invoicing by editing a PDF, attaching it, checking the recipient and sending the email.\nDone with\nCR\nCursor\nWhat they did\nThe author opened a folder of invoices with inconsistent names and formats in Cursor and gave instructions. The agent read the files, renamed them and moved them into folders. For monthly invoicing, a second demo had Cursor edit a PDF invoice, attach it, check the recipient and send the email. Recipients are listed in a CSV.\nHow it went\nThe author says the tasks, about 10 minutes a month for filing and 10 to 20 minutes for invoice emails, can be compressed. The source gives no measured results; both are video demos.\nWorth knowing\nTo add more invoices, the author says you only need to add rows to the CSV. The demos are only in embedded videos, so check them for the exact prompts.\nTry it yourself\nwith\nCursor\nCopy prompt\nLook through my invoices folder [path], rename the files to a consistent pattern like [YYYY-MM-vendor-amount], and sort them into [folders by year or client]. Show me the planned renames before applying them. Then prepare this month's invoice for [client] from my template [file], attach it to an email draft, and pause for me to review the recipient and contents before sending.\nOriginal source: https://note.com/minicoohei/n/n892b82b65f7b?hl=en",
     "body_sha256": "700fba049373eb2824001f0916e1e67fb65d4e135bbdb9aac27d534012695f3e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:33.074498+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:33.074498+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/publish-free-game-giveaway-posts-automatically",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:41:25.056602+00:00",
+  "html_sha256": "54b11d3ead90067ba36c755595ad3dd1888b7f76cd81c8a0408b2bc73b1fecbf",
   "body_sha256": "299b1a270d8767a006f9e7983fc48abb1a59939eab74d3c19a38cb44c0f9ac70",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Publish free game giveaway posts automatically\nn8n workflows track free games on Epic, Prime Gaming and Steam, then create and publish WordPress posts with details, images and store links.\nDone with\nN8\nn8n\nWhat they did\nA scheduled n8n workflow pulls free-game listings from sources like Epic and Prime Gaming, splits and de-duplicates them, and scrapes missing descriptions, images or expiry dates through a self-hosted Browserless. New games are saved in NocoDB. The workflow then creates a WordPress draft through the REST API, uploads the featured image, and sets the post to publish. FluentCRM emails subscribers.\nHow it went\nThe author says it went live, and that the backend, WordPress integration and workflows took five days of a few hours each. Later additions were AI-generated game sheets. One problem remained: retrieving source links for those sheets.\nWorth knowing\nThe author built it in about five days, part-time. It needs self-hosted Browserless, NocoDB and FluentCRM alongside n8n and WordPress.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every [day/week], checks [Epic Games Store, Prime Gaming, Steam] for newly free games, and collects each game's title, description, image and store link. Have it create a WordPress post for each game as a [draft/scheduled] post on [my WordPress site]. Don't publish anything live until you've shown me a sample post and I've approved it. The job is done when one test run produces a correct draft for each current giveaway.\nOriginal source: https://community.n8n.io/t/introducing-nocashgaming-automated-free-game-tracker-using-n8n/81369",
     "body_sha256": "299b1a270d8767a006f9e7983fc48abb1a59939eab74d3c19a38cb44c0f9ac70",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:41:25.056602+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:41:25.056602+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

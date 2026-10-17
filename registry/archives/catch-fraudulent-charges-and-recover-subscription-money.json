@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-fraudulent-charges-and-recover-subscription-money",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:30:11.015778+00:00",
+  "html_sha256": "4ce5d9ffa65634190feb8a9d3d57244e99de19c4a4ea90c24fe4a4a38fb81cec",
   "body_sha256": "e2a7ef2c1cfa37a1487719e122a51ee8236718e796b9967421e38573d53aa471",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Catch fraudulent charges and recover subscription money\nUsers said Muse caught a recurring fraudulent charge the bank missed and found a forgotten book subscription and got the money back; savings unverified.\nDone with\nMM\nMeta Muse\nWhat they did\nUsers pointed Meta's Muse agent at their finances, giving it access to inboxes and payment details, and let it work in the background. Per the posts reported, it found a book subscription a user's wife had forgotten to cancel and got the money back. Another user said it caught a recurring fraudulent charge their bank had missed. The source gives few mechanics beyond this.\nHow it went\nAnecdotes only: the source says none of the savings have independent before-and-after figures, and many posts came from Meta staff. The fraud case and the subscription refund have no dollar amounts.\nWorth knowing\nMuse needs inbox and payment access, and it asks you to approve a purchase total in chat before it pays, so check that step.\nTry it yourself\nwith\nMeta Muse\nCopy prompt\nGo through my bank and card statements for [date range] in [folder or attached files]. Flag recurring charges that look fraudulent or that I may have forgotten, with merchant, amount and dates. For each one, draft a dispute or cancellation-and-refund message. Show me everything before sending anything, and end with a list of the total amounts at stake.\nOriginal source: https://thenextweb.com/news/meta-muse-money-challenge-wang",
     "body_sha256": "e2a7ef2c1cfa37a1487719e122a51ee8236718e796b9967421e38573d53aa471",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:30:11.015778+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:30:11.015778+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

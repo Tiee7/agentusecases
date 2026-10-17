@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-work-scripts-in-cowork-on-staged-documents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:54:21.106060+00:00",
+  "html_sha256": "8b938abc380d74fe0da543ff5ab757139d6525d513d3616a0406c42e4abadaf6",
   "body_sha256": "4cbcf1f8b5aacd56d6ea7bcf32042eaeb60e9bba13fc3c548ff114b34a1a2456",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run work scripts in Cowork on staged documents\nA user runs Claude Cowork on a headless machine, staging cloned documents so it can run the scripts and programs needed for work.\nDone with\nCW\nClaude Cowork\nWhat they did\nA commenter says they use Cowork with a headless machine dedicated to Claude, then let it run the work scripts and programs they need by cloning the documents into Cowork’s cloud session and staging them there. They describe steering that setup remotely from their phone, rather than keeping Claude running directly on the machine.\nHow it went\nThey say the setup has been seamless for extensive use and that they do not notice a meaningful difference from local mode. The thread gives no metrics or concrete failures for this specific workflow.\nWorth knowing\nThe main catch is that this depends on a separate headless Claude-only machine, with the actual documents cloned into the cloud session context.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nIn the folder [path to staged copies of my documents], run the script [script name or command] on each file and save the outputs in a new folder called [output folder]. Work only on these copies, and never touch the originals. When you finish, give me a list of the files processed, anything that failed, and why. Ask me before deleting or overwriting any file.\nOriginal source: https://www.reddit.com/r/claude/comments/1wtlbfj/claude_cowork_will_no_longer_work_locally",
     "body_sha256": "4cbcf1f8b5aacd56d6ea7bcf32042eaeb60e9bba13fc3c548ff114b34a1a2456",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:54:21.106060+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:54:21.106060+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

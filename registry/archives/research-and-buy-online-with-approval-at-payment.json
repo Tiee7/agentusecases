@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/research-and-buy-online-with-approval-at-payment",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:54:47.097550+00:00",
+  "html_sha256": "2e6fc55425123a2c389a21a1b189a6368d6428e0f0815d9316110b943a9d9520",
   "body_sha256": "fa366b8dff2eda3b6e3d01cb3112eef4ee237f3efff130a77ca93b4b97c48aff",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Research and buy online with approval at payment\nGrok Bot researches options, prepares orders via Stripe Link and shows a spend request with merchant, total and description before paying; one example covered meal planning and grocery orders.\nDone with\nGB\nGrok Bot\nWhat they did\nConnect the Stripe Link plugin, then ask the Bot to shop. It researches options and prepares the order. At payment it shows a spend request with the merchant, total, description and an expandable breakdown. The person approves each request, and the Bot then gets a secure single-use card for that payment. The meal-planning example is only mentioned in passing, via a roundup.\nHow it went\nThe source gives no purchase results or numbers for this feature. The meal-planning and grocery example is a second-hand anecdote with no detail. Stripe Link purchasing is currently US-only, and mobile support comes later.\nWorth knowing\nCheck the exact merchant, domain, subscription terms, total price and delivery details before approving. A single-use card limits reuse of the card but won't stop you approving the wrong purchase.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nResearch options for [thing to buy, or a meal plan with a grocery order for [number] people and a [budget]]. Prepare the order and, before paying, show me a spend request with the merchant, total and a description of what's in it. Wait for my approval before paying. You're done when the order is placed and you've sent me the confirmation.\nOriginal source: https://flaviocopes.com/grok-bot/",
     "body_sha256": "fa366b8dff2eda3b6e3d01cb3112eef4ee237f3efff130a77ca93b4b97c48aff",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:54:47.097550+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:54:47.097550+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

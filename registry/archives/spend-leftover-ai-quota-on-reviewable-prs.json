@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/spend-leftover-ai-quota-on-reviewable-prs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:39.120788+00:00",
+  "html_sha256": "003720d70e55d1a73ac39095d8ff4177011f152e73c1e58422adf44d1d2dc9e4",
   "body_sha256": "eac9c849f66d206b628905a2ad970ef3aa0b0af8a1bb1d99252517cf83f0ce79",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Spend leftover AI quota on reviewable PRs\nRemainderBot uses a founder's goals and task lists to write PRs with spare Claude and Codex quota, producing 111 PRs including call prep and prototypes.\nDone with\nCL\nClaude\nCX\nCodex\nWhat they did\nThe founder points RemainderBot at a goals file and task-list sources. It runs by hand or as a cronjob. In cron mode it checks remaining subscription quota and time until the weekly reset, picks a task, works on a new branch, and opens a PR. The founder reviews PRs on GitHub, and comments and merge decisions shape later tasks.\nHow it went\nIt produced 111 PRs, including customer call prep, a census of 31 GitHub orgs' agent setup files, and standalone prototypes for demos. The source gives no accuracy figures; the author asks users to report mistakes.\nWorth knowing\nNeeds git, the claude or codex CLI, and an authenticated gh. A single small run with a 20-minute deadline costs a few percent of weekly quota.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead my goals in [path to goals file] and my task list in [path or link to task list]. Pick up to [number] small, well-defined tasks I could use help with, such as call prep notes, prototypes, or small fixes, and do each on its own branch and open it as a pull request in [repo] with a short description of what you did and why. Do not merge anything, and stop once you have opened the PRs and given me a list of them.\nOriginal source: https://news.ycombinator.com/item?id=50073611",
     "body_sha256": "eac9c849f66d206b628905a2ad970ef3aa0b0af8a1bb1d99252517cf83f0ce79",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:39.120788+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:39.120788+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

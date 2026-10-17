@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/attempt-to-book-a-couple-s-flight-failed",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:29:57.075454+00:00",
+  "html_sha256": "6335d3fdb1a73d3a85b0acf9186d256f29792fe699296f33d6f3013d2b11b67d",
   "body_sha256": "f707359015e92162c3c143877635744bb1e72d8a556bd7cb5c1105c1c8848bcf",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Attempt to book a couple's flight (failed)\nA Slate reporter asked Muse to book flights; it hit a captcha, was kicked from the browser and achieved nothing, so he booked himself.\nDone with\nMM\nMeta Muse\nWhat they did\nAlex Kirshner first found the flight himself on Google Flights. For journalistic reasons he then asked Meta's Muse app to book flights for him and his wife, after storing his airline login in Muse's vault. Muse hit a captcha and, with his permission, tried to pass it and failed. He logged in himself and handed control back, and Muse was kicked out of the browser a few minutes later.\nHow it went\nThe attempt took 30 minutes and achieved nothing. Kirshner then booked the flights himself in five minutes, for just over $500.\nWorth knowing\nAgents may get stopped by captchas and bot detection on airline sites. Expect to take over by hand, and budget time for the manual fallback.\nTry it yourself\nwith\nMeta Muse\nCopy prompt\nFind round-trip flights for two people from [origin city] to [destination] departing [date] and returning [date], with seats together and a budget of about [amount] per person. If you hit a captcha or login, stop and tell me so I can complete it. Give me your top three options with prices, times and links, and pause for my approval before entering any passenger or payment details.\nOriginal source: https://slate.com/technology/2026/09/meta-muse-ai-app-review.html",
     "body_sha256": "f707359015e92162c3c143877635744bb1e72d8a556bd7cb5c1105c1c8848bcf",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:29:57.075454+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:29:57.075454+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

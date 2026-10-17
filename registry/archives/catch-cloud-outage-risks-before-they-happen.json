@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-cloud-outage-risks-before-they-happen",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:11.004926+00:00",
+  "html_sha256": "7ac816c23d59be272a9323f1c738bc2dcbb49309adb33afe963ad1dc2ef584ea",
   "body_sha256": "a720ad64be4e69af466fb420c61ea5761e614bdc0d91b2d6a16e8f2a537e75d5",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Catch cloud outage risks before they happen\nAn autonomous ReAct agent that queries real data to stop cloud outages before they occur, built for the Sanity Challenge.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nSHIPCHECK is a ReAct agent connected to a Sanity Content Lake through MCP. Given a proposed upgrade, it calls four tools for component state, version constraints, cluster dependencies and a knowledge graph. It follows two-hop dependencies with GROQ and settles conflicting docs by an authority score from 1 to 10. Sanity held 18 seeded records.\nHow it went\nFor the payment service v2 to v4 upgrade, it ran 13 steps and found that the cluster's Payment SDK v2.4.1 was below the required v3.0.0. It returned DO NOT SHIP YET, and a simulated SDK fix flipped the verdict to safe.\nWorth knowing\nThe data is a small seeded set of 18 records, and the claim that hallucination fell from about 30% to 0% is stated without any evaluation method.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nUsing the logs and metrics export at [path], look for patterns that came before past outages, like rising error rates, saturated CPU, or expiring certificates. Write a script that checks current data for those signals and outputs a ranked list of risks with evidence. Finish when it runs on my sample data. Do not change any infrastructure.\nOriginal source: https://dev.to/rajan_mishra_a9f78ad216b4/shipcheck-an-autonomous-react-agent-that-stops-cloud-outages-before-they-happen-5ag1",
     "body_sha256": "a720ad64be4e69af466fb420c61ea5761e614bdc0d91b2d6a16e8f2a537e75d5",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:11.004926+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:11.004926+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

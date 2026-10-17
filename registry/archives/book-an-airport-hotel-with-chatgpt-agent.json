@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-an-airport-hotel-with-chatgpt-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:11.005403+00:00",
+  "html_sha256": "cdada7c3bde8dd2cd1a9a35a3cf3e274fec5e97dd5c04f6287b4ae355871db4a",
   "body_sha256": "661d92381a0db264651dab083a1d774299ecb9736dcc3692cdaf00ea3f699af4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Book an airport hotel with ChatGPT Agent\nAuthor had ChatGPT Agent pick and book a Gatwick hotel on Booking.com; it reached the card confirmation screen, then needed the author to take over.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe author pasted a long instruction block into ChatGPT Agent. It limited the agent to Booking.com, used Booking.com's own filter names, and set ranking and tie-break rules. The agent used his logged-in account and searched, ranked and picked a hotel. It stopped at the CVC confirmation screen with links to the runner-ups. He then took control.\nHow it went\nThree Gatwick runs each picked the hotel he would have chosen, taking 5-10 minutes each. Stansted worked too. Reykjavík failed until he dropped the air-conditioning filter. The agent made minor errors, such as a wrong star rating.\nWorth knowing\nAgent mode ignores project instructions, so paste the prompt every time. UK banks likely block 3D Secure, so book through a saved Booking.com account.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nFind and book a hotel near [airport] for the night of [date] for [number] guests, under [budget] per night, with free cancellation and a good rating of at least [score]. Compare at least three options on [booking site] and recommend one with reasons. Stop at the payment screen and show me the room, total price and cancellation terms, and wait for me to confirm and enter payment details.\nOriginal source: https://wow.pjh.is/journal/can-chatgpt-agent-book-hotel",
     "body_sha256": "661d92381a0db264651dab083a1d774299ecb9736dcc3692cdaf00ea3f699af4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:11.005403+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:11.005403+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

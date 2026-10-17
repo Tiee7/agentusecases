@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-follow-ups-and-inventory-tracking-for-a-food-distri",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:51:41.101793+00:00",
+  "html_sha256": "8fbc6763934737fd310b7c7387c0ee46544ee35950ec859764cec632be419f3d",
   "body_sha256": "8f262da2256fafa0606adeef36a7facf76253393481f734499d2a570d8ab2f7a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-08",
+      "sha256": "6b9df6402709e9e818c2543649efa60495b29313d05ce6e8eacc7ac607078444"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Automate follow-ups and inventory tracking for a food distributor\nBuilt agents for a wholesale food distributor that ran on Excel, calls and email, including inventory tracking and a copywriter agent for outreach emails.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThey started with a wholesaler that ran on Excel, phone calls, texts, emails, and manual follow-ups. The setup chained simple agents: scrape local businesses from Google Maps by ZIP code, generate segmented cold-email copy from scraped YouTube transcript examples, find and verify emails with Apollo, Apify, and Million Verifier, send campaigns through warmed inboxes in Aerosend and Smartlead, and flag inventory reorders from rules and sales history; a human still approved purchases.\nHow it went\nIn 4 months, monthly revenue rose from about $22K to $45K, leads contacted from about 120 to 1,500+, verified local leads to around 900 a month, and new customers from 3–4 to 12–15 monthly. The inventory piece was intentionally basic, using rules plus historical sales velocity rather than advanced optimization.\nWorth knowing\nThey say the automation worked best because the tools had solid APIs, and the reorder system’s first version was simple rules with human approval, not a fully autonomous buyer.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow for my [type of business] that reads [Excel file] for inventory levels and customer orders, flags items below [threshold], and drafts follow-up emails to customers who haven't reordered in [number] days. Save the drafts for my review and never send them automatically. Finish when a test run produces an inventory alert list and a batch of drafted emails.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1t6dt98/i_built_boring_ai_agents_for_a_food_distributor",
     "body_sha256": "8f262da2256fafa0606adeef36a7facf76253393481f734499d2a570d8ab2f7a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:51:41.101793+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:51:41.101793+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

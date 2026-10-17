@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/set-up-weekly-changelogs-and-fix-docs-from-github-issues",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:41.031770+00:00",
+  "html_sha256": "e466fe8d1e08fec552b59c6680b7fba851a6bb05cb8156c292ed729dcf2a3828",
   "body_sha256": "ce5fad00cf5651144323812cb795cd5003ee7da22abdb89f584e4f0a71a48dd4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Set up weekly changelogs and fix docs from GitHub issues\nNeon's docs team has Devin create the weekly changelog from a playbook and open or revise doc PRs from GitHub issues, for repetitive work only.\nDone with\nDE\nDevin\nWhat they did\nNeon's docs team standardized the weekly changelog setup as a Devin Playbook, so they only tell Devin to set up the changelog for this Friday. For GitHub issues, they point Devin at an issue, and it reviews the code, finds the docs that need updating, and creates or revises a PR.\nHow it went\nThis helped them work through a backlog of older docs issues without auditing each one by hand. Devin struggled with open-ended tasks, and a bulk term rename needed 20+ manual cleanup commits.\nWorth knowing\nKeep tasks clearly scoped. Devin failed silently on vague jobs, with no clarifying questions or error signals, so check in on its progress yourself.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my docs repo at [path to repo], read the open GitHub issues labeled [label] and make the doc changes each one asks for, one branch per issue. Also draft this week's changelog from [source, e.g. merged PRs since last Friday] following the format in [example changelog file]. Pause and show me each diff before opening any PRs.\nOriginal source: https://neon.com/blog/ai-workflows-for-docs-devin",
     "body_sha256": "ce5fad00cf5651144323812cb795cd5003ee7da22abdb89f584e4f0a71a48dd4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:41.031770+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:41.031770+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

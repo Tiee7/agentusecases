@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/shortlist-destinations-and-compare-stays",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:35:09.059825+00:00",
+  "html_sha256": "67bb42f572ae6baac97edacd3b16d73ccff1cab40a03f8e5a6e662c6a7994352",
   "body_sha256": "46e4f3fef6ebcb5de489d9379df1363fa90cc3b3c942fc4efe348833214fb1da",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Shortlist destinations and compare stays\nComet shortlisted sunny destinations by flight time from Amsterdam, then pulled Airbnb and Booking.com listings into a comparison table.\nDone with\nPC\nPerplexity Comet\nWhat they did\nIn a live session, Thibault Masson of RSU by PriceLabs opened Perplexity's Comet browser and gave it one prompt. The prompt asked for five apartments for four nights in April, under €250 a night, sunny, good for remote work, and within a 3-hour flight of Amsterdam. He named no destination. He took his hands off the keyboard while the agent worked out flight times, picked cities, opened Airbnb and Booking.com, and extracted listing details.\nHow it went\nComet returned a table of five apartments with Wi-Fi speeds, flight durations and nightly prices, and named Lisbon, Malaga and Valencia as candidate cities. The article gives no accuracy check and no booking step.\nWorth knowing\nWith a broad prompt like this, the agent defaulted to Airbnb and Booking.com. Masson says more specific asks, such as design-led stays, pulled from niche sites instead.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nShortlist [number] sunny destinations in [month] within [number] hours flight of [home city]. For my top [2-3] picks, pull listings from Airbnb and Booking.com for [dates] and [number of guests] under [budget], and put them in a comparison table with price, rating, and location. Do not book anything; stop once the table is ready.\nOriginal source: https://www.rentalscaleup.com/ai-travel-booking-agents-autonomous-browser/",
     "body_sha256": "46e4f3fef6ebcb5de489d9379df1363fa90cc3b3c942fc4efe348833214fb1da",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:35:09.059825+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:35:09.059825+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

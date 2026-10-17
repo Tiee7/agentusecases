@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/test-an-iphone-game-and-report-what-passed",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:55.040684+00:00",
+  "html_sha256": "6a155bcf2f25c3572685cf197b84df5b39c2966d52bab7d830f1ac757e32d936",
   "body_sha256": "23956b0fb9f3a450f3c0d893a59ca7e35fa975105d8e524fbfbb7468f5637053",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Test an iPhone game and report what passed\nCognition had Devin on GPT-6 Astra test the game Otter Run in a simulator, returning a recording and a report of checks passed and untested areas.\nDone with\nDE\nDevin\nWhat they did\nDevin, Cognition's cloud agent, ran on GPT-6 Astra and tested Otter Run, an iPhone game, in a simulator. It produced two outputs: a recording of the game running, and a report listing the checks that passed and the areas it left untested. Engineers use those outputs to see how the software behaves and what still needs attention.\nHow it went\nThe source gives no pass counts or timings. It presents the example as a step toward engineers reviewing less code by hand, which Cognition expects over time and has not yet shown.\nWorth knowing\nThe report's list of untested areas shows what the agent did not cover, so you still have to review those parts yourself.\nTry it yourself\nwith\nDevin\nCopy prompt\nTest my iOS app [app name] in the simulator. Play through [key flows, e.g. launch, first level, pause, game over] and record a screen recording while you do it. Finish with a report listing each check that passed, each failure with steps to reproduce, and areas you did not test. Don't change any code.\nOriginal source: https://openai.com/index/cognition-devin-testing-with-astra/",
     "body_sha256": "23956b0fb9f3a450f3c0d893a59ca7e35fa975105d8e524fbfbb7468f5637053",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:55.040684+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:55.040684+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

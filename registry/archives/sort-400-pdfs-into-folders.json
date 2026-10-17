@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/sort-400-pdfs-into-folders",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:57:47.013074+00:00",
+  "html_sha256": "daf326e6c3d0d695f3e433a5d006df69fb90083970b7c3fd997388007256effb",
   "body_sha256": "788def11603042f764c12d1eb90897aba35cc668694a1bee8651c6086e48825e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Sort 400 PDFs into folders\nA user had Claude Cowork read 400 PDF files and sort them into different folders.\nDone with\nCW\nClaude Cowork\nWhat they did\nThe user put all the PDFs in one local folder, selected that folder in Claude Cowork, and gave a plain-language instruction saying how many files were there, what text to look for, and which matching files should be moved into one or more subfolders. They said Cowork handled text-based PDFs, could also group related PDFs for merging, and after sorting they could ask it to generate an XLSX index showing what went where.\nHow it went\nThey reported Cowork sorted 400 PDFs without trouble; in the more detailed follow-up they described the same workflow on 382 files. The source gives no measured accuracy, speed, or examples of mistakes, only that it worked for text rather than image content.\nWorth knowing\nTheir main tip was to be very explicit in the prompt, like briefing a smart new coworker; they only made a reusable skill if it was something they wanted to repeat.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nRead the PDFs in [folder path] and sort them into subfolders by [criteria, e.g. client, document type, or year]. First show me the proposed folder names and a sample of how files would be assigned, and wait for my OK. Then move the files, never delete anything, and finish with a list of any files you couldn't classify.\nOriginal source: https://www.reddit.com/r/claude/comments/1ur3x8a/when_or_what_to_use_cowork_for",
     "body_sha256": "788def11603042f764c12d1eb90897aba35cc668694a1bee8651c6086e48825e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:57:47.013074+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:57:47.013074+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

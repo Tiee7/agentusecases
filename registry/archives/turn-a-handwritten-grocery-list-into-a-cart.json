@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-a-handwritten-grocery-list-into-a-cart",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:27:43.012884+00:00",
+  "html_sha256": "98dfcbdba5b0f88c602b77c1c60c610fdb42d43fc65522b35aeb32998083aca1",
   "body_sha256": "663cc6a7843a3b61517ad0a6e1c457c6ed06e981ee0044267a970863c2374eb6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn a handwritten grocery list into a cart\nChatGPT Agent transcribed 15 of 16 items from a photo, found the nearest store and added them to the cart, but missed onions and struggled with login.\nDone with\nGA\nChatGPT Agent\nWhat they did\nTimothy B. Lee gave ChatGPT Agent a photo of a handwritten grocery list, with the items to buy marked in red. He asked it to fill an online cart. The agent transcribed the list, found his nearest store (Harris Teeter) and added items. When a safety proxy blocked the Kroger login page, he told it he would log in himself, then entered his password.\nHow it went\nIt transcribed 15 of 16 items and added all 15 to the cart, missing onions. Operator had managed only 13 of 16 in an earlier test. After about six minutes it stalled at login, then finished the order.\nWorth knowing\nAn OpenAI safety proxy blocked the Kroger-hosted login as irrelevant. Replying that you'll log in yourself, then typing the password, got past it.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nI'm attaching a photo of my handwritten grocery list. Transcribe it into a typed list and show it to me so I can check for anything missed. Then find the nearest [store] to [my location or zip code] and add every item to the cart. Stop before checkout and show me the cart, any items you could not find and the total, and wait for my approval before ordering.\nOriginal source: https://www.understandingai.org/p/chatgpt-agent-a-big-improvement-but",
     "body_sha256": "663cc6a7843a3b61517ad0a6e1c457c6ed06e981ee0044267a970863c2374eb6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:27:43.012884+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:27:43.012884+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

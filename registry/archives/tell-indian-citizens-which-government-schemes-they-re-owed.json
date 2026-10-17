@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/tell-indian-citizens-which-government-schemes-they-re-owed",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:08.870826+00:00",
+  "html_sha256": "6525f1845f38230a583dace16f70c0dc1c102f85e71defc44b404c4f912e47ab",
   "body_sha256": "076a81bdbb88c9624f38514e665da3f3bf50f986e2707babd7adbbf87d8d4bb6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Tell Indian citizens which government schemes they're owed\nAn agent built on Sanity queries real content to tell people in India which government schemes they are entitled to.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent runs on Inception's Mercury via the Vercel AI SDK and reaches a Sanity Context MCP endpoint in GROQ mode. It extracts the person's details, reads the schema, and makes one GROQ query for schemes with typed eligibility rules. It then checks every exclusion rule. A second pass formats cards as JSON, and the route attaches the apply and source URLs from the dataset.\nHow it went\nWorks in English and Kannada with follow-ups. The dataset has 125 schemes, but only 10 flagships have structured rules (33 rules, 11 exclusions). A run takes 30 to 45 seconds. The author did not verify every rule line by line.\nWorth knowing\nThe first Knowledge Base route burned 20 tool calls without answering. Switching to GROQ mode fixed it, but it needs a deployed Studio.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nI am a [age] year old [occupation] living in [state] in India with household income of about [amount] and [other relevant details like caste category, land, or family]. Search official government sites to find central and state schemes I may be eligible for. For each, give the benefit, eligibility, documents needed, and the official application link. Do not submit any applications or enter personal ID numbers.\nOriginal source: https://dev.to/varshithvhegde/entitled-an-ai-agent-that-tells-indians-which-government-schemes-theyre-owed-built-on-sanity-4dml",
     "body_sha256": "076a81bdbb88c9624f38514e665da3f3bf50f986e2707babd7adbbf87d8d4bb6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:08.870826+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:08.870826+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

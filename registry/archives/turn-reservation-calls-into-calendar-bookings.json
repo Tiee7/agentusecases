@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-reservation-calls-into-calendar-bookings",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:12.943840+00:00",
+  "html_sha256": "1b0488a02647a84ddeef5625b8c82a551090536640d5b54b59a82b56c2dd9a21",
   "body_sha256": "80e3a6edc499a4f4b1e3d719bf09a35db3f2e7f105a1ab1653550a867ce98239",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn reservation calls into calendar bookings\nAn n8n workflow takes Vapi call transcripts, extracts reservation details, creates Calendar events, logs to Sheets and sends follow-ups.\nDone with\nN8\nn8n\nWhat they did\nWhen Vapi finishes a call, it posts the transcript to an n8n webhook, and an IF node lets only call_ended events through. A Groq-hosted Llama model turns the transcript into fixed JSON: name, phone, email, guests, date, time and requests, plus a drafted confirmation email. n8n then creates the Google Calendar event, appends to Sheets and Supabase, and sends Gmail and Twilio SMS confirmations.\nHow it went\nThe authors give no booking counts or test results. They put running cost at about $60–100 a month and argue that recovering one lost reservation a week pays for it. They flag double-booking as an open risk.\nWorth knowing\nAdd an availability check before the calendar insert, or two callers can get the same slot. Cost is roughly $60–100 a month, or $0.10–0.12 per call minute.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives call transcripts from [Vapi or my voice-agent tool], extracts the guest name, phone number, date, time and party size, and creates a Google Calendar event on [my calendar]. It should also log each booking to a Google Sheet and draft a follow-up message. It's done when a sample transcript produces a calendar event and a sheet row; pause and show me the follow-up before anything is sent.\nOriginal source: https://www.clixlogix.com/n8n-ai-receptionist-24-7-booking-agent/",
     "body_sha256": "80e3a6edc499a4f4b1e3d719bf09a35db3f2e7f105a1ab1653550a867ce98239",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:12.943840+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:12.943840+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

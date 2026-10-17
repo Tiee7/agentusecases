@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-a-killed-process-on-a-server",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:57.038165+00:00",
+  "html_sha256": "b86a7867e0ba828a6231eddaa332f51a5e87b324d69a93765d4b927c4b7aa86b",
   "body_sha256": "d5de899f118b6022ca233eac341d1a279a9902e56964bb40b38a3a79c7ad2285",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Diagnose a killed process on a server\nCodex CLI over SSH found the OOM killer in kernel logs on a 2 GB droplet with no swap and listed fixes by risk without changing anything.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nClaude Code kept dying within seconds on the author's Ubuntu droplet. He ran Codex CLI on his Mac and gave it the SSH command for the server, plus the symptom and no hints. Codex asked approval to connect, then checked memory, processes and limits. It grepped the kernel log via journalctl for kill and OOM messages.\nHow it went\nCodex found the OOM killer ending claude at about 860 MB on a 1.9 GB droplet with no swap, with MySQL using about 786 MB. It ranked fixes and changed nothing.\nWorth knowing\nThe author resized the droplet, which caused its own problems. He says in hindsight that the first fix Codex listed, a 2 GB swap file, was cheaper.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nMy server at [user@host] has a process that keeps getting killed, namely [service name]. Connect over SSH and investigate read-only: check kernel logs, memory, swap, and service logs to find the cause. Finish with a diagnosis and a list of possible fixes ranked by risk. Do not change any settings, install anything, or restart services without showing me the exact command and getting my approval first.\nOriginal source: https://flaviocopes.com/server-process-killed/",
     "body_sha256": "d5de899f118b6022ca233eac341d1a279a9902e56964bb40b38a3a79c7ad2285",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:57.038165+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:57.038165+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

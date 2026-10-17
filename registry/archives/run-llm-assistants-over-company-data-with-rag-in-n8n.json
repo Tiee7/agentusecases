@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-llm-assistants-over-company-data-with-rag-in-n8n",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:45:05.137337+00:00",
+  "html_sha256": "ff41dcb0a729431cc8c07749a87b1460384ee6f5a09de18bdc224f281d38522f",
   "body_sha256": "f8e04ef38a02b83946631bfca0394ae2bfcf16fc44a7f7cabf756c254b6c5df7",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run LLM assistants over company data with RAG in n8n\nA commenter used multiple LLM assistants in an n8n project at their company, handling AutoCAD Forge API calls, parsing, embedding and RAG across company data.\nDone with\nN8\nn8n\nWhat they did\nIn a company n8n project, the commenter says they set up multiple LLM assistants that handled AutoCAD Forge API calls and worked over company information using parsing, embeddings, and RAG. They describe the system as easier to start than a Python project, but say the LLMs sometimes routed requests to the wrong Supabase and often needed humans dealing with revised engineering drawings and desired SMP schemes.\nHow it went\nIt worked well enough for much of the job, but they say responses were inconsistent: API work was painful, information spread badly between assistants, and the RAG/parsing setup was harder to build in n8n than in Python.\nWorth knowing\nTheir main catch is tradeoff: n8n was easier to get started with, but they say a Python script could have handled some Forge API work in only a few hours.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that lets me ask questions in [chat or Slack] about our company data stored in [Google Drive, Notion, or database]. It should parse and split those documents, embed them into a vector store, and answer using retrieval with a citation to the source document. Only read the data, never modify or delete anything. The job is done when it correctly answers [three test questions] and shows its sources.\nOriginal source: https://www.reddit.com/r/n8n/comments/1r3qalu/most_ai_agent_workflows_are_just_glorified_ifelse",
     "body_sha256": "f8e04ef38a02b83946631bfca0394ae2bfcf16fc44a7f7cabf756c254b6c5df7",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:45:05.137337+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:45:05.137337+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

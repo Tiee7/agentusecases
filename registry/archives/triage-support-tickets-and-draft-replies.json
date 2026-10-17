@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-support-tickets-and-draft-replies",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:53.243300+00:00",
+  "html_sha256": "234f6c2d36e3439997a0f83d087dc3b3ea08a12dcbc0b88590a7bfda2531ebcd",
   "body_sha256": "f71893ea996768c372c90deeb07324ec7c4a700bee07132e38039429d0d357f3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage support tickets and draft replies\nA Claude Code skill builds scripts against support, billing and database APIs to list and triage tickets, gather billing context, draft replies, and run refunds and cancellations.\nDone with\nCC\nClaude Code\nWhat they did\nThe skill interviews you about your support stack, then writes TypeScript scripts for your ticketing, billing and database APIs, plus response templates. Once built, the agent lists and triages every open ticket, proposes the most urgent one, pulls billing and customer context, and drafts a reply. You approve before anything is sent, refunded or closed.\nHow it went\nFor the Lex setup (HelpScout, Stripe, PostgreSQL), the author built 15 scripts and 6 templates. He says it handles about 80% of support tasks with yes/no approvals.\nWorth knowing\nSetup takes roughly 30-60 minutes for core scripts and templates, and you need API credentials. Database access is read-only, and the README says nothing goes out without your approval.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite scripts that connect to my [support tool] and [billing tool] APIs using the credentials in [env file], list open tickets, and sort them by urgency. For each ticket, pull the customer's billing context and draft a reply in a file for me to review. Do not send any reply, issue any refund, or cancel any account; pause and show me the exact action first.\nOriginal source: https://github.com/nbashaw/claude-cs",
     "body_sha256": "f71893ea996768c372c90deeb07324ec7c4a700bee07132e38039429d0d357f3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:53.243300+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:53.243300+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

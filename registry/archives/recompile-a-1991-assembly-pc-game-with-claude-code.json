@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/recompile-a-1991-assembly-pc-game-with-claude-code",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:24:48.989236+00:00",
+  "html_sha256": "e816178d907390f61ac257fb6c6c4df4c114ada3c05098f82b7059a0cd4ebbc4",
   "body_sha256": "31f4853ce66024aea7deeeae51f1d7c69786ef3333461e36b478ef8b08686d56",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Recompile a 1991 assembly PC game with Claude Code\nThe author uses Claude Code CLI with Sonnet to get the source of their 1991 386+ assembly game compiling again.\nDone with\nCC\nClaude Code\nWhat they did\nThe author took the full source of an unpublished 1991 386+ assembly game and set up UASM, which is MASM-compatible, with DOSBox for running results. Using Claude Code CLI with Sonnet, they got the old build utilities compiling. They also asked the model to locate bugs mentioned in their own old code comments.\nHow it went\nThe picture converters and sprite extractor now compile and run in DOSBox, but the main game doesn't compile yet; the author expects a few more hours. Sonnet 4.6 immediately spotted a clash with a reserved name, incbin.\nWorth knowing\nOld macro names may now be reserved words in modern assemblers; here a macro called incbin blocked UASM compilation until the model pointed it out.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have the source code of an old [language, e.g. 386 assembly] project at [path to folder] that I last built in [year]. Work out which assembler, linker and tools it needs, set up a way to build it on my [OS], and fix errors until it compiles and runs. Explain each change you make, and ask me before you delete or overwrite any original files.\nOriginal source: https://news.ycombinator.com/item?id=47689685",
     "body_sha256": "31f4853ce66024aea7deeeae51f1d7c69786ef3333461e36b478ef8b08686d56",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:24:48.989236+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:24:48.989236+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

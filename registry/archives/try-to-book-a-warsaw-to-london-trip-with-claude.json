@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/try-to-book-a-warsaw-to-london-trip-with-claude",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:42:11.082463+00:00",
+  "html_sha256": "11a579db27d49e35667eb20b770be62e8bcc90b5cc2ba81971a9270b07e25fd5",
   "body_sha256": "de1f8e9bfa32f68d57b357c713e5772a16e5a930dabf1ebfdeefc716efa4bae3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Try to book a Warsaw to London trip with Claude\nThe poster tried to have Claude fully book flights and hotel via Expedia and Kiwi connectors, found them poor, and ended up building a travel booking project instead.\nDone with\nCL\nClaude\nWhat they did\nThe poster tried to make the default Claude mobile/web app fully book a Warsaw-to-London trip, using Expedia and Kiwi through Claude’s connectors. Claude could search options, but the attempt dragged on because the booking flow, especially taking payment safely without exposing card details to the model or connector, was not solved; the poster then turned the experience into building a travel-booking product instead.\nHow it went\nThe trip itself was not fully booked by Claude, and the process stretched into a six-month project. In the end, the poster says a later model release changed what felt possible, but the original Expedia and Kiwi connector attempt was poor.\nWorth knowing\nThe biggest catch was payments: the post frames bank-grade card handling, without the AI or services ever seeing the card data, as the central blocker.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small travel planning project for a trip from [origin city] to [destination city] on [dates]. It should pull flight and hotel options from [sites or APIs you prefer] into one ranked comparison file using my budget of [amount] and preferences of [preferences]. Stop once the shortlist is ready and show me the top choices with links, and don't book or pay for anything.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wg6ubl/i_asked_claude_to_book_my_flight_hotel_it_took_6",
     "body_sha256": "de1f8e9bfa32f68d57b357c713e5772a16e5a930dabf1ebfdeefc716efa4bae3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:42:11.082463+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:42:11.082463+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-claude-buy-a-game-autonomously",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:51:35.103140+00:00",
+  "html_sha256": "f63a9b23eff64b31cbd50e15c25e1abab779d32a89bd932e30afd2c5dc5f5110",
   "body_sha256": "f89892092074cba5f9ece97ce71689481c1743ea66a1df60dc1fa6ca65f9ac1b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-08",
+      "sha256": "6b9df6402709e9e818c2543649efa60495b29313d05ce6e8eacc7ac607078444"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let Claude buy a game autonomously\nThe poster built payment infrastructure so Claude could complete a game purchase on its own when told to, in about 60 seconds.\nDone with\nCL\nClaude\nWhat they did\nThe poster says they built payment infrastructure with a few custom MCPs so Claude could shop for a game. In the demo, Claude searched 10,000+ games, found Civilization III Complete for $0.99, authorized payment through x402 with a human confirmation step, settled funds through an MCP server with a digital wallet, and then received the license key.\nHow it went\nThe run took 60 seconds total with 0 clicks, broken out as 10 seconds for search, 5 for authorization, 30 for settlement, and 15 for fulfillment. It was a demo merchant integration, and the poster says settlement and secure buyer-merchant exchange were the tricky parts.\nWorth knowing\nIf you copy this, the source’s clearest catch is that payment can be manually approved at each step or constrained with purchase limits and whitelisted merchants.\nTry it yourself\nwith\nOperator\nCopy prompt\nGo to [store name] and buy the game [game title] for [platform] if the price is at or below [max price]. Use the saved payment method on my account. Pause and show me the item, price, and total at the final checkout step before you pay, and finish when I've confirmed and you've shown me the order confirmation.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1owqgrp/i_just_bought_a_game_in_60_seconds_by_telling",
     "body_sha256": "f89892092074cba5f9ece97ce71689481c1743ea66a1df60dc1fa6ca65f9ac1b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:51:35.103140+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:51:35.103140+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

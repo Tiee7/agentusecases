@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-connections-across-100-non-fiction-books",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:19.001556+00:00",
+  "html_sha256": "5519e6df3150d0ccf3def403c9d72c652528d70f5ebe25f705b9f63e62560dfc",
   "body_sha256": "93cc1e58fb23ed1257d15512d8489afe127151a472e9237466b9dc4e93420163",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Find connections across 100 non-fiction books\nClaude Code browses a personal library with CLI tools and surfaces trails of related excerpts across books.\nDone with\nCC\nClaude Code\nWhat they did\nPieter Maes pointed Claude Code at his personal library of non-fiction books. It automatically found thematic links across them and grouped them into named trails. Each trail has a short thesis, related concepts, and the books it draws on. The results are published as a browsable site with a books index.\nHow it went\nThe site shows dozens of trails, such as Useful Lies, Pacemaker Principle and Proxy Trap. Each one links five books that would not normally be read together. The page doesn't say how the trails were checked.\nWorth knowing\nThe page doesn't describe the tooling or its cost. The full method is in the author's linked explainer, so read that before copying the setup.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a folder of about [number] non-fiction books as [epub/pdf/txt] files at [folder path]. Index them so you can search across them, then find connections between books on the theme of [topic or question]. Give me 5 trails of related excerpts, each with the book title, the quote, and one sentence on how it links to the next, and stop once I have those 5 trails.\nOriginal source: https://trails.pieterma.es/",
     "body_sha256": "93cc1e58fb23ed1257d15512d8489afe127151a472e9237466b9dc4e93420163",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:19.001556+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:19.001556+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

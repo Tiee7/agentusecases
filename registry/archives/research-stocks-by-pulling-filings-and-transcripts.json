@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/research-stocks-by-pulling-filings-and-transcripts",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:43:46.961332+00:00",
+  "html_sha256": "aeb35147f08be0b3cec1ff7289017c1a929cd4b90c1181d6bc7a6a9915ba947f",
   "body_sha256": "53c47c053dcf89ee24154e8db7550dd1ceb75a73738b20cb7c655eff8a3e46aa",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Research stocks by pulling filings and transcripts\nThe poster has Claude Code fetch filings, transcripts and SEC documents for a company, cite sources, and write a bear case on a holding.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster says they stopped manually downloading and skimming 10-Ks and instead ask Claude Code about a company and what they want to know. Claude Code then uses web search to pull 10-Ks, earnings transcripts, and other SEC filings on its own, writes up the research, and cites the filings so the poster can spot-check anything that seems off; the human mainly reviews the output and decides whether to buy.\nHow it went\nThey say the writeups were more thorough than their old process and that asking for a bear case on a long-held position surfaced concerns they had missed. No performance numbers or specific investing results are given.\nWorth knowing\nThe main catch is that this is described as a research aid, with the person still reading the cited output and making the final decision.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nResearch [company name, ticker]. Fetch its latest 10-K, 10-Q and the last [number] earnings call transcripts, summarize the business, key numbers and management's main claims, and cite the source and page for every point. Then write a bear case of the strongest arguments against owning it, saved as a markdown file in this folder. This is for research only, not investment advice.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1rpxsan/claude_code_kinda_ruined_me_for_doing_stock",
     "body_sha256": "53c47c053dcf89ee24154e8db7550dd1ceb75a73738b20cb7c655eff8a3e46aa",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:43:46.961332+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:43:46.961332+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

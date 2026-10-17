@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-a-voice-receptionist-schedule-appointments-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:24:13.001903+00:00",
+  "html_sha256": "ad3aed41e17532ecac79cd50ad0839f8b47eef55512b0c092eb6b0a1ad4e3100",
   "body_sha256": "d7365495003c59b4bccb796bc0794924d77ba455a2fb9fc268243bfc868af3c5",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let a voice receptionist schedule appointments via MCP\nA custom MCP server exposes list, schedule and cancel appointment tools so an ElevenLabs voice agent can handle customer calls against the company CRM.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter's team runs a custom MCP server exposing tools such as list_appointments, schedule_appointment and cancel_appointment against their CRM. An ElevenLabs voice agent, which handles speech-to-text, the LLM and text-to-speech, connects to it over a Twilio phone line. A system prompt sets tone, guardrails and when to call each tool.\nHow it went\nThe source is a short explanatory comment and reports no results, numbers or shortcomings. It describes the architecture only.\nWorth knowing\nThe LLM runs on infrastructure you don't control, so your own hosted MCP server is the only bridge to your CRM; the voice transport (phone, app, browser websocket) is interchangeable.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild an MCP server in [language] that exposes list_appointments, schedule_appointment, and cancel_appointment tools on top of [CRM or API name]. Make it usable by a voice agent such as ElevenLabs, and include tests with fake data. Stop when the tools pass the tests and give me a short guide for connecting it, with cancellations requiring confirmation.\nOriginal source: https://news.ycombinator.com/item?id=49560285",
     "body_sha256": "d7365495003c59b4bccb796bc0794924d77ba455a2fb9fc268243bfc868af3c5",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:24:13.001903+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:24:13.001903+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-web-form-entry-and-gmail-cleanup",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:48.906391+00:00",
+  "html_sha256": "9d9895d7871719bf39876ee575d8db48027a0d0d851e4f1fd28505ac5cc99d7d",
   "body_sha256": "af4f9f332fef9f060dee47a0bb0a068fb357c84029355a6afb392b268415adba",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Automate web-form entry and Gmail cleanup\nThe author tested Claude for Chrome on repetitive forms, where it started entering wrong data and slowed down, and on archiving newsletters and starring urgent Gmail messages, which saved a few minutes.\nDone with\nCH\nClaude in Chrome\nWhat they did\nIn \"Act without asking\" mode, Claude for Chrome built a seven-field Google Form. It then worked across a Google Sheet and the form, planning a task list and submitting one registration per Engineering employee. The author stopped it at the third form and finished the last two by hand. The Gmail archive-and-star prompt is described only briefly.\nHow it went\nThe first two forms were correct. On the third, Claude entered \"Emily Wang\" instead of \"Emily Watson\", and the run reached 50 minutes. The author estimates doing it by hand takes about 10 minutes. The source gives the Gmail saving as 5–10 minutes.\nWorth knowing\nIt needs a Claude Max subscription ($100 or $200 a month). Check its form entries yourself, because it takes a fresh screenshot after each interaction and ran slower than a person would.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nIn Gmail, find newsletters and promotional emails from the last [number] days and archive them. Then star any messages that look urgent, such as [examples: invoices, deadlines, messages from my manager]. Before archiving, show me the list of senders and message counts so I can approve it. Don't delete anything or send any replies. Finish with a short summary of what you archived and starred.\nOriginal source: https://www.datacamp.com/tutorial/claude-for-chrome-ai-powered-browser-assistance-automation",
     "body_sha256": "af4f9f332fef9f060dee47a0bb0a068fb357c84029355a6afb392b268415adba",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:48.906391+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:48.906391+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

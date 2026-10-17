@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/produce-cited-research-briefs-with-simulated-peer-review",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:47:11.090079+00:00",
+  "html_sha256": "ebfcb7a035cc266c54b578c42476af8de13076c90c7dab3bfdf06da72e304f49",
   "body_sha256": "dffbb0d5c2e6bf500a5eb126cffd3d7ecdee672912d2985c3224938f974dd216",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Produce cited research briefs with simulated peer review\nFeynman multi-agent system searches papers and the web, synthesizes findings, runs simulated peer review, verifies citations, and outputs a cited brief.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nUser runs one curl-bash install from terminal then types a topic. Researcher agent pulls evidence from papers, repos, docs, and web; Reviewer runs simulated peer review with severity-graded feedback; Writer drafts paper-style output from notes; Verifier checks every citation and drops dead links. Additional agents can replicate experiments on local/cloud GPUs or audit papers against codebases.\nHow it went\nProduces a fully cited research brief with all claims source-grounded. No usage metrics or shortfalls reported in the post.\nWorth knowing\nSingle curl install command; repo at github.com/Companion-Inc/feynman; thread notes the installer script is not itself open.\nTry it yourself\nwith\nManus\nCopy prompt\nResearch [topic] and write a cited brief of about [length]. Search academic papers and the web, synthesize the main findings, then critique your own draft as a skeptical peer reviewer and fix the weak points. Verify every citation actually exists and supports its claim; you're done when I have the brief with a reference list and a note on any claims you couldn't verify.\nOriginal source: https://x.com/aigleeson/status/2041073339616387468",
     "body_sha256": "dffbb0d5c2e6bf500a5eb126cffd3d7ecdee672912d2985c3224938f974dd216",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:47:11.090079+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:47:11.090079+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

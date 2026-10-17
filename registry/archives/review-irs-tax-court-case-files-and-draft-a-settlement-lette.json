@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/review-irs-tax-court-case-files-and-draft-a-settlement-lette",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:07.046824+00:00",
+  "html_sha256": "f0b71d29fb1a6d77a66a07da69288b898fa0e2a53a45b4c0e9249c90b5cac577",
   "body_sha256": "ccf2b5205ae7f85954988da33cf2a204c798a22894b022c803ec105d6f109bd9",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Review IRS Tax Court case files and draft a settlement letter\nA Tax Court defendant used Claude in Chrome to open and summarise portal documents in about 20 minutes, then Claude Desktop and Claude Code to organise evidence and draft a settlement letter.\nDone with\nCH\nClaude in Chrome\nCC\nClaude Code\nWhat they did\nThe author, a pro se petitioner, had Claude in Chrome click through about ten documents in the court's DAWSON portal, open the PDFs and summarise them. That took about 100 steps. He pasted the summary into Claude Desktop, uploaded his solar evidence, and had it check the documents against the credit requirements and draft the letter. Claude Code then merged about 15 PDFs.\nHow it went\nThe portal review took about 20 minutes, and the whole workflow about 30. He sent the letter to the IRS attorney. The case is unresolved, with trial set for April 2026, so the win is only his prediction.\nWorth knowing\nThe Chrome extension and Desktop app couldn't share a conversation, so he pasted the summary across by hand.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen my case portal at [portal URL] where I am already logged in, and go through every document in [case name or number]. Summarize each one in a few lines and finish with a single timeline of key dates, amounts, and positions taken by each side. Only read and summarize; don't download, submit, or send anything without showing me first.\nOriginal source: https://medium.com/@thetangstr/how-i-used-ai-to-fight-the-irs-and-why-im-probably-going-to-win-bd6837e83102",
     "body_sha256": "ccf2b5205ae7f85954988da33cf2a204c798a22894b022c803ec105d6f109bd9",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:07.046824+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:07.046824+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

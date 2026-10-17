@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-intent-conflicts-between-parallel-coding-agents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:38.862490+00:00",
+  "html_sha256": "d0d1f0332ee7715d27d2df17598f9de3f6e4b619205c63612971ae1f84f0883b",
   "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
   "status": "observed",
   "fields": {
@@ -54,10 +54,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -78,10 +80,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -91,13 +92,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
     "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:38.862490+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:38.862490+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

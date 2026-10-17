@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/work-helpdesk-tickets-with-claude-code-and-custom-gpts",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:39.044386+00:00",
+  "html_sha256": "6b219eedfa1bfb626933a4dcf5ea9e68b8469ef0fdf0ccda618f71d13b074b21",
   "body_sha256": "2ca9fb34593fe52e5ddc4a18f558b28ab009ec4cbe8f4b3886ddb9bdc975c949",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Work helpdesk tickets with Claude Code and custom GPTs\nSupport admins built CLIs and skills for Confluence, Jira and Zendesk with Claude Code, and used a custom GPT to draft ticket answers that had to be pasted back manually.\nDone with\nCC\nClaude Code\nGP\nChatGPT\nWhat they did\nOne admin, quoted from Hacker News, connected Zendesk, Jira, Confluence and GitHub to Claude Code. They built a CLI for each of Confluence, Jira and Zendesk, with matching skills and an OAuth login for each, in a couple of days. A separate admin built a custom GPT that answers tickets. Its replies had to be copied back into Zendesk by hand.\nHow it went\nThe commenter says cross-tool search dropped from about 15 minutes of manual hunting to about one minute. The custom GPT drafts worked well, but the paste-back step stayed manual.\nWorth knowing\nA Zendesk draft is stored locally and can't be written into the ticket from outside, so an external drafter can only post an internal note or feed a sidebar app.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI work on support tickets in [Zendesk/Jira/other helpdesk] and keep answers in [Confluence/knowledge base]. Build me a small command-line tool and reusable skill that pulls a ticket by ID, searches our docs for relevant articles, and drafts a reply in our tone. Do not post or send anything; show me the draft and ask for approval first. You're done when I can run it on [ticket ID] and get a draft with links to the sources.\nOriginal source: https://www.eesel.ai/blog/how-to-use-claude-for-customer-support",
     "body_sha256": "2ca9fb34593fe52e5ddc4a18f558b28ab009ec4cbe8f4b3886ddb9bdc975c949",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:39.044386+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:39.044386+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

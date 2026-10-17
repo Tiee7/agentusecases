@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-claude-read-apple-health-and-fitbit-data-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:42:57.047476+00:00",
+  "html_sha256": "bda8299b4329e88cd3dd3a4e8bb78a3f7c9ae4e5e2a93347bf46a565db2e7881",
   "body_sha256": "d7500f44087a1e251da99f2854ed405374fe719adfe5c744a4cbb37157c246b7",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let Claude read Apple Health and Fitbit data via MCP\nThe poster built a setup that lets Claude read Apple Health and Fitbit data and log workouts and meals through MCP.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster used a hosted MCP connector instead of a self-hosted server. They connected their devices once on the web, then in Claude went to Settings, Connectors, Add custom connector, pasted the connector URL, authorized it, and Claude could then read Apple Health or Fitbit data to answer questions like weekly training or last month’s sleep; the URL itself was left in a comment.\nHow it went\nIt let Claude use the poster’s real health data and sometimes return interactive charts instead of only text. The poster says it was free and early, was built by one person, and they were explicitly looking for reports on where it breaks.\nWorth knowing\nThe main catch is that this was an early free service from a solo builder, and the post points readers to a comment for the connector URL and tool catalog.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up an MCP server so you can read my [Apple Health / Fitbit] data and log workouts and meals. Walk me through the setup, then pull my last [30] days of [sleep, steps, and workouts] and summarize any trends. Before you write or log anything to my health data, show me exactly what you are about to add and wait for my approval.\nOriginal source: https://www.reddit.com/r/ClaudeHomies/comments/1uiey1q/if_you_want_claude_to_actually_read_your_apple",
     "body_sha256": "d7500f44087a1e251da99f2854ed405374fe719adfe5c744a4cbb37157c246b7",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:42:57.047476+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:42:57.047476+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

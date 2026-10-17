@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/set-up-a-reddit-profile-through-desktop-control",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:44:47.105693+00:00",
+  "html_sha256": "eeb930e73f388ad260321627bfcc3a4d696a6ad2f08bde3eb6af5bb3d1336fff",
   "body_sha256": "70f3ddea4bc33c67961f0e2ea10001f406bee0ec54440565bd71cb0edd6a1b5e",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Set up a Reddit profile through desktop control\nA commenter says Claude Code set up their Reddit profile by screenshotting, navigating settings, filling forms and uploading images.\nDone with\nCC\nClaude Code\nCU\nClaude computer use\nWhat they did\nA commenter said they had Claude Code set up their Reddit profile entirely from the CLI. The agent first took a screenshot to inspect the current page, then used Playwright MCP to navigate into Reddit settings, fill out the profile forms, upload images, and when one image exceeded Reddit’s 500KB limit, it compressed the file and retried the upload without human help.\nHow it went\nThe reported outcome was a completed Reddit profile with zero manual intervention. The commenter also said Playwright MCP was usually faster and more reliable for web apps than raw computer use.\nWorth knowing\nThe main catch mentioned was Reddit’s 500KB image upload limit, which the agent handled by compressing the image and trying again.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up my Reddit profile at [my Reddit account]. Go through the profile settings, fill in the display name [name], bio [bio text], and upload the avatar and banner images from [folder path]. Before you save or submit any changes, stop and show me what you are about to enter so I can approve it.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1s7wkky/computer_use_is_now_in_claude_code",
     "body_sha256": "70f3ddea4bc33c67961f0e2ea10001f406bee0ec54440565bd71cb0edd6a1b5e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:44:47.105693+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:44:47.105693+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/upgrade-site-dependencies-and-frameworks-with-cursor",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:55.138711+00:00",
+  "html_sha256": "e3f613042f10fbb68f0a802d0e2218dbd0196aec2570f6093b3e1b34cf0a0f79",
   "body_sha256": "7bab0000c1753fce9c4fb080bd9eeb6fde6b211fa58dc7ae315452ff7eec2ac6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Upgrade site dependencies and frameworks with Cursor\nKent C. Dodds had Cursor's agent look up migration docs, plan and upgrade Remix v2 to React Router v7 and xstate in his site.\nDone with\nCR\nCursor\nWhat they did\nKent asked Cursor to list outdated packages grouped by upgrade difficulty, then upgraded them in separate conversations: easy, medium, then majors one at a time. For xstate and Remix, he told it to read migration docs first. He ran the Remix to React Router v7 move as a long-running background agent, answered its plan questions, and fed it route output to fix routing.\nHow it went\nEverything went smoothly except routing after the switch to react-router-auto-routes, which needed a correction. Kent merged after a few BugBot and CodeRabbit fix rounds. The migration took about a day and touched over 17k lines.\nWorth knowing\nKent says it worked because the site already had good tests and docs, and giving the agent a way to check itself, like comparing route listings, made it perform much better.\nTry it yourself\nwith\nCursor\nCopy prompt\nLook up the official migration docs for upgrading [old framework/library] to [new framework/library] in my project, then plan and carry out the upgrade step by step, running tests after each change. Stop and show me a summary of all changes before committing anything.\nOriginal source: https://kentcdodds.com/blog/how-i-used-cursor-to-migrate-frameworks",
     "body_sha256": "7bab0000c1753fce9c4fb080bd9eeb6fde6b211fa58dc7ae315452ff7eec2ac6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:55.138711+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:55.138711+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

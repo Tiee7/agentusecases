@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/playtest-a-godot-4-game-with-a-cursor-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:07.032744+00:00",
+  "html_sha256": "0871ade3ff6762e9e7c1c94ebb8a96ab3a3e1843c416f2a6a01b0104f65b98ba",
   "body_sha256": "f52803adcdb08d0b54602cb7de4f124ab7d9ec9bc5558e38a51f0ec382758a83",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Playtest a Godot 4 game with a Cursor agent\nA Cursor plugin and subagent lets an agent capture screenshots and click through UI flows of a Godot 4 game like a player.\nDone with\nCR\nCursor\nWhat they did\nYou install a Godot plugin, skills, a command and a subagent. The caller gives the studio-playtester subagent a slice with criteria, a scene and an action. The agent inspects the scene's unique node names and InputMap, writes a JSON flow under res://agent/, and runs it through the plugin's CLI. Button presses go in as mapped input actions, and screenshots land in out/.\nHow it went\nEach run ends in AGENT_OK or AGENT_FAIL, and the agent reports PASS/FAIL. A script error or unmapped input counts as a failure. The source gives no measured results beyond a boot-to-race demo.\nWorth knowing\nCapture and flow runs need a real game window. If the debug scene is missing, the agent returns NEED_SETUP and stops, and it won't build one.\nTry it yourself\nwith\nCursor\nCopy prompt\nSet up an agent that can launch my Godot 4 game, take screenshots, and click through the main UI flows like a player would. Have it report any broken buttons, dead ends, or visual glitches it finds.\nOriginal source: https://github.com/Joelnicolass/godot-studio-playtest",
     "body_sha256": "f52803adcdb08d0b54602cb7de4f124ab7d9ec9bc5558e38a51f0ec382758a83",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:07.032744+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:07.032744+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

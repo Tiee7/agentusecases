@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-client-messages-into-tickets-and-replies",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:37.148640+00:00",
+  "html_sha256": "88219f21903cb2da96ffa65a7854002dc76d68ed124a930c58830a4b07a9049d",
   "body_sha256": "b42863179249a7d90468d0202372dfcc61bfde0ff576d28bd25a9775ac7d0ef8",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage client messages into tickets and replies\nA Slack watcher starts a Devin session on each new client message to investigate, create a Linear ticket, draft a response and route follow-ups.\nDone with\nDE\nDevin\nWhat they did\nA Slack watcher on one client thread triggers a Devin session on each new message. Devin investigates the issue on its own, creates a Linear ticket, and drafts a response. A human reviews and approves every outgoing reply and every follow-up after an issue is fixed; a dashboard shows active Devin work, clients, and status.\nHow it went\nThe setup automates triage, ticketing, and drafting for customer-service messages, routing all client contact through the human for approval. Nothing is sent automatically yet while language is refined.\nWorth knowing\nHuman stays in the loop on every client reply until wording matches expectations.\nTry it yourself\nwith\nDevin\nCopy prompt\nWhenever a new client message arrives in the Slack channel [channel name], investigate it against [repo or docs], create a ticket in [Linear project] with what you found, and draft a reply to the client. Post the draft and ticket link in [internal channel] and don't send anything to the client until I approve it. A message is handled once the ticket exists and the draft is waiting for review.\nOriginal source: https://x.com/DaleSpoonemore/status/2108400880504406376",
     "body_sha256": "b42863179249a7d90468d0202372dfcc61bfde0ff576d28bd25a9775ac7d0ef8",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:37.148640+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:37.148640+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

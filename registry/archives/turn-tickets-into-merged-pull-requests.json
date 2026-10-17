@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-tickets-into-merged-pull-requests",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:20:54.973556+00:00",
+  "html_sha256": "f22ca85febee5e2697977d7a19c21bdf6d05a8f5af500abdfbd12294549faf58",
   "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
     "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:20:54.973556+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:20:54.973556+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

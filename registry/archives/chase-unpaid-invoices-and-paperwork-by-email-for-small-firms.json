@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/chase-unpaid-invoices-and-paperwork-by-email-for-small-firms",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:43:31.079813+00:00",
+  "html_sha256": "2b70f6850e230cdbcec8635db385a31428f5bcedb41df2e458d523034c18976c",
   "body_sha256": "4ef8f11b47dfd3b139a12c3a428d7f7ef9dba8aed76f3233052e56905fdeb0a0",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Chase unpaid invoices and paperwork by email for small firms\nAn agent watches for unpaid invoices and paperwork, emails people until they say yes, no, or pay, and escalates decisions to the owner.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster describes an email-based collections and paperwork agent for small firms that monitors unpaid invoices and missing admin, keeps chasing by email until it gets a yes, a no, or a payment, and hands anything needing judgment back to the owner. In comments, they say the important mechanics were persistent memory and a running document of promises and context, plus holding risky cases for human release rather than sending automatically.\nHow it went\nThe source gives no hard revenue or recovery numbers. The main result stated is that building the agent was easier than selling it, and the poster was still unsure whether outbound demand generation worked for this niche.\nWorth knowing\nThe clearest catch is operational: a delayed chase costs little, but a wrong chase can damage the client relationship, so flagged emails were held for a daily owner digest instead of auto-sent.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nCreate an agent that checks [accounting tool or sheet] daily for invoices unpaid past [number] days and paperwork still missing from [people or clients]. It should email each person a polite reminder, repeating every [number] days until they pay, confirm, or decline. Show me the reminder template for approval first, and escalate to me by [email or Slack] when someone declines or reaches [number] reminders.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1vgeo9g/built_an_agent_that_chases_invoices_and_paperwork",
     "body_sha256": "4ef8f11b47dfd3b139a12c3a428d7f7ef9dba8aed76f3233052e56905fdeb0a0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:43:31.079813+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:43:31.079813+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

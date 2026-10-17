@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/prep-meetings-and-check-inbox-against-calendar-with-muse",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:30:17.041503+00:00",
+  "html_sha256": "147c9393c60a9016a7f560c22e1d2f7b59928f3ef8748487baf022f46c3035f4",
   "body_sha256": "ca50f5b5f9f20ead14937e3e4a643c727f2bc54419b3749a43452e1fc5ae4ba3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Prep meetings and check inbox against calendar with Muse\nThe author ran work tasks in Muse: it found the right email thread for meeting prep and cross-checked emails against the calendar for conflicts, though inbox prioritisation was weak.\nDone with\nMM\nMeta Muse\nWhat they did\nThe author connected Muse to email and calendar and ran it on real work tasks inside a ten-task test. For meeting prep, Muse picked the right email thread unprompted from several plausible ones and found the matching calendar event. It also saw it needed calendar access and walked through the connection itself. For inbox triage, the prompt told it to read and rank only, not reply.\nHow it went\nMeeting preparation scored 10/10. Inbox prioritisation scored 6/10 because Muse wrongly decided a message was unanswered when it had been, apparently confused by the thread and CC structure.\nWorth knowing\nHave Muse list uncertain threads for you to check rather than guessing, and forbid replying, since acting on the wrong inbox call would have meant emailing someone twice.\nTry it yourself\nwith\nMeta Muse\nCopy prompt\nFor my meeting with [person or topic] on [date], find the right email thread in my [Gmail] and summarize where things stand, with open items and what I should bring. Then cross-check my unread emails from the past [3] days against my calendar and flag any scheduling conflicts or requests that clash with existing events. Give me the results as one short list and don't reply to or send anything.\nOriginal source: https://www.aiagentslibrary.com/blog/meta-muse-prompts/",
     "body_sha256": "ca50f5b5f9f20ead14937e3e4a643c727f2bc54419b3749a43452e1fc5ae4ba3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:30:17.041503+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:30:17.041503+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

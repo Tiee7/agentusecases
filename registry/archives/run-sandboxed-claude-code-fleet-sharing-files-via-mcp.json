@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-sandboxed-claude-code-fleet-sharing-files-via-mcp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:11.004966+00:00",
+  "html_sha256": "566f284f48ae5fd9169b64c767320f62d0872dccbbf0bd888340b8cc742acb94",
   "body_sha256": "e52f438e23f990158b848cca6535ce8d4d303aec952a81796b4613a78a1a1b29",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run sandboxed Claude Code fleet sharing files via MCP\nA developer runs a fleet of sandboxed Claude Code instances that share files through MCP tools on a virtual filesystem, with an orchestrator handling AWS storage and audit logs.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer runs a fleet of sandboxed Claude Code instances that exchange files. Agents get MCP tools to list, upload and download from a virtual filesystem using a custom URI scheme (agentfiles://). An outer orchestrator receives those MCP requests and does the real file work on AWS, so the agents never see credentials or know AWS is involved.\nHow it went\nThe model adapted well to the unusual filesystem, and the agents stayed fully compartmentalized. Tool request logs plus orchestrator logs give full auditing. The source gives no numbers.\nWorth knowing\nKeep storage credentials in the orchestrator and expose only narrow MCP file tools, so sandboxed agents never touch the backend directly.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a small fleet of sandboxed Claude Code instances that share files through an MCP server exposing a virtual filesystem. Build a minimal prototype with [number] agents, a shared file store backed by [local folder or S3 bucket], and an audit log of every file read and write. Stop when two agents can pass a file to each other and I can read the log, and ask before touching any cloud resources or credentials.\nOriginal source: https://news.ycombinator.com/item?id=49782293",
     "body_sha256": "e52f438e23f990158b848cca6535ce8d4d303aec952a81796b4613a78a1a1b29",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:11.004966+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:11.004966+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/qualify-leads-and-draft-emails-pending-human-approval",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:47.131346+00:00",
+  "html_sha256": "a6844da68975f3fa54d082bfc9661dad5ad735d205b8a3ca5b586d2cd374d543",
   "body_sha256": "5676bbfa58a5b42f76f3c48b9171624aeec942bb4fd2c38c00a807902ade1812",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Qualify leads and draft emails pending human approval\nAn n8n workflow dedupes and AI-scores leads and drafts personalized emails, sending via Gmail only after human approval.\nDone with\nN8\nn8n\nWhat they did\nThe author built LeadFlow AI V1 in n8n as a pipeline. It takes in a lead, validates it and checks for duplicates. AI then qualifies and scores the lead as HOT, WARM or COLD and drafts a personalized email. A person approves the draft before Gmail sends it. Lead data and approval status are logged in Google Sheets.\nHow it went\nThe post gives no results or numbers. It is a V1 showcase. A commenter suggested adding a score-reason field next to the rating, so approvers can see the source, reason, next step and draft in one row.\nWorth knowing\nApproval happens in Google Sheets. A commenter advised keeping it there at first and building a dedicated dashboard only after you know which fields reviewers use.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that takes new leads from [source], removes duplicates, scores each one 1-10 against this ideal customer profile: [description], and drafts a personalized email for each qualified lead. Save the drafts and scores in [Sheet or Airtable] and notify me to approve. Only send through Gmail after I approve each draft, and show me the email before anything is sent.\nOriginal source: https://community.n8n.io/t/i-built-leadflow-ai-v1-an-ai-lead-qualification-workflow-with-human-approval/309312",
     "body_sha256": "5676bbfa58a5b42f76f3c48b9171624aeec942bb4fd2c38c00a807902ade1812",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:47.131346+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:47.131346+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

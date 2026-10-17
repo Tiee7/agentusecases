@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/shop-hotel-sites-for-a-new-york-stay",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:30:01.010963+00:00",
+  "html_sha256": "9d087dd41e07f9c4dce5c40a36d9b1ae9692f05c2b6a93b1e8387c4ca9165800",
   "body_sha256": "64e7a25e0006a4c4e498fa5c8e50bf450ff38ad612e10ed86a7b1dcfeabc273f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Shop hotel sites for a New York stay\nIn a Skift test, Muse opened a browser and searched hotels for Nov 1-2 at $350-450 a night, suggesting the Marlton Hotel first.\nDone with\nMM\nMeta Muse\nWhat they did\nThis account relays Skift's test of Meta's Muse agent. Hotels have no unified booking rail, so Muse opened a browser and shopped consumer hotel sites directly, comparing published prices. The request was a New York City room for Nov 1-2 at $350-450 a night. Muse checks with the person before purchases and can pay through Stripe Link.\nHow it went\nMuse put the Marlton Hotel first, based on published prices. The source treats it as a shortlist rather than a confirmed booking, since a browser-shopped price is only as good as the page it came from.\nWorth knowing\nBefore approving, recheck dates, room type, taxes and the total on the hotel's own site. Hotel results reflect whatever the open web showed the agent that day.\nTry it yourself\nwith\nMeta Muse\nCopy prompt\nSearch hotel sites for a stay in [city] from [check-in date] to [check-out date], at [min price] to [max price] per night, near [neighborhood or landmark]. Compare at least three sites and give me a table of the top five options with price, location, rating, cancellation terms and total cost with fees. Stop before booking and ask me which one I want.\nOriginal source: https://deeparrival.com/news/meta-muse-agent-books-travel-september-2026/",
     "body_sha256": "64e7a25e0006a4c4e498fa5c8e50bf450ff38ad612e10ed86a7b1dcfeabc273f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:30:01.010963+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:30:01.010963+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

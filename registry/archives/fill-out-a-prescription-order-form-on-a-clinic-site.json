@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-out-a-prescription-order-form-on-a-clinic-site",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:44:23.077157+00:00",
+  "html_sha256": "d540fec0814249d3d39df74d2368939a47afe780d4e77c65abc6192f5948ae8a",
   "body_sha256": "52c892bde75b9a0900f2b1e6b66cf10cc0fcb0977ee7f3a61a7642ae6f92aecf",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Fill out a prescription order form on a clinic site\nChatGPT Agent filled in medication, dosage and number of days on a clinic's website, while the user entered sensitive data manually.\nDone with\nGA\nChatGPT Agent\nWhat they did\nOne commenter tested agent mode on a clinic’s prescription refill form. They put the medication information into the prompt, and the agent filled in the medication name, dosage, and number of days on the website; the person handled the sensitive fields manually instead of having the agent enter them.\nHow it went\nIn that test, it completed the non-sensitive prescription details correctly. The only stated limitation was that sensitive information still had to be entered by the user.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nGo to [clinic website URL] and fill in the prescription order form with this medication: [name], dosage: [dose], for [number] days. Leave all personal and medical identity fields blank for me to complete myself. Stop before submitting and show me what is filled in so I can review it and submit it myself.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1m8k3xh/agent_mode_just_released_on_plus",
     "body_sha256": "52c892bde75b9a0900f2b1e6b66cf10cc0fcb0977ee7f3a61a7642ae6f92aecf",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:44:23.077157+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:44:23.077157+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

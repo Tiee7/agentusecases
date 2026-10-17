@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/configure-a-local-ai-lab-and-build-a-knowledge-graph-by-chat",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:29:02.998395+00:00",
+  "html_sha256": "fa6164a0bd5fe4f4dab159ce7924620eea96d339c594be0d52c3e925d0a1cd27",
   "body_sha256": "7558a2a3fc840889310b102a4f56e83f7768aa505b55a5344e5a32dbd02c1db7",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Configure a local AI lab and build a knowledge graph by chat\nUsers had Hermes Agent set up a local AI stack (liteLLM, Postgres, Prometheus, Grafana) and install Gbrain as an MCP server to build a personal knowledge graph.\nDone with\nHA\nHermes Agent\nWhat they did\nPer this overview, Ivan Fioravanti showed Hermes Agent setting up a local AI lab (liteLLM, Postgres, Prometheus, Grafana) through conversation. Separately, Alvaro Cintas had Hermes install Gbrain, an open-source project from Garry Tan, add it as an MCP server, and query it for entity-aware recall as a personal knowledge graph.\nHow it went\nThe source names both setups as working demos. It cites Gbrain's own benchmark of 31 points more precise than plain vector search. It gives no setup time, costs or failures for either one.\nWorth knowing\nThe source only briefly describes these examples, so check the original posts by Fioravanti and Cintas for the actual steps. Hermes needs at least a 64K-token context.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up a local AI stack on my machine with [liteLLM, Postgres, Prometheus, Grafana, or tools you choose], then install [Gbrain or another MCP knowledge-graph server] so I can build a personal knowledge graph from [my notes folder]. Explain each install step before you run it and ask me before deleting or overwriting anything. Finish by showing that each service is running and giving me a test query that works.\nOriginal source: https://kie.ai/blog/what-is-hermes-agent",
     "body_sha256": "7558a2a3fc840889310b102a4f56e83f7768aa505b55a5344e5a32dbd02c1db7",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:29:02.998395+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:29:02.998395+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

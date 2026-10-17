@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/send-a-daily-ai-news-digest-on-a-schedule",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:59:11.131154+00:00",
+  "html_sha256": "3fad0a77fc71d40e081203fe9c431708e0366f975258240e793741d61a9e2baf",
   "body_sha256": "f223af1a95a1f951b490b821fe19b5e58336b38675d77b144f56dfbadd884286",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-11",
+      "sha256": "bf253a0ae8de03aa5d8511050196f1032ff74d2010f83e689b41c1bad94fea67"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Send a daily AI news digest on a schedule\nA Manus scheduled task searches Reddit, X and Hacker News each morning, ranks results and delivers a digest to email or Notion; a how-to guide.\nDone with\nMA\nManus\nWhat they did\nYou create a scheduled task in Manus and write a plain-language standing prompt. The prompt names the subreddits, Hacker News and X searches to cover, the ranking criteria, and the digest format and destination. Each morning the agent browses those public pages, collects top posts, ranks them by engagement and relevance, and sends the digest. The person runs one manual test first, then refines the prompt.\nHow it went\nThe source gives no measured results. It says first prompts usually need tuning after about a week, and that X coverage is inconsistent, paywalled stories can't be summarized, and complex scrapes can fail.\nWorth knowing\nA daily recurring task will likely need a paid Manus plan, since the free tier caps task runs. Test manually first to find blocked sources.\nTry it yourself\nwith\nManus\nCopy prompt\nSet up a scheduled task that runs every morning at [time and timezone]. Search Reddit, X and Hacker News for the newest posts about [your topic, e.g. AI news], rank the top [number] by relevance and engagement, and write a short digest with a one-line summary and link for each. Send it to [your email or Notion page]; once you've delivered a test digest today, show it to me before turning on the daily schedule.\nOriginal source: https://www.mindstudio.ai/blog/manus-ai-scheduled-tasks-daily-news-briefing",
     "body_sha256": "f223af1a95a1f951b490b821fe19b5e58336b38675d77b144f56dfbadd884286",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:59:11.131154+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:59:11.131154+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

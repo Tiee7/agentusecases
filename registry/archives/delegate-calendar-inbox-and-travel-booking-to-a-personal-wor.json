@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/delegate-calendar-inbox-and-travel-booking-to-a-personal-wor",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:10.908852+00:00",
+  "html_sha256": "31d983a359f21ebd5f6affa71a923d82f5c243d2238d5072ef7bb7a00e722160",
   "body_sha256": "f32b6085efe914002e6af061554d05863667a15bf6c008a53ff310bd8d515523",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Delegate calendar, inbox and travel booking to a personal work agent\nAuthors use Cowork or Claude Code to schedule invites, triage email, book flights and hotels, pull Airtable data and scrape exhibitor lists.\nDone with\nCW\nClaude Cowork\nCC\nClaude Code\nWhat they did\nThe authors run Claude in Cowork or Claude Code and link Gmail, calendar, Airtable and other apps through Rube, a free connector service. They teach it routines as saved Skills and keep notes in markdown files. It then finds open calendar slots and sends invites, triages and archives email, books travel through a booking tool, and scrapes exhibitor lists with Firecrawl.\nHow it went\nThe authors call the agent useful across daily workflows, data pulls and research. They give no metrics. They say Claude sometimes skips a Skill unless told to use it, and that it can make mistakes.\nWorth knowing\nNeeds a paid Claude plan (Pro is $20/mo). Start with drafts rather than sending, watch for prompt injection, and consider giving the agent its own limited email account.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nAct as my work assistant for this week's tasks: [list tasks such as schedule a meeting with X, triage my inbox, find flights and hotels to [city] for [dates]]. For each task, finish the prep and show me the result. Pause and show me details before sending any invite or email, or booking or paying for anything.\nOriginal source: https://technicallycurious.substack.com/p/create-your-personal-agent-with-claude",
     "body_sha256": "f32b6085efe914002e6af061554d05863667a15bf6c008a53ff310bd8d515523",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:10.908852+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:10.908852+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

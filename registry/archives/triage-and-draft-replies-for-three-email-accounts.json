@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-and-draft-replies-for-three-email-accounts",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:02.917479+00:00",
+  "html_sha256": "37cf29f00980ddb43bd422bc7e7fd97723d61b78d2b70a848d56832e6935e672",
   "body_sha256": "2fce77663fbacc9d636f04e34fd65985d59d873cf155dba13775feb75855ef5a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage and draft replies for three email accounts\nAn OpenClaw agent drafted routine replies at about 70% ready quality and cut inbox processing from 10 to 2 minutes, though some things broke.\nDone with\nOC\nOpenClaw\nWhat they did\nAn agent named Donna, running on an OpenClaw gateway, got IMAP and Microsoft Graph access to three accounts. Every 30 minutes in business hours it sorted mail into urgent, important, informational and noise, pinged urgent items on Telegram, and drafted routine replies. It never sent anything without approval. It also read a memory file of relationship notes.\nHow it went\nTriage was about 85% right, no urgent email was missed in 30 days, and routine drafts were about 70% ready. Tone, CC choices, context across sessions and relationship-sensitive emails went badly.\nWorth knowing\nDefine failure modes before deploying. The author narrowed the agent to routine, templated and newsletter mail, and had it flag negotiations, legal matters and established relationships without drafting.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my email accounts [list accounts] and go through unread messages from the last [time period]. Sort them into needs reply, FYI, and ignore, and write draft replies for the routine ones in my usual tone, which is [describe tone]. Save the drafts as drafts only and never send anything without asking me first. Finish with a short summary of what is waiting on me.\nOriginal source: https://dev.to/jarveyspecter/i-let-an-ai-agent-manage-my-emails-for-30-days-heres-what-broke-4n12",
     "body_sha256": "2fce77663fbacc9d636f04e34fd65985d59d873cf155dba13775feb75855ef5a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:02.917479+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:02.917479+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

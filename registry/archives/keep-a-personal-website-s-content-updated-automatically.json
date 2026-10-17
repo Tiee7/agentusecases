@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/keep-a-personal-website-s-content-updated-automatically",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:51.089320+00:00",
+  "html_sha256": "a53c14cb38747505a2ed29059cb293299d7599dcadebcdaede11122390de3c20",
   "body_sha256": "ca092439046a98b2fac6678967ac140a5ce79756b4dee62e68b21751acf10c2f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Keep a personal website's content updated automatically\nA developer's setup for automating their site's content with agents and MCP.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nDebbie O'Brien saved her podcast-page prompt as a Goose recipe that takes the episode URL as a parameter. Goose used the Playwright MCP to read the episode page, the Cloudinary MCP to upload the image, and then ran the dev server and checked the podcasts page. It opened a pull request through the GitHub MCP, and she reviewed the code and merged it.\nHow it went\nNew podcast episodes with images were added to her Nuxt site and merged after her review. She hasn't tested it on large batches of URLs, and setup took longer than copying by hand would have.\nWorth knowing\nSetup took longer than doing one episode manually. She still reviewed the PR, especially the Cloudinary URL, and only wrote that one recipe so far.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at my personal website repo at [path or URL] and set up automation so its content ([blog, projects, or reading list]) updates from [source such as Notion, GitHub, or RSS]. Use an MCP server if it helps. Finished means one command refreshes the content and shows me a diff of the changes, and nothing gets deployed or committed until I approve.\nOriginal source: https://dev.to/debs_obrien/how-i-use-ai-agents-mcp-to-fully-automate-my-websites-content-3ekj",
     "body_sha256": "ca092439046a98b2fac6678967ac140a5ce79756b4dee62e68b21751acf10c2f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:51.089320+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:51.089320+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

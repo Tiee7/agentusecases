@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-a-daily-podcast-briefing-from-newsletters",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:25.244122+00:00",
+  "html_sha256": "36a8799afb31461b3d18d243d33be4fd48ec177ee585266c497a96f68ade8903",
   "body_sha256": "3f9df89654b116ba0c21a364c8f6da0f9ddb32954623395d1cb3cd2eebb34fc2",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate a daily podcast briefing from newsletters\nThe author tested Cowork on a morning podcast from newsletters via Readwise and n8n MCP, plus video and 3D print design, noting what worked and what failed.\nDone with\nCW\nClaude Cowork\nN8\nn8n\nWhat they did\nNewsletters are forwarded to Readwise. Because Cowork has no network access, the author ran n8n as an MCP server with a workflow that calls the Readwise API. Cowork fetched the previous day's articles through it and wrote a two-page Word briefing with an executive summary. It then tried to turn the briefing into a 2-3 minute MP3.\nHow it went\nThe briefing document worked and the n8n bridge ran without problems. Audio failed: with no access to a good text-to-speech model, Cowork fell back to the local Flite library, and the result was robotic and not worth listening to.\nWorth knowing\nCowork can't reach cloud text-to-speech models. The author plans to rebuild this in Claude Code, which can call the Readwise API directly and use ElevenLabs or OpenAI TTS.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nEvery morning at [time], gather the newsletters I received in [email or Readwise source], pick the most important stories on [my topics], and write a [number]-minute podcast-style script. Save it to [folder] as a text file, and turn it into audio if a tool is connected. Tell me which steps worked and which didn't.\nOriginal source: https://ishyshkova.substack.com/p/claude-cowork-review-real-use-cases",
     "body_sha256": "3f9df89654b116ba0c21a364c8f6da0f9ddb32954623395d1cb3cd2eebb34fc2",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:25.244122+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:25.244122+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/drive-a-7-axis-robot-arm-with-natural-language",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:55.060347+00:00",
+  "html_sha256": "4518ed43d8a4c4117ebbc713e4d24dc072bcd573ee18888e7c76dea4617c1fc7",
   "body_sha256": "1d5bc3fdd18c75923d83e1a197e1418aea5626224934ec9ba4942d5724c0726e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Drive a 7-axis robot arm with natural language\nOpenClaw is taught a skill and rules for the NERO arm, then writes and runs Python control scripts from plain-language movement requests.\nDone with\nOC\nOpenClaw\nWhat they did\nAfter installing OpenClaw (the article suggests the Qwen model), the author adds a skill folder holding a skill file and an API reference for the pyAgxArm SDK. These set rules for connecting over CAN, enabling the arm before switching modes, units, and waiting for each motion to finish. OpenClaw then generates Python scripts from plain-language movement requests.\nHow it went\nThe article is a setup walkthrough and a demo video link. It reports no measured results, success rates, or example prompts with outputs.\nWorth knowing\nThe skill only generates code. You must set up CAN, install pyAgxArm and power the arm yourself, and the skill advises clearing the workspace and testing with small, slow moves first.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI have a [robot arm model] with an SDK at [SDK docs link or path]. Read the docs and write a skill file with the safety rules: [joint limits, speed cap, workspace bounds]. Then, when I ask for a movement in plain language, write a Python script to do it and show me the script before running it on the arm. Finish when you can complete [simple test move, e.g. move to home position and back] safely.\nOriginal source: https://www.hackster.io/agilexrobotics/controlling-the-nero-robotic-arm-with-openclaw-6f5b94",
     "body_sha256": "1d5bc3fdd18c75923d83e1a197e1418aea5626224934ec9ba4942d5724c0726e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:55.060347+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:55.060347+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

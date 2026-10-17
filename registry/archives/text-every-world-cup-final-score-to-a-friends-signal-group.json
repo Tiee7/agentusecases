@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/text-every-world-cup-final-score-to-a-friends-signal-group",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:02:19.145639+00:00",
+  "html_sha256": "3c7272c9a50622f66134e1a749a089f825ff4a8275bd6e846c14e4412f8cce70",
   "body_sha256": "a97510bfef4838bb0eca515bcbb79081e192d3dc8942430d38b788ada6e6d6ab",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-14",
+      "sha256": "ffabbde475be33a5fe34128904c9a6af10d2bb26db6fb1fd1d24b5824297d5a7"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Text every World Cup final score to a friends' Signal group\nA Claude Code-built agent checked ESPN every 30 minutes and sent each 2026 World Cup final score, written up in a persona, to a 3-person Signal group, with a code check on scores.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nBuilt with Claude Code in one evening. A macOS LaunchDaemon runs a Python script every 30 minutes. It pulls ESPN's public scoreboard, finds finished matches not yet sent, and has Claude Haiku write each result as the persona Claudia. A plain non-AI check confirms the score appears before sending through signal-cli. If the check fails, it sends the plain score line.\nHow it went\nAll 104 matches were sent over 39 days with no duplicates or send errors. 101 got persona write-ups and 3 fell back to plain lines. One shipped bug reported a penalty-shootout win as a 1–1 tie before it was fixed.\nWorth knowing\nFetch yesterday's and today's ESPN scoreboards, and check match status so shootouts aren't read as draws. Cost was pennies, one short Haiku call per match.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small agent that checks [ESPN or another scores site] every [30 minutes] during [tournament or season] and texts each final score for [team or league] to my [Signal/WhatsApp] group, written in the voice of [a persona, e.g. a dramatic sports announcer]. Add a code check so it only sends a score once the game is final and never sends the same result twice. Before you send anything to the group, show me a sample message and wait for my okay.\nOriginal source: https://github.com/bronsonelliott/worldcup-scores-bot-public",
     "body_sha256": "a97510bfef4838bb0eca515bcbb79081e192d3dc8942430d38b788ada6e6d6ab",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:02:19.145639+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:02:19.145639+00:00",
+    "status": "fetched",
+    "error": null
   }
 }
