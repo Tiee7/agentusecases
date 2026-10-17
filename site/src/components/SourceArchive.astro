@@ -2,17 +2,19 @@
 const {archive:a,trial,inline=false}=Astro.props;
 const tags=(a.tags || []).map(t=>t.trim()).filter(t=>t && !/^(?:-+|—+|暂无标签)$/.test(t));
 const metadata=[['分类',a.category],['标签',tags.join(' · ')],['作者',a.author],['Wanted',a.wanted],['发布日期',a.sourceDate]].filter(([,value])=>value!==null && value!==undefined && String(value).trim());
+const archiveHeadings=new Set(['实际使用','使用工具','使用的 Agent','具体做法','他们做了什么','结果如何','值得知道','需要知道的事','自行试用','自己试试','推荐工具','复制提示词','原始来源','Done with','What they did','How it went','Worth knowing','Try it yourself','Copy prompt','Original source']);
+const translationLines=(a.translationText || '').split(/\r?\n/).map((text,index)=>({text:text.trim(),title:index===0,heading:archiveHeadings.has(text.trim())})).filter(line=>line.text);
 ---
 <section id="source-case"><p class="eyebrow">CASE ARCHIVE</p><h2>案例档案</h2>
 <div class="case-meta"><p class="case-tools">原始agent：{a.agents.join(' · ') || '未收录'}{trial?.agent && ` · 推荐工具：${trial.agent}`}</p>{a.addedAt && <time class="case-added" datetime={a.addedAt}>收录于 {a.addedAt}</time>}</div>
-{a.translationText && <details class="source-translation source-pane" open><summary>中文</summary><pre id="source-translation" lang="zh-CN" class="archive-body">{a.translationText}</pre></details>}
+{a.translationText && <details class="source-translation source-pane" open><summary>中文</summary><div id="source-translation" lang="zh-CN" class="archive-body">{translationLines.map(line=><>{line.title?<h3 class="archive-title">{line.text}</h3>:line.heading?<h3 class="archive-heading">{line.text}</h3>:<p>{line.text}</p>}{' '}</>)}</div></details>}
 {a.sourceText && <details class="source-original source-pane"><summary>English</summary><pre id="source-original" lang="en" class="archive-body">{a.sourceText}</pre></details>}
 {metadata.length>0 && <dl class="archive-details">{metadata.map(([label,value])=><div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>}
 <p><a href={a.url} target="_blank" rel="noopener noreferrer">来源页面 ↗</a></p>{a.originals.length>0 && <p>相关来源：{a.originals.map(u=><a href={u} target="_blank" rel="noopener noreferrer">{new URL(u).hostname} ↗ </a>)}</p>}
 {inline && <p><a href={a.path}>查看案例与试用模板 →</a></p>}
 </section>
 <style>
-.archive-body{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.85;margin:0;padding:.65rem 0;background:transparent;max-width:100%}
+.archive-body{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;line-height:1.85;margin:0;padding:.65rem 0;background:transparent;max-width:100%}.archive-body p{margin:.35rem 0}.archive-body .archive-title{font:600 1.35rem/1.55 var(--serif);letter-spacing:.01em;margin:.2rem 0 .7rem}.archive-body .archive-heading{font:600 1.05rem/1.55 var(--serif);margin:1rem 0 .2rem;padding:.1rem 0 .1rem .65rem;border-left:3px solid var(--red);color:var(--ink)}
 .source-pane{border-top:1px solid var(--line,#ddd);padding:.65rem 0}.source-pane summary{cursor:pointer;font-size:1rem;font-weight:600;line-height:1.6}.source-pane summary:focus-visible{outline:2px solid var(--red);outline-offset:5px}
 .case-meta{display:flex;align-items:baseline;flex-wrap:wrap;gap:.25rem 1rem;margin:.75rem 0}.case-tools{flex:1 1 auto;margin:0;font-size:.85rem;line-height:1.8;overflow-wrap:anywhere}.case-added{margin-left:auto;text-align:right;font-size:.75rem;color:var(--muted);white-space:nowrap}
 .archive-details{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;margin:.75rem 0;font-size:.8rem;color:var(--muted)}.archive-details div{display:flex;gap:.5rem;min-width:0}.archive-details dt{font-weight:600}.archive-details dd{margin:0;overflow-wrap:anywhere}
