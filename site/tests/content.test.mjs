@@ -11,6 +11,25 @@ test('only completed v2 records with existing reports and matching identity beco
 });
 test('untrusted IDs and nonpublic schemes are rejected',()=>{assert(!safeId('../secret'));assert(!safeId('UpperCase'));assert.equal(safeUrl('javascript:alert(1)'),'');assert.equal(safeUrl('https://user:password@example.org'),'');assert.equal(safeUrl('file:///tmp/secret'),'')});
 test('actual published reports match score, source references and repository eligibility',()=>{const {reports,catalog}=loadContent();assert(reports.length>0);assert(catalog.length>=reports.length);for(const r of reports){const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));assert.equal(raw.schema_version,2);assert.equal(raw.status,'completed');assert(fs.existsSync(path.join(repoRoot,'reports',r.id+'.md')));assert.equal(r.sections.length,10);assert(r.sources.length>=6);assert(r.score>=0&&r.score<=100);assert(r.facts.every(f=>f.refs.length>0));assert(r.sections.every(s=>s.refs.length>0));assert(r.models.length>=2)}});
+test('commercial scores match raw weighted research and missing dimensions remain unavailable',()=>{
+ const weights={demand:20,outcome:20,economics:20,distribution:15,moat:10,execution:10,feedback:5};
+ const {reports}=loadContent();
+ for(const r of reports){
+  const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));
+  const expected=Math.round(Object.entries(weights).reduce((sum,[key,weight])=>sum+raw.scores[key].score*weight/5,0)*10)/10;
+  assert.equal(r.scoreAvailable,true,r.id);assert.equal(r.score,expected,r.id);
+ }
+ const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json'))),entry={id:raw.id,url:raw.url};
+ for(const value of [0,5,1.1]){
+  const fixture=structuredClone(raw);for(const key of Object.keys(weights))fixture.scores[key].score=value;
+  const result=projectReport(fixture,entry);assert.equal(result.scoreAvailable,true);assert.equal(result.score,Math.round(value*20*10)/10);
+ }
+ const missing=structuredClone(raw);delete missing.scores;assert.equal(projectReport(missing,entry).scoreAvailable,false);
+ const partial=structuredClone(raw);delete partial.scores.feedback;assert.equal(projectReport(partial,entry).scoreAvailable,false);
+ for(const value of [undefined,null,'2',NaN,Infinity,-1,6]){
+  const fixture=structuredClone(raw);fixture.scores.demand.score=value;assert.equal(projectReport(fixture,entry).scoreAvailable,false,String(value));
+ }
+});
 test('personal use is independent and old records have honest fallbacks',()=>{
  const {reports}=loadContent();const r=reports[0];const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));const entry={id:raw.id,url:raw.url};
  const score=r.score;delete raw.personal_value;delete raw.try_it;delete raw.source_trial;
