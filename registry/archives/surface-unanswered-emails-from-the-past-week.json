@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/surface-unanswered-emails-from-the-past-week",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:28.933808+00:00",
+  "html_sha256": "09b7cfb915c87500705afde36745dfba92b6549b0ec484e881308974dba8afa1",
   "body_sha256": "a5cf1b9745f44fcbbdbd69999733d4b91f83772a8c1fe07d7120886d7e905e38",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Surface unanswered emails from the past week\nAuthor had Devin build a Gmail API assistant that lists unanswered emails from the past week, since Attio lacks that tab; he wrote the auth part himself in Cursor.\nDone with\nDE\nDevin\nCR\nCursor\nWhat they did\nThe author wanted to recreate Affinity's Unanswered Emails tab using the Gmail API. Devin struggled with authentication, so he wrote that himself in Cursor. Devin then wrote a function for emails from the past week needing a reply, limited to Primary. It read the Gmail API docs in its own browser, built a front end, and deployed it. He then asked it to add Supabase storage and an Ignore action.\nHow it went\nIt produced a working function, a front end, and a public deployment in one late-night session. It worked at human speed: the Supabase setup ran over an hour, which he says he could do in under 10 minutes.\nWorth knowing\nDevin costs $500 a month and auto-hosts what it deploys. The author saw his Replit bill climb from $20 a month to $20 a week with hosted agent apps.\nTry it yourself\nwith\nDevin\nCopy prompt\nBuild me a small script that connects to my Gmail account through the Gmail API and lists every email from the past [number] days that I received but haven't replied to. Show each one with sender, subject, date and a link, and skip newsletters and automated mail. Walk me through the OAuth setup steps, and stop once I can run it and see a correct list; it must be read-only and never send or delete anything.\nOriginal source: https://jamesin.substack.com/p/hello-world-meet-devin",
     "body_sha256": "a5cf1b9745f44fcbbdbd69999733d4b91f83772a8c1fe07d7120886d7e905e38",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:28.933808+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:28.933808+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

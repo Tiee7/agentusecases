@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-email-invoices-into-a-live-financial-dashboard",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:43:29.073668+00:00",
+  "html_sha256": "b3f8d67bf778c8511e5345c668dae46130cfca9c599ec439c3fc5c3de6fa6a96",
   "body_sha256": "eeaf267b89d50a241402c36f9fa9625ddd14465f009400ba26bee07b8e390a94",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn email invoices into a live financial dashboard\nAn n8n workflow scans emailed invoices, extracts supplier, amount, date and description, and feeds a real-time Google Sheets dashboard.\nDone with\nN8\nn8n\nWhat they did\nThe workflow watches Gmail for incoming invoice emails, then uses AI to classify each one as an expense or income and extract fields including supplier, amount, date, description, and category. It writes the structured data into Google Sheets, where the sheet itself powers a live dashboard showing totals, net profit, and category breakdowns; the Reddit post does not describe a manual review step.\nHow it went\nThe stated result is a real-time finance dashboard tracking total income, total expenses, net profit, and spending by category. The post shares no hard metrics, error rates, or before-and-after time savings.\nWorth knowing\nThe source is high level only: it explains the flow and dashboard outputs, but gives no template, run cost, or setup time in the post text shown.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that watches [Gmail label or inbox] for emails with invoice attachments, extracts supplier, amount, date, and description from each, and appends a row to the Google Sheet [sheet name]. Add a second tab with totals by supplier and month for a live dashboard. Finished means a test invoice shows up correctly in the sheet; flag any invoice it cannot read instead of guessing.\nOriginal source: https://www.reddit.com/r/n8n/comments/1o27rk5/i_built_an_ai_accountant_in_n8n_that_turns_email",
     "body_sha256": "eeaf267b89d50a241402c36f9fa9625ddd14465f009400ba26bee07b8e390a94",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:43:29.073668+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:43:29.073668+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

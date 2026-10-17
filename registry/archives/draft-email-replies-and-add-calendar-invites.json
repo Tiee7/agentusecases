@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/draft-email-replies-and-add-calendar-invites",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:50:29.112774+00:00",
+  "html_sha256": "348bc2668109122d22f5986ab75f348d8a619f0bf638f1fd0243b94b88d50f26",
   "body_sha256": "375ed722fad1d98d9151d46cb33c91b4b2ebe7c0c0429bacbab5fef7d1e216d0",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-07",
+      "sha256": "76d1562084b80ede48b8bcaa3acf2f92b835f1559225588120cbf9ee68496244"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Draft email replies and add calendar invites\nA writer built a scheduled Claude agent using Gmail and Calendar connectors to draft replies and add invites to the calendar.\nDone with\nCL\nClaude\nWhat they did\nThe writer signed into Claude on a paid plan, enabled the Gmail and Google Calendar connectors, and used the /schedule skill in a plain-language prompt. It told Claude to scan the inbox hourly, review mail since the last run, draft replies where needed, and add invites to the calendar. A scheduled-tasks tab confirms the setup.\nHow it went\nThe source gives no measured results. Claude drafts replies, but Gmail users must still review and send every draft themselves.\nWorth knowing\nScheduled tasks run in the cloud, while /loop in Claude Code only runs while your laptop is on. Both need a paid plan.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nEvery [weekday morning or schedule], check my Gmail for new emails that need a reply and draft responses in my voice, using [a sample of my writing or tone notes]. If an email mentions a meeting or event, add it to my Google Calendar as an invite for [time zone]. You're done when drafts are saved and events added; do not send any email, and tell me about each calendar event you added.\nOriginal source: https://www.tomsguide.com/ai/claude/i-built-a-claude-agent-to-manage-my-inbox-and-it-changed-how-i-handle-email",
     "body_sha256": "375ed722fad1d98d9151d46cb33c91b4b2ebe7c0c0429bacbab5fef7d1e216d0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:50:29.112774+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:50:29.112774+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

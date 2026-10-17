@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-flights-with-ai-trip-planners",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:27:33.090961+00:00",
+  "html_sha256": "ea818bc31b9ecb72589093767e99bbfab58dc0d7517a825ddfafcd11e4ce77f5",
   "body_sha256": "138358ca8a895713db54a86f1a23d0f53e0796e4b12a8546025aed27703850f1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Book flights with AI trip planners\nA blog tested five AI trip planners on completing flight bookings; Kayak's agent finished through its own checkout, while ChatGPT Operator only partly completed bookings via form-filling and needed manual cancellation.\nDone with\nOP\nOperator\nWhat they did\nThe blog ran five AI trip planners through the same scenarios: a same-week domestic booking, a multi-city international trip, and a premium cabin request. Kayak's agent negotiated the itinerary in conversation, then handed off to Kayak's own checkout. For ChatGPT Operator, the testers pointed it at United.com. It filled in the search and passenger details, then paused at payment for the user to authorize.\nHow it went\nKayak completed the booking, though changes and cancellations go through its support flow. Operator failed in two of three runs because of session timeouts, CAPTCHAs and price changes. Gemini and Mindtrip only redirected.\nWorth knowing\nThe blog also sells one of the tools it ranks first, and it gives no per-run timing. Kayak fares may carry a markup, which the blog puts at $30–$80 on economy international.\nTry it yourself\nwith\nOperator\nCopy prompt\nFind the best flight from [origin] to [destination] departing [date] and returning [date], with a budget of [amount] and a preference for [nonstop or cheapest]. Compare at least three options on [airline or booking site] and tell me which you recommend. Pause before entering passenger details or payment and show me exactly what you are about to submit, and never complete a purchase without my confirmation.\nOriginal source: https://www.travelanywhere.blog/blog/ai-trip-planners-that-book-flights-tested",
     "body_sha256": "138358ca8a895713db54a86f1a23d0f53e0796e4b12a8546025aed27703850f1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:27:33.090961+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:27:33.090961+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

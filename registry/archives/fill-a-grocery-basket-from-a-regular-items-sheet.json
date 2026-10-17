@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-a-grocery-basket-from-a-regular-items-sheet",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:57.064343+00:00",
+  "html_sha256": "ad77e1d253196a25ba41d3720f27e4631019dcde9a3c2d49a696d834025ed50d",
   "body_sha256": "0ae9b5b247a4f55da71824f22cb73ed15fa54e732b250ea313e1062b081acc23",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Fill a grocery basket from a regular-items sheet\nClaude in Chrome added about 24 items to an ASDA basket from a Google Sheet, but the user still had to fix items and check out.\nDone with\nCH\nClaude in Chrome\nWhat they did\nClaude built a Google Sheet of 40+ regular items with quantities, frequency tags and price rules. Christina Souch gave it to Haiku in Claude in Chrome on ASDA's site. The first run bulk-added everything from ASDA's Regulars page, so she told it the sheet was the only source of truth. She then ran it several more times, watching each one.\nHow it went\nThe best run added about 24 of 42 items, totalling £71.76. It claimed the rest were unavailable, added carrots that weren't on the list, and she still had to fix the basket and check out. It was slower than shopping by hand.\nWorth knowing\nThe first run's bulk add of Regulars pushed a usual £60 shop past £200. One run stopped at a token limit, and closing the window mid-task lost all progress.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen my Google Sheet of regular groceries at [sheet link] and add each item to my basket at [grocery store site]. If an item isn't available, list it at the end instead of substituting. Stop with the basket full and give me a list of items that need my attention. Do not check out or pay.\nOriginal source: https://christinasouch.com/blog/can-claude-automate-my-grocery-shopping",
     "body_sha256": "0ae9b5b247a4f55da71824f22cb73ed15fa54e732b250ea313e1062b081acc23",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:57.064343+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:57.064343+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

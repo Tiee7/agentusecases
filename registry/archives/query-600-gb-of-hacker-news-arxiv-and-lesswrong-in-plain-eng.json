@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/query-600-gb-of-hacker-news-arxiv-and-lesswrong-in-plain-eng",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:21.003904+00:00",
+  "html_sha256": "8038967c8452c9871e14c4febdbfaad5a8c03ae657d2c05384f014dd7204dcb0",
   "body_sha256": "b5649876769d1327eb14f3663f6ae2198c8e341b723874020c14317ecb7a2fbe",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Query 600 GB of Hacker News, arXiv, and LessWrong in plain English\nClaude Code writes the SQL and vector queries against a public read-only index, and can set email alerts for nuanced criteria.\nDone with\nCC\nClaude Code\nWhat they did\nScry is an MCP server at mcp.scry.io that you add to Claude, ChatGPT, or Claude Code. The agent reads the live schema, picks the relations that could hold the answer, and writes one bounded query. That query can be a phrase match, a time window, a join, or vector math. It runs on Scry's side, not on your machine.\nHow it went\nThe page says a scan of all indexed Hacker News text (15.5 billion characters) takes 0.86 seconds. It lists about 105 billion queryable rows. It says nothing about email alerts, and it doesn't report results from real use.\nWorth knowing\nFree for non-commercial use when there is capacity. Most questions cost a fraction of a cent to a few cents, and data freshness varies by source.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to explore [public dataset or index, e.g. Hacker News, arXiv posts] using plain-English questions. Connect to [read-only index or database URL], write the SQL or vector queries needed, and answer this: [your question, e.g. what are people saying about X over the last year]. Show me the queries you ran along with a short summary of results. If I ask for email alerts, show me the alert setup and wait for my approval before turning anything on.\nOriginal source: https://exopriors.com/scry",
     "body_sha256": "b5649876769d1327eb14f3663f6ae2198c8e341b723874020c14317ecb7a2fbe",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:21.003904+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:21.003904+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

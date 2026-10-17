@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-hotel-rooms-across-booking-engines",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:35:40.945968+00:00",
+  "html_sha256": "75556eb441bb437daad32b848a53313533486016b69a9a10f027f1b104932ab4",
   "body_sha256": "9fee2dc69cc7eed24199cb77b1a400a1ed80f82314eac339269fec95c107067a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Book hotel rooms across booking engines\nManus was tested on 11 hotel booking engines and got through date and room selection on 8, but handed back at payment details so no booking was completed.\nDone with\nMA\nManus\nWhat they did\nTriptease gave Manus the same one-line prompt on each of 11 booking engines, asking for a room at a named hotel for September 15 to 17. Manus went to the hotel's own site first, then clicked through the date picker and room choice. It stopped at the guest and payment form so a person could enter details. It never held card details.\nHow it went\nManus succeeded on 8 of 11 engines, 3 of them with delays. It failed on D Edge and Travelanium because of CAPTCHAs, and on Simple Booking because of its date selector. Each time it fell back to Booking.com.\nWorth knowing\nDate pickers that show months side by side worked best. A length-of-stay picker or a CAPTCHA sent Manus to Booking.com, and it still can't finish payment itself.\nTry it yourself\nwith\nManus\nCopy prompt\nGo to [hotel website or booking engine URL] and go through the booking flow for a [room type] from [check-in date] to [check-out date] for [number] guests. Stop at the payment details page and show me the room, price, and cancellation terms. Don't enter any payment information or submit the booking.\nOriginal source: https://www.hotelnewsresource.com/article137200.html",
     "body_sha256": "9fee2dc69cc7eed24199cb77b1a400a1ed80f82314eac339269fec95c107067a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:35:40.945968+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:35:40.945968+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/log-tenant-maintenance-requests-for-rental-properties",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:59.015253+00:00",
+  "html_sha256": "70ab124c9e7d6f39012c6556c061bf07982f3b906e269f4e2fd24bcc6c15e82b",
   "body_sha256": "427eb146069053bc78feb2a2f16d9748eabd1741587c32a8540c4bb07bae4457",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Log tenant maintenance requests for rental properties\nIn a vendor demo, Claude Code connected to TIDY's MCP server logs maintenance requests, notifies a handyman and escalates an urgent issue.\nDone with\nCC\nClaude Code\nWhat they did\nThe owner connects Claude Code to TIDY's MCP server with a free account and an API token. They describe a tenant's problems in plain language. Claude logs two issues at the property, notifies the handyman, and raises the disposal to urgent when asked. In the emergency example it texts the tenant shutoff steps from the saved property notes, calls a plumber, and asks the owner for a spending limit.\nHow it went\nThe post shows scripted example conversations, not a real deployment. It reports no measured results, only the logged issues, the handyman notifications and a $500 plumber authorization.\nWorth knowing\nTIDY charges a 3.9% platform fee when you book pros. The MCP server itself is free to connect, and the post's setup takes about five minutes.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a maintenance request flow for my rentals at [property list]. When I paste a tenant message, log it in [tool or sheet] with the unit, issue and urgency, and draft a note to [handyman name]. Treat [leaks, no heat, safety issues] as urgent and flag them. Show me any notification before it is sent. You're done when I've tested it on two sample requests.\nOriginal source: https://www.tidy.com/blog/claude-code-sfr-property-management",
     "body_sha256": "427eb146069053bc78feb2a2f16d9748eabd1741587c32a8540c4bb07bae4457",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:59.015253+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:59.015253+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

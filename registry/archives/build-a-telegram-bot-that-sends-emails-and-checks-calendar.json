@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-telegram-bot-that-sends-emails-and-checks-calendar",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:00:47.051946+00:00",
+  "html_sha256": "01cc856e7d06465d3f49d2d114c03c2e4e5fdae48b91c15948da75d831da8cdb",
   "body_sha256": "864771c9410a148965a408ed1bff15ad1bceb10883abbd23311da0ba6ff534e4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build a Telegram bot that sends emails and checks calendar\nJulian Goldie used Replit's agents and automations feature to build a Telegram bot that sends emails and checks his calendar, taking 28 messages; the feature is in beta and buggy.\nDone with\nRA\nReplit Agent\nWhat they did\nOpened Replit agents and automations, entered OpenAI key, and connected Outlook via OAuth for email and calendar access. Selected Telegram bot trigger, then exchanged 28 messages describing the desired bot so the agent handled all API setup and code generation automatically before publishing.\nHow it went\nProduced a working Telegram bot that checked calendar gaps and sent Outlook meeting invites. Beta bugs included no persistent memory in the test playground and occasional formatting errors.\nWorth knowing\nRequires own OpenAI API key; beta with bugs like needing a fresh Telegram bot for each deployment.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nBuild me a Telegram bot that can send emails from my [email provider] account and check my [Google Calendar or other calendar] for upcoming events when I message it. Only respond to my Telegram user ID [your ID], and before sending any email, show me the recipient, subject and body and wait for me to confirm. When you are done, give me setup steps for the tokens and permissions I need to add, and run a test where I ask it 'what's on my calendar tomorrow?'\nOriginal source: https://x.com/JulianGoldieSEO/status/1970461781899547063",
     "body_sha256": "864771c9410a148965a408ed1bff15ad1bceb10883abbd23311da0ba6ff534e4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:00:47.051946+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:00:47.051946+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

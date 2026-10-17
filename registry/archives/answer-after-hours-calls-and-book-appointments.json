@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/answer-after-hours-calls-and-book-appointments",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:37.024044+00:00",
+  "html_sha256": "43ddcd97c419e1b90e7d9c9749b56881bfdbb1593cc2ae89ed09f3062629dc86",
   "body_sha256": "4f5d97da4f6cde6afcb76b96f587c07c6f197655b61c445d89c942eb6c6d8bf9",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Answer after-hours calls and book appointments\nThe author set up a Synthflow receptionist that captured caller details and booked next-day appointments, and a Retell agent that answered clinic FAQs and flagged frustrated callers (vendor comparison).\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a Synthflow receptionist for a home services company in about 45 minutes with its visual builder. It answered after-hours calls, captured name, address and service type, and booked next-day appointments. Separately, for a 12-provider clinic, a Retell agent drew on a loaded FAQ document and post-call analysis flagged frustrated callers for same-day follow-up by the office manager.\nHow it went\nSynthflow handled simple intake well across 30 test calls, but looped back to the start when a caller rescheduled and changed service. Retell flagged 3 frustrated calls out of 80 tests, with no hallucinated FAQ answers.\nWorth knowing\nThe author works for Retell, so the comparison favors it. Synthflow's Pro plan was about 700ms latency and $450/month, and the agent was weak off-script.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me build an after-hours receptionist workflow for [my business type]. It should answer calls or messages outside [business hours], collect the caller's name, phone number and reason for calling, answer these common questions: [list of FAQs], and offer next-day appointment slots from [my calendar]. Flag callers who sound frustrated for my follow-up. Before it books anything or sends any message, pause and show me what it is about to do. You're done when I've tested it with a sample call and seen the booking and flag work.\nOriginal source: https://www.retellai.com/blog/best-ai-voice-platforms-virtual-receptionists",
     "body_sha256": "4f5d97da4f6cde6afcb76b96f587c07c6f197655b61c445d89c942eb6c6d8bf9",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:37.024044+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:37.024044+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

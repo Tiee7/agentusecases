@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/draft-appeals-for-denied-insurance-claims",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:45:47.095547+00:00",
+  "html_sha256": "a71509c9a9b22a9d12739c9a4e944860ce5fe97951512cbb8e4cfc7609da844b",
   "body_sha256": "d1cc6c3c2c4628c5aed7285c5abc81801eda030a121703eee774cebf5858750f",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Draft appeals for denied insurance claims\nA built AI system reads a denied claim, pulls the patient's record and drafts a formal appeal letter for human review before sending.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAn n8n automation triggers the moment a claim is marked Denied, filters anything already appealed, then pulls the full patient record, prescriptions, and test results tied to that patient ID. One AI call identifies the likely denial reason and drafts the formal appeal letter citing the clinical details.\nHow it went\nIt outputs a real Google Doc with the letter, updates a tracking sheet, and sends a branded email to staff with a review link. No results or metrics are stated.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a tool that reads a denied insurance claim from [file or folder], pulls the relevant patient record details from [source], and drafts a formal appeal letter citing the denial reason and supporting evidence. It should save the draft for human review and never send anything by itself. Finish by running it on one sample denial and showing me the resulting letter.\nOriginal source: https://x.com/Tariere5/status/2104521353386766588",
     "body_sha256": "d1cc6c3c2c4628c5aed7285c5abc81801eda030a121703eee774cebf5858750f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:45:47.095547+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:45:47.095547+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

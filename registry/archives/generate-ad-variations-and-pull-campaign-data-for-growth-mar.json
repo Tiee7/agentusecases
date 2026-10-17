@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-ad-variations-and-pull-campaign-data-for-growth-mar",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:48.912302+00:00",
+  "html_sha256": "10749c19087c221ea26ced63f21707d2214bf0fe5016c763e160fc7711a8f75a",
   "body_sha256": "23d6dfa5522314d67adfd4245a161a22d7e0235d2b7421bf77bea80cc80ebcbd",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate ad variations and pull campaign data for growth marketing\nAnthropic's growth marketing team used Claude Code to flag underperforming ads from a CSV and generate hundreds of Google Ads variations, plus a Figma plugin and Meta Ads MCP server.\nDone with\nCC\nClaude Code\nWhat they did\nThis is a third-party summary of Anthropic's own document. Claude Code reads a CSV of past ads and metrics and filters for low-CTR ads with enough impressions. Two sub-agents then write new headlines (30 characters) and descriptions (90 characters). The variants go back to a CSV, tagged for staged rollout and human QA. A Figma plugin swaps the copy into templates, and a small Meta Ads MCP server feeds campaign data to Claude Desktop.\nHow it went\nAd copy creation for a campaign refresh dropped from about two hours to about 15 minutes. Creative output rose roughly 10x. The Figma plugin produces up to 100 variations at once. Outputs still need human QA for brand voice and legal compliance.\nWorth knowing\nModels can fabricate claims or metrics, so check character counts, line breaks and legal wording before upload. Attribution only works if each variant is tied to an experiment ID.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead the ad performance CSV at [file path] and flag the ads that are underperforming on [metric, e.g. CTR or CPA]. For each one, write [number] new headline and description variations that fit [platform] character limits, and save them to a new CSV with the original ad referenced. Stop when every flagged ad has variations; do not upload anything to the ad platform.\nOriginal source: https://dev.to/danishashko/claude-code-for-growth-marketing-hell-yeah-i7i",
     "body_sha256": "23d6dfa5522314d67adfd4245a161a22d7e0235d2b7421bf77bea80cc80ebcbd",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:48.912302+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:48.912302+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/scaffold-a-second-module-from-an-existing-one-s-structure",
+  "observed_at": "2026-10-17T06:05:53.163554+00:00",
+  "html_sha256": "3b46401c3a34dea1dbf1404aae84fe079fc386fb1891fc67534681615d4efd38",
+  "body_sha256": "d73388212ad8686599bc5266e17e0ec12b0c439184f5aa500d3eec01169604da",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Scaffold a second module from an existing one's structure",
+      "sha256": "bb77e9a88a66e9e4a29849007bb6a7d5659d5c105da76406ca65741472b6525c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter asked Cursor to create a second module following another module's structure, but it failed because it did not read the relevant files.",
+      "sha256": "1a0c8031004e2d64640e2016677a4c88dd9c4b740a9b139169b331cc7550ae58"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter set up the project foundation manually, then asked Cursor to create a second module by following the structure of an existing module. It failed because, according to the post, it did not read the 4–5 files that made up the reference module instead of pulling in that context on its own.",
+      "sha256": "1ee21d47b991f149b3df32911fc0599d4d6bea48a432051fede7abb9c094bf62"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was that the agent could not scaffold the matching module from the existing pattern, and the commenter described the agent as too lazy to read context. In replies, others echoed that shrinking context made results worse and more error-prone.",
+      "sha256": "d27b0890937f0cb865d51b674e45c7280116160b1cc941c31065d9b3c8a3d398"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The practical catch was context: the source says the relevant module structure lived across 4–5 files, and Cursor missed it unless that context was explicitly brought in.",
+      "sha256": "4139ae74f27511fca557ab790bc2bfa41f66dd7cb57d77f64dd8d89c7afdd5fd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/cursor/comments/1k94oye"
+      ],
+      "sha256": "61e3b7203e91272c880170e9d71821d2a4a6041e3dfb377170a32d0b9228cc8a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-16",
+      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "4db9dd2a15671af1d793f428873cf8c8267be5e739fe55b163eac37fbc2854a3",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Scaffold a second module from an existing one's structure\nA commenter asked Cursor to create a second module following another module's structure, but it failed because it did not read the relevant files.\nDone with\nCR\nCursor\nWhat they did\nThe commenter set up the project foundation manually, then asked Cursor to create a second module by following the structure of an existing module. It failed because, according to the post, it did not read the 4–5 files that made up the reference module instead of pulling in that context on its own.\nHow it went\nThe result was that the agent could not scaffold the matching module from the existing pattern, and the commenter described the agent as too lazy to read context. In replies, others echoed that shrinking context made results worse and more error-prone.\nWorth knowing\nThe practical catch was context: the source says the relevant module structure lived across 4–5 files, and Cursor missed it unless that context was explicitly brought in.\nTry it yourself\nwith\nCursor\nCopy prompt\nCreate a new module called [new module name] in [repo name], modeled on the existing module [existing module path]. Before writing anything, open and read every file in that module and list its structure, naming conventions, and patterns back to me. Then scaffold the new module to match, and finish by confirming that it builds and that its structure mirrors the original.\nOriginal source: https://www.reddit.com/r/cursor/comments/1k94oye",
+    "body_sha256": "d73388212ad8686599bc5266e17e0ec12b0c439184f5aa500d3eec01169604da",
+    "archived_at": "2026-10-17T06:05:53.163554+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:53.163554+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

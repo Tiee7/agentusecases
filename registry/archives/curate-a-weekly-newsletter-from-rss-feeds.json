@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/curate-a-weekly-newsletter-from-rss-feeds",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:37.018601+00:00",
+  "html_sha256": "3391f58e2f87e249c5cba7a2de17b1deac4095b3a5b8a5c2d8785fb357f01c75",
   "body_sha256": "6c6bb3d66d7e830e0a7f39569f5c591156632319e40862feb74e4f10874e4e45",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Curate a weekly newsletter from RSS feeds\nOpenClaw monitors RSS feeds, scores items, compiles a digest with intros and sends a Telegram preview; the owner approves and it sends.\nDone with\nOC\nOpenClaw\nWhat they did\nThe guide builds five markdown skills wired together by cron jobs and a heartbeat. Every 6 hours the agent pulls about 120 RSS feeds plus Reddit and Hacker News into an inbox. Wednesday night it scores items on relevance, recency, source authority and engagement, with penalties for repeats. Thursday it writes intros in the editor's voice and sends a Telegram preview. The editor replies approve or asks for changes.\nHow it went\nThe guide claims about 18 minutes of human time per issue, against roughly four hours done manually. Compilation intros can miss nuance, so it advises against sending without review.\nWorth knowing\nEstimated API cost is $2.40-3.00 per issue, under $15 a month. Start Buttondown sends as drafts for the first few issues to check formatting.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nMonitor these RSS feeds: [feed URLs]. Each week, score items for relevance to [topic/audience], pick the top [10], and write a digest with a short intro and one line per item. Send me a preview on [Telegram], and only send it to [newsletter tool/list] after I reply approve.\nOriginal source: https://sfailabs.com/guides/openclaw-newsletter-curation",
     "body_sha256": "6c6bb3d66d7e830e0a7f39569f5c591156632319e40862feb74e4f10874e4e45",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:37.018601+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:37.018601+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

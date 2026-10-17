@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/draft-email-replies-and-linkedin-posts-with-n8n-workflows",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:29:35.003364+00:00",
+  "html_sha256": "e6924612c15f57b3df04a1f1c9a3091bcd0af76f9887cc5647744e7465016f72",
   "body_sha256": "f4572b1f50fbe0172f17bb209e8edbf48238eec7569c7e3e9c7faff54c81b326",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Draft email replies and LinkedIn posts with n8n workflows\nThe author built n8n workflows that draft Gmail replies for approval, generate LinkedIn posts from a topic, and extract tasks from emails into Google Tasks or Notion.\nDone with\nN8\nn8n\nWhat they did\nThe author built three n8n workflows. One reads new Gmail messages, sends the body to OpenAI or Gemini for a reply, asks for approval, then sends it through Gmail. Another takes a topic from a form, has OpenAI write a LinkedIn post, and saves it to Notion or emails it. The third watches Gmail, pulls out tasks by keyword or AI, and adds them to Google Tasks or Notion.\nHow it went\nThe post gives no measured results. It only claims that small automations like these can save hours each week. Each workflow is shown in a linked video tutorial.\nWorth knowing\nYou can run n8n locally with npm or Docker, or use the cloud version. The author suggests starting with a simple test workflow first.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that watches my Gmail for new emails matching [label or sender], drafts a reply in my tone using [short tone description], and saves it as a draft for me to approve. Add a second branch that extracts any tasks from the email into [Google Tasks or Notion database]. You're done when a test email produces both a draft and a task. Never send an email automatically; leave everything as a draft.\nOriginal source: https://learninwithak.substack.com/p/lear-n8n-automation-in-few-steps",
     "body_sha256": "f4572b1f50fbe0172f17bb209e8edbf48238eec7569c7e3e9c7faff54c81b326",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:29:35.003364+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:29:35.003364+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/search-literature-and-write-notes-into-zotero",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:15.069048+00:00",
+  "html_sha256": "5217945cb1233c3c6796886b06c51a1f8821d73b5c479c5fd2de51c15b669d34",
   "body_sha256": "90bce9c87b9224f4c36546b6f7d295ad49fbf93d253dba83da7e562a79217c1d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Search literature and write notes into Zotero\nA researcher uses Claude to search Google Scholar, follow citations, query a Zotero library in natural language, and write summary notes into Zotero or Obsidian.\nDone with\nCL\nClaude\nWhat they did\nPin Shuai runs Claude Code with the Paper Search MCP to find top-cited papers and the papers citing them. A Zotero MCP, backed by Zotero's local API and a search database, lets Claude query his library in natural language. He asks for a summary of one paper's findings and knowledge gaps based on his own annotations. Claude asks a few clarifying questions, then writes the note into Zotero or Obsidian.\nHow it went\nThe note appears in Zotero when he opens it, and library search saves time on hundreds of entries. He hasn't tested having Claude write a literature review from the retrieved papers.\nWorth knowing\nSearching your own Zotero library keeps Claude from hallucinating papers that don't exist. The setup needs the Zotero local API enabled and a database build, with a slower full-text option.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSearch the literature on [research topic] and find the [number] most relevant papers, following key citations from them. Write a short summary note for each paper into [Zotero library or Obsidian vault path], including title, authors, year, main findings, and how it relates to [my project]. Finish with an index note linking them all, and ask before modifying any existing notes.\nOriginal source: https://groundwater.usu.edu/blog/2026/Academic-Usecase-with-Claude/",
     "body_sha256": "90bce9c87b9224f4c36546b6f7d295ad49fbf93d253dba83da7e562a79217c1d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:15.069048+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:15.069048+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

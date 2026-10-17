@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-scored-sales-lead-profiles-and-outreach-drafts",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:36:28.951959+00:00",
+  "html_sha256": "4df21486e1fe71def11f9cee5f7edeb79ce91541d4773ded07fc2b57915bbda0",
   "body_sha256": "1dd3c1428a62fb68907b889be7a3d422477b9b9e0ea17427c70cf82e04bdda1b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build scored sales lead profiles and outreach drafts\nThe author built a pipeline with Gemini Deep Research, NotebookLM and Sheets that produces a scored lead profile and outreach draft in under 20 minutes, tested on three companies.\nDone with\nGE\nGemini\nWhat they did\nThe author set up a custom Gem called Sales Lead Researcher with their offering and a four-part, 0-16 scoring framework. For each company, one command runs Deep Research and a second identifies a decision-maker, scores the company and drafts a short LinkedIn message. Results go to Google Docs, then NotebookLM for comparison, then Sheets.\nHow it went\nDeep Research cited 50-100+ sources per company and took 7-10 minutes each. Scores were 14/16, 13/16 and 9/16 for Airbnb, which gave three different outreach strategies. The prompts and rubric are paywalled.\nWorth knowing\nIt only researches companies you already picked, needs your own offer and scoring rubric defined first, runs on Gemini Pro at $20/month, and Deep Research has daily limits.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse Deep Research on [company name] to build a sales lead profile: what they do, recent news, key decision makers, likely pain points related to [my product], and a fit score from 1 to 10 with reasons. Then draft a short outreach email in [my tone]. Finish with the profile in a table plus the draft, and do not send anything.\nOriginal source: https://cashandcache.substack.com/p/i-used-gemini-to-find-sales-leads",
     "body_sha256": "1dd3c1428a62fb68907b889be7a3d422477b9b9e0ea17427c70cf82e04bdda1b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:36:28.951959+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:36:28.951959+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

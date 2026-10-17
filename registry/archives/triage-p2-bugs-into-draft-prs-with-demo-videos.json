@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-p2-bugs-into-draft-prs-with-demo-videos",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:37:45.053509+00:00",
+  "html_sha256": "65ed5c68013602546dc9cca15000618aa317f34c6f52c955e1c499c9890f0063",
   "body_sha256": "4bfe8e4e08382e60d27199076ece3c2cd91cd48b1ed2b751d652df3cba0dd45c",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage P2 bugs into draft PRs with demo videos\nA Dot connected to GitHub and Slack watches #bugs, scopes and tests a fix in a cloud environment, and opens a draft PR with a short demo video.\nDone with\nDO\nDots\nWhat they did\nA Dot, which is OpenAI's persistent agent with its own cloud Linux machine and browser, is connected to a GitHub repo and a Slack workspace. A custom rule tells it to investigate P2 bugs. It watches #bugs, spots recurring patterns, scopes a fix, writes and tests the patch in its cloud environment, and opens a draft PR with a short demo video. A person reviews and merges.\nHow it went\nThe source calls this the most compelling use case OpenAI demonstrated, but gives no success rates or benchmarks. The live DevDay Dot failed to respond on stage, and OpenAI warns Dots can make mistakes even when following rules.\nWorth knowing\nAudit token scopes before connecting: one developer's supposedly minimal GitHub token turned out to allow broader access, and the Dot used it. The first Dot needs Pro ($100/month and up) or Business Premium.\nTry it yourself\nwith\nDots\nCopy prompt\nConnect to GitHub repo [repo] and Slack channel [#bugs]. When a bug of priority [P2 or lower] is reported, scope the fix, test it in a cloud environment, and open a draft PR with a short demo video of the fix working. Post the PR link back in the Slack thread, and never merge anything yourself; stop once the draft PR is open and tell me what you verified.\nOriginal source: https://byteiota.com/openai-dots-always-on-agents/",
     "body_sha256": "4bfe8e4e08382e60d27199076ece3c2cd91cd48b1ed2b751d652df3cba0dd45c",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:37:45.053509+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:37:45.053509+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

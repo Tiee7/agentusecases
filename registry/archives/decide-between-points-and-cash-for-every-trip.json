@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/decide-between-points-and-cash-for-every-trip",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:37.034359+00:00",
+  "html_sha256": "8280ad829685a6acf10e0d6952ae8a586a26a341bbaad1bd9a8c6d1a3a380e43",
   "body_sha256": "610683afbe245c9d45aa388c48faaa766ef82feb8a832cf49eca9fcd27e84e46",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Decide between points and cash for every trip\nSkills and MCP servers that let Claude Code search award flights across 25+ mileage programs, compare cash fares, and check loyalty balances.\nDone with\nCC\nClaude Code\nWhat they did\nThe toolkit installs into Claude Code as a plugin with skills, MCP servers and a travel-hacker subagent. Given a request, it searches cash sources (Duffel, Ignav, Google Flights, Skiplagged, Kiwi) and Seats.aero for awards. It also checks credit card portals and finds the cheapest transfer path. A calculator compares cents-per-point, and AwardWallet confirms balances. You book yourself, after checking availability on the airline's site.\nHow it went\nThe source describes the workflow and what is included, not measured results. Award search covers 27 programs. Options that fall below a floor valuation lead to a recommendation to pay cash.\nWorth knowing\nAward search needs a Seats.aero Pro key (about $8/month, or $99/year). Loyalty balances need an AwardWallet Business account, and the five free MCP servers cover cash search only.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm planning a trip from [origin] to [destination] around [dates or flexible window] and have points in [programs and balances]. Search award availability and cash fares, then compare the cost of each option, including taxes and fees, and recommend whether to use points or pay cash. Give me the top 3 options in a table, and do not book or transfer points without showing me the details and getting my approval first.\nOriginal source: https://github.com/borski/travel-hacking-toolkit",
     "body_sha256": "610683afbe245c9d45aa388c48faaa766ef82feb8a832cf49eca9fcd27e84e46",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:37.034359+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:37.034359+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

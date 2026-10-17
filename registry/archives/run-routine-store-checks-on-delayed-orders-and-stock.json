@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-routine-store-checks-on-delayed-orders-and-stock",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:53:11.100305+00:00",
+  "html_sha256": "fe2d7734bd8603bf5e12cdc7ad0e8641d9c84b2c7aa6e9a4568152b7e60837c8",
   "body_sha256": "854fba381d752b465fa14f37c264c4fe18457777ba2c4b2cf11732263655d6a4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run routine store checks on delayed orders and stock\nA commenter runs Claude against their store to check delayed orders, stalled tracking, and stock issues; the poster is connecting an assistant via MCP.\nDone with\nCL\nClaude\nWhat they did\nThe thread describes a store owner connecting Claude to Zendrop through its MCP and using it for routine read-style store checks rather than autonomous decision-making. The assistant is used to surface delayed orders, shipments whose tracking has stopped moving, and stock issues; the human still reviews anything important and handles decisions on orders.\nHow it went\nThe commenter says it has been pretty solid and saved them a lot of manual checking by flagging which orders need attention. No hard metrics or automation rates are given, and they still double-check important cases before acting.\nWorth knowing\nThe main catch is that they do not let it make order decisions on its own; it is mainly a triage layer to reduce manual checking.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nCheck my [Shopify/WooCommerce] store at [store or admin URL] each morning for orders delayed beyond [number] days, shipments with no tracking updates for [number] days, and products with stock below [threshold]. Produce a short report listing each issue with order or product number and the suggested next step. Do not email customers or change any orders; show me proposed actions for approval first.\nOriginal source: https://www.reddit.com/r/dropshipping/comments/1vmqtd0/whats_a_good_ai_assistant_to_connect_to_my_store",
     "body_sha256": "854fba381d752b465fa14f37c264c4fe18457777ba2c4b2cf11732263655d6a4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:53:11.100305+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:53:11.100305+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

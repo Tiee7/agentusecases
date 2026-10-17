@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-coding-agents-git-native-persistent-memory",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:16.868885+00:00",
+  "html_sha256": "cdc1352ec59fc60321dde413c493a74a250e26d9fc63d5b0e7219809662772b4",
   "body_sha256": "0dc03e3367354d8abed112821a8dd5c5bc0b28a1a4333e0e38fb2c59b4212bed",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Give coding agents git-native persistent memory\nA tool that stores persistent memory for AI coding agents in git so context carries across sessions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou build a Go binary, then run a bootstrap command on a project. It creates a knowledge/ folder of Markdown files with YAML frontmatter, an agent skill, and an AGENTS.md. Agents reach the memory through the CLI or an MCP server over stdio, which works with Claude Code, Cursor and Codex. The convention tells agents to search before writing and to load only the index pages they need.\nHow it went\nThe README claims search under 300µs, about 4ms to validate 50+ concepts, and an 80% token reduction. Those figures come from the project's own benchmarks and comparison table, and the README doesn't show independent results.\nWorth knowing\nThe repo is new, with one commit and 3 stars. The 80% token claim comes from a benchmark you can rerun with make benchmark against a local LLM.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up persistent memory for coding agents in this repository by storing notes in a [folder name, e.g. .agent-memory] directory tracked in git. Create a simple format for recording decisions, conventions, and open tasks, and add instructions so future sessions read it first and update it at the end. Show me the files you plan to commit before you commit anything.\nOriginal source: https://github.com/okf-memory/okf-agent-memory",
     "body_sha256": "0dc03e3367354d8abed112821a8dd5c5bc0b28a1a4333e0e38fb2c59b4212bed",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:16.868885+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:16.868885+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

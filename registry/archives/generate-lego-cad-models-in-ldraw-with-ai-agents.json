@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-lego-cad-models-in-ldraw-with-ai-agents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:40.983233+00:00",
+  "html_sha256": "f3761a3c8c133689df6f58a5c9c4b4933abcf3be521a6cb8f72342ad8c2656c9",
   "body_sha256": "eae60383fe0f6fb451561912e94bf2977ad4aa09c8fae66cdf54bd3d894212aa",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate LEGO CAD models in LDraw with AI agents\nA toolset and docs let ChatGPT and Claude agents write LDraw source files that become LEGO CAD models, packaged as a dockerized web app.\nDone with\nGP\nChatGPT\nCL\nClaude\nWhat they did\nThe agent takes a prompt, reads the repo's instruction docs, and plans the parts and submodels. It does not place bricks directly. It writes a plan file, then Python generator scripts that output the LDraw file. It uses tools for part search, collision and gap detection, and headless rendering, and loops render, inspect and adjust until it judges the model finished.\nHow it went\nIt produces LDraw source, several viewers, and a Blender-editable glb file. The author says only expensive high-end models can build large, correct models. Generation is slow, spaceships are weak, and VR on Meta Quest 3 has many issues.\nWorth knowing\nThe Docker build needs about 5 GB of disk. Without a TypeSafe API key, part search falls back to full-text search, which may give worse models.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite an LDraw file (.ldr) for a LEGO model of [object, e.g. a small red sports car] using real LDraw part numbers and colors, and place the parts so they connect properly. Then validate the file, render a preview image if you can, and fix any floating or overlapping parts. Finish by giving me the final .ldr file and a parts list.\nOriginal source: https://github.com/anteloc/ldraw-nova",
     "body_sha256": "eae60383fe0f6fb451561912e94bf2977ad4aa09c8fae66cdf54bd3d894212aa",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:40.983233+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:40.983233+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

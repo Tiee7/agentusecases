@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/delegate-web-research-from-claude-code-to-comet",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:35:39.085212+00:00",
+  "html_sha256": "22c1cbf0c4aafc1e432e52d92fbeace9a17ec817fc365a542ba2b057fd78a00e",
   "body_sha256": "27d554244bba0da4148fcd03df103190874eafd1032eb1e62402c82db34b5cbc",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Delegate web research from Claude Code to Comet\nAn MCP server lets Claude Code hand web navigation, login-walled pages and research to Comet while it keeps coding, then returns results.\nDone with\nCC\nClaude Code\nPC\nPerplexity Comet\nWhat they did\nYou add the comet-mcp server to Claude Code's MCP config and install the Perplexity Comet browser. The server launches Comet with remote debugging and talks to it over CDP. Claude sends high-level goals such as researching a topic or logging into GitHub. Comet does the clicks, scrolling and searching, and Claude polls progress and gets the results back.\nHow it went\nThe source gives no benchmarks or measured results. It shows a demo of research and login-flow delegation, and it presents the approach as keeping Claude's context focused on coding.\nWorth knowing\nNeeds Node 18+ and Comet installed. On WSL2 you must enable mirrored networking, and port 9222 has to be free.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up an MCP server so that you can hand web research and browsing tasks to Perplexity Comet while you keep working on [my project] in [repo path]. Walk me through installing and configuring it, then test it by asking Comet to look up [a documentation page or question] and return a short summary. Tell me before you install anything or change my config files.\nOriginal source: https://github.com/hanzili/comet-mcp",
     "body_sha256": "27d554244bba0da4148fcd03df103190874eafd1032eb1e62402c82db34b5cbc",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:35:39.085212+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:35:39.085212+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

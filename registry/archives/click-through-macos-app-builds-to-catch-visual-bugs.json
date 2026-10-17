@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/click-through-macos-app-builds-to-catch-visual-bugs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:17.051004+00:00",
+  "html_sha256": "ca53579b10fbc26ff46b7492510c65386b11c498d5d386f98acaa67b25924624",
   "body_sha256": "be284fcb52b9fa9d60292300662978537f81d4acf5a28c3c41d67af88f7f6de0",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Click through macOS app builds to catch visual bugs\nA developer used Claude Code computer use to compile, launch, and click through macOS app screens to find layout bugs.\nDone with\nCC\nClaude Code\nCU\nClaude computer use\nWhat they did\nThe built-in computer-use MCP server is enabled through /mcp, and macOS Accessibility and Screen Recording permissions are granted. The developer approves each app per session. Claude then runs xcodebuild, launches the app, clicks through windows, resizes them to reproduce layout problems, takes screenshots, and reads the code to suggest a fix.\nHow it went\nThe article describes the workflow but gives no measured results. It is a research preview, so behavior may change between versions.\nWorth knowing\nIt needs a Pro or Max plan, Claude Code v2.1.85 or later, and macOS in an interactive session. It runs on your real desktop, so check manually anything where a wrong click could cause side effects.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCompile and launch my macOS app in [project path]. Click through each screen, including [key screens or flows], and look for layout bugs like clipped text, overlapping views, or misaligned controls. Finish with a list of each bug, the screen it was on, and a suggested fix; don't change any code until I approve.\nOriginal source: https://claudcod.com/blog/claude-code-computer-use/",
     "body_sha256": "be284fcb52b9fa9d60292300662978537f81d4acf5a28c3c41d67af88f7f6de0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:17.051004+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:17.051004+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

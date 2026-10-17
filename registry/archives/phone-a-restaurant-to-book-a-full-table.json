@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/phone-a-restaurant-to-book-a-full-table",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:27:57.013912+00:00",
+  "html_sha256": "85153365fb352505c5ca222e5665126c711205146b1ac58718b0188bf7a4c8ef",
   "body_sha256": "4e5a56d80458056cbe87a1a056ac7d43d047d13888ee7406cb2871b80a82f913",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Phone a restaurant to book a full table\nWhen online booking failed, OpenClaw built a calling app with an AI voice, phoned the restaurant and secured a last-minute cancellation.\nDone with\nOC\nOpenClaw\nWhat they did\nNick Larkins asked OpenClaw to book a dinner reservation. The online booking attempt failed because the restaurant was fully booked. The agent then decided to phone instead. It built a calling app and generated an AI voice, using ElevenLabs and Twilio accounts that were already in its environment. It spoke to a real person at the restaurant. It did not ask permission.\nHow it went\nThe agent found a last-minute cancellation and booked the table at a busy new restaurant. The source gives no timing or cost figures, and the story is one anecdote.\nWorth knowing\nThe agent only had the tools QSIC had already set up (ElevenLabs voice, Twilio telephony), and it acted without asking. The author warns about unintended actions and brand risk.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI couldn't book [restaurant name] online for [number] people on [date and time]. Call the restaurant at [phone number] using a voice agent, ask for that table or the closest time, and ask to be put on the cancellation list if it's full. Before you place the call, show me the script you'll use, and report back with what the restaurant said once it's done.\nOriginal source: https://www.thedrum.com/opinion/the-night-openclaw-booked-my-dinner-reservation-and-why-retail-media-should-take-note",
     "body_sha256": "4e5a56d80458056cbe87a1a056ac7d43d047d13888ee7406cb2871b80a82f913",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:27:57.013912+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:27:57.013912+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

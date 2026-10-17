@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/plan-a-trip-and-book-flight-hotel-and-shuttle-with-an-always",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:32.994991+00:00",
+  "html_sha256": "d98153b628dc3d421917459cf2b249bfcf95cf5759d1c41a0846ead43665deee",
   "body_sha256": "fce3d0c2cef2237ed634e625340770f1db9417390009afb475637de36effff24",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Plan a trip and book flight, hotel and shuttle with an always-on agent\nA user had Dots plan a trip and remind them to book the shuttle; the agent filled booking forms but kept asking for confirmation and wouldn't enter 2FA codes, so it only got partway.\nDone with\nDO\nDots\nWhat they did\nThe user asked Dots to work out a trip, then booked the flight and hotel themselves. The agent noticed the shuttle was missing and offered to book it. It reopened the site, rechecked the agreed details, and filled the booking form on its cloud computer. The user confirmed repeatedly. They also tried writing broad permission rules.\nHow it went\nThe shuttle booking stalled because the agent kept asking for confirmation after filling the form. It would not enter emailed 2FA codes, and the permissions checker rejected most broad rules; only two were accepted. The user graded it B-.\nWorth knowing\nExpect to enter 2FA codes yourself, which breaks chains like flights to Uber, since Uber triggers one every login; the permissions rule checker also rejected broad delegation rules.\nTry it yourself\nwith\nDots\nCopy prompt\nPlan a trip to [destination] from [date] to [date] for [number] travelers with a budget of [amount]. Find flight, hotel, and airport shuttle options, give me a short comparison, and remind me on [day] to book the shuttle. Fill in booking forms as far as you can, but pause and show me everything before any payment or submission, and tell me exactly what you need from me for 2FA steps.\nOriginal source: https://news.ycombinator.com/item?id=49904198",
     "body_sha256": "fce3d0c2cef2237ed634e625340770f1db9417390009afb475637de36effff24",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:32.994991+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:32.994991+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

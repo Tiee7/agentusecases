@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-a-new-delhi-to-mumbai-flight-with-computer-use",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:27:31.045917+00:00",
+  "html_sha256": "955078c775342199d579545db8c4d0556509c8666948cf8da20f0f33d34dbf00",
   "body_sha256": "71b8c03e7d5e943694ad6cb79d34974a90ea5f26fbe71a3926cf3ffd2eec8c27",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Book a New Delhi to Mumbai flight with computer use\nThe author ran Claude's computer use in a Docker demo to book a flight from New Delhi to Mumbai; Claude opened Firefox and started the search, but the outcome isn't shown.\nDone with\nCU\nClaude computer use\nWhat they did\nThe author ran Anthropic's computer use demo in Docker with an API key and prompted Claude to book a New Delhi to Mumbai flight for 1 December 2024. Claude opened Firefox and went to makemytrip.com. It stalled on a sign-in popup until the author added a prompt telling it to close it. It then filled in the cities and navigated the calendar.\nHow it went\nClaude did not complete the booking. It got through the search form, including cities and date, after the popup was cleared and an error was retried. The author calls this a beta limitation.\nWorth knowing\nClaude struggled with the popup and needed a follow-up prompt from the author to get past it. Anthropic advises a sandboxed container and human sign-off on any financial transaction.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nOpen a browser and search for flights from [origin city] to [destination city] on [date], and compare the [number] cheapest and the [number] fastest options in a short list with airline, times and price. Stop at the passenger details page without entering anything. Show me your top pick and wait for my go-ahead before filling in any details, paying or submitting anything.\nOriginal source: https://rittikajindal.medium.com/my-first-hand-experience-with-claudes-computer-use-when-ai-takes-control-a0f78445a6c7",
     "body_sha256": "71b8c03e7d5e943694ad6cb79d34974a90ea5f26fbe71a3926cf3ffd2eec8c27",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:27:31.045917+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:27:31.045917+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

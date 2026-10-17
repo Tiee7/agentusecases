@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/orchestrate-a-spot-robot-through-multi-step-tasks",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:37:05.032682+00:00",
+  "html_sha256": "3c67716a6dd06c136eaf83507be65f63e6b3503f59fdb799eb50008775313254",
   "body_sha256": "4274ff582bf1ffa2ba6a73fc163d0ca981605d998bbb8e4e3376cf7509b5462a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Orchestrate a Spot robot through multi-step tasks\nGemini Robotics ER 2 drives a Boston Dynamics Spot, watching video to confirm tasks like tying a trash bag are done before moving on.\nDone with\nGE\nGemini\nWhat they did\nDevelopers declare low-level controls, such as Boston Dynamics Spot's navigation and manipulator APIs, as tools. They stream video, audio or text into Gemini Robotics ER 2 through the Gemini Live API. The model sequences the steps, watches the video to track progress and confirm a task is finished, then moves on. The published Spot demo fetches objects, such as a popcorn snack, on a spoken command.\nHow it went\nOn progress classification, which sorts each video frame into five progress bands, it reached 57.4% accuracy. On moment-finding it reached 91.3% accuracy with a 0.96s mean absolute distance. The post gives no Spot success rate for tying a trash bag.\nWorth knowing\nThe Spot demo code is on GitHub, and the model is available as a preview through the Gemini API and Google AI Studio.\nTry it yourself\nwith\nGemini\nCopy prompt\nWrite a Python program that breaks the task [multi-step task, e.g. tidy the workbench] into steps for a robot or simulator I have called [robot or simulator name]. After each step, have it check a camera frame or video clip from [source] to confirm the step is done before moving to the next. Show me the plan and code before running anything on real hardware. Stop when the program completes all steps in a simulated run.\nOriginal source: https://blog.google/innovation-and-ai/models-and-research/google-deepmind/gemini-robotics-er-2/",
     "body_sha256": "4274ff582bf1ffa2ba6a73fc163d0ca981605d998bbb8e4e3376cf7509b5462a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:37:05.032682+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:37:05.032682+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

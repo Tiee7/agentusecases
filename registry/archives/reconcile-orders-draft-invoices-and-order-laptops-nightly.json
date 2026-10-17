@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reconcile-orders-draft-invoices-and-order-laptops-nightly",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:54:33.110876+00:00",
+  "html_sha256": "2259d013cb7a5546973574b98690b6bb720316a04c9eda2bd65d8b5a7725b633",
   "body_sha256": "e36efc1bb83937a777271eccabc5cf7cb8099daf4c79d499c389ea06c91c4b7b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Reconcile orders, draft invoices, and order laptops nightly\nChatGPT pulls completed orders, checks them against the CRM, drafts invoices, logs deals in Sheets, and ordered two laptops from Apple and a return box.\nDone with\nGP\nChatGPT\nWhat they did\nChatGPT runs nightly scheduled prompts that pull completed orders, compare them to CRM entries, create draft invoices in the accounting system, and log deal names and amounts in Google Sheets; separate jobs file NDAs from email into CRM folders and handle insurance requirements from contracts. For hardware, it accessed the logged-in bank account for the credit card and HR system for addresses to order specific MacBook models from Apple and prepare a return box. The user reviewed the draft invoices and reminded it to save receipts.\nHow it went\nThe automations handle tasks equivalent to three people's work in less time, including writing 1400 lines of commission calculation code, with around 20 such jobs active.\nWorth knowing\nUser had to remind the AI to file receipts after the laptop order.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nEach night, review the completed orders from [order source, e.g. my store export or a pasted list], check them against [CRM or customer list], and flag any mismatches. Draft an invoice for each matched order and add a row for each deal to a [Sheets-style table: columns]. Show me the invoices and the flagged items, and don't send any invoice or place any purchase until I approve.\nOriginal source: https://x.com/SunnyvaleSBay/status/2108047957874573477",
     "body_sha256": "e36efc1bb83937a777271eccabc5cf7cb8099daf4c79d499c389ea06c91c4b7b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:54:33.110876+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:54:33.110876+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

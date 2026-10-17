@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/research-hotels-and-pull-tax-documents-with-chrome-auto-brow",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:28:53.009105+00:00",
+  "html_sha256": "53c020408986153363580aae239b7fda35c99e47bf33f62ce8677bbb9689fb7e",
   "body_sha256": "c278b9da40950503b6d8b7feb76af858212342125e0ac434c5858ac16dd2f20d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Research hotels and pull tax documents with Chrome auto browse\nA tester used Gemini in Chrome to research Lisbon hotels across sites and fetch tax documents from payroll portals; it stopped before placing a grocery order.\nDone with\nGE\nGemini\nWhat they did\nIn Chrome auto browse, the tester gave Gemini a Lisbon goal: October hotels under $220 a night across three week-long windows. It opened Booking, Hotels.com, Expedia and Hyatt tabs and kept a comparison in the side panel. For taxes, it used already-logged-in Gusto and ADP sessions to download W-2 and 1099 PDFs. When Gusto showed a two-factor prompt, it handed control back and resumed afterward.\nHow it went\nThe hotel run took about six minutes and returned three candidates without booking. It downloaded four tax documents. The grocery cart had 18 items, two of them the wrong brand, and it waited for approval at checkout.\nWorth knowing\nAuto browse is a US-only preview for Google AI Pro or Ultra subscribers. The tester's subscription-cancellation run failed, and one cancellation chose the wrong tier.\nTry it yourself\nwith\nGemini\nCopy prompt\nIn Chrome, research [number] hotels in [city] for [dates] across [two or three booking sites], and give me a comparison table with price, location, rating and cancellation terms. Then log into [portal] and download my [document type, e.g. tax documents] for [year], listing what you saved. Stop and ask me before any login step, purchase or order.\nOriginal source: https://blog.imseankim.com/chrome-auto-browse-gemini-agentic-hotel-form-fill-google-io-2026/",
     "body_sha256": "c278b9da40950503b6d8b7feb76af858212342125e0ac434c5858ac16dd2f20d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:28:53.009105+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:28:53.009105+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

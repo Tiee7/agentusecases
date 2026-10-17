@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/control-a-fan-from-sleep-position",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:46:01.066778+00:00",
+  "html_sha256": "738150df3d825532895ed8ed8327c7bf97971bca9ef765b75c7126a0062ad691",
   "body_sha256": "5eab2ae890a5b760eb777672b46c2a896652aa614c72436d9ccf12ad8dafb130",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Control a fan from sleep position\nAn AI roommate uses a pose model on a Raspberry Pi to watch the user sleep and presses a remote button to turn the fan on or off.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe setup runs a MediaPipe pose vision model on a Raspberry Pi home server that watches the sleeping person via camera. It detects real-time sleep position and sends a signal to a remote button pusher: arms or leg out triggers fan on, arms curled triggers fan off. The person defined the position rules and installed the hardware.\nHow it went\nThe fan turns on or off automatically overnight without waking the user. Current version struggles with blankets at times.\nWorth knowing\nDemo uses a stock photo; blanket detection issues are being fixed.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a project on a [Raspberry Pi model] with a camera that detects when I'm [asleep or in a certain pose] using a pose estimation model and then triggers [fan or other device] through [remote, relay, or smart plug]. Write the code, the setup steps, and a test mode that logs detections without controlling anything. Finish when I can run the test mode and see it working, and ask before enabling real device control.\nOriginal source: https://x.com/the2ndfloorguy/status/2024832757382500720",
     "body_sha256": "5eab2ae890a5b760eb777672b46c2a896652aa614c72436d9ccf12ad8dafb130",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:46:01.066778+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:46:01.066778+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

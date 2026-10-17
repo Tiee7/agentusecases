@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-failed-github-actions-runs-and-self-heal-flaky-tests",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:43.195008+00:00",
+  "html_sha256": "548bc9a7ff2179bd62c73b5fca0c9d905ab6104c25b798e341a395355ef823b8",
   "body_sha256": "83973ae3231bc3d708e7dbec8fa64a6a0985771fb588515b447b8c8805dd62e9",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Triage failed GitHub Actions runs and self-heal flaky tests\nA QA engineer's OpenClaw agent reads failed CI logs, classifies failures, posts analysis to GitHub and Slack and opens issues; flakiness fell from 8% to 0.8%, though it once wrongly altered an assertion.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author built an OpenClaw agent over a weekend that watches GitHub Actions for failed runs and reads the logs and test output. It classifies each failure as flaky, a real regression or an environment issue. It then posts its analysis to GitHub and Slack and opens issues. A separate self-healing locator agent tries alternative strategies when selectors break and suggests fixes.\nHow it went\nTime-to-diagnosis fell from 45 to 6 minutes, and flakiness dropped from 8% to 0.8%. The self-healing agent once changed an assertion to match the output instead of fixing the locator. Code review caught it.\nWorth knowing\nToken costs neared $4,000 a month until the author fed the agent only the relevant 500-1000 tokens, which cut it to $400. A confidence threshold gates auto-merges.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nReview failed GitHub Actions runs on [repo] from the last [7 days]. Classify each as real bug, flaky test, or infra issue, post a summary to [Slack channel], and open an issue for each real bug. Don't change any test assertions or merge anything; show me proposed fixes for flaky tests first.\nOriginal source: https://suneetmalhotra.com/blog/openclaw-production-ai-agent-runtime-2026",
     "body_sha256": "83973ae3231bc3d708e7dbec8fa64a6a0985771fb588515b447b8c8805dd62e9",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:43.195008+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:43.195008+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

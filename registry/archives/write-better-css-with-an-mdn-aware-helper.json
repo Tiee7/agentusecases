@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/write-better-css-with-an-mdn-aware-helper",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:12.996822+00:00",
+  "html_sha256": "2914211f4d4387792e72faad5863f6b05cfd573ece8e6bc552f348333fb63f6e",
   "body_sha256": "595e0b4bf9f154e9e480022110fe0d193bf82312524cf92835d44055e6987580",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Write better CSS with an MDN-aware helper\nAn MCP server that consults MDN docs, reports browser compatibility, and analyzes your CSS for the agent.\nDone with\nCC\nClaude Code\nWhat they did\nYou add the server to Claude Code, VS Code or another MCP client with an npx command. The agent can then call tools to fetch MDN docs for a CSS feature, pull browser compatibility data, and analyze pasted CSS or a project's built CSS files. Analysis returns a short summary by default, and you ask in plain language.\nHow it went\nThe README gives no real-world results. It lists first fetches at about 400-500ms and cached ones at about 100ms. Summary analysis costs roughly 1-2k tokens.\nWorth knowing\nFull 150+ metric analysis uses about 10k+ tokens, so keep the default summary mode. It needs Node 20+ and native build tools for the SQLite cache.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview the CSS in [path to stylesheet or project] and check each questionable property or feature against MDN docs for browser support in [browsers, e.g. the last 2 versions of Safari and Chrome]. Fix issues you find, like unsupported properties or redundant rules, and explain each change. Finish with a short compatibility report listing what's safe to ship and what needs a fallback.\nOriginal source: https://github.com/stolinski/css-mcp",
     "body_sha256": "595e0b4bf9f154e9e480022110fe0d193bf82312524cf92835d44055e6987580",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:12.996822+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:12.996822+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

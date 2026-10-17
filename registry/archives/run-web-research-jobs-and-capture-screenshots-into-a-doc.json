@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-web-research-jobs-and-capture-screenshots-into-a-doc",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:53:53.155998+00:00",
+  "html_sha256": "783d3b0c3d868f62f3c7b0b088e38b7e544e9eab2ab65370706b570d72fec05c",
   "body_sha256": "ae3b5dd00dc00ebf6c3df11e1b9c8d17defe4c50c08624b3c83456a4c702240f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run web research jobs and capture screenshots into a doc\nA reviewer tested Operator on analyzing web-design posts, summarizing AI news, listing website builders with prices and screenshotting sites into a Google Doc, finding login and CAPTCHA handoffs frustrating.\nDone with\nOP\nOperator\nWhat they did\nThe reviewer paid $200 for ChatGPT Operator and spent a week giving it plain-language browser tasks. These included analyzing trending web-design tweets, summarizing AI news, listing AI website builders with pricing, summarizing a set of linked articles, and screenshotting sites into a shared Google Doc. Operator browsed on its own. The reviewer re-prompted it, and had to take over at logins and CAPTCHAs.\nHow it went\nResults were weak. Operator returned duplicate, stale tweets, summarized one Axios article, and copied the first ten items from a single Bing listicle. It looped between tabs on multi-article summaries and could not take screenshots at all.\nWorth knowing\nOperator is built to hand control back at logins, payments and CAPTCHAs, so you must be present for those steps. Expect to supervise even simple multi-step jobs.\nTry it yourself\nwith\nOperator\nCopy prompt\nResearch [topic, e.g. website builders] by visiting the main sites, and list each with its starting price, key features and a screenshot of the homepage. Put everything into a new Google Doc called [doc name]. Hand control to me when you hit a login or CAPTCHA, and finish when the doc is complete and you've given me the link.\nOriginal source: https://icons8.com/blog/articles/chatgpt-operator-review/",
     "body_sha256": "ae3b5dd00dc00ebf6c3df11e1b9c8d17defe4c50c08624b3c83456a4c702240f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:53:53.155998+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:53:53.155998+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

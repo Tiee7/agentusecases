@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-academic-literature-reviews-from-seed-papers",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:53:01.104895+00:00",
+  "html_sha256": "d9e2a00e50898437b91c88c9c990d66b09a0e986544cbcb8f20b732482a80859",
   "body_sha256": "a995041d1741a5de67d46edb53c6555227b3733ee883d292c41baf8bdf32a799",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run academic literature reviews from seed papers\nPoster built an agent skill that starts from seed papers, searches backward and forward, screens candidates, and iteratively refines a literature review.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster made a lightweight agent skill for literature reviews because general chatbots were missing relevant papers and citation tracing. The skill starts from seed papers, follows references backward and citations forward, screens the papers it finds, and iteratively refines the review; the workflow is partly hard-coded/scripted and meant to run inside tools such as Claude Code, Codex, Gemini CLI, or OpenClaw.\nHow it went\nIn the poster’s tests, the final review was better than a generic AI-generated document, especially on coverage and paper selection. No quantitative results or specific failure cases are given in the thread.\nWorth knowing\nThe main catch is that the workflow is only partly autonomous: it is partly hard-coded/scripted rather than a fully open-ended agent.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRun a literature review on [topic] starting from these seed papers: [titles or DOIs]. Search backward through their references and forward through papers that cite them, screen candidates against these criteria: [inclusion criteria], and repeat until new rounds turn up nothing relevant. Deliver a table of included papers with a summary of each and a short written synthesis of the main themes, plus a list of excluded papers with reasons.\nOriginal source: https://www.reddit.com/r/AIToolBench/comments/1su9rqu/i_built_a_agent_skill_for_academic_literature",
     "body_sha256": "a995041d1741a5de67d46edb53c6555227b3733ee883d292c41baf8bdf32a799",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:53:01.104895+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:53:01.104895+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

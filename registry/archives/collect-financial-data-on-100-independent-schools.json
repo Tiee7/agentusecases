@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/collect-financial-data-on-100-independent-schools",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:31:13.068338+00:00",
+  "html_sha256": "0329d014563585a5770b7132b48c330b3d6c901025afde6bf285b40fa64d12b4",
   "body_sha256": "0ff24ad89e03e3a85ace7b6c1bcc84ccd5f57bbf34d762992861a2af06337ea2",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Collect financial data on 100 independent schools\nA writer had Operator gather financial data for independent schools in the background; it was slow and was stopped after about 25 schools, then the data went to o1 for analysis.\nDone with\nOP\nOperator\nWhat they did\nThe writer gave Operator a Google Sheet listing 100 school names, which came from an o3-mini-high query. Operator used its own browser to search ProPublica's Nonprofit Explorer for each school, read the summary financials, and paste them into the sheet. The writer mostly left it running in the background. They then pasted the sheet into o1, which wrote code for an interactive chart dashboard.\nHow it went\nOperator was very slow and was stopped after about 25 schools. It rounded numbers inconsistently and sometimes picked the wrong organization. o1's dashboard was usable, though basic and needing label fixes, and the writer chose not to share it.\nWorth knowing\nCheck every row. Operator confused schools with common names and began rounding figures after the first few, so the data needs verifying before you analyze it.\nTry it yourself\nwith\nOperator\nCopy prompt\nFor each of these [type of organization, e.g. independent schools] in [region], collect [data points, e.g. tuition, endowment, revenue] from their public websites and filings: [list or source]. Put results in a spreadsheet with a source link per row and mark any missing values. Start with the first [25] and stop there so I can check quality before you continue.\nOriginal source: https://fullstackeducator.substack.com/p/ai-agents-in-action",
     "body_sha256": "0ff24ad89e03e3a85ace7b6c1bcc84ccd5f57bbf34d762992861a2af06337ea2",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:31:13.068338+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:31:13.068338+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

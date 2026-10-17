@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-agents-build-recipe-viewer-urls",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:52:11.118416+00:00",
+  "html_sha256": "ae96233d6dde72f5f33c06471b9415449b0a69a82da436b7f6a8026781e1a51d",
   "body_sha256": "d5de915f4680526af9a1639222c09adc42e83dfea7ae565b06e0e2d38baf8b41",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let agents build recipe viewer URLs\nThe author gives agents a skill file and docs so they generate recipe URLs for a recipe viewer, working even in permission-limited agents like ChatGPT web.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a recipe viewer at keep.recipes where the recipe lives in the URL. They wrote a skill file and docs that teach agents how to construct those URLs. The agent builds the link itself, so no files or tools are needed, and the author says others can copy the approach.\nHow it went\nThe author reports it works pretty well, including in permission-limited agents such as ChatGPT web. The comment gives no numbers or failure cases.\nWorth knowing\nThe source is a brief comment; check keep.recipes for the actual skill file and docs before copying the setup.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a recipe viewer at [viewer URL] that builds a recipe page from a URL format described in [docs link or file]. Write a skill file that teaches any AI agent how to turn a recipe I paste, [recipe text or source], into a valid viewer URL, including the encoding rules and one worked example. Test it on two recipes and show me the working links.\nOriginal source: https://news.ycombinator.com/item?id=50009060",
     "body_sha256": "d5de915f4680526af9a1639222c09adc42e83dfea7ae565b06e0e2d38baf8b41",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:52:11.118416+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:52:11.118416+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

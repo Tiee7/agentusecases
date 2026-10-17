@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/manage-18-agents-from-a-notion-workspace",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:25.010303+00:00",
+  "html_sha256": "2ef44d705016a96dd2eb46b4f845f4f9fdf661f199361d688f4d18f893eff8ac",
   "body_sha256": "d195b13af29b9ae83368499b484d89027204924fb99949fb35b203faa5fa1e65",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Manage 18 agents from a Notion workspace\nNotion used as the control plane for a fleet of 18 OpenClaw agents.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author built AgentOps, a Node/React server that uses Notion as its only database through the Notion API (MCP). Four Notion databases hold the agent registry, task queue, run log and alerts. A runtime polls Notion every 10 seconds and skips paused agents. Tasks created in Notion get dispatched. Prompts and configs sync both ways, and the fleet can be backed up or exported as JSON.\nHow it went\nIt tracked 18 agents, 78 logged runs and over 128K tokens. The author says migrating between instances takes minutes. A commenter raised concurrency concerns, and the author replied that the workloads are cron-based and run one at a time.\nWorth knowing\nDesigned as a single poller over cron-style jobs, so concurrent writes from many agents were not tested. Secrets are redacted before configs sync to Notion.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me set up a small team of [number] agents, each with a clear job such as [job 1, job 2, job 3], and track their tasks and status in [Notion or another workspace]. Create a task board where I can assign work and see results from each agent. Before any agent sends messages or changes things outside the board, pause and show me what it plans to do.\nOriginal source: https://dev.to/aws-heroes/i-turned-notion-into-a-control-plane-for-my-18-openclaw-ai-agents-5624",
     "body_sha256": "d195b13af29b9ae83368499b484d89027204924fb99949fb35b203faa5fa1e65",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:25.010303+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:25.010303+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/record-meetings-and-suggest-answers-live-from-uploaded-files",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:43.005542+00:00",
+  "html_sha256": "41b9e46d4dc5a92641f262e3c7e44cedb7bf45a3b32ee2daf02088b281c38761",
   "body_sha256": "62161e7de6ab1a7acfdb924f6532056f116e6bc71c5e87c1a646015c4993c7d3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Record meetings and suggest answers live from uploaded files\nAn open-source Mac recorder transcribes calls and, using the user's uploaded files, suggests answers when it hears questions.\nDone with\nCL\nClaude\nWhat they did\nThe user adds PDF, text or markdown files to Parrot's knowledge base. These are indexed on the Mac. Parrot records system audio and the mic with no bot joining, and transcribes with Whisper locally. While the call runs, an assistant (Claude, Ollama or another model the user picks) shows answer cards that cite the source document. The user can pause it.\nHow it went\nThe site quotes about $0.07 per hour of calls with cloud cards and $0.00 fully local. It gives no accuracy measurements. Cards need a model, and cloud models receive transcript text.\nWorth knowing\nIt needs macOS 14 or later on Apple Silicon. Fully local mode uses Ollama, while cloud mode needs your own API keys, and transcript text goes to the provider you choose.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a local tool that transcribes a live meeting from [audio source] and, whenever it hears a question, searches the documents in [folder path] and suggests a short answer with the source file named. Done means I can run it on a test recording and see the questions and suggested answers listed with timestamps. Keep everything on my machine and tell me before installing anything.\nOriginal source: https://openparrot.app",
     "body_sha256": "62161e7de6ab1a7acfdb924f6532056f116e6bc71c5e87c1a646015c4993c7d3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:43.005542+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:43.005542+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-in-flight-delay-compensation-claim-forms",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:23.070523+00:00",
+  "html_sha256": "d971c6726f3b71a27f8ad0525b4aa9b4614d4237a59bbafeeaba12830628866f",
   "body_sha256": "9826e429215e14a1bcfe76f806157d9b1b572fa3ab84bdaf0a580f555edb5c5e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Fill in flight delay compensation claim forms\nAn agent checks what happened to a flight, works out compensation owed under the law, and fills in the airline's claim form, stopping before Submit.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nGiven a flight number and date, the agent converts the airline code, scrapes FlightAware gate times, and cross-checks them against AirHelp. A model reads the regulation live from legislation.gov.uk, and a built-in table of rules checks the amounts. It then fills Air India's claim form in a cloud browser, with an injected lock that blocks any submission.\nHow it went\nOn Air India AI162 it found a 207-minute delay and an entitlement of £260 to £520. A full claim takes two to five minutes. A small model mis-filled fields, and 8 of 10 submit-trap pages got past the first text-based rule.\nWorth knowing\nEach claim costs about 14 Anakin credits. Use a capable model (gpt-5-mini worked, gpt-4.1-nano mis-filled fields), and block submits in the page itself, not by matching button text.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nCheck what happened to my flight [flight number] on [date] using public flight tracking sites, and work out whether I'm owed compensation under [EU261/other rule]. Then open [airline]'s claim form and fill it in using my details: [name, booking reference, contact info]. Stop before clicking Submit and show me the completed form and the amount you're claiming.\nOriginal source: https://dev.to/imarpan/i-built-an-ai-agent-that-fills-in-your-flight-delay-claim-ncb",
     "body_sha256": "9826e429215e14a1bcfe76f806157d9b1b572fa3ab84bdaf0a580f555edb5c5e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:23.070523+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:23.070523+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

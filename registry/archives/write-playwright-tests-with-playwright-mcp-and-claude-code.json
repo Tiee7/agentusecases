@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/write-playwright-tests-with-playwright-mcp-and-claude-code",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:51.086198+00:00",
+  "html_sha256": "9d914b875994cccbdb6f6a040011f74bd8739844d54c746d5475ec65ea3bff12",
   "body_sha256": "bf7a7576c04f8cec350c1651b96f8e78ebde2494339b0a456e31487bdb77f0fd",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-06",
+      "sha256": "60e44b095b242681a6bf189848348a558dc307a5e8df1aab516d8e06e7faef04"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Write Playwright tests with Playwright MCP and Claude Code\nA walkthrough of using Playwright MCP with Claude Code to generate Playwright tests in minutes.\nDone with\nCC\nClaude Code\nWhat they did\nThe Playwright MCP server is registered with Claude Code, loaded with a saved logged-in session through storage state. A three-part prompt carries the environment facts, a plain-English scenario, and standing rules. The agent explores the live app through the accessibility tree, writes the test, runs it, and fixes failures itself. A person reviews the code and the scenario's meaning.\nHow it went\nThe agent produced a runnable test with locators read from the live page. It also fixed a strict-mode locator error on its own. It struggles with long flows, changing data, deep conditionals, and OAuth. The source gives no timing numbers.\nWorth knowing\nAdd .auth/ to .gitignore before committing, because this setup saves the session outside Playwright's default ignored path, and run the test with --repeat-each 5 to check for flakiness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up Playwright MCP in this project, then open [app URL] and explore the flow for [user journey, e.g. sign up and checkout]. Write Playwright tests that cover it using stable locators, and run them until they pass. Finish by showing me the test files and the passing run output.\nOriginal source: https://dev.to/jakobnorlin/how-to-write-playwright-tests-in-minutes-with-playwright-mcp-and-claude-code-1o0d",
     "body_sha256": "bf7a7576c04f8cec350c1651b96f8e78ebde2494339b0a456e31487bdb77f0fd",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:51.086198+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:51.086198+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

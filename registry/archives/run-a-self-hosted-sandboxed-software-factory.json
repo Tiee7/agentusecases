@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-self-hosted-sandboxed-software-factory",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:07.051806+00:00",
+  "html_sha256": "cdfaa8d351ecbaff9f8b16f612f65ab2ea06432a43c8c6ed05cf0eccaad77e36",
   "body_sha256": "e2bf05c21936b6023e7e3aab72e00ecce298e76e5a807634b086596f1a64ffdd",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run a self-hosted, sandboxed software factory\nOne developer's build log of an almost fully self-hosted, sandboxed agentic pipeline for producing software.\nDone with\nCX\nCodex\nWhat they did\nThe author put Hermes, an agent using Codex, on a spare eBay PC with no inbound internet access. The box ran Coolify, Forgejo, self-hosted Firecrawl and Tailscale. One prompt asked for a calorie-tracking SvelteKit app. The agent created the repo, wrote the code and tests, fixed CI failures, and deployed the app with its own Postgres.\nHow it went\nIt reached a deployed app with no further prompts. One CSRF bug turned up on first use, and a single follow-up prompt got it diagnosed, fixed, covered by regression tests and redeployed.\nWorth knowing\nThe only specific ongoing cost is a £20 Codex subscription. The sandbox is not harmless: the agent can still wipe the box and misuse any keys you give it.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a sandboxed pipeline where coding agents build [project idea] inside Docker containers with no access to my personal files or credentials. Write the container setup, a task queue folder, and a script that runs one agent on one task and saves the result as a branch. Finish when I can run one example task end to end, and show me the plan before running anything that touches the network.\nOriginal source: https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/",
     "body_sha256": "e2bf05c21936b6023e7e3aab72e00ecce298e76e5a807634b086596f1a64ffdd",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:07.051806+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:07.051806+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

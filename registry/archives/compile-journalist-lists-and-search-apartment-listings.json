@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/compile-journalist-lists-and-search-apartment-listings",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:27:07.048614+00:00",
+  "html_sha256": "4796518f66d834930fe6c4aaaa928d9500f376b445477c160762f6fa7c6e55a4",
   "body_sha256": "0ccae68520fecde8ea8e01a57d6d901dd1881b7a95cfa4835e4f205dedd4e60e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Compile journalist lists and search apartment listings\nA reporter tested Manus on building a reporter list, searching NYC rentals and finding award candidates; results were thin at first, and a three-hour search yielded only three full profiles.\nDone with\nMA\nManus\nWhat they did\nThe reporter gave Manus three tasks: a list of China tech reporters, two-bedroom NYC listings with several criteria, and 50 Innovators Under 35 nominees. She watched its browser window and took over for captchas. When its first outputs fell short, she pushed back, and it expanded the reporter list to 30 names and loosened its reading of the outdoor-space requirement.\nHow it went\nThe reporter list took a little over an hour and the apartment search under half an hour. The award search ran three hours and produced only three full profiles. The 50-name list was skewed, and she gave up when the system warned about too much input.\nWorth knowing\nPaywalls and captchas blocked it often, and crashes and server overload occurred. The article cites a per-task cost of about $2, reported by 36Kr.\nTry it yourself\nwith\nManus\nCopy prompt\nBuild me a list of [number] [reporters/contacts] who cover [topic] at [type of outlet], with name, outlet, recent relevant article, and contact info where it's public. Include only people you can verify, and mark any gaps clearly instead of guessing. Deliver it as a spreadsheet and stop when you have [number] complete entries or have run out of reliable sources.\nOriginal source: https://www.technologyreview.com/2025/03/11/1113133/manus-ai-review/",
     "body_sha256": "0ccae68520fecde8ea8e01a57d6d901dd1881b7a95cfa4835e4f205dedd4e60e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:27:07.048614+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:27:07.048614+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

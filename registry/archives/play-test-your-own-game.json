@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/play-test-your-own-game",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:22:00.981258+00:00",
+  "html_sha256": "5377eef8993fd0c781f186adc542579815f3170577bc90a25809f76293b84b14",
   "body_sha256": "297438b3f57228a82f7e6646507c61a82bf4fa1bb88aef9cbd0b97c5fd5ec2a4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Play-test your own game\nA developer built an agentic test harness so an AI could play their game and help with play-testing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe game is a browser-based, turn-based crossword dungeon. Claude wrote a node.js wrapper that leaves the game files alone. It adds a text renderer and synthetic key events, served over HTTP. The AI played via curl calls, built fixtures to reproduce bugs, and was told to playtest each milestone feature before moving on.\nHow it went\nMilestone 13, with five new special encounters, took 12 minutes and about 120k tokens. The AI caught and fixed a cage bug on its own. Manual playtesting was still needed and found more bugs, but it took under 30 minutes.\nWorth knowing\nIt ran on Claude Code with Sonnet 4.6 on the Pro plan; the approach suits text-heavy, turn-based games better than screenshot-driven browser automation.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at my game in [path] and build a test harness that lets an AI agent play it: expose the game state as text or JSON and accept actions like [moves or inputs]. Then have the agent play [number] sessions and report bugs, balance problems, and confusing moments. Finished means a written play-test report with steps to reproduce each issue.\nOriginal source: https://blog.jeffschomay.com/letting-ai-play-my-game",
     "body_sha256": "297438b3f57228a82f7e6646507c61a82bf4fa1bb88aef9cbd0b97c5fd5ec2a4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:22:00.981258+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:22:00.981258+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-kubernetes-alerts-with-mcp-servers",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:41:17.079697+00:00",
+  "html_sha256": "f1e657b2038854bf120acaf3ae5d04a1380261c032de9272456f99b9da558c27",
   "body_sha256": "acb6f6e33eb8ea155664788d1006f816fdf0ef70e16a125b406e65867ab0e707",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Diagnose Kubernetes alerts with MCP servers\nAn n8n agent triggered by Alertmanager queries Kubernetes, Grafana and other MCP servers and posts a diagnostic report with root-cause hypotheses in a Mattermost thread.\nDone with\nN8\nn8n\nWhat they did\nAn Alertmanager webhook starts an n8n workflow. It deduplicates alerts over 48 hours and fetches the triggering PromQL expression from the Prometheus Rules API. An AI agent then investigates through Kubernetes, Grafana, DigitalOcean and GitHub MCP servers, plus a Qdrant store of internal docs. It is read-only. The workflow finds the original Mattermost alert post and replies in its thread.\nHow it went\nThe source gives no measured results. It describes a report with a summary, an event timeline, up to two root-cause hypotheses and troubleshooting steps. The author is still weighing extra data sources, such as database stats and pipeline status.\nWorth knowing\nLimit tool retries to one per failed call to avoid loops, and strip noisy labels like job and instance from the prompt. You must configure your own MCP endpoints and credentials.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives Alertmanager webhooks and starts an AI agent connected to my MCP servers for [Kubernetes, Grafana, other tools]. The agent should investigate the alert read-only, then post a diagnostic report with evidence and ranked root-cause hypotheses as a thread reply in [Mattermost channel]. You're done when a sample alert produces a report; it must not change anything in the cluster, and show me the report before the first post.\nOriginal source: https://community.n8n.io/t/ai-alert-assistant-automated-incident-diagnostics-with-5-mcp-servers-alertmanager-ai-agent-mattermost/285369",
     "body_sha256": "acb6f6e33eb8ea155664788d1006f816fdf0ef70e16a125b406e65867ab0e707",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:41:17.079697+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:41:17.079697+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

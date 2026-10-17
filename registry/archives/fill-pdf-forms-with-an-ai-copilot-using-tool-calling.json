@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-pdf-forms-with-an-ai-copilot-using-tool-calling",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:24:03.051773+00:00",
+  "html_sha256": "bba66a6c017da83ef442787c1a2432e8ac46262d69f2fdc2e0f14bd5ded5face",
   "body_sha256": "b944f26b4bea48d2db5fbb1e14338b757a362f5855363f6f3404057fb849611f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Fill PDF forms with an AI copilot using tool calling\nAn in-browser copilot fills PDF form fields from data sources or user input, helps with foreign-language forms, and explains contract clauses before signing.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe copilot runs inside a browser-based PDF editor and uses LLM tool calling to fill form fields. It can draw values from existing data sources such as a CRM or EHR through MCP/RAG, or from what the user types. Each change appears live in the editor, and the user can correct any field with one click. The LLM is bring-your-own, local or hosted.\nHow it went\nThe source gives no metrics. The author says a commenter found a bug where mangled form labels sent to the LLM put values in wrong fields, and that it is now fixed.\nWorth knowing\nCheck that the form labels passed to the LLM are clean; mangled labels caused values to land in the wrong fields.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nHelp me fill out the PDF form at [URL or file] using the details I give you: [name, address, other info]. If the form is in [language], translate each field for me, and flag any contract clause I should understand before signing. Pause and show me every filled field before I sign or submit anything.\nOriginal source: https://news.ycombinator.com/item?id=47995318",
     "body_sha256": "b944f26b4bea48d2db5fbb1e14338b757a362f5855363f6f3404057fb849611f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:24:03.051773+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:24:03.051773+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

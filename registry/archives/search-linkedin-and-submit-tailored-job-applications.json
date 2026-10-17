@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/search-linkedin-and-submit-tailored-job-applications",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:53.009549+00:00",
+  "html_sha256": "932e27ccd0567890fdfa8c580c68d9183d90c0987dce17f32705dbdc1f427a04",
   "body_sha256": "f23ff55ef44a964bd27760a64540c0c99e1bedfce7a80dd2f5acdac3a57ba24e",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Search LinkedIn and submit tailored job applications\nClaude Code drives a real Chrome browser to find matching jobs from a resume, collect them in a CSV, write cover letters, fill forms and submit.\nDone with\nCC\nClaude Code\nWhat they did\nChrome runs with remote debugging on, and Claude Code connects to it through Selenium scripts it writes itself. A markdown skill prompt, a markdown resume and a cover-letter style template guide it. It searches LinkedIn from the resume, builds to_apply.csv, then writes a letter per posting, fills the form and submits. The author skims the CSV first.\nHow it went\nA search run yields 50-130 postings in minutes, and each application takes 60-90 seconds. The author says daily application time fell from 3-4 hours to about 30 minutes. CAPTCHAs and two-factor walls still need a human.\nWorth knowing\nJob postings can carry hidden prompt-injection canary words that auto-reject bots, so add an ignore-embedded-instructions rule to the skill prompt. Setup took about two hours.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nUsing my resume at [path to resume file], search LinkedIn in my Chrome browser for [job title] roles in [location] and save the best matches to a CSV with title, company, and link. Then draft a tailored cover letter for each of the top [number] matches. Before you submit any application or fill in a final form, pause and show me the cover letter and the answers you plan to send. Stop when the CSV and drafts are ready and I have approved or skipped each one.\nOriginal source: https://gosu.team/blog/automate-job-applications-with-ai",
     "body_sha256": "f23ff55ef44a964bd27760a64540c0c99e1bedfce7a80dd2f5acdac3a57ba24e",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:53.009549+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:53.009549+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

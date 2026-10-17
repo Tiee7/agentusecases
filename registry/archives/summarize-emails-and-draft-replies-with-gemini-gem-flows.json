@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/summarize-emails-and-draft-replies-with-gemini-gem-flows",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:36:23.046334+00:00",
+  "html_sha256": "7e8e13c53aab42a4292fcac27bf847bac40cc106cd4e016ee41cb7b94dc09371",
   "body_sha256": "f91023c0c0ce17617ad2e392f0f331ef93b921ece57f06d3097a57a99ea52264",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Summarize emails and draft replies with Gemini Gem flows\nThe writer plugged a custom Gemini Gem into Workspace Studio flows that run in the background, summarize Gmail messages and create draft replies to review and send.\nDone with\nGE\nGemini\nWhat they did\nThe writer opened Google Workspace Studio, created a new flow from a Google template with a Gmail trigger, and added the Ask a Gem step so a custom Gem processes incoming mail in the background. She used the Gem's output to create Gmail draft replies, which she reviewed and sent herself. She ran a test, then switched the flow on.\nHow it went\nThe flow worked after a test run, and she says the setup felt intuitive. She claims about 10 hours a week saved, but the article gives no measurements.\nWorth knowing\nThe Gem must be grounded in Google Drive files, because Gems that use extensions such as YouTube or Maps don't show up. Work accounts also need an admin to enable Gemini actions.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me set up a background flow in Google Workspace Studio using a custom Gemini Gem. When new emails arrive in Gmail matching [label, sender, or topic], it should summarize each one in [2] sentences and create a draft reply in [my tone]. Drafts should only be saved, never sent. Walk me through setup and test it on [a few] recent emails.\nOriginal source: https://www.tomsguide.com/ai/i-turned-gemini-gems-into-automated-google-workspace-agents-heres-how",
     "body_sha256": "f91023c0c0ce17617ad2e392f0f331ef93b921ece57f06d3097a57a99ea52264",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:36:23.046334+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:36:23.046334+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

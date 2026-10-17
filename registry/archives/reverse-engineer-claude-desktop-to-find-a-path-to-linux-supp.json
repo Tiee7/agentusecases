@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-claude-desktop-to-find-a-path-to-linux-supp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:32.941815+00:00",
+  "html_sha256": "fda7bd4c832f5c6c89212041dadf208140c1d8f8b3294eaddf0ce5c180cb0627",
   "body_sha256": "cdca044a263bce7d1beb05d81915def869475168cac4faee3b51a2e48f628dae",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Reverse engineer Claude Desktop to find a path to Linux support\nA maintainer pointed Claude at the minified Claude Desktop app to find why Cowork only runs on macOS; it found the VM and sandbox layers and mapped a route to Linux.\nDone with\nCC\nClaude Code\nCW\nClaude Cowork\nWhat they did\nThe maintainer of a Linux repackaging script for Claude Desktop extracted the app's minified JavaScript from the Windows installer and ran it through prettier. Claude then went through roughly 170,000 lines, renamed the obfuscated symbols, and documented the architecture. A contributor found x64 VM image URLs, and the maintainer downloaded and inspected that image.\nHow it went\nIt found a macOS-only Swift addon driving a Linux VM, with bubblewrap and seccomp inside it. It laid out three Linux routes: stub the addon, add bubblewrap, or run Firecracker. Nothing was implemented.\nWorth knowing\nMinified symbol names change with each release, so re-trace the patterns instead of searching for the names in this write-up (analysis covers version 1.1.799).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReverse engineer [the app or binary] by inspecting its minified or compiled code to understand how a specific feature works or why it's limited to a certain platform, then write up what you find including any architectural layers involved. Produce a clear technical summary and a proposed path forward, stopping short of modifying or redistributing the original software.\nOriginal source: https://aaddrick.com/blog/reverse-engineering-claude-desktops-cowork-mode-a-deep-dive-into-vm-isolation-and-linux-possibilities",
     "body_sha256": "cdca044a263bce7d1beb05d81915def869475168cac4faee3b51a2e48f628dae",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:32.941815+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:32.941815+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

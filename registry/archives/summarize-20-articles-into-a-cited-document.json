@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/summarize-20-articles-into-a-cited-document",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:53.052476+00:00",
+  "html_sha256": "27e7229638b8496b287c032e2d948e254f61a48d436108ee18348f85dd4c0af5",
   "body_sha256": "a3399b8a56f729b84f409778c28223612a87a837bf2f9b268326fdbde2c8e4b0",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Summarize 20 articles into a cited document\nAn agent extracted key insights from 20 articles, found common themes and produced a cited summary; the write-up estimates 18 minutes versus hours by hand.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nFor an article on AI automation trends, a user gave Claude in Chrome a set of 20 articles. The prompt asked it to pull key insights from each, find common themes, and build an organized summary document with citations. The guide shows only the prompt and the result, not the individual steps the agent took.\nHow it went\nThe guide puts manual effort at an estimated 4-5 hours against 18 minutes for Claude. The summaries were accurate enough to show which articles deserved a full read, but the guide says this speeds up research and doesn't replace reading.\nWorth knowing\nThe 4-5 hour manual figure is an estimate, not a measurement. The guide also says long sessions and long lists can stop mid-task, so add checkpoints.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead these [number] articles: [URLs or file paths]. Extract the key insights from each, identify the themes they share and where they disagree, and write a summary document in [folder] with a citation to the source for every claim. Aim for about [length] and stop when every article is cited at least once. Flag any article you couldn't open instead of guessing.\nOriginal source: https://www.contextstudios.ai/blog/claude-code-chrome-extension-the-complete-guide-to-browser-native-ai-automation",
     "body_sha256": "a3399b8a56f729b84f409778c28223612a87a837bf2f9b268326fdbde2c8e4b0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:53.052476+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:53.052476+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

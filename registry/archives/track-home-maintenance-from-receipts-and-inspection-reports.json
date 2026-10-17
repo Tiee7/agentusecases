@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-home-maintenance-from-receipts-and-inspection-reports",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:02:15.129380+00:00",
+  "html_sha256": "0aa3305e5a36b37af9de5f88dd9c0e0a02aa16191caeb2b31a485b63183d66bd",
   "body_sha256": "f294d3584858fcc014c5d438e48c6e43a0980fb5375b2610d93e7129fc9fca9b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Track home maintenance from receipts and inspection reports\nAn agent classifies receipts and inspection reports, proposes maintenance tasks, and drafts vendor messages for a property owner.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe concrete setup described in the thread was a maintenance coordinator, not a general-purpose home agent. The commenter said to keep an asset registry, recurring maintenance schedule, issue inbox, warranties, and vendor contacts, then have the agent classify receipts and inspection reports, turn inspection findings into ranked tasks, and draft vendor messages, with a person approving any spending, scheduling access, or sharing household data.\nHow it went\nThe source presents this as a recommended workflow, not a reported deployment with measured results. It gives no performance numbers and says the agent should stay constrained to organizing, prioritizing, and drafting rather than acting autonomously.\nWorth knowing\nThe clearest catch is to require human approval before money is spent, access is booked, or household data is sent out.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nGo through the receipts and inspection reports in [folder path] for my property at [home or rental]. Sort them by system or area (roof, HVAC, plumbing, etc.), then build a maintenance list with suggested tasks, timing, and the source document for each. Draft messages to the relevant vendors for the top [number] tasks, but show them to me first and don't send anything.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1wbz6zq/anyone_using_ai_to_make_homeownership_easier",
     "body_sha256": "f294d3584858fcc014c5d438e48c6e43a0980fb5375b2610d93e7129fc9fca9b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:02:15.129380+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:02:15.129380+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

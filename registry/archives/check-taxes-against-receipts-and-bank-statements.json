@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/check-taxes-against-receipts-and-bank-statements",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:11.047699+00:00",
+  "html_sha256": "5fe50d060dfc084fb53604d31d14889eee06f1d83cf9ffec4e57ab6b199059cc",
   "body_sha256": "1b4aa52011c6e4fd19816376968d4dfe6f2727481ab9052a7f30c766302619ce",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Check taxes against receipts and bank statements\nA user had Claude compare tax figures with receipts and bank statements, flagging discrepancies, then reviewed the draft themselves.\nDone with\nCL\nClaude\nWhat they did\nThe poster fed Claude Opus the numbers and dates from a more complicated household tax situation involving a spouse’s LLC, revenue and expense streams, and some public business names. Claude checked their first pass, caught issues like double-counted revenue and expenses and client attribution problems, rechecked the calculations, and produced a spreadsheet that the user then entered into FreeTaxUSA; the user says they also reviewed it against receipts and bank statements themselves.\nHow it went\nThey say the final figures matched their receipts and bank statements after several prompts, and it helped enough that they skipped a CPA who had quoted $2,000. It was still a manual handoff into FreeTaxUSA rather than fully automated filing.\nWorth knowing\nThe privacy catch was that they only gave Claude numbers, dates, and a few public business names, not EINs, SSNs, or family or company names and addresses.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm preparing my taxes for [year] in [country]. Below are my draft figures, and I've attached my receipts and bank statements. Compare them line by line, list any discrepancies, missing receipts, or deductions that look questionable, and say how confident you are in each flag. Finish with a short summary table, and note that I'll check everything myself before filing.\n\n[paste figures]\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1rut65g/anyone_else_doing_taxes_with_claude",
     "body_sha256": "1b4aa52011c6e4fd19816376968d4dfe6f2727481ab9052a7f30c766302619ce",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:11.047699+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:11.047699+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-agents-fill-out-web-forms-using-text-grid-page-rendering",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:24:15.014291+00:00",
+  "html_sha256": "143f30d71d43c6073526fc01ec0751d4b56347cb1d2ca38c38b002d52dab886c",
   "body_sha256": "4f229382ae3c7225b48c86f88f348587b056405fd44eb4ee5f5a48fe8c7a2d15",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Let agents fill out web forms using text-grid page rendering\nAuthor built TextWeb, a text-grid browser so LLM agents can fill out job applications without costly vision models.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built TextWeb, which loads a page in headless Chromium and pulls out each visible element's position, text, and whether it's interactive. It maps these onto a character grid that keeps the on-screen layout. Interactive elements get numbers, so an agent issues commands like click 3 or type 7 followed by text. Any LLM can read it.\nHow it went\nEach page comes out as roughly 2-5KB of text instead of a roughly 1MB screenshot, so no vision model is needed. The post gives no results from actual job applications and asks for feedback on the grid format.\nWorth knowing\nIt installs with npm install -g textweb and plugs in through an MCP server, function-calling definitions, LangChain, CrewAI, an HTTP API, a CLI, or a Node.js library.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a small tool that renders a web page as a text grid, listing each form field, button, and link with a reference number, so an LLM agent can fill out forms without screenshots. Test it on [job application or form URL] using placeholder data and show me the filled fields. Never submit the form.\nOriginal source: https://news.ycombinator.com/item?id=47073885",
     "body_sha256": "4f229382ae3c7225b48c86f88f348587b056405fd44eb4ee5f5a48fe8c7a2d15",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:24:15.014291+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:24:15.014291+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/fill-out-immigration-forms-through-a-spanish-conversation",
+  "observed_at": "2026-10-17T06:05:19.050865+00:00",
+  "html_sha256": "5307ab564390ab9c9706848dcb4447d7d4f5f52937d6395bc8644fdae4f6de1c",
+  "body_sha256": "8d69359c433753d69d29e3963c97fcfe3a3469584baa3830286559d60d166015",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Fill out immigration forms through a Spanish conversation",
+      "sha256": "9dd6ac635017d474caf889879036faa45f34ce48c855f3c61b9841280351a755"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer built a mode where Claude asks plain-Spanish questions and enters each answer into an immigration form, keeping sensitive IDs like SSN out of what is sent.",
+      "sha256": "6a36eb2d2b3345990ee0f4ce10cde5e9e9626efc4f745368d42dcd2d4ecfbf2f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "On each form, the user can pick a conversational mode. Claude asks plain-Spanish questions and proposes answers through an answer_question tool. The app runs each answer through its normal validation and saves it on the device, so a live card fills in. A stateless Vercel Function relays the chat and stores nothing. Social Security, A-Number and USCIS account numbers go in a separate box and are never sent. ID-like numbers typed in chat are masked.",
+      "sha256": "4c32035a318a22eb4ebd8b3514149bc93a237c00c4d1487fde3880eef83a74d3"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "A real preview-deployment conversation filled the I-765 reason and asked a clarifying question about a middle name. The pull request is still a draft, and 486 tests pass.",
+      "sha256": "1a321e090f1f53f84ed17fe6cb5b1c92bbf3c9f94e1166509cd5b08c736f4ba5"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Opt-in notice comes first, and AGENT_ENABLED=false switches the assistant off without a deploy. Relative imports in Vercel's api/ folder need file extensions, or the function crashes.",
+      "sha256": "b42d4805d864ef4f7234b7ca7f485d285b39e51a825c8acf47b4812a00ed27a6"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/rarevalo0306-hash/immigration-Forms/pull/6"
+      ],
+      "sha256": "8de16d59d4592884ede8bfb8d3b18f2916a02806a395917246cc16a3f44063dc"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-16",
+      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "435246dcdd7fdeafef907a7d10f3fe541ab60ac4b08c86ab1d8444c51a6c4cb2",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill out immigration forms through a Spanish conversation\nA developer built a mode where Claude asks plain-Spanish questions and enters each answer into an immigration form, keeping sensitive IDs like SSN out of what is sent.\nDone with\nCL\nClaude\nWhat they did\nOn each form, the user can pick a conversational mode. Claude asks plain-Spanish questions and proposes answers through an answer_question tool. The app runs each answer through its normal validation and saves it on the device, so a live card fills in. A stateless Vercel Function relays the chat and stores nothing. Social Security, A-Number and USCIS account numbers go in a separate box and are never sent. ID-like numbers typed in chat are masked.\nHow it went\nA real preview-deployment conversation filled the I-765 reason and asked a clarifying question about a middle name. The pull request is still a draft, and 486 tests pass.\nWorth knowing\nOpt-in notice comes first, and AGENT_ENABLED=false switches the assistant off without a deploy. Relative imports in Vercel's api/ folder need file extensions, or the function crashes.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me fill out my [type of immigration form, e.g. I-485] by interviewing me in [Spanish or my preferred language], one plain-language question at a time. Record each answer in the matching form field, and do not ask me for or store my SSN, A-number, or passport number; leave those fields marked for me to fill in myself. When every non-sensitive field is done, show me the full list of answers for review and flag anything unclear.\nOriginal source: https://github.com/rarevalo0306-hash/immigration-Forms/pull/6",
+    "body_sha256": "8d69359c433753d69d29e3963c97fcfe3a3469584baa3830286559d60d166015",
+    "archived_at": "2026-10-17T06:05:19.050865+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:19.050865+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-an-automated-podcast-website-that-creates-companion-re",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:23.059797+00:00",
+  "html_sha256": "0e32715078948e79dafe193e6fb682d319438bcb9009d0128eaf84168ced5d32",
   "body_sha256": "beb4f32a95994e2736aceeb105030b33048b34ba40952dddfa70b9a125dff958",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build an automated podcast website that creates companion resources\nA podcaster built and deployed a podcast site with Replit over a weekend that automatically generates companion resources when an episode is published.\nDone with\nRA\nReplit Agent\nWhat they did\nOver a weekend of back-and-forth, the podcaster described what they wanted and Replit Agent built and deployed the site. It imports episodes from the show's RSS feed, then uses AWS Transcribe for transcripts and GPT-4o for tags and analysis. GPT-4o-mini powers an episode chat, limited by rules to episode-related topics. Admins can trigger bulk transcript generation.\nHow it went\nThe result is a live site that creates transcripts, tags, related episodes and chat once an episode is published. The post gives no usage numbers. It does say AWS Transcribe replaced Whisper, cutting cost 73% and raising the file limit to 2GB.\nWorth knowing\nThe podcaster restricted the chat to episode-related questions so it can't become a free general AI tool that drives up costs.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nBuild a website for my podcast [podcast name] where, when I publish a new episode with a title and transcript or notes, it automatically generates companion resources like [show notes, summary, quotes, and a checklist]. Set up the pages and the automation using sample episodes. You're done when I can add a test episode and see the generated resources on its page; ask before deploying publicly.\nOriginal source: https://replit.discourse.group/t/how-to-create-an-automated-podcast-website-with-replit/6034",
     "body_sha256": "beb4f32a95994e2736aceeb105030b33048b34ba40952dddfa70b9a125dff958",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:23.059797+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:23.059797+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

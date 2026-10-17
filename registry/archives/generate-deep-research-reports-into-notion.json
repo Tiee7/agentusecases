@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-deep-research-reports-into-notion",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:41:09.114357+00:00",
+  "html_sha256": "bca9213f12d144990c47735e47b627bbe7176712a348448be8ff9e6b1a1f7cb7",
   "body_sha256": "f8e584da4b388378e971a4c44aea0ee4931608a2cf4cc4fb753ff848cce2992d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Generate deep research reports into Notion\nAn n8n workflow turns a topic into up to three Tavily searches, compiles a Markdown report with an agent, and pushes it to a Notion page.\nDone with\nN8\nn8n\nWhat they did\nA webhook passes the user's topic to a Strategy Agent, which asks 2–3 clarifying questions and then creates a Notion database page. The workflow generates up to three search queries. For each one, Tavily finds the top link and extracts its content. A Final Report Agent writes a Markdown report from the combined content. Gemini converts it to HTML in chunks, and the chunks are pushed into the Notion page.\nHow it went\nThe workflow returns the Notion report link to the user with no manual steps after the clarifying questions. The source gives no quality, speed or cost figures. Each query uses only its single top-ranked source.\nWorth knowing\nYou need keys for Tavily, Notion, an OpenRouter or OpenAI model, and Google Gemini, plus a Notion database ID connected in n8n.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes a research topic [topic] and runs up to three web searches with Tavily. An AI agent should then compile the findings into a Markdown report with headings, key findings and source links, and save it as a new page in my Notion [parent page or database]. You're done when one test topic produces a finished Notion page; confirm the Notion destination with me before it writes anything.\nOriginal source: https://n8n.io/workflows/7160-deep-research-agent-automated-research-and-notion-report-builder/",
     "body_sha256": "f8e584da4b388378e971a4c44aea0ee4931608a2cf4cc4fb753ff848cce2992d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:41:09.114357+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:41:09.114357+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

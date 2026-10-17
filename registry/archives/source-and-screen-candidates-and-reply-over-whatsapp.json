@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/source-and-screen-candidates-and-reply-over-whatsapp",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:51:31.102214+00:00",
+  "html_sha256": "ba4358bd51bf5b3ff2baf7e4acbc7b90e2d98ddbda4275c6b8faee63988562f4",
   "body_sha256": "c8f29e3966c2bb92db794bfacfcea2ee314114ced5353b329609977f6ba7acca",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-08",
+      "sha256": "6b9df6402709e9e818c2543649efa60495b29313d05ce6e8eacc7ac607078444"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Source and screen candidates and reply over WhatsApp\nRecruiters run OpenClaw to monitor GitHub for new contributors overnight, score resume folders against a job description, and draft WhatsApp replies held for human approval.\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw runs on a dedicated machine such as a Mac Mini. A 6 AM scheduled task uses the browser skill to visit chosen GitHub repos, pull contributors, filter for recent activity and send a Telegram digest. For screening, the recruiter drops PDF resumes and a JD into the workspace, and the agent returns a ranked CSV with rationales. For replies, it drafts a response and sends it to the recruiter on WhatsApp, and sends it only after the recruiter says yes.\nHow it went\nThe guide says API costs run roughly $10 to $30 a month for light use and $100 to $200 for heavy use. It gives no measured sourcing results. LinkedIn scraping is fragile, and a clean first workflow takes most of a day.\nWorth knowing\nSandboxing, approval prompts and workspace limits ship with 2.0 but are off by default, so turn them on before pointing the agent at candidate data.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery night, check GitHub for new contributors to [repos or topics] who match [skills, location] and add them to [sheet]. Also score the resumes in [folder] against this job description: [paste JD], with a one-line reason each. Draft WhatsApp replies to [candidates or contacts], but hold them for my approval and never send without it.\nOriginal source: https://www.glozo.com/blog/openclaw-for-recruiters",
     "body_sha256": "c8f29e3966c2bb92db794bfacfcea2ee314114ced5353b329609977f6ba7acca",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:51:31.102214+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:51:31.102214+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

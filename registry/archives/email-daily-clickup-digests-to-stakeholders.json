@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-daily-clickup-digests-to-stakeholders",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:00:05.141203+00:00",
+  "html_sha256": "05f2b2ee2a700e0afe069b448cf0ae57a4be3cb9898545be7c3491fd152eddf7",
   "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Email daily ClickUp digests to stakeholders\nA Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\nDone with\nMK\nMake\nWhat they did\nThey set up ClickUp with a master action-item list plus related project and contact lists, rolling stakeholder emails into each task and auto-adding the right contacts when a project is chosen. In Make, the intended flow was a 6 AM scheduled run that lists incomplete tasks, iterates them, groups them by project in a Text Aggregator, and sends one email digest to that project’s stakeholder email field; the person manually tested the outputs and email format.\nHow it went\nThe first version failed because the Text Aggregator was pulling whole ClickUp objects, so the email came out as JSON instead of task fields. Commenters said the fix was mapping individual fields and grouping by project name; no finished result or performance numbers were reported.\nWorth knowing\nA practical catch from the thread: test by writing the generated subject, recipients, and body to Google Sheets or a Make data store before turning on live email sends.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that runs every day at [time] and pulls tasks from my ClickUp [space or list] that are [due soon, changed, or blocked]. Format them into a clean email digest and send it to [stakeholder emails] who don't have ClickUp accounts. Send a test digest to me first and don't send it to stakeholders until I approve.\nOriginal source: https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
     "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:00:05.141203+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:00:05.141203+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

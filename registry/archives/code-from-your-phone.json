@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/code-from-your-phone",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:11.045502+00:00",
+  "html_sha256": "522ddbf1302192277bf82ae88176112ffd938380bc3d59fc7cf7c92329883260",
   "body_sha256": "4a72e28b73b80f3a39e4ba940c6636324ebe3b11093514a46928c93293a08b89",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Code from your phone\nA write-up on a setup for using Claude Code on the go.\nDone with\nCC\nClaude Code\nWhat they did\nThe author runs Claude Code on a Vultr cloud VM reachable only through Tailscale, using Termius with mosh from an iPhone. tmux keeps sessions alive. Each git worktree gets its own tmux window and agent. A PreToolUse hook sends a Poke push notification when Claude asks a question. Claude Code built the VM setup in one session, given a Vultr API key and gh access.\nHow it went\nHe runs six agents in parallel on separate features from his phone, handling tasks of 10-20 minutes between notifications. The source gives no results beyond that workflow.\nWorth knowing\nThe VM costs $0.29/hr, so he starts and stops it per session. Mosh doesn't forward the SSH agent, so git auth needs plain SSH inside tmux.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up Claude Code so I can use it from my phone on [project folder] running on my [laptop, home server, or cloud VM]. Walk me through the secure remote access setup, for example SSH plus tmux or a remote session tool, so tasks keep running when my phone disconnects. Finish with a short checklist I can follow from my phone, and ask before opening any ports.\nOriginal source: https://granda.org/en/2026/01/02/claude-code-on-the-go/",
     "body_sha256": "4a72e28b73b80f3a39e4ba940c6636324ebe3b11093514a46928c93293a08b89",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:11.045502+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:11.045502+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

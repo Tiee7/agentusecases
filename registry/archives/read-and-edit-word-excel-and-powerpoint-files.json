@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/read-and-edit-word-excel-and-powerpoint-files",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:30.989321+00:00",
+  "html_sha256": "2b2b8e962c1e5dfc28d19d14274f0b5e2d3123286ca7137043b7eb8a1cca3d1c",
   "body_sha256": "42e05b07d1e5c0fa7232fa48102a4b2bfe8a24bdd6ea04cef531fe10db1d55f7",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Read and edit Word, Excel, and PowerPoint files\nOfficeCLI is an office suite built for agents to read and edit Microsoft Office files.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOfficeCLI is a single binary with no Office install needed. Running its install command adds a skill to detected agents such as Claude Code, Cursor, Windsurf and GitHub Copilot. The agent then uses commands like create, add, set, get and view to build or edit .docx, .xlsx and .pptx files. It can render pages to HTML or PNG to check its own work, and a live browser preview updates after each command.\nHow it went\nThe README shows sample decks, Word documents and spreadsheets that it says agents made with no templates or manual editing. It gives no benchmarks or failure cases.\nWorth knowing\nRendering to PNG screenshots works by piping HTML through a headless browser, so the look-and-fix loop may need one available. The binary also checks for updates in the background by default.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have an Office file at [file path]. Read it and [task, e.g. update the figures in the Excel sheet, fix the formatting in the Word doc, rework slides 3 to 6 in the PowerPoint]. Save the result as a new copy named [new file name], leave the original untouched, and give me a short list of everything you changed.\nOriginal source: https://github.com/iOfficeAI/OfficeCLI",
     "body_sha256": "42e05b07d1e5c0fa7232fa48102a4b2bfe8a24bdd6ea04cef531fe10db1d55f7",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:30.989321+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:30.989321+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

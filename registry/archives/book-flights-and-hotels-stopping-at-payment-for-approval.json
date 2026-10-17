@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-flights-and-hotels-stopping-at-payment-for-approval",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:40.937105+00:00",
+  "html_sha256": "5baa9a2a90769fa1e1936485ea85ffc9e5a26de272e3ce1e5fed3050c19582c5",
   "body_sha256": "3d8eefbfc2cc8d448278e6439a7b06f9a3893f542d54b2089aecc292b24c11b5",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Book flights and hotels, stopping at payment for approval\nClaude Cowork drove the browser through Claude in Chrome to book 8 flights and 5 hotels, filling traveler details and seats and pausing at payment for approval.\nDone with\nCW\nClaude Cowork\nCH\nClaude in Chrome\nWhat they did\nBoris Cherny put his flight preferences in Cowork instructions and let Opus 4.7 book while he kept working in Claude Code. The guide's setup is Claude in Chrome with browser actions allowed, an Expedia connector, and a Flight Booker project. Claude researches three options, a person approves one, then Claude fills in traveler details, loyalty numbers and seats, and stops at payment.\nHow it went\nCherny said Opus 4.7 one-shotted 8 flights and 5 hotels. The author has only tried the research step, not payment, and says Claude in Chrome is finicky.\nWorth knowing\nHanding over card details is the risky part. The author suggests 1Password for agents rather than pasting credentials into instructions, and finds Expedia research works best before switching to the browser to book.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing Claude in Chrome, search for and fill in booking details for [number] flights and [number] hotels for my trip to [destination, dates, traveler names], selecting seats and room preferences as specified. Stop and show me the full itinerary and total cost before submitting any payment.\nOriginal source: https://mikareyes.com/ai/how-to-book-flights-with-claude",
     "body_sha256": "3d8eefbfc2cc8d448278e6439a7b06f9a3893f542d54b2089aecc292b24c11b5",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:40.937105+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:40.937105+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

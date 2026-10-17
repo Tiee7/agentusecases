@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-personal-finances-with-a-claude-code-assistant",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:20:50.858726+00:00",
+  "html_sha256": "5fc206e4bce5f037bd53bed7c1d518776f04806e814a4c3bc90d639f8be5a78d",
   "body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,7 +90,14 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track personal finances with a Claude Code assistant\nThe author built a Claude Code financial assistant using macro data over MCP and his own financials to track his finances, assess health and support investment decisions.\nDone with\nCC\nClaude Code\nWhat they did\nThe author connected the Baselight MCP to Claude Code, then had Claude generate a repo of markdown files: CLAUDE.md for behavior, YAML and markdown files for memory (portfolio, decisions, action plans), and saved SQL queries. He wrote no code and no markdown by hand. Each run queries Baselight for macro data, then analyses his portfolio. Git hooks encrypt sensitive data.\nHow it went\nThe assistant, called Mr. Malone, runs analyses against his own portfolio and stores action plans for later sessions. The post gives no quantitative results, and he says LLMs can be unreliable and stochastic.\nWorth knowing\nHe built and used the assistant in one Claude Code session, which mixed contexts, and he kept the repo private and encrypted because the data is sensitive.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a personal finance assistant using my data in [folder or export files]. Summarize my income, spending, debts and savings, assess my financial health, and flag [concerns like runway or high-interest debt]. Keep everything local and don't make any transactions. You're done when I have a one-page report and a list of three questions or decisions I should consider next.\nOriginal source: https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
+    "body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+    "archived_at": "2026-10-17T05:20:50.858726+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
   "editorial": {
     "status": "reviewed",
     "format": "detailed_bilingual_restatement",
@@ -125,14 +133,6 @@
     "external_source_status": "not_read_in_this_batch",
     "quotation_policy": "No source quotation needed; tool names, numbers and interface command tokens retained as facts."
   },
-  "source_text": {
-    "format": "extracted_page_text",
-    "language": "en",
-    "body": "Track personal finances with a Claude Code assistant\nThe author built a Claude Code financial assistant using macro data over MCP and his own financials to track his finances, assess health and support investment decisions.\nDone with\nCC\nClaude Code\nWhat they did\nThe author connected the Baselight MCP to Claude Code, then had Claude generate a repo of markdown files: CLAUDE.md for behavior, YAML and markdown files for memory (portfolio, decisions, action plans), and saved SQL queries. He wrote no code and no markdown by hand. Each run queries Baselight for macro data, then analyses his portfolio. Git hooks encrypt sensitive data.\nHow it went\nThe assistant, called Mr. Malone, runs analyses against his own portfolio and stores action plans for later sessions. The post gives no quantitative results, and he says LLMs can be unreliable and stochastic.\nWorth knowing\nHe built and used the assistant in one Claude Code session, which mixed contexts, and he kept the repo private and encrypted because the data is sensitive.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a personal finance assistant using my data in [folder or export files]. Summarize my income, spending, debts and savings, assess my financial health, and flag [concerns like runway or high-interest debt]. Keep everything local and don't make any transactions. You're done when I have a one-page report and a list of three questions or decisions I should consider next.\nOriginal source: https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
-    "body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
-  },
   "translation": {
     "status": "available",
     "format": "full_extracted_text_translation",
@@ -142,5 +142,10 @@
     "body": "使用Claude Code助手跟踪个人财务\n作者使用MCP提供的宏观数据及自己的财务资料，构建了Claude Code财务助手，用于跟踪财务、评估状况并支持投资决策。\n实际使用\nClaude Code\n具体做法\n作者把Baselight MCP连接到Claude Code，再让Claude生成一个Markdown文件仓库：用CLAUDE.md规定行为，用YAML和Markdown文件保存记忆，包括组合、决策和行动计划，并保存SQL查询。他没有手写代码或Markdown。每次运行都会向Baselight查询宏观数据，然后分析他的投资组合。Git hooks会加密敏感数据。\n结果如何\n这个名为Mr. Malone的助手会分析作者自己的组合，并保存行动计划供后续会话使用。文章没有给出量化结果；作者表示，大语言模型可能不可靠，输出具有随机性。\n值得知道\n他在同一次Claude Code会话中构建并使用了助手，因此混合了上下文。由于数据敏感，他将仓库保持私有，并进行了加密。\n自行试用\n推荐工具\nClaude Code\n复制提示词\n使用[文件夹或导出文件]中的我的数据，构建个人财务助手。总结收入、支出、债务和储蓄，评估财务健康状况，并标记[需要关注的问题，例如资金可支撑时间或高息债务]。所有内容保留在本地，不进行任何交易。生成一页报告及三个我应考虑的问题或决策后结束。\n原始来源：https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
     "body_sha256": "735b3772dfbb71e436b9f30dec1c6c009dda5506b7491a9c0fa0c9c4489f4788",
     "scope": "All captured case prose, source template and original links; decorative agent initials omitted."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:20:50.858726+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

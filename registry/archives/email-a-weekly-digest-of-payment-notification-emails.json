@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-a-weekly-digest-of-payment-notification-emails",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:40:23.048937+00:00",
+  "html_sha256": "f9c893789ad5c5dcfaea51e33e91f16aae9a5bc845f35fd3b8398385bd0d74fa",
   "body_sha256": "95a913e090ce1325518b7365ebf564549673f8c4af7153810ac7be3aa407f1dd",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Email a weekly digest of payment notification emails\nAn n8n AI workflow reads labeled payment emails in Gmail, pulls the top three takeaways from each and sends a Sunday digest.\nDone with\nN8\nn8n\nWhat they did\nThe author labels payment emails in Gmail, then builds an n8n workflow that runs Sunday at 8 AM. It fetches the past week's labeled messages, aggregates them, and truncates the text to 100K characters. An AI Agent node running gpt-4o-mini through OpenRouter writes the digest from a system-message template. A code node converts the markdown to HTML, and Gmail sends it.\nHow it went\nThe author gets about 15 payment notifications a week, and the workflow turns them into one weekly digest email. The post gives no measured results beyond a successful test run.\nWorth knowing\nTruncating to 100K characters keeps the combined email text within what OpenAI can handle. Without the formatting code node, the email shows raw markdown symbols.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that every Sunday reads emails under Gmail label [payment notifications] from the past week, has AI pull the top three takeaways from each, and compiles them into one digest. Send the digest to [my email]. It's finished when a test run produces a digest from the last week's labeled emails.\nOriginal source: https://mariannanakos.substack.com/p/n8n-tutorial-built-an-ai-workflow",
     "body_sha256": "95a913e090ce1325518b7365ebf564549673f8c4af7153810ac7be3aa407f1dd",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:40:23.048937+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:40:23.048937+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

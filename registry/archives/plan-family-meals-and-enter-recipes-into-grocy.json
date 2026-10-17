@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/plan-family-meals-and-enter-recipes-into-grocy",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:55.086442+00:00",
+  "html_sha256": "9dc33cbed4c3553cbbf6bbd8c48daa5fdf6132e75e608668161d85774947566b",
   "body_sha256": "0249eb20188b0a19f91cc8dc767b99386f9c22948bb4d4065a857758d539f008",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-06",
+      "sha256": "60e44b095b242681a6bf189848348a558dc307a5e8df1aab516d8e06e7faef04"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Plan family meals and enter recipes into Grocy\nThe author used Claude Cowork's computer use in Chrome to enter recipes into Grocy, adjust them for four people, and pick recipes that use leftover perishables for a shopping list.\nDone with\nCW\nClaude Cowork\nWhat they did\nThe author ran Grocy in Home Assistant and gave Claude Cowork's computer use access to it in Chrome. He supplied recipes from books and online, had Claude scale them for four, and left it to type them in while he did other things. He then tested picking three meals and letting Claude choose two more.\nHow it went\nClaude added all the recipes and created the product categories, needing a couple of tweaks. With a bare-cupboard assumption, it chose two recipes using leftover perishables, and the ingredients went onto the Grocy shopping list. Adding items to an online grocery basket is still untried.\nWorth knowing\nEntering the recipes took a while, though the author gives no figures. Expect to check the entries and fix a few.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nOpen my Grocy instance at [Grocy URL] in Chrome and enter these recipes: [recipe links or text], scaling each to [number] servings. Then check my current stock, pick [number] dinners that use up the perishables I have, and generate a shopping list for the rest. Done when the recipes are saved and the list is ready; show me before you delete or overwrite any existing entries.\nOriginal source: https://tech.yahoo.com/ai/claude/articles/meal-planning-stresses-let-claude-113016928.html",
     "body_sha256": "0249eb20188b0a19f91cc8dc767b99386f9c22948bb4d4065a857758d539f008",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:55.086442+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:55.086442+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

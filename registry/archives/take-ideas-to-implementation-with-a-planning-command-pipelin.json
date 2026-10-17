@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/take-ideas-to-implementation-with-a-planning-command-pipelin",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:49:08.985272+00:00",
+  "html_sha256": "703002396cee8778ede894b11b5f8d3ea288f5cc0f5123658b45a3c1d03d61f0",
   "body_sha256": "bc7c043e92fb04299651c0285224ff8cc6a27878b71a120bbcac9ddf69f11d66",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Take ideas to implementation with a planning-command pipeline\nA solo SaaS founder uses a custom five-command agent flow (intent, impact analysis, planning, execution, review) with lint guardrails to ship features in a production product.\nDone with\nCC\nClaude Code\nWhat they did\nThe founder built five chained commands (intent, impact analysis, iterative planning, execution orchestration, review/demo) that all update one plan file in git, which he reviews at each stage. A shared CONTRIBUTING.md guides agents, ESLint rules run as post-edit hooks, and a Bash-approval script screens commands. When the agent misbehaves, it writes a new rule with tests.\nHow it went\nAn orchestrator script turning plans into workflows cut token spend to about 20% and runtime from 5-6 hours to 20-30 minutes. He still reviews most code via git diff, and calls it mostly clean.\nWorth knowing\nThe guardrails grew incrementally: each unwanted agent action or approval prompt became a new lint rule or approval rule, so expect to keep investing in them.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a planning pipeline for my project in [repo or product name] as custom slash commands: one to capture intent, one for impact analysis, one for planning, one for execution, and one for review. Make the execution step run [my lint and test commands] and stop if they fail. Test it on this small feature: [feature idea]. Stop when the feature has gone through all five steps and I have a reviewed diff, and do not commit or push without asking me.\nOriginal source: https://news.ycombinator.com/item?id=49586883",
     "body_sha256": "bc7c043e92fb04299651c0285224ff8cc6a27878b71a120bbcac9ddf69f11d66",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:49:08.985272+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:49:08.985272+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

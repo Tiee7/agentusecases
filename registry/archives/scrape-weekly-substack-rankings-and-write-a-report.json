@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/scrape-weekly-substack-rankings-and-write-a-report",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:28:09.018422+00:00",
+  "html_sha256": "54249f3c88bf6347fe8b82b296640d659c8719d2aac3b2e3283751de3bc9c75b",
   "body_sha256": "40c3e0fac6bc811e02b929424ba1ae45fa7e0ef36013587a1b9eb5c030258fe3",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Scrape weekly Substack rankings and write a report\nClaude in Chrome runs weekly to scrape Substack ranking data into a dataset, and Cowork analyzes it and writes a weekly report.\nDone with\nCH\nClaude in Chrome\nCW\nClaude Cowork\nWhat they did\nFrank Andrade prompts Claude in Chrome to scrape the first 250 rows of Reletter's Substack charts (rank, newsletter, date, free/paid) into a CSV, then converts that prompt into a task that runs every Tuesday. A Cowork task at 5:10 PM reads the saved folder and builds a spreadsheet of the biggest rank gains, losses and new entrants, for paid and free separately.\nHow it went\nEach week the scrape takes a couple of minutes, and Cowork drops the analysis spreadsheet into his folder. The source gives no accuracy checks or other figures.\nWorth knowing\nScheduled tasks only run while the computer is awake and the Claude desktop app is open, and each run draws on your daily usage allowance.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nGo to [ranking page URL, such as a Substack leaderboard for my category] and scrape the top [50] entries with rank, name, and any visible stats into a spreadsheet, adding a column for today's date. Append to the existing file at [file location] if it exists. Stop when the data is saved and tell me how many rows were added, so I can run the same job weekly.\nOriginal source: https://artificialcorner.com/p/claude-automates",
     "body_sha256": "40c3e0fac6bc811e02b929424ba1ae45fa7e0ef36013587a1b9eb5c030258fe3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:28:09.018422+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:28:09.018422+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

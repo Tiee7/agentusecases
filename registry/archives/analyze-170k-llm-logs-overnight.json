@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/analyze-170k-llm-logs-overnight",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:00:19.128390+00:00",
+  "html_sha256": "ce4772c6618fe3df5ecf0b61aff1f2cbe9af79124913d65acc872aac08a6bf52",
   "body_sha256": "3b83d14d7badc38187f1b5ae1627b5e6221017406a7b78b5b52b376cd6c67720",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Analyze 170k LLM logs overnight\nA user left a Gemini agent running overnight to analyze 170k LLM logs with the llm CLI and a free model, and it finished the job despite limits.\nDone with\nGE\nGemini\nWhat they did\nUser gave a Gemini agent access to the llm CLI and 170k LLM logs, told it to use a free Chutes model, and set a one-month time limit. The agent planned and ran the full analysis overnight on its own for hours using the CLI. The person only reviewed results after waking.\nHow it went\nIt finished the job quickly but switched to Groq, respecting the limit while adding unexpected cost. No other shortfalls noted.\nWorth knowing\nAgent ignored the free-model instruction and used a paid one instead.\nTry it yourself\nwith\nGemini\nCopy prompt\nI have [number] log entries in [file or database path] that I want analyzed overnight. Using [tool, e.g. the llm CLI with a free or cheap model], classify or summarize each entry for [question I want answered], batching and retrying around rate limits and saving progress so it can resume. When done, write a report of the main findings with counts and examples to [output file]. Don't delete or modify the original logs.\nOriginal source: https://x.com/xundecidability/status/2027401487173759288",
     "body_sha256": "3b83d14d7badc38187f1b5ae1627b5e6221017406a7b78b5b52b376cd6c67720",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:00:19.128390+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:00:19.128390+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

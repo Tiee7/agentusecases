@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/manage-files-in-a-chosen-folder-with-an-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:54:25.116668+00:00",
+  "html_sha256": "e2d0e2f7a8127bc785b1965871279a5c169b08ce384e5b81a52b8da1e73fd285",
   "body_sha256": "49fc98b3a33d8d540e40643eb6e163224dbfd3a9e096526483fcf17a17fd5e4a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Manage files in a chosen folder with an agent\nThe author built an open-source desktop agent that works inside a chosen folder, reading and writing files and asking before changing anything.\nDone with\nCC\nClaude Code\nWhat they did\nThe author built a desktop agent that operates only inside a folder the user chooses. It can read existing files, write new ones, and asks for approval before every change; shell commands are disabled by default and only run if the user turns them on. They say it began as a way to study how Claude Code works, and about half the app’s commits were written with Claude Code.\nHow it went\nThe result is an open-source alternative with no account or telemetry, support for Claude, OpenAI, Google, and local models, and an option to keep files on-disk with local inference. It still has notable gaps: text files only, no Windows sandbox, unsigned builds, and nothing runs when the app is closed.\nWorth knowing\nThe main catch is safety and scope: it asks before every file change, but sandboxing is incomplete and the app only works on text files while open.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWork only inside the folder [path to folder]. Read through the files, then [organize, rename, or summarize them, e.g. sort by project and rename with a consistent date format]. Before changing, moving, or deleting any file, show me the exact list of changes and wait for my OK. When done, give me a summary of what changed and how to undo it.\nOriginal source: https://www.reddit.com/r/ClaudeCowork/comments/1wuqa6c/i_built_an_open-source_cowork-style_folder_agent",
     "body_sha256": "49fc98b3a33d8d540e40643eb6e163224dbfd3a9e096526483fcf17a17fd5e4a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:54:25.116668+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:54:25.116668+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-receipts-into-csv-for-bookkeeping",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:01:17.034332+00:00",
+  "html_sha256": "d47045e4922bd0437b82e4871bba0989848b037466678f51991d9819ee7512d5",
   "body_sha256": "2f55162f4936c30c962533face31905b566fe16e80c214effe3335d86fbe8316",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn receipts into CSV for bookkeeping\nPoster built a custom GPT that takes receipts and outputs a CSV for copy/pasting into books, with a caveat that it shouldn't be blindly trusted.\nDone with\nGP\nChatGPT\nWhat they did\nThe poster built a custom GPT that reads receipt images and returns a CSV you can paste into bookkeeping software. In the example shown, it processed receipts from Yummy Kitchen, Farm Boy, and Costco, transcribed them, and summarized them into bookkeeping fields; the poster said it mainly pulls net, tax, and total and groups line items into broad categories like goods or groceries, with a person expected to review the output.\nHow it went\nIt appears useful for quick data entry, and one commenter estimated this kind of workflow could be about 90% accurate with a human check. The poster also said GPT makes odd mistakes, especially on dates and numbers from crinkled or curved receipts, so it should not be trusted blindly.\nWorth knowing\nThe main catch is accuracy: the poster said their production product needed a separate AI layer to interpret results and another to verify that extracted values actually appear in the document.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nI'm going to upload photos or PDFs of receipts for [my business or personal bookkeeping]. For each one, pull out the date, vendor, total, tax, payment method, and a likely expense category from [my category list, or suggest standard ones], and output everything as one CSV with a header row that I can paste into [my spreadsheet or accounting software]. Flag any field you are unsure about or could not read clearly instead of guessing, and finish with a short list of receipts I should check by hand.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/18zcsrf/i_made_a_gpt_for_bookkeeping_that_takes_receipts_and_outputs_a_csv_for_copypasting",
     "body_sha256": "2f55162f4936c30c962533face31905b566fe16e80c214effe3335d86fbe8316",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:01:17.034332+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:01:17.034332+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

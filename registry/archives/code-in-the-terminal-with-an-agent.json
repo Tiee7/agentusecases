@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/code-in-the-terminal-with-an-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:57:29.137096+00:00",
+  "html_sha256": "9ad578001ec2083cd199b3eca5001874aca82f0a356fcc72c66bc9317e5f9e42",
   "body_sha256": "f4429c49322b479e37c2f5e312d3ba8738c93c4b69e5bcd100ad442790cc3c9a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Code in the terminal with an agent\nThe poster uses Grok as a terminal coding agent that reads, edits, runs tools and spawns sub-agents.\nDone with\nGB\nGrok Bot\nWhat they did\nThe poster says they built agenc-core as a terminal agent harness where Grok drives the work directly in a CLI/TUI: it reads files, edits code, runs tools, and can spawn parallel sub-agents with separate context, tools, and token budgets. In the example they watched it split a divisible job into eight workers to build eight separate C terminal games at once, while the main orchestrator integrated and verified the results and a human handled approval prompts for tool calls.\nHow it went\nThe post presents it as working well enough to be the author’s showcase, including the eight-game parallel build and integrations like Ledger actions gated by on-device approval. It does not give benchmark numbers, failure rates, or a detailed comparison against other coding agents.\nWorth knowing\nThe main catch is the permission model: tool calls can require human approval, and any Ledger action that moves value needs physical confirmation on the device.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nIn the project at [path to repo], I want you to [describe feature or bug fix]. Read the relevant code first, make the edits, and run [test or build command] to check that it works. Show me a summary of the changes when you're done, and ask before deleting any files or running anything destructive.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1v3gtvc/grok_is_surprisingly_good_as_a_terminal_coding",
     "body_sha256": "f4429c49322b479e37c2f5e312d3ba8738c93c4b69e5bcd100ad442790cc3c9a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:57:29.137096+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:57:29.137096+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

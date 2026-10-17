@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-a-book-file-format-to-search-it",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:24:55.012746+00:00",
+  "html_sha256": "a0b0afeee20f179ecae0779e0e85540c329a65e4e01fd537e084f6a7a1effaea",
   "body_sha256": "f3072e4a74cae7747a537a90350136e453dfd090d970bbf6b5ae5acb1954d477",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Reverse-engineer a book file format to search it\nAfter the RAG indexer crashed on an uploaded book, Claude used Unix commands to work out the file format and grep the book manually.\nDone with\nCL\nClaude\nWhat they did\nThe commenter uploaded a book into the project context on Claude's web chat. The RAG indexer crashed on the file. Claude then used a series of Unix commands to work out the book's file format, and searched the contents with grep by hand. The source doesn't say whether the commenter prompted any of these steps.\nHow it went\nClaude got around the crashed indexer and could search the book anyway. The commenter found this surprising. The source gives no details on accuracy, the file format, or how long it took.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a file at [path to file] that my tools can't read properly, and it is a [book/document, format if known]. Use command-line tools to inspect its structure, work out the format, and extract the readable text into a plain text file. Then search it for [topic or phrase] and show me the matching passages with their locations. Don't modify the original file.\nOriginal source: https://news.ycombinator.com/item?id=49512445",
     "body_sha256": "f3072e4a74cae7747a537a90350136e453dfd090d970bbf6b5ae5acb1954d477",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:24:55.012746+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:24:55.012746+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/extract-vendor-pdfs-and-create-quickbooks-invoices",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:33.013341+00:00",
+  "html_sha256": "47e0294480f3313355294b3be6e2ea6a44a542406d76c6f805a239684c03f48c",
   "body_sha256": "955d69f587db89b8f5c5df1e2d4452078df550c43849cdd34d21c45fd47fe7a9",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Extract vendor PDFs and create QuickBooks invoices\nA custom integration built with Claude Code extracts data from vendor PDFs and creates categorized invoices in QuickBooks Online.\nDone with\nCC\nClaude Code\nWhat they did\nEamonn Cottrell had already built, with Claude Code, an integration that reads vendor PDFs, categorizes items and creates QuickBooks Online invoices. He reopened the project and had Claude Code remove the remaining manual steps. It added PDF attachment through the QuickBooks attachment API, a prompt that asks for a category on unknown items and updates the master list itself, file cleanup, and duplicate checking.\nHow it went\nOn a test run for another vendor workflow, it found 40 PDFs, created the QuickBooks records, attached the PDFs and cleaned up on its own. He says the workflow once took hours and now takes minutes. He tested duplicate protection by deliberately running the process twice.\nWorth knowing\nHe had never built a QuickBooks integration before, and the existing invoice-creation logic was left untouched while each improvement was added.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a workflow that extracts line-item data from vendor PDF invoices in [folder/email], categorizes expenses, and creates matching invoices in QuickBooks Online. Pause and show me the first few invoices it would create before it posts anything to QuickBooks.\nOriginal source: https://www.gotsheet.xyz/p/i-automated-quickbooks-w-claude-code",
     "body_sha256": "955d69f587db89b8f5c5df1e2d4452078df550c43849cdd34d21c45fd47fe7a9",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:33.013341+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:33.013341+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

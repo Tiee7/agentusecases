@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/hunt-high-value-pok-mon-cards-on-ebay-overnight",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:47:59.079161+00:00",
+  "html_sha256": "7baca2efb402e80dfb0a2d999010e5e9965492313dc0ccac7d9405665e2300ee",
   "body_sha256": "f3379e1c7d0b6678b2883fe7ef192f18a08e96ff4e445c79ffe9e8a6012581cb",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Hunt high-value Pokémon cards on eBay overnight\nAn engineer built a Codex agent that browses eBay listings, extracts PSA certificate numbers and cross-references known prices while he sleeps.\nDone with\nCX\nCodex\nWhat they did\nAlessio Finelli gave the Codex agent a sparse skill file with rules on target cards, batch size of 5, and grading companies. The agent browses eBay listings on its own, extracts PSA certificate numbers, cross-references known prices, and flags underpriced high-value cards. He steps in only to review flags for his physical shop.\nHow it went\nIt works as his power buyer, surfacing underpriced cards before others see them.\nWorth knowing\nLimit batches to 5 listings to avoid eBay bans; run on a cloud VPS.\nTry it yourself\nwith\nCodex\nCopy prompt\nWrite and run an agent that browses [marketplace, e.g. eBay] listings for [item type, e.g. graded Pokémon cards] under [max price], extracts each listing's [certificate or serial number], and compares it to prices in [price source or file]. Save listings that look underpriced by at least [percent]% to a file called [output file] with the link, price, and reference price. Stop after running it once on [number] listings and show me the results and how to schedule it overnight. Don't buy, bid, or message any sellers.\nOriginal source: https://x.com/Scantor22/status/2078497019446894953",
     "body_sha256": "f3379e1c7d0b6678b2883fe7ef192f18a08e96ff4e445c79ffe9e8a6012581cb",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:47:59.079161+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:47:59.079161+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

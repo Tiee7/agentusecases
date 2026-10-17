@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-pantry-stock-from-receipts-and-buy-groceries",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:50:06.997306+00:00",
+  "html_sha256": "7320b31d7b01c1afd7b606de37dc3ccaf858ad2f7d20e54e499a1b00b2d3a0f0",
   "body_sha256": "1b362a627b6bd4bbe218e3ff8c943aa2ff9ab0043f052e1599f997c9675e8c63",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-06",
+      "sha256": "60e44b095b242681a6bf189848348a558dc307a5e8df1aab516d8e06e7faef04"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Track pantry stock from receipts and buy groceries\nA custom AI system reads receipts, estimates kitchen stock, checks grocery store availability and prices, buys groceries, and suggests recipes.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nUser ingests receipts and spending data into a custom service, then exposes a grocery budget envelope plus recipe history and financial data to a stock estimator tool. A second tool connects to local grocery store APIs for nutrition, availability, and prices. Both tools are exposed over a terse MCP surface to an AI harness (ChatGPT plus opencodev2) that produces stock updates, budgeting, and recipe recommendations.\nHow it went\nThe system genuinely saves the user time and money through ongoing stock estimates and recommendations. No purchase execution or quantitative results are stated.\nWorth knowing\nUser offered to open-source the stack if others want it.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn the folder [path to receipts] I have grocery receipts. Read them, build a running estimate of what's in my kitchen, and save it as [pantry file name]. Then list what I'm likely low on, suggest [number] recipes using what I have, and prepare a shopping list. You are done when the pantry file and shopping list exist; don't buy anything without showing me the list first.\nOriginal source: https://x.com/ZacariahHeim/status/2107123309095596211",
     "body_sha256": "1b362a627b6bd4bbe218e3ff8c943aa2ff9ab0043f052e1599f997c9675e8c63",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:50:06.997306+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:50:06.997306+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

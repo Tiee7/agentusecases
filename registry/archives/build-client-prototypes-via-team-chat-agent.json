@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-client-prototypes-via-team-chat-agent",
+  "observed_at": "2026-10-17T06:05:33.090860+00:00",
+  "html_sha256": "ba060d4bff59fda1a6efae34fedb4bd7b33bf84176f89121ae09c156b8117ea2",
+  "body_sha256": "90ae5712c5de8b4889279ecd2a69036a8f7f823b447589e6dab46120f5ff63ce",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build client prototypes via team chat agent",
+      "sha256": "b71a7d0d5c051ec75029e5952ec1fa92983b2ff2a729e7d8711cd53d9d96dcf3"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A team gave Hermes access to IRC, the repo, Cloudflare and nginx so it builds prospective-client prototypes after they confirm the prompt.",
+      "sha256": "e45680dc94d8b70494559fbd5f7e8f3451c6deaeb3df7d9500efef83325d4ce4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster runs a 20-ish person software shop and put Hermes on a VPS with root access plus connections to the team’s IRC, repos, Cloudflare, nginx, and custom MCP wrappers. After a few days of tweaking, they had it create skills first, add test cases, and then carry out work like PR-review notifications, client status updates, daily iOS/APK builds, and quick prospective-client prototypes, with actions gated by the owner saying yes after Hermes prompts.",
+      "sha256": "5045a99c946e7f32c7c1b1544ade1f36c1cf5299f7eebbd9f57f8f24ff910471"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say Hermes now handles most of those previously manual tasks and rate it 8/10. The main drawbacks they report are trial-and-error skill selection, flaky session handoff from CLI to Slack because of its SQLite DB, and high token usage.",
+      "sha256": "3ca9bfac22a2624a1ca21bdced22a74ebfcaf0a8309c5b4dc0902279dcc983de"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "They say getting their Hermes setup built from scratch again would take no more than a day, but it took a couple of days of tweaking to automate the workflow.",
+      "sha256": "1ea332b1245d7be97fa489901ba6389afecf2aebcbc4831474931cb2757efa90"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/hermesagent/comments/1wijyx0/hermes_is_too_good_to_be_true_working_use_cases"
+      ],
+      "sha256": "9a81a1b1a027445b270935a255eb845b8096a56602f5fad2403737fac54e5cc4"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-16",
+      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ceb74d8dbd89d6095061cee047c0dde589d34aca95adb28794b261698ea26e1f",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build client prototypes via team chat agent\nA team gave Hermes access to IRC, the repo, Cloudflare and nginx so it builds prospective-client prototypes after they confirm the prompt.\nDone with\nHA\nHermes Agent\nWhat they did\nThe poster runs a 20-ish person software shop and put Hermes on a VPS with root access plus connections to the team’s IRC, repos, Cloudflare, nginx, and custom MCP wrappers. After a few days of tweaking, they had it create skills first, add test cases, and then carry out work like PR-review notifications, client status updates, daily iOS/APK builds, and quick prospective-client prototypes, with actions gated by the owner saying yes after Hermes prompts.\nHow it went\nThey say Hermes now handles most of those previously manual tasks and rate it 8/10. The main drawbacks they report are trial-and-error skill selection, flaky session handoff from CLI to Slack because of its SQLite DB, and high token usage.\nWorth knowing\nThey say getting their Hermes setup built from scratch again would take no more than a day, but it took a couple of days of tweaking to automate the workflow.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nConnect to our team chat on [IRC/Slack channel] and give yourself access to [repo URL], [Cloudflare account/project], and [nginx server]. When someone posts a prototype request for a prospective client, repeat back the prompt you understood and wait for a teammate to confirm it. Then build the prototype in a new branch, deploy it to a preview URL such as [subdomain pattern], and post the link in the channel. Pause and show me the planned changes before you push to production, change DNS, edit nginx config, or message anyone outside the team.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1wijyx0/hermes_is_too_good_to_be_true_working_use_cases",
+    "body_sha256": "90ae5712c5de8b4889279ecd2a69036a8f7f823b447589e6dab46120f5ff63ce",
+    "archived_at": "2026-10-17T06:05:33.090860+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:33.090860+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

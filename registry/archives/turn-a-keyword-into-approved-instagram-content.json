@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-a-keyword-into-approved-instagram-content",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:00:01.164301+00:00",
+  "html_sha256": "1c6f25a31e46f68886c116ed56274ba474933e98ebd11b2510615e9ab3dd1017",
   "body_sha256": "ed2eaccdcf3876c7b4244cc4e7d7521baf9857e2b88c609e2c7e91e3198e094f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-12",
+      "sha256": "1778f9f78b7259121030c21480277aed369174e3ecc33a86e3ebffe208861fa2"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn a keyword into approved Instagram content\nA Make.com pipeline takes a keyword, generates AI content, sends it for email approval, and logs it to Google Sheets.\nDone with\nMK\nMake\nWhat they did\nThe setup was a no-code Make.com workflow using OpenAI, Gmail, and Google Sheets. A person entered one keyword, ChatGPT generated both the Instagram caption and image, Make.com emailed that content to a reviewer, and the reviewer chose approve or reject before the content, image, and decision were logged to Sheets.\nHow it went\nThe poster says it worked well and highlights the human approval step as the main safeguard against off-brand auto-posting. No performance metrics, posting volume, or time-saved numbers were given.\nWorth knowing\nThe main catch is that it stops for manual approval by email, so a person still has to review every post before it is logged.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that takes a keyword from [Google Sheet or form] and uses AI to write an Instagram caption and image idea for [my brand and tone]. Email the draft to [my email] for approval, and log each keyword, draft and approval status in Google Sheets. Don't publish anything to Instagram until I approve, and show me the first draft to review.\nOriginal source: https://www.reddit.com/r/maketemplates/comments/1s4g5wc/i_built_an_instagram_content_pipeline_on_makecom",
     "body_sha256": "ed2eaccdcf3876c7b4244cc4e7d7521baf9857e2b88c609e2c7e91e3198e094f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:00:01.164301+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:00:01.164301+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

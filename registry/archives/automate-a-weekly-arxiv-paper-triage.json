@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-a-weekly-arxiv-paper-triage",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:49.028052+00:00",
+  "html_sha256": "f839f529dd17e9f857657d3bb0ce8284d4d5e860437202c2ded0de25295bea58",
   "body_sha256": "fc8f25a7f28e9f1aab6a0a0568816a1b8704c51beab9570f6dfc9c915b167515",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Automate a weekly arXiv paper triage\nA weekly Codex automation searches arXiv for keywords, logs new papers to a CSV, sorts them into keep/skim/drop buckets and can check claims against Zotero.\nDone with\nCX\nCodex\nWhat they did\nA weekly Codex automation searches arXiv for the author's keywords, such as AI alignment. It saves results to a CSV so only new papers are triaged each run. Each paper gets a label: keep, skim, drop, duplicate, outside scope or weak method. Promising ones go to a Zotero inbox, where they are embedded in a vector database. The author reads the papers himself.\nHow it went\nThe author says that checking claims against scoped Zotero collections leads to fewer hallucinated related-work citations and less double-checking. The post gives no numbers, and he stresses that he still verifies the evidence himself.\nWorth knowing\nStart with this triage workflow before automating more, since maintaining an over-built system can cost more time than it saves. The post doesn't explain how Zotero connects to the vector database.\nTry it yourself\nwith\nCodex\nCopy prompt\nSet up a weekly automation that searches arXiv for new papers matching [keywords or topics], logs them to a CSV with title, authors, date, link, and one-line summary, and sorts each into keep, skim, or drop based on [my research interests]. Stop when the CSV is updated and give me the keep list. Don't delete past entries.\nOriginal source: https://aisagroup.substack.com/p/how-i-use-codex-to-automate-parts",
     "body_sha256": "fc8f25a7f28e9f1aab6a0a0568816a1b8704c51beab9570f6dfc9c915b167515",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:49.028052+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:49.028052+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

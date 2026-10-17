@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/keep-coding-agents-running-autonomously-for-long-stretches",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:21:08.989924+00:00",
+  "html_sha256": "0cf95c33bbd5cae57576b38c03c4f58e37a6c49e048bd85ebee7cda596111327",
   "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Keep coding agents running autonomously for long stretches\nCursor's write-up on scaling long-running autonomous coding.\nDone with\nCR\nCursor\nWhat they did\nCursor ran hundreds of concurrent agents on one project. Flat self-coordination through a shared file with locks, then optimistic concurrency, failed. They switched to planners that explore the code and create tasks, and workers that each grind on one task and push. A judge agent decided at the end of each cycle whether to continue, and the next cycle started fresh.\nHow it went\nA browser built from scratch ran close to a week and produced over 1 million lines across 1,000 files. A Solid-to-React migration took over three weeks and passed CI but still needs careful review.\nWorth knowing\nPrompting mattered more than the harness or model. Agents sometimes ran far too long, and periodic fresh starts were still needed to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want a background agent to work on [large task, e.g. migrating all API handlers to the new validation library] in my repo [repo] for an extended stretch. Break it into small checkable steps, work through them one by one, run tests after each, and commit after each step that passes. Stop when all handlers are done or after [number, e.g. 3] consecutive failures, and leave me a progress log.\nOriginal source: https://cursor.com/blog/scaling-agents",
     "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:21:08.989924+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:21:08.989924+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

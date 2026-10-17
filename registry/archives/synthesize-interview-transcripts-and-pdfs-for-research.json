@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/synthesize-interview-transcripts-and-pdfs-for-research",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:01.067605+00:00",
+  "html_sha256": "719b3093302b62471ec5b615a5d7d68415c028fb0d419129d4d95becc2a8ff61",
   "body_sha256": "e3a64610f17c4a1ca8f9e961596c964780d60f1b9a555f7f7ee1a3000b5abfd5",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Synthesize interview transcripts and PDFs for research\nClaude Code is pointed at transcripts and PDFs to produce theme summaries, evidence tables and annotated bibliographies; a UX researcher runs 50-transcript studies this way.\nDone with\nCC\nClaude Code\nWhat they did\nTranscripts go in one folder, one file per interview with consistent names, plus a CLAUDE.md holding research questions, a codebook and a rule to quote only verbatim text with file names. Claude codes them in batches of 5 to 8, or via parallel subagents, and writes themes.md and evidence tables. PDFs go in a papers folder for the bibliography. Claude then searches each quote in its source file.\nHow it went\nThe guide says one typed question replaces an hour of Ctrl+F, and Else van der Berg runs 50-transcript studies this way. Timing figures are illustrative, not benchmarked. One audit found 7.7% of supposedly verbatim quotes missing from sources.\nWorth knowing\nPin the codebook before launching parallel agents, or you get incompatible theme lists. Always run the quote verification pass, and de-identify transcripts, since file contents are sent to Anthropic.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead all the interview transcripts and PDFs in [folder path] for my study on [research question]. Produce a theme summary, an evidence table with a quote and source file for each theme, and an annotated bibliography. Mark any theme supported by fewer than [number] sources as tentative, and save everything as separate files in a new output folder.\nOriginal source: https://ccforeveryone.com/guides/claude-code-for-researchers",
     "body_sha256": "e3a64610f17c4a1ca8f9e961596c964780d60f1b9a555f7f7ee1a3000b5abfd5",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:01.067605+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:01.067605+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

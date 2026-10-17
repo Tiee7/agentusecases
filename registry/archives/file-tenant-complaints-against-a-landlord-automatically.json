@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/file-tenant-complaints-against-a-landlord-automatically",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:46:45.219866+00:00",
+  "html_sha256": "27e8763a2d59ba5c4c4f20f757c5bb6667b02747b413b148480c9ccd66835b1d",
   "body_sha256": "943013a79d9fdf9505b8f51a0726a20f9627a83cebdc1c4e1a8769f2bcbbf77a",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "File tenant complaints against a landlord automatically\nA Claude agent scraped violation databases and filed 14 complaints with the NYC housing board; the landlord was reportedly fined and the rent increase blocked.\nDone with\nCL\nClaude\nWhat they did\nUser told Claude code to act as tenant lawyer, find violations, and file them legally. The agent scraped HPD violation database and DOB history for the building BIN, pulled the full NYC housing code, matched unit issues to exact sections, drafted 14 311 complaints, filed them staggered on a $4 VPS workflow, tracked numbers in SQLite, and auto-replied to callbacks with user-uploaded photos.\nHow it went\nNineteen days later the city fined the landlord $2,800, issued a class C designation, and blocked the rent raise. Inspector confirmed 14 violations; the agent later flagged two more.\nWorth knowing\nSetup took 48 hours and ran on a $4 VPS.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nI rent at [my address, city]. Search [city's public housing violation database] for open violations on my building and list them with dates and case numbers. Then prepare a complaint form for each one using my details [name, unit, contact info]. Pause and show me each complaint before you submit anything.\nOriginal source: https://x.com/Argona0x/status/2049921143067288016",
     "body_sha256": "943013a79d9fdf9505b8f51a0726a20f9627a83cebdc1c4e1a8769f2bcbbf77a",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:46:45.219866+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:46:45.219866+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

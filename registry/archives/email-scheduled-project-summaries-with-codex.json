@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-scheduled-project-summaries-with-codex",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:35.021248+00:00",
+  "html_sha256": "580ed20eb38c52e980c418c4334790e0efc323297d787dce6ca021efe0b677fb",
   "body_sha256": "c80d3c3d3d78625909f3c0f9c0556d132163d65d38e3b01321af564e135ab66d",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Email scheduled project summaries with Codex\nA guide sets up a Codex automation that reads project files on a schedule and emails a weekly summary via the Gmail plugin.\nDone with\nCX\nCodex\nWhat they did\nThe guide has you install the Gmail plugin through OAuth and send a test email. You then create an automation attached to a local project folder. Its prompt tells Codex to summarize the files and send the result with @Gmail. The demo used a folder of two transcript files, medium reasoning, a Sunday 9 a.m. schedule and full-access permissions so it runs unattended.\nHow it went\nThe source says setup takes under ten minutes and then runs with no further input. It gives no measured results from real runs, only troubleshooting for failures such as expired OAuth, approval pauses and a missing @Gmail mention.\nWorth knowing\nAutomations use tokens on every run, so check your usage first. Large folders or high reasoning drain credits quickly, and full access is needed for unattended runs.\nTry it yourself\nwith\nCodex\nCopy prompt\nCreate a scheduled automation that runs every [day and time], reads the files in [project folder], and writes a short weekly summary of progress, open issues, and next steps. Email it to [recipient address] using my Gmail plugin. Before the first send, show me the draft and the schedule so I can approve them.\nOriginal source: https://www.mindstudio.ai/blog/chatgpt-codex-automations-gmail-plugin-scheduled-tasks",
     "body_sha256": "c80d3c3d3d78625909f3c0f9c0556d132163d65d38e3b01321af564e135ab66d",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:35.021248+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:35.021248+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

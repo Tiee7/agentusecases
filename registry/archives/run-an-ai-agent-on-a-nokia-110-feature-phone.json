@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-an-ai-agent-on-a-nokia-110-feature-phone",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:53:39.127845+00:00",
+  "html_sha256": "12a66bfc6f53110b2ddf6117fb0cb6b598a31f79627b9569085c1d6380292263",
   "body_sha256": "bfbb49da57577141d74691a549b7484e709c56dc4af3e4721e2736915435c47f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run an AI agent on a Nokia 110 feature phone\nAuthor reverse-engineered a 48MB-RAM Nokia 110 to run an AI agent on it and automate a few actions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author studied the Nokia 110 4G firmware and boot process, then ran custom code in RAM through the Calculator entry point. They turned Calculator into a chat app that sends typed messages to the DeepSeek chat API and acts on tool calls. OpenAI Codex helped build it. Because of the 48MB memory limit, they wrote a minimal custom agent, used smaller builds, compressed the payload and reused buffers.\nHow it went\nIt works as a prototype. Over mobile data, unplugged, it can answer questions, check the battery, switch the torch on and off, start a call and set an alarm. It is not permanent.\nWorth knowing\nThe code is loaded into RAM from a computer and is lost on restart or power-off, so it must be reloaded each time. The source code isn't published.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have an old [device model, e.g. feature phone or small embedded gadget] with about [RAM amount] of RAM, and I want it to trigger a simple action: [e.g. send a text to a script that toggles a light]. Help me work out what the device can do, write the smallest working code or bridge to connect it to an AI agent, and test it. Stop when I can press [a key or send a message] on the device and see the action happen, and tell me each step to run on my own hardware before you change anything.\nOriginal source: https://github.com/anupray95/AI-Agent-on-a-NOKIA",
     "body_sha256": "bfbb49da57577141d74691a549b7484e709c56dc4af3e4721e2736915435c47f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:53:39.127845+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:53:39.127845+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

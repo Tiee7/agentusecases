@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-pdfs-and-textbooks-into-interactive-courses",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:47:19.187876+00:00",
+  "html_sha256": "7cd445c20ee77d6b505d0964f5ab1ed2f73e160b9152de4f34541977ef0611f1",
   "body_sha256": "b00e46f31a3196f19ff33747ca380011474eec6e7c7bcece5af9d85c3b778bd1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Turn PDFs and textbooks into interactive courses\nHassan's agent parses source documents, plans lesson structure via tool calls, picks interactive components, and a Lesson Reviewer agent checks the final course.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent receives a PDF or textbook and parses it, keeping small files in context or embedding larger ones. It plans lesson structure using provided examples, then uses tool calls to select and populate pre-built components such as Q&A or flowcharts with generated content and parameters. The output passes to a separate Lesson Reviewer agent for verification against the source before final creation.\nHow it went\nA working demo generated one course in 2 minutes at 10 cents on Together Compute open-source models; the full free open-source app is now live.\nWorth knowing\nGeneration cost 10 cents and took 2 minutes in the reported demo.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nRead the PDF or textbook at [file path] and turn it into an interactive course for [audience]. Plan the lesson structure, then for each lesson write the content and add quizzes, flashcards or exercises. Review the full course for accuracy against the source and consistency. Finish with the course as [format, e.g. HTML files] in [folder].\nOriginal source: https://x.com/nutlope/status/1981373070666264805",
     "body_sha256": "b00e46f31a3196f19ff33747ca380011474eec6e7c7bcece5af9d85c3b778bd1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:47:19.187876+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:47:19.187876+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

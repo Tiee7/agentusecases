@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/rewrite-a-readme-after-a-rearchitecture",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:45.093278+00:00",
+  "html_sha256": "98c6024c00fd9ab7950866ed5597db73f1e446ae87d99b103a51ed00f1236dea",
   "body_sha256": "c3444a9e2386a13acae8bb95f90827ed5c3b3b3c2935ccaeee589093d80414b0",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Rewrite a README after a rearchitecture\nDevin scanned a rearchitected codebase and delivered a new README as a PR with accurate setup and API details, but struggled with design rationale and purpose.\nDone with\nDE\nDevin\nWhat they did\nAfter a major rearchitecture, the author gave Devin the repo and a step-by-step prompt. Devin scanned the code, read the old README, and proposed a headline outline. It then waited for a \"CONFIRMED, PROCEED\" command. Next it was told to forget the repo, follow its own setup instructions as a new developer, and report gaps. It then opened a PR from a branch off develop.\nHow it went\nThe README had accurate setup steps, clear API endpoint specs, and examples inferred from the code. It struggled to explain design rationale and the project's overall purpose, which the codebase doesn't contain.\nWorth knowing\nThe author gives no timings, and suggests that supplying internal docs or architecture diagrams alongside the code might fix the missing rationale and purpose.\nTry it yourself\nwith\nDevin\nCopy prompt\nMy project at [path to repo] was recently rearchitected. Scan the code and rewrite the README with accurate setup steps, configuration, and API details, checking each command against the real code. Leave clearly marked placeholders for design rationale and project purpose that I will fill in. Put the change on a new branch and show me the diff before opening a PR.\nOriginal source: https://medium.com/@universe3523/boosting-documentation-with-devin-ai-2257cfb04c79",
     "body_sha256": "c3444a9e2386a13acae8bb95f90827ed5c3b3b3c2935ccaeee589093d80414b0",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:45.093278+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:45.093278+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

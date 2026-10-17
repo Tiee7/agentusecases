@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/summarize-newsletters-into-a-notion-database",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:41:13.047781+00:00",
+  "html_sha256": "d2bcd40674a60dc9e4953f1479825038e5fdfdba779fa85405dfa7211e3e8bfb",
   "body_sha256": "bf99e048a37ad47d2b9fc9c42b4b286c8ae2fb32f51abce2aea52de7106a2a1f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Summarize newsletters into a Notion database\nAn n8n workflow retrieves newsletters, summarizes them with an LLM and stores them in Notion, splitting long summaries to fit block limits.\nDone with\nN8\nn8n\nWhat they did\nThe n8n workflow reads unread emails over IMAP, then filters by date and by a list of allowed senders. An OpenAI-backed summarization chain turns each remaining newsletter into bullet points that keep source URLs. Summaries over 1,950 characters are split by a code node. The first chunk creates the Notion page, and the later chunks are appended to that page by its URL.\nHow it went\nIn the walkthrough, 15 unread emails were narrowed to 3 summaries, all written to Notion. The author's multi-email chunking fix worked. The IMAP filter rules were unreliable, and the author chose the wrong summarization method at first.\nWorth knowing\nOnly OpenAI ran reliably. Claude hit token limits mid-run after tokens were already spent, and local Llama2 errored. The author planned to switch from map-reduce to the simpler stuff method.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls newsletters from my [email label or folder], summarizes each one with an AI model into a title, sender, 5 key bullets and a link, and saves them to my Notion database [database name]. If a summary is longer than Notion's block limit, split it across several blocks. You're done when a test run saves my last [number] newsletters correctly; show me the workflow before activating it.\nOriginal source: https://medium.com/@syrom_85473/a-practical-n8n-workflow-example-from-a-to-z-part-2-aggregating-newsletter-summaries-in-a-688f30f69352",
     "body_sha256": "bf99e048a37ad47d2b9fc9c42b4b286c8ae2fb32f51abce2aea52de7106a2a1f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:41:13.047781+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:41:13.047781+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

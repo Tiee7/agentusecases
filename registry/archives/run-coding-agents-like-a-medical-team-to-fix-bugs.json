@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-coding-agents-like-a-medical-team-to-fix-bugs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:57:43.117539+00:00",
+  "html_sha256": "4b40b9f39aa1916707a45dfd19485925faed282ab13fa069cc02f271ffbb6dfc",
   "body_sha256": "9531b50f103060fbb1a20c075f0578d1285fcac9666a48d981dc4bd8caa592e3",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run coding agents like a medical team to fix bugs\nOver five months, the author treated bugs like patients and organized coding agents as a hospital-style team to diagnose and fix them.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nCockroach Labs built a GitHub Actions pipeline in which labels on an issue trigger role-specific agents. A Fellow reproduces the bug and posts a treatment plan, and a separate Review Attending approves or rejects it before any code is written. Large issues are split into sub-issues of under 1,000 lines each. A Discharge Nurse audits the review before merge, and humans handle escalations.\nHow it went\nOver five months it merged 1,238 PRs and over a million lines of code with 7 reverts. A Db2 migration feature shipped in under two days. Reviewers sometimes looped on trivial fixes, and agents filed about half of all issues.\nWorth knowing\nIt used about $135,000 in Claude tokens, around $84 per issue. Some issues went 9 to 11 rework rounds before a circuit-breaker was added.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nTreat the bugs in this repo like patients in a hospital. For each bug in [issue list or file], have one agent triage and reproduce it, another diagnose the root cause, and another write a fix with a test, then have a separate reviewer check the fix. Finish with a summary table of each bug, its diagnosis, the fix and test status, and pause for my approval before committing or pushing anything.\nOriginal source: https://www.cockroachlabs.com/blog/experiment-running-hospital-code/",
     "body_sha256": "9531b50f103060fbb1a20c075f0578d1285fcac9666a48d981dc4bd8caa592e3",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:57:43.117539+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:57:43.117539+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/search-for-a-wedding-flight-to-new-york",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:35:11.093366+00:00",
+  "html_sha256": "33c7e5f8e60c503ddeadea9f98086430c5333aff6461244916d74fea288d245a",
   "body_sha256": "cdfe7db693849a9cefff7d0e9cb2903e598fd73acac03ba2648616edb13fe1e1",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Search for a wedding flight to New York\nThe author gave Comet and ChatGPT Atlas the same flight-booking task; Comet mostly pointed to aggregators instead of specific flights.\nDone with\nPC\nPerplexity Comet\nWhat they did\nThe author gave Comet and ChatGPT Atlas the same prompt: nonstop SFO to NYC flights leaving Friday April 24, 2026 after 2pm and returning Sunday April 26 evening. She named preferred airlines (United, JetBlue, Alaska) and preferred airports (JFK, LGA). Atlas failed on the first try, then offered browser mode. She chose logged-out browsing and watched it apply filters.\nHow it went\nAtlas returned 11 round-trip combinations with times, airports and prices, which was a bit much but easy to narrow. Comet gave general statements and links to aggregator sites, not specific flights.\nWorth knowing\nThe author says her prompting may have been at fault. Both tools failed on the first attempt, and Atlas only worked after she accepted its browser-mode offer.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nFind me specific flights from [departure city] to [destination city] arriving by [date], returning [date], for [number] travelers. Compare at least three options with airline, times, total price and a direct booking link, not just aggregator homepages. Stop at the booking page and show me the options; do not enter payment details or book anything.\nOriginal source: https://medium.com/@amurray101/chatgpt-atlas-vs-perplexity-comet-on-flight-booking-f580f8bd6e14",
     "body_sha256": "cdfe7db693849a9cefff7d0e9cb2903e598fd73acac03ba2648616edb13fe1e1",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:35:11.093366+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:35:11.093366+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

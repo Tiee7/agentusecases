@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/create-and-read-issues-from-claude-code-via-a-tangled-mcp-se",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:25:01.033393+00:00",
+  "html_sha256": "34e2ed152e681537b34031504e8da6dde4d39dbac39809b3208a4e28c4c4e2c1",
   "body_sha256": "368239e18bf4317dd0e47a656f93017b17c3b31b0d582189d1f659c6e4f5c442",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Create and read issues from Claude Code via a Tangled MCP server\nThe author started building an MCP server so Claude Code can create and read issues on Tangled.\nDone with\nCC\nClaude Code\nWhat they did\nWhile auditing his atproto identity visualization tool, the author wanted to do project management on code hosted at Tangled. Working with Claude, he built a Tangled MCP server and registered it in Anthropic's MCP registry. It has a connection-status resource, a branch-listing tool, and issue tools to create, update, delete and list. Repos are given as owner/repo.\nHow it went\nIt covers only a few operations so far, but it did what he needed for creating and reading issues. Pull request support looks blocked by architectural limits, at least for mutations.\nWorth knowing\nOnly branches and issues are supported. The author hasn't yet confirmed whether PR mutations can be done at all. The README has usage instructions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build an MCP server in [language] that lets you create and read issues on [issue tracker or code host, e.g. Tangled] using [API or auth method]. Start with two tools, create_issue and list_issues, and write a short README explaining how to register it with Claude Code. Finish when you can list issues from my repo [repo name], and ask me before creating any real test issue.\nOriginal source: https://nate.leaflet.pub/3m2vldeq2wk2d",
     "body_sha256": "368239e18bf4317dd0e47a656f93017b17c3b31b0d582189d1f659c6e4f5c442",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:25:01.033393+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:25:01.033393+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

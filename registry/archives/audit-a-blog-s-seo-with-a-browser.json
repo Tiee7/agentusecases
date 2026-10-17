@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/audit-a-blog-s-seo-with-a-browser",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:33:47.103653+00:00",
+  "html_sha256": "33314cfe0b2b1b7b5f6096e88d394f092c18a3e2de9e2dff42d053490897f0c2",
   "body_sha256": "77b4a10b6613ab8f57ca172da39d0b5d049cee3938bee92ee9ff84cc6701bfff",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Audit a blog's SEO with a browser\nA developer used Claude Code with Puppeteer MCP to browse their blog, check meta tags, speed, structured data and mobile views, and write a report that caught a noindex issue.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer ran the Puppeteer MCP server against a local dev copy of their Nuxt blog starter, NuxtPapier. They gave Claude Code a short prompt that told it to audit the blog and write the findings to a markdown file. Claude Code made its own todo list, then browsed pages, checked meta tags, load times, structured data and mobile screenshots, and wrote the report.\nHow it went\nIt flagged noindex/nofollow tags, a robots.txt that blocked crawlers, and duplicate H1s. It also found structured data, mobile layout and about 200ms loads were fine. The report named files to change and gave code fixes.\nWorth knowing\nThe blocking issues were development settings, because the audit ran against a dev server. Expect similar findings if you audit a site before it is production-ready.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nUse a browser tool such as Puppeteer to visit [my blog URL] and audit its SEO. Check meta tags, noindex or canonical problems, page speed, structured data, and how it looks on mobile. Write a prioritized report in seo-audit.md with specific fixes, and don't change anything on the site yourself.\nOriginal source: https://alexop.dev/posts/how-i-use-claude-code-for-doing-seo-audits/",
     "body_sha256": "77b4a10b6613ab8f57ca172da39d0b5d049cee3938bee92ee9ff84cc6701bfff",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:33:47.103653+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:33:47.103653+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

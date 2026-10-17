@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-marketing-operations-with-a-team-of-subagents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:43:11.050443+00:00",
+  "html_sha256": "4f08cf419ea4ecaed135af2d8e7cf82e43b24037e1f2ad862f979d35e5cbef47",
   "body_sha256": "ca3418c2154c5b1c777efc8430ea3979ec75c79abb6e42e8813f7e19c5d5a37f",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run marketing operations with a team of subagents\nA CMO agent reads the weekly plan and spawns specialist subagents like a social media marketer and performance reviewer; the social agent double-posted to Reddit in week one.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster set up a Chief Marketing Officer agent in Claude Code that reads a weekly plan, checks the current three-hour slot, and then launches specialist subagents for each task. Those agents live as markdown files in .claude/agents/ and can use custom scripts and integrations, including a Reddit OAuth2 client, a Hacker News headless client, Google Gemini for images, Sanity CDN uploads, and Slack notifications; the human appears to define the plan and refine rules.\nHow it went\nIt automated recurring marketing work across channels, but the post calls out one clear failure: in week one the social media agent double-posted to Reddit because the instruction against duplicates was too vague. The comments frame this as a working system that still needed tighter guardrails.\nWorth knowing\nThe most useful catch was that prompt wording mattered operationally: saying “no duplicate comments” was not specific enough to stop repeated Reddit posts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a small marketing team of subagents for [my business]: a lead agent that reads my weekly plan in [path/to/plan file] and delegates to a social media specialist and a performance reviewer. Have them draft this week's posts for [platforms] and a summary of last week's results. Before any post is published, show me the final text and destination, and check that nothing gets posted twice.\nOriginal source: https://www.reddit.com/r/AskGTM/comments/1tngr97/automated_my_marketing_operations_with_claude_code",
     "body_sha256": "ca3418c2154c5b1c777efc8430ea3979ec75c79abb6e42e8813f7e19c5d5a37f",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:43:11.050443+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:43:11.050443+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

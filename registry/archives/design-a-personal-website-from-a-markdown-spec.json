@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/design-a-personal-website-from-a-markdown-spec",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:53.065046+00:00",
+  "html_sha256": "fe1d2a554dc80d66618f03c7f53c2f9d44ff370082f13f82ed1dc299a8a8f830",
   "body_sha256": "6e5a342eb0ac2edfca7cba5c9d012aa035b6de2cb277ddc0480cd878eb9fc651",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Design a personal website from a markdown spec\nThe author had Codex CLI read a design spec and iterated on it to design his personal site, and he can reuse the spec on other projects.\nDone with\nCX\nCodex\nWhat they did\nThe author copied the long design prompt from Anthropic's frontend-design plugin for Claude Code and pasted it into a local markdown file in his project. In a Codex CLI session he first had Codex read that file and treat it as the design spec for his personal site. Then it generated the UI, and he steered it through a few rounds of iteration.\nHow it went\nCodex nearly got the design right in one shot, and the follow-up iterations were fast and accurate. He shipped a site he's happy with, replacing a very basic earlier version. The source gives no metrics.\nWorth knowing\nThe spec is just a markdown file, so you can reuse it across projects and swap in different design prompts. Expect a few iterations and keep your own taste in the loop.\nTry it yourself\nwith\nCodex\nCopy prompt\nRead the design spec in [path to your markdown spec file] and use it to design a [personal site / landing page] for [your name or project] in this folder. Build a first version, then show me how to preview it and wait for my feedback before changing anything big. Once I approve a version, list any rules from the spec that should be updated so I can reuse it on other projects.\nOriginal source: https://wilbertliu.com/blog/how-i-designed-my-personal-site-using-codex-cli",
     "body_sha256": "6e5a342eb0ac2edfca7cba5c9d012aa035b6de2cb277ddc0480cd878eb9fc651",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:53.065046+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:53.065046+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

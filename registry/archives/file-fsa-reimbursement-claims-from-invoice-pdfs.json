@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/file-fsa-reimbursement-claims-from-invoice-pdfs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:32:47.004771+00:00",
+  "html_sha256": "685f3bd09128e2d53152918aeda238a14c7eab31621a3339f8dbea72ddadee29",
   "body_sha256": "ecbf0481f48906c35f5fd3b34a7c0e2e74a473462bf3af19c76be774ec985961",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "File FSA reimbursement claims from invoice PDFs\nClaude Code with the Chrome extension parsed Amazon invoice PDFs and spotted duplicates, but couldn't upload files and was slow, so the user had to step in.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nThe user exported 2025 Amazon invoice PDFs showing FSA-eligible amounts. They told Claude Code to read each PDF's eligible amount and order date, then submit a reimbursement claim in the already-open Optum portal through the Chrome extension. Claude parsed the PDFs and flagged two duplicates. The extension couldn't upload files, and ChatGPT agent mode and Claude Desktop also failed. Claude Code with Playwright MCP worked.\nHow it went\nPlaywright MCP could upload files and ran faster. After the first submission Claude Code wrote a script for the rest, and about a dozen claims were submitted in roughly two minutes.\nWorth knowing\nThe Chrome extension needed other Chrome extensions disabled to take screenshots, and it took nearly a minute to find a button. Playwright MCP avoided both problems.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nParse the invoice PDFs in [folder path] to extract amounts, dates and vendors for my FSA reimbursement claims, flagging any duplicates. Produce a clean summary spreadsheet ready for me to manually upload to my FSA portal, since file uploads may need to be done by hand.\nOriginal source: https://b2.broom9.com/?p=14418",
     "body_sha256": "ecbf0481f48906c35f5fd3b34a7c0e2e74a473462bf3af19c76be774ec985961",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:32:47.004771+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:32:47.004771+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

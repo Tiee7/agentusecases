@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/scrape-a-conference-site-into-a-searchable-dashboard",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:52:31.105871+00:00",
+  "html_sha256": "b45075224c52e6be5fe3e015e3acac61d8c8f940e9d5ff4b62cdc0a80feb5367",
   "body_sha256": "c1db43a396399cb3a4c109e749dd260f7bf15034fc8f053062559445225696bd",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-09",
+      "sha256": "5278576a478d2bf8aa7ab536202d8543cb8d2f87d6e6c4b1d75a5b6d2f3cf82d"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Scrape a conference site into a searchable dashboard\nIn a workshop demo, a Manus agent scraped about 70 talks, extracted schedules, converted times to UTC, and built a dashboard with recommendations and calendar integration.\nDone with\nMA\nManus\nWhat they did\nIn a workshop demo, a Manus agent scraped a whole conference website of about 70 talks. It pulled out dates, times and descriptions, and converted every time to UTC. It then built a searchable dashboard with a Similar Events recommendation feature and one-click calendar integration. The write-up doesn't give the prompt or say where a person stepped in.\nHow it went\nThe demo produced a working dashboard covering the 70-plus talks. The source gives no accuracy checks, timings or cost figures for this example.\nWorth knowing\nThe write-up is a summary of a workshop video and gives no prompt or build time, so watch the recording for the exact steps.\nTry it yourself\nwith\nManus\nCopy prompt\nGo to [conference website URL] and scrape every talk: title, speaker, time, room, and description. Convert all times to [my time zone], then build a searchable dashboard where I can filter by topic and speaker, plus a list of recommended talks based on my interests in [topics]. You're done when the dashboard works and I can export my picks to a calendar file; show me the picks before adding anything to my calendar.\nOriginal source: https://growwstacks.com/blog/how-to-build-intelligent-research-agents-with-manus-ai",
     "body_sha256": "c1db43a396399cb3a4c109e749dd260f7bf15034fc8f053062559445225696bd",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:52:31.105871+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:52:31.105871+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

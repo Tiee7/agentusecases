@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/flag-documentation-drift-from-merged-prs-weekly",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:05.035036+00:00",
+  "html_sha256": "91f4d46606133765e6f683e89b4913dfe6a76e6785445a2fd5f36ea34fee94b1",
   "body_sha256": "183cab42d8ab5fcdaf9e6bd8a7d5d11f1dc8ff677cef3e8f456579cce9737ddf",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Flag documentation drift from merged PRs weekly\nA weekly Hermes cron job checks merged PRs for changes to tool schemas, CLI commands, config options or env variables to flag docs needing updates.\nDone with\nHA\nHermes Agent\nWhat they did\nA Hermes cron job runs Mondays at 9am. It uses the gh CLI to list the last 30 merged PRs in the hermes-agent repo, keeps those from the past 7 days, and checks whether they touched tool, CLI, config or env-var code. For each such PR it checks whether the matching docs page changed in the same PR, then sends a Telegram report.\nHow it went\nThe source gives a copy-paste blueprint and no measured results. Output is a list of gaps where code changed but docs didn't. If everything is in sync, the agent replies [SILENT] and nothing is sent.\nWorth knowing\nThe prompt hardcodes this repo's file paths and fetches only 30 merged PRs, so adapt the paths and raise the limit if more than 30 PRs merge in a week.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nEvery [day and time], check the pull requests merged into [repo name] over the past week. Flag any that changed [tool schemas, CLI commands, config options, or environment variables] and list which docs pages in [docs path] likely need updating. Send me a short report with PR links and stop there without editing any docs.\nOriginal source: https://hermes-agent.nousresearch.com/docs/guides/automation-blueprints",
     "body_sha256": "183cab42d8ab5fcdaf9e6bd8a7d5d11f1dc8ff677cef3e8f456579cce9737ddf",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:05.035036+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:05.035036+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

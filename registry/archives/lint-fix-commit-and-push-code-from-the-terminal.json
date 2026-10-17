@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/lint-fix-commit-and-push-code-from-the-terminal",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:38:23.075842+00:00",
+  "html_sha256": "aa199d725af53538abb9ebaf00461bd32ef7ed1a6d94e84a30d4612f9c89a15b",
   "body_sha256": "3fdb086dab4c87adf931db07f4f587b786150411c52296ae7143e8e94efbbf6b",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Lint, fix, commit and push code from the terminal\nScout runs a linter, fixes a syntax error, re-runs it, reviews staged changes, writes a commit message and pushes to a new branch, shown as a walkthrough.\nDone with\nMS\nMicrosoft Scout\nWhat they did\nScout connects to the local terminal through an MCP bridge and works only inside a workspace folder you set. It ran a linter, read the output, opened the file to fix a syntax error and re-ran the linter. For Git, it ran git status and git diff, wrote a conventional commit message, created the branch and pushed. By default you click to confirm each command.\nHow it went\nThe article describes the workflow as a walkthrough and gives no measured results, timings or failure cases. It states that the lint-fix loop and the commit-and-push flow work as described.\nWorth knowing\nScout needs an enterprise setup: Frontier preview enrollment, an Intune policy, and both Microsoft 365 Copilot and GitHub Copilot Business or Enterprise licenses. Personal accounts won't work.\nTry it yourself\nwith\nMicrosoft Scout\nCopy prompt\nIn my project at [path to repo], run [linter command] and fix any errors it reports, then re-run it until it passes. Review the staged changes and draft a clear commit message, then pause and show me the diff and message before you commit. After I approve, commit and push to a new branch named [branch name].\nOriginal source: https://www.thewindowsclub.com/microsoft-scout-for-developers-automating-git-and-shell-commands",
     "body_sha256": "3fdb086dab4c87adf931db07f4f587b786150411c52296ae7143e8e94efbbf6b",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:38:23.075842+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:38:23.075842+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

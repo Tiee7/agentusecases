@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/coordinate-sub-agents-to-monitor-prs-and-fix-prod-bugs",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T06:02:05.032139+00:00",
+  "html_sha256": "41b6428a29f7bd054f54450167aaeb14d347f4563de94620428899bd49484a71",
   "body_sha256": "2dcbd146f252fe5297e90c246fc200ecd59dc5917ab73a2df7daee50ce4f4b98",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -77,10 +79,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-13",
+      "sha256": "ecec9f222b97b72671ced97d5131fd438fbd38c9aca2019b426d1c20fb90c5a5"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Coordinate sub-agents to monitor PRs and fix prod bugs\nA Cursor Projects coordinator agent delegates to sub-agents, watches new PRs and production bugs, spins up agents to fix issues, and surfaces questions to the user.\nDone with\nCR\nCursor\nWhat they did\nThe Cursor Projects coordinator agent received overall project context and intent. On its own it monitored fresh PRs and production issues or bugs, then spun up sub-agents to handle fixes while delegating context across them. It sent the user live updates and surfaced questions along with its own recommendation or point of view.\nHow it went\nAfter finishing one large project the user described the experience as a collaborative marathon that ended too soon and preferred it to earlier agent workflows.\nTry it yourself\nwith\nCursor\nCopy prompt\nAct as a coordinator for [repo]. Watch for new pull requests and production errors from [monitoring tool], and for each issue spin up a sub-agent to investigate and propose a fix as a draft PR. Report back to me with a short summary and any questions you have. Don't merge or deploy anything without my explicit approval.\nOriginal source: https://x.com/chsrbrts/status/2107637980504723550",
     "body_sha256": "2dcbd146f252fe5297e90c246fc200ecd59dc5917ab73a2df7daee50ce4f4b98",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T06:02:05.032139+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:02:05.032139+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

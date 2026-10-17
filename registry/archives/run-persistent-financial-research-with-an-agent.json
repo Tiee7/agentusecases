@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-persistent-financial-research-with-an-agent",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:23:17.020017+00:00",
+  "html_sha256": "2eea37c906c14ab65123ee22460d33ae3fef4d83ff8647c805c7c89b1051f0bc",
   "body_sha256": "28b04293199f4afaeed15f71116a1555f56f07a1bc1c240d1c95e6f12859dc48",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Run persistent financial research with an agent\nLangAlpha is a Claude Code-style agent for investing research that keeps persistent workspaces and memory so analysis such as models and comps can be updated across sessions.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou create one workspace per research goal, such as a Q2 rebalance. The agent interviews you about goals and style, then writes code in a Daytona sandbox to pull financial data and build deliverables like DCF or comps models. It saves files and an agent.md notes file in the workspace. Parallel subagents handle sub-tasks, and you can steer mid-run.\nHow it went\nThe README gives no measured results. It shows a comps run that produced an Excel model and PDF report with implied price ranges for NVDA, AMD and GOOGL. Later sessions resume from the saved files and notes.\nWorth knowing\nYou can self-host with just Docker and your own LLM key, but without data keys you get reduced Yahoo Finance data. Price-triggered automations and channel integrations are hosted-only.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a persistent research workspace for [company or ticker] in [folder]. Gather its latest filings and news, build a simple financial model and a comps table against [peers], and write notes on assumptions in a memory file. Next time I ask, update the model with new data and summarize what changed. Finish by showing the first model and notes.\nOriginal source: https://github.com/ginlix-ai/langalpha",
     "body_sha256": "28b04293199f4afaeed15f71116a1555f56f07a1bc1c240d1c95e6f12859dc48",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:23:17.020017+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:23:17.020017+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

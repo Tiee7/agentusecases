@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-180-microservices-to-a-new-framework-version",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:52.961644+00:00",
+  "html_sha256": "41d99c14bf1f0e6a531056c88450d227192ce03ff8d2371551fa6b1f4d0e1760",
   "body_sha256": "64acc7fbb470be978c93f658e2eef53b94ae16316777b368a531b947d1383714",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Migrate 180 microservices to a new framework version\nBrex built Cursor-based self-correcting agents that let one engineer migrate 180 microservices to a newer Micronaut version in about a month.\nDone with\nCR\nCursor\nWhat they did\nBrex split the work between two self-hosted Cursor agents. Creating a Linear ticket triggers a generation agent. It combines scripts with LLM reasoning, builds locally, self-corrects, and opens a draft PR. A GitHub label then triggers a validation agent. It deploys to dev, runs integration tests, and patches failures up to three times. Both agents load eleven small skills, one per failure type.\nHow it went\nOne engineer migrated 180 microservices in a month, which Brex puts at 32x per person. Cost per service fell about 90%. A few PRs passed all tests but still caused subtle production bugs.\nWorth knowing\nA single giant prompt run from laptops failed. Cloud-hosted agents, modular skills and a three-attempt cap fixed that. Human review was still required, and weak test coverage let bugs through.\nTry it yourself\nwith\nCursor\nCopy prompt\nWrite a self-correcting migration agent that updates [list of services/repos] from [old framework version] to [new framework version], running build and tests after each change and fixing failures automatically. Have it report progress per service and pause before opening any pull requests for my review.\nOriginal source: https://www.brex.com/journal/agent-automations-for-big-migrations",
     "body_sha256": "64acc7fbb470be978c93f658e2eef53b94ae16316777b368a531b947d1383714",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:52.961644+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:52.961644+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

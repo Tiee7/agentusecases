@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-security-flaws-in-open-source-software",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:36:57.054109+00:00",
+  "html_sha256": "b7b985e027dc2dd1a3538e56d093b7ea8afb7cde8aa67f33c9b9968f7bc8b42b",
   "body_sha256": "1d457f8a3935eb7ff89cae81348fa84ce749570f8ccb85b21a78aeab331d8c48",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Find security flaws in open-source software\nGoogle's Big Sleep agent reported about 20 security flaws in open-source software, following its SQLite find.\nDone with\nGE\nGemini\nWhat they did\nBig Sleep, built by Google DeepMind and Project Zero, was pointed at widely used open-source projects. It found and reported 20 previously unknown vulnerabilities, mostly in FFmpeg and ImageMagick. The article gives no detail on the agent's workflow or on how much human review was involved. It does describe the earlier SQLite case, where the agent traced the root cause of a flaw that Google's threat intelligence team had only seen signs of being exploited.\nHow it went\n20 flaws were reported, and their details are withheld under standard disclosure procedures. The article says nothing on severity or fix status for these 20. The earlier SQLite bug (CVE-2025-6965) was rated 7.2 on CVSS.\nWorth knowing\nThe specifics of the 20 flaws are not public yet, so you can't check them. The article also doesn't say how many reports were valid or how much human triage was needed.\nTry it yourself\nwith\nGemini\nCopy prompt\nClone [open-source repository URL] and review its [language] code for likely security flaws such as memory safety bugs, injection, unsafe input parsing, and hardcoded secrets. Write up each finding in a file with the file path, a short explanation, and how severe you think it is. Do not change any code or open any issues or pull requests. Stop once you have a ranked list of your top [number] findings.\nOriginal source: https://www.computing.co.uk/news/2025/security/big-sleep-finds-20-flaws-in-open-source-software",
     "body_sha256": "1d457f8a3935eb7ff89cae81348fa84ce749570f8ccb85b21a78aeab331d8c48",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:36:57.054109+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:36:57.054109+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

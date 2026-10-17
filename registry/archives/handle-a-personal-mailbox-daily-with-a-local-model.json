@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/handle-a-personal-mailbox-daily-with-a-local-model",
+  "observed_at": "2026-10-17T06:05:31.051688+00:00",
+  "html_sha256": "3d8afe2944d198b8d3f9a50052a1d7b545c4e5e0f8b21f4ed0cbd7418c091f9b",
+  "body_sha256": "1f378eebcf57a588210703e527ffe88b4fa499c8ada4152874841248708245bb",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Handle a personal mailbox daily with a local model",
+      "sha256": "3b96b6a4a34f422c4996f03a16215765ec11426e07e5ed577bdd4b0017830bf0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster runs Hermes with free local models via Ollama on their own GPU, using a daily cron job to process their personal mailbox.",
+      "sha256": "f49ee528a9b50c5ab21badb8b4a451b44380bd2d575d8327b5530c6631535af0"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the thread, the concrete mailbox example appears in a comment, not the main post. The commenter says they switched Hermes to a different base model with very clear requirements, worked closely with Claude Code to build the setup, and now runs it daily as a cron job to GTD their personal mailbox; they also mention using an MCP server built via Claude Code, with the person shaping requirements and development.",
+      "sha256": "a36bc29dd6f6e917cfa53be6377eae02c465ea048d851e6339a3dadcd8875507"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The reported result is simply that it worked well enough for daily use on their personal mailbox and they were extending it to travel. The same commenter says they see Hermes more as a chat or operational agent than a development agent.",
+      "sha256": "ea7e16783438c99ed426d48c0e6348276a7df29a58c13d70237c7cf9ae9728f9"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is model choice and setup effort: the thread frames free local Ollama models as fine for simple cron-job automations, but not for heavy coding, and says going local takes a lot of configuration.",
+      "sha256": "fff18fcf1e936c40d24726f440437170949ac3a3bfe139f00085c7319f71be16"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/hermesagent/comments/1w5kf85/my_experience_with_hermes_agent_free_models_a"
+      ],
+      "sha256": "eb3346b3252cf96438246f2b3d4a9e440199b1ea2b1a7c8595498145e992e6d7"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-16",
+      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ac91cde745d70a63e03735f3f4f2a1137087d10c514271afcc655bdb0afe53c5",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Handle a personal mailbox daily with a local model\nThe poster runs Hermes with free local models via Ollama on their own GPU, using a daily cron job to process their personal mailbox.\nDone with\nHA\nHermes Agent\nWhat they did\nIn the thread, the concrete mailbox example appears in a comment, not the main post. The commenter says they switched Hermes to a different base model with very clear requirements, worked closely with Claude Code to build the setup, and now runs it daily as a cron job to GTD their personal mailbox; they also mention using an MCP server built via Claude Code, with the person shaping requirements and development.\nHow it went\nThe reported result is simply that it worked well enough for daily use on their personal mailbox and they were extending it to travel. The same commenter says they see Hermes more as a chat or operational agent than a development agent.\nWorth knowing\nThe main catch is model choice and setup effort: the thread frames free local Ollama models as fine for simple cron-job automations, but not for heavy coding, and says going local takes a lot of configuration.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up a daily job that runs at [time, e.g. 7am] and goes through my personal mailbox at [email provider/account], using my local model through [Ollama model name]. Sort new messages into [categories, e.g. needs reply, newsletters, receipts, junk], and write me a short digest of what needs my attention along with draft replies for anything urgent. Do not send, delete, or archive anything without showing me the list first and getting my approval. The job is done when I have a working daily schedule and one sample digest to review.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1w5kf85/my_experience_with_hermes_agent_free_models_a",
+    "body_sha256": "1f378eebcf57a588210703e527ffe88b4fa499c8ada4152874841248708245bb",
+    "archived_at": "2026-10-17T06:05:31.051688+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T06:05:31.051688+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

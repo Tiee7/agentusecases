@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/watch-weekly-deals-and-buy-regular-items",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:57:05.102195+00:00",
+  "html_sha256": "0d6e1b5a668cafb262c4a534453929752070a07d0304e1f6860b02ad0e19a927",
   "body_sha256": "937568439ae32404fdf57d11b592755c9c41ef626cd6ac36cd9119eb571690c9",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Watch weekly deals and buy regular items\nOne Grok Bot watches deals on regularly bought products, another purchases in a browser with shipping details and discount codes, then reads order confirmations and tracking.\nDone with\nGB\nGrok Bot\nWhat they did\nThe setup used two separate bots: Deals checked weekly for discounts on repeat purchases like energy drinks and cat supplies, then sent approved finds to Buyer. Buyer used Grok Bot’s Chrome browser plus a custom skill containing the shipping address and instructions to hunt for recent discount codes, complete checkout, pull one-time passcodes from iMessages when Stripe Link needed them, and then watch for order confirmations and tracking updates.\nHow it went\nThe poster says Grok Bot is finding deals on consumables they always need and buying them without their involvement. No savings totals or success-rate numbers were given, and purchases still depended on the user approving the deal first.\nWorth knowing\nThe main catch is usage: the poster says they used up Grok Bot on Cursor Pro+ in a day.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nEach week, watch deals on these items I buy regularly: [list of products] at [stores]. When one is at or below [target price], add it to the cart using my shipping details and the best available discount code. Pause and show me the cart and total before you pay, then after I approve, save the order confirmation and tracking number and tell me when it ships.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1vwkzf1/heres_how_grok_bot_is_doing_all_the_stuff_i_hate",
     "body_sha256": "937568439ae32404fdf57d11b592755c9c41ef626cd6ac36cd9119eb571690c9",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:57:05.102195+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:57:05.102195+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/use-cursor-for-academic-paper-writing-with-citations",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:39:42.983296+00:00",
+  "html_sha256": "961645e557d3eef4270fd1fcde408a0233a14f0f7dd19481c25524d44415313c",
   "body_sha256": "832ff89b3c592865df05d5f0cd85590700cdf1a77741696aecb98075b470cd10",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Use Cursor for academic paper writing with citations\nForum users write papers in markdown with Zotero citations and a bibtex file for Cursor to pick references from, converting to Word with pandoc.\nDone with\nCR\nCursor\nWhat they did\nOne user writes papers in markdown, inserts citations with the Zotero citation picker and Better BibTeX, and keeps a large bibtex file with abstracts so Cursor can suggest references. Pandoc converts the markdown to Word, and a Lua script turns the citations into native Zotero ones. The AI is used to rewrite, trim and add sentences.\nHow it went\nThe user paraphrases nearly every sentence because the AI isn't good enough for most academic writing. The workflow is only slightly faster, but the final quality is higher because revising is less painful. Cursor can't read PDFs.\nWorth knowing\nCursor has no native PDF support. Workarounds are converting PDFs to markdown with Marker or Datalab, or having ChatGPT summarize key papers into .md files.\nTry it yourself\nwith\nCursor\nCopy prompt\nI am writing a paper on [topic] in markdown at [file path]. Use my bibtex file [path] to pick and insert citations in [citation style] where my claims need support, and flag any claim that has no matching reference. Then check that the document converts to Word with pandoc. Finish when the paper builds cleanly, and do not invent references that are not in my bibtex file.\nOriginal source: https://forum.cursor.com/t/anyone-use-cursor-for-academic-research-writing/57393",
     "body_sha256": "832ff89b3c592865df05d5f0cd85590700cdf1a77741696aecb98075b470cd10",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:39:42.983296+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:39:42.983296+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

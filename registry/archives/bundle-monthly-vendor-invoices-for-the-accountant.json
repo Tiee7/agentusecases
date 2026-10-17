@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/bundle-monthly-vendor-invoices-for-the-accountant",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:55:05.009951+00:00",
+  "html_sha256": "7713980e899bf7cd81c5a8ca5b4441c51bbc8f1173591746970dd03188676a86",
   "body_sha256": "5fc6170cff9baceb171be152a0fce06b6aa78d684d77a9631c967159c67d49d6",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-10",
+      "sha256": "3828b4cd2d8b7bf8a432fac56321886aeadd12a910338cf8de31b13908f0be54"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Bundle monthly vendor invoices for the accountant\nA scheduled bot pulls vendor, date, amount and invoice number from PDFs, bundles a month with an index, and waits for approval before sending to the accountant.\nDone with\nGB\nGrok Bot\nWhat they did\nThe shared Grok Bot template runs on a schedule rather than waiting to be asked. It reads each invoice PDF and extracts the vendor, date, amount and invoice number. It then bundles a whole month with an index. It holds the bundle until the owner approves it, and only then does anything go to the accountant.\nHow it went\nThe page gives no results, numbers or time savings, and no examples of its output. It only describes what the bot is set up to do.\nWorth knowing\nAdding the bot copies the shared instructions into your account. Read them before installing, and don't paste in any key or password it asks for.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nOn the [day] of each month, collect vendor invoice PDFs from [folder or inbox] and extract vendor, date, amount, and invoice number into an index spreadsheet. Bundle the month's invoices and the index into one package. Before sending anything to [accountant's email], pause and show me the bundle and the draft email for approval.\nOriginal source: https://grokbot.dev/marketplace/invoice-hunter/",
     "body_sha256": "5fc6170cff9baceb171be152a0fce06b6aa78d684d77a9631c967159c67d49d6",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:55:05.009951+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:55:05.009951+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

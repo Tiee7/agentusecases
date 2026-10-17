@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-and-balance-a-live-telegram-rpg",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:34:23.032858+00:00",
+  "html_sha256": "9de9d37d6fd6bb940c0fdc885955fa02c884ebd6b5fcd2ba4ecf1def02fb457a",
   "body_sha256": "e3b3740cca4da8828df81e69e8c1a7172ae18827c454248926ebd89db2a73322",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Build and balance a live Telegram RPG\nA non-coding PM had Claude Code write a Telegram RPG bot, deploy it over SSH, and run tens of thousands of test fights to rebalance classes.\nDone with\nCC\nClaude Code\nWhat they did\nA project manager who doesn't code owned the design and every balance decision. Claude Code wrote all of the bot, from combat to a player market. It deployed over SSH, checked the bot was running, and built analytics that the two read together. For the class rebalance, it ran tens of thousands of test fights and proposed safe fixes.\nHow it went\nTwo evenings produced a prototype, and a live game followed in six weeks. After seven weeks it had 164 players, 109 of them active in the last day. The author ran no marketing, and paid ads did poorly.\nWorth knowing\nThe article gives no cost figures or details of the test-fight setup. Its stated lesson is that the human supplies the vision and the balance calls, while the AI does the execution.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a Telegram RPG bot where players pick from [number] classes like [class names] and fight [enemy types]. Write a simulation that runs [10,000+] test fights to check class balance and adjust stats until no class wins more than [percent]% of the time. Before deploying to my server at [host] over SSH, pause and show me the deployment steps and bot token handling for approval.\nOriginal source: https://retrostylegames.com/blog/claude-code-game-dev-case-study/",
     "body_sha256": "e3b3740cca4da8828df81e69e8c1a7172ae18827c454248926ebd89db2a73322",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:34:23.032858+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:34:23.032858+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

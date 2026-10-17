@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/control-the-home-by-voice-with-a-local-ai",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:51:07.137985+00:00",
+  "html_sha256": "0cac91cb05890640705e381a25b45f4076d16382b2a144cd9c0d6e90f578f77e",
   "body_sha256": "d744f39deaee6eba4c0636baadfc350778649b42695e67744248f6e9c5c01b3c",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-07",
+      "sha256": "76d1562084b80ede48b8bcaa3acf2f92b835f1559225588120cbf9ee68496244"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Control the home by voice with a local AI\nA user set up local AI with voice commands for a home assistant that handles groceries, lights, AC and garden moisture monitoring.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nUser ran local AI on their PC via Ollama with a private model sized to their GPU, better on Linux. They connected voice input through whisper and piper TTS to issue commands to a local home assistant instance. The setup handled groceries, lights, AC, and garden moisture monitoring, plus language teaching, with remote access via WireGuard or Tailscale and no external data sharing.\nHow it went\nThe system worked alright for these tasks though the AI was less powerful than cloud versions. It delivered fully private local control without phoning home.\nWorth knowing\nSetup may require an advanced AI to configure initially.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up a local voice-controlled home assistant that runs on my own hardware with [local model, e.g. Llama via Ollama]. It should handle [grocery list, lights, AC, plant or garden moisture sensors] through [Home Assistant or device platform], and answer questions like 'is the garden dry?'. You're done when I can say five example commands out loud and each one works or gives a clear error. Ask me before changing any device settings that could affect safety, like heating or door locks.\nOriginal source: https://x.com/HerbWetherell/status/2105798686194417918",
     "body_sha256": "d744f39deaee6eba4c0636baadfc350778649b42695e67744248f6e9c5c01b3c",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:51:07.137985+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:51:07.137985+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

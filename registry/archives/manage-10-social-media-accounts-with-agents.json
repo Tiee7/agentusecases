@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/manage-10-social-media-accounts-with-agents",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:26:42.882127+00:00",
+  "html_sha256": "c5ca5ae6af15f6c53e93877ff3cb3d30e5ca9efa57df973b6f9bf4c9609df95b",
   "body_sha256": "cbddb36b068e8ac9f960d185e07395a6699571b2f2ad122c5f8ba3c764b5a4a4",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
     },
     "tags": {
       "status": "not_observed",
@@ -73,13 +75,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Manage 10 social media accounts with agents\nThe author runs 10 accounts with OpenClaw agents and cron jobs, reports follower growth, and added health checks after an analytics job silently failed for three days.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author split the work across three OpenClaw agents. A content agent drafts an article each morning and rewrites it per platform. A social agent scans notifications every 2 hours and replies, and it leaves controversial topics for the author. An analytics agent runs nightly. Cron schedules three publishing windows. The author began in semi-auto mode, approving drafts via Telegram.\nHow it went\nOver three months, Twitter went from 30 to 2,147 followers, Dev.to views from 200 to 8,500 a month, and daily ops time from 4+ hours to 30 minutes. An early tweet had a factual error, and the analytics cron job failed silently for three days.\nWorth knowing\nDon't go fully automatic at the start: the first week's published error led to a review-first phase. Add health checks that send a Telegram alert whenever a cron job fails.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me manage my social accounts: [list accounts]. Set up scheduled jobs that draft posts, track follower counts and engagement weekly, and report to me in [channel]. Add a health check that alerts me right away if any job fails or produces no data for a day. Pause and show me any post before it is published. You're done when the jobs are running and I've seen a test alert fire.\nOriginal source: https://dev.to/xujfcn/case-study-how-i-manage-10-social-media-accounts-with-one-ai-assistant-1b9k",
     "body_sha256": "cbddb36b068e8ac9f960d185e07395a6699571b2f2ad122c5f8ba3c764b5a4a4",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:26:42.882127+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:26:42.882127+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

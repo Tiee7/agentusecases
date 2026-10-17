@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-resy-and-book-date-night-tables",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:45:31.066576+00:00",
+  "html_sha256": "1d8c354b3613501ab8b8955fdc588fa7937b192fc298f22f8aa3daef77bff5af",
   "body_sha256": "069f8edc15f56ab7dc57ed80d091a4c1b4dd4c01ec0e0ab93578bdcac271ccea",
   "status": "observed",
   "fields": {
@@ -52,10 +52,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
     },
     "tags": {
       "status": "not_observed",
@@ -76,10 +78,9 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-05",
+      "sha256": "dbd39fbed4d4a45d9387778208a1a6cf4d88dbe6ffa8c4c71c42dbf8fd2a88ab"
     },
     "try_it": {
       "status": "observed",
@@ -89,13 +90,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Monitor Resy and book date night tables\nBrian built a Hermes agent that watches Resy for openings at favorite NYC restaurants and books tables, but it had no rate limits and got his account suspended.\nDone with\nHA\nHermes Agent\nWhat they did\nBrian spun up a Hermes subagent inside his personal agent Hannah (which used Obsidian as the brain and Telegram as the interface) to monitor Resy for openings at a few favorite NYC restaurants and book tables for date nights. The subagent ran checks on its own with no rate limits configured. It operated by repeatedly querying the site whenever it detected availability.\nHow it went\nThe subagent secured openings effectively until Resy suspended the account for hammering their system and violating TOS. After repeated support requests he received a one-time reinstatement.\nWorth knowing\nNo rate limits were set on the subagent's Resy queries, which caused the immediate suspension.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nWatch Resy for openings at [list of restaurants] in [city] for [party size] on [days and times]. Check at a gentle rate of no more than once every [number] minutes to avoid getting my account blocked. When a table opens, message me with the details and book it only after I approve.\nOriginal source: https://x.com/bdistel/status/2089421994450170039",
     "body_sha256": "069f8edc15f56ab7dc57ed80d091a4c1b4dd4c01ec0e0ab93578bdcac271ccea",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:45:31.066576+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:45:31.066576+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

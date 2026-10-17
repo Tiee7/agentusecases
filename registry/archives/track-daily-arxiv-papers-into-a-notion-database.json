@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-daily-arxiv-papers-into-a-notion-database",
-  "observed_at": "2026-10-14T15:02:21.299781+00:00",
-  "html_sha256": null,
+  "observed_at": "2026-10-17T05:41:10.945189+00:00",
+  "html_sha256": "7a40bd6902b2498e985de73e3e200b516f14fea5d4dee0ee97f62f43903173b8",
   "body_sha256": "223d082fe88491a8edc9ebd69fd1e5f9c05f07554676ddc5085e96c80abd7927",
   "status": "observed",
   "fields": {
@@ -53,10 +53,12 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "category": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
     },
     "tags": {
       "status": "not_observed",
@@ -74,13 +76,12 @@
       "status": "not_observed",
       "value": null,
       "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "not_observed",
-      "value": null,
-      "sha256": null,
-      "reason": "Not present in the captured public page; not a zero or proof of absence."
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
     },
     "try_it": {
       "status": "observed",
@@ -90,13 +91,17 @@
     }
   },
   "publication": "source_case_text_and_separate_editorial",
-  "capture_basis": "historical extracted body; HTML and omitted fields unavailable",
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
     "body": "Track daily arXiv papers into a Notion database\nAn n8n workflow fetches arXiv papers daily for a keyword, summarizes them with Gemini 2.5 Flash, writes them to Notion and sends Feishu and Gmail notifications.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA daily 6:00 AM n8n schedule queries the arXiv API for the previous day's submissions on one keyword. It cleans the Atom response into JSON with authors and categories as arrays. Gemini 2.5 Flash then analyzes each paper and writes a daily summary with translation. Pages are created in two Notion tables, and Feishu and Gmail messages go out. GPT was used to design the HTML email template.\nHow it went\nThe source gives no results or measurements. It expects fewer than 20 papers a day and doesn't report how well the summaries turned out.\nWorth knowing\nNotion's create-page node only adds entries and never updates them. Multi-select fields need real arrays, and null values cause a 400 error.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every day at [time], fetches new arXiv papers matching the keyword [keyword], summarizes each in 2-3 sentences with an AI model, and adds them to my Notion database [database name] with title, authors, link and summary. Then send me one email digest listing the new papers. You're done when a test run adds the latest papers without duplicates; pause and show me the email before the first send.\nOriginal source: https://n8n.io/workflows/8847-daily-rag-research-paper-hub-with-arxiv-gemini-ai-and-notion/",
     "body_sha256": "223d082fe88491a8edc9ebd69fd1e5f9c05f07554676ddc5085e96c80abd7927",
-    "archived_at": "2026-10-16T09:49:29.479545+00:00",
-    "scope": "Captured case text including source template and existing original links; not external linked articles or page HTML."
+    "archived_at": "2026-10-17T05:41:10.945189+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-17T05:41:10.945189+00:00",
+    "status": "fetched",
+    "error": null
   }
 }
