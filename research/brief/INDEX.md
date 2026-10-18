@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **9**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **10**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -13,3 +13,4 @@
 | 用 AI agent 为对话记忆加入遗忘机制 | [简报](../../reports/brief/add-agentic-forgetting-to-an-agent-s-memory.md) |
 | 用 AI agent 按语音指令办理家人加入牙科计划 | [简报](../../reports/brief/add-family-to-a-dental-plan-by-voice-from-the-car.md) |
 | 用 AI agent 识别手写日程并归档邮件 PDF | [简报](../../reports/brief/add-handwritten-appointments-to-calendar-and-file-pdfs.md) |
+| 用 AI agent 分析 10-K 年报并估算企业价值 | [简报](../../reports/brief/analyze-10-ks-for-value-investing.md) |

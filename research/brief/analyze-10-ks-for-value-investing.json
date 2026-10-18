@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "analyze-10-ks-for-value-investing",
+  "url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
+  "title": "用 AI agent 分析 10-K 年报并估算企业价值",
+  "industry": "财务申报研究与估值辅助",
+  "researched_at": "2026-10-18T02:06:32.442096+00:00",
+  "brief_reason": "仅有案例站转述及两份官方/学术基础资料；原始讨论未读、SEC API说明遭robots拒绝，缺少可归属实现、运行结果、独立验证、成本和客户。材料不足以完成v2商业深研；保留有依据简报，不生成商业分数。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先做可追溯提取与离线复算，商业分数暂不评定",
+    "reason": "来源和计算可复核之前，只能作为人审辅助研究方案，不能把模型输出或回测印象当成可靠经营和投资结果。"
+  },
+  "facts": [
+    {
+      "statement": "源站实际工具是自建或未命名agent；Claude只是Try it yourself推荐，不能当成作者实际模型。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "案例归档转述的是试验与问题，没有报告绩效结果、收益率、独立测试或付费客户。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档转述建议保留结构化数字、来源段落及逐年陈述，并由人核对跨公司可比性；原始讨论本轮未读。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Investor.gov说明Form 10-K包含公司业务与财务状况概述及审计财务报表，并区别于给股东的年度报告。",
+      "source_ids": [
+        "S41ca1220801c"
+      ]
+    },
+    {
+      "statement": "Damodaran目录提供正常化盈利、折现率及FCFF/FCFE等表格说明，不等于本案例已采用这些模型。",
+      "source_ids": [
+        "S19844cab18d1"
+      ]
+    },
+    {
+      "statement": "本轮只读取文档和归档，没有执行agent、表格、回测或交易，也没有形成任何证券价格或收益判断。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c",
+        "S19844cab18d1"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "conclusion",
+      "title": "商业判断与证据层级",
+      "body": "当前仅建议把它作为人审辅助研究流程来验证，商业分数未评定，自用价值待核实。本稿是简要分析，不计入completed v2深研。已取得的案例站转述描述了一个试验中的未命名agent，同时报告数据、检索和回测问题；没有原作者代码、真实样本、逐项结果、客户或成本。不能因为出现ROIC、股东盈余和反向DCF等术语，就把它写成已经成立的投资产品或可靠收益来源。潜在使用者是假设中会逐项复核申报文件的研究人员，付款人、预算和购买意愿均未验证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c",
+        "S19844cab18d1"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "先保存来源与调整，再谈估值",
+      "body": "归档转述的链路是结构化数字与申报正文检索结合，保留来源段落和逐年陈述，由人核对可比性。它不是可执行工作流说明，也没有披露模型、API供应商、提示词或分块策略。原始Reddit讨论未读，方法字段保持unavailable，不能根据搜索摘要编造作者步骤。Claude是源站推荐工具，实际agent仍自建或未命名。后续验证应先把年度、申报版本、币种、单位、对应原始行项和调整理由写成可检查台账，再用明确公式复算；一个数字带了引用，不代表引用真的支持该项调整。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c"
+      ]
+    },
+    {
+      "id": "data",
+      "title": "年度、版本与当时可获得信息分开",
+      "body": "案例站转述提到自定义标签、附注、整段历史超出上下文、分块遗漏及事实编造，也提到重述和申报时滞让回测显得过好。这些都是转述，未取得原始样本或独立错误率。评估时应分别保存报告覆盖期、首次公开日期、所用版本及检索位置，明确某个回测时点到底能看到什么。最新可下载数字不能自动当成历史已知数字；只让模型写一句“按当时数据”也不是可复核的输入筛选。SEC API文档遭robots拒绝，未用它核实Companyfacts具体覆盖范围或接口字段，不补写其规则。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "公开申报与透明表格是必要基线",
+      "body": "Investor.gov说明10-K覆盖公司业务和财务状况并包含审计财务报表，但审计不延伸到agent自己做的盈利调整、增长假设或估值结论。Damodaran目录公开列出正常化盈利、折现率及不同DCF模型的表格说明，显示透明计算本身已有可用比较构件；本轮没有下载或运行它们，也不宣称适合所有公司。正常化盈利、ROIC、股东盈余与FCFF/FCFE应给各自定义，不能换个标题就当作同一数字。反向DCF得到的是在指定模型和假设下的隐含条件，并不证明未来增长会发生。",
+      "source_ids": [
+        "S41ca1220801c",
+        "S19844cab18d1",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "验收应检查可追溯性和错误",
+      "body": "可设计一个离线小样本：使用明确版本的公开或合成报表，包含一次性项目、单位变化、负盈利、缺失字段及同一期间的不同版本，先由人写参考台账。逐项检查提取值、来源位置、调整计算和跨年一致性，再比较直接人工表格与候选agent的修复工时。正文检索缺证据时应返回缺失，不从其他年度或另一公司补齐。模型推导和原报表事实分别展示，所有假设可变更和重算。本轮未跑模型、下载真实财务数据集或构建回测，没有准确率、收益率或节时结果。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c",
+        "S19844cab18d1"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "两种交付预算与人工敏感性",
+      "body": "以下全为USD规划假设，不是作者账单、市场报价或实际客户。99美元每份文件核对包，资源2、人工2小时×50美元=100、其他3、获客15，可变120，贡献-21；20份减固定200，月贡献-620。团队月度辅助服务299美元，资源10、人工3小时×50美元=150、其他20、获客摊销40，可变220，贡献79；10客户减固定500，月贡献290。额外两小时复核使单客户贡献变为-21。后者不含首次接入，数据许可与工具成本归属尚需按实际合同明确；不能因申报资料公开，就假设所有后续数据、分发和支持都零成本。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c",
+        "S19844cab18d1"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "继续条件、反证与停止条件",
+      "body": "有利反证是这套转述提出了保存结构与引用、按新增申报增量处理的务实方向，公开表格也使离线复算成为可能；它足以支持研究方案，不足以支持商业承诺。先取得可确认归属的实现、固定样本及可复现结果，再决定是否升级深研。若来源无法支持调整、单位和年度频繁混淆、历史时点不能锁定，或人工纠错超过预算，应停止扩大规模，保留台账返回基线。原始投资目标、持仓与私人账单不属于本次任务；本稿没有评价任何具体证券或执行交易。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S41ca1220801c",
+        "S19844cab18d1"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
+      "title": "Analyze 10-Ks for value investing",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T06:03:29.129601+00:00",
+      "archive_path": "registry/archives/analyze-10-ks-for-value-investing.json",
+      "sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+      "hash_scope": "Existing source_text.body UTF-8 in Git; no fresh source-site request.",
+      "supports": "支持源站归档转述的用途、数据与回测问题及推荐模板；不是已核实Reddit作者原文。"
+    },
+    {
+      "id": "S41ca1220801c",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/glossary/form-10-k",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T02:03:42.123240+00:00",
+      "status": "fetched",
+      "title": "Form 10-K | Investor.gov",
+      "characters": 5648,
+      "sha256": "25af759eb261401ce9e4fab2805917d440f2a25d1c0584a4327cca70f47342b7",
+      "independent_verification": {
+        "id": "S41ca1220801c",
+        "verified_at": "2026-10-18T02:04:47.802377+00:00",
+        "sha256": "25af759eb261401ce9e4fab2805917d440f2a25d1c0584a4327cca70f47342b7",
+        "exact_match": true
+      },
+      "supports": "SEC旗下Investor.gov说明10-K概述业务与财务状况、包含审计财务报表，并区别于股东年度报告；不证明agent派生估值或历史回测正确。"
+    },
+    {
+      "id": "S19844cab18d1",
+      "url": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T02:03:46.296294+00:00",
+      "status": "fetched",
+      "title": "Spreadsheet programs",
+      "characters": 19437,
+      "sha256": "040f3d71f11e0f984eac195c3013b8ba0bae0b7c93cc125e5aaeea0d0504555a",
+      "independent_verification": {
+        "id": "S19844cab18d1",
+        "verified_at": "2026-10-18T02:04:51.884015+00:00",
+        "sha256": "040f3d71f11e0f984eac195c3013b8ba0bae0b7c93cc125e5aaeea0d0504555a",
+        "exact_match": true
+      },
+      "supports": "Damodaran公开表格目录列出正常化盈利、折现率、FCFF/FCFE与模型协调工具，是透明计算的替代基线；本轮仅阅读说明，未下载或执行表格，也不把股东盈余自动等同于某一现金流模型。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "f8aa84827f539d2b848c8c30f61618d5a53f2cafb383b9c8095f8a41e70c7ff4",
+      "How it went": "db9490fdbe7cd0da496073982872e7aeb2a9b25b9f6d69175850efc813eae51c",
+      "Worth knowing": "845cb202ade13bec51ef1f31339cd6760a5ee3460d247ca2b40dd99bc5a00a7f"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Analyze the latest 10-K for [company name or ticker], which I'll attach or link: [file or URL]. Calculate normalized earnings, ROIC, and owner earnings, showing each adjustment and the line items you used. Then build a rough reverse DCF showing what growth the current price of [price] implies at a [discount rate]% discount rate. Finish with a one-page summary that notes your assumptions and anything you were unsure about.",
+    "agent": "Claude",
+    "source_url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
+    "observed_at": "2026-10-17T06:03:29.129601+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "28e7a63af73a61737779f58fbc521e5ccc79c987fcb040c27a6addbc948447f5"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ValueInvesting/comments/1x52d8o/anyone_building_a_value_investing_agent_what_are",
+    "source_title": "登记的Reddit原始讨论（本轮未读）",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "遵守既有来源访问停止，未请求原帖；案例站转述和搜索摘要不能替代已读作者原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "没有可归属实现或实际样本，不能核实此agent的节时和质量；有财务背景的人可先检查离线提取与复算方案。",
+    "audience": "能够逐项阅读申报文件、定义调整和核对公式的研究人员。",
+    "use": "建立来源与调整台账，评估有限范围的财报整理辅助。",
+    "benefit": "潜在减少重复查找，但未测得准确率、节时、金额或投资回报。",
+    "setup_cost": "明确版本与时点的合成/公开样本、人工参考台账、单位口径与离线计算工具。",
+    "maintenance_cost": "维护字段、申报版本、附注与回归样本，记录人工纠错和资源支出。",
+    "frequency": "按实际研究和新增申报需要使用，未核实原例频率。",
+    "privacy_risk": "本轮不收集持仓、私人账户或交易记录，不将个人材料公开。",
+    "error_risk": "可能混年度、版本、单位和指标定义，漏附注或编造调整，必须回到原文和公式核对。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S41ca1220801c",
+      "S19844cab18d1"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站建议模板完整保留，不是原作者实际提示词。",
+    "prerequisites": "离线合成或明确版本的公开报表样本、人工参考台账、指标定义与估值假设；不需要账户或新凭据。",
+    "tools": "实际agent自建或未命名；源站推荐Claude。本轮仅文档与静态校验，不调用模型或付费数据。",
+    "expected_result": "可追溯字段台账、调整公式、缺失项和测试计划；自编模板未实测，不生成真实买卖判断。",
+    "prompts": [
+      {
+        "title": "先核对来源与口径，再展示估值假设",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非原作者或源站原话，未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S41ca1220801c",
+          "S19844cab18d1"
+        ],
+        "text": "只使用[明确版本的公开或合成10-K样本]、[人工参考台账]及[指标定义]。先输出报表项目、数值、币种、单位、覆盖期、申报版本、公开日期和来源段落；缺失项标未知，不从其他年度或公司补齐。为正常化盈利、ROIC和股东盈余逐项写出定义、公式、调整及原始行项，区分报表事实和研究假设；不要将不同现金流口径直接互换。需要反向DCF时，只在[给定价格、折现率、现金流口径、预测期和终值假设]下展示隐含条件及敏感性，不将其说成未来结果。用相同样本与人工表格比较，记录提取错误、无依据调整和修复工时；历史回放只用该时点已公开版本，明确无法核实的地方。不得访问私人账户、下单、创建凭据或调用额外付费API；不要绕过来源限制。本轮只给可检查台账与方案，不声称完成真实投资验证。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：单份申报文件核对包",
+      "currency": "USD",
+      "unit": "一份限定范围文件",
+      "price": 99,
+      "generation_cost": 2,
+      "human_cost": 100,
+      "other_variable_cost": 3,
+      "acquisition_cost": 15,
+      "contribution_before_fixed_cost": -21,
+      "monthly_volume": 20,
+      "monthly_fixed_cost": 200,
+      "monthly_profit": -620,
+      "assumptions": "人工2小时×50美元，其余全为预算假设，非作者费用、实际定价或收入；只作支持工时敏感性。"
+    },
+    {
+      "scenario": "规划假设：团队月度辅助维护",
+      "currency": "USD",
+      "unit": "客户月，不含首次接入",
+      "price": 299,
+      "generation_cost": 10,
+      "human_cost": 150,
+      "other_variable_cost": 20,
+      "acquisition_cost": 40,
+      "contribution_before_fixed_cost": 79,
+      "monthly_volume": 10,
+      "monthly_fixed_cost": 500,
+      "monthly_profit": 290,
+      "assumptions": "人工3小时×50美元，全为假设；额外2小时使单位贡献-21。数据与平台合同成本归属待核，不含税费及首次设置，不代表实际客户。"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "原帖未读，归档是案例站转述；三次检索覆盖公开网页、GitHub和HN，未找到可归属本实现的独立复现。搜索发现同名其他项目不能当成本例代码或评价。"
+  },
+  "limitations": "没有原始讨论、作者代码、模型、API配置、真实财务样本、时点数据集、运行/回测结果、成本或客户。SEC API文档robots拒绝后停止，无换路；源站仅用既有Git归档。未下载执行NYU表格、未调用模型或真实财务API、未访问账户或交易。",
+  "archive_source_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+  "translation_sha256": "962187db5ca10ef2f281741c65216fd44270378edf969d9c7852870bdc3105cc"
+}
