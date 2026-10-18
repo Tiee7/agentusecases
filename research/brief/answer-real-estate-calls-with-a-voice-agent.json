@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-real-estate-calls-with-a-voice-agent",
+  "url": "https://agentusecases.ai/use-case/answer-real-estate-calls-with-a-voice-agent",
+  "title": "用 n8n 和 ElevenLabs 接听房产咨询来电",
+  "researched_at": "2026-10-18T03:40:52.806225+00:00",
+  "industry": "房地产来电接待与线索行政整理",
+  "brief_reason": "X原帖依既有限制跳过，归档称Loom未录到agent语音；没有实际效果指标和独立用户。六份官方技术/竞争资料不足以替代案例结果。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收字段、保存与跟进状态，缺少语音和实际线索结果证据",
+    "reason": "原帖未核验，演示语音缺失，通话质量、净省时和单位经济均未验证。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-real-estate-calls-with-a-voice-agent",
+      "title": "Answer real estate calls with a voice agent",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:48:53.086237+00:00",
+      "archived_at": "2026-10-17T05:48:53.086237+00:00",
+      "archive_path": "registry/archives/answer-real-estate-calls-with-a-voice-agent.json",
+      "sha256": "254d907012c47d83b64bf473f623de81a6ba2f713457558c4e406fadb1db3a2c",
+      "hash_scope": "Existing source_text.body UTF-8; no new source-site request",
+      "supports": "n8n实际agent字段、正文ElevenLabs语音集成、预算/地点收集、未接来电变线索的定性声称，以及Loom未录到agent语音；未独立核实。"
+    },
+    {
+      "id": "registered-x-unread",
+      "kind": "primary",
+      "url": "https://x.com/oluwatomisint6/status/2106878686519587312",
+      "title": "X 原帖（本轮未读取）",
+      "status": "skipped_previous_robots_restriction",
+      "fresh_attempt": false,
+      "sha256": null,
+      "supports": "仅保留登记链接，未重试、登录或以搜索摘要/镜像补原文和视频。"
+    },
+    {
+      "id": "S7b31c553d69e",
+      "kind": "primary",
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.webhook",
+      "title": "/integrations/builtin/core-nodes/n8n-nodes-base.webhook",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:37:54.323983+00:00",
+      "sha256": "93e26baae59dd7c2213edafef1a6480d08a3c67083d3210cc69d88494ff6b5bf",
+      "supports": "n8n官方Webhook测试/生产入口、认证和响应模式；立即返回启动信息不等于线索保存或跟进邮件送达。"
+    },
+    {
+      "id": "S9c31625dedcc",
+      "kind": "primary",
+      "url": "https://n8n.io/pricing/",
+      "title": "n8n Plans and Pricing - n8n.io",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:37:56.965598+00:00",
+      "sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+      "supports": "n8n当前工作流执行等计划口径，不能当成一次通话、合格线索或成交费用。"
+    },
+    {
+      "id": "Sccd928733206",
+      "kind": "competitor",
+      "url": "https://smith.ai/ai-receptionist",
+      "title": "Smith.ai: 24/7 AI Receptionist Backed by Live Agents",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:37:59.603320+00:00",
+      "sha256": "68b68677e4e9c3595489683adc7c31ba97f5adf2b9e62ca9ca0fb8de05a8c6a7",
+      "supports": "Smith.ai当前AI接待与人工升级方案构成竞争基线，人工介入费用与条件需区分；厂商自选评价不是本案例独立用户证据。"
+    },
+    {
+      "id": "S68a3de50ac11",
+      "kind": "primary",
+      "url": "https://elevenlabs.io/docs/eleven-agents/workflows/post-call-webhooks",
+      "title": "Post-call webhooks | ElevenLabs Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:38:14.526016+00:00",
+      "sha256": "58f4f257deba753dc0584863dcbbb302385a603ff5274cc2e77725a307998840",
+      "supports": "ElevenLabs官方通话后转录/音频/发起失败事件、HMAC验证与重试机制；不证明本案例采用此接口或通话质量。"
+    },
+    {
+      "id": "Sbc9b5d80cf1f",
+      "kind": "primary",
+      "url": "https://elevenlabs.io/docs/eleven-agents/customization/agent-analysis/data-collection",
+      "title": "Data collection | ElevenLabs Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:38:17.072512+00:00",
+      "sha256": "dd117e3079e80a072f69ee4b015fedbf642ef78d1e226a5a14ff1e3586723bd5",
+      "supports": "ElevenLabs官方基于转录的LLM字段提取、数据类型和缺失/歧义返回空值；不证明预算/地点提取已准确。"
+    },
+    {
+      "id": "S2927392d8f4c",
+      "kind": "primary",
+      "url": "https://elevenlabs.io/pricing/agents",
+      "title": "ElevenAgents Pricing for creators and businesses of all sizes",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:38:40.959926+00:00",
+      "sha256": "93b6a5148bb538dee763d9082ba14dd76659eb0afe26c6387a3dc3fea99678a9",
+      "supports": "ElevenAgents当前按通话分钟与并发等计费，LLM及外部运营商费用分开；不能用Creative/TTS价格替代真实语音交付总成本。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "源站实际agent字段为n8n，正文称连接了ElevenLabs语音与n8n工作流。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档所述采集预算和地点后传入自动化，但没有披露完整CRM或邮件架构。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档两次说明Loom未录到agent语音输出，不支持通话听感或时延判断。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "未接来电变为可跟进线索只是定性声称，未给成功率、预约或成交数量。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "ElevenLabs官方数据收集由转录后的LLM分析提取字段，缺失或不明确可能返回空值。",
+      "source_ids": [
+        "Sbc9b5d80cf1f"
+      ]
+    },
+    {
+      "statement": "ElevenLabs官方把转录、音频和发起失败回调分开，音频回调不含全部转录分析。",
+      "source_ids": [
+        "S68a3de50ac11"
+      ]
+    },
+    {
+      "statement": "n8n立即回应工作流启动，不等于后续CRM保存或邮件送达成功。",
+      "source_ids": [
+        "S7b31c553d69e"
+      ]
+    },
+    {
+      "statement": "ElevenAgents当前通话分钟、LLM和外部运营商费用应分别核对，不能替代为Creative/TTS价格。",
+      "source_ids": [
+        "S2927392d8f4c"
+      ]
+    },
+    {
+      "statement": "n8n工作流执行与语音分钟是不同计费单位，也不等于合格线索或成交。",
+      "source_ids": [
+        "S9c31625dedcc"
+      ]
+    },
+    {
+      "statement": "Smith.ai当前提供AI接待和人工升级组合，人工介入存在不同条件及收费安排。",
+      "source_ids": [
+        "Sccd928733206"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "流程与可用线索的证据分开",
+      "body": "本轮商业评分不评定，现有证据不建议商业投入。归档称工作流把未接来电变为可跟进线索，但没有通话总量、成功收集比例、人工净省时、预约或成交结果。原帖依既有X访问限制跳过，作者方法不可用；归档还明确演示没有录到agent的口头回复。因此既不能把视频流程当作语音听感、时延、打断处理和理解能力的验证，也不能从“有用线索”推导收入。本轮保存schema-1简要分析；官方技术和竞争资料只能支持验收条件，不能补出案例实际效果。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S68a3de50ac11",
+        "Sbc9b5d80cf1f"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "保留语音组件与agent字段的层次",
+      "body": "源站Done with实际agent字段是n8n，正文另称ElevenLabs提供语音；两个层次按原样保存，不增改actual_agents字段。源站建议模板要求保存CRM或表格、发跟进邮件、测试通话并在真实消息前等批准；这不表示作者确实采用了相同CRM、邮件平台或提示词。归档方法只清楚提到预算、地点传入自动化，未披露电话运营商、模型、联系人验证、人工接管、权限和故障恢复。当前ElevenLabs的通话后接口也不能倒推为作者实际采用的集成架构。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S68a3de50ac11",
+        "S7b31c553d69e"
+      ]
+    },
+    {
+      "id": "fields",
+      "title": "预算和地点不是两个任意文本框",
+      "body": "拟议验收应保存来电者明确给出的预算数值、币种、租赁周期或购买总价口径，以及确认过的地点。币种、周期、范围或地点模糊时保留未知并交人工，不能默认某个国家、月租或货币；零也不等于未知。ElevenLabs官方数据收集文档说明字段提取来自转录后的LLM分析，缺失或歧义可能返回空值，因此类型正确不代表语义正确。还需区分原话、模型提取和来电者确认后的字段。本轮仅用人工标注的合成字段测试状态，不测语音识别、自然语言提取准确率或房产匹配，不作报价、贷款资格或成交决定。",
+      "source_ids": [
+        "Sbc9b5d80cf1f",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "通话后事件、保存和发信各自验收",
+      "body": "ElevenLabs当前文档区分转录、音频和通话发起失败事件，音频回调并不同时带完整字段分析。收到某个事件不能直接当作可用线索。生产接收方还需按官方机制验证来源，并处理重试、重复及顺序；本地测试只假设上游已验证的标志，没有创建密钥或验证真实HMAC。n8n可以立即回复工作流已启动，这不等于CRM记录成功，更不等于跟进邮件送达。拟议流程分别记录字段待复核、本地待保存、保存未知、跟进草稿和发送状态；保存超时不自动重发邮件，不把无新事件当成成功。",
+      "source_ids": [
+        "S68a3de50ac11",
+        "S7b31c553d69e",
+        "Sbc9b5d80cf1f"
+      ]
+    },
+    {
+      "id": "buyer",
+      "title": "前台、回拨和现成接待服务是基线",
+      "body": "潜在使用者是经纪团队的接待或行政人员，预算负责人可能是门店或机构负责人。Agape Real Estate仅是归档提及的公司名，本轮未核验其付费合同、部署或身份，也不尝试联系同名机构。替代方案包括人工前台、语音信箱加回拨、现成AI接待与人工升级服务。Smith.ai提供这类组合，并对人工介入的条件与加收项目作区分；其供应商页面的自选证言不能当本案例客户反馈。应比较相同通话样本的完整记录、复核分钟、失败回拨、总费用和可跟进比例，而非只比较接通数量。",
+      "source_ids": [
+        "Sccd928733206",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "costs",
+      "title": "分钟、执行、线索与成交不能混用",
+      "body": "ElevenAgents公开计划以通话分钟和并发等为口径，LLM和外部电话运营商费用另列；本轮通过官网Creative价格页中的Agents链接找到对应计划，没有把TTS字符或Creative共享积分换算成电话成本。n8n另按工作流执行等计费，同一通话可能触发多个事件与重试。Smith.ai的人工介入与服务组合又是另一种成本结构。所有这些都还没有包含资料维护、人工复核、异常回拨和获客。采购条件、实际通话时长及峰值并发未知，本轮不声称测出了真实单条线索成本；也不能把线索收入当成交易佣金已实现。",
+      "source_ids": [
+        "S2927392d8f4c",
+        "S9c31625dedcc",
+        "Sccd928733206",
+        "S68a3de50ac11"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "人工返工足以改变两个预算",
+      "body": "以下均为美元假设，不是厂商报价、作者收入或实测利润。月度线索整理维护每客户750，用量预算120、人工6小时乘45为270、其他35、获客90，单位贡献235；月8客户固定450，月贡献1430。人工增至12小时则单位负35、月负730。一次设置2800，用量75、人工40小时乘45为1800、其他125、获客300，单位贡献500；月2项固定400，贡献600。若多12小时返工，单位负40、月负480。真实分钟、模型、运营商、CRM、消息、并发超额、税和采购等额外费用仍未知，预算中的用量项是占位估算，不能冒充已覆盖全部实际采购成本。",
+      "source_ids": [
+        "S2927392d8f4c",
+        "S9c31625dedcc",
+        "Sccd928733206"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "缺失音频与独立用户结果不能补写",
+      "body": "本轮在公开网页、GitHub和Hacker News方向检索发帖者与Agape流程，出现同名机构、汇编目录和无关内容，没有取得可归属本案例的独立实际付费或使用结果；没有访问这些汇编来替代受限原帖。下一步只用虚构事件检查预算/币种/周期/地点缺失、来电者确认、重复和旧修订、跨机构、音频或失败事件、CRM未知与邮件草稿。若缺字段被自动补齐、记录串用、保存未知却发送跟进、人工复核超预算或无法取得合法可听音频来验证通话质量，应停止扩展。17个合成检查不构成真实电话、声学或端到端生产可靠性验证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S68a3de50ac11",
+        "Sbc9b5d80cf1f",
+        "S7b31c553d69e",
+        "S2927392d8f4c",
+        "S9c31625dedcc",
+        "Sccd928733206"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-real-estate-calls-with-a-voice-agent",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "254d907012c47d83b64bf473f623de81a6ba2f713457558c4e406fadb1db3a2c",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "4bbca6cf00aebdae95e09f970956388e53aa21957216731efa6a5b65e41b1b15",
+      "How it went": "409809cf5568dc585cf9ffbf13b28e25af2ff8ca0d1c40f6e6b213bed47cd555",
+      "Worth knowing": "7acae5740f5f3a33c4943a8e6f7ed121b9c5b8a81992232f5077cfe1cde443e8"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me build an n8n workflow for a voice agent that answers inbound calls for [type of business, e.g. a real estate firm]. It should ask callers for [budget, location, and other details], then save the answers to [CRM or spreadsheet] and trigger a follow-up email to the caller. Run a test call with sample data, and pause for my approval before the workflow sends any real message.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/answer-real-estate-calls-with-a-voice-agent",
+    "observed_at": "2026-10-17T05:48:53.086237+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "56d4d6356192a068d56af045ba7b616b721a68adc7d6bf3e05d756e3391165a1"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/oluwatomisint6/status/2106878686519587312",
+    "source_title": "X 原帖（本轮未读取）",
+    "steps": [],
+    "unavailable_reason": "Existing X restriction respected; no fresh request, retry, login, mirror or invented author steps. No audio/video retrieved."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助接待后的字段整理，但语音质量、字段准确性、保存与实际净省时未验证。",
+    "audience": "能审阅房产咨询字段和人工跟进流程的成年接待或运营人员。",
+    "use": "先用虚构事件与字段做离线线索、保存和跟进草稿验收。",
+    "benefit": "可能减少重复行政录入，不承诺转化率、预约、成交或佣金收入。",
+    "setup_cost": "预算币种/周期与地点定义、确认状态、事件去重、人工队列和对照样本。",
+    "maintenance_cost": "通话时长与并发、资料更新、字段复核、CRM异常、重复事件和消息状态。",
+    "frequency": "先做固定合成批次；没有连续真实通话效果证据。",
+    "privacy_risk": "录音、联系方式和预算可能敏感；本轮不读取、上传或发送真实资料。",
+    "error_risk": "误听预算、币种或周期默认、地点歧义、旧修订覆盖、重复跟进及保存未知当成功。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S68a3de50ac11",
+      "Sbc9b5d80cf1f",
+      "S2927392d8f4c",
+      "S7b31c553d69e",
+      "Sccd928733206"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整源站n8n模板保留，测试通话和发信审批为模板要求，未执行。",
+    "prerequisites": "虚构机构/通话ID、字段和人工标签、事件修订与保存状态，不含真实录音或联系人。",
+    "tools": "现有Python标准库；不运行电话、模型、ElevenLabs、n8n、CRM或邮箱。",
+    "expected_result": "合成字段与保存/跟进状态表、未知项和人工复核问题，不产生真实线索或消息。",
+    "prompts": [
+      {
+        "title": "用虚构事件验收房产来电线索",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者原话或源站模板；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S68a3de50ac11",
+          "Sbc9b5d80cf1f",
+          "S7b31c553d69e"
+        ],
+        "text": "仅使用[虚构来电ID、机构ID、人工标注转录字段、事件ID/修订号与CRM状态]设计离线线索验收。来源实际agent字段保留n8n，正文ElevenLabs语音组件另记，不推定作者接口。预算列数值、币种和月租/总价口径，地点与来电者确认单列；缺失、歧义或未确认转人工，不补默认值。区分转录、音频、失败事件和旧修订；按机构与通话ID隔离记录，重复事件不得重复跟进，新通话不因同一联系人被自动丢弃。只生成本地虚构记录及跟进草稿，CRM保存未知不得变成成功或触发发信。上游可信标志和确认标志均为测试输入，不宣称已验证签名、身份或语音理解。不得拨打或接听真实电话、发邮件/消息、读取真实录音/联系人/房产资料/凭据、接入ElevenLabs/n8n/CRM、注册、创建凭据、购买或调用付费API。输出测试表与未知项后停止。研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：月度线索行政维护",
+      "currency": "USD",
+      "unit": "客户/月",
+      "price": 750,
+      "api_cost": 120,
+      "human_cost": 270,
+      "other_variable_cost": 35,
+      "acquisition_cost": 90,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 450,
+      "contribution_before_fixed_cost": 235,
+      "monthly_contribution_before_tax": 1430,
+      "assumptions": "全部为预算假设，人工6小时×45；增至12小时则单位-35、月-730。实际分钟、模型、运营商、CRM、税等费用未知，不是厂商报价或实际利润。"
+    },
+    {
+      "scenario": "假设：一次设置与合成验收",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 2800,
+      "api_cost": 75,
+      "human_cost": 1800,
+      "other_variable_cost": 125,
+      "acquisition_cost": 300,
+      "units_per_month": 2,
+      "fixed_monthly_cost": 400,
+      "contribution_before_fixed_cost": 500,
+      "monthly_contribution_before_tax": 600,
+      "assumptions": "全部为预算假设，人工40小时×45；多12小时返工则单位-40、月-480。未知实际采购和费用不含，没有真实成交或佣金收入验证。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"oluwatomisint6\" \"Agape\" review -site:x.com -site:reddit.com -site:substack.com",
+        "outcome": "出现其他汇编和同名机构，未取得本案例独立实际结果；未访问汇编作为X原文替代。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "\"oluwatomisint6\" \"real estate\" site:github.com",
+        "outcome": "未取得可归属该房产来电流程的独立部署/客户结果。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"oluwatomisint6\" site:news.ycombinator.com",
+        "outcome": "未取得本案例独立用户或付费结果。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent case-user result; no call quality, conversion or satisfaction estimate."
+  },
+  "limitations": "X原帖未读，作者方法不可用；未取得原始视频或声音。合成检查不验证HMAC、真实身份、语音识别/提取、时延、打断、运营商、生产CRM或邮件送达。所有可信/确认标志为虚构输入。没有真实电话、录音、联系人、凭据、房产交易或消息；不从同名公司或供应商评价推定客户。",
+  "archive_source_sha256": "254d907012c47d83b64bf473f623de81a6ba2f713457558c4e406fadb1db3a2c",
+  "translation_sha256": "8d584d879b0f245d0b96b41cac6f37fdfdd3aa4870d72a4c3fadbd81bc8938f9"
+}
