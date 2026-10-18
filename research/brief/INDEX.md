@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **23**；深度研究 **47**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **24**；深度研究 **47**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -27,3 +27,4 @@
 | 用 n8n 和 Gemini 回复诊所患者咨询 | [简报](../../reports/brief/answer-patient-enquiries-for-a-clinic-by-chat.md) |
 | 用 n8n 和 ElevenLabs 接听房产咨询来电 | [简报](../../reports/brief/answer-real-estate-calls-with-a-voice-agent.md) |
 | 用 Zapier Agents 搭建销售问答 Slackbot | [简报](../../reports/brief/answer-sales-reps-questions-with-a-slackbot-agent.md) |
+| 用 AI agent 隔夜处理 Shopify 订单查询邮件 | [简报](../../reports/brief/answer-shopify-order-status-emails-and-fix-issues-overnight.md) |
