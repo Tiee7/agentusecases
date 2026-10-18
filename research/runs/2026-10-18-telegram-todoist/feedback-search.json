@@ -1,0 +1,39 @@
+{
+  "recorded_at": "2026-10-18T01:45:22.239106+00:00",
+  "searches": [
+    {
+      "channel": "HN与公开网页",
+      "query": "\"Telegram\" \"Todoist\" \"lucw\" site:news.ycombinator.com",
+      "outcome": "已执行；原始指定HN评论另行读取，只有作者个人自述，未发现独立复现。"
+    },
+    {
+      "channel": "GitHub问题",
+      "query": "\"Telegram\" \"Todoist\" \"due date\" site:github.com/n8n-io/n8n/issues",
+      "outcome": "已执行；结果包含无关节点问题，没有可归属lucw工作流的复现，未当作本例故障证据。"
+    },
+    {
+      "channel": "公开用户体验与模板检索",
+      "query": "\"Telegram\" \"Todoist\" \"review\" \"n8n\"",
+      "outcome": "已执行；发现模板与销售介绍、产品总体评价，不作为该工作流独立用户反馈；随后读取n8n模板库中的原作者说明作为替代资料。"
+    }
+  ],
+  "observations": [
+    {
+      "source_id": "S2f112b268169",
+      "directness": "direct_user",
+      "finding": "lucw自述确实用Telegram给自己的Todoist加任务，并推荐编排平台及LLM；未给实现、量化效果或维护成本。",
+      "bias": "单一作者、自选论坛回答，未独立复现；与独立客户评价分开。"
+    },
+    {
+      "source_id": "S13f757531172",
+      "directness": "adjacent_workflow",
+      "finding": "Onur提供另一同类模板的功能与设置说明，不是使用lucw实现的独立客户，也不是本轮实际运行结果。",
+      "bias": "模板作者在平台发布的功能介绍与推广，通用平台评价不计入具体用例反馈。"
+    }
+  ],
+  "search_return_sha256": "8cec7d62428b2e1a66a215cc7721d96853bbf01173aad9b9f7d1df99fa7178b1",
+  "independent_user_feedback_verified": 0,
+  "independent_feedback_score": 0,
+  "weight_percent": 5,
+  "search_results_are_not_source_readings": true
+}

@@ -1,0 +1,484 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "add-todo-items-to-todoist-from-telegram",
+  "url": "https://agentusecases.ai/use-case/add-todo-items-to-todoist-from-telegram",
+  "title": "用 AI agent 将 Telegram 消息转为 Todoist 待办事项",
+  "industry": "个人任务管理与聊天自动化",
+  "researched_at": "2026-10-18T01:45:22.239106+00:00",
+  "confidence": "直接短评论支持个人用途和平台建议，当前官方文档支持可用构件及替代方案；具体编排平台、配置、稳定性、成本和购买意愿仍未知。没有独立复现或真实业务执行，不能把源站n8n标签当成原作者明确选择。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先对比原生快速添加，验证聊天入口是否值得维护",
+    "reason": "作者自述使用Telegram给Todoist加任务，说明一个具体便利需求，但没有工作流、量化效果、费用或付费证据。Todoist原生快速添加已支持自然语言日期，另有同类免费模板，功能组合本身难形成独立产品壁垒。设置和维护假设对人工支持敏感，优先在已有环境中做可恢复的内部验证，不将个人实践写成收费服务已经成立。",
+    "next_action": "用合成任务及已有获准工具，对照Todoist原生入口检查标题、项目、日期、时区、重复消息和失败恢复，并记录首装与维护工时；本轮只给计划，未运行。",
+    "stop_condition": "原生入口已足够、聊天流程需反复重录、发生跨账户写入，或实际设置及支持持续超预算时，停止扩大范围。"
+  },
+  "sources": [
+    {
+      "id": "Sd7faa1a4a589",
+      "url": "https://agentusecases.ai/use-case/add-todo-items-to-todoist-from-telegram",
+      "title": "源站归档：Telegram 到 Todoist",
+      "supports": "支持归档的完整案例叙述及源站推荐模板；n8n标签与正文n8n或windmill均按原样保留，不能以标签消除原评论的不确定性。"
+    },
+    {
+      "id": "S2f112b268169",
+      "url": "https://news.ycombinator.com/item?id=47728484",
+      "title": "Hacker News：lucw 的 Telegram 与 Todoist 自述",
+      "supports": "支持作者确实自述通过Telegram往自己的Todoist加任务、建议编排平台和LLM，并认为更可控；没有代码、配置、成本或独立复现。"
+    },
+    {
+      "id": "Sd25b82e3a035",
+      "url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.todoist",
+      "title": "n8n 官方：Todoist 节点",
+      "supports": "支持现有节点具有创建、读取等任务操作，以及可以供AI工具调用；不证明本案例具体使用n8n、节点版本或任何错误恢复配置。"
+    },
+    {
+      "id": "S47b07402e486",
+      "url": "https://www.todoist.com/help/todoist/features/use-task-quick-add-in-todoist-va4Lhpzz",
+      "title": "Todoist 官方：Task Quick Add",
+      "supports": "支持原生快速添加可识别自然语言日期、指定项目，并有智能日期识别误判提示；是入口替代基线，不证明任意自然语言或语言都能正确解析。"
+    },
+    {
+      "id": "S9c31625dedcc",
+      "url": "https://n8n.io/pricing/",
+      "title": "n8n 官方：定价",
+      "supports": "支持采集时Starter年付折算20欧元/月、2.5K月执行量及按工作流执行计费；不代表作者成本，也不保证模型、Todoist或支持人工包含在内。"
+    },
+    {
+      "id": "S69b841c7350d",
+      "url": "https://core.telegram.org/bots/faq",
+      "title": "Telegram 官方：Bots FAQ",
+      "supports": "支持更新接收、长轮询与Webhook互斥及重复未确认更新的机制；不证明Todoist业务写入恰好一次或确认回复等同于落库成功。"
+    },
+    {
+      "id": "S13f757531172",
+      "url": "https://n8n.io/workflows/3052-effortless-task-management-create-todoist-tasks-directly-from-telegram-with-ai/",
+      "title": "n8n 模板库：Onur 的 Telegram 到 Todoist 模板",
+      "supports": "支持存在公开的同类免费模板说明，列出文本/语音、LLM解析、Todoist创建和Telegram回执；这是另一作者的模板，不是lucw的实际实现或独立客户评价。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "已读原始评论的作者为lucw，他自述通过Telegram向自己的Todoist账户加入待办事项。",
+      "source_ids": [
+        "S2f112b268169"
+      ]
+    },
+    {
+      "statement": "lucw建议使用n8n或windmill.dev一类编排平台并保留LLM交互，没有明确说明自己采用其中哪一个平台。",
+      "source_ids": [
+        "S2f112b268169"
+      ]
+    },
+    {
+      "statement": "源站实际使用标签是n8n，正文仍保留n8n或windmill；本报告不把该标签当成原作者具体实现已核实。",
+      "source_ids": [
+        "Sd7faa1a4a589",
+        "S2f112b268169"
+      ]
+    },
+    {
+      "statement": "原始短评论没有配置、代码、用量、成功率、成本、付费客户或对照测试；更可控是作者判断。",
+      "source_ids": [
+        "S2f112b268169"
+      ]
+    },
+    {
+      "statement": "当前n8n官方Todoist节点列出创建、读取、更新、关闭、重开与删除任务的操作；具体授权范围需另外配置。",
+      "source_ids": [
+        "Sd25b82e3a035"
+      ]
+    },
+    {
+      "statement": "Todoist官方Quick Add支持在任务文字中写自然语言日期及项目标记，也提供桌面全局快捷入口。",
+      "source_ids": [
+        "S47b07402e486"
+      ]
+    },
+    {
+      "statement": "Todoist官方提醒智能日期识别可能把任务名称中的词误判为日期，用户可以取消识别；不能据此推算本例LLM错误率。",
+      "source_ids": [
+        "S47b07402e486"
+      ]
+    },
+    {
+      "statement": "采集时n8n Starter公开显示年付折算20欧元每月、2.5K月工作流执行；不是作者成本，也不是正确任务数量。",
+      "source_ids": [
+        "S9c31625dedcc"
+      ]
+    },
+    {
+      "statement": "Telegram官方说明长轮询与Webhook不能同时接收更新，未确认更新可能再次返回；任务业务去重不是自动结论。",
+      "source_ids": [
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "statement": "Onur在n8n模板库发布同类免费模板说明，列出LLM、Todoist与Telegram回执，并要求模型及应用连接；它不是lucw代码或客户验证。",
+      "source_ids": [
+        "S13f757531172"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "现有双平台用户的输入摩擦",
+      "body": "结论是适合内部效率工具，商业分数23/100；不建议仅凭这条入口开展独立产品投入。直接使用者lucw已经使用Todoist，并自述从Telegram向自己的账户加入任务。便利来自少切一次应用、把随口描述放入固定清单，不是替用户重新建立任务管理系统。来源没有使用频率、漏记损失、节省工时或付款记录，不能把个人习惯推算成广泛付费需求。\n\n潜在人群是同时稳定使用Telegram和Todoist、确有跨应用输入摩擦的人；这一限定是研究推断。付款人可能是本人，或已经维护自动化工具的小团队，但作者没有描述团队采购、审批预算和商业客户。偶尔录入任务的人可以直接打开Todoist，不能因为消息机器人显得方便，就假定一个新的持续订阅会进入预算。\n\n本例也不同于上一个家庭本地清单案例：目标是已托管的Todoist账户，不是保留一个不与手机同步的自定义API。不能把另一位用户的本地网络、2009年旧系统或QEMU故障移植过来充当本例困难。自用价值为中，前提是已有获准连接、能核对日期与任务结果；本轮没有测得实际收益。",
+      "source_ids": [
+        "Sd7faa1a4a589",
+        "S2f112b268169",
+        "S47b07402e486"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "平台名称与作者实际步骤分开",
+      "body": "原评论建议n8n或windmill.dev一类编排平台，保留Telegram机器人和LLM自然语言交互，并称自己确实通过Telegram给Todoist加任务。它没有明确指出自己选了哪一个平台。源站的实际使用标签是n8n，归档及忠实译文照样保留；本站分析则不能把标签扩写为已核实的n8n节点、模型或运行版本，故编辑标题使用AI agent这一较宽的表述。\n\n能确认的链路只有消息入口、自然语言处理与Todoist写入的概念组合；提示词、字段映射、账户隔离、触发方式和确认逻辑未知。源站Copy prompt另外提出正确标题、到期日期、目标项目和回复确认，这些是推荐验收目标，并非作者已经展示的工作流。尤其“提醒我”不自动意味着已设置通知提醒，创建带日期的任务和配置提醒应分别核对。\n\n当前n8n文档说明已有Todoist创建和读取动作，可作为设计构件。可检查交付应展示解析草稿、明确缺失日期及用户时区，再在写入后按返回任务标识读取核对。模型说已添加、Telegram消息已送达或工作流显示结束，都不能单独证明任务标题、项目与日期正确。本轮没有操作任何账户或运行原工作流。",
+      "source_ids": [
+        "Sd7faa1a4a589",
+        "S2f112b268169",
+        "Sd25b82e3a035",
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "需求边界与可见成本参照",
+      "body": "这里没有可核验的客户规模、流失率或购买意愿。Telegram和Todoist的总用户数不等于交集需求，更不等于愿意为第三个工具付费的人数。首先应询问既有使用者每周有多少条消息要转任务、是否真的因此漏记，以及原生录入为什么不够用；当前没有这些数据，不构造市场规模数字。\n\nn8n公开页面在本次读取时显示Starter年付折算每月20欧元、2.5K次工作流执行，并说明按完整执行计费。这只能作为托管编排平台的报价参照，不是lucw实际账单；模型、目标应用订阅与人工维护需分别核对。一次消息可能触发一次或多次工作流，重试与拆分会影响用量，不能将2.5K次执行直接叫作2.5K条正确任务，也不将欧元报价直接放入美元利润计算。\n\n对已有自动化环境的人，这条用途可能只增加少量配置；对新用户，则需要持续运行的入口、账户连接及故障维护。两者成本结构不同。合理进入范围是一个明确账户、固定项目与有限输入类型，验证实际使用后再扩展；没有依据承诺泛化到所有家庭、学生或企业团队。",
+      "source_ids": [
+        "S2f112b268169",
+        "S9c31625dedcc",
+        "S47b07402e486",
+        "S13f757531172"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "先与原生快速添加及现成模板比较",
+      "body": "Todoist官方快速添加本身支持自然语言日期及项目标记，还提供桌面全局快捷方式；因此自然语言生成一条任务不全是新能力。比较应让同一位用户完成相同任务，记录找入口、填写、检查和修复的总时间。Telegram入口若只是多加一层转发，反而可能增加模型误解和维护；若消息是用户主要工作入口，才可能减少切换摩擦。\n\n官方帮助也提醒智能日期识别可能把任务名称里的词误当作日期，并允许用户取消识别。这个例子说明即使成熟原生入口也需要可见反馈，不能据此推算LLM解析的错误率。新流程至少要保持同等可检查性，让用户看到明确日期、时区和项目，不能用一条含糊的“完成了”替代原生编辑能力。\n\nn8n模板库另有Onur发布的同类免费模板说明，覆盖文本、语音、LLM、Todoist和Telegram回执。它降低了功能独占性，但模板免费不等于运行、模型和维护免费，也不是lucw本人代码。本文只读说明，没有下载执行模板或配置其要求的密钥；windmill只是原帖提到的另一平台，没有核查其本例配置或报价。",
+      "source_ids": [
+        "S2f112b268169",
+        "S47b07402e486",
+        "S13f757531172",
+        "S9c31625dedcc"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "人工支持决定小额服务能否成立",
+      "body": "没有作者费用、部署工时、任务量或付款证据。以下两种情景全部是USD规划假设，既不是市场报价，也不是已实现收入；n8n的欧元订阅只作独立参照，不作未注明汇率的成本换算。设置服务与持续维护也分别计算，避免用订阅收入掩盖一次性交付亏损。\n\n假设固定账户的149美元接入包，模型测试预算1美元、人工3小时乘40美元为120美元、其他5美元、获客25美元，可变成本151美元，单位贡献-2美元。每月10包、固定支出200美元，月经营贡献-220美元。现成模板只能减少部分连线工作，不能自动消除账户连接、日期例外、交接和售后；人工少算一次就可能扭转表面利润。\n\n假设已有接入后的29美元每客户月维护，模型2美元、人工15分钟乘40美元为10美元、其他3美元、获客摊销5美元，可变20美元，贡献9美元。50客户减月固定300美元，月贡献150美元；若某客户额外需要30分钟支持，其当月贡献变为-11美元。模型、平台与目标应用必须按实际合同归属记录，维护情景不含首次接入，未算税费与退款。这些敏感性支持先验证工时，不能证明可以收费。",
+      "source_ids": [
+        "S2f112b268169",
+        "S9c31625dedcc",
+        "S13f757531172"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "第一批验证应围绕已有工作习惯",
+      "body": "技术论坛能发现这种需求，模板库也能展示如何连接工具，但浏览量、收藏或平台推荐不等于购买。没有任何证据说明lucw在经营该服务，不能把他的个人回答写成销售渠道、付费转化或创业结果。若尝试验证交付，最合适的对象是假设中已经使用两个平台且有重复录入问题的人，而不是让所有新用户先改变习惯。\n\n可复用交付需要固定输入范围、目标项目、允许账户和维护责任。应说明日期模糊时返回草稿，写入失败怎样告知，用户怎样在Todoist中修复，不把所有语音转录、多任务拆分、跨项目分配都塞进低价服务。Onur模板提供较宽功能说明，但原案例没有声称需要这些能力；功能越多，解析、权限和支持例外也越多。\n\n本轮没有联系任何作者或潜在客户，也没有发消息、报价、创建机器人或连接账户。下一步可以由用户提供已有工具上的合成输入，比较原生入口与候选流程的实际操作负担。只有拿到使用频率、首装工时与一段时间的支持记录，才有依据讨论获客预算和是否形成套餐。",
+      "source_ids": [
+        "S2f112b268169",
+        "S47b07402e486",
+        "S13f757531172"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "连接现成功能本身不足以形成壁垒",
+      "body": "Telegram入口、LLM整理和Todoist任务动作都是现成构件，公开同类模板进一步降低了组合难度。当前没有独家模型、专有数据、分发渠道或难迁移流程的证据；不能把工具调用链更长、节点更多或有一个聊天界面当成壁垒。对于愿意使用Todoist原生入口的人，增加第三个服务反而需要解释为什么值得维护。\n\n可能积累的是针对特定任务输入的可恢复流程、日期歧义样本、账户隔离规范与真实支持工时，但这些只是未来经营假设。应使用获准的合成或脱敏例子验证，私人待办和聊天不是可以默认公开、跨客户复用或作为训练资产的数据。标准化的是错误处理与交接步骤，而不是收集越多用户生活内容就越有价值。\n\n如果平台继续改善自然语言添加或现成模板维护，简单入口的收费空间会进一步收窄。只有在限定人群中证明整条链路比原生录入更便利、维护更省心，才可能获得持续服务理由。当前无法支持网络效应、规模经济或可持续利润的判断，商业评分中的壁垒维度记0分。",
+      "source_ids": [
+        "Sd25b82e3a035",
+        "S47b07402e486",
+        "S13f757531172"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "日期、重复投递与成功回执要分别验收",
+      "body": "原评论的“更可控”是作者判断，没有权限配置、故障记录或对照测试，不能当作已经测得的安全性。当前文档支持选择有限动作，但工作流是否只允许某个用户、只能写固定项目，仍由实际配置决定。一个个人待办入口不需要因此获得删除全部任务、修改共享项目或任意系统操作的权限。\n\nTelegram官方说明长轮询与Webhook不能同时收取更新，未确认更新可能再次返回。设计时应将消息接收、解析草稿、任务创建和回执分开，考虑重放、网络中断及创建成功后回执失败。按消息标识记录业务处理状态是本文的工程建议，不能宣称原案例已实现幂等。仅重跑整个工作流可能重复创建任务，恢复时先核实已有结果。\n\n日期还需区别相对日、时区、到期日期与提醒；未说日期的消息不能被模型补成明天。若涉及多用户和共享项目，还要检查归属和账户边界。任何账号连接、日志保留及模型处理范围都需由使用者明确。本轮没有真实Telegram消息、Todoist写入或模型调用，测试只覆盖研究数据、页面与复制功能，不证明业务链路可靠。",
+      "source_ids": [
+        "S2f112b268169",
+        "Sd25b82e3a035",
+        "S47b07402e486",
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "一位作者的自述不能算独立复现",
+      "body": "lucw直接说自己用Telegram给Todoist加任务，这支持用途确有个人实践，但没有成功率、维护时长或长期跟踪。他建议使用n8n或windmill并认为更可控，也没有提供可核对的版本、工作流或比较过程。它是作者体验，不能同时作为作者实现和独立用户验证来计算两次证据。\n\n三次评价检索覆盖HN、GitHub问题和公开网页。结果中出现其他模板、销售介绍、Todoist总体评价和无关n8n节点问题；这些没有被当作本案例的客户反馈。Onur的模板说明是另一位作者的同类方案，也不是独立用户安装lucw工作流后的结果，页面通用宣传评价更不能代替具体用例口碑。\n\n因此独立用户反馈信号为0/5，权重严格5%，含义是缺少可核验独立反馈，不是给用户满意度零分。原作者没有报告限制也不表示没有限制；当前对成本和错误的讨论来自文档支持的机制与明确假设。没有访问已停止的Reddit、X、Substack目标，不用搜索摘要充当已读用户原文。",
+      "source_ids": [
+        "S2f112b268169",
+        "S13f757531172"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "先证明入口比原生录入值得维护",
+      "body": "适合内部效率工具的结论来自一个明确的个人用途，加上现成构件足以组成可检查的小流程；不支持仅靠它成立新的独立产品。最有利反证是双平台重度用户已具备自动化环境，增加这个入口的边际成本可能很低，而且作者确实说自己在用。这足以支持小范围自用验证，但还不能证明一般用户愿为额外订阅和支持付款。\n\n继续条件是：在合成项目与已有获准工具上，对比同一批任务的原生快速添加与候选聊天流程，确认标题、项目、日期和时区；含糊输入保持草稿，重复消息不重复新增，失败能被发现并恢复。记录设置工时、人工纠错和维护负担，而不是只展示一条成功消息。此处为下一步计划，本轮未运行业务代理，也没有创建凭据或购买API。\n\n若原生入口已解决主要问题、消息流程需要频繁重录、出现跨账户写入，或首装及月支持工时持续超过预算，就应停止扩大范围。若未来拿到可复现工作流、实际用量和获准反馈，再评估收费与评分。当前29美元月费的薄利假设不能用来证明利润，149美元设置包的负贡献也不能靠未验证客户量掩盖。",
+      "source_ids": [
+        "S2f112b268169",
+        "S47b07402e486",
+        "S9c31625dedcc",
+        "S69b841c7350d",
+        "S13f757531172"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "HN与公开网页",
+        "query": "\"Telegram\" \"Todoist\" \"lucw\" site:news.ycombinator.com",
+        "outcome": "已执行；原始指定HN评论另行读取，只有作者个人自述，未发现独立复现。"
+      },
+      {
+        "channel": "GitHub问题",
+        "query": "\"Telegram\" \"Todoist\" \"due date\" site:github.com/n8n-io/n8n/issues",
+        "outcome": "已执行；结果包含无关节点问题，没有可归属lucw工作流的复现，未当作本例故障证据。"
+      },
+      {
+        "channel": "公开用户体验与模板检索",
+        "query": "\"Telegram\" \"Todoist\" \"review\" \"n8n\"",
+        "outcome": "已执行；发现模板与销售介绍、产品总体评价，不作为该工作流独立用户反馈；随后读取n8n模板库中的原作者说明作为替代资料。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "S2f112b268169",
+        "directness": "direct_user",
+        "finding": "lucw自述确实用Telegram给自己的Todoist加任务，并推荐编排平台及LLM；未给实现、量化效果或维护成本。",
+        "bias": "单一作者、自选论坛回答，未独立复现；与独立客户评价分开。"
+      },
+      {
+        "source_id": "S13f757531172",
+        "directness": "adjacent_workflow",
+        "finding": "Onur提供另一同类模板的功能与设置说明，不是使用lucw实现的独立客户，也不是本轮实际运行结果。",
+        "bias": "模板作者在平台发布的功能介绍与推广，通用平台评价不计入具体用例反馈。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "全部假设：固定账户一次性接入",
+      "unit": "一套固定账户及项目的接入交付",
+      "currency": "USD",
+      "price": 149,
+      "api_cost": 1,
+      "human_cost": 120,
+      "other_variable_cost": 5,
+      "acquisition_cost": 25,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 200,
+      "assumptions": "未实测；人工3小时×40美元，模型测试1美元、其他5、获客25，可变151、贡献-2；10包减固定200，月贡献-220。不是作者支出、公开报价或实际收入；欧元平台报价未换算进来。",
+      "source_ids": [
+        "S2f112b268169",
+        "S9c31625dedcc",
+        "S13f757531172"
+      ]
+    },
+    {
+      "scenario": "全部假设：接入后的有限月度维护",
+      "unit": "客户月，不含首次设置",
+      "currency": "USD",
+      "price": 29,
+      "api_cost": 2,
+      "human_cost": 10,
+      "other_variable_cost": 3,
+      "acquisition_cost": 5,
+      "units_per_month": 50,
+      "fixed_monthly_cost": 300,
+      "assumptions": "未实测；人工15分钟×40美元，模型2、其他3、获客摊销5，可变20、贡献9；50客户减固定300，月贡献150。额外30分钟支持20美元使该客户贡献变为-11；平台/目标应用成本以真实归属另核，不含首次设置、税费和退款。",
+      "source_ids": [
+        "S2f112b268169",
+        "S9c31625dedcc",
+        "S13f757531172"
+      ]
+    }
+  ],
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "条件性推断：既用Telegram又用Todoist且已有稳定环境的人可能减少切换，但需要核对日期、项目和恢复，未测得节时收益。",
+    "audience": "已有这两个平台和获准自动化连接，能检查任务结果的人。",
+    "use": "把聊天中的任务整理成Todoist草稿，再受限写入及读回。",
+    "benefit": "减少切换应用和重复输入的摩擦，收益及频率尚未量化。",
+    "setup_cost": "已有获准连接、固定测试项目、时区规则、合成任务和明确动作范围；先与原生Quick Add比较。",
+    "maintenance_cost": "检查解析偏差、重复写入、连接失效与回执缺失，保留可恢复记录。",
+    "frequency": "按真实跨应用任务输入需要使用，先确认每周频率；不是所有用户都需要。",
+    "privacy_risk": "待办和聊天可能经过编排与模型，不跨账户混用，不公开私人内容或凭据。",
+    "error_risk": "相对日期、提醒与到期时间可能混淆，可能错项目、重复任务或错误确认；需要可见草稿和读回。",
+    "source_ids": [
+      "S2f112b268169",
+      "S47b07402e486",
+      "Sd25b82e3a035",
+      "S69b841c7350d"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "已有获准Telegram/Todoist连接说明、合成项目、用户与项目范围、时区；条件不足只生成方案，不创建凭据。",
+    "tools": "源站标签与推荐是n8n；原评论只建议n8n或windmill并自述Telegram到Todoist，未明确具体平台、模型和版本。",
+    "expected_result": "可检查的解析草稿、写入/读回与去重恢复验收计划；自编模板未实测，本轮未发消息或修改账户。",
+    "prompts": [
+      {
+        "title": "比较原生入口与受限聊天入口",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "S2f112b268169",
+          "S47b07402e486",
+          "Sd25b82e3a035",
+          "S69b841c7350d"
+        ],
+        "attribution": "研究团队自编，非lucw或源站原话，未实测。",
+        "text": "仅根据[现有获准连接说明]和[合成任务清单]，为Telegram消息到Todoist的入口提出受限方案。先对照Todoist原生Quick Add，说明额外流程解决什么摩擦。只处理[用户]的[测试项目]，展示标题、明确日期、时区、项目和原始消息；未知项保留待确认，不把“提醒我”自动当成通知提醒。先输出草稿与字段差异，不发送真实消息、不写真实任务、不创建机器人或凭据。设计在获准后才执行的写入及按任务标识读回检查，另列重复消息、API失败、写入成功但回执失败的恢复步骤，不能直接重跑造成重复任务。排除删除、共享项目修改和任意系统权限。只用现有工具，不调用额外付费API，标明假设及未实测范围。"
+      },
+      {
+        "title": "Plan a constrained Telegram intake for Todoist",
+        "language": "en",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "S2f112b268169",
+          "S47b07402e486",
+          "Sd25b82e3a035",
+          "S69b841c7350d"
+        ],
+        "attribution": "Research-team template; not the source or lucw prompt; not tested.",
+        "text": "Using [existing authorized connection documentation] and [synthetic tasks], compare a Telegram intake with Todoist Quick Add. Limit the plan to [allowed user] and [test project]. Show proposed title, explicit date, timezone, project and original message; leave missing fields unresolved and distinguish due dates from notification reminders. Return a draft only: do not send real messages, write real tasks, or create bots or credentials. Describe a later authorized create-and-read-back check, duplicate-message handling, API failures, and recovery after successful creation but failed acknowledgement. Exclude deletion, shared-project changes and arbitrary system permissions. Use existing tools only, make no additional paid API calls, and label untested assumptions."
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=47728484",
+    "source_title": "lucw在Hacker News说明Telegram到Todoist用途",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T01:41:28.484573+00:00",
+    "source_sha256": "dd946c13c93764c71bb2dd4fbe0a828b582fb37d8180b1fd731e935d987bbb90",
+    "steps": [
+      {
+        "en": "The commenter recommends an orchestration platform such as n8n or windmill.dev, retaining a Telegram bot and an LLM for natural-language interaction.",
+        "zh": "评论者建议使用n8n或windmill.dev一类编排平台，并保留Telegram机器人及LLM自然语言交互。"
+      },
+      {
+        "en": "They report adding tasks to their own Todoist account from Telegram; the comment does not identify their exact platform, configuration or measured results.",
+        "zh": "他们自述通过Telegram给自己的Todoist账户加任务；评论没有明确具体平台、配置或测量结果。"
+      }
+    ]
+  },
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/add-todo-items-to-todoist-from-telegram",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "698085c7f183cd77881957192f13d28fd7ad4ce4d7764ced7b59ee0ea0e8bc63",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "b5d90f421f07ee2e091cea33908f1df3770c9fabcc436a0fee5962ff384f45c5",
+      "How it went": "9386d488b03a469ccd49264f11277dd421e1dc8d202ed2503326866fe5d82f23",
+      "Worth knowing": "dca0d5fbd4850273313d033f9f8489d47ac3ba102567e682e37dd561a9ea92a1"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a workflow where I message a Telegram bot like 'remind me to [task] by [day]' and it adds a task to my Todoist with the right title and due date. Use an LLM step to parse the message. Finished means a test message creates a correct task in my [Todoist project], and the bot replies to confirm what it added.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/add-todo-items-to-todoist-from-telegram",
+    "observed_at": "2026-10-17T05:24:29.007858+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "51f41826b39cf3346c0ed9195c86fb57f63b5db75ee6474bb3efc433af62a27f"
+  },
+  "disconfirming_evidence": "作者确实报告自己在用，已有双平台和自动化环境的用户可能以较低边际成本取得便利；公开模板也降低搭建门槛。但模板不是作者实现、效果复现或客户付费，原生Quick Add对同类输入已有能力。",
+  "limitations": "原评论未明确其编排平台，未取得代码、模型、账户配置、任务量、错误率、成本、独立反馈或客户；未下载运行模板，未发消息、操作Todoist或调用模型。页面/数据测试不是端到端业务验证；Wanted未知，稳定位置38不是热度排序。",
+  "catalog_snapshot": {
+    "commit": "3a598e333959ef199926d575f0af222a0c71510e",
+    "registered_cases": 1381,
+    "refresh_fetched_at": "2026-10-17T06:05:53.201718+00:00",
+    "detail_pages_read": 1381,
+    "new_crawl": false
+  },
+  "selection": {
+    "basis": "stable registry order after all remote record and claim exclusions; Wanted unknown",
+    "archive_position": 38,
+    "wanted_observed": false
+  },
+  "scores": {
+    "demand": {
+      "score": 1,
+      "rationale": "直接用户用途明确但无付款或购买验证，双平台习惯不能外推普遍市场。",
+      "source_ids": [
+        "S2f112b268169",
+        "S47b07402e486"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "作者自述实际使用，缺少可复现配置、质量和时间对照，模板也不是效果测试。",
+      "source_ids": [
+        "S2f112b268169",
+        "S13f757531172"
+      ]
+    },
+    "economics": {
+      "score": 1,
+      "rationale": "设置假设亏损，月维护仅薄利且对额外支持敏感，没有账单和收费证据。",
+      "source_ids": [
+        "S2f112b268169",
+        "S9c31625dedcc",
+        "S13f757531172"
+      ]
+    },
+    "distribution": {
+      "score": 1,
+      "rationale": "论坛与模板库只有发现入口，没有转化或客户，低客单仍需设置与交接。",
+      "source_ids": [
+        "S2f112b268169",
+        "S13f757531172"
+      ]
+    },
+    "moat": {
+      "score": 0,
+      "rationale": "原生快速添加与公开模板可替代主要功能，未见独家数据、接口或分发。",
+      "source_ids": [
+        "S47b07402e486",
+        "Sd25b82e3a035",
+        "S13f757531172"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "可限制固定任务动作，但原例配置与恢复未知，日期、重复投递及账户边界仍需验收。",
+      "source_ids": [
+        "Sd25b82e3a035",
+        "S47b07402e486",
+        "S69b841c7350d"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "只有原作者自述和另一模板作者的功能说明，没有可归属本实现的独立用户复现；0表示缺证据而非差评。",
+      "source_ids": [
+        "S2f112b268169",
+        "S13f757531172"
+      ]
+    }
+  }
+}
