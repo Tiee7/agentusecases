@@ -1,0 +1,125 @@
+{
+  "checked_at": "2026-10-18T03:33:02.918634+00:00",
+  "integrity": "passed",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "manual paragraph correspondence plus hash checks passed",
+  "brief_not_deep": true,
+  "commercial_score": null,
+  "author_method": "unavailable; original not read, no invented steps",
+  "source_receipts_verified": 5,
+  "economics_recomputed": 2,
+  "cross_references": "passed",
+  "personal_and_editorial_validators": "passed",
+  "source_trial_exact": "passed",
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 39,
+    "chinese_translation_pending": 1342,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 43,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 0,
+  "new_briefs": 1,
+  "new_complete_chinese_translations": 1,
+  "v2_deep_gate": "not applicable; not run or claimed",
+  "verify_sources_exception": "No bulk verify-sources call because it would re-request the stopped source target. Used archive/cache hashes, four permitted public captures and exact independent refetches instead.",
+  "implementation_runtime": "not tested; author code not obtained; no model calls, real customer data, telephone, messaging or CRM operations",
+  "prepublication_identity": {
+    "checked_at": "2026-10-18T03:30:11.758121+00:00",
+    "action": "gh api user --jq .login",
+    "status": "succeeded",
+    "login": "Tiee7",
+    "reason": null,
+    "new_credentials": false
+  },
+  "tests_completed_at": "2026-10-18T03:33:02.950403+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T03:30:22.607Z",
+      "duration": 157685.986,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site desktop and mobile; not an execution of the home-service call workflow",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "trials"
+    ],
+    "checks": [
+      "exact original and translation",
+      "Chinese default open, English collapsed and expandable",
+      "exact source trial template and actual/recommended tools",
+      "pending deep research and no fabricated score",
+      "no overflow or page errors"
+    ],
+    "report_route": "absent by design because brief is separate from completed v2 research"
+  },
+  "website_counts": {
+    "reports": 43,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 39
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Existing repository tests unchanged; temporary config only selects installed system Chromium and absolute test/server paths. Security adapter only substitutes absolute imports and browser launcher."
+  },
+  "commands": [
+    "python /tmp/validate_homecalls_brief.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/homecalls-security.mjs",
+    "node /tmp/homecalls-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "59512ca674b29c3910a9aaa33ce9ad1367d4d7b97d2a466faf58c892effdf7d3",
+    "content": "11e7343d4e934689f262281b7b637c956cd7aa0c33e66a9c4d60a9320ce075d7",
+    "build": "df2554281d450a078a7ef7f19b7e7b82f1b2140d29d6a0b5e605b3691562048f",
+    "output": "4f2e4fd91f902e0b9b4f06cdfd3046ce6fc2087d4780c8855d40298cefea9d84",
+    "browser": "89215db6e66076ed989fd47f9a560ec7eb50f17648eeb669cca6733d4d7e75df",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "5a62fdb246a40d14fb9ac5c7222dfc2ceb369f3a9d1ebd3aa5089a75f508062d"
+  }
+}
