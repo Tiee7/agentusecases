@@ -1,0 +1,116 @@
+{
+  "checked_at": "2026-10-18T02:50:39.180234+00:00",
+  "scope": "Only fictional events, call IDs and provided labels. Proposed state logic, not AgentVoice/Lindy/HubSpot/Twilio production code or voice quality.",
+  "bridge_status_checks": 8,
+  "events": [
+    {
+      "event": "E1",
+      "call": "C1",
+      "state": "notification_pending",
+      "recording_state": "not_ready",
+      "crm_state": "confirmed",
+      "notice_state": "queued",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E2",
+      "call": "C1",
+      "state": "bridge_record_and_notice_confirmed_not_business_outcome",
+      "recording_state": "ready",
+      "crm_state": "confirmed",
+      "notice_state": "confirmed",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E2",
+      "call": "C1",
+      "state": "duplicate_suppressed"
+    },
+    {
+      "event": "E0",
+      "call": "C1",
+      "state": "stale_suppressed"
+    },
+    {
+      "event": "E3",
+      "call": "C2",
+      "state": "transfer_fallback_pending",
+      "recording_state": "not_ready",
+      "crm_state": "confirmed",
+      "notice_state": "unknown",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E4",
+      "call": "C3",
+      "state": "manual_review_no_autowrite",
+      "recording_state": "not_ready",
+      "crm_state": "unknown",
+      "notice_state": "unknown",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E5",
+      "call": "C4",
+      "state": "closed_hours_message_draft",
+      "recording_state": "not_ready",
+      "crm_state": "unknown",
+      "notice_state": "unknown",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E6",
+      "call": "C5",
+      "state": "quarantine_not_delete",
+      "recording_state": "not_ready",
+      "crm_state": "unknown",
+      "notice_state": "unknown",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E7",
+      "call": "C6",
+      "state": "crm_unknown_reconcile_before_retry",
+      "recording_state": "not_ready",
+      "crm_state": "unknown",
+      "notice_state": "unknown",
+      "business_outcome": "not_measured"
+    },
+    {
+      "event": "E8",
+      "call": "C7",
+      "state": "notification_pending",
+      "recording_state": "not_ready",
+      "crm_state": "confirmed",
+      "notice_state": "queued",
+      "business_outcome": "not_measured"
+    }
+  ],
+  "logical_crm_records": 3,
+  "draft_outbox_entries": 3,
+  "outbox_sends": 0,
+  "duplicate_and_stale_events_suppressed": true,
+  "unknown_write_not_retried": true,
+  "bridge_not_business_success": true,
+  "recording_readiness_separate": true,
+  "unknown_label_manual_review": true,
+  "source_lindy_template_not_actual_tool": true,
+  "cost_checks": [
+    {
+      "scenario": "假设：自营月度接待",
+      "unit": 249,
+      "monthly": 994
+    },
+    {
+      "scenario": "假设：一次性集成",
+      "unit": 550,
+      "monthly": 600
+    }
+  ],
+  "labor_and_minute_sensitivities_checked": true,
+  "reproduction": "Interpret documented Dial status with conference answered separately. Reject repeated event ID and lower sequence per call. Keep routing, recording readiness, CRM confirmation and notification confirmation separate; unknown CRM requires reconciliation before retry. Logical map/outbox only, no network or sends. Unit=price-api-human-other-acquisition; monthly=unit*volume-fixed.",
+  "no_real_contacts_audio_or_records": true,
+  "no_calls_or_messages": true,
+  "no_paid_calls": true,
+  "no_new_credentials": true
+}

@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-business-phone-calls-with-a-voice-agent",
+  "url": "https://agentusecases.ai/use-case/answer-business-phone-calls-with-a-voice-agent",
+  "title": "用自建语音 agent 接听企业来电并整理记录",
+  "researched_at": "2026-10-18T02:49:55.842009+00:00",
+  "industry": "小企业电话接待与行政记录辅助",
+  "brief_reason": "G2来源正常重定向后读取403并停止；只有既有评论转述及六份一手/竞争资料，缺少独立已读结果和实际单位经济证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收转接和记录完成状态，评论自述不替代成本与效果",
+    "reason": "原评论不可重读，底层平台、实际报价、语音质量和客户转化未验证。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-business-phone-calls-with-a-voice-agent",
+      "title": "Answer business phone calls with a voice agent",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:26:34.990867+00:00",
+      "archived_at": "2026-10-17T05:26:34.990867+00:00",
+      "archive_path": "registry/archives/answer-business-phone-calls-with-a-voice-agent.json",
+      "sha256": "129066168165f3a367943a74bf2add406bbc808b992525a13adefea7fa3ff06a",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request",
+      "supports": "源站对G2评论的既有转述，完整保留但未独立重读评论、核对身份或效果。"
+    },
+    {
+      "id": "registered-g2-unread",
+      "kind": "primary",
+      "url": "https://g2.com/products/agentvoice/reviews",
+      "title": "G2 AgentVoice 评论（本轮正文未取得）",
+      "status": "blocked",
+      "error": "Normal g2.com to www.g2.com redirect followed; source capture returned HTTP403, then stopped. No review body obtained.",
+      "sha256": null,
+      "supports": "只保存登记来源与读取限制，不支持新的作者方法或评论事实。"
+    },
+    {
+      "id": "S6926dfc983a9",
+      "kind": "primary",
+      "url": "https://agentvoice.com/",
+      "title": "AI voice agent agency for inbound and outbound calls - AgentVoice",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:46:30.430357+00:00",
+      "sha256": "7cf8abf1b3df98f1b5041f429048728d2fd0bf6cbcb9e6d353dfe0435407d2f9",
+      "supports": "当前AgentVoice官网的定制语音机构、部署和调优范围；厂商展示的评价不当作本轮独立用户证据。"
+    },
+    {
+      "id": "S59835087ed62",
+      "kind": "primary",
+      "url": "https://agentvoice.com/pricing/",
+      "title": "AI voice agent pricing - AgentVoice",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:47:04.010445+00:00",
+      "sha256": "cadee53aa9060555c9ca3ed334952d70c68dbeebdbdd068b41ef49c0621c31cb",
+      "supports": "当前官网按项目构建、一次性许可、使用量与后续工程分别计价；没有核实原案例报价、账单或统一每分钟售价。"
+    },
+    {
+      "id": "S9a34a774ee3d",
+      "kind": "primary",
+      "url": "https://agentvoice.com/integrations/",
+      "title": "Integrations - AgentVoice",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:47:06.496446+00:00",
+      "sha256": "cb776eab44bccb231283fe2ee0093877797ae88c9de5a49cdbcecdfd4fbca295",
+      "supports": "厂商列出HubSpot、CRM、日历和电话集成方向；不证明原评论对应的实现或成功写入。"
+    },
+    {
+      "id": "S7f156240aa7b",
+      "kind": "primary",
+      "url": "https://www.twilio.com/docs/voice/twiml/dial",
+      "title": "TwiML™ Voice: <Dial> | Twilio",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:47:08.957455+00:00",
+      "sha256": "abef6e515348b732a6a93c0394e4eab79037680c59b84776ed723482211afc88",
+      "supports": "Twilio官方Dial转接状态、DialBridged和录音就绪回调定义；用于验收设计，不证明本案例使用Twilio。"
+    },
+    {
+      "id": "Sccd928733206",
+      "kind": "competitor",
+      "url": "https://smith.ai/ai-receptionist",
+      "title": "Smith.ai: 24/7 AI Receptionist Backed by Live Agents",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:47:22.571533+00:00",
+      "sha256": "68b68677e4e9c3595489683adc7c31ba97f5adf2b9e62ca9ca0fb8de05a8c6a7",
+      "supports": "Smith.ai官方AI前台及人工转接、测试/集成和收费展示，作为具体替代；不计作AgentVoice用户反馈或实测。"
+    },
+    {
+      "id": "Scd0605691962",
+      "kind": "primary",
+      "url": "https://developers.hubspot.com/docs/api-reference/legacy/crm/objects/contacts/guide",
+      "title": "CRM API | Contacts - HubSpot docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:48:02.285333+00:00",
+      "sha256": "3717de011e43fcfca8f417253c5654f8dca5e0015f5bdb79400a4406b20f4d77",
+      "supports": "官方重定向到的legacy Contacts指南列创建/更新/读取/关联与批量错误边界；不证明本案例接通或实际字段映射。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档实际agent为自建或未命名，Lindy是源站推荐试用工具。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档转述评论者减少漏接和增多线索，但没有具体量化结果。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档有经过多轮迭代及建议供应商搭建的提醒。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "当前AgentVoice官网描述定制构建、系统连接及持续调优。",
+      "source_ids": [
+        "S6926dfc983a9"
+      ]
+    },
+    {
+      "statement": "当前定价分别列项目构建、许可、用量和后续工程，不等于免费运行。",
+      "source_ids": [
+        "S59835087ed62"
+      ]
+    },
+    {
+      "statement": "厂商集成目录列有HubSpot和电话平台，不证明原案例已验证字段。",
+      "source_ids": [
+        "S9a34a774ee3d"
+      ]
+    },
+    {
+      "statement": "Twilio Dial文档区分接通、忙线、无人接听、失败等结果。",
+      "source_ids": [
+        "S7f156240aa7b"
+      ]
+    },
+    {
+      "statement": "同一文档说明录音URL回调时未必已可用，需等待就绪通知。",
+      "source_ids": [
+        "S7f156240aa7b"
+      ]
+    },
+    {
+      "statement": "HubSpot官方联系人指南区分创建、更新及批量错误处理。",
+      "source_ids": [
+        "Scd0605691962"
+      ]
+    },
+    {
+      "statement": "Smith.ai官网列AI接听、转接、场景测试和集成，作为替代而非本案例反馈。",
+      "source_ids": [
+        "Sccd928733206"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "自述改善不等于经营效果已验证",
+      "body": "现有资料不足以支持商业投入，商业评分不评定。归档转述评论者减少漏接、增加线索和无需增聘，但没有来电基数、对照时段、线索质量、成交或完整成本数据。G2正常重定向后的来源读取返回403，已停止，没有用搜索摘要、厂商摘录或其他入口冒充本轮重读评论。当前官网能够说明供应商提供什么，却不能替代原评论身份、付费经历和效果核验。记录中也不把没取得指标当作实际效果为零。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6926dfc983a9"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "实际agent与推荐模板分开",
+      "body": "源站将实际工具标成自建或未命名agent，方法段提到AgentVoice；Lindy只出现在源站试用模板，不能写成评论者用Lindy上线。本轮author_method保持unavailable、steps为空，不用官网功能表或源站Copy prompt编造原作者步骤。当前AgentVoice官网描述在多种语音平台或自有云引擎上定制、运行与调优，不能据此推定旧评论的底层模型、电话供应商、部署方式或套餐。非技术用户需要迭代的归档提醒也应进入交付和支持成本。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6926dfc983a9",
+        "S59835087ed62"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "每个动作都要有独立完成状态",
+      "body": "业务链路包括识别来电意图、确认必要信息、查询可答资料、转接或留言、写入CRM及通知员工。这些不是一条自然语言“已完成”能代替的事务。Twilio官方Dial文档区分completed、busy、no-answer、failed等状态，接通也只证明桥接，不证明预约、成交或问题解决。文档还提醒录音URL在回调时未必已可取，需要等待就绪状态；即使将来选用其他电话平台，这类完成边界也应明确。本轮未拨打测试号码，未使用语音模型或电话API。",
+      "source_ids": [
+        "S7f156240aa7b",
+        "S6926dfc983a9"
+      ]
+    },
+    {
+      "id": "crm",
+      "title": "CRM写入、重复与未知需要核对",
+      "body": "HubSpot当前重定向到的legacy联系人指南区分创建、更新、关联及批量成功/失败，不能因为集成页面列了HubSpot就推定所有动作自动正确。拟议验收应明确字段、联系人匹配依据、记录ID和写入确认；超时结果未知时先对账，不能直接重复创建。通话转写也不能无核对覆盖已有权威字段。邮件排队不等于送达，转接忙线不等于客户已被员工接手，缺少确认应留待处理。合成回调去重只能验证研究者提出的状态设计，不证明厂商幂等或生产可靠性。",
+      "source_ids": [
+        "Scd0605691962",
+        "S9a34a774ee3d",
+        "S7f156240aa7b"
+      ]
+    },
+    {
+      "id": "customer",
+      "title": "买方、人工替代和质量基线",
+      "body": "潜在使用者是办公室经理和接待人员，付款人通常是小企业负责人；预算来自电话接听、行政或获客环节，但本案例没有核验具体采购单。现有人工前台、语音信箱、外包接听和Smith.ai的AI前台都是比较基线；后者公开列人工转接、模拟场景和集成能力，也仍需要检查套餐、额外人工费用及适配。不能将接起更多电话直接等同更多有效线索，骚扰过滤还可能误伤正常客户。应分别记录误拦、转接失败、重复录入及人工回访时间，才能判断是否净省成本。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sccd928733206",
+        "S6926dfc983a9"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "供应商调优不是零维护",
+      "body": "AgentVoice当前定价把定制构建、平台许可、语音/AI/电话用量和上线后的工程区分开，并没有提供可直接套入本案例的统一报价。一次性许可没有每分钟平台费，也不表示云、模型或电信用量免费。数据映射、营业时间、节假日、员工可用性和知识变化都会增加维护。客户声音、转写和联系方式还要求明确访问、保留和删除范围；本轮未评估具体市场的录音/通信法律，也不根据官网部署表述保证合规。没有本地实测，就不能承诺噪声、插话、口音或真实骚扰识别质量。",
+      "source_ids": [
+        "S59835087ed62",
+        "S6926dfc983a9",
+        "S9a34a774ee3d",
+        "S7f156240aa7b"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "自营交付预算不冒充厂商报价",
+      "body": "以下全部为美元预算假设，不是AgentVoice报价、实际账单或已实现利润。每客户每月699，假设1000分钟综合语音/模型/电话预算每分钟0.18=180，人工4小时乘40=160、其他50、获客60，贡献249；月6客户、固定500时贡献994。人工8小时，单位89、月34；分钟数翻倍则单位69、月负86。另设一次性集成3500，测试用量100、人工60小时乘40=2400、其他150、获客300，贡献550；月2项、固定500时贡献600，多20小时返工则单位负250、月负1000。厂商构建/许可、地区电信、保险、税及其他固定费用未核实，预算不能外推为采购方案或完整采购与托管方案利润。",
+      "source_ids": [
+        "S59835087ed62",
+        "Sccd928733206",
+        "S7f156240aa7b"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "反馈等级、下一步与停止条件",
+      "body": "已在公开网页、GitHub和Hacker News方向检索，主要取得厂商信息、同名编程插件或其他主题，没有取得可归属于本案例的独立已读付费使用结果。官网星级和摘录不能替代被拒访的G2原文。六份已读厂商/技术/竞争资料支持有限交付分析，原帖及结果证据不足，故保存schema-1简版。下一步只在虚构通话编号和回调上核对接通、失败、录音待就绪、CRM未知、通知待确认、重复与乱序；若没有来源追踪、误拦真实客户、写入未知被当成功或人工维护超过预算，应停止扩展。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6926dfc983a9",
+        "S59835087ed62",
+        "S9a34a774ee3d",
+        "S7f156240aa7b",
+        "Scd0605691962",
+        "Sccd928733206"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-business-phone-calls-with-a-voice-agent",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "129066168165f3a367943a74bf2add406bbc808b992525a13adefea7fa3ff06a",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "168ef878b3c61cef5852d395098b9c7b8bbbd6b9a93a7f6b52e309403fc9c09a",
+      "How it went": "7e80ef863400205c00b78c1f2b119445d27697369bbfaef1a98bb282edf95ca6",
+      "Worth knowing": "3d472a2716a618adb74e0879e9cd65bc09f9485c62904e27b5d689044df3a785"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a phone-answering assistant for my business, [business name and type]. It should greet callers, answer questions about [hours, services, pricing], take messages, and log each call in [CRM or spreadsheet]. It should screen out spam and transfer real customers to [staff name and number]. Before it goes live, show me a sample call flow and wait for my approval.",
+    "agent": "Lindy",
+    "source_url": "https://agentusecases.ai/use-case/answer-business-phone-calls-with-a-voice-agent",
+    "observed_at": "2026-10-17T05:26:34.990867+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "6ff319bbc7c3c66a2073953c1da64f3447232175d38ef18da77bcba485881f07"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://g2.com/products/agentvoice/reviews",
+    "source_title": "G2 AgentVoice 评论（本轮正文未取得）",
+    "steps": [],
+    "unavailable_reason": "Normal redirect from g2.com to www.g2.com followed; source capture returned HTTP403 and was stopped. No review body. No retry after403, mirror, login or substituted vendor method."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助来电整理，但没有独立语音质量、净省时、有效线索或可靠写入证据。",
+    "audience": "能核对接待流程、系统权限及人工接管的小企业运营人员。",
+    "use": "用虚构回调验收转接、记录、通知与未知状态，不接触真实电话。",
+    "benefit": "可能减少重复行政工作；未测量漏接减少、时间节省或成交。",
+    "setup_cost": "梳理来电类型、字段、员工时段、回调和失败处理，准备人工答案。",
+    "maintenance_cost": "知识更新、员工/节假日规则、接口变更、误拦复核及用量监测。",
+    "frequency": "先按合成批次验收；没有持续真实使用净收益证据。",
+    "privacy_risk": "声音、转写和联系方式可能敏感；本轮不读取或发送真实客户资料。",
+    "error_risk": "误拦客户、忙线当接通、重复写入和通知待定当送达可能丢失业务。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S6926dfc983a9",
+      "S59835087ed62",
+      "S9a34a774ee3d",
+      "S7f156240aa7b",
+      "Scd0605691962",
+      "Sccd928733206"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站完整Lindy模板保存在原文及忠实译文，与实际自建或未命名agent分开；不是作者实际提示词。",
+    "prerequisites": "纯虚构来电编号、营业时段、人工标签和回调，无真实姓名、号码、录音或业务账户。",
+    "tools": "现有本地Python标准库即可验证拟议状态；不连接Lindy、AgentVoice、电话或CRM。",
+    "expected_result": "离线状态验收表、未知/重复/乱序处理和成本假设，不产生真实接通或语音质量结论。",
+    "prompts": [
+      {
+        "title": "用虚构回调验收来电处理",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S7f156240aa7b",
+          "Scd0605691962",
+          "S59835087ed62"
+        ],
+        "text": "只使用[虚构来电编号、营业时间、人工标注的客户/骚扰/未知标签，以及虚构转接、CRM和通知回调]，设计电话接听流程验收。不要收集真实姓名、电话号码、录音或客户资料，不登录、授权、创建凭据、安装集成、拨号、发短信/邮件、写CRM/日历或调用任何付费API。区分转接尝试、接通、忙线、无人接听、失败、取消和未知；接通不等于成交或问题已解决。对录音待就绪、CRM超时未知、通知未确认，保留待处理状态。检查重复及乱序事件，未知写入先对账不直接重复创建。标签不确定时交人工，不把未知客户当骚扰删除。分别标注源站实际自建/未命名agent与推荐Lindy，不声称测试了厂商或语音质量。输出离线状态表、未知项、人工核对和费用敏感性后停止。本模板为研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：自营月度接待",
+      "currency": "USD",
+      "unit": "客户/月",
+      "price": 699,
+      "api_cost": 180,
+      "human_cost": 160,
+      "other_variable_cost": 50,
+      "acquisition_cost": 60,
+      "units_per_month": 6,
+      "fixed_monthly_cost": 500,
+      "contribution_before_fixed_cost": 249,
+      "monthly_contribution_before_tax": 994,
+      "assumptions": "全为自营预算假设；1000分钟×0.18综合用量预算、人工4小时×40。人工8小时则单位89、月34；分钟翻倍则单位69、月-86。未计未知厂商构建/许可、保险、税及额外固定费用，不是报价或实际利润。"
+    },
+    {
+      "scenario": "假设：一次性集成",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 3500,
+      "api_cost": 100,
+      "human_cost": 2400,
+      "other_variable_cost": 150,
+      "acquisition_cost": 300,
+      "units_per_month": 2,
+      "fixed_monthly_cost": 500,
+      "contribution_before_fixed_cost": 550,
+      "monthly_contribution_before_tax": 600,
+      "assumptions": "全为自营预算假设；人工60小时×40，测试用量100。多20小时返工则单位-250、月-1000。厂商许可/构建、电信地区差异、税及额外固定费用未知，不是完整采购方案。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Hacker News",
+        "query": "\"AgentVoice\" site:news.ycombinator.com",
+        "outcome": "未取得可归属本案例的独立实际使用结果。"
+      },
+      {
+        "channel": "GitHub公开代码",
+        "query": "\"AgentVoice\" site:github.com",
+        "outcome": "同名编程/语音插件和无关仓库不能当电话接待客户。"
+      },
+      {
+        "channel": "公开网页",
+        "query": "\"AgentVoice\" \"review\" -site:g2.com -site:reddit.com -site:x.com -site:substack.com",
+        "outcome": "主要取得厂商材料；无独立已读付费效果核验，G2读取403后停止。"
+      }
+    ],
+    "observations": [],
+    "signal": "No independently re-read case-user outcome; no satisfaction, conversion or savings estimate."
+  },
+  "limitations": "G2来源读取403后停止，作者方法不可用。未运行AgentVoice/Lindy、语音模型、电话/CRM接口或真实接听，不拨号、不发送通知、不写账户。六份可读一手/竞争资料不属于独立客户证据；当前厂商交付不推定与历史评论相同。所有经营数字均为假设，不是报价或实测回报。",
+  "archive_source_sha256": "129066168165f3a367943a74bf2add406bbc808b992525a13adefea7fa3ff06a",
+  "translation_sha256": "4344aee0a8900b2f85da4c495c1c306ec2dcdb0ce6043f889e3bd03441ee0cab"
+}
