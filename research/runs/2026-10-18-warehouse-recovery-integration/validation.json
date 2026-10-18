@@ -1,33 +1,739 @@
 {
-  "checked_at": "2026-10-18T03:38:16.172310+00:00",
-  "checkpoint": "Unpublished warehouse merge before preserving the newer remote main and clinic delivery",
-  "status": "awaiting_final_combined_validation",
-  "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
-  "counts_at_checkpoint": {
+  "checked_at": "2026-10-18T03:44:22.337263+00:00",
+  "base_main": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+  "source_comparison_base": "6b1f13ee50fc58e208b3048c4a75f325feb2f764",
+  "preserved_concurrent_main": {
+    "head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+    "case_id": "answer-home-service-customer-calls-and-text-the-owner",
+    "already_published": true,
+    "counted_as_new_by_this_integration": false
+  },
+  "resumed_local_head": "2e7ccb775b87804605d1a85dc401dcf699382773",
+  "source_deliveries": [
+    {
+      "branch": "research/customer-questions-escalation-20261018",
+      "head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "id": "answer-customer-questions-and-escalate-to-humans",
+      "depth": "brief"
+    },
+    {
+      "branch": "research/zendesk-support-conversations-20261018",
+      "head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+      "depth": "deep"
+    },
+    {
+      "branch": "research/dental-clinic-calls-20261018",
+      "head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "id": "answer-dental-clinic-calls-and-manage-appointments",
+      "depth": "brief"
+    },
+    {
+      "branch": "research/warehouse-questions-dashboards-20261018",
+      "head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+      "depth": "deep"
+    },
+    {
+      "branch": "main",
+      "head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "id": "answer-home-service-customer-calls-and-text-the-owner",
+      "depth": "brief",
+      "already_on_remote_main": true
+    },
+    {
+      "branch": "research/clinic-patient-chat-20261018",
+      "head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+      "depth": "brief"
+    }
+  ],
+  "authentication_recovery": {
+    "current_identity_read": "Tiee7",
+    "git_fetch_origin_main": "succeeded",
+    "remote_main_before_integration": "6b1f13ee50fc58e208b3048c4a75f325feb2f764",
+    "existing_credentials_only": true,
+    "new_credentials_created_or_injected": false,
+    "prior_block_record": "research/runs/2026-10-18-zendesk-integration/validation.json",
+    "prior_block_scope": "Historical pre-publication checkpoint preserved unchanged; subsequent verification and publication are separate."
+  },
+  "new_deep": 2,
+  "new_briefs": 3,
+  "new_complete_chinese_translations": 5,
+  "counts": {
+    "registered": 1381,
+    "originals": 1381,
     "deep": 45,
-    "brief": 19,
-    "complete_chinese_translations": 42
+    "brief": 21,
+    "complete_chinese_translations": 44
   },
-  "checks_completed": {
-    "python": 73,
-    "content": 16,
+  "source_specific_artifacts_exact": [
+    {
+      "path": "registry/archives/answer-customer-questions-and-escalate-to-humans.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "b38cca94e7fd3777a68cabcb77c4b11e024a41cb579573eeb4d6725858058da2"
+    },
+    {
+      "path": "reports/brief/answer-customer-questions-and-escalate-to-humans.md",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "34b51a9085c49e13b90b71e233b2f1f300df7ff24f97c0a34ee3a5f1932bcb49"
+    },
+    {
+      "path": "research/brief/answer-customer-questions-and-escalate-to-humans.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "17cbfdc7dd990a25071cb2a60286b89ebc444a0f4d02ab62e198739b32289723"
+    },
+    {
+      "path": "research/evidence/answer-customer-questions-and-escalate-to-humans.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "d56153bd7b1b8e335979dc08375cbfa56c25d143d306b5624bf9a968b4681ee2"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/artifact-sha256.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "24530da389012646021d9ba10b03aad51f9899e9372144164a978cb6f5e01c4c"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/completion.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "536af4694a76ef6455e9777566ed2949531d4eb78f675147d0a7b41c6dcf9c59"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/selection.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "389be07ef1122baaae7520e2f5f7437e1474faa1933e19fc86091a019d0dafbf"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/source-validation.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "a47a98043098d0d7b7c2922453670554a38300b2037d6489320addfa9aca149c"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/synthetic-check.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "81c75964be0664c666eee1deef82e5dff856e9956b3e5ae6569934e56315f171"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/translation-review.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "2a159d0bd6825e0db11840545bd459ec7f295c488de4bb3935e75cdcf8164e80"
+    },
+    {
+      "path": "research/runs/2026-10-18-customer-questions-escalation/validation.json",
+      "source_head": "44d5d70fe09e31d53b198a550ac3e84fc1e22c51",
+      "sha256": "be38f71da9b251ce142f4198eaca592cd407f798f5a20e4fea1c497f6e983d4e"
+    },
+    {
+      "path": "registry/archives/answer-customer-support-conversations-with-a-zendesk-agent.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "6495314710af0c576b5f4ab67a96122081d8b212cac8d5a79f88efc3a062c77b"
+    },
+    {
+      "path": "reports/answer-customer-support-conversations-with-a-zendesk-agent.md",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "abfe2ce7a3091799f082152ed82e0fecf5efc22aca3911124800a163e67b7ad7"
+    },
+    {
+      "path": "research/answer-customer-support-conversations-with-a-zendesk-agent.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "e08828ef18dd9cf9c5628bb762b89a6ce672ba57fa7e3189857ef3e65ee7b07f"
+    },
+    {
+      "path": "research/evidence/answer-customer-support-conversations-with-a-zendesk-agent.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "69f9c5feb55a75b4094c429e5df0ede9f942abae27f70333272350081d5fab7c"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/artifact-sha256.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "dfa12beb365e05c4f357785062b2e1c660dd8429ce0df966683da29f96fc1d58"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/completion.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "3c72fef90d63feb963aea37d912b0e2f8b6d672b3d0ea0ca943478944f121375"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/feedback-search.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "a0b4edce43eab5ae2553684578f863fa2eea138f8063cda1efa63ac4559c2e70"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/selection.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "aa4d58b2dee9c00eecd56defbf42f9185834bc146f82ebe17e56b7f1dde80a3c"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/source-validation.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "22f254f3d74eac120dfa01de37ac4ef6ff89187109728ceeaf39e164f47284e7"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/translation-audit.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "e39c3d7cdc6aec96d9609367131232cf9524c6b62ba0ab81ec589d322dd03501"
+    },
+    {
+      "path": "research/runs/2026-10-18-zendesk-support-conversations/validation.json",
+      "source_head": "37831b3537ce462e0c91402b4bc775003a6d4f83",
+      "sha256": "8926e38dc39bbdbe1a39e26411c8b1cdeddf63fa757bf2a370e5755ab16af153"
+    },
+    {
+      "path": "registry/archives/answer-dental-clinic-calls-and-manage-appointments.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "07d47c88f89f8f608c7f6a1656356da33c8bd30af884a7c5457853a446f7e886"
+    },
+    {
+      "path": "reports/brief/answer-dental-clinic-calls-and-manage-appointments.md",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "584f8ffc146d0680d306e51fff93168ff2f7535b6536865fbc41106f113d1a6c"
+    },
+    {
+      "path": "research/brief/answer-dental-clinic-calls-and-manage-appointments.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "c0fd29f90d54c26835090d8ec18d072b707a2b40fc5c9e6d6e7ff4c969effac6"
+    },
+    {
+      "path": "research/evidence/answer-dental-clinic-calls-and-manage-appointments.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "73eac6ce37f4f3b717748f2d526d5f128cea079e5fce7e5e248f28b686cd8072"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/artifact-sha256.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "96c3bb26b0e1c88c96b72380fe6044187926fd2104ced9a789990f17904f4f0e"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/completion.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "2dce5a51dd1bcf9a489e3fc1f4175336df56c5626f009c6e175aee0cf785a813"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/feedback-search.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "0c3a2c55b02ad2ff9785b7aaf91cf990c04409f6707ad124af539125a42fe9ca"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/selection.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "6dd0625e3a43c7c6b1c721e6e8068e375618994d67dbfb1331293ac17e9e547b"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/source-validation.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "7e0b45cc955787099d3b6be2f89cd27df458cb3012d6fb47f9206d7793d526e7"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/translation-audit.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "a5eadf865981d6e53cd3b4286203ac49aac7ffab82df4a9b46be242a9492f4d7"
+    },
+    {
+      "path": "research/runs/2026-10-18-dental-clinic-calls/validation.json",
+      "source_head": "eafd1e65c1b5e8916847cb172b6d2d2372e2cd3b",
+      "sha256": "621a8a810f10be4ab044f0d1a677857e0f8722580d7d28efd3c7faff6896a2e9"
+    },
+    {
+      "path": "registry/archives/answer-data-questions-and-build-dashboards-from-the-warehous.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "4dd21c4ece34887a396e216ab82ddf9758e3d904ba7c47349c8e6133d5232e5f"
+    },
+    {
+      "path": "reports/answer-data-questions-and-build-dashboards-from-the-warehous.md",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "b00e9c5c3bca3adf3170fa22981d6902ae07c025ed00ff8e277ffaa260293b2a"
+    },
+    {
+      "path": "research/answer-data-questions-and-build-dashboards-from-the-warehous.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "624318a9afee18d6ee4c9bbcba21422ea7479158fa149b3c54948e76cd25fe9d"
+    },
+    {
+      "path": "research/evidence/answer-data-questions-and-build-dashboards-from-the-warehous.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "1d8cedb500373197c758b08538367efe7fec0c1dd445808eb9c1298161585b81"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/artifact-sha256.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "e2a2b790cfa64c7aafd95f16a483db481228c634bb0ad9fdd151ac725abee091"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/completion.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "c724b4d29cb01dc69b466239a4e7fdaad139149a5763953d8d885fc68d5e183a"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/economic-checks.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "6360d7ae53ec8d8e4add0c6c598a78ba433113abaed251691e2a6fdbf0d9bad5"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/publication-blocker.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "2cd76407825fc655d61a7a0bd5056b225ef50eb7ff46e64abbce25e4f3b73228"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/recovery-validation.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "7fe37a3563fa6a0674821834c305aed82d851a368ba71f4d4ff7c4b0b4657ae3"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/selection.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "1d403ff9d258c1c994f275e45775a86938532617d20f7efdb03411be807cecf1"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/source-validation.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "e62d3d9b7c40b5e6c4962efde9394ecf8a7c7e10e3bedd497f42fa4d375e2aae"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/synthetic-checks.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "bb45a4ecadd1ff170b5fa7c39e30886db4ff396d7ff74b1691fadc4e4e301ba5"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/translation-review.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "0c3065b3f34b224976d2c6f4d596ae3a7c5d913920e0fbdfcf4f41b480244a60"
+    },
+    {
+      "path": "research/runs/2026-10-18-warehouse-questions-dashboards/validation.json",
+      "source_head": "d4fcc83bcbbd7bbf3cfcf7b57ae9ad5f579d7b2d",
+      "sha256": "d3aa2748a5fa22b8c2d8a916de540f34b0fc83ea45ec75ca34732238b85747e3"
+    },
+    {
+      "path": "registry/archives/answer-home-service-customer-calls-and-text-the-owner.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "55ec3a3144982e2630625112cd71dfb8660a124f19414983c06c463690ce6f7f"
+    },
+    {
+      "path": "reports/brief/answer-home-service-customer-calls-and-text-the-owner.md",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "3e22e8042b075f4639056c5f7513ea03e4249108280d54ad74e37b10cffdc2f9"
+    },
+    {
+      "path": "research/brief/answer-home-service-customer-calls-and-text-the-owner.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "41a6942af0977b333ac149f9360d159beb3f44a73ee135805720a2f4d9dfb775"
+    },
+    {
+      "path": "research/evidence/answer-home-service-customer-calls-and-text-the-owner.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "4e9d96069f03a27e651c40080ca2ed13e9417566bce92a8de7a060b9957ebd79"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/artifact-sha256.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "1f3f8030f52514ee19c05f66c116016b6a2fd72fc6c826151eb85095395e28ca"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/completion.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "d22463388a7e3f7dd9a912733bfffd5fda143a8deced18f7f4bcbd4528777e52"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/feedback-search.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "c7e7aa9d17ecca8e85672cd1a83e1aa41eecc409632137e7a215f9b0cd041b83"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/selection.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "f82b647c1856b3006f30846f306349ff0c44936429ca0bfac4f903b9a636f432"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/source-validation.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "49705f4432f43d65a74a1c529d30ae9f8a19dd25a6dc201c60281e028708ae56"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/translation-audit.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "c9a03c73d005e270b0784a20db6e9aed105f3e0c1f42a5b14da995d1a1dbf141"
+    },
+    {
+      "path": "research/runs/2026-10-18-home-service-calls-owner-sms/validation.json",
+      "source_head": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
+      "sha256": "1a261c7909c73be741d1225ce4fb2749f7e680cdd345f453543ce353297ad24e"
+    },
+    {
+      "path": "registry/archives/answer-patient-enquiries-for-a-clinic-by-chat.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "0f848f9c959e1d9f01bef97cfb802080a511fac1822f34f8f0fde71dd775d1d4"
+    },
+    {
+      "path": "reports/brief/answer-patient-enquiries-for-a-clinic-by-chat.md",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "1690ddc70b3c677b65f0189d9a2752e611e72242a19581c92aaa8f65ff2b7b3b"
+    },
+    {
+      "path": "research/brief/answer-patient-enquiries-for-a-clinic-by-chat.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "532c2cd5808f69a4eb4a392649d9393fbb5f3ae6a6abe5ce804594febb803f74"
+    },
+    {
+      "path": "research/evidence/answer-patient-enquiries-for-a-clinic-by-chat.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "97e441e1ebe7f0aa9f1cbe5dcd641289208a4f2e02d7d341280f58f1f95c6659"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/artifact-sha256.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "68dd190b8243fc9295bdb15240c809ed96b87c8834c80c4dd53d429f1613ffec"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/completion.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "f0ffac0df1e7b342dfb039b681fd8483e4d39c6444abcb38b3cec2bbc4f588fa"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/selection.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "f18e63e5ec92c413dbf52e7e44be36e1af36b4d64dbfa99e97627453b76dac0a"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/source-validation.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "74f3f2d1bcb24288198769eb89fbfd915a090eea5dbe8a0be7072ac4e7df4db9"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/synthetic-checks.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "a008ab11e630daeba3bb26eb134f50ccb4f6c480feb105840db10e4c4cfc0308"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/translation-review.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "4f2ba094f440ca8b59703b934047e30c3749863e30a4543c0c8421e833e3d1ae"
+    },
+    {
+      "path": "research/runs/2026-10-18-clinic-patient-chat/validation.json",
+      "source_head": "6ea5d37c0c55868caa92b3839ac8be9f02bf8248",
+      "sha256": "6f7253d94a1a11def759d3b16f531164d7bdd48e5f41fed15de324e6a1a7d5b6"
+    }
+  ],
+  "integrity": {
+    "all_69_source_artifacts_exact": true,
+    "original_archives_unchanged_except_added_translations": true,
+    "all_prior_research_retained": true,
+    "shared_indexes_rebuilt": true,
+    "registry_cases_unchanged": true,
+    "ui_fix": {
+      "path": "site/src/lib/archive-text.mjs",
+      "additional_section_labels": [
+        "值得注意",
+        "实际使用的 Agent"
+      ],
+      "source_text_unchanged": true,
+      "shared_by_reports_and_cases": true
+    },
+    "validators": "business deep + personal required + author_method required passed"
+  },
+  "tests": {
+    "python_passed": 73,
+    "content_passed": 16,
+    "browser_stats": {
+      "startTime": "2026-10-18T03:41:02.227Z",
+      "duration": 171885.429,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
     "build": "passed",
-    "output": "passed",
+    "output_allowlist": "passed",
     "prompt_security": "passed",
-    "reading_and_heading_checks": 33
+    "target_browser": {
+      "checks": 45,
+      "results": [
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "reports",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "reports",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "trials",
+          "width": 1440,
+          "status": "passed"
+        },
+        {
+          "id": "add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+          "route": "cases",
+          "width": 1440,
+          "status": "passed",
+          "heading_alias": "实际使用的 Agent"
+        },
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "reports",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "reports",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "cases",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "trials",
+          "width": 820,
+          "status": "passed"
+        },
+        {
+          "id": "add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+          "route": "cases",
+          "width": 820,
+          "status": "passed",
+          "heading_alias": "实际使用的 Agent"
+        },
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-questions-and-escalate-to-humans",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "reports",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-customer-support-conversations-with-a-zendesk-agent",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-dental-clinic-calls-and-manage-appointments",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "reports",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-data-questions-and-build-dashboards-from-the-warehous",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-home-service-customer-calls-and-text-the-owner",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "cases",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+          "route": "trials",
+          "width": 390,
+          "status": "passed"
+        },
+        {
+          "id": "add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+          "route": "cases",
+          "width": 390,
+          "status": "passed",
+          "heading_alias": "实际使用的 Agent"
+        }
+      ]
+    },
+    "desktop_mobile_visual_review": "passed: styled Chinese headings, Chinese expanded, English folded, compact aligned date, exact prompts and no overflow"
   },
-  "full_browser": {
-    "status": "intentionally_interrupted_for_new_remote_main",
-    "not_used_as_final_validation": true
+  "logs_sha256": {
+    "python": "4ba87cd82a755ef12ee81a3695a0511b366157fdd06b30ab5e494a64071b1051",
+    "content": "0ff6e841f894aae0efa14d38a8e5a8a2c0d790bd57a3b8bc1287790d2e3dc3cc",
+    "build": "3423802f3d966a1809c1d35cc420c331dd91c991ce51bf21d97ab710a03ed0d0",
+    "browser": "b978236110fb1c90ac54d68cb68f34765d6c714f3413e233367b175483fa24e9",
+    "output": "220e23ffb09571d433d24cc2bb62518b42c3e06ad55ae9c079907b2026720e37",
+    "security": "ac4fc16a6df7004732eb1117e3969ce1422f3175edaee794e87a812040511f23",
+    "target": "075c918943ddaa7b42ec8b9c95e98c66524f630710726927eb98ba308e9f5285"
   },
-  "preserve_remote_main": "c32d4687f6b527a291bb278fe9b3f7def0d5d7f5",
-  "ui_fix": {
-    "path": "site/src/lib/archive-text.mjs",
-    "section_labels": [
-      "值得注意",
-      "实际使用的 Agent"
-    ],
-    "source_text_unchanged": true
-  },
-  "publication": "No push from this integration yet; final combined validation and remote checks remain required."
+  "publication_scope": "Pre-push recovery integration validation. Final main SHA, exact remote readback, CI and existing Vercel Git automatic production deployment are verified after commit and reported separately. No prior push was repeated.",
+  "runtime_limits": "Reading-site tests only. No new crawl/source request, patient/customer data, real calls, messages, appointments, medical judgments, paid API calls or credential changes."
 }
