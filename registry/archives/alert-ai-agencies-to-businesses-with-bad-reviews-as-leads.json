@@ -102,5 +102,15 @@
     "at": "2026-10-17T05:40:48.938507+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "e8415728b33b18053857d4390fd5d2287273b3add806b2b6d00ad1b6aba5b52c",
+    "translated_at": "2026-10-18T02:08:05.534469+00:00",
+    "body": "向AI机构推送收到差评的商家作为线索\nn8n智能体会在商家收到差评时通知自动化机构，让他们能够率先致电，并提供负面评价应对工具。\n实际使用\nn8n\n具体做法\n一个n8n AI Agent节点位于托管的聊天界面之后。用户指定一个国家。Agent调用Bright Data工具，为Google Maps评论数据创建快照，然后取回数据。它筛选整体评分较高、存在3星或以下评论且商家未回复的商家，再汇总前5项，并在用户要求时通过邮件或Slack发送结果。\n结果如何\n这是一个提交给挑战赛的可用演示，作者没有将其商业化的计划。销售话术生成工具目前已停用。来源没有给出线索数量或转化数据。\n值得知道\n使用Bright Data快照，避免了按每个place_id循环调用Google Places和Reviews接口；作者说，这种循环很快会让你被封禁。构建前应阅读每个节点的文档。\n自行试用\n推荐工具\nn8n\n复制提示词\n构建一个n8n工作流，每天检查[本地商家类型，例如我所在城市的牙医]的Google评论，并标记刚收到[1星或2星]评论的商家。对每一家商家，让AI步骤概括投诉内容，并起草一段简短的电话话术，推荐[我的负面评价应对工具或服务]，然后通过邮件把商家名称、电话号码、评论原文和话术发给我。用几家商家进行测试并展示结果；不要自行联系任何商家。\n原始来源：https://dev.to/myopicoracle/communitypulse-4230",
+    "body_sha256": "381cabd4f1d856f08f655054673492ca2423809eff888b3242a569efe22f9115",
+    "scope": "Faithful full translation of captured case prose, actual n8n agent, complete source trial and original link; decorative N8 omitted. Source claims about blocking are attributed, not executed or endorsed as access authorization."
   }
 }
