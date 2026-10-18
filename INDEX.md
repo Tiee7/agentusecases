@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **46** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **47** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -45,6 +45,7 @@
 | [用 Zendesk AI Agent 回答客户产品问题](reports/answer-customer-support-conversations-with-a-zendesk-agent.md) | 仅建议受控试点 | 30.0 | 中 | available | 零售产品咨询、客服知识与人工升级 | 2026-10-18T03:04:50.499706+00:00 |
 | [用 Devin 查询数据仓库并生成 SQL 与看板](reports/answer-data-questions-and-build-dashboards-from-the-warehous.md) | 适合内部效率工具 | 35.0 | 中 | available | 企业内部数据分析与BI辅助 | 2026-10-18T03:12:38.025709+00:00 |
 | [用 Alexa+ 查询上传文档并整理学校邮件](reports/answer-questions-from-uploaded-documents-and-school-emails.md) | 适合内部效率工具 | 28.5 | 中 | available | 家庭资料问答与学校日程整理 | 2026-10-18T03:42:28.183314+00:00 |
+| [用 AI Assist 回答租客问题并安排看房](reports/answer-renter-questions-and-schedule-tours.md) | 仅建议受控试点 | 48.0 | 中 | available | 多户住宅租赁沟通与看房行政流程 | 2026-10-18T03:53:22.588465+00:00 |
 | [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
 | [用 Claude Code 和 Claude for Word 起草文件并衔接法律工作流](reports/automate-legal-drafting-and-workflows-with-claude-code.md) | 适合内部效率工具 | 38.0 | 中 | available | 律师内部文书处理与知识工作流 | 2026-10-16T17:12:27.645268+00:00 |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
