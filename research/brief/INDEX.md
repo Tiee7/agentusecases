@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **19**；深度研究 **45**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **20**；深度研究 **45**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -23,3 +23,4 @@
 | 用自建语音 agent 接听企业来电并整理记录 | [简报](../../reports/brief/answer-business-phone-calls-with-a-voice-agent.md) |
 | 用自建客服 agent 回答产品问题并转交人工 | [简报](../../reports/brief/answer-customer-questions-and-escalate-to-humans.md) |
 | 用 n8n 处理牙科诊所来电与预约 | [简报](../../reports/brief/answer-dental-clinic-calls-and-manage-appointments.md) |
+| 用 AI agent 接听居家服务来电并短信通知老板 | [简报](../../reports/brief/answer-home-service-customer-calls-and-text-the-owner.md) |
