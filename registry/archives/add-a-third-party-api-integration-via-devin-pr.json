@@ -102,5 +102,15 @@
     "at": "2026-10-17T05:29:13.013719+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "34e8a84426b082d8d9949229b70bcba40e07fa7ab88a921a004d9fb331e65a01",
+    "translated_at": "2026-10-18T00:52:43.508911+00:00",
+    "body": "通过Devin的PR添加第三方API集成\nDevin提交了包含端点和后端接入代码的PR，该PR随后被合并，但它遗漏了API key逻辑、代码风格和抽象方面的要求，需要通过审阅修正。\n实际使用\nDevin\n具体做法\n作者通过Devin的Slack集成，要求它依据文档链接，为第三方服务构建一个生成令牌的端点。提示词要求将其加入已有微服务，并使用现有的CDK secrets逻辑处理API key。Devin先给出计划，再创建GitHub PR。作者在PR上留下审阅意见，Devin则推送修正。\n结果如何\n经过2–3轮审阅后，代码达到可生产使用状态，测试通过，PR被合并。整项任务大约花了1小时；如果手写，大约需要15分钟。作者审阅约花了5分钟。\n值得知道\nDevin在调用中遗漏了第三方API key，也没有把客户端逻辑放入共享的clients库，因此应当像审阅初级工程师的代码一样审阅该PR。\n自行试用\n推荐工具\nDevin\n复制提示词\n在[仓库URL]中添加[第三方API]集成，包括端点、后端接入代码，以及通过[环境变量或secrets方案]配置API key。遵循[文件夹或文件]中已有的代码风格和抽象，并添加测试。创建一个PR，列出修改内容和所有假设；到此停止，不要合并。\n原始来源：https://dev.to/prpatel05/a-real-world-coding-story-devin-ai-as-my-co-pilot-548",
+    "body_sha256": "16611680f8d5010412c08b078c7e22aa9579ad6c722f020e11aa55ff87f3df51",
+    "scope": "Faithful translation of all captured case prose, source template and original link. Decorative DE initials omitted. The linked author article is summarized separately, not reproduced in full."
   }
 }
