@@ -1,0 +1,131 @@
+{
+  "checked_at": "2026-10-18T04:19:14.766358+00:00",
+  "integrity": "passed",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "manual paragraph correspondence plus hash checks passed",
+  "brief_not_deep": true,
+  "commercial_score": null,
+  "author_method": "3 concise source-backed bilingual summaries, explicitly architecture/goals rather than execution",
+  "source_receipts_verified": 5,
+  "economics_recomputed": 2,
+  "cross_references": "passed",
+  "personal_and_editorial_validators": "passed",
+  "source_trial_exact": "passed",
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 49,
+    "chinese_translation_pending": 1332,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 47,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 0,
+  "new_briefs": 1,
+  "new_complete_chinese_translations": 1,
+  "v2_deep_gate": "not applicable; not run or claimed",
+  "verify_sources_exception": "No bulk verify-sources call because it would re-request the stopped source target. Used archive/cache hashes, four permitted public captures and exact independent refetches instead.",
+  "implementation_runtime": "not tested; author code not obtained; no model calls, real WhatsApp/Telegram data, bot/account setup, messaging, workflow import or model execution",
+  "tests_completed_at": "2026-10-18T04:19:14.797639+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T04:16:20.182Z",
+      "duration": 159083.06100000002,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site desktop and mobile; not an execution of the WhatsApp support/handoff architecture",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "trials"
+    ],
+    "checks": [
+      "exact original and translation",
+      "Chinese default open, English collapsed and expandable",
+      "exact source trial template and actual/recommended tools",
+      "pending deep research and no fabricated score",
+      "no overflow or page errors"
+    ],
+    "report_route": "absent by design because brief is separate from completed v2 research"
+  },
+  "website_counts": {
+    "reports": 47,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 49
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Existing repository tests unchanged; temporary config only selects installed system Chromium and absolute test/server paths. Security adapter only substitutes absolute imports and browser launcher."
+  },
+  "commands": [
+    "python /tmp/validate_whatsupport_brief.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/whatsupport-security.mjs",
+    "node /tmp/whatsupport-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "62b581252a74ae5777cd1c3bcf39fde1ce64924dde945b1f4740dae2311223a6",
+    "content": "c3b895b28435ee6ab56a81c8ed816f811258b98f6bb6a0add3bb7400182b9098",
+    "build": "7f194e8e5f5ddfed0476072fe0f6995418da212fb8897cb08d3f092ef5cb6c1c",
+    "output": "06aa62e60e7a87559427f43806af1449fa88c7f7371425e4dde477bfecfa0dff",
+    "browser": "320d54d1f18fbc21b4803599395eb67f19fc2d81c5d635635818033ae98c00ed",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "5a62fdb246a40d14fb9ac5c7222dfc2ceb369f3a9d1ebd3aa5089a75f508062d"
+  },
+  "latest_main_observation": {
+    "checked_at": "2026-10-18T04:19:14.708416+00:00",
+    "base_commit": "9bd839b76f6ba253c6f2b9ef7916d4a4fa0c1a96",
+    "latest_main": "178b2b5aa87e0ec86a2cad48409f4b72e49f1cf3",
+    "catalog_and_assigned_archive_unchanged": {
+      "registry/cases.json": true,
+      "registry/refresh.json": true,
+      "registry/archives/answer-whatsapp-customer-questions-and-escalate-to-humans.json": true
+    },
+    "assigned_research_absent_on_main": true,
+    "main_written": false,
+    "scope": "Independent branch snapshot; integration coordinator serializes shared indexes/main."
+  },
+  "visual_review": "Viewed desktop and mobile case screenshots: complete Chinese opens by default, n8n actual and recommended tools match, no visual overlap; brief remains pending deep with no invented score."
+}

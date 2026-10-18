@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-whatsapp-customer-questions-and-escalate-to-humans",
+  "url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
+  "title": "用 n8n 设计 WhatsApp 知识问答与 Telegram 人工转接",
+  "industry": "WhatsApp知识问答与人工客服交接架构",
+  "researched_at": "2026-10-18T04:14:41.015991+00:00",
+  "brief_reason": "原始README与固定树已读，但公开仓库只有架构文档，没有工作流导出、置信度实现、回流/权限日志、质量、客户、费用或独立复现。当前平台资料不能补成原项目实测，保存未评分简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先检查可实现的置信度与人工回流，暂不评定商业分数",
+    "reason": "架构强调知识约束和人工升级，但发布物不足以复现实际流程。只支持合成材料中的有限设计评审，不承诺全天候人工接管、准确率、节时或付费交付收益。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
+      "title": "Answer WhatsApp customer questions and escalate to humans",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:40:55.073645+00:00",
+      "archive_path": "registry/archives/answer-whatsapp-customer-questions-and-escalate-to-humans.json",
+      "sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
+      "hash_scope": "Existing source_text.body UTF-8; no new source-site request.",
+      "supports": "支持n8n/OpenAI知识问答、WhatsApp/Telegram人工路由、无测量/无导出和推荐试用模板的归档，模板不是作者实际指令。"
+    },
+    {
+      "id": "S674559adf368",
+      "url": "https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T04:09:58.789850+00:00",
+      "status": "fetched",
+      "title": "GitHub - zezo640/whatsapp-ai-support-agent-n8n: 24/7 WhatsApp customer support agent answering from a company knowledge base, with confidence-based escalation to a human operator on Telegram. Built with n8n + OpenAI. · GitHub",
+      "characters": 6035,
+      "sha256": "21e19b63e5ece7283991602921fd14a41674a01002b63a3a9b67e50f0acf7756",
+      "independent_verification": {
+        "id": "S674559adf368",
+        "url": "https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
+        "verified_at": "2026-10-18T04:12:15.646561+00:00",
+        "original_sha256": "21e19b63e5ece7283991602921fd14a41674a01002b63a3a9b67e50f0acf7756",
+        "verified_sha256": "21e19b63e5ece7283991602921fd14a41674a01002b63a3a9b67e50f0acf7756",
+        "exact_match": true
+      },
+      "supports": "登记的原始README设计说明：n8n/OpenAI、知识和历史、置信度路由、Telegram完整上下文与设计目标；固定树只有README，未公布工作流或测量结果，不当运行验证。"
+    },
+    {
+      "id": "S071b02979073",
+      "url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T04:11:50.828025+00:00",
+      "status": "fetched",
+      "title": "/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp",
+      "characters": 5832,
+      "sha256": "9177558acdc8582768dc484848b1bf318453faa28384538d34eca7814723bcd8",
+      "independent_verification": {
+        "id": "S071b02979073",
+        "url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.whatsapp",
+        "verified_at": "2026-10-18T04:12:26.870823+00:00",
+        "original_sha256": "9177558acdc8582768dc484848b1bf318453faa28384538d34eca7814723bcd8",
+        "verified_sha256": "9177558acdc8582768dc484848b1bf318453faa28384538d34eca7814723bcd8",
+        "exact_match": true
+      },
+      "supports": "当前n8n官方WhatsApp Business Cloud节点文档列发送、模板、等待响应和人工批准等积木；不是本例使用版本或Telegram回流/置信度门槛实现。"
+    },
+    {
+      "id": "S69b841c7350d",
+      "url": "https://core.telegram.org/bots/faq",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T04:10:55.179143+00:00",
+      "status": "fetched",
+      "title": "Bots FAQ",
+      "characters": 7660,
+      "sha256": "7e2ce6846ec9efa8a0bc9251d1666301b34dc7a405490559f9424ca192ea2548",
+      "independent_verification": {
+        "id": "S69b841c7350d",
+        "url": "https://core.telegram.org/bots/faq",
+        "verified_at": "2026-10-18T04:12:20.674236+00:00",
+        "original_sha256": "7e2ce6846ec9efa8a0bc9251d1666301b34dc7a405490559f9424ca192ea2548",
+        "verified_sha256": "7e2ce6846ec9efa8a0bc9251d1666301b34dc7a405490559f9424ca192ea2548",
+        "exact_match": true
+      },
+      "supports": "Telegram官方FAQ说明机器人能接收哪些私聊/群组/频道消息及privacy mode条件；不证明本例配置、人员权限或人工接管完成。"
+    },
+    {
+      "id": "S9c31625dedcc",
+      "url": "https://n8n.io/pricing/",
+      "kind": "market",
+      "fetched_at": "2026-10-18T04:10:58.696167+00:00",
+      "status": "fetched",
+      "title": "n8n Plans and Pricing - n8n.io",
+      "characters": 17271,
+      "sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+      "independent_verification": {
+        "id": "S9c31625dedcc",
+        "url": "https://n8n.io/pricing/",
+        "verified_at": "2026-10-18T04:12:24.601347+00:00",
+        "original_sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+        "verified_sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+        "exact_match": true
+      },
+      "supports": "n8n当前报价按workflow executions并说明每次工作流运行、聊天消息估量与Assistant credits；报价币种EUR、年付口径与USD假设分开，不当原作者模型/消息/维护账单。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "原始README由Ziad Hady署名，描述n8n编排和OpenAI知识问答、WhatsApp客户渠道及Telegram人工升级设计。",
+      "source_ids": [
+        "S674559adf368"
+      ]
+    },
+    {
+      "statement": "固定提交0945a2959170b035fc8ddf91132c5b63d04bf033的完整树只有README.md，未发布工作流JSON；不是对作者私有实现是否存在的判断。",
+      "source_ids": [
+        "S674559adf368"
+      ]
+    },
+    {
+      "statement": "README把全天候覆盖、常见问题与可靠人工转交列为目标，没有测量结果或置信度评分细节。",
+      "source_ids": [
+        "S674559adf368",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "客户主动要求人工、从Telegram回复以及两个测试完成条件来自源站推荐模板，不能当作者实际验收。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "当前n8n WhatsApp节点列出发送与等待响应/批准等功能，不证明本例采用或已做好回流。",
+      "source_ids": [
+        "S071b02979073"
+      ]
+    },
+    {
+      "statement": "Telegram FAQ对机器人收到哪些私聊/群组/频道消息给出条件说明，不能直接作本例权限隔离证明。",
+      "source_ids": [
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "statement": "n8n当前报价按workflow executions并讨论聊天消息估算，不能把咨询人数、消息数和执行次数混为同一计量。",
+      "source_ids": [
+        "S9c31625dedcc"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "conclusion",
+      "title": "商业判断与证据范围",
+      "body": "保存未评分简要分析，自用价值待核实，不计入completed v2深研。原始公开README已读，但它明确是架构说明和设计目标，没有运行结果。固定提交的完整仓库树只有README.md，无导出工作流，不能当成可直接导入、部署或已稳定运行的交付包；这不证明作者从未有过私有实现。潜在使用者是WhatsApp客服团队，付款人可能是店主或客服负责人，但没有客户、付费、问答量、质量或实际成本证据。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S674559adf368"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "公开的是路由方案，未给出实现",
+      "body": "README把传入消息、会话历史和公司知识交给OpenAI生成回复，再经confidence check决定发回WhatsApp或把完整上下文送到Telegram；24/7、覆盖常见问题与人工接管是设计目标，不是已测覆盖率或服务等级。原作者方法只做简短中英设计摘要，不翻译整篇README。源站模板还要求客户主动要人工时转交、可从Telegram回复和两类测试，这些不是README已实现的明确步骤。",
+      "source_ids": [
+        "S674559adf368",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "confidence",
+      "title": "置信度与可核对依据分别设计",
+      "body": "README没有公开置信度的生成方式、阈值、校准样本或如何发现错误。模型自称有把握不能代替来源正确、规则适用与未知项检查。应先用参考答案区分资料内可答、冲突、缺失和需要人工的意图，再检查误答与漏升级，不用一个正确问题和一个棘手问题推断整体可靠性。这些是我们的评审建议，未在本例实现或运行；“基于知识库”也不自动证明每个回答都引用正确版本。",
+      "source_ids": [
+        "S674559adf368",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "handoff",
+      "title": "通知、领取与回复客户分开",
+      "body": "把完整会话发到Telegram，不等于有人领取、客户已获答或WhatsApp机器人已停止继续回复。README没有说明会话关联、人员身份、暂停/恢复、超时、重复事件、人工回复回到客户的路径及确认记录。当前n8n节点的发送、等待响应与批准功能只能作为已有积木比较，不能补成作者的实现。若要经营，必须先定义谁何时接管和未接管时怎么办，人工队列不能因通知发送成功就自动关闭。",
+      "source_ids": [
+        "S674559adf368",
+        "S071b02979073",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "完整上下文会跨越两个渠道",
+      "body": "README刻意把客户渠道与操作员渠道分开，但这不等于已经验证隐私隔离。Telegram FAQ说明机器人收到的消息与私聊、频道、群组管理员和privacy mode条件有关；它描述平台能力，不证明本例设置或所有人员都应看客户完整对话。未来设计应核对必要字段、人员可见范围和保存期限，不把全部历史无条件搬运或当公开调试样本。本轮没有真实会话、机器人账号、密钥、WhatsApp/Telegram连接或消息操作。",
+      "source_ids": [
+        "S674559adf368",
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "id": "costs",
+      "title": "执行、模型与人工维护不能混算",
+      "body": "当前n8n报价说明按工作流执行次数计量，FAQ对聊天场景还区分会话与每会话消息数；不能把每名客户的一次咨询当一次执行。报价页显示的欧元及年付口径不混入下面USD假设，也不能从包含Assistant credits推断本例OpenAI费用全部覆盖。作者没有公开模型、上下文长度、渠道/提供方费用或部署方式。固定FAQ、知识库搜索后人工回答和平台现成节点是可比较基线，不默认新建一个agent就能降低总成本。",
+      "source_ids": [
+        "S9c31625dedcc",
+        "S071b02979073",
+        "S674559adf368"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "原型与维护的两种有限情景",
+      "body": "以下全为USD规划假设，不是作者账单、平台报价或24/7人工SLA。799美元限定原型：资源40、人工12小时×40=480、其他30、获客120，可变670、贡献129；月2项减固定500，月贡献-242。499美元客户月：资源预算80、人工7小时×40=280、其他20、获客60，可变440、贡献59；8客户减固定800，月贡献-328。多2小时支持使贡献-21。资源未测量，未知模型/消息超额、客户许可、正式上线评审、持续值守、首次接入及税费退款不含在内。",
+      "source_ids": [
+        "S9c31625dedcc",
+        "S674559adf368",
+        "S69b841c7350d"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "反馈、反证与停止条件",
+      "body": "检索原项目名称、HN和GitHub未取得可归属的独立使用结果；仓库公开元数据或没有开放issue不当满意度。最强反证是架构把知识约束和人工升级放在中心，平台也确有消息/批准积木；这可能适合作为设计起点，但不足以证明无需重做实施。先取得可检查导出或重新定义合成回放，检查资料缺失、客户要人工、重复/迟到事件和无人领取，记录所有复核与修复。若越权泄露、误答无法发现、回流错人或支持超预算，应停止扩大，不补造分数。",
+      "source_ids": [
+        "S674559adf368",
+        "S071b02979073",
+        "S69b841c7350d",
+        "S9c31625dedcc",
+        "archive-case-20261017"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "9b6eb16d913cd45b6698044c205942a40e1d9b4687d2c1de4c29ed970385e12a",
+      "How it went": "fcf1a38083979c9e084c7ef83d273ef9ba9a39311cdb7e8eb8faed5d5cdf21e1",
+      "Worth knowing": "aa19fc1a514197c0a09f247dc9fb2448fb20b5145f97f884c03461ac97126042"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build an n8n workflow that answers customer questions on WhatsApp using an AI agent grounded in [my knowledge base, e.g. a Google Doc or FAQ sheet]. When the agent's confidence is low or the customer asks for a human, forward the full conversation to me on Telegram and let me reply from there. Done when a test question gets a correct answer and a deliberately tricky one gets escalated to me with context.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
+    "observed_at": "2026-10-17T05:40:55.073645+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "750512e743af37786781cadf339bde0ccdc7f6dcaf08fe25fe173d868f8b6a5d"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
+    "source_title": "Ziad Hady：WhatsApp支持架构README（设计说明）",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T04:09:58.789850+00:00",
+    "source_sha256": "21e19b63e5ece7283991602921fd14a41674a01002b63a3a9b67e50f0acf7756",
+    "steps": [
+      {
+        "en": "Assemble incoming WhatsApp messages with conversation history and company knowledge, then use OpenAI to draft grounded replies.",
+        "zh": "将传入的WhatsApp消息与会话历史、公司知识汇集，再用OpenAI起草有资料依据的回复。"
+      },
+      {
+        "en": "The design routes confident answers to WhatsApp and uncertain cases with full context to a human team on Telegram. The confidence scoring method is not published.",
+        "zh": "该设计将有把握的答案发回WhatsApp，将不确定事项连同完整上下文送到Telegram人工团队；置信度评分方法未发布。"
+      },
+      {
+        "en": "The README describes architecture and goals; the workflow export is still being added. These summaries do not establish a working deployment or a Telegram-to-customer reply path.",
+        "zh": "README说明架构与目标，工作流导出仍在添加中；这些摘要不证明部署已运行，也不证明已实现Telegram到客户的回复路径。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "公开架构可作设计参考，但没有可导入工作流、阈值、回流、质量或维护数据，无法确认净收益和实施负担。",
+    "audience": "有版本化客服知识、能设计和复核跨渠道升级的技术及客服负责人。",
+    "use": "在合成对话上评审回答、拒答、转交、领取和回流设计。",
+    "benefit": "可能减少常见问题反复整理和上下文丢失，但没有覆盖率、准确率、节时或客服成本实测。",
+    "setup_cost": "合成问题、参考答案、知识版本、升级角色、会话关联与状态规则；公开导出缺失，本轮不搭建账号或调用服务。",
+    "maintenance_cost": "知识/规则/节点变动、阈值复核、人工队列值守、失败恢复、日志与用量检查。",
+    "frequency": "随实际客户问题与升级需要，README没有可外推的量级或使用频率。",
+    "privacy_risk": "完整客户对话跨渠道含私人信息，需核对必要字段和可见人员；不默认不同渠道等于隔离，本轮不接真实数据。",
+    "error_risk": "可能自信误答、错配会话、无人领取、重复回复或人工回流错误，需要资料核对、状态记录和人审。",
+    "source_ids": [
+      "S674559adf368",
+      "S071b02979073",
+      "S69b841c7350d",
+      "S9c31625dedcc",
+      "archive-case-20261017"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站n8n推荐模板完整保留，含低置信度或客户要求人工、完整会话与Telegram回复及两类测试；不是README实际prompt或已发布工作流。",
+    "prerequisites": "合成对话、版本化知识、参考答案、角色和升级规则、会话标识与待审状态表。",
+    "tools": "原例标n8n，README还写OpenAI、WhatsApp和Telegram；本轮只读资料，不安装、接账号或执行模型。",
+    "expected_result": "有出处的答复草稿、未知项、升级与人工回流方案、失败清单；自编模板未实测，不发送真实消息。",
+    "prompts": [
+      {
+        "title": "用合成对话检查回答、升级和人工回流",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "S674559adf368",
+          "S071b02979073",
+          "S69b841c7350d",
+          "S9c31625dedcc",
+          "archive-case-20261017"
+        ],
+        "attribution": "研究团队自编，非原作者或源站原话；未实测。",
+        "text": "仅使用[合成WhatsApp对话]、[版本化知识]、[人工参考答案]、[允许字段/角色]和[明确升级规则]。不要连接真实WhatsApp或Telegram、发送消息、读取客户资料、创建凭据或调用额外付费API。逐条列会话标识、来源版本、支持句、拟答、未知项和与参考答案的差异；不要把模型自称置信度高当正确证据。资料缺失/冲突或客户要人工时列升级原因、最少必要上下文、拟接收角色和待领取状态。设计从通知、领取、人工草稿、审批、客户回复到恢复机器人的关联与确认，不把通知已发当接管完成。回放重复/迟到消息、无人领取、未知会话、误答和超时；全部保持草稿，展示状态差异、需人工决定事项和恢复办法。分别记录消息、执行、模型与人工维护变量，不声称已达24/7服务、准确率或节时。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：限定架构原型",
+      "currency": "USD",
+      "unit": "一个合成资料原型，不含正式生产上线或24/7值守",
+      "price": 799,
+      "generation_cost": 40,
+      "human_cost": 480,
+      "other_variable_cost": 30,
+      "acquisition_cost": 120,
+      "contribution_before_fixed_cost": 129,
+      "monthly_volume": 2,
+      "monthly_fixed_cost": 500,
+      "monthly_profit": -242,
+      "assumptions": "全部假设，人工12小时×40，资源40不是实际账单或欧元套餐换算；不含客户许可、模型/消息未知超额、正式上线评审、后续维护、持续值守及税费退款，无实际订单。"
+    },
+    {
+      "scenario": "规划假设：有限知识与回流维护",
+      "currency": "USD",
+      "unit": "客户月，不含24/7人工SLA",
+      "price": 499,
+      "generation_cost": 80,
+      "human_cost": 280,
+      "other_variable_cost": 20,
+      "acquisition_cost": 60,
+      "contribution_before_fixed_cost": 59,
+      "monthly_volume": 8,
+      "monthly_fixed_cost": 800,
+      "monthly_profit": -328,
+      "assumptions": "收费/用量/工时全是假设，人工7小时×40，资源80非账单或n8n欧元套餐换算，多2小时支持使贡献-21；不含首次接入、客户许可、未知模型/消息超额、正式评审、24/7值守、税费退款，非作者经营数据。"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 1,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "作者README是设计说明，无测量效果；检索未取得本项目独立用户复现，公开元数据不作满意度。未评分不是差评。"
+  },
+  "limitations": "只有公开架构README和固定树，无工作流JSON、置信度机制、人工领取/回流与权限实现、日志、质量、客户、费用或独立复现。当前平台功能/价格不是作者配置。未运行或安装项目、执行模型、接真实会话、创建账号/凭据或发送消息，无额外付费API。",
+  "archive_source_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
+  "translation_sha256": "10a8dce40feaa454106671a7fe0b448f26869ba06b04084ecc5ee4f1b6532ac4"
+}
