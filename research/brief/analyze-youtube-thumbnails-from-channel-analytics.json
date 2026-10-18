@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "analyze-youtube-thumbnails-from-channel-analytics",
+  "url": "https://agentusecases.ai/use-case/analyze-youtube-thumbnails-from-channel-analytics",
+  "title": "用 Grok Bot 比较 YouTube 缩略图表现并提出创意",
+  "researched_at": "2026-10-18T02:40:04.726771+00:00",
+  "industry": "创作者分析与频道运营辅助",
+  "brief_reason": "产品团队演示及历史比较，未有新创意部署后的独立实验、付费客户或净省时证据；六份已读官方资料不能代替效果与市场验证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收数据口径和人工复核，历史胜出样式不能保证改版效果",
+    "reason": "没有独立客户或因果提升，Grok费用及后台字段映射未核验。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/analyze-youtube-thumbnails-from-channel-analytics",
+      "title": "Analyze YouTube thumbnails from channel analytics",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:55:33.123411+00:00",
+      "archived_at": "2026-10-17T05:55:33.123411+00:00",
+      "archive_path": "registry/archives/analyze-youtube-thumbnails-from-channel-analytics.json",
+      "sha256": "5fa1010109c4ff1a287453e6efe75d89f72e0cb4aba82ef9253434677bbbb0af",
+      "hash_scope": "Existing source_text.body UTF-8, no fresh source-site request",
+      "supports": "完整源站转述和模板，包括5.1%与14%至19%的报告值；不是独立后台核验或因果提升。"
+    },
+    {
+      "id": "S756b7d4d7bc6",
+      "kind": "primary",
+      "url": "https://videostats.ai/blog/grok-bot-youtube-analytics",
+      "title": "How to Connect Grok Bot to Your YouTube Analytics | VideoStats",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:36:58.223807+00:00",
+      "sha256": "704f9f22e11b5024e2c49377353bb91632d1668a527b33ca520de6ef8f29c35c",
+      "supports": "产品团队的连接教程与Primal Video演示，含MCP授权、缩略图比较和归因说明；非独立客户或创意效果验证。"
+    },
+    {
+      "id": "S4866aa79d0c3",
+      "kind": "primary",
+      "url": "https://videostats.ai/",
+      "title": "YouTube Attribution: See Which Videos Drive Leads and Sales | VideoStats",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:37:22.857172+00:00",
+      "sha256": "a2c62376c5d90d7e0a7a759e3b1f0e874ea6474e4dcd7f60554c90a79cfb432a",
+      "supports": "当前官方首页的产品功能、创办团队关系及Starter单频道37美元/月标价；不证明实际账单、Grok费用或套餐所有权限。"
+    },
+    {
+      "id": "S3dfc7d40356b",
+      "kind": "primary",
+      "url": "https://videostats.ai/privacy-policy",
+      "title": "Privacy Policy | VideoStats",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:37:25.501838+00:00",
+      "sha256": "8d95f00eb0bc989eaf1faddc59d6c55c0eda3fe62b0942b2df542ca957ce4960",
+      "supports": "公开隐私政策中的MCP工作区范围、少量写入例外、返回给AI提供商的数据及撤销/删除说明；属厂商政策，非独立安全审计。"
+    },
+    {
+      "id": "S41dbc8ec4da3",
+      "kind": "primary",
+      "url": "https://developers.google.com/youtube/analytics/metrics",
+      "title": "Metrics  |  YouTube Analytics and Reporting APIs  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:37:28.093640+00:00",
+      "sha256": "851bced86be075c9938dbb79c445cc866a18acc77ba31935130655218819760c",
+      "supports": "Google官方Analytics指标定义，注释/卡片点击率和观看时长等有各自口径；不能当本案例缩略图CTR字段映射已核验。"
+    },
+    {
+      "id": "Sf93e1429ed51",
+      "kind": "primary",
+      "url": "https://support.google.com/youtube/answer/7628154?hl=en",
+      "title": "Impressions & click-through-rate FAQs - YouTube Help",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:37:52.207493+00:00",
+      "sha256": "e8df3ba4d50d711ed0cb0d38dc4b6f8af7b550bbf65339f6f5ebb0866ee78dca",
+      "supports": "YouTube官方展示CTR的计数范围、流量/受众差异和比较注意点；不保证本案例改版提升。"
+    },
+    {
+      "id": "Sca736e8be4d3",
+      "kind": "competitor",
+      "url": "https://support.google.com/youtube/answer/16391400?hl=en-GB",
+      "title": "A/B test titles and thumbnails - YouTube Help",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:37:55.114592+00:00",
+      "sha256": "e740729e4272a96bf74f5d77726ca1d452123f0a4c1b5a6bc5d0b5cbd248f0d2",
+      "supports": "YouTube官方原生标题/缩略图并发A/B比较、观看时长指标和资格限制，作为具体替代；本轮未运行测试。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档描述以Grok Bot连接Video Stats并比较频道缩略图。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "5.1%及14%至19%来自既有案例转述，不是新创意实验结果。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "原文教程要求选择频道并授权，且站外线索和销售需要追踪代码。",
+      "source_ids": [
+        "S756b7d4d7bc6"
+      ]
+    },
+    {
+      "statement": "当前首页把演示频道的Justin/Mike Brown与文章作者Jack Born列为创办团队。",
+      "source_ids": [
+        "S4866aa79d0c3",
+        "S756b7d4d7bc6"
+      ]
+    },
+    {
+      "statement": "当前首页Starter为37美元/月、一个频道，非Grok费用报价。",
+      "source_ids": [
+        "S4866aa79d0c3"
+      ]
+    },
+    {
+      "statement": "公开政策说明MCP结果会送给连接的AI提供商，并列QR码与功能请求写入例外。",
+      "source_ids": [
+        "S3dfc7d40356b"
+      ]
+    },
+    {
+      "statement": "YouTube官方说明总观看量不能直接除以展示量替代展示CTR。",
+      "source_ids": [
+        "Sf93e1429ed51"
+      ]
+    },
+    {
+      "statement": "Google官方annotationClickThroughRate指注释点击，不是缩略图展示CTR。",
+      "source_ids": [
+        "S41dbc8ec4da3"
+      ]
+    },
+    {
+      "statement": "YouTube官方A/B工具最多三种标题/缩略图方案，按观看时长比较。",
+      "source_ids": [
+        "Sca736e8be4d3"
+      ]
+    },
+    {
+      "statement": "官方说明CTR受内容、受众与展示位置影响，不能把历史样式共同点直接当因果。",
+      "source_ids": [
+        "Sf93e1429ed51"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "历史比较不能作为新创意的提升结果",
+      "body": "现有证据不足以支持商业投入，商业评分不评定。原案例展示的是读取数据、比较历史缩略图并提出后续创意，没有说明新创意被采用或通过实验提高了观看、线索或收入。5.1%与14%至19%是归档转述的历史报告值，不能当作改图后的前后测差异。本轮读取文章文字，未取得后台数据或独立核验截图数字；对视觉模式的描述仍归属于来源，不能据此复述为本轮看图实测。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S756b7d4d7bc6"
+      ]
+    },
+    {
+      "id": "method",
+      "title": "案例是产品团队演示",
+      "body": "原文描述通过聊天添加MCP、浏览器选择频道并授权，再用返回的图像与指标询问缩略图。文章由Jack Born署名，首页把他及Primal Video的Justin、Mike Brown列为创办团队，因此演示频道不是已证明的独立付费客户。文章当前标注2026年10月4日、更新10月6日；这与既有源站日期未观测字段分开保存，未回写旧档案。作者方法只做短双语摘要，不把源站Copy prompt或截图中未提取的文字当成作者实际提示词。",
+      "source_ids": [
+        "S756b7d4d7bc6",
+        "S4866aa79d0c3",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "metrics",
+      "title": "CTR的分母必须一致",
+      "body": "YouTube官方解释，展示点击率只针对计入的展示所产生的观看，外站或其他未计入展示来源的观看不能随意进入分子。不同视频还可能有不同时间范围、流量来源与受众，直接比较“最好十条”和全频道会引入筛选差异。多条视频汇总应在同一口径下合计分子/分母，不能简单平均各条百分比。Google指标文档中的annotationClickThroughRate是注释点击率，不能因为名字含CTR就替代缩略图展示CTR；本案例字段来源与映射仍未实测。",
+      "source_ids": [
+        "Sf93e1429ed51",
+        "S41dbc8ec4da3"
+      ]
+    },
+    {
+      "id": "inference",
+      "title": "相关模式需要后续验证",
+      "body": "两个胜出缩略图的共同样式不能证明样式导致胜出；题材、标题、频道受众和分发位置可能同时不同。竖版缩略图表现较低也不能推出所有竖版都差，更不能把缩略图方向直接当成视频的Shorts类别。先明确比较集合、曝光量、发布时间和流量分组，再把观察转成可否证的创意假设。合成表只验证汇总和缺失处理，不测试模型的视觉理解、原创设计或增长效果。即使点击率上升，也仍要分别观察观看时长和业务转化，不能把点击当收入。",
+      "source_ids": [
+        "Sf93e1429ed51",
+        "Sca736e8be4d3",
+        "S756b7d4d7bc6"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "原生实验与报告整理的分工",
+      "body": "YouTube当前官方标题/缩略图A/B工具可同时比较最多三种方案，依据观看时长而非只看CTR；文档也有桌面、资格和视频类型限制，不能承诺任意频道都能用。它是验证方案的具体基线，而MCP文字助手主要帮助整理数据和假设。外部工具的额外付款理由应是减少复核、连接站外归因或跨频道交付的实际成本。站外点击、线索和销售来自另一层追踪，作者要求站点追踪代码；缺少追踪不能被记为真实零，也不能由此保证收入归因准确。",
+      "source_ids": [
+        "Sca736e8be4d3",
+        "S756b7d4d7bc6",
+        "S4866aa79d0c3"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "连接范围和写入例外要逐项核验",
+      "body": "公开政策声称连接限单一工作区，返回频道指标、缩略图、点击、线索及销售等数据，结果会送到用户选用的AI提供商；这扩大了需要核对的数据流。政策列出大多数工具只读，但创建QR码会生成公开短链，提交功能请求也会写入消息，不能把整个连接说成绝对只读。更广泛网页功能还不能等同于当前MCP权限。未来试点需核对工作区、工具清单、撤销和删除要求，不能只凭营销承诺证明隔离可靠。本轮不登录、授权、连接MCP或调用上述写入。",
+      "source_ids": [
+        "S3dfc7d40356b",
+        "S4866aa79d0c3",
+        "S756b7d4d7bc6"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "把平台与人工复核分别计入",
+      "body": "当前首页Starter标价每月37美元、一个频道；这是读取时标价，不是账单或Grok套餐价格。以下为行政分析服务预算假设：每频道每月149，平台37加Grok/运行预算10=47，人工1.5小时乘40=60、其他5、获客15，单位贡献22；月8份、固定100时贡献76。人工3小时则单位负38、月负404。一次审计300，假设承担完整一个月平台37加运行10、人工4小时乘40=160、其他10、获客30，贡献53；月4项固定100时贡献112，返工6小时则单位负27、月负208。未知Grok实际计划、税及额外固定成本均未包含，不能由此承诺利润；模型预算不是已核验报价。",
+      "source_ids": [
+        "S4866aa79d0c3",
+        "S756b7d4d7bc6",
+        "S3dfc7d40356b"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "证据等级与停止条件",
+      "body": "公开网页、GitHub和Hacker News检索出现同名运动软件、无关VideoStats类名或其他主题，未取得可归属于本产品Grok缩略图流程的独立付费使用结果。六份已读资料支持实现、定价边界和替代分析，却不能替代外部客户或实验效果，故保存schema-1简版。下一步先用虚构频道编号、同口径展示与观看数据核对加权CTR、零/缺失、重复、跨日期和筛选偏差。若拿不到准确分母、图像与指标错配、缺失被当零、人工返工超过预算或无法证明客户愿为验收后的报告付费，应停止商业扩张。",
+      "source_ids": [
+        "S756b7d4d7bc6",
+        "S4866aa79d0c3",
+        "S41dbc8ec4da3",
+        "Sf93e1429ed51",
+        "Sca736e8be4d3",
+        "S3dfc7d40356b"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-youtube-thumbnails-from-channel-analytics",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "5fa1010109c4ff1a287453e6efe75d89f72e0cb4aba82ef9253434677bbbb0af",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "29b9aaf4222cfe638729f050d16207735574c05b002f8b610cf46fa35e854a39",
+      "How it went": "b1c7703e2e1b6488fae47d0b57e4a98f7367e6483a2f09d0da861e0c69493861",
+      "Worth knowing": "79b8715efc75a5f4e344bdb39eaa12484d608334a29f5e8b255b457c9bfa361d"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Using my YouTube analytics for [channel name], compare the click-through rate of my top [10] videos' thumbnails against my channel average. Tell me what the best ones have in common, then suggest [5] new thumbnail ideas for upcoming videos on [topic]. You're finished when I have a short comparison table and written descriptions of each idea.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/analyze-youtube-thumbnails-from-channel-analytics",
+    "observed_at": "2026-10-17T05:55:33.123411+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "57071cec45932357ae3fabf1c17dfed0d15375693339ac1e203557b7ac01d802"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://videostats.ai/blog/grok-bot-youtube-analytics",
+    "source_title": "How to Connect Grok Bot to Your YouTube Analytics | VideoStats",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T02:36:58.223807+00:00",
+    "source_sha256": "704f9f22e11b5024e2c49377353bb91632d1668a527b33ca520de6ef8f29c35c",
+    "steps": [
+      {
+        "en": "The vendor describes connecting Grok Bot to Video Stats through a custom MCP URL and authorizing a selected channel in a browser.",
+        "zh": "厂商描述通过自定义MCP地址连接Grok Bot与Video Stats，并在浏览器中授权选中的频道。"
+      },
+      {
+        "en": "For the founders’ Primal Video channel, the demonstration compares historical thumbnails and results and offers new concepts.",
+        "zh": "演示使用创办团队的Primal Video频道，比较历史缩略图及表现，并提出新概念。"
+      },
+      {
+        "en": "The article does not demonstrate that these concepts were deployed or produced an experimentally measured improvement.",
+        "zh": "文章没有展示这些概念投入使用，或产生经过实验测量的提升。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助整理历史比较和创意假设，但视觉准确性、净省时和实际增长未验证。",
+    "audience": "拥有本人频道权限且能核对指标口径的成年创作者或运营人员；本轮仅用虚构数据。",
+    "use": "设计缩略图图像/指标匹配、加权CTR及实验假设的人工验收。",
+    "benefit": "可能减少数据整理，未测得节省时长、点击增长、转化或收入。",
+    "setup_cost": "字段来源、日期/流量范围、图像ID、授权范围、人工答案和费用预算。",
+    "maintenance_cost": "指标与接口变化、追踪失效、工作区隔离、误判复核和实验跟进。",
+    "frequency": "先离线按批次验收；没有重复交付净收益证据。",
+    "privacy_risk": "频道分析、线索和销售数据可能进入第三方AI；本轮不授权或读取真实后台。",
+    "error_risk": "分母错用、简单平均CTR、缺失归零、图像错配和历史样式误作因果。",
+    "source_ids": [
+      "S756b7d4d7bc6",
+      "S4866aa79d0c3",
+      "S3dfc7d40356b",
+      "S41dbc8ec4da3",
+      "Sf93e1429ed51",
+      "Sca736e8be4d3"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站完整Grok Bot模板在原文与忠实译文保留，不等于作者实际提示词或已执行流程。",
+    "prerequisites": "纯虚构视频编号、同口径分子分母、图像占位说明及人工答案，无真实后台或线索数据。",
+    "tools": "现有本地Python标准库，禁止连接平台、OAuth、MCP和模型。",
+    "expected_result": "加权CTR验收表、未知项、图像匹配与实验问题，不产生真实改图或增长结论。",
+    "prompts": [
+      {
+        "title": "用合成数据验收缩略图比较口径",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "S756b7d4d7bc6",
+          "S3dfc7d40356b",
+          "S41dbc8ec4da3",
+          "Sf93e1429ed51",
+          "Sca736e8be4d3"
+        ],
+        "text": "仅使用[虚构频道/视频编号、同一日期范围与流量来源的计入展示量、由这些展示产生的观看量、独立列示的总观看量和已提供的图像占位说明]，设计离线缩略图分析验收。分别计算单条和加权总体展示CTR；不得用总观看量替代分子，不简单平均百分比。展示量为零、缺失、分子大于分母、重复、日期或流量口径不同要单列未知或排除，不当作零。没有真实图像就不要虚构颜色、人脸或构图共同点；将描述性观察与需检验的创意假设分开，不宣称因果提升或收入。说明如何人工核对图像ID、分母、时间范围和实验指标。禁止登录频道、授权OAuth、添加MCP、创建QR/公开短链、提交功能请求、改视频或发送报告；不注册、不创建凭据、不购买、不调用付费模型或读取真实后台。输出合成验收表、未知项和人工核对问题后停止。本模板为研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：每月频道报告",
+      "currency": "USD",
+      "unit": "频道/月",
+      "price": 149,
+      "api_cost": 47,
+      "human_cost": 60,
+      "other_variable_cost": 5,
+      "acquisition_cost": 15,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 100,
+      "contribution_before_fixed_cost": 22,
+      "monthly_contribution_before_tax": 76,
+      "assumptions": "平台37取当前Starter单频道月标价，另Grok/运行10为预算而非报价；人工1.5小时×40。人工3小时则单位-38、月-404。税与额外固定费未计，权限/实际账单未知。"
+    },
+    {
+      "scenario": "假设：一次频道审计",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 300,
+      "api_cost": 47,
+      "human_cost": 160,
+      "other_variable_cost": 10,
+      "acquisition_cost": 30,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 100,
+      "contribution_before_fixed_cost": 53,
+      "monthly_contribution_before_tax": 112,
+      "assumptions": "假设每项目承担完整一个月Starter37及运行10预算，并非平台按次收费；人工4小时×40。返工6小时则单位-27、月-208。税及额外固定费未计，未验证客户报价、Grok计划或付款。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"VideoStats\" \"Grok\" review -site:reddit.com -site:x.com -site:substack.com",
+        "outcome": "官方产品与无关同名结果，未取得独立实际付费使用。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"VideoStats\" site:news.ycombinator.com",
+        "outcome": "主要为无关主题，未取得本流程的独立用户结果。"
+      },
+      {
+        "channel": "GitHub公开代码",
+        "query": "\"VideoStats\" \"analytics\" site:github.com",
+        "outcome": "出现无关同名类/插件，不能当videostats.ai客户或本案例部署。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent case-user outcome; no satisfaction or causal-lift estimate."
+  },
+  "limitations": "未登录/授权真实频道、连接MCP、读取后台、核验聊天截图数字、评估真实图像或生成/应用新缩略图。未运行A/B实验、创建QR/短链、提交功能请求或发送消息。六份资料均为厂商/平台一手材料，缺少独立客户及增长证据。源站报告值、平台当前标价、Grok预算和本轮合成计算分别标注。",
+  "archive_source_sha256": "5fa1010109c4ff1a287453e6efe75d89f72e0cb4aba82ef9253434677bbbb0af",
+  "translation_sha256": "3b8694ece9f5ba1ee385059bd28af1add18cac20da67842abc8a315a95ef42bc"
+}

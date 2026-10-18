@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **15**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **16**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -19,3 +19,4 @@
 | 用 Claude Code 分析钢琴录音的速度、结构与分轨报告 | [简报](../../reports/brief/analyze-a-piano-recording-s-bpm-structure-and-stems.md) |
 | 用 ChatGPT 和 Claude 分析银行支出与财务报告 | [简报](../../reports/brief/analyze-budgets-and-research-investments-from-bank-data.md) |
 | 用 Claude 整理可穿戴数据与餐食健康记录 | [简报](../../reports/brief/analyze-garmin-data-for-meal-planning-and-health-patterns.md) |
+| 用 Grok Bot 比较 YouTube 缩略图表现并提出创意 | [简报](../../reports/brief/analyze-youtube-thumbnails-from-channel-analytics.md) |
