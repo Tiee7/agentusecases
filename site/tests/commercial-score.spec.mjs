@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {spawnSync,spawn} from 'node:child_process';
+import {get} from 'node:http';
 import {loadContent,repoRoot} from '../src/lib/content.mjs';
 
 const {reports}=loadContent();
@@ -58,7 +59,13 @@ test.describe('missing scores and boundary values in isolated static pages',()=>
   const built=spawnSync(process.execPath,[path.join(repoRoot,'site/node_modules/astro/bin/astro.mjs'),'build'],{cwd:path.join(temporary,'site'),env:{...process.env,ASTRO_TELEMETRY_DISABLED:'1'},encoding:'utf8'});
   expect(built.status,built.stderr).toBe(0);
   server=spawn('python3',['-m','http.server','4324','--bind','127.0.0.1','--directory',path.join(temporary,'site/dist')],{stdio:'ignore'});
-  await expect.poll(async()=>{try{return (await fetch('http://127.0.0.1:4324/')).status}catch{return 0}}).toBe(200);
+  await expect.poll(()=>new Promise(resolve=>{
+   const request=get('http://127.0.0.1:4324/',response=>{
+    const status=response.statusCode??0;response.resume();
+    response.once('end',()=>resolve(status));response.once('error',()=>resolve(0));
+   });
+   request.once('error',()=>resolve(0));request.setTimeout(1000,()=>request.destroy());
+  })).toBe(200);
  });
  test.afterAll(()=>{server?.kill();if(temporary)fs.rmSync(temporary,{recursive:true,force:true})});
  test('missing or malformed ratings are not presented as zero or a partial total',async({page})=>{
