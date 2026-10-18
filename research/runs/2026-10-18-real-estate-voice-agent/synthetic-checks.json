@@ -1,0 +1,264 @@
+{
+  "checked_at": "2026-10-18T03:39:14.907491+00:00",
+  "scope": "Fictional deterministic event/state fixtures only. trusted_upstream/reviewed/caller_confirmed are assumed input flags, not HMAC, speech, model extraction, call quality, caller identity or production security tests. No phone call, model, ElevenLabs, n8n, CRM or email connection. No leads from real people.",
+  "checks": [
+    {
+      "check": "complete",
+      "result": "reviewed_candidate"
+    },
+    {
+      "check": "duplicate",
+      "result": "duplicate_ignored"
+    },
+    {
+      "check": "untrusted",
+      "result": "untrusted_rejected"
+    },
+    {
+      "check": "audio_only",
+      "result": "not_a_transcript_lead"
+    },
+    {
+      "check": "initiation_failure",
+      "result": "not_a_transcript_lead"
+    },
+    {
+      "check": "missing_currency",
+      "result": "human_review"
+    },
+    {
+      "check": "missing_period",
+      "result": "human_review"
+    },
+    {
+      "check": "unknown_budget",
+      "result": "human_review"
+    },
+    {
+      "check": "zero_is_not_unknown_or_ready",
+      "result": "human_review"
+    },
+    {
+      "check": "missing_location",
+      "result": "human_review"
+    },
+    {
+      "check": "unconfirmed",
+      "result": "human_review"
+    },
+    {
+      "check": "unreviewed_extraction",
+      "result": "human_review"
+    },
+    {
+      "check": "corrected_latest",
+      "result": "reviewed_candidate"
+    },
+    {
+      "check": "stale_arrival",
+      "result": "stale_ignored"
+    },
+    {
+      "check": "tenant_separation",
+      "result": "reviewed_candidate"
+    },
+    {
+      "check": "new_call_same_caller_not_merged",
+      "result": "reviewed_candidate"
+    },
+    {
+      "check": "crm_unknown_does_not_send_followup",
+      "result": {
+        "call_id": "CALL_SYNTH_1",
+        "revision": 2,
+        "budget": {
+          "value": 1500,
+          "currency": "USD",
+          "period": "month"
+        },
+        "location": "SYNTH_DISTRICT_A",
+        "status": "reviewed_candidate",
+        "save_status": "crm_delivery_unknown",
+        "followup": "draft_only",
+        "sent": false
+      }
+    }
+  ],
+  "synthetic_records": [
+    {
+      "call_id": "CALL_SYNTH_1",
+      "revision": 2,
+      "budget": {
+        "value": 1500,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "reviewed_candidate",
+      "save_status": "crm_delivery_unknown",
+      "followup": "draft_only",
+      "sent": false
+    },
+    {
+      "call_id": "NO_CUR",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "NO_PERIOD",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "currency": "USD"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "UNKNOWN",
+      "revision": 1,
+      "budget": {
+        "value": null
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "ZERO",
+      "revision": 1,
+      "budget": {
+        "value": 0,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "NO_LOC",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": null,
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "NOT_CONF",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "UNREV",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "human_review",
+      "save_status": "synthetic_local_only",
+      "followup": "not_prepared",
+      "sent": false
+    },
+    {
+      "call_id": "CALL_SYNTH_1",
+      "revision": 1,
+      "budget": {
+        "value": 2000,
+        "currency": "EUR",
+        "period": "total"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "reviewed_candidate",
+      "save_status": "synthetic_local_only",
+      "followup": "draft_only",
+      "sent": false
+    },
+    {
+      "call_id": "CALL_SYNTH_2",
+      "revision": 1,
+      "budget": {
+        "value": 1200,
+        "currency": "USD",
+        "period": "month"
+      },
+      "location": "SYNTH_DISTRICT_A",
+      "status": "reviewed_candidate",
+      "save_status": "synthetic_local_only",
+      "followup": "draft_only",
+      "sent": false
+    }
+  ],
+  "no_real_messages": true,
+  "no_paid_api": true,
+  "no_credentials_created": true,
+  "economics": {
+    "currency": "USD",
+    "assumptions": "All inputs fictional budgets, not vendor quote, procurement, revenue or realized profit.",
+    "models": [
+      {
+        "price": 750,
+        "api_cost": 120,
+        "human_cost": 270,
+        "other_variable_cost": 35,
+        "acquisition_cost": 90,
+        "units_per_month": 8,
+        "fixed_monthly_cost": 450,
+        "variable_cost": 515,
+        "unit_contribution": 235,
+        "monthly_contribution": 1430,
+        "extra_human_cost": 270,
+        "stress_unit": -35,
+        "stress_monthly": -730
+      },
+      {
+        "price": 2800,
+        "api_cost": 75,
+        "human_cost": 1800,
+        "other_variable_cost": 125,
+        "acquisition_cost": 300,
+        "units_per_month": 2,
+        "fixed_monthly_cost": 400,
+        "variable_cost": 2300,
+        "unit_contribution": 500,
+        "monthly_contribution": 600,
+        "extra_human_cost": 540,
+        "stress_unit": -40,
+        "stress_monthly": -480
+      }
+    ]
+  }
+}
