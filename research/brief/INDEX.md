@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **11**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **12**；深度研究 **41**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -15,3 +15,4 @@
 | 用 AI agent 识别手写日程并归档邮件 PDF | [简报](../../reports/brief/add-handwritten-appointments-to-calendar-and-file-pdfs.md) |
 | 用 AI agent 分析 10-K 年报并估算企业价值 | [简报](../../reports/brief/analyze-10-ks-for-value-investing.md) |
 | 用 n8n 筛选低分未回复商家评论并整理候选清单 | [简报](../../reports/brief/alert-ai-agencies-to-businesses-with-bad-reviews-as-leads.md) |
+| 用 Gemini agent 隔夜分析 LLM 日志 | [简报](../../reports/brief/analyze-170k-llm-logs-overnight.md) |
