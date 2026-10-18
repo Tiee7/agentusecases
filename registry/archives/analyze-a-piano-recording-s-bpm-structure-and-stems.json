@@ -102,5 +102,15 @@
     "at": "2026-10-17T05:34:07.072475+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
+    "translated_at": "2026-10-18T02:21:06.999648+00:00",
+    "body": "分析钢琴录音的 BPM、结构和分轨\n安装一个技能后，Claude Code 安装了 ffmpeg 和 librosa，并对本地 MP3 运行 Python 处理流程，生成了一份关于 BPM、结构和分轨的报告。\n实际使用\nClaude Code\n具体做法\n作者让 Gemini 在 Loooom 上起草了一个技能，然后通过网页界面发布，并将其安装到 Claude Code。他让 Claude 识别歌曲的各个部分，并指向本地 MP3 文件，内容是他的一段 37 秒钢琴片段。Claude 在会话过程中安装了 ffmpeg 和 librosa，并运行了一个 Python 处理流程。\n结果如何\n它生成了一份报告，包含 BPM、拍号、调性、由四个段落组成的时间线，以及分轨列表。BPM 估计约为 91，而标准版本约为 104。虽然片段是钢琴独奏，分轨列表却包含人声和鼓。\n值得知道\n准确度只能粗略看待：BPM 与实际速度有偏差，列出的分轨（底鼓、人声、踩镲）也与钢琴独奏录音不相符。\n自行试用\n推荐工具\nClaude Code\n复制提示词\n我有一份钢琴录音，位于[MP3 文件路径]。安装所需的任何工具（例如 ffmpeg 和 librosa），然后分析它，给我写一份报告，涵盖 BPM、带有各段大致时间戳的歌曲结构，以及在可行情况下分离出的分轨。将报告以[报告文件名]保存在同一个文件夹中，完成后告诉我，并说明输出文件的位置。\n原始来源：https://www.mager.co/blog/2026-03-26-loooom-identify-song-parts/",
+    "body_sha256": "37ef8aff728a6104b75ba435848821454ef695edd88d95387b6608d2522dfa57",
+    "scope": "Faithful full translation of captured case prose, complete source trial and original link; decorative CC omitted. Source accuracy assertions retained as source wording, separately qualified in research."
   }
 }
