@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-18T02:09:02.204873+00:00",
+  "scope": "Offline synthetic schema/predicate and budget checks only; not author workflow, model, scraper, data service, real lead generation or outreach.",
+  "inputs": [
+    {
+      "business_id": "S001",
+      "review_id": "R1",
+      "overall_rating": 4.6,
+      "review_rating": 2,
+      "owner_response": null
+    },
+    {
+      "business_id": "S002",
+      "review_id": "R2",
+      "overall_rating": 4.0,
+      "review_rating": 2,
+      "owner_response": null
+    },
+    {
+      "business_id": "S003",
+      "review_id": "R3",
+      "overall_rating": 4.7,
+      "review_rating": 4,
+      "owner_response": null
+    },
+    {
+      "business_id": "S004",
+      "review_id": "R4",
+      "overall_rating": 4.7,
+      "review_rating": 2,
+      "owner_response": "synthetic reply"
+    },
+    {
+      "business_id": "S005",
+      "review_id": "R5",
+      "overall_rating": 4.7,
+      "review_rating": 2
+    },
+    {
+      "business_id": "S006",
+      "review_id": "R6",
+      "overall_rating": 4.7,
+      "review_rating": 2,
+      "owner_response": ""
+    },
+    {
+      "business_id": "S007",
+      "review_id": "R7",
+      "overall_rating": 4.6,
+      "review_rating": 3,
+      "owner_response": null
+    },
+    {
+      "business_id": "S008",
+      "review_id": "R8",
+      "overall_rating": 4.8,
+      "review_rating": null,
+      "owner_response": null
+    },
+    {
+      "business_id": "S001",
+      "review_id": "R1",
+      "overall_rating": 4.6,
+      "review_rating": 2,
+      "owner_response": null
+    },
+    {
+      "business_id": "S001",
+      "review_id": "R9",
+      "overall_rating": 4.6,
+      "review_rating": 3,
+      "owner_response": null
+    }
+  ],
+  "outputs": [
+    {
+      "business_id": "S001",
+      "review_id": "R1",
+      "status": "candidate"
+    },
+    {
+      "business_id": "S002",
+      "review_id": "R2",
+      "status": "excluded"
+    },
+    {
+      "business_id": "S003",
+      "review_id": "R3",
+      "status": "excluded"
+    },
+    {
+      "business_id": "S004",
+      "review_id": "R4",
+      "status": "excluded"
+    },
+    {
+      "business_id": "S005",
+      "review_id": "R5",
+      "status": "unknown"
+    },
+    {
+      "business_id": "S006",
+      "review_id": "R6",
+      "status": "unknown"
+    },
+    {
+      "business_id": "S007",
+      "review_id": "R7",
+      "status": "candidate"
+    },
+    {
+      "business_id": "S008",
+      "review_id": "R8",
+      "status": "unknown"
+    },
+    {
+      "business_id": "S001",
+      "review_id": "R9",
+      "status": "candidate"
+    }
+  ],
+  "unique_candidate_business_ids": [
+    "S001",
+    "S007"
+  ],
+  "duplicate_reviews": [
+    [
+      "S001",
+      "R1"
+    ]
+  ],
+  "unknown_snapshot_states": [
+    "pending",
+    "failed"
+  ],
+  "snapshot_state_note": "Pending or failed retrieval must remain unknown, not a successful empty result; proposed acceptance condition, not a test of provider API.",
+  "economic_models": [
+    {
+      "scenario": "假设：月度候选整理",
+      "unit_contribution": "22",
+      "monthly_contribution": "120"
+    },
+    {
+      "scenario": "假设：定制设置",
+      "unit_contribution": "150",
+      "monthly_contribution": "200"
+    }
+  ],
+  "assertions": "passed",
+  "real_business_data": false
+}
