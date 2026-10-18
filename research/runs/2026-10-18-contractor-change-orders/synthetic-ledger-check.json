@@ -1,0 +1,51 @@
+{
+  "scope": "Self-created deterministic arithmetic example only; no model extraction, customer document, external message, legal entitlement or real money tested.",
+  "currency": "USD (synthetic choice, not a confirmed code for the archived case)",
+  "rows": [
+    {
+      "invoice": "A",
+      "revision": 1,
+      "line": "1",
+      "po": 1000,
+      "approved_change": 200,
+      "billed": 1200,
+      "approval": "approved"
+    },
+    {
+      "invoice": "B",
+      "revision": 1,
+      "line": "1",
+      "po": 1000,
+      "approved_change": 0,
+      "billed": 1250,
+      "approval": "unchanged"
+    },
+    {
+      "invoice": "B",
+      "revision": 1,
+      "line": "1",
+      "po": 1000,
+      "approved_change": 0,
+      "billed": 1250,
+      "approval": "unchanged"
+    },
+    {
+      "invoice": "C",
+      "revision": 1,
+      "line": "1",
+      "po": 600,
+      "approved_change": 0,
+      "billed": 900,
+      "approval": "unknown"
+    }
+  ],
+  "results": {
+    "naive_original_po_difference": 1000.0,
+    "unique_approved_baseline_candidates": 550.0,
+    "confirmed_posted_credit_on_B": 250.0,
+    "remaining_to_review": 300.0,
+    "remaining_approval_status": "unknown for C; not a legally recoverable total",
+    "if_credit_only_requested_candidate_total": 550.0
+  },
+  "assertions": "passed"
+}
