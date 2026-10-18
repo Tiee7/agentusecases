@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-dental-clinic-calls-and-manage-appointments",
+  "url": "https://agentusecases.ai/use-case/answer-dental-clinic-calls-and-manage-appointments",
+  "title": "用 n8n 处理牙科诊所来电与预约",
+  "industry": "牙科诊所接待与预约工作流",
+  "researched_at": "2026-10-18T03:16:12.029145+00:00",
+  "brief_reason": "原始讨论未读，缺少流程导出、实际数据流、预约/通知日志、效果数字、费用及独立反馈。已读案例归档和四份当前官方资料能澄清条件与验证方向，不能确认该六部分实现的安全、稳定性或经营收益，保存未评分简报，不冒充v2深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先在合成材料中核对预约状态与人工交接，暂不评商业分",
+    "reason": "已有归档提供具体任务和组件，但没有原始实现或硬结果；只能先检查非生产设计，不能直接承诺医疗部署、减少爽约或取代接待人员。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-dental-clinic-calls-and-manage-appointments",
+      "title": "Answer dental clinic calls and manage appointments",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:42:17.079627+00:00",
+      "archive_path": "registry/archives/answer-dental-clinic-calls-and-manage-appointments.json",
+      "sha256": "ca707bc50ad97b4f8bf2545e9df7c2e78c4e3c6f9a5e08cc288d34f154fa1aa6",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request.",
+      "supports": "支持源站关于n8n/语音/分析/CRM/日历/Telegram的转述与无硬指标的效果声称，不是原帖、实际配置或独立法律/临床验证。"
+    },
+    {
+      "id": "S7e352f8a3441",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T03:11:24.617797+00:00",
+      "status": "fetched",
+      "title": "Guidance on HIPAA & Cloud Computing | HHS.gov",
+      "characters": 38611,
+      "sha256": "57e8bb1ab850d17bf7f683eb95fdc295b421a6ef6c20a0e235704e8388ad6dfd",
+      "independent_verification": {
+        "id": "S7e352f8a3441",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/health-information-technology/cloud-computing/index.html",
+        "verified_at": "2026-10-18T03:14:01.896345+00:00",
+        "original_sha256": "57e8bb1ab850d17bf7f683eb95fdc295b421a6ef6c20a0e235704e8388ad6dfd",
+        "verified_sha256": "57e8bb1ab850d17bf7f683eb95fdc295b421a6ef6c20a0e235704e8388ad6dfd",
+        "exact_match": true
+      },
+      "supports": "已读HHS云计算指导的适用主体、ePHI、云服务商与BAA及责任关系；支持有条件的美国规则说明，不认定本例实际适用或已经合规。"
+    },
+    {
+      "id": "S31e9b31738ab",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T03:11:36.930982+00:00",
+      "status": "fetched",
+      "title": "Covered Entities and Business Associates | HHS.gov",
+      "characters": 9185,
+      "sha256": "6f4058b9d40d2a22c6a2654cdd8cf9b4fff3fc0e480a4114f81fc10cde4fc8fe",
+      "independent_verification": {
+        "id": "S31e9b31738ab",
+        "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html",
+        "verified_at": "2026-10-18T03:14:14.436969+00:00",
+        "original_sha256": "6f4058b9d40d2a22c6a2654cdd8cf9b4fff3fc0e480a4114f81fc10cde4fc8fe",
+        "verified_sha256": "6f4058b9d40d2a22c6a2654cdd8cf9b4fff3fc0e480a4114f81fc10cde4fc8fe",
+        "exact_match": true
+      },
+      "supports": "已读HHS covered entity/business associate说明，牙医等提供者涉及规定标准电子交易等适用条件；不是所有国家或所有诊所自动同一结论。"
+    },
+    {
+      "id": "S2c4ba7603395",
+      "url": "https://supabase.com/docs/guides/platform/hipaa-projects",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T03:13:33.937621+00:00",
+      "status": "fetched",
+      "title": "HIPAA Projects | Supabase Docs",
+      "characters": 3692,
+      "sha256": "dc8cbc3fc0b5c151b810d5e2dce5a66b327f71f3b19edbb2c0290ce1e859753e",
+      "independent_verification": {
+        "id": "S2c4ba7603395",
+        "url": "https://supabase.com/docs/guides/platform/hipaa-projects",
+        "verified_at": "2026-10-18T03:14:25.287873+00:00",
+        "original_sha256": "dc8cbc3fc0b5c151b810d5e2dce5a66b327f71f3b19edbb2c0290ce1e859753e",
+        "verified_sha256": "dc8cbc3fc0b5c151b810d5e2dce5a66b327f71f3b19edbb2c0290ce1e859753e",
+        "exact_match": true
+      },
+      "supports": "当前Supabase HIPAA Projects要求PHI场景下的签署BAA、HIPAA附加项和项目配置；不证明作者已启用、获得协议或整套多服务系统合规。"
+    },
+    {
+      "id": "S0dd2cac8c92a",
+      "url": "https://cal.com/pricing",
+      "kind": "competitor",
+      "fetched_at": "2026-10-18T03:13:36.652712+00:00",
+      "status": "fetched",
+      "title": "Pricing | Cal.com",
+      "characters": 16955,
+      "sha256": "29533f8f1ef76d6f4438d485b6952690dc862a04626f1e8955f5ae6fcec85e99",
+      "independent_verification": {
+        "id": "S0dd2cac8c92a",
+        "url": "https://cal.com/pricing",
+        "verified_at": "2026-10-18T03:14:27.902553+00:00",
+        "original_sha256": "29533f8f1ef76d6f4438d485b6952690dc862a04626f1e8955f5ae6fcec85e99",
+        "verified_sha256": "29533f8f1ef76d6f4438d485b6952690dc862a04626f1e8955f5ae6fcec85e99",
+        "exact_match": true
+      },
+      "supports": "Cal.com当前个人预约和团队排期功能提供普通预约入口参照；不证明原帖Calcom配置、诊所系统适用性或临床/隐私验收。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例站将实际工具标为n8n，推荐Lindy；语音、GPT-4、Supabase、Calcom与Telegram仅是现有归档的架构转述。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档声称漏接减少、爽约下降和90多天患者唤回，但明确没有硬指标，评论中的HIPAA说法也不是本轮原帖验证。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "HHS说明HIPAA按covered entity/business associate条件适用，列举牙医等提供者时同时要求涉及规定标准的电子交易。",
+      "source_ids": [
+        "S31e9b31738ab"
+      ]
+    },
+    {
+      "statement": "HHS云指导说明适用主体处理ePHI的云服务关系涉及BAA和相应责任，不能仅据自托管编排断言整套处理已满足要求。",
+      "source_ids": [
+        "S7e352f8a3441"
+      ]
+    },
+    {
+      "statement": "Supabase当前HIPAA Projects说明PHI使用的BAA、附加项与项目配置要求，不证明原作者已采用。",
+      "source_ids": [
+        "S2c4ba7603395"
+      ]
+    },
+    {
+      "statement": "Cal.com的普通预约功能只能作为比较基线，不是这个诊所具体配置、隐私或临床能力的验证。",
+      "source_ids": [
+        "S0dd2cac8c92a"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "conclusion",
+      "title": "商业判断与证据边界",
+      "body": "本稿仅建议先核对不涉及真实患者的预约设计，商业分数未评定，自用价值待核实，属于简要分析而非completed v2深研。归档描述六部分系统，并声称减少漏接、降低爽约和唤回90多天未活跃患者，但没有基线、数量、时间窗或账单。原帖未读，没有代码、流程导出、客户或独立复现。不能把组件清单当成可交付的临床系统，也不能把没有数字的结果称为已经测得的经营收益。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "自托管编排与多服务数据流分开",
+      "body": "归档标注实际工具为n8n，语音提到ElevenLabs/Vapi，通话分析用GPT-4，记录进入Supabase CRM，预约与Calcom同步，紧急来电通知医生的Telegram。Lindy只在源站推荐模板中出现，不是原作者已用工具。只知道n8n自托管，不能推断语音、转录、分析、存储和通知都留在同一设备；哪些音频、文本或摘要经过哪些服务仍未知。原作者方法保持unavailable，不能把这段汇编转述重写成作者逐步操作。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S7e352f8a3441"
+      ]
+    },
+    {
+      "id": "handoff",
+      "title": "通知成功不等于医生已经接管",
+      "body": "原文紧急来电触发Telegram警报，是通知路径的转述，不证明有临床识别准确率、发送回执、医生读取、领取或升级时限。本稿不生成症状分类或医疗处置规则，只建议采用诊所已定义的人工接管规则，用合成例子检查待发送、送达、已领取和失败状态。90多天自动唤回也没有联络数量、许可、响应或复约数据，不能当作已恢复患者或新收入。本轮不拨号、发消息、查看联系人或操作患者记录。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "所在地自述不能替代适用性判断",
+      "body": "归档转述作者说所在地不要求HIPAA，但国家、主体和实际数据都未披露。HHS说明规则适用于covered entities及business associates，并列出牙医等提供者涉及规定标准电子交易的条件；不能简单写成所有美国诊所或所有国家都适用同一判断。其云计算指导进一步说明，为适用主体处理或保存ePHI的云服务关系涉及BAA及相应责任。这里记录这些有条件的规则，不认定原例违法、合规或适用，也不把签一个文件等同整套实现已经通过验收。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S7e352f8a3441",
+        "S31e9b31738ab"
+      ]
+    },
+    {
+      "id": "platform",
+      "title": "当前平台条件不是作者实际配置",
+      "body": "Supabase当前HIPAA Projects文档要求PHI场景下签署BAA、启用HIPAA附加项并配置项目，说明普通数据库可用和特定健康数据部署条件是两回事。它不证明作者已经签署或启用，也不能覆盖语音、模型、日历和Telegram的其他数据环节。Cal.com当前提供个人预约及团队排期功能，可作普通预约入口的比较参照；本例所称Calcom的接口和诊所现有系统整合未核实。n8n错误处理文档发生普通重定向，未取得正文，不据此补写已实现重试或警报能力。",
+      "source_ids": [
+        "S2c4ba7603395",
+        "S0dd2cac8c92a",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "从合成预约的读回与恢复开始",
+      "body": "预约、改期、取消与查空档应分别检查结果：一个可用时段不是已保留，改期也不是先删旧事件就必然成功。可用合成日历设计重复请求、无空档、换服务时长、取消重放、写入超时与通知失败等回放，对照事件标识、时区和最终状态。检查FAQ未知回答与交人工，不能让语言模型自行补保险覆盖、价格或治疗建议。上述只是未执行的验证计划；本轮没有安装组件、处理音频、调用GPT-4或生成真实预约。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S0dd2cac8c92a"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "两个资源与支持预算情景",
+      "body": "以下全为USD假设，不能用于声称医疗上线成本。799美元非生产原型包，资源20、人工12小时×40=480、其他50、获客100，可变650、贡献149；每月5包减固定500，月贡献245。999美元已有接入的客户月，资源120、人工6小时×40=240、其他80、获客100，可变540、贡献459；10客户减固定2000，月贡献2590。额外12小时支持使单客户贡献-21。两者都未计入尚未知的医疗部署、专用平台、合同/专业审核、税费退款和实际电话费用差异，未证明买家接受价格，更不是原帖费用或患者收益。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2c4ba7603395",
+        "S0dd2cac8c92a"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "反馈、反证与停止条件",
+      "body": "三次检索覆盖原帖题目、GitHub及n8n社区，发现Reddit跨帖和通用产品结果，未获取可归属本实现的独立使用记录；跨帖未读取，不换路补作者内容。最强反证是，具体组件与预约任务能形成可检查设计，但当前官方能力不能替作者证明减少爽约或安全交付。先取得确认归属的流程与获准结果，再核对预约恢复、数据去向、人工领取和维护工时；若持续错约、通知无人领取、数据路径无法说明或支持超预算，应停止扩大。没有原始实现和质量/费用证据前，不升级为深研或填写数值商业分。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S7e352f8a3441",
+        "S31e9b31738ab",
+        "S2c4ba7603395",
+        "S0dd2cac8c92a"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-dental-clinic-calls-and-manage-appointments",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "ca707bc50ad97b4f8bf2545e9df7c2e78c4e3c6f9a5e08cc288d34f154fa1aa6",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "6cd0a6180e4e6c14db4629a03fa9bd91a34477eac7766a12aaa08f21b0801e98",
+      "How it went": "991c9e2025bb6f60ffa3ec321b15a0fa31228f166189a71678e52c19eea7bbb5",
+      "Worth knowing": "9bb1605310835808669968cecb0197a2c4e70b5e09263a115b8696baa3b849bd"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a voice assistant for [dental clinic name] that answers incoming calls, books, reschedules and cancels appointments in [calendar system], checks open slots, and answers common questions about [hours, services, insurance]. Hand off to a human for [emergencies or complex cases]. Before it sends any confirmation text or email, show me a sample for approval, and finish by walking me through a test call.",
+    "agent": "Lindy",
+    "source_url": "https://agentusecases.ai/use-case/answer-dental-clinic-calls-and-manage-appointments",
+    "observed_at": "2026-10-17T05:42:17.079627+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "ef187615f7d9341fe60f39e515c5bb07adf3e7fcd712e73dd4c205711a285415"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/AiAutomations/comments/1s8mjnn/i_built_a_full_ai_automation_system_for_a_dental",
+    "source_title": "登记的Reddit原始讨论（本轮未读）",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "遵守既有Reddit访问停止，未请求原帖或跨帖，也未用浏览器、代理或镜像换路；源站转述和搜索摘要不能冒充原作者方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "只有架构和效果转述，没有真实预约、通知回执、数据流和维护工时，不能确认收益或可复制性。",
+    "audience": "能提供既定预约和人工交接规则、检查合成测试结果的诊所运营或技术人员。",
+    "use": "在无真实患者数据的设计里核对预约、改期、取消、未知FAQ和人工领取状态。",
+    "benefit": "可能减少重复接待或整理负担，但未量化漏接、爽约、节时、唤回或收入。",
+    "setup_cost": "合成来电脚本、测试日历、批准FAQ及人工预期结果；真实部署条件和多服务边界另待核实。",
+    "maintenance_cost": "排班/服务变化、工具失败、重复请求、通知领取及数据处理关系需要持续维护。",
+    "frequency": "按诊所真实需求使用；全天候和90多天触发是归档声称，不是已核验运行记录。",
+    "privacy_risk": "语音与预约可能关联患者身份，多服务数据流未知；本轮不读、上传或公开患者资料。",
+    "error_risk": "可能错约、重复取消、误答或通知无人接管，不承担临床判断，需要预定义人工路径。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S7e352f8a3441",
+      "S31e9b31738ab",
+      "S2c4ba7603395"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站推荐Lindy模板完整保留；不是作者实际n8n流程、指令或临床配置。",
+    "prerequisites": "仅合成来电脚本、虚构联系人、测试日历快照、批准FAQ和诊所预定义人工转接规则。",
+    "tools": "归档标n8n及多个服务，建议工具Lindy另列；本轮不安装、连接或调用这些服务。",
+    "expected_result": "预约与交接草稿、状态差异和未知项清单；自编模板未实测，不创建真实事件或发消息。",
+    "prompts": [
+      {
+        "title": "核对合成来电的预约和人工领取状态",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S7e352f8a3441",
+          "S31e9b31738ab",
+          "S2c4ba7603395",
+          "S0dd2cac8c92a"
+        ],
+        "attribution": "研究团队自编，非原作者或源站原话；未实测，不构成临床分诊流程。",
+        "text": "只使用[合成来电脚本]、[虚构联系人]、[测试日历快照]、[已批准FAQ]和[诊所预定义人工接管规则]。不要连接患者或医疗系统、拨打电话、发Telegram/短信/邮件、写真实日历、安装陌生组件、创建凭据或调用额外付费API。先列出资料和工具边界，对预约、改期、取消、查空档分别生成草稿并标识时区、事件ID、旧/新状态、未知项和需人工确认之处。回放重复请求、无空档、写入超时和通知失败，区分拟执行、已确认、已写入、已读回与失败；没有执行证据就不得称成功。人工接管仅遵循给定规则，不生成症状分类、治疗、保险覆盖或急救建议；通知单独列待发送、送达、领取、超时与负责人，不把发送成功当成医生已处理。说明哪些音频/文字/摘要将经过哪些服务以及仍未知的信息，但不声称自托管等于完全本地或已经合规。先展示方案与样例，不做真实患者唤回，不报告已减少爽约或节省成本。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：非生产预约原型",
+      "currency": "USD",
+      "unit": "一个不含真实患者的原型包",
+      "price": 799,
+      "generation_cost": 20,
+      "human_cost": 480,
+      "other_variable_cost": 50,
+      "acquisition_cost": 100,
+      "contribution_before_fixed_cost": 149,
+      "monthly_volume": 5,
+      "monthly_fixed_cost": 500,
+      "monthly_profit": 245,
+      "assumptions": "全部假设，人工12小时×40美元；不含临床上线、医疗专用配置/合同与专业审核、税费退款，资源预算不是实际API报价或费用。"
+    },
+    {
+      "scenario": "规划假设：已有接入的限定维护",
+      "currency": "USD",
+      "unit": "客户月，不含首次及医疗上线成本",
+      "price": 999,
+      "generation_cost": 120,
+      "human_cost": 240,
+      "other_variable_cost": 80,
+      "acquisition_cost": 100,
+      "contribution_before_fixed_cost": 459,
+      "monthly_volume": 10,
+      "monthly_fixed_cost": 2000,
+      "monthly_profit": 2590,
+      "assumptions": "全部假设，人工6小时×40美元，额外12小时支持使贡献-21；不含尚未知的医疗专用平台、合同/专业审核、税费退款及实际电话费用差异，不是美国诊所上线报价。"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "原帖和跨帖未读；搜索结果不当原作者原文，当前官方说明不当独立效果验证，未评分不是差评。"
+  },
+  "limitations": "原帖、诊所归属、国家/适用条件、流程代码、音频/摘要数据流、日历与通知日志、质量/费用和独立复现均未知。官方资料不证明作者签署或配置任何项目；没有临床判断或真实患者操作。n8n错误处理文档未读，不补写其产品特性；旧Supabase404页不算来源，当前HIPAA Projects经官方索引发现。",
+  "archive_source_sha256": "ca707bc50ad97b4f8bf2545e9df7c2e78c4e3c6f9a5e08cc288d34f154fa1aa6",
+  "translation_sha256": "4d7983aeea19c52001242e2b3a0447d2c63ef79e5acd9d2607a0e0b1c31b4127"
+}
