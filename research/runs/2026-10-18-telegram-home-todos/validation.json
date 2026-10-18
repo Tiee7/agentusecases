@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-10-18T01:19:49.063448+00:00",
+  "integrity": "passed",
+  "validators": "business.validate + personal required + author_method required",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "Manual paragraph correspondence plus hash checks passed",
+  "analysis_depth": "deep",
+  "analysis_characters": 4563,
+  "facts": 10,
+  "sections": 10,
+  "source_receipts_verified": 6,
+  "independent_refetches_exact": 4,
+  "commercial_score": 22,
+  "personal_value": "中",
+  "author_method": "3 bilingual source-backed summaries",
+  "unit_economics_recomputed": [
+    [
+      109,
+      -10,
+      -400
+    ],
+    [
+      14.5,
+      4.5,
+      25
+    ]
+  ],
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 19,
+    "chinese_translation_pending": 1362,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 36,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 1,
+  "new_briefs": 0,
+  "new_complete_chinese_translations": 1,
+  "business_runtime": "Not executed; no real bot, user device, memory or account operations",
+  "bulk_verify_sources_exception": "Source case is verified from committed archive instead of retrying the known certificate stop; n8n docs use accurately scoped normal-redirect web receipt. Four permitted external HTTP sources independently re-fetched with exact hashes.",
+  "tests_completed_at": "2026-10-18T01:23:51.977447+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T01:20:36.325Z",
+      "duration": 152535.106,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site; not execution of the author implementation",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "reports",
+      "trials"
+    ],
+    "checks": [
+      "exact original and complete Chinese translation",
+      "Chinese default expanded / English collapsed",
+      "objective H1 and SEO title",
+      "OpenClaw actual and recommended tools",
+      "22/100 score and correct verdict/personal value",
+      "3 bilingual author summaries",
+      "2 economics and 3 source/ours prompt cards",
+      "no overflow or page errors"
+    ]
+  },
+  "targeted_check_correction": "Initial temporary selector expected lang on ol; actual markup places lang on the wrapper. Corrected to the existing shared-test selector and re-ran all 9 route checks successfully; no product or content change was needed.",
+  "website_counts": {
+    "reports": 36,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 19
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Repository tests unchanged. Temporary full-suite config and security adapter only substitute installed system Chromium and absolute paths."
+  },
+  "commands": [
+    "python /tmp/validate_telegram_research.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/telegram-security.mjs",
+    "node /tmp/telegram-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "1068d51dbefbcdc245654eca71b564ba20cbf22e3dde8892b4dfb976c88c73dd",
+    "content": "73b2d04655f0bd5189b09466b2393c9db3596702c9899c2cece70f9a09b0bc27",
+    "build": "3eb4c93c5abe5b16f77b24341eef9fe758172ff5f69d6a04eca0ebe3ad4432c2",
+    "output": "ebcba9823eda2f2a2635afeede6da0425ee50228c6c18252463576c1b84500e8",
+    "browser": "c47cab9f74c59f3fc57a4eb7f713e1479fe2988512dd0afe51f00135496ce13c",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "e17c8e58792186f1d8f8facb27b35682367ac4194baed9b72baa1208bbeb9c47"
+  }
+}

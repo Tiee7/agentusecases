@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-10-18T01:17:56.343554+00:00",
+  "searches": [
+    {
+      "channel": "Hacker News与公开网页",
+      "query": "\"OpenClaw\" \"Telegram\" \"todo\" site:news.ycombinator.com",
+      "outcome": "已执行；独立读取指定原始讨论，区分BeetleB直接案例与lucw、SyneRyder的相邻流程自述。"
+    },
+    {
+      "channel": "GitHub问题",
+      "query": "\"OpenClaw\" \"Telegram\" \"duplicate\" site:github.com/openclaw/openclaw/issues",
+      "outcome": "已执行；检索未提供可直接归属本例的复现或可靠性分母，不把无关Slack等问题当成本用途证据。"
+    },
+    {
+      "channel": "公开用户体验检索",
+      "query": "\"OpenClaw\" \"Telegram\" \"custom API\" review",
+      "outcome": "已执行；结果含官网、营销和未读体验页，未当作独立生产验证；不访问既有停止目标。"
+    }
+  ],
+  "observations": [
+    {
+      "source_id": "S8ca2c2978e62",
+      "directness": "direct_user",
+      "finding": "BeetleB说Telegram到家庭自定义API的待办入口很方便，想念该功能；同时不愿为理想设置耗费数周，QEMU软件故障后停用。API不对外开放且保留旧清单是明确约束，没有量化成本、可用率或客户记录。",
+      "bias": "单一作者自述，偏好和环境高度个性化，未审计其实现或停用原因。"
+    },
+    {
+      "source_id": "S8ca2c2978e62",
+      "directness": "adjacent_workflow",
+      "finding": "lucw自述通过编排工具从Telegram把事项写入自己的Todoist。它说明相邻流程有人使用，但目标系统不同，不是对本例家庭API的复现，也未提供收费或可靠性数据。",
+      "bias": "同一技术论坛中的自选评论，没有独立运行验证、分母或长期跟踪。"
+    },
+    {
+      "source_id": "S8ca2c2978e62",
+      "directness": "adjacent_workflow",
+      "finding": "SyneRyder描述自己使用邮件触发Claude并通过MCP管理Toodledo等工具。该经验说明窄功能消息入口可以是替代方向，通道与后端都与本例不同，不能当作OpenClaw Telegram的性能测试。",
+      "bias": "自建经验与建议混合，未核实实现、维护工时或对其他用户的可复制性。"
+    }
+  ],
+  "independent_feedback_score": 1,
+  "weight_percent": 5,
+  "scope": "Original author and adjacent workflow self-reports, not measured user ratings or independently reproduced cases."
+}
