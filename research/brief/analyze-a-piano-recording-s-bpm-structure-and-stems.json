@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "analyze-a-piano-recording-s-bpm-structure-and-stems",
+  "url": "https://agentusecases.ai/use-case/analyze-a-piano-recording-s-bpm-structure-and-stems",
+  "title": "用 Claude Code 分析钢琴录音的速度、结构与分轨报告",
+  "researched_at": "2026-10-18T02:21:06.999648+00:00",
+  "industry": "音乐练习与音频报告辅助",
+  "brief_reason": "单次作者演示，缺少独立音频效果、客户和付费证据；报告中的分轨名称不构成实际声源分离。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收可听结果与人工成本，现有演示不足以支持收费交付",
+    "reason": "没有独立标注、可听分轨或净省时证据，误判与回听成本未测量。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/analyze-a-piano-recording-s-bpm-structure-and-stems",
+      "title": "Analyze a piano recording's BPM, structure and stems",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:34:07.072475+00:00",
+      "archived_at": "2026-10-17T05:34:07.072475+00:00",
+      "archive_path": "registry/archives/analyze-a-piano-recording-s-bpm-structure-and-stems.json",
+      "sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request",
+      "supports": "完整源站叙述和试用模板的既有归档；不是独立准确率验证。"
+    },
+    {
+      "id": "Sd9f07c75a984",
+      "kind": "primary",
+      "url": "https://www.mager.co/blog/2026-03-26-loooom-identify-song-parts/",
+      "title": "Loooom: I Built a Skill to Teach Claude to Hear Music — mager.co",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:18:29.104387+00:00",
+      "sha256": "fc380c550d500a5628fc0343d7ce847bb647c3b7fe707dbe5b91bf3138e6fbdc",
+      "supports": "作者单次37秒钢琴演示、工具链和报告结果，未独立复现，不等于测量真值或可听分轨。"
+    },
+    {
+      "id": "S33ce31fd1088",
+      "kind": "primary",
+      "url": "https://www.mager.co/blog/2026-06-02-loooom/",
+      "title": "Loooom: Curated Skills for People Who Don't Code — mager.co",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:18:46.941084+00:00",
+      "sha256": "dcd0179f42799c636536580feda6eeafade710e7ab38687279722f8618aa0255",
+      "supports": "作者2026年6月回顾平台尝试、使用有限、转向精选非技术技能及免费定位；非独立用户证据。"
+    },
+    {
+      "id": "S3b3e7a281dd7",
+      "kind": "competitor",
+      "url": "https://www.sonicvisualiser.org/",
+      "title": "Sonic Visualiser",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:18:55.821296+00:00",
+      "sha256": "83d39ba4767bab2836f0298da5a1d6f4ac182aac5d7dce9ae67e5bd43c7215ce",
+      "supports": "Sonic Visualiser官方免费开源音频可视化、分析和标注功能，作为人工复核替代。"
+    },
+    {
+      "id": "Sc53a75c06263",
+      "kind": "primary",
+      "url": "https://ffmpeg.org/ffmpeg.html",
+      "title": "ffmpeg Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:19:00.118650+00:00",
+      "sha256": "e15e9ea5c695b8a415985a8fb59ffd0f298da335b47f3d7ed186b254ba0ab6c2",
+      "supports": "FFmpeg官方媒体转换、流映射和-n禁止覆盖说明；不证明可由名称分离独立声源。"
+    },
+    {
+      "id": "Se3f89845a890",
+      "kind": "primary",
+      "url": "https://librosa.org/doc/main/_modules/librosa/beat.html",
+      "title": "librosa.beat — librosa 1.0.0 documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:19:26.334296+00:00",
+      "sha256": "02a8ed3a38bbce0f1ee9ad5842e3f285821f8e75f975865ebd42b8cb7ebce432",
+      "supports": "当前main开发文档源码说明起音、速度估计和节拍跟踪步骤与无起音时输出；不证明案例当时版本或准确率。"
+    },
+    {
+      "id": "S588654d7563a",
+      "kind": "primary",
+      "url": "https://librosa.org/librosa_gallery/auto_examples/plot_vocal_separation.html",
+      "title": "Vocal separation — librosa-gallery 0.1.0 documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:19:29.624975+00:00",
+      "sha256": "0b80893429f965588a6bfafdc26c6882e8bdb5f3d48defd3951107811e4de071",
+      "supports": "历史librosa-gallery 0.1.0文档演示前景/背景分离；不是任意六种乐器分轨保证或当前版本复现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "原作者描述一次37秒钢琴录音演示，而非多样本评测。",
+      "source_ids": [
+        "Sd9f07c75a984"
+      ]
+    },
+    {
+      "statement": "Gemini用于起草技能，Claude Code用于处理本地文件。",
+      "source_ids": [
+        "Sd9f07c75a984"
+      ]
+    },
+    {
+      "statement": "作者报告安装ffmpeg和librosa后运行Python分析。",
+      "source_ids": [
+        "Sd9f07c75a984"
+      ]
+    },
+    {
+      "statement": "报告速度约91，比较的标准版本约104；并非本次演奏的人工真值。",
+      "source_ids": [
+        "Sd9f07c75a984"
+      ]
+    },
+    {
+      "statement": "源站归档指出分轨名称与钢琴独奏不符。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "当前librosa main源码将节拍跟踪分为起音、速度估计和节拍选择。",
+      "source_ids": [
+        "Se3f89845a890"
+      ]
+    },
+    {
+      "statement": "同一文档说明未检出起音时返回0 BPM及空节拍列表。",
+      "source_ids": [
+        "Se3f89845a890"
+      ]
+    },
+    {
+      "statement": "历史librosa-gallery人声分离示例区分前景和背景。",
+      "source_ids": [
+        "S588654d7563a"
+      ]
+    },
+    {
+      "statement": "Sonic Visualiser官网提供免费开源音频可视化、分析与标注。",
+      "source_ids": [
+        "S3b3e7a281dd7"
+      ]
+    },
+    {
+      "statement": "FFmpeg文档说明-n在输出文件已存在时停止，-map选择输入流。",
+      "source_ids": [
+        "Sc53a75c06263"
+      ]
+    },
+    {
+      "statement": "作者后续回顾描述早期使用有限，并重申技能免费定位。",
+      "source_ids": [
+        "S33ce31fd1088"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "报告生成与音频效果分别验收",
+      "body": "当前证据不足以支持商业交付，商业评分不评定。案例只展示一次短录音的报告，没有人工标注真值、误差分布、可听输出或付费使用者。文字完整、术语丰富和流程执行成功，都不能替代音频结果验收。商业交付应逐项检查节拍、段落和文件，而不是以报告看起来专业为通过条件。潜在价值是协助复核已有材料，尚未证明可替代音乐教师、制作人或剪辑师。",
+      "source_ids": [
+        "Sd9f07c75a984",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "method",
+      "title": "从输入到交付保留可追踪证据",
+      "body": "作者描述的链路是技能说明、Claude Code、本地文件、依赖安装和Python分析；本轮不安装该技能或执行陌生代码。拟议流程应先记录文件哈希、时长、采样率、工具版本和参数，再输出带依据的候选结论，并让人工回听。先复制到独立工作目录、保留原文件，区分分析失败、无信号和未生成文件。FFmpeg的流映射面向已有输入流，命名一个人声输出并不会证明从混音中分离了人声。",
+      "source_ids": [
+        "Sd9f07c75a984",
+        "Sc53a75c06263"
+      ]
+    },
+    {
+      "id": "tempo",
+      "title": "标准歌曲速度不是这次演奏的真值",
+      "body": "源站译文忠实保留其“约91对标准约104”的表述；分析只把二者作为作者报告中的比较值。业余翻弹可能改变速度，未听取并人工标注该录音，不能断言它实际就应为104，也不能把差13 BPM或12.5%解释为对这次录音的实测误差率。当前librosa开发文档将起音强度、速度估计、节拍选择分成步骤，起音数量也不能直接等同拍数。无可用起音时文档中的0 BPM属于算法输出状态，应在产品层显示未检出而非真实零速度。",
+      "source_ids": [
+        "Sd9f07c75a984",
+        "Se3f89845a890",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "stems",
+      "title": "分轨名称、频带和可听音轨分开",
+      "body": "案例归档指出钢琴独奏对应了人声、鼓等分轨名称，这是必须保留的反证。研究未取得可听分轨，不能宣布成功或据此算分离准确率。已读历史librosa示例使用前景/背景掩码，其范围也不能外推到任意乐器多分轨。拟议验收需要实际非空音频文件、与输入一致的时长范围，以及人工回听确认目标声源；文件存在仍不等于声源正确。结构中的主歌、副歌名称也应作为待核对标签，不能仅凭能量高低就判定歌曲形式。",
+      "source_ids": [
+        "Sd9f07c75a984",
+        "S588654d7563a",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "customer",
+      "title": "付款理由与免费替代之间的距离",
+      "body": "潜在用户是整理自有练习录音的学习者、教师或制作人员，可能的付款人是本人或承担备课与交付预算的工作室；现有资料没有证明这些人已为本技能付款。对于偶发短片段，人工回听和免费Sonic Visualiser的波形、分析及标注功能是具体基线。增加Agent层只有在净复核时间下降、错误可控制时才可能值得付费。平台作者后续回顾提到早期使用有限并调整产品方向，不能把其技能评分当作音频效果或商业需求验证。",
+      "source_ids": [
+        "S3b3e7a281dd7",
+        "S33ce31fd1088",
+        "Sd9f07c75a984"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "人工回听决定单位经济",
+      "body": "以下全部为美元预算假设，不是厂商报价或作者账单。每份短录音报告收15，模型/运行0.5、人工20分钟乘30每小时=10、其他0.5、获客2，单位贡献2；月100份、固定50，经营贡献150。人工改为40分钟，单位负8、月负850。另一情景为教师批量设置服务200，运行5、人工4小时乘30=120、其他5、获客30，单位贡献40；月5份固定50时贡献150。若返工至6小时，单位负20、月负150。未扣税和额外固定费用，不能用技能免费推出总成本为零。",
+      "source_ids": [
+        "S33ce31fd1088",
+        "S3b3e7a281dd7",
+        "Sc53a75c06263"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "反馈与证据等级",
+      "body": "本轮检索公开搜索、GitHub和Hacker News方向的Loooom及本技能使用评价，取得原作者材料和平台代码线索，没有取得可核验的独立付费使用结果。作者自评、模型对技能的评分以及平台可访问，都不是客户验证。六份已读资料能够支持工具链和验收边界，但缺少独立市场与音频效果证据，故保存为schema-1简版，不伪装成completed v2深研。404路径不算已读，也不将搜索摘要充当完整技能或实际运行记录。",
+      "source_ids": [
+        "Sd9f07c75a984",
+        "S33ce31fd1088",
+        "Se3f89845a890",
+        "S588654d7563a",
+        "S3b3e7a281dd7",
+        "Sc53a75c06263"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "合成检查的范围与停止条件",
+      "body": "本轮只用本地自生成脉冲与静音WAV检查输入/输出时长、原文件哈希、-n禁止覆盖及简单间隔计算，并用虚构时间线检查越界、缺口和重叠；不是Claude、librosa或真实钢琴识别测试。91与104的算术差只验证计算。下一步应先有自有音频和人工标注，再比较回听总时间、节拍及段落错误；没有实测就不承诺准确率或节省。如果产生不存在的声源、覆盖原文件、无法给出可听输出，或人工返工吃掉预算，应停止作为收费交付。",
+      "source_ids": [
+        "Sc53a75c06263",
+        "Se3f89845a890",
+        "S588654d7563a"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-a-piano-recording-s-bpm-structure-and-stems",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "ec25ead2793cc443ef61b0d9b518c7f6f8623b59e431fc0ea21aff22045ba8bd",
+      "How it went": "443f381076eeba3d2e0eb6741460081d72721c59bb5fbc68ba9c02f4d7d516d0",
+      "Worth knowing": "c8ed36952927c810a8f5864e9ca800a9bb891b8414f64ce479afcee9cb90f5f7"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I have a piano recording at [path to MP3 file]. Install whatever you need (such as ffmpeg and librosa), then analyze it and write me a report covering the BPM, the song structure with approximate timestamps for each section, and separated stems if possible. Save the report as [report filename] in the same folder and tell me when it's finished and where the output files are.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/analyze-a-piano-recording-s-bpm-structure-and-stems",
+    "observed_at": "2026-10-17T05:34:07.072475+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "70c64a75f25216f9ec0093b05a0bf5d8445b258c3ee9f46942cf204e1f9afe2e"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.mager.co/blog/2026-03-26-loooom-identify-song-parts/",
+    "source_title": "Loooom: I Built a Skill to Teach Claude to Hear Music — mager.co",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T02:18:29.104387+00:00",
+    "source_sha256": "fc380c550d500a5628fc0343d7ce847bb647c3b7fe707dbe5b91bf3138e6fbdc",
+    "steps": [
+      {
+        "en": "The author drafted a Loooom skill with Gemini, published it, and loaded it in Claude Code for a short local piano recording.",
+        "zh": "作者用Gemini起草Loooom技能，发布后在Claude Code中加载，用于一段本地钢琴短录音。"
+      },
+      {
+        "en": "He reports that Claude installed audio dependencies and generated a Python analysis report, including tempo and section labels.",
+        "zh": "他报告称Claude安装了音频依赖，并用Python生成含速度和段落标签的分析报告。"
+      },
+      {
+        "en": "The displayed tempo comparison and unexpected instrument labels are reported outputs, without independently verified timing or separated audio.",
+        "zh": "展示的速度比较和意外乐器标签属于报告输出，没有独立核验的时间真值或分离音频。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可以辅助设计报告和验收，但没有独立准确性或净省时证据，真实录音仍需回听。",
+    "audience": "拥有自有或获准处理录音、能够人工回听的成年学习者、教师或制作人员。",
+    "use": "整理候选速度和段落，设计输入/输出验收，不替代音乐判断。",
+    "benefit": "可能减少整理工作；没有测量节省时长、识别率或教育效果。",
+    "setup_cost": "确认输入权限、版本、独立目录、人工标注和验收表；本轮不安装项目或依赖。",
+    "maintenance_cost": "参数及版本变化、长音频用量、误判回听与重跑。",
+    "frequency": "按自有录音批次核验，尚无稳定重复使用证据。",
+    "privacy_risk": "录音可能含私人谈话和未发布作品；本轮仅处理自生成合成音频，不上传。",
+    "error_risk": "速度倍半拍、起音/节拍混淆、虚构声源、段落猜测和覆盖文件。",
+    "source_ids": [
+      "Sd9f07c75a984",
+      "Se3f89845a890",
+      "S588654d7563a",
+      "S3b3e7a281dd7",
+      "Sc53a75c06263"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站模板完整保留于案例原文和忠实译文，不代表作者实际提示词或已经执行。",
+    "prerequisites": "自生成脉冲或静音音频、虚构时间线和人工答案；不含私人或第三方录音。",
+    "tools": "仅现有本地Python标准库及已安装FFmpeg；不安装技能、模型、项目或依赖。",
+    "expected_result": "输入/输出元数据、区间验收和待核实项；不声称真实钢琴识别成功。",
+    "prompts": [
+      {
+        "title": "用合成音频设计报告验收",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "Se3f89845a890",
+          "S588654d7563a",
+          "Sc53a75c06263"
+        ],
+        "text": "请仅使用[自生成脉冲/静音音频及人工提供的虚构时间线]设计离线音频报告验收。先列现有工具，禁止安装依赖、安装技能、下载模型或调用付费API。保留输入哈希和原文件，在独立目录处理。分别核对时长、采样率、区间起止、重叠/缺口和文件是否存在；未检出速度、未知调性、未生成分轨必须明确标注，不猜测。不要把起音个数当拍数，不把标准歌曲速度当本次演奏真值，不把能量峰当副歌，也不把频带或分轨名称当可听声源。若没有独立音轨就写未分离；若有输出仍需人工回听，不宣称识别正确。列出需人工验证的节拍、段落和声源，输出误差与人工时间记录表后停止。本模板为研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：短录音报告",
+      "currency": "USD",
+      "unit": "报告",
+      "price": 15,
+      "api_cost": 0.5,
+      "human_cost": 10,
+      "other_variable_cost": 0.5,
+      "acquisition_cost": 2,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 50,
+      "contribution_before_fixed_cost": 2,
+      "monthly_contribution_before_tax": 150,
+      "assumptions": "全部为预算假设，人工20分钟×30/小时；改40分钟则单位-8、月-850。未扣税及额外固定费，非报价、收入或账单。"
+    },
+    {
+      "scenario": "假设：教师批量设置",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 200,
+      "api_cost": 5,
+      "human_cost": 120,
+      "other_variable_cost": 5,
+      "acquisition_cost": 30,
+      "units_per_month": 5,
+      "fixed_monthly_cost": 50,
+      "contribution_before_fixed_cost": 40,
+      "monthly_contribution_before_tax": 150,
+      "assumptions": "全部为预算假设，人工4小时×30；返工至6小时则单位-20、月-150。未扣税及额外固定费，未验证客户付款。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"loooom\" \"piano\" review",
+        "outcome": "主要为作者文章及不相关同名结果，无独立付费使用证据。"
+      },
+      {
+        "channel": "GitHub公开代码",
+        "query": "\"loooom\" site:github.com",
+        "outcome": "找到平台仓库，未取得本钢琴技能的独立实际使用或音频效果反馈。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"loooom\" site:news.ycombinator.com",
+        "outcome": "无可归属独立使用结果，不等于负面评价。"
+      },
+      {
+        "channel": "公开网页",
+        "query": "\"how-to-identify-parts-of-a-song\" review",
+        "outcome": "取得原作者演示线索，没有独立评测。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent user evidence; no numerical satisfaction estimate."
+  },
+  "limitations": "没有运行Claude或该技能、安装librosa、下载模型、听取作者录音或取得可听分轨；合成检查仅验收机制。两条latest文档404，未算已读；改读公开main源码及明确标年的历史示例，不代表作者版本。没有独立市场资料，保存brief而非v2。",
+  "archive_source_sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
+  "translation_sha256": "37ef8aff728a6104b75ba435848821454ef695edd88d95387b6608d2522dfa57"
+}

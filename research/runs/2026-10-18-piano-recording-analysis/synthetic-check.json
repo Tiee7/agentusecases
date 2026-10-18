@@ -1,0 +1,62 @@
+{
+  "checked_at": "2026-10-18T02:21:51.867982+00:00",
+  "audio_checks": [
+    {
+      "input": "pulse",
+      "input_sha256": "80eccea1054e1d030077a05cca9e192d2e54bd31aa2473ad0837c8572fa9e578",
+      "output_sha256": "80626a4dd0cff7a72cf5c413d1a00c8b68c7d3241832b1ea8646546e1213eafd",
+      "seconds": 4,
+      "source_preserved": true,
+      "nonoverwrite_rejected": true,
+      "nonoverwrite_observed_exit_code": 0,
+      "rejection_verified_by_stderr_and_unchanged_hash": true,
+      "copy_metadata_checked": true,
+      "simple_threshold_interval_bpm": 120.0,
+      "scope": "Only self-generated PCM, FFmpeg copy and deterministic threshold interval arithmetic. Not Claude/librosa or natural-music validation."
+    },
+    {
+      "input": "silence",
+      "input_sha256": "bff9ae2d1c0defb0f2b9070f43439fcb723621dbeb1cca5e2dbadcd9bfb13c68",
+      "output_sha256": "00b918534808f865c9cefa16014e98be3ea0dacd38ab9c974ba9ccb0819e4e06",
+      "seconds": 4,
+      "source_preserved": true,
+      "nonoverwrite_rejected": true,
+      "nonoverwrite_observed_exit_code": 0,
+      "rejection_verified_by_stderr_and_unchanged_hash": true,
+      "copy_metadata_checked": true,
+      "simple_threshold_interval_bpm": null,
+      "scope": "Only self-generated PCM, FFmpeg copy and deterministic threshold interval arithmetic. Not Claude/librosa or natural-music validation."
+    }
+  ],
+  "timeline_boundary_checks": 6,
+  "tempo_comparison": {
+    "difference": 13,
+    "relative_to_canonical": 0.125,
+    "scope": "Arithmetic only, not recording accuracy"
+  },
+  "cost_checks": [
+    {
+      "scenario": "假设：短录音报告",
+      "unit": 2.0,
+      "monthly": 150.0
+    },
+    {
+      "scenario": "假设：教师批量设置",
+      "unit": 40,
+      "monthly": 150
+    }
+  ],
+  "human_time_sensitivities_checked": true,
+  "no_real_recordings": true,
+  "no_audio_model": true,
+  "no_project_or_dependency_install": true,
+  "no_paid_calls": true,
+  "stem_labels_not_audio_outputs": true,
+  "reproduction": {
+    "input": "4 seconds, 8000 Hz, mono signed 16-bit PCM. Pulse sample is 12000 for first 8 samples of each 4000-sample block, otherwise zero; silence all zero.",
+    "copy_command": "ffmpeg -nostdin -hide_banner -loglevel error -n -i INPUT.wav -map 0:a:0 -c:a pcm_s16le OUTPUT.wav",
+    "checks": "Read output WAV metadata; SHA-256 input before/after; repeat same command with output already present and verify stderr plus unchanged output hash. Simple pulse BPM = 60 / median consecutive rising-edge interval, null when no intervals. This does not test natural music or librosa.",
+    "timeline": "Require 0 <= start < end <= duration, start equals previous end, first start 0 and final end equals duration; reject overlap, gap, negative start, zero-length and overrun.",
+    "economics": "unit=price-api-human-other-acquisition; monthly=unit*volume-fixed. All budgets hypothetical."
+  }
+}
