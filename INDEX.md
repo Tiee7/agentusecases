@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **37** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **38** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -35,6 +35,7 @@
 | [用 Codex 取消 Amazon 订阅并申请退款](reports/cancel-an-amazon-subscription-and-get-a-refund.md) | 不建议商业投入 | 28.5 | 中 | available | 个人订阅取消准备与退款状态核对 | 2026-10-18T00:17:13.506691+00:00 |
 | [用四个 AI 模型各管理 1,000 美元模拟股票组合](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
+| [用 Devin 提交第三方 API 集成并通过 PR 审阅修正](reports/add-a-third-party-api-integration-via-devin-pr.md) | 适合内部效率工具 | 39.0 | 中 | available | 软件团队的第三方API集成与代码审阅 | 2026-10-18T00:52:43.508911+00:00 |
 | [用 Claude Agent SDK 分析竞品广告并生成品牌素材](reports/analyze-competitor-ads-and-generate-on-brand-ad-creatives.md) | 仅建议受控试点 | 43.5 | 中 | available | 广告创意研究与品牌素材准备 | 2026-10-16T16:55:44.734582+00:00 |
 | [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
 | [用 Claude Code 和 Claude for Word 起草文件并衔接法律工作流](reports/automate-legal-drafting-and-workflows-with-claude-code.md) | 适合内部效率工具 | 38.0 | 中 | available | 律师内部文书处理与知识工作流 | 2026-10-16T17:12:27.645268+00:00 |
@@ -56,8 +57,8 @@
 - Track personal finances with a Claude Code assistant · `track-personal-finances-with-a-claude-code-assistant`
 - Add 61 kid-friendly mini-games to an app · `add-61-kid-friendly-mini-games-to-an-app`
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
-- Add a third-party API integration via Devin PR · `add-a-third-party-api-integration-via-devin-pr`
 - Add agentic forgetting to an agent's memory · `add-agentic-forgetting-to-an-agent-s-memory`
 - Add family to a dental plan by voice from the car · `add-family-to-a-dental-plan-by-voice-from-the-car`
 - Add handwritten appointments to calendar and file PDFs · `add-handwritten-appointments-to-calendar-and-file-pdfs`
 - Add home TODO items by Telegram message · `add-home-todo-items-by-telegram-message`
+- Add todo items to Todoist from Telegram · `add-todo-items-to-todoist-from-telegram`
