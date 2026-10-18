@@ -1,0 +1,234 @@
+{
+  "checked_at": "2026-10-18T03:30:04.885399+00:00",
+  "scope": "Pure deterministic fictional state fixture; types supplied by human labels, no natural-language classifier/model or n8n/Gemini/Google Sheets/email executed. No medical advice or emergency triage test. Not production auth, privacy, retention or safety proof.",
+  "checks": [
+    {
+      "check": "approved_hours",
+      "result": {
+        "status": "admin_answer_draft",
+        "value": "09:00–17:00",
+        "row": "r1",
+        "version": "v2"
+      }
+    },
+    {
+      "check": "same_session_followup",
+      "result": {
+        "status": "context_available",
+        "field": "hours"
+      }
+    },
+    {
+      "check": "other_session_isolated",
+      "result": {
+        "status": "context_unknown"
+      }
+    },
+    {
+      "check": "same_session_other_clinic_isolated",
+      "result": {
+        "status": "context_unknown"
+      }
+    },
+    {
+      "check": "missing_price",
+      "result": {
+        "status": "human_pending",
+        "reason": "stale_or_missing_info",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "prelabelled_medical",
+      "result": {
+        "status": "human_pending",
+        "reason": "medical",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "prelabelled_unclear",
+      "result": {
+        "status": "human_pending",
+        "reason": "unclear",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "stale_sheet",
+      "result": {
+        "status": "human_pending",
+        "reason": "stale_or_missing_info",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "blocked_model",
+      "result": {
+        "status": "human_pending",
+        "reason": "provider_or_sheet_unavailable",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "sheet_unavailable",
+      "result": {
+        "status": "human_pending",
+        "reason": "provider_or_sheet_unavailable",
+        "notification": "draft_only"
+      }
+    },
+    {
+      "check": "duplicate_message_no_duplicate_task",
+      "task_count": 6
+    },
+    {
+      "check": "expired_context_unknown",
+      "result": {
+        "status": "context_unknown"
+      }
+    },
+    {
+      "check": "untrusted_text_cannot_mutate_fixture_catalog",
+      "result": {
+        "status": "admin_answer_draft",
+        "value": "09:00–17:00",
+        "row": "r1",
+        "version": "v2"
+      }
+    },
+    {
+      "check": "notification_unknown_is_not_sent_or_followed_up",
+      "result": {
+        "task": "T2",
+        "status": "delivery_unknown",
+        "payload": {
+          "clinic": "A",
+          "session": "s1",
+          "message_id": "m6",
+          "reason": "medical"
+        },
+        "delivered": false,
+        "staff_acknowledged": false
+      }
+    },
+    {
+      "check": "wrong_task_ack_rejected_matching_synthetic_ack_accepted",
+      "real_delivery": false
+    }
+  ],
+  "notification_drafts": [
+    {
+      "task": "T1",
+      "status": "draft_only",
+      "payload": {
+        "clinic": "A",
+        "session": "s1",
+        "message_id": "m5",
+        "reason": "stale_or_missing_info"
+      },
+      "delivered": false,
+      "staff_acknowledged": false
+    },
+    {
+      "task": "T2",
+      "status": "synthetic_staff_acknowledged",
+      "payload": {
+        "clinic": "A",
+        "session": "s1",
+        "message_id": "m6",
+        "reason": "medical"
+      },
+      "delivered": false,
+      "staff_acknowledged": true
+    },
+    {
+      "task": "T3",
+      "status": "draft_only",
+      "payload": {
+        "clinic": "A",
+        "session": "s1",
+        "message_id": "m7",
+        "reason": "unclear"
+      },
+      "delivered": false,
+      "staff_acknowledged": false
+    },
+    {
+      "task": "T4",
+      "status": "draft_only",
+      "payload": {
+        "clinic": "A",
+        "session": "s3",
+        "message_id": "m8",
+        "reason": "stale_or_missing_info"
+      },
+      "delivered": false,
+      "staff_acknowledged": false
+    },
+    {
+      "task": "T5",
+      "status": "draft_only",
+      "payload": {
+        "clinic": "A",
+        "session": "s3",
+        "message_id": "m9",
+        "reason": "provider_or_sheet_unavailable"
+      },
+      "delivered": false,
+      "staff_acknowledged": false
+    },
+    {
+      "task": "T6",
+      "status": "draft_only",
+      "payload": {
+        "clinic": "A",
+        "session": "s3",
+        "message_id": "m10",
+        "reason": "provider_or_sheet_unavailable"
+      },
+      "delivered": false,
+      "staff_acknowledged": false
+    }
+  ],
+  "raw_chat_in_notification_payload": false,
+  "credential_or_real_data": false,
+  "real_messages": false,
+  "extra_paid_api": false,
+  "economic_scenarios": {
+    "currency": "USD",
+    "scope": "All inputs hypothetical budgets, no quote, procurement, payment or realized income.",
+    "models": [
+      {
+        "price": 650,
+        "api_cost": 70,
+        "human_cost": 280,
+        "other_variable_cost": 30,
+        "acquisition_cost": 80,
+        "units_per_month": 8,
+        "fixed_monthly_cost": 400,
+        "variable_cost": 460,
+        "unit_contribution": 190,
+        "monthly_contribution": 1120,
+        "extra_human_cost": 280,
+        "stress_unit": -90,
+        "stress_monthly": -1120
+      },
+      {
+        "price": 2400,
+        "api_cost": 50,
+        "human_cost": 1575,
+        "other_variable_cost": 125,
+        "acquisition_cost": 250,
+        "units_per_month": 2,
+        "fixed_monthly_cost": 300,
+        "variable_cost": 2000,
+        "unit_contribution": 400,
+        "monthly_contribution": 500,
+        "extra_human_cost": 450,
+        "stress_unit": -50,
+        "stress_monthly": -400
+      }
+    ]
+  }
+}

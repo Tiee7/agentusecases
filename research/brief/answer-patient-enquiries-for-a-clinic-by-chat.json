@@ -1,0 +1,382 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-patient-enquiries-for-a-clinic-by-chat",
+  "url": "https://agentusecases.ai/use-case/answer-patient-enquiries-for-a-clinic-by-chat",
+  "title": "用 n8n 和 Gemini 回复诊所患者咨询",
+  "researched_at": "2026-10-18T03:31:34.034192+00:00",
+  "industry": "诊所行政资料问答与人工跟进辅助",
+  "brief_reason": "原帖X依既有限制跳过；归档只有工作流说明和目标，无实际效果、独立用户或单位经济证据。六份技术/竞争资料不能替代案例结果。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先核对资料、会话与人工通知，功能描述不足以证明服务价值",
+    "reason": "没有可核验的原帖、真实回答质量、净省时或工作人员跟进证据。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-patient-enquiries-for-a-clinic-by-chat",
+      "title": "Answer patient enquiries for a clinic by chat",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T06:02:43.152762+00:00",
+      "archived_at": "2026-10-17T06:02:43.152762+00:00",
+      "archive_path": "registry/archives/answer-patient-enquiries-for-a-clinic-by-chat.json",
+      "sha256": "c41919695810bfedf5b38670bf09cef022ebc3a5107e662984fa83d1ca01a3d7",
+      "hash_scope": "Existing source_text.body UTF-8, no fresh source-site request",
+      "supports": "归档所述n8n/Gemini、Simple Memory、Google Sheets聊天工作流及没有结果指标；医疗问题转人工和邮件通知仅见建议模板。"
+    },
+    {
+      "id": "registered-x-unread",
+      "kind": "primary",
+      "url": "https://x.com/SahilWagave/status/2109697093778690255",
+      "title": "X 原帖（本轮未读取）",
+      "status": "skipped_previous_robots_restriction",
+      "fresh_attempt": false,
+      "sha256": null,
+      "supports": "只保留登记链接，不新请求、不登录、不重试、不以镜像或搜索摘要补原文。"
+    },
+    {
+      "id": "Sea81b114bc49",
+      "kind": "primary",
+      "url": "https://ai.google.dev/gemini-api/docs/safety-settings",
+      "title": "Safety settings  |  Gemini API  |  Google AI for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:28:59.171059+00:00",
+      "sha256": "40fdd01dccb32e346cefe9799966f795ee792086ef345e9faeaa62805910a241",
+      "supports": "Gemini官方安全过滤类别、概率阈值和阻断错误机制；不构成医疗正确性、识别全部医疗问题或通知成功证明。"
+    },
+    {
+      "id": "S9c31625dedcc",
+      "kind": "primary",
+      "url": "https://n8n.io/pricing/",
+      "title": "n8n Plans and Pricing - n8n.io",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:29:02.393021+00:00",
+      "sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+      "supports": "n8n当前计划按工作流执行等项目计费；成本还需模型、消息和人工复核，不能把一段会话当成一次执行。"
+    },
+    {
+      "id": "S21bc2cd4aaf4",
+      "kind": "competitor",
+      "url": "https://www.intercom.com/pricing",
+      "title": "Intercom Pricing | Plans for every team size",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:29:04.808888+00:00",
+      "sha256": "80bd4580440e4a565cdf1c9b3edf3609565d9b10db31ea5d30112bae8a40c460",
+      "supports": "Intercom当前共享收件箱、人工转交、席位/Fin outcome及渠道等收费构成具体竞争基线，不证明适用本案例医疗场景或任何合规结论。"
+    },
+    {
+      "id": "Sb17c1939c941",
+      "kind": "primary",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow",
+      "title": "/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:29:21.632611+00:00",
+      "sha256": "9cf6b389a3ad6a3e49f9cb87575d1f1288fc4e9d9d1bb974af1b3d95445726cd",
+      "supports": "n8n官方Simple Memory会话键、上下文窗口、子节点表达式取首项和生产队列模式限制；不证明本案例实际隔离、删除或部署配置。"
+    },
+    {
+      "id": "S06d05da8421d",
+      "kind": "primary",
+      "url": "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+      "title": "/integrations/builtin/core-nodes/n8n-nodes-langchain.chattrigger",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:29:24.021650+00:00",
+      "sha256": "75f23cb55e41aef4b69b520dd375ae27a0b4ccd9d209d9af2fa15523021f3652",
+      "supports": "n8n官方Chat Trigger每条消息一次执行、访问认证和先前会话加载机制；会话ID不是患者身份验证，也不证明本案例已设置这些控制。"
+    },
+    {
+      "id": "S3fbc146d47ad",
+      "kind": "primary",
+      "url": "https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets",
+      "title": "/integrations/builtin/app-nodes/n8n-nodes-base.googlesheets",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T03:29:26.252569+00:00",
+      "sha256": "55153750ec0844066ea39b26656ee7a84a770c014943c7042a93a088eec1da24",
+      "supports": "n8n官方Google Sheets节点包含读取和写入操作；数据源连接不自动意味着agent只读，且没有本案例表结构或更新策略。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档方法所述实际工具为n8n和Gemini，并提到Simple Memory及Google Sheets。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档明确没有结果或指标，减少人工只是所述目标，不是已验证效果。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "医疗或不明确问题通知工作人员的要求见源站试用模板，不是已核验的作者实现。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Simple Memory官方明确不适用于生产队列模式，因为请求可能被分到不同worker。",
+      "source_ids": [
+        "Sb17c1939c941"
+      ]
+    },
+    {
+      "statement": "Simple Memory子节点表达式可能只解析第一项，不能默认逐用户隔离可靠。",
+      "source_ids": [
+        "Sb17c1939c941"
+      ]
+    },
+    {
+      "statement": "Chat Trigger每条用户消息都执行一次工作流，十条消息会消耗十次执行。",
+      "source_ids": [
+        "S06d05da8421d"
+      ]
+    },
+    {
+      "statement": "Google Sheets节点有读取也有写入操作，连接数据源不能自动推定只读。",
+      "source_ids": [
+        "S3fbc146d47ad"
+      ]
+    },
+    {
+      "statement": "Gemini安全过滤依据类别和概率，不是本案例医疗正确性或意图分流评测。",
+      "source_ids": [
+        "Sea81b114bc49"
+      ]
+    },
+    {
+      "statement": "Intercom当前席位、outcome和渠道收费是竞争成本基线，不是本案例结果证明。",
+      "source_ids": [
+        "S21bc2cd4aaf4"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "功能说明不足以证明实际服务效果",
+      "body": "本轮商业评分不评定，现有证据不建议商业投入。归档只描述患者消息进入n8n、Gemini结合Simple Memory和Google Sheets生成回复，没有回答准确率、服务量、人工净省时、成本或患者结果。目标是减少人工工作，不能改写为已经减少人工。X原帖依既有限制跳过，作者方法不可用；六份技术与竞争资料可以帮助列验收条件，但不能填补本案例实际部署和效果缺口。因此保存schema-1简要分析，不冒充completed v2深研。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sb17c1939c941",
+        "S06d05da8421d",
+        "S3fbc146d47ad"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "实际工具、模板和作者方法分别保留",
+      "body": "实际agent标注为n8n和Gemini，推荐试用工具为n8n，两者都按归档保留。医疗或不明确问题告知患者工作人员会跟进并通知邮箱，是源站建议模板里的要求；归档方法段没有明确描述该人工通知分支。不能把模板要求补成原作者已完成的接管、邮件送达或工作人员跟进。也不知道具体Gemini型号、提供方式、提示词、数据访问权限或实际诊所类型。当前官方文档只是技术对照，不用它们反推这套工作流的真实设置。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sea81b114bc49",
+        "S06d05da8421d"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "诊所资料要可追踪且不能由聊天改写",
+      "body": "营业时间、地址、服务和价格需要对应经诊所确认的数据行、版本和有效时间。Google Sheets节点既有读取也有创建、更新与删除操作，因此接了表格并不自动形成只读权限；本轮不配置真实连接。拟议验收应把聊天和表格中未审阅的内容视为输入资料，不能直接改权威资料或工具行为。缺价、过期信息、表格不可用应保留未知并转为人工待核对，不补一个看似合理的答案。本地合成检查只证明固定规则下的版本处理，不测量检索召回、模型理解或真实表格权限。",
+      "source_ids": [
+        "S3fbc146d47ad",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "记忆上下文不等于可靠隔离与保存",
+      "body": "Simple Memory官方文档提供Session Key和Context Window Length，并明确生产队列模式下不能保证请求都到同一个worker，因而不适用；子节点表达式处理多项时还可能只取第一项。不能据此假设任意多用户或多worker部署都可靠。拟议验收用诊所与会话的组合键检查隔离、上下文过期和重复消息，但会话ID本身不证明患者身份，也不保证所有执行日志或副本被删除。若需要跨设备、后台恢复或多机构共享，应另行核对实现与保留策略；本轮不读取任何真实患者消息或健康资料。",
+      "source_ids": [
+        "Sb17c1939c941",
+        "S06d05da8421d"
+      ]
+    },
+    {
+      "id": "handoff",
+      "title": "医疗边界、模型阻断和人工确认分开",
+      "body": "用途先限定为已批准的行政资料。任何医疗或不明确请求都按源站模板转成人工待处理；本报告不提供诊断、治疗或紧急分诊规则。Gemini内容过滤是类别和概率阈值机制，不能替代医疗正确性审核，也不能证明能识别全部医疗意图。阻断、超时或空输出时不应用另一个未审阅回答兜底。通知草稿、未知送达、已送达与工作人员确认需要独立状态，不把“将跟进”的文字当作实际通知完成。合成任务只含虚构消息ID及原因，未发邮件，人工类型标签由测试者提供，不能当自然语言分流准确率。",
+      "source_ids": [
+        "Sea81b114bc49",
+        "S06d05da8421d",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "buyer",
+      "title": "人工前台与现成收件箱是具体基线",
+      "body": "潜在使用者是诊所前台与行政人员，付款人可能是经营负责人；没有可核验的采购或续费客户。先比较现有FAQ、人工前台和带共享收件箱的现成客服系统，目标应是减少重复行政整理，并保持人工处理责任清楚。Intercom当前价格包含席位、Fin outcome及部分渠道等口径，但它不是本案例使用工具，也不能凭价格页推定满足某诊所的健康数据或合规要求。采购范围、司法辖区、隐私条款和实际数据路径均未知，本轮不作医疗机构可直接上线的结论。",
+      "source_ids": [
+        "S21bc2cd4aaf4",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "执行量和人工返工决定预算",
+      "body": "以下均为美元假设预算，不是厂商报价、作者收入或实际利润。月度行政问答维护每客户650：模型/平台预算70、人工7小时乘40为280、其他30、获客80，单位贡献190；每月8客户、固定400，月经营贡献1120。人工增至14小时则单位负90、月负1120。一次设置2400：用量50、人工35小时乘45为1575、其他125、获客250，单位贡献400；每月2项固定300，贡献500；增加10小时返工则单位负50、月负400。Chat Trigger每条用户消息都会执行工作流，一段十条消息的会话会用十次执行；不能把会话数直接当执行数。n8n欧元标价未兑换或当作上述美元预算，真实模型、额外通道、税和维护等费用仍需核实。",
+      "source_ids": [
+        "S06d05da8421d",
+        "S9c31625dedcc",
+        "S21bc2cd4aaf4"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "缺失证据与下一步验收",
+      "body": "公开网页、GitHub和Hacker News方向检索SahilWagave诊所流程，没有取得可归属本案例的独立实际使用或付费结果。搜索出现其他汇编目录及无关内容，没有访问这些内容来替代被限制的原帖，也不把它们算成独立用户证据。下一步仅用虚构资料验收行政问答、缺失/过期数据、跨会话、跨诊所、医疗/不明确标签、模型阻断、重复消息和通知未知。若资料没有版本、会话串用、模型越界、通知未知被当成功、人工无人领取或总成本超过预算，就停止扩展。当前证据只能支持整理验收条件，不能承诺真实患者沟通改善。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sb17c1939c941",
+        "S06d05da8421d",
+        "S3fbc146d47ad",
+        "Sea81b114bc49",
+        "S9c31625dedcc",
+        "S21bc2cd4aaf4"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-patient-enquiries-for-a-clinic-by-chat",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "c41919695810bfedf5b38670bf09cef022ebc3a5107e662984fa83d1ca01a3d7",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "33cec5350ca79c5892f6c5b3b4ff85768dc6f3c949f31933b13530391beeebca",
+      "How it went": "4d5185e0ade61abed533c2ba1087013b1908ec0dc322369f18dd33058393348f"
+    },
+    "actual_agents": [
+      "n8n",
+      "Gemini"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build an n8n workflow with a Gemini-powered chat agent for my [clinic type] that answers patient enquiries about [services, hours, pricing, location] using the info in my [Google Sheet]. Keep conversation context between messages, and for anything medical or unclear, tell the patient staff will follow up and notify [staff email]. Test with sample questions and show me the answers before going live.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/answer-patient-enquiries-for-a-clinic-by-chat",
+    "observed_at": "2026-10-17T06:02:43.152762+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "48ec42d53797dc9367ebe3b5d4002d81a8b851b0ecc7ef99e36d8bd42c877eae"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/SahilWagave/status/2109697093778690255",
+    "source_title": "X 原帖（本轮未读取）",
+    "steps": [],
+    "unavailable_reason": "Existing X access restriction respected; no fresh request, retry, login, mirror or invented author steps. Source template is separate from actual implementation."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助整理行政咨询，但回答准确性、记忆隔离、人工跟进和净省时尚未验证。",
+    "audience": "能维护经批准诊所行政资料并处理人工跟进的成年前台或运营人员。",
+    "use": "用虚构行政问题、资料版本与事件验收表做离线准备。",
+    "benefit": "可能减少重复行政整理；没有测量节省时长、患者满意度或医疗效果。",
+    "setup_cost": "可信资料、版本/有效期、会话范围、人工队列与消息状态验收。",
+    "maintenance_cost": "价格/时间更新、记忆与执行日志、人工跟进、接口异常和执行量监测。",
+    "frequency": "先用固定合成样本验收，没有持续实际使用效果证据。",
+    "privacy_risk": "患者聊天可能含健康和身份资料；本轮不读取、接入或发送真实资料。",
+    "error_risk": "旧价、串会话、医疗意图漏分、阻断后误兜底与通知未知被当成功。",
+    "source_ids": [
+      "archive-case-20261017",
+      "Sb17c1939c941",
+      "S06d05da8421d",
+      "S3fbc146d47ad",
+      "Sea81b114bc49",
+      "S21bc2cd4aaf4"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整源站n8n建议模板保留；不代表作者当时所用提示词或已执行测试。",
+    "prerequisites": "虚构诊所行政目录、资料行版本、会话ID、人工标签与事件，不含真实患者或凭据。",
+    "tools": "现有Python标准库；不接入n8n、Gemini、Google Sheets、邮箱或诊所系统。",
+    "expected_result": "合成行政问答与人工待处理状态表、资料依据及未知项，无真实回复或医疗结论。",
+    "prompts": [
+      {
+        "title": "用虚构资料验收诊所行政聊天",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者原话或源站模板；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "Sb17c1939c941",
+          "S06d05da8421d",
+          "S3fbc146d47ad",
+          "Sea81b114bc49"
+        ],
+        "text": "仅使用[虚构诊所服务/时间/价格/地址、资料行版本/有效期、会话ID和人工标签样例]设计离线行政聊天验收。实际工具保留n8n和Gemini，但不要接入它们或Google Sheets。对行政答案列可信资料行和版本，缺失、过期或表格不可用时保留未知；聊天不能改写权威资料。按诊所与会话分开上下文，检查过期、重复消息、跨会话及跨诊所。医疗、不明确、请求人工或模型阻断只生成待人工事项，不输出医疗建议；类型标签由测试者提供，不宣称模型分类已测。只生成含虚构消息ID和原因的通知草稿，把未知送达、已送达和人工确认分开，不发送任何消息。不读取真实患者聊天、健康资料、账号或凭据，不注册、创建凭据、购买、调用付费API、上线或联系任何人。输出结果表和未知项后停止。研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：月度行政问答维护",
+      "currency": "USD",
+      "unit": "客户/月",
+      "price": 650,
+      "api_cost": 70,
+      "human_cost": 280,
+      "other_variable_cost": 30,
+      "acquisition_cost": 80,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 400,
+      "contribution_before_fixed_cost": 190,
+      "monthly_contribution_before_tax": 1120,
+      "assumptions": "全部为预算假设，人工7小时×40，增至14小时则单位-90、月-1120。n8n欧元报价未换算为此美元预算；税、用量、额外通道与真实采购未知，不是实测利润。"
+    },
+    {
+      "scenario": "假设：一次设置与合成验收",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 2400,
+      "api_cost": 50,
+      "human_cost": 1575,
+      "other_variable_cost": 125,
+      "acquisition_cost": 250,
+      "units_per_month": 2,
+      "fixed_monthly_cost": 300,
+      "contribution_before_fixed_cost": 400,
+      "monthly_contribution_before_tax": 500,
+      "assumptions": "全部为预算假设，人工35小时×45；多10小时返工则单位-50、月-400。没有真实合同、采购或支付验证，未知费用未含。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"SahilWagave\" \"clinic\" review -site:x.com -site:reddit.com -site:substack.com",
+        "outcome": "出现其他汇编目录与无关线索，未取得独立实际使用/付费结果；未访问目录来替代X原帖。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "\"SahilWagave\" \"clinic\" site:github.com",
+        "outcome": "未取得可归属该诊所流程的独立部署或客户结果。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"SahilWagave\" clinic site:news.ycombinator.com",
+        "outcome": "主要无关内容，未取得本案例用户结果。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent case-user or paid-customer evidence obtained; no satisfaction or medical quality rating."
+  },
+  "limitations": "原帖未访问，作者方法不可用。未运行n8n/Gemini/Google Sheets或医疗系统，未发送邮件、处理真实患者或执行医疗咨询。合成输入类型为人工标签，不验证模型分类、安全过滤、紧急分诊、生产身份/权限、实际隔离、保留删除或通知送达。未作任何司法辖区的隐私/医疗合规结论。",
+  "archive_source_sha256": "c41919695810bfedf5b38670bf09cef022ebc3a5107e662984fa83d1ca01a3d7",
+  "translation_sha256": "58f55711bfe795d400c23061b1ab58ea11224c693d3f8246ec224ba450dd3fa2"
+}

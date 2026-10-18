@@ -104,5 +104,15 @@
     "at": "2026-10-17T06:02:43.152762+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "c41919695810bfedf5b38670bf09cef022ebc3a5107e662984fa83d1ca01a3d7",
+    "translated_at": "2026-10-18T03:31:34.034192+00:00",
+    "body": "通过聊天回答诊所患者的咨询\n一个使用 n8n 和 Gemini 的 agent 接收患者的聊天消息、保留上下文、使用 Google Sheets 中的诊所信息，并回复咨询。\n实际使用\nn8n\nGemini\n具体做法\n患者通过聊天界面发送消息，消息进入一个 n8n 工作流。Gemini agent 使用 Simple Memory 保留上下文，从 Google Sheets 获取诊所详情，并自行生成咨询回复。\n结果如何\n没有报告结果或指标。所述目标是让诊所沟通更智能，并减少人工工作。\n自行试用\n推荐工具\nn8n\n复制提示词\n为我的[诊所类型]构建一个 n8n 工作流，使用由 Gemini 驱动的聊天 agent，根据我的[Google Sheet]中的信息回答患者有关[服务、营业时间、价格、位置]的咨询。在消息之间保留对话上下文；对于任何医疗问题或不明确的问题，告诉患者工作人员会跟进，并通知[工作人员邮箱]。用示例问题测试，在上线前向我展示答案。\n原始来源：https://x.com/SahilWagave/status/2109697093778690255",
+    "body_sha256": "58f55711bfe795d400c23061b1ab58ea11224c693d3f8246ec224ba450dd3fa2",
+    "scope": "Complete faithful translation of captured prose and full n8n/Gemini trial. Actual agents n8n and Gemini; suggested n8n. No results/metrics and stated goal preserved. Medical/unclear staff-followup plus staff-email notification belong to source template, not independently verified implementation. Decorative N8/GE icons omitted. No notes section invented."
   }
 }
