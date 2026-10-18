@@ -102,5 +102,15 @@
     "at": "2026-10-17T05:22:31.067175+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "format": "full_extracted_text_translation",
+    "language": "zh-CN",
+    "based_on_body_sha256": "52cf25273cc4b518dc969a45227cc457149b8957287e2e09fd6f7266a89c2808",
+    "translated_at": "2026-10-18T02:41:29.568104+00:00",
+    "body": "将你的国际象棋对局制作成带解说的分析视频\n一个 Claude Code skill 将 Claude 的视觉能力、Stockfish 和你的语音笔记结合起来，把一盘 Lichess 对局制作成带解说的视频分析。\n实际使用\nClaude Code\n他们做了什么\n作者在一盘 15+10 快棋对局中录下了自己边下边说的思考过程，然后把 Lichess 链接和 mp3 交给 Claude Code。Claude 使用 whisper.cpp 在本地转录音频，并利用 PGN 中的棋钟时间，将每句话与对应的走子对齐。它用 Stockfish 逐步扫描对局，再由子代理针对每个失误向引擎提问。之后，一轮核验检查结果，再将分镜脚本制作成带旁白的视频。\n结果如何\n它为作者的真实对局生成了带注释的 PGN、一个 HTML 棋盘，以及一段 6 分 49 秒、带字幕和旁白的视频。作者说错误很少，但 AI 仍可能出错。\n需要知道的事\n完整运行大约需要一小时处理时间，因此应把它用于你花时间认真思考过的慢棋对局，而不是超快棋。\n自己试试\n推荐工具\nClaude Code\n复制提示词\n请获取我在 Lichess 上的这盘对局：[对局 URL]，用 Stockfish 分析，找出最大的失误和最佳走法。结合我在[音频文件或文本文件]中的笔记，制作一个带解说的对局讲解视频。视频文件保存后停止，并给我一份简短清单，列出讲解涵盖的关键时刻。\n原始来源：https://github.com/brumar/chess-postmortem-skills",
+    "body_sha256": "765bc451d54a457d87d566c72be7be3cf41179d325b0f22c270176756e29ccc3",
+    "scope": "逐段完整翻译已归档案例页，含标题、简介、实际工具、方法、结果、限制、全部推荐提示词与链接；仅省略装饰性CC缩写。保留作者自述归属、15+10、6:49与约一小时，未加入外部原帖的成本或我们的分析；不是GitHub文档全文翻译。"
   }
 }
