@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "add-61-kid-friendly-mini-games-to-an-app",
+  "url": "https://agentusecases.ai/use-case/add-61-kid-friendly-mini-games-to-an-app",
+  "title": "用 Replit Agent 为应用添加 61 款儿童小游戏",
+  "researched_at": "2026-10-18T00:42:26.437498+00:00",
+  "industry": "小游戏内容扩充与质量验收",
+  "brief_reason": "原作者帖文被robots禁止，只有源站归档的数量与试玩瓶颈描述，没有项目、代码、覆盖或经营结果；官方测试与计费资料只支持有限流程分析。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "数量扩充未证明内容质量，先验证少量游戏与人工验收成本",
+    "reason": "缺少玩法差异、试玩覆盖、适龄审阅和需求证据，暂不支持批量交付或订阅产品投入。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/add-61-kid-friendly-mini-games-to-an-app",
+      "title": "Add 61 kid-friendly mini-games to an app",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:48:45.167062+00:00",
+      "archived_at": "2026-10-17T05:48:45.167062+00:00",
+      "archive_path": "registry/archives/add-61-kid-friendly-mini-games-to-an-app.json",
+      "sha256": "b14ffb4e37c34084c8bd21cc2a764c300ca9405941391d4f980d919c5d78004a",
+      "hash_scope": "Existing source_text.body UTF-8, not a fresh source-site request",
+      "supports": "源站关于从40款扩至101款、无重复规则和人工试玩瓶颈的归档转述；不是独立结果验证。"
+    },
+    {
+      "id": "S6c295fe0d1f1",
+      "kind": "primary",
+      "url": "https://docs.replit.com/features/agent/app-testing",
+      "title": "App Testing - Replit",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:40:43.996526+00:00",
+      "sha256": "4c99822e8fb0aac20dd1fea79c90c0079e4d3e8c50c8d29529305a335e5de45e",
+      "supports": "官方文档说明Agent可用浏览器测试，按需决定测试时机且当前限特定Web应用；不证明作者采用了该功能。"
+    },
+    {
+      "id": "S52ef340dff43",
+      "kind": "primary",
+      "url": "https://docs.replit.com/billing/ai-billing",
+      "title": "Replit AI Billing - Replit",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:40:46.886615+00:00",
+      "sha256": "0797d20d5f0a20adcfe2b4836f58e51c7a8d1213ab796dfb867ba1323816dbfd",
+      "supports": "当前官方计费说明计划额度及付费模式按工作量计费；不能从游戏数量推算实际构建或测试账单。"
+    },
+    {
+      "id": "S6299b89ef18b",
+      "kind": "primary",
+      "url": "https://playwright.dev/docs/best-practices",
+      "title": "Best Practices | Playwright",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:40:49.756651+00:00",
+      "sha256": "c4cc1e47b767368d0a6a3b4871ccbb6e26785c9a959645916dd10d28e5e9ebf9",
+      "supports": "官方建议针对用户可见行为设计隔离测试；功能检查本身不能证明游戏有趣或适合某年龄。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档称两位用户让Replit Agent在原有40款基础上增加61款，达到101款。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档明确的作者规则只有不重复，其余选择、构建与整合由Agent自主处理。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档称生成速度超过人工逐关试玩速度，部分技术上可运行的游戏缺乏吸引力。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档提及200关和400个程序生成关卡的人工试玩瓶颈，但未提供对应覆盖清单。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站模板要求无广告、内购、暴力和外链，不能当作作者实际提示词。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Replit官方说明App Testing按需启动且不覆盖每条用户消息，支持范围有限。",
+      "source_ids": [
+        "S6c295fe0d1f1"
+      ]
+    },
+    {
+      "statement": "当前Replit计费文档说明付费工作按工作量计费，无法从游戏数量反推费用。",
+      "source_ids": [
+        "S52ef340dff43"
+      ]
+    },
+    {
+      "statement": "Playwright官方建议核对用户可见行为并隔离测试，不是好玩或适龄的认证。",
+      "source_ids": [
+        "S6299b89ef18b"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "数量成果与证据边界",
+      "body": "源站归档称两位用户让Replit Agent把已有40款游戏扩充到101款，唯一明确的实际指令约束是不重复；选择、构建与整合由Agent自主完成。归档还称部分游戏虽然能运行，却不够吸引人，人工试玩跟不上生成速度。我们没有取得原作者帖文、应用名称、代码、关卡清单或独立玩家反馈，因此61款只是源站转述的新增数量。“适合儿童”和“无广告”也只是归档描述，未做内容或网络行为审计。源站试用模板的年龄、无内购、无暴力、无外链条件，不可倒推为作者原始要求。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "逐款接入与测试证据需要分开",
+      "body": "可复用的流程应先给现有40款游戏建立清单，逐款记录核心规则、输入方式、目标、胜负条件、资源与入口，再对新条目检查功能和玩法重复。不同名称或不同图片不证明玩法不同。Replit官方App Testing能通过浏览器检查界面与功能，但会自行选择测试时机，不保证每条消息后都测试，当前文档也限定了支持的Web技术类型；本案例技术栈和实际测试方式未知，不能据产品能力补写作者过程。Playwright文档主张测试用户可见行为，适合核对启动、游玩、结束和返回流程。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6c295fe0d1f1",
+        "S6299b89ef18b"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "关卡数量扩大的是验收工作",
+      "body": "归档所说200关或400个程序生成关卡没有给出对应游戏和覆盖清单，不能把61款乘以某个关卡数当成实际工作量。固定关卡可逐一列出验收状态；程序生成关卡应保留种子、规则版本、约束和失败输入，以便重现问题。加载成功、能点击、能计分与存在合理的获胜路径需要不同证据；自动化通过仍不能推出好玩、难度合理或适龄。先由成年人审阅合成样例的说明、输入、文本、声音与结束反馈；本轮不招募儿童、不收集儿童资料，也未运行或审计作者游戏。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6299b89ef18b"
+      ]
+    },
+    {
+      "id": "personal",
+      "title": "自用价值、准备与维护",
+      "body": "对已有小游戏应用、能人工试玩并审阅内容的开发者，这可以作为扩充原型的思路；实际自用价值仍待核实。准备成本包括现有玩法清单、明确年龄与设备假设、资源授权信息、输入和胜负规格，以及可复现验收表。维护会随着共享组件、屏幕尺寸、声音、关卡生成规则和内容变更持续发生。更可比较的方案是先完成3至5款差异明确且可验收的游戏，再决定是否扩大数量；这是我们的试点建议，不是作者做法。成人审阅与合成输入只能验证有限条件，不能证明真实儿童体验或推广效果。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6c295fe0d1f1",
+        "S6299b89ef18b"
+      ]
+    },
+    {
+      "id": "business",
+      "title": "付款场景与两种成本假设",
+      "body": "可能的买方是已有分发渠道、需要扩充游戏内容的应用运营者，但没有订单、活跃使用、留存或付费需求证据。家长、儿童使用者和应用采购人不能混为一个付款主体。定制项目可交付的应是已约定玩法、资源来源、设备范围和验收记录，而不是仅承诺新增61个入口。规划情景一：项目收入3000美元，模型/测试预算200、人工40小时×40美元=1600、其他100、获客300，贡献800美元；多25小时返工则负200美元。情景二：订阅每月9美元，模型预算1、人工0.25小时×30美元=7.5、其他0.5、获客1，贡献负1美元。全部为假设，未扣固定费用与税费，并非Replit报价、作者支出或已实现利润；本轮无付费调用。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S52ef340dff43",
+        "S6c295fe0d1f1"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "先收敛范围再决定扩充",
+      "body": "先将“不同游戏”“可玩”“适龄”“无广告”等目标转成分别可检查的验收条件，选择少量玩法，确认没有缺失资源、无效关卡和无法返回的状态，再研究批量生成。获客与壁垒目前均未验证；数量容易被复制，已审阅内容、可复现质量记录和已有分发渠道才是需要进一步核实的能力。无法给出玩法差异、人工验收责任或资源来源时，不承接大批量交付；无法估算返工和持续维护时，不依据一次扩充数量制定订阅价格。是否可面向儿童正式发布，需要另行核对具体产品与平台要求，本简报不作认证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6c295fe0d1f1",
+        "S52ef340dff43",
+        "S6299b89ef18b"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/add-61-kid-friendly-mini-games-to-an-app",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "b14ffb4e37c34084c8bd21cc2a764c300ca9405941391d4f980d919c5d78004a",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "34483073ee38c8ec93c337745f0637ae1dda8735fa5a8e613e88647094d76274",
+      "How it went": "166096cafcbe156c7d901f95befda828589c8cb15a06692079914dd28fcbc1d8",
+      "Worth knowing": "0fe32d0085f93304d654ae34d66b61f41af1bd6a2260f25aa684ecab81ea21c0"
+    },
+    "actual_agents": [
+      "Replit Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I have a game collection app called [app name] with [current number] games. Add [number] new kid-friendly mini-games for ages [age range]: no ads, no in-app purchases, no violence, and no external links. Build them one at a time, test that each one loads and plays, and stop when they are all in the collection and listed on the home screen with a short description.",
+    "agent": "Replit Agent",
+    "source_url": "https://agentusecases.ai/use-case/add-61-kid-friendly-mini-games-to-an-app",
+    "observed_at": "2026-10-17T05:48:45.167062+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "581d0d3ee1d3aafff15f31a8979878373ec215827935a52b2e3fc6049c593138"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/Andrew_Blumson/status/2099243389963194640",
+    "source_title": "原作者关于扩充小游戏合集的帖文",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "普通网页读取未取得内容；随后的公开读取检查确认robots禁止，立即停止且不换路。未取得原帖，不能将源站转述或试用模板写成作者方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "原型扩充思路可以参考，但没有可运行项目、质量覆盖或省时证据，无法确定实际收益。",
+    "audience": "已有小游戏应用、能人工试玩及审核资源与内容的成年开发者。",
+    "use": "设计少量差异明确的小游戏及只用合成输入的验收流程。",
+    "benefit": "可能减少初版构建工作，未测得净节省时间、体验或教育效果。",
+    "setup_cost": "现有玩法清单、设备与年龄假设、资源来源、输入及胜负规格、验收样例。",
+    "maintenance_cost": "内容、共享组件、关卡规则、设备适配、返工与回归试玩。",
+    "frequency": "先按小批次逐款验收，通过后再评估扩充频率。",
+    "privacy_risk": "本轮无儿童参与或儿童个人数据；不凭无广告描述推断所有数据流已安全。",
+    "error_risk": "重复玩法、无法获胜、难度失衡、内容不适合预期年龄或生成关卡不可复现。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S6c295fe0d1f1",
+      "S6299b89ef18b"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站完整模板随原文和忠实译文保留，不是作者实际提示词或适龄认证。",
+    "prerequisites": "项目副本或合成项目、既有玩法清单、设备及年龄假设、资源来源和验收规格；仅成人审阅。",
+    "tools": "现有工具与本地浏览器即可设计，不调用付费API或新建凭据。",
+    "expected_result": "少量游戏实现计划、玩法差异表、验收清单和人工工作估算；自编模型模板未实测。",
+    "prompts": [
+      {
+        "title": "设计少量小游戏的实现与验收计划",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S6c295fe0d1f1",
+          "S52ef340dff43",
+          "S6299b89ef18b"
+        ],
+        "text": "请只在[现有小游戏应用的副本或纯合成项目]中设计少量新增游戏的实现与验收计划，先列出已有玩法、输入、目标、胜负条件和资源来源，再提出[3款]核心规则不同的新游戏。将本次计划与原作者实际操作分开说明。每款分别检查加载、输入、计分、结束、重试、返回、屏幕尺寸和声音控制；固定关卡记录逐关状态，程序生成关卡记录种子和规则版本。不要把名称不同当成玩法不同，也不要把自动测试通过当成适龄或好玩的证明。所有示例只使用合成输入，由成年人审阅；不招募儿童、不收集任何儿童个人资料、不加入广告、内购、外链或账户系统。不注册、不新建凭据、不购买、不调用额外付费API或发布应用。先输出实现计划、玩法差异表、验收清单、预计人工复核和未解决问题后停止；本模板不授权自动扩充到61款。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：一次内容扩充项目",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 3000,
+      "api_cost": 200,
+      "human_cost": 1600,
+      "other_variable_cost": 100,
+      "acquisition_cost": 300,
+      "contribution_before_fixed_cost": 800,
+      "assumptions": "人工40小时×40美元；多25小时返工后贡献-200美元。全部为规划假设，未扣固定费和税费。"
+    },
+    {
+      "scenario": "假设：订阅维护",
+      "currency": "USD",
+      "unit": "用户/月",
+      "price": 9,
+      "api_cost": 1,
+      "human_cost": 7.5,
+      "other_variable_cost": 0.5,
+      "acquisition_cost": 1,
+      "contribution_before_fixed_cost": -1,
+      "assumptions": "人工0.25小时×30美元；无实测规模、维护量或获客成本。全部为规划假设，未扣固定费和税费。"
+    }
+  ],
+  "limitations": "原作者X帖文robots禁止，未再试；无应用名称、代码、关卡及测试清单、独立反馈或经营结果。官方工具能力不能代替本案例实测；本轮未运行作者应用，不收集儿童数据，不作适龄或安全认证。",
+  "archive_source_sha256": "b14ffb4e37c34084c8bd21cc2a764c300ca9405941391d4f980d919c5d78004a",
+  "translation_sha256": "dada55fb06c9471e06d4bba96ff384b4aec67ab2dc8f334b390955963f9f8de4"
+}
