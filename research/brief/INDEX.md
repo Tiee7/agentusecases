@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **25**；深度研究 **47**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **26**；深度研究 **47**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -29,3 +29,4 @@
 | 用 Zapier Agents 搭建销售问答 Slackbot | [简报](../../reports/brief/answer-sales-reps-questions-with-a-slackbot-agent.md) |
 | 用 AI agent 隔夜处理 Shopify 订单查询邮件 | [简报](../../reports/brief/answer-shopify-order-status-emails-and-fix-issues-overnight.md) |
 | 用 AI agent 处理租客咨询并整理维修工单 | [简报](../../reports/brief/answer-tenant-and-rental-prospect-questions-with-ai.md) |
+| 用 Uprent 提交荷兰租房看房申请 | [简报](../../reports/brief/apply-for-dutch-rentals-and-schedule-viewings.md) |

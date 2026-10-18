@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "apply-for-dutch-rentals-and-schedule-viewings",
+  "url": "https://agentusecases.ai/use-case/apply-for-dutch-rentals-and-schedule-viewings",
+  "title": "用 Uprent 提交荷兰租房看房申请",
+  "researched_at": "2026-10-18T04:14:51.149314+00:00",
+  "industry": "荷兰租房信息整理与看房申请辅助",
+  "brief_reason": "登记的Trustpilot原评论页robots禁止，本轮未换域或以摘要补读。归档成功/投诉未核验，六份商家/竞争/接口资料不足以替代用户效果。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先核对重复申请、发送状态和人工成本，评论转述不足以承诺找房效果",
+    "reason": "缺少原评论核验、真实重复率、申请成功口径、监督时间与可复算单位经济。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/apply-for-dutch-rentals-and-schedule-viewings",
+      "title": "Apply for Dutch rentals and schedule viewings",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:26:01.100988+00:00",
+      "archived_at": "2026-10-17T05:26:01.100988+00:00",
+      "archive_path": "registry/archives/apply-for-dutch-rentals-and-schedule-viewings.json",
+      "sha256": "cf720a20bb5ba35a572526d47571578bd1a22ff391709b536f090753b9fb70f6",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request",
+      "supports": "源站归档转述公司功能与用户评论，包括41条评论、Almere成功和重复申请/卡顿/扩展中断投诉；不是本轮原评论核验。"
+    },
+    {
+      "id": "registered-trustpilot-blocked",
+      "kind": "independent",
+      "url": "https://au.trustpilot.com/review/uprent.nl",
+      "title": "Trustpilot 原始评论页（robots禁止）",
+      "status": "blocked_robots",
+      "fresh_attempt": true,
+      "fetched_at": "2026-10-18T04:10:46.754620+00:00",
+      "sha256": null,
+      "error": "ValueError: robots.txt disallows this source",
+      "supports": "本轮robots明确禁止后停止；未换地区域名、重试、登录、镜像或用搜索摘要补评论。"
+    },
+    {
+      "id": "Sf05e28d3bc7a",
+      "kind": "primary",
+      "url": "https://chromewebstore.google.com/detail/uprent-ai-rental-agent/nnjokgfpoecefilcbmcinacgmefmdabl",
+      "title": "Uprent - AI Rental Agent - Chrome Web Store",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:05.651381+00:00",
+      "sha256": "8f7bd5f7de5889375ff9440f34c005ddbd29be537046845edf4b40a81a7cda32",
+      "supports": "官方扩展商店的开发者功能说明：完整支持与有限功能网站范围、需账号和数据披露；未安装扩展，也未把评分总览当详细用户结果。"
+    },
+    {
+      "id": "S20af46921719",
+      "kind": "competitor",
+      "url": "https://renthunter.nl/",
+      "title": "RentHunter - Find your home easily in the Netherlands | RentHunter",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:08.211740+00:00",
+      "sha256": "dd1b3a31e7cc2bf4391670227e9266c2d37887d0738626f765c40d161bafffbb",
+      "supports": "RentHunter当前聚合、提醒、一键申请与跟踪等竞争功能主张；商家自选成功话语不作独立效果证据。"
+    },
+    {
+      "id": "S47a5e50a22fc",
+      "kind": "primary",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/events/insert",
+      "title": "Events: insert  |  Google Calendar  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:11.191709+00:00",
+      "sha256": "ff88451acbf51352e8ee67b510057fad004bfb53f6443993b8cc132820d600d1",
+      "supports": "Google日历官方事件创建的时间/时区、写入与通知参数，作为验收基线；不证明本案例实际配置，也不执行API。"
+    },
+    {
+      "id": "S906b7a9215ed",
+      "kind": "primary",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query",
+      "title": "Freebusy: query  |  Google Calendar  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:13.889925+00:00",
+      "sha256": "098650b7720e7200ad31224096e7f893e32dc5a0d7ca75c9bbc012c44024dddc",
+      "supports": "Google日历忙闲查询的区间与错误结果，用于未知不等于空闲的验收；不证明已创建、收到或接受预约。"
+    },
+    {
+      "id": "S2fc7f39182d3",
+      "kind": "primary",
+      "url": "https://uprent.nl/en-nl",
+      "title": "Uprent - Find rental home with AI 🇳🇱",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:53.445861+00:00",
+      "sha256": "3d76cccae8ce5d746e9fdc02af0898a18abd6b369e77c264bdae657a7af91cb0",
+      "supports": "Uprent当前官网的免费/Premium/人工全程服务、自动申请范围和暂停控制等商家主张；价格与覆盖信息不是成功效果验证。"
+    },
+    {
+      "id": "S38463f981dd7",
+      "kind": "competitor",
+      "url": "https://renthunter.nl/how-it-works/",
+      "title": "How RentHunter works | Find and get a rental in the Netherlands | RentHunter",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:11:56.666760+00:00",
+      "sha256": "2d2bb481c2f685a03ec168fcd3abd317bf88320a6075cbdd1ed800d4297a26d6",
+      "supports": "RentHunter当前公开月费、申请确认/预先批准及功能说明，只作竞争口径；不验证租房成功、合同或隐私保证。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档所述Almere成功、重复申请和扩展中断是用户评论转述，本轮原评论未读。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档的41条评论被忠实保留为历史文本，没有更新成搜索摘要中的当前数字。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站实际agent字段为自建或未命名，正文Uprent/Bob与建议Operator分别保留。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Uprent官网当前区分免费手动、Premium自动和含人类经纪人的全程服务，不能混作AI结果。",
+      "source_ids": [
+        "S2fc7f39182d3"
+      ]
+    },
+    {
+      "statement": "扩展开发者把少数平台的完整功能与其他网站有限功能区分，未安装测试其覆盖。",
+      "source_ids": [
+        "Sf05e28d3bc7a"
+      ]
+    },
+    {
+      "statement": "Uprent当前官网列Premium每月29欧元，RentHunter当前说明列每月34.90欧元，属于商家公开报价。",
+      "source_ids": [
+        "S2fc7f39182d3",
+        "S38463f981dd7"
+      ]
+    },
+    {
+      "statement": "RentHunter页面描述提交前确认或预先批准路径，不等于本案例实际授权或渠道设置。",
+      "source_ids": [
+        "S38463f981dd7"
+      ]
+    },
+    {
+      "statement": "Google忙闲查询可返回日历错误，未知不是确定可用；创建事件也不等于对方接受。",
+      "source_ids": [
+        "S906b7a9215ed",
+        "S47a5e50a22fc"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "成功自述与本轮可核验证据分开",
+      "body": "本轮商业评分不评定，现有证据不建议商业投入。登记的Trustpilot评论页被robots明确禁止，已停止访问，没有切换地域域名或用搜索摘要补原文。归档中的41条评论是既有文本的一部分，在忠实译文中保留，但本轮不知道当前数量；Almere成功、抢先申请有用，以及重复申请、卡顿和扩展中断均没有重新核验。六份实际读取的官方/竞争资料支持有限工作流分析，不能替代原评论或证明找到住房的概率。因此保存schema-1简报，不冒充completed v2深研或把营销承诺当可复现结果。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2fc7f39182d3",
+        "Sf05e28d3bc7a"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "Uprent、Bob与Operator模板不是同一个层次",
+      "body": "源站实际agent字段为自建或未命名，正文称Uprent并转述评论者提到Bob，建议试用工具则为Operator，均按原样保留。不能把Operator写成Uprent的实际架构，也不据归档模板承诺该建议工具当前可用或等效。官网当前区分免费手动申请、Premium自动申请和有人类经纪人参与的全程服务；人工服务结果不能自动算作AI独立完成。扩展商店还把Pararius、Funda、Kamernet的完整功能和其他网站的有限功能分开，不能从广泛覆盖数字推出每个网站都支持同样的自动申请。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2fc7f39182d3",
+        "Sf05e28d3bc7a"
+      ]
+    },
+    {
+      "id": "dedup",
+      "title": "先明确同一广告，再讨论一次发送",
+      "body": "重复申请风险不能只靠去掉URL跟踪参数解决。拟议验收优先记录来源平台稳定广告ID、申请人或共同找房范围、动作类型和发送状态；跨站同一房源需要可信对应关系，不凭模糊地址把不同单元合并。新广告是否是合法重发、房源是否变化也需要人工核对，不能默认同地址永远只申请一次。只有草稿、已批准、尝试发送、结果未知和已确认分别记录，才知道是否需要暂停。发送未知时先冻结该项，不换新请求再次联系房东；单进程虚构别名测试不是实际跨站实体匹配或生产去重保证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sf05e28d3bc7a",
+        "S2fc7f39182d3"
+      ]
+    },
+    {
+      "id": "approval",
+      "title": "偏好、真实资料与草稿修订分别核对",
+      "body": "搜索应把最高租金、卧室数和必备条件作为明确约束，缺失价格、费用口径或可用性不能当满足。消息只能使用求租者真实给出的资料，不编造收入、担保、职业或资格。拟议离线验收只使用虚构标识，不收集这类私人材料。批准要绑定具体房源、资料版本与消息草稿，改稿或资料变化后旧批准失效；跳过也不能被转成自动申请。Uprent官网称自动申请可按筛选条件运行并暂停，RentHunter页面则描述确认或预先批准路径，具体设置与真实平台权限本轮都没有测试。",
+      "source_ids": [
+        "S2fc7f39182d3",
+        "Sf05e28d3bc7a",
+        "S38463f981dd7"
+      ]
+    },
+    {
+      "id": "calendar",
+      "title": "房东邮件、看房草稿和日历写入分开",
+      "body": "归档称系统读取房东邮件并创建日程，但没有原评论或实际日志可核对。建议先保留房源标识、邮件来源、日期、时区和地点的关联，模糊日期或多个候选时间须人工澄清，不从正文随意建立确定预约。Google忙闲结果可能含分日历错误，未知不等于空闲；事件创建和通知又是单独动作，不能把插入参数当作对方已收到或接受。这里使用Google文档作接口对照，并没有连接日历或读取邮箱；本地样本只停在草稿，也不声称解决所有时区、改期、取消和并发冲突。",
+      "source_ids": [
+        "S47a5e50a22fc",
+        "S906b7a9215ed",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "订阅产品与额外服务要有不同价值",
+      "body": "求租者既是使用者也是潜在付款人，但当前免费聚合/手动申请、自动申请订阅与人工全程服务已有分层。Uprent官网公开Premium为每月29欧元，RentHunter公开每月34.90欧元，功能、使用条件与可选服务并不完全相同；这些是读取时的商家报价，不是本轮采购或实际账单。官网覆盖数字存在不同口径，本研究不据此认证“覆盖全市场”或推算漏看比例。新服务若只是转发房源或生成普通模板，会面对便宜订阅和手动查找的替代；差异须来自可检查的偏好筛选、状态整理与人工核对，而不是保证找房或复制成功自述。",
+      "source_ids": [
+        "S2fc7f39182d3",
+        "S20af46921719",
+        "S38463f981dd7"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "低客单价与监督时间的两个预算",
+      "body": "以下均为欧元假设，不是平台报价、经纪费、作者收入或已实现利润。月度行政整理每客户149，用量预算35、人工2小时乘30为60、其他10、获客25，单位贡献19；月20客户固定250，贡献130。人工变为4小时则单位负41、月负1070。一次草稿与记录设置299，用量30、人工5小时乘35为175、其他15、获客40，单位贡献39；月8项固定250，贡献62。多2小时返工则单位负31、月负498。实际订阅、额外平台、税、采购与维护等未知支出未含，服务收入也未验证，不能用房租或找到住处的价值直接替代服务收入。",
+      "source_ids": [
+        "S2fc7f39182d3",
+        "S38463f981dd7",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "当前能验收的边界与停止条件",
+      "body": "本轮跨公开网页、GitHub和Hacker News方向检索，出现其他同名产品、营销比较和评分摘要，没有取得可归属原评论的独立效果核验；不把未读的Trustpilot搜索结果或商家转引评分当原文。扩展页面读取成功，只能说明开发者公开描述和页面状态，未安装、登录或测试真实申请。七组合成检查覆盖硬筛选、手工标注跨站别名、未知标识、同住户去重、发送未知冻结、资料修订批准、跳过和模糊日程。若房源身份不明、发送未知却重试、编造资料、平台不支持或监督时间超过预算，就停止扩展。当前自用价值待核实，不提供租赁法律或安全认证结论。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2fc7f39182d3",
+        "Sf05e28d3bc7a",
+        "S20af46921719",
+        "S38463f981dd7",
+        "S47a5e50a22fc",
+        "S906b7a9215ed"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/apply-for-dutch-rentals-and-schedule-viewings",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "cf720a20bb5ba35a572526d47571578bd1a22ff391709b536f090753b9fb70f6",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "74702d4f127d5df78ab553d5b40edcd85e9d40db287694c8b028d59e9a77c5fe",
+      "How it went": "a7feed5da85e38f00f3f528952a720a8774b0d09bc91fece8ab21d075f100128",
+      "Worth knowing": "c25906943663523eabe8759e970cb1343506f3a02a4b28fbc7792058dc714a2b"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Search [rental site, e.g. Funda or Pararius] for rentals in [city] under [max rent] with [bedrooms] bedrooms and [must-haves]. Keep a list of every listing you have already contacted so you never apply to the same ad twice. For each new match, show me the viewing request message you plan to send and wait for my approval before sending it. Stop when I have approved or skipped every current match.",
+    "agent": "Operator",
+    "source_url": "https://agentusecases.ai/use-case/apply-for-dutch-rentals-and-schedule-viewings",
+    "observed_at": "2026-10-17T05:26:01.100988+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "95f0edc363ecb437d85cc708bce13ccef175f7d055c391b91de76673fe8f1c73"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://au.trustpilot.com/review/uprent.nl",
+    "source_title": "Trustpilot 原始评论页（robots禁止）",
+    "steps": [],
+    "unavailable_reason": "Registered au.trustpilot.com review URL denied by robots on fresh attempt. Stopped without retry, regional-domain switch, login, mirror or search-summary substitution. No original reviews or author steps reconstructed."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助搜集与整理，但重复申请、真实覆盖、发送状态和净省时未验证。",
+    "audience": "能核对真实房源、自己的资料和每条联系草稿的成年求租者。",
+    "use": "用虚构房源与状态记录验收偏好筛选、去重、批准和日程草稿。",
+    "benefit": "可能减少整理工作；不承诺看房、获租、速度、覆盖或金钱收益。",
+    "setup_cost": "筛选硬条件、房源稳定标识、共同申请范围、消息和资料版本、未知状态表。",
+    "maintenance_cost": "房源变化、平台/扩展变化、重复核对、回信、日程与费用监测。",
+    "frequency": "先用固定合成样本，不推定持续真实找房效果。",
+    "privacy_risk": "求租资料、收入、证件、地址和邮箱可能敏感；本轮不读取、上传或发送真实材料。",
+    "error_risk": "错配房源、重复联系、旧资料、未知当成功、模糊时间自动预约与商家承诺误读。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S2fc7f39182d3",
+      "Sf05e28d3bc7a",
+      "S38463f981dd7",
+      "S47a5e50a22fc",
+      "S906b7a9215ed"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整源站Operator建议模板保留，不代表Uprent实际工具或当前可用性，未执行申请。",
+    "prerequisites": "虚构房源ID、偏好、资料版本、跨站对应与状态，无真实求租材料。",
+    "tools": "现有Python标准库；不运行Uprent、Operator、扩展、租房门户或日历服务。",
+    "expected_result": "匹配/跳过/待核对表、联系与日程草稿和未知项，无真实申请或消息。",
+    "prompts": [
+      {
+        "title": "用虚构房源验收申请去重",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者原话或源站模板；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S2fc7f39182d3",
+          "Sf05e28d3bc7a",
+          "S38463f981dd7",
+          "S47a5e50a22fc",
+          "S906b7a9215ed"
+        ],
+        "text": "只用[虚构房源ID、人工确认的跨站对应关系、筛选条件、资料版本和发送/日程状态]准备离线找房验收。区分Uprent实际叙述与源站Operator建议，不调用任何产品。最高租金、卧室数和必备项缺失就待核对，不补默认值；按平台广告ID、求租共同范围和动作记账，未知跨站关系转人工，不合并不同单元。先给消息草稿，批准只对应当前房源和资料版本；跳过不发送，修改后旧批准失效。发送未知先冻结并核对，不换请求重复联系。房东邮件样例只保留虚构ID，日期/时区不明时不写日历。不得读取真实地址、收入/证件/租约、邮箱/日历或凭据，不访问租房门户申请表、安装扩展、登录、注册、创建凭据、购买、调用付费API、发消息、预约或签约。输出每项匹配的批准/跳过/待核对状态和未知项后停止。研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：月度房源行政整理",
+      "currency": "EUR",
+      "unit": "客户/月",
+      "price": 149,
+      "api_cost": 35,
+      "human_cost": 60,
+      "other_variable_cost": 10,
+      "acquisition_cost": 25,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 250,
+      "contribution_before_fixed_cost": 19,
+      "monthly_contribution_before_tax": 130,
+      "assumptions": "全部预算假设，人工2小时×30；增至4小时则单位-41、月-1070。实际平台、税和采购未知，不是订阅商报价或房租收入。"
+    },
+    {
+      "scenario": "假设：一次草稿与记录设置",
+      "currency": "EUR",
+      "unit": "项目",
+      "price": 299,
+      "api_cost": 30,
+      "human_cost": 175,
+      "other_variable_cost": 15,
+      "acquisition_cost": 40,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 250,
+      "contribution_before_fixed_cost": 39,
+      "monthly_contribution_before_tax": 62,
+      "assumptions": "全部预算假设，人工5小时×35；多2小时返工则单位-31、月-498。额外实际费用未核实，不是经纪服务承诺或已成交收入。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"Uprent\" review -site:reddit.com -site:x.com -site:substack.com -site:g2.com",
+        "outcome": "出现Trustpilot摘要、同名产品和营销比较；未访问受限评论的其他地区版或以摘要恢复评论。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "\"Uprent\" site:github.com",
+        "outcome": "主要同名或无关代码线索，未取得本案例独立结果。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"Uprent\" site:news.ycombinator.com",
+        "outcome": "主要无关内容，未取得可归属本案例的独立实际效果。"
+      }
+    ],
+    "observations": [],
+    "signal": "No independently verified original reviewer outcomes obtained; archive and vendor ratings not treated as fresh review verification."
+  },
+  "limitations": "Trustpilot原评论robots禁止后停止，作者方法不可用，没有新读取的评论或当前数量。未安装扩展、登录门户、购买、调用模型、提交申请、发消息或写日历；未处理真实地址/收入/证件/租约。手工别名和模拟接收标志不证明跨站识别、真实接受或生产并发去重；商家覆盖、结果、隐私或法律保证未独立核验。",
+  "archive_source_sha256": "cf720a20bb5ba35a572526d47571578bd1a22ff391709b536f090753b9fb70f6",
+  "translation_sha256": "e867652df1c0fa087098c8a05cd6479dd0534873e95cf5bc1e15682ebd78077f"
+}

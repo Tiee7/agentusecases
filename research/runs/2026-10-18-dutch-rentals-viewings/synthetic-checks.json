@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-18T04:13:12.300119+00:00",
+  "scope": "Pure fictional state/filter/ledger fixtures. Cross-portal aliases and submission receipt are manually supplied labels, not actual entity resolution, identity verification, browser automation, accepted applications or calendar writes. No portal access, credentials, documents or messages.",
+  "checks": [
+    {
+      "check": "hard_filters_unknown_not_match"
+    },
+    {
+      "check": "same_ad_and_manually_linked_cross_portal_duplicate_suppressed",
+      "identity_scope": "Aliases manually labelled in fixture, not real entity matching."
+    },
+    {
+      "check": "unknown_identity_manual_review_different_unit_not_collapsed"
+    },
+    {
+      "check": "unknown_submission_frozen_no_retry_no_success_inference"
+    },
+    {
+      "check": "profile_scope_and_version_bound_approval"
+    },
+    {
+      "check": "skip_never_sends"
+    },
+    {
+      "check": "ambiguous_email_calendar_time_stays_draft",
+      "result": {
+        "source_email": "EMAIL_SYNTH_1",
+        "status": "proposal_only",
+        "time_zone": null,
+        "write_status": "not_attempted",
+        "notification": "not_sent"
+      }
+    }
+  ],
+  "synthetic_ledger": [
+    {
+      "profile": "HOUSEHOLD_SYNTH_A",
+      "home": "HOME1",
+      "action": "viewing_request",
+      "status": "sent_confirmed"
+    },
+    {
+      "profile": "HOUSEHOLD_SYNTH_A",
+      "home": "HOME2",
+      "action": "viewing_request",
+      "status": "send_unknown"
+    }
+  ],
+  "economics": {
+    "currency": "EUR",
+    "scope": "All inputs hypothetical administrative assistance budgets, not Uprent or competitor quotes, broker fees or realized income.",
+    "models": [
+      {
+        "price": 149,
+        "api_cost": 35,
+        "human_cost": 60,
+        "other_variable_cost": 10,
+        "acquisition_cost": 25,
+        "units_per_month": 20,
+        "fixed_monthly_cost": 250,
+        "variable_cost": 130,
+        "unit_contribution": 19,
+        "monthly_contribution": 130,
+        "extra_human_cost": 60,
+        "stress_unit": -41,
+        "stress_monthly": -1070
+      },
+      {
+        "price": 299,
+        "api_cost": 30,
+        "human_cost": 175,
+        "other_variable_cost": 15,
+        "acquisition_cost": 40,
+        "units_per_month": 8,
+        "fixed_monthly_cost": 250,
+        "variable_cost": 260,
+        "unit_contribution": 39,
+        "monthly_contribution": 62,
+        "extra_human_cost": 70,
+        "stress_unit": -31,
+        "stress_monthly": -498
+      }
+    ]
+  },
+  "real_applications_messages_or_calendar": false,
+  "new_credentials": false,
+  "extra_paid_api": false
+}
