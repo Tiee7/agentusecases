@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-10-18T00:34:44.730121+00:00",
+  "scope": "Synthetic deterministic Decimal bookkeeping only; not author implementation, not Claude/LLM execution, not financial advice.",
+  "inputs": [
+    {
+      "id": "salary",
+      "account": "A",
+      "amount": "2000",
+      "currency": "CNY",
+      "kind": "income"
+    },
+    {
+      "id": "expense",
+      "account": "A",
+      "amount": "-300",
+      "currency": "CNY",
+      "kind": "expense"
+    },
+    {
+      "id": "refund",
+      "account": "A",
+      "amount": "50",
+      "currency": "CNY",
+      "kind": "refund"
+    },
+    {
+      "id": "transfer-out",
+      "account": "A",
+      "amount": "-200",
+      "currency": "CNY",
+      "kind": "transfer"
+    },
+    {
+      "id": "transfer-in",
+      "account": "B",
+      "amount": "200",
+      "currency": "CNY",
+      "kind": "transfer"
+    },
+    {
+      "id": "salary",
+      "account": "A",
+      "amount": "2000",
+      "currency": "CNY",
+      "kind": "income"
+    },
+    {
+      "id": "other-currency",
+      "account": "USD-demo",
+      "amount": "10",
+      "currency": "USD",
+      "kind": "income"
+    }
+  ],
+  "opening_CNY": {
+    "A": "1000",
+    "B": "500"
+  },
+  "closing_CNY": {
+    "A": "2550",
+    "B": "700"
+  },
+  "total_CNY": "3250",
+  "duplicate_ids_flagged": [
+    "salary"
+  ],
+  "unconverted_foreign_currency_ids": [
+    "other-currency"
+  ],
+  "assertions": "passed",
+  "does_not_cover": "Card payments, month boundaries, missing balances and real-world correctness are not verified by this small fixture."
+}
