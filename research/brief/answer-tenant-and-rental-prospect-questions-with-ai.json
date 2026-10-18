@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-tenant-and-rental-prospect-questions-with-ai",
+  "url": "https://agentusecases.ai/use-case/answer-tenant-and-rental-prospect-questions-with-ai",
+  "title": "用 AI agent 处理租客咨询并整理维修工单",
+  "researched_at": "2026-10-18T04:03:37.064942+00:00",
+  "industry": "物业行政问答与维修工单协调辅助",
+  "brief_reason": "Reddit原帖依既有限制跳过；归档是单一评论者自述，90%+与增员替代缺分母/工时/质量核验。六份技术/竞争资料不足以替代案例效果。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先核对审批、资料和工单状态，90%+自述不足以支持增员替代判断",
+    "reason": "没有原帖核验、真实质量/监督工时、权限配置或独立用户结果。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-tenant-and-rental-prospect-questions-with-ai",
+      "title": "Answer tenant and rental prospect questions with AI",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:43:45.062361+00:00",
+      "archived_at": "2026-10-17T05:43:45.062361+00:00",
+      "archive_path": "registry/archives/answer-tenant-and-rental-prospect-questions-with-ai.json",
+      "sha256": "775dffdf5aca91fed1c86fa48ba0525e860f59d72884f96ea9bb5e9d4d9e07d3",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request",
+      "supports": "源站转述一名评论者的两个AI员工、90%+、短信报修、工单与持续人工监督声称；不是原帖已读或独立效果验证。"
+    },
+    {
+      "id": "registered-reddit-unread",
+      "kind": "primary",
+      "url": "https://www.reddit.com/r/PropertyManagement/comments/1wbct4o/ai_is_coming",
+      "title": "Reddit 原帖（本轮未读取）",
+      "status": "skipped_previous_access_restriction",
+      "fresh_attempt": false,
+      "sha256": null,
+      "supports": "只保留登记链接；不新请求、不重试、登录、换路或用镜像和搜索摘要补原帖。"
+    },
+    {
+      "id": "S3a105406c482",
+      "kind": "primary",
+      "url": "https://docs.lindy.ai/",
+      "title": "What is Lindy? - Lindy Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:00:29.365025+00:00",
+      "sha256": "c4e45901fe6d42b8938b8a9269a249d7fa76113176126868e63db98213bf88c0",
+      "supports": "Lindy当前个人助理与团队协作定位、连接工具及上下文说明；不证明案例的租客短信入口、隔离或具体实现。"
+    },
+    {
+      "id": "Sf5315fb36512",
+      "kind": "primary",
+      "url": "https://docs.lindy.ai/pricing",
+      "title": "Pricing - Lindy Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:00:32.591359+00:00",
+      "sha256": "c730a5b244ab9ad2a8872b4afa1edcacd5e92cd0a2895f4f2dcc83155eb483e6",
+      "supports": "Lindy当前席位与共享credits计费、credits耗尽暂停及泛化审批FAQ；不是某条租客问题的固定费用或案例采购报价。"
+    },
+    {
+      "id": "S74df509dca19",
+      "kind": "primary",
+      "url": "https://docs.lindy.ai/integrations/overview",
+      "title": "Integrations - Lindy Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:00:35.780674+00:00",
+      "sha256": "699e5efd04acf54216bae0255db91da5ccc185447aa5fe6d9b6d076091b0ccb9",
+      "supports": "Lindy当前个人/团队连接及共享Slack线程guardrails、Always allow/Require approval和单次/持续授权范围；范围不能忽略，也不证明本案例设置。"
+    },
+    {
+      "id": "S2e4b69483d91",
+      "kind": "competitor",
+      "url": "https://www.appfolio.com/property-manager/maintenance",
+      "title": "Property Management Maintenance Software | AppFolio",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:00:41.587802+00:00",
+      "sha256": "f94958092617b43c945eeb0cc43894e2648e0873e44ca3b7542590ff089066ef",
+      "supports": "AppFolio官方维护请求、工单、调度与审计等产品能力作为竞争基线；厂商宣传不作本案例结果或实际维修验证。"
+    },
+    {
+      "id": "S760dd76a6f0c",
+      "kind": "competitor",
+      "url": "https://www.appfolio.com/pricing",
+      "title": "Property Management Software Pricing | AppFolio",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:00:44.692958+00:00",
+      "sha256": "178df78d7a2b2e41b4363ed1fc80f40ca4988782d667b9cccc5d8f8e68af4578",
+      "supports": "AppFolio当前整套PMS计划的起价、最低条件和功能差异，不与单一AI问答或Lindy credits直接等价。"
+    },
+    {
+      "id": "S6baaa6f45cc5",
+      "kind": "primary",
+      "url": "https://developers.chatwoot.com/api-reference/conversations/toggle-status",
+      "title": "Toggle Status - Chatwoot Developer Docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T04:01:09.981101+00:00",
+      "sha256": "2dfbc74314b53e070277c6dd828fea1b59f3fc90225ea17d35b2e4bb3d614b0b",
+      "supports": "Chatwoot官方会话状态与snoozed后新回复重开机制；只作状态对照，不等于维修工单或物理维修已完成。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档转述评论者使用两个AI员工并提及Lindy.AI，实际agent字段仍为自建或未命名。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "90%+、无需增员和应对愤怒租客较好均为评论者声称，未核对分母或真实效果。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档明确仍需一人监督边缘情况和检查流程，没有声称完全无人运营。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "法律争议转人工和最初草稿批准是源站模板要求，不是已核验的原作者设置。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "当前Lindy集成文档把guardrails限定在共享Slack线程，并允许Always allow等不同设置。",
+      "source_ids": [
+        "S74df509dca19"
+      ]
+    },
+    {
+      "statement": "Lindy计费FAQ泛称外部动作需批准，具体使用范围不能只凭该FAQ推定。",
+      "source_ids": [
+        "Sf5315fb36512",
+        "S74df509dca19"
+      ]
+    },
+    {
+      "statement": "Lindy共享连接以所分享账号权限工作，不自动证明对外租客身份隔离。",
+      "source_ids": [
+        "S74df509dca19",
+        "S3a105406c482"
+      ]
+    },
+    {
+      "statement": "Chatwoot会话snoozed后新回复会重开，该会话状态不等于维修工单完成。",
+      "source_ids": [
+        "S6baaa6f45cc5"
+      ]
+    },
+    {
+      "statement": "AppFolio提供维护请求、工单、调度与审计能力，是现成竞争流程，不是本案例工具。",
+      "source_ids": [
+        "S2e4b69483d91"
+      ]
+    },
+    {
+      "statement": "Lindy当前席位与共享credits计费，不能把credit或一条消息等同实际问题解决成本。",
+      "source_ids": [
+        "Sf5315fb36512"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "自述比例不能当作运营效果",
+      "body": "本轮商业评分不评定，现有证据不建议商业投入。归档转述一名评论者的使用经历，原帖依既有Reddit限制跳过，作者方法不可用。90%+没有已核对的分母、时间窗口、问题范围、错误率或人工复核量；处理过、正确回答、无需人工和问题解决不是同一指标。两个AI“员工”也不等于两个全职岗位已经被替代。对愤怒租客处理更好的说法是主观声称，不能改成满意度或投诉减少。本轮保留忠实译文并保存schema-1简报，不把技术资料补成completed v2深研或编造口碑。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S3a105406c482"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "实际字段、口头工具名与建议模板分开",
+      "body": "源站实际agent字段为自建或未命名，正文转述评论者在被问时提到Lindy.AI，建议试用工具为Lindy；这三个层次都按原样保存。法律问题、争议和例外转人工、先批准最初若干草稿，是源站试用模板里的要求，不能补写成评论者已经配置的流程。当前Lindy文档描述个人助理和团队协作，也不证明历史上未注明日期的租客短信系统使用相同版本、入口或权限。没有读取评论内容、租客聊天或原作者提示词，更不知道工单通过哪个系统、渠道和账号送达。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S3a105406c482",
+        "S74df509dca19"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "只从可信物业资料准备行政草稿",
+      "body": "拟议验收先给租金、宠物政策、申请步骤与维修流程指定物业、版本和有效期，缺失、过期或冲突交人工，不让聊天改写正式资料。涉及法律解释、争议或例外时只标记待处理，文件准备也先限定为经批准模板的草稿，不能据此宣称合同有效或自动签署。不同物业、住户和问题要分开索引，个人助理的私密上下文、团队共享连接与对外租客入口并不相同。当前Lindy说明团队共享连接以同一账号权限读写，这不自动提供租客级隔离；本轮只用虚构记录，不接入任何实际物业或住户资料。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S3a105406c482",
+        "S74df509dca19"
+      ]
+    },
+    {
+      "id": "approval",
+      "title": "泛化审批FAQ与具体范围不能混同",
+      "body": "Lindy计费FAQ泛称有外部影响的动作需批准，但当前集成文档进一步说明guardrails只覆盖共享Slack线程，web聊天、Slack私信、iMessage和SMS不在该guardrail范围内，且可选择Always allow。单次Approve与改变以后规则也不同。因此不能只看FAQ就保证每一条租客短信或工单都要逐条批准，也不能推定本案例采用某种设置。拟议合成验收把批准绑定到具体草稿和修订号；资料改动后旧批准失效，批准最初三条也不自动授予未来无限发送权限。这里的批准标志全是虚构测试输入，未检查实际产品权限。",
+      "source_ids": [
+        "Sf5315fb36512",
+        "S74df509dca19",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "maintenance",
+      "title": "创建、派发、接收和修复分别记状态",
+      "body": "追问和生成工单只是报修流程的一部分。应区分本地草稿、派发未知、维修团队确认、现场处理和人工验收；消息未知不当已送达，不换一个请求重复派发。收到团队确认也不等于物理问题解决，不能因客服会话resolved就自动认定维修完成。Chatwoot文档说明snoozed会话会在新回复时重开，只能作沟通状态对照，不证明本案例用了Chatwoot。AppFolio已有请求、工单、调度与审计能力，是具体替代基线。合成检查中的紧急、法律等类型由人提供标签，不测自动识别危险或紧急问题，也不给维修操作指导。",
+      "source_ids": [
+        "S6baaa6f45cc5",
+        "S2e4b69483d91",
+        "S74df509dca19",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "buyer",
+      "title": "付费者买的是可靠流程与维护",
+      "body": "潜在使用者是物业接待、租赁和维修协调人员，预算负责人可能是物业管理者；没有可核验的采购或客户结果。人工管理员、现有PMS维护门户及内建自动化都需要比较，不能默认新增agent就减少人手。Lindy当前按席位和共享credits说明计费，实际任务耗费不等同消息数或租客人数，计划价格需要现有账户内确认，本轮不登录或推测报价。AppFolio是完整PMS套餐，起价和最低条件也不能与一个助手作同口径单价比较。真正需要记账的是资料维护、复核、派发失败和回访的总工时，尤其源站自己已明确仍需人监督。",
+      "source_ids": [
+        "Sf5315fb36512",
+        "S2e4b69483d91",
+        "S760dd76a6f0c",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "监督工时决定两个预算是否成立",
+      "body": "以下全为美元假设预算，不是厂商报价、原作者收入或实际利润。月度行政辅助维护每客户900：用量预算90、人工8小时乘45为360、其他40、获客90，单位贡献320；月6客户固定450，月贡献1470。人工增至16小时则单位负40、月负690。一次设置4000：用量100、人工55小时乘50为2750、其他150、获客350，单位贡献650；月2项固定500，贡献800。再多15小时返工则单位负100、月负700。真实席位、credits、消息、工单系统、税和采购等额外费用仍未知；credits的美元单价不能直接当作每个问题的费用，更不能用90%+自述推算节省90%工资。",
+      "source_ids": [
+        "Sf5315fb36512",
+        "S760dd76a6f0c",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "还缺什么以及何时停止",
+      "body": "公开网页、GitHub和Hacker News方向检索没有取得可归属于该Reddit案例的独立实际使用结果。当前官方文档可以支持权限和费用分析，不能替代未读取的评论或复现其配置；没有重试受限Reddit，也不以其他帖子或汇编作镜像。下一步仅用虚构政策和事件检查跨物业、缺失与过期、法律/争议/紧急标签、工单去重、旧批准、派发未知和维修确认。若审批范围不清、共享账号越界、未知当成功、工单重复、人工无人接管或总监督时间不降，就停止扩展。自用价值待核实；11组合成检查不构成真实语言质量、权限、送达、维修或紧急分流验证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S3a105406c482",
+        "Sf5315fb36512",
+        "S74df509dca19",
+        "S6baaa6f45cc5",
+        "S2e4b69483d91",
+        "S760dd76a6f0c"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-tenant-and-rental-prospect-questions-with-ai",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "775dffdf5aca91fed1c86fa48ba0525e860f59d72884f96ea9bb5e9d4d9e07d3",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "6b3effb5107e61dac0e6d90b27edde79a848220d1acad1231f1ee6d308f3e1f8",
+      "How it went": "05ebf99814bf8fef2d19c34d3b7c9cfe3b4595262eb98b07690708efddd8cdfa",
+      "Worth knowing": "6f7d8d541e98a2431afb99f1c03ceddb5cdeedbd8d729627870120e0bb2bfa7d"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up an assistant for my rental property at [address or portfolio]. It should answer common tenant and prospect questions using these details: [rent, pet policy, lease terms, application steps, maintenance process], and draft replies for me when a question falls outside them. Anything about legal issues, disputes or exceptions should be flagged to me instead of answered, and do not send any message until I have approved the first [number] drafts.",
+    "agent": "Lindy",
+    "source_url": "https://agentusecases.ai/use-case/answer-tenant-and-rental-prospect-questions-with-ai",
+    "observed_at": "2026-10-17T05:43:45.062361+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "67025ec8dd166d3c7a253b4430b8d8835674fac5477f32549e477c26cd8584ef"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/PropertyManagement/comments/1wbct4o/ai_is_coming",
+    "source_title": "Reddit 原帖（本轮未读取）",
+    "steps": [],
+    "unavailable_reason": "Existing Reddit access restriction respected; no fresh request, retry, login, mirror, copied comment thread or invented author steps."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助行政草稿与工单整理，但实际审批范围、资料隔离、维修交接和净省时尚未验证。",
+    "audience": "能维护物业资料并承担租客与维修人工跟进的成年物业运营人员。",
+    "use": "用虚构政策与事件做问答、草稿审批、工单去重和人工确认的离线验收。",
+    "benefit": "可能减少重复行政录入，不承诺90%解决率、人员替代、满意度或已节省薪酬。",
+    "setup_cost": "资料版本/有效期、物业与住户范围、入口与审批范围、人工接管和工单状态表。",
+    "maintenance_cost": "政策更新、回复与异常复核、工单派发/回访、额度与接口变化。",
+    "frequency": "先用固定合成批次；没有持续真实使用效果数据。",
+    "privacy_risk": "住户聊天、地址、租约和维修记录可能敏感；本轮不读取、上传或发送真实资料。",
+    "error_risk": "旧政策、跨物业信息、无范围审批、重复派发、未知当成功与已接单当已修复。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S3a105406c482",
+      "Sf5315fb36512",
+      "S74df509dca19",
+      "S6baaa6f45cc5",
+      "S2e4b69483d91"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整源站Lindy建议模板保留；不代表原作者实际提示词或已运行测试。",
+    "prerequisites": "虚构政策、工单/住户ID、人工类型和批准/确认标签，不含真实租客材料。",
+    "tools": "现有本地Python标准库；不运行Lindy、PMS、Chatwoot、工单或短信/邮件平台。",
+    "expected_result": "行政草稿、工单与交接状态表、依据和未知项，无真实回复、派工或法律文件。",
+    "prompts": [
+      {
+        "title": "用虚构资料验收租客问答与工单",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者原话或源站模板；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S3a105406c482",
+          "S74df509dca19",
+          "S6baaa6f45cc5",
+          "S2e4b69483d91"
+        ],
+        "text": "只用[虚构物业政策、版本/有效期、住户/工单ID、问题和人工类型标签]准备离线租客行政验收。实际字段保留自建/未命名，正文提及Lindy.AI但不推定具体配置。每个草稿注明物业和可信资料版本；缺失、过期、法律、争议、例外或紧急标签转人工，不给法律或维修指导。按物业/住户/事项分开记录，检查重复消息和同一工单后续补充。生成的工单、回复与通知都保持草稿，批准绑定具体修订，改稿后重新核对；批准最初几个草稿不授予未来无限发送。派发未知先核对，不重发；团队确认与实际维修验收分别记状态。类型、批准和确认均由测试者标注，不声称模型识别、权限或真实送达已测试。不得读取住户聊天、租约/证件/地址或凭据，不接入Lindy、PMS、工单或消息渠道，不注册、创建凭据、购买、调用付费API、发消息、调度人员或签署文件。输出结果表和未知项后停止。研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：月度行政辅助维护",
+      "currency": "USD",
+      "unit": "客户/月",
+      "price": 900,
+      "api_cost": 90,
+      "human_cost": 360,
+      "other_variable_cost": 40,
+      "acquisition_cost": 90,
+      "units_per_month": 6,
+      "fixed_monthly_cost": 450,
+      "contribution_before_fixed_cost": 320,
+      "monthly_contribution_before_tax": 1470,
+      "assumptions": "全部为预算假设，人工8小时×45；增至16小时则单位-40、月-690。实际席位、credits、消息/PMS、税和采购未知，不是报价或工资节省。"
+    },
+    {
+      "scenario": "假设：一次设置与合成验收",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 4000,
+      "api_cost": 100,
+      "human_cost": 2750,
+      "other_variable_cost": 150,
+      "acquisition_cost": 350,
+      "units_per_month": 2,
+      "fixed_monthly_cost": 500,
+      "contribution_before_fixed_cost": 650,
+      "monthly_contribution_before_tax": 800,
+      "assumptions": "全部为预算假设，人工55小时×50；多15小时返工则单位-100、月-700。未验证真实合同、采购、收入与额外费用。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"1wbct4o\" \"Lindy\" review -site:reddit.com -site:x.com -site:substack.com -site:g2.com",
+        "outcome": "未取得原案例独立结果，不读取受限Reddit或镜像评论。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "\"Lindy\" \"tenant\" site:github.com",
+        "outcome": "主要无关代码或同名线索，未取得原案例部署/用户结果。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"Lindy\" \"property management\" site:news.ycombinator.com",
+        "outcome": "无关讨论为主，未取得该租客与工单案例的独立实际结果。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent case-user results; no resolution, staffing, satisfaction or sentiment estimate."
+  },
+  "limitations": "原帖未访问，作者方法不可用；未读取真实住户聊天、地址、租约或维修记录，未运行模型、Lindy、PMS、工单和消息渠道。人工标签/批准/确认是合成输入，不验证语言识别、实际权限、危险或法律问题分流、消息送达及现场维修。当前文档范围和泛化FAQ不能反推原案例版本/配置或法律合规结论。",
+  "archive_source_sha256": "775dffdf5aca91fed1c86fa48ba0525e860f59d72884f96ea9bb5e9d4d9e07d3",
+  "translation_sha256": "0d898784c30f4baf4cdcb0ba26dcd9a5351c8b65a20cfb3952680d3ad8d500d0"
+}

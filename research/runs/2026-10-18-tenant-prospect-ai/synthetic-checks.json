@@ -1,0 +1,151 @@
+{
+  "checked_at": "2026-10-18T04:04:32.606618+00:00",
+  "scope": "Fictional deterministic state fixtures with human input labels/approval/ack/review flags only. Not Lindy/Chatwoot/AppFolio, model classification, tenant authentication, production guardrails, legal/urgent issue triage, real delivery or physical repair verification.",
+  "checks": [
+    {
+      "check": "known",
+      "result": {
+        "status": "draft_only",
+        "property": "P1",
+        "version": 2,
+        "text": "SYNTH_PET_POLICY"
+      }
+    },
+    {
+      "check": "other_property",
+      "result": {
+        "status": "draft_only",
+        "property": "P2",
+        "version": 7,
+        "text": "OTHER_SYNTH_POLICY"
+      }
+    },
+    {
+      "check": "missing",
+      "result": {
+        "status": "human_pending",
+        "kind": "missing_or_stale"
+      }
+    },
+    {
+      "check": "expired",
+      "result": {
+        "status": "human_pending",
+        "kind": "missing_or_stale"
+      }
+    },
+    {
+      "check": "human_labelled_sensitive_urgent_failure_routes",
+      "input_labels": [
+        "legal",
+        "dispute",
+        "exception",
+        "urgent",
+        "model_error",
+        "credit_pause"
+      ],
+      "classifier_tested": false
+    },
+    {
+      "check": "workorder_duplicate_update_and_property_isolation",
+      "count": 2
+    },
+    {
+      "check": "version_bound_approval_and_unknown_delivery_blocks_retry",
+      "result": {
+        "property": "P1",
+        "tenant": "T1",
+        "issue": "I1",
+        "revision": 2,
+        "notes": 2,
+        "status": "work_order_draft",
+        "notification": "delivery_unknown",
+        "crew_acknowledged": false,
+        "repair_verified": false
+      }
+    },
+    {
+      "check": "matching_synthetic_crew_ack_not_repair_completion",
+      "real_auth_or_delivery": false
+    },
+    {
+      "check": "physical_completion_needs_separate_human_fixture_flag",
+      "real_repair_verified": false
+    },
+    {
+      "check": "three_initial_approvals_do_not_grant_future_autonomy",
+      "initial_approvals_in_fixture": 3,
+      "new_order_attempt": "approval_required_or_stale",
+      "future_send_allowed": false
+    },
+    {
+      "check": "new_reply_reopens_conversation_not_previous_repair_history",
+      "conversation": {
+        "status": "open"
+      }
+    }
+  ],
+  "synthetic_orders": [
+    {
+      "property": "P1",
+      "tenant": "T1",
+      "issue": "I1",
+      "revision": 2,
+      "notes": 2,
+      "status": "work_order_draft",
+      "notification": "delivery_unknown",
+      "crew_acknowledged": true,
+      "repair_verified": true
+    },
+    {
+      "property": "P2",
+      "tenant": "T1",
+      "issue": "I1",
+      "revision": 1,
+      "notes": 1,
+      "status": "work_order_draft",
+      "notification": "draft_only",
+      "crew_acknowledged": false,
+      "repair_verified": false
+    }
+  ],
+  "economics": {
+    "currency": "USD",
+    "scope": "All inputs hypothetical budgets, not actual vendor procurement or commenter results",
+    "models": [
+      {
+        "price": 900,
+        "api_cost": 90,
+        "human_cost": 360,
+        "other_variable_cost": 40,
+        "acquisition_cost": 90,
+        "units_per_month": 6,
+        "fixed_monthly_cost": 450,
+        "variable_cost": 580,
+        "unit_contribution": 320,
+        "monthly_contribution": 1470,
+        "extra_human_cost": 360,
+        "stress_unit": -40,
+        "stress_monthly": -690
+      },
+      {
+        "price": 4000,
+        "api_cost": 100,
+        "human_cost": 2750,
+        "other_variable_cost": 150,
+        "acquisition_cost": 350,
+        "units_per_month": 2,
+        "fixed_monthly_cost": 500,
+        "variable_cost": 3350,
+        "unit_contribution": 650,
+        "monthly_contribution": 800,
+        "extra_human_cost": 750,
+        "stress_unit": -100,
+        "stress_monthly": -700
+      }
+    ]
+  },
+  "real_data_or_messages": false,
+  "new_credentials": false,
+  "extra_paid_api": false
+}
