@@ -1,0 +1,118 @@
+{
+  "checked_at": "2026-10-18T03:50:23.804933+00:00",
+  "scope": "Local deterministic fictional scheduling/catalog state and hypothetical math only. Not live Google/EliseAI/Zillow/Zapier execution, model accuracy, concurrency/distributed lock, delivery, authorization, cohort reconstruction or causal proof. No real renter/property/contact/calendar data or credentials.",
+  "checks": [
+    {
+      "check": "relative_lift_not_percentage_points",
+      "scope": "Arithmetic examples only; PR baseline, statistical estimand and denominators unknown. Not actual study reconstruction or causal proof.",
+      "examples": [
+        {
+          "metric": "apply",
+          "hypothetical_baseline": "0.10",
+          "hypothetical_relative_lift": "0.43",
+          "hypothetical_result": "0.1430",
+          "absolute_percentage_point_difference": "4.3000"
+        },
+        {
+          "metric": "tour",
+          "hypothetical_baseline": "0.20",
+          "hypothetical_relative_lift": "0.19",
+          "hypothetical_result": "0.2380",
+          "absolute_percentage_point_difference": "3.8000"
+        },
+        {
+          "metric": "lease",
+          "hypothetical_baseline": "0.05",
+          "hypothetical_relative_lift": "0.24",
+          "hypothetical_result": "0.0620",
+          "absolute_percentage_point_difference": "1.2000"
+        }
+      ],
+      "invalid_probability_example_rejected": true
+    },
+    {
+      "check": "propose_without_booking_and_require_approval",
+      "bookings": 0
+    },
+    {
+      "check": "one_slot_two_candidates_duplicate_and_stale_proposal",
+      "booking_count": 1
+    },
+    {
+      "check": "busy_unknown_and_write_unknown_not_success"
+    },
+    {
+      "check": "uncertain_write_quarantines_slot_until_reconciled",
+      "reconcile_scope": "Assumed manual no-write confirmation in fixture, not live API"
+    },
+    {
+      "check": "same_slot_label_other_property_isolated",
+      "bookings": {
+        "R1": {
+          "property": "P1",
+          "slot": "S1",
+          "status": "synthetic_local_confirmed",
+          "notification": "not_sent"
+        },
+        "R6": {
+          "property": "P2",
+          "slot": "S1",
+          "status": "synthetic_local_confirmed",
+          "notification": "not_sent"
+        }
+      }
+    },
+    {
+      "check": "DST_ambiguous_time_requires_clarification",
+      "first_utc": "2026-11-01T05:30:00+00:00",
+      "second_utc": "2026-11-01T06:30:00+00:00",
+      "booking_created": false
+    },
+    {
+      "check": "version_expiry_missing_and_untrusted_info_no_invented_answers"
+    },
+    {
+      "check": "no_email_message_or_calendar_api_operations",
+      "real_operations": 0
+    }
+  ],
+  "economics": {
+    "currency": "USD",
+    "scope": "All inputs fictional budgets for optional QA/setup services, not AI Assist licensing quote or claimed procurement/income.",
+    "models": [
+      {
+        "price": 1200,
+        "api_cost": 75,
+        "human_cost": 500,
+        "other_variable_cost": 60,
+        "acquisition_cost": 125,
+        "units_per_month": 6,
+        "fixed_monthly_cost": 600,
+        "variable_cost": 760,
+        "unit_contribution": 440,
+        "monthly_contribution": 2040,
+        "extra_human_cost": 500,
+        "stress_unit": -60,
+        "stress_monthly": -960
+      },
+      {
+        "price": 8000,
+        "api_cost": 150,
+        "human_cost": 5400,
+        "other_variable_cost": 300,
+        "acquisition_cost": 600,
+        "units_per_month": 1,
+        "fixed_monthly_cost": 700,
+        "variable_cost": 6450,
+        "unit_contribution": 1550,
+        "monthly_contribution": 850,
+        "extra_human_cost": 1800,
+        "stress_unit": -250,
+        "stress_monthly": -950
+      }
+    ]
+  },
+  "extra_paid_api": false,
+  "new_credentials": false,
+  "real_booking_or_messages": false
+}
