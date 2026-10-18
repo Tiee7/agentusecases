@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **41** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **42** / 注册案例 **1381**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -40,6 +40,7 @@
 | [用 AI agent 将 Telegram 消息转为 Todoist 待办事项](reports/add-todo-items-to-todoist-from-telegram.md) | 适合内部效率工具 | 23.0 | 中 | available | 个人任务管理与聊天自动化 | 2026-10-18T01:45:22.239106+00:00 |
 | [用 Claude Code 将邮件中的旅行预订加入日历](reports/add-travel-bookings-from-email-to-calendar.md) | 适合内部效率工具 | 21.0 | 中 | available | 个人差旅行程与文件工作流 | 2026-10-18T01:56:59.919216+00:00 |
 | [用 Claude Agent SDK 分析竞品广告并生成品牌素材](reports/analyze-competitor-ads-and-generate-on-brand-ad-creatives.md) | 仅建议受控试点 | 43.5 | 中 | available | 广告创意研究与品牌素材准备 | 2026-10-16T16:55:44.734582+00:00 |
+| [用 Claude Code 将国际象棋对局制作成解说视频](reports/analyze-your-chess-games-into-commented-videos.md) | 适合内部效率工具 | 23.0 | 中 | available | 国际象棋复盘与学习辅助 | 2026-10-18T02:41:29.568104+00:00 |
 | [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
 | [用 Claude Code 和 Claude for Word 起草文件并衔接法律工作流](reports/automate-legal-drafting-and-workflows-with-claude-code.md) | 适合内部效率工具 | 38.0 | 中 | available | 律师内部文书处理与知识工作流 | 2026-10-16T17:12:27.645268+00:00 |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
