@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "track-personal-finances-with-a-claude-code-assistant",
+  "url": "https://agentusecases.ai/use-case/track-personal-finances-with-a-claude-code-assistant",
+  "title": "用 Claude Code 跟踪个人财务并保存分析计划",
+  "researched_at": "2026-10-18T00:34:28.904141+00:00",
+  "industry": "个人财务资料整理与只读报告",
+  "brief_reason": "只有源站归档转述，原文既有限制且实现私有；缺少计算及业务结果，三份当前官方资料仅支持记忆、数据流与hook边界分析，不满足深研要求。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验证只读账目整理；现有证据不足以支持投资决策产品",
+    "reason": "没有准确性、持续使用效果或客户需求证据，先用合成流水核对输入、计算和数据流。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/track-personal-finances-with-a-claude-code-assistant",
+      "title": "Track personal finances with a Claude Code assistant",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:20:50.858726+00:00",
+      "archived_at": "2026-10-17T05:20:50.858726+00:00",
+      "archive_path": "registry/archives/track-personal-finances-with-a-claude-code-assistant.json",
+      "sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+      "hash_scope": "Existing source_text.body UTF-8; not a fresh source-site request",
+      "supports": "作者关于Baselight MCP、财务记忆文件、私有加密仓库和无量化结果的源站归档转述。"
+    },
+    {
+      "id": "Sf1c064262dc8",
+      "kind": "primary",
+      "url": "https://code.claude.com/docs/en/memory",
+      "title": "How Claude remembers your project - Claude Code Docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:31:53.032866+00:00",
+      "sha256": "c2cc5cb121cc8fe19805daeb13ebb8303444de2a0f7851cc5fd807127883a33d",
+      "supports": "CLAUDE.md提供行为指导，官方文档区分它与由客户端强制执行的设置。"
+    },
+    {
+      "id": "S06b2864aaa7d",
+      "kind": "primary",
+      "url": "https://code.claude.com/docs/en/data-usage",
+      "title": "Data usage - Claude Code Docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:31:55.838485+00:00",
+      "sha256": "92fac1d9f7c8b7011273c87a19e8a99edec663836fc3c7b22dab9b8b024dbd06",
+      "supports": "本地运行的Claude Code仍会联网与模型交互；数据流、留存及训练政策取决于具体产品和设置。"
+    },
+    {
+      "id": "S69bab27d9df2",
+      "kind": "primary",
+      "url": "https://git-scm.com/docs/githooks",
+      "title": "Git - githooks Documentation",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:31:58.506916+00:00",
+      "sha256": "28e1970d74427e1f3c1137937bbf9a5f091602ed19fcd38f72ed2ae0e3558e93",
+      "supports": "Git hooks是执行特定动作的程序，位置可配置且不可执行的hook被忽略；文档不证明本案例加密实现正确。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "源站称实际使用Claude Code并连接Baselight MCP；作者让工具生成记忆文件与SQL查询。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档称助手分析作者组合并保存行动计划，但未给量化结果，作者提醒模型不可靠且随机。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档称仓库私有并使用Git hooks加密；我们未检查实现。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站试用模板与作者实际提示词不同，模板要求只读且本地保存，不是数据流证明。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "官方文档区分CLAUDE.md行为指导与客户端强制执行的技术设置。",
+      "source_ids": [
+        "Sf1c064262dc8"
+      ]
+    },
+    {
+      "statement": "官方数据使用文档说明本地客户端仍需通过网络与模型交互。",
+      "source_ids": [
+        "S06b2864aaa7d"
+      ]
+    },
+    {
+      "statement": "Git官方说明hook目录可配置，缺少执行权限的hook不会运行。",
+      "source_ids": [
+        "S69bab27d9df2"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "实际做法与证据边界",
+      "body": "归档称作者把Baselight MCP接到Claude Code，让它生成CLAUDE.md、YAML/Markdown形式的组合与决策记忆，以及保存的SQL查询；每次运行查询宏观数据，再分析自己的组合。作者称没有手写代码或Markdown，但这不等于整个设置、核对和维护无需劳动。没有给出计算准确率、节省时间、投资收益、完整代码或独立用户结果。我们未取得受限原文和私有仓库，因此只把这些内容作为源站转述，不能补写作者实际操作步骤。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "memory",
+      "title": "把财务事实、说明和行动计划分开",
+      "body": "记忆文件能让后续会话找到历史上下文，不能保证余额正确。官方文档说明CLAUDE.md是行为指导，技术限制应由客户端设置等机制执行。复现时可以将原始合成流水、确定性汇总、模型解释和带日期的行动建议分开保存；每次结论应指向输入版本与计算表，不把前一轮建议自动升级成新事实。归档提到同一会话混合搭建与使用上下文，这提示应拆分开发会话与分析会话，并将导入文字当成数据，避免其成为工具操作指令。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sf1c064262dc8"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "本地文件不等于全部处理都在本地",
+      "body": "源站试用模板要求“所有内容保留在本地”，这是目标而非已验证的数据流。Claude Code官方说明本地客户端会通过网络与模型交互，因此在输入真实资料前仍需确认会发送哪些内容、服务及账户设置、日志与留存。私有仓库和Git hooks加密只能说明作者采取了存储保护措施；Git文档显示hook还依赖安装位置与执行权限。未检查其脚本、密钥管理、历史提交、临时文件或日志，不能宣称已端到端保护。宏观数据查询也不应无必要携带个人持仓或账户信息；本轮没有输入任何私人财务。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S06b2864aaa7d",
+        "S69bab27d9df2"
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "先验算流水，再解释财务状况",
+      "body": "可从纯合成的两个账户开始：期初合计1500、收入2000、消费300、退款50、账户间转账200，期末应为3250，转账不增加收入或支出。重复交易ID要报告，不能重复记账；不同币种在缺少汇率时分开显示。信用卡消费与还款、退款关联、日期边界和缺失余额还需单独设计样例，不能把上述小样例通过当成真实账务可靠。我们仅用本地Decimal核对这个合成样例与去重标记，未运行作者助手或模型；模型适合解释已核对的表格，数值由可检查的计算完成。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sf1c064262dc8"
+      ]
+    },
+    {
+      "id": "personal",
+      "title": "自用价值与维护成本",
+      "body": "自用价值待核实。对于能够审阅账目、愿意维护输入口径的人，它可能把分散的资料和待办集中到可追踪文件中；没有实测证据表明它比现有表格更省时间。设置需要字段字典、账户和币种范围、人工答案、数据流检查和固定报告模板。维护包括新增账户、修正分类、处理格式变化、清理敏感上下文及审核行动计划。先只读生成疑问清单，将资金可支撑时间等指标的假设写明；本案例不足以支持个性化投资建议或自动交易。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S06b2864aaa7d"
+      ]
+    },
+    {
+      "id": "business",
+      "title": "可交付范围与费用假设",
+      "body": "较可检验的方向是合成或合规脱敏资料的整理模板、确定性汇总和人工复核工作流，而非保证投资回报的助手。尚无客户、订单、定价、续费或获客证据。规划情景一：每用户每月49美元，模型及数据预算5、人工1小时×30美元=30、其他5、获客10，贡献负1美元；人工增至2小时则负31美元。情景二：一次设置900美元，模型/数据测试预算20、人工15小时×40美元=600、其他30、获客100，贡献150美元；多4小时返工则负10美元。全部是假设，未扣固定费与税费，不是实际平台报价或作者账单，本轮未发生任何付费调用。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "下一步与停止条件",
+      "body": "下一步先明确一页报告服务于哪些问题，再准备合成流水和人工核算基准，检查重复、退款、转账及多币种异常，并为每条解释附输入和计算依据。若数据流无法说明、账目无法对齐、输出混入无来源数字，或必须依靠模型猜测才能补全缺失资料，就停在试验阶段。宏观数据接入并非首个验收条件，先保证输入和汇总正确；没有私人材料也可以验证整理格式。后续涉及真实资料或投资决定仍需另行界定范围，本轮没有注册、凭据、账户接入或交易。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sf1c064262dc8",
+        "S06b2864aaa7d",
+        "S69bab27d9df2"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/track-personal-finances-with-a-claude-code-assistant",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "13fde76945b6db097133f1ee859652eedaa0f4fb9e47e77a744393026b32020f",
+      "How it went": "a934082daf170d68c1c9364391ffcf1cf2dd5175a1a2454ede6c7992b22b60af",
+      "Worth knowing": "b5761f7d3f572579af40c9290c4a867ab8ac0be40b0b8e214554e188118dbd2d"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a personal finance assistant using my data in [folder or export files]. Summarize my income, spending, debts and savings, assess my financial health, and flag [concerns like runway or high-interest debt]. Keep everything local and don't make any transactions. You're done when I have a one-page report and a list of three questions or decisions I should consider next.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/track-personal-finances-with-a-claude-code-assistant",
+    "observed_at": "2026-10-17T05:20:50.858726+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "5fc206e4bce5f037bd53bed7c1d518776f04806e814a4c3bc90d639f8be5a78d"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://adlrocha.substack.com/p/adlrocha-agents-will-make-code-and",
+    "source_title": "原作者关于个人财务助手的文章",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原文存在既有访问限制，未再次请求；实现仓库据归档为私有，不读取私人财务或补写操作步骤。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "资料整理与历史计划可追踪的潜在价值存在，但没有计算准确性、节省时间或持续使用的独立证据。",
+    "audience": "能够人工核对账目并明确数据流的个人使用者或流程设计者。",
+    "use": "整理获准资料、核对确定性汇总并形成只读报告与疑问清单。",
+    "benefit": "可能减少翻找历史资料，未测得实际时间节省或投资改善。",
+    "setup_cost": "合成样本、字段字典、账户及币种口径、人工答案、输入版本和数据流确认。",
+    "maintenance_cost": "处理导入变化、分类纠错、上下文清理、记忆审阅与报告核对。",
+    "frequency": "先离线按样例验收，后续频率取决于输入更新，不能默认无人值守。",
+    "privacy_risk": "私有仓库及加密hook不覆盖所有数据路径，本地客户端仍可能发送模型上下文；本轮仅合成资料。",
+    "error_risk": "重复记账、转账与收入混淆、退款、信用卡还款、多币种和无依据推断可造成误导。",
+    "source_ids": [
+      "archive-case-20261017",
+      "Sf1c064262dc8",
+      "S06b2864aaa7d",
+      "S69bab27d9df2"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站试用模板在归档完整保留，不能当成作者实际提示词或本地处理保证。",
+    "prerequisites": "纯合成或充分脱敏且获准使用的流水、字段定义、币种、期初余额和人工答案。",
+    "tools": "现有工具与本地确定性计算即可设计；不增加付费API、凭据或账户接入。",
+    "expected_result": "一页报告草案、计算依据、异常清单及三个待人工核对问题；自编模型模板未实测。",
+    "prompts": [
+      {
+        "title": "用合成流水设计只读财务报告",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "Sf1c064262dc8",
+          "S06b2864aaa7d",
+          "S69bab27d9df2"
+        ],
+        "text": "请只使用我提供的[纯合成或已充分脱敏且获准使用的流水、字段字典、币种、期初余额和人工答案]，设计一个只读财务报告流程。先核对字段、重复交易ID、转账配对、退款关联、消费与信用卡还款、日期和币种，缺失汇率不得自行补值。将确定性计算表、输入版本、解释、未解决问题和行动建议分开保存，每条数字附计算依据，历史建议不可当作新事实。先核对期初1500、收入2000、消费300、退款50、内部转账200应得期末3250的合成样例。不要读取真实财务、凭据或私人聊天，不向MCP发送个人持仓，不注册、不购买、不调用额外付费API、不交易或发送资料。说明工具的数据流和无法验证的部分，不能以“保存在本地”保证不上云。输出一页报告草案、验收表、缺失资料以及三个待人工确认的问题后停止，不提供个性化投资买卖建议。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：每月只读整理",
+      "currency": "USD",
+      "unit": "用户/月",
+      "price": 49,
+      "api_cost": 5,
+      "human_cost": 30,
+      "other_variable_cost": 5,
+      "acquisition_cost": 10,
+      "contribution_before_fixed_cost": -1,
+      "assumptions": "人工1小时×30美元；增加到2小时贡献-31美元。全部是假设预算，未扣固定费与税费。"
+    },
+    {
+      "scenario": "假设：一次流程设置",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 900,
+      "api_cost": 20,
+      "human_cost": 600,
+      "other_variable_cost": 30,
+      "acquisition_cost": 100,
+      "contribution_before_fixed_cost": 150,
+      "assumptions": "人工15小时×40美元；多4小时返工贡献-10美元。全部是假设预算，未扣固定费与税费。"
+    }
+  ],
+  "limitations": "未取得受限原文、私有实现、Baselight连接配置、端到端数据流或计算结果；三份官方资料不证明作者实现效果。未读取私人财务或调用额外付费API。自用待核实，商业评分不评定。",
+  "archive_source_sha256": "56eebdb90b31ed18ad1411a924e7c50da746ff93aef2aedebc3d6ba31ffaeb22",
+  "translation_sha256": "735b3772dfbb71e436b9f30dec1c6c009dda5506b7491a9c0fa0c9c4489f4788"
+}
