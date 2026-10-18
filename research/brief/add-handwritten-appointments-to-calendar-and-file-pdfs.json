@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "add-handwritten-appointments-to-calendar-and-file-pdfs",
+  "url": "https://agentusecases.ai/use-case/add-handwritten-appointments-to-calendar-and-file-pdfs",
+  "title": "用 AI agent 识别手写日程并归档邮件 PDF",
+  "researched_at": "2026-10-18T01:45:16.027163+00:00",
+  "industry": "个人日历录入与文档整理",
+  "brief_reason": "原始HN评论为功能举例和费用设想，缺少项目、实现、测量和账单；Paperless文档403已停止。公开Google接口只能支持有限验收设计，不满足深研效果与经营证据要求。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收日期与归档状态，功能举例和token设想不足以支撑收费交付",
+    "reason": "无法确认实际部署、识别准确性、权限与总成本，也没有客户或付款证据；只适合先以合成批次研究预览与人工核对边界。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/add-handwritten-appointments-to-calendar-and-file-pdfs",
+      "title": "Add handwritten appointments to calendar and file PDFs",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:24:10.874137+00:00",
+      "archived_at": "2026-10-17T05:24:10.874137+00:00",
+      "archive_path": "registry/archives/add-handwritten-appointments-to-calendar-and-file-pdfs.json",
+      "sha256": "105606fb422641d44ace770a56822ced6e2742b8a3de861e034638e9a247c9d7",
+      "hash_scope": "Existing source_text.body UTF-8; not a new source-site request",
+      "supports": "源站对自建agent、手写预约、邮件PDF和费用估计的转述；原文中的功能举例和假设口吻需另行区分。"
+    },
+    {
+      "id": "Sed47bfd16613",
+      "kind": "primary",
+      "url": "https://news.ycombinator.com/item?id=49627493",
+      "title": "Well, it's much more than that. In general everybody's building agents now. You ... | Hacker News",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T01:41:31.181282+00:00",
+      "sha256": "c4d11617347d82eaa3f08a7b7f5bb63ea6f12d234fd5b9f448d8152938561759",
+      "supports": "原始评论举例说明可自建agent及token与订阅费用的设想，没有代码、部署记录或经核对账单。"
+    },
+    {
+      "id": "S47a5e50a22fc",
+      "kind": "primary",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/events/insert",
+      "title": "Events: insert  |  Google Calendar  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T01:42:14.426532+00:00",
+      "sha256": "ff88451acbf51352e8ee67b510057fad004bfb53f6443993b8cc132820d600d1",
+      "supports": "Google官方说明日期时间格式与时区等事件字段，供验收设计参考；不证明作者实际使用Google日历。"
+    },
+    {
+      "id": "S7df3405c8543",
+      "kind": "primary",
+      "url": "https://developers.google.com/workspace/gmail/api/reference/rest/v1/users.messages.attachments/get",
+      "title": "Method: users.messages.attachments.get  |  Gmail  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T01:42:17.409737+00:00",
+      "sha256": "065b7425da7ca66b91e0095c03407445cfe1fb9fd6c8a01f5f5765cc756b6ffa",
+      "supports": "Google官方附件获取方法返回MessagePartBody；附件取得与归档是不同动作，不证明作者使用Gmail。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "源站实际agent标为自建或未命名，OpenClaw只属于建议试用模板。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "原始HN评论列举OCR预约、日历、网页搜索和本地paperless等可能任务，未提供代码或部署记录。",
+      "source_ids": [
+        "Sed47bfd16613"
+      ]
+    },
+    {
+      "statement": "15美元年度token支出在原评论中是设想性比较，不是经核对的年度账单或总成本。",
+      "source_ids": [
+        "Sed47bfd16613"
+      ]
+    },
+    {
+      "statement": "原评论没有报告识别准确率、完整测试、实际故障或持续维护工时。",
+      "source_ids": [
+        "Sed47bfd16613"
+      ]
+    },
+    {
+      "statement": "Google日历官方说明日期时间使用RFC3339，并需要偏移或明确时区。",
+      "source_ids": [
+        "S47a5e50a22fc"
+      ]
+    },
+    {
+      "statement": "Gmail附件获取方法成功返回MessagePartBody，不包含另一系统的归档结果。",
+      "source_ids": [
+        "S7df3405c8543"
+      ]
+    },
+    {
+      "statement": "源站试用模板要求保存前展示条目和文件名，不能当作作者实际提示词。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "归档叙述与原始评论的差别",
+      "body": "完整译文忠实保留归档把功能描述成自建agent工作流的说法。实际读到的HN评论则是在举例：个人agent可以识别手写预约、写入日历、搜索网页和把邮件PDF放入本地paperless；没有明确提供一套已经运行的项目或结果。每年15美元token费用也以设想口吻与聊天订阅比较，不是可核对的年度账单。不能把功能主张、可能做法和实际成功记录合并为已验证案例。评论未给代码、OCR工具、模型版本、日历提供商、邮件服务、权限、测试集或归档接口，因此作者方法只能收录短的建议摘要，不能补写成执行步骤。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sed47bfd16613"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "日期识别和写入需要分别验收",
+      "body": "读取手写文字只是第一步；日期、年份、开始与结束时间、时区、地点以及目标日历都要有明确来源，模糊的03/04不能静默选择月日顺序。以Google Calendar公开文档为具体参考，日期时间应符合RFC3339，且需偏移或明确时区；这不是识别作者实际日历产品的证据。合成验收可以覆盖模糊日期、缺少年份、全天日程、跨日以及夏令时重复小时，在生成待确认条目后停止。我们用本地时区库演示一个重复小时可对应两个UTC时刻，只验证时间歧义，未做OCR、调用模型或创建日历事件。重复批次也应有可检查的来源标记和重试规则，不能把再读一次照片变成再创建一条预约。",
+      "source_ids": [
+        "Sed47bfd16613",
+        "S47a5e50a22fc"
+      ]
+    },
+    {
+      "id": "filing",
+      "title": "附件取得不等于归档完整",
+      "body": "以Gmail官方附件方法为例，成功取得的是附件资源，并不会自动形成另一系统中的可检索档案；原作者是否使用Gmail未知。拟议流程应分别核对目标邮件、附件对应、原始文件、拟用标题与标签、保存位置以及最终可读取状态。相同文件名不必然是相同文件，重复批次和中断后的重试也要人工答案样例。Paperless文档本轮返回403，已停止且没有换路读取，因此不声称已核验其具体上传、去重、队列或回执机制，也不认定评论所指版本。只用合成文件与待保存清单即可研究边界，不需要访问真实邮箱、文件库或私人PDF。",
+      "source_ids": [
+        "Sed47bfd16613",
+        "S7df3405c8543"
+      ]
+    },
+    {
+      "id": "agent",
+      "title": "工具身份与资料处理范围",
+      "body": "实际agent在归档中标为自建或未命名，OpenClaw只属于源站建议试用模板，不能据此断言评论者使用了OpenClaw。评论中的flash级别也没有明确模型或服务版本，不能套用某个当前模型的费率。拥有代码和本地paperless配置，不足以说明每一步处理都在本地；若未来接远端文字或视觉服务，仍需明确图片、附件与日志的去向。本轮只读公开资料并使用合成样例，未读取私人日历、邮件、文件或聊天，也未建立任何集成。源站模板要求保存前展示日历条目与文件名，这是一条编辑提供的试用约束，不是已经核验的作者确认流程。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sed47bfd16613",
+        "S47a5e50a22fc",
+        "S7df3405c8543"
+      ]
+    },
+    {
+      "id": "value",
+      "title": "自用价值与替代方式",
+      "body": "自用价值待核实。对有能力维护集成并逐项复核的人，潜在用途是把一批手写记录和PDF整理成可确认的待办，而非保证识别正确或无人值守归档。现有手机日历、邮件搜索和手工文件夹整理是直接基线；资料量很少时，维护agent可能比手动录入更重。准备需要字段字典、时区与日期口径、合成照片或文字样例、重复文件规则和人工答案。维护包括权限、服务变更、识别错误、重试与归档核对。没有真实用户规模、准确率、净省时、持续成本或付款证据，不能从评论的轻松语气推断大多数人都能低成本复现。",
+      "source_ids": [
+        "Sed47bfd16613",
+        "S47a5e50a22fc",
+        "S7df3405c8543"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "token估计与总交付成本",
+      "body": "评论将token费用与聊天订阅比较，但模型费不含集成搭建、计算与存储、备份、人工确认或错误修复，两类服务范围也不相同。不得将年度token设想直接当作实际净节省。两种规划情景均未验证：一次设置收入300美元，模型/测试预算3、人工6小时×30=180、其他12、获客60，贡献45；多2小时返工则负15。月维护收入19美元，模型1、人工0.4小时×30=12、其他2、获客4，贡献0；人工0.8小时则负12。全部为假设，未扣税和固定费，不是作者支出或平台报价。先核对合成批次的日期、重复与归档状态，关键字段仍须猜测、错误无法重现或维护负担超过手工流程时停止扩大范围；未证明需求之前不开展收费交付。",
+      "source_ids": [
+        "Sed47bfd16613",
+        "S47a5e50a22fc",
+        "S7df3405c8543"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/add-handwritten-appointments-to-calendar-and-file-pdfs",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "105606fb422641d44ace770a56822ced6e2742b8a3de861e034638e9a247c9d7",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "284295a595455c23894e18f6781ae6f5a455f948a2881cd13d1e7b81c32b694b",
+      "How it went": "ee30ea82b0d1d351248543d05695a59f316161cba1b11a432b22bbd2115ed260",
+      "Worth knowing": "b1045d2d09b06e6d7506ad0e5fecbee6962319b3b2f98b9ed4e010a7231b3d7d"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "When I send you a photo of a handwritten appointment, read the text and add it to my [calendar name] with the date, time, and place. When I forward a PDF by email, file it into [paperless or folder] with a sensible title and tags. Show me each calendar entry and filename before saving, and stop once everything from today's batch is filed.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/add-handwritten-appointments-to-calendar-and-file-pdfs",
+    "observed_at": "2026-10-17T05:24:10.874137+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "f730e8e34a10a12de099fc620afcbc239f861cc462aaaab9315fc13f4a8277e7"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=49627493",
+    "source_title": "Well, it's much more than that. In general everybody's building agents now. You ... | Hacker News",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T01:41:31.181282+00:00",
+    "source_sha256": "c4d11617347d82eaa3f08a7b7f5bb63ea6f12d234fd5b9f448d8152938561759",
+    "steps": [
+      {
+        "en": "The commenter suggests building a personally controlled agent instead of relying only on a chat subscription.",
+        "zh": "评论者建议构建由个人控制的agent，而不只依赖聊天订阅。"
+      },
+      {
+        "en": "Examples include reading a handwritten appointment, updating a calendar, searching the web, and filing an emailed PDF locally.",
+        "zh": "功能举例包括读取手写预约、更新日历、搜索网页，以及将邮件中的PDF归档到本地。"
+      },
+      {
+        "en": "They sketch token spending as a subscription alternative, without implementation details, measured results, or an itemized bill.",
+        "zh": "他们设想以token支出替代订阅，但未提供实现细节、实测结果或分项账单。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "预览和批次整理可能提供辅助，但原评论未证明已部署效果、准确率、净省时或总维护成本。",
+    "audience": "能维护接口、理解日期时区并人工核对资料的成年个人使用者。",
+    "use": "把获准或合成输入整理成待确认日历条目和文件归档清单。",
+    "benefit": "可能减少重复录入，未验证准确性、节省时长或15美元年度总成本。",
+    "setup_cost": "日期口径、时区、字段、接口边界、重复规则、合成样例与人工答案。",
+    "maintenance_cost": "识别纠错、权限和服务变化、中断重试、重复与文件完整性核对。",
+    "frequency": "按实际资料批次处理；原文没有持续频率或规模证据。",
+    "privacy_risk": "本轮不读私人日历、邮箱或PDF；自建与本地归档不自动证明全部处理本地化。",
+    "error_risk": "月日顺序、缺少年份、夏令时、重复录入、附件错配与错误归档。",
+    "source_ids": [
+      "archive-case-20261017",
+      "Sed47bfd16613",
+      "S47a5e50a22fc",
+      "S7df3405c8543"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站OpenClaw模板完整保留在原文与忠实译文中，不是作者实际工具或提示词。",
+    "prerequisites": "纯合成日程和文档说明、目标时区、字段字典、重复规则及人工答案，不含私人资料。",
+    "tools": "现有文本工具和本地标准库即可设计验收；不新建凭据或调用付费模型。",
+    "expected_result": "待确认日历条目和归档清单、缺失冲突表及合成验收矩阵；不创建真实事件或文件归档，自编模板未实测。",
+    "prompts": [
+      {
+        "title": "用合成批次设计日历与文档预览",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非原作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "Sed47bfd16613",
+          "S47a5e50a22fc",
+          "S7df3405c8543"
+        ],
+        "text": "请只使用[纯合成的手写日程文字或图片、合成邮件/PDF说明、字段字典、目标时区和人工答案]，设计一个先预览再确认的批次整理流程。先列出日期、年份、月日顺序、开始/结束、时区、地点和目标日历的缺失与冲突；模糊项不得猜测。区分文字识别、日历草案、附件取得、拟归档清单与最终状态；明确重复输入和中断重试如何被发现。只给出日历条目、文件名、标题、标签和来源的预览，不创建或修改任何真实日历，不读邮箱或私人PDF，不连接文件库，不注册、不创建凭据、不购买、不调用额外付费API、不发送或提交。讨论系统时区库下夏令时重复小时的两种解释，并要求人工选定；不要以15美元年度token设想承诺总成本或用源站建议的OpenClaw冒充作者实际工具。输出预览、缺失/冲突表、合成验收矩阵和未核验接口后停止。本模板是研究团队自编，非作者原话，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：一次集成设置",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 300,
+      "api_cost": 3,
+      "human_cost": 180,
+      "other_variable_cost": 12,
+      "acquisition_cost": 60,
+      "contribution_before_fixed_cost": 45,
+      "assumptions": "人工6小时×30美元；多2小时返工贡献-15。全部为规划假设，未扣税和固定费，非作者账单或验证报价。"
+    },
+    {
+      "scenario": "假设：月度维护",
+      "currency": "USD",
+      "unit": "用户/月",
+      "price": 19,
+      "api_cost": 1,
+      "human_cost": 12,
+      "other_variable_cost": 2,
+      "acquisition_cost": 4,
+      "contribution_before_fixed_cost": 0,
+      "assumptions": "人工0.4小时×30美元；人工0.8小时贡献-12。全部为规划假设，未扣税和固定费，没有订阅付款证据。"
+    }
+  ],
+  "limitations": "未取得实现、部署证明、模型版本、实际日历/邮件服务、归档接口、准确性或账单。原评论的费用为设想，非独立实测；Paperless文档403后未再请求或换路。Google文档只作为具体参考，不证明作者使用其服务。本轮只做合成时间与费用检查及阅读站验证，未运行作者agent或实际OCR。",
+  "archive_source_sha256": "105606fb422641d44ace770a56822ced6e2742b8a3de861e034638e9a247c9d7",
+  "translation_sha256": "f2937f11584b092da3cc2221d3de8672f500b7b49cfc35f59fc2624904dcd2d9"
+}
