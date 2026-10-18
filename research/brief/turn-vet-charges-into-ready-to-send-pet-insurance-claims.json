@@ -1,0 +1,289 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "turn-vet-charges-into-ready-to-send-pet-insurance-claims",
+  "url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
+  "title": "用 OpenClaw 整理兽医费用并起草宠物保险理赔",
+  "researched_at": "2026-10-18T00:18:02.326884+00:00",
+  "industry": "宠物保险理赔材料整理",
+  "brief_reason": "已有完整译文、作者公开技术说明与两份平台官方资料，但缺少独立理赔结果、用户反馈、真实交付成本和保险方具体流程复核；不冒充completed v2深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核对匹配、申报金额和状态记录，再评估材料整理服务",
+    "reason": "公开实现说明了可审阅的材料准备链路，也暴露过误匹配和状态倒退。代码与作者自述不能验证赔付效果，商业交付还取决于人工核对、授权维护与各保险方流程。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
+      "title": "Turn vet charges into ready-to-send pet insurance claims",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:20:42.873994+00:00",
+      "archived_at": "2026-10-17T05:20:42.873994+00:00",
+      "archive_path": "registry/archives/turn-vet-charges-into-ready-to-send-pet-insurance-claims.json",
+      "sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
+      "hash_scope": "archived source_text.body UTF-8; not a fresh site request",
+      "supports": "案例站归档中的人工CSV、Gmail发票匹配、Petcover表单、草稿、十份结算核对及历史错误。"
+    },
+    {
+      "id": "S01d5d046cc04",
+      "kind": "primary",
+      "url": "https://github.com/jagberg/Me.OpenClaw",
+      "title": "GitHub - jagberg/Me.OpenClaw: Personal agent that turns bank transactions into ready-to-send insurance claims. An experiment in what an agentic system should be allowed to do unsupervised. · GitHub",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:15:33.845722+00:00",
+      "sha256": "0b0f7f09763f1876ff55942c17104d3dae6048b146a08c0efe1bb8f04ebfa92e",
+      "supports": "作者公开README的理赔流程、两类结算核对、状态事件与已报告错误；非独立理赔结果审计。"
+    },
+    {
+      "id": "S6dcb5626c60a",
+      "kind": "primary",
+      "url": "https://developers.google.com/identity/protocols/oauth2",
+      "title": "Using OAuth 2.0 to Access Google APIs  |  Authorization  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:15:37.299888+00:00",
+      "sha256": "a359b1e2f109d74a6dda8230949ebfea2d3a0a9d983ec9dfc4b6eb3fb0cb8214",
+      "supports": "外部Testing状态OAuth刷新token七天有效期及范围例外，不能外推到所有Gmail授权。"
+    },
+    {
+      "id": "Se7ad574b4f85",
+      "kind": "primary",
+      "url": "https://developers.google.com/workspace/gmail/api/guides/drafts",
+      "title": "Create and send draft emails  |  Gmail  |  Google for Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T00:15:40.149007+00:00",
+      "sha256": "9d3a9bb568975295c23ca00e176c9103b7bda51c9c85279a21058eeec0dc5c2e",
+      "supports": "Gmail草稿是未发送消息，创建和发送分别有API操作；草稿界面不能替代程序边界检查。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "案例站标注实际agent和推荐工具为OpenClaw，已有完整中英文归档。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "作者README描述手动上传银行CSV，不保存银行登录；匹配发票后准备表单和Gmail草稿。",
+      "source_ids": [
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "statement": "Check A重算结算信列出的数值，Check B比较评估与申报小计；二者回答不同问题。",
+      "source_ids": [
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "statement": "作者报告十份批准信的算术核对精确到分，五份评估差异被提问，未提供独立赔付审计。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "statement": "已报告的历史错误包括自身请求邮件误匹配十二笔、旧确认导致两笔已结算状态倒退。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "statement": "Google文档将外部Testing授权七天刷新token有效期与基础身份scope例外区分；草稿创建和发送也分别有API方法。",
+      "source_ids": [
+        "S6dcb5626c60a",
+        "Se7ad574b4f85"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "workflow",
+      "title": "输入、匹配与草稿",
+      "body": "本例从用户手动上传银行CSV开始，并不是代理登录银行获取完整账户。交易只提供线索，真正填表还要从发票核对宠物、就诊日期、费用项目及申报金额。作者README描述缺失必填项或模糊匹配时提问，而不是猜测；发票缺失、扫描不清和一笔付款涉及多只宠物都需要单独处理。可复制的价值是把“交易—发票—表单—草稿—回复”串成可审阅记录，并保留人工决定和发送。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "id": "results",
+      "title": "十份核对能说明什么",
+      "body": "作者报告的Check A，是把结算信已经打印的数字重新计算，十份信均对到分；它不是保险条款模型，也不是抽取、匹配或理赔全流程100%准确。Check B比较保险方评估金额与已记录的申报小计，对五份提出问题，不能据此认定五次少赔或额外追回款。早期自身请求邮件误匹配十二笔、旧确认信让两笔已结案记录倒退，说明去重、发件来源和状态顺序是实际交付难点。现有数字仍是作者自述，没有独立审计或节时记录。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04"
+      ]
+    },
+    {
+      "id": "implementation",
+      "title": "授权、状态与项目边界",
+      "body": "Google文档的七天限制适用于外部用户类型、发布状态为Testing的OAuth刷新token，并有仅身份基础scope的例外；不能写成所有Gmail授权每七天必然失效。Gmail API把创建草稿和发送分成不同操作，但“只显示草稿”本身不能证明程序绝无发送路径。作者README还同时保留网关迁移说明，项目名Me.OpenClaw与另一个OpenClaw网关并非同一个组件；应按部署版本核对连接方式，不能把此例包装为安装标准技能就自动具备的能力。状态事件需保留原始时间，旧确认不能覆盖已结算事实。",
+      "source_ids": [
+        "S01d5d046cc04",
+        "S6dcb5626c60a",
+        "Se7ad574b4f85"
+      ]
+    },
+    {
+      "id": "personal",
+      "title": "个人使用与维护",
+      "body": "自用价值为中，适合经常产生兽医账单、愿意逐笔确认的宠物主人。一次偶发理赔可能用保险方现有表单和邮件模板就够了；多宠物、多发票与持续补件才更需要匹配台账。准备时先用脱敏CSV、发票、空表和保单字段做样例，确认哪些项目必须由人填写。每次检查附件、宠物、申报金额和收件人，定期看授权失效、额度耗尽及错误状态。银行登录不进入代理，不代表邮件、银行导出及宠物资料没有隐私风险。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04",
+        "S6dcb5626c60a",
+        "Se7ad574b4f85"
+      ]
+    },
+    {
+      "id": "commercial",
+      "title": "付费交付与成本",
+      "body": "潜在付款人是反复整理材料的主人，或愿意购买行政整理支持的服务机构；现有资料没有客户付费、续费或独立效果反馈。真正可收费的交付是核对完整的材料草稿与待确认项，不是保证获赔或代替保险方判断。仅作测算：每份收费35美元，人工15分钟×30美元/小时=7.5美元，模型/提取2美元、存储与工具2美元、获客摊销5美元，贡献18.5美元，尚未扣固定费；复杂单需一小时人工时贡献变为负4美元。假设400美元设置服务，8小时×35美元人工、20美元测试、10美元工具、40美元获客，贡献50美元，多两小时返工就转负。这些均非作者费用或市场报价。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04",
+        "S6dcb5626c60a"
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "先验证的五类样例",
+      "body": "先用脱敏或合成材料验证：正常一单、一笔付款含多张发票、发票缺失、自己发出的请求邮件、已结算后又收到旧确认信。验收重点是金额与附件可追溯、未知不补猜、同一发票不重复申报、旧信不使状态倒退。随后再比较真实手工整理时间；若复核不减、授权维护过重或特定保险流程尚未核实，就缩小为离线材料清单。本次未运行作者项目、访问银行或Gmail、调用模型、填写真实表单或发送任何消息。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S01d5d046cc04",
+        "Se7ad574b4f85"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "3f014053dc13ab172f952ec7f727f2f4dd5f16875e3dd62f2a20f3fbb3c8525e",
+      "How it went": "bd81a81db8a274b00152f79ca60de1d23511ef8b8197b2ba8a624a5b4df92f30",
+      "Worth knowing": "8d1c68101834733f613b7d731a40837360d66e1d532ebcbbf264f877c7bfd56a"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Scan my [bank account or statement] for vet charges from the last [timeframe], find the matching invoices in my email, and fill out [insurer]'s claim form with them. Draft the claim email with the form and invoice attached, and finish by showing me the drafted claim. Don't send anything until I approve it.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
+    "observed_at": "2026-10-17T05:20:42.873994+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "236a49acacecab6d61f47067d721b7e0f45d3e136d890a4f92df1e4a50cb1986"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://github.com/jagberg/Me.OpenClaw",
+    "source_title": "Me.OpenClaw公开README",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T00:15:33.845722+00:00",
+    "source_sha256": "0b0f7f09763f1876ff55942c17104d3dae6048b146a08c0efe1bb8f04ebfa92e",
+    "steps": [
+      {
+        "en": "Start from an uploaded bank CSV, identify veterinary charges, and match them to invoice attachments.",
+        "zh": "从上传的银行CSV开始，识别兽医支出，并匹配发票附件。"
+      },
+      {
+        "en": "Extract the invoice fields, prepare claim PDFs and stage Gmail drafts for human review.",
+        "zh": "提取发票字段，准备理赔PDF，并建立供人审阅的Gmail草稿。"
+      },
+      {
+        "en": "Record insurer-reply events and compare settlement figures; surface ambiguous matches and assessment differences for review.",
+        "zh": "记录保险方回复事件并核对结算数字，将模糊匹配和评估差异交给人复核。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "对重复、多发票的理赔整理有辅助价值，但仍需核对，未测得节时或赔付改善。",
+    "audience": "有多份兽医发票、能确认保单和材料的宠物主人。",
+    "use": "匹配交易与发票、准备表单和邮件草稿、记录回复状态。",
+    "benefit": "有机会减少重复录入与漏附件，尚无独立收益或节时测量。",
+    "setup_cost": "准备脱敏CSV、发票、空白保险表和需人确认字段，实际邮箱授权另行核实。",
+    "maintenance_cost": "检查失效授权、配额、重复邮件、附件和状态事件，持续人工复核。",
+    "frequency": "按账单与补件需要使用，不必为低频理赔强行维持十五分钟轮询。",
+    "privacy_risk": "邮件、银行导出、发票和保单字段需限制共享；不保存银行登录并非没有其他敏感数据。",
+    "error_risk": "错配宠物、重复申报、发票与申报小计混用、旧邮件状态倒退。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S01d5d046cc04",
+      "S6dcb5626c60a",
+      "Se7ad574b4f85"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站提供的OpenClaw试用模板已保存在归档，不是作者实际完整配置。",
+    "prerequisites": "脱敏交易、发票、空白表、人工确认的宠物/保单字段与历史状态样例。",
+    "tools": "可先用现有工具离线核对资料；连接邮箱、使用模型或填PDF的能力需另核实。",
+    "expected_result": "匹配表、待确认项、表单与邮件草稿及附件清单；自编模板未实测，不承诺获赔。",
+    "prompts": [
+      {
+        "title": "用脱敏资料整理宠物理赔草稿",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非源站/作者原话，未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S01d5d046cc04",
+          "S6dcb5626c60a",
+          "Se7ad574b4f85"
+        ],
+        "text": "请仅使用我提供且已脱敏的[银行CSV、发票、空白理赔表、保单中需填字段、历史状态样例]整理一份待人工确认的宠物保险理赔材料。按交易、发票号、宠物与就诊日期匹配，列出银行支出、发票金额、拟申报小计和证据，不能把它们混为同一数值。金额不匹配、一笔付款多宠物、附件缺失或字段未知时单列问题，不猜诊断、保单覆盖或收款信息。排除自己发出的索票邮件，已结算项目不能因旧确认信退回处理中。输出表单草稿、附件清单、邮件正文草稿及逐项确认表后停止。不要登录银行或邮箱、读取或创建凭据、调用额外付费模型API、提交理赔或发送消息；由我自行核对并决定后续。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：单份材料整理",
+      "currency": "USD",
+      "unit": "份",
+      "price": 35,
+      "api_cost": 2,
+      "human_cost": 7.5,
+      "other_variable_cost": 2,
+      "acquisition_cost": 5,
+      "contribution_before_fixed_cost": 18.5,
+      "assumptions": "人工15分钟×30美元/小时，均为假设；复杂单1小时人工使贡献变为-4美元。未扣固定费和税费。"
+    },
+    {
+      "scenario": "假设：一次设置服务",
+      "currency": "USD",
+      "unit": "次",
+      "price": 400,
+      "api_cost": 20,
+      "human_cost": 280,
+      "other_variable_cost": 10,
+      "acquisition_cost": 40,
+      "contribution_before_fixed_cost": 50,
+      "assumptions": "人工8小时×35美元，均为假设；多2小时返工后贡献-20美元。不包含长期无限维护。"
+    }
+  ],
+  "limitations": "未检查真实银行、邮箱、保单、账单或批准信，未核验结算款到账；技术文档与作者运行自述不是独立效果验证，具体保险方流程、地区和商业使用条件仍需核实。",
+  "archive_source_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
+  "translation_sha256": "ae8c30ff8315bae1b70a16f457f226fc7b6762ffe9c20884ac76180f0838c5b2"
+}
