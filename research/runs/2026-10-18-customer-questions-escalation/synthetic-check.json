@@ -1,0 +1,141 @@
+{
+  "checked_at": "2026-10-18T03:00:29.281002+00:00",
+  "scope": "Fictional products, prices, questions, orders and event labels only. No actual chat, payment, account, customer, model or platform execution.",
+  "five_question_fixtures": [
+    {
+      "fixture": "FQ1",
+      "kind": "price",
+      "state": "grounded_draft",
+      "price": 100,
+      "source_version": "v2",
+      "scope": "Direct fixture rules, no language model or real customer query"
+    },
+    {
+      "fixture": "FQ2",
+      "kind": "price",
+      "state": "unknown_source_human_pending",
+      "price": null,
+      "source_version": "v1",
+      "scope": "Direct fixture rules, no language model or real customer query"
+    },
+    {
+      "fixture": "FQ3",
+      "kind": "refund",
+      "state": "human_pending_no_bot_reply",
+      "price": null,
+      "source_version": null,
+      "scope": "Direct fixture rules, no language model or real customer query"
+    },
+    {
+      "fixture": "FQ4",
+      "kind": "human",
+      "state": "human_pending_no_bot_reply",
+      "price": null,
+      "source_version": null,
+      "scope": "Direct fixture rules, no language model or real customer query"
+    },
+    {
+      "fixture": "FQ5",
+      "kind": "payment_screenshot",
+      "state": "proof_received_not_paid",
+      "price": null,
+      "source_version": null,
+      "scope": "Direct fixture rules, no language model or real customer query"
+    }
+  ],
+  "ownership_checks": [
+    {
+      "action": "human_requested",
+      "owner": "human_pending",
+      "epoch": 1,
+      "old_bot_draft_accepted": false
+    },
+    {
+      "action": "human_claimed",
+      "owner": "human",
+      "epoch": 2,
+      "matching_epoch_bot_reply_accepted": false
+    },
+    {
+      "action": "explicit_human_release",
+      "owner": "bot",
+      "epoch": 3,
+      "new_bot_draft_accepted": true,
+      "old_bot_draft_accepted": false
+    }
+  ],
+  "payment_event_checks": [
+    {
+      "event": "E1",
+      "sequence": 1,
+      "state": "proof_pending_review",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E1",
+      "sequence": 1,
+      "state": "exact_event_duplicate",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E2",
+      "sequence": 2,
+      "state": "untrusted_fixture_rejected",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E3",
+      "sequence": 3,
+      "state": "mismatch_pending_review",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E4",
+      "sequence": 4,
+      "state": "mismatch_pending_review",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E5",
+      "sequence": 5,
+      "state": "mismatch_pending_review",
+      "payment_confirmed_in_fixture": false
+    },
+    {
+      "event": "E6",
+      "sequence": 6,
+      "state": "confirmed_only_in_fixture",
+      "payment_confirmed_in_fixture": true
+    },
+    {
+      "event": "E0",
+      "sequence": 0,
+      "state": "stale_event_ignored",
+      "payment_confirmed_in_fixture": true
+    }
+  ],
+  "notice_drafts": 1,
+  "notice_sends": 0,
+  "source_screenshot_not_paid": true,
+  "owner_and_epoch_both_required": true,
+  "duplicate_and_stale_events_handled": true,
+  "authentication_scope": "trusted flag is an assumption in synthetic fixture, not HMAC/signature verification. No secret/credential generated, provider event mapping or real settlement checked.",
+  "cost_checks": [
+    {
+      "scenario": "假设：月度客服行政维护",
+      "unit": 144,
+      "monthly": 1140
+    },
+    {
+      "scenario": "假设：一次性设置",
+      "unit": 260,
+      "monthly": 220
+    }
+  ],
+  "labor_sensitivities_checked": true,
+  "reproduction": "Use only active matching catalog versions for drafts. Human request immediately pauses bot; ownership plus epoch checks discard stale/mismatched-owner output. Payment screenshot creates pending review and one notice draft only. Accept a fictional provider confirmation only if supplied trusted flag and order/amount/currency match; exact repeated event ID and lower sequence do not reapply. No network/sends.",
+  "extra_paid_api": false,
+  "new_credentials": false,
+  "financial_operations": false,
+  "real_messages_sent": false
+}

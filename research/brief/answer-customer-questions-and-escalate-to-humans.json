@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-customer-questions-and-escalate-to-humans",
+  "url": "https://agentusecases.ai/use-case/answer-customer-questions-and-escalate-to-humans",
+  "title": "用自建客服 agent 回答产品问题并转交人工",
+  "researched_at": "2026-10-18T02:59:36.391260+00:00",
+  "industry": "小企业客服知识整理与人工交接辅助",
+  "brief_reason": "X原帖依既有访问限制跳过；归档只有功能与交接说明，无结果指标、客户或单位经济证据。六份技术/竞争资料不足以替代原案例效果验证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收资料、付款证据与发言所有权，功能描述不足以证明经营价值",
+    "reason": "没有原帖核验、真实解决率、支付确认依据或净省时数据。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-customer-questions-and-escalate-to-humans",
+      "title": "Answer customer questions and escalate to humans",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:51:48.987178+00:00",
+      "archived_at": "2026-10-17T05:51:48.987178+00:00",
+      "archive_path": "registry/archives/answer-customer-questions-and-escalate-to-humans.json",
+      "sha256": "8660a809c4229a8201ba651f1eb19e298e48ca0174b36fecefce8195ef2c0ff4",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request",
+      "supports": "系统构建、付款凭证通知、人工接管与无结果指标的源站既有转述；不等于原帖已读或效果验证。"
+    },
+    {
+      "id": "registered-x-unread",
+      "kind": "primary",
+      "url": "https://x.com/Nueltek/status/2107162516572782829",
+      "title": "X 原帖（本轮未读取）",
+      "status": "skipped_previous_robots_restriction",
+      "fresh_attempt": false,
+      "sha256": null,
+      "supports": "仅保留登记链接；未重试、登录、换路或使用搜索摘要补原帖。"
+    },
+    {
+      "id": "S6cb4fd2aa905",
+      "kind": "primary",
+      "url": "https://docs.langchain.com/oss/python/langchain/human-in-the-loop",
+      "title": "Human-in-the-loop - Docs by LangChain",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:18.646210+00:00",
+      "sha256": "d4017ae8179feb17a3fd29e71244adf4ec39173dd0e3779a35e2cf60f0177819",
+      "supports": "LangChain官方工具调用暂停、持久化与恢复/拒绝的机制；不等于已完成客服对话接管，也不证明本案例使用LangChain。"
+    },
+    {
+      "id": "S6baaa6f45cc5",
+      "kind": "primary",
+      "url": "https://developers.chatwoot.com/api-reference/conversations/toggle-status",
+      "title": "Toggle Status - Chatwoot Developer Docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:22.862184+00:00",
+      "sha256": "2dfbc74314b53e070277c6dd828fea1b59f3fc90225ea17d35b2e4bb3d614b0b",
+      "supports": "Chatwoot官方会话状态open/resolved/pending/snoozed及重开行为；作为具体会话管理基线，状态接口本身不证明独占发言。"
+    },
+    {
+      "id": "Sf1e510a3e84f",
+      "kind": "primary",
+      "url": "https://docs.adyen.com/development-resources/webhooks/handle-webhook-events",
+      "title": "Handle webhook events | Adyen Docs",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:25.635796+00:00",
+      "sha256": "a680e4223c6ecd1e41c412bd0703ba3bfcf92c561aaf4db917ecb19307b5701c",
+      "supports": "Adyen官方回调真实性、存储/接收、顺序和重复处理；只是支付证据与通知处理对照，不推定案例付款方式或实际到账。"
+    },
+    {
+      "id": "S21bc2cd4aaf4",
+      "kind": "competitor",
+      "url": "https://www.intercom.com/pricing",
+      "title": "Intercom Pricing | Plans for every team size",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:28.179297+00:00",
+      "sha256": "80bd4580440e4a565cdf1c9b3edf3609565d9b10db31ea5d30112bae8a40c460",
+      "supports": "Intercom当前按席位、Fin outcome及渠道等收费，outcome定义包含部分handoff；作为竞争方案与计费口径，非案例使用证据。"
+    },
+    {
+      "id": "S50f7196cce5b",
+      "kind": "primary",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent",
+      "title": "/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:31.422893+00:00",
+      "sha256": "a0e1fa35d5447b90f5f6dedb8fde20cd0a588adcee7f2c47a8cf3a931a370615",
+      "supports": "n8n官方AI Agent连接模型与工具的机制；n8n仅源站推荐工具，不替代实际agent身份。"
+    },
+    {
+      "id": "S9c31625dedcc",
+      "kind": "primary",
+      "url": "https://n8n.io/pricing/",
+      "title": "n8n Plans and Pricing - n8n.io",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:57:34.171062+00:00",
+      "sha256": "fd1cfd1d5d8d0fe2724236c96ea20cf85bb9b26eaf39df77ecfb3e6390e016ba",
+      "supports": "n8n当前计划页以工作流执行说明收费，不能等同一条消息、一次转人工或全部模型/维护成本。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档只描述系统构建与人工交接，没有结果指标或不足记录。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "实际agent是自建或未命名，n8n只为源站推荐工具。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站转述收到付款截图时通知管理员，确认后索取订单，没有披露确认依据。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站模板要求五个示例问题，不能当已完成评测。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "LangChain官方HITL说明暂停工具调用、保存状态和恢复决策。",
+      "source_ids": [
+        "S6cb4fd2aa905"
+      ]
+    },
+    {
+      "statement": "Chatwoot官方状态有open/resolved/pending/snoozed，客户回复可重开snoozed会话。",
+      "source_ids": [
+        "S6baaa6f45cc5"
+      ]
+    },
+    {
+      "statement": "Adyen官方回调处理文档讨论真实性、重复与顺序。",
+      "source_ids": [
+        "Sf1e510a3e84f"
+      ]
+    },
+    {
+      "statement": "Intercom当前Fin outcome定义包括部分流程handoff，不等于纯自主解决。",
+      "source_ids": [
+        "S21bc2cd4aaf4"
+      ]
+    },
+    {
+      "statement": "n8n计划页按工作流执行说明计费，不等同消息或实际问题解决。",
+      "source_ids": [
+        "S9c31625dedcc"
+      ]
+    },
+    {
+      "statement": "n8n当前Agent文档说明连接模型和工具，不证明原案例架构。",
+      "source_ids": [
+        "S50f7196cce5b"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "构建说明与解决效果分开",
+      "body": "现有证据不足以支持商业投入，商业评分不评定。归档只描述产品/价格问答、追问、付款信息和人工接管流程，没有给出真实会话量、解决率、客户满意度、成交、错误或成本。原帖依既有X访问限制跳过，不能把源站转述当成作者方法已核验。没有报告不足，也不表示系统没有不足。可进一步验证的是资料追踪、交接和未知处理，而不是根据一段功能介绍承诺24小时自动解决业务问题。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "自建agent与n8n建议不同",
+      "body": "源站实际agent标为自建或未命名，n8n仅是Try it yourself的建议工具。本轮不把推荐平台写成已使用架构，也不从模板倒推出原作者提示词；author_method为unavailable、steps为空。当前n8n文档可说明另一种Agent与工具连接方式，但不证明本案例的模型、消息渠道、记忆、身份权限或看板实现。源站要求的五个示例问题是试用任务，不是有证据显示原作者已经做过的评测。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S50f7196cce5b"
+      ]
+    },
+    {
+      "id": "knowledge",
+      "title": "产品与价格回答要能追到版本",
+      "body": "拟议验收先定义可信产品目录、价格版本、生效时间和可答范围，再让每个草稿回答标出依据。用户聊天、截图和外部链接不能直接改写权威价目或付款指令。缺失、过期、冲突资料应转为待人工核对，而不是让模型补一个合理价格；多轮上下文也不能跨客户串用。当前n8n连接模型与工具的能力不能自动保证这些条件。合成检查只验证明确字段和版本规则，不测量模型理解、检索召回或实际回答质量。",
+      "source_ids": [
+        "S50f7196cce5b",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "handoff",
+      "title": "请求人工后谁能发言必须明确",
+      "body": "看板能显示聊天不等于接管成功。收到人工请求或退款/瑕疵等越界问题时，拟议流程先暂停机器人发言，记录待接管；人工确认领取后才进入人工所有状态，并在明确交还后恢复。正在生成的旧机器人草稿应因所有权版本变化被丢弃，避免人机同时回复。Chatwoot公开状态接口可作会话管理基线，但open/pending等标签不自动建立发言锁。LangChain工具暂停需要保存并恢复状态，其HITL机制也不等于完整客服所有权管理，更不能证明本案例已实现这些控制。",
+      "source_ids": [
+        "S6baaa6f45cc5",
+        "S6cb4fd2aa905",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "payment",
+      "title": "截图、通知和到账是不同证据",
+      "body": "源站描述收到付款凭证截图时通知管理员，确认后索取订单；未说明由谁、根据什么确认，因此不能把截图接收改写为自动到账核验。拟议流程应把截图视为客户提交的待核对材料，通知草稿、通知送达、可信后台确认和后续订单动作分开。Adyen官方回调文档要求检查消息真实性并处理重复和顺序，这说明接收某种消息与完成业务处理是不同层次；它不证明本案例用了Adyen，且不能把某个提供商的事件名直接套入未知付款方式。本轮不接入支付账户、处理资金、生成真实付款指令或验证任何人的凭证。",
+      "source_ids": [
+        "Sf1e510a3e84f",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "buyer",
+      "title": "人工与现成客服系统是具体基线",
+      "body": "潜在使用者是客服和运营人员，付款人可能是承担客服预算的店主或负责人；原案例没有可核验合同或付款客户。人工共享收件箱、标准FAQ，以及Chatwoot/Intercom等现成系统都是需要比较的基线。差异应来自可核对的知识维护、减少重复整理和交接成本，而不是默认多一个Agent就提高成交。Intercom当前页面按席位、outcome及部分渠道收费，Fin outcome定义包括某些流程交接；n8n计划页则讲工作流执行。不能把消息、执行、接管和实际解决当成同一个计费单位，也不把厂商计费outcome当作研究实测解决率。",
+      "source_ids": [
+        "S21bc2cd4aaf4",
+        "S6baaa6f45cc5",
+        "S9c31625dedcc",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "预算重点在人工接管和维护",
+      "body": "以下全为美元预算假设，不是厂商报价、作者收入或已实现利润。每客户每月399，平台/模型预算40、人工5小时乘30=150、其他25、获客40，单位贡献144；月10客户、固定300时贡献1140。人工10小时，单位负6、月负360。一次设置2000，测试用量40、人工35小时乘40=1400、其他100、获客200，贡献260；月2项固定300时贡献220。多10小时返工则单位负140、月负580。预算没有核实实际采购、消息量、重试、支付通道或税等额外费用，不能声称覆盖完整采购方案；付款截图整理也不是支付处理服务收入。",
+      "source_ids": [
+        "S9c31625dedcc",
+        "S21bc2cd4aaf4",
+        "Sf1e510a3e84f"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "证据等级、验收与停止条件",
+      "body": "本轮在公开网页、GitHub和Hacker News方向检索Nueltek客服流程，取得同名机构或其他项目线索，没有取得可归属于本案例的独立实际付费结果。未访问X，也不拿其他网站或搜索摘要充当原帖镜像。六份已读一手/竞争资料支持有限技术和成本分析，不能填补案例效果缺口，故保存schema-1简版。下一步只用虚构目录、消息ID和事件测试五个问答/接管场景、截图不等于到账、重复/乱序以及所有权变化后的旧草稿。若价格缺依据、支付材料被自动当已付、人机双发、通知未知当成功或人工成本超过预算，应停止扩展。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S6cb4fd2aa905",
+        "S6baaa6f45cc5",
+        "Sf1e510a3e84f",
+        "S21bc2cd4aaf4",
+        "S50f7196cce5b",
+        "S9c31625dedcc"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-customer-questions-and-escalate-to-humans",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "8660a809c4229a8201ba651f1eb19e298e48ca0174b36fecefce8195ef2c0ff4",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "54ee8e9ca1907bbd3376e0c6430b861899386be1dd1133eca456dfd886e94f9a",
+      "How it went": "d3ed3b8796023ea9306793139f4c5dc455147e16caddf4caf3c8ccaa35e23399"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a customer support workflow for [my business] that answers questions about products and pricing from this info: [paste product and price list or FAQ link]. It should handle follow-up questions, share payment details [payment instructions] when a customer is ready, and notify [admin contact] when someone sends proof of payment. If it can't answer or the customer asks for a person, hand off to a human with the conversation attached. Test it with five sample questions and show me the results before connecting it to real customers.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/answer-customer-questions-and-escalate-to-humans",
+    "observed_at": "2026-10-17T05:51:48.987178+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "765b2fcb1a602efbe8e0c753f08b4dbe5033d5920279d063d0e135f17b2a47e0"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/Nueltek/status/2107162516572782829",
+    "source_title": "X 原帖（本轮未读取）",
+    "steps": [],
+    "unavailable_reason": "Skipped under existing X robots restriction, without fresh request, retry, mirror, login or invented author steps. Aggregator narrative and n8n template remain separate."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能辅助整理FAQ和交接，但资料准确性、净省时与实际服务效果未验证。",
+    "audience": "能够维护可信产品目录、处理人工接管的成年运营或客服人员。",
+    "use": "只用虚构问答与事件验收资料追踪、交接所有权和未知处理。",
+    "benefit": "可能减少重复行政整理；未测量解决率、满意度、成交或节省时长。",
+    "setup_cost": "目录版本、生效时间、可答范围、人工队列、发言所有权及合成验收表。",
+    "maintenance_cost": "产品/价格更新、异常和退款复核、接口变化、消息重试及成本监测。",
+    "frequency": "先按虚构批次验收；没有持续真实使用效果证据。",
+    "privacy_risk": "聊天、订单和付款材料可能敏感；本轮不读取、接入、上传或发送真实材料。",
+    "error_risk": "旧价格、截图当到账、人机双发、重复通知与跨会话信息混用。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S6cb4fd2aa905",
+      "S6baaa6f45cc5",
+      "Sf1e510a3e84f",
+      "S21bc2cd4aaf4",
+      "S50f7196cce5b",
+      "S9c31625dedcc"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站完整n8n模板保留在原文及忠实译文；不是作者实际提示词或已运行测试。",
+    "prerequisites": "纯虚构目录、五个问题、消息ID、截图类型标签和人工事件，不含真实客户或付款资料。",
+    "tools": "现有本地Python标准库；不接入n8n、模型、聊天平台或支付系统。",
+    "expected_result": "合成状态表、可信目录版本、所有权与未知项，不产生真实回复、付款或客户效果。",
+    "prompts": [
+      {
+        "title": "用虚构问答验收人工接管",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S6cb4fd2aa905",
+          "S6baaa6f45cc5",
+          "Sf1e510a3e84f",
+          "S50f7196cce5b"
+        ],
+        "text": "仅使用[虚构产品目录、版本/生效日期、五条虚构客户问题、消息ID及人工标注事件]设计离线客服验收。实际agent保持自建/未命名，n8n仅为源站推荐，不声称原作者用了它。对每个产品/价格草稿列可信目录版本；缺失、过期或冲突转人工，不根据聊天或截图改付款信息。客户要求人工、退款或未知问题时先暂停机器人，人工领取后仅人工可回复；交还时变更所有权版本，旧草稿不得发送。把虚构付款截图接收、管理员通知草稿、可信确认和订单动作分别标状态，截图不得自动变成已付款。检查重复、乱序、旧草稿和通知未知。不得请求或读取真实客户聊天、凭证、账户或收款信息，不登录、接入渠道/支付/CRM、不注册、创建凭据、购买、调用付费API、收退款或发送任何消息。输出合成状态表、未知项及人工核对问题后停止。本模板为研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：月度客服行政维护",
+      "currency": "USD",
+      "unit": "客户/月",
+      "price": 399,
+      "api_cost": 40,
+      "human_cost": 150,
+      "other_variable_cost": 25,
+      "acquisition_cost": 40,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 300,
+      "contribution_before_fixed_cost": 144,
+      "monthly_contribution_before_tax": 1140,
+      "assumptions": "全部为预算假设，人工5小时×30；增至10小时则单位-6、月-360。采购、消息量、支付通道、税等未知费用不含，不是厂商报价、支付服务收入或实测利润。"
+    },
+    {
+      "scenario": "假设：一次性设置",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 2000,
+      "api_cost": 40,
+      "human_cost": 1400,
+      "other_variable_cost": 100,
+      "acquisition_cost": 200,
+      "units_per_month": 2,
+      "fixed_monthly_cost": 300,
+      "contribution_before_fixed_cost": 260,
+      "monthly_contribution_before_tax": 220,
+      "assumptions": "全部为预算假设，人工35小时×40；多10小时返工则单位-140、月-580。实际采购与额外费用未核实，未验证客户付款。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"Nueltek\" \"customer support\" review -site:x.com -site:reddit.com -site:substack.com",
+        "outcome": "未取得可归属本案例的独立付费使用结果。"
+      },
+      {
+        "channel": "GitHub公开代码",
+        "query": "\"Nueltek\" \"support\" site:github.com",
+        "outcome": "取得其他项目或同名线索，不能当本客服系统的客户/部署证据。"
+      },
+      {
+        "channel": "Hacker News",
+        "query": "\"Nueltek\" site:news.ycombinator.com",
+        "outcome": "主要无关主题，未取得本案例独立用户结果。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified case-user or paid-customer evidence; no resolution or satisfaction estimate."
+  },
+  "limitations": "原帖未访问，作者方法不可用。未运行模型、平台或真实客服/支付工作流，不处理真实客户聊天、付款材料、收退款、订单或管理员通知。LangChain/Chatwoot/Adyen/n8n/Intercom只是技术或替代对照，不能推定本案例使用它们；合成检查不构成语言回答、到账、认证或生产可靠性验证。",
+  "archive_source_sha256": "8660a809c4229a8201ba651f1eb19e298e48ca0174b36fecefce8195ef2c0ff4",
+  "translation_sha256": "31d902cd9e0ea31ad2fc47cb01bde3c7a96c88dd5633fd563b181abed863281d"
+}
