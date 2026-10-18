@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+  "observed_at": "2026-10-18T06:13:15.017690+00:00",
+  "html_sha256": "2c52f14ac7195c4a452d636efe867bbc5a32c89a69b4f23bc2f8763c06d778ab",
+  "body_sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Sync Monday orders to Xero POs, invoices and bills",
+      "sha256": "ea71856ee0a2e49bf38a471c1a638589de65d728818020c94fd8e844189b2376"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Make.com setup for a client creates Xero purchase orders, emails client invoices, and matches supplier invoice uploads to bills, flagging failures for attention.",
+      "sha256": "d6743ebac893d6d7450f0537dab1da3a6b70af3f0c7fe8ce312b2874c33a378c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The setup uses three Make.com scenarios triggered by Monday webhooks. When a PO item is marked Ready, it finds or creates the supplier in Xero, creates the purchase order with line items, downloads the PDF back onto the Monday item, and creates the matching bill; a client-invoice flow does the reverse and emails the invoice, while a supplier-upload flow takes a PDF added by an employee and attaches it to the matching Xero bill by PO reference.",
+      "sha256": "eb1d3c715114af16a4f607989c37612c79ba2fa568f7795e3400419b72c466e2"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says all three flows were fully tested and running in production, with failures switching the Monday status to Needs Attention and adding a comment so staff can fix the data and retry. No results or volume numbers were given.",
+      "sha256": "d46914b698e10647032b3c4bcfa3e6f554273e10a25e6760d3d7a3b95e1cc541"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that autonomy depends on clean status-based retries in Monday, so staff correct the item there instead of debugging inside Make.com.",
+      "sha256": "d682989536187ac193d56db76c8d7c4c79231fb80bfb2f1fab89208f75bb8836"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Make"
+      ],
+      "sha256": "0509e922cf9bb48aa8c605e35ac20ee21e9dc52eb40ca4f40974367fcc19533a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/mondaydotcom/comments/1tgn8rm/built_a_monday_xero_automation_in_makecom_sharing"
+      ],
+      "sha256": "6f10587f1b04c86309f67cadba06c29825635384b8a0b3de5ee01bc524a0242c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-17",
+      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3f0d821d5d8ec122e295d8fb070df1580c525f85fa96f2c39c634fba1b8c8f61",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Sync Monday orders to Xero POs, invoices and bills\nA Make.com setup for a client creates Xero purchase orders, emails client invoices, and matches supplier invoice uploads to bills, flagging failures for attention.\nDone with\nMK\nMake\nWhat they did\nThe setup uses three Make.com scenarios triggered by Monday webhooks. When a PO item is marked Ready, it finds or creates the supplier in Xero, creates the purchase order with line items, downloads the PDF back onto the Monday item, and creates the matching bill; a client-invoice flow does the reverse and emails the invoice, while a supplier-upload flow takes a PDF added by an employee and attaches it to the matching Xero bill by PO reference.\nHow it went\nThe author says all three flows were fully tested and running in production, with failures switching the Monday status to Needs Attention and adding a comment so staff can fix the data and retry. No results or volume numbers were given.\nWorth knowing\nThe main catch is that autonomy depends on clean status-based retries in Monday, so staff correct the item there instead of debugging inside Make.com.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a Make scenario that watches my Monday.com board [board name] and, when an item reaches [status], creates a purchase order in Xero from its details and emails the client invoice. Also match supplier invoice files uploaded to [folder or column] to the right Xero bill, and post any failures or mismatches to [Slack channel or email] instead of guessing. Create the Xero records and emails in test mode first and show me a sample of each before turning anything live.\nOriginal source: https://www.reddit.com/r/mondaydotcom/comments/1tgn8rm/built_a_monday_xero_automation_in_makecom_sharing",
+    "body_sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+    "archived_at": "2026-10-18T06:13:15.017690+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T06:13:15.017690+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

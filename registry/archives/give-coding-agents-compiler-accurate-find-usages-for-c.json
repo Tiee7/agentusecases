@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-coding-agents-compiler-accurate-find-usages-for-c",
-  "observed_at": "2026-10-17T05:22:59.030235+00:00",
-  "html_sha256": "677b78f6227b13dd6613a1f855f0bf5fc35be2f56d7b2364b72720961e0b1893",
+  "observed_at": "2026-10-18T05:30:08.982358+00:00",
+  "html_sha256": "0128530278bdc7dbf6f42935b99081dd20999ec931c805d6a4e37cfcbf3144ab",
   "body_sha256": "a758dbfbac0192834c0ae5ffa951d9999acb028501838a49d5fac23b78be331e",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Give coding agents compiler-accurate Find Usages for C#\nGraphify C# lets coding agents find symbol usages in C# codebases with compiler-level accuracy.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou install a .NET global tool and run it on a .sln or .csproj. It loads the project through MSBuild and asks Roslyn to resolve every symbol. The output is one JSON file of nodes and edges (calls, references, implements, inherits, overrides). An included skill file tells Codex or Claude Code when to refresh the index and how to follow the edges. An optional watcher keeps the index current.\nHow it went\nThe README's example is an internal method whose single compiler-resolved caller was a test, which shows how test-only usage can be spotted. It gives no benchmarks. Reflection, dependency injection and dynamic calls are not captured.\nWorth knowing\nZero inbound edges means only zero observed static references, so deletion candidates still need human judgment. SDKs, packages and MSBuild inputs must be available locally.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my C# solution at [path], find every usage of [class or method name], including interface implementations and overrides, using the compiler's semantic info (for example Roslyn) rather than text search. Give me a list of file and line for each usage, grouped by project. Do not edit any files; stop once the list is complete and tell me how you verified it was accurate.\nOriginal source: https://github.com/zachsaw/graphify-csharp",
     "body_sha256": "a758dbfbac0192834c0ae5ffa951d9999acb028501838a49d5fac23b78be331e",
-    "archived_at": "2026-10-17T05:22:59.030235+00:00",
+    "archived_at": "2026-10-18T05:30:08.982358+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:22:59.030235+00:00",
+    "at": "2026-10-18T05:30:08.982358+00:00",
     "status": "fetched",
     "error": null
   }

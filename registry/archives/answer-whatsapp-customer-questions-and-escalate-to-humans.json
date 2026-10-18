@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/answer-whatsapp-customer-questions-and-escalate-to-humans",
-  "observed_at": "2026-10-17T05:40:55.073645+00:00",
-  "html_sha256": "750512e743af37786781cadf339bde0ccdc7f6dcaf08fe25fe173d868f8b6a5d",
+  "observed_at": "2026-10-18T05:48:04.892447+00:00",
+  "html_sha256": "af5fe5f537baeecf91bf4bd935bfcd9aecd53b84fdb6ed8855b4c4495a9f27db",
   "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
   "status": "observed",
   "fields": {
@@ -95,13 +95,8 @@
     "language": "en",
     "body": "Answer WhatsApp customer questions and escalate to humans\nAn n8n and OpenAI agent answers WhatsApp questions from a knowledge base and escalates low-confidence cases to a human on Telegram with full context.\nDone with\nN8\nn8n\nWhat they did\nAn n8n workflow takes each incoming WhatsApp message and assembles the conversation history plus the company knowledge base. OpenAI drafts a reply grounded in that content, and a confidence check decides whether it can be answered reliably. Confident answers go back on WhatsApp. Otherwise the case goes to the human team on Telegram with the full conversation attached.\nHow it went\nThe README gives no measured results, only design goals: cover routine questions, give round-the-clock coverage, and keep a human on unreliable cases. The exported n8n workflow JSON was still being added.\nWorth knowing\nThe repo documents architecture only, with no workflow file yet and no description of how confidence is scored, so you would have to design that check yourself.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that answers customer questions on WhatsApp using an AI agent grounded in [my knowledge base, e.g. a Google Doc or FAQ sheet]. When the agent's confidence is low or the customer asks for a human, forward the full conversation to me on Telegram and let me reply from there. Done when a test question gets a correct answer and a deliberately tricky one gets escalated to me with context.\nOriginal source: https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
     "body_sha256": "04fd421345e540d9ca464de9786b7540286c91b4aa199e1aa4fa7800dd21e16d",
-    "archived_at": "2026-10-17T05:40:55.073645+00:00",
+    "archived_at": "2026-10-18T05:48:04.892447+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
-  },
-  "last_attempt": {
-    "at": "2026-10-17T05:40:55.073645+00:00",
-    "status": "fetched",
-    "error": null
   },
   "translation": {
     "status": "available",
@@ -112,5 +107,10 @@
     "body": "回答 WhatsApp 客户问题并升级转交人工\n一个由 n8n 和 OpenAI 构成的 agent 根据知识库回答 WhatsApp 问题，并将置信度较低的情况连同完整上下文升级转交给 Telegram 上的人工人员。\n实际使用\nn8n\n他们做了什么\n一个 n8n 工作流接收每条传入的 WhatsApp 消息，并汇集会话历史和公司知识库。OpenAI 根据这些内容起草回复，再由置信度检查决定能否可靠回答。有把握的答案会通过 WhatsApp 发回；否则，该事项会连同完整会话一起转交给 Telegram 上的人工团队。\n结果如何\nREADME 没有给出测量结果，只有设计目标：覆盖日常问题、提供全天候服务，并让人工负责不可靠的情况。导出的 n8n 工作流 JSON 仍在添加中。\n需要知道的事\n仓库只记录了架构，尚无工作流文件，也没有说明如何计算置信度，因此你需要自行设计这项检查。\n自己试试\n推荐工具\nn8n\n复制提示词\n请搭建一个 n8n 工作流，使用基于[我的知识库，例如 Google 文档或 FAQ 表]的 AI agent 在 WhatsApp 上回答客户问题。当 agent 的置信度较低，或客户要求人工时，请将完整会话转发给 Telegram 上的我，并让我从那里回复。当一个测试问题获得正确答案，且一个故意设计的棘手问题连同上下文被升级转交给我时，才算完成。\n原始来源：https://github.com/zezo640/whatsapp-ai-support-agent-n8n",
     "body_sha256": "10a8dce40feaa454106671a7fe0b448f26869ba06b04084ecc5ee4f1b6532ac4",
     "scope": "完整逐段翻译案例标题、简介、实际工具、方法、仅设计目标/JSON仍添加中的结果、置信度未说明限制、全量推荐提示词与知识库示例/低置信度或客户要求人工/完整会话/Telegram回复/两类测试完成条件和原始链接；只省略装饰性N8头像字样。固定提交审计、当前节点/计费/机器人文档及我们的分析未混入译文，不是外部README全文翻译。"
+  },
+  "last_attempt": {
+    "at": "2026-10-18T05:48:04.892447+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

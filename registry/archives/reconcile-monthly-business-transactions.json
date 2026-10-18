@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reconcile-monthly-business-transactions",
-  "observed_at": "2026-10-17T05:26:50.965155+00:00",
-  "html_sha256": "074254d51ed7c14ceb3125530de2bc88bd833112951d30e12f7f3b87bc26dd5e",
+  "observed_at": "2026-10-18T05:34:00.872779+00:00",
+  "html_sha256": "4ec962b9bb5eb453139aa0a1545ca553a28bcb0d8a6445d42bacfebce239ff06",
   "body_sha256": "690d4896df8e90c1c7d369e43d64cd199c002f1730e8d346fd6fcde6c013adaf",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Reconcile monthly business transactions\nClaude Code pulled a month of transactions over MCP and matched bank rows to receipts, proposing categories; it reconciled 200 rows but miscategorized 11, caught in a manual audit.\nDone with\nCC\nClaude Code\nWhat they did\nRather than pasting a CSV into chat, the author had Claude Code build a re-runnable pipeline. It pulled the month's transactions from the accounting platform over MCP, matched bank rows to receipts by amount and date, drafted a category with a reason for each row, and flagged rows it was unsure about. The author reviewed the flagged rows and sampled the rest.\nHow it went\nIt reconciled 200 transactions and miscategorized 11 (94.5%). The errors were judgment calls: 5 on business intent, 4 on local tax rules, 2 on edge cases. Seven of the 11 were already in its flagged set of 18.\nWorth knowing\nTelling the agent never to guess silently turned a 200-row audit into an 18-row review plus a sample. Even so, four errors surfaced only in the spot-check.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReconcile my business transactions for [month] using [bank export/accounting tool] and the receipts in [folder]. Match each bank row to a receipt, propose a category from [my chart of accounts], and mark low-confidence matches separately. Don't post or change anything in my books. You're done when I have a table of matches and a list of items needing my review, so I can spot-check the categories.\nOriginal source: https://dev.to/kenimo49/i-let-claude-code-run-a-month-of-my-business-books-it-reconciled-200-transactions-and-513d",
     "body_sha256": "690d4896df8e90c1c7d369e43d64cd199c002f1730e8d346fd6fcde6c013adaf",
-    "archived_at": "2026-10-17T05:26:50.965155+00:00",
+    "archived_at": "2026-10-18T05:34:00.872779+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:26:50.965155+00:00",
+    "at": "2026-10-18T05:34:00.872779+00:00",
     "status": "fetched",
     "error": null
   }

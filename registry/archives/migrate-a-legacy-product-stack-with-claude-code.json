@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-a-legacy-product-stack-with-claude-code",
-  "observed_at": "2026-10-17T05:34:17.039261+00:00",
-  "html_sha256": "6673317ad62f51f4f7a768c08293fd270f075d9136bd7af29fc120b5e47f7b2d",
+  "observed_at": "2026-10-18T05:41:26.990028+00:00",
+  "html_sha256": "e18dd2f562fb613f3c82264a35856b3507367804ff6a06747980faa267238862",
   "body_sha256": "2c9bff015354b83e86f9f11438c362e0a46d4650083d776262de6b6ac4885eee",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate a legacy product stack with Claude Code\nAn engineer ran a proof-of-concept that consolidated 4 repos into 2, moved MySQL to PostgreSQL, upgraded frameworks and replaced the auth model, in about 15 work days.\nDone with\nCC\nClaude Code\nWhat they did\nThe engineer wrote layered CLAUDE.md context files and gave Claude Code the legacy repos, read-only MySQL and PostgreSQL connections, and a reference implementation. Claude drafted the design, and parallel reviewer agents stress-tested it. Claude then made 19 Jira tickets. Each ticket got a design doc and plan doc that he reviewed, then ran in its own git worktree, with CI monitored through a loop.\nHow it went\nAbout 15 work days produced roughly 50 tickets and 580 passing tests, with 95%+ API coverage and zero bugs or vulnerabilities at QA handoff. AI review caught only 30-40% of issues, and the Jira MCP could not link tickets.\nWorth knowing\nCost was close to $5,000 in Bedrock tokens, mostly up front. Also, the Confluence MCP silently truncated pages over about 5KB, overwriting two large design docs.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want a proof-of-concept migration of [legacy product] from [current stack, e.g. 4 repos, MySQL, old framework version] to [target stack, e.g. 2 repos, PostgreSQL, current framework]. Start by reading the codebases and writing a phased migration plan with risks, then execute the first phase on a new branch with tests passing. Pause for my review before merging anything or running changes against any real database.\nOriginal source: https://dev.to/aws-builders/the-setup-is-the-strategy-how-i-orchestrated-a-product-migration-with-claude-code-b92",
     "body_sha256": "2c9bff015354b83e86f9f11438c362e0a46d4650083d776262de6b6ac4885eee",
-    "archived_at": "2026-10-17T05:34:17.039261+00:00",
+    "archived_at": "2026-10-18T05:41:26.990028+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:34:17.039261+00:00",
+    "at": "2026-10-18T05:41:26.990028+00:00",
     "status": "fetched",
     "error": null
   }

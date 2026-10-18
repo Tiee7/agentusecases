@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/validate-invoices-against-inventory-and-create-purchase-orde",
-  "observed_at": "2026-10-17T05:40:25.074482+00:00",
-  "html_sha256": "a05fdc2d7bd1ecfcd724eba0da244c40606dcb4aa2059b5beeedf7033db5f4b5",
+  "observed_at": "2026-10-18T05:47:34.967773+00:00",
+  "html_sha256": "1d2bf9431a9ff7b6400add14cdd99eef9423fba613d568daefb089b7a977762d",
   "body_sha256": "47a295503c83bddfd1780d5c5e546ce708f5510391ee45988a51938ed00f97a6",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Validate invoices against inventory and create purchase orders\nAn n8n workflow built for a client matches invoice data to a Google Sheets inventory, creates ERP purchase orders and notifies purchasing; about 90% of invoices are handled automatically.\nDone with\nN8\nn8n\nWhat they did\nA 23-node n8n workflow watches the client's Gmail for invoice emails, pulls out the PDF attachments and sends them to OpenAI's vision model to extract vendor, amount, items and dates. It checks the data against a Google Sheets inventory. If items match and amounts look reasonable, it creates an ERP purchase order, posts to Slack and replies to the sender.\nHow it went\nThe client went from manually handling 40-50 invoices a week to about 90% processed automatically, saving roughly 8-10 hours weekly. The author built it in 3 days, mostly handling edge cases, then trained the operations manager in about 2 hours.\nWorth knowing\nn8n counts every node run as an execution, so each invoice uses about 23. At 200 invoices a month, the author says the Pro plan is the minimum.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that triggers when a new invoice arrives at [email inbox or folder], extracts the vendor, line items and quantities, and checks them against my inventory in [Google Sheets link]. If items are low or match a reorder rule, create a purchase order in [ERP or tool] and notify [purchasing contact] on [Slack or email]. Send anything it can't match to a review list instead of acting on it, and pause to show me the purchase order it is about to create before you enable the live version.\nOriginal source: https://dev.to/nova_gg/n8n-review-2026-i-used-it-for-8-months-to-build-ai-agents-honest-verdict-kif",
     "body_sha256": "47a295503c83bddfd1780d5c5e546ce708f5510391ee45988a51938ed00f97a6",
-    "archived_at": "2026-10-17T05:40:25.074482+00:00",
+    "archived_at": "2026-10-18T05:47:34.967773+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:40:25.074482+00:00",
+    "at": "2026-10-18T05:47:34.967773+00:00",
     "status": "fetched",
     "error": null
   }

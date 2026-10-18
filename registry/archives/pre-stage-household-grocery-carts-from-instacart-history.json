@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/pre-stage-household-grocery-carts-from-instacart-history",
-  "observed_at": "2026-10-17T05:31:19.034388+00:00",
-  "html_sha256": "697af4fa325a7830a9247070fa6bab3f9b1ea0241199cd0824ae3d0dd73a7e62",
+  "observed_at": "2026-10-18T05:38:28.935757+00:00",
+  "html_sha256": "4d84ea56444826049b2d2145290cabc5bf329cb431abd3fb67f2aea974cafac6",
   "body_sha256": "e185ecbff675112b77734f486efb7060c47d0fcddecfedf5181bcb5914b88e2f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Pre-stage household grocery carts from Instacart history\nAn OpenClaw add-on scrapes Instacart order history, predicts what the household is running out of, fills the cart twice weekly and texts; nothing ships until the user taps Place Order.\nDone with\nOC\nOpenClaw\nWhat they did\nA nightly script imports each day's Instacart orders into a local SQLite database using Instacart's own item IDs, via a community CLI. A SQL analyzer takes the median days between purchases for each item and marks items due, soon, or not due. On Wednesday and Saturday at 7:45am, a script adds the due items to the cart by ID. At 8am it sends one iMessage. The CLI has no checkout action, so the user places the order.\nHow it went\nMoving from an LLM clicking through the browser to canonical IDs took accuracy from eleven of fourteen items wrong on a typical run to 100%. The loop is fully deterministic, with no LLM in it.\nWorth knowing\nThe earlier browser-clicking LLM version got most items wrong, so use item IDs rather than search. Setup is about 20 minutes, needs an active Instacart session, and the example scheduling uses macOS launchd.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nLook at my [Instacart] order history, work out what my household is likely running low on, and fill a cart for [store] with those items twice a week. Text me a summary of the cart with quantities and the total. Don't place the order. Wait for me to confirm it.\nOriginal source: https://github.com/kmanan/spratt-skills",
     "body_sha256": "e185ecbff675112b77734f486efb7060c47d0fcddecfedf5181bcb5914b88e2f",
-    "archived_at": "2026-10-17T05:31:19.034388+00:00",
+    "archived_at": "2026-10-18T05:38:28.935757+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:31:19.034388+00:00",
+    "at": "2026-10-18T05:38:28.935757+00:00",
     "status": "fetched",
     "error": null
   }

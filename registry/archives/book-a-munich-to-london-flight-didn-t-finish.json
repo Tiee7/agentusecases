@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/book-a-munich-to-london-flight-didn-t-finish",
+  "observed_at": "2026-10-18T06:13:28.979824+00:00",
+  "html_sha256": "185412e986025129f940d1eee13f9413f045a06f61511525a3b0b4f973f16fb9",
+  "body_sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Book a Munich to London flight (didn't finish)",
+      "sha256": "a55e54406d7b2268db7269da94062d7618d510d08d75f931e244743674336c5e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The user asked an AI agent to book a flight from Munich to London; it searched the airline site but couldn't complete the booking.",
+      "sha256": "4bbcc3241d7415b1e35a12f3ddb89cb00c951a930e6fe35c0df9b960b2f14075"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user told an AI agent to book a Munich-to-London flight for the 25th. It found options on Google Flights in about ten seconds, then tried airline and travel sites to complete the purchase, but British Airways, Lufthansa, easyJet, Kayak, Skyscanner, and Expedia all blocked or challenged it; Kiwi’s MCP server was the only route that returned flights and a handoff link for the user to finish entering passenger details.",
+      "sha256": "60f259589b2fb971030b6679b2d68f9df0fd6c2336f0ad3d1841eba63d2e574c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It never reached the passenger-details page on the normal booking sites, so it did not complete the booking. The only successful step was Kiwi’s MCP server, which returned 15 flights in under four seconds and a link for manual checkout.",
+      "sha256": "dda08549c1d12b858e1dad9a3b12460206817d355bb2f4cce9cb45bb3ca6eb51"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The post says no CAPTCHA solving or pretending to be a person was allowed, which appears to be the key constraint that kept the agent from finishing.",
+      "sha256": "ca590e949f438fb733afb7df7e9968db84932c2325d8a389664b9df54cd7dd76"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/agi/comments/1x7sd1q/i_asked_an_ai_agent_to_book_my_flight_and_it"
+      ],
+      "sha256": "bb8efbcacf27b9c7e470dab400ea34cf1132a01f70f294b237cbdcff6a835c7a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-17",
+      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ee62dd86f0f0b94e401595ae60ae05cc8e18c9b705671344375538fa12a1efe0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book a Munich to London flight (didn't finish)\nThe user asked an AI agent to book a flight from Munich to London; it searched the airline site but couldn't complete the booking.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user told an AI agent to book a Munich-to-London flight for the 25th. It found options on Google Flights in about ten seconds, then tried airline and travel sites to complete the purchase, but British Airways, Lufthansa, easyJet, Kayak, Skyscanner, and Expedia all blocked or challenged it; Kiwi’s MCP server was the only route that returned flights and a handoff link for the user to finish entering passenger details.\nHow it went\nIt never reached the passenger-details page on the normal booking sites, so it did not complete the booking. The only successful step was Kiwi’s MCP server, which returned 15 flights in under four seconds and a link for manual checkout.\nWorth knowing\nThe post says no CAPTCHA solving or pretending to be a person was allowed, which appears to be the key constraint that kept the agent from finishing.\nTry it yourself\nwith\nOperator\nCopy prompt\nFind the best nonstop or one-stop flight from [origin city] to [destination city] on [date], returning [date or one-way], for [number] traveler(s). Compare options on Google Flights and the airline's own site, then take me to the checkout page for the one you recommend. Pause before entering any payment details or submitting the booking, and show me the fare, times, and baggage rules first.\nOriginal source: https://www.reddit.com/r/agi/comments/1x7sd1q/i_asked_an_ai_agent_to_book_my_flight_and_it",
+    "body_sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+    "archived_at": "2026-10-18T06:13:28.979824+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T06:13:28.979824+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

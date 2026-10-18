@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+  "observed_at": "2026-10-18T06:13:40.958808+00:00",
+  "html_sha256": "78a0ec121552b0370c1f61fc98d544c4a2e06e57f13472a70196fec2698a551b",
+  "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run each coding agent session in a cgroup that is killed on completion",
+      "sha256": "20f3e50f3c79f6eee23e8d31e490c3c86e6187bc0e636a6f6e8355286ffcd1e5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.",
+      "sha256": "37b2aff040d1f67aaaa62bea739132177974cb2592486533557c662022ca7838"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer traced heavy swapping to a RAM-backed tmpfs /tmp and to processes that earlier coding agents had forked and abandoned. They added a frequently run job that deletes tmp files unused for about two hours and not held open by any command. They also built their agent spawner to launch each session in its own cgroup, killing every process in it when the task finishes.",
+      "sha256": "1bcb21b2a83fcf8e0ba79f64041e078c4309f323495952b79ba716864ea744d1"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no measurements. It says the cleanup job and per-session cgroups addressed the swap usage and the leftover processes, but it is a brief forum comment with no before-and-after figures.",
+      "sha256": "1be701933a0fba9189440192bfcaae26697d10d3f9536d0b56018a6520ee3740"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Check whether swap is really coming from a RAM-backed tmpfs /tmp before blaming the agents; the cleanup job only removes files with no open handles.",
+      "sha256": "c4236b55b96f2ca7a63f275567f9e26254fcc96d6e1a944eb1ac51ab627b6ca7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50136354"
+      ],
+      "sha256": "5ada2cfbb32770c45d3f03b28185dcd62aba8dabdd972913ec94a3ef9d27bbd3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-17",
+      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d76b97fdba657d99c4415a1dcc7384106b0ec1d991f8aeff3df07056b954a12c",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run each coding agent session in a cgroup that is killed on completion\nA developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.\nDone with\nCX\nCodex\nWhat they did\nThe developer traced heavy swapping to a RAM-backed tmpfs /tmp and to processes that earlier coding agents had forked and abandoned. They added a frequently run job that deletes tmp files unused for about two hours and not held open by any command. They also built their agent spawner to launch each session in its own cgroup, killing every process in it when the task finishes.\nHow it went\nThe source gives no measurements. It says the cleanup job and per-session cgroups addressed the swap usage and the leftover processes, but it is a brief forum comment with no before-and-after figures.\nWorth knowing\nCheck whether swap is really coming from a RAM-backed tmpfs /tmp before blaming the agents; the cleanup job only removes files with no open handles.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval.\nOriginal source: https://news.ycombinator.com/item?id=50136354",
+    "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+    "archived_at": "2026-10-18T06:13:40.958808+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T06:13:40.958808+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

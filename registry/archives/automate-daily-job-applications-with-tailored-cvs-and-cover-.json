@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-daily-job-applications-with-tailored-cvs-and-cover-",
+  "observed_at": "2026-10-18T06:13:08.980387+00:00",
+  "html_sha256": "a826890202f28454ca5a11a9d636607e65de051c7837bbaefde8136f4c6ba56d",
+  "body_sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate daily job applications with tailored CVs and cover letters",
+      "sha256": "511f844f8099938aab0cfc986708db01558bb8c6f7ceafa84a5240f068c5d633"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n pipeline runs daily to search for jobs, adapt a CV and cover letter with AI, and send applications by email.",
+      "sha256": "459edfc81854dbdd69348c880559cec51971440e4c4b4042afff814f7f7a91b7"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The n8n workflow runs on a daily schedule, reads the applicant’s profile from sources like LinkedIn and a portfolio via Jina AI, generates job-search queries, pulls listings from an API, removes duplicates through Google Sheets, and has AI rank the best matches. For each selected role it drafts a tailored cover letter and, in the author’s setup, can edit a YAML CV in GitHub, trigger a GitHub Action to compile a PDF, then email the application pack; the human reviews the emailed package and applies through the job link.",
+      "sha256": "413dbf5acf6c83f611511a63992bd85da0f906db8b6e831f5e65568881b9bfb4"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says it handles the pipeline end to end in about 51 nodes, but not full submission: in practice the email goes to the author, who then applies manually because automating portal submissions without an API is described as nearly impossible. No interview or offer results are given.",
+      "sha256": "d086d0f3c2c4292b9d16f91c6163f1bb86bf6dc04182fbc8c86449b58b0a3d96"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author says building it took about two hours using their n8n-as-code helper, and the CV-editing GitHub subflow is optional and removable if you just attach a static PDF.",
+      "sha256": "dee3101245ff448d41833df0279346d7b1850f60cc8cb225fd7474a4733794dd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1r95t1k/i_built_a_fully_automated_job_application"
+      ],
+      "sha256": "2b8b6143cc89a44ff21f7f42b5d8b08dd41b326ca84a4710dfe3754434279b76"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-17",
+      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "9f4b36e5b393c8b992fc9e2993a54f9199376a7ed30d9e583bf9fdb5ddcb2656",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate daily job applications with tailored CVs and cover letters\nAn n8n pipeline runs daily to search for jobs, adapt a CV and cover letter with AI, and send applications by email.\nDone with\nN8\nn8n\nWhat they did\nThe n8n workflow runs on a daily schedule, reads the applicant’s profile from sources like LinkedIn and a portfolio via Jina AI, generates job-search queries, pulls listings from an API, removes duplicates through Google Sheets, and has AI rank the best matches. For each selected role it drafts a tailored cover letter and, in the author’s setup, can edit a YAML CV in GitHub, trigger a GitHub Action to compile a PDF, then email the application pack; the human reviews the emailed package and applies through the job link.\nHow it went\nThe author says it handles the pipeline end to end in about 51 nodes, but not full submission: in practice the email goes to the author, who then applies manually because automating portal submissions without an API is described as nearly impossible. No interview or offer results are given.\nWorth knowing\nThe author says building it took about two hours using their n8n-as-code helper, and the CV-editing GitHub subflow is optional and removable if you just attach a static PDF.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me a workflow that runs every day at [time], searches [job boards or sites] for [job title] roles in [location], and picks postings that match my CV at [link to CV file]. For each match, have the AI tailor my CV and write a cover letter, then prepare an application email to the contact in the posting. Don't send any email automatically; first post each draft with the job link to [Slack channel or my email] for my approval. The workflow is finished when one test run produces reviewed drafts for at least [number] jobs.\nOriginal source: https://www.reddit.com/r/n8n/comments/1r95t1k/i_built_a_fully_automated_job_application",
+    "body_sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+    "archived_at": "2026-10-18T06:13:08.980387+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T06:13:08.980387+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

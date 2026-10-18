@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/answer-data-questions-and-build-dashboards-from-the-warehous",
-  "observed_at": "2026-10-17T05:38:31.030275+00:00",
-  "html_sha256": "e6815c440ad7c18d2a76047d889d01a6e49f920b1f9b48a408e64bbf1aeb906b",
+  "observed_at": "2026-10-18T05:45:41.005317+00:00",
+  "html_sha256": "e40316317cf96294b56a8064ff68ff7c7bf5a8952f7091b532d79cf7bb06ffbf",
   "body_sha256": "893421cf7325a3e34547bb5f1e3e42c410cdf44f96481d2ab50915be7cd7e080",
   "status": "observed",
   "fields": {
@@ -95,13 +95,8 @@
     "language": "en",
     "body": "Answer data questions and build dashboards from the warehouse\nCognition's team uses a Devin variant called DANA to query their data warehouse, build dashboards and answer data questions, and Devin fills out report forms.\nDone with\nDE\nDevin\nWhat they did\nDANA is a Devin variant reached from the web app's agent picker or in Slack with /dana or @Devin !dana. It connects to the warehouse (Redshift, Postgres, Snowflake, BigQuery) through MCP and keeps its own knowledge of the schema. It runs SQL, returns concise answers with seaborn charts, and can build shareable Metabase dashboards.\nHow it went\nAd-hoc questions that used to wait days in an engineer's queue can now be answered by anyone in Slack, with the SQL included so the logic can be checked. The post gives no numbers for this.\nWorth knowing\nBe specific about metrics, include time periods, and ask for visualizations. Read the SQL that DANA returns to check its logic.\nTry it yourself\nwith\nDevin\nCopy prompt\nConnect to my data warehouse using the read-only credentials in [config file or env var] and answer this question: [business question, e.g. weekly signups by channel for the last 90 days]. Show me the SQL you used, the result table, and a simple chart or dashboard file I can open. Before running any query that writes or modifies data, stop and ask me; otherwise you're done when I have a verified answer and the query saved in [folder].\nOriginal source: https://cognition.com/blog/how-cognition-uses-devin-to-build-devin",
     "body_sha256": "893421cf7325a3e34547bb5f1e3e42c410cdf44f96481d2ab50915be7cd7e080",
-    "archived_at": "2026-10-17T05:38:31.030275+00:00",
+    "archived_at": "2026-10-18T05:45:41.005317+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
-  },
-  "last_attempt": {
-    "at": "2026-10-17T05:38:31.030275+00:00",
-    "status": "fetched",
-    "error": null
   },
   "translation": {
     "status": "available",
@@ -112,5 +107,10 @@
     "body": "查询数据仓库中的数据问题并构建看板\nCognition 团队使用一个名为 DANA 的 Devin 变体来查询数据仓库、构建看板并回答数据问题，Devin 还会填写报表表单。\n实际使用\nDevin\n具体做法\nDANA 是一个 Devin 变体，可从网页应用的 agent 选择器中访问，也可在 Slack 中通过 /dana 或 @Devin !dana 调用。它通过 MCP 连接数据仓库（Redshift、Postgres、Snowflake、BigQuery），并维护自己对数据结构的认识。它执行 SQL，用 seaborn 图表给出简洁的答案，还能构建可分享的 Metabase 看板。\n结果如何\n过去需要在工程师的任务队列中等待几天的临时问题，现在任何人都可以在 Slack 中获得答案，而且回答附带 SQL，便于检查逻辑。文章没有给出这方面的数字。\n值得注意\n明确说明指标，写出时间范围，并要求提供可视化。阅读 DANA 返回的 SQL，检查其逻辑。\n自行试用\n推荐工具\nDevin\n复制提示词\n使用[配置文件或环境变量]中的只读凭据连接我的数据仓库，并回答这个问题：[业务问题，例如过去90天按渠道划分的每周注册量]。向我展示所用的 SQL、结果表，以及我可以打开的简单图表或看板文件。在执行任何会写入或修改数据的查询之前，停下来征求我的同意；除此之外，当我得到经过验证的答案，并且查询已保存在[文件夹]中时，任务即告完成。\n原始来源：https://cognition.com/blog/how-cognition-uses-devin-to-build-devin",
     "body_sha256": "38f1fe3fc86b1797cedf19eb04dea0f81b96f198b541f99c3c475d74096742c9",
     "scope": "Faithful full translation of all captured prose and full source trial. Actual and suggested agent both Devin. Queue delay is qualitative with no numbers; source prompt read-only credentials are not asserted to be DANA default permissions. Decorative DE icon excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T05:45:41.005317+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

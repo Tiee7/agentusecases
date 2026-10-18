@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/analyze-a-piano-recording-s-bpm-structure-and-stems",
-  "observed_at": "2026-10-17T05:34:07.072475+00:00",
-  "html_sha256": "70c64a75f25216f9ec0093b05a0bf5d8445b258c3ee9f46942cf204e1f9afe2e",
+  "observed_at": "2026-10-18T05:41:16.996028+00:00",
+  "html_sha256": "b7c833880adcfe2c67559e8807d9f8c88f8d93d6c646c5350c7962539e9c9676",
   "body_sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
   "status": "observed",
   "fields": {
@@ -95,13 +95,8 @@
     "language": "en",
     "body": "Analyze a piano recording's BPM, structure and stems\nWith a skill installed, Claude Code installed ffmpeg and librosa and ran a Python pipeline on a local MP3, producing a report on BPM, structure and stems.\nDone with\nCC\nClaude Code\nWhat they did\nThe author had Gemini draft a skill on Loooom, then published it through the web UI and installed it in Claude Code. He asked Claude to identify parts of a song and pointed it at a local MP3 of his 37-second piano clip. Claude installed ffmpeg and librosa mid-session and ran a Python pipeline.\nHow it went\nIt produced a report with BPM, meter, key, a four-section timeline and a list of stems. The BPM was estimated at about 91 against a canonical ~104. The stem list included vocals and drums, though the clip was solo piano.\nWorth knowing\nExpect rough accuracy: the BPM was off from the real tempo, and the stems listed (kick, vocal, hi-hat) don't match a solo piano recording.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a piano recording at [path to MP3 file]. Install whatever you need (such as ffmpeg and librosa), then analyze it and write me a report covering the BPM, the song structure with approximate timestamps for each section, and separated stems if possible. Save the report as [report filename] in the same folder and tell me when it's finished and where the output files are.\nOriginal source: https://www.mager.co/blog/2026-03-26-loooom-identify-song-parts/",
     "body_sha256": "c92b12fd545ef779ebea27549eef50416e4cd3ab1d12255c1e05495457f10d87",
-    "archived_at": "2026-10-17T05:34:07.072475+00:00",
+    "archived_at": "2026-10-18T05:41:16.996028+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
-  },
-  "last_attempt": {
-    "at": "2026-10-17T05:34:07.072475+00:00",
-    "status": "fetched",
-    "error": null
   },
   "translation": {
     "status": "available",
@@ -112,5 +107,10 @@
     "body": "分析钢琴录音的 BPM、结构和分轨\n安装一个技能后，Claude Code 安装了 ffmpeg 和 librosa，并对本地 MP3 运行 Python 处理流程，生成了一份关于 BPM、结构和分轨的报告。\n实际使用\nClaude Code\n具体做法\n作者让 Gemini 在 Loooom 上起草了一个技能，然后通过网页界面发布，并将其安装到 Claude Code。他让 Claude 识别歌曲的各个部分，并指向本地 MP3 文件，内容是他的一段 37 秒钢琴片段。Claude 在会话过程中安装了 ffmpeg 和 librosa，并运行了一个 Python 处理流程。\n结果如何\n它生成了一份报告，包含 BPM、拍号、调性、由四个段落组成的时间线，以及分轨列表。BPM 估计约为 91，而标准版本约为 104。虽然片段是钢琴独奏，分轨列表却包含人声和鼓。\n值得知道\n准确度只能粗略看待：BPM 与实际速度有偏差，列出的分轨（底鼓、人声、踩镲）也与钢琴独奏录音不相符。\n自行试用\n推荐工具\nClaude Code\n复制提示词\n我有一份钢琴录音，位于[MP3 文件路径]。安装所需的任何工具（例如 ffmpeg 和 librosa），然后分析它，给我写一份报告，涵盖 BPM、带有各段大致时间戳的歌曲结构，以及在可行情况下分离出的分轨。将报告以[报告文件名]保存在同一个文件夹中，完成后告诉我，并说明输出文件的位置。\n原始来源：https://www.mager.co/blog/2026-03-26-loooom-identify-song-parts/",
     "body_sha256": "37ef8aff728a6104b75ba435848821454ef695edd88d95387b6608d2522dfa57",
     "scope": "Faithful full translation of captured case prose, complete source trial and original link; decorative CC omitted. Source accuracy assertions retained as source wording, separately qualified in research."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T05:41:16.996028+00:00",
+    "status": "fetched",
+    "error": null
   }
 }

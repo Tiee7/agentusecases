@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-nightly-briefing-pipelines-with-scheduled-tasks",
-  "observed_at": "2026-10-17T05:58:11.155197+00:00",
-  "html_sha256": "ba6396c19fc712fd21ab7e7853fda3a317310697c91a1f0e2ad7b227907ee6e4",
+  "observed_at": "2026-10-18T06:05:20.981801+00:00",
+  "html_sha256": "eafc8d8ed708f442c462debc2d9bf003664b5de900d7f7a44f76cbd1ea232d17",
   "body_sha256": "89bf4786d88b9c66aaef7f9c414cc93308e4749cdace6b1fdadb9c727dd35858",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run nightly briefing pipelines with scheduled tasks\nThe author uses Claude Code cloud scheduled tasks for nightly pipelines that scan work, generate retrospectives, and assemble morning briefings.\nDone with\nCC\nClaude Code\nWhat they did\nThe author had a self-hosted Claude automation stack with three environments, 11 cron jobs, and a Slack daemon, then mapped which jobs could move to Claude Code Cloud scheduled tasks. In Cloud, nightly retrospectives and the morning orchestrator run sequentially, using git as the handoff between fresh task runs; hourly tasks read from git or call APIs directly for tweet scheduling, email processing, and news monitoring, while each task commits its own output.\nHow it went\nThe migration would remove 7 of 11 cron jobs because they only existed to keep the system alive, and the author says the sequential Cloud runs can improve quality by keeping one session’s context. It still falls short for the always-on Slack workflow, because Cloud tasks start in a fresh VM and cannot listen continuously for messages.\nWorth knowing\nThe main catch is architectural: every Cloud task starts in a clean environment, so anything needing persistent messaging, task chaining, or storage between runs still needs another solution.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a nightly scheduled task that scans [folders, repos, or notes] for the day's work, writes a short retrospective of what changed, and assembles a morning briefing saved to [file path or location]. The briefing should cover [what you want: open tasks, blockers, priorities] and fit on one page. Run it once now so I can check the output before you schedule it.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1s2j53l/claude_code_cloud_scheduled_tasks_one_feature",
     "body_sha256": "89bf4786d88b9c66aaef7f9c414cc93308e4749cdace6b1fdadb9c727dd35858",
-    "archived_at": "2026-10-17T05:58:11.155197+00:00",
+    "archived_at": "2026-10-18T06:05:20.981801+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:58:11.155197+00:00",
+    "at": "2026-10-18T06:05:20.981801+00:00",
     "status": "fetched",
     "error": null
   }

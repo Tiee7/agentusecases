@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+  "observed_at": "2026-10-18T06:13:27.009342+00:00",
+  "html_sha256": "8717180446a24fb02386bdfa875a8998c5949ba126da636b45985c55b6780087",
+  "body_sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Personalize cold email openers from lead websites",
+      "sha256": "039ac1760571fc6d5eeecb3f83b58fac4f378410022d999d1e1bf5418a4a37bc"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n workflow pulls leads from Apollo via Apify, reads each lead's website, and has AI write personalized opening lines into a spreadsheet for a sending tool.",
+      "sha256": "11795c85735875d827b35932baf8e5334f63d66095f7be6094bc77d8410ab55b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author rebuilt Nick Saraev's n8n system. It pulls leads, reads a lead's homepage and up to two key pages, and has AI summarize them and draft opening lines into Google Sheets for a sending tool. Because the Apify Apollo scraper is deprecated, he swapped in Podcast Index leads. Claude via OpenRouter extracts three sourced facts per lead, and he reads every draft before anything is sent.",
+      "sha256": "870d1509081ce647f6a7759462a5edf13f6d9292eb30864ebda10b6d03b7f0b1"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Podcast Index gave 40 usable leads per 100, against 6 to 8 from the Apify source. AI cost was about $0.006 per good lead. Reply results aren't in yet, and the drafts read flat.",
+      "sha256": "773b55ee0b9cced89edda51e802f84ace11fb1143785ae0d29314cd865ed8148"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Sending costs far more than the AI: Smartlead is $39 a month, Google Workspace is $8.40 per inbox, and inbox warm-up takes weeks.",
+      "sha256": "d9606bc9f32df1554db6181e2fbebd560a991e4214a9aa9f0256379a9f965e77"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://unpromptable.substack.com/p/ai-cold-email-system-tested"
+      ],
+      "sha256": "ab5c2d62274ef15d8152b853225d15fd68f6f3af1c3e456c6a3584b1f30b8352"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-17",
+      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0634a313d23708dbbd2bfaccd87a4ef72fdf26bbc8efd9a1545cddda160e7c7e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Personalize cold email openers from lead websites\nAn n8n workflow pulls leads from Apollo via Apify, reads each lead's website, and has AI write personalized opening lines into a spreadsheet for a sending tool.\nDone with\nN8\nn8n\nWhat they did\nThe author rebuilt Nick Saraev's n8n system. It pulls leads, reads a lead's homepage and up to two key pages, and has AI summarize them and draft opening lines into Google Sheets for a sending tool. Because the Apify Apollo scraper is deprecated, he swapped in Podcast Index leads. Claude via OpenRouter extracts three sourced facts per lead, and he reads every draft before anything is sent.\nHow it went\nPodcast Index gave 40 usable leads per 100, against 6 to 8 from the Apify source. AI cost was about $0.006 per good lead. Reply results aren't in yet, and the drafts read flat.\nWorth knowing\nSending costs far more than the AI: Smartlead is $39 a month, Google Workspace is $8.40 per inbox, and inbox warm-up takes weeks.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me a workflow that reads leads from [spreadsheet or lead source], visits each lead's website [website column], and uses AI to write a one-sentence personalized opening line for a cold email about [what I offer]. Write each line into a new column next to the lead in my spreadsheet, and don't send any emails. Test it on 5 leads first and show me the results before running the full list.\nOriginal source: https://unpromptable.substack.com/p/ai-cold-email-system-tested",
+    "body_sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+    "archived_at": "2026-10-18T06:13:27.009342+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-18T06:13:27.009342+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

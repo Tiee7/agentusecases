@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/review-github-pull-requests-for-bugs-and-security",
-  "observed_at": "2026-10-17T05:38:02.948454+00:00",
-  "html_sha256": "d940f326cc3c3ceb788883f38af6cbd47f20563a784342e2be3987966807977a",
+  "observed_at": "2026-10-18T05:45:13.026682+00:00",
+  "html_sha256": "04639710d9d3e6a5702c3d87f36fc89f2b62d9cd99e245df3d67502d472f5c6d",
   "body_sha256": "c8747e35d77c306a4a28b1ba19dd1f96797b4d927c33779171581aba4c05cdab",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Review GitHub pull requests for bugs and security\nA Hermes tutorial reads a PR diff and returns a structured review of bugs, security and code quality, then turns it into a skill that watches repos and sends summaries.\nDone with\nHA\nHermes Agent\nWhat they did\nWith the gh CLI authenticated and the Hermes gateway running, you first ask Hermes in chat to fetch a PR diff and review it. You then add a code-review skill with a severity-based output format, and teach it team conventions through memory. A cron job runs every 2 hours, reviews recent PRs in the listed repos, and delivers a summary to Telegram.\nHow it went\nThe source gives no review results. It says the skill and remembered conventions make reviews less generic, and estimates 3-5 GitHub API requests per PR review.\nWorth knowing\nReviews posted back to GitHub appear under whichever account gh is authenticated as, and that token needs repo scope.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nReview the pull request at [PR URL] and return a structured report with sections for bugs, security issues, and code quality, each with file and line references and a severity. Then turn this into a reusable routine that checks [repo name] for new PRs every [interval] and sends me a short summary. Show me the routine and wait for approval before posting any comments on GitHub.\nOriginal source: https://hermes-agent.nousresearch.com/docs/guides/github-pr-review-agent",
     "body_sha256": "c8747e35d77c306a4a28b1ba19dd1f96797b4d927c33779171581aba4c05cdab",
-    "archived_at": "2026-10-17T05:38:02.948454+00:00",
+    "archived_at": "2026-10-18T05:45:13.026682+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:38:02.948454+00:00",
+    "at": "2026-10-18T05:45:13.026682+00:00",
     "status": "fetched",
     "error": null
   }

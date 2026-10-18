@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/try-devin-on-research-tasks-mostly-failed",
-  "observed_at": "2026-10-17T05:38:39.189091+00:00",
-  "html_sha256": "4c36b0460a9d15ded0f81b6cb79f5efe230a121065328d89bec5da548b703630",
+  "observed_at": "2026-10-18T05:45:48.984671+00:00",
+  "html_sha256": "f9996394c786407c213c54bbe7cdabf549aa15b4f71d8c68e7d5a0315ec9b41c",
   "body_sha256": "fc9f5e7b5253a78ac9fc4abc6c24c828880db4e206f9e9e6a909e1a4e2d1d421",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Try Devin on research tasks (mostly failed)\nAnswer.AI had Devin fetch an author's recent papers and research transcript summarization; it got stuck parsing HTML and returned generic results, rated a failure.\nDone with\nDE\nDevin\nWhat they did\nAnswer.AI gave Devin, which works through Slack in its own Docker environment with a browser, editor and shell, two tasks. One was grabbing an author's 25 most recent Google Scholar papers with Playwright, skipping paywalls. The other was researching transcript summarization with accurate timestamps. They then rated the results.\nHow it went\nBoth failed. On the scraping task Devin got stuck parsing HTML and went to sleep. On the research task it returned related but unhelpful material and code that missed the core problem.\nWorth knowing\nAcross 20 tasks Devin had 14 failures and 3 successes. One research success, a Discord bot, worked because the goal was loose pseudocode-level guidance.\nTry it yourself\nwith\nDevin\nCopy prompt\nResearch [author or topic] by finding their [number] most recent papers and writing a one-paragraph summary of each, with links to the sources. Then give me a short overview of the main themes across them. If a page can't be read, tell me which one and why instead of guessing, and stop once you have a cited summary I can check.\nOriginal source: https://www.answer.ai/posts/2025-01-08-devin.html",
     "body_sha256": "fc9f5e7b5253a78ac9fc4abc6c24c828880db4e206f9e9e6a909e1a4e2d1d421",
-    "archived_at": "2026-10-17T05:38:39.189091+00:00",
+    "archived_at": "2026-10-18T05:45:48.984671+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-17T05:38:39.189091+00:00",
+    "at": "2026-10-18T05:45:48.984671+00:00",
     "status": "fetched",
     "error": null
   }
