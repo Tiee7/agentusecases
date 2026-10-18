@@ -1,0 +1,482 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "cancel-an-amazon-subscription-and-get-a-refund",
+  "url": "https://agentusecases.ai/use-case/cancel-an-amazon-subscription-and-get-a-refund",
+  "title": "用 Codex 取消 Amazon 订阅并申请退款",
+  "industry": "个人订阅取消准备与退款状态核对",
+  "researched_at": "2026-10-18T00:17:13.506691+00:00",
+  "confidence": "案例金额与时长来自聚合归档自述；原始X帖和Amazon当前具体退款条款未取得。官方工具文档、竞争者条款及独立指南支持流程与替代分析，不证明实际退款成功率。",
+  "analysis_depth": "deep",
+  "sources": [
+    {
+      "id": "S6e83568e6902",
+      "url": "https://agentusecases.ai/use-case/cancel-an-amazon-subscription-and-get-a-refund",
+      "title": "源站案例归档：Cancel an Amazon subscription and get a refund",
+      "supports": "支持源站对实际工具Codex、15美元退款、当晚累计400美元和约五分钟的叙述，以及Copy prompt；均为聚合案例自述，原始X帖和入账凭据未核验。"
+    },
+    {
+      "id": "Sec21f0dba848",
+      "url": "https://learn.chatgpt.com/docs/computer-use",
+      "title": "OpenAI：Computer Use",
+      "supports": "支持当前桌面Computer Use的系统与应用授权、支持平台和对图形界面的操作能力；不证明本案例使用的历史版本、订阅或成功率。"
+    },
+    {
+      "id": "S9724500c38de",
+      "url": "https://learn.chatgpt.com/docs/browser",
+      "title": "OpenAI：Browser",
+      "supports": "支持桌面内置浏览器可由Codex操作、独立浏览器资料及站点权限与敏感操作确认边界；不是所有Codex会话都已连接本人Amazon账户的证明。"
+    },
+    {
+      "id": "S78f507f36f7e",
+      "url": "https://help.rocketmoney.com/en/articles/4649463-subscription-cancellation-faqs",
+      "title": "Rocket Money：Subscription cancellation FAQs",
+      "supports": "支持竞争服务通过邮件及Recurring页跟进取消请求，可能要求补充资料，以及取消后仍被扣费的跟进流程；不是独立用户满意度或退款保证。"
+    },
+    {
+      "id": "Sf05c5272cf5e",
+      "url": "https://www.rocketmoney.com/terms",
+      "title": "Rocket Money：Terms of Service，订阅取消条款",
+      "supports": "仅支持订阅取消的有限代理授权、账户验证资料和潜在提前终止费用；不据此断言案例Amazon订阅的退款权利，也不把账单协商收费规则套到取消服务。"
+    },
+    {
+      "id": "S0745aee432f0",
+      "url": "https://www.kiplinger.com/personal-finance/online-shopping/how-to-cancel-amazon-prime",
+      "title": "Kiplinger：How to Cancel Amazon Prime (Three Methods to Try)",
+      "supports": "独立编辑指南展示原生取消与不同付费渠道的路径差异；其对象是Prime，不等于本案例未命名订阅，本研究不采信其内容作为普遍即时退款政策。"
+    },
+    {
+      "id": "Sf631730b78d1",
+      "url": "https://github.com/openai/codex/issues/52023",
+      "title": "OpenAI Codex 公开问题 #52023：浏览器权限显示与拒绝不一致",
+      "supports": "支持一名用户报告桌面浏览器在页面访问前遭遇权限阻断；单一未解决的相邻开发工作流问题，不是本案例退款失败或产品整体故障率的证据。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "源站把本案例的实际工具标为Codex，并叙述先取消Amazon订阅、再进入客服聊天请求退款；原始X帖未读取。",
+      "source_ids": [
+        "S6e83568e6902"
+      ]
+    },
+    {
+      "statement": "源站自述单项退款十五美元，并另称同一晚多个订阅累计四百美元、约五分钟；没有逐项结算或失败样本，不能当作普遍结果。",
+      "source_ids": [
+        "S6e83568e6902"
+      ]
+    },
+    {
+      "statement": "当前归档保留一份建议工具为Codex的源站Copy prompt，其中包含发送退款请求前展示措辞；这不是原作者提示词已经核验的证明。",
+      "source_ids": [
+        "S6e83568e6902"
+      ]
+    },
+    {
+      "statement": "OpenAI当前Computer Use文档说明支持地区的桌面应用可在macOS和Windows使用相关能力，并区分系统权限和应用批准。",
+      "source_ids": [
+        "Sec21f0dba848"
+      ]
+    },
+    {
+      "statement": "OpenAI Browser文档说明内置浏览器保持自身资料和历史，并提供站点权限控制；敏感行为仍可能要求确认。",
+      "source_ids": [
+        "S9724500c38de"
+      ]
+    },
+    {
+      "statement": "Rocket Money取消FAQ说明可以通过邮件或Recurring标签查看取消请求状态，也可能要求补充资料。",
+      "source_ids": [
+        "S78f507f36f7e"
+      ]
+    },
+    {
+      "statement": "同一FAQ提供取消后仍被扣费时的客服跟进入口，不能据此认为所有请求会在提交后立刻终结。",
+      "source_ids": [
+        "S78f507f36f7e"
+      ]
+    },
+    {
+      "statement": "Rocket Money订阅取消条款描述有限代理授权和验证资料，并提醒某些服务可能收取提前终止费用；这些不是Amazon本案例的具体条款。",
+      "source_ids": [
+        "Sf05c5272cf5e"
+      ]
+    },
+    {
+      "statement": "Kiplinger的独立编辑指南讨论Prime原生取消路径以及不同付款渠道的管理差异；其对象不能直接等同于本案例未命名订阅。",
+      "source_ids": [
+        "S0745aee432f0"
+      ]
+    },
+    {
+      "statement": "公开Codex问题#52023包含一名桌面用户关于浏览器权限阻断的报告；这是未确认根因的相邻工作流信息，不是退款任务结果。",
+      "source_ids": [
+        "Sf631730b78d1"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "小额退款、偶发需求与真正的付款人",
+      "body": "这条案例的直接使用者是想停止一项Amazon订阅并追回近期扣费的账户持有人。源站声称单项取得十五美元退款，又提到同一晚多个订阅累计四百美元。两种口径必须分开：前者是这项任务的叙述，后者没有列出服务、笔数、此前使用情况或到账记录；不能把四百美元分配给每个新客户，更不能把它当成每月可重复收入。本文据此判断小额单次代办缺乏宽裕的收费空间，不建议直接经营无人代退业务。\n\n付款人通常仍是个人消费者。他为省掉理解页面、准备理由和反复确认状态的麻烦付费，购买的并不是机器点击本身。对只有十五美元潜在退款的人，收费、交出账户访问权限和等待人工处理都会降低吸引力；成功取消后的下一次需求又未必很快出现。对已有多项订阅、愿意自己完成账户操作的人，整理清单和下一账期提醒可能有辅助价值，这是自用判断，不是已验证的购买需求。\n\n本案例没有订阅种类、国家地区、付款渠道、客户访谈或真实服务报价。不能默认它是Prime，也不能将Prime指南中的条件推广给所有Amazon相关订阅。若未来评估收费准备包，应先问具体客户愿为什么交付物付钱，并与其自己使用账户原生入口的成本比较；此处没有接触客户或执行实际代办。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S0745aee432f0"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "取消状态与退款状态分别核对",
+      "body": "源站叙述的链路是Codex进入账户设置取消订阅，转到帮助页，与客服人员聊天后获得退款批准。原始X帖未取得，因此我们不能补写模型、界面版本、登录方法、真实提示词或客服逐句回应。源站Copy prompt要求发送退款请求前展示措辞，这只能作为编辑提供的试用模板保留，不能反推作者确实采用了相同确认流程。\n\n可检查的辅助交付应把几种状态拆开：已找到订阅、已关闭续费、当前服务何时结束、已准备退款请求、客服是否批准、退款是否实际入账。服务在已付账期结束前仍可使用，不等于取消失败；一段聊天中的批准也不等于银行或支付记录已经显示退款。记录确认时间、参考编号与待复核日期，有助于避免把中间步骤误标为完成。这里是我们设计的检查方法，不是对未读取作者文章的复原。\n\n本轮试用只使用合成或去标识材料，让Codex整理信息缺口、状态表和请求草稿。账户持有人需要先确认订阅名称、计费方、扣费日期及真实理由，再选择自己的官方操作入口。我们没有打开账户、取消服务或发送客服消息，也没有用源站模板实际申请退款。这样能验证文本整理是否清楚，但不能宣称验证了真实协商成功。",
+      "source_ids": [
+        "S6e83568e6902",
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S78f507f36f7e"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "官方入口与可进入的需求范围",
+      "body": "独立编辑指南列出了Prime的取消方法，并指出付费渠道可能影响管理入口。它能说明用户面对的并非一个统一页面，但不能替代Amazon当前官方条款。本轮Amazon帮助页没有取得可读正文，不能宣布某一时间窗口必然全额退款，更不能把取消、退款申请、退款批准和结算当成同一项权利。报告的市场判断只涉及流程准备的价值，没有提供适用于具体账户的退款资格意见。\n\n从经营范围看，值得先观察的是用户不知道自己付给谁、取消后仍不清楚生效日期、需要反复核对扣费等事务。它们可能存在于多类订阅，却不自动意味着一个新的付费市场。原生账户管理、已有消费者工具和自己保存的账单已经覆盖部分工作；这会压低简单代点按钮的价格，也会让涉及不同渠道的例外处理占据人工时间。\n\n没有可靠的本案例用户规模、平均可退金额、退款成功率或触达成本，本文不从热门位置、一次成功自述或媒体关注度估算收入规模。当前选择该案例仅按仓库归档第25位的临时顺序，与实时Wanted或热门榜无关。若材料显示大多数任务可由本人照官方说明几步完成，应把工具保留为个人整理助手，而不是为缺乏重复需求的代办业务配置销售与账户托管体系。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S0745aee432f0",
+        "S78f507f36f7e"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "原生管理与现有取消服务",
+      "body": "第一类替代是本人在正确的付款平台中管理订阅。用户保留登录与操作控制，服务商直接展示取消后的状态；代办服务必须证明能减少多少往返，而不能仅靠浏览器自动化这一技术标签收费。第二类替代是已存在的订阅管理和取消服务。Rocket Money的取消FAQ提供请求状态跟进、补充资料以及取消后仍扣费的处理入口，说明这不是一个提交请求就总能结束的工作流。\n\n其订阅取消条款还明确有限代理授权和账户验证资料，并提示某些服务可能有提前终止费用。这些是该竞争者描述的合同安排，不能直接转用为我们服务的权限，也不说明Amazon会接受任何代理请求。比较时应看客户是否愿意给予所需授权、谁处理失败与回访、何时停止收费，而不是简单比较一个模型调用的价格。本文不引用未核验的套餐价格，不把账单降价服务的分成当作订阅取消的统一费率。\n\n新进入者若只复刻取消按钮与聊天草稿，很容易被原生功能、现成管理工具和用户已有的通用agent替代。较小的可检验差异是把计费来源、用户提供的理由和后续状态整理成准确的材料包；即使如此，也需要证明它比用户自己整理更省事，而不是增加新的沟通环节。",
+      "source_ids": [
+        "S0745aee432f0",
+        "S78f507f36f7e",
+        "Sf05c5272cf5e",
+        "Sec21f0dba848"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "十五美元退款与服务毛利的区别",
+      "body": "退款属于消费者追回的钱，不能直接列为服务商收入；取消后避免的未来扣费也不能先算已经到账的现金。五分钟是源站对这次经历的自述，没有任务样本、等待拆分和失败记录，不能用来设定每位客户的稳定人工成本。四百美元累计结果没有逐项明细，更不能乘以月份形成年度收入或年度节省。以下两组测算全部是经营假设，不是作者收费或我们实测的成本。\n\n假设每个受理任务只有十五美元潜在退款，成功率一半，成功时收实际退款的百分之四十，则每受理件预期收入三美元。人工十五分钟按每小时二十四美元计六美元，运行预算零点五、其他可变成本一、获客四，合计十一点五美元；单位贡献为负八点五。每月一百件、固定费用二百时，月经营贡献负一千零五十美元。按受理件计人工，才能把失败任务的劳动纳入。\n\n另设十九美元的固定材料准备包，只交付清单、草稿和状态复核表，人工十五分钟六美元，加运行零点五、其他一、获客五，总可变成本十二点五，单位贡献六点五。每月四十包、固定二百五十，仅剩十美元经营贡献；人工增加到三十一点二五分钟，单位贡献即归零。这表明即使缩小交付范围，也必须验证真实付费意愿和返工时间，不能靠低模型成本推断业务有利润。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S78f507f36f7e",
+        "Sf05c5272cf5e"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "低客单价能承担多少获客",
+      "body": "个人订阅退款往往在扣费后才被想起，用户此时会寻找服务商帮助入口或取消说明。这类需求具有明确时间点，但也容易在一次处理后消失。对于十五美元潜在收益，单独投放广告、解释权限、收取服务费和售后追踪的总成本可能超过可收收入；本文的获客预算是用于压力测试的假设，尚无任何投放或成交数据支持。\n\n如果未来有人评估材料准备服务，较现实的入口可能是已有财务整理、数字事务教育或订阅盘点场景中由用户主动提出的需求。这不是本轮已经建立的渠道，也不授权读取邮件、账单或联系用户。服务页面需要说明交付物、退款与取消的区别、需要用户补充哪些事实，以及无法确认退款资格时如何结束，才能让付款人判断是否值得继续。\n\n源站一次成功叙述可以帮助解释用途，不能作为承诺五分钟到账或四百美元回收的广告证据。若经过自愿且另行授权的后续验证，用户普遍只愿为成功退款付极低比例费用，而人工核对与获客无法下降，就应停止销售准备包。当前更合适的动作是把检查表给本人使用，并记录尚未证实的需求，而不是联系案例作者索取账户经验或借用其身份背书。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S0745aee432f0",
+        "Sf05c5272cf5e"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "通用agent能力与长期维护价值",
+      "body": "OpenAI当前文档已描述Codex通过桌面图形界面和内置浏览器完成操作的能力。这支持通用工具可以承载此类流程，却同时削弱单纯封装点击路径的独特性。原生管理入口和已有取消服务也已经存在。只要用户知道自己的订阅计费方，并能理解取消与退款状态，另一个相似的自动化界面就不一定带来持续付费理由。\n\n可能有积累价值的是经过用户确认的任务状态、不同计费渠道需要哪些字段、何时回查账单，以及哪些情况应交还本人处理。这些需要长期维护与准确更新，本身也带来信息过期和错配的成本。不能把保存账号密码或更多个人数据当成壁垒，更不能用一个未核验案例推断已经具备跨平台稳定操作能力。当前没有代码、独家数据、支付方合作或留存指标证明本项目有这些积累。\n\n因此经营差异应由交付质量来证明：是否把缺失字段显式列出、是否保留每次状态的证据、是否避免重复发起请求和错误取消。若这套整理可被用户现有agent或一张表轻易完成，工具可以继续有自用价值，但不应以“可操作浏览器”作为独立创业投入依据。本文没有部署新的连接器或构建账户托管系统。",
+      "source_ids": [
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S78f507f36f7e",
+        "S0745aee432f0"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "版本、权限与不可替代的账户判断",
+      "body": "源站只标注实际工具为Codex，没有说明操作系统、运行环境、模型版本或账户套餐。本轮读取的当前官方能力文档用于说明今天的工具与授权边界，不能证明案例发生时的具体配置。桌面Computer Use的系统权限、应用批准和浏览器的站点权限也不是一回事；可用浏览器操作能力不等于这个任务已获得对任何账户行为的授权。\n\n退款请求必须基于本人提供且可核对的事实，不能为了说服客服虚构未使用服务、误扣费或合同承诺。用户还要判断取消是否会影响自己仍需要的权益。我们的自编试用将所有账户操作停在草稿阶段；源站模板原样保留，不把它默认视为适用于每个账户的建议。若遇到登录、验证码、证书或明确访问拒绝，应停止该访问并把状态写明，不能换客户端绕过。\n\n经营上还应预算权限设置、用户补充材料、对话等待和退款状态回查。公开GitHub问题中一名用户报告权限显示与实际阻断不一致，根因未确认，且不是退款任务；它只能提醒运行环境可能出现例外，不能用于计算故障率。当前没有真实账户实验、退款入账核对、外部客服对话或自动续费变更，风险与时间仍需以后在明确授权的范围里测量。",
+      "source_ids": [
+        "S6e83568e6902",
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "Sf631730b78d1"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "相邻用户问题不等于退款口碑",
+      "body": "本轮执行了针对Codex退款体验、公开代码问题以及独立订阅管理评价渠道的三组检索，搜索结果没有给出可核验的本案例直接用户复现。原始X帖没有再次请求，源站的十五美元、四百美元和五分钟不能升级为独立用户反馈。搜索出现无关页面的情况也如实记录，不用摘要填补作者实际操作或口碑。\n\n已读取的公开GitHub问题是一名桌面用户对浏览器权限阻断的描述。它与使用通用agent操作网页的准备成本有关，因此按相邻工作流保存；该用户并没有报告本案例的Amazon退款任务，问题的根因也未确认。不能由此说退款服务不可靠，更不能把这个单一问题外推为产品普遍失败。另一方面，Rocket Money FAQ和条款由服务方自己编写，说明其承诺和处理入口，不是消费者评价。\n\n独立编辑指南提供原生取消方法和付费渠道差异的背景，也不能证明Codex取得退款的可复制性。因此本报告将独立用户反馈信号记为零，含义是没有本用途的独立结果验证，不是用户满意度为零。只有后续取得明确授权的直接使用记录，能同时记录失败、返工与实际状态，才应重新评估这一项；本轮没有为了补齐反馈去联系任何人。",
+      "source_ids": [
+        "S6e83568e6902",
+        "Sf631730b78d1",
+        "S78f507f36f7e",
+        "S0745aee432f0"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "商业选择与本人可用的辅助范围",
+      "body": "商业判断是不建议投入一个以小额订阅退款为收入基础的无人代办业务。已知自述的十五美元金额、未知的成功率和例外处理成本，无法支撑高获客与人工审核费用；四百美元汇总也不足以改变这一点。十九美元材料包的假设利润极薄，且付费意愿尚未验证。先有单次成功，再提出标准化收费，之间还缺少重复需求、稳定时间和退款结算证据。\n\n自用价值独立评为中：适合已经拥有可用Codex环境、能自己确认订阅和计费资料的人，让agent整理信息、草拟简明请求和列出下一步复核点。本轮提供的文本试用不要求账户接入，预期交付是清楚的材料与未知项，不是现金退款、自动取消或节省多少分钟。用户自己掌握最终判断，对低额偶发任务可先比较直接使用原生入口是否更快。\n\n下一步只建议用二十份明确标为合成的订阅记录评估材料准备：订阅、计费方、续费关闭日期、退款批准与到账状态必须全部区分，缺失值不得猜测。这个目标是后续设计，不代表本轮已做该实验。若需要借口、无法核实计费对象，或准备与返工经常超过三十一点二五分钟，就停止商业投入；即使达到文本准确目标，也不能据此宣称真实退款成功率已经得到验证。",
+      "source_ids": [
+        "S6e83568e6902",
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S0745aee432f0",
+        "S78f507f36f7e"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "十五美元单次退款自述不足以支撑无人代办，个人可先用agent整理订阅材料",
+    "reason": "这条案例没有原始作者流程、订阅种类、重复样本或结算记录；十五美元小额退款无法给销售、权限准备、失败任务和回查留下稳定收费空间。原生管理和现有取消服务已经覆盖主要入口，通用agent的点击能力也容易替代简单封装。建议将用途限定为本人材料整理与草稿辅助，商业准备包须先证明付费意愿和返工时间，不能用当晚四百美元汇总或五分钟自述外推利润。",
+    "next_action": "后续可另行设计二十份合成订阅资料的状态识别验证，要求计费方、关闭续费、服务结束、退款批准和到账状态准确区分；达到目标仍不代表真实退款成功。",
+    "stop_condition": "需要编造退款理由、计费对象无法确认，或十九美元准备包的人工准备与返工经常超过31.25分钟时停止商业投入。"
+  },
+  "scores": {
+    "demand": {
+      "score": 2,
+      "rationale": "单项十五美元收益和偶发取消需求限制消费者付费空间，没有客户购买证据或重复需求数据。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S0745aee432f0"
+      ]
+    },
+    "outcome": {
+      "score": 1.5,
+      "rationale": "归档有退款金额自述，但原始帖、到账凭据、失败分母和多项四百美元明细均未取得。",
+      "source_ids": [
+        "S6e83568e6902"
+      ]
+    },
+    "economics": {
+      "score": 1,
+      "rationale": "把失败人工和获客纳入后，抽成假设为负；固定准备包仅有极薄假设利润，收费意愿未核验。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S78f507f36f7e",
+        "Sf05c5272cf5e"
+      ]
+    },
+    "distribution": {
+      "score": 1.5,
+      "rationale": "需求可在扣费后出现，但原生入口和既有工具占据用户路径，小额客单难承担独立获客。",
+      "source_ids": [
+        "S0745aee432f0",
+        "S78f507f36f7e"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "通用Codex浏览器能力、原生取消和现有服务使简单点击封装容易被替代，未发现独家接入证据。",
+      "source_ids": [
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S0745aee432f0",
+        "S78f507f36f7e"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "本人确认和清晰状态表可缩小风险，但权限例外、计费方差异和退款结算仍需人工处理。",
+      "source_ids": [
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S78f507f36f7e",
+        "Sf631730b78d1"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "没有本用途独立退款复现；公开问题仅是相邻浏览器权限个案，不能作为成功率或满意度。",
+      "source_ids": [
+        "S6e83568e6902",
+        "Sf631730b78d1"
+      ]
+    }
+  },
+  "feedback": {
+    "searches": [
+      {
+        "channel": "OpenAI社区公开搜索",
+        "query": "Codex Amazon subscription refund user experience ChrisGPT",
+        "outcome": "已执行；没有取得可核验的本案例直接复现，返回结果大量无关，不把摘要当作作者流程或用户证明。",
+        "domains": [
+          "community.openai.com"
+        ]
+      },
+      {
+        "channel": "GitHub公开问题搜索",
+        "query": "Codex browser permission account action failure",
+        "outcome": "已执行；未得到退款直接结果。另从前序产品检索的公开问题#52023读取相邻浏览器权限报告，按单一未确认用户问题处理。",
+        "domains": [
+          "github.com"
+        ]
+      },
+      {
+        "channel": "独立评价与消费工具评论搜索",
+        "query": "Rocket Money cancellation subscriptions review actual experience",
+        "outcome": "已执行；结果未提供本案例直接用户证据。服务方FAQ与条款只用于替代分析，不作为独立用户口碑。",
+        "domains": [
+          "nerdwallet.com",
+          "trustpilot.com"
+        ]
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sf631730b78d1",
+        "directness": "adjacent_workflow",
+        "bias": "单一自选问题报告，没有总体分母、复现核验或退款结果；无法外推故障率或用户满意度。",
+        "finding": "一名公开问题提交者报告桌面浏览器权限显示与拒绝不一致；不是Amazon退款工作流，根因未确认。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：仅按实际退款抽成",
+      "unit": "每个受理的十五美元潜在退款任务，失败劳动一并计入",
+      "currency": "USD",
+      "price": 3,
+      "api_cost": 0.5,
+      "human_cost": 6,
+      "other_variable_cost": 1,
+      "acquisition_cost": 4,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 200,
+      "assumptions": "全部为未实测假设：潜在退款15、成功率50%、仅成功时收实际退款40%，每受理件预期收入3。人工15分钟×24美元/小时；运行预算0.5、其他1、获客4，每月100件固定200。15来自源站自述；成功率与收费比例不是作者结果或Rocket Money费率；不把400美元汇总年化。",
+      "source_ids": [
+        "S6e83568e6902",
+        "S78f507f36f7e",
+        "Sf05c5272cf5e"
+      ]
+    },
+    {
+      "scenario": "假设：固定价订阅材料准备包",
+      "unit": "一份计费来源、订阅状态、请求草稿及复核清单，不含实际代办",
+      "currency": "USD",
+      "price": 19,
+      "api_cost": 0.5,
+      "human_cost": 6,
+      "other_variable_cost": 1,
+      "acquisition_cost": 5,
+      "units_per_month": 40,
+      "fixed_monthly_cost": 250,
+      "assumptions": "全部为设计假设，非现有产品报价：人工15分钟×24美元/小时，运行预算0.5、其他1、获客5，每月40包固定250。单位贡献6.5，月贡献10；人工达到31.25分钟单位贡献归零。本轮未收费、未使用付费模型API或操作账户。",
+      "source_ids": [
+        "Sec21f0dba848",
+        "S9724500c38de",
+        "S78f507f36f7e"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "一次成功退款并不保证可经营，但若本人已拥有Codex、任务与原归档接近且没有获客费用，辅助整理仍可能有价值。多项订阅盘点的总收益可能高于十五美元单项退款，但四百美元自述没有明细，不能用于报价。原生入口和Rocket Money的既有处理流程削弱新封装的差异；公开浏览器问题也只是相邻个案，不证明退款流程必然失败。",
+  "limitations": "未取得原始X帖、Amazon帮助页可读正文、具体订阅与国家地区、实际提示词、账户与模型配置、退款入账记录、四百美元明细、五分钟任务拆分或任何直接复现。无真实客户、获客、收费、取消或客服实验。独立指南讨论Prime而非已确认的案例产品。商业分数为证据约束下的判断，经济模型仅假设。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "对已有Codex环境且愿意自己确认账户行为的人，整理计费来源、材料与状态有辅助价值；无独立测量支持固定省时或退款金额，仍需本人复核和执行。",
+    "audience": "能确认订阅名称与真实扣费、已有可用Codex环境的账户持有人；不要求把登录信息交给第三方。",
+    "use": "整理本人提供的去标识资料，区分续费、服务结束和退款状态，准备请求草稿。",
+    "benefit": "可能减少信息整理与遗漏，属于推断；不保证退款、取消成功或节省时间。",
+    "setup_cost": "准备订阅名称、计费方、日期、金额、现有状态和真实理由；本轮文本试用无需账户连接或新插件。",
+    "maintenance_cost": "本人在新的账期回查状态，处理规则和界面变化；没有测量持续维护时间。",
+    "frequency": "通常按发现未知订阅或扣费触发，未证明每月有同等需求。",
+    "privacy_risk": "材料应去除密码、验证码、完整卡号和其他无关身份资料；真实登录由本人掌握。",
+    "error_risk": "可能混淆取消续费与立即终止服务、批准退款与实际到账，或把其他订阅规则套到本账户；需人工核实。",
+    "source_ids": [
+      "S6e83568e6902",
+      "Sec21f0dba848",
+      "S9724500c38de",
+      "S78f507f36f7e",
+      "S0745aee432f0"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "仅使用合成或已去标识的订阅资料：名称、计费方、扣费日期和金额、当前续费状态、已知服务结束日期、真实退款理由。未知字段留空，不提供密码、验证码或完整支付信息。",
+    "tools": "现有Codex文本能力即可完成本轮材料整理；若以后另行授权实际界面操作，须具备可用浏览器/Computer Use及本人账户权限，不能据此假定任何Codex会话都能操作Amazon。",
+    "expected_result": "一份带来源字段与未知项的订阅状态表、请求草稿和本人复核清单；不取消、不发送、不接受条件、不申请真实退款，不将批准写成到账。",
+    "prompts": [
+      {
+        "title": "我们编写：只整理材料和状态",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "我们编写，非作者或源站原文，未实测真实账户。",
+        "source_url": null,
+        "source_ids": [
+          "S6e83568e6902",
+          "Sec21f0dba848",
+          "S9724500c38de",
+          "S78f507f36f7e"
+        ],
+        "text": "只根据我提供的合成或去标识资料，整理Amazon订阅取消与退款准备材料。不要访问或登录任何账户，不取消服务，不联系或发送客服消息，不提交退款，不接受任何条件。输入字段：订阅名称、实际计费方、最近扣费日期和金额、续费是否已关闭、服务结束日期、退款真实理由、已有确认记录。未知字段写“待本人核实”，不要推测我没有使用服务或必然有退款资格。输出：1）字段与证据表；2）分别标记关闭续费、服务结束、请求已提交、批准、入账五种状态；3）一段简洁的客服请求草稿，只使用给定事实；4）我在自己官方账户中需核对的问题与下一次账单复查点。不要把十五美元或四百美元案例自述当作我的预期退款。最后停在草稿，等本人决定是否进行任何真实操作。"
+      },
+      {
+        "title": "Our template: prepare materials and status only",
+        "language": "en",
+        "kind": "ours",
+        "attribution": "我们编写，非作者或源站原文，未实测真实账户。",
+        "source_url": null,
+        "source_ids": [
+          "S6e83568e6902",
+          "Sec21f0dba848",
+          "S9724500c38de",
+          "S78f507f36f7e"
+        ],
+        "text": "Use only the synthetic or de-identified information I provide to prepare an Amazon subscription cancellation and refund worksheet. Do not access or sign in to accounts, cancel services, contact support, send messages, submit a refund, or accept conditions. Inputs: subscription name, actual billing provider, charge date and amount, renewal status, service end date, truthful refund reason, and existing confirmations. Mark unknowns for my review; do not infer non-use or refund eligibility. Return an evidence table, separate renewal-off/service-ended/requested/approved/settled states, a concise support-request draft using only supplied facts, and questions and next-statement checks for me. Do not treat the archived $15 or $400 claims as my expected refund. Stop at the draft before any real action."
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Go to my Amazon account settings and find the [subscription name] subscription. Cancel it, then contact customer service chat and ask for a refund of [amount or most recent charge] because [reason]. Pause and show me the refund request wording before you send it, and finish when the subscription is cancelled and you've reported the refund status.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/cancel-an-amazon-subscription-and-get-a-refund",
+    "observed_at": "2026-10-17T05:20:40.948354+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "dd3a6286bef6eff21276a5859c481967b89d4592afd35d6680c1ff5d1d2a9c95"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/ChrisGPT/status/2049341524958151000",
+    "source_title": "原始 X 案例帖",
+    "source_language": "en",
+    "accessed_at": "2026-10-18T00:17:13.506691+00:00",
+    "source_sha256": "",
+    "steps": [],
+    "unavailable_reason": "原始X帖未取得，无法核对实际提示词、账户条件或逐步操作；源站聚合叙述和试用模板不能替代作者方法。"
+  },
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/cancel-an-amazon-subscription-and-get-a-refund",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "f13a8518ceef350e2d7849d64bd02fae84ec7641b91d18d11a845d09b9961afb",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "30b7d03024e7c5ce547b10b0fabdb02ab0ea0e5ab80655069a2277d153d455c4",
+      "How it went": "3455f46046ba580fe7d99d04fa2259457de37dff02807534560faf796dfa7377",
+      "Worth knowing": "ff042712069315e1754e5c342656ca2f497ed300938727d7f2f63098a9b687fc"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "catalog_snapshot": {
+    "commit": "36d2f8ac4507e10333b2b69261a1dfa87a3c87c6",
+    "registered_cases": 1381,
+    "refresh_fetched_at": "2026-10-17T06:05:53.201718+00:00",
+    "detail_pages_read": 1381,
+    "new_crawl": false
+  },
+  "selection": {
+    "basis": "stable committed registry order as a temporary fallback; not actual trending or Wanted order",
+    "archive_position": 25,
+    "historical_popularity_evidence": null
+  }
+}
