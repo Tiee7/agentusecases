@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "answer-sales-reps-questions-with-a-slackbot-agent",
+  "url": "https://agentusecases.ai/use-case/answer-sales-reps-questions-with-a-slackbot-agent",
+  "title": "用 Zapier Agents 搭建销售问答 Slackbot",
+  "industry": "销售运营内部知识问答",
+  "researched_at": "2026-10-18T03:52:08.474068+00:00",
+  "brief_reason": "原始Substack与付费prompt/视频未读，缺配置、问答日志、质量、实际费用和独立反馈。已读归档及当前产品、价格和原生Slackbot文档只支持有边界的流程/预算讨论，保存未评分简报，不冒充v2深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核对知识、权限与升级，暂不评定商业分数",
+    "reason": "用途明确但案例只提供调通耗时，没有回答质量和经营效果；先在合成资料中检查来源、拒答与升级，不能承诺减少RevOps负担或提高销售。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/answer-sales-reps-questions-with-a-slackbot-agent",
+      "title": "Answer sales reps' questions with a Slackbot agent",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:29:45.006936+00:00",
+      "archive_path": "registry/archives/answer-sales-reps-questions-with-a-slackbot-agent.json",
+      "sha256": "dadc16f2dd23d29f5df009c239a1afcd4a4f256cc22acb4651faea336100d0d1",
+      "hash_scope": "Existing source_text.body UTF-8; no new source-site request.",
+      "supports": "支持Jeff Ignacio搭建销售问答Slackbot、两条工具路线、下午及额外数小时、试错/付费限制和推荐5问题模板；不是原帖读取或作者实际prompt。"
+    },
+    {
+      "id": "S2a4b1a5deec8",
+      "url": "https://zapier.com/agents",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T03:49:41.083963+00:00",
+      "status": "fetched",
+      "title": "Build AI teammates with Zapier Agents",
+      "characters": 25654,
+      "sha256": "c4419a87557715313209130e2a8b07447de031e8cb55e1c5410c7d6d96100d1c",
+      "independent_verification": {
+        "id": "S2a4b1a5deec8",
+        "url": "https://zapier.com/agents",
+        "verified_at": "2026-10-18T03:50:15.804005+00:00",
+        "original_sha256": "c4419a87557715313209130e2a8b07447de031e8cb55e1c5410c7d6d96100d1c",
+        "verified_sha256": "c4419a87557715313209130e2a8b07447de031e8cb55e1c5410c7d6d96100d1c",
+        "exact_match": true
+      },
+      "supports": "Zapier当前产品页说明连接公司知识、应用和Slack相关模板等定位，供应商例证不当本例效果、代码或原始prompt。"
+    },
+    {
+      "id": "Sd27c601b2fcf",
+      "url": "https://zapier.com/pricing",
+      "kind": "market",
+      "fetched_at": "2026-10-18T03:49:47.530327+00:00",
+      "status": "fetched",
+      "title": "Plans & Pricing | Zapier",
+      "characters": 26426,
+      "sha256": "0a87695889cdbd7561d4f52b99827f9a42655250df875a223bf454290fb1fb32",
+      "independent_verification": {
+        "id": "Sd27c601b2fcf",
+        "url": "https://zapier.com/pricing",
+        "verified_at": "2026-10-18T03:50:21.264623+00:00",
+        "original_sha256": "0a87695889cdbd7561d4f52b99827f9a42655250df875a223bf454290fb1fb32",
+        "verified_sha256": "0a87695889cdbd7561d4f52b99827f9a42655250df875a223bf454290fb1fb32",
+        "exact_match": true
+      },
+      "supports": "当前定价页区分Agents活动、平台tasks与MCP用量，Agents Pro年付400美元折合33.33/月且有1500活动；非本例账单或月付报价，不能把一次问题当一次活动。"
+    },
+    {
+      "id": "Sf7bda7cbf9d4",
+      "url": "https://slack.com/help/articles/202026038-How-to-work-with-Slackbot",
+      "kind": "competitor",
+      "fetched_at": "2026-10-18T03:49:17.674242+00:00",
+      "status": "fetched",
+      "title": "How to work with Slackbot | Slack",
+      "characters": 15140,
+      "sha256": "6c5e46e4a2cd6dbd8b2fa14ff3aa08a44793a7018054c725d679a9564205799a",
+      "independent_verification": {
+        "id": "Sf7bda7cbf9d4",
+        "url": "https://slack.com/help/articles/202026038-How-to-work-with-Slackbot",
+        "verified_at": "2026-10-18T03:50:11.389118+00:00",
+        "original_sha256": "6c5e46e4a2cd6dbd8b2fa14ff3aa08a44793a7018054c725d679a9564205799a",
+        "verified_sha256": "6c5e46e4a2cd6dbd8b2fa14ff3aa08a44793a7018054c725d679a9564205799a",
+        "exact_match": true
+      },
+      "supports": "当前Slack原生Slackbot说明按用户可见内容回答并受访问权限及计划条件影响；这不是作者自建Zapier机器人，权限说明不能直接移植。"
+    },
+    {
+      "id": "S34c6f22304c3",
+      "url": "https://slack.com/help/articles/53579676130195-Slackbot-limits-and-credit-usage",
+      "kind": "competitor",
+      "fetched_at": "2026-10-18T03:49:51.884994+00:00",
+      "status": "fetched",
+      "title": "Slackbot limits and credit usage | Slack",
+      "characters": 9863,
+      "sha256": "594c86abf9e14981f2f4bc521b7b6b24029bbde11af9dbf514adbec726a6c6b4",
+      "independent_verification": {
+        "id": "S34c6f22304c3",
+        "url": "https://slack.com/help/articles/53579676130195-Slackbot-limits-and-credit-usage",
+        "verified_at": "2026-10-18T03:50:26.818758+00:00",
+        "original_sha256": "594c86abf9e14981f2f4bc521b7b6b24029bbde11af9dbf514adbec726a6c6b4",
+        "verified_sha256": "594c86abf9e14981f2f4bc521b7b6b24029bbde11af9dbf514adbec726a6c6b4",
+        "exact_match": true
+      },
+      "supports": "当前Slack原生Slackbot文档说明各计划消息额度、重置与Flex Credits条件；作为可用性/成本比较，不当原例费用或无限免费承诺。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档将作者归为Jeff Ignacio，实际标签为Zapier Agents与ChatGPT Agent，正文第二路线是ChatGPT Playground加Zapier MCP。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档结果是首条路线花整个下午、另一条额外数小时；没有回答准确率、团队使用规模或经营收益。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "原始prompt、视频细节与配置未取得；源站5问题测试模板不能当作者已实行的方法。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Zapier当前产品页提供公司知识、应用连接和Slack相关模板定位，未证明本例接入及效果。",
+      "source_ids": [
+        "S2a4b1a5deec8"
+      ]
+    },
+    {
+      "statement": "当前Zapier定价页区分Agents活动和tasks，Pro年付400美元折合33.33/月，不能当月付或作者账单。",
+      "source_ids": [
+        "Sd27c601b2fcf"
+      ]
+    },
+    {
+      "statement": "原生Slackbot的可见内容和权限说明属于Slack自身产品，不能自动视为自建Zapier机器人的权限实现。",
+      "source_ids": [
+        "Sf7bda7cbf9d4"
+      ]
+    },
+    {
+      "statement": "原生Slackbot的消息额度及Flex Credits条件依计划而异，不能把它称为普遍无限免费替代。",
+      "source_ids": [
+        "S34c6f22304c3"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "conclusion",
+      "title": "商业判断与证据范围",
+      "body": "保存有依据的简要分析，商业分数未评定、自用价值待核实，不计入completed v2深研。潜在使用者是反复向RevOps问流程或资料问题的销售代表，付款人可能是销售运营或部门预算负责人，但没有采购、预算、使用人数和持续付费证据。归档主要报告调通耗时，不能从“工作起来”推导准确回答、减少打扰、提高成交或节约固定人数。原帖和付费细节未读，作者方法为空，不用汇编转述冒充作者步骤。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "工具标签、实际路线与推荐模板",
+      "body": "归档顶部列Zapier Agents和ChatGPT Agent，正文具体写Zapier Agent Slackbot，以及通过Zapier MCP连接的ChatGPT Playground提示词。译文原样区分，不能把标签补成浏览器版ChatGPT agent的实际操作。视频、作者prompt和配置未取得；源站提出知识来源、找不到就说明并@人员、5个真实问题和启用前看答案，这是推荐模板，不是作者已实行的验收。Make/n8n也是原文替代建议，未运行或验证。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "问答知识与群聊权限分开检查",
+      "body": "Zapier当前产品页给出公司知识、连接应用和Slack相关模板，说明平台已有此类定位，不证明作者接了哪些CRM字段或Drive文档。销售政策可能有版本、地区、角色和客户范围差异；机器人能访问资料不代表频道每位读者都有权看。当前原生Slackbot文档说按用户可见内容回答，但这是另一个产品，不能直接作为自建Zapier机器人自动继承权限的保证。应先明确读取主体、回答受众和不可公开字段。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2a4b1a5deec8",
+        "Sf7bda7cbf9d4"
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": "活动、工具调用和消息不是同一单位",
+      "body": "当前Zapier价格页把Agents活动与平台tasks分开，活动包括动作、浏览和查附加知识；MCP工具调用另有任务用量说明。页面列Agents Free400活动/月、Pro1500活动/月，Pro为400美元年付、折合33.33/月，不能说成随时月付33.33，也不是本例费用。一次问题可能需要多次检索/动作，消息数不能直接当活动或账单。原生Slackbot又有按计划的消息额度与Flex Credits条件，不能拿不同单位单价直接比较。",
+      "source_ids": [
+        "Sd27c601b2fcf",
+        "S34c6f22304c3"
+      ]
+    },
+    {
+      "id": "comparison",
+      "title": "先比较原生搜索和已有问答入口",
+      "body": "原生Slackbot当前能根据用户可见上下文回答，并可结合其他应用等条件；计划和管理员设置影响可用性。单看功能清单不能证明它等同作者自建机器人，但足以要求实施服务说明额外价值。还应比较固定FAQ、带链接的手工回复和现有文档搜索，不把人工基线成本设为零。若问题主要来自缺失或过时政策，先修资料和负责人，可能比增加一个会生成答案的入口更有用；这属于待验证的经营判断。",
+      "source_ids": [
+        "Sf7bda7cbf9d4",
+        "S34c6f22304c3",
+        "S2a4b1a5deec8",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "两种假设都计算试错与维护人工",
+      "body": "以下为USD规划假设，不是报价、原作者成本或真实订单。599美元限定接入包：资源10、人工8小时×40=320、其他20、获客100，可变450、贡献149；每月3单减固定600，月贡献-153。另一个499美元客户月：资源预算50、人工6小时×40=240、其他20、获客60，可变370、贡献129；5客户减固定800，月贡献-155。资源50不是33.33月付或实际账单；多花4小时支持使贡献-31。均不含客户基础Slack/CRM许可、首次大规模知识整理、超额用量、税费退款与未知企业条件。",
+      "source_ids": [
+        "Sd27c601b2fcf",
+        "S34c6f22304c3",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "先核对拒答、升级和出处",
+      "body": "可用合成或获准脱敏问题及版本化政策做回放，检查无答案、来源冲突、过期规则、越权问题和检索失败。给出出处不代表引用适用于提问者；@到某人也不表示对方领取或解决了问题。分别保留待确认草稿、升级待领取、人工结论和修复内容，记录反复解释与维护时间。原模板的5个真实问题完整译出，但少量示例不能证明长期质量。这里不读取私人频道、CRM或Drive，不发消息、不配置MCP、不执行模型。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2a4b1a5deec8",
+        "Sf7bda7cbf9d4"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "反馈、反证与停止条件",
+      "body": "实际检索覆盖Jeff Ignacio/Slackbot、HN、GitHub及销售Slack问答评价，没有取得可归属此部署的独立使用结果。厂商展示的具名客户属于其他任务及自选材料，不作本项目口碑，搜索摘要也不当已读原帖。最强反证是平台确有知识/Slack能力，有限FAQ可能有用；但真实问题覆盖、拒答、权限和维护未知。先取得可检查配置和合成回放，再决定内部试用。若持续猜测政策、越权展示、无人领取升级或维护超预算，应停止扩大，不补造分数。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2a4b1a5deec8",
+        "Sd27c601b2fcf",
+        "Sf7bda7cbf9d4",
+        "S34c6f22304c3"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/answer-sales-reps-questions-with-a-slackbot-agent",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "dadc16f2dd23d29f5df009c239a1afcd4a4f256cc22acb4651faea336100d0d1",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "7ee6a586f6e3220c676ae6b8862ea4978ea1daad7a5692363dbf8664957c3414",
+      "How it went": "21c1ba8744afbf9db20fd22eb3d1640e3866eca97ca3158a75aabf9beef07966",
+      "Worth knowing": "b5d3dfb384e82477a52b45aaf28f03642e10c99b08b14ec005bd9e40229e7ae3"
+    },
+    "actual_agents": [
+      "Zapier Agents",
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Create a Zapier Agent as a Slackbot in [channel] that answers questions from our [sales reps] using [knowledge sources, e.g. Google Drive docs, CRM fields]. If it can't find an answer in those sources, it should say so rather than guess and tag [person]. Test it with 5 real questions I give you and show me the answers before enabling it for the team.",
+    "agent": "Zapier Agents",
+    "source_url": "https://agentusecases.ai/use-case/answer-sales-reps-questions-with-a-slackbot-agent",
+    "observed_at": "2026-10-17T05:29:45.006936+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "025acff87af9d491cde1790f95dd86600f6e738077189eb3dbb0a1912210b6b4"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://revengine.substack.com/p/paid-members-my-experience-with-zapier",
+    "source_title": "登记的Substack原帖（本轮未读）",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "遵守既有Substack停止访问要求，未请求或换路；付费prompt/视频未取得，归档、平台文档与推荐模板不是作者实际步骤。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有具体内部问答设想，但缺实际配置、代表性问题、权限和回复日志、维护工时与效果，当前产品定位不能补成收益证据。",
+    "audience": "有版本化销售资料、明确审核与升级负责人的销售运营团队。",
+    "use": "在合成问题上拟答、引用、拒答和标明升级，不自动发送。",
+    "benefit": "可能减少重复检索和解释，但没有准确率、节时、成交或RevOps工作量变化数据。",
+    "setup_cost": "合成或获准脱敏问题、政策/CRM字段说明、角色可见范围、参考答案、已有获准草稿环境；本轮不接账户。",
+    "maintenance_cost": "政策和字段变动、资料同步、错误/拒答修复、升级领取和用量核对，不能忽略试错人工。",
+    "frequency": "随实际销售咨询需求，归档没有每日问题量或可外推频次。",
+    "privacy_risk": "频道、CRM和Drive可能含私人或公司资料，本轮不读取、上传或公开；不默认平台连接者权限可转给所有提问人。",
+    "error_risk": "可能猜测或引用过时政策、泄露越权内容、@后无人处理，需要出处、角色核对和人工复核。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S2a4b1a5deec8",
+      "Sd27c601b2fcf",
+      "Sf7bda7cbf9d4",
+      "S34c6f22304c3"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Zapier Agents推荐模板完整保留，含5个真实问题测试和团队启用前看答案；不是付费原作者prompt。",
+    "prerequisites": "合成问题、版本化知识、人工参考答案、允许可见范围和升级人员规则，不连接真实系统。",
+    "tools": "归档实际标签Zapier Agents与ChatGPT Agent；正文另写Playground+Zapier MCP。推荐Zapier Agents另列，本轮不配置或登录。",
+    "expected_result": "有出处的回复草稿、未知项、拒答/升级表和维护变量；自编模板未实测，不发送频道消息。",
+    "prompts": [
+      {
+        "title": "在合成销售问题上核对来源和升级",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S2a4b1a5deec8",
+          "Sd27c601b2fcf",
+          "Sf7bda7cbf9d4",
+          "S34c6f22304c3"
+        ],
+        "attribution": "研究团队自编，非原作者付费prompt或源站原话；未实测。",
+        "text": "仅使用[合成或获准脱敏的销售问题]、[版本化知识资料]、[角色可见范围]、[人工参考答案]和[升级规则]。不要读取私人Slack、CRM或Drive，不发送消息、不配置MCP、不创建凭据、不调用额外付费API。逐题列意图、适用角色、来源和版本、支持句、回复草稿、未知项及与参考答案的差异。资料缺失、冲突、过时或超出权限时说明原因，不猜测销售政策、折扣、客户数据或流程。把拟@人员与已领取/已解决分开，列需人工决定的事项和恢复办法。回放无答案、越权请求、检索失败、重复问题和规则变更，全部保持草稿。记录检索/人工复核/修复和维护变量；问题数、Agents活动、Zapier tasks和Slack消息分别记录，未经核对不称为账单或收益。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：限定知识问答接入",
+      "currency": "USD",
+      "unit": "一个接入包，不含客户基础平台许可",
+      "price": 599,
+      "generation_cost": 10,
+      "human_cost": 320,
+      "other_variable_cost": 20,
+      "acquisition_cost": 100,
+      "contribution_before_fixed_cost": 149,
+      "monthly_volume": 3,
+      "monthly_fixed_cost": 600,
+      "monthly_profit": -153,
+      "assumptions": "全是假设，人工8小时×40，资源10不是实际账单；不含客户Slack/CRM许可、大规模首次知识整理、后续维护、超额用量、企业条件、税费退款，无实际订单。"
+    },
+    {
+      "scenario": "规划假设：有限知识与问答维护",
+      "currency": "USD",
+      "unit": "客户月，资源50为规划预算而非平台月付报价",
+      "price": 499,
+      "generation_cost": 50,
+      "human_cost": 240,
+      "other_variable_cost": 20,
+      "acquisition_cost": 60,
+      "contribution_before_fixed_cost": 129,
+      "monthly_volume": 5,
+      "monthly_fixed_cost": 800,
+      "monthly_profit": -155,
+      "assumptions": "收费、资源和工时全是假设，人工6小时×40，资源50不是原作者成本或33.33月付；额外4小时支持使贡献-31。不含客户基础许可、首次知识整理、超额/企业条件、税费退款，非真实合同或账单。"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "原帖未读，平台其他客户例证和搜索摘要不作本项目独立反馈；未评分不是差评。"
+  },
+  "limitations": "未读Substack或付费prompt/视频；无配置、代码、问答样本、质量、权限/升级日志、实际用量账单、客户付费或独立复现。当前Zapier与原生Slackbot文档不是作者实现，活动/tasks/消息不能混算。无真实频道/CRM/Drive操作、模型调用、新凭据或新增付费API。",
+  "archive_source_sha256": "dadc16f2dd23d29f5df009c239a1afcd4a4f256cc22acb4651faea336100d0d1",
+  "translation_sha256": "8caa75baa06d76e45753a31a40f8726d77c70fa5f4bcd4ca2dac6410126d9756"
+}

@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-10-18T03:55:48.964647+00:00",
+  "integrity": "passed",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "manual paragraph correspondence plus hash checks passed",
+  "brief_not_deep": true,
+  "commercial_score": null,
+  "author_method": "unavailable; original not read, no invented steps",
+  "source_receipts_verified": 5,
+  "economics_recomputed": 2,
+  "cross_references": "passed",
+  "personal_and_editorial_validators": "passed",
+  "source_trial_exact": "passed",
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 45,
+    "chinese_translation_pending": 1336,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 45,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 0,
+  "new_briefs": 1,
+  "new_complete_chinese_translations": 1,
+  "v2_deep_gate": "not applicable; not run or claimed",
+  "verify_sources_exception": "No bulk verify-sources call because it would re-request the stopped source target. Used archive/cache hashes, four permitted public captures and exact independent refetches instead.",
+  "implementation_runtime": "not tested; author code not obtained; no model calls, private Slack, CRM or Drive data, messaging or MCP configuration",
+  "tests_completed_at": "2026-10-18T03:55:49.004229+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T03:53:03.184Z",
+      "duration": 155634.592,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site desktop and mobile; not an execution of the sales Slackbot workflow",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "trials"
+    ],
+    "checks": [
+      "exact original and translation",
+      "Chinese default open, English collapsed and expandable",
+      "exact source trial template and actual/recommended tools",
+      "pending deep research and no fabricated score",
+      "no overflow or page errors"
+    ],
+    "report_route": "absent by design because brief is separate from completed v2 research"
+  },
+  "website_counts": {
+    "reports": 45,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 45
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Existing repository tests unchanged; temporary config only selects installed system Chromium and absolute test/server paths. Security adapter only substitutes absolute imports and browser launcher."
+  },
+  "commands": [
+    "python /tmp/validate_salesbot_brief.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/salesbot-security.mjs",
+    "node /tmp/salesbot-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "75ce0584684e3ea8fc1c6e81b815a6d562dd5c706916865e3eb51fce8de7b066",
+    "content": "6831688005d52a9eb98706d8a0f09a46c254af7cd601b54fbfe1b775be7eb02b",
+    "build": "5fdc310fe192e997e3b75bfad46b3bd9d3597d960c45e6b6f5bb2f92b52533a7",
+    "output": "bf30e63f3fc1881f2d2a90dbf8d012b136c8a9d139f70464481d5aba62264684",
+    "browser": "837c01d06fe88682ee898e7235d892e7a9eaf1e2572c3146ba4ef4aefa9516e4",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "5a62fdb246a40d14fb9ac5c7222dfc2ceb369f3a9d1ebd3aa5089a75f508062d"
+  },
+  "latest_main_observation": {
+    "checked_at": "2026-10-18T03:55:48.893603+00:00",
+    "base_commit": "a7454948e5afc682ecbf204015b899a690286519",
+    "latest_main": "bb7a19079c77871fa120e1747bc8701dc30bd70f",
+    "catalog_and_assigned_archive_unchanged": {
+      "registry/cases.json": true,
+      "registry/refresh.json": true,
+      "registry/archives/answer-sales-reps-questions-with-a-slackbot-agent.json": true
+    },
+    "assigned_research_absent_on_main": true,
+    "main_written": false,
+    "scope": "Independent branch snapshot; integration coordinator serializes shared indexes/main."
+  }
+}
