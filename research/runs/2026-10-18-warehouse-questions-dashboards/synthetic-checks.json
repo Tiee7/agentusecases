@@ -1,0 +1,85 @@
+{
+  "checked_at": "2026-10-18T03:10:24.403534+00:00",
+  "scope": "Python standard-library SQLite synthetic fixture only; no model, Devin, warehouse, MCP or Metabase execution; not production security or text-to-SQL accuracy proof. All rows invented.",
+  "parameters": [
+    "T1",
+    "2026-01-05T00:00:00",
+    "2026-02-02T00:00:00"
+  ],
+  "weekly_sql": "WITH RECURSIVE weeks(w) AS (SELECT '2026-01-05' UNION ALL SELECT date(w,'+7 days') FROM weeks WHERE w<'2026-01-26'), eligible AS (SELECT * FROM users WHERE tenant=? AND signup>=? AND signup<? AND is_test=0) SELECT w,count(e.id) AS signups FROM weeks LEFT JOIN eligible e ON e.signup>=w||'T00:00:00' AND e.signup<date(w,'+7 days')||'T00:00:00' GROUP BY w ORDER BY w",
+  "weekly_result": [
+    [
+      "2026-01-05",
+      2
+    ],
+    [
+      "2026-01-12",
+      1
+    ],
+    [
+      "2026-01-19",
+      1
+    ],
+    [
+      "2026-01-26",
+      0
+    ]
+  ],
+  "channel_sql": "SELECT coalesce(channel,'unknown'),count(*) FROM users WHERE tenant=? AND signup>=? AND signup<? AND is_test=0 GROUP BY coalesce(channel,'unknown') ORDER BY 1",
+  "channel_result": [
+    [
+      "organic",
+      2
+    ],
+    [
+      "paid",
+      1
+    ],
+    [
+      "unknown",
+      1
+    ]
+  ],
+  "tenant_injection_string_result": [],
+  "naive_join_sql": "SELECT count(*),count(DISTINCT u.id),sum(e.amount) FROM users u LEFT JOIN events e ON u.id=e.user_id WHERE tenant=? AND signup>=? AND signup<? AND is_test=0",
+  "naive_join_count_distinct_sum": [
+    5,
+    4,
+    20.0
+  ],
+  "dedup_sql": "SELECT sum(amount),sum(amount IS NULL),sum(amount=0) FROM (SELECT DISTINCT id,user_id,amount FROM events)",
+  "dedup_known_sum_unknown_truezero": [
+    10.0,
+    1,
+    1
+  ],
+  "unknown_amount_policy": "10 is known partial sum, not total revenue; one NULL remains unknown. Zero-filled week requires known complete fixture coverage.",
+  "denied_operations": [
+    {
+      "sql": "UPDATE users SET channel='bad'",
+      "result": "denied",
+      "error": "not authorized"
+    },
+    {
+      "sql": "CREATE TABLE bad(x)",
+      "result": "denied",
+      "error": "not authorized"
+    },
+    {
+      "sql": "ATTACH DATABASE ':memory:' AS other",
+      "result": "denied",
+      "error": "not authorized"
+    },
+    {
+      "sql": "PRAGMA query_only=OFF",
+      "result": "denied",
+      "error": "not authorized"
+    }
+  ],
+  "database_unchanged_sha256": "2bf2ae36cc72fee5369351c25f47146ec5377e14631c1301b8a63cf65f005328",
+  "artifact": "/workspace/warehouse-synthetic-report.html",
+  "artifact_sha256": "886c27ba3c6287d09755aadc2b98b7602cb6cdb5b0f22805b4674c5662a83da7",
+  "paid_api": false,
+  "credentials": false,
+  "real_data": false
+}

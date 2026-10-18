@@ -1,4 +1,4 @@
-const headings = new Set(['实际使用','使用工具','使用的 Agent','具体做法','他们做了什么','结果如何','值得知道','需要知道的事','自行试用','自己试试','推荐工具','复制提示词','原始来源','Done with','What they did','How it went','Worth knowing','Try it yourself','Copy prompt','Original source']);
+const headings = new Set(['实际使用','实际使用的 Agent','使用工具','使用的 Agent','具体做法','他们做了什么','结果如何','值得知道','值得注意','需要知道的事','自行试用','自己试试','推荐工具','复制提示词','原始来源','Done with','What they did','How it went','Worth knowing','Try it yourself','Copy prompt','Original source']);
 
 // Classify a line without changing its text, whitespace, or line ending.
 export function archiveLines(body) {
