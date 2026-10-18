@@ -1,0 +1,134 @@
+{
+  "checked_at": "2026-10-18T01:47:52.712806+00:00",
+  "integrity": "passed",
+  "validators": "business.validate + personal required + author_method required",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "Manual paragraph correspondence plus hash checks passed",
+  "analysis_depth": "deep",
+  "analysis_characters": 4353,
+  "facts": 10,
+  "sections": 10,
+  "source_receipts_verified": 7,
+  "independent_refetches_exact": 6,
+  "commercial_score": 23,
+  "personal_value": "中",
+  "author_method": "2 bilingual source-backed summaries",
+  "unit_economics_recomputed": [
+    [
+      151,
+      -2,
+      -220
+    ],
+    [
+      20,
+      9,
+      150
+    ]
+  ],
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 20,
+    "chinese_translation_pending": 1361,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 36,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 1,
+  "new_briefs": 0,
+  "new_complete_chinese_translations": 1,
+  "business_runtime": "Not executed; no real bot, user device, memory or account operations",
+  "bulk_verify_sources_exception": "Do not invoke bulk verify-sources because it would re-request a source-site target with an existing certificate stop. Existing Git archive is hash checked; all six permitted external sources were independently re-fetched and byte hashes matched. Normal 301/302 canonical redirects are separately recorded, not access denials.",
+  "tests_completed_at": "2026-10-18T01:48:49.909048+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T01:46:16.374Z",
+      "duration": 150262.248,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site; not execution of the author implementation",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "reports",
+      "trials"
+    ],
+    "checks": [
+      "exact original and complete Chinese translation",
+      "Chinese default expanded / English collapsed",
+      "objective H1 and SEO title",
+      "source n8n label distinguished from unknown author platform",
+      "23/100 score and correct verdict/personal value",
+      "2 bilingual author summaries",
+      "2 economics and 3 source/ours prompt cards",
+      "no overflow or page errors"
+    ]
+  },
+  "markdown_review": "Removed duplicate renderer-provided English/Chinese blocks from Markdown; one Chinese block and collapsed English remain. Website reads structured JSON, not Markdown text; final site validation still covers current record.",
+  "website_counts": {
+    "reports": 36,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 20
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Repository tests unchanged. Temporary full-suite config and security adapter only substitute installed system Chromium and absolute paths."
+  },
+  "commands": [
+    "python /tmp/validate_todoist_research.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/todoist-security.mjs",
+    "node /tmp/todoist-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "b74fd86bfc07a2cea3dd1e0f9e2cc5019ae4d62bf1c1638a46dc45cd98fb0b7f",
+    "content": "7564c008507b05b6b1ff9601603eb9ff907595b4b8c3eaca7d44942d8aaaad80",
+    "build": "9d1527067eb16ec011625b8ae92ebfe4a55ded3512a894e4285c6e6c3a5df84a",
+    "output": "80e24ccf44e3562de4fd2a25ab341ae2c81688bacdac3a3f98a3e2a663146755",
+    "browser": "8d8c25eac79c71b86886148c76b7ff6e1d5ab294c059a8813c38479cb24b51c7",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "fb88806f84de13d6cd76f49749f432e6bb24e2cc9b49f8764b0890db530da0b5"
+  }
+}
