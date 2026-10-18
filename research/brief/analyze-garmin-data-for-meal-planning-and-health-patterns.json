@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "analyze-garmin-data-for-meal-planning-and-health-patterns",
+  "url": "https://agentusecases.ai/use-case/analyze-garmin-data-for-meal-planning-and-health-patterns",
+  "title": "用 Claude 整理可穿戴数据与餐食健康记录",
+  "researched_at": "2026-10-18T02:30:45.026490+00:00",
+  "industry": "个人日志整理与健康记录辅助",
+  "brief_reason": "原帖依既有拒访限制未读，归档存在Garmin与Hume方法差异；缺少独立健康效果、客户和付费证据，官方文档不能替代临床或商业验证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先验收来源与人工整理，不能把用药自述变成服务效果",
+    "reason": "没有独立原帖、健康真值、因果或付费结果，现阶段只支持合成数据质量验收。"
+  },
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/analyze-garmin-data-for-meal-planning-and-health-patterns",
+      "title": "Analyze Garmin data for meal planning and health patterns",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T06:02:35.125747+00:00",
+      "archived_at": "2026-10-17T06:02:35.125747+00:00",
+      "archive_path": "registry/archives/analyze-garmin-data-for-meal-planning-and-health-patterns.json",
+      "sha256": "a677c7a0b6cfac54c9dbf1fb4c57eb2c06d678b7fca7cf152ea75bb179a983cc",
+      "hash_scope": "Existing source_text.body UTF-8, no new source-site request",
+      "supports": "源站关于Garmin简介、Hume手工录入和用药/餐食自述的既有归档；完整译文不构成医学验证。"
+    },
+    {
+      "id": "registered-original-unread",
+      "kind": "primary",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1tnxsyf/best_way_to_use_a_health_watch_use_it_with_claude",
+      "title": "Reddit 原帖（本轮未读取）",
+      "status": "skipped_previous_access_denial",
+      "fresh_attempt": false,
+      "sha256": null,
+      "supports": "仅保留登记链接；未重试既有拒访，不支持新的作者方法或评论事实。"
+    },
+    {
+      "id": "S9f713a144d7b",
+      "kind": "primary",
+      "url": "https://developer.garmin.com/gc-developer-program/health-api/",
+      "title": "Health API | Garmin Connect Developer Program | Garmin Developers",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:28:11.219613+00:00",
+      "sha256": "c031205d89c7f0795a3e019fe4ad1cc57446d5c00fa3d5cea959ca93820f6da8",
+      "supports": "官方Health API提供JSON健康指标，说明用户同意、设备同步和审批后的评估环境；不证明本案例接通接口。带星号费用脚注不外推为所有API的统一价格。"
+    },
+    {
+      "id": "S965208b484ed",
+      "kind": "primary",
+      "url": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+      "title": "Upload files to Claude | Claude Help Center",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:28:16.384012+00:00",
+      "sha256": "d8607d1c9f6dfc053935b7e3add18a039367384757de690368f30054afce1c00",
+      "supports": "Claude当前上传文档类型及聊天/项目处理范围；可上传不证明数据解释或医学结论正确。"
+    },
+    {
+      "id": "S545f93840f99",
+      "kind": "primary",
+      "url": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude",
+      "title": "Create and edit files with Claude | Claude Help Center",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:28:19.306871+00:00",
+      "sha256": "703c68cadd7f0d5c3e29b3d9cb9b569504c93f2feff446b968fb95200b0ee189",
+      "supports": "Claude当前文件和代码执行能力、网络/MCP范围与数据外传风险提示；未实际接入或上传。"
+    },
+    {
+      "id": "S4ed2fbaf8d69",
+      "kind": "competitor",
+      "url": "https://www.garmin.com/en-US/newsroom/press-release/sports-fitness/stay-on-top-of-nutrition-goals-in-garmin-connect/",
+      "title": "Garmin announces nutrition tracking in Garmin Connect",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:28:21.910543+00:00",
+      "sha256": "ff68cc10655ed49807d71024cc78b4194a6d7bd20c5a61d695f2412e3aa5a82b",
+      "supports": "Garmin官方2026年1月公告的Connect+营养记录、报告与洞察功能，构成具体替代；不是本案例疗效或付费需求证明。"
+    },
+    {
+      "id": "Se21a9489945b",
+      "kind": "primary",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/general-wellness-policy-low-risk-devices",
+      "title": "General Wellness: Policy for Low Risk Devices | FDA",
+      "status": "fetched",
+      "fetched_at": "2026-10-18T02:28:28.518257+00:00",
+      "sha256": "d3e5316a40670e3f087c0e95517d3cb9b2cfdc1d07b4708b33a0010e95be6023",
+      "supports": "FDA 2026年一般健康产品指导页面区分与疾病诊疗无关的软件用途；仅引用页面说明，未读取完整PDF或据此给本案例作分类。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "归档简介写Garmin导出，方法段写Hume手环及体脂秤的手工录入，不能直接认定同一接入流程。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档转述分别维护餐食规划和健康项目，并有用药自述。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档没有硬性健康效果指标，且包含过度解读异常的提醒。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站模板要求上传Garmin及用药/餐食记录，不等于作者实际提示词。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Garmin官方Health API说明JSON汇总、用户同意和设备同步。",
+      "source_ids": [
+        "S9f713a144d7b"
+      ]
+    },
+    {
+      "statement": "官方Health API页面描述审批后的评估环境，而非本案例现成接入。",
+      "source_ids": [
+        "S9f713a144d7b"
+      ]
+    },
+    {
+      "statement": "Claude官方上传页列有CSV和JSON，聊天与项目处理范围不同。",
+      "source_ids": [
+        "S965208b484ed"
+      ]
+    },
+    {
+      "statement": "Claude文件文档明确网络与MCP连接需分别考虑。",
+      "source_ids": [
+        "S545f93840f99"
+      ]
+    },
+    {
+      "statement": "Garmin2026年1月公告Connect+的营养记录、报告和洞察功能。",
+      "source_ids": [
+        "S4ed2fbaf8d69"
+      ]
+    },
+    {
+      "statement": "FDA指导页面针对一般健康用途，未对本案例作产品认定。",
+      "source_ids": [
+        "Se21a9489945b"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "decision",
+      "title": "先界定记录整理与医学判断",
+      "body": "现有证据不支持将本案例作为收费的药效或健康干预服务，商业评分不评定。归档中的“药效减弱”和“没有副作用”是来源转述的个人经历，没有可核对指标、对照或独立临床评估。完整译文保留原文，研究不将这些措辞改写成已验证效果。可进一步检查的是记录整理是否省事、能否形成供人工核对的问题清单；这与证明药物效果或生成个体化治疗方案是不同任务。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "identity",
+      "title": "Garmin导出与Hume手工录入不能合并",
+      "body": "归档简介写Garmin导出，具体方法却是评论者手工录入Hume手环、体脂秤和用药信息；现有材料不足以消除这个差异。不能把另一人的实践当成发帖者已完成的集成，也不能推定跨设备字段、计量单位和时间口径一致。原帖依既有拒访限制跳过，author_method保持unavailable、steps为空，不从聚合站模板编造作者步骤。作者实际工具记录为Claude，源站推荐模板另存，两者即使同名也不代表模板已经执行。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "数据整理先于规律解释",
+      "body": "拟议流程先列来源设备、手工/自动输入、单位、时区、测量时间、覆盖日期和缺失项，再统一可比口径。无佩戴、未同步和未记录必须与真实零分开；重复导入不能成为新增观测。Garmin官方Health API说明用户同意、同步、JSON汇总及审批后评估环境，这些只是另一种数据接入条件，不证明案例用了API，更不证明可以直接免费商用。只读健康指标也不等于可以修改账户或把数据转给其他服务。本轮仅检查合成记录，不接入设备或账户。",
+      "source_ids": [
+        "S9f713a144d7b",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "inference",
+      "title": "相关、星期规律和药效之间缺少因果证据",
+      "body": "少量选择性手工数据可能同时受星期安排、记录频率、活动或其他未记录因素影响；在这里没有独立证据证明哪一因素解释变化。不能因为同一天出现两个变化就确认药效，也不能用没有记录到副作用证明没有发生。合成反例中，两个分组内部的X/Y均正相关，合并后却负相关，说明分组和背景足以改变描述性结论；这不是对真实患者的模拟或疗效估计。可交付的应是数据缺口与待核对的问题，不是因果诊断、用药调整或保证安全的饮食处方。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "scope",
+      "title": "平台能力与用途边界",
+      "body": "Claude官方支持上传CSV/JSON并用代码整理数据，但支持文件格式不保证正确理解设备字段、完整上下文或医学因果。当前不同上传和文件处理文档的限制口径不同，不在本案例承诺全量导出均可处理。FDA 2026年指导页面说明与疾病诊断、治疗等无关的一般健康软件用途边界；该页面不是针对本案例的许可或豁免，本轮也未读取完整PDF、作产品法律分类或评价具体药物。若交付开始解释药效或指导临床行为，需要另外评估专业责任与适用要求，不能沿用普通日志整理的成本和承诺。",
+      "source_ids": [
+        "S965208b484ed",
+        "S545f93840f99",
+        "Se21a9489945b"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "付款人、替代与隐私成本",
+      "body": "可能使用者是整理本人日常记录的人，潜在付款人可能是本人或承担行政整理预算的服务方；没有可核验付费客户。手工日志、电子表格以及Garmin Connect+公告中的营养记录和报告是具体替代，但后者并非本案例药效分析的等效品。新增Agent层必须证明人工核对后仍省时，不能依赖“能发现隐藏健康规律”获客。健康、用药和未发布生活记录会增加字段最小化、访问控制、保留删除及误发处置负担。官方文件文档提醒网络与MCP需分别考虑，禁用某类网络访问不能被表述为所有连接都无法外传。",
+      "source_ids": [
+        "S4ed2fbaf8d69",
+        "S545f93840f99",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "只计算行政整理的假设情景",
+      "body": "以下均为美元预算假设，不是平台费率、作者收入或诊疗收费。每用户每月29，运行2、人工半小时乘30=15、其他2、获客5，单位贡献5；月40人、固定100时贡献100。人工增至1.5小时，单位负25、月负1100。一次性日志设置199，运行4、人工3小时乘40=120、其他10、获客25，贡献40；月5项、固定100时贡献100。人工增至5小时，单位负40、月负300。这些没有包含临床审核、保险、法律审查、税和其他固定费用，因此不能外推为完整健康服务利润；许可、真实用量及客户付款均待核实。",
+      "source_ids": [
+        "S9f713a144d7b",
+        "S545f93840f99",
+        "S4ed2fbaf8d69"
+      ]
+    },
+    {
+      "id": "evidence",
+      "title": "反馈等级与下一步",
+      "body": "已在公开网页、GitHub和Hacker News方向检索Garmin/Claude健康与餐食使用，未取得可归属于本案例的独立实际使用或付费效果证据；原帖评论只来自源站转述，不计为已读用户反馈。已读五份官方资料支持有限平台与替代分析，不能弥补原帖和健康结果缺口，故保存schema-1简版。下一步先用虚构日期和数值验收单位、时区、重复、缺失与分组反例；没有真实健康信息也能检验这些机制。如果不能追溯来源、把未知当零、混合设备数据、人工返工超预算，或输出开始替代医疗判断，应停止扩大交付。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9f713a144d7b",
+        "S965208b484ed",
+        "S545f93840f99",
+        "S4ed2fbaf8d69",
+        "Se21a9489945b"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-garmin-data-for-meal-planning-and-health-patterns",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "a677c7a0b6cfac54c9dbf1fb4c57eb2c06d678b7fca7cf152ea75bb179a983cc",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "6be94ac28c2af1b16a9d4f70452700087418ef651c17cbcbfc43c2d1c3abb65a",
+      "How it went": "9e60a8a134b992636680460bff6fa2fa5e5eb452aac6776feac16100deb31ff8",
+      "Worth knowing": "227c560abfe4273afd826b21162ab1dd20d2d23aecd48340f47580ecd7b8b464"
+    },
+    "actual_agents": [
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm uploading my Garmin export covering [date range] along with my [medications and meal log]. Look for patterns between my sleep, activity, heart rate and eating, and tell me anything linked to how well [medication or symptom] works. Then draft a one-week meal plan for [goal] based on those patterns, and list the questions to bring to my doctor rather than making medical conclusions.",
+    "agent": "Claude",
+    "source_url": "https://agentusecases.ai/use-case/analyze-garmin-data-for-meal-planning-and-health-patterns",
+    "observed_at": "2026-10-17T06:02:35.125747+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e60594cb01aeed567a99a5a2c216d28b08b69ad3a8d8e7ed6cc22572efaaa16f"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeAI/comments/1tnxsyf/best_way_to_use_a_health_watch_use_it_with_claude",
+    "source_title": "Reddit 原帖（本轮未读取）",
+    "steps": [],
+    "unavailable_reason": "Existing access denial applies to Reddit; skipped without a new request, retry, login or bypass. Archived aggregator narrative and trial are not treated as author method."
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "日志整理可能有辅助价值，但来源差异、净省时和准确性未验证，不能推导药效或安全性。",
+    "audience": "能核对本人记录来源和数据用途的成年人；本轮只用虚构数据。",
+    "use": "设计来源、单位、日期和未知值验收，形成供人工核对的问题清单。",
+    "benefit": "可能减少手工整理，未测得时间节省、健康改善或治疗效果。",
+    "setup_cost": "字段字典、时间/单位口径、输入最小化、人工答案和访问边界。",
+    "maintenance_cost": "设备与导出变化、补录、去重、错误复核、保留删除与费用监测。",
+    "frequency": "先按虚构批次验收；没有连续实际使用证据。",
+    "privacy_risk": "健康、用药和生活记录敏感；本轮不读取或上传真实记录、不连接账户。",
+    "error_risk": "混合设备、选择性记录、未知当零及相关误作药效会造成错误理解。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S9f713a144d7b",
+      "S965208b484ed",
+      "S545f93840f99",
+      "S4ed2fbaf8d69",
+      "Se21a9489945b"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站完整模板在归档原文和忠实译文保留，是源站建议，不等于作者实际提示词或已经执行。",
+    "prerequisites": "纯虚构来源设备、时间、单位、数值、字段字典与人工答案，不含真实健康信息。",
+    "tools": "现有本地Python标准库即可验收；不接入健康平台、项目或模型。",
+    "expected_result": "可追溯的数据质量表、未知项和分组反例，不给医学结论或个人餐食处方。",
+    "prompts": [
+      {
+        "title": "用虚构日志核对来源与数据质量",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非作者或源站原话；未调用模型实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S9f713a144d7b",
+          "S965208b484ed",
+          "S545f93840f99",
+          "Se21a9489945b"
+        ],
+        "text": "请仅用[纯虚构日期、来源设备代号、时间戳、单位和数值]设计健康日志的数据质量验收，不读取、请求或上传任何人的真实健康、用药、饮食或账户资料。禁止连接Garmin、Hume、Claude项目或医疗系统，不注册、不安装集成、不创建凭据、不调用付费API。检查手工与自动来源、时区跨日、单位不一致、重复、缺失和真实零，逐行列出保留、排除、待核实理由。用无医学含义的X/Y分组示例说明总体相关与组内相关可能相反，不把任何关联当作药效、诊断或因果结论。不要提出用药、剂量、注射时间、治疗或个体化餐食处方，不承诺没有副作用。只输出字段字典、可追溯验收表、未知项和供人工核对的问题后停止。本模板为研究团队自编，未调用模型实测。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "假设：每月行政日志整理",
+      "currency": "USD",
+      "unit": "用户/月",
+      "price": 29,
+      "api_cost": 2,
+      "human_cost": 15,
+      "other_variable_cost": 2,
+      "acquisition_cost": 5,
+      "units_per_month": 40,
+      "fixed_monthly_cost": 100,
+      "contribution_before_fixed_cost": 5,
+      "monthly_contribution_before_tax": 100,
+      "assumptions": "全部为预算假设；人工0.5小时×30，增至1.5小时则单位-25、月-1100。不含临床审核、保险、法律审查、税及其他固定费用；不是完整健康服务利润。"
+    },
+    {
+      "scenario": "假设：一次性日志设置",
+      "currency": "USD",
+      "unit": "项目",
+      "price": 199,
+      "api_cost": 4,
+      "human_cost": 120,
+      "other_variable_cost": 10,
+      "acquisition_cost": 25,
+      "units_per_month": 5,
+      "fixed_monthly_cost": 100,
+      "contribution_before_fixed_cost": 40,
+      "monthly_contribution_before_tax": 100,
+      "assumptions": "全部为预算假设；人工3小时×40，返工至5小时则单位-40、月-300。不含临床审核、保险、法律审查、税及其他固定费用，未验证付款或平台许可。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Hacker News",
+        "query": "\"Garmin\" \"Claude\" \"meal\" site:news.ycombinator.com",
+        "outcome": "没有取得可归属本案例的独立实际使用证据。"
+      },
+      {
+        "channel": "GitHub公开代码",
+        "query": "\"Garmin\" \"Claude\" \"nutrition\" site:github.com",
+        "outcome": "没有取得本案例的独立客户或健康效果验证。"
+      },
+      {
+        "channel": "公开网页",
+        "query": "\"Garmin\" \"Claude\" \"health\" review -site:reddit.com -site:x.com -site:substack.com",
+        "outcome": "没有取得独立付费使用结果；未用搜索摘要替代原帖。"
+      }
+    ],
+    "observations": [],
+    "signal": "No verified independent case-user signal; no health or satisfaction estimate."
+  },
+  "limitations": "原帖未重试，author_method unavailable。没有实际使用Claude或健康项目、连接设备/账户、上传私人记录、评估药效、制作个人餐食处方或调整医疗行为。FDA只读指导网页，未读完整PDF或给本产品定性。官方平台能力和发布公告不等于本案例当前可用、健康效果或付费需求。",
+  "archive_source_sha256": "a677c7a0b6cfac54c9dbf1fb4c57eb2c06d678b7fca7cf152ea75bb179a983cc",
+  "translation_sha256": "f9f2634b042ee8887380ce3531874192a509e57ca5d2b65c3892346d3562995e"
+}

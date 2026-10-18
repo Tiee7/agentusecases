@@ -1,0 +1,155 @@
+{
+  "checked_at": "2026-10-18T02:31:22.459168+00:00",
+  "scope": "Purely invented duration records and abstract X/Y. No person, wearable, medication, food, patient or model data; no inference about real health.",
+  "row_checks": [
+    {
+      "row": 1,
+      "source": "A",
+      "utc": "2026-01-02T04:30:00+00:00",
+      "local_day": "2026-01-01",
+      "normalized_minutes": 60.0,
+      "status": "kept",
+      "reason": "valid synthetic duration"
+    },
+    {
+      "row": 2,
+      "source": "A",
+      "utc": "2026-01-02T04:30:00+00:00",
+      "local_day": "2026-01-02",
+      "normalized_minutes": 60.0,
+      "status": "duplicate",
+      "reason": "same source and instant after normalization"
+    },
+    {
+      "row": 3,
+      "source": "B",
+      "utc": "2026-01-02T04:30:00+00:00",
+      "local_day": "2026-01-02",
+      "normalized_minutes": 60.0,
+      "status": "kept",
+      "reason": "valid synthetic duration"
+    },
+    {
+      "row": 4,
+      "source": "A",
+      "utc": "2026-01-03T00:00:00+00:00",
+      "local_day": "2026-01-03",
+      "normalized_minutes": null,
+      "status": "unknown",
+      "reason": "value missing"
+    },
+    {
+      "row": 5,
+      "source": "A",
+      "utc": "2026-01-04T00:00:00+00:00",
+      "local_day": "2026-01-04",
+      "normalized_minutes": 0.0,
+      "status": "kept",
+      "reason": "valid synthetic duration"
+    },
+    {
+      "row": 6,
+      "source": "A",
+      "utc": "2026-01-05T00:00:00+00:00",
+      "local_day": "2026-01-05",
+      "normalized_minutes": null,
+      "status": "unknown",
+      "reason": "unit missing/unknown"
+    },
+    {
+      "row": 7,
+      "source": "A",
+      "utc": "2026-01-06T00:00:00+00:00",
+      "local_day": "2026-01-06",
+      "normalized_minutes": -1.0,
+      "status": "invalid",
+      "reason": "negative synthetic duration"
+    },
+    {
+      "row": 8,
+      "source": "A",
+      "utc": null,
+      "local_day": null,
+      "normalized_minutes": null,
+      "status": "unknown",
+      "reason": "timezone missing"
+    },
+    {
+      "row": 9,
+      "source": "A",
+      "utc": "2026-01-08T00:00:00+00:00",
+      "local_day": "2026-01-08",
+      "normalized_minutes": null,
+      "status": "unknown",
+      "reason": "unit missing/unknown"
+    },
+    {
+      "row": 10,
+      "source": "A",
+      "utc": "2026-01-09T00:00:00+00:00",
+      "local_day": "2026-01-09",
+      "normalized_minutes": null,
+      "status": "unknown",
+      "reason": "could not convert string to float: 'bad'"
+    }
+  ],
+  "status_totals": {
+    "kept": 3,
+    "duplicate": 1,
+    "unknown": 5,
+    "invalid": 1
+  },
+  "cross_source_records_retained": true,
+  "local_and_utc_days_distinct": true,
+  "missing_not_zero": true,
+  "correlation_counterexample": {
+    "x": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9
+    ],
+    "y": [
+      7,
+      8,
+      9,
+      1,
+      2,
+      3
+    ],
+    "groups": [
+      "A",
+      "A",
+      "A",
+      "B",
+      "B",
+      "B"
+    ],
+    "pooled": -0.8620689655172413,
+    "within": [
+      1.0,
+      1.0
+    ],
+    "interpretation": "Grouping can reverse descriptive association. This is not a causal test, health effect or medication model."
+  },
+  "costs": [
+    {
+      "scenario": "假设：每月行政日志整理",
+      "unit": 5,
+      "monthly": 100
+    },
+    {
+      "scenario": "假设：一次性日志设置",
+      "unit": 40,
+      "monthly": 100
+    }
+  ],
+  "human_time_sensitivities_checked": true,
+  "reproduction": "Normalize aware ISO timestamps to UTC but retain original local date; allow h/min conversion only, preserve explicit zero, mark missing/bad values unknown, negative duration invalid. Deduplicate only same source+instant. Pearson correlation on invented X/Y; unit=price-api-human-other-acquisition, monthly=unit*volume-fixed.",
+  "no_private_health_data": true,
+  "no_paid_calls": true,
+  "no_credentials": true,
+  "no_real_account_connection": true
+}
