@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+  "url": "https://agentusecases.ai/use-case/add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+  "title": "用 Claude Code 为怀旧游戏重制版添加阿莱西亚战役场景",
+  "researched_at": "2026-10-18T00:51:43.935172+00:00",
+  "industry": "游戏原型、历史场景与模组制作",
+  "brief_reason": "已归档正文可完整翻译；原作者外部帖子未读，游戏、代码、构建与许可不明，缺少实际成本、直接玩家反馈和完成结果。两份官方补充资料只支持流程与假设发行条件；本稿不满足v2深研证据广度，独立保存为brief。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先取得可验收原型与成本记录，再讨论商业交付",
+    "reason": "尚不能确认成品、权利、需求或单位经济；对拥有合法工程且能人工试玩的人仍有条件性的辅助价值。"
+  },
+  "facts": [
+    {
+      "statement": "归档Done with记录的实际agent是Claude Code；简介另外提到ChatGPT负责研究与提示词交接。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档称地图依据ChatGPT提供的文本资料重建，列举凯撒著作译本、The Latin Library、Britannica和法国一家考古博物馆；没有给出这些资料的具体链接、版本或地图数据。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档称Nate Combs反复试玩、提出批评意见，由Claude Code修改；仍在试玩，没有最终结果或量化成效。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "归档未给出游戏名、游戏引擎、代码仓库、可运行构建、费用或耗时，无法据此确认可销售产品。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站Copy prompt要求实现地图、单位与胜利条件，在独立分支上迭代；这是推荐模板，不是已核验的作者实际提示词。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "Claude Code官方文档建议明确可执行验证条件，并把探索、规划与实现分开；技术建议不能替代本案例的运行验收。",
+      "source_ids": [
+        "S9686dc1633cd"
+      ]
+    },
+    {
+      "statement": "Steam官方规则把内容权利与发布前构建审核作为发行条件；此规则只用于说明假设渠道的交付门槛。",
+      "source_ids": [
+        "S200b6377ed2e-web"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "workflow",
+      "title": "研究、实现与试玩的交接",
+      "body": "归档呈现的流程是ChatGPT整理历史研究并撰写交接提示词，Claude Code把材料转成扩展场景，再由人试玩和提出具体意见。已记录的实际agent仍按Done with保留为Claude Code；不能把推荐工具或其他项目反填成作者配置。地图尺寸、兵力、地形、单位行为与胜负条件究竟怎样实现没有材料。应把史料摘录、据史料作出的推断和为可玩性调整的设计分别保存，否则下游代码很容易把研究阶段的不确定假设固化成规则。这里是对流程的分析，没有重建作者代码或观看其截图。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9686dc1633cd"
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "先建立可以检查的场景验收",
+      "body": "官方文档支持给编码代理可执行的验证标准，但能构建不等于好玩。针对已有且获准修改的工程，建议先固定一个小场景，核对进入地图、单位移动与交战、胜利和失败触发、重开及原有场景是否仍正常。存读档只有原游戏具备该功能时才纳入回归，不能假设案例引擎或接口存在。人工试玩应记录操作顺序、版本与可复现的问题；游戏平衡和历史解释仍需人判断。没有本例代码与构建，本轮没有进行游戏运行验证，也没有测得代理成功率。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9686dc1633cd"
+      ]
+    },
+    {
+      "id": "personal",
+      "title": "自用范围与准备负担",
+      "body": "自用价值为中，是对已有合法可修改源码、能够检查游戏行为的爱好者或独立开发者的条件性推断。辅助作用是把研究简报转为场景修改草案、减少资料与代码之间的手工交接，尚无节时数据。准备工作包括确认工程可运行、已有测试与素材来源，整理可追溯的史料和一个小场景的目标。后续负担主要是试玩、回归与维护；若连基础工程都不能稳定启动，先排除环境问题，不应把它混入扩展制作预算。项目隐私、未公开源码及素材只按原有访问范围处理。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9686dc1633cd"
+      ]
+    },
+    {
+      "id": "commercial",
+      "title": "潜在客户、替代与商业判断",
+      "body": "现有证据下不建议商业投入，先保留为个人原型与学习流程。假设付款人是拥有可修改游戏的独立团队，购买的会是能集成、可验收且修改范围清楚的场景交付，而不是一段代理提示词。替代方案包括团队手工编写场景、现有编辑器或聘请开发者；由于游戏本身未知，不能列举某款编辑器为已核验直接竞品，也无法比较真实报价、社区规模或兼容成本。没有付费客户、销售记录或直接玩家评价，尚不能证明获客渠道、复购或可积累的壁垒。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9686dc1633cd"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "从私人试玩到公开交付的差距",
+      "body": "可运行扩展和可公开发行是两步。Steam官方资料仅被当作一种假设渠道：内容权利和构建审核是发行条件。本例是否使用Steam、是否有重制版或素材许可，均未知，不能因为作品源自20世纪90年代就默认可以销售。下一步应先列出代码、引擎、图像与音频的来源及允许用途，未确认前仅在已获准的本地范围内做原型。历史叙述来自哪些具体译本、文章和地图仍需逐项核对，本轮没有用任意同题历史网页冒充作者读过的资料。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S200b6377ed2e-web"
+      ]
+    },
+    {
+      "id": "cost",
+      "title": "两种可复算成本情景",
+      "body": "案例未披露模型用量、订阅分摊、失败次数或人工工时。第一种个人原型规划：收入0美元，现有资源分摊预算5美元，加6小时×20美元的机会成本120美元，总投入125美元；其中120美元不是新增现金支出。第二种固定范围接单假设：每份299美元，资源5美元、8小时×30美元人工240美元、其他15美元和获客60美元，变动成本320美元，单位贡献-21美元；每月4份再扣100美元固定成本为-184美元。全部是用于检验报价的假设，未实际支出或核实市场价；多返工2小时，第二种单位贡献变-81美元。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "补证条件、反证与停止投入",
+      "body": "反对暂缓商业投入的理由是：爱好者自用并不需要付费客户，人工试玩也可能足以带来创作乐趣；这支持条件性的自用价值，不足以证明商业收益。下一轮最有用的材料是一份可确认归属与允许用途的项目说明、一个可运行的小场景、明确的验收记录，以及真实的修改工时。先约定一张地图和最多两轮试玩反馈，达到预算就停下来复盘。如果基础工程不可运行、关键许可未知或反复无法复现胜负条件，暂停扩展。取得这些证据后再升级研究层级，不按来源数量凑出深研。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S9686dc1633cd",
+        "S200b6377ed2e-web"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+      "title": "Add a battle-of-Alesia expansion to a 1990s game remake",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:34:29.020983+00:00",
+      "archived_at": "2026-10-17T05:34:29.020983+00:00",
+      "archive_path": "registry/archives/add-a-battle-of-alesia-expansion-to-a-1990s-game-remake.json",
+      "sha256": "57dbe14e750dae04574c1c9608f2f17b4b1e1356833eee7ba62d19b24f2544c6",
+      "hash_scope": "source_text.body UTF-8 in existing Git archive; not a new source-site request.",
+      "supports": "案例站已归档简介、ChatGPT到Claude Code的交接、试玩仍进行中、费用和耗时未报告，以及源站试用模板。"
+    },
+    {
+      "id": "S9686dc1633cd",
+      "url": "https://code.claude.com/docs/en/best-practices",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T00:49:19.780666+00:00",
+      "status": "fetched",
+      "title": "Best practices for Claude Code - Claude Code Docs",
+      "characters": 35069,
+      "sha256": "c6f68258ed748d2ca4623ff72b6402f00173ee7a19d39c7602fef1f5b16f34d7",
+      "supports": "Claude Code官方建议先探索与规划，提供可执行的验证标准并检查运行结果；不证明本例实际实现、画面或性能。"
+    },
+    {
+      "id": "S200b6377ed2e-web",
+      "kind": "primary",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/onboarding",
+      "title": "Onboarding (Steamworks Documentation)",
+      "status": "fetched",
+      "method": "web_open_cached_text",
+      "observed_at": null,
+      "observation_window": {
+        "start": "2026-10-18T00:49:22.885674+00:00",
+        "end": "2026-10-18T00:49:58+00:00"
+      },
+      "archived_at": "2026-10-18T00:49:58+00:00",
+      "sha256": "e632a6ddb397be8e7bcbc669da4881132be8889bb63ddfdaa7a79cd736e2be5d",
+      "hash_scope": "UTF-8 web-tool returned extract, lines 355–454 including line labels and reference markers; not HTTP HTML or a fresh successful evidence.capture fetch.",
+      "characters": 9497,
+      "supports": "Steam作为一种假设发行渠道，要求有足够内容权利并在发布前审核构建；不证明本例在Steam发行或已获许可。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "57dbe14e750dae04574c1c9608f2f17b4b1e1356833eee7ba62d19b24f2544c6",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "3c57b2774e5ae8ec05a2199360279f8c416ea76ad87d95f06560d1b28ee47f63",
+      "How it went": "b57fb84eeb950433d8e04783e94ef582190862564f2ab90a0ce3b23d29adfe11",
+      "Worth knowing": "bf3a9709a2316b10352e6e27f9b23aa9ad29f4fc5071d49af23667475458c108"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I have the source for my remake of [classic game] in [project path]. Add an expansion scenario based on [historical battle, e.g. the Battle of Alesia] using this research brief: [paste notes]. Implement the map, units, and win conditions, then let me playtest and iterate on my feedback until I say it's done. Keep changes on a separate branch.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/add-a-battle-of-alesia-expansion-to-a-1990s-game-remake",
+    "observed_at": "2026-10-17T05:34:29.020983+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "2a96a980640dfdd2b8d918b847cbacef81fe006b366a48dbe00cdbe2243db816"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://substack.com/@natecombsai/note/c-207873186",
+    "source_title": "Nate Combs的Alesia扩展原帖",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "外部原帖未取得；本轮没有重试已停止的Substack访问。已归档案例站介绍和Copy prompt不作为作者原始方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "条件性推断：已有获准修改的源码且能人工试玩时，可辅助把研究简报转为场景草案；未测得节时或质量收益。",
+    "audience": "拥有可修改工程、能检查代码和游戏行为的爱好者或独立开发者。",
+    "use": "整理历史资料交接、制作小场景并记录试玩问题。",
+    "benefit": "有机会减少研究到代码之间的手工交接；无实际收益数字。",
+    "setup_cost": "能正常启动的现有工程、素材用途记录、可追溯研究简报及明确场景范围。",
+    "maintenance_cost": "手工试玩、回归检查、环境与版本维护、修改失败后的复盘。",
+    "frequency": "按已有游戏项目需要使用，先做一次小场景。",
+    "privacy_risk": "源码、未发布内容与私人反馈保持原有访问范围，不上传无关资料。",
+    "error_risk": "历史假设可能被当成事实，地图、AI行为和胜负条件可能出错，需人工复核。",
+    "source_ids": [
+      "archive-case-20261017",
+      "S9686dc1633cd"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "原文Copy prompt已保存在source_trial与双语全文；不代表作者实际用过。",
+    "prerequisites": "已有获准修改且能运行的工程、资料来源清单、一张地图范围和人工试玩时间。",
+    "tools": "实际实现与源站推荐均为Claude Code；ChatGPT在归档叙述中负责研究和提示词交接。",
+    "expected_result": "小场景设计、变更清单及可复现的试玩验收步骤；本轮未运行游戏，不保证可玩或完成。",
+    "prompts": [
+      {
+        "title": "为现有工程准备可检查的小场景",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "S9686dc1633cd"
+        ],
+        "attribution": "研究团队自编，非原作者提示词，未实测。",
+        "text": "我已有获准修改且能正常运行的[游戏工程路径]，希望制作[历史战役]的一张小地图。先阅读现有场景格式、构建说明与测试，整理[研究简报和逐条来源]，把史料事实、推断和游戏设计假设分开。先给出地图、单位、胜负条件与最小文件改动计划，再在独立分支实施；只用已有工程和已配置工具。最多安排两轮我的试玩反馈，逐次记录版本、操作步骤、问题与修复。检查启动、地图进入、单位行为、胜利、失败、重开与原有场景回归；存读档只在原工程已有功能时检查。保留中间文件与改动清单，不覆盖原始素材；无法启动或缺少关键资料时说明阻碍并停在方案阶段。不要安装陌生项目、创建凭据、调用额外付费API、发布或联系他人。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：个人小场景",
+      "currency": "USD",
+      "unit": "次原型",
+      "price": 0,
+      "generation_cost": 5,
+      "human_cost": 120,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "contribution_before_fixed_cost": -125,
+      "assumptions": "6小时×20美元机会成本，现有资源分摊5美元。总投入125美元，其中人工120美元不是新增现金支出；不是作者实测或本轮支出。"
+    },
+    {
+      "scenario": "规划假设：固定范围开发服务",
+      "currency": "USD",
+      "unit": "份场景交付",
+      "price": 299,
+      "generation_cost": 5,
+      "human_cost": 240,
+      "other_variable_cost": 15,
+      "acquisition_cost": 60,
+      "contribution_before_fixed_cost": -21,
+      "monthly_volume": 4,
+      "monthly_fixed_cost": 100,
+      "monthly_profit": -184,
+      "assumptions": "8小时×30美元人工；一张地图、两轮试玩；全部是假设报价和成本，非真实订单。额外返工2小时单位贡献-81美元，未含税。"
+    }
+  ],
+  "feedback": {
+    "status": "not_verified",
+    "direct_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "三次定向搜索覆盖公开网页、GitHub代码社区及HN/Steam讨论渠道，未找到可确认归属的可运行项目或直接玩家反馈；检索结果不证明不存在反馈，不据此生成评分。"
+  },
+  "limitations": "未读取Substack原帖、未观看截图或运行游戏，未确认游戏名、引擎、代码归属、许可、史料具体版本、完工状态、客户需求、实际工时和成本。未把同题其他作者仓库当成此项目。Source Copy prompt是建议模板。Wanted未知，暂用稳定登记顺序，不是热度排名。",
+  "archive_source_sha256": "57dbe14e750dae04574c1c9608f2f17b4b1e1356833eee7ba62d19b24f2544c6",
+  "translation_sha256": "174124eac53027c1c92d5e7f91f4d6592689ab6f5e4b91462fe6688b11e41095"
+}
