@@ -1,0 +1,342 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "analyze-budgets-and-research-investments-from-bank-data",
+  "url": "https://agentusecases.ai/use-case/analyze-budgets-and-research-investments-from-bank-data",
+  "title": "用 ChatGPT 和 Claude 分析银行支出与财务报告",
+  "industry": "个人预算整理与财务材料研究",
+  "researched_at": "2026-10-18T02:27:15.743852+00:00",
+  "brief_reason": "原始讨论、确认归属的连接实现、真实结果/账单和独立用户反馈未取得；已读材料为案例站转述、当前同名候选官网及官方基础资料。五份来源不足v2深研广度，不能独立确认安全、准确性或商业需求，保存简报并保留未评分状态。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证只读整理与金额对账，商业分数暂不评定",
+    "reason": "归档提供了实用任务方向，但工具归属、数据流和效果仍有缺口；只建议做人审辅助方案核对，不能据此形成自主理财或收费服务结论。"
+  },
+  "facts": [
+    {
+      "statement": "案例归档实际标注ChatGPT和Claude，推荐模板工具为Claude Cowork，两者不能混同。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "源站没有报告具体效果数字；WisePenny不交银行登录的说法及另一评论者的本地方案均为转述，非本轮验证。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "statement": "当前同名候选官网宣传Plaid或账单导入、ChatGPT/Claude/MCP连接及预算分类功能；未确认是否原帖同一服务。",
+      "source_ids": [
+        "S2cfd31c8ce07"
+      ]
+    },
+    {
+      "statement": "OpenAI当前官方资料说明关闭模型改进不删除聊天，控制选项依账户、计划及工作区而异；不能证明原例设置。",
+      "source_ids": [
+        "Sbe583b060c13"
+      ]
+    },
+    {
+      "statement": "Anthropic消费者数据使用说明与商业产品分开，不能将消费者、商业账户及本地运行视作同一配置。",
+      "source_ids": [
+        "Se7ad291536d1"
+      ]
+    },
+    {
+      "statement": "CFPB工具包列出支出追踪、账单日历与现金流预算，提供不依赖此agent的基础整理参照。",
+      "source_ids": [
+        "S127cd31ed8cd"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "conclusion",
+      "title": "商业判断与证据范围",
+      "body": "本稿仅建议把它作为人工复核的只读整理方案来验证，商业分数未评定，自用价值待核实，属于简要分析而非completed v2深研。案例站转述涉及预算、财报比较与投资研究，但没有准确率、节省金额、工时、费用或客户。读取和总结不等于可以自主管理资金。潜在使用者是假设中愿意核对分类与来源的个人，付款人和持续服务预算未验证；不能把银行交易接入的便利直接写成可靠财务决策或商业收入。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S127cd31ed8cd"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "两个实际工具与推荐模板分别标识",
+      "body": "归档标注实际工具为ChatGPT和Claude，方法转述说用WisePenny把交易数据传入前者，再用后者做预算及财报分析，但两者之间怎样传递数据、具体版本、文件格式和权限均未披露。Claude Cowork出现在源站Try it yourself推荐，不能反推作者实际使用Cowork。源站模板另提供CSV导出的试用方式，不等于已经证明原始WisePenny接入就是本地CSV流程。原帖未读，author_method保持unavailable，不根据搜索摘要拼接作者步骤。",
+      "source_ids": [
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "银行密码、数据副本与本地运行不是同一件事",
+      "body": "发帖人避免分享银行登录信息，是案例站转述的自述；另一评论者的本地方案也不能移植成发帖人的属性。检索找到的同名候选官网说可以经Plaid或账单导入，并宣传与ChatGPT、Claude和MCP连接；尚未确认与原帖同一服务，更没有审计其数据流。即使不把银行密码交给模型，交易副本仍可能经过连接层和模型服务。银行账户只读、预算/类别可修改，以及完全在设备内处理，也要分别核对，不能把营销中的安全措辞当成独立验证。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S2cfd31c8ce07"
+      ]
+    },
+    {
+      "id": "controls",
+      "title": "当前模型数据设置不能倒推原例",
+      "body": "OpenAI当前官方资料说明可控制新对话是否用于模型改进，但关闭该项不会删除已保存聊天，选项也依账户、计划和工作区而异。Anthropic消费者资料则说明允许模型改进等使用情形，并区分商业产品。它们提供核对维度，不证明本例采用什么设置，也不等于数据不离开设备。应先明确输入副本、连接层、模型处理、保留与共享范围；本轮未查看或更改任何账户设置，没有上传私人账单，也没有连接银行或创建凭据。",
+      "source_ids": [
+        "Sbe583b060c13",
+        "Se7ad291536d1",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "从可复算月度汇总开始",
+      "body": "预算部分可以先用合成或获准脱敏CSV验收：检查日期、币种、正负方向、退款、内部转账、重复导出和跨月边界，逐月把原始合计、分类合计与未分类金额对账。重复商户或相近金额只能标记为疑似订阅，不是已经确认的订阅；异常也不是诈骗结论。财报摘要与投资研究应另列公开来源和假设，不从银行支出自动推导买卖建议。本文没有运行分类模型、处理真实CSV或计算任何人的预算，不能报告实际节省。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S127cd31ed8cd"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "先比较不需要模型的整理基线",
+      "body": "CFPB的Your Money, Your Goals工具包提供支出追踪、账单日历与现金流预算，说明基础梳理不必依赖一个新代理。固定类别规则和普通表格可作为比较基线；模型若能解释含糊商户或组织财报摘要，仍需确认是否减少了总核对工时。同名候选官网宣传预算、分类与共享功能，只能证明供应商展示了这些用途，不能替案例证明更准确、更私密或更便宜。未读同名App的评论或用其商店评分作为本服务口碑。",
+      "source_ids": [
+        "S127cd31ed8cd",
+        "S2cfd31c8ce07",
+        "archive-case-20261017"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "两个支持工时情景",
+      "body": "以下全为USD规划假设，不是作者账单、市场报价、实际客户或节省金额。49美元的限定单次整理包，资源3、人工1.5小时×40美元=60、其他2、获客10，可变75、贡献-26；每月20包减固定200，月贡献-720。249美元客户月辅助，资源10、人工3小时×40美元=120、其他15、获客摊销30，可变175、贡献74；10客户减固定500，月贡献240。额外两小时支持使该客户贡献变为-6。后者不含首次接入、税费退款，连接器和平台成本归属待按实际方案核对；发现可以节省的项目也不等于已经省下现金。",
+      "source_ids": [
+        "archive-case-20261017",
+        "S127cd31ed8cd",
+        "S2cfd31c8ce07"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "反馈、反证与停止条件",
+      "body": "三次评价搜索覆盖公开网页、GitHub与HN，发现同名产品、企业和一个社交展示帖，但未读原帖或把搜索摘要当成独立使用结果。没有可归属本实现的复现，反馈信号留空，不当作差评。最有利反证是现成工具确实能组织财务材料，源站也给出具体CSV模板，足以支持小样本核对计划。先取得确认归属的实现与脱敏结果，比较合计正确性、未知分类和修复工时；出现无法对账、越过只读范围、数据去向不明或维护超预算，应停止扩大范围。未形成独立安全、财务效果或收费验证前，不升级为商业深研。",
+      "source_ids": [
+        "archive-case-20261017",
+        "Sbe583b060c13",
+        "Se7ad291536d1",
+        "S127cd31ed8cd",
+        "S2cfd31c8ce07"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "archive-case-20261017",
+      "kind": "archived_case",
+      "url": "https://agentusecases.ai/use-case/analyze-budgets-and-research-investments-from-bank-data",
+      "title": "Analyze budgets and research investments from bank data",
+      "status": "read_from_approved_git_archive",
+      "observed_at": "2026-10-17T05:43:51.047329+00:00",
+      "archive_path": "registry/archives/analyze-budgets-and-research-investments-from-bank-data.json",
+      "sha256": "56953d3307e278e9d1bd9c8104680b59a24dfd38bcf4297938eddc53463af5e4",
+      "hash_scope": "Existing source_text.body UTF-8; no fresh source-site request.",
+      "supports": "支持案例站转述的WisePenny、ChatGPT/Claude用途、只读/本地建议与无效果数字；不是原作者原文或独立安全验证。"
+    },
+    {
+      "id": "Se7ad291536d1",
+      "url": "https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T02:24:01.938126+00:00",
+      "status": "fetched",
+      "title": "Is my data used for model training? | Anthropic Privacy Center",
+      "characters": 3272,
+      "sha256": "1df51e7d41b7dc966b48f0fb644dd66014da0c92d43c728e78ac977d3c80afcb",
+      "independent_verification": {
+        "id": "Se7ad291536d1",
+        "verified_at": "2026-10-18T02:25:21.518876+00:00",
+        "sha256": "1df51e7d41b7dc966b48f0fb644dd66014da0c92d43c728e78ac977d3c80afcb",
+        "exact_match": true
+      },
+      "supports": "当前Anthropic消费者资料说明允许改进模型等数据使用情形，并与商业产品分开；不能把原例账户、连接器内容或当地处理状态倒推出来。"
+    },
+    {
+      "id": "S127cd31ed8cd",
+      "url": "https://www.consumerfinance.gov/consumer-tools/educator-tools/your-money-your-goals/toolkit/",
+      "kind": "competitor",
+      "fetched_at": "2026-10-18T02:24:05.440193+00:00",
+      "status": "fetched",
+      "title": "Your Money, Your Goals toolkit | Consumer Financial Protection Bureau",
+      "characters": 6224,
+      "sha256": "0dc1e9da9d864485947acc05ec5dcc9e24cbad4e32bd30139965ac55cf820d28",
+      "independent_verification": {
+        "id": "S127cd31ed8cd",
+        "verified_at": "2026-10-18T02:25:25.013648+00:00",
+        "sha256": "0dc1e9da9d864485947acc05ec5dcc9e24cbad4e32bd30139965ac55cf820d28",
+        "exact_match": true
+      },
+      "supports": "CFPB工具包提供支出追踪、账单日历与现金流预算等手工基线；不为本案例或特定AI工具背书。"
+    },
+    {
+      "id": "S2cfd31c8ce07",
+      "url": "https://www.wisepenny.app/",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T02:24:20.400985+00:00",
+      "status": "fetched",
+      "title": "Wise Penny — Chat with your money.",
+      "characters": 5281,
+      "sha256": "d7eaaadebd8d98f254976989c5649eabd6f38fd4d96cc81c5f1ea3f6b8ae9680",
+      "independent_verification": {
+        "id": "S2cfd31c8ce07",
+        "verified_at": "2026-10-18T02:25:29.642552+00:00",
+        "sha256": "d7eaaadebd8d98f254976989c5649eabd6f38fd4d96cc81c5f1ea3f6b8ae9680",
+        "exact_match": true
+      },
+      "supports": "检索找到的同名Wise Penny候选官网宣传接入ChatGPT/Claude/MCP，支持Plaid或账单导入和预算分类等；属于当前供应商自述，未确认与原帖同一服务，未独立审计安全、权限或成效。"
+    },
+    {
+      "id": "Sbe583b060c13",
+      "url": "https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt",
+      "kind": "primary",
+      "fetched_at": "2026-10-18T02:24:38.716890+00:00",
+      "status": "fetched",
+      "title": "Data controls in ChatGPT | OpenAI Help Center",
+      "characters": 6240,
+      "sha256": "d2c94bda8106502256e5ce9992d185147da777985955d0297e168b6d3ad1e2cd",
+      "independent_verification": {
+        "id": "Sbe583b060c13",
+        "verified_at": "2026-10-18T02:25:18.711173+00:00",
+        "sha256": "d2c94bda8106502256e5ce9992d185147da777985955d0297e168b6d3ad1e2cd",
+        "exact_match": true
+      },
+      "supports": "当前OpenAI官方资料区分模型训练控制、聊天历史及账户/工作区条件；关闭模型改进不等于聊天被删除，不证明案例账户设置或数据在本机。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/analyze-budgets-and-research-investments-from-bank-data",
+    "observed_at": "2026-10-17T06:05:53.201718+00:00",
+    "body_sha256": "56953d3307e278e9d1bd9c8104680b59a24dfd38bcf4297938eddc53463af5e4",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "e0619b8f7fc7185a786c998a0303e60f06ac9545fc893cf9241023b4bb4a875e",
+      "How it went": "cb9604b5c1f18b8e5e5656822c251d0c33931faa2f9d9fc09ee0f048db7dffc0",
+      "Worth knowing": "e01cfccd5c65e1ef7695f57efec50eb12f0ccae902a64c13f9920e99e3f674b8"
+    },
+    "actual_agents": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I have exported my bank transactions to [file path, CSV]. Categorize the spending, show monthly totals by category, flag subscriptions and unusual charges, and suggest [number] realistic ways to save toward [goal]. Finish with a one-page summary and a cleaned spreadsheet, and do not change or delete my original files.",
+    "agent": "Claude Cowork",
+    "source_url": "https://agentusecases.ai/use-case/analyze-budgets-and-research-investments-from-bank-data",
+    "observed_at": "2026-10-17T05:43:51.047329+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "6a46508a815b36be1b786081d5a2cd15446624fdb250b1a23d362ef0e550389d"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeAI/comments/1s9b6im/anyone_using_claude_for_managing_finances",
+    "source_title": "登记的Reddit原始讨论（本轮未读）",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "遵守既有来源访问停止，未请求原帖；案例站转述、候选官网和搜索摘要不能冒充作者原文或实际配置。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "没有真实对账结果、实现和工时，未核实收益；能检查分类及合计的人可先验证合成CSV方案。",
+    "audience": "能核对交易类别、金额、月份及公开财报来源的个人或研究人员。",
+    "use": "只读整理预算材料、标记未知分类并组织财报摘要。",
+    "benefit": "可能减少重复整理，未测得准确率、节时或现金节省。",
+    "setup_cost": "合成/获准脱敏CSV、类别规则、币种和符号约定、人工参考合计及工具说明。",
+    "maintenance_cost": "处理退款转账、重复导出、商户变化，核对数据去向与人工修复。",
+    "frequency": "按真实月度梳理或财报研究需要使用，原例频率未知。",
+    "privacy_risk": "交易副本含私人信息，不交密码不等于数据只在本机；本轮不收集或上传私人资料。",
+    "error_risk": "可能混淆转账支出、重复金额、误判订阅或编造财报结论，需对账和来源复核。",
+    "source_ids": [
+      "archive-case-20261017",
+      "Sbe583b060c13",
+      "Se7ad291536d1",
+      "S127cd31ed8cd"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站CSV建议模板完整保留，不是原作者实际提示词，也不是Cowork实际使用证据。",
+    "prerequisites": "合成CSV、人工参考合计、类别定义和公开财报样本；不需要连接真实银行。",
+    "tools": "案例站实际标注ChatGPT、Claude；推荐Cowork；WisePenny及具体数据衔接未独立核实。",
+    "expected_result": "可复算分类台账、未分类项和核对清单；自编模板未实测，不执行真实理财动作。",
+    "prompts": [
+      {
+        "title": "在合成账单上核对分类与合计",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究团队自编，非原作者或源站原话，未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive-case-20261017",
+          "Sbe583b060c13",
+          "Se7ad291536d1",
+          "S127cd31ed8cd"
+        ],
+        "text": "只使用[合成或获准脱敏CSV]、[类别定义]和[人工参考合计]，先说明日期、币种、正负方向、退款和内部转账规则。列出每条记录的标识、原始金额、建议类别、理由和未知项，不补造商户或收入。按月给原始总额、分类总额和未分类总额的对账表，检查重复导出及跨月边界；订阅和异常仅标疑似，不能直接当成已确认收费或诈骗。生成新文件草稿和一页摘要，不修改删除原件，不连接银行、不读取密码或创建凭据、不调用额外付费API。若另做财报摘要，只用[明确公开文件]给出处与不确定项，区分事实与假设，不根据支出自动提出证券买卖。先展示方案与待核对输出，不声称已经省钱、完全本地或通过安全审计。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规划假设：限定单次预算整理",
+      "currency": "USD",
+      "unit": "一个限定范围整理包",
+      "price": 49,
+      "generation_cost": 3,
+      "human_cost": 60,
+      "other_variable_cost": 2,
+      "acquisition_cost": 10,
+      "contribution_before_fixed_cost": -26,
+      "monthly_volume": 20,
+      "monthly_fixed_cost": 200,
+      "monthly_profit": -720,
+      "assumptions": "全部假设，人工1.5小时×40美元；不是作者账单、市场报价、实际收入或现金节省。"
+    },
+    {
+      "scenario": "规划假设：已有接入的月度辅助",
+      "currency": "USD",
+      "unit": "客户月，不含首次设置",
+      "price": 249,
+      "generation_cost": 10,
+      "human_cost": 120,
+      "other_variable_cost": 15,
+      "acquisition_cost": 30,
+      "contribution_before_fixed_cost": 74,
+      "monthly_volume": 10,
+      "monthly_fixed_cost": 500,
+      "monthly_profit": 240,
+      "assumptions": "全部假设，人工3小时×40美元，额外2小时使贡献-6；未含首次设置、税费和退款，平台/连接成本归属待核。"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "原帖未读，同名App、公司和展示帖搜索结果不作为本实现独立用户验证；当前候选官网是供应商自述。"
+  },
+  "limitations": "未取得原始讨论、准确服务归属、连接配置/权限、实际数据流、安全审计、真实CSV/分析结果、账单、客户或独立复现。本轮只读归档和公开资料，没有上传私人账单、连接账户、调用模型、配置权限或交易。",
+  "archive_source_sha256": "56953d3307e278e9d1bd9c8104680b59a24dfd38bcf4297938eddc53463af5e4",
+  "translation_sha256": "d9ad89a751e16e4bf769302e86ad30477e57174a3457b4d07c8916ae62643110"
+}
