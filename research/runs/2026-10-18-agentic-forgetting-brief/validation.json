@@ -1,0 +1,117 @@
+{
+  "checked_at": "2026-10-18T01:04:58.339108+00:00",
+  "integrity": "passed",
+  "archive_unchanged_except_translation": true,
+  "faithful_translation": "manual paragraph correspondence plus hash checks passed",
+  "brief_not_deep": true,
+  "commercial_score": null,
+  "author_method": "author_summary, two bilingual summaries with matching primary-source hash",
+  "source_receipts_verified": 5,
+  "economics_recomputed": 2,
+  "cross_references": "passed",
+  "personal_and_editorial_validators": "passed",
+  "source_trial_exact": "passed",
+  "counts": {
+    "registered_cases": 1381,
+    "original_texts_in_git": 1381,
+    "complete_chinese_translations": 19,
+    "chinese_translation_pending": 1362,
+    "detailed_bilingual_editorials": 30,
+    "editorial_pending": 1351,
+    "completed_business_research": 35,
+    "legacy_short_summaries": 23,
+    "html_receipts": 1381,
+    "historical_extracted_text_receipts": 0,
+    "agent_status_counts": {
+      "custom_or_unnamed": 238,
+      "observed": 1143
+    }
+  },
+  "new_deep": 0,
+  "new_briefs": 1,
+  "new_complete_chinese_translations": 1,
+  "v2_deep_gate": "not applicable; not run or claimed",
+  "verify_sources_exception": "Bulk verify-sources would re-request the case site despite the existing certificate-warning stop. Used the approved case archive, actual permitted author/official-source reads and all cache hashes. No fresh case-site request.",
+  "implementation_runtime": "not tested; no author code available; no models or real memory modified",
+  "tests_completed_at": "2026-10-18T01:08:22.454228+00:00",
+  "python_tests": {
+    "passed": 73,
+    "failed": 0
+  },
+  "content_tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "full_browser_suite": {
+    "passed": 69,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "runs": 1,
+    "stats": {
+      "startTime": "2026-10-18T01:05:41.522Z",
+      "duration": 148092.913,
+      "expected": 69,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "build": "passed",
+  "output_allowlist": "passed",
+  "prompt_security": "passed, isolated synthetic site desktop and mobile; not an execution of the memory implementation",
+  "target_browser": {
+    "status": "passed",
+    "viewports": [
+      1440,
+      820,
+      390
+    ],
+    "routes": [
+      "cases",
+      "trials"
+    ],
+    "checks": [
+      "exact original and translation",
+      "Chinese default open, English collapsed and expandable",
+      "exact source trial template and actual/recommended tools",
+      "pending deep research and no fabricated score",
+      "no overflow or page errors"
+    ],
+    "report_route": "absent by design because brief is separate from completed v2 research"
+  },
+  "website_counts": {
+    "reports": 35,
+    "cases": 1381,
+    "trials": 1381,
+    "translated": 19
+  },
+  "browser_environment": {
+    "node": "24.19.0",
+    "chromium": "/usr/bin/chromium",
+    "launch_args": [
+      "--no-sandbox"
+    ],
+    "test_logic": "Existing repository tests unchanged; temporary config only selects installed system Chromium and absolute test/server paths. Security adapter only substitutes absolute imports and browser launcher."
+  },
+  "commands": [
+    "python /tmp/validate_memory_brief.py",
+    "python -m unittest discover -s tests -v",
+    "npm test",
+    "ASTRO_TELEMETRY_DISABLED=1 npm run build",
+    "npm run check:output",
+    "npx playwright test --config /tmp/score-playwright.config.mjs",
+    "node /tmp/memory-security.mjs",
+    "node /tmp/memory-target-browser.mjs",
+    "git diff --check"
+  ],
+  "logs_sha256": {
+    "python": "78dfdc5516c15f46961853909ff77c69d49f5166b7b227e4029bbf51f5fa4a84",
+    "content": "85bc1260a6835da1243ea10ca7a9a562ade155a904dded7e25ea7b600d8714a7",
+    "build": "2875c12ec5a987e4d36f2cec3b42a562ecccd18c78a66514a5425e308754632c",
+    "output": "0c0a6aa0bf8a6f837223773a3c43b76246ec4ea821016c0bff6a95717eb55aa8",
+    "browser": "eaf14b7529e2a452f7c3ccb35c28b2651cb77a10589f85efcbf7d1475d6b8df7",
+    "security": "463787a7cb61df62b9e24739b6d6b1ed53dfd558b1add03bccbc7e7587836bed",
+    "target-browser": "5a62fdb246a40d14fb9ac5c7222dfc2ceb369f3a9d1ebd3aa5089a75f508062d"
+  }
+}
