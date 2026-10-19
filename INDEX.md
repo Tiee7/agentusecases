@@ -1,8 +1,8 @@
 # 商业深度研究总索引
 
-已完成深度研究 **55** / 注册案例 **1438**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **56** / 注册案例 **1438**。旧版简略初稿 **0** 份不计入完成。
 
-当前主对话单一执行者按 /new 从新到旧串行研究，排除分给 Spark 的20例；独立分支测试、推送、合并和回读后立即接续，无额外冷却。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
+当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、推送、合并和回读完成后接续，无额外冷却。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
 [完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)
 
@@ -53,6 +53,7 @@
 | [用 Resume 智能体搜索岗位、定制简历并跟踪申请](reports/hunt-jobs-tailor-resumes-and-apply-automatically.md) | 仅建议受控试点 | 42.0 | 中 | available | 求职岗位筛选与申请材料准备 | 2026-10-16T16:41:28.042672+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
 | [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
+| [用 Claude for Word 生成原生修订并处理批注](reports/redline-lawyer-documents-with-native-word-tracked-changes.md) | 仅建议受控试点 | 44.0 | 中 | available | 专业文档流程配置与审核辅助 | 2026-10-19T22:14:26Z |
 | [用 11 个 agent 分工完成交易前准备](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
 | [用 Grok Bot 夜间巡检迷因币并发送提醒](reports/run-overnight-memecoin-checks-and-alerts.md) | 适合内部效率工具 | 29.0 | 中 | available | 链上信息筛选与研究提醒 | 2026-10-16T16:08:47.863325+00:00 |
 | [用 ChatGPT Agent 上架并出售闲置物品](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
