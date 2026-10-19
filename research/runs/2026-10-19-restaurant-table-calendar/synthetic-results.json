@@ -1,0 +1,62 @@
+{
+  "scope": "Synthetic Python checks of researcher-proposed acceptance rules and arithmetic. No model execution, login, real reservation, cancellation, payment, API call, or restaurant contact.",
+  "tested_at": "2026-10-19T15:29:49.781071+00:00",
+  "checks": [
+    {
+      "check": "complete synthetic record passes",
+      "passed": true
+    },
+    {
+      "check": "menu cost above stated budget rejected",
+      "passed": true
+    },
+    {
+      "check": "tax and tip can make affordable menu exceed all-in budget",
+      "passed": true
+    },
+    {
+      "check": "unconfirmed request cannot be called booked",
+      "passed": true
+    },
+    {
+      "check": "missing confirmation rejected",
+      "passed": true
+    },
+    {
+      "check": "existing reservation must not be resubmitted",
+      "passed": true
+    },
+    {
+      "check": "naive local time rejected",
+      "passed": true
+    },
+    {
+      "check": "unknown tax cannot be treated as zero",
+      "passed": true
+    },
+    {
+      "check": "negative cost rejected",
+      "passed": true
+    }
+  ],
+  "calculations": [
+    {
+      "scenario": "假设A：低返工、获准渠道的小规模协助",
+      "variable": 8.333333333333334,
+      "contribution": 3.666666666666666,
+      "monthly_contribution": 53.333333333333314,
+      "cash_4weeks": 120.0,
+      "extra_channel_fee_effect": "minus volume*x (20*x)"
+    },
+    {
+      "scenario": "假设B：高返工和较贵获客",
+      "variable": 18.0,
+      "contribution": -6.0,
+      "monthly_contribution": -100.0,
+      "cash_4weeks": 145.0,
+      "extra_channel_fee_effect": "minus volume*x (10*x)"
+    }
+  ],
+  "maximum_break_even_human_minutes": 14.4,
+  "agent_reliability_measured": false
+}
