@@ -1,0 +1,120 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/find-errors-in-production-agent-traces",
+  "observed_at": null,
+  "html_sha256": "62036ca95863d6e8a711055b6e0d5ebf326c1a6ea532beaa56159b8d1cbc95b7",
+  "body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Find errors in production agent traces",
+      "sha256": "5a2c517a53439b703c4c2ef7bd6e76593866df64305b3e525392255cff520de1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Laminar's flow-1 model reads agent traces to catch implicit failures like wrong clicks or wrong citations, so every production trace can be analyzed without sampling.",
+      "sha256": "6ac9d86718b9b06c50d3b3581ac14d316378846812afa87ba687930b5829d2c1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "flow-1, a small open-source model fine-tuned and then trained with RL on synthetic investigations, runs inside a harness called Signals. It treats a trace like a repo with each span as a file, starts from a compressed trace plus a user prompt, greps spans, reads relevant ones in full, and returns findings as JSON in a user-defined schema.",
+      "sha256": "8c42c033099b96bd872dcb434528afff544ea1213ab84d9dd35ab558a8ff9e8c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Laminar says it matches GPT-6-sol in detection quality on its own benchmark at 23x lower cost, making analysis of every trace affordable. Similar findings are clustered, though the benchmark is the vendor's own.",
+      "sha256": "7860803e64a162a6941e165db657c8f8f14988a943cdd46a195d8d1ba861bbdc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Signals accepts general prompts, such as checking whether a browser agent completed a checkout, and clusters of failures can seed eval datasets for fixing them. Laminar is Apache 2.0 and self-hostable.",
+      "sha256": "5193d6c07ff57724db210cb1a079df95fc0c51ec2d15e1ad04ec350b9a5a28b1"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50154029"
+      ],
+      "sha256": "6d80db745acb4a54dbf26b77e6d42479ee6c5c721c0e6f094f91f6c273da53bf"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-19",
+      "sha256": "61341b09a3c76a1d7be2c4e0bd7aa6a050c7aa655d73a1c54be8c8a16e4f76f9"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a034e95aa434a4cf19acf204e35e72f0c20e2cc6a808d309819b8ac5c0ddd665",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find errors in production agent traces\nLaminar's flow-1 model reads agent traces to catch implicit failures like wrong clicks or wrong citations, so every production trace can be analyzed without sampling.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nflow-1, a small open-source model fine-tuned and then trained with RL on synthetic investigations, runs inside a harness called Signals. It treats a trace like a repo with each span as a file, starts from a compressed trace plus a user prompt, greps spans, reads relevant ones in full, and returns findings as JSON in a user-defined schema.\nHow it went\nLaminar says it matches GPT-6-sol in detection quality on its own benchmark at 23x lower cost, making analysis of every trace affordable. Similar findings are clustered, though the benchmark is the vendor's own.\nWorth knowing\nSignals accepts general prompts, such as checking whether a browser agent completed a checkout, and clusters of failures can seed eval datasets for fixing them. Laminar is Apache 2.0 and self-hostable.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a folder of exported traces from my AI agent at [path to trace files]. Read through every trace and flag the ones with silent failures, such as wrong clicks, wrong citations, skipped steps, or answers that don't match the tool output. Finish with a table listing the trace ID, the failure type, and a one-line explanation for each flagged trace, plus a count of the most common failure patterns.\nOriginal source: https://news.ycombinator.com/item?id=50154029",
+    "body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-19T23:07:22Z",
+      "end": "2026-10-19T23:07:33Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "observation_window": {
+    "start": "2026-10-19T23:07:22Z",
+    "end": "2026-10-19T23:07:33Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
+    "translated_at": "2026-10-19T23:14:54Z",
+    "body": "查找生产环境智能体运行轨迹中的错误\nLaminar的flow-1模型读取智能体运行轨迹，发现点错位置或引用错误等隐性失败，从而不必抽样即可分析每条生产轨迹。\n使用的是\n自建或未命名的智能体\n他们做了什么\nflow-1是一个小型开源模型，先经微调，再用合成调查任务进行强化学习训练，在名为Signals的运行框架内工作。它把轨迹视为代码仓库，每个span视为一个文件，从压缩轨迹和用户提示开始，搜索各个span，完整读取相关内容，然后按用户指定的结构返回JSON发现。\n进展与成效\nLaminar称，在自有基准上，其检测质量与GPT-6-sol相当，成本低23倍，使分析每条轨迹变得可负担。相似发现会聚类，不过这项基准由厂商自己提供。\n值得了解\nSignals接受通用提示，例如检查浏览器智能体是否完成结账。失败聚类可用于构建评估数据集并修复问题。Laminar采用Apache 2.0许可，可自行托管。\n亲自尝试\n使用Claude Code\n复制提示词\n我有一个文件夹，里面是我的AI智能体导出的运行轨迹，路径为[轨迹文件路径]。逐条读取所有轨迹，标出静默失败，例如错误点击、错误引用、漏做步骤，或回答与工具输出不一致。最后给出表格，列出每条被标记轨迹的ID、失败类型和一句解释，并统计最常见的失败模式。\n原始来源：https://news.ycombinator.com/item?id=50154029",
+    "body_sha256": "252cdaf67d12291037be627d4986e1f63479f1f9bcb5d8f71d571f0772a2f0cf",
+    "status": "available"
+  }
+}
