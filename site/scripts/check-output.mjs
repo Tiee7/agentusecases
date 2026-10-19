@@ -44,6 +44,7 @@ for(const b of briefs){
  const source=fs.readFileSync(`dist/cases/${b.id}/index.html`,'utf8');
  const title=escapeHtml(b.title);
  assert(briefIndex.includes(`href="${b.path}"`),`Missing brief link: ${b.id}`);
+ assert(briefIndex.includes(`data-search="${b.id} `),`Brief ID missing from search: ${b.id}`);
  assert(html.includes(`<h1>${title}</h1>`) && html.includes(`<title>${title}`),`Brief title mismatch: ${b.id}`);
  assert(source.includes(`href="${b.path}"`) && source.includes('已完成简报'),`Missing case-to-brief link: ${b.id}`);
  assert(html.includes('简报不设总分。') && !html.includes('commercial-score-badge'),`Brief score misclassified: ${b.id}`);
