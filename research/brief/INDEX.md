@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **46**；深度研究 **56**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **47**；深度研究 **56**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -55,3 +55,5 @@
 | 用 Claude Code 整理论文文件夹与共同引用 | [简报](../../reports/brief/run-literature-reviews-over-a-folder-of-papers.md) |
 
 | 用 Claude Code 生成跨平台内容草稿并交由本人审批 | [简报](../../reports/brief/automate-content-distribution-across-reddit-and-linkedin.md) |
+
+| 让编程智能体通过 SSH 在远程 WSL 运行构建测试 | [简报](../../reports/brief/run-agent-builds-and-tests-on-remote-windows-vms.md) |
