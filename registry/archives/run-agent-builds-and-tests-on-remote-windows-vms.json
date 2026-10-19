@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+  "observed_at": "2026-10-19T07:17:37.719517+00:00",
+  "html_sha256": "6dd70457f067b96e647e96e84ca890df3e656e56f784a410a8ccd41e4732ca6c",
+  "body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run agent builds and tests on remote Windows VMs",
+      "sha256": "2ee7a78038c944da359baa927a57a9ec3a3f937d43231d922573cd9ac13c5bc5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer gives coding agents ssh access to WSL instances on remote Windows VMs to run builds and tests instead of on their Mac laptop.",
+      "sha256": "16c830f33831bee04b60fe487820545427fb805dc9c5769f35cfee5a377a1575"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer's employer supplies a Mac laptop plus remote Windows VMs. The agents get ssh access to WSL instances on those VMs and run their builds and tests there. Setup is ad hoc: agents have to pull the latest code, or the developer keeps the main enlistment current on each machine.",
+      "sha256": "005d639f759c1795089df7455b2982802b825752e2cd2b4cf549966d543b303a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Builds no longer run on the Mac, so background agents stop causing video streams to drop during meetings. The developer is happy with it, though the setup is only good enough for now.",
+      "sha256": "32af7071fd4e9a4e7a325f4f9fb18b5d737391b247f7d1a9aa6144dc5695e4b4"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Keeping code in sync on the VMs is manual; the developer is considering containers or GitHub Actions to make it cleaner.",
+      "sha256": "8516f3a0173ce8dcc25f67cf93eb05299d4a925d76f132571f0a080711070a3a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50137976"
+      ],
+      "sha256": "9f0df2bd847a3f4f0f20a80749a1007a76d5f697b03b110e0c474568e7f0fce3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "6b13d543f1a044cbc03c27edac2686456ecb47ec8c3e2542688439567b89ed30",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run agent builds and tests on remote Windows VMs\nA developer gives coding agents ssh access to WSL instances on remote Windows VMs to run builds and tests instead of on their Mac laptop.\nDone with\nCX\nCodex\nWhat they did\nThe developer's employer supplies a Mac laptop plus remote Windows VMs. The agents get ssh access to WSL instances on those VMs and run their builds and tests there. Setup is ad hoc: agents have to pull the latest code, or the developer keeps the main enlistment current on each machine.\nHow it went\nBuilds no longer run on the Mac, so background agents stop causing video streams to drop during meetings. The developer is happy with it, though the setup is only good enough for now.\nWorth knowing\nKeeping code in sync on the VMs is manual; the developer is considering containers or GitHub Actions to make it cleaner.\nTry it yourself\nwith\nCodex\nCopy prompt\nI'm working in [project folder] on my [Mac/Linux] machine, but builds and tests must run on a remote Windows machine. You can reach it with ssh at [user@host] and use WSL there. Sync the code to [remote path], run [build command] and [test command] over ssh, and report which tests passed and failed with the relevant error output. Do not delete or overwrite anything on the remote machine outside [remote path], and show me any command that would do so before running it.\nOriginal source: https://news.ycombinator.com/item?id=50137976",
+    "body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
+    "archived_at": "2026-10-19T07:17:37.719517+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-19T07:17:37.719517+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

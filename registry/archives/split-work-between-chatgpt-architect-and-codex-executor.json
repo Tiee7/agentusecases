@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
-  "observed_at": "2026-10-18T06:12:12.942556+00:00",
-  "html_sha256": "8760d0f11bd8542031ed59960fbda11c439b9c1b850d77f61817406d4490fc99",
+  "observed_at": "2026-10-19T07:16:05.820515+00:00",
+  "html_sha256": "40d8d9f0318e80550e90cae03a2af46d7c9fee2714d0e39df12e3fddb05c752b",
   "body_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Split work between ChatGPT architect and Codex executor\nThe poster built a bridge where ChatGPT plans and reviews while Codex does the local execution work.\nDone with\nGP\nChatGPT\nCX\nCodex\nWhat they did\nThe poster used MCP-style local file access to connect ChatGPT with a local Codex setup, after seeing ChatGPT handle a local CAD task by asking clarifying questions and working with subagents for nearly an hour. They then built a small workflow layer that assigns ChatGPT the planning and review role, while Codex handles local execution steps like touching files, running commands, and checking results, with basic safety boundaries added by the poster.\nHow it went\nThe immediate CAD test showed stronger high-level capability from ChatGPT than Codex, though the CAD output itself was only so-so. The bridge itself is presented as experimental, with no performance numbers yet and the author asking others how they would design the workflow.\nWorth knowing\nIt was built for the Windows version of Codex, and the author said using computer-use directly inside native apps like the ChatGPT desktop app usually failed, so they bypassed that with Codex web Chrome control.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nI'm using ChatGPT as the planner and reviewer for [project or repo path], and you're the executor. Read the plan I paste below, carry it out step by step in the local repo, and run [tests or build command] after each step. When finished, give me a short summary of what changed, the files touched, and any test results that I can paste back to ChatGPT for review. Pause and ask me before deleting files or pushing anything. Plan: [paste plan from ChatGPT]\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1uow2ld/i_built_a_bridge_between_chatgpt_and_codex",
     "body_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
-    "archived_at": "2026-10-18T06:12:12.942556+00:00",
+    "archived_at": "2026-10-19T07:16:05.820515+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T06:12:12.942556+00:00",
+    "at": "2026-10-19T07:16:05.820515+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-a-weekly-digest-of-payment-notification-emails",
-  "observed_at": "2026-10-18T05:47:32.983863+00:00",
-  "html_sha256": "ead3f4ba0a574add8774dc195031f276675ca8843e7487b73f33c2161abd8ce8",
+  "observed_at": "2026-10-19T06:51:23.754933+00:00",
+  "html_sha256": "fb426a7225be9d0978287f2ea63dd7e245bf0904de5186ff6387aec646689ca7",
   "body_sha256": "95a913e090ce1325518b7365ebf564549673f8c4af7153810ac7be3aa407f1dd",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Email a weekly digest of payment notification emails\nAn n8n AI workflow reads labeled payment emails in Gmail, pulls the top three takeaways from each and sends a Sunday digest.\nDone with\nN8\nn8n\nWhat they did\nThe author labels payment emails in Gmail, then builds an n8n workflow that runs Sunday at 8 AM. It fetches the past week's labeled messages, aggregates them, and truncates the text to 100K characters. An AI Agent node running gpt-4o-mini through OpenRouter writes the digest from a system-message template. A code node converts the markdown to HTML, and Gmail sends it.\nHow it went\nThe author gets about 15 payment notifications a week, and the workflow turns them into one weekly digest email. The post gives no measured results beyond a successful test run.\nWorth knowing\nTruncating to 100K characters keeps the combined email text within what OpenAI can handle. Without the formatting code node, the email shows raw markdown symbols.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that every Sunday reads emails under Gmail label [payment notifications] from the past week, has AI pull the top three takeaways from each, and compiles them into one digest. Send the digest to [my email]. It's finished when a test run produces a digest from the last week's labeled emails.\nOriginal source: https://mariannanakos.substack.com/p/n8n-tutorial-built-an-ai-workflow",
     "body_sha256": "95a913e090ce1325518b7365ebf564549673f8c4af7153810ac7be3aa407f1dd",
-    "archived_at": "2026-10-18T05:47:32.983863+00:00",
+    "archived_at": "2026-10-19T06:51:23.754933+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T05:47:32.983863+00:00",
+    "at": "2026-10-19T06:51:23.754933+00:00",
     "status": "fetched",
     "error": null
   }

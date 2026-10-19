@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-support-emails-and-draft-replies-for-human-review",
-  "observed_at": "2026-10-18T05:47:36.923173+00:00",
-  "html_sha256": "1bdd296bd132bb64c9db2913764bfd9a3dcbf3f741d99d2eb140a05cbd3c12b5",
+  "observed_at": "2026-10-19T06:51:27.729810+00:00",
+  "html_sha256": "48a8f8e55812dadc60c6926417a55944cd362ea90b70051e124eda1dd65215a4",
   "body_sha256": "67ce4b7b647bf98fb472e59c1bae1d842e19fc648f15497bd8cba0d3f87458e6",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Triage support emails and draft replies for human review\nAn n8n workflow classifies, prioritizes and summarizes each support email, drafts a reply and posts it to Slack for a person to send.\nDone with\nN8\nn8n\nWhat they did\nA five-node n8n workflow polls Gmail for new support emails. Each one goes to an OpenAI-compatible model (gpt-4o-mini in the shared JSON), which returns a category, an urgency, a one-sentence summary and a 3-5 sentence draft reply. The results are logged to a Google Sheet and posted to Slack. A person reviews the draft and sends it, since the author kept sending manual on purpose.\nHow it went\nThe author says it takes about 20 minutes to wire up and that the drafts are good. No volume or time-saved figures are given. Commenters found bugs: one email per poll is processed, and the sender shows as an object.\nWorth knowing\nBefore production, fix the Code node so it handles every email in a poll (it uses .first()), use from.text for the sender, and add JSON parse error handling and a spam filter.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches [support inbox] and, for each new email, classifies the topic, assigns a priority of low, medium or high, and writes a two-line summary. Have it draft a reply using [link to FAQ or policies] and post the summary and draft to [Slack channel] for a person to review. It must never send the reply itself; you're done when a test email produces a Slack post I can approve.\nOriginal source: https://community.n8n.io/t/ai-support-inbox-triage-classify-prioritize-draft-the-reply-human-still-sends/311971",
     "body_sha256": "67ce4b7b647bf98fb472e59c1bae1d842e19fc648f15497bd8cba0d3f87458e6",
-    "archived_at": "2026-10-18T05:47:36.923173+00:00",
+    "archived_at": "2026-10-19T06:51:27.729810+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T05:47:36.923173+00:00",
+    "at": "2026-10-19T06:51:27.729810+00:00",
     "status": "fetched",
     "error": null
   }

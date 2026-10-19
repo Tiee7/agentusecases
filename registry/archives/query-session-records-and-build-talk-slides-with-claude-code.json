@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+  "observed_at": "2026-10-19T07:18:17.715830+00:00",
+  "html_sha256": "28161ca6c3a2b20c616bb755e4c2c2198ac63eb9fe8f72757e9901afe4d24ffc",
+  "body_sha256": "aa611d2d9c6e13581face9316f5545f9bcd8551265c0e95d31f7dffcdf1b4427",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Query session records and build talk slides with Claude Code",
+      "sha256": "8c66ada10beae948ee4a304dd3fadd7bb9f4c540ab3edb18cac32229138f99b4"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A CS instructor used Claude Code to query his recorded session database for commit stats and timelines and to build slides for a faculty talk.",
+      "sha256": "d6b86e2d19209e45c5beffb51458f8f246877b6eed02e192b987471e0e8ae06f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Geoffrey Challen had built Claude Recorder, a tool that logs his Claude Code sessions to a local SQLite database with timestamps, tool use and token counts. For his faculty retreat talk, he had Claude Code query that database for stats and commit timelines. It then designed the reveal.js slides, including an interactive timeline, as one standalone HTML file. It also transcribed his practice recordings with WhisperX and drafted the written summary.",
+      "sha256": "3c56c0011fe553f0d6a4f829dacf55a44558e5b0fc4a6af19257714f9d4b33a9"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The stats covered one 17-hour day: 903 prompts, 63 commits, and about 16,000 lines added. Claude produced the slides and the write-up. The source doesn't describe any failures in the slide-building itself.",
+      "sha256": "6ef61e216d076997c572593c227e51d1d2def2e9011e46c0319726133ad54809"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The session data comes from a custom recorder he built beforehand. The day's API usage would have cost about $1,000, but he's on the $200 per month Max plan.",
+      "sha256": "317136ff3c8612b488c9a1833f1ca6361e2773f148daeb7b3bcf29da3b1214fb"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.geoffreychallen.com/talks/2026-01-15-a-day-with-claude-using-and-teaching-coding-agents"
+      ],
+      "sha256": "d0edb66cca763a7ca9fd441f076630c2b92e34d28480f243cef17d8a4ffffdd7"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a1659fc470fbe33e5c266076e51efe1df18f72c14d3362440ff5f06a7258aee0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Query session records and build talk slides with Claude Code\nA CS instructor used Claude Code to query his recorded session database for commit stats and timelines and to build slides for a faculty talk.\nDone with\nCC\nClaude Code\nWhat they did\nGeoffrey Challen had built Claude Recorder, a tool that logs his Claude Code sessions to a local SQLite database with timestamps, tool use and token counts. For his faculty retreat talk, he had Claude Code query that database for stats and commit timelines. It then designed the reveal.js slides, including an interactive timeline, as one standalone HTML file. It also transcribed his practice recordings with WhisperX and drafted the written summary.\nHow it went\nThe stats covered one 17-hour day: 903 prompts, 63 commits, and about 16,000 lines added. Claude produced the slides and the write-up. The source doesn't describe any failures in the slide-building itself.\nWorth knowing\nThe session data comes from a custom recorder he built beforehand. The day's API usage would have cost about $1,000, but he's on the $200 per month Max plan.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a database of recorded work sessions at [path to database]. Explore its structure, then answer these questions: [e.g. commit counts per week, a timeline of the project, the biggest changes]. Then build a slide deck for a [length]-minute talk to [audience] on [topic] using those findings. You're done when I have the numbers with a note on how you computed them, plus a slide file I can open. Don't modify the database.\nOriginal source: https://www.geoffreychallen.com/talks/2026-01-15-a-day-with-claude-using-and-teaching-coding-agents",
+    "body_sha256": "aa611d2d9c6e13581face9316f5545f9bcd8551265c0e95d31f7dffcdf1b4427",
+    "archived_at": "2026-10-19T07:18:17.715830+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-19T07:18:17.715830+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

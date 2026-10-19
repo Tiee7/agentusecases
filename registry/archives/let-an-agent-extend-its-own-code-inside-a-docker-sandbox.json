@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-an-agent-extend-its-own-code-inside-a-docker-sandbox",
-  "observed_at": "2026-10-18T05:31:00.888409+00:00",
-  "html_sha256": "77bf425ed8b0a7eee4c912daa9c1a9e5e0b5e1af24ca835ca6ebb8e461876528",
+  "observed_at": "2026-10-19T06:34:49.670351+00:00",
+  "html_sha256": "3c9a6659b2c308d4df21bc5f6a1cbcb21d51cad48d8de2e7d4e4198f9b9124f6",
   "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Let an agent extend its own code inside a Docker sandbox\nAn agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\nDone with\nCL\nClaude\nWhat they did\nMiguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.\nHow it went\nIt finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.\nWorth knowing\nEach improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a Docker sandbox where an agent can add new capabilities to its own source code in [repo path]. Each change should run the tests, be committed if they pass, and be rolled back if they fail, with a log of what happened. Finish by having it add [first capability, e.g. a web search tool] and show me the commit and test results; pause before any change that touches files outside the sandbox.\nOriginal source: https://news.ycombinator.com/item?id=47329087",
     "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
-    "archived_at": "2026-10-18T05:31:00.888409+00:00",
+    "archived_at": "2026-10-19T06:34:49.670351+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T05:31:00.888409+00:00",
+    "at": "2026-10-19T06:34:49.670351+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/have-claude-find-a-torrent-and-add-it-to-qbittorrent",
+  "observed_at": "2026-10-19T07:18:01.738833+00:00",
+  "html_sha256": "0aad30c9e5dfb0dcd2015af2e2472004d11278101cae3ac4ae393e5bc8888ca0",
+  "body_sha256": "62c9462f17388010be6e1277d02479c9cb8e3324352f766e7435e8a56c33c934",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Have Claude find a torrent and add it to qBittorrent",
+      "sha256": "2d4d18d4e4565b878b476caf59cf8cc9fe88555bedad6966d71b6e0a2b073324"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster has Claude search for a torrent and add it to qBittorrent as part of a smart home setup.",
+      "sha256": "48a72f86f23999c55ffc147734a59ee6f6852a2caa0815d0da41cb7e3de77345"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster had Claude wired into a local smart-home and media setup: Home Assistant handled device control, and for media they say a Wyoming transcription service fed a Python bridge that called the Claude API, which then searched for a torrent and added it to qBittorrent. In the moment, they asked Claude aloud for recommendations from their Plex history and Letterboxd ratings, then told it to fetch Euphoria; when it stalled, they manually troubleshot the Ubuntu box hosting Plex instead of using qBittorrent’s phone-accessible web UI.",
+      "sha256": "69f905ea3a4da718586820b0943fb63fabb6062b42d5f3d89c41069ae9ad4155"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It worked inconsistently enough that the poster says the torrent flow hung and they spent 15 minutes debugging while their date left. They also say the broader Crash-at-home routine works about 80% of the time.",
+      "sha256": "1a41079c119cf4dc94290a28d262720178af32ddb4ec459e398f220a3473a854"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is reliability under pressure: the automated torrent step was slow enough to derail the interaction, and the fallback web UI existed but was forgotten in the moment.",
+      "sha256": "34187e8ab7eacabdf77a08c082578d437505ebda5fe91c50e561041cc11c9acf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/redscarepod/comments/1uj7cdl/date_ruined_because_of_my_smart_home_setup"
+      ],
+      "sha256": "83070f0fc844bb045d9bd0752d5b55f97f1839ec3ed78d46e509d73a1dffdb48"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "8bd619425a97b459886e8086260767172f25df3b3d9657415f28b60cf56edf1d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Have Claude find a torrent and add it to qBittorrent\nThe poster has Claude search for a torrent and add it to qBittorrent as part of a smart home setup.\nDone with\nCL\nClaude\nWhat they did\nThe poster had Claude wired into a local smart-home and media setup: Home Assistant handled device control, and for media they say a Wyoming transcription service fed a Python bridge that called the Claude API, which then searched for a torrent and added it to qBittorrent. In the moment, they asked Claude aloud for recommendations from their Plex history and Letterboxd ratings, then told it to fetch Euphoria; when it stalled, they manually troubleshot the Ubuntu box hosting Plex instead of using qBittorrent’s phone-accessible web UI.\nHow it went\nIt worked inconsistently enough that the poster says the torrent flow hung and they spent 15 minutes debugging while their date left. They also say the broader Crash-at-home routine works about 80% of the time.\nWorth knowing\nThe main catch is reliability under pressure: the automated torrent step was slow enough to derail the interaction, and the fallback web UI existed but was forgotten in the moment.\nTry it yourself\nwith\nClaude\nCopy prompt\nSearch for a torrent of [title and version or quality I want] from [trusted source or site, if any] and pick the best-seeded legitimate option. Before adding it to qBittorrent at [my qBittorrent web UI address], show me the name, size, seeders, and source so I can approve it. Once I confirm, add it and report back that it's queued and downloading.\nOriginal source: https://www.reddit.com/r/redscarepod/comments/1uj7cdl/date_ruined_because_of_my_smart_home_setup",
+    "body_sha256": "62c9462f17388010be6e1277d02479c9cb8e3324352f766e7435e8a56c33c934",
+    "archived_at": "2026-10-19T07:18:01.738833+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-19T07:18:01.738833+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

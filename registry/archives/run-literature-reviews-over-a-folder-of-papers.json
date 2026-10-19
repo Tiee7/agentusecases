@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+  "observed_at": "2026-10-19T07:17:55.745281+00:00",
+  "html_sha256": "1d029628b72c313ed3445a8f6ed7eca704ac86b294eb178ebf6e7a47a3f0f34e",
+  "body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run literature reviews over a folder of papers",
+      "sha256": "7fe8b42d736b367c5458ff3ca17f9c3a39bb3d322d824f8a81890591a80e7a53"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Researchers point Claude Code at 50+ papers to extract bibliographies, find core cited works, and write relevance lists against a theme as files.",
+      "sha256": "88418ae8b3257e55f7900206ea554c70b430c7af0dab94a585072eaa8d93ea71"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author sets up custom slash commands in Claude Code, and the research theme goes in CLAUDE.md. /lit-map extracts text from every PDF in a papers/ folder. It pulls each paper's objective, method, conclusion and keywords, then writes a High/Medium/Low relevance list to literature_map.md. /citation-network extracts the bibliographies, finds works cited across several papers, and ranks them.",
+      "sha256": "4159bd4ce7f8681a658dfd5617e1ff10ef011f0fe1e6c310e1084e8e03a16233"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author claims /lit-map cuts 50 papers from 2-3 days to 30 minutes, and /citation-network cuts 10 papers from 4-5 hours to 15 minutes. These are before/after claims, not measured results.",
+      "sha256": "b2c2194497010973ed401517194bdd490a4947f66100ff553e50e975276e0b8a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Scanned or image-only PDFs lower accuracy. The researcher still has to check the AI's scores and summaries, and should review the terms and policies before sending unpublished or copyrighted text to cloud services.",
+      "sha256": "63183d7c2a9d0168058eb87f01626e4d40f11a6a593e62618951c825cca177ba"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en"
+      ],
+      "sha256": "d32695170cc0d88b04d492a782ea299935b8c16a039faad978a4d65185c2fccb"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7e1ebde5e9737616b41147c96e28cbb8805e77e3b578b63f60e8b98833b88209",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run literature reviews over a folder of papers\nResearchers point Claude Code at 50+ papers to extract bibliographies, find core cited works, and write relevance lists against a theme as files.\nDone with\nCC\nClaude Code\nWhat they did\nThe author sets up custom slash commands in Claude Code, and the research theme goes in CLAUDE.md. /lit-map extracts text from every PDF in a papers/ folder. It pulls each paper's objective, method, conclusion and keywords, then writes a High/Medium/Low relevance list to literature_map.md. /citation-network extracts the bibliographies, finds works cited across several papers, and ranks them.\nHow it went\nThe author claims /lit-map cuts 50 papers from 2-3 days to 30 minutes, and /citation-network cuts 10 papers from 4-5 hours to 15 minutes. These are before/after claims, not measured results.\nWorth knowing\nScanned or image-only PDFs lower accuracy. The researcher still has to check the AI's scores and summaries, and should review the terms and policies before sending unpublished or copyrighted text to cloud services.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead every paper in the folder [path to my papers folder] and extract each one's bibliography into a file called bibliographies.md. Then identify the works cited most often across the papers, and write relevance_list.md ranking all papers by how relevant they are to [my research theme], with one sentence of reasoning each. Don't modify or delete any of the original files. You're done when both files exist and you've told me the top 10 core works.\nOriginal source: https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en",
+    "body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
+    "archived_at": "2026-10-19T07:17:55.745281+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-19T07:17:55.745281+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

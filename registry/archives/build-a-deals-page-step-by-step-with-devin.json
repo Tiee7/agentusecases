@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-deals-page-step-by-step-with-devin",
-  "observed_at": "2026-10-18T06:07:44.996533+00:00",
-  "html_sha256": "206f88795400244f77bd4c38db2aa2e4a57ffa2e98cfe28836c5b969948f8bb5",
+  "observed_at": "2026-10-19T07:11:37.756588+00:00",
+  "html_sha256": "abcc676cb45279846c4b3f74a829476a1572e1a15d5633dace6ee65cf9c55ab9",
   "body_sha256": "637faad287c7d2425b2dbfe0801de45d9aff8328848b5653a3ba029d1599de32",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a deals page step by step with Devin\nAn engineer had Devin implement a deals page in steps; it opened a PR in under 10 minutes, but CI failed, it added unnecessary changes and gave a false answer about a library.\nDone with\nDE\nDevin\nWhat they did\nThe engineer connected the backend and frontend repos to Devin through its GitHub integration and had it set up its own environment. She gave it the Deal schema and a DB diagram, plus PR numbers for related unmerged work. Devin split the task into separate sessions, opened a PR for the first piece, and retried CI lint and TypeScript fixes. Each later part got its own session, with PRs based on the earlier ones.\nHow it went\nThe first PR opened in under 10 minutes but failed CI. Later PRs were acceptable but carried extra changes, and Devin wrongly said Joi wasn't used elsewhere. The final session, getting the project running locally, hit usage limits.\nWorth knowing\nSeparate sessions don't share context, so the split can't be run in parallel. She used all 150 ACUs in under a week, and the docs say performance degrades past 10 ACUs per session.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn [repo name], implement a [page or feature, e.g. deals page] in small steps: [step 1], then [step 2], then [step 3]. Open a PR after the steps, make sure CI passes, and don't add changes outside the scope. If you're unsure how a library works, check its docs and tell me what you verified versus what you assumed.\nOriginal source: https://qubika.com/blog/devin-ai-coding-agent/",
     "body_sha256": "637faad287c7d2425b2dbfe0801de45d9aff8328848b5653a3ba029d1599de32",
-    "archived_at": "2026-10-18T06:07:44.996533+00:00",
+    "archived_at": "2026-10-19T07:11:37.756588+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T06:07:44.996533+00:00",
+    "at": "2026-10-19T07:11:37.756588+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/control-lights-and-fix-automations-in-home-assistant-via-ope",
-  "observed_at": "2026-10-18T05:57:44.944508+00:00",
-  "html_sha256": "9968f18745b3ee7f80a7e5304a0ad76cd1d738b1c71775a558d9b6ce738a5708",
+  "observed_at": "2026-10-19T07:01:37.755721+00:00",
+  "html_sha256": "9c145a0127b9207ec96e4e40ab34c45484e2321420603839f5c5404e131093b6",
   "body_sha256": "498cb31bd00077e80ff2558e223237f9b8c527ee48d900bb6092bda4cdfa1a18",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Control lights and fix automations in Home Assistant via OpenClaw\nDan Malone runs OpenClaw as an always-on Claude agent connected to Home Assistant through ha-mcp, controlling his lights and fixing his automations.\nDone with\nOC\nOpenClaw\nWhat they did\nDan runs OpenClaw in its own LXC container on his Proxmox server, next to Home Assistant, and connects it through ha-mcp. He chats with it over Telegram. When his landing motion lights failed, the agent found two dead Hue bulbs. It couldn't edit the blueprint automation, so it deleted it and rebuilt it as a native one. Dan then asked for weekend nap schedules.\nHow it went\nThe fix took about five minutes of typing in Telegram. Dan estimates the Home Assistant UI would have taken at least an hour. The agent also updated his dashboard to show the new automation.\nWorth knowing\nCosts add up on per-token API billing, because debugging automations burns a lot of context. Dan rides on his roughly $200/month Claude Max plan, and he runs the agent sandboxed in an isolated container.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my Home Assistant at [address] and review my automations. Find any that are broken, failing or never triggering, explain what is wrong, and propose fixes. Show me each proposed change and wait for my approval before saving it, then test the ones that are fixed and report the results.\nOriginal source: https://www.dan-malone.com/blog/openclaw-home-assistant",
     "body_sha256": "498cb31bd00077e80ff2558e223237f9b8c527ee48d900bb6092bda4cdfa1a18",
-    "archived_at": "2026-10-18T05:57:44.944508+00:00",
+    "archived_at": "2026-10-19T07:01:37.755721+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-18T05:57:44.944508+00:00",
+    "at": "2026-10-19T07:01:37.755721+00:00",
     "status": "fetched",
     "error": null
   }
