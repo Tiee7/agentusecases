@@ -1,0 +1,490 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "generate-custom-interactive-html-lessons-for-students",
+  "url": "https://agentusecases.ai/use-case/generate-custom-interactive-html-lessons-for-students",
+  "title": "用 Claude Code 生成可在浏览器授课的互动 HTML 文件",
+  "industry": "英语互动课件制作与维护",
+  "researched_at": "2026-10-19T22:49:39Z",
+  "confidence": "中：追到教师原帖和同作者公开样例并测试一条交互；没有原课全量验收、学习效果或销量数据。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "可编辑的互动英语课件值得验证，持续维护与教师审核决定商业价值",
+    "reason": "本轮从二手引用追到原教师与实际公开游戏，确认有具体模块和局部可用演示。教师备课需求明确，但H5P等已有替代，免费资源也多；生成一致性、内容纠错与设备适配会增加工时。没有真实收入或学习成效数据，先限定一个英语主题和成年教师评估，测完整制作复核成本，再决定订阅或定制。",
+    "next_action": "用自写文章做一个主题样例，核答案、重试计分、教师编辑和设备兼容，并记录完整工时。",
+    "stop_condition": "内容无法可靠纠错、重复操作出错、审核维护成本不降或要求未获准学生数据。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/generate-custom-interactive-html-lessons-for-students",
+      "title": "许可目录",
+      "supports": "原目录仅二手引述，本研究另追原教师和公开样例，不改写历史原文。"
+    },
+    {
+      "id": "Sessay",
+      "url": "https://baseclasses.com/p/what-claude-code-can-teach-us-about",
+      "title": "Luke Shepard 2026-01-07文章",
+      "supports": "文章引用教师，并给出原Reddit链接；它不是第二位独立课堂测试者。"
+    },
+    {
+      "id": "Steacher",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1ppanio/claude_has_completely_transformed_my_teaching/",
+      "title": "教师原帖与评论",
+      "supports": "韩国ESL教师自述流程，其他教师提出文本图片修正需求；不把赞同当学习效果。"
+    },
+    {
+      "id": "Scommunity",
+      "url": "https://www.reddit.com/r/htmlteachingtools/",
+      "title": "教师发布工具与资源社区",
+      "supports": "同一账号公开A2游戏与套餐宣传，历史报价不等于当前可购或收入。"
+    },
+    {
+      "id": "Sdemo",
+      "url": "https://ajtracysk.github.io/Shopping-Jeopardy/",
+      "title": "同一教师A2购物游戏公开演示",
+      "supports": "本轮只测试一题、正确反馈和Team1加100；是相邻作品，不是原帖那份完整阅读课。"
+    },
+    {
+      "id": "Sh5p",
+      "url": "https://h5p.org/content-types-and-applications",
+      "title": "H5P互动类型目录",
+      "supports": "翻卡、填空和选择等已有模板，可作替代而非独有AI功能。"
+    },
+    {
+      "id": "Sa11y",
+      "url": "https://help.h5p.com/hc/en-us/articles/7505649072797-Content-types-recommendations",
+      "title": "H5P可访问性说明",
+      "supports": "不同类型覆盖不同，作者内容选择也会影响可访问性，不能统一保证。"
+    },
+    {
+      "id": "Snegative",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1sbc834/claude_for_teachers/",
+      "title": "另一教师的生成一致性问题",
+      "supports": "相邻Cowork用户说文件风格不稳定，提示维护成本，不是主作者相同实现。"
+    },
+    {
+      "id": "Sesl",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1wl3vs0/esl_teachers/",
+      "title": "另一ESL教师的HTML语法练习使用",
+      "supports": "自述现在进行时讲解与填空练习，其他用户仍需反复调整，未测学习收益。"
+    },
+    {
+      "id": "Sw3c",
+      "url": "https://www.w3.org/WAI/tutorials/forms/notifications/",
+      "title": "W3C表单反馈指导",
+      "supports": "错误与成功反馈需清楚可感知，支持拟议课件验收而非认证本例。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "原目录来自Luke Shepard二手引用，本轮追到verytiredspiderman教师原帖。",
+      "source_ids": [
+        "Sdirectory",
+        "Sessay",
+        "Steacher"
+      ]
+    },
+    {
+      "statement": "教师自述在韩国教授ESL，以文章水平词表目标生成HTML。",
+      "source_ids": [
+        "Steacher"
+      ]
+    },
+    {
+      "statement": "原帖描述翻卡、理解题、文本输入、教师模式和进度，但没有对各模块给出量化验收结果。",
+      "source_ids": [
+        "Steacher"
+      ]
+    },
+    {
+      "statement": "同一账号社区发布A2购物游戏，并宣传历史9.99美元月工具包；销量未知。",
+      "source_ids": [
+        "Scommunity"
+      ]
+    },
+    {
+      "statement": "本轮公开购物游戏一题正确反馈后Team1从0变100，仅局部测试。",
+      "source_ids": [
+        "Sdemo"
+      ]
+    },
+    {
+      "statement": "H5P官方目录已经提供翻卡、填空、选择等类型，因此基础互动模块不能作为独占功能。",
+      "source_ids": [
+        "Sh5p"
+      ]
+    },
+    {
+      "statement": "H5P官方按内容类型列可访问性差异，并说明作者内容选择可能影响实际可用性。",
+      "source_ids": [
+        "Sa11y"
+      ]
+    },
+    {
+      "statement": "另一位数理教师自述Cowork生成HTML的一致性需要额外维护，属于不同工具配置的相邻体验。",
+      "source_ids": [
+        "Snegative"
+      ]
+    },
+    {
+      "statement": "同帖教师提出改词句与占位图片的可视化编辑需求。",
+      "source_ids": [
+        "Steacher"
+      ]
+    },
+    {
+      "statement": "另一ESL教师自述用HTML呈现语法说明和填空练习，未报告受控学习效果。",
+      "source_ids": [
+        "Sesl"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "多个教师自述备课需求，目标具体，但地域学科不同且真实付费需求未核。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "公开相邻样例一题通过，不能替代原完整课程验收或学生学习成效证据。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "订阅贡献对支持人工与用户数敏感，两种假设有正有负，未取得真实账单。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "作者已有免费样例与社区入口，但当前销售页不可读，转化和续费未知。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "moat": {
+      "score": 2,
+      "rationale": "模板与审核资产可能积累，通用互动类型已有成熟替代，定制价值仍需验证。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "内容正确性、编辑维护、设备与可访问性都需人工检查，不能只看生成完成。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    },
+    "feedback": {
+      "score": 2,
+      "rationale": "有直接教师与相邻使用者正负自述，但身份未核且没有可比长期结果。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sh5p"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "先服务备课教师，不假定学生会付钱",
+      "body": "原始教师自述在韩国教ESL，输入文章、水平、词汇与目标后获得课堂HTML；这比目录中的二手引述更直接，但仍不是课堂效果实验。直接使用者是负责备课和课堂节奏的教师，学生主要使用产物。潜在付款人可能是教师本人、培训机构或学校，三者预算与审批不同，不能因为学生觉得互动有趣就推断学校会采购。\n适合先聚焦某一课程水平与固定教学场景，例如投屏复习、阅读理解或词汇练习，而不是一次做全学科平台。A2是语言水平标签，不能直接等同某个国家初中年级；本案也不代表美国课程标准或中国教材覆盖。客户需要的不只是漂亮页面，还包括题目正确、节奏可控和课前能快速改字。若教师已有熟悉的PPT模板，切换到HTML必须省下净时间而非增加调试负担。\n在课堂使用方式上也要分清：全班看同一投屏由教师操作，与每名学生拿平板独立答题，所需状态完全不同。前者可能只需队伍计分和答案揭晓，后者才涉及个人进度、恢复和反馈。应先选一个方式，不把两个交付范围合成一个廉价“全能课件”。",
+      "source_ids": [
+        "Steacher",
+        "Sesl"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "生成文件之外还要做教学与操作验收",
+      "body": "可还原的输入链路是文章、学习者水平、词表和练习目标，输出是可在浏览器使用的文件。教师仍决定学习目标、答案和课堂使用方式。目录原模板要求打开后所有功能正常，本研究将其拆为内容核对、交互状态、错误反馈和恢复四类验收；这些是研究者建议，不是宣称原作者已有自动化测试体系。\n本轮找到同一账号公开的购物Jeopardy样例，实际点开一道词汇100分题，选择Buy后显示正确反馈，选Team1后分数变100。只能证明这条局部交互可用，不代表原帖完整阅读课、所有题目、离线运行或手机都通过。后续测试应覆盖答错、重复确认、下一题、重开、教师揭晓和计分重置，避免学生多点一次就重复加分。答案反馈还应解释原因，不能只显示绿色勾；教师可随时暂停与补充说明。\n本轮游戏把正确答案确认与选择队伍分成两步，适合教师主持竞争活动，却不等同自动判定哪位学生作答。报告保留这个观察，避免把团队计分当个人学情分析。自由文本输入的评分还需另测大小写、空格、同义表达和多种正确答案，不能套用单选题验证。",
+      "source_ids": [
+        "Steacher",
+        "Sdemo",
+        "Sw3c"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "已出现资源供给，销量仍未知",
+      "body": "追到原作者社区后，可见其分享多种免费工具和课程包，并宣传每月9.99美元、每周提供五项资源的工具包。这是历史帖子中的报价与承诺，当前Gumroad页面经普通读取和一次浏览器尝试都无可读正文，本轮停止继续访问，不能称当前仍可订阅、有人购买或已经赚到多少钱。Luke Shepard文章只是引用同一教师，不算第二份独立效果证明。\n这说明市场进入可以从可演示的单项资源和资源包开始，但持续供给有内容质量与维护成本。学校采购还会关心课程适配、分发方式、设备限制和可访问性；单个教师可能只愿意购买立即可用的一课。免费社区规模或点赞不应转换为客户数。下一步应观察用户是否重复使用、实际修改多少内容，以及哪些活动最难自己做，才能区分一次尝鲜与长期需求。",
+      "source_ids": [
+        "Scommunity",
+        "Sessay"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "模板工具和免费资源已覆盖常见互动",
+      "body": "H5P已有翻转卡、填空、选择题、互动演示等内容类型，因此这些模块本身不是AI产品独有能力。通用PPT、教师自制网页和公开课堂游戏也能解决局部需求。AI生成的可能增量在于围绕指定文章、词表和教学目标组合活动，但应与在现成模板中填内容的成本比较，而不是只和从零手写代码比较。\nH5P有不同系统集成路线，也有类型级可访问性差异；独立HTML便于直接打开，但可能缺统一成绩、版本管理和教师编辑器。这是不同交付选择，不能简单宣布单文件更好。若客户只需标准选择题，成熟模板可能更稳；若需要特殊课堂规则，定制才可能有价值。比较时先列必须功能与设备限制，避免把所有高级平台功能加进轻量课件后，反而失去容易使用的优点。",
+      "source_ids": [
+        "Sh5p",
+        "Sa11y"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "资源包与定制服务分开测算",
+      "body": "以下为研究者假设，不是作者收入。以每月一套固定范围资源包为单位，设价格15美元、50名付费用户，每名模型摊销0.2、支持人工2、其他平台成本1、获客摊销2，月固定内容制作与验收300，则贡献为190美元。固定成本假设包含一批资源生产与检查，客户数和续费率都未验证；原作者历史9.99报价不是本模型价格依据，也不能据此推断更高价格能成交。\n压力情景仍15美元，仅30名用户，每名模型0.5、人工支持5、其他1.5、获客3，月固定300，贡献负150美元。两者均未含税、退款、教材授权、学校合规或额外设备测试，不能称净利润。若每位客户都要求单独改内容，支持成本会远高于普通订阅；此时应另定义定制交付而非混进无限修改套餐。最先要测的是每课含审核的制作时间与每用户支持工时，而不是追求生成速度。",
+      "source_ids": [
+        "Scommunity",
+        "Snegative"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "先让教师看到可使用的样例",
+      "body": "作者的路径包括公开社区、免费游戏和资源商店链接，说明演示可以承担获客入口。本轮确实打开了公开游戏，没有下载付费文件、注册、购买或联系教师。帖子里的免费测试邀请与套餐宣传只证明其在尝试分发，不证明渠道转化有效，也不能把社区中其他创作者的作品和销售合并到作者名下。\n适合的验证材料是教师能自己打开的完整小样例，说明水平、学习目标、课堂时间和已测设备。演示应显示错误处理与教师控制，不只截一张漂亮图。若要扩展英语初中市场，可以选择一个具体语法或阅读主题，提供同素材的纸面版与互动版供教师比较；这仍是研究建议，本轮没有向学生投放。不要为了收线索强制注册或收集学生姓名，降低首次体验成本也减少不必要数据处理。",
+      "source_ids": [
+        "Scommunity",
+        "Sdemo"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "可编辑与持续一致性比生成花样重要",
+      "body": "主帖另一位教师提到想用图形界面改不合适的词句和图片，占位图与僵硬表达会增加返工；另一个Cowork教师反馈输出一致性维护困难。这些相邻体验提示，长期价值可能在可编辑内容结构、稳定模板和回归检查，而不是每次生成一个完全不同的界面。不能把其他人的建议说成原作者已经实现的编辑器。\n可积累资产包括课程目标到题型的映射、经教师审核的题库、设备测试清单和可复用布局；教材或图片必须有权使用，不能靠复制受保护材料建立资源库。模板应把内容与逻辑分开，让老师改词表不必重新生成整页。若生成后每次修改标题都要耗费多轮模型交互，可能比PPT慢。真正壁垒要由重复使用与少返工证明，不能从技术实现容易或难就直接推断商业护城河。\n资源更新还应有课程版本和修改记录：教师已经打印或下载旧版时，不能只覆盖线上文件而不说明答案变更。对重要修正可提供简短差异表与可回退旧版。此类维护能力可以成为服务价值，但同样会增加持续成本，必须纳入订阅承诺。",
+      "source_ids": [
+        "Steacher",
+        "Snegative"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "不收学生数据也仍要检查页面行为",
+      "body": "初期交付可以限定为教师投屏与匿名本地练习，避免真实学生账户、成绩或语音上传。单文件不自动代表离线、无追踪或无外部请求，素材、字体、脚本和模型接口都可能依赖网络。本轮只观察公开游戏一题，没有做网络断开测试，因此不把作者的离线描述升级成独立验证。若后续要记录成绩，需要重新明确保存位置、访问与删除责任。\n可访问性要在具体产物上检查。官方H5P资料也区分类型与作者内容的影响，不能看到“HTML5”就称所有学生可用。拟议检查包括键盘焦点、按钮名称、放大后布局、非颜色提示和错误反馈；自动扫描也不能代替人工试用。教学内容应由教师核答案、难度和解释，进度条只是完成状态，不代表掌握知识。课堂故障时应有简易静态备用材料，避免整节课依赖一个未充分测试的页面。",
+      "source_ids": [
+        "Sa11y",
+        "Sw3c",
+        "Sdemo"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "正面备课体验之外保留返工反证",
+      "body": "原帖及其他教师都表达生成互动材料有帮助，但地域、学科和工具不同：韩国ESL作者、同帖越南ESL与罗马尼亚历史教师、另帖德国数理教师，以及另一个英语练习作者，不能合成一组标准化样本。更不能把他们的时间节省自述转成学生成绩提升。重复转载同一主帖只算一次来源，论文或文章引用也不增加独立人数。\n负面信息尤其具体：风格一致性需要额外维护，词句和占位图片要改，其他教师仍需多轮调整。这些会影响实际交付成本。评论的身份没有独立核验，且公开讨论自选偏差明显，所以评分只给有限反馈信号。后续可以关注持续使用后的失败记录，而不是再收更多“很酷”评论。对于相对时间显示与搜索索引日期不一致的帖子，本轮不猜精确发帖日，保留读取日期和来源链接。",
+      "source_ids": [
+        "Steacher",
+        "Snegative",
+        "Sesl"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "值得验证教师工具价值，不能据此保证学习效果",
+      "body": "结论是仅建议受控试点。与原目录相比，本轮已经追到教师原帖、其公开工具社区和一个实际可交互样例，证据不再止于二手短引述，足以分析具体交付与竞争条件。不过只测试了一道相邻游戏题，没有原课完整文件、真实订单、课堂对照或净省时测量，因此仍不能承诺一键替代教材、节约固定小时数或改善考试成绩。\n下一步先选一个英语主题，用自写素材做一份明确目标的课件，找获准成年教师评价而非直接收学生数据。拟议继续条件是答案经审核、关键操作无重复计分、教师能独立改内容、投屏与目标设备可用，且含审核总时间低于旧流程。停止条件是维护成本持续高于使用价值、内容难以纠错或必须依赖未获准数据。若只适合某位教师的个人工作，也可停留在内部工具，不强行扩成订阅平台。\n教育效果的验证需要另外设计课堂观察和适当评估，不能由“打开正常”推导。产品阶段先把功能正确、教师可控、内容可核做扎实，再考虑学习结果；本报告的商业评分只用于机会判断，绝不是教学质量认证。",
+      "source_ids": [
+        "Steacher",
+        "Sdemo",
+        "Sh5p"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "教师社区",
+        "query": "site.reddit.com/r/htmlteachingtools verytiredspiderman lessons demo",
+        "outcome": "追到同账号公开工具与套餐帖子，并实际测试相关游戏一题。"
+      },
+      {
+        "channel": "官方文档及论坛",
+        "query": "site.h5p.org documentation accessibility content types",
+        "outcome": "核已有互动模板与类型级可访问性边界。"
+      },
+      {
+        "channel": "教师社区",
+        "query": "site.reddit.com/r/Teachers \"HTML\" \"Claude\" lessons errors",
+        "outcome": "发现相邻教师的一致性维护与英语练习使用自述，保留失败成本。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Steacher",
+        "directness": "direct_user",
+        "bias": "自述教师身份与效果未独立核，社区内容自选。",
+        "finding": "生成备课材料有帮助，但其他教师还要改词句与占位图。"
+      },
+      {
+        "source_id": "Snegative",
+        "directness": "adjacent_workflow",
+        "bias": "使用Cowork、不同学科和任务，不能视作主案例相同实现。",
+        "finding": "输出一致性需要额外维护。"
+      },
+      {
+        "source_id": "Sesl",
+        "directness": "adjacent_workflow",
+        "bias": "另一教师自述，无原始课堂测量。",
+        "finding": "语法练习可生成，仍需多轮调整与教师工作。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "基础假设：固定内容资源包",
+      "unit": "一位用户一个月资源包",
+      "currency": "USD",
+      "price": 15,
+      "api_cost": 0.2,
+      "human_cost": 2,
+      "other_variable_cost": 1,
+      "acquisition_cost": 2,
+      "units_per_month": 50,
+      "fixed_monthly_cost": 300,
+      "assumptions": "全部是假设；50×(15-.2-2-1-2)-300=190；固定成本覆盖批次内容与验收，未含税退款授权，非净利润或作者收入。",
+      "source_ids": [
+        "Scommunity"
+      ]
+    },
+    {
+      "scenario": "压力假设：小规模高支持量",
+      "unit": "一位用户一个月资源包",
+      "currency": "USD",
+      "price": 15,
+      "api_cost": 0.5,
+      "human_cost": 5,
+      "other_variable_cost": 1.5,
+      "acquisition_cost": 3,
+      "units_per_month": 30,
+      "fixed_monthly_cost": 300,
+      "assumptions": "全部是假设；30×(15-.5-5-1.5-3)-300=-150；不承诺无限定制，未验证定价与付费用户。",
+      "source_ids": [
+        "Scommunity",
+        "Snegative"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "H5P与免费资源替代；教师需修正内容和一致性；局部样例成功不证明全课或学习成效；Gumroad当前页面不可读。",
+  "limitations": "仅一个同作者相邻游戏题的浏览器交互检查，没有真实学生、私人资料、账号、购买、模型API或原始完整课程试用。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "教师能拿具体材料做互动工具，但内容与设备验收不能省。",
+    "audience": "已有明确教学目标、能核题目答案的教师。",
+    "use": "阅读、词汇、语法和课堂游戏的文件化课件。",
+    "benefit": "教师自述减少备课；本轮未测净工时或学习提升。",
+    "setup_cost": "获准素材、水平目标、答案与稳定模板。",
+    "maintenance_cost": "改词改图、题目纠错、浏览器和设备检查。",
+    "frequency": "原教师称每周备课，实际次数与使用时长未知。",
+    "privacy_risk": "初期只用自写素材和匿名操作，不收学生姓名成绩语音。",
+    "error_risk": "错误答案、难度错配、重复计分、键盘不可用或外部依赖失效。",
+    "source_ids": [
+      "Steacher",
+      "Sa11y",
+      "Sdemo"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "自写短文、词表、正确答案与明确目标，不含学生个人信息。",
+    "tools": "已有编程助手与浏览器；不额外付费API。",
+    "expected_result": "独立HTML、教师可改内容、反馈与进度正常；逐条列未测试设备与功能。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/generate-custom-interactive-html-lessons-for-students",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Build me a single self-contained interactive HTML lesson file from this passage: [paste passage]. The students are at [level], and the vocabulary to cover is [word list]. The learning goals are [goals]. Include flip cards for the vocab, comprehension questions with instant feedback, and a short wrap-up. The job is finished when I can open the file in a browser and everything works. Save it as [filename].html and don't touch other files."
+      },
+      {
+        "title": "英语课件验收",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sw3c",
+          "Sa11y"
+        ],
+        "attribution": "原创下一步提示，未生成新课程",
+        "text": "用自写短文制作阅读和词汇练习，内容与逻辑分开。核答案、答错反馈、重复确认不重复计分、下一题与重开、教师揭晓、键盘焦点和放大布局。说明外部依赖，不采集学生资料；只报告实际测试结果。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a single self-contained interactive HTML lesson file from this passage: [paste passage]. The students are at [level], and the vocabulary to cover is [word list]. The learning goals are [goals]. Include flip cards for the vocab, comprehension questions with instant feedback, and a short wrap-up. The job is finished when I can open the file in a browser and everything works. Save it as [filename].html and don't touch other files.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/generate-custom-interactive-html-lessons-for-students",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "8ea16b3204458ea68dafbf5ed1c074fd8f34c7f28cca1d71c46c526d95bc01ab",
+    "observation_window": {
+      "start": "2026-10-19T22:46:07Z",
+      "end": "2026-10-19T22:46:17Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://baseclasses.com/p/what-claude-code-can-teach-us-about",
+    "source_title": "Luke Shepard essay quoting teacher; primary thread separately traced",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T22:49:39Z",
+    "source_sha256": "4b348ec6d92f1107a0b6f857eabbfd5572a59404916491385066e1efddfacadd",
+    "steps": [
+      {
+        "en": "The teacher supplies a passage, level, vocabulary and practice goals, then uses generated HTML in class.",
+        "zh": "教师提供文章、水平、词汇与练习目标，课堂使用生成的HTML。"
+      },
+      {
+        "en": "The quoted teacher describes flip cards, comprehension questions and teacher controls; measured learning outcomes are not provided.",
+        "zh": "被引教师描述翻卡、理解题和教师控制，没有给出测量的学习成效。"
+      }
+    ]
+  },
+  "analysis_depth": "deep",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/generate-custom-interactive-html-lessons-for-students",
+    "observed_at": null,
+    "body_sha256": "a2a1a08ad6f7bbb7c53645516b7e41b6b8c732c10de762eb422fbb7095081daa",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "59d010675638a16c1bf96e692563433c2a0d99d2b5a85c7232d5577c6ffb688c",
+      "How it went": "eaf19ee06bc15f9f1202a10e1354f74970f1ac18b864d6cd4fa4b249178868fb"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T22:46:07Z",
+      "end": "2026-10-19T22:46:17Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  }
+}
