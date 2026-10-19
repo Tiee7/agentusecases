@@ -1,0 +1,425 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-real-estate-operations-with-a-memory-equipped-assistant",
+  "url": "https://agentusecases.ai/use-case/run-real-estate-operations-with-a-memory-equipped-assistant",
+  "title": "用 n8n 和 Supabase 记忆处理房源对话与预约",
+  "industry": "房地产运营与对话记忆",
+  "researched_at": "2026-10-19T20:41:24Z",
+  "brief_reason": "有组件和动作自述，缺可运行交付、记忆隔离/更新测试、真实部署和客户结果；保留技术验证路线，不凭通用文档补成本案例深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先核记忆隔离与数据新鲜度，再考虑自动更新房源",
+    "reason": "公开资料能说明技术组合，尚不能说明长期运营、跨客户隔离和商业交付效果。",
+    "next_action": "以两个虚构门店和客户测试隔离、价格更新、删除及预约状态。",
+    "stop_condition": "记忆来源不可追溯、撤回无法生效、自动更新无可靠确认，或现成工具已经足够。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-real-estate-operations-with-a-memory-equipped-assistant",
+      "title": "目录原文和试用模板",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:40:39Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:24Z",
+        "end": "2026-10-19T20:40:39Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "permitted_cloud_browser_main_dom",
+      "characters": 14384,
+      "sha256": "80740768375379e57138dd72455e8116dc7430171b674d155689fa57f059fc77",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "完整目录仅说明能力自述，未给部署指标或失败样本。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/n8n_ai_agents/comments/1tha9mp/ive_built_an_ai_real_estate_assistant_heres_what/",
+      "title": "作者原帖与公开评论",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 15262,
+      "sha256": "225a5224d9e08b0cea215f7dfbeb77cb351cdbdc605d9cede3222c1e9ad3a294",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "作者提及Supabase向量记忆、Google Calendar和Gmail；评论中的合作意向不等于成交。"
+    },
+    {
+      "id": "Srag",
+      "url": "https://supabase.com/docs/guides/ai/rag-with-permissions",
+      "title": "向量检索权限设计",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 10405,
+      "sha256": "516ef587d411851142b4a40013b4cd0aa82a91fcd8ca84ffe370852e8a5a5353",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "向量相似检索也可按用户权限过滤，不自动证明本案已配置隔离。"
+    },
+    {
+      "id": "Srls",
+      "url": "https://supabase.com/docs/guides/database/postgres/row-level-security",
+      "title": "数据库行级权限与角色",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 18448,
+      "sha256": "7f3aa85c539a5fdd319ecc3588dc84ef58a2da4c59dca41bc19f41c53039f0e8",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "授权与行级策略需要共同核验，service_role等高权限路径不能默认视为受限。"
+    },
+    {
+      "id": "Ssession",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/common-issues",
+      "title": "Simple Memory会话键",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 3085,
+      "sha256": "d61907ff04b7ecf14487d9959f178a1f268ad24ddf373f4b25be41bdd9370aa4",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "多个节点默认共享实例，非聊天触发器需管理session；固定测试键不可直接生产。"
+    },
+    {
+      "id": "Smemory",
+      "url": "https://docs.n8n.io/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorybufferwindow/",
+      "title": "Simple Memory运行边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 4476,
+      "sha256": "ef1a86ae4771323ff732dac68739a098dfacf12276c51cfe3fba41c996122d57",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "窗口长度与会话键，queue模式不适合该节点；不推断作者实际使用此节点。"
+    },
+    {
+      "id": "Sprice",
+      "url": "https://supabase.com/pricing",
+      "title": "Supabase现行价格",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 3953,
+      "sha256": "940f6a6050e792bd328164004a5e2db4fbe5ebc791fe8b3d3ef04164305713a6",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "Free500MB数据库且不活跃一周暂停，Pro25美元起，非整个助手总成本。"
+    },
+    {
+      "id": "Salt",
+      "url": "https://cal.com/pricing",
+      "title": "Cal.com预约替代",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T20:41:24Z",
+      "read_window": {
+        "start": "2026-10-19T20:40:39Z",
+        "end": "2026-10-19T20:41:24Z"
+      },
+      "timestamp_semantics": "Actual read interval upper bound",
+      "read_method": "supported_public_web_tool",
+      "characters": 3742,
+      "sha256": "19dd7ab0e53921148ddc82d3903056297fc8d8d35c2739ec937d07657c0cbe56",
+      "hash_scope": "Captured tool response/main HTML",
+      "supports": "个人免费预约方案，团队功能另计；不能替代所有房源记忆需求。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述n8n结合向量嵌入、Supabase、Google Calendar及Gmail。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "评论中的合作兴趣和询问不证明已出售或完成客户交付。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Supabase文档给出按权限限制向量检索的设计方式。",
+      "type": "verified",
+      "source_ids": [
+        "Srag"
+      ]
+    },
+    {
+      "statement": "Simple Memory文档要求会话管理并指出queue模式边界；作者是否用该节点未知。",
+      "type": "verified",
+      "source_ids": [
+        "Smemory",
+        "Ssession"
+      ]
+    },
+    {
+      "statement": "Supabase当前Pro25美元/月起，Free有容量和不活跃暂停条件。",
+      "type": "verified",
+      "source_ids": [
+        "Sprice"
+      ]
+    },
+    {
+      "statement": "Cal.com提供个人免费预约计划，不能等同整个运营助手。",
+      "type": "verified",
+      "source_ids": [
+        "Salt"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "有记忆不等于已验证长期运营",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ],
+      "body": "原帖和流程图提供了组件与动作描述，评论又确认当前使用Google Calendar、过去用过cal.com。没有可运行工作流、跨会话测试、房源更新后的回答样本或真实部署数量。有人提出想介绍给客户，只能算合作兴趣；另有人问是否卖出，没有可核答案。因此保存未评分简报，重点验证记忆是否会串人、过期或被错误更新，暂不填写商业收入与利润。"
+    },
+    {
+      "id": "memory",
+      "title": "三类数据需要不同处理",
+      "source_ids": [
+        "Srag",
+        "Ssession"
+      ],
+      "body": "建议将短期对话、长期说明资料和实时房源状态分开。向量相似检索适合找相关说明，不适合作为唯一的价格、可售状态和预约事实来源；这些字段应回查带版本和更新时间的结构记录。用户说以前喜欢某个区域，不代表其当前需求永远不变。记忆更新应保留来源和时间，冲突时询问或待核。这些是研究建议，不是作者已经实现的功能。"
+    },
+    {
+      "id": "isolation",
+      "title": "记忆必须与权限绑定",
+      "source_ids": [
+        "Srag",
+        "Srls"
+      ],
+      "body": "不同客户、门店和员工可见范围要先确定，再执行检索；不能先把所有人的内容取出交给模型自行保密。Supabase提供RLS等机制，但需要正确的角色、授权和测试；高权限服务角色不能被想当然地视作普通用户。流程中传入一个session字符串也不等于身份验证。原帖没有公开这些配置，所以不能判定已安全，也不能反过来声称已泄露。"
+    },
+    {
+      "id": "operations",
+      "title": "会话连续性与写入确认",
+      "source_ids": [
+        "Ssession",
+        "Smemory"
+      ],
+      "body": "n8n官方说明Simple Memory的会话键和共享实例行为，并指出它不适用于queue模式。本案未明确是否使用该节点，不能将它的限制直接算到作者头上；复制者仍应核实际记忆实现。价格修改、取消预约和通知发送分别是独立操作，建议先显示变更再批准，保留回执和版本；失败后核是否已完成再重试。模型生成的旧记忆不能覆盖当前业务记录。"
+    },
+    {
+      "id": "alternatives",
+      "title": "先判断是否需要向量记忆",
+      "source_ids": [
+        "Salt",
+        "Sprice"
+      ],
+      "body": "如果需求只是预约、改期和提醒，Cal.com个人免费方案已是具体替代；并不意味着团队协作、特定渠道或完整房源运营都免费。Supabase当前Free列500MB数据库和不活跃一周暂停，Pro从25美元/月起，这只是数据库平台费用，还需模型、n8n、渠道、维护和人工。没有任务量和部署方式，不能给总成本或利润数字。低频个人使用可先用结构表和预约工具，减少维护组件。"
+    },
+    {
+      "id": "business",
+      "title": "可能收费的部分仍待验证",
+      "source_ids": [
+        "Sauthor",
+        "Srag"
+      ],
+      "body": "潜在客户是重复处理房源咨询、已有可整理数据的中介或管理团队，付款人可能是业务负责人。可售交付可能是数据整理、身份隔离、更新验证和持续支持，属于推断。只有一个“能记住对话”的演示，难以证明比现有CRM笔记更值钱。获客可从已有实施关系中的单一流程验证开始，但本轮没有联系任何人。没有实际工时、客户报价和复购，本例不做伪精确评分。"
+    },
+    {
+      "id": "feedback",
+      "title": "讨论与使用结果分开",
+      "source_ids": [
+        "Sauthor",
+        "Ssession"
+      ],
+      "body": "原帖评论主要是希望了解、请求合作、询问日历或记忆刷新方案，没有独立部署者提供长周期效果。外部聚合转载不能增加独立来源数。检索n8n社区与GitHub找到session配置问题，但不是作者这个助手的缺陷证据。它们适合提示验收覆盖边界，不适合推断本产品失败率。缺反馈不代表没有价值，意味着应优先取得可重放测试和匿名结果，而不是堆积赞美评论。"
+    },
+    {
+      "id": "next",
+      "title": "合成数据的验收顺序",
+      "source_ids": [
+        "Srag",
+        "Srls",
+        "Ssession"
+      ],
+      "body": "先准备两个虚构门店、两个客户和同名房源：相同问题不能返回他人记忆；修改价格后必须使用新结构记录；删除或撤回资料后不应继续检索到旧片段；未确认的价格变更只能形成草稿。再测试重启、并发消息、会话键缺失和取消预约超时。成功标准是隔离与状态结果可逐项核对，不预填准确率。若无法解释记忆来源、无法可靠撤回或现成工具已足够，就停止增加自动写入权限。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-real-estate-operations-with-a-memory-equipped-assistant",
+    "observed_at": null,
+    "body_sha256": "0eb3396bf4cb31e6c1a39c48d3ee07edb95e0e4afbea3eeee90e4b6f855e1072",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "5eedab947a6bdbc7614c9772f0b162b943b566848b4388a1ad3b1906d803f478",
+      "How it went": "4adf0bcae675032f926420bd5bf220b6f82dcf97d3187ee80afd715fade35a18",
+      "Worth knowing": "a32a4c755ae4f54831c62f03b030058289dc999ead1830e70630cc07d28b799c"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T20:40:24Z",
+      "end": "2026-10-19T20:40:39Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build an n8n workflow with an AI agent that answers questions from [clients/tenants/team] about my [properties] using data in [spreadsheet or database]. Give it memory so it remembers each person's earlier conversation, and let it update property fields like [price, availability, status] when I tell it to. Before it changes any record or sends any message, show me what it will change and wait for my approval; stop once a test conversation works end to end.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/run-real-estate-operations-with-a-memory-equipped-assistant",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "80740768375379e57138dd72455e8116dc7430171b674d155689fa57f059fc77",
+    "observation_window": {
+      "start": "2026-10-19T20:40:24Z",
+      "end": "2026-10-19T20:40:39Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/n8n_ai_agents/comments/1tha9mp/ive_built_an_ai_real_estate_assistant_heres_what/",
+    "source_title": "AI real estate assistant with memory",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T20:41:24Z",
+    "source_sha256": "225a5224d9e08b0cea215f7dfbeb77cb351cdbdc605d9cede3222c1e9ad3a294",
+    "steps": [
+      {
+        "en": "The author processes client messages with an AI agent and stores long-term knowledge using embeddings and Supabase.",
+        "zh": "作者通过AI智能体处理客户消息，并用向量嵌入及Supabase存储长期知识。"
+      },
+      {
+        "en": "The workflow updates property data and uses Google Calendar for appointments, with Gmail notifications.",
+        "zh": "工作流更新房产资料，用Google Calendar管理预约并通过Gmail通知。"
+      },
+      {
+        "en": "The author reports smooth scheduling and says the calendar integration can be changed for a client.",
+        "zh": "作者自述排期顺利，并表示可以按客户需要更换日历接入。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有明确用途，但跨会话记忆与动态更新没有可核样本。",
+    "audience": "愿意维护数据和权限的房地产小团队。",
+    "use": "辅助房源答疑、预约草稿与历史背景查找。",
+    "benefit": "可能减少重复解释，净省时和准确率未测试。",
+    "setup_cost": "准备结构房源、身份会话边界、合成数据和确认流程。",
+    "maintenance_cost": "记忆刷新、撤回、字段同步、权限与错误复核。",
+    "frequency": "随真实授权咨询使用，不需为记忆持续发送消息。",
+    "privacy_risk": "聊天历史与购房需求可能跨客户泄露；先隔离再检索。",
+    "error_risk": "旧价格、混淆同名房源、串会话、未经确认写入与错约。",
+    "source_ids": [
+      "Sauthor",
+      "Srag",
+      "Ssession"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "完整保存目录模板，非作者真实系统提示词。",
+    "prerequisites": "仅虚构门店、客户、房源、预约和记忆记录；不含真实凭据或通信。",
+    "tools": "文本助手或本地状态模拟，尚未运行上游产品。",
+    "expected_result": "带来源和版本的答复、建议变更及批准点；不发送消息、不更新真实房源。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-real-estate-operations-with-a-memory-equipped-assistant",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "目录试用模板，非原作者配置",
+        "text": "Build an n8n workflow with an AI agent that answers questions from [clients/tenants/team] about my [properties] using data in [spreadsheet or database]. Give it memory so it remembers each person's earlier conversation, and let it update property fields like [price, availability, status] when I tell it to. Before it changes any record or sends any message, show me what it will change and wait for my approval; stop once a test conversation works end to end."
+      },
+      {
+        "title": "虚构客户记忆隔离测试",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Srag",
+          "Ssession"
+        ],
+        "attribution": "我们编写；未测试作者系统",
+        "text": "使用两个虚构门店、客户和同名房源建立测试表。每次请求先验证客户及门店范围，显示命中资料来源、日期和版本；价格以当前结构记录为准，旧聊天不能覆盖。测试串会话、价格修改、撤回资料和预约取消超时。只输出答复草稿及变更建议，真实发送或修改前等待批准；来源不足时说待核，不补造记忆。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "searches": [
+      {
+        "channel": "Reddit及公开网页",
+        "query": "\"Forsaken_Clock_5488\" \"real estate\" review",
+        "outcome": "作者展示与转载，未取得独立使用成果。"
+      },
+      {
+        "channel": "n8n社区",
+        "query": "site:community.n8n.io memory session mixing users Supabase",
+        "outcome": "通用会话与权限资料，不视作本案例实测。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "site:github.com n8n supabase memory session issue",
+        "outcome": "历史集成问题，与作者部署版本未知。"
+      }
+    ],
+    "note": "合作意向、推广与旁观建议不计真实使用成果。"
+  },
+  "disconfirming_evidence": "预约已有免费替代；向量记忆不保证实时数据和身份隔离；无长期客户证据。",
+  "limitations": "未取得可运行工作流、未登录、未调用付费模型、未更新数据或发送消息。目录日期保留为2026-05-01，未将相对发布时间换算为精确原帖日期。",
+  "archive_source_sha256": "0eb3396bf4cb31e6c1a39c48d3ee07edb95e0e4afbea3eeee90e4b6f855e1072",
+  "translation_sha256": "0b06f6b0d4e7b9ea22b520075060ac0757b2e267985dcefba244a19bfc2cfaae"
+}
