@@ -1,0 +1,464 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "turn-meeting-notes-into-a-prioritized-daily-action-list",
+  "url": "https://agentusecases.ai/use-case/turn-meeting-notes-into-a-prioritized-daily-action-list",
+  "title": "用 Claude Code 将会议笔记整理为每日行动清单",
+  "industry": "个人知识管理与会议后续工作",
+  "researched_at": "2026-10-19T20:52:20Z",
+  "confidence": "中：作者公开方法和工具政策可核，节时为自述，未运行Claude Code或取得真实客户收益。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证有来源的行动清单，个人节时不能直接转成商业收入",
+    "reason": "作者给出了原始笔记、摘要与任务文件的清晰链路，适合会议较多且愿意复核结果的人。任务负责人、日期和状态仍需从原文确认，重复运行与原文保护决定实际维护成本。现成会议工具和人工模板可替代部分需求，配置服务工时及客户付费尚未验证。应先以合成笔记检查准确性与恢复，再测实际净省时；目录收录日期与原文发布日期分开记录，不把旧教程当新产品发布。",
+    "next_action": "三份合成笔记测试责任、日期、取消、重复和原文保护，真实试点另按授权核数据范围。",
+    "stop_condition": "复核负担不降、原文被改、未知项被编造，或现有工具已经满足。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/turn-meeting-notes-into-a-prioritized-daily-action-list",
+      "title": "许可目录与试用模板",
+      "supports": "完整保留目录，10月18日为目录标记，作者文章实际标1月25日。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.ronforbes.com/blog/build-your-personal-ai-assistant-with-claude-code",
+      "title": "Ron Forbes的个人助手教程",
+      "supports": "作者工作流和节时估计；没有独立计时或付费交付证据。"
+    },
+    {
+      "id": "Splan",
+      "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+      "title": "Claude Pro现行说明",
+      "supports": "美国月付20美元且包含Code；API使用不含在Pro内。"
+    },
+    {
+      "id": "Sbilling",
+      "url": "https://support.claude.com/en/articles/11145838-use-claude-code-with-your-pro-or-max-plan",
+      "title": "Code订阅与用量边界",
+      "supports": "订阅和Console/API计费分别处理，不能当无限调用。"
+    },
+    {
+      "id": "Sobsidian",
+      "url": "https://obsidian.md/pricing",
+      "title": "Obsidian现行价格与本地存储说明",
+      "supports": "应用免费；同步为可选付费项，本地笔记不自动代表模型不传输。"
+    },
+    {
+      "id": "Sdata",
+      "url": "https://code.claude.com/docs/en/data-usage",
+      "title": "Claude Code数据使用文档",
+      "supports": "本地客户端仍有远端数据流；消费与商业账号训练及保留政策不同。"
+    },
+    {
+      "id": "Salt",
+      "url": "https://www.notion.com/product/ai-meeting-notes",
+      "title": "Notion会议笔记替代",
+      "supports": "厂商公开提供转录、摘要和后续动作，非本案准确率或零成本证据。"
+    },
+    {
+      "id": "Sfeedback",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1tlep12/anyone_using_claude_to_pull_action_items_out_of/",
+      "title": "会议行动项整理的公开需求",
+      "supports": "用户描述转录后仍要整理责任和任务；评论者披露自己在做产品，需标利益关系。"
+    },
+    {
+      "id": "Sissue",
+      "url": "https://github.com/anthropics/claude-code/issues/57666",
+      "title": "历史笔记流水线中断报告",
+      "supports": "历史插件多文件流程重置，作者称归档避免数据丢失；不是当前产品普遍缺陷。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录按2026-10-18收录，但原博客实际标Published January25,2026。",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者用原始会议笔记、摘要和任务文件分区，给出三级优先级框架。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者30至45分钟每日、10至12小时每月及两千笔记都是自述。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "当前Pro美国月付20美元且含Code，Pro不包含Console API使用。",
+      "source_ids": [
+        "Splan"
+      ]
+    },
+    {
+      "statement": "Code订阅与API计费分别管理，有使用限制，不能当无限运行。",
+      "source_ids": [
+        "Sbilling"
+      ]
+    },
+    {
+      "statement": "Obsidian应用免费，同步可选月付5美元或年付折算4美元。",
+      "source_ids": [
+        "Sobsidian"
+      ]
+    },
+    {
+      "statement": "Code数据文档区分消费和商业账户，客户端本地执行仍有外部连接。",
+      "source_ids": [
+        "Sdata"
+      ]
+    },
+    {
+      "statement": "Notion官方提供会议转录摘要及后续动作，是具体替代而非本案效果证据。",
+      "source_ids": [
+        "Salt"
+      ]
+    },
+    {
+      "statement": "公开用户描述转录后仍需手动整理任务，回复者披露产品开发利益关系。",
+      "source_ids": [
+        "Sfeedback"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "会后整理负担有原作者和相邻用户描述，但付款人及可接受价格仍未验证。",
+      "source_ids": [
+        "Sauthor",
+        "Sfeedback"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "可复用流程明确，节时仅个人估计，没有独立核对时间与错误率验证。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "一次性配置对人工工时敏感，压力情景负贡献，不能把省时算已收现金。",
+      "source_ids": [
+        "Splan",
+        "Sbilling"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "可通过已有培训关系展示，但作者个人流量不等于可复制的客户获取。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "通用工具已能摘要任务，差异更多在适配和质量保障，复制门槛较低。",
+      "source_ids": [
+        "Salt"
+      ]
+    },
+    "execution": {
+      "score": 3,
+      "rationale": "小范围只读原文与草稿输出可控，仍需数据授权、重跑去重和恢复验收。",
+      "source_ids": [
+        "Sdata",
+        "Sissue"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "有相邻需求和历史插件使用问题，没有本作者工作流独立效果评估。",
+      "source_ids": [
+        "Sfeedback",
+        "Sissue"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "使用者与真正需要解决的事情",
+      "source_ids": [
+        "Sauthor",
+        "Sfeedback"
+      ],
+      "body": "使用者是会议较多、已有笔记习惯，却经常在会后花时间整理责任和下一步的人。个人可能自己支付工具订阅，小团队也可能由负责人购买培训或流程配置。这里的付费画像是研究推断，原作者没有展示销售服务、客户合同或团队采购。需求并非再生成一份更长的摘要，而是让当天应做的事情可查、可确认、能进入已有工作习惯。没有负责人和时间信息的会议笔记，即使语言被整理得流畅，也不能自动成为可靠任务。\n应优先验证每天有重复整理负担的人，低频使用者用简单清单可能足够。个人“感觉轻松”与公司能减少成本是不同结果；节省出的时间是否用于更有价值的工作，还取决于使用者如何安排。把所有记录塞进系统也不一定增加收益，历史材料越多，检索与误判复核可能越费时。采购前应让客户选一个具体流程，提供合成或获准匿名样本，确定怎样才算更省事。"
+    },
+    {
+      "id": "workflow",
+      "title": "从原始笔记到行动清单",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "作者以原始笔记、摘要和任务文件分开组织，日终提取行动项并按明确的优先级规则分组。该链路的可复用部分是输入输出清楚，而不是某个文件夹名称本身。本轮保留许可目录全文和试用模板，原博客只做有限摘要，没有复制长篇教程或作者完整命令。目录的来源栏标10月18日，实际文章标2026年1月25日，研究排序仍按目录/new，不把收录日期说成文章刚发布。\n可靠实现还应给每个行动项保留来源笔记及段落，负责人不明就标待确认，未说截止日就留空。所谓本周应结合会议时间和时区解析，不可用处理当天替换历史日期。重复处理同一笔记应更新原条目而非再生成一份；已完成项不能因旧笔记被重新读取而恢复为待办。这些属于建议加强，不是作者已经证明具备的行为。 同一任务可以在两场会议被再次提及，去重不能只比较标题字符串，应结合项目、负责人和明确动作，同时保留两处来源。若后来会议改变截止日，列出新旧值和证据，不能静默选一个；如果只是讨论可能方案，也不应升级为已经承诺的任务。"
+    },
+    {
+      "id": "market",
+      "title": "节时估计如何转成可验证需求",
+      "source_ids": [
+        "Sauthor",
+        "Sfeedback"
+      ],
+      "body": "作者称每天节约30至45分钟、每月10至12小时，并整理超过两千条笔记；这些数字是自述，不能作为所有用户效果或已获得现金。日估计与月估计还依赖实际开会天数，不能简单按三十天相乘后说矛盾或夸大。真正应测的是原来整理耗时减去生成后的核对、修改和维护时间。输入已经结构化的人，自动化增益可能很小；杂乱且说话人不准的转录，复核成本可能较大。\n公开社区有人提到已有转录仍需把行动项、项目和责任人移入任务工具，支持这个中间环节有需求，但并未给市场规模或愿付价格。适合进入的范围是明确的会议后处理，不是承诺替代整个个人助理、项目经理或决策者。组织场景还要经过数据处理批准和人员协作适配，这会增加销售周期，不能把个人当天装好直接换算成企业批量上线速度。"
+    },
+    {
+      "id": "competition",
+      "title": "现成会议工具与简单清单",
+      "source_ids": [
+        "Salt",
+        "Sobsidian"
+      ],
+      "body": "Notion公开产品页已提供会议转录、摘要和后续行动能力，已有团队使用它时，追加一个Obsidian文件系统可能增加同步负担。本轮没有试用Notion，也不采信其完美记忆营销词为准确率证据。其他替代包括人工模板、原有任务软件和单次文本整理；客户只需要每天几项待办时，复杂代理并非自然最优。\nObsidian应用当前免费，同步和发布是可选服务；保留Markdown有便于备份和迁移的优势，但不自动解决任务去重、团队分派和到期提醒。可能收费的差异在适应组织已有命名、任务字段、权限及审核方式，并让用户不用重复复制。只卖一个高、中、低优先级提示词，复制门槛很低。应拿同一份合成会议材料比较各方案总处理时间、误派负责人和遗漏项，而不是比较摘要字数或视觉效果。"
+    },
+    {
+      "id": "economics",
+      "title": "配置服务与持续支持的两种假设",
+      "source_ids": [
+        "Splan",
+        "Sbilling",
+        "Sobsidian"
+      ],
+      "body": "本案没有经营账单，因此模型以一次个人工作流配置与验收为交付单位，不将作者节时折算成已收收入。基础假设收费150美元，变量API为0，人工两小时按30美元计60，其他变量5、获客20，每月8单、固定费用40，结果480美元。API为0只因假设客户用自己的合适订阅运行，不代表模型免费；客户的Pro月费20美元、可选同步和超额用量另列在总拥有成本中，不能再让服务者重复计同一订阅。\n压力情景仍收费150，人工五小时150、其他10、获客35，每月4单、固定40，结果负220美元。它反映不同笔记结构、工具版本和反复培训可能吃掉一次性配置收入。全部价格与工时是假设，只有公开订阅价属于已读事实；不含税、退款和组织审查。持续月费只有在确有更新与支持需求时才合理，不能把完成的一次安装包装成永久收益。先记录实际交付工时，再决定固定价、按时或不收费。 自用评估可用更简单的盈亏线：每月净节约时间乘个人认可的时间价值，再减新增订阅与维护成本。时间价值是使用者自己的假设，不是市场工资承诺。已有订阅时可看增量费用，但不能据此说其他新用户成本也为零；超额额度和API切换要单独核账。"
+    },
+    {
+      "id": "distribution",
+      "title": "先展示可核对的结果",
+      "source_ids": [
+        "Sauthor",
+        "Sfeedback"
+      ],
+      "body": "初始获客可从已有知识管理或团队培训关系出发，展示一份保留原文链接的行动清单，让用户判断是否更容易执行。这是待验证路径，本轮没有联系作者、评论者或潜在客户。营销应明确交付是整理辅助和配置指导，不承诺每天固定省多少时间。作者的个人品牌和文章分发不能直接复制成新服务者的获客渠道，更不能将文章阅读量当订单。\n演示应包括一条责任不明、一条取消、一条跨日截止和一条重复任务，显示系统会怎样处理不确定性。真实试点需先批准可用笔记范围及第三方数据传递方式，不能要求客户把整个工作目录开放来证明功能。销售后还要交付如何恢复原文件、怎样查看处理记录和停用工作流。若客户本来就不维护任务清单，自动生成更多清单可能没有持续价值，应该先解决使用习惯而非增加工具。"
+    },
+    {
+      "id": "moat",
+      "title": "有价值的是适配与验收",
+      "source_ids": [
+        "Sissue",
+        "Salt"
+      ],
+      "body": "文件读取、摘要和任务抽取已是常见能力，单个提示词很难形成稳定优势。可以积累的是不同会议类型的字段规范、重复项合并规则、来源定位和回归样本，以及如何在不破坏原文的前提下更新派生文件。这是服务能力假设，尚无证据说明作者形成商业壁垒或客户迁移成本。\n通用平台增加会议后续功能会持续压缩独立小工具空间。更合理的竞争方式是服务特定流程，例如固定审查会的责任追踪，而不是再做一个万能个人系统。复杂插件也会增加依赖，历史GitHub问题显示多文件流程可能因会话重置而需要重新识别进度。该历史报告不代表现版本仍坏，却说明完成记录与恢复机制有实际价值。客户是否愿意为这些保障付费，要通过真实采购验证，不能仅由技术重要性推出。"
+    },
+    {
+      "id": "execution",
+      "title": "原文保护与数据边界",
+      "source_ids": [
+        "Sdata",
+        "Sissue"
+      ],
+      "body": "本地保存笔记不等于离线模型处理。Claude Code官方文档区分消费和商业账户的数据训练、保留与外部连接，具体选择须按客户账户和组织政策核对。不能因为Obsidian本地存储，就声称工作会议内容完全不离开电脑。默认试用应使用虚构材料，真实会议中的人员、客户和业务资料只在批准的范围内处理；不把聊天笔记中的外部指令当作执行授权。\n写入只限派生摘要和待审核清单，原文件只读。每次处理先确定输入版本，输出先写临时文件并核内容，再更新固定路径；需要保留用户手改状态，避免旧摘要覆盖新决定。长任务中断后核哪些输出已保存，不能整批重做造成重复。历史issue提出归档与重建进度的做法，但本轮未运行上游插件。验收需把可恢复和可追溯列入要求，而不只看一次生成是否成功。 优先级只是对明确规则的应用，不是对人员重要性的评判。一个任务写着本周完成但实际已过期，应显示逾期和来源日期；不能在新的一周自动延后。人工改过的负责人或状态应有单独记录，避免下一次模型重算抹掉人的决定。"
+    },
+    {
+      "id": "feedback",
+      "title": "真实需求与利益相关建议",
+      "source_ids": [
+        "Sfeedback",
+        "Sissue"
+      ],
+      "body": "社区提问者描述转录后仍需整理任务的负担，是相邻需求信号，尚未证明采用Ron的流程后有效。回复者建议保留来源并避免猜负责人，同时披露自己在开发转录产品；观点有启发，但要标清利益关系。GitHub历史用户报告多文件插件流程被中断，并表示源文件逐项归档避免损失。这属于相邻使用经验，不是本作者助手的故障率。\n本轮检索作者名称、Obsidian行动项和GitHub文件处理问题，没有取得RonOS的独立计时或付费客户验证。正反线索都应保留：有人确实反复整理笔记，有人不希望AI替自己写记忆或声音，也有人发现维护成本高。评价的关键不是赞成或反对AI，而是任务准确性、核对负担及使用者对原文的控制。反馈评分为有限信号，不把没有五星评价解释为产品没价值。"
+    },
+    {
+      "id": "decision",
+      "title": "先作为内部效率工具验证",
+      "source_ids": [
+        "Sauthor",
+        "Salt",
+        "Sdata"
+      ],
+      "body": "结论是适合内部效率工具。作者给出可理解的文件工作流和优先级框架，使用者能从一个小流程开始；商业上现成替代丰富、个性化交付工时未知，因此不应仅凭节时自述建立订阅收入预测。下一步先用三份虚构会议笔记形成有来源的清单，人工核责任、截止、优先级、取消和重复项，比较完整核对时间。\n明确验收应包括原文哈希不变、重复运行不新增同一任务、已完成状态不被恢复、未知负责人不猜、日期缺失不补。通过这些只说明有限合成场景，真实净省时仍待获准试点。若每次要重读全部会议才能相信结果、原文被改写、数据政策不符合组织要求或现成工具已够用，就停止扩展。预算跟踪和其他个人生活模块不纳入这次验证，避免从一个可用流程扩成难维护的大系统。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开网页",
+        "query": "\"Ron Forbes\" \"personal AI assistant\" review",
+        "outcome": "作者文章为主，未取得独立计时。"
+      },
+      {
+        "channel": "Reddit",
+        "query": "site:reddit.com Claude Code Obsidian action items notes experience",
+        "outcome": "读取相邻需求与利益相关建议，不当RonOS实绩。"
+      },
+      {
+        "channel": "GitHub",
+        "query": "site:github.com Claude Code Obsidian overwritten notes issue",
+        "outcome": "读取历史多文件处理中断报告，不推定现版本同故障。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sfeedback",
+        "directness": "adjacent_workflow",
+        "bias": "提问是未解决需求，回复者自述在开发产品。",
+        "finding": "转录到行动项仍需核责任和项目，不能猜测说话者。"
+      },
+      {
+        "source_id": "Sissue",
+        "directness": "adjacent_workflow",
+        "bias": "历史单用户插件问题，版本与当前不同。",
+        "finding": "保存逐项完成状态和原文可以减少中断恢复成本。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "基础假设：个人流程配置验收",
+      "unit": "一次配置与验收交付",
+      "currency": "USD",
+      "price": 150,
+      "api_cost": 0,
+      "human_cost": 60,
+      "other_variable_cost": 5,
+      "acquisition_cost": 20,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 40,
+      "assumptions": "全部经营输入是假设：人工2小时×30；客户自付适用订阅，服务者API0不代表模型免费；8×65-40=480。客户Pro20美元/月等成本另列，不重复计。",
+      "source_ids": [
+        "Splan",
+        "Sbilling"
+      ]
+    },
+    {
+      "scenario": "压力假设：个性化配置返工",
+      "unit": "一次配置与验收交付",
+      "currency": "USD",
+      "price": 150,
+      "api_cost": 0,
+      "human_cost": 150,
+      "other_variable_cost": 10,
+      "acquisition_cost": 35,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 40,
+      "assumptions": "人工5小时×30，其余均假设，4×(150-150-10-35)-40=-220；未含税退款，不是作者利润。",
+      "source_ids": [
+        "Splan",
+        "Sbilling"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "现成会议工具已覆盖部分任务；个人节时未独立验证；笔记越多不必然更有效，维护和复核可能抵消收益。",
+  "limitations": "未安装Claude Code、未运行上游插件、未读取私人笔记或发送消息；没有准确率和真实节时实测。原博客长文仅有限摘要，目录全文已获许可。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "会议密集者可能受益，是否净省时取决于原始笔记和复核负担。",
+    "audience": "已有笔记习惯的个人知识工作者或获组织批准的小团队。",
+    "use": "将当天会议笔记变成可核责任与期限的行动草稿。",
+    "benefit": "可能减少会后整理；作者节时不能当本次测量。",
+    "setup_cost": "限定目录、字段、优先级和合成样本，确认数据政策。",
+    "maintenance_cost": "去重、状态保留、提示词版本、文件恢复与人工核对。",
+    "frequency": "按开会日处理，不必每天重扫全部历史库。",
+    "privacy_risk": "本地文件仍可能传模型，工作资料需明确范围和批准。",
+    "error_risk": "误派负责人、补造期限、重复任务、旧记录覆盖新状态。",
+    "source_ids": [
+      "Sauthor",
+      "Sdata",
+      "Sfeedback"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "三份虚构会议笔记及已知行动项清单，不含真实个人或业务资料。",
+    "tools": "现有文本助手与本地文件核对；本轮未调用Claude产品或额外API。",
+    "expected_result": "带来源和未知项的行动清单草稿，原文不变；不外发和自动分派。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/turn-meeting-notes-into-a-prioritized-daily-action-list",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "目录试用模板",
+        "text": "Set up a personal assistant in the folder [path to your meeting notes folder]. Each day, read the new meeting notes there and write an end-of-day action list to [file name], with each item showing the owner, the due date if one was mentioned, and a priority of high, medium or low. Finish by showing me the list, and don't edit or delete any of my original notes."
+      },
+      {
+        "title": "可回溯的合成会议任务提取",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sfeedback"
+        ],
+        "attribution": "我们编写；未实测Claude产品",
+        "text": "读取这三份虚构会议笔记：[内容、时间、时区、文件ID]。只提明确行动、负责人和提到的截止时间，未知留空；每项保留来源段落。取消事项不新增待办，相同事项去重，已有完成状态保留。按阻塞他人或硬期限、重要可调整、无当前依赖分级并说明依据。只写新草稿，不改原文件，不发消息、不自动分派；列需要人工确认的问题。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up a personal assistant in the folder [path to your meeting notes folder]. Each day, read the new meeting notes there and write an end-of-day action list to [file name], with each item showing the owner, the due date if one was mentioned, and a priority of high, medium or low. Finish by showing me the list, and don't edit or delete any of my original notes.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/turn-meeting-notes-into-a-prioritized-daily-action-list",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "69b8154adc3002ddb24daee716d09e50ff53ebe0c4eef9984067328e89018654",
+    "observation_window": {
+      "start": "2026-10-19T20:50:57Z",
+      "end": "2026-10-19T20:51:12Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.ronforbes.com/blog/build-your-personal-ai-assistant-with-claude-code",
+    "source_title": "Build Your Personal AI Assistant with Claude Code",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T20:52:20Z",
+    "source_sha256": "f1bc8b7059631904dcd0641b8c0790ff027b5df510a24115b5fd5261cb2971a7",
+    "steps": [
+      {
+        "en": "The author captures raw meeting notes in an Obsidian workspace and asks Claude Code to summarize them at day end.",
+        "zh": "作者在Obsidian工作区收集原始会议笔记，日终让Claude Code总结。"
+      },
+      {
+        "en": "Action items are collected with owners and deadlines under an explicit three-level priority framework.",
+        "zh": "行动项按明确的三级优先级框架整理，并列负责人和截止时间。"
+      },
+      {
+        "en": "The author adds morning and evening routines after establishing the first workflow; time savings are self-reported estimates.",
+        "zh": "作者先建立一个工作流，再加入早晚例行整理；节时是个人估计。"
+      }
+    ]
+  },
+  "analysis_depth": "deep",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/turn-meeting-notes-into-a-prioritized-daily-action-list",
+    "observed_at": null,
+    "body_sha256": "0f3e028b58db3589b4e0a3f6d46c87170b7d67b4ac1a251162df3e4cdf4df44e",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "f251f246980bff1d49565e6c688e192a0f8e177f1f2c5135bc4eb3581f11de48",
+      "How it went": "5c9d9d3b7850acf384b7141a60cf7aed5fce2582a0f8e2179c170baa04b3ba37",
+      "Worth knowing": "1f618c0852ea40a830a2baa1c0625cc5854c33235137f955c60774673256dfc6"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T20:50:57Z",
+      "end": "2026-10-19T20:51:12Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  }
+}
