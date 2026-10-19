@@ -81,3 +81,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 ## 源站案例与实际 agent
 
 22 篇研读现优先展示 agentusecases.ai 的介绍、方法与结果：英文原创摘要和对应中文翻译，非源站全文；之后保留外部原作者的方法与分析。目录从 Done with 观测实际 agent，不使用 Try it yourself 推荐工具作替代。覆盖、许可检查、哈希、缺失清单与同步机制见[本轮记录](docs/source-case-verification.md)。
+
+## 当前发布方式（2026-10-20，北京时间）
+
+按用户要求，Git 自动部署已在根目录 `vercel.json` 关闭。研究仍正常测试、提交并合并 main；只有用户明确要求查看时，才从通过验证的提交手动发布。不要创建每小时发布任务，也不要自动恢复 Git 发布。GitHub 检查与部署分别处理。
