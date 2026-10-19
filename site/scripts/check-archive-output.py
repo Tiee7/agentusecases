@@ -93,6 +93,9 @@ def main():
         report = root / 'site/dist/reports' / case['id'] / 'index.html'
         if report.exists():
             paths.append(report)
+        brief = root / 'site/dist/briefs' / case['id'] / 'index.html'
+        if brief.exists():
+            paths.append(brief)
         for path in paths:
             html = path.read_text()
             for name, expected in [('source-original', raw), ('source-translation', translated)]:

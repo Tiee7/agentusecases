@@ -1,44 +1,7 @@
 ---
-import SourceArchive from '../../components/SourceArchive.astro';
-import CommercialScore from '../../components/CommercialScore.astro';
-import Base from '../../layouts/Base.astro';import Refs from '../../components/Refs.astro';
-import {loadContent,dateLabel,tone,sourceStatusLabels} from '../../lib/content.mjs';
+import ResearchArticle from '../../components/ResearchArticle.astro';
+import {loadContent} from '../../lib/content.mjs';
 export function getStaticPaths(){return loadContent().reports.map(report=>({params:{id:report.id},props:{report}}))}
-const {report:r}=Astro.props;
-const toc=[{id:'source-case',title:'案例档案'},{id:'author-method',title:'外部原作者的方法与来源'},{id:'verdict',title:'商业判断'},{id:'personal',title:'自用价值'},{id:'try-it',title:'Copy prompt · 动手试用'},{id:'facts',title:'已核验事实'},...r.sections,{id:'models',title:'收入与成本测算'},{id:'score',title:'评分依据'},{id:'limits',title:'不同意见与未核实的问题'},{id:'next',title:'下一步与何时停止'},{id:'sources',title:'来源与证据'}];
-const money=(n)=>new Intl.NumberFormat('zh-CN',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n);
+const {report}=Astro.props;
 ---
-<Base title={r.title} description={r.verdict.headline} active="reports"><div class="reading-progress" aria-hidden="true"><span id="reading-progress"></span></div><div class="wrap article-top"><a class="back-link" href="/#research">← 返回研究档案</a><div class="report-title-row"><div class="article-meta"><span>案例研读</span><span>{dateLabel(r.date)}</span><span>约 {r.minutes} 分钟阅读</span></div><h1>{r.title}</h1><CommercialScore score={r.scoreAvailable?r.score:null}/></div><div class="article-byline"><span>{r.industry}</span><button id="print" class="text-button" type="button">打印 / 保存 PDF ↗</button></div></div>
-<div class="wrap reading-layout"><aside class="toc"><details open><summary>本篇目录 <span>↓</span></summary><nav aria-label="文章目录">{toc.map((s,i)=><a href={`#${s.id}`}><small>{String(i+1).padStart(2,'0')}</small>{s.title}</a>)}</nav></details></aside><article class="prose">
-<SourceArchive archive={r.archive} trial={r.sourceTrial} inline={true}/>
-<section id="author-method"><p class="eyebrow">THE ORIGINAL CASE</p><h2>外部原作者的方法与来源</h2><p>{r.authorMethod.source?<a href={r.authorMethod.source} target="_blank" rel="noopener noreferrer">{r.authorMethod.title} ↗</a>:<span>原始来源待补充</span>}</p>{r.authorMethod.status==='unavailable'?<p class="notice">方法摘要未收录</p>:<><p class="method-source-label">{r.authorMethod.status==='author_summary'?'作者方法摘要':'报道摘要'}</p><div class="method-translation"><div lang="zh-CN"><h3>中文方法摘要</h3><ol>{r.authorMethod.steps.map(s=><li>{s.zh}</li>)}</ol></div><details><summary lang="en">English · Method summary</summary><ol lang="en">{r.authorMethod.steps.map(s=><li>{s.en}</li>)}</ol></details></div></>}</section>
-<section id="verdict" class="verdict-box"><p class="eyebrow">THE VERDICT</p><h2>我们的分析</h2><p class={`badge ${tone(r.verdict.decision)}`}>{r.verdict.decision}</p><h3>{r.title}</h3><p>{r.verdict.headline}</p><p>{r.verdict.reason}</p></section>
-<section id="personal"><p class="eyebrow">PERSONAL USE</p><h2>自用价值 · {r.personal.level}</h2><p>{r.personal.reason}</p><Refs ids={r.personal.refs}/><dl class="personal-details">{r.personal.details.map(d=><div><dt>{d.label}</dt><dd>{d.body}</dd></div>)}</dl></section>
-<section id="try-it"><p class="eyebrow">TRY IT YOURSELF</p><h2>Copy prompt · 动手试用</h2>{r.sourceTrial.status!=='available' && <p data-source-trial-status={r.sourceTrial.status}>{sourceStatusLabels[r.sourceTrial.status]}</p>}<h3>准备条件</h3><p>{r.trial.prerequisites || '待核实'}</p><h3>工具</h3><p>{r.trial.tools || '待核实'}</p><h3>预期结果</h3><p>{r.trial.expected || '待核实'}</p>{r.trial.prompts.map((p,i)=><div class="prompt-card"><h3>{p.title}</h3><p><strong>{p.kind==='site_template'?'源站试用模板':p.kind==='ours'?'自编模板':p.kind==='adapted'?'改写':'原文'}</strong> · {p.language}</p>{p.agent && <p>建议运行工具：{p.agent}</p>}<p>出处：{p.url?<a href={p.url} target="_blank" rel="noopener noreferrer">提示词来源 ↗</a>:p.kind==='ours'?'研究团队自编':'未收录'}</p><Refs ids={p.refs}/><pre class="prompt-text" id={`prompt-${i}`} tabindex="0">{p.text}</pre><button type="button" class="copy-prompt" data-copy={`prompt-${i}`} hidden>复制提示词 / Copy prompt</button><p class="copy-status" role="status" aria-live="polite"></p></div>)}<noscript><p>可选择上方文本手动复制。</p></noscript></section>
-<section id="facts"><p class="eyebrow">EVIDENCE FIRST</p><h2>已核验事实</h2><ol class="facts">{r.facts.map(f=><li><p>{f.statement}</p><Refs ids={f.refs}/></li>)}</ol></section>
-{r.sections.map((s,index)=><section id={s.id}><div class="chapter-number">{String(index+1).padStart(2,'0')}</div><h2>{s.title}</h2><p class="body-text">{s.body}</p><Refs ids={s.refs}/></section>)}
-<section id="models"><p class="eyebrow">THE ECONOMICS</p><h2>收入与成本：把假设摊开</h2><p class="notice">情景测算 · 假设与币种见各表</p>{r.models.map(m=>{const variable=m.api+m.human+m.other+m.acquisition;const contribution=m.price-variable;return <div class="economic-model"><h3>{m.scenario}</h3><p class="small-text">{m.unit} · {m.currency}</p><div class="table-scroll" tabindex="0" role="region" aria-label={`${m.scenario}成本明细`}><table><thead><tr><th scope="col">收入</th><th scope="col">模型 / API</th><th scope="col">人工</th><th scope="col">其他可变成本</th><th scope="col">获客摊销</th></tr></thead><tbody><tr><td>{money(m.price)}</td><td>{money(m.api)}</td><td>{money(m.human)}</td><td>{money(m.other)}</td><td>{money(m.acquisition)}</td></tr></tbody></table></div><dl class="economic-results"><div><dt>单位贡献</dt><dd>{money(contribution)}</dd></div><div><dt>月交付量</dt><dd>{m.volume}</dd></div><div><dt>月固定成本</dt><dd>{money(m.fixed)}</dd></div><div><dt>月经营贡献</dt><dd class={contribution*m.volume-m.fixed<0?'red':''}>{money(contribution*m.volume-m.fixed)}</dd></div></dl><p>{m.assumptions}</p><Refs ids={m.refs}/></div>})}</section>
-<section id="score"><p class="eyebrow">COMMERCIAL PRIORITY</p>{r.scoreAvailable?<><h2>商业评分 <span class="red">{r.score}</span><small> / 100</small></h2><p>商业投入优先顺序 · 七项加权评分</p><div class="score-breakdown">{r.scores.map(s=><div><div class="score-row"><h3>{s.label}<small>权重 {s.weight}%</small></h3><strong>{s.value}<small> / 5</small></strong></div><div class="meter" aria-hidden="true"><span style={`width:${s.value/5*100}%`}></span></div><p>{s.rationale} <Refs ids={s.refs}/></p></div>)}</div></>:<><h2>商业评分 · 待补充</h2><p>评分资料不完整，暂不展示总分。</p></>}</section>
-<section id="limits"><p class="eyebrow">WHAT WE DON'T KNOW</p><h2>不同意见与未核实的问题</h2><h3>什么证据反驳了初始判断？</h3><p>{r.counter}</p><h3>哪些仍未核实？</h3><p>{r.limitations}</p></section>
-<section id="next"><p class="eyebrow">NEXT DECISION</p><h2>下一步与何时停止</h2><h3>下一步</h3><p>{r.verdict.next}</p><div class="stop-box"><h3>何时停止投入</h3><p>{r.verdict.stop}</p></div></section>
-<section id="sources"><p class="eyebrow">SOURCE NOTES</p><h2>来源与证据<span class="count">{r.sources.length}</span></h2><ol class="sources">{r.sources.map((s,index)=><li id={`source-${s.id}`}><span class="source-number">{String(index+1).padStart(2,'0')} · {s.id}</span><a href={s.url} target="_blank" rel="noopener noreferrer">{s.title} ↗</a><p>{s.supports}</p><small>{new URL(s.url).hostname}</small></li>)}</ol></section>
-<div class="article-end"><span>— 本篇完 —</span><a href="/#research">继续阅读其他案例 →</a></div></article></div></Base>
-<script>
- document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach(button=>{
-  button.hidden=false;
-  button.addEventListener('click',async()=>{
-   const prompt=document.getElementById(button.dataset.copy!);
-   const status=button.parentElement!.querySelector('.copy-status')!;
-   try { await navigator.clipboard.writeText(prompt?.textContent || ''); status.textContent='已复制 / Copied'; }
-   catch { status.textContent='无法自动复制，请选择上方文本手动复制。'; if(prompt){ const range=document.createRange();range.selectNodeContents(prompt);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);prompt.focus(); } }
-  });
- });
- document.querySelector('#print')?.addEventListener('click',()=>window.print());
- const progress=document.querySelector<HTMLElement>('#reading-progress');
- const update=()=>{if(progress){const available=document.documentElement.scrollHeight-innerHeight;progress.style.width=`${available>0?scrollY/available*100:0}%`}};
- addEventListener('scroll',update,{passive:true});update();
- const details=document.querySelector<HTMLDetailsElement>('.toc details');if(details && matchMedia('(max-width: 1000px)').matches)details.open=false;
- const links=[...document.querySelectorAll<HTMLAnchorElement>('.toc nav a')];
- const observer=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){links.forEach(a=>{if(a.hash===`#${e.target.id}`)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')})}}},{rootMargin:'-12% 0px -65% 0px'});
- document.querySelectorAll('.prose section[id]').forEach(s=>observer.observe(s));
-</script>
+<ResearchArticle report={report}/>

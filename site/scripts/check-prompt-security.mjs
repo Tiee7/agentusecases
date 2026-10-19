@@ -8,7 +8,9 @@ import {createHash} from 'node:crypto';
 import {chromium} from '@playwright/test';
 import {repoRoot,loadContent} from '../src/lib/content.mjs';
 const tmp=fs.mkdtempSync(path.join(os.tmpdir(),'prompt-security-'));
-const id=loadContent().reports[0].id;
+const live=loadContent();const id=live.reports[0].id;
+const briefId='synthetic-security-brief',briefUrl='https://example.test/synthetic-security-brief';
+const brief=JSON.parse(fs.readFileSync(path.join(repoRoot,'research/brief',`${live.briefs[0].id}.json`)));
 const record=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',`${id}.json`)));
 const prompt='中文 & "双引号" \'单引号\' </pre><script>globalThis.promptInjected=true</script>\nEnglish `backticks` ${template} \\ slash\n```\n<img src=x onerror="globalThis.promptInjected=true">';
 const archiveText='\n  中文标题 & <img src=x onerror="globalThis.promptInjected=true">  \r\n\r\n  具体做法  \r\n'+prompt+'\n</div><script>globalThis.promptInjected=true</script>\r\n \t\r\n结果如何\n保留尾空格  \n';
@@ -18,13 +20,21 @@ let server,browser;
 try {
  for(const dir of ['research','reports','registry','site'])fs.mkdirSync(path.join(tmp,dir));
  fs.mkdirSync(path.join(tmp,'registry/archives'));
- fs.writeFileSync(path.join(tmp,'registry/cases.json'),JSON.stringify({cases:[{id,url:record.url,title:record.title,original_sources:['https://author.test/story']}]}));
+ fs.mkdirSync(path.join(tmp,'research/brief'));fs.mkdirSync(path.join(tmp,'reports/brief'));
+ fs.writeFileSync(path.join(tmp,'registry/cases.json'),JSON.stringify({cases:[{id,url:record.url,title:record.title,original_sources:['https://author.test/story']},{id:briefId,url:briefUrl,title:'Synthetic brief title',original_sources:['https://author.test/story']}]}));
  fs.writeFileSync(path.join(tmp,'registry/archives',`${id}.json`),JSON.stringify({version:1,url:record.url,body_sha256:sha(originalText),source_text:{format:'extracted_page_text',body:originalText,body_sha256:sha(originalText)},translation:{status:'available',format:'full_extracted_text_translation',body:archiveText,body_sha256:sha(archiveText),based_on_body_sha256:sha(originalText)}}));
  record.author_method={version:1,status:'author_summary',presentation:'bilingual_summary',source_url:'https://author.test/story',source_title:'Synthetic author',accessed_at:'2026-10-16T00:00:00Z',source_sha256:'a'.repeat(64),steps:[{en:prompt,zh:prompt}]};
  record.source_trial={status:'available',text:prompt,agent:'Synthetic tool',source_url:record.url,observed_at:'2026-10-15T17:00:00Z',method:'dom'};
  record.try_it.prompts[0].text=prompt;record.try_it.prompts[0].source_url='javascript:globalThis.promptInjected=true';
  fs.writeFileSync(path.join(tmp,'research',`${id}.json`),JSON.stringify(record));
  fs.writeFileSync(path.join(tmp,'reports',`${id}.md`),'Synthetic security fixture');
+ const briefArchive=JSON.parse(fs.readFileSync(path.join(tmp,'registry/archives',`${id}.json`)));briefArchive.url=briefUrl;
+ fs.writeFileSync(path.join(tmp,'registry/archives',`${briefId}.json`),JSON.stringify(briefArchive));
+ Object.assign(brief,{id:briefId,url:briefUrl,title:'Synthetic brief title',author_method:record.author_method,source_trial:{...record.source_trial,source_url:briefUrl},reported_method:null,
+ sources:[{id:'archive',url:briefUrl,title:'Synthetic source',summary:prompt,status:'fetched'},{id:'unsafe',url:'javascript:globalThis.promptInjected=true'}],
+ facts:[{statement:prompt,type:'author_claim',source_ids:['archive','unsafe']}],analysis:[{id:'sources',title:'Literal analysis',body:prompt,source_ids:['archive']}]});
+ brief.try_it.prompts[0].text=prompt;brief.try_it.prompts[0].source_url='javascript:globalThis.promptInjected=true';
+ fs.writeFileSync(path.join(tmp,'research/brief',`${briefId}.json`),JSON.stringify(brief));fs.writeFileSync(path.join(tmp,'reports/brief',`${briefId}.md`),'Synthetic brief fixture');
  for(const name of ['src','public','package.json','astro.config.mjs'])fs.cpSync(path.join(repoRoot,'site',name),path.join(tmp,'site',name),{recursive:true});
  fs.symlinkSync(path.join(repoRoot,'site/node_modules'),path.join(tmp,'site/node_modules'),'dir');
  const built=spawnSync(process.execPath,[path.join(repoRoot,'site/node_modules/astro/bin/astro.mjs'),'build'],{cwd:path.join(tmp,'site'),env:{...process.env,ASTRO_TELEMETRY_DISABLED:'1'},encoding:'utf8'});
@@ -59,7 +69,16 @@ try {
  assert.equal(await page.locator('#source-prompt').textContent(),prompt);
  await page.locator('#copy-source').click();assert.equal(await page.evaluate(()=>window.copied),prompt);
  assert.equal(await page.evaluate(()=>window.promptInjected),undefined);
- console.log('PASS: isolated Astro build + desktop/mobile Chromium preserve exact bilingual archive whitespace, headings, hostile text and clipboard content without execution on reports/cases/trials.');
+ for(const width of [1440,390]){
+  await page.setViewportSize({width,height:1000});await page.goto(`http://127.0.0.1:4323/briefs/${briefId}/`);
+  assert.equal(await page.locator('#source-translation').textContent(),archiveText);assert.equal(await page.locator('#source-original').textContent(),originalText);
+  assert.equal(await page.locator('#author-method [lang="zh-CN"] li').textContent(),prompt);
+  assert.equal(await page.locator('#analysis-1 .body-text').textContent(),prompt);assert.equal(await page.locator('#facts li p').textContent(),prompt);
+  assert.equal(await page.locator('.prose script,.prose img,a[href^="javascript:"]').count(),0);
+  assert.equal(await page.locator('#prompt-0').textContent(),prompt);await page.locator('[data-copy="prompt-0"]').click();assert.equal(await page.evaluate(()=>window.copied),prompt);
+  assert.equal(await page.evaluate(()=>window.promptInjected),undefined);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+ }
+ console.log('PASS: isolated Astro build + desktop/mobile Chromium preserve exact bilingual archive whitespace, headings, hostile text and clipboard content without execution on reports/cases/trials/briefs.');
 } finally {
  await browser?.close();server?.kill();fs.rmSync(tmp,{recursive:true,force:true});
 }

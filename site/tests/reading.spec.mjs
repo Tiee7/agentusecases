@@ -43,7 +43,7 @@ test('source trial pages keep literal prompts and do not imply completed researc
  const newest=catalog.find(c=>c.id===reports[0].id);if(newest?.sourceTrial.status==='available')representatives.set(newest.id,newest);
  await context.grantPermissions(['clipboard-read','clipboard-write']);
  for(const c of representatives.values()){
-  await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(!c.complete)await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  await page.goto(`/trials/${c.id}/`);await expect(page.locator('#source-prompt')).toHaveText(c.sourceTrial.text);await expect(page.locator('#source-trial')).toContainText(c.sourceTrial.agent);await page.locator('#copy-source').click();expect(await page.evaluate(()=>navigator.clipboard.readText())).toBe(c.sourceTrial.text);if(c.status==='pending')await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   const a11y=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21aa']).analyze();expect(a11y.violations).toEqual([]);
  }
  for(const r of reports.filter(r=>r.sourceTrial.status==='available')){
@@ -87,7 +87,7 @@ test('independent archives show detailed facts, pending restatements and exact t
 test('source originals and full Chinese translations render without becoming business research',async({page})=>{
  for(const c of catalog.filter(c=>c.archive.translationText).slice(0,7)){
   await page.goto(`/cases/${c.id}/`);await expect(page.locator('#source-original')).toHaveText(c.archive.sourceText);await expect(page.locator('#source-translation')).toHaveText(c.archive.translationText);
-  if(!c.complete)await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+  if(c.status==='pending')await expect(page.locator('.article-top')).toContainText('待研究');expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  }
  const pending=catalog.find(c=>!c.archive.translationText);await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-translation')).toHaveCount(0);
 });

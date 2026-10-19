@@ -1,0 +1,8 @@
+---
+import Base from '../../layouts/Base.astro';
+import ReportCard from '../../components/ReportCard.astro';
+import Explorer from '../../components/Explorer.astro';
+import {loadContent,decisions} from '../../lib/content.mjs';
+const {briefs}=loadContent();
+---
+<Base title="案例简报" active="briefs"><section class="wrap page-intro"><p class="eyebrow">CASE BRIEFS · 简报</p><h1>先读用途，<br/>再看证据与边界。</h1><p>已完成 {briefs.length} 篇简报。简报与完整深研独立统计。<br/><a href="/#research">阅读完整深研 ↗</a></p></section><section class="wrap research-section" data-explorer="briefs"><Explorer mode="briefs" total={briefs.length} decisions={decisions}/><div class="report-grid" data-list>{briefs.map((report,index)=><ReportCard report={report} index={index}/>)}</div></section></Base>

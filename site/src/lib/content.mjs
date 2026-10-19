@@ -93,10 +93,40 @@ export function projectReport(record, entry) {
     minutes:Math.max(1,Math.ceil((sections.map(s=>s.body).join('').length + readerText(record.verdict.reason).length)/350)),
   };
 }
+// Briefs are a distinct public projection; never promote them to v2 research.
+const finiteOrNull = value => typeof value === 'number' && Number.isFinite(value) ? value : null;
+const presentNumber = (value, ...keys) => finiteOrNull(value[keys.find(key => Object.hasOwn(value,key))]);
+export function projectBrief(record, entry, scoring) {
+  if (!safeId(entry.id) || record.schema_version !== 1 || record.analysis_depth !== 'brief' || record.status !== 'completed' || record.id !== entry.id || record.url !== entry.url) return null;
+  const sources=(record.sources || []).filter(s=>safeUrl(s.url) && typeof s.id==='string' && /^[A-Za-z0-9][A-Za-z0-9-]*$/.test(s.id || '')).map(s=>({id:s.id,title:text(s.title) || new URL(s.url).hostname,url:safeUrl(s.url),supports:text(s.supports)||text(s.summary),status:/^(failed|blocked|skipped|not_read)/.test(s.status || '')?'未读取 / 访问受限':'资料来源'}));
+  if(new Set(sources.map(s=>s.id)).size!==sources.length)throw new Error(`Duplicate brief source: ${entry.id}`);
+  const sourceIds=new Set(sources.map(s=>s.id));
+  const refs=values=>Array.isArray(values)?values.filter(id=>sourceIds.has(id)):[];
+  const sourceTrial=projectSourceTrial(entry.source_trial || record.source_trial,entry.url);
+  const personal=record.personal_value || {};
+  const trial=record.try_it || {};
+  const sections=(record.analysis || []).filter(s=>text(s.body).trim()).map((s,i)=>({id:`analysis-${i+1}`,title:text(s.title)||`分析 ${i+1}`,body:readerText(s.body),refs:refs(s.source_ids)}));
+  const reported=record.reported_method;
+  const reportedMethod=reported?.status==='reported_summary' && reported.source_url===entry.url && reported.source_sha256===entry.archive?.body_sha256 && Array.isArray(reported.steps) ? {title:'归档转述的方法摘要',source:safeUrl(reported.source_url),steps:reported.steps.filter(s=>text(s.en)&&text(s.zh)).map(s=>({en:text(s.en),zh:text(s.zh)}))}:null;
+  const scoreLabels={demand_payment:'需求与付费',acquisition:'获客可行性',delivery_economics:'交付与利润',differentiation:'差异化',validation_replication:'验证与复制',audience_frequency:'需求与频率',net_benefit:'净收益',reliability:'可靠性',setup_maintenance:'设置与维护',cost_data_control:'成本与数据可控性'};
+  const scoreTracks=scoring?.id===entry.id && scoring.analysis_depth==='brief' && scoring.score_version==='dual-track-v1' ? ['commercial','personal'].map(track=>({title:track==='commercial'?'商业价值':'自用价值',dimensions:Object.entries(scoring[track]?.dimensions || {}).filter(([key])=>Object.hasOwn(scoreLabels,key)).map(([key,d])=>({label:scoreLabels[key],value:Number.isInteger(d.score)&&d.score>=0&&d.score<=4?d.score:null,rationale:text(d.rationale),refs:refs(d.evidence_ids)}))})):[];
+  const date=Number.isFinite(Date.parse(record.researched_at))?record.researched_at:'';
+  return {id:entry.id,depth:'brief',path:`/briefs/${entry.id}/`,title:text(record.title),caseTitle:text(entry.title),industry:text(record.industry),category:text(entry.category),date,
+    archive:projectArchive(entry.archive,entry),sourceTrial,authorMethod:projectAuthorMethod(record.author_method,entry),reportedMethod,
+    personal:{level:personalLevels.includes(personal.level)?personal.level:'待核实',reason:text(personal.reason),refs:refs(personal.source_ids),details:Object.entries(personalFields).filter(([key])=>text(personal[key]).trim()).map(([key,label])=>({label,body:text(personal[key])}))},
+    trial:{status:sourceTrial.status==='available'?'collected':'missing',prerequisites:text(trial.prerequisites),tools:text(trial.tools),expected:text(trial.expected_result),prompts:[...(sourceTrial.status==='available'?[sourcePrompt(sourceTrial)]:[]),...(trial.prompts || []).filter(p=>['original','adapted','ours'].includes(p.kind)&&text(p.text).trim()).map(p=>({title:text(p.title),language:text(p.language),kind:p.kind,attribution:text(p.attribution),url:safeUrl(p.source_url),refs:refs(p.source_ids),text:text(p.text)}))]},
+    verdict:{decision:readerText(record.verdict?.decision),headline:readerText(record.verdict?.headline),reason:readerText(record.verdict?.reason),next:readerText(record.verdict?.next_action),stop:readerText(record.verdict?.stop_condition)},
+    briefReason:text(record.brief_reason),score:null,scoreAvailable:false,scoreTracks,sections,sources,
+    facts:(record.facts || []).filter(f=>text(f.statement)).map(f=>({statement:text(f.statement),type:({verified:'资料核实',author_claim:'作者自述',scenario_assumption:'情景假设'})[f.type] || '资料记载',refs:refs(f.source_ids)})),
+    models:(record.unit_economics || []).map(m=>({scenario:text(m.scenario),unit:text(m.unit),currency:text(m.currency),price:finiteOrNull(m.price),api:presentNumber(m,'api_cost','generation_cost'),human:finiteOrNull(m.human_cost),other:finiteOrNull(m.other_variable_cost),acquisition:finiteOrNull(m.acquisition_cost),volume:presentNumber(m,'units_per_month','monthly_volume'),fixed:presentNumber(m,'fixed_monthly_cost','monthly_fixed_cost'),assumptions:text(m.assumptions),refs:refs(m.source_ids),valueType:text(m.value_type),cashUpfront:finiteOrNull(m.cash_fixed_upfront),cashVariable:finiteOrNull(m.cash_variable_per_unit),cashKnown:finiteOrNull(m.cash_4week_known),cashLimit:finiteOrNull(m.cash_budget_limit),cashBuffer:finiteOrNull(m.budget_buffer_for_unlisted_cash),budgetStatus:text(m.budget_status)})),
+    feedback:{note:text(record.feedback?.note)||text(record.feedback?.signal),searches:(record.feedback?.searches || []).map(s=>({channel:text(s.channel),query:text(s.query),outcome:text(s.outcome)})),observations:(record.feedback?.observations || []).map(o=>({finding:text(o.finding)||text(o.bias),refs:refs([o.source_id])})).filter(o=>o.finding)},
+    counter:readerText(record.disconfirming_evidence),limitations:readerText(record.limitations),minutes:Math.max(1,Math.ceil(sections.map(s=>s.body).join('').length/350))};
+}
+
 export function loadContent(root = repoRoot) {
   const registry = JSON.parse(fs.readFileSync(path.join(root,'registry/cases.json'),'utf8'));
   const notePath=path.join(root,'registry/reading-notes.json');const notes=fs.existsSync(notePath)?JSON.parse(fs.readFileSync(notePath,'utf8')).limitations || {}:{};
-  const catalog = [], reports = [], seen = new Set();
+  const catalog = [], reports = [], briefs = [], seen = new Set();
   for (const entry of registry.cases) {
     if (!safeId(entry.id) || seen.has(entry.id)) throw new Error('Invalid or duplicate catalog ID');
     seen.add(entry.id);
@@ -113,11 +143,20 @@ export function loadContent(root = repoRoot) {
       report=projectReport(record,entry);
     }
     if (report) reports.push(report);
-    catalog.push({ id:entry.id, archive:projectArchive(entry.archive,entry), sourceCase:projectSourceCase(entry.source_case,entry.url), firstSeen:Number.isFinite(Date.parse(entry.first_seen_at)) ? new Date(entry.first_seen_at).toISOString() : '', title:report?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
+    const briefFile=path.join(root,'research/brief',`${entry.id}.json`), briefReport=path.join(root,'reports/brief',`${entry.id}.md`);
+    let brief=null;
+    if(!report && fs.existsSync(briefFile) && fs.existsSync(briefReport)){
+      const scoreFile=path.join(root,'research/scoring-v1',`${entry.id}.json`);
+      brief=projectBrief(JSON.parse(fs.readFileSync(briefFile,'utf8')),entry,fs.existsSync(scoreFile)?JSON.parse(fs.readFileSync(scoreFile,'utf8')):undefined);
+      if(brief)briefs.push(brief);
+    }
+    const status=report?'completed':brief?'brief':'pending';
+    catalog.push({ id:entry.id, archive:projectArchive(entry.archive,entry), sourceCase:projectSourceCase(entry.source_case,entry.url), firstSeen:Number.isFinite(Date.parse(entry.first_seen_at)) ? new Date(entry.first_seen_at).toISOString() : '', title:report?.title || brief?.title || text(entry.title), category:text(entry.category), listed:entry.listed !== false, complete:Boolean(report), status, researchState:report?'deep':brief?'brief':'pending', readingPath:report?`/reports/${entry.id}/`:brief?.path || '', source:safeUrl(entry.url), sourceTrial:report?.sourceTrial || projectSourceTrial(entry.source_trial,entry.url) });
   }
   reports.sort((a,b) => b.date.localeCompare(a.date) || a.id.localeCompare(b.id));
+  briefs.sort((a,b)=>b.date.localeCompare(a.date)||a.id.localeCompare(b.id));
   catalog.sort((a,b) => b.firstSeen.localeCompare(a.firstSeen) || a.id.localeCompare(b.id));
-  return { reports, catalog };
+  return { reports, briefs, catalog };
 }
 export const dateLabel = date => new Intl.DateTimeFormat('zh-CN',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:'UTC'}).format(new Date(date));
 export const tone = decision => decisions.indexOf(decision) === 1 ? 'trial' : decisions.indexOf(decision) === 3 ? 'avoid' : 'internal';

@@ -1,0 +1,7 @@
+---
+import ResearchArticle from '../../components/ResearchArticle.astro';
+import {loadContent} from '../../lib/content.mjs';
+export function getStaticPaths(){return loadContent().briefs.map(report=>({params:{id:report.id},props:{report}}))}
+const {report}=Astro.props;
+---
+<ResearchArticle report={report}/>
