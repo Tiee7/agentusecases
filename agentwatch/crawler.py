@@ -148,6 +148,22 @@ def save(db, listing, ordering, rows, catalog_rows=None, priorities=None):
     catalog_delta = None if catalog_rows is None else {'count': len(catalog_rows), 'baseline': not old_catalog, 'newly_listed': sorted(set(catalog_rows)-set(old_catalog)) if old_catalog else [], 'no_longer_listed': sorted(set(old_catalog)-set(catalog_rows)), 'lastmod_changed': sorted(url for url in set(catalog_rows)&set(old_catalog) if catalog_rows[url] != old_catalog[url])}
     return {'fetched_at': fetched_at, 'adapter_version': ADAPTER_VERSION, 'catalog': catalog_delta, 'details_complete': catalog_rows is not None and len(rows)==len(catalog_rows), 'run_id': run, 'previous_run_id': previous, 'ordering': ordering, 'complete_catalog': catalog_rows is not None, 'not_observed': sorted(set(old) - {r['url'] for r in rows}), 'cases': changes}
 
+def validate_catalog_seed(seed):
+    """Reject malformed listings before fetching details or saving a snapshot."""
+    if not isinstance(seed, dict) or type(seed.get('total')) is not int or seed['total'] <= 0:
+        raise RuntimeError('Invalid SSR catalog total; no snapshot saved')
+    if not isinstance(seed.get('firstPage'), list) or not seed['firstPage']:
+        raise RuntimeError('Invalid SSR catalog firstPage; no snapshot saved')
+    for section in seed['firstPage']:
+        if (not isinstance(section, dict) or not isinstance(section.get('id'), str)
+                or not section['id'].strip() or not isinstance(section.get('items'), list)):
+            raise RuntimeError('Invalid SSR catalog section; no snapshot saved')
+        for item in section['items']:
+            if (not isinstance(item, dict) or not isinstance(item.get('id'), str)
+                    or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', item['id'])
+                    or not isinstance(item.get('title'), str) or not item['title'].strip()):
+                raise RuntimeError('Invalid SSR catalog item id/title; no snapshot saved')
+
 def main():
     global REQUEST_DELAY
     parser = argparse.ArgumentParser()
@@ -174,6 +190,7 @@ def main():
     listing_html = fetch(args.listing)
     from .site import extract_seed, catalog, detail
     seed = extract_seed(listing_html)
+    validate_catalog_seed(seed)
     sitemap_url = f'https://{base.netloc}/sitemap.xml'
     if not robots.can_fetch(UA, sitemap_url):
         raise RuntimeError('robots.txt disallows sitemap')
