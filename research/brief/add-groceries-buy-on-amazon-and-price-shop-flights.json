@@ -1,0 +1,335 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "add-groceries-buy-on-amazon-and-price-shop-flights",
+  "url": "https://agentusecases.ai/use-case/add-groceries-buy-on-amazon-and-price-shop-flights",
+  "title": "用未命名 AI 智能体辅助杂货购物与机票比价",
+  "industry": "家庭购物与出行资料整理",
+  "researched_at": "2026-10-19T21:21:50Z",
+  "brief_reason": "仅一条用户评论列任务，实际agent、配置、权限、订单和效果均缺；不靠通用平台资料补成实现深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先做候选清单和可比性核对，实际自动购买链路待核",
+    "reason": "公开材料提供使用方向，但不足以还原实现或证明交易效果。",
+    "next_action": "取得实际工具与批准边界前，只用虚构候选检查规格、总价和条件。",
+    "stop_condition": "复核成本超过人工复购，或需要无边界支付权限。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/add-groceries-buy-on-amazon-and-price-shop-flights",
+      "title": "许可目录与试用模板",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:21:30Z",
+      "read_window": {
+        "start": "2026-10-19T21:21:13Z",
+        "end": "2026-10-19T21:21:30Z"
+      },
+      "timestamp_semantics": "Actual bounded tool interval",
+      "read_method": "permitted_cloud_browser_main_dom",
+      "characters": 12972,
+      "sha256": "1558c3ba66fb143a241332f573dd768735cd2269842876666a1b98fa4723313b",
+      "hash_scope": "Captured tool response/main DOM",
+      "supports": "明确实际agent未知，推荐ChatGPT Agent只属于目录试用区。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1u7ptrk/anyone_use_agentic_ai_for_shopping/",
+      "title": "记者征集与购物用户评论",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:09:50Z",
+      "read_window": {
+        "start": "2026-10-19T21:09:40Z",
+        "end": "2026-10-19T21:09:50Z"
+      },
+      "timestamp_semantics": "Actual bounded tool interval",
+      "read_method": "supported_public_web_tool",
+      "characters": 16249,
+      "sha256": "354d637a868998208ef6327066c1d30fd9753a6c3dd95263bbc6b26a5939b4e3",
+      "hash_scope": "Captured tool response/main DOM",
+      "supports": "turnipsium评论自述经常购物；记者不是实际使用者，其他评论不能合并为同一实现。"
+    },
+    {
+      "id": "Sedit",
+      "url": "https://www.walmart.com/help/article/edit-or-cancel-walmartn-order/2c7e3d99812044f8aaa65aee0eae3d1c",
+      "title": "Walmart订单编辑边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:21:50Z",
+      "read_window": {
+        "start": "2026-10-19T21:21:30Z",
+        "end": "2026-10-19T21:21:50Z"
+      },
+      "timestamp_semantics": "Actual bounded tool interval",
+      "read_method": "supported_public_web_tool",
+      "characters": 22876,
+      "sha256": "df83ea0fb2ff2f12f86422e8d994b456ebb6c7d206bdf53ff058661516643e10",
+      "hash_scope": "Captured tool response/main DOM",
+      "supports": "符合条件订单在截止前可修改，截止随订单类型和地区变化；不是无限期加购。"
+    },
+    {
+      "id": "Sbags",
+      "url": "https://support.google.com/travel/answer/9074247?hl=en",
+      "title": "Google Flights行李费比较",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:21:50Z",
+      "read_window": {
+        "start": "2026-10-19T21:21:30Z",
+        "end": "2026-10-19T21:21:50Z"
+      },
+      "timestamp_semantics": "Actual bounded tool interval",
+      "read_method": "supported_public_web_tool",
+      "characters": 3720,
+      "sha256": "a5920797edcbe1bcf1f8b8635292bfd7a10f37014a86d241641b4d412f0882af",
+      "hash_scope": "Captured tool response/main DOM",
+      "supports": "行李过滤可调整含费价格，数据来自合作方，需核航空公司规则。"
+    },
+    {
+      "id": "Sapp",
+      "url": "https://www.walmart.com/help/article/the-walmart-site-and-app-experience/27f2678cb25a40a7b57a359fec3ca67f",
+      "title": "Walmart现有站点功能",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:21:50Z",
+      "read_window": {
+        "start": "2026-10-19T21:21:30Z",
+        "end": "2026-10-19T21:21:50Z"
+      },
+      "timestamp_semantics": "Actual bounded tool interval",
+      "read_method": "supported_public_web_tool",
+      "characters": 1463,
+      "sha256": "8635ad7ed3d31e3f51c7f3101230dde9c2ab63b0dd206c64af73f305930fe4f9",
+      "hash_scope": "Captured tool response/main DOM",
+      "supports": "平台已有购物列表、复购和配送选项；不能把所有下单便捷性归给agent。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "原帖是记者征集，购物使用叙述来自评论者turnipsium。",
+      "type": "verified",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "statement": "评论者自述经常加杂货、Amazon购买和机票比价，未说明实际agent。",
+      "type": "author_claim",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "statement": "ChatGPT Agent只在目录试用推荐中出现，不是作者已确认工具。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Walmart符合条件的订单编辑受截止时间约束。",
+      "type": "verified",
+      "source_ids": [
+        "Sedit"
+      ]
+    },
+    {
+      "statement": "机票行李费过滤需要结合航空公司具体规定核对。",
+      "type": "verified",
+      "source_ids": [
+        "Sbags"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "这是使用线索，不是完整实现记录",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ],
+      "body": "原帖由记者征集访谈，真正的购物叙述来自turnipsium的一条评论。没有产品名、配置、订单回执或节省数据，因此不能将目录推荐的ChatGPT Agent当成实际工具，也不能把其他评论者的x402使用和销售广告工具拼进去。保留未评分简报；经常使用表示自述频率，不等于成功率、真实成交金额或可复制服务。"
+    },
+    {
+      "id": "workflow",
+      "title": "三项任务不能共用一个验收结果",
+      "source_ids": [
+        "Soriginal",
+        "Sedit",
+        "Sbags"
+      ],
+      "body": "杂货加购需要核商品规格、数量和替代规则；Amazon购买还需核卖家、配送、总价及最终批准；机票比价需要统一日期、机场、时区、行李和退改条件。完成其中一项不能证明另外两项也完成。原评论只列任务，没有说明实际步骤，因此这些是拟议验收项，不是还原出的作者操作录像。"
+    },
+    {
+      "id": "boundary",
+      "title": "订单编辑与购物车不同",
+      "source_ids": [
+        "Sedit"
+      ],
+      "body": "给未结账购物车加商品和修改已存在的配送订单具有不同后果。Walmart公开说明符合条件的订单可以在截止前修改，截止随订单类型和地区变化，应以实际订单页为准。本轮没有登录、查看用户订单或加购。将来试用应先确认是在草拟清单还是修改订单，并在任何会改变支付或配送承诺前核授权；失败时先查已完成状态，避免重复商品。"
+    },
+    {
+      "id": "comparison",
+      "title": "价格数字需要可比条件",
+      "source_ids": [
+        "Sbags"
+      ],
+      "body": "机票最低展示价未必是用户最终可接受的成本。Google Flights提供行李费用过滤，但信息来自合作方，航空公司尺寸和费用仍需核对。比价表应保留查询时间、航段、人数、币种和费用包含项，缺项标未知，不用模型补报价。原评论没有实际行程或预订结果，本例不报告节省比例，也不因“比较过”认定已买到最便宜机票。"
+    },
+    {
+      "id": "business",
+      "title": "现成复购功能构成替代",
+      "source_ids": [
+        "Sapp",
+        "Soriginal"
+      ],
+      "body": "家庭常买同一批商品时，平台购物列表与复购入口可能比跨站智能体更直接。潜在增量是把自然语言偏好转成准确的候选清单，并减少多站核对；这仍需测净省时。没有实际工具、预算、错误率和售后工时，无法建立有依据的收费或利润模型。可以验证用户是否愿为具体整理任务付费，不能凭一条使用评论推出自动采购服务市场。"
+    },
+    {
+      "id": "feedback",
+      "title": "不同人的体验分开",
+      "source_ids": [
+        "Soriginal"
+      ],
+      "body": "同一讨论里，有人自述多次使用购物工具后觉得规格会编造、优惠会漏掉、复核比自己浏览更慢；这只能作为相邻负面体验。另一人提及用x402服务购物，是不同实现；推广分类广告工具的评论更不是购买助手验证。原用户没有解释如何使用的追问答案，关键复制信息仍缺失。正负评论都保留其身份和范围，不将旁观意见换成满意度。"
+    },
+    {
+      "id": "trial",
+      "title": "先用虚构商品和报价测试",
+      "source_ids": [
+        "Sedit",
+        "Sbags"
+      ],
+      "body": "准备几条虚构商品候选，故意加入同品牌不同容量、数量单位不一致和缺货替代；再准备两组行李包含条件不同的虚构机票。要求助手列匹配与未知项，不能自动下单。验收关注是否识别不可比、是否保持数量和预算、是否在未知条件停止，而非输出推荐多漂亮。本轮未执行任何购物试用。"
+    },
+    {
+      "id": "next",
+      "title": "下一步只补最关键证据",
+      "source_ids": [
+        "Soriginal"
+      ],
+      "body": "若继续研究，优先取得实际agent名称、任务轨迹和批准边界，再决定是否值得做端到端评估。没有这些，不应靠更多泛化平台文档把简报扩写成已验证深研。如果复核清单的成本超过人工复购，或任务要求交出无限支付权限，应停止扩大自动化；保留搜索和草拟清单可能已足够。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/add-groceries-buy-on-amazon-and-price-shop-flights",
+    "observed_at": null,
+    "body_sha256": "8461c6bdf368a017c2968c02ba28bdbca43921bfb1c1ba22d8cd36c23f3f9da7",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d62b4b8a18af0ca2cdc66c9344733d6a0793f53af364743a8e1ca8eb011483d3",
+      "How it went": "37a4ecb57ee0e5d8198b3d00998992444e6bd75c852616b19165f77302ddb962"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T21:21:13Z",
+      "end": "2026-10-19T21:21:30Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Log in to my [Walmart] account in the browser and add these items to my next grocery delivery order: [list of items with brands or sizes]. Then search [site] for round-trip flights from [origin] to [destination] on [dates] and compare prices across [2-3 sites]. Stop and show me the cart and the best flight options before checking out or buying anything.",
+    "agent": "ChatGPT Agent",
+    "source_url": "https://agentusecases.ai/use-case/add-groceries-buy-on-amazon-and-price-shop-flights",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "1558c3ba66fb143a241332f573dd768735cd2269842876666a1b98fa4723313b",
+    "observation_window": {
+      "start": "2026-10-19T21:21:13Z",
+      "end": "2026-10-19T21:21:30Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/AI_Agents/comments/1u7ptrk/anyone_use_agentic_ai_for_shopping",
+    "source_title": "Shopping use described by commenter turnipsium",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T21:21:50Z",
+    "source_sha256": "354d637a868998208ef6327066c1d30fd9753a6c3dd95263bbc6b26a5939b4e3",
+    "steps": [
+      {
+        "en": "A commenter, not the journalist who opened the thread, reports regular grocery, Amazon and flight-comparison use.",
+        "zh": "评论者而非发帖记者，自述经常用智能体处理杂货、Amazon购物和机票比价。"
+      },
+      {
+        "en": "The comment does not identify the agent or explain its setup, permissions or approval steps.",
+        "zh": "评论没有说明智能体身份、配置、权限或批准步骤。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有家庭日常使用自述，缺实现和净省时证据。",
+    "audience": "已有固定购物偏好并愿意复核的个人。",
+    "use": "候选清单、规格匹配和同条件机票比较。",
+    "benefit": "可能减少查找，尚未验证省钱或省时。",
+    "setup_cost": "明确平台、品规、数量、预算和批准边界。",
+    "maintenance_cost": "缺货、替代、价格变动与订单状态核验。",
+    "frequency": "作者仅称经常，未给次数，不编造每周频率。",
+    "privacy_risk": "登录、收货与支付信息敏感，研究阶段不用真实账户。",
+    "error_risk": "错规格、重复加购、混淆订单和购物车、机票不可比。",
+    "source_ids": [
+      "Soriginal",
+      "Sedit",
+      "Sbags"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "目录推荐ChatGPT Agent模板保留，不代表实际作者工具。",
+    "prerequisites": "虚构商品及报价表，无账号、地址、银行卡或真实订单。",
+    "tools": "已有文本助手，先离线比较，不调用购物账户。",
+    "expected_result": "规格、数量、总价包含项与未知项清单；无购买或订单更改。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/add-groceries-buy-on-amazon-and-price-shop-flights",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "目录推荐模板，非作者配置",
+        "text": "Log in to my [Walmart] account in the browser and add these items to my next grocery delivery order: [list of items with brands or sizes]. Then search [site] for round-trip flights from [origin] to [destination] on [dates] and compare prices across [2-3 sites]. Stop and show me the cart and the best flight options before checking out or buying anything."
+      },
+      {
+        "title": "虚构购物候选核对",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sedit",
+          "Sbags"
+        ],
+        "attribution": "我们编写，未执行真实购物",
+        "text": "比较这些虚构商品和航班候选。商品核品牌、容量、数量单位与替代；航班核航段日期时区人数、行李与退改条件。缺失项列未知，不补价格。输出可比清单和需确认问题，不登录、不改订单、不购买。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "同帖有其他人正负自述，但实际工具不同或未知，不当该评论者实现的独立验证。"
+  },
+  "disconfirming_evidence": "平台已有复购入口；同类用户称复核可能更慢；实际agent与批准过程未知。",
+  "limitations": "未登录、加购、修改订单、购买或试用付费服务；源站标Undated，不将相对发布时间换算为具体日期。",
+  "archive_source_sha256": "8461c6bdf368a017c2968c02ba28bdbca43921bfb1c1ba22d8cd36c23f3f9da7",
+  "translation_sha256": "f65adfb90b9b95f9a213e643c74f857d058e2483114ba36eb3eae8517a1d4175"
+}
