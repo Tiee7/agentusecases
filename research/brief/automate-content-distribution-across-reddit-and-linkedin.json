@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "automate-content-distribution-across-reddit-and-linkedin",
+  "url": "https://agentusecases.ai/use-case/automate-content-distribution-across-reddit-and-linkedin",
+  "title": "用 Claude Code 生成跨平台内容草稿并交由本人审批",
+  "industry": "创作者内容整理与分发辅助",
+  "researched_at": "2026-10-19T22:25:44Z",
+  "brief_reason": "公开概览可读，完整实现、发布接口、版本审批和失败恢复不可核；效果缺独立记录。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证草稿与审批链路，再决定是否接入发布",
+    "reason": "已有个人使用叙述，关键复制细节和增长收益仍未知。",
+    "next_action": "自写文章和虚构规则验证去重、逐稿批准与改稿重审。",
+    "stop_condition": "改稿成本不降、无法防重发或平台接入不获准。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/automate-content-distribution-across-reddit-and-linkedin",
+      "title": "许可目录概览",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "permitted_cloud_browser_main_dom",
+      "characters": 14332,
+      "sha256": "e5ba05d8eae18f79862c663da1b1a39069a2d090fdda693db3afb1d9d0103d02",
+      "hash_scope": "Captured source tool response",
+      "supports": "目录标2026-10-18，保留原文和逐稿批准模板。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://aiblewmymind.substack.com/p/claude-code-content-distribution-ai-agent",
+      "title": "Daria公开文章部分，页面日期2026-06-11",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 14399,
+      "sha256": "181f863db8cf27b4710ab605d4d9e9715b13e8beeeda5e142e226991dded2c5f",
+      "hash_scope": "Captured source tool response",
+      "supports": "公开概览明确所有内容需本人批准；详细实现位于付费墙后，未访问。"
+    },
+    {
+      "id": "Sroutine",
+      "url": "https://code.claude.com/docs/en/routines",
+      "title": "Claude Code Routines官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 16827,
+      "sha256": "43d247fb699a6c24e77759264ccd3b95295c137b7e53b980bb546841dead0bd7",
+      "hash_scope": "Captured source tool response",
+      "supports": "云端调度与连接器范围机制可核，不证明作者系统的配置或实际成功率。"
+    },
+    {
+      "id": "Sreddit",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/360043504051-Spam",
+      "title": "Reddit垃圾信息规则",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 3262,
+      "sha256": "ccf878c6df3128aa9897281386140352988f417cc9b68abeb47c1842b9b1ea7e",
+      "hash_scope": "Captured source tool response",
+      "supports": "人工和自动重复推广均受限制，社区另有规则，审批不等于平台许可。"
+    },
+    {
+      "id": "Slinkedin",
+      "url": "https://www.linkedin.com/help/linkedin/answer/a1341543",
+      "title": "LinkedIn自动活动说明",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 2535,
+      "sha256": "b4bd15e2c2aed219a2e75dc7fc885cd68de9064f1a43a29f4a6d7f30888cde5f",
+      "hash_scope": "Captured source tool response",
+      "supports": "禁止未获准的网站自动活动，需核实际发布途径，不能凭作者故事判定合规。"
+    },
+    {
+      "id": "Sbuffer",
+      "url": "https://buffer.com/publish",
+      "title": "Buffer草稿与审阅队列",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 624,
+      "sha256": "ec2b60b77c562c17e35a6fad98d717cee5d5857d5cbdceec7699aa1cf130669c",
+      "hash_scope": "Captured source tool response",
+      "supports": "现成排期产品支持草稿及团队审批，通用审批队列并非独有。"
+    },
+    {
+      "id": "Srule8",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/53416317564820-Changelog-September-10-2026",
+      "title": "Reddit 2026-09-10说明",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:25:44Z",
+      "read_window": {
+        "start": "2026-10-19T22:23:24Z",
+        "end": "2026-10-19T22:25:44Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 589,
+      "sha256": "30d4d38fede6d55d33e43f47a12c1f2e8b52541b3e6a6d53f22a058ee05d5fa9",
+      "hash_scope": "Captured source tool response",
+      "supports": "平台说明自动账号违规标签不适用于所有机器人或所有AI辅助内容。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "公开原文显示2026-06-11，与目录标2026-10-18不同。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "作者自述运行一个多月，每六小时唤醒，并保留本人批准。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "完整六项自动化与文件结构位于付费区，本轮未访问。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "官方Routines支持云端调度，不能据此认定作者全部配置正确。",
+      "type": "verified",
+      "source_ids": [
+        "Sroutine"
+      ]
+    },
+    {
+      "statement": "Reddit垃圾信息规则同时约束人工和自动行为。",
+      "type": "verified",
+      "source_ids": [
+        "Sreddit"
+      ]
+    },
+    {
+      "statement": "Buffer提供草稿和团队批准排期路线。",
+      "type": "verified",
+      "source_ids": [
+        "Sbuffer"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "概览够判断方向，不能还原六套实现",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "公开文章介绍运行一个多月、每六小时触发、稿件进入Slack审核以及每周调整指令。这些为作者自述，未见发布日志或独立效果证明。完整自动化、文件结构与检查清单在付费区，本轮止于可读部分，没有购买、登录或绕过。目录日期2026-10-18与原文显示2026-06-11不同，两者保留，不混成同一天发布。缺关键实现细节，交付未评分简报。"
+    },
+    {
+      "id": "approval",
+      "title": "所有发布都要区分草稿和批准版本",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "原文明确分发仍由本人把关，不能因目录开头强调Reddit回复批准，就推断LinkedIn无需批准。目录模板也要求所有草稿逐一批准。本研究建议批准记录绑定平台、目标位置、正文图片和版本，批准后改稿需重审；审批一个示例不应放行后来所有内容。这是拟议实现要求，未确认作者是否采用此数据结构。"
+    },
+    {
+      "id": "state",
+      "title": "定时触发不等于可靠交付",
+      "source_ids": [
+        "Sroutine"
+      ],
+      "body": "云端Routine机制可核，但一个任务被唤醒并不证明已发布。候选实现需分待生成、待审、已批准、发送中、已核回执等状态，按文章和平台去重。发送后超时先核回执，不盲目再发；后台任务重入也不能重复领取。作者的锁、状态存储与失败处理细节未知，不能把本研究提出的设计写成其已实现能力。"
+    },
+    {
+      "id": "learning",
+      "title": "每周改指令也需要检查",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "作者称从编辑反馈修改自身指令，这不等于模型权重训练。可取的验证方式是保留旧版本、检查差异并用固定样稿回归；不能让文风学习同时改掉批准要求或目标范围。拒绝一篇稿可能因为时机或主题，不一定是永久文风偏好。没有看到完整反馈归纳规则，不能宣称已经建立稳定自学习闭环。"
+    },
+    {
+      "id": "platform",
+      "title": "本人批准和平台允许是两件事",
+      "source_ids": [
+        "Sreddit",
+        "Slinkedin",
+        "Srule8"
+      ],
+      "body": "Reddit对重复、无关或不受欢迎的推广限制同时适用于人工与自动行为，并非只要手动点批准就没有风险。LinkedIn也限制未获准的网站自动活动；实际连接方式与权限仍待核。另一方面，Reddit官方明确某类违规标签不意味着所有机器人或AI辅助内容都违法规则。研究应核具体社区、用途和发布渠道，既不宣布全盘安全，也不把一切辅助起草说成禁止。"
+    },
+    {
+      "id": "business",
+      "title": "队列容易买到，文风与复核才是难点",
+      "source_ids": [
+        "Sbuffer",
+        "Sauthor"
+      ],
+      "body": "Buffer已有草稿和团队批准排期功能，因此“定时生成再审批”本身不足以形成独立产品优势。潜在增量是基于作者获准内容生成适合不同语境的草稿，仍需测改稿时间。作者没公开新增订阅收入、成交归因或每稿维护成本；不以每天发帖当增长，也不把未来Gumroad产品计划当已实现收入。本例不建立缺乏输入的利润模型。"
+    },
+    {
+      "id": "trial",
+      "title": "先用自写文章做无发布测试",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备一篇自写文章和两套虚构社区规则，要求生成两种草稿及各自依据，记录哪些观点来自原文、哪些为改写。故意加入互相冲突的规则、重复输入和批准后改稿情况，预期重复项不增加、改稿回到待审、规则不明不发布。本轮没有执行这些试用，没有读取私人Gmail或Slack，也没有发帖。"
+    },
+    {
+      "id": "next",
+      "title": "下一步只补决定可复制性的证据",
+      "source_ids": [
+        "Sauthor",
+        "Sroutine"
+      ],
+      "body": "如果继续核查，应取得获准公开的状态模型、审批版本绑定、发布接口和失败回执样例，再谈端到端复制。文章付费细节不可读不妨碍形成有限判断，但不应靠通用文档充作原系统源码。若审核时间接近人工写作、重复发布无法可靠阻止或平台不允许相应接入，保留离线草稿辅助并停止扩大自动发布范围。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/automate-content-distribution-across-reddit-and-linkedin",
+    "observed_at": null,
+    "body_sha256": "c94ca9e766b71d69c9ae1629be91378e842d3a1cffcbc30ef66ac9b296cc5ff5",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "2b56cc8ce33dba1f6a5effc3f400767fdac8022a520f9beb5b0ee2faff46af1d",
+      "How it went": "86502da7e86988624fe9a5639055b29e402ae0a137af5e6e36232e8980e6ff65",
+      "Worth knowing": "f4e82fce1aa8e899a6df435605b0be22a7a6a69196a36b1bdaf9cad43df987a8"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T22:23:24Z",
+      "end": "2026-10-19T22:23:35Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Whenever I publish a new article at [blog or RSS URL], draft a LinkedIn post of [length] words for it, plus a short [Reddit community] post that follows that community's rules. Save the drafts in [folder or doc], and post a summary in my [Slack channel] for approval. Do not publish or reply anywhere until I approve each draft, and stop once all drafts are waiting for my review.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/automate-content-distribution-across-reddit-and-linkedin",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e5ba05d8eae18f79862c663da1b1a39069a2d090fdda693db3afb1d9d0103d02",
+    "observation_window": {
+      "start": "2026-10-19T22:23:24Z",
+      "end": "2026-10-19T22:23:35Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://aiblewmymind.substack.com/p/claude-code-content-distribution-ai-agent",
+    "source_title": "Daria content-distribution overview",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T22:25:44Z",
+    "source_sha256": "181f863db8cf27b4710ab605d4d9e9715b13e8beeeda5e142e226991dded2c5f",
+    "steps": [
+      {
+        "en": "Daria describes a cloud routine preparing content for her approval and publishing approved LinkedIn drafts.",
+        "zh": "Daria描述云端任务准备待审内容，并发布已批准LinkedIn草稿。"
+      },
+      {
+        "en": "Detailed implementation is paywalled; this review uses only the public overview.",
+        "zh": "详细实现处于付费墙后，本研究只使用公开概览。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可降低启动分发的心理负担，净省时与实际增长未知。",
+    "audience": "已有原创内容并愿意逐稿复核的创作者。",
+    "use": "内容归档、不同平台草稿和审批队列。",
+    "benefit": "作者自述开始完成以前回避的任务，未独立测量。",
+    "setup_cost": "获准文章、平台规则、文风样例、审批范围与状态设计。",
+    "maintenance_cost": "改稿、失效链接、社区规则和发布回执检查。",
+    "frequency": "作者自述六小时触发、每日任务和每周调整，不等于每次都发布。",
+    "privacy_risk": "邮件和聊天可含私密内容，只接入必要范围。",
+    "error_risk": "重复发帖、批准版本错配、无关推广和指令漂移。",
+    "source_ids": [
+      "Sauthor",
+      "Sreddit",
+      "Sroutine"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "目录模板明确逐稿批准，完整保留。",
+    "prerequisites": "一篇自写文章、两套虚构规则，无真实社媒账户或私人通信。",
+    "tools": "文本助手和本地草稿表，不调用发帖接口。",
+    "expected_result": "可追溯草稿、待审状态、重复检测和版本变化重审。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/automate-content-distribution-across-reddit-and-linkedin",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Whenever I publish a new article at [blog or RSS URL], draft a LinkedIn post of [length] words for it, plus a short [Reddit community] post that follows that community's rules. Save the drafts in [folder or doc], and post a summary in my [Slack channel] for approval. Do not publish or reply anywhere until I approve each draft, and stop once all drafts are waiting for my review."
+      },
+      {
+        "title": "离线草稿审批检查",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Sreddit"
+        ],
+        "attribution": "原创测试提示，未执行",
+        "text": "把这篇自写文章按两套虚构规则分别改写，逐条列观点来源与不确定项。重复输入不新增草稿。每稿待审，修改正文后取消旧批准；不发布、不回复、不联系任何人。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "作者自述未被独立日志或可比试用验证，平台规则与产品说明不是用户效果。"
+  },
+  "disconfirming_evidence": "全文仍需人工编辑，Instagram文案未达作者预期，现成队列工具替代，平台限制与复制细节未核。",
+  "limitations": "未访问付费区、未注册购买、未读私信、未创建任何Routine或发帖；Microsoft分享文档出现授权提示后未进一步操作。",
+  "archive_source_sha256": "c94ca9e766b71d69c9ae1629be91378e842d3a1cffcbc30ef66ac9b296cc5ff5",
+  "translation_sha256": "9385beba3d34c7af701024197bad6c461ee6136866bace9111040f874bc6df81"
+}
