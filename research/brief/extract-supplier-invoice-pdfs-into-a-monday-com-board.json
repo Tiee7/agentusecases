@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "extract-supplier-invoice-pdfs-into-a-monday-com-board",
+  "url": "https://agentusecases.ai/use-case/extract-supplier-invoice-pdfs-into-a-monday-com-board",
+  "title": "用 Make 提取发票字段并整理到 monday.com",
+  "industry": "发票录入辅助",
+  "researched_at": "2026-10-19T13:35:43.885504+00:00",
+  "brief_reason": "原教程本次未读；没有财务字段对照、实际用量、三席USD报价或Google剩余容量。Make专页付费资格与通用概览曾有文案差异，保守按专页核资格，本轮未测Free。monday不同帮助口径额度有历史冲突，应按账户实际限额核，不声称已跑通。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "68736788325093ee8c64054f5074e7491face3fedc9600291faa341231a96453",
+  "archive_source_sha256": "68736788325093ee8c64054f5074e7491face3fedc9600291faa341231a96453",
+  "translation_sha256": "b54933834e0886236507aa00527393ebed9aa4b3113aa2bc4e028a2d3da7da36",
+  "facts": [
+    {
+      "statement": "归档转述教程链路为监听 Drive→下载PDF→Make AI Extractors提取编号/供应商/日期/金额→写monday看板，建议连接账户、准备credits、套模板并测试模块。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "秒级自动处理是教程声称；绿色模块执行状态不证明金额正确、准确率或已经投产，原材料没有吞吐量或异常样本。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "发票专用模块按operation计10 credits，不能把每票都按某个通用模型token价估算。",
+      "type": "verified",
+      "source_ids": [
+        "extractor"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/Make/comments/1vknc6a/tutorial_automated_supplier_invoice_processing",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "缺准确率、异常处理、固定画像频次和净成本实测。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "把发票字段提成待审记录，与原件对照后再入板。",
+    "benefit": "可能减少录入，不能保证消除差错或免维护。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "普通人的发票量未知，专业财务场景需独立记录。",
+    "privacy_risk": "发票可能含财务、联系方式和商业信息，跨Drive、Make及monday处理需授权和最小权限；账户剩余存储、留存和删除未知，不保证零新增存储费。",
+    "error_risk": "币种、日期、含税/折扣/运费或重复误读可影响账务；不能为过等式改数字或把未知税额当0。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "Make发票提取模块、Google Drive、monday.com；具体套餐与列/API权限须实际核对。",
+    "expected_result": "合成票据字段、来源定位、缺值/重复和对账异常清单；不上传真实发票或记账。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅用合成发票。逐字段提取供应商、编号、日期、币种和金额并标原件位置；未显示或不可辨识填null，只有原件明确零值才填0。仅在含义和币种一致、相关字段完整且关系适用时检查小计/税/总额；折扣运费等差额交人工，不改数强凑。标记重复与异常，展示草稿并待人工明确批准后才可写表。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a Make scenario that watches my Google Drive folder [folder name] for new supplier invoice PDFs and extracts supplier, invoice number, date, line items, and total using AI extraction. Create one item per invoice on my monday.com board [board name], mapping fields to columns [column names], and flag any PDF with missing or unclear fields for my review. Test with [number] sample PDFs and show me the results before enabling it.",
+    "agent": "Make",
+    "source_url": "https://agentusecases.ai/use-case/extract-supplier-invoice-pdfs-into-a-monday-com-board",
+    "observed_at": "2026-10-18T06:13:16.959501+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e59a96d221ca845f9ef11e7b497fcc890e88840fa7db4b9accde03f7afd78dfc"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "可卖有限字段映射和异常交接，必须与现有财务软件/OCR和人工录入比较。原教程并未证明行项目、税前税后分解或双向关联已经实现；扩展字段只能是源站模板或我们的设计建议。应按实际模块、页数、轮询、重试与写入计量，订阅内credits与外部付费不可重复计算。monday内置集成和外部Make/API是两条权限路径；不据Free限制强制购买Standard。",
+      "source_ids": [
+        "archive",
+        "extractor",
+        "monday-price",
+        "monday-api"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "五十张每张省三分钟只是月毛省2.5小时的未测情景；初始S、复核维护M和完整现金C未知，不能由此给二至三个月净回本。个人净月收益=25×(2.5−M)−C，仅在正值且初始25S已知时可算回本。财务人员高频不替换普通画像。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "模块成功之后仍须逐字段验收",
+    "reason": "适合合成票据的受控设计；未证财务准确与异常恢复前，不承诺无人工自动入账。",
+    "next_action": "建立含缺税、零税、折扣、多币种和重复的合成样本，与人工参考逐字段比对，先核账户权限和真实费用。",
+    "stop_condition": "若未知字段不能诚实保留、复核成本无益或权限不满足，停止自动写入试点。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "为小微企业/创意工作室交付发票自动解析与财务看板录入系统（交付与配置服务）",
+      "unit": "单套发票自动化采集与财务看板流水线定制交付（配置 Make.com 场景、Google Drive 监听、AI 提取规则与 monday.com 字段映射）",
+      "currency": "USD",
+      "price": 260.0,
+      "api_cost": 6.0,
+      "human_cost": 100.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 40.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工100=4小时。保留API/提取预算6为订阅内额度之外预留的增量测试预算，不将同一credits重复收现金；如实际包含则应下调。固定20为服务商按月测试规划，付费Extractor资格须另核。月贡献208−2x；现金2×(6+40)+20=112。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 146.0,
+      "known_unit_contribution": 114.0,
+      "known_monthly_contribution": 208.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 46.0,
+      "cash_4week_known": 112,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 88,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "发票看板月度数据对账巡检、版式规则适配与异常排查（轻量维保服务）",
+      "unit": "单套发票录入流水线月度维护与异常发票重处理（月度维保，含新增供应商发票版式规则适配、API 积分监控与漏录排查）",
+      "currency": "USD",
+      "price": 55.0,
+      "api_cost": 3.0,
+      "human_cost": 25.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 12.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 15.0,
+      "assumptions": "人工25=1小时。API3同为未测增量资源预留，固定15不是已核可购买付费Make套餐；若实际所需许可/预付更高必须重算。月贡献30−3x；现金3×(3+12)+15=60。客户生产monday/Drive/Make由客户承担，不能反推服务商没有额外费。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 40.0,
+      "known_unit_contribution": 15.0,
+      "known_monthly_contribution": 30.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 15.0,
+      "cash_variable_per_unit": 15.0,
+      "cash_4week_known": 60,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 140,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "现成财务工具和人工录入可能更完整；清理和核账可能超过节省，模块绿勾不是准确率。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原教程本次未读；没有财务字段对照、实际用量、三席USD报价或Google剩余容量。Make专页付费资格与通用概览曾有文案差异，保守按专页核资格，本轮未测Free。monday不同帮助口径额度有历史冲突，应按账户实际限额核，不声称已跑通。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/extract-supplier-invoice-pdfs-into-a-monday-com-board",
+      "title": "Extract supplier invoice PDFs into a monday.com board",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.885504+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:09.827558+00:00",
+      "characters": 1746,
+      "sha256": "68736788325093ee8c64054f5074e7491face3fedc9600291faa341231a96453",
+      "hash_scope": "registry/archives/extract-supplier-invoice-pdfs-into-a-monday-com-board.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "extractor",
+      "url": "https://apps.make.com/Twfdcm7QGCp_9QKZ3GGrY",
+      "title": "Make AI Content Extractor 模块",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.884675+00:00",
+      "read_method": "public_web_read",
+      "characters": 114,
+      "sha256": "d4ae6f12ca5e760540a47f03e0f1cf3184969cfb7f9bf2c10644109d1ce8d4ac",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "专页称付费计划可用且 beta 价格可变。发票模块每 operation 10 credits，通用文档文字提取才按页10；不能按通用 token 单价计。PDF/TIFF上限2000页、500MB，实际链路还须核套餐文件上限。",
+      "read_result_sha256": "e4350ca7f5d81426c001aaa8ec70b65256287dcd914a7842b0faef73019a8e44",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "monday-price",
+      "url": "https://monday.com/pricing",
+      "title": "monday 价格与内置集成",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.884909+00:00",
+      "read_method": "public_web_read",
+      "characters": 75,
+      "sha256": "5d7c972bcdcc38080aac4f9ba3178c0f6d3ddedaa1a4b38e83362db24ab09ab0",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "本次主页面显示 EUR、十席年付示例，并非三席 USD 结账价；Free 与内置 automation/integration、列能力的权限需分别核。",
+      "read_result_sha256": "3a474d86c91b4fcfc047d077de5860bdf97de0061e305e67e032c2316d3ee1fc",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "monday-api",
+      "url": "https://developer.monday.com/api-reference/docs/rate-limits",
+      "title": "monday 外部 API 额度",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.885074+00:00",
+      "read_method": "public_web_read",
+      "characters": 78,
+      "sha256": "953caa1d7b4f13b66a11b21d95ecf0d235c47cce2d4c63f78ba22bc5c34ea2fa",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "开发文档列 Free/Basic/Standard 每日1000调用，并有复杂度、并发等限制；Free 无内置集成不等于无外部 API，实际账户可用性未测。",
+      "read_result_sha256": "e4350ca7f5d81426c001aaa8ec70b65256287dcd914a7842b0faef73019a8e44",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/extract-supplier-invoice-pdfs-into-a-monday-com-board",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.885504+00:00",
+    "source_sha256": "68736788325093ee8c64054f5074e7491face3fedc9600291faa341231a96453",
+    "steps": [
+      {
+        "en": "The archive describes watching a Drive folder, downloading invoice PDFs and extracting fields through Make.",
+        "zh": "归档描述监听Drive、下载发票并经Make提取字段。"
+      },
+      {
+        "en": "The tutorial writes fields to monday.com and asks the user to validate every module.",
+        "zh": "教程把字段写入monday.com并要求测试模块；这不是财务字段对照验收。"
+      }
+    ]
+  }
+}

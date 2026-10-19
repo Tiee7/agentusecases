@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "book-a-munich-to-london-flight-didn-t-finish",
+  "url": "https://agentusecases.ai/use-case/book-a-munich-to-london-flight-didn-t-finish",
+  "title": "用 AI agent 检索航班并交接人工预订",
+  "industry": "航班信息与预订辅助",
+  "researched_at": "2026-10-19T13:35:43.395740+00:00",
+  "brief_reason": "原帖本次未读；旧包读取和复核时间晚于封包，不能作为本次凭据。无用户点击、购买、出票、一般人频次、配置时长或实际付费经营证据。当前官网仅作为工具范围资料。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+  "archive_source_sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+  "translation_sha256": "577330ec020cf1f21354e35ab336fc5f1cf29a41bea96a3541585e80b13cac71",
+  "facts": [
+    {
+      "statement": "归档称用户让未具名 agent 搜索二十五日慕尼黑至伦敦航班；此次列举的六个航司/旅游站未推进至乘客信息页，未完成预订。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "同一归档称 Kiwi MCP 在四秒内返回十五个航班和人工交接链接；后续是否点开、填写或完成购买未知。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "Kiwi 官方页提供航班搜索工具与每个结果的预订链接。搜索交接不等于已出票。",
+      "type": "verified",
+      "source_ids": [
+        "kiwi-mcp"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/agi/comments/1x7sd1q/i_asked_an_ai_agent_to_book_my_flight_and_it",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "单次失败自述及产品搜索文档不足以证明个人净收益与稳定完成能力。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "比较可核的航班选项并把预订链接交给本人。",
+    "benefit": "可能减少查找时间；案例的十秒和四秒是作者自述，不能作为普遍时效。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "普通知识工作者出行频次未知；高频差旅另做敏感性情景。",
+    "privacy_risk": "查询会向提供商传送行程条件；乘客资料、付款与账户权限另需明确授权。安装页没有证明零数据暴露或全部免费。",
+    "error_risk": "报价和舱位变化、行李/退改规则遗漏、链接失效；搜索成功不代表预订、付款或出票成功。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "未具名 agent；Kiwi MCP 为已报道的搜索交接路线，Operator 仅为源站推荐。",
+    "expected_result": "产出模拟航班比较与待人工核对的交接清单，不进行预订。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅用虚构行程比较样例选项，分别列总价、货币、时区、行李、退改与未知费用。不得声称实时可订，除非有当前可核页面。不得输入身份或付款信息、完成验证码或提交预订。遇访问限制立即停止该来源，交接由本人决定。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Find the best nonstop or one-stop flight from [origin city] to [destination city] on [date], returning [date or one-way], for [number] traveler(s). Compare options on Google Flights and the airline's own site, then take me to the checkout page for the one you recommend. Pause before entering any payment details or submitting the booking, and show me the fare, times, and baggage rules first.",
+    "agent": "Operator",
+    "source_url": "https://agentusecases.ai/use-case/book-a-munich-to-london-flight-didn-t-finish",
+    "observed_at": "2026-10-18T06:13:28.979824+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "185412e986025129f940d1eee13f9413f045a06f61511525a3b0b4f973f16fb9"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "只支持本次特定尝试受阻，不推断所有自动化请求都被认定恶意、合法出票接口不存在或全行业不可行。可研究的交付单位是有依据的航班比较及人工交接；应与官方搜索和直接人工预订比较。客户的护照/付款信息与交易确认不能因有搜索工具就自动处理。",
+      "source_ids": [
+        "archive",
+        "kiwi-mcp"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "官网安装步骤不证明配置速度、零维护或总费用为零；普通人的出行频率未核实。个人净收益需要扣设置、比较复核、返工、维护和额外现金，缺数据只列公式：累计省时×25−初始设置小时×25−持续人工小时×25−现金。删除“第二次回本”和半年至一年推断。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "止于比较与人工交接",
+    "reason": "目前材料缺端到端交付和付费验证，只适合辅助探索；不由一次受阻宣布全行业不可行。",
+    "next_action": "离线比较合成行程的规则完整性，记录设置、复核和费用；若考虑真实搜索，先明确行程及资料共享范围。",
+    "stop_condition": "若无法提供当前可核的价格和规则，或全成本不支持收费，应停止该项咨询试点；不绕验证码或网站拒绝。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "单人定制商旅机票比价与直达链接代查服务（情景假设）",
+      "unit": "单次商旅航班比价与推荐咨询（含需求梳理、Kiwi MCP/多源对比、退改签行李规则核对与直达结账链接交付）",
+      "currency": "USD",
+      "price": 30.0,
+      "api_cost": 2.0,
+      "human_cost": 12.5,
+      "other_variable_cost": null,
+      "acquisition_cost": 10.0,
+      "units_per_month": 6.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工12.5=0.5小时；月贡献=6×(30−2−12.5−10)−20=13，尚需减6x。四周已列现金6×(2+10)+20=92。固定20为未核价月付预算。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 24.5,
+      "known_unit_contribution": 5.5,
+      "known_monthly_contribution": 13.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 12.0,
+      "cash_4week_known": 92,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 108,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "个人差旅助手 MCP 连接器配置与使用辅导（情景假设）",
+      "unit": "单次个人 AI 差旅助手环境配置与使用辅导（一次性交付，指导客户在 Claude/ChatGPT 中接入 Kiwi MCP）",
+      "currency": "USD",
+      "price": 100.0,
+      "api_cost": 2.0,
+      "human_cost": 50.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 40.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工50=2小时；月贡献=2×(100−2−50−40)−20=−4，尚需减2x。四周已列现金2×(2+40)+20=104。不得把咨询回款假定为已收到营运资金。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 92.0,
+      "known_unit_contribution": 8.0,
+      "known_monthly_contribution": -4.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 42.0,
+      "cash_4week_known": 104,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 96,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "本人用官方搜索可能已足够，少量单次咨询的人工与获客成本可吃掉贡献；这不是已证需求不存在。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原帖本次未读；旧包读取和复核时间晚于封包，不能作为本次凭据。无用户点击、购买、出票、一般人频次、配置时长或实际付费经营证据。当前官网仅作为工具范围资料。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/book-a-munich-to-london-flight-didn-t-finish",
+      "title": "Book a Munich to London flight (didn't finish)",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.395740+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:21.873791+00:00",
+      "characters": 1614,
+      "sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+      "hash_scope": "registry/archives/book-a-munich-to-london-flight-didn-t-finish.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "kiwi-mcp",
+      "url": "https://www.kiwi.com/en/pages/mcp/",
+      "title": "Kiwi.com Flight Search MCP",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.394212+00:00",
+      "read_method": "public_web_read",
+      "characters": 77,
+      "sha256": "69b5d6eea2c15bdd33ee6fa858355ab8dcffaaf4308488855b7bf07c01f3a6fc",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "官网描述单个 search-flight 工具按行程条件返回航班及预订链接，给出客户端接入条件；没有本案例实际完成付款、免费总成本或五至十分钟配置的证明。",
+      "read_result_sha256": "31851386bda306180eaeeb5a886af2203e86b844c4dd1a2fc55297107a6c5186",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/book-a-munich-to-london-flight-didn-t-finish",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.395740+00:00",
+    "source_sha256": "c6df3d7b79429d04b908af1733aa5f8c606b7f9feb8e9509a1e5fa133718dac5",
+    "steps": [
+      {
+        "en": "The user asked an unnamed agent to book a Munich-to-London flight for the 25th.",
+        "zh": "用户让未具名 agent 查二十五日慕尼黑至伦敦航班，未明确单程或往返。"
+      },
+      {
+        "en": "The archive reports failed progress on the listed booking sites, followed by flight options and a handoff link from Kiwi MCP.",
+        "zh": "归档转述在列举预订站受阻，随后 Kiwi MCP 返回选项和人工交接链接；方法到此为止。"
+      }
+    ]
+  }
+}

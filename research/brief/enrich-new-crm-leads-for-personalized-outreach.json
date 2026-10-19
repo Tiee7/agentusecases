@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "enrich-new-crm-leads-for-personalized-outreach",
+  "url": "https://agentusecases.ai/use-case/enrich-new-crm-leads-for-personalized-outreach",
+  "title": "用 Make 富集 CRM 新线索供人工核对",
+  "industry": "销售线索整理",
+  "researched_at": "2026-10-19T13:35:43.805955+00:00",
+  "brief_reason": "原Reddit本次未读；RapidAPI泛入口无可核产品文本。未核具体供应商报价、成功/失败费、准确率、回复率、控制权限或实际工时，无新增凭据/API/外联。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "fde3b833c38240eeb90d32053291ff914000fdb5ab8a9120547153f21bab1de3",
+  "archive_source_sha256": "fde3b833c38240eeb90d32053291ff914000fdb5ab8a9120547153f21bab1de3",
+  "translation_sha256": "1d4b2d2796a4156a9420d21ab7c429c3b8bd1be77e50887d18d3d204a06505a4",
+  "facts": [
+    {
+      "statement": "归档转述 Make 监控 Airtable 新线索，通过 RapidAPI 访问 LinkedIn 资料，并用另一类服务补企业/职位字段，再写回 Airtable。提到的 Clearbit/FullContact 是原报道例子，不认证现在可采购或兼容。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "归档称评论中建议在标识符模糊时加入 AI 选匹配步骤；没有性能或外联提升数字。原帖和评论本次没有独立实读。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "Make credits 消耗与第三方服务费用应分别核算；泛 RapidAPI 入口不能证明某个产品的成功/失败计费或单次价格。",
+      "type": "verified",
+      "source_ids": [
+        "make-meter"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/coldemail/comments/1jzhsss",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "缺普通画像频次、明确API采购、身份匹配质量、权限与全成本证据。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "形成有来源、可拒绝歧义的线索富集草稿。",
+    "benefit": "可能减少手查字段；未证明外联效果或准确率。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "固定普通画像的线索处理频次未知；销售团队另测。",
+    "privacy_risk": "姓名、职业线索与内部CRM字段可能传给多家数据商/模型；公开职业资料不等于可任意传播，真实授权、数据最小化、留存/删除未知。",
+    "error_risk": "同名误配和过期资料可能污染CRM；模型置信度未校准，不能替代人工确认或发送许可。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "Make、Airtable和经核价/许可的数据源；泛RapidAPI目录不代表已选产品。",
+    "expected_result": "合成线索的来源字段、候选匹配和待审队列，不写CRM、不发邮件。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅处理虚构线索。逐项列资料来源、匹配支持与冲突；姓名/公司不足时标记待人工处理，不自动挑最像的人。置信度只用于排序。先展示富集草稿，真实写回和进入发送队列均需明确人工确认；不得把分数阈值当同意，不发送冷邮件。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a Make scenario that triggers when a new lead is added to my CRM [CRM name] and enriches it with company size, industry, role, recent news, and a short summary of what they likely care about. Write the results back to custom fields [field names] on the lead record. Test it on [number] existing leads and show me the enriched records before turning it on for new ones.",
+    "agent": "Make",
+    "source_url": "https://agentusecases.ai/use-case/enrich-new-crm-leads-for-personalized-outreach",
+    "observed_at": "2026-10-18T06:13:20.950990+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "8f67e9d9f15a544dc3f773d914d3ac75904140e67b4d31d3fcf336ff5e276623"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "可售的是可追溯字段与待审候选，不是自动正确身份或已证明提高回复率。需要具体供应商、endpoint、计划、额度、失败计费及许可才能定价。RapidAPI Hub 本次返回空解析，不给特定 LinkedIn 产品费用背书；移除每次零点零几美元和所谓廉价兼容替代的事实表述。",
+      "source_ids": [
+        "archive",
+        "make-meter",
+        "airtable"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "销售从业者的高频外联不能替换固定普通画像。五小时设置与月省四小时未经测量，现金、复核与维护未列，删除两个月回本承诺；净月收益=25(G−M)−C，正值时才谈25S除以净收益的连续摊销。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "把身份歧义留给人工",
+    "reason": "概念链路可研究，但数据源采购与匹配未验证，不能直接开自动外联。",
+    "next_action": "先做合成同名/缺值样本和人工参考答案；明确具体API产品、费用及授权后再决定连接。",
+    "stop_condition": "若歧义不能拒绝、数据许可不明或人工复核吞噬贡献，停止自动回写与外联方案。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "为出海 B2B 团队交付销售线索多源自动富集流水线（交付与配置服务）",
+      "unit": "单套 CRM 销售线索自动富集与清洗流水线定制交付（配置 Make.com 场景、Airtable 字段回写、RapidAPI 对接与大模型防混淆仲裁逻辑）",
+      "currency": "USD",
+      "price": 280.0,
+      "api_cost": 8.0,
+      "human_cost": 125.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 45.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工125=5小时；月贡献2×(280−8−125−45)−20=184−2x，现金2×(8+45)+20=126。API8与固定20均为规划预算，不是Hub证明的单价；先核付费充值与周期。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 178.0,
+      "known_unit_contribution": 102.0,
+      "known_monthly_contribution": 184.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 53.0,
+      "cash_4week_known": 126,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 74,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "线索库月度匹配度抽检、API 故障排查与提示词微调（轻量维保服务）",
+      "unit": "单套线索富集流水线月度维护与数据质量巡检（月度维保，含模糊匹配逻辑微调、API 接口健康检查与脏数据清洗）",
+      "currency": "USD",
+      "price": 60.0,
+      "api_cost": 4.0,
+      "human_cost": 25.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 15.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 15.0,
+      "assumptions": "人工25=1小时；月贡献3×(60−4−25−15)−15=33−3x，现金3×(4+15)+15=72。所有真实API套餐、预付余额及客户生产许可未核，不能认证低现金或成熟流水线。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 44.0,
+      "known_unit_contribution": 16.0,
+      "known_monthly_contribution": 33.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 15.0,
+      "cash_variable_per_unit": 19.0,
+      "cash_4week_known": 72,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 128,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "人工核对与现有CRM功能可能已足够；过时产品名不是可购买替代品，错误富集会增加返工。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原Reddit本次未读；RapidAPI泛入口无可核产品文本。未核具体供应商报价、成功/失败费、准确率、回复率、控制权限或实际工时，无新增凭据/API/外联。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/enrich-new-crm-leads-for-personalized-outreach",
+      "title": "Enrich new CRM leads for personalized outreach",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.805955+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:13.805609+00:00",
+      "characters": 1431,
+      "sha256": "fde3b833c38240eeb90d32053291ff914000fdb5ab8a9120547153f21bab1de3",
+      "hash_scope": "registry/archives/enrich-new-crm-leads-for-personalized-outreach.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "make-meter",
+      "url": "https://help.make.com/credits",
+      "title": "Make credits 计量",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.805596+00:00",
+      "read_method": "public_web_read",
+      "characters": 65,
+      "sha256": "9513bbcdf7c09e43f87b6dd0b3a1f07c961ca7c0d02fba8be54e8221b08f6f31",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "标准模块通常一操作一 credit，AI/自动提供商可按 token 等计量；自接模型提供商费用另计，不把所有模块都视为固定一价。",
+      "read_result_sha256": "c0918a03392ff7c37ca7a09efbcbd45476b9c25cdb9576c7165edc433b06536e",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "airtable",
+      "url": "https://airtable.com/pricing",
+      "title": "Airtable 计费边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.805724+00:00",
+      "read_method": "public_web_read",
+      "characters": 49,
+      "sha256": "bff43c9147a71801182cec175ad262cad79dbdabb687b0dd7f8305f1c981eb15",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 适用轻量需求，付费按编辑席；额度、API和实际套餐应另核，不将免费层当完整运行成本为零。",
+      "read_result_sha256": "c0918a03392ff7c37ca7a09efbcbd45476b9c25cdb9576c7165edc433b06536e",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/enrich-new-crm-leads-for-personalized-outreach",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.805955+00:00",
+    "source_sha256": "fde3b833c38240eeb90d32053291ff914000fdb5ab8a9120547153f21bab1de3",
+    "steps": [
+      {
+        "en": "The archive reports watching Airtable, calling enrichment services and writing enriched fields back.",
+        "zh": "归档转述监控 Airtable、调用富集服务并回写字段。"
+      },
+      {
+        "en": "It reports a suggestion to use AI for ambiguous identifiers; this is not measured matching accuracy.",
+        "zh": "归档另转述以 AI 处理歧义的建议，不能当成准确率验证。"
+      }
+    ]
+  }
+}

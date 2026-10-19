@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "collect-international-grant-listings-into-airtable",
+  "url": "https://agentusecases.ai/use-case/collect-international-grant-listings-into-airtable",
+  "title": "用 Zapier Agents 收集国际资助清单到 Airtable",
+  "industry": "公开资助信息整理",
+  "researched_at": "2026-10-19T13:35:43.564133+00:00",
+  "brief_reason": "原帖本次未读，无真实采集日志、准确率、客户付费、已选套餐/迁移或预算账单；动态费率及作者历史采购未知。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "8bac071489122ad1b4b064ef6ff4f0f551494608fa0376de1950756b97775fd8",
+  "archive_source_sha256": "8bac071489122ad1b4b064ef6ff4f0f551494608fa0376de1950756b97775fd8",
+  "translation_sha256": "148855dbcc9a3ef381ee270931a3ce6983653b370806b392bf89d356d43dcfe1",
+  "facts": [
+    {
+      "statement": "归档仅称作者为影视融资博客采集多国资助并上传 Airtable，刚开始使用，自评不错但不完美，认为指导方式可能是问题，正在求助。没有数量或具体失败样本。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "独立 Agents 的 activities 与迁后 AI by Zapier 的 tasks 分开计；作者实际计划、历史价格和迁移状态未知。",
+      "type": "verified",
+      "source_ids": [
+        "agents-meter",
+        "agents-migrate",
+        "agents-price"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/zapier/comments/1i787nl/tips_and_tricks_needed_for_zapier_agents",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "无频率、设置、质量或净收益实测；“不完美”不证明低可靠性故障率。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "形成附发布方来源的候选资助清单，人工核对资格与期限。",
+    "benefit": "可能减少重复搜索，不能保证获得资助或信息完整。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "固定普通画像频次未知；专业用户的周期任务需另测。",
+    "privacy_risk": "资助正文可能公开，但连接器权限、账户凭据及云端数据流仍需核对；公开输入不等于无隐私风险。",
+    "error_risk": "一般风险包括过期或重复、资格和金额误读、遗漏；本案没有具体失败样本。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "独立 Zapier Agents 或迁后 AI by Zapier、Airtable；先明确实施路径。",
+    "expected_result": "合成资助记录及缺值/重复/来源核对清单；不写真实表或发邮件。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "对给定合成资助网页抽取名称、发布者、国家、截止日、金额、资格和来源。未知留空，不猜测，不把已结束项目列成开放。按来源链接去重。每条由人工复核后才可考虑写入；不得实际写表、发邮件或申请资助。分别记录独立 Agents activities 或迁后 tasks，不混算。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Create an agent that searches the web each [week] for open grants for [type of organization or project] from [list of countries], and adds each one to my Airtable base [base name] with fields for name, funder, country, deadline, amount, eligibility, and link. Skip any grant already in the table and leave unknown fields blank rather than guessing. It's finished when a test run adds at least [number] new, accurate rows and I've reviewed them.",
+    "agent": "Zapier Agents",
+    "source_url": "https://agentusecases.ai/use-case/collect-international-grant-listings-into-airtable",
+    "observed_at": "2026-10-18T06:13:13.008163+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "9752af1bc241470e8afcea56770cb756dcadca810e16658383902a70bc31fa9b"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "客户可能为可追溯的资助机会筛选付费，但本例没有付款或采集质量证据。开放申报过滤、字段、周频、去重和官方机构网站是源站试用建议或研究者设计，不能写成作者实际实现。应把资格/期限逐项链接回发布方，人工确认后才提供情报；错过期限、幻觉、动态页等是待测一般风险。",
+      "source_ids": [
+        "archive",
+        "agents-meter",
+        "agents-migrate",
+        "agents-price",
+        "airtable"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "普通通用知识工作者未必有持续资助需求，影视、学术与非营利专业人群只作敏感性场景。不能以商业四周200预算代替个人每月新增20预算。五小时设置与每月毛省三小时均未测，未扣维护/复核及正确支付周期，删除三至四月回本。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核信息质量、产品路径和额度",
+    "reason": "仅支持有限合成试点；没有证明采集质量、付费需求或平台配额能覆盖持续运营。",
+    "next_action": "用固定公开样本离线核字段、期限与去重；选择独立或迁后路线后实际计量，再决定是否值得接账户。",
+    "stop_condition": "若人工核验与信息维护使全成本超过收益，或无法确认合法来源和资格，停止订阅情报方案。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "为垂直行业创作者交付行业资助基金自动抓取与 Airtable 知识库系统（交付与配置服务）",
+      "unit": "单套行业资助自动化采集流水线定制与交付（配置 Zapier Agent 抓取规则、Airtable 数据清洗视图与去重工作流）",
+      "currency": "USD",
+      "price": 250.0,
+      "api_cost": 10.0,
+      "human_cost": 125.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 40.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "选择独立 Agents Free+客户 Airtable Free 作为有限合成试点前提，必须实测在额度内；固定20仅是服务商每四周一次支付的软件/测试规划封顶，不是报价或年费摊销。人工125=5小时。月贡献130−2x，现金2×(10+40)+20=120。若实际需付费许可，重算。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 175.0,
+      "known_unit_contribution": 75.0,
+      "known_monthly_contribution": 130.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 50.0,
+      "cash_4week_known": 120,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 80,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "全球影视/艺术资助数据库月度订阅会员与情报简报（轻量内容产品）",
+      "unit": "单人按月订阅全球影视/艺术资助精选数据库与邮件情报更新（月度订阅会员）",
+      "currency": "USD",
+      "price": 15.0,
+      "api_cost": 1.0,
+      "human_cost": 5.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 5.0,
+      "units_per_month": 15.0,
+      "fixed_monthly_cost": 30.0,
+      "assumptions": "同选独立 Agents Free 的有限验证，固定30拆为服务商信息维护/发送工具总规划预算，且假设可按月支付，不声称其中包含19.99 Professional或任何已核邮件单价。人工5=0.2小时/订户。月贡献30−15x，现金15×(1+5)+30=120。若改选 Agents Pro 年付，仅订阅预付400已超200，不能只付33.33月均。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 11.0,
+      "known_unit_contribution": 4.0,
+      "known_monthly_contribution": 30.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 30.0,
+      "cash_variable_per_unit": 6.0,
+      "cash_4week_known": 120,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 80,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "免费官方提醒、现有资助目录和人工筛选可能足够；只有来源和时效可核才有情报价值。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原帖本次未读，无真实采集日志、准确率、客户付费、已选套餐/迁移或预算账单；动态费率及作者历史采购未知。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/collect-international-grant-listings-into-airtable",
+      "title": "Collect international grant listings into Airtable",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.564133+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:05.699950+00:00",
+      "characters": 1513,
+      "sha256": "8bac071489122ad1b4b064ef6ff4f0f551494608fa0376de1950756b97775fd8",
+      "hash_scope": "registry/archives/collect-international-grant-listings-into-airtable.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "agents-meter",
+      "url": "https://help.zapier.com/hc/en-us/articles/26559132765325-How-is-Zapier-Agents-usage-measured",
+      "title": "独立 Agents 用量",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.563229+00:00",
+      "read_method": "public_web_read",
+      "characters": 88,
+      "sha256": "bb5f1fd91ff574b1a3880a66d688f50d932aaa634f7a19e354d6a88f157108bf",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "独立 Agents 用 activities：Free 每月400，Pro 1500；浏览、搜索、触发和动作分别计量，不消耗通用 tasks；达到额度通常暂停，非自动阶梯加收。",
+      "read_result_sha256": "cdecc35ea82193f373384056e343e433acd1f1acce25bc8f3825411aa3597242",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "agents-migrate",
+      "url": "https://help.zapier.com/hc/en-us/articles/47402591569805-Migrating-from-Agents-to-AI-by-Zapier",
+      "title": "Agents 迁移说明",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.563514+00:00",
+      "read_method": "public_web_read",
+      "characters": 68,
+      "sha256": "e8fd0301c6940cc560aed4d7599ec9ee9e72101ccb71b599c27064f0b3cda059",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "官方正迁往 AI by Zapier，迁后用 tasks，不另订独立 Agents；尚未公布 Agents 停用日，不能假定本案已迁完。",
+      "read_result_sha256": "cdecc35ea82193f373384056e343e433acd1f1acce25bc8f3825411aa3597242",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "agents-price",
+      "url": "https://zapier.com/pricing",
+      "title": "Zapier 独立 Agents 价格",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.563703+00:00",
+      "read_method": "public_web_read",
+      "characters": 73,
+      "sha256": "1487f54b51ae9d3ddf33ad71e5c3546c2ab87f857078463799cd6611940ff1fa",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Agents Pro 显示年付 USD 400、月均33.33，非按月支付报价。通用 Professional 不是独立 Agents 必需订阅。",
+      "read_result_sha256": "d8a434179f17999f4ed4f7b316459f304effd520fbfb0f6cc018776e53165277",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "airtable",
+      "url": "https://airtable.com/pricing",
+      "title": "Airtable 计费边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.563810+00:00",
+      "read_method": "public_web_read",
+      "characters": 66,
+      "sha256": "6592a6ae08b4f57489d3f3c87cf4a0019e194b0f8ba5a1048193383d33f11278",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 可免费使用；付费按编辑席，Team 显示年付月均每人 USD 20；容量和 API 另有上限，不能由免费二字认证无限采集。",
+      "read_result_sha256": "14b1036a5e92efb85c845297ee8ff898dedd7170fc0ccd62e43bef9b472cb418",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/collect-international-grant-listings-into-airtable",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.564133+00:00",
+    "source_sha256": "8bac071489122ad1b4b064ef6ff4f0f551494608fa0376de1950756b97775fd8",
+    "steps": [
+      {
+        "en": "The archive says the poster configured Zapier Agents to collect grant listings from several countries and upload them to Airtable.",
+        "zh": "归档称作者让 Zapier Agents 收集多国资助清单并传入 Airtable。"
+      },
+      {
+        "en": "They were still tuning the instructions and asking for guidance; no collection count or specific failure was reported.",
+        "zh": "作者仍在调整指令并寻求指导，没有提供采集量或具体失败。"
+      }
+    ]
+  }
+}

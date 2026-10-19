@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "enrich-and-store-contacts-in-a-personal-crm",
+  "url": "https://agentusecases.ai/use-case/enrich-and-store-contacts-in-a-personal-crm",
+  "title": "用 Claude 和 Supabase 整理个人人脉档案",
+  "industry": "联系人资料辅助",
+  "researched_at": "2026-10-19T13:35:43.718507+00:00",
+  "brief_reason": "Substack 原文本次未读；未核 Harmonic 当前报价与作者订阅，无95%准确率、自动增网、免维护、可复现经营或私人资料操作。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "9c28b5b938e8c0199f4df1023cdc2e7edd8aa4e78a2f133027fd2a10bf549ab3",
+  "archive_source_sha256": "9c28b5b938e8c0199f4df1023cdc2e7edd8aa4e78a2f133027fd2a10bf549ab3",
+  "translation_sha256": "fd31ea4b743997808ac4852268a7fd2743d672886a8cc089d3ae719c659c1dc2",
+  "facts": [
+    {
+      "statement": "归档称 Claude 通过自定义四工具 MCP 接 Supabase，按 Markdown 工作流用 Harmonic 富集角色、公司、履历和推断技能，关联 Granola 会议笔记。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "归档声称数秒形成档案，并在 Granola 同步后标记尚未入库者；标记不等于无需确认自动新增。没有准确率或独立效果日志。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://jax.substack.com/p/uncovered-bookmarks-23-building-a",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "无固定画像频次、全成本、身份匹配或数据控制实测。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "查询与整理获准联系人记录，待审后写入并核对结果。",
+    "benefit": "可能减少手工整理；不保证匹配、会议归属或推断技能正确。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "普通人实际维护人脉资料频次未知，专业用户需另测。",
+    "privacy_risk": "联系人和私人会议笔记可能流经模型、Supabase、Harmonic 与 Granola。最小权限、授权范围、导出/删除和留存未核，云数据库不是无约束私有库。",
+    "error_risk": "同名误匹配、推断技能当事实、误删和重复；须逐条核来源并保持可恢复。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "Claude、自建 MCP、Supabase、Harmonic、Granola；不要把官方开发MCP直接当面向客户的四工具接口。",
+    "expected_result": "合成联系人的候选匹配、来源和待写草稿，不接真实会议或数据库。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅使用虚构姓名、职业与会议记录。逐字段注明来源，推断技能单列，不猜私人信息；同名或来源冲突交人工。展示拟写记录及关联笔记并等待明确批准，未经批准不得新增、修改或删除；同步发现未建档者只列候选。演练重复、误匹配与回滚，不上传真实会议。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm going to give you a person's name and LinkedIn URL: [name] and [LinkedIn URL]. Enrich the profile using my connected enrichment tool, then save a record to the [contacts table name] table in my connected database with name, company, role, location, and profile link. Show me the record before you write it, and stop once it's saved and you've confirmed the row exists.",
+    "agent": "Claude",
+    "source_url": "https://agentusecases.ai/use-case/enrich-and-store-contacts-in-a-personal-crm",
+    "observed_at": "2026-10-18T06:13:24.995093+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "49429be12667b91ff9d8d1c79be451a05bbdbd93f0243b22775bf0ad6e84b6b9"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "整合公开职业线索和本人获准会议笔记有便利，但身份匹配与推断技能需要人工核验。没有依据从作者职业推定高级采购特权，也不以泛供应商定位推断 Harmonic 高价或廉价。Harmonic 价格、可用权限和作者订阅均未知；旧稿列的泛名称替代品移除，未核现用产品不推荐为便宜兼容替代。",
+      "source_ids": [
+        "archive",
+        "supabase-price",
+        "supabase-mcp",
+        "granola"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "猎头、咨询顾问等专业高频场景不替换普通画像。五小时设置与每周省四十分钟只是未测试毛时间假设；未扣订阅、复核、维护、清洗不能承诺两个月回本。净周收益=25(G−M)−C，设置成本25S；正值才可算连续回本。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核同名匹配、授权与数据流",
+    "reason": "适合先做合成资料原型；自动建档、准确率和净收益无证，不支持无监督客户服务承诺。",
+    "next_action": "设计脱敏匹配样本、人工参考记录和回滚规则，核实际供应商资格及全费用后再决定接入。",
+    "stop_condition": "若同名错误不可发现、会议授权不足或持续维护吃完贡献，停止自动写入方案。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "个人 CRM 集成配置交付（规划）",
+      "unit": "一套获准数据的辅助配置，不承诺无人自动建档",
+      "currency": "USD",
+      "price": 300.0,
+      "api_cost": 10.0,
+      "human_cost": 125.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 45.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工125=5小时；月贡献2×(300−10−125−45)−20=220−2x，现金2×(10+45)+20=130。固定20为服务商沙箱月付预算；客户生产Claude/Granola/Harmonic/Supabase另付，服务商如需这些额外许可须加计。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 180.0,
+      "known_unit_contribution": 120.0,
+      "known_monthly_contribution": 220.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 55.0,
+      "cash_4week_known": 130,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 70,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "联系人数据健康维护（规划）",
+      "unit": "一个客户月的抽查和维护，不含删除未授权记录",
+      "currency": "USD",
+      "price": 70.0,
+      "api_cost": 5.0,
+      "human_cost": 37.5,
+      "other_variable_cost": null,
+      "acquisition_cost": 15.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 15.0,
+      "assumptions": "人工37.5=1.5小时；月贡献3×(70−5−37.5−15)−15=22.5−3x，现金3×(5+15)+15=75。Granola/Harmonic实际资格、付款周期和用量未核；不能从客户已有账户推服务商没有附加费。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 57.5,
+      "known_unit_contribution": 12.5,
+      "known_monthly_contribution": 22.5,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 15.0,
+      "cash_variable_per_unit": 20.0,
+      "cash_4week_known": 75,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 125,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "现有联系人/笔记搜索也可能满足需求；数据富集许可和持续清洗可能比模型成本更重要。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 Substack 原文本次未读；未核 Harmonic 当前报价与作者订阅，无95%准确率、自动增网、免维护、可复现经营或私人资料操作。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/enrich-and-store-contacts-in-a-personal-crm",
+      "title": "Enrich and store contacts in a personal CRM",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.718507+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:17.851491+00:00",
+      "characters": 1350,
+      "sha256": "9c28b5b938e8c0199f4df1023cdc2e7edd8aa4e78a2f133027fd2a10bf549ab3",
+      "hash_scope": "registry/archives/enrich-and-store-contacts-in-a-personal-crm.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "supabase-price",
+      "url": "https://supabase.com/pricing",
+      "title": "Supabase 计划",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.717616+00:00",
+      "read_method": "public_web_read",
+      "characters": 66,
+      "sha256": "4f22d9380d01b38868ddc40d40adf2541bbf735fc14ea30f394360b36fd4610d",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 含500MB数据库、1GB文件存储等限制，闲置一周可能暂停；Pro 每月 USD 25起，附加计算和资源另算。非作者账单。",
+      "read_result_sha256": "3b9a1054e96a4068df18413860d176e38adc5bd3c917fdd597024f15f5b1cd76",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "supabase-mcp",
+      "url": "https://supabase.com/docs/guides/ai-tools/mcp",
+      "title": "Supabase 官方 MCP 边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.717885+00:00",
+      "read_method": "public_web_read",
+      "characters": 79,
+      "sha256": "d377f7c6653f7f5850fa8b26473582b5e820ec7128b760549fda102570d835ab",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "官方开发 MCP 有项目范围、只读和工具组控制，并不等同作者自建 query/insert/update/delete 四工具接口；应最小权限并审查工具调用。",
+      "read_result_sha256": "15e9f695f85aa1170e41609c3b5dae502fcde6e0e0ba1d613bb2abbca238f527",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "granola",
+      "url": "https://www.granola.ai/pricing",
+      "title": "Granola 当前计划",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.718058+00:00",
+      "read_method": "public_web_read",
+      "characters": 82,
+      "sha256": "1bb92b48eb05d4e96a0d98dd9d703b8403e3d17b7384ec65e5c5e2082e267d60",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Basic 免费且历史限30天；Business 显示每人每月 USD 14，含更广历史/集成/API。未核结账支付周期，不能当作者历史方案或十至十八美元通用成本。",
+      "read_result_sha256": "15e9f695f85aa1170e41609c3b5dae502fcde6e0e0ba1d613bb2abbca238f527",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/enrich-and-store-contacts-in-a-personal-crm",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.718507+00:00",
+    "source_sha256": "9c28b5b938e8c0199f4df1023cdc2e7edd8aa4e78a2f133027fd2a10bf549ab3",
+    "steps": [
+      {
+        "en": "The archive describes a custom four-tool database interface and Markdown workflow instructions.",
+        "zh": "归档描述自建四工具数据库接口和 Markdown 流程说明。"
+      },
+      {
+        "en": "Claude uses Harmonic enrichment and links matching Granola notes; after sync it flags people missing from the CRM.",
+        "zh": "Claude 富集资料并关联匹配笔记；同步后标记未建档者，不据此推断自动新增。"
+      }
+    ]
+  }
+}

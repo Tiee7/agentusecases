@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "handle-padel-club-bookings-through-a-conversational-ai-agent",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "540a7096a412ba07010b091fefae879fc7744894bdd7ad05fa22ef3c916bc10a",
+  "translated_at": "2026-10-19T13:35:43.975403+00:00",
+  "body": "通过对话式 AI Agent 处理板网球俱乐部预约预订\n一个板网球俱乐部预约系统采用 n8n 对话式 AI Agent 负责客户沟通，同时由确定性工作流负责底层预订业务逻辑。\n使用工具\nN8\nn8n\n他们做了什么\n开发者在一个拥有两块球场的板网球（Padel）俱乐部现有 n8n 预订工作流前端接入了一个 AI 对话 Agent。该 Agent 的唯一职责是在对话中收集预订细节并作为工具调用底层工作流；工作流随后执行档期冲突校验、分配首个空闲球场、处理创建/修改/取消等分支，并将预订信息同步至 Google Sheets。这是开发者在前序由 AI 承担过多核心逻辑导致产生幻觉后，经人工多次迭代重构得出的设计。\n进展与成效\n系统允许客户通过自然语言输入预约请求并获取确认后的预订编号（Booking ID）。作者表示将对话层与底层业务逻辑分离后系统更可靠，也更容易调试排错。不过当前工作流依然较为庞大复杂，作者表示后续计划将创建、修改和取消拆分为独立的子工作流。\n值得注意\n作者表示他们选用了 GPT-4o mini 模型，在测试期间处理约 150 次成功对话仅花费约 1 美元。\n亲自尝试\n使用\nn8n\n复制提示词\n为 [俱乐部名称] 构建一个工作流，使客户能够通过 [WhatsApp、Telegram 或网页聊天插件] 与 AI Agent 对话以预约 [球场或场次]。让 Agent 在对话中收集日期、时间、时长和球员姓名，同时由工作流在 [Google Calendar 或电子表格] 中检查空闲档期并执行预订规则。在工作流正式创建或取消预订前，要求 Agent 先向客户核对确认具体信息。当我能端到端完成测试时段的预订、改期和取消时，任务即告完成。\n原始来源：https://www.reddit.com/r/n8n/comments/1ukil5g/i_added_an_ai_agent_to_my_n8n_booking_workflow",
+  "body_sha256": "42bff7e838f1ef17c0518154f7444d17a487f34602c1446e0c3dd12a6dd95829",
+  "scope": "完整归档提取正文中文译文；外链全文不在包内"
+}

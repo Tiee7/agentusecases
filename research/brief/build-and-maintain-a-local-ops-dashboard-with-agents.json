@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "build-and-maintain-a-local-ops-dashboard-with-agents",
+  "url": "https://agentusecases.ai/use-case/build-and-maintain-a-local-ops-dashboard-with-agents",
+  "title": "用 OpenClaw 构建运营控制看板并维护任务",
+  "industry": "个人运营与开发辅助",
+  "researched_at": "2026-10-19T13:35:43.482323+00:00",
+  "brief_reason": "原博客本次未读；未核作者具体配置、原套餐/席位或真实省款，没有压力测试或独立复现。Asana 最低购买席数本次尚未核清，不以单席价计算整单支出。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "d8e36d4dfd0b6ebccb60d8e91b98569e06e3e4a5ae12db543999f71ac9e89e8f",
+  "archive_source_sha256": "d8e36d4dfd0b6ebccb60d8e91b98569e06e3e4a5ae12db543999f71ac9e89e8f",
+  "translation_sha256": "8770ca4f82ea3c6be82cf90c9107bdc103c7d688bc58c99cb9b8e7f9042cd064",
+  "facts": [
+    {
+      "statement": "归档称作者用 OpenClaw、Convex、Postiz 和 Tailscale 做本地入口的 Mission Control；Fred 检查看板并拆出具体任务，工程 agent 夜间做，作者晨间复核。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "作者自述替代了 Asana 与排期工具；边界稳定的小任务较好，开放式夜间任务较不可靠，有时结果混乱。原套餐、净节省和错误率未知。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "Tailscale Personal 限非商业；Convex 免费与按量范围、Asana 每席计费及 Postiz 支付周期不能混作作者实际成本。",
+      "type": "verified",
+      "source_ids": [
+        "tailscale",
+        "convex",
+        "asana",
+        "postiz"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://modilingua.com/ai-lab/openclaw-automation-for-small-business/",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "缺普通人设置、实际许可、维护与净节省记录；作者对夜间任务的有限自述不足以推总体故障率。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "在单一看板查看任务、审批和排期，以具体小任务迭代。",
+    "benefit": "可能减少工具切换，但替代订阅和省时均未核净值。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "作者晨间复核为单例自述；固定画像实际任务频次未知。",
+    "privacy_risk": "本地界面与 Tailscale 不证明 Convex、模型和排期平台都本地。须另核授权、远端数据、日志和社交账号访问，不能保证零泄露。",
+    "error_risk": "错误初始假设可消耗预算；通宵开放任务有范围漂移风险。具体失败率和代码破坏并未验证。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "OpenClaw、Convex、Postiz、Tailscale；具体云端/自托管方案未知。",
+    "expected_result": "生成本地入口与云组件的数据流、有限任务验收项和预算停止线，不启动夜间循环。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅用合成任务草拟看板、审批队列和计划任务视图。列每个组件实际部署位置、远端数据和费用未知项。每次只做一个可回滚小改动并等待验收。禁止开放式通宵循环，任何发帖、发送、删除或权限修改均须先获得明确批准。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a local ops dashboard on my computer to replace [current tool, e.g. Asana]. It should have a Kanban board for [my main workflows], an approvals queue, and a view of scheduled jobs such as [cron tasks or social posts]. Work in small steps, stop after the first working version, and show me what it looks like. Do not run open-ended overnight loops or send, publish, or delete anything without asking me first.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/build-and-maintain-a-local-ops-dashboard-with-agents",
+    "observed_at": "2026-10-18T06:13:32.970310+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "f79efd8b40002dd22c3b8a4585026c9984108fdbd097d608c9dfac061a860473"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "价值是整合具体运营任务和审批入口，不是证明所有组件都在本机。Convex 部署方式、模型推理、发送数据、社交权限和日志留存未知，可能是混合云架构。应比较现成看板和排期工具的总许可与维护；未核原账单不能认证每月省四十美元。商业使用不能默认套用非商业网络免费计划。",
+      "source_ids": [
+        "archive",
+        "tailscale",
+        "convex",
+        "asana",
+        "postiz"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "作者每天晨间复核不等于普通知识工作者每天有同类任务。原稿八小时设置只是未测假设；用未知的订阅毛节省推出五个月净回本不成立。净月收益应为被替代的真实现金 A−新增现金 C+25×(月毛省时 G−复核返工维护 M)，初始成本25S；分母>0才谈回本。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "以有限任务和人工复核控制范围",
+    "reason": "整合方式有启发，但实际混合架构和维护成本未明；先核总成本和边界，不能卖完全本地或免维护保证。",
+    "next_action": "先画组件和授权数据流，选一个稳定小任务做合成验收，记录模型与维护；商用许可满足后才考虑客户试点。",
+    "stop_condition": "若无法控制远端数据、任务范围和预算，或持续维护使净收益为负，停止扩张。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "为小微企业/自由职业者定制自托管本地 Ops 任务控制看板（交付与部署服务）",
+      "unit": "一套运营控制看板配置，组件组合及部署与许可待核",
+      "currency": "USD",
+      "price": 300.0,
+      "api_cost": 15.0,
+      "human_cost": 150.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 50.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工150=6小时。月贡献2×(300−15−150−50)−20=150−2x；现金2×(15+50)+20=150。固定20是服务商沙箱总规划预算，未证明可购买全部商用组件；商用网络许可未计部分须另加。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 215.0,
+      "known_unit_contribution": 85.0,
+      "known_monthly_contribution": 150.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 65.0,
+      "cash_4week_known": 150,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 50,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "本地 Ops 仪表盘月度代运维与 Agent 任务边界调优（轻量月度维保服务）",
+      "unit": "一个客户月的任务边界与用量巡检，实际部署与许可待核",
+      "currency": "USD",
+      "price": 80.0,
+      "api_cost": 5.0,
+      "human_cost": 50.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 20.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工50=2小时。月贡献3×(80−5−50−20)−20=−5−3x；现金3×(5+20)+20=95。客户生产主机、网络与应用许可须客户另付，不能从免费层反推供应商测试也免费。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 75.0,
+      "known_unit_contribution": 5.0,
+      "known_monthly_contribution": -5.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 25.0,
+      "cash_4week_known": 95,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 105,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "现成看板和排期工具可能更省维护；混合云组件仍有许可与数据边界。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原博客本次未读；未核作者具体配置、原套餐/席位或真实省款，没有压力测试或独立复现。Asana 最低购买席数本次尚未核清，不以单席价计算整单支出。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/build-and-maintain-a-local-ops-dashboard-with-agents",
+      "title": "Build and maintain a local ops dashboard with agents",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.482323+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:25.874966+00:00",
+      "characters": 1561,
+      "sha256": "d8e36d4dfd0b6ebccb60d8e91b98569e06e3e4a5ae12db543999f71ac9e89e8f",
+      "hash_scope": "registry/archives/build-and-maintain-a-local-ops-dashboard-with-agents.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "tailscale",
+      "url": "https://tailscale.com/pricing",
+      "title": "Tailscale 计划与适用范围",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.480940+00:00",
+      "read_method": "public_web_read",
+      "characters": 59,
+      "sha256": "90f28f2b0d17df5fdfab52708791badf95b3dbd43b5f00e8bcbac5d1958eb1d7",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Personal 免费层限非商业使用，不能默认客户部署适用；商用套餐及资源需另外核算。链路保护不是全部组件本地化证明。",
+      "read_result_sha256": "a90afb0ea5250054ff96980309d7519f3a28f3abc3050ac3cff3368f7ae4cb7b",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "convex",
+      "url": "https://www.convex.dev/pricing",
+      "title": "Convex 定价与资源",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.481263+00:00",
+      "read_method": "public_web_read",
+      "characters": 76,
+      "sha256": "e0b0933f670a9d8b149450e6c383d70fc5c8e0e17cbb4f1e0ea216df0e69c83d",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 有内置额度，Starter 超额按量，Professional 显示每开发者每月 USD 25；资源有独立上限与计费，不能把免费层当零总成本。",
+      "read_result_sha256": "7abbc94c01538d101f2ea871439bb20d8be2ed8cf692764edcc1ff365dcad6ab",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "asana",
+      "url": "https://asana.com/pricing",
+      "title": "Asana 价格",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.481379+00:00",
+      "read_method": "public_web_read",
+      "characters": 57,
+      "sha256": "1b0464383547ec2f9f9ea3124b5e948604bdc820153f6a746ce9e1321326af38",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Starter 显示每席年付月均 USD 10.99、月付 USD 13.49，不能当作作者实际单人账单或净节省。",
+      "read_result_sha256": "7abbc94c01538d101f2ea871439bb20d8be2ed8cf692764edcc1ff365dcad6ab",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "postiz",
+      "url": "https://postiz.com/pricing",
+      "title": "Postiz 价格",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.482009+00:00",
+      "read_method": "public_web_read",
+      "characters": 52,
+      "sha256": "e116fbd3cfc5d2a5b14f6939b7c178aa44bf7f2225c0d3d9713f99dd0d2e4ba3",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Standard 月付 USD 29，年付月均 USD 23；自托管不免主机、模型与维护。未核作者选择。",
+      "read_result_sha256": "7abbc94c01538d101f2ea871439bb20d8be2ed8cf692764edcc1ff365dcad6ab",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/build-and-maintain-a-local-ops-dashboard-with-agents",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.482323+00:00",
+    "source_sha256": "d8e36d4dfd0b6ebccb60d8e91b98569e06e3e4a5ae12db543999f71ac9e89e8f",
+    "steps": [
+      {
+        "en": "The archive reports a dashboard using Convex, Postiz and Tailscale.",
+        "zh": "归档转述作者搭建使用 Convex、Postiz 和 Tailscale 的看板。"
+      },
+      {
+        "en": "Fred reviewed the dashboard and wrote scoped tasks; an engineering agent worked overnight and the author reviewed the results in the morning.",
+        "zh": "Fred 检查并拆解有限任务，工程 agent 夜间执行，作者早晨复核。"
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "extract-supplier-invoice-pdfs-into-a-monday-com-board",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "68736788325093ee8c64054f5074e7491face3fedc9600291faa341231a96453",
+  "translated_at": "2026-10-19T08:50:00+00:00",
+  "body": "将供应商发票 PDF 提取录入 monday.com 看板\n通过 Make.com 自动化工作流监听 Google Drive 文件夹中的供应商发票 PDF，利用 AI 提取器提取字段并写入 monday.com。\n使用工具\nMK\nMake\n他们做了什么\n该教程展示了一个 Make 自动化场景（Scenario），用于监听指定的 Google Drive 文件夹以获取新上传的供应商发票 PDF，自动下载每个文件，并通过 Make 原生 AI 提取器（AI Extractors）解析出诸如发票编号、供应商信息、日期和金额等字段。提取后的数据随后被写入 monday.com 的“供应商发票”看板。教程指导使用者完成 Google Drive 与 monday.com 的连接授权，确保拥有足够的 Make AI Extractor 积分，套用预置场景模板，并进行测试直至所有模块均显示成功运行。\n进展与成效\n作者宣称原本需要人工处理的发票录入工作现在可以在数秒内全自动完成。但帖文除了建议用户测试并验证自动化场景外，未提供具体的识别准确率、吞吐量数据或异常边界情况处理。\n值得注意\n用户需要准备好 Make AI Extractor 积分、配置好的 monday.com 看板以及 Google Drive 连接授权；该帖主要推荐了一套预置的自动化场景模板，并未详述异常分支或脏数据清理工作。\n亲自尝试\n使用\nMake\n复制提示词\n构建一个 Make 自动化场景，监听我的 Google Drive 文件夹 [文件夹名称] 中的新供应商发票 PDF，并利用 AI 提取供应商、发票编号、开票日期、费用明细行及总金额。在我的 monday.com 看板 [看板名称] 中为每张发票创建一条条目，将数据字段映射到对应列 [列名称]，并将任何包含缺失或模糊字段的 PDF 标记为待人工复核。使用 [数量] 个样本 PDF 进行测试，并在正式启用前向我展示提取结果。\n原始来源：https://www.reddit.com/r/Make/comments/1vknc6a/tutorial_automated_supplier_invoice_processing",
+  "body_sha256": "b54933834e0886236507aa00527393ebed9aa4b3113aa2bc4e028a2d3da7da36",
+  "scope": "完整归档提取正文中文译文；外链全文不在包内"
+}

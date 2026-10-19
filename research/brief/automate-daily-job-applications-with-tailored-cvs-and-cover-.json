@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "automate-daily-job-applications-with-tailored-cvs-and-cover-",
+  "url": "https://agentusecases.ai/use-case/automate-daily-job-applications-with-tailored-cvs-and-cover-",
+  "title": "用 n8n 筛选职位并起草定制求职资料",
+  "industry": "求职辅助",
+  "researched_at": "2026-10-19T13:35:43.303315+00:00",
+  "brief_reason": "原帖本次未读；不保留摘录之外的 Gemini 型号、十五节点子流程、评论/替代品或作者明确未统计的主张。许可范围及价格尚需按实际部署核实。未配置、未实测、未投递。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+  "archive_source_sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+  "translation_sha256": "68fb12e9db2d8c9a927738a13d74ecb1d59a0b0e0221bc0506f9402705e7a5fc",
+  "facts": [
+    {
+      "statement": "归档转述该工作流每天拉取职位、经 Google Sheets 去重和模型排序，起草求职信；可选 GitHub YAML 简历编译子流程，最终邮件发给作者，由作者人工投递。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "归档称约五十一个节点，作者自述用自制辅助工具约两小时搭建；没有面试或录用结果。未保留型号、节点子流程数量或社区逐字评论的支持。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/n8n/comments/1r95t1k/i_built_a_fully_automated_job_application",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "未测求职结果和全成本净节省，不能因作者两小时构建外推普通人的设置时长。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "整理职位并形成可信的求职草稿，保留本人最终复核与投递。",
+    "benefit": "可能降低重复整理负担；不保证面试、录用或求职效率净提升。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "求职期间按需重复，固定普通画像的频率未验证。",
+    "privacy_risk": "简历、邮箱、工作经历可能传至抓取服务、模型、GitHub 和邮件平台；总费用、最小权限、留存与删除未核实，自有账号不等于已控制数据流。",
+    "error_risk": "可能误匹配职位、伪造经历或泄露简历；不自动联系雇主或投递，所有对外材料须本人确认。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "n8n、职位数据、模型与资料存储；原案准确模型版本未知。",
+    "expected_result": "取得合成职位的匹配理由、事实核对和草稿，不产生真实投递。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅用虚构或获准脱敏简历与职位文本，列必备条件、匹配证据、缺口和求职信草稿。不得新增技能、资历或经历。缺失信息标未知。不得发信、填申请或提交。逐项人工复核事实后再由本人决定投递。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a workflow that runs every day at [time], searches [job boards or sites] for [job title] roles in [location], and picks postings that match my CV at [link to CV file]. For each match, have the AI tailor my CV and write a cover letter, then prepare an application email to the contact in the posting. Don't send any email automatically; first post each draft with the job link to [Slack channel or my email] for my approval. The workflow is finished when one test run produces reviewed drafts for at least [number] jobs.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/automate-daily-job-applications-with-tailored-cvs-and-cover-",
+    "observed_at": "2026-10-18T06:13:08.980387+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "a826890202f28454ca5a11a9d636607e65de051c7837bbaefde8136f4c6ba56d"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "可交付的是材料准备与筛选辅助，不能销售为已验证的全自动门户投递或提高录用率。应先比较招聘网站提醒、静态简历与人工筛选；任何改写须忠于真实经历。对外代运行还要核实平台许可、资料权限和服务条款，不能由“开源/可自托管”推出任意托管转售都获许可。",
+      "source_ids": [
+        "archive",
+        "n8n-hosting"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "求职期可能存在周期任务，但普通人的实际每周职位量、复核返工和维护未知。若设初始 S、每周毛省 G、复核维护 M、新增周现金 C，则连续回本周数仅在分母为正时为 25S/[25(G−M)−C]。删掉旧稿十至十二周及一至两个月通常为负的断言，没有从假设反推实测。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "保留人工投递，先验证草稿质量",
+    "reason": "有可描述的辅助流程，但没有结果证据、成本控制或稳定复现；两种原情景已知现金均超过固定预算，不能照此开试点。",
+    "next_action": "先离线核对合成职位与简历，记录匹配、事实错误和复核时间；重新设计低成本方案后再决定是否投入。",
+    "stop_condition": "若改写不忠于经历、资料授权不明，或计入人工和获客后持续为负，停止代运行方案。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "单求职者月度代运行与辅助复核服务包（情景假设）",
+      "unit": "单求职者月度服务包（按 30 天/月计，含每日职位拉取、求职信草稿生成与人工抽检汇总，不含代客手工填表投递）",
+      "currency": "USD",
+      "price": 150.0,
+      "api_cost": 15.0,
+      "human_cost": 125.0,
+      "other_variable_cost": 10.0,
+      "acquisition_cost": 80.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "保留150报价；125人工=5小时。已列变动230，单位贡献−80，月贡献3×(−80)−20=−260；现金3×(15+10+80)+20=335，已超预算。无原始日志时不恢复旧乱码金额。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 230.0,
+      "known_unit_contribution": -80.0,
+      "known_monthly_contribution": -260.0,
+      "unknown_variable_cost": false,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 105.0,
+      "cash_4week_known": 335,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": -135,
+      "budget_status": "known_items_already_over_budget"
+    },
+    {
+      "scenario": "单次工作流模板改造与远程部署指导（情景假设）",
+      "unit": "单次模板交付与配置指导项目（一次性交付，后续日常运行费用由客户自理）",
+      "currency": "USD",
+      "price": 200.0,
+      "api_cost": 5.0,
+      "human_cost": 100.0,
+      "other_variable_cost": 10.0,
+      "acquisition_cost": 120.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "保留200报价；100人工=4小时。已列变动235，单位贡献−35，月贡献2×(−35)−20=−90；现金2×(5+10+120)+20=290，已超预算。软件20是规划月付预算，不是官方价。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 235.0,
+      "known_unit_contribution": -35.0,
+      "known_monthly_contribution": -90.0,
+      "unknown_variable_cost": false,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 135.0,
+      "cash_4week_known": 290,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": -90,
+      "budget_status": "known_items_already_over_budget"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "模板代运行的获客与人工复核可能超过收费；作者未给面试结果不等于已经证明毫无效果。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原帖本次未读；不保留摘录之外的 Gemini 型号、十五节点子流程、评论/替代品或作者明确未统计的主张。许可范围及价格尚需按实际部署核实。未配置、未实测、未投递。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/automate-daily-job-applications-with-tailored-cvs-and-cover-",
+      "title": "Automate daily job applications with tailored CVs and cover letters",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.303315+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:01.708431+00:00",
+      "characters": 1902,
+      "sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+      "hash_scope": "registry/archives/automate-daily-job-applications-with-tailored-cvs-and-cover-.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "n8n-hosting",
+      "url": "https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker.md",
+      "title": "n8n 自托管安装说明（该页标记过时）",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.303060+00:00",
+      "read_method": "public_web_read",
+      "characters": 63,
+      "sha256": "cf93ccca81e1b86919f2f963c97d615b36570b0f2e462fec4354499e5495535f",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "官方提醒自托管需要服务器、资源和安全配置知识，错误可能造成数据丢失、泄露与停机；本页另标记安装说明已过时，不作为当前操作教程。",
+      "read_result_sha256": "dd92e9e7d95a26f18e3558131f930b486d862e18afec2c2b122fde9fc4f48fe0",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/automate-daily-job-applications-with-tailored-cvs-and-cover-",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.303315+00:00",
+    "source_sha256": "43240fe41902f8e6b2b65bb4052d2856c1edac80a01c7c9aeb2c300584da2642",
+    "steps": [
+      {
+        "en": "The archive describes scheduled job retrieval, deduplication and AI ranking.",
+        "zh": "归档描述定时检索职位、去重和模型排序。"
+      },
+      {
+        "en": "The workflow drafts tailored application materials and emails the pack to the applicant.",
+        "zh": "流程生成定制求职材料并把资料包发给求职者。"
+      },
+      {
+        "en": "The applicant reviews the pack and applies manually through the job link; GitHub CV compilation is optional.",
+        "zh": "求职者复核后通过链接人工投递；GitHub 简历编译可选。"
+      }
+    ]
+  }
+}

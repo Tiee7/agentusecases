@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "automate-customer-onboarding-with-a-make-scenario",
+  "url": "https://agentusecases.ai/use-case/automate-customer-onboarding-with-a-make-scenario",
+  "title": "用 Make 和 Slack 同步客户入职数据",
+  "industry": "客户入职与低代码流程",
+  "researched_at": "2026-10-19T13:35:43.207958+00:00",
+  "brief_reason": "原帖本次未读，无模块蓝图、发票、真实订单成本、运行日志或个人实测；两轨总分 null。旧读取凭据、历史金额乱码与根因推断均不认证。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "b04810d71c7832add84fc4cd6bf44e1315999f901ba2c75a9fbf22db4930bbcb",
+  "archive_source_sha256": "b04810d71c7832add84fc4cd6bf44e1315999f901ba2c75a9fbf22db4930bbcb",
+  "translation_sha256": "b42b54e5ecf271cf88a664be7c9d7f840b7f2a3847d6e68cbf036770ef73acf4",
+  "facts": [
+    {
+      "statement": "聚合归档称团队先花两小时梳理流程，发现三名员工在三个工具间重复录入；改用 Make 场景与 Slack，四天交付，客户支付原发票，声称每周节省十五小时。无发票金额或独立效果记录。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "Make 官方文档将 credits 与完整工作流区分；Core 年付仍按月分配额度，年费需预付。",
+      "type": "verified",
+      "source_ids": [
+        "make-credits",
+        "make-billing"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/u_Actual-Struggle9480/comments/1vhxx3q/client_paid_us_to_build_an_ai_agent_we_killed_the",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "仅有团队单例自述，缺个人设置、复核和净节省实测。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "同步入职表单、文件夹与任务，邮件保持草稿供人工确认。",
+    "benefit": "可能减少重复录入；没有可外推的个人节省时长。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "依实际入职事件，普通人的稳定频次未知。",
+    "privacy_risk": "客户信息与元数据可能流经 Make、邮箱、网盘及 Slack；最小权限、数据地域、删除和迁移未核实，不声称具体 AWS 节点或双因素认证已配置。",
+    "error_risk": "字段变化、凭据过期、额度耗尽及重复事件可导致漏项或误发，需要可见失败与人工确认。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "Make、Slack、所需表单/网盘/任务工具；具体套餐须按实际用量核价。",
+    "expected_result": "得到模拟字段映射、每步 credits 计量及失败清单；未运行或发送真实信息。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "仅用合成客户信息，列出表单→建夹→任务→欢迎邮件草稿→Slack 摘要的字段映射与权限。先演练重复、缺值、超额和失败恢复；不连接真实账户或发信。发送任何客户邮件前展示草稿并等待本次明确批准。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a Make scenario that starts when a new client signs up through [form or CRM trigger] and runs our onboarding steps: create their folder in [Drive or tool], send the welcome email, add tasks to [project tool], and post a summary to Slack channel [channel]. Use fixed steps rather than an open-ended AI agent so it behaves predictably. Pause before sending the client email and show me the draft, and finish once a test signup runs cleanly through every step.",
+    "agent": "Make",
+    "source_url": "https://agentusecases.ai/use-case/automate-customer-onboarding-with-a-make-scenario",
+    "observed_at": "2026-10-18T06:13:22.954190+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e9a78f1e24bd9b3ab59b436f78f14b8366fe7854b46e37dde47b5e4cd9242afd"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "客户购买的是流程梳理、跨工具映射和异常交接。作者自述表明存在一例付款，但没有合同金额、获客成本或后续维护，不能推断单人经营者能复现。优先比较现有原生直连、规则自动化与人工处理，避免为简单步骤额外增加开放式模型。标准步骤仍须处理字段变更、重复触发和失败恢复。",
+      "source_ids": [
+        "archive",
+        "make-credits",
+        "make-billing"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "三人团队的十五小时毛节省不能直接分给普通单人用户。个人设定 S 小时、每周毛省 G 小时、复核返工维护 M 小时、周新增现金 C 美元时，仅在 25(G−M)−C>0 才有时间价值回本，连续周数为 25S/[25(G−M)−C]。本案 S/G/M/C 未实测，因此删去旧稿八至十周断言；免费、月付与年付的现金回收另算。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证流程价值与交付工时",
+    "reason": "付款自述与确定性替代方案值得小规模验证，当前没有可认证的利润、可靠性或个人回本时间。",
+    "next_action": "先用合成数据做字段与失败检查，之后在总现金不超过 USD 200 的条件下测试客户需求；年付第二情景不在本预算内。",
+    "stop_condition": "若实际工时、复核或获客使全成本贡献不再为正，或无法约束权限和误发，停止商业试点。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "保守型小微企业定制交付（服务商采用 Make Core 月付方案）",
+      "unit": "单次客户入职流程梳理与 Make 场景交付项目",
+      "currency": "USD",
+      "price": 600.0,
+      "api_cost": 0.0,
+      "human_cost": 375.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 100.0,
+      "units_per_month": 1.0,
+      "fixed_monthly_cost": 16.0,
+      "assumptions": "保留原包 USD 16/月作为服务商沙箱的软件规划假设，本次可读官方页未返回动态价格卡，不将其认证为当前报价。现金=100 获客+16 固定=116。人工375对应15小时；月贡献109−x。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 475.0,
+      "known_unit_contribution": 125.0,
+      "known_monthly_contribution": 109.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 16.0,
+      "cash_variable_per_unit": 100.0,
+      "cash_4week_known": 116,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 84,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "标准化入职模板与培训交付（服务商采用 Make Core 年付折算方案）",
+      "unit": "单次标准化入职模板配置与培训交付项目",
+      "currency": "USD",
+      "price": 1200.0,
+      "api_cost": 0.0,
+      "human_cost": 500.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 250.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 12.0,
+      "assumptions": "保留原包 USD 12/月的年付摊销作为规划假设，12×12=144 为推算的订阅基础额，结账税费未知；现金=2×250+144=644。人工500对应20小时；月贡献888−2x。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 750.0,
+      "known_unit_contribution": 450.0,
+      "known_monthly_contribution": 888.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 144,
+      "cash_variable_per_unit": 250.0,
+      "cash_4week_known": 644,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": -444,
+      "budget_status": "known_items_already_over_budget"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "已有原生集成或客户自行配置会削弱交付溢价；低频用户可能抵不过配置与复核。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 原帖本次未读，无模块蓝图、发票、真实订单成本、运行日志或个人实测；两轨总分 null。旧读取凭据、历史金额乱码与根因推断均不认证。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/automate-customer-onboarding-with-a-make-scenario",
+      "title": "Automate customer onboarding with a Make scenario",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.207958+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:17:15.835024+00:00",
+      "characters": 1474,
+      "sha256": "b04810d71c7832add84fc4cd6bf44e1315999f901ba2c75a9fbf22db4930bbcb",
+      "hash_scope": "registry/archives/automate-customer-onboarding-with-a-make-scenario.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "make-credits",
+      "url": "https://help.make.com/credits",
+      "title": "Make Credits",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.207110+00:00",
+      "read_method": "public_web_read",
+      "characters": 68,
+      "sha256": "4afcad6bbc11da9c8148028f930b8be520ac09dfd80446e9b9220522c3957a5c",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "非 AI 标准模块通常按每次操作计一个 credit；AI 功能可按操作、token 等动态消耗。一次完整入职不等于一个 credit。",
+      "read_result_sha256": "def80a0ab30646c837603b9e9bf1c977409aaee39588ad4bdfd5d0a53745883b",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "make-billing",
+      "url": "https://help.make.com/monthly-and-annual-subscriptions",
+      "title": "Make 月付与年付规则",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.207718+00:00",
+      "read_method": "public_web_read",
+      "characters": 38,
+      "sha256": "86c5b149d0ffadea54a4b3b0bec8f4f43b1a9d02174d9f9ee76945b4c3f33e72",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "年付须预付全年；Core 即使年付仍按月分配 credits。未核结账税费。",
+      "read_result_sha256": "def80a0ab30646c837603b9e9bf1c977409aaee39588ad4bdfd5d0a53745883b",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/automate-customer-onboarding-with-a-make-scenario",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.207958+00:00",
+    "source_sha256": "b04810d71c7832add84fc4cd6bf44e1315999f901ba2c75a9fbf22db4930bbcb",
+    "steps": [
+      {
+        "en": "The archive reports that the team mapped the existing onboarding workflow before building.",
+        "zh": "归档转述团队先梳理现有入职流程。"
+      },
+      {
+        "en": "They replaced duplicate entry across three tools with a Make scenario and a Slack channel.",
+        "zh": "用 Make 场景和 Slack 频道替代跨三个工具的重复录入。"
+      }
+    ]
+  }
+}

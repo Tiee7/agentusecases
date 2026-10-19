@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "deploy-agent-built-static-pages-to-your-own-cloudflare-domai",
+  "url": "https://agentusecases.ai/use-case/deploy-agent-built-static-pages-to-your-own-cloudflare-domai",
+  "title": "用 Cloudflare Workers 发布 agent 静态页面",
+  "industry": "团队报告发布",
+  "researched_at": "2026-10-19T13:35:43.645383+00:00",
+  "brief_reason": "HN 原帖和 getonup 代码本次未读；没有独立复现、SLA或实际账单。旧包复核时间与封包冲突，未反猜历史时刻。当前来源不证明作者当时采购。",
+  "commercial_score": null,
+  "profile_id": "solo-generalist-v1",
+  "source_body_sha256": "019a34598240374b3f74430079d9f194640c8ef3cb5440bf2eff17d6f556e3e0",
+  "archive_source_sha256": "019a34598240374b3f74430079d9f194640c8ef3cb5440bf2eff17d6f556e3e0",
+  "translation_sha256": "66d5806b6190f5c783174e1ba6f38c6749f01a50787a0cc055b655baea87a58b",
+  "facts": [
+    {
+      "statement": "归档称作者构建 getonup，让 agent 对选定 Cloudflare 账户和域名配置 Workers 与 Zero Trust，生成按日期排序的页面索引；作者与团队自述经常一天发布数页。",
+      "type": "author_claim",
+      "source_ids": [
+        "archive"
+      ]
+    },
+    {
+      "statement": "当前官方计费区分 Worker 调用、普通静态资产与 KV；免费层有范围和上限，Paid 最低费不是总费用封顶。",
+      "type": "verified",
+      "source_ids": [
+        "workers",
+        "kv"
+      ]
+    }
+  ],
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=49941666",
+    "source_title": "登记的原始来源（本次未实读）",
+    "unavailable_reason": "本次未直接读取该原始外链；另列归档转述摘要，不将聚合站当一手来源。",
+    "steps": []
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有团队初步使用转述，没有固定普通人的频次、完整净收益或安全实测。",
+    "audience": "固定画像 solo-generalist-v1：普通通用知识工作者；专业或高频客户仅作敏感性场景。",
+    "use": "在自有域名发布静态成果并管理受控访问与索引。",
+    "benefit": "可能降低平台切换成本，实际可移植性与净节省未测。",
+    "setup_cost": "设置工时未实测，须记录初次配置、授权与排错。",
+    "maintenance_cost": "维护、逐项复核与返工均未实测；自用边界每周维护不超过 1 小时、月新增现金不超过 USD 20。",
+    "frequency": "团队经常日发数页为作者自述；普通人的发布量未知。",
+    "privacy_risk": "内容托管 Cloudflare，可能还经模型与身份服务。自有域名不是本地私有；实际保护范围、保留与数据地域未知。",
+    "error_risk": "错误 Access/DNS 或预览入口可能暴露内容；配额、部署和续期仍需维护。没有99.9%工作流可用性证明。",
+    "source_ids": [
+      "archive"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "missing",
+    "source_prompt_note": "完整保留源站建议模板 source_trial；它不是作者实际提示词或实现证明。自编模板仅为未实测演练。",
+    "prerequisites": "仅用合成或获准脱敏输入，先检查所需账户、许可和额度；本轮未登录、调用付费 API 或创建凭据。",
+    "tools": "未具名作者 agent、getonup、Cloudflare Workers/Zero Trust；Claude Code 是源站推荐。",
+    "expected_result": "形成部署/路由/权限/用量验收清单，未改 DNS、账户或发布页面。",
+    "prompts": [
+      {
+        "title": "合成输入下的受控检查（自编）",
+        "language": "zh-CN",
+        "kind": "ours",
+        "attribution": "我们编写，非作者原话；未实测。",
+        "source_url": null,
+        "source_ids": [
+          "archive"
+        ],
+        "text": "对合成静态页面拟定发布流程。先列全部域名、默认/预览路由、资源、访问规则、回滚与费用，并展示拟改配置。不得实际登录、改 DNS、安全权限、创建凭据或部署。明确检查未授权访问与所有备用入口，未测试前不得承诺私有或高可用。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me set up a way to publish static HTML pages to my own domain [yourdomain.com] using Cloudflare Workers, with access limited to [team email domain] through Cloudflare Zero Trust. Each published page should get a dated entry on an index page. Walk me through each Cloudflare change and show me the exact commands or config before running anything that changes my account or DNS. You're done when I can publish a test page and see it listed on the index behind login.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/deploy-agent-built-static-pages-to-your-own-cloudflare-domai",
+    "observed_at": "2026-10-18T06:13:06.982483+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "0bd4d196313f2f132727d4ee0df3f3d0e9205387ba65318cfcbdcb9d5028cfe9"
+  },
+  "analysis": [
+    {
+      "id": "workflow-business",
+      "title": "业务、交付与替代方案",
+      "body": "可提供团队发布入口、索引与受控访问配置的交付，不应宣传物理私有部署或任何工具无缝迁移。KV、邮箱域规则、OTP 和一键脚本仅是可选设计；未读代码不能归为作者实装。需要验收默认域、预览、资产和所有路由的访问策略，不能因登录页存在就保证无旁路。",
+      "source_ids": [
+        "archive",
+        "workers",
+        "kv"
+      ]
+    },
+    {
+      "id": "personal-boundary",
+      "title": "自用净收益与证据边界",
+      "body": "自有域名仍是托管云端；减少服务器补丁工作不等于免 DNS、域名、授权、备份与额度维护。三小时设置、每次省五分钟若只比毛时间是36次，但缺频次、复核维护和现金，不认证二至三个月净回本。净收益以 25×(累计毛省时−设置−复核返工维护)−新增现金 计算。",
+      "source_ids": [
+        "archive"
+      ]
+    }
+  ],
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核访问边界与完整运营成本",
+    "reason": "团队初步使用可作为设计线索；未经部署、权限与配额验收，不认证安全隔离或免维护。",
+    "next_action": "离线检查配置方案和全部访问入口，用合成页面计划最小验收；真实账户变更应单独获得授权。",
+    "stop_condition": "若不能验证全部入口受控，或实际维护/域名/用量超预算，停止交付安全承诺。"
+  },
+  "unit_economics": [
+    {
+      "scenario": "自有域名静态成果发布与访问配置交付（规划）",
+      "unit": "一套托管云端发布入口配置，不含物理私有部署承诺",
+      "currency": "USD",
+      "price": 350.0,
+      "api_cost": 5.0,
+      "human_cost": 125.0,
+      "other_variable_cost": null,
+      "acquisition_cost": 50.0,
+      "units_per_month": 2.0,
+      "fixed_monthly_cost": 20.0,
+      "assumptions": "人工125=5小时；月贡献2×(350−5−125−50)−20=320−2x，现金2×(5+50)+20=130。固定20为软件测试规划，不是完整官方报价；域名、Access和其他用量未核费用须另计。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 180.0,
+      "known_unit_contribution": 170.0,
+      "known_monthly_contribution": 320.0,
+      "unknown_variable_cost": true,
+      "cash_fixed_upfront": 20.0,
+      "cash_variable_per_unit": 55.0,
+      "cash_4week_known": 130,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 70,
+      "budget_status": "conditional_on_unlisted_costs"
+    },
+    {
+      "scenario": "年度静态成果基础维保（每月新增年约批次规划）",
+      "unit": "一个新签年约；需承担未来全年履约，不等于月度续费收入",
+      "currency": "USD",
+      "price": 120.0,
+      "api_cost": 1.0,
+      "human_cost": 25.0,
+      "other_variable_cost": 12.0,
+      "acquisition_cost": 20.0,
+      "units_per_month": 3.0,
+      "fixed_monthly_cost": 15.0,
+      "assumptions": "人工25=1小时的全年基础维保假设，不代表足够；12是每新年约域名年费预算而非通用官方价。本月新签3份年约，则贡献3×(120−1−25−12−20)−15=171，现金3×(1+12+20)+15=114。未来全年维护、续期和未列服务成本仍须扣除。 所有报价、销量、API预算、获客费与工时均为未测试情景，人工按 USD 25/小时；模型/API预算不等于单位调用实测价。客户生产许可及既有设备由客户承担，不含在服务商测试预算内；服务商仍未核的付款手续费、税费、超额用量及额外预付须另计，不以 null 当 0。已知项贡献不是实际利润或订单证明。",
+      "source_ids": [
+        "archive"
+      ],
+      "known_variable_cost": 58.0,
+      "known_unit_contribution": 62.0,
+      "known_monthly_contribution": 171.0,
+      "unknown_variable_cost": false,
+      "cash_fixed_upfront": 15.0,
+      "cash_variable_per_unit": 33.0,
+      "cash_4week_known": 114,
+      "cash_budget_limit": 200,
+      "budget_buffer_for_unlisted_cash": 86,
+      "budget_status": "conditional_on_unlisted_costs"
+    }
+  ],
+  "feedback": {
+    "case_author_self_reports_verified": 0,
+    "independent_user_feedback_count": 0,
+    "independent_feedback_signal": null,
+    "note": "归档中的作者叙述是聚合转述，无独立直接使用者效果样本；无证据不等于差评。"
+  },
+  "disconfirming_evidence": "现有静态托管与文档发布可能满足需求；免费额度不能替代权限与维护验收。",
+  "limitations": "本次未重新取得外链原帖；仅使用已授权归档转述。旧包声称的读取时间和短摘不被当成本次独立核验。 HN 原帖和 getonup 代码本次未读；没有独立复现、SLA或实际账单。旧包复核时间与封包冲突，未反猜历史时刻。当前来源不证明作者当时采购。",
+  "sources": [
+    {
+      "id": "archive",
+      "url": "https://agentusecases.ai/use-case/deploy-agent-built-static-pages-to-your-own-cloudflare-domai",
+      "title": "Deploy agent-built static pages to your own Cloudflare domain",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:35:43.645383+00:00",
+      "read_method": "approved_git_archive",
+      "original_observed_at": "2026-10-19T07:16:59.800084+00:00",
+      "characters": 1524,
+      "sha256": "019a34598240374b3f74430079d9f194640c8ef3cb5440bf2eff17d6f556e3e0",
+      "hash_scope": "registry/archives/deploy-agent-built-static-pages-to-your-own-cloudflare-domai.json#/source_text/body UTF-8",
+      "summary": "本次离线实读归档正文；归档是聚合站转述，不能等同外链原作者已实读。"
+    },
+    {
+      "id": "workers",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "title": "Workers 当前计费",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.644965+00:00",
+      "read_method": "public_web_read",
+      "characters": 100,
+      "sha256": "765e9cd112968275af51882d5dcb6884bb56a19306021f85cab0982b0b7bf8df",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 为每日十万次 Worker 调用，Paid 账户最低每月 USD 5，超额另计。普通直接静态资源请求与执行 Worker 分开；启用 Workers Caching 的缓存请求仍按请求费计。",
+      "read_result_sha256": "066b6236c4544babd7d8552c55a9a013a59b9f2614e532f7f8ff995f3cc5292c",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    },
+    {
+      "id": "kv",
+      "url": "https://developers.cloudflare.com/kv/platform/pricing/",
+      "title": "KV 额度",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T13:30:00+00:00",
+      "read_window": {
+        "start": "2026-10-19T13:18:00+00:00",
+        "end": "2026-10-19T13:30:00+00:00"
+      },
+      "timestamp_semantics": "fetched_at is the inclusive upper bound of the actual public-read window, not an exact retrieval second; exact per-call timestamps were not retained",
+      "recorded_at": "2026-10-19T13:35:43.645122+00:00",
+      "read_method": "public_web_read",
+      "characters": 74,
+      "sha256": "f3208ad8e807c4d38867c751e05d41c8baca539cbd8fcb70afa1469b6a1cd7de",
+      "hash_scope": "summary UTF-8; researcher paraphrase, not a hash of the complete remote page",
+      "summary": "Free 每日读十万键，写、删、list 各一千，总存储1GB；每天 UTC 零点重置，超出该类操作失败。若经 KV 读 HTML，仍需计相关用量。",
+      "read_result_sha256": "56a015fef2a3af109bd68c6866b844f2fd9949bd84b3d2e44ff1f829e2652bcd",
+      "read_result_scope": "Local web tool JSON result; raw result retained outside Git, not publicly redistributed"
+    }
+  ],
+  "import_provenance": {
+    "provider": "Spark",
+    "package_sha256": "62242bb6feda5e777772b68236c1e962bfdf8b37991a860eca9e1f58a8458401",
+    "normalization": "Re-reviewed and corrected into current repository brief format; original package is immutable and is not published as current facts.",
+    "acceptance_run": "spark-ten-case-repair-20261019"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/deploy-agent-built-static-pages-to-your-own-cloudflare-domai",
+    "source_title": "AgentUseCases 归档转述的方法摘要",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T13:35:43.645383+00:00",
+    "source_sha256": "019a34598240374b3f74430079d9f194640c8ef3cb5440bf2eff17d6f556e3e0",
+    "steps": [
+      {
+        "en": "The archive reports that the author built getonup and pointed an agent to its repository.",
+        "zh": "归档转述作者构建 getonup，并让 agent 读取其仓库。"
+      },
+      {
+        "en": "The agent was asked to configure the project on a chosen Cloudflare account and domain, including Zero Trust.",
+        "zh": "要求 agent 在选定的 Cloudflare 账户与域名配置项目及 Zero Trust；具体内部配置未核。"
+      }
+    ]
+  }
+}
