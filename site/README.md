@@ -46,9 +46,9 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 - Build Command：`ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run build`。
 - Output Directory：`site/dist`。
 - Production Branch：`main`。无需环境秘密、服务端 adapter、数据库或付费 API。
-- Git 集成完成后，main 的内容变更应触发新构建。仅成功构建的 `site/dist` 可部署，不要部署仓库根目录作为静态文件目录。
+- 当前 Git 自动部署关闭；main 内容变更不触发 Vercel 构建，用户要求时手动发布。仅成功构建的 `site/dist` 可部署，不要部署仓库根目录作为静态文件目录。
 
-发布协调方已在用户重新授权后完成生产部署并关联 main 自动发布，详见[2026-10-15 部署回执](docs/deployment-receipt-2026-10-15.md)。已确认 READY 与匿名 HEAD 200；后续完整 GET 和浏览器验收被取消，完整线上验收仍未完成。本地通过不代替线上验收。
+2026-10-15 曾完成生产部署并关联 main 自动发布（现已关闭，见下方当前发布方式），详见[2026-10-15 部署回执](docs/deployment-receipt-2026-10-15.md)。已确认 READY 与匿名 HEAD 200；后续完整 GET 和浏览器验收被取消，完整线上验收仍未完成。本地通过不代替线上验收。
 
 ## 设计与验证依据
 
@@ -68,7 +68,7 @@ ASTRO_TELEMETRY_DISABLED=1 npm --prefix site run test:e2e
 
 首页同时提供全部收录与已完成深研入口；最近收录区已按后续要求移除。目录按 `first_seen_at` 降序排列，同时间按 ID 排序，未知日期置后。未完成案例标记待研究并链接来源，只有符合原内容契约的记录生成报告页。
 
-`bootstrap` 从 SQLite 的目录及详情观测历史取得首次收录时间，并保留登记表已有时间。此次为 1,348 条记录回填日期：1,289 条来自已有历史数据库，59 条来自 Git 中首次出现该 ID 的 registry 提交时间（含最新 14 条）。这些是本站收录记录时间，不是源站发布日期。构建仍只读取 Git 中的 registry/research/reports，不依赖本地数据库或 Git 历史；后续自动收录将日期一起提交，main 自动部署后即可出现。
+`bootstrap` 从 SQLite 的目录及详情观测历史取得首次收录时间，并保留登记表已有时间。此次为 1,348 条记录回填日期：1,289 条来自已有历史数据库，59 条来自 Git 中首次出现该 ID 的 registry 提交时间（含最新 14 条）。这些是本站收录记录时间，不是源站发布日期。构建仍只读取 Git 中的 registry/research/reports，不依赖本地数据库或 Git 历史；后续自动收录将日期一起提交，下一次获准手动发布后即可出现。
 
 验证覆盖新增未研究案例排序、未知日期回退、日期重复同步稳定性、首页入口及目录排序、目录搜索、构建目录数量与禁用重复文案。来源、具体风险、数据缺失仍保留；源站模板、自编未实测提示词及经济情景用短标签说明。
 

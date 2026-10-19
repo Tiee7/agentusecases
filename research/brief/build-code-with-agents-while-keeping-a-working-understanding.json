@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "build-code-with-agents-while-keeping-a-working-understanding",
+  "url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+  "title": "用编程智能体生成讲解测验并执行规格检查",
+  "industry": "软件理解与开发验证",
+  "researched_at": "2026-10-19T23:44:38Z",
+  "brief_reason": "原作者方法清楚，但自己的技能、验证器、形式化模型和实例回执未取得，缺可复核实现与交付经济性；不以通用测试文档填成完整系统深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "以代码证据和失败样例校验理解，不只生成解释",
+    "reason": "个人方法可尝试，具体实现和净收益仍待核。",
+    "next_action": "用自写小功能绑定需求、代码、讲解、测验和故障测试。",
+    "stop_condition": "解释无法对应代码、验证器漏掉已知缺陷或复核成本更高。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+      "title": "许可目录",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "permitted_cloud_browser",
+      "characters": 18377,
+      "sha256": "e3cdd24eacd4084a6c317060263b5465518e8597bc5dd99aabbfb05cae937b9b",
+      "hash_scope": "Captured public source response",
+      "supports": "完整方法与源站提示，实际模型未命名。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://news.ycombinator.com/item?id=50158650",
+      "title": "iamwil原始评论",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "permitted_cloud_browser",
+      "characters": 6039,
+      "sha256": "c5d51011b29c965dfd861a827477bde4944e8e96785f966faf4b0c3ceadb9230",
+      "hash_scope": "Captured public source response",
+      "supports": "访谈、重要决策、讲解测验、验证器四原则，无代码样例和量化效果。"
+    },
+    {
+      "id": "Sdiscussion",
+      "url": "https://news.ycombinator.com/item?id=50151036",
+      "title": "HN工程师背景讨论",
+      "kind": "independent",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "permitted_cloud_browser",
+      "characters": 19236,
+      "sha256": "84aac532582c50e643578ea1238bb88c542582c35d3438a4d6831b510dfd85de",
+      "hash_scope": "Captured public source response",
+      "supports": "有先设计再实现和审查负担的不同自述，非主案例独立复现。"
+    },
+    {
+      "id": "Sassert",
+      "url": "https://playwright.dev/docs/test-assertions",
+      "title": "Playwright官方断言",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 14434,
+      "sha256": "d95d50cac95efd25bf75b5df5b9acb6ca895b398c1d9ebdb813b31659584d3ec",
+      "hash_scope": "Captured public source response",
+      "supports": "DOM与网页状态可机械检查，不验证审美或规格完整性。"
+    },
+    {
+      "id": "Salternative",
+      "url": "https://github.com/joshuawheelock/grill-me/blob/main/README.md",
+      "title": "同名代码理解测验技能",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 13617,
+      "sha256": "b2bfb1b2020eca70138777ab986098538ba706d3df1d55f075105360152ab5d8",
+      "hash_scope": "Captured public source response",
+      "supports": "按实现提问的现有替代，不证明就是作者所用技能。"
+    },
+    {
+      "id": "Sstudy",
+      "url": "https://www.anthropic.com/research/AI-assistance-coding-skills",
+      "title": "AI辅助技能形成研究",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T23:44:38Z",
+      "read_window": {
+        "start": "2026-10-19T23:40:51Z",
+        "end": "2026-10-19T23:44:38Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 5455,
+      "sha256": "5b340f3e58a28b8aabb6c973ffeafadc79cdf616730d7a70e4d87418e192525d",
+      "hash_scope": "Captured public source response",
+      "supports": "新Python库学习的短期测验与不同使用方式，不是本工作流实验。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述访谈、保留重要决策、生成讲解测验和使用验证器四原则。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "原评论没有量化效果、具体模型或验证器实现链接。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Playwright官方提供网页状态等自动重试断言。",
+      "type": "verified",
+      "source_ids": [
+        "Sassert"
+      ]
+    },
+    {
+      "statement": "同名grill-me技能存在不同实现，未核为作者实际使用。",
+      "type": "verified",
+      "source_ids": [
+        "Salternative"
+      ]
+    },
+    {
+      "statement": "背景讨论存在设计责任与理解深度的不同观点。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdiscussion"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "先保留作者实际做法和证据缺口",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "作者提出四个可理解的原则，但没有给出他自己的技能文件、验证器源码、形式化模型、生成课程或测试回执。因此目前可复用的是工作方法，不是已验收的软件产品。减少凌晨反复修错是使用体验，不能量化为节省多少工时。原文泛称agent，没有明确产品、模型版本和付费套餐；目录建议Claude Code只是试用模板，不应填成作者真实工具。"
+    },
+    {
+      "id": "decisions",
+      "title": "重要决策不只由差异化决定",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "原作者愿把登录等通用子系统决策交给智能体，这是一种个人工作分配。研究者建议另加风险维度：登录、权限、支付或数据删除即使不构成产品差异，也可能有高影响。可把界面细节交由助手提出方案，但安全约束、验收条件和授权仍需明确。不能把“通用”翻译为“无需审核”，也不能让问答环节替代真正的实现检查。"
+    },
+    {
+      "id": "understanding",
+      "title": "解释、答题和独立修改是不同能力",
+      "source_ids": [
+        "Sauthor",
+        "Sstudy"
+      ],
+      "body": "讲解与测验能暴露疑问，却可能由同一模型重复同一个错误解释。应要求关键结论指向当前代码和测试，并让维护者预测一个未展示过的输入结果，或解释一个失败路径。Anthropic的新库学习研究提示AI使用方式与短期理解有关，但样本、任务与本案不同，不能用其测验差异证明这套四原则一定有效，更不能推长期职业能力。"
+    },
+    {
+      "id": "verification",
+      "title": "机械通过只能证明写入的条件",
+      "source_ids": [
+        "Sassert",
+        "Sauthor"
+      ],
+      "body": "Playwright已有网页断言，DOM尺寸和状态确实可以机械检查；作者所称设计验证器的具体规则生成与覆盖尚未公开核验。规则若把错误需求准确编码，测试仍会通过。形式化证明也依赖模型假设与实现映射，生成一条轨迹并运行成功，不代表已证明全部并发路径。建议保留需求、断言和失败样例的映射，区分测试通过、人工审查和仍未覆盖事项。"
+    },
+    {
+      "id": "alternatives",
+      "title": "同名技能不能自动归为同一作者",
+      "source_ids": [
+        "Salternative"
+      ],
+      "body": "公开搜索找到多个grill-me实现。其中joshuawheelock版本会根据代码行为提问并反馈答案，作者自述仍为alpha；这可以作为相邻替代参考，但没有证据证明它就是iamwil所提的访谈技能。购买或安装前应区分需求访谈、代码理解测验和代码审查三个用途，不能只按名字判断相同。此轮只读README，没有安装或运行第三方代码。"
+    },
+    {
+      "id": "market",
+      "title": "先作内部流程，商业需求尚未验证",
+      "source_ids": [
+        "Sdiscussion",
+        "Salternative"
+      ],
+      "body": "背景讨论显示工程师对设计责任、理解深度和审查负担有分歧，匿名评论不是全行业共识。潜在付费方向可能是团队上手、知识移交或遗留系统培训，但本案没有购买者、交付边界、定价、维护工时或转化记录。现有技能和人工结对也是替代。没有具体产物时，填两套经营数字容易变成泛泛培训生意，因此保留未评分简报，不硬套利润结论。"
+    },
+    {
+      "id": "privacy",
+      "title": "理解工具也会接触代码和内部知识",
+      "source_ids": [
+        "Sauthor",
+        "Salternative"
+      ],
+      "body": "讲解生成需要读取代码，可能涉及商业秘密与内部架构；是否可向模型供应商发送要按已有授权确定。本轮不读取用户私有项目、不安装插件、不上传文件。未来试点先用自写示例，明确目录和只读权限，代码中的注释不能授权外部动作。知识测验不应直接被当作员工绩效或招聘筛选结论。"
+    },
+    {
+      "id": "next",
+      "title": "先取得一份完整可复核样例",
+      "source_ids": [
+        "Sauthor",
+        "Sassert"
+      ],
+      "body": "下一步最有价值的是一项自写小功能：原始需求、访谈澄清、关键决策、代码差异、讲解、测验与测试结果绑定同一版本。可以有意加入一处与规格冲突的缺陷，检查验证器是否真的发现，并记录人工确认所需时间。这是拟议实验，尚未执行。若讲解增加的复核负担超过帮助，或测验只考记忆而不能支持修改，可保留轻量解释流程，不扩成产品。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+    "observed_at": null,
+    "body_sha256": "3752a5e1b354bc1e5d3f2d1218f8f462d3ff85dbbd40b1f205e217f6f7409012",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "c5dfa25965b550e1f1acb1c88d00b629092c28cf55d829ffb504f89dab778693",
+      "How it went": "0d77e0626c1bd8056aa1a5ea116547749e7400b0b55e63e6889b15b5517b5cd2",
+      "Worth knowing": "6086e0ed39f1ffbf8ee610aefc4bf22222edb1b543e9a385f98601a971f0075e"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T23:40:51Z",
+      "end": "2026-10-19T23:41:11Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I want to build [feature or project] in this codebase, and I want to stay able to understand everything you write. Before coding, interview me about any ambiguities in the plan, one question at a time, and make the minor decisions yourself, listing them for me. After each major piece, write a short explainer of how it works and give me a 3-question quiz on it, then run the tests or checks before moving on.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c7050f4a05e54f782acf7d0b28fbcdc3d867bd1f2a9284169eb2e66b85910831",
+    "observation_window": {
+      "start": "2026-10-19T23:40:51Z",
+      "end": "2026-10-19T23:41:11Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50158650",
+    "source_title": "iamwil on retaining a working theory while using agents",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T23:44:38Z",
+    "source_sha256": "c5d51011b29c965dfd861a827477bde4944e8e96785f966faf4b0c3ceadb9230",
+    "steps": [
+      {
+        "en": "The author uses interviews to clarify a specification and keeps differentiating design decisions.",
+        "zh": "作者通过访谈澄清规格，保留差异化设计决策。"
+      },
+      {
+        "en": "Agent-generated explainers and quizzes support understanding while mechanical checks verify selected requirements.",
+        "zh": "生成式讲解和测验辅助理解，机械检查验证选定要求。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "可把不理解的地方显式化，但没有净省时或长期掌握测量。",
+    "audience": "需要维护和扩展AI生成代码的开发者。",
+    "use": "澄清规格、理解子系统、检查实现是否符合要求。",
+    "benefit": "作者自述减少修错循环，未量化。",
+    "setup_cost": "合适示例、当前版本代码、验收规则和人工答案。",
+    "maintenance_cost": "代码更新后同步解释、问题与断言。",
+    "frequency": "每次功能设计和主要实现阶段，真实次数未知。",
+    "privacy_risk": "代码与内部架构可能敏感，需已有数据处理授权。",
+    "error_risk": "错误讲解、同源验证偏差、断言遗漏与形式化模型失配。",
+    "source_ids": [
+      "Sauthor",
+      "Sassert"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "目录模板完整保留，未按此生成新代码。",
+    "prerequisites": "自写小项目、明确行为要求和已知失败案例。",
+    "tools": "已有获准助手与本地测试工具，不安装未知技能。",
+    "expected_result": "版本绑定的解释、测验和测试，列明未覆盖项；本轮未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I want to build [feature or project] in this codebase, and I want to stay able to understand everything you write. Before coding, interview me about any ambiguities in the plan, one question at a time, and make the minor decisions yourself, listing them for me. After each major piece, write a short explainer of how it works and give me a 3-question quiz on it, then run the tests or checks before moving on."
+      },
+      {
+        "title": "理解与验证分开",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sassert",
+          "Sauthor"
+        ],
+        "attribution": "原创试点提示，未执行",
+        "text": "只分析这个自写示例。列需求歧义、代码依据和失败路径；解释每个重要决定，给三个预测行为问题并提供代码证据。测试故意加入的缺陷，区分理解回答与程序通过，不修改其他文件，不上传或部署。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "相邻讨论不是对作者完整工作流的独立复现。"
+  },
+  "disconfirming_evidence": "同名现成技能存在，解释与验证可能共享错误；无作者产物和客观收益，不保证理解或无缺陷。",
+  "limitations": "只读来源，无安装、模型API、代码生成或实际团队试点；外部来源不全文转载。",
+  "archive_source_sha256": "3752a5e1b354bc1e5d3f2d1218f8f462d3ff85dbbd40b1f205e217f6f7409012",
+  "translation_sha256": "586a529eb4b9c90802043c0e324276b7955ecab197b90dab7b5e1cda5912df81"
+}
