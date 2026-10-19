@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
-  "observed_at": "2026-10-19T07:17:55.745281+00:00",
-  "html_sha256": "1d029628b72c313ed3445a8f6ed7eca704ac86b294eb178ebf6e7a47a3f0f34e",
+  "observed_at": null,
+  "html_sha256": "6ab3994c9560ecdea556d2116176de1c5d3763f7b99cc33600ab9d6c296786b0",
   "body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
   "status": "observed",
   "fields": {
@@ -95,12 +95,26 @@
     "language": "en",
     "body": "Run literature reviews over a folder of papers\nResearchers point Claude Code at 50+ papers to extract bibliographies, find core cited works, and write relevance lists against a theme as files.\nDone with\nCC\nClaude Code\nWhat they did\nThe author sets up custom slash commands in Claude Code, and the research theme goes in CLAUDE.md. /lit-map extracts text from every PDF in a papers/ folder. It pulls each paper's objective, method, conclusion and keywords, then writes a High/Medium/Low relevance list to literature_map.md. /citation-network extracts the bibliographies, finds works cited across several papers, and ranks them.\nHow it went\nThe author claims /lit-map cuts 50 papers from 2-3 days to 30 minutes, and /citation-network cuts 10 papers from 4-5 hours to 15 minutes. These are before/after claims, not measured results.\nWorth knowing\nScanned or image-only PDFs lower accuracy. The researcher still has to check the AI's scores and summaries, and should review the terms and policies before sending unpublished or copyrighted text to cloud services.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead every paper in the folder [path to my papers folder] and extract each one's bibliography into a file called bibliographies.md. Then identify the works cited most often across the papers, and write relevance_list.md ranking all papers by how relevant they are to [my research theme], with one sentence of reasoning each. Don't modify or delete any of the original files. You're done when both files exist and you've told me the top 10 core works.\nOriginal source: https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en",
     "body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
-    "archived_at": "2026-10-19T07:17:55.745281+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-19T21:51:26Z",
+      "end": "2026-10-19T21:51:57Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:17:55.745281+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-19T21:51:26Z",
+    "end": "2026-10-19T21:51:57Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
+    "translated_at": "2026-10-19T21:54:14Z",
+    "body": "对整份论文文件夹开展文献梳理\n研究人员让Claude Code处理50多篇论文，提取参考文献、查找共同引用的核心作品，并围绕研究主题把相关性列表写入文件。\n使用的是\nClaude Code\n他们做了什么\n作者在Claude Code中设置自定义斜杠命令，将研究主题写入CLAUDE.md。/lit-map从papers/文件夹的每份PDF提取文本，再提取各篇论文的研究目标、方法、结论和关键词，把高、中、低相关性列表写入literature_map.md。/citation-network提取参考文献，找出多篇论文共同引用的作品并排序。\n进展与成效\n作者声称，/lit-map把处理50篇论文的时间从2至3天缩短到30分钟，/citation-network把处理10篇论文的时间从4至5小时缩短到15分钟。这些是前后对比说法，并非测量结果。\n值得注意\n扫描版或纯图片PDF会降低准确性。研究人员仍需检查AI的评分和摘要，并应在把未发表或受版权保护的文本发送到云服务前检查条款和政策。\n亲自尝试\n使用Claude Code\n复制提示词\n阅读文件夹[我的论文文件夹路径]中的每篇论文，将各篇的参考文献提取到名为bibliographies.md的文件。然后识别这些论文中被引用次数最多的作品，并写出relevance_list.md，按照与[我的研究主题]的相关程度为所有论文排序，每篇给出一句理由。不要修改或删除任何原文件。两个文件都已生成，并告诉我排名前10的核心作品后，任务才算完成。\n原始来源：https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en",
+    "body_sha256": "d4d0f4bcfbb70b83d21025e6ecf5b9b29459ee1063f4b7a741ce657ff6293893",
+    "status": "available"
   }
 }

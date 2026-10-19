@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **44**；深度研究 **55**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **45**；深度研究 **55**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -51,3 +51,5 @@
 
 | 用 n8n 和 Supabase 记忆处理房源对话与预约 | [简报](../../reports/brief/run-real-estate-operations-with-a-memory-equipped-assistant.md) |
 | 用未命名 AI 智能体辅助杂货购物与机票比价 | [简报](../../reports/brief/add-groceries-buy-on-amazon-and-price-shop-flights.md) |
+
+| 用 Claude Code 整理论文文件夹与共同引用 | [简报](../../reports/brief/run-literature-reviews-over-a-folder-of-papers.md) |
