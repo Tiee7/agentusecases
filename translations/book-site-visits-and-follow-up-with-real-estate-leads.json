@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "book-site-visits-and-follow-up-with-real-estate-leads",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "dc4da3b00a4efe65009cbc7a7c187b31f1273d9a8bd68a898b0885a562bb1d21",
+  "translated_at": "2026-10-19T20:29:40Z",
+  "body": "预约实地看房并跟进房地产线索\n发帖者搭建了一个基于n8n的销售助手，可以预约看房、发送邮件、跟进线索并更新CRM。\n使用的是\nn8n\n他们做了什么\n发帖者用n8n结合OpenAI、Airtable、WhatsApp、Gmail和Google Calendar搭建助手。新线索存入Airtable，智能体跟踪是否已发送欢迎消息、看房状态和跟进日期等字段，回答房产问题、推荐房源、从Airtable获取房产图片、检查日历冲突后预约看房、发送HTML确认邮件并更新CRM；另一个每日工作流只向当天到期且已拒绝看房的线索发送WhatsApp跟进。\n进展与成效\n他们说，现在它能处理房地产销售流程中的很大一部分，并避免重复欢迎和跟进。主要问题是WhatsApp状态事件造成的webhook循环，以及如何让智能体可靠地调用Gmail、Calendar、Airtable和房源搜索工具并输出结构化结果。\n值得注意\n最大的难点是可靠性调试：过滤WhatsApp状态回调、使工具输出符合解析器要求，都花了不少工作，才使流程可靠起来。\n亲自尝试\n使用n8n\n复制提示词\n为我的[房地产业务]构建一个n8n工作流：从[表单/来源]收到新线索时触发，向他们发送邮件，提供[日历]中的看房时间，在收到回复后完成预约。如果他们在[X天]内没有回复，就发送跟进，并在每个步骤更新[CRM]中的线索状态。在向任何真实线索发送消息前，先展示每种邮件模板的样例供我批准；当一条测试线索完整走完流程后就停止。\n原始来源：https://www.reddit.com/r/aiagents/comments/1uhus5x/i_built_an_ai_real_estate_sales_assistant_that",
+  "body_sha256": "00e22bf73ff65aceea3e0c6b27525426dd0d359faa0f58ac474f472742d4389f",
+  "scope": "Full licensed directory; author declined follow-up is distinct from template nonresponse."
+}
