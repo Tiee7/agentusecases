@@ -50,8 +50,10 @@
 
 ## 验证与交付
 
-本地已通过：十案原文/译文绑定、来源引用、author_method/personal_use、报告投影、评分空值规则、二十种情景贡献及现金重算；Python 单元测试；16 项网站内容测试；Astro 构建；输出检查验证 1,427 份原文、63 份完整译文、47 篇深研及全部源站模板。
+本地已通过：十案原文/译文绑定、来源引用、author_method/personal_use、报告投影、评分空值规则、二十种情景贡献及现金重算；92 项 Python 单元测试；16 项网站内容测试；Astro 构建 2,905 页；输出检查 2,907 个文件，验证 1,427 份原文、63 份完整译文、47 篇深研及全部源站模板。
 
-本地浏览器安全与端到端测试未通过启动阶段：浏览器下载返回不完整内容；已有 Chromium 在本原生沙箱内因进程 socket 权限拒绝退出，标准提权也遇环境内部只读目录错误。因此这些断言没有被冒称本地通过。独立分支的既有 GitHub Reading site checks 将运行原版浏览器与安全回归，确认通过才合并 main；真实结果及 SHA 在交付回读中记录。
+本地浏览器安全与端到端测试未通过启动阶段：浏览器下载返回不完整内容；已有 Chromium 在本原生沙箱内因进程 socket 权限拒绝退出，标准提权也遇环境内部只读目录错误。因此这些断言没有被冒称本地通过。独立分支内容提交 [695eebc](https://github.com/Tiee7/agentusecases/commit/695eebc17c9596fda840338d1f5dcd8543bd9c94) 的既有 [GitHub Reading site checks](https://github.com/Tiee7/agentusecases/actions/runs/39263173413) 已于 13:51 UTC 全部成功：92 项 Python 测试、16 项内容测试、构建与输出检查、桌面/手机真实 Chromium 提示词安全检查、69 项桌面/平板/手机端到端测试。此结果为 GitHub 发布验证，不能解释为本地浏览器启动成功，也不是十个业务工作流的实测。
 
 提交继续使用已有 Tiee7 认证，author 与 committer 均为 Tiee <tieetheai@gmail.com>。已先用未挂引用、同 tree 的 commit 验证连接器身份；无新增凭据、强推、改历史或绕过保护。发布前复核远端 main，再以 expected-old、force=false 更新引用，最后回读报告、索引、记录与真实计数。
+
+发布凭据见 [publication.json](../../research/runs/spark-ten-case-repair-20261019/publication.json)。13:49 UTC 再次列出 results，仍为 59 项，最新仍是同一 09:50 总包。交付凭据补充后，最终分支仍须通过相同 CI 才合并；最终 SHA、合并与检查状态以 [PR 2](https://github.com/Tiee7/agentusecases/pull/2) 和 main 的远端记录为准。
