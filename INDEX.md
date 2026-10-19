@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **56** / 注册案例 **1438**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **57** / 注册案例 **1438**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、推送、合并和回读完成后接续，无额外冷却。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -49,6 +49,7 @@
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
 | [用 Claude Code 根据银行流水起草税务申报](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 中 | not_observed | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
+| [用 Claude Code 生成可在浏览器授课的互动 HTML 文件](reports/generate-custom-interactive-html-lessons-for-students.md) | 仅建议受控试点 | 44.0 | 中 | available | 英语互动课件制作与维护 | 2026-10-19T22:49:39Z |
 | [用 Claude Code 汇集市场数据并生成投资分析](reports/generate-investment-analysis-from-live-market-data.md) | 适合内部效率工具 | 36.0 | 中 | available | 个人投资研究与组合信息整理 | 2026-10-16T18:02:24.876149+00:00 |
 | [用 Resume 智能体搜索岗位、定制简历并跟踪申请](reports/hunt-jobs-tailor-resumes-and-apply-automatically.md) | 仅建议受控试点 | 42.0 | 中 | available | 求职岗位筛选与申请材料准备 | 2026-10-16T16:41:28.042672+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
