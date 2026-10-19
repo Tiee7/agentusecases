@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "run-real-estate-operations-with-a-memory-equipped-assistant",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "0eb3396bf4cb31e6c1a39c48d3ee07edb95e0e4afbea3eeee90e4b6f855e1072",
+  "translated_at": "2026-10-19T20:41:24Z",
+  "body": "使用带记忆的助手处理房地产运营\n发帖者构建了一个AI智能体工作流，通过保留记忆进行有上下文的对话，并动态更新房产数据。\n使用的是\nn8n\n他们做了什么\n发帖者在n8n中搭建了一个房地产公司的运营助手。它接收客户聊天消息，使用带记忆的AI智能体进行上下文对话，通过Supabase中的向量嵌入保存长期知识，更新房产数据、检查可用时间，并通过Google Calendar预约、改期或取消，然后用Gmail发送确认和通知；开发者编写了逻辑，也能按客户需要更换日历工具。\n进展与成效\n来源称它把对话、排期、线索资格判断、跟进和房产更新放在同一个系统中，发帖者表示Google Calendar的预约、排期和取消运行顺利。没有提供硬指标、部署数量或失败案例。\n值得注意\n最清楚的实现细节是，长期记忆使用向量嵌入加Supabase，排期使用Google Calendar而不是cal.com。\n亲自尝试\n使用n8n\n复制提示词\n构建一个n8n工作流，让AI智能体使用[电子表格或数据库]中的数据，回答[客户/租户/团队]关于我的[房产]的问题。让它具备记忆，记住每个人此前的对话；当我指示时，允许它更新[价格、可用情况、状态]等房产字段。在更改任何记录或发送任何消息前，先展示将进行的更改并等待我的批准；当一次测试对话完整跑通后就停止。\n原始来源：https://www.reddit.com/r/n8n_ai_agents/comments/1tha9mp/ive_built_an_ai_real_estate_assistant_heres_what",
+  "body_sha256": "0b06f6b0d4e7b9ea22b520075060ac0757b2e267985dcefba244a19bfc2cfaae",
+  "scope": "Full licensed directory; technical and business claims qualified separately."
+}

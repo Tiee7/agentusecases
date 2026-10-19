@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **42**；深度研究 **52**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **43**；深度研究 **53**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -48,3 +48,5 @@
 | 用 Claude 将个人投资记录表改成手机和电脑可用的界面 | [简报](../../reports/brief/track-personal-investments-with-a-claude-built-portfolio-tra.md) |
 
 | 用 ContractKen 和 Sonar Legal 分层检查合同问题 | [简报](../../reports/brief/review-contracts-and-check-consumer-protection-rules-with-le.md) |
+
+| 用 n8n 和 Supabase 记忆处理房源对话与预约 | [简报](../../reports/brief/run-real-estate-operations-with-a-memory-equipped-assistant.md) |
