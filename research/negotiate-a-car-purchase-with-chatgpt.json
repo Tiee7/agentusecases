@@ -1,0 +1,481 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "negotiate-a-car-purchase-with-chatgpt",
+  "url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-with-chatgpt",
+  "title": "用 ChatGPT 整理购车报价并准备谈判问题",
+  "industry": "消费者购车资料与报价比较",
+  "researched_at": "2026-10-19T21:36:03Z",
+  "confidence": "中：原帖方法、官方消费资料与现行竞品价可核；节省为自述，缺合同、独立对照与实际服务工时。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "可辅助准备和报价核对，节省自述不能直接证明可经营代谈服务",
+    "reason": "作者提供了具体准备过程和现场行动，但更换经销商、家长陪同及一个月研究共同影响结果，没有可比合同证明模型独立贡献。免费公共清单和现成付费服务已经覆盖部分需求。优先验证资料整理、条件核对与问题准备，不把模型输出作为优惠资格、车况或融资批准。商业模型的售价和工时均属假设，必须通过真实授权试点再判断。",
+    "next_action": "以三份虚构报价测试总价、年款、优惠组合和费用遗漏，记录复核成本。",
+    "stop_condition": "缺书面条件、要求保证省款或越权财务决策，或核验成本持续超过收费。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-with-chatgpt",
+      "title": "许可目录及试用模板",
+      "supports": "原文节省为家长自述，另一个远程购车叙述单独保留。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1lo1n36/yesterday_chatgpt_helped_my_daughter_save_over/",
+      "title": "家长购车经历与后续解释",
+      "supports": "超过3000美元和一个月准备为自述，家长参与和更换经销商共同发生。"
+    },
+    {
+      "id": "Sremote",
+      "url": "https://www.reddit.com/r/FuckDealerships/comments/1kr0y5b/how_i_used_chatgpt_to_buy_a_car_from_overseas_and/",
+      "title": "另一位用户的远程购车经历",
+      "supports": "用户称用ChatGPT分析报价及起草邮件，是另一个人的自述，不构成本案收据。"
+    },
+    {
+      "id": "Sftc",
+      "url": "https://consumer.ftc.gov/articles/buying-used-car-dealer",
+      "title": "FTC二手车购买建议",
+      "supports": "书面落地价、附加项和独立检查作为比较依据，不给个案法律结论。"
+    },
+    {
+      "id": "Sads",
+      "url": "https://consumer.ftc.gov/articles/car-dealer-ads-and-promotions-know-you-go",
+      "title": "FTC广告与优惠核对",
+      "supports": "官方提醒核库存、书面总价和优惠条件，宣传价格不能直接当成交价。"
+    },
+    {
+      "id": "Scfpb",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-compare-auto-loan-offers-what-should-i-look-at-besides-the-monthly-payment-en-753/",
+      "title": "CFPB比较汽车贷款报价",
+      "supports": "比较总成本和期限等因素，不能只看月供；不替用户选贷款。"
+    },
+    {
+      "id": "Svin",
+      "url": "https://vpic.nhtsa.dot.gov/decoder/",
+      "title": "NHTSA vPIC VIN解码入口",
+      "supports": "提供VIN信息解码入口，不能替代完整车况检查或优惠资格核定。"
+    },
+    {
+      "id": "Salt",
+      "url": "https://caredge.com/pricing",
+      "title": "CarEdge现行服务价格",
+      "supports": "AI Buying Agent beta49.99美元每次找车，人工Concierge999美元；官方报价非效果证明。"
+    },
+    {
+      "id": "Sservice",
+      "url": "https://caredge.com/carbuyingservice",
+      "title": "CarEdge服务范围与限制",
+      "supports": "厂商介绍人工购车服务，节省随市场条件变化，不能据宣传保证节省。"
+    },
+    {
+      "id": "Sreviews",
+      "url": "https://www.trustpilot.com/review/caredge.com",
+      "title": "CarEdge用户公开评论页",
+      "supports": "相邻服务的自选评论，可能混合软件与人工产品，不代表ChatGPT本案结果。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述超过3000美元节省，同时换经销商、颜色和保修，未给完整对照合同。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者在评论补充提示词经一个多月近乎每日迭代，不是一次性即兴操作。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "远程购车叙述来自另一位用户，不能作为主案例独立成交凭证。",
+      "source_ids": [
+        "Sremote"
+      ]
+    },
+    {
+      "statement": "FTC建议取得书面落地价，检查附加项和价格条件。",
+      "source_ids": [
+        "Sftc",
+        "Sads"
+      ]
+    },
+    {
+      "statement": "FTC明确车辆历史报告不能替代独立机械检查。",
+      "source_ids": [
+        "Sftc"
+      ]
+    },
+    {
+      "statement": "CFPB建议比较贷款总成本等因素而非只看月供。",
+      "source_ids": [
+        "Scfpb"
+      ]
+    },
+    {
+      "statement": "vPIC解码VIN所编码信息，信息由制造商报告；不等于全部车况或优惠资格。",
+      "source_ids": [
+        "Svin"
+      ]
+    },
+    {
+      "statement": "CarEdge当前AI beta49.99美元每次找车，人工Concierge999美元每车。",
+      "source_ids": [
+        "Salt"
+      ]
+    },
+    {
+      "statement": "CarEdge服务页明确节省金额不保证并受市场等条件影响。",
+      "source_ids": [
+        "Sservice"
+      ]
+    },
+    {
+      "statement": "相邻服务一则2026年10月评论肯定减压但指出年款匹配及后续跟进问题。",
+      "source_ids": [
+        "Sreviews"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": 3,
+      "rationale": "购车资料与压力痛点明确，公共指南和付费顾问存在，但本案客户愿付未验证。",
+      "source_ids": [
+        "Sauthor",
+        "Salt"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "节省仅作者叙述且伴随换店等因素，没有独立归因或完整合同对照。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "报价整理人力与获客成本敏感，基础和压力模型都是假设，不代表真实利润。",
+      "source_ids": [
+        "Salt"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "社区个人故事可传播，尚无可复制采购渠道，信任与授权会增加交付成本。",
+      "source_ids": [
+        "Sauthor",
+        "Sreviews"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "通用话术易复制，公共资料与现成服务替代强，数据核验优势仍待建立。",
+      "source_ids": [
+        "Sftc",
+        "Salt"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "交易、融资和车况风险需限定范围，人工复核与书面条件不可省略。",
+      "source_ids": [
+        "Sftc",
+        "Scfpb"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "有第二用户故事和相邻顾问评价，但缺主案例独立效果验证与可比较样本。",
+      "source_ids": [
+        "Sremote",
+        "Sreviews"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "买家需要的是可核对的报价",
+      "source_ids": [
+        "Sauthor",
+        "Sremote"
+      ],
+      "body": "本案使用者是准备买车、面对经销商报价和销售压力的消费者。直接付款人可能是买家本人；如果发展资料整理服务，也可能由家庭共同承担，但原帖没有服务合同或付费客户。痛点是信息不对称、报价项目复杂，以及临场难以保持判断。AI在故事中的角色主要是整理信息和准备问题，人仍负责离开、换店、陪同与购买，不能把它描述成自主交易机器人。\n这类需求低频而单次金额较大，用户往往只在购车窗口集中使用。长期订阅可能不如一次性报价整理合适，但是否愿意另付钱仍待验证。客户可能已经有家人、独立技师或熟悉市场的人帮助，因此不能把所有最终价格差都归给模型。可交付价值应限定为同条件报价表、待核优惠及问题清单，不替客户确定其借贷能力、签约意愿或可接受的财务风险。"
+    },
+    {
+      "id": "workflow",
+      "title": "一个月准备与现场决策共同发生",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "作者补充说，提示词经过一个多月近乎每日迭代，最终版本是在已经选定品牌车型后使用。故事不是随便输入一句话就自动省下三千美元：先有研究与家庭建议，随后AI输出支持买家离开，再由家长陪同换经销商。完整目录原文和译文保留；原帖中的具体提示词只作方法摘要，不把针对某地某时的税费、贷款或优惠说法搬成今天通用规则。\n可复制的辅助链路是固定车辆身份、收集书面报价、逐项比较、列出未知、准备提问、人工核回信，再核最终合同是否一致。每张报价要标时间、卖家、车型年款配置、里程及包含项，同配置不同颜色、保修、库存状态也要单独列。模型若没取得当前网页或文件，应明确缺证，不从VIN编造优惠。报价变化需保存版本，不能仅用最后一段聊天记住交易条件。 还要区分模型输出的信息、买家取得的外部报价和最终接受的条件。建议表格保留“来源原句、模型解释、人工确认”三列，不能把解释回写成经销商的承诺。相同VIN的两个报价也可能采用不同附加项或付款方式，识别同车只是比较的起点。"
+    },
+    {
+      "id": "market",
+      "title": "节省额需要比较基准",
+      "source_ids": [
+        "Sauthor",
+        "Sads",
+        "Scfpb"
+      ],
+      "body": "超过三千美元是家长自述，没有提供完整两份报价或付款凭证。换店、颜色、保修和市场时点同时变化，不能据此量化模型的独立贡献，更不能把消费者少付的钱当作服务商收入。可验证的节省必须有可比基准：相同车辆条件、税费、附加产品和付款结构；比较标价与含税落地价，或者比较不同期限月供，会产生看似节约的假象。\n需求范围可以从已拿到报价、需要整理项目的买家开始，不必承诺全国全车型最低价。官方消费者资料强调书面总价和完整成本，说明基本工作有公共免费替代。低频用户也可能更重视避免重大遗漏而非省几分钟。市场规模、转化率和可接受服务费在原帖都未知，不用帖子点赞、评论数量或“很多人想复制提示词”估计销量。是否值得经营，要看真实愿付与人工核验成本。"
+    },
+    {
+      "id": "competition",
+      "title": "免费材料与现成代谈服务",
+      "source_ids": [
+        "Sftc",
+        "Salt",
+        "Sservice"
+      ],
+      "body": "替代并不只有另一个聊天模型。FTC的购车清单、平台车辆资料、买家自己收集的书面报价，以及人工购车顾问，都能解决部分问题。当前CarEdge页面将AI Buying Agent beta列为49.99美元每次找车，人工Concierge为999美元；这是不同交付范围的官方报价，不能把后者价格当单份AI报告的可售价格，也不能把beta优惠当永久价格。\n其服务页同时说明节省不保证，库存、地点、市场和个人条件会影响结果。新服务若只做提示词和一般话术，很容易被免费指南替代；若要代联系、谈判、检查文件和协调交付，则人工责任、授权及地区要求都更复杂。本轮没有购买或使用这些服务，也没有核实其运营效果。比较应把研究辅助、代表客户沟通和最终签约分开，不能借竞品自动模式替自己获得无限行动权限。"
+    },
+    {
+      "id": "economics",
+      "title": "用报价整理服务而非省款抽成测算",
+      "source_ids": [
+        "Salt",
+        "Sservice"
+      ],
+      "body": "以下只是研究者情景，不是作者收入或建议收费。以一次三份报价整理及问题清单为单位，基础假设收费149美元，模型预算4、人工两小时按30美元计60、其他资料与工具10、获客35；每月6单、固定50，月贡献为190美元。这里未代客户联系、签约或办理融资，范围比完整购车顾问窄。实际是否有人愿意支付149，要和49.99的竞品AI服务及免费材料比较，不能凭成本倒推需求。\n压力情景同价149，模型8、人工四小时120、资料15、获客45；每月4单、固定70，结果负226美元。人工返工、报价不完整、电话核验与售后解释会显著压缩贡献，原帖一个月准备也提示不能把提示词视作零维护。税、退款、专业审查和地区经营要求未计，不能称净利润。按节省抽成尤其需要约定可比基准，否则容易围绕最初虚高报价产生争议；本案没有足够证据支持这种收费模式。 应另外统计未成交和退款个案的支持工时，因为按成交收费会把这部分成本留给服务者。若只做材料整理，交付完成与买家最终是否成交应分别约定。一次谈判成功后用户数年不再买车，也意味着复购周期长，不能套用每月持续付费的客户终身价值模型。"
+    },
+    {
+      "id": "distribution",
+      "title": "从可审计样例建立信任",
+      "source_ids": [
+        "Sauthor",
+        "Sreviews"
+      ],
+      "body": "初始验证可以展示完全虚构的三份购车报价，说明哪些是必填信息、哪些无法核定，以及如何保留原始项目。潜在客户来源可能是已有汽车知识内容受众或熟人介绍，属于待验证渠道。作者在大型社区分享个人故事不等于新服务已有分发优势，评论者复制提示词也不等于愿意购买代办。\n信任主要来自具体范围和可查证交付：列事实与疑问、让用户知道哪些还需经销商书面确认，不使用“必省三千”或“厂家内部价”等无依据承诺。相邻顾问服务的用户反馈显示，匹配年款和最后交付跟进同样影响体验；因此报价前要说明服务到哪里结束。如果只核报价，不应让用户期待会处理提车后的维修或贷款争议。本轮没有联系经销商、评论者或客户，也没有替用户开展商业经营。"
+    },
+    {
+      "id": "moat",
+      "title": "数据质量比强势话术更重要",
+      "source_ids": [
+        "Svin",
+        "Sads",
+        "Salt"
+      ],
+      "body": "可积累的能力可能是统一报价字段、核对优惠条件、识别不可比项目、维护资料来源与检查版本，而不是让模型说话更强硬。VIN解码入口可以帮助识别车辆信息，但并不自动提供当前成交价、全部历史或客户优惠资格。优惠能否组合需要官方条件和书面确认；模型把两个促销叠加成一个虚构价格，会让谈判失去依据。\n数据供应商、专业顾问和大型平台已有库存与客户渠道，独立小服务不能假定靠通用模型就形成优势。可以先选窄范围、固定表格和明确不处理的事项，测人工复核时间及错误率。若大量资料需付费、车况需实地检查或每单都要长时间沟通，业务更接近专业服务而不是软件订阅。所有这些都是经营推断，不是作者已经建立的壁垒或已证实的市场份额。"
+    },
+    {
+      "id": "execution",
+      "title": "保留人对交易和财务的决定权",
+      "source_ids": [
+        "Sftc",
+        "Scfpb",
+        "Svin"
+      ],
+      "body": "报价辅助应记录购车总价、付款条件和附加项目，但不替买家签署贷款或确认交易。信用评分、收入、地址和身份证明不应成为公开研究样本；演示用虚构值或不需要这些字段。即使模型解释了某种贷款，真实条款仍以机构文件和适用规则为准。对当前优惠、税费或贷款资格没有证据时列待核，不给一个看似精确的批准结论。\n二手车历史报告与模型摘要不能替代独立机械检查，FTC资料明确区分这两者。远程用户故事中模型把某些保养记录解释成可靠性，属于个人叙述，不足以保证车况。交付前应核车辆VIN、年份和最终报价是否同一辆，检查原报价与签署文件变化。任何需要联系卖家、发承诺或支付定金的步骤都要单独明确授权；本轮只研究公开资料，无实际购车、贷款申请或文件上传。 人工验收应检查具体承诺对象：草稿中的报价不是卖家已接受，电子邮件中的估算不是最终合同。演示也不应将型号、市场和日期不同的实例拼为可兑现价格。用户随时改变车型或预算时，先作废旧比较的适用范围，再计算新方案，避免沿用已经失效的结论。"
+    },
+    {
+      "id": "feedback",
+      "title": "独立故事与相邻服务评价",
+      "source_ids": [
+        "Sremote",
+        "Sreviews",
+        "Sauthor"
+      ],
+      "body": "目录给出的第二个远程购车故事，用户称用ChatGPT分析车辆记录、报价并起草邮件，说明类似辅助方式有人自述使用。但它没有为第一案例提供独立收据，也不是同一车型、时间或谈判条件，不能把两个金额汇总成平均节省。主帖许多回复只是赞美或提出提示词扩展，不算实用效果测试。\nCarEdge评论页混有AI工具、研究订阅和人工顾问体验，不能把整体星级当某个产品准确率。具体一则2026年10月评论肯定减轻压力，同时提到最初推荐年款不符和转交经销商后跟进不足；这提示需求匹配与交付收尾的重要性，不证明本案ChatGPT也有同样问题。评价应逐条标身份、产品与时间，忽略平台AI汇总中的未经逐条核验概括。现有信号支持做有限资料辅助，仍缺本案独立对照和收益归因。"
+    },
+    {
+      "id": "decision",
+      "title": "可做购车准备，先不承诺代谈结果",
+      "source_ids": [
+        "Sauthor",
+        "Sftc",
+        "Salt"
+      ],
+      "body": "结论为适合内部效率工具。ChatGPT可以帮助买家整理资料、发现待核项目和准备问题，原案例也强调了人的研究、陪同和最终决定。现有证据不支持“一次提示词保证省三千”或无人监督完成购车。商业复制面临免费指南和已有付费服务，是否值得投入取决于明确的小交付、获客成本和人工核对，而不是把一笔自述省款当市场证明。\n下一步用虚构报价检查同款不同年款、税费遗漏、附加项、现金优惠与融资优惠不可随意相加，以及更长贷款期限导致月供下降但总成本上升。输出只列可核项目和问题，不代替购买或融资判断。真实试点须先获数据与沟通授权，并记录完整核对工时。若无法取得书面条件、用户要求保证最低价、需要超范围财务决策或核验成本超过报价，应停止扩展，保留为买家自己的准备清单。 研究升级所需证据是同条件书面报价、核验来源和实际处理时间，而不是更多热帖。保留未成交和无节省案例，才能知道服务何时不值得做。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "Reddit",
+        "query": "\"ChatGPT\" \"car purchase\" \"wrong\" VIN incentives reddit",
+        "outcome": "读取主帖及补充说明，区分复制提示词与实际经历。"
+      },
+      {
+        "channel": "独立评价平台",
+        "query": "site:trustpilot.com caredge concierge review negotiation",
+        "outcome": "读取相邻服务具体评论，产品混合与自选偏差保留。"
+      },
+      {
+        "channel": "公开网页",
+        "query": "site:caredge.com concierge pricing car buying 2026",
+        "outcome": "核官方现价与节省限制，不作为用户效果。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sremote",
+        "directness": "adjacent_workflow",
+        "bias": "另一位购车者自述，无独立收据。",
+        "finding": "资料整理和邮件草拟可用，但车况与贷款解释需核。"
+      },
+      {
+        "source_id": "Sreviews",
+        "directness": "adjacent_workflow",
+        "bias": "竞争服务自选评论，混合不同产品。",
+        "finding": "匹配条件与交付后跟进是体验的重要部分。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "基础假设：三份报价整理",
+      "unit": "一次报价资料整理及问题清单",
+      "currency": "USD",
+      "price": 149,
+      "api_cost": 4,
+      "human_cost": 60,
+      "other_variable_cost": 10,
+      "acquisition_cost": 35,
+      "units_per_month": 6,
+      "fixed_monthly_cost": 50,
+      "assumptions": "全部经营数是假设；人工2小时×30，6×(149-4-60-10-35)-50=190。范围不含代联系、签约、融资办理，未含税退款；不同于竞品完整服务。",
+      "source_ids": [
+        "Salt"
+      ]
+    },
+    {
+      "scenario": "压力假设：反复核对与获客昂贵",
+      "unit": "一次报价资料整理及问题清单",
+      "currency": "USD",
+      "price": 149,
+      "api_cost": 8,
+      "human_cost": 120,
+      "other_variable_cost": 15,
+      "acquisition_cost": 45,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 70,
+      "assumptions": "人工4小时×30，全部假设；4×(149-8-120-15-45)-70=-226。不是作者收入，不能从省款推销售。",
+      "source_ids": [
+        "Salt",
+        "Sservice"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "一个月准备、换店和家长参与影响归因；VIN查询有限；免费指南与现成49.99美元beta服务挤压一般话术价值。",
+  "limitations": "无真实报价合同、VIN查询、信用资料、贷款建议试算或客户联系；未购买竞品或执行谈判。所有节省为来源自述，经营模型是假设。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "有明确资料准备价值，但仍须核事实与条款，不能保证节省或车况。",
+    "audience": "准备买车且愿意逐项核书面报价的成年人。",
+    "use": "整理报价、优惠条件、车辆一致性和提问清单。",
+    "benefit": "可能降低遗漏与临场压力；未测本次省钱省时。",
+    "setup_cost": "准备脱敏报价、车型条件、时间地区和可核来源。",
+    "maintenance_cost": "价格变化、优惠资格、版本对照及人工核验。",
+    "frequency": "围绕单次购车周期，非持续高频订阅需求。",
+    "privacy_risk": "信用、地址和付款资料敏感，研究演示不使用真实信息。",
+    "error_risk": "优惠不可叠加、车况推测、月供混淆总成本、错VIN或车型。",
+    "source_ids": [
+      "Sauthor",
+      "Sftc",
+      "Scfpb"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "三份虚构报价，明确车辆和费用字段，不含真实信用或身份信息。",
+    "tools": "文本比较与确定性加总；不登录账户、不申请贷款或代联系。",
+    "expected_result": "可比项目、缺失条件和人工问题清单，无交易或融资决定。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-with-chatgpt",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "目录试用模板，非本次实际购车指令",
+        "text": "I'm buying a [new/used] [make and model] with a budget of [amount] and a financing plan of [cash/loan details]. Build me a checklist for inspecting and buying it, then coach me through negotiating: give me an opening offer, a walk-away price, and scripts for common dealer tactics. When I paste the dealer's replies, help me answer each one. Finish with a summary of the final deal terms to verify before I sign."
+      },
+      {
+        "title": "虚构购车报价对照",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sftc",
+          "Scfpb"
+        ],
+        "attribution": "我们编写；未执行购车",
+        "text": "比较三份虚构报价，逐项列车辆年份配置、价格、税费、附加项、保修与付款条件。不同车辆或费用缺失先标不可比；不要假定优惠可叠加，不只按月供排序。确定性加总已知项目，列需书面确认问题。不能编造VIN数据、资格或保证省款，不联系卖家、不签约、不付定金、不申请贷款。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm buying a [new/used] [make and model] with a budget of [amount] and a financing plan of [cash/loan details]. Build me a checklist for inspecting and buying it, then coach me through negotiating: give me an opening offer, a walk-away price, and scripts for common dealer tactics. When I paste the dealer's replies, help me answer each one. Finish with a summary of the final deal terms to verify before I sign.",
+    "agent": "ChatGPT",
+    "source_url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-with-chatgpt",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "908e6c18a8647fa3ad7ee2c12d272811041228b12c5690b7f8e0ad8b83ee6a70",
+    "observation_window": {
+      "start": "2026-10-19T21:33:27Z",
+      "end": "2026-10-19T21:33:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1lo1n36/yesterday_chatgpt_helped_my_daughter_save_over/",
+    "source_title": "Parent describes ChatGPT-assisted car purchase",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T21:36:03Z",
+    "source_sha256": "7cd449e5bd73bb740d7dddbda43fab70383e705d3fe2326b53aafe99b1c43800",
+    "steps": [
+      {
+        "en": "The parent developed a car-buying prompt over a month, then shared it while the buyer was at a dealership.",
+        "zh": "家长用一个多月完善购车提示词，再在买家到店时提供给她。"
+      },
+      {
+        "en": "ChatGPT supplied research and negotiation guidance; the buyer walked away and later bought elsewhere with the parent.",
+        "zh": "ChatGPT提供资料和谈判建议；买家先离开，后来与家长到别处购买。"
+      },
+      {
+        "en": "The parent reports savings above $3,000 and limited VIN lookup reliability; these are self-reported results.",
+        "zh": "家长自述节省超过3,000美元并说明VIN查询可靠性有限；这些是自述结果。"
+      }
+    ]
+  },
+  "analysis_depth": "deep",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/negotiate-a-car-purchase-with-chatgpt",
+    "observed_at": null,
+    "body_sha256": "d18832d0bc5ae3e75ec263ad09a233b1301db20d39e85d7305584be069c72ef6",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "84489cdcec078d34e070c71c546f9fb48a5d2e1b9dc46f939a2dd1a1924bdb19",
+      "How it went": "c2cdb141e7322121b4c8668e4b4da12a0953285ceb26a5de436ac57d5dedcb23",
+      "Worth knowing": "cde52a24260f41619f41ab6d8a4b5cb243c945b314e3b3c57d81e6189de0e736"
+    },
+    "actual_agents": [
+      "ChatGPT"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T21:33:27Z",
+      "end": "2026-10-19T21:33:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  }
+}
