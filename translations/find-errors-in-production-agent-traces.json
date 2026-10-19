@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "find-errors-in-production-agent-traces",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
+  "translated_at": "2026-10-19T23:14:54Z",
+  "body": "查找生产环境智能体运行轨迹中的错误\nLaminar的flow-1模型读取智能体运行轨迹，发现点错位置或引用错误等隐性失败，从而不必抽样即可分析每条生产轨迹。\n使用的是\n自建或未命名的智能体\n他们做了什么\nflow-1是一个小型开源模型，先经微调，再用合成调查任务进行强化学习训练，在名为Signals的运行框架内工作。它把轨迹视为代码仓库，每个span视为一个文件，从压缩轨迹和用户提示开始，搜索各个span，完整读取相关内容，然后按用户指定的结构返回JSON发现。\n进展与成效\nLaminar称，在自有基准上，其检测质量与GPT-6-sol相当，成本低23倍，使分析每条轨迹变得可负担。相似发现会聚类，不过这项基准由厂商自己提供。\n值得了解\nSignals接受通用提示，例如检查浏览器智能体是否完成结账。失败聚类可用于构建评估数据集并修复问题。Laminar采用Apache 2.0许可，可自行托管。\n亲自尝试\n使用Claude Code\n复制提示词\n我有一个文件夹，里面是我的AI智能体导出的运行轨迹，路径为[轨迹文件路径]。逐条读取所有轨迹，标出静默失败，例如错误点击、错误引用、漏做步骤，或回答与工具输出不一致。最后给出表格，列出每条被标记轨迹的ID、失败类型和一句解释，并统计最常见的失败模式。\n原始来源：https://news.ycombinator.com/item?id=50154029",
+  "body_sha256": "252cdaf67d12291037be627d4986e1f63479f1f9bcb5d8f71d571f0772a2f0cf",
+  "scope": "Full licensed directory translation. Model/open-source limitations corrected separately in analysis."
+}

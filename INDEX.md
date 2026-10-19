@@ -1,8 +1,8 @@
 # 商业深度研究总索引
 
-已完成深度研究 **57** / 注册案例 **1438**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **58** / 注册案例 **1439**。旧版简略初稿 **0** 份不计入完成。
 
-当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、推送、合并和回读完成后接续，无额外冷却。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
+当前主对话单执行者按 /new 顺序串行研究，排除 Spark 二十例；独立分支验证后串行合并 main，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
 [完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)
 
@@ -65,6 +65,7 @@
 | [用 MentionDesk 跟踪品牌在 AI 回答中的提及并整理改进计划](reports/audit-seo-and-ai-search-visibility-with-an-agent.md) | 仅建议受控试点 | 38.0 | 中 | available | 搜索营销与品牌监测 | 2026-10-19T19:27:31Z |
 | [用 Finance 智能体检索13F申报并整理机构持仓变化](reports/research-hedge-fund-portfolios-from-13f-filings.md) | 仅建议受控试点 | 41.0 | 中 | available | 公开金融披露研究与数据整理 | 2026-10-19T19:57:01Z |
 | [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
+| [用 Laminar Signals 分析智能体运行轨迹并聚类错误](reports/find-errors-in-production-agent-traces.md) | 仅建议受控试点 | 43.0 | 中 | available | 智能体可观测性与质量运营 | 2026-10-19T23:14:54Z |
 
 ## 需要重做的旧版简略初稿
 
