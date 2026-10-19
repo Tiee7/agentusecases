@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
-  "observed_at": "2026-10-19T07:17:37.719517+00:00",
-  "html_sha256": "6dd70457f067b96e647e96e84ca890df3e656e56f784a410a8ccd41e4732ca6c",
+  "observed_at": null,
+  "html_sha256": "e8dcfb0d55590d66a32f69ad5465c15aa201cd1865b1176f1532d690c7005cda",
   "body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
   "status": "observed",
   "fields": {
@@ -95,12 +95,26 @@
     "language": "en",
     "body": "Run agent builds and tests on remote Windows VMs\nA developer gives coding agents ssh access to WSL instances on remote Windows VMs to run builds and tests instead of on their Mac laptop.\nDone with\nCX\nCodex\nWhat they did\nThe developer's employer supplies a Mac laptop plus remote Windows VMs. The agents get ssh access to WSL instances on those VMs and run their builds and tests there. Setup is ad hoc: agents have to pull the latest code, or the developer keeps the main enlistment current on each machine.\nHow it went\nBuilds no longer run on the Mac, so background agents stop causing video streams to drop during meetings. The developer is happy with it, though the setup is only good enough for now.\nWorth knowing\nKeeping code in sync on the VMs is manual; the developer is considering containers or GitHub Actions to make it cleaner.\nTry it yourself\nwith\nCodex\nCopy prompt\nI'm working in [project folder] on my [Mac/Linux] machine, but builds and tests must run on a remote Windows machine. You can reach it with ssh at [user@host] and use WSL there. Sync the code to [remote path], run [build command] and [test command] over ssh, and report which tests passed and failed with the relevant error output. Do not delete or overwrite anything on the remote machine outside [remote path], and show me any command that would do so before running it.\nOriginal source: https://news.ycombinator.com/item?id=50137976",
     "body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
-    "archived_at": "2026-10-19T07:17:37.719517+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-19T22:35:10Z",
+      "end": "2026-10-19T22:35:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:17:37.719517+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-19T22:35:10Z",
+    "end": "2026-10-19T22:35:21Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
+    "translated_at": "2026-10-19T22:37:26Z",
+    "body": "在远程Windows虚拟机上运行智能体构建和测试\n一位开发者给编程智能体提供远程Windows虚拟机中WSL实例的SSH访问，让它们在那里构建和测试，而不是在自己的Mac笔记本上运行。\n使用的是\nCodex\n他们做了什么\n开发者的雇主提供Mac笔记本和远程Windows虚拟机。智能体通过SSH访问这些虚拟机中的WSL实例，在那里运行构建和测试。配置较临时：智能体需要拉取最新代码，或由开发者维护每台机器上的主工作副本。\n进展与成效\n构建不再占用Mac，因此后台智能体不再导致会议视频流掉线。开发者对此满意，但认为目前只是够用。\n值得注意\n虚拟机代码同步仍是手动的；开发者正在考虑用容器或GitHub Actions让流程更整洁。\n亲自尝试\n使用Codex\n复制提示词\n我在[Mac/Linux]机器的[项目文件夹]中工作，但构建和测试必须在远程Windows机器上运行。你可以通过SSH连接[user@host]，并使用那里的WSL。把代码同步到[远程路径]，通过SSH运行[构建命令]和[测试命令]，报告通过与失败的测试及相关错误输出。不要删除或覆盖远程机器上[远程路径]之外的内容；如果某命令会这样做，运行前先展示给我。\n原始来源：https://news.ycombinator.com/item?id=50137976",
+    "body_sha256": "f904f8cc8d51cf334be9fefc44f0e1400ddbbb66b8b435f5f9448e641a4c9379",
+    "status": "available"
   }
 }

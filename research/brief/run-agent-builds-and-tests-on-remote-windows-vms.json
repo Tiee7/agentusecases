@@ -1,0 +1,357 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-agent-builds-and-tests-on-remote-windows-vms",
+  "url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+  "title": "让编程智能体通过 SSH 在远程 WSL 运行构建测试",
+  "industry": "开发环境与构建验证",
+  "researched_at": "2026-10-19T22:37:26Z",
+  "brief_reason": "只有单条用户评论，缺构建命令、版本绑定、环境配置和测试回执；不以通用CI资料补成原系统深研。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先绑定代码版本与测试目标，再衡量远程卸载收益",
+    "reason": "减少本机竞争有使用自述，可靠同步和工程效果尚待核。",
+    "next_action": "补一份脱敏的commit—平台—命令—退出码—产物任务记录。",
+    "stop_condition": "版本无法绑定、测试平台不符或维护成本超过收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+      "title": "许可目录",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "permitted_cloud_browser_main_dom",
+      "characters": 14964,
+      "sha256": "e8dcfb0d55590d66a32f69ad5465c15aa201cd1865b1176f1532d690c7005cda",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "保留Codex标签、SSH到WSL方法及原始提示词。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://news.ycombinator.com/item?id=50137976",
+      "title": "bentcorner HN公开评论",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "permitted_cloud_browser_after_one_failed_web_read",
+      "characters": 1075,
+      "sha256": "31b63a5cb72d1132ddc88d2b05d16e4824d7e5f0fffac190636133d3d21f9f90",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "评论自述会议视频干扰减少，配置临时且同步仍手动，未给性能基准。"
+    },
+    {
+      "id": "Swsl",
+      "url": "https://learn.microsoft.com/en-us/windows/wsl/compare-versions",
+      "title": "Microsoft WSL说明",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 12508,
+      "sha256": "1dd56e28ebd3065e614fbccee9a6227a9c3fc2214baa7db8279e23895cd49940",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "WSL2运行Linux内核，宿主Windows不自动等于原生Windows测试。"
+    },
+    {
+      "id": "Srunner",
+      "url": "https://docs.github.com/en/actions/concepts/runners/github-hosted-runners",
+      "title": "GitHub托管运行器",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 7778,
+      "sha256": "9ff4119c26be29a2b70964c496dddc6376436ef6fc4ea6888f8ec94364eb2fba",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "有Linux、Windows与macOS运行器，环境映像和工作日志可追溯。"
+    },
+    {
+      "id": "Sprice",
+      "url": "https://docs.github.com/en/billing/reference/actions-runner-pricing",
+      "title": "GitHub运行器价格",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 4975,
+      "sha256": "8f044cc8ad951eeda4760870d1b6c390cb4ddc0bd1396b66c98fd58aea40c565",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "当前基准Linux2核x64为0.006美元每分钟、Windows2核x64为0.010，并逐作业向上取整；不是作者实际账单。"
+    },
+    {
+      "id": "Ssecurity",
+      "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions",
+      "title": "GitHub安全实践",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T22:37:26Z",
+      "read_window": {
+        "start": "2026-10-19T22:35:10Z",
+        "end": "2026-10-19T22:37:26Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 5604,
+      "sha256": "b42e09b32c60845aae433ced18b53683f6df157004cbc80d0aa3cc2a0a2656c4",
+      "hash_scope": "Captured public browser text or source tool response",
+      "supports": "最小权限和日志敏感信息检查适用于拟议CI方案，不能证明原SSH配置安全。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述使用雇主提供的Mac与远程Windows VM中的WSL。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "评论承认代码同步临时，并考虑容器或GitHub Actions。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "会议视频流干扰减少是评论者自述，未提供基准测试。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "WSL2运行Linux内核，原评论未交代版本。",
+      "type": "verified",
+      "source_ids": [
+        "Swsl",
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "GitHub提供不同操作系统的托管运行器。",
+      "type": "verified",
+      "source_ids": [
+        "Srunner"
+      ]
+    },
+    {
+      "statement": "现行价格表按运行器SKU及作业分钟取整计费。",
+      "type": "verified",
+      "source_ids": [
+        "Sprice"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "一条有效使用线索，缺完整工程记录",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "bentcorner说明雇主提供Mac与远程Windows VM，自己把智能体构建测试移到WSL。评论没有仓库、语言、构建命令、VM配置或耗时对照，不能据此得出速度更快或成本更低。减少会议视频干扰是作者体验，不是受控CPU或网络测量。目录标Codex，评论本身泛称agents；保留目录标签，不补造具体版本和模型。"
+    },
+    {
+      "id": "target",
+      "title": "宿主Windows和测试目标必须分开",
+      "source_ids": [
+        "Swsl",
+        "Sauthor"
+      ],
+      "body": "SSH进入WSL后，通常执行的是Linux环境中的工具；除非明确调用Windows工具链并验证产物，不能把通过的结果称为原生Windows兼容性测试。WSL2有Linux内核，原评论也没说WSL版本。下一步应先记录目标操作系统、CPU架构、编译器和实际可执行文件格式，避免把“跑在Windows机器里”误当平台验收。"
+    },
+    {
+      "id": "sync",
+      "title": "拉取最新不等于测试正确版本",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "作者承认同步仍较临时，这是最关键的复制缺口。建议每次任务绑定明确commit和任务ID，远端使用独立工作目录并回报实际HEAD、工作树差异和测试命令。只运行git pull可能测到别人后来提交的版本，也可能漏掉本地未提交改动。这些是研究者拟议改进，未确认作者已有锁或版本绑定；不把主工作副本共享给多个写者当安全并行。"
+    },
+    {
+      "id": "receipt",
+      "title": "回执比一句通过更重要",
+      "source_ids": [
+        "Srunner"
+      ],
+      "body": "远程命令成功退出只证明进程结束，未必覆盖预期测试。拟议回执应含代码标识、平台、开始结束时间、完整命令、退出码及实际测试数量；失败保留必要错误信息但避免凭据。断连后先查询原任务是否还在跑，再决定重试，防止重复构建占满远端。日志与产物绑定同一任务，不能拿上次成功报告当这次结果。"
+    },
+    {
+      "id": "alternative",
+      "title": "先比较已有CI和现有机器",
+      "source_ids": [
+        "Srunner",
+        "Sprice"
+      ],
+      "body": "GitHub托管运行器可承担按提交触发的验证，也提供不同操作系统。交互式远程机器适合临时调试，标准CI更便于固定流程和记录，两者并不互斥。当前价目表按不同SKU计费并逐作业取整，不能只看任务持续几秒就按小数秒估价。作者使用雇主已提供VM，其新增现金成本未知，因此不能推断租云机器必然省钱或值得售卖托管服务。"
+    },
+    {
+      "id": "business",
+      "title": "自用价值先于独立商业模式",
+      "source_ids": [
+        "Sauthor",
+        "Srunner"
+      ],
+      "body": "明确价值是减少工作笔记本资源竞争，尤其会议与后台编译同时发生时。潜在服务可包括构建环境整理、回执规范与维护，但现成CI和内部IT已有替代。没有真实采购、维护工时、并发量或利用率，无法给有依据的利润模型；本例保持未评分简报。只想让电脑不卡的人未必需要购买一个完整agent平台。"
+    },
+    {
+      "id": "access",
+      "title": "远程访问不是无限机器权限",
+      "source_ids": [
+        "Ssecurity"
+      ],
+      "body": "研究阶段没有连接SSH、创建密钥或改防火墙。未来若实施，须明确获准机器、路径、命令与任务范围，使用已有合适权限；不能把提示词中的路径约束当操作系统隔离。构建脚本与依赖本身会执行代码，读取项目文件不代表它们可授权外发秘密。日志需检查敏感信息，不能依赖自动遮罩一定成功。"
+    },
+    {
+      "id": "next",
+      "title": "补一份可复核任务记录即可提升判断",
+      "source_ids": [
+        "Sauthor",
+        "Swsl"
+      ],
+      "body": "优先拿到脱敏的单次任务：源commit、WSL版本、目标平台、命令、退出码及产物。不需要先搭建复杂调度。可先设计两个不同commit的合成回执，检查混用时是否被拒绝；本轮未执行该测试。若主要痛点通过限制本地并发就能解决，远程迁移未必划算；如果同步和维护成本高于减少的干扰，也应保留较简单方案。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+    "observed_at": null,
+    "body_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d3ec33a802f4e94a4fb101175c197b090dd61658834eb3d12729f47573b82dfc",
+      "How it went": "b2f897cf8bd256e37bc20a2074bf5bbc0f38f43388064220c4fcd5647ae6d4d7",
+      "Worth knowing": "5e523673f75faec606f88956ad32cfb052ca99f32eea522be06d415ed5e12bad"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T22:35:10Z",
+      "end": "2026-10-19T22:35:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm working in [project folder] on my [Mac/Linux] machine, but builds and tests must run on a remote Windows machine. You can reach it with ssh at [user@host] and use WSL there. Sync the code to [remote path], run [build command] and [test command] over ssh, and report which tests passed and failed with the relevant error output. Do not delete or overwrite anything on the remote machine outside [remote path], and show me any command that would do so before running it.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e8dcfb0d55590d66a32f69ad5465c15aa201cd1865b1176f1532d690c7005cda",
+    "observation_window": {
+      "start": "2026-10-19T22:35:10Z",
+      "end": "2026-10-19T22:35:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50137976",
+    "source_title": "bentcorner remote WSL builds comment",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T22:37:26Z",
+    "source_sha256": "31b63a5cb72d1132ddc88d2b05d16e4824d7e5f0fffac190636133d3d21f9f90",
+    "steps": [
+      {
+        "en": "The commenter moves agent builds and tests from a Mac to employer-provided remote WSL instances over SSH.",
+        "zh": "评论者通过SSH把智能体构建测试从Mac移到雇主提供的远程WSL实例。"
+      },
+      {
+        "en": "Code synchronization remains ad hoc; improved meeting-video behavior is self-reported.",
+        "zh": "代码同步仍较临时，会议视频体验改善为作者自述。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "移走编译负载可能改善本机可用性，但未测净省时和成本。",
+    "audience": "已有获准远程算力、同时开会和构建的开发者。",
+    "use": "远程构建测试并取回版本绑定回执。",
+    "benefit": "作者自述会议体验改善，未量化。",
+    "setup_cost": "核机器授权、工具链、代码同步、目标平台与回执。",
+    "maintenance_cost": "依赖、补丁、容量、版本同步和失败恢复。",
+    "frequency": "按构建任务发生，评论未给每日次数。",
+    "privacy_risk": "代码与环境可能含机密，远程路径和日志需限制。",
+    "error_risk": "测错commit、混淆WSL与Windows、重复运行或遗留进程。",
+    "source_ids": [
+      "Sauthor",
+      "Swsl",
+      "Ssecurity"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "目录模板完整保留，本轮不按模板连接真实机器。",
+    "prerequisites": "合成任务记录与虚构路径，不含主机地址或密钥。",
+    "tools": "本地记录核对；未运行远程构建或配置访问。",
+    "expected_result": "识别版本或平台不一致，列缺项，不把未知写成测试通过。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-agent-builds-and-tests-on-remote-windows-vms",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I'm working in [project folder] on my [Mac/Linux] machine, but builds and tests must run on a remote Windows machine. You can reach it with ssh at [user@host] and use WSL there. Sync the code to [remote path], run [build command] and [test command] over ssh, and report which tests passed and failed with the relevant error output. Do not delete or overwrite anything on the remote machine outside [remote path], and show me any command that would do so before running it."
+      },
+      {
+        "title": "构建回执核对",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Srunner"
+        ],
+        "attribution": "原创测试提示，未执行",
+        "text": "检查这两份虚构构建记录的任务ID、源commit、远端HEAD、操作系统架构、命令退出码和产物。版本不一致或平台目标不符就标未验证，不连接机器、不运行命令。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "仅一个用户自述，官方机制说明不构成其结果独立验证。"
+  },
+  "disconfirming_evidence": "手工同步仍在，平台目标不明，已有CI替代，雇主提供VM不能推新服务经济性。",
+  "limitations": "无SSH连接、安装、密钥、凭据或远程变更；HN普通读取失败一次后自有浏览器成功；Microsoft页显示授权提示，未登录或继续受限操作。",
+  "archive_source_sha256": "59dcfb6d3b2e5b9c897a9b6a8a399df8ea02cf4c59a211b1178671f799d0974d",
+  "translation_sha256": "f904f8cc8d51cf334be9fefc44f0e1400ddbbb66b8b435f5f9448e641a4c9379"
+}
