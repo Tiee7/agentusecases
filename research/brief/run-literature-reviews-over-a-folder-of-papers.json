@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-literature-reviews-over-a-folder-of-papers",
+  "url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+  "title": "用 Claude Code 整理论文文件夹与共同引用",
+  "industry": "科研资料整理",
+  "researched_at": "2026-10-19T21:54:14Z",
+  "brief_reason": "作者为培训教程，缺命令文件、样本输出和可复现耗时；多来源官方文档不能替代案例执行证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证引用提取与人工复核成本",
+    "reason": "文件夹整理方向合理，教程效率和商业交付尚未验证。",
+    "next_action": "取得命令与可分享样本，按人工基准核查。",
+    "stop_condition": "来源无法定位或复核总时间超过手工。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:54:14Z",
+      "read_window": {
+        "start": "2026-10-19T21:51:26Z",
+        "end": "2026-10-19T21:54:14Z"
+      },
+      "read_method": "permitted_cloud_browser",
+      "characters": 14010,
+      "sha256": "6ab3994c9560ecdea556d2116176de1c5d3763f7b99cc33600ab9d6c296786b0",
+      "hash_scope": "Captured browser text or combined source-read response",
+      "supports": "保留目录原文、工具与提示词，目录自己标明耗时为作者说法。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en",
+      "title": "Claude Code研究所教程，页面日期2026-07-27",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:54:14Z",
+      "read_window": {
+        "start": "2026-10-19T21:51:26Z",
+        "end": "2026-10-19T21:54:14Z"
+      },
+      "read_method": "permitted_cloud_browser",
+      "characters": 10657,
+      "sha256": "08003d68c21d22bf71ea46de1e51f6a4ef00a985b4264479ac3372a8fe9147ef",
+      "hash_scope": "Captured browser text or combined source-read response",
+      "supports": "教程列操作阶段与效率主张，但没有提供命令文件、论文集合或结果样本；末尾推广培训。"
+    },
+    {
+      "id": "Sskills",
+      "url": "https://code.claude.com/docs/en/skills",
+      "title": "Claude Code技能官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:54:14Z",
+      "read_window": {
+        "start": "2026-10-19T21:51:26Z",
+        "end": "2026-10-19T21:54:14Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 32053,
+      "sha256": "91806ef3e6ded6e84e8d2b09e95673b3264a3c2cc8c23a029e2df7a5358f45c9",
+      "hash_scope": "Captured browser text or combined source-read response",
+      "supports": "官方确认自定义技能机制，不能据此验证该作者的命令或耗时。"
+    },
+    {
+      "id": "Snotebook",
+      "url": "https://support.google.com/gemininotebook/answer/16215270?co=GENIE.Platform%3DDesktop&hl=en-5",
+      "title": "Google多来源笔记官方说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:54:14Z",
+      "read_window": {
+        "start": "2026-10-19T21:51:26Z",
+        "end": "2026-10-19T21:54:14Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 32053,
+      "sha256": "91806ef3e6ded6e84e8d2b09e95673b3264a3c2cc8c23a029e2df7a5358f45c9",
+      "hash_scope": "Captured browser text or combined source-read response",
+      "supports": "官方支持多份来源及PDF，反驳教程将多文档处理说成独有优势。"
+    },
+    {
+      "id": "Selicit",
+      "url": "https://elicit.com/pricing?redirected=true",
+      "title": "Elicit官方产品与价格",
+      "kind": "competitor",
+      "status": "fetched",
+      "fetched_at": "2026-10-19T21:54:14Z",
+      "read_window": {
+        "start": "2026-10-19T21:51:26Z",
+        "end": "2026-10-19T21:54:14Z"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 32053,
+      "sha256": "91806ef3e6ded6e84e8d2b09e95673b3264a3c2cc8c23a029e2df7a5358f45c9",
+      "hash_scope": "Captured browser text or combined source-read response",
+      "supports": "提供论文搜索、提取和系统综述工作流；价格存在不同客群与年付档，不混成单一月付报价。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录描述Claude Code两个自定义命令，未提供其文件。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者声称50篇30分钟、10篇引用整理15分钟，缺计时记录。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者页面日期为2026-07-27，末尾推广培训。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "官方技能文档支持自定义SKILL.md及斜杠调用。",
+      "type": "verified",
+      "source_ids": [
+        "Sskills"
+      ]
+    },
+    {
+      "statement": "Google官方产品支持多份来源与PDF。",
+      "type": "verified",
+      "source_ids": [
+        "Snotebook"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "教程能提供思路，效果尚无复现依据",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "原文可读，日期显示2026年7月27日；目录标Undated，两者分别记录。作者是发布Claude Code培训内容的账号，文末有课程推广。文章展示两个命令名和阶段，却没有命令定义、输入论文列表、模型版本、输出样本或计时日志。30分钟和15分钟属于教程声称的前后对比，不能当已测效率，更不能当收入。当前保留简报，优先补可重现材料。"
+    },
+    {
+      "id": "workflow",
+      "title": "两个命令与目录试用模板并不完全相同",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "作者描述/lit-map先提取PDF文本，再整理目标、方法、结论、关键词及主题相关性；/citation-network统计参考文献的重叠。目录Copy prompt把任务合并，要求bibliographies.md和relevance_list.md，而原教程提到literature_map.md。保留这一区别，不能声称下载了现成命令。研究主题、排除条件和输出位置需事先明确，原始文件只读。"
+    },
+    {
+      "id": "accuracy",
+      "title": "引用频次不能直接充当相关性",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "在指定文件夹内频繁被引，只代表该集合内的共同引用，不证明全领域重要性。需先处理同篇论文标题变体、DOI、预印本与正式版重复，再计算去重后的引用论文数。相关性排序应另有主题标准和页码依据；方法相反或负面结果也可能重要。扫描文本和参考文献排版可能产生漏项，这些是建议验收风险，尚未量化本工作流误差。"
+    },
+    {
+      "id": "alternatives",
+      "title": "多文件处理有现成替代",
+      "source_ids": [
+        "Snotebook",
+        "Selicit",
+        "Sskills"
+      ],
+      "body": "教程把其他聊天工具描述为只能逐篇处理，不能据此建立独占卖点。Google官方说明支持多份来源与PDF；Elicit已有文献检索和提取流程。Claude Code可自定义文件输出和处理步骤，官方技能机制确实存在，但自定义能力不等于该教程效果已验证。选择应比较可追溯输出、人工纠错和机构允许的数据路径。"
+    },
+    {
+      "id": "personal",
+      "title": "适合已有论文集合的研究者先小样本验证",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ],
+      "body": "使用场景是定期整理已收集资料；真正收益应计算提取加复核的总时间。首次需明确研究问题、准备有权使用的文本PDF、建立引用去重规则；维护涉及格式变化和主题调整。未发表材料可能敏感，终端本地文件并不自动意味着推理完全离线。应先核机构与服务设置，不把教程关于本地处理的笼统表述当权限结论。"
+    },
+    {
+      "id": "business",
+      "title": "付费方向与作者成果分别看",
+      "source_ids": [
+        "Selicit",
+        "Sauthor"
+      ],
+      "body": "可能收费的工作是给团队配置可审计整理流程、培训和维护，而非售卖未经复核的学术结论。这只是候选模式。已有专业产品构成替代，作者推广课程也不证明课程销量。缺实际交付工时、复核错误、付费客户和续用证据，本例不评分也不编利润情景。下一步问清哪类结果人工最难校对，再判断是否需要定制。"
+    },
+    {
+      "id": "trial",
+      "title": "先做三份合成材料的可核对检查",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议验证用三份自行编写的小文档：两份共享同一引用但格式不同，一份与主题无关，再放一条缺DOI的引用。预期输出标注文件与页码、合并重复项、单列未知、不删除原件；人工已知答案用于核对。计时应包括复核。此轮没有运行Claude Code或上传真实论文，没有宣称已通过此测试。"
+    },
+    {
+      "id": "next",
+      "title": "升级深研需要的材料",
+      "source_ids": [
+        "Sauthor",
+        "Sskills"
+      ],
+      "body": "先补作者命令定义和可分享的小样本输入输出，再记录运行配置、失败项与复核耗时。若只得到相似教程而没有执行证据，继续保持简报。若输出无法逐条回到论文位置，或整理加复核比手工更慢，就缩小为目录索引辅助，不把自动摘要用于最终综述结论。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+    "observed_at": null,
+    "body_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "a317efaeacf58ec2432434bc759f1f9038c00e87d9eae9109c6134afbda3ac69",
+      "How it went": "2f57d62300ee1e2a4fa41410c73bb5dc56238bf726c02bd6789b99b7f4091791",
+      "Worth knowing": "ad39431e94e463f46125d132da80cd594022fe8da7d4feab3db3ca7192a8be42"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-19T21:51:26Z",
+      "end": "2026-10-19T21:51:57Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Read every paper in the folder [path to my papers folder] and extract each one's bibliography into a file called bibliographies.md. Then identify the works cited most often across the papers, and write relevance_list.md ranking all papers by how relevant they are to [my research theme], with one sentence of reasoning each. Don't modify or delete any of the original files. You're done when both files exist and you've told me the top 10 core works.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "6ab3994c9560ecdea556d2116176de1c5d3763f7b99cc33600ab9d6c296786b0",
+    "observation_window": {
+      "start": "2026-10-19T21:51:26Z",
+      "end": "2026-10-19T21:51:57Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://note.com/claudecode_lab/n/n8bc3cb76575d?hl=en",
+    "source_title": "Claude Code literature-review tutorial",
+    "source_language": "en",
+    "accessed_at": "2026-10-19T21:54:14Z",
+    "source_sha256": "08003d68c21d22bf71ea46de1e51f6a4ef00a985b4264479ac3372a8fe9147ef",
+    "steps": [
+      {
+        "en": "The tutorial proposes custom commands for PDF extraction and citation overlap.",
+        "zh": "教程提出自定义命令用于PDF提取和引用重叠整理。"
+      },
+      {
+        "en": "Timing claims lack input sets, command definitions and reproducible output artifacts.",
+        "zh": "耗时主张缺输入集合、命令定义和可复现输出。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有教程步骤但缺复现证据。",
+    "audience": "有合法论文集合的研究人员。",
+    "use": "参考文献提取和主题相关性初筛。",
+    "benefit": "潜在减少整理，净省时未知。",
+    "setup_cost": "定义主题、输出、文本提取与去重规则。",
+    "maintenance_cost": "论文格式、模型和研究范围变化。",
+    "frequency": "按文献积累使用；每周监测是教程另一个提议，不是实测频率。",
+    "privacy_risk": "未发表资料与机构授权，需核云服务数据路径。",
+    "error_risk": "漏引、重复引用、错误相关性及无出处摘要。",
+    "source_ids": [
+      "Sauthor",
+      "Sskills"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "source_prompt_note": "目录模板与原教程输出文件名有所不同。",
+    "prerequisites": "三份自行编写且答案已知的小文档，无机密或未授权全文。",
+    "tools": "已有文本助手或获准Claude Code；本轮未运行。",
+    "expected_result": "来源位置、引用去重、未知项与相关性理由，原件不改。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-literature-reviews-over-a-folder-of-papers",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Read every paper in the folder [path to my papers folder] and extract each one's bibliography into a file called bibliographies.md. Then identify the works cited most often across the papers, and write relevance_list.md ranking all papers by how relevant they are to [my research theme], with one sentence of reasoning each. Don't modify or delete any of the original files. You're done when both files exist and you've told me the top 10 core works."
+      },
+      {
+        "title": "合成引用检查",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "原创验证提示，未执行",
+        "text": "仅整理这三份合成材料，逐条保留文件和页码。合并格式不同的同一引用；缺失标未知。引用频次与主题相关性分开，不修改原件。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "未取得该教程实现的独立使用证据；官方产品说明不算用户反馈。"
+  },
+  "disconfirming_evidence": "多文档并非独有能力，原文培训推广，效果缺复现材料。",
+  "limitations": "未运行作者命令，未上传论文，未购买工具或课程；来源读取成功不等于复现成功。",
+  "archive_source_sha256": "617cb460b4d70c400f947a2213d30ab712fda958de7f88d00dd575993476ff95",
+  "translation_sha256": "d4d0f4bcfbb70b83d21025e6ecf5b9b29459ee1063f4b7a741ce657ff6293893"
+}
