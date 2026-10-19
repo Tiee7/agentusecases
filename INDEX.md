@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **50** / 注册案例 **1432**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **51** / 注册案例 **1433**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -58,6 +58,7 @@
 | [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 不建议商业投入 | 28.5 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
 | [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
 | [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |
+| [用 MentionDesk 跟踪品牌在 AI 回答中的提及并整理改进计划](reports/audit-seo-and-ai-search-visibility-with-an-agent.md) | 仅建议受控试点 | 38.0 | 中 | available | 搜索营销与品牌监测 | 2026-10-19T19:27:31Z |
 
 ## 需要重做的旧版简略初稿
 
