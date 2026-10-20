@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **62** / 注册案例 **1452**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **63** / 注册案例 **1452**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -70,6 +70,8 @@
 | [用 Finance 智能体检索13F申报并整理机构持仓变化](reports/research-hedge-fund-portfolios-from-13f-filings.md) | 仅建议受控试点 | 41.0 | 中 | available | 公开金融披露研究与数据整理 | 2026-10-19T19:57:01Z |
 | [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
 | [用 Laminar Signals 分析智能体运行轨迹并聚类错误](reports/find-errors-in-production-agent-traces.md) | 仅建议受控试点 | 43.0 | 中 | available | 智能体可观测性与质量运营 | 2026-10-19T23:14:54Z |
+
+| [用Claude进行技术面试并生成候选人报告](reports/run-ai-led-technical-interviews-for-recruiting.md) | 仅建议受控试点 | 44.0 | 中 | available | 技术招聘与面试辅助 | 2026-10-20T10:53:13.090855+00:00 |
 
 ## 需要重做的旧版简略初稿
 
