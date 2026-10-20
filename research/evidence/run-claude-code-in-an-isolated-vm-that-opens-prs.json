@@ -1,0 +1,114 @@
+[
+  {
+    "id": "Sdirectory",
+    "url": "https://agentusecases.ai/use-case/run-claude-code-in-an-isolated-vm-that-opens-prs",
+    "title": "许可目录：隔离虚拟机与人工合并",
+    "kind": "aggregator",
+    "status": "fetched",
+    "read_window": {
+      "start": "2026-10-20T18:51:48Z",
+      "end": "2026-10-20T18:52:06Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "read_method": "permitted_own_cloud_browser_main_dom",
+    "characters": 14140,
+    "sha256": "b9c50995cdfdb55e131afb6ddd5bb0cad59e92472e3bbc32a3b1283554dafdf9",
+    "hash_scope": "Captured main DOM outerHTML",
+    "supports": "目录转述VM/VLAN、Forgejo、Infisical及人工合并流程；没有实测结果。"
+  },
+  {
+    "id": "Ssecret",
+    "url": "https://infisical.com/blog/how-environment-variables-work",
+    "title": "Infisical：运行时环境变量",
+    "kind": "primary",
+    "status": "fetched",
+    "read_window": {
+      "start": "2026-10-20T18:52:20Z",
+      "end": "2026-10-20T18:52:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "read_method": "supported_public_web_tool",
+    "receipt_created_at": "2026-10-20T18:54:41.108796+00:00",
+    "receipt_text": "2026-09-25官方解释运行时注入将密钥放入应用进程环境，避免项目明文文件，但运行时值仍在进程内存/环境；不能将没有.env等同agent永远不可读。",
+    "characters": 77,
+    "sha256": "b05fcda2681bf0fd9c997d1a24ea65aec24fe66b9b50878e3e6632dc7707ff07",
+    "hash_scope": "Researcher summary of read source, not full source text",
+    "supports": "2026-09-25官方解释运行时注入将密钥放入应用进程环境，避免项目明文文件，但运行时值仍在进程内存/环境；不能将没有.env等同agent永远不可读。"
+  },
+  {
+    "id": "Spermissions",
+    "url": "https://forgejo.org/docs/v17.0/user/collaboration/repo-permissions/",
+    "title": "Forgejo17：仓库权限",
+    "kind": "primary",
+    "status": "fetched",
+    "read_window": {
+      "start": "2026-10-20T18:52:20Z",
+      "end": "2026-10-20T18:52:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "read_method": "supported_public_web_tool",
+    "receipt_created_at": "2026-10-20T18:54:41.108796+00:00",
+    "receipt_text": "Read可贡献/更新PR但不能直接推送仓库或合并；Write默认可推送和合并。团队可分单元设权限。账号名称或口头约定不能替代实际权限检查。",
+    "characters": 69,
+    "sha256": "1cdc062d50d8d2c76e1c27f21fb77550bdee105d76665bead8ff7f3b6326aaae",
+    "hash_scope": "Researcher summary of read source, not full source text",
+    "supports": "Read可贡献/更新PR但不能直接推送仓库或合并；Write默认可推送和合并。团队可分单元设权限。账号名称或口头约定不能替代实际权限检查。"
+  },
+  {
+    "id": "Sworkflow",
+    "url": "https://forgejo.org/docs/latest/user/actions/security-pull-request/",
+    "title": "Forgejo：PR工作流信任",
+    "kind": "primary",
+    "status": "fetched",
+    "read_window": {
+      "start": "2026-10-20T18:52:20Z",
+      "end": "2026-10-20T18:52:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "read_method": "supported_public_web_tool",
+    "receipt_created_at": "2026-10-20T18:54:41.108796+00:00",
+    "receipt_text": "只读用户发起的相关PR工作流需审批；写权限、Actions写权限、Owner/Admin通常隐式受信任。Approve once不同于永久信任；PR可修改工作流，因此不能把合并权限与执行风险混为一谈。",
+    "characters": 100,
+    "sha256": "564ab29ad8a37a6119436e4bcf350082dbda0a016adc9f9e95fc5c85239c3e53",
+    "hash_scope": "Researcher summary of read source, not full source text",
+    "supports": "只读用户发起的相关PR工作流需审批；写权限、Actions写权限、Owner/Admin通常隐式受信任。Approve once不同于永久信任；PR可修改工作流，因此不能把合并权限与执行风险混为一谈。"
+  },
+  {
+    "id": "Ssandbox",
+    "url": "https://code.claude.com/docs/en/sandboxing",
+    "title": "Claude Code：沙箱范围",
+    "kind": "primary",
+    "status": "fetched",
+    "read_window": {
+      "start": "2026-10-20T18:52:20Z",
+      "end": "2026-10-20T18:52:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "read_method": "supported_public_web_tool",
+    "receipt_created_at": "2026-10-20T18:54:41.108796+00:00",
+    "receipt_text": "当前内置沙箱覆盖shell及其子进程，文件工具、MCP和hooks不在同一边界；整体进程可置于容器或VM。默认环境可继承密钥，必须同时考虑文件与网络隔离，不能认为开启sandbox即完整防护。",
+    "characters": 96,
+    "sha256": "81c4a165f4610ea8507c78cc0a94e5204e8706092ae39109123ee9b8157a2db5",
+    "hash_scope": "Researcher summary of read source, not full source text",
+    "supports": "当前内置沙箱覆盖shell及其子进程，文件工具、MCP和hooks不在同一边界；整体进程可置于容器或VM。默认环境可继承密钥，必须同时考虑文件与网络隔离，不能认为开启sandbox即完整防护。"
+  },
+  {
+    "id": "Soriginal",
+    "url": "https://news.ycombinator.com/item?id=50164831",
+    "title": "HN原始讨论（未读取）",
+    "kind": "primary",
+    "status": "unavailable",
+    "read_method": "supported_public_web_tool",
+    "attempts": [
+      {
+        "window": "2026-10-20T18:52:06Z/18:52:10Z",
+        "result": "not accessible via this tool"
+      },
+      {
+        "window": "2026-10-20T18:52:20Z/18:52:25Z",
+        "result": "same error; one ordinary retry exhausted"
+      }
+    ],
+    "supports": "仅保存原始链接，未核实作者身份、原话、代码或配置；不再换路重试。"
+  }
+]
