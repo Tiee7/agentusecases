@@ -1,0 +1,383 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "generate-prompts-for-a-browser-agent-to-execute-trades",
+  "url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+  "title": "为Perplexity Comet生成交易信号和操作提示",
+  "industry": "投资研究工具",
+  "researched_at": "2026-10-20T05:02:57.947987+00:00",
+  "brief_reason": "有源码静态证据，但无独立使用效果、执行回执或商业需求；说明与代码及许可存在冲突。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "暂不建议商业化",
+    "headline": "先解决订单边界、数据缺失和许可冲突",
+    "reason": "生成文本不代表安全执行或有投资收益。",
+    "next_action": "仅做脱敏纯数据规则验收，不连接账户。",
+    "stop_condition": "未明确批准的提交指令、缺数据伪装完整或许可未澄清即分发。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:59:38Z",
+        "end": "2026-10-20T04:59:42Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1506,
+      "sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+      "hash_scope": "Read file content or existing licensed archive",
+      "receipt_text": null,
+      "supports": "目录称生成信号与提示文件，无已证交易执行结果；来源未标日期。"
+    },
+    {
+      "id": "Sreadme",
+      "url": "https://github.com/cometportfolio/CometAgent/blob/main/README.md",
+      "title": "CometAgent README",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:59:46Z",
+        "end": "2026-10-20T04:59:50Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector",
+      "characters": 14230,
+      "sha256": "1d95de509d46ea5a8ed82a1b46706d8c492de87abe09f540671ab1425f486764",
+      "hash_scope": "Read file content or existing licensed archive",
+      "receipt_text": null,
+      "supports": "说明CSV/Excel、技术与情绪评分和多券商提示。宣称提交前确认；License段又写仅教育用途、商业分发需许可。",
+      "git_blob": "ccfdff22900a70e394f90ce621d3166bc88e6fc0"
+    },
+    {
+      "id": "Scode",
+      "url": "https://github.com/cometportfolio/CometAgent/blob/main/agentic-trader.py",
+      "title": "CometAgent主脚本静态检查",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:59:50Z",
+        "end": "2026-10-20T05:00:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector",
+      "characters": 58949,
+      "sha256": "008b6b491090d74686db2bf85ae2c4d3eed3c7e8444f30febe8459139672c7b4",
+      "hash_scope": "Read file content or existing licensed archive",
+      "receipt_text": null,
+      "supports": "实际生成函数默认market，limit_hint只在签名出现；模板含直接submit/place指令，未明确强制用户批准后才提交。空情绪输入为0；短期有效权重60/20/10/10。",
+      "git_blob": "124fa66119383f01f0f92af5db0035ac41f4c8d2"
+    },
+    {
+      "id": "Slicense",
+      "url": "https://github.com/cometportfolio/CometAgent/blob/main/LICENSE",
+      "title": "CometAgent LICENSE文件",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:00:20Z",
+        "end": "2026-10-20T05:00:29Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector",
+      "characters": 78,
+      "sha256": "681941429f66118ec6cb442bcbbb3b288782f9f32837ad024837307faa4c7c81",
+      "hash_scope": "Researcher summary below, not original full document",
+      "receipt_text": "文件为2025 Comet Portfolio LLC MIT License，含商业使用/分发许可和保留声明条件；与README限制措辞冲突，需澄清范围。",
+      "supports": "文件为2025 Comet Portfolio LLC MIT License，含商业使用/分发许可和保留声明条件；与README限制措辞冲突，需澄清范围。",
+      "git_blob": "09d75e13e7f9f30c1e46ddd9f8a92ed1cfffc041"
+    },
+    {
+      "id": "Salpaca",
+      "url": "https://docs.alpaca.markets/us/v1.4.2/docs/paper-trading",
+      "title": "Alpaca模拟交易说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:00:15Z",
+        "end": "2026-10-20T05:00:35Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 52,
+      "sha256": "1416c2e5d3d10c82028087cb1d74541f1985bf75a667f40c4686607246c4a355",
+      "hash_scope": "Researcher summary below, not original full document",
+      "receipt_text": "模拟成交不同于真实市场，不能覆盖市场冲击、延迟滑点和排队等全部执行因素。仅作方法对比，本轮未开户或使用。",
+      "supports": "模拟成交不同于真实市场，不能覆盖市场冲击、延迟滑点和排队等全部执行因素。仅作方法对比，本轮未开户或使用。"
+    },
+    {
+      "id": "Salert",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-alerts/artificial-intelligence-fraud",
+      "title": "SEC等机构AI投资警示",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:02:57.947987+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:00:15Z",
+        "end": "2026-10-20T05:00:35Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 61,
+      "sha256": "6471a39dff7bfac64163aa68ae021d3cbb76ee8a334dd7091f412431dc300f7b",
+      "hash_scope": "Researcher summary below, not original full document",
+      "receipt_text": "2024-01-25投资者教育警示：AI信息可能不完整或错误，不能据AI标签承诺收益；该警示不是对本项目的调查或欺诈认定。",
+      "supports": "2024-01-25投资者教育警示：AI信息可能不完整或错误，不能据AI标签承诺收益；该警示不是对本项目的调查或欺诈认定。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "主脚本生成信号CSV和提示文本，本轮无真实执行证据。",
+      "type": "verified",
+      "source_ids": [
+        "Scode"
+      ]
+    },
+    {
+      "statement": "默认market，limit_hint参数未使用。",
+      "type": "verified",
+      "source_ids": [
+        "Scode"
+      ]
+    },
+    {
+      "statement": "模板有直接提交措辞，与逐单确认说明不完全一致。",
+      "type": "verified",
+      "source_ids": [
+        "Scode",
+        "Sreadme"
+      ]
+    },
+    {
+      "statement": "短期有效权重静态计算为60/20/10/10。",
+      "type": "verified",
+      "source_ids": [
+        "Scode"
+      ]
+    },
+    {
+      "statement": "空情绪输入返回0。",
+      "type": "verified",
+      "source_ids": [
+        "Scode"
+      ]
+    },
+    {
+      "statement": "README商业限制与MIT LICENSE措辞冲突。",
+      "type": "verified",
+      "source_ids": [
+        "Sreadme",
+        "Slicense"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "status",
+      "title": "生成文件已经可读，执行与业绩未证实",
+      "source_ids": [
+        "Sreadme",
+        "Scode"
+      ],
+      "body": "已静态读取README和主脚本。主函数最终调用信号分析、生成提示词并写CSV和文本，不能据此说程序已与券商完成交易。README列支持平台和Coinbase合作说法，本轮没有得到券商或Comet对应功能证据。未读取私人持仓，未运行脚本，未审计回测输出，不报告胜率、收益或真实成交。"
+    },
+    {
+      "id": "mismatch",
+      "title": "确认要求与模板并不一致",
+      "source_ids": [
+        "Sdirectory",
+        "Sreadme",
+        "Scode"
+      ],
+      "body": "目录及README称订单提交前需要确认；实际_prompt_for_platform模板同时包含直接place/submit等步骤。双重验证分支会要求用户确认，但不能代替每一笔订单批准。默认订单类型为market，limit_hint仅定义未使用，generate_prompts也未传入限价。源站试用模板要求数量和限价，不能被误认为当前脚本已完整落实这些要求。"
+    },
+    {
+      "id": "scoring",
+      "title": "README与实际权重不同",
+      "source_ids": [
+        "Sreadme",
+        "Scode"
+      ],
+      "body": "主脚本已加入Reddit情绪，与README三源描述不同。按代码相乘，短期技术/新闻/X/Reddit为60%/20%/10%/10%，中期50%/27.5%/12.5%/10%，长期40%/36%/12%/12%；这些是静态算术，不是策略验证。空文本或情绪组件不可用返回0，缺数据可能被当作中性值参与固定权重，不能把中性得分解释为已充分获取消息。"
+    },
+    {
+      "id": "demand",
+      "title": "可研究的需求是整理与审核一致性",
+      "source_ids": [
+        "Sreadme",
+        "Scode"
+      ],
+      "body": "推断用户需求是把分散的持仓输入和研究信号转为统一待审清单，减少人工复制。代码把配置比例和实时账户值换算委托数量的工作留给后续提示执行者；持仓数量、可用余额、交易单位和订单状态并没有因此形成完整约束。最小有用产物应先是可追溯的研究记录及异常列表，不必直接连接真实资金。"
+    },
+    {
+      "id": "delivery",
+      "title": "固定版本、来源完整度和输出边界",
+      "source_ids": [
+        "Scode"
+      ],
+      "body": "拟议交付需记录文件版本、行情时点、缺失源、规则参数与每条结论依据。现有CSV读取含原始前几行debug输出，真实持仓若进入共享日志会扩大暴露面。信号分数和所谓confidence也不等于经过校准的盈利概率。还应区分建议动作、待审委托和已成交回执，缺失任何环节都不能补造成功。"
+    },
+    {
+      "id": "license",
+      "title": "商业复制前先解决许可文字冲突",
+      "source_ids": [
+        "Sreadme",
+        "Slicense"
+      ],
+      "body": "README写教育用途并限制未经许可商业分发，LICENSE却是MIT并允许使用和分发等行为。两份文件同属作者仓库，不算两个独立支持来源。本轮如实记录冲突，不自行判定哪份声明优先、也不把公开仓库等同于无条件商业授权；报告只保存原创分析及短证据，不复制整套实现。"
+    },
+    {
+      "id": "revenue",
+      "title": "收费方向不等于收益承诺",
+      "source_ids": [
+        "Sreadme",
+        "Salert"
+      ],
+      "body": "可假设为研究团队提供数据清洗、规则审计或模拟流程质量检查服务，但本案无客户、付款或采购反馈。把信号直接包装为盈利订阅会要求远高于当前证据的验证和合规评估。官方投资者警示只是通用风险背景，不代表该项目被认定欺诈。本轮不提出买卖任何标的，也不接管交易。"
+    },
+    {
+      "id": "cost",
+      "title": "数据维护和执行验证可能高于生成成本",
+      "source_ids": [
+        "Scode",
+        "Salpaca"
+      ],
+      "body": "成本未知项包括行情许可、社交数据可用性、接口维护、回归验证与人工审核。抓取失败后输出0容易让表格看似完整，维护必须区分数据未取到和真实中性判断。模拟环境可帮助检查流程，但其成交假设与实际流动性、滑点及队列不同。没有实测运行成本和客户价值，不填虚构单位经济或回报。"
+    },
+    {
+      "id": "personal",
+      "title": "研究自用仍要避免敏感输入与误读",
+      "source_ids": [
+        "Sreadme",
+        "Scode"
+      ],
+      "body": "适合愿阅读代码和检查数据的研究型使用者；可用于理解规则如何生成待审文本，收益尚未证明。设置需要虚构或脱敏输入、依赖版本、源可用性和输出核查；维护涉及数据和页面变化。频率由研究计划决定。隐私风险在持仓、账户值与日志；错误风险包括错标的、缺数据当中性、重复指令、卖出超持仓和限价遗漏。"
+    },
+    {
+      "id": "next",
+      "title": "先做纯静态规则清单",
+      "source_ids": [
+        "Scode",
+        "Salpaca"
+      ],
+      "body": "本轮已完成代码阅读和权重算术，未执行第三方程序或模拟交易。下一步可设计本地纯数据验收：缺新闻、空持仓、非法数量、重复输入和无明确限价时，输出应保留未知并停止进入任何订单渠道。只有输出规则与说明一致才谈后续验证；不得把通过模拟视作真实盈利，更不应在研究阶段登录券商或提交订单。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "86ca6e22f902d075fe9b53537553e63ff1c51ac0653ba43d9dbd2c2cca94eda5",
+      "How it went": "3baa8fa86d28d10f8697b27058e2f32515f5cf9841c64516d398ef19dc345b51",
+      "Worth knowing": "469bab327928e108fb9a3f2a005e4e5a20f1fa6d956585bd0ab885e60da862a9"
+    },
+    "actual_agents": [
+      "Perplexity Comet"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Write a script that reads my portfolio files in [folder] and turns my trading signals into clear step-by-step instructions I can give a browser agent for [brokerage site]. Each instruction should include the ticker, buy or sell, quantity and limit price. Output them to [file] for me to review, and make sure the instructions tell the agent to stop and ask me before submitting any order.",
+    "agent": "Perplexity Comet",
+    "source_url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+    "observed_at": "2026-10-19T06:31:49.584242+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "f9d53e81d2d78fd79a7c7bf592e4de89fb294c054c36081c4d22350e1574306c"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://github.com/cometportfolio/CometAgent/blob/main/README.md",
+    "source_title": "CometAgent README",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T05:02:57.947987+00:00",
+    "source_sha256": "1d95de509d46ea5a8ed82a1b46706d8c492de87abe09f540671ab1425f486764",
+    "steps": [
+      {
+        "en": "The author describes reading portfolio files, combining indicators and sentiment, and writing signal and browser-prompt files.",
+        "zh": "作者描述读取持仓文件、组合指标与情绪，再写出信号和浏览器提示文件。"
+      },
+      {
+        "en": "The README recommends educational testing and paper trading, but implementation and licensing discrepancies remain.",
+        "zh": "README建议教育性测试与模拟交易，但实现及许可文字仍有不一致。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可辅助学习与审核规则，未证投资收益或净省时。",
+    "audience": "愿检查代码与数据的研究型用户。",
+    "use": "学习信号生成及待审文本结构。",
+    "benefit": "仅确认静态生成逻辑，无真实交易效果。",
+    "setup_cost": "脱敏输入、版本与来源完整度核对。",
+    "maintenance_cost": "数据接口、参数、回归与输出审查。",
+    "frequency": "按研究计划。",
+    "privacy_risk": "持仓与账户信息可能出现在日志。",
+    "error_risk": "缺数据中性化、限价遗漏、错误数量和直接提交措辞。",
+    "source_ids": [
+      "Scode",
+      "Sreadme"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板保留；本轮仅静态阅读，不执行交易指令。",
+    "prerequisites": "虚构数据与脱敏规则清单，不连接任何账户。",
+    "tools": "文本阅读与自行编写的算术检查。",
+    "expected_result": "参数、来源缺失、说明与代码差异清单；已做静态核验，未运行第三方程序。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Write a script that reads my portfolio files in [folder] and turns my trading signals into clear step-by-step instructions I can give a browser agent for [brokerage site]. Each instruction should include the ticker, buy or sell, quantity and limit price. Output them to [file] for me to review, and make sure the instructions tell the agent to stop and ask me before submitting any order."
+      },
+      {
+        "title": "纯静态规则审核",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Scode"
+        ],
+        "attribution": "原创审核范围",
+        "text": "只阅读提供的代码与虚构数据说明，列出缺失数据、订单类型、数量、限价、重复指令和批准步骤的不一致。不要运行第三方程序，不联网获取行情，不登录券商，也不生成可提交的真实订单。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "README和代码均为作者自有来源；未核独立用户结果。"
+  },
+  "disconfirming_evidence": "提示中缺乏明确逐单批准停点、限价未落地、权重版本不一致与许可文字冲突。",
+  "limitations": "仅静态阅读和算术。没有运行第三方脚本、访问社交原帖、读取真实持仓、开户、调用付费API或提交交易；未审计回测绩效。",
+  "archive_source_sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+  "translation_sha256": "dc064901273cbda647ee055b0583d9f02d74c27a60903820af1b01ceb82752ca"
+}
