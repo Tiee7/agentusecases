@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **58**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **59**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -68,3 +68,4 @@
 | 用ChatGPT整理每日日程和每周家务清单 | [简报](../../reports/brief/plan-daily-schedules-and-household-chores-with-chatgpt.md) |
 | 用ChatGPT选择并购买惊喜礼物 | [简报](../../reports/brief/have-an-agent-pick-and-buy-a-surprise-gift.md) |
 | 用Perplexity Comet研究公司信息并整理股票观察清单 | [简报](../../reports/brief/research-stocks-and-update-a-watchlist-in-the-browser.md) |
+| 用Claude Code拆分手写作业扫描件并登记提交情况 | [简报](../../reports/brief/split-and-log-handwritten-homework-scans-for-teachers.md) |

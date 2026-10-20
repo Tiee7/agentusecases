@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "split-and-log-handwritten-homework-scans-for-teachers",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+  "translated_at": "2026-10-20T03:05:26.660319+00:00",
+  "body": "为教师拆分手写作业扫描件并登记提交情况\n一个Claude Code技能读取批量扫描件上的手写姓名，将其与花名册匹配，为每位学生拆分出PDF，更新完成情况表，并标出未交作业。\n使用的是\nCC\nClaude Code\n他们做了什么\n这个技能接收一份批量扫描的作业PDF，通过视觉识别每页上的手写姓名。它将这些姓名与学生花名册进行模糊匹配，因此不同的拼写形式也能匹配。随后，它把PDF拆分为每位学生一份文件，并更新Excel完成情况表。对于超过99页的批次，它可以恢复会话继续处理。它要求进行人工核验。\n进展与成效\n该介绍没有给出实测结果或耗时。它说，人工核验步骤旨在让学生归属判断完全准确，并把在大型花名册中识别未交作业列为一种用途。\n值得了解\n要准备好人工检查姓名匹配，因为这个技能要求人工核验。超过99页的批次需要使用它的会话恢复功能。\n亲自尝试\n使用\nClaude Code\n复制提示词\n创建一个可复用的技能，处理[文件夹路径]中成批的手写作业扫描PDF。它应读取每页上手写的学生姓名，与[花名册文件]中的名单匹配，将扫描件拆成每位学生一份PDF，并更新[完成情况表]，标记谁提交了作业。最后列出未交作业的学生，以及任何无法有把握匹配的姓名。写入任何内容之前，先向我展示计划如何拆分以及如何修改表格，并且绝不要删除原始扫描件。\n原始来源：https://mcpmarket.com/tools/skills/homework-grading-workflow",
+  "body_sha256": "35bd458239c6fb829bcae16a7873acfacbce9382dc8a11332d2ee5768b9337fa",
+  "scope": "Full licensed directory only; third-party skill text not reproduced."
+}
