@@ -18,7 +18,7 @@
 | spark_second10 | run-a-company-reddit-presence-with-a-bot | pending_repair | 尚无 |
 | spark_second10 | handle-multi-click-chores-like-dmv-returns-and-appointments | pending_repair | 尚无 |
 | spark_second10 | hand-seo-tasks-to-a-chatgpt-agent | pending_repair | 尚无 |
-| spark_second10 | connect-an-agent-to-email-with-scoped-access | corrected_pending_publication | [修订报告](../reports/connect-an-agent-to-email-with-scoped-access.md)，尚待全量测试/发布回读 |
+| spark_second10 | connect-an-agent-to-email-with-scoped-access | completed | [修订报告](../reports/connect-an-agent-to-email-with-scoped-access.md)，[PR77](https://github.com/Tiee7/agentusecases/pull/77)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39445799518)，合并及远端回读通过 |
 | spark_second10 | run-a-10-agent-seo-content-pipeline | pending_repair | 尚无 |
 | own_original30 | track-personal-investments-with-a-claude-built-portfolio-tra | pending_final_audit | 尚无 |
 | own_original30 | find-errors-in-production-agent-traces | pending_final_audit | 尚无 |
