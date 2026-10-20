@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "manage-several-websites-across-wordpress-astro-and-eleventy",
+  "url": "https://agentusecases.ai/use-case/manage-several-websites-across-wordpress-astro-and-eleventy",
+  "title": "用OpenClaw与编码agent维护多个网站",
+  "industry": "网站运维",
+  "researched_at": "2026-10-20T12:27:40.048415+00:00",
+  "brief_reason": "原帖、站点和故障记录未取得；五站规模与四次回滚属于不同人的目录转述，没有真实维护工时、付费、版本归属或独立复验。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "按站点隔离任务，以恢复能力而非更新次数衡量维护",
+    "reason": "多agent可辅助操作，但验收、备份和生产权限仍需独立管理。",
+    "next_action": "先在一个无真实数据的测试项目上验证差异、构建和恢复清单。",
+    "stop_condition": "测试副本可触达生产数据、回滚不可验证或agent未经授权部署。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/manage-several-websites-across-wordpress-astro-and-eleventy",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:23:20Z",
+        "end": "2026-10-20T12:23:33Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T12:27:40.048415+00:00",
+      "characters": 15877,
+      "sha256": "d5b8fee8677b8b403217d565689570ff1d248f3d05bf01572a2abf2270ed5096",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "目录转述约五个网站的多agent维护体验，并明确不同评论者对升级、备份与四次回滚的描述。"
+    },
+    {
+      "id": "Sbackup",
+      "url": "https://docs.openclaw.ai/install/backups",
+      "title": "OpenClaw备份文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:24:00Z",
+        "end": "2026-10-20T12:24:10Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T12:27:40.048415+00:00",
+      "receipt_text": "官方说明恢复目录可能含凭据、会话和工作区数据；插件node_modules不在归档中，恢复后可能需重装依赖；恢复也会回退批准和去重状态。",
+      "characters": 68,
+      "sha256": "ef9cf5996a80f57e9e1f7178476fa0de22b515c7d8eba8451a31a82db7f70012",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方说明恢复目录可能含凭据、会话和工作区数据；插件node_modules不在归档中，恢复后可能需重装依赖；恢复也会回退批准和去重状态。"
+    },
+    {
+      "id": "Swp",
+      "url": "https://wordpress.org/documentation/article/updating-wordpress/",
+      "title": "WordPress更新文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:24:00Z",
+        "end": "2026-10-20T12:24:10Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T12:27:40.048415+00:00",
+      "receipt_text": "官方要求更新前备份并提供恢复路径；更新会影响核心文件，定制核心文件可能被覆盖。",
+      "characters": 39,
+      "sha256": "2cc71d7a45ad76d37c9171018a72f85f9493e4677ba5cd236f8c4e76df8e8414",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方要求更新前备份并提供恢复路径；更新会影响核心文件，定制核心文件可能被覆盖。"
+    },
+    {
+      "id": "Sastro",
+      "url": "https://docs.astro.build/en/develop-and-build/",
+      "title": "Astro构建与预览文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:24:00Z",
+        "end": "2026-10-20T12:24:10Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T12:27:40.048415+00:00",
+      "receipt_text": "官方区分开发服务器与构建后预览；预览反映最近一次构建，之后修改需要重新构建。",
+      "characters": 38,
+      "sha256": "48ee63d75e58a5451a27d8e779275cd0e289abbb697a289977dc14da1788b23d",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方区分开发服务器与构建后预览；预览反映最近一次构建，之后修改需要重新构建。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/openclaw/comments/1vt0a5e/my_experience_with_openclaw",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Reddit已在此前访问受限，本轮不重试、不换路读取；未取得作者站点、配置、日志、故障记录或完整评论。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述发帖者维护约五个WordPress、Astro及Eleventy网站。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "四次升级回滚来自另一位评论者，不是五站维护者的同一次实验。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "OpenClaw官方指出备份恢复会回退批准和去重状态，插件依赖未包含在归档中。",
+      "type": "verified",
+      "source_ids": [
+        "Sbackup"
+      ]
+    },
+    {
+      "statement": "Astro构建后预览不自动包含构建之后的源码修改。",
+      "type": "verified",
+      "source_ids": [
+        "Sastro"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "分开不同人的维护经历",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "五站使用、近乎每次更新出问题以及四次升级回滚不能拼接成统一试验。5.28与7.1-2只是目录里的版本写法，缺少软件归属和完整版本，不能据此写可执行升级命令或当前产品故障率。目录日期也未独立核实。"
+    },
+    {
+      "id": "workflow",
+      "title": "一站一任务一份验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议清单先标站点、仓库、技术栈、任务范围、当前版本和禁止触达区域。每次只处理一个站点，保存差异和检查结果，避免把WordPress更新命令套到静态站。多个agent可分工，但不让它们同时写同一工作树或覆盖彼此成果。"
+    },
+    {
+      "id": "isolation",
+      "title": "同机副本不等于真正隔离",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "同服务器克隆是评论者做法，不是隔离证明。拟议测试副本需检查数据库、文件路径、定时任务、Webhook和外部发送目标是否仍指向生产。仅复制目录可能仍有外部副作用；本轮没有复制用户系统或变更任何权限。"
+    },
+    {
+      "id": "backup",
+      "title": "备份成功还需恢复验证",
+      "source_ids": [
+        "Sbackup",
+        "Swp"
+      ],
+      "body": "应区分agent运行状态与所管理网站的代码、内容及数据库。OpenClaw恢复可能回退批准和去重记录，插件依赖还可能要重装；因此恢复后不能盲目重放待办。备份含秘密时不能放公共仓库。WordPress官方也要求更新前保留恢复能力，不能仅以Git提交代替全部站点备份。"
+    },
+    {
+      "id": "acceptance",
+      "title": "构建通过不是全部功能验收",
+      "source_ids": [
+        "Sastro"
+      ],
+      "body": "Astro官方预览的是最近构建产物，源码改变后要重建。拟议验收还要检查关键页面、链接与交互，动态服务另外核接口和数据读写；WordPress并不天然具有与静态站相同的构建门槛。目录模板的“运行构建”要按项目实际脚本解释，不应伪造不存在的测试。"
+    },
+    {
+      "id": "commercial",
+      "title": "可以验证维护服务，不能先认定有订阅收入",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "假设客户是有多站资产的小团队，交付应是明确范围的变更、验收和恢复说明。可探索按变更计费或有边界的维护费，但没有客户或付款证据。获客可先用脱敏演示解释风险减少和响应范围，本轮不联系第三方或启动经营。"
+    },
+    {
+      "id": "cost",
+      "title": "维护成本包括失败与响应责任",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "模型费之外，还需人工审查、测试环境、备份存储、故障定位、重试和恢复时间。站点数不是收入，更新次数也不是产能。若失败处理吞掉自动修改节省，或客户要求全天候响应而没有人员覆盖，应缩小服务范围而非承诺全自动代运维。"
+    },
+    {
+      "id": "alternatives",
+      "title": "直接编码助手和现有发布流程可替代一部分",
+      "source_ids": [
+        "Sdirectory",
+        "Swp"
+      ],
+      "body": "用户可以直接用Claude Code或Codex处理单站任务，配合已有Git和发布检查；WordPress本身也有更新与备份流程。OpenClaw多工具调度是否额外节时需用同任务、同验收标准比较，不能只因多一个agent就推定更可靠。"
+    },
+    {
+      "id": "personal",
+      "title": "适合能审核变更的多站维护者",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "设置需要项目清单、各站测试脚本、权限边界与恢复步骤；后续维护包括框架、插件和agent自身更新。频率随内容变更和维护需求，不按帖子估算。错误可能跨站扩散，隐私风险来自备份与环境变量，因此测试资料应脱敏、访问最小化。"
+    },
+    {
+      "id": "trial",
+      "title": "先做无生产连接的单站演练",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "给一份虚构项目清单和一处静态文案修改，要求先列计划、差异、已有检查命令以及恢复方法，不执行部署。预期是明确缺少的验收与权限，而不是声称完成生产升级。本轮只研究资料，没有实测OpenClaw或这些网站。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/manage-several-websites-across-wordpress-astro-and-eleventy",
+    "observed_at": null,
+    "body_sha256": "d30affed7fed3c9f62ed1e003461384816ad468460844997c4733923bce81df4",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "be810079066488195ed0344977eaf3052035cca9c2c9bf63a44e39aa17b83304",
+      "How it went": "b2ba10e880c663dddb04701af61e3760980edf86ce618f5b12fb106409622deb",
+      "Worth knowing": "bde197a6eebca9e3f83b05a215f11a120d06da0dd46146cb99a9d6f72c054296"
+    },
+    "actual_agents": [
+      "OpenClaw",
+      "Claude Code",
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T12:23:20Z",
+      "end": "2026-10-20T12:23:33Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Look at the site projects in [folder paths] built with [WordPress, Astro, Eleventy, etc.] and do [task, such as update dependencies, fix broken links, or add a new page]. Work on one site at a time and run each site's build to confirm it still works. Summarize what changed per site, and ask me before deploying, pushing to production, or deleting anything.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/manage-several-websites-across-wordpress-astro-and-eleventy",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "d5b8fee8677b8b403217d565689570ff1d248f3d05bf01572a2abf2270ed5096",
+    "observation_window": {
+      "start": "2026-10-20T12:23:20Z",
+      "end": "2026-10-20T12:23:33Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/openclaw/comments/1vt0a5e/my_experience_with_openclaw",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T12:27:40.048415+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit已在此前访问受限，本轮不重试、不换路读取；未取得作者站点、配置、日志、故障记录或完整评论。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可帮助组织维护，但净收益和可靠性仍待验证。",
+    "audience": "能够审查代码和恢复步骤的多站维护者。",
+    "use": "串行整理站点变更、检查和交付记录。",
+    "benefit": "可能减少重复操作，无真实工时对照。",
+    "setup_cost": "站点清单、环境边界、测试及备份方案。",
+    "maintenance_cost": "agent、框架、插件版本和故障恢复。",
+    "frequency": "按网站任务与维护周期。",
+    "privacy_risk": "备份、会话、环境变量和客户数据泄露。",
+    "error_risk": "连错生产、跨站覆盖、构建误判和重复执行。",
+    "source_ids": [
+      "Sdirectory",
+      "Sbackup",
+      "Swp",
+      "Sastro"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "无账号、密钥或生产数据的虚构站点资料。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "按站点列计划、检查与恢复缺项，不部署；未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/manage-several-websites-across-wordpress-astro-and-eleventy",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Look at the site projects in [folder paths] built with [WordPress, Astro, Eleventy, etc.] and do [task, such as update dependencies, fix broken links, or add a new page]. Work on one site at a time and run each site's build to confirm it still works. Summarize what changed per site, and ask me before deploying, pushing to production, or deleting anything."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅根据给定虚构站点资料制定一次静态文案修改计划。每站单独列范围、差异审查、已知测试与恢复方法。缺失信息写未知，不编造命令，不连接生产，不更新系统或删除数据。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "仅许可目录转述发帖者与另一评论者，未取得可核实独立复验。"
+  },
+  "disconfirming_evidence": "agent自身升级增加维护面；现有直接编码助手和原生更新工具可能已足够。",
+  "limitations": "未读取受限原帖、未运行升级或恢复、未访问私人网站；官方现行能力不能证明历史操作成功。",
+  "archive_source_sha256": "d30affed7fed3c9f62ed1e003461384816ad468460844997c4733923bce81df4",
+  "translation_sha256": "82560edb97b9558c90e9bfdb6f17c7abe05b160aa5ed94e99887958626651926"
+}
