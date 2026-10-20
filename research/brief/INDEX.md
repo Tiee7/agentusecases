@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **76**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **77**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -86,3 +86,4 @@
 | 用ChatGPT和GitHub MCP把讨论摘要存入仓库 | [简报](../../reports/brief/save-ai-q-a-summaries-into-git-repos-as-persistent-notes.md) |
 | 用cgroup管理编码agent会话并清理遗留进程 | [简报](../../reports/brief/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-.md) |
 | 用n8n读取线索网站并起草邮件开场白 | [简报](../../reports/brief/personalize-cold-email-openers-from-lead-websites.md) |
+| 用AI agent监测已订航班与酒店的降价 | [简报](../../reports/brief/reprice-booked-flights-when-prices-drop.md) |
