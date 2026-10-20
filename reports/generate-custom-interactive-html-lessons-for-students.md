@@ -41,7 +41,7 @@
 
 来源：[Luke Shepard essay quoting teacher; primary thread separately traced](https://baseclasses.com/p/what-claude-code-can-teach-us-about)
 
-作者方法摘要
+报道摘要
 
 1. 教师提供文章、水平、词汇与练习目标，课堂使用生成的HTML。
    English summary: The teacher supplies a passage, level, vocabulary and practice goals, then uses generated HTML in class.

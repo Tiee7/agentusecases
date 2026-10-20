@@ -63,7 +63,7 @@
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
 | [用本地Codex辅导纸笔练习并保存学习记录](reports/tutor-you-through-pen-and-paper-math-with-a-local-agent.md) | 仅建议受控试点 | 35.0 | 中 | available | 个人学习工具 | 2026-10-20T01:24:22.548256+00:00 |
 | [用Claude Code指导SQL项目迁移并练习dbt](reports/use-claude-code-as-an-agentic-tutor-in-your-learning-environ.md) | 仅建议受控试点 | 37.0 | 中 | available | 成人技术学习 | 2026-10-20T02:45:22.422735+00:00 |
-| [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 不建议商业投入 | 28.5 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
+| [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 仅建议受控试点 | 未评定 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
 | [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
 | [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |
 | [用 MentionDesk 跟踪品牌在 AI 回答中的提及并整理改进计划](reports/audit-seo-and-ai-search-visibility-with-an-agent.md) | 仅建议受控试点 | 38.0 | 中 | available | 搜索营销与品牌监测 | 2026-10-19T19:27:31Z |
