@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "unsubscribe-from-newsletters-and-tidy-files",
+  "url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+  "title": "用OpenClaw退订邮件列表并整理文件",
+  "industry": "个人事务与文件整理",
+  "researched_at": "2026-10-20T09:26:56.639940+00:00",
+  "brief_reason": "效果主要为个人经历转述，缺运行日志、独立复现、完整成本与付款数据；原文当前浏览器复核受阻。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先做可审查清单，再判断执行收益",
+    "reason": "有整理需求和部分成功自述，也有重要邮件误判及日历误报；商业需求未验证。",
+    "next_action": "用合成元数据比较原生工具和只读候选清单。",
+    "stop_condition": "重要项目误判、无恢复路径或复核负担超过收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+      "title": "许可目录案例现场读取",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:23:38Z",
+        "end": "2026-10-20T09:23:46Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T09:26:56.639940+00:00",
+      "characters": 13908,
+      "sha256": "bb6ec3625991fc62b3e3eca5cf1fd88bf97624b104a2b0ecf136f4fb71288218",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "隔离设备、临时邮箱、847邮件、203列表、约50抽查、约90%准确率、300文件及历史费用均为目录转述，不是本次实测。"
+    },
+    {
+      "id": "Sgmail",
+      "url": "https://support.google.com/mail/answer/15621070?co=GENIE.Platform%3DDesktop&hl=en-GB",
+      "title": "Gmail官方订阅管理",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:23:23Z",
+        "end": "2026-10-20T09:23:38Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T09:26:56.639940+00:00",
+      "receipt_text": "Gmail提供集中订阅管理，逐步开放；退订前可查看发件人邮件，相关列表按发件人处理，生效可能需数天，部分需要跳转发件人网站。屏蔽与退订不同。",
+      "characters": 70,
+      "sha256": "704bda8c1f6c91cb4bc7bf776b4d67e14a0da76cda524773abd93938a1705d97",
+      "hash_scope": "Researcher summary, not source HTML",
+      "supports": "Gmail提供集中订阅管理，逐步开放；退订前可查看发件人邮件，相关列表按发件人处理，生效可能需数天，部分需要跳转发件人网站。屏蔽与退订不同。"
+    },
+    {
+      "id": "Ssecurity",
+      "url": "https://docs.openclaw.ai/gateway/security",
+      "title": "OpenClaw官方安全边界",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:23:23Z",
+        "end": "2026-10-20T09:23:38Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T09:26:56.639940+00:00",
+      "receipt_text": "每个网关面向一个可信操作方或相互信任团队，不是敌对多租户安全边界；混合信任需分离网关及凭据。文档提供权限配置和沙箱主题，不证明任何具体部署安全。",
+      "characters": 72,
+      "sha256": "0f95f2f096777f21b33e8eb663fa7cbb6959e2bfa7dcd1827c9d784b0ad11bca",
+      "hash_scope": "Researcher summary, not source HTML",
+      "supports": "每个网关面向一个可信操作方或相互信任团队，不是敌对多租户安全边界；混合信任需分离网关及凭据。文档提供权限配置和沙箱主题，不证明任何具体部署安全。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://medium.com/@likhitkumarvp/i-spent-47-testing-openclaw-for-a-week-heres-what-s-actually-happening-c274dc26a3fd",
+      "title": "原作者Medium文章",
+      "kind": "primary",
+      "status": "blocked",
+      "supports": "既有研究日志记录08:16公开网页读取；本次云浏览器复核受Cloudflare及安全审批阻止，未重新取得正文。",
+      "error": "Stopped after Cloudflare block and origin denial; no alternate access attempted."
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述处理847封邮件、退订203个列表，约90%准确率。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录也转述客户邮件误判与日历未完全成功却报告成功。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Gmail提供逐步开放的集中订阅管理。",
+      "type": "verified",
+      "source_ids": [
+        "Sgmail"
+      ]
+    },
+    {
+      "statement": "OpenClaw文档不将共享网关视为敌对多租户安全边界。",
+      "type": "verified",
+      "source_ids": [
+        "Ssecurity"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "先分清自述与实测",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录讲述的是隔离Ubuntu笔记本和临时Gmail账户里的个人试验。847是处理邮件数，203是列表数，约50是抽查规模；约90%的准确率没有明确分母、标注方法或混淆矩阵，不能相除重算或外推稳定生产效果。日历误报成功与文件重命名表现是不同子任务，不能合成统一准确率。"
+    },
+    {
+      "id": "demand",
+      "title": "需求是减少清理负担，不是多一个聊天入口",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "潜在人群是订阅积累较多、又愿意审查操作的个人。重要客户也使用营销平台发邮件，因此按“推广邮件”自动处理可能误伤。偶尔整理一次与持续日常处理需求不同；本案没有用户付款或持续复用证据，不能据此推出订阅市场。"
+    },
+    {
+      "id": "delivery",
+      "title": "候选清单、批准与结果核验分开",
+      "source_ids": [
+        "Sdirectory",
+        "Sgmail"
+      ],
+      "body": "拟议交付先生成发件人及理由清单，由用户核对重要联系人，再仅执行获准项目。退订请求被提交与最终不再送达要分别记录；文件整理保留原名映射和恢复方法；日历邀请需要核实具体事件和邀请状态。以上是建议流程，不是原作者已实现能力。"
+    },
+    {
+      "id": "revenue",
+      "title": "可能收费的是配置与核查服务",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "商业假设可以是一次性配置、个性化规则及维护，而非承诺无人值守清理所有邮箱。付款人是否愿意为此付费还需验证。先提供不接真实邮箱的示例清单和报价测试，未明确价值前不进行付费投放或替别人托管邮箱。"
+    },
+    {
+      "id": "acquisition",
+      "title": "用明确差异而非笼统自动化获客",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可面向已有大量订阅且同时需要文件整理的人展示可审查方案，比较原生工具与定制规则。获客演示应展示误判、人工接管及恢复，不只展示成功动作。尚无客户渠道、转化率或续费数据；本研究没有联系客户。"
+    },
+    {
+      "id": "competition",
+      "title": "先比较Gmail原生入口",
+      "source_ids": [
+        "Sgmail"
+      ],
+      "body": "Google官方已有集中管理订阅入口，但页面注明逐步开放。它允许先查看发件人邮件，相关列表按发件人一起处理；一些操作仍需到发件人网站。若原生工具已满足需求，定制agent的额外安装、费用和权限负担未必划算。"
+    },
+    {
+      "id": "economics",
+      "title": "历史账单不能代替交付利润",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录的8美元邮件API费用和47美元整周费用是历史自述，不是当前价格或每客户成本。还需计入设置、审查、返工、维护、第三方工具与获客。下面两种报价情景仅演示敏感性，没有付款和实测依据。"
+    },
+    {
+      "id": "privacy",
+      "title": "隔离试验不等于可直接接客户邮箱",
+      "source_ids": [
+        "Ssecurity"
+      ],
+      "body": "官方说明一个网关对应一个可信边界。若做多客户服务，应独立设计凭据和数据隔离，不能只用提示词隔开客户。邮件、文件名和日历可能含私人资料；只申请必要权限，外部文本不能成为执行指令。本文未接邮箱或客户资料，文档存在也不代表已完成安全测试。"
+    },
+    {
+      "id": "personal",
+      "title": "自用收益取决于复核负担",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合愿意配置工具、明确重要发件人并有重复整理需求的人。预期收益是减少重复操作，但本案无净节时测量。设置涉及账号授权、名单及目录规则，维护包括误判核对、失效链接、接口变化和费用监控；低频用户可能直接手工处理更省事。"
+    },
+    {
+      "id": "test",
+      "title": "先用合成清单验证分类",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备含客户促销平台邮件、账单、家人消息、newsletter、重复列表和模糊标题的合成元数据，只输出候选，不进行退订、邀请或重命名。分别统计重要邮件误判、待人工判断项和核查耗时。若不能解释分类或无法保留恢复路径，停止自动执行，改用只读辅助。未运行该演练，不宣称通过。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+    "observed_at": null,
+    "body_sha256": "4d0230a2fb02a7e8d4ed5475e460d5a2fe9defa4395361725472d2e607fedb6f",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "9690f4a3a8a5ca71dbb9e684824c180b21e0203b5a81ae975733d9eed3cdeea4",
+      "How it went": "56410b00ca3e332773f6c2cdcdb91bd37cae619dfeacc4864fa60c5ce3066228",
+      "Worth knowing": "eb5c009a51b06148cf570113797cc07bd9b8011aece2467ed441595cb1fc646d"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T09:23:38Z",
+      "end": "2026-10-20T09:23:46Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Go through my inbox at [email account] and find newsletters and promotional mailing lists I haven't opened in [number] months. Build a list of the senders you plan to unsubscribe from, and never include anything from [clients, family, or important senders]. Show me the full list and wait for my approval before unsubscribing from anything or sending any invites or renaming files; you're done when I've approved the list and you've given me a report of what was unsubscribed.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "bb6ec3625991fc62b3e3eca5cf1fd88bf97624b104a2b0ecf136f4fb71288218",
+    "observation_window": {
+      "start": "2026-10-20T09:23:38Z",
+      "end": "2026-10-20T09:23:46Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://medium.com/@likhitkumarvp/i-spent-47-testing-openclaw-for-a-week-heres-what-s-actually-happening-c274dc26a3fd",
+    "source_title": "Original Medium article",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T09:26:56.639940+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "本次浏览器复核受阻；已有历史阅读笔记，但缺可独立核对的原文凭据，不冒充本次原文核验。目录转述另列。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有整理便利的自述，净节省和错误代价未测。",
+    "audience": "有重复邮箱与文件整理需求、愿意人工复核的个人。",
+    "use": "生成待确认的退订和文件整理清单。",
+    "benefit": "可能减少重复点击，尚无净节时数据。",
+    "setup_cost": "安装、必要授权、重要发件人名单与文件规则。",
+    "maintenance_cost": "复核误判、更新规则、处理失败及监控费用。",
+    "frequency": "按实际订阅和文件积累，不假定每日需要。",
+    "privacy_risk": "邮件、文件名、日历和凭据涉及私人资料。",
+    "error_risk": "误判重要邮件、重命名难恢复、日历误报成功。",
+    "source_ids": [
+      "Sdirectory",
+      "Ssecurity"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站模板原样保留，不是原作者实际提示词；不执行其中操作。",
+    "prerequisites": "合成邮件与文件元数据；不接真实账号。",
+    "tools": "现有获准文本助手或本地文档。",
+    "expected_result": "有理由、待批准、可排除的候选清单；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Go through my inbox at [email account] and find newsletters and promotional mailing lists I haven't opened in [number] months. Build a list of the senders you plan to unsubscribe from, and never include anything from [clients, family, or important senders]. Show me the full list and wait for my approval before unsubscribing from anything or sending any invites or renaming files; you're done when I've approved the list and you've given me a report of what was unsubscribed."
+      },
+      {
+        "title": "只读分类演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只分析我给出的合成邮件和文件元数据，输出候选项目、理由、不确定项及重要联系人排除项。不要访问邮箱、退订、发送邀请、修改或重命名文件。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "name": "一次配置假设",
+      "unit": "每客户一次配置，USD",
+      "revenue": 80,
+      "api": 8,
+      "third_party": 0,
+      "acquisition": 10,
+      "labor_hours": 2,
+      "labor_hourly": 25,
+      "fixed_cost_allocation": 5,
+      "contribution": 7
+    },
+    {
+      "name": "高返工假设",
+      "unit": "每客户一次配置，USD",
+      "revenue": 80,
+      "api": 16,
+      "third_party": 5,
+      "acquisition": 20,
+      "labor_hours": 4,
+      "labor_hourly": 25,
+      "fixed_cost_allocation": 5,
+      "contribution": -66
+    }
+  ],
+  "economics_assumptions": "两项全为报价/用量/工时假设，含25美元小时机会成本和固定费摊销。第三方0是情景假设，不声称软件全部免费。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "仅个人经历和目录转述，无独立运行复现；未完成深研反馈搜索门槛。"
+  },
+  "disconfirming_evidence": "原生订阅管理、重要邮件误判、日历成功状态不实、净工时未知。",
+  "limitations": "只读研究；没有接入邮箱、退订、邀请、文件修改、安装、支付或真实试用。历史费用不是当前报价。",
+  "archive_source_sha256": "4d0230a2fb02a7e8d4ed5475e460d5a2fe9defa4395361725472d2e607fedb6f",
+  "translation_sha256": "7fc67d16fe2f8ae44f12c7485e3d5cd6e632b24e096730a5487c0ee2e3a0bbe5"
+}
