@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **94**；深度研究 **74**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **95**；深度研究 **74**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -104,3 +104,4 @@
 | 用浏览器Agent从公司CRM提取销售线索字段 | [简报](../../reports/brief/extract-prospecting-data-from-a-company-crm.md) |
 | 用Claude Desktop整理并填写ITR-1申报资料 | [简报](../../reports/brief/file-an-income-tax-return-through-the-tax-portal.md) |
 | 用Manus查询附近商店的商品库存 | [简报](../../reports/brief/phone-stores-to-check-if-items-are-in-stock.md) |
+| 用Claude Cowork与Maya迭代游戏工具代码 | [简报](../../reports/brief/build-a-game-tool-with-claude-cowork-and-maya.md) |
