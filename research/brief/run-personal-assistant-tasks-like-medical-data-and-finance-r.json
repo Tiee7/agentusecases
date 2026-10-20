@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-personal-assistant-tasks-like-medical-data-and-finance-r",
+  "url": "https://agentusecases.ai/use-case/run-personal-assistant-tasks-like-medical-data-and-finance-r",
+  "title": "用Grok Bot整理健康数据与个人财务报告",
+  "industry": "个人数据整理",
+  "researched_at": "2026-10-20T04:04:47.765211+00:00",
+  "brief_reason": "原评论未读，目录仅有主观效果与角色描述，缺实现、样本和净收益测量。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证数据核对与权限边界",
+    "reason": "分工可组织流程，但不建立隔离，也未验证临床或财务效果。",
+    "next_action": "用分开的合成健康和交易导出测试单位、时间和缺失处理。",
+    "stop_condition": "错单位、漏记录、无来源计算或将摘要直接用于高风险决定。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-personal-assistant-tasks-like-medical-data-and-finance-r",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:04:47.765211+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:02:08Z",
+        "end": "2026-10-20T04:02:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1581,
+      "sha256": "1210f0323795986c8f923d1ddfbab18b108e44322bce0658cd33daf5c31742bb",
+      "hash_scope": "Captured text or local web bundle; not HTML",
+      "supports": "四个bot为转述，仅明确三个角色；无效果测量。"
+    },
+    {
+      "id": "Sprivacy",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "title": "Grok Bot权限与共享电脑说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:04:47.765211+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:02:30Z",
+        "end": "2026-10-20T04:02:44Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30495,
+      "sha256": "570331cd3df84beed904e587cdd226e2b34ecfe43bb8cba96d80ba8abcf9041b",
+      "hash_scope": "Captured text or local web bundle; not HTML",
+      "supports": "多个Bot共享云电脑，不能视为安全隔离；数据存储与训练选择不同。"
+    },
+    {
+      "id": "Sexport",
+      "url": "https://support.tidepool.org/hc/en-us/articles/360044350552-Exporting-Tidepool-data",
+      "title": "Tidepool数据导出说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:04:47.765211+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:02:30Z",
+        "end": "2026-10-20T04:02:44Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30495,
+      "sha256": "570331cd3df84beed904e587cdd226e2b34ecfe43bb8cba96d80ba8abcf9041b",
+      "hash_scope": "Captured text or local web bundle; not HTML",
+      "supports": "XLSX/JSON、单位、UTC与设备时间、导出错误表。"
+    },
+    {
+      "id": "Sglooko",
+      "url": "https://glooko.com/solutions/diabetes-self-management/",
+      "title": "Glooko数据整理替代方案",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:04:47.765211+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:02:30Z",
+        "end": "2026-10-20T04:02:44Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30495,
+      "sha256": "570331cd3df84beed904e587cdd226e2b34ecfe43bb8cba96d80ba8abcf9041b",
+      "hash_scope": "Captured text or local web bundle; not HTML",
+      "supports": "兼容设备数据、饮食活动背景与标准报告已有专用产品。"
+    },
+    {
+      "id": "Standem",
+      "url": "https://support.tidepool.org/hc/en-us/articles/360029369132-Uploading-your-Tandem-insulin-pump",
+      "title": "Tidepool对Tandem上传的说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:04:47.765211+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:02:30Z",
+        "end": "2026-10-20T04:02:44Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30495,
+      "sha256": "570331cd3df84beed904e587cdd226e2b34ecfe43bb8cba96d80ba8abcf9041b",
+      "hash_scope": "Captured text or local web bundle; not HTML",
+      "supports": "特定设备重启可能使之前数据无法上传；不能扩展为所有泵。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/GrokBot/comments/1wckwfp/is_grok_bot_actually_any_good",
+      "title": "原评论所在Reddit讨论",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Previously explicit Reddit security block respected; no retry, mirror or search-snippet substitute.",
+      "supports": "原评论未读；效果与套餐建议仅为许可目录转述。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录称四个bot，但正文只明确三个角色。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "用户报告医疗数据任务顺利，缺独立效果测量。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "官方说明同一用户多个Bots共享电脑，角色不是安全边界。",
+      "type": "verified",
+      "source_ids": [
+        "Sprivacy"
+      ]
+    },
+    {
+      "statement": "Tidepool导出可选单位并区分UTC和设备时间。",
+      "type": "verified",
+      "source_ids": [
+        "Sexport"
+      ]
+    },
+    {
+      "statement": "Glooko已有兼容设备与饮食背景整理及标准报告。",
+      "type": "verified",
+      "source_ids": [
+        "Sglooko"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "整理记录与作出医疗或财务决定分开",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录转述一位用户分工配置四个bot，只明确医疗数据、财务报告、主管协调三个角色，第四个未知。医疗数据处理没有问题和系统效果很好是主观自述，不是临床试验、准确率或财务收益。原Reddit受既有安全限制，本轮未访问。没有设备型号、数据样本、技能实现、耗时和纠错记录；不能补成完整深研，也不推测该用户如何调整胰岛素或交易。"
+    },
+    {
+      "id": "isolation",
+      "title": "分角色不等于隔离敏感资料",
+      "source_ids": [
+        "Sprivacy"
+      ],
+      "body": "现行官方文档明确：同一用户的Bots共享云电脑，文件、浏览器会话和命令行凭据可跨bot使用；删除一个bot不会删除共享文件和登录会话。它还说明需要数据存储，不支持Legacy Privacy Mode。研究者据此强调，单独命名健康bot和财务bot不能建立访问隔离；训练选择不等于零存储。应核对实际权限、保留及删除边界后再决定是否接入，不能把角色提示词当作数据隔离措施。"
+    },
+    {
+      "id": "healthdata",
+      "title": "先检查单位、时间和缺失",
+      "source_ids": [
+        "Sexport",
+        "Standem"
+      ],
+      "body": "Tidepool官方导出支持XLSX/JSON，可选mg/dL或mmol/L，并区分UTC与设备/本地时间；EXPORT ERROR工作表表示服务超时，不能当完整数据。另一个Tandem专门说明提醒设备重启前的数据可能无法上传，该限制不能泛化到所有胰岛素泵。研究者建议每批记录设备/导出版本、单位、时区、时间范围、覆盖率和缺失段；缺失不能填零，也不能把相邻饮食与读数直接解释为因果。"
+    },
+    {
+      "id": "finance",
+      "title": "财务晨报也要先对账",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "本案只说管理财务和晨报，没有展示转账、投资策略或税务处理。原创建议以用户获准导出文件为边界，固定币种、日期口径、待入账与已入账状态，区分内部转账、支出、退款和重复交易；按原表合计核对再分类。报告中的异常只作为待核对项目，不自动移动资金、改账户或联系银行。这些是待验证设计，不是原评论已采用的方法。"
+    },
+    {
+      "id": "alternatives",
+      "title": "专用数据平台已覆盖基础整理",
+      "source_ids": [
+        "Sglooko",
+        "Sexport"
+      ],
+      "body": "Glooko官方描述兼容设备同步、食物和活动背景、标准报告及与护理团队共享；Tidepool已有数据导出。研究者认为，仅把几类数据放在一起不是充分差异，agent需要证明能降低准备和复核负担且不增加错读。兼容设备、地区和账户条件仍须个案核对；不把专用产品某一模块的医疗器械资格外推到通用agent，也不把平台宣传直接当成效果验证。"
+    },
+    {
+      "id": "business",
+      "title": "可考虑配置与整理支持，先核付款边界",
+      "source_ids": [
+        "Sdirectory",
+        "Sglooko"
+      ],
+      "body": "商业假设为对已有合规系统提供报告准备、数据核对或用户培训支持，潜在付款者可能是个人或机构；两者采购、责任和预算不同。原案例没有真实客户、收入或价格。获客可展示合成导出资料的差异核对，不以收集病历或银行凭据作为体验入口。若涉及机构健康数据或医疗建议，需另行专业与合规评估，本简报不宣称可直接经营医疗服务。"
+    },
+    {
+      "id": "cost",
+      "title": "多bot带来协调和审核成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录提到较高SuperGrok套餐是用户经验，本轮未核定当前套餐权益和价格，不据此推荐升级或把“四个bot”换算成收入。成本待测包括既有订阅/调用、数据导出、清洗、交叉核对、人工审核、异常处理、技能维护和支持；商业模式还要算获客与合规支出。主管bot多一层转述可能增加延迟及错误传播。没有时间和账单数据，不编造单位利润或节约比例。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值是更清楚地回看资料",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适用者是愿意审核自己的导出记录、需要定期整理的人。可能收益是减少找文件和做摘要的重复劳动，实际收益未知。设置需定义资料来源、报告周期、接收渠道和停止条件；维护需检查源格式、登录状态、缺失、重复和报告是否按期送达。隐私风险来自医疗与财务资料及共享会话，错误风险是错单位、错时区、漏记录与过度解释。该流程不应替代临床监测、紧急提醒或专业决策。"
+    },
+    {
+      "id": "next",
+      "title": "只以合成数据核对报告，不改治疗或资金",
+      "source_ids": [
+        "Sexport",
+        "Sdirectory"
+      ],
+      "body": "拟议演练分别使用虚构健康日志和虚构交易表，不混入真实身份、账号或设备编号。预置单位不同、缺失段、重复交易与时区偏移，要求报告列来源、覆盖率、计算口径、事实和未知，人工按标准答案核对。预期是可追溯的资料摘要与待查清单，不是诊断、用药调整或投资结论。本轮未运行；若仍错单位、把缺失当正常或无法回溯数字，就停止扩大使用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-personal-assistant-tasks-like-medical-data-and-finance-r",
+    "observed_at": null,
+    "body_sha256": "6252956c0663028e422fd6bc67a62ea65df930848cc3514e2079ce2c6847c26b",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "7838036b1777ca0d43dd46a85d36b5526af6f55fcc118905c83a8cad0b8bab82",
+      "How it went": "260a5ba8dac561e555058636d454796278ad067d2f22311e4d1ceb3077625776",
+      "Worth knowing": "23178f0052eb1cec8f7a7bdef3ce9cf68139ab3db4bda7643abc67b2ca53f3f0"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T04:02:08Z",
+      "end": "2026-10-20T04:02:19Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Act as my personal assistant for [area, e.g. health data or personal finances]. Every [morning/week], pull together [data sources, e.g. my glucose export and food log, or my bank transactions] into a short report of [what I want, e.g. patterns, spending by category, anything unusual] and send it to me by [channel]. Do not send messages to anyone else or move money, and ask me before changing anything.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/run-personal-assistant-tasks-like-medical-data-and-finance-r",
+    "observed_at": null,
+    "observation_window": {
+      "start": "2026-10-20T04:02:08Z",
+      "end": "2026-10-20T04:02:19Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": null
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/GrokBot/comments/1wckwfp/is_grok_bot_actually_any_good",
+    "source_title": "Is Grok Bot actually any good?",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T04:04:47.765211+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "既有Reddit安全限制，不访问或绕过；目录转述保留但不冒充作者方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "整理负担可能减少，净节省与准确性未测。",
+    "audience": "愿意审核自己导出记录的用户。",
+    "use": "健康与财务数据分开整理及报告草稿。",
+    "benefit": "只有主观效果转述，无临床或财务收益证明。",
+    "setup_cost": "来源、单位、时区、周期、接收方和停止条件。",
+    "maintenance_cost": "格式变化、缺失、重复、登录与报告送达核对。",
+    "frequency": "按用户明确约定的晨报或周期，不承担急救监测。",
+    "privacy_risk": "医疗、财务记录及跨bot共享电脑会话。",
+    "error_risk": "单位时间错配、缺失当零、重复和错误因果解释。",
+    "source_ids": [
+      "Sdirectory",
+      "Sprivacy",
+      "Sexport"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "原模板保留；本研究仅提出合成资料只读演练。",
+    "prerequisites": "分开的虚构健康日志和交易文件及人工标准答案。",
+    "tools": "已有获准助手或本地表格，不连接真实账户/医疗设备。",
+    "expected_result": "带来源和缺失说明的资料摘要；未实际运行，不调整治疗或移动资金。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-personal-assistant-tasks-like-medical-data-and-finance-r",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Act as my personal assistant for [area, e.g. health data or personal finances]. Every [morning/week], pull together [data sources, e.g. my glucose export and food log, or my bank transactions] into a short report of [what I want, e.g. patterns, spending by category, anything unusual] and send it to me by [channel]. Do not send messages to anyone else or move money, and ask me before changing anything."
+      },
+      {
+        "title": "合成个人数据核对",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sexport",
+          "Sdirectory"
+        ],
+        "attribution": "原创合成演练，未执行",
+        "text": "分别核对给定虚构健康日志和交易文件。保留单位、时区、覆盖率、来源与重复/缺失说明，不补造读数，不把相关当因果。只输出可人工复核摘要；不登录账号、不发给第三人、不改变设备设置、不提供剂量调整或交易指令。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原评论不可读，目录主观转述不算独立实测。"
+  },
+  "disconfirming_evidence": "依赖仔细配置；模型能力被同一评论者质疑；多个bot共享数据环境；导出可缺失或超时；已有专用平台。",
+  "limitations": "未处理真实健康/财务资料，未运行或配置bot，未验证当前套餐或任何临床效果。",
+  "archive_source_sha256": "6252956c0663028e422fd6bc67a62ea65df930848cc3514e2079ce2c6847c26b",
+  "translation_sha256": "8fa8636753205d59939c8673f88c56f984fc6338a586caba04bf344d7036ef0e"
+}

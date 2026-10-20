@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **61**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **62**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -71,3 +71,4 @@
 | 用Claude Code拆分手写作业扫描件并登记提交情况 | [简报](../../reports/brief/split-and-log-handwritten-homework-scans-for-teachers.md) |
 | 用Operator订购冰淇淋配送并制作日程表 | [简报](../../reports/brief/order-ice-cream-delivery-and-build-schedule-spreadsheets.md) |
 | 用agent匹配Twitter关注账户并在Bluesky关注 | [简报](../../reports/brief/move-twitter-follows-over-to-bluesky.md) |
+| 用Grok Bot整理健康数据与个人财务报告 | [简报](../../reports/brief/run-personal-assistant-tasks-like-medical-data-and-finance-r.md) |
