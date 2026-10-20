@@ -1,0 +1,95 @@
+{
+  "id": "run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+  "created_at": "2026-10-20T06:34:46.330261+00:00",
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+      "title": "许可目录编码会话清理案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:38Z",
+        "end": "2026-10-20T06:32:48Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1709,
+      "sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "每会话cgroup清理和约两小时无句柄临时文件清理；成效为转述，无前后测量。"
+    },
+    {
+      "id": "Scgroup",
+      "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+      "title": "Linux cgroup v2官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 72,
+      "sha256": "d8220a6774900de5d1015f8f61b958a243985d6a625da2669a4a92c7f0a0b1cd",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "子进程继承当时父cgroup，移动父不自动移动已有子孙；cgroup.kill对子树SIGKILL并处理并发fork，threaded组不支持。"
+    },
+    {
+      "id": "Stmpfs",
+      "url": "https://docs.kernel.org/filesystems/tmpfs.html",
+      "title": "Linux tmpfs官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 39,
+      "sha256": "84c5afe1dcbb4027d8c6d8f1226cfd298fbb10cc1ae7905d3404806e786935b3",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "tmpfs存虚拟内存，允许swap时页可换出；/tmp挂载类型不能凭名称推断。"
+    },
+    {
+      "id": "Skill",
+      "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html",
+      "title": "systemd进程终止语义",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 76,
+      "sha256": "00be1ba83159762660060b205c6b3ae0590ecab41051c71a6e1831203fc0aa9c",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "KillMode=control-group在unit stop时处理组内进程，默认先TERM再按超时等条件KILL；只主进程模式不足以管理遗留子进程。"
+    },
+    {
+      "id": "Stmpfiles",
+      "url": "https://www.freedesktop.org/software/systemd/man/latest/tmpfiles.d.html",
+      "title": "systemd临时文件老化",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:53Z",
+        "end": "2026-10-20T06:33:04Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 46,
+      "sha256": "85393b321ad8fa7cca81a63f6a9ba4f486b2403c0a8df8ff0209f23390c200ea",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "Age依据时间戳组合；清理会检查BSD文件锁并跳过已有锁的路径；锁检查不是全部打开句柄检测。"
+    }
+  ],
+  "limitations": [
+    "Original HN ordinary reads failed twice; no third retry or mirror.",
+    "No process termination, temp deletion, cgroup or permissions change, schedule or actual trial."
+  ]
+}

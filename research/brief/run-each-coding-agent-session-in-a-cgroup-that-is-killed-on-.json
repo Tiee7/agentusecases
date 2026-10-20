@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+  "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+  "title": "用cgroup管理编码agent会话并清理遗留进程",
+  "industry": "开发运维",
+  "researched_at": "2026-10-20T06:34:46.330261+00:00",
+  "brief_reason": "原评论两次不可读，目录自述缺测量、代码和独立效果；官方文档只验证机制。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先验证资源原因和会话归属",
+    "reason": "机制合理，具体实施与收益未知。",
+    "next_action": "编写隔离测试与干运行清单，不执行实际清理。",
+    "stop_condition": "无法确定目标归属或可能伤及无关任务。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+      "title": "许可目录编码会话清理案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:38Z",
+        "end": "2026-10-20T06:32:48Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1709,
+      "sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "每会话cgroup清理和约两小时无句柄临时文件清理；成效为转述，无前后测量。"
+    },
+    {
+      "id": "Scgroup",
+      "url": "https://docs.kernel.org/admin-guide/cgroup-v2.html",
+      "title": "Linux cgroup v2官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 72,
+      "sha256": "d8220a6774900de5d1015f8f61b958a243985d6a625da2669a4a92c7f0a0b1cd",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "子进程继承当时父cgroup，移动父不自动移动已有子孙；cgroup.kill对子树SIGKILL并处理并发fork，threaded组不支持。"
+    },
+    {
+      "id": "Stmpfs",
+      "url": "https://docs.kernel.org/filesystems/tmpfs.html",
+      "title": "Linux tmpfs官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 39,
+      "sha256": "84c5afe1dcbb4027d8c6d8f1226cfd298fbb10cc1ae7905d3404806e786935b3",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "tmpfs存虚拟内存，允许swap时页可换出；/tmp挂载类型不能凭名称推断。"
+    },
+    {
+      "id": "Skill",
+      "url": "https://www.freedesktop.org/software/systemd/man/latest/systemd.kill.html",
+      "title": "systemd进程终止语义",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:48Z",
+        "end": "2026-10-20T06:32:58Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 76,
+      "sha256": "00be1ba83159762660060b205c6b3ae0590ecab41051c71a6e1831203fc0aa9c",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "KillMode=control-group在unit stop时处理组内进程，默认先TERM再按超时等条件KILL；只主进程模式不足以管理遗留子进程。"
+    },
+    {
+      "id": "Stmpfiles",
+      "url": "https://www.freedesktop.org/software/systemd/man/latest/tmpfiles.d.html",
+      "title": "systemd临时文件老化",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:34:46.330261+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:32:53Z",
+        "end": "2026-10-20T06:33:04Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 46,
+      "sha256": "85393b321ad8fa7cca81a63f6a9ba4f486b2403c0a8df8ff0209f23390c200ea",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "Age依据时间戳组合；清理会检查BSD文件锁并跳过已有锁的路径；锁检查不是全部打开句柄检测。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "每会话cgroup清理和约两小时无句柄临时文件清理；成效为转述，无前后测量。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "子进程继承当时父cgroup，移动父不自动移动已有子孙；cgroup.kill对子树SIGKILL并处理并发fork，threaded组不支持。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Scgroup"
+      ]
+    },
+    {
+      "statement": "tmpfs存虚拟内存，允许swap时页可换出；/tmp挂载类型不能凭名称推断。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Stmpfs"
+      ]
+    },
+    {
+      "statement": "KillMode=control-group在unit stop时处理组内进程，默认先TERM再按超时等条件KILL；只主进程模式不足以管理遗留子进程。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Skill"
+      ]
+    },
+    {
+      "statement": "Age依据时间戳组合；清理会检查BSD文件锁并跳过已有锁的路径；锁检查不是全部打开句柄检测。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Stmpfiles"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "并行或长期编码任务可能遗留进程、临时文件，影响开发机器可用性。潜在人群是开发者和运维团队；当前只有单个自述，无故障率、损失或付费意向。"
+    },
+    {
+      "id": "offer",
+      "title": "交付与收入机制",
+      "source_ids": [
+        "Scgroup",
+        "Skill"
+      ],
+      "body": "可设想交付会话启动、结束清理、资源记录与异常恢复的工具或内部规范。收费配置/维护是假设；系统本来具备进程组管理能力，不能把包装脚本当独占壁垒。"
+    },
+    {
+      "id": "acquisition",
+      "title": "验证与获客",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "先确认机器确实存在该问题，再用隔离测试会话验证正常退出、失败和超时后遗留进程是否归零；记录前后内存、swap和临时目录大小。本轮没有获客、用户机器检查或运行试验。"
+    },
+    {
+      "id": "diagnosis",
+      "title": "先区分原因",
+      "source_ids": [
+        "Stmpfs"
+      ],
+      "body": "tmpfs可以在允许时使用swap，不应称全部固定在物理内存。目录名称/tmp不能证明挂载类型。进程RSS、共享内存与临时文件分别观察，不能把所有swap增长归因于模型或agent。"
+    },
+    {
+      "id": "lifecycle",
+      "title": "进程生命周期",
+      "source_ids": [
+        "Scgroup",
+        "Skill"
+      ],
+      "body": "应在派生进程之前建立会话归属；仅事后移动父进程可能遗漏已有子孙。cgroup本身不是任务结束通知，启动器还需在完成、失败等出口触发stop并核组内状态。cgroup是资源/生命周期机制，不等于完整安全沙箱。"
+    },
+    {
+      "id": "deletion",
+      "title": "文件清理边界",
+      "source_ids": [
+        "Stmpfiles",
+        "Sdirectory"
+      ],
+      "body": "作者的无打开句柄筛选仅来自转述。systemd-tmpfiles的时间戳和BSD锁机制不等价。扫描与删除之间可能变化，且老文件未必无价值；优先会话专属目录、保留清单和明确边界，不直接清空全局/tmp。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与替代",
+      "source_ids": [
+        "Skill",
+        "Stmpfiles"
+      ],
+      "body": "现成systemd生命周期和tmpfiles提供基础能力；成本在发行版/版本差异、权限、异常路径和误删责任。无测量及工时不能给虚构节省或利润。适合先内部可靠性改进而非独立产品定价。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合确认有遗留进程问题的Linux编码用户。设置会话标识、目录和结束规则，维护版本兼容与故障日志；按会话发生，清理频率由工作量决定。作者约两小时并非所有人通用阈值，无实测净收益。"
+    },
+    {
+      "id": "risk",
+      "title": "隐私与错误风险",
+      "source_ids": [
+        "Scgroup",
+        "Stmpfiles"
+      ],
+      "body": "错误组路径可能终止无关任务，强制终止可能丢失未保存输出，错误目录范围会误删文件。日志也可能含代码路径和秘密；只保留必要元数据。不得扩大系统权限以方便清理。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Sdirectory",
+        "Skill"
+      ],
+      "body": "适合内部效率工具。先制定隔离测试清单与只展示候选对象的干运行，再单独取得实际清理许可；本轮未运行。如果无法可靠确定进程和文件归属，停止自动清理。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "dfa5cc95c487c47385478d0d70254463269c9b7cc0a08fef981e85bddd9fb55a",
+      "How it went": "cec8b82808ef196e181d20983bf90eee75df0f5627ad1190586503a44b3d3917",
+      "Worth knowing": "ef031ce89759b03d8aa03ce73abcfce8b1eefa65354553cf8c9a9c8af3379206"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "In my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+    "observed_at": "2026-10-19T07:17:33.829446+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "f34bc1dab4fe45d04d27b44b77d96fb62e9b18c5328f89d51f2c10a3fbd16c81"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50136354",
+    "source_title": "HN coding session cleanup comment",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:34:46.330261+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "公开web普通读取及一次重试失败，未继续该来源或改用镜像。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "应以本机实际遗留问题和前后测量验证。",
+    "audience": "确认有会话遗留问题的Linux编码用户。",
+    "use": "明确每次agent会话的进程生命周期。",
+    "benefit": "目录称问题改善，无量化证据。",
+    "setup_cost": "会话目录、cgroup归属、结束规则和隔离验收。",
+    "maintenance_cost": "系统版本、异常路径与归属核验。",
+    "frequency": "随会话结束；临时文件策略另定。",
+    "privacy_risk": "日志含代码路径和潜在敏感数据。",
+    "error_risk": "误杀无关任务、未保存输出丢失及误删文件。",
+    "source_ids": [
+      "Sdirectory",
+      "Scgroup"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "保留模板先批准真实清理的边界；本轮只研究。",
+    "prerequisites": "虚构会话树与目录清单；所有真实清理须单独授权。",
+    "tools": "文档和本地静态验收清单，不操作系统组。",
+    "expected_result": "明确哪些对象属于会话、哪些须保留及异常恢复；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "In my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval."
+      },
+      {
+        "title": "会话归属干运行设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Scgroup",
+          "Stmpfiles"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只根据给定虚构进程树与目录清单制定验收，区分正常结束、失败、子进程脱离和仍被使用文件。不杀进程、不删文件、不挂载、不改权限或创建调度；列出预期保留与待确认对象。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖不可读，官方文档不代表作者效果复现。"
+  },
+  "disconfirming_evidence": "缺测量，系统已有基础能力，文件锁与打开句柄不等价，错误归属造成破坏。",
+  "limitations": "没有执行kill、清理、cgroup/权限修改、调度或真实试用。",
+  "archive_source_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+  "translation_sha256": "e4e64e56363b1450d6620c57db65c173caeb9d08daf176db50adb7e397f91fc2"
+}
