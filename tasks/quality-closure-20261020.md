@@ -51,3 +51,7 @@
 | own_original30 | generate-custom-interactive-html-lessons-for-students | pending_final_audit | 尚无 |
 | own_original30 | build-home-assistant-automations-with-claude | pending_final_audit | 尚无 |
 | own_original30 | order-from-a-restaurant-menu-photo-with-chatgpt | pending_final_audit | 尚无 |
+
+## 原批次30例最终审查进展
+
+30例逐案审查与必要修复、104项Python、24项站点测试及构建输出验证通过；远端CI、合并和回读待完成，尚未关闭。详见 [逐案清单](../reports/audits/original-thirty-final-20261020.md)。

@@ -36,7 +36,7 @@
 
 ## 原作者的方法与来源
 
-来源：[Shopping use described by commenter turnipsium](https://www.reddit.com/r/AI_Agents/comments/1u7ptrk/anyone_use_agentic_ai_for_shopping)
+来源：[Shopping use described by commenter turnipsium](https://www.reddit.com/r/AI_Agents/comments/1u7ptrk/anyone_use_agentic_ai_for_shopping/)
 
 A commenter, not the journalist who opened the thread, reports regular grocery, Amazon and flight-comparison use.
 评论者而非发帖记者，自述经常用智能体处理杂货、Amazon购物和机票比价。
