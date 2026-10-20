@@ -1,0 +1,354 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "split-and-log-handwritten-homework-scans-for-teachers",
+  "url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+  "title": "用Claude Code拆分手写作业扫描件并登记提交情况",
+  "industry": "教学行政",
+  "researched_at": "2026-10-20T03:05:26.660319+00:00",
+  "brief_reason": "有托管技能流程但源代码不可读，缺准确率、耗时、客户和实际收益。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核对每页归属和待查项，再写提交记录",
+    "reason": "可减少归档抄表，但错分与隐私成本未经验证。",
+    "next_action": "以合成扫描件检查匹配、未知页保留和表格差异。",
+    "stop_condition": "仍错分学生、漏页或复核时间不低于规范人工流程。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:05:26.660319+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:56:07Z",
+        "end": "2026-10-20T02:56:18Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 8522,
+      "sha256": "37fef0005ac0ef5d15536be3034f38382ad4191269c30cca20dd69d06f4b1725",
+      "hash_scope": "Local capture bundle, not original HTML",
+      "supports": "目录明示无实测结果和耗时；保留完整原模板。"
+    },
+    {
+      "id": "Sskill",
+      "url": "https://mcpmarket.com/tools/skills/homework-grading-workflow",
+      "title": "MCPMarket托管技能说明",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:05:26.660319+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:56:31Z",
+        "end": "2026-10-20T02:57:55Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 20556,
+      "sha256": "777cac80f7698e509eadfd51087926b3fe05820374bdf67e5c79e448fbe6dd76",
+      "hash_scope": "Local capture bundle, not original HTML",
+      "supports": "实际读取列表和SKILL页签；第三方托管内容，不是已核验源仓库。"
+    },
+    {
+      "id": "Sscan",
+      "url": "https://guides.gradescope.com/hc/en-us/articles/21707758815245-Scanning-Tips",
+      "title": "Gradescope扫描建议",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:05:26.660319+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:58:00Z",
+        "end": "2026-10-20T02:59:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31408,
+      "sha256": "cfce933c97ca656a4e6f3d7da3e73b520c3be3063b3705053483b45332fcfd01",
+      "hash_scope": "Local capture bundle, not original HTML",
+      "supports": "扫描前后核对页数、固定页长分组，不规则作业分开处理。"
+    },
+    {
+      "id": "Spdf",
+      "url": "https://platform.claude.com/docs/en/build-with-claude/pdf-support",
+      "title": "Claude API PDF支持",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:05:26.660319+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:58:00Z",
+        "end": "2026-10-20T02:59:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31408,
+      "sha256": "cfce933c97ca656a4e6f3d7da3e73b520c3be3063b3705053483b45332fcfd01",
+      "hash_scope": "Local capture bundle, not original HTML",
+      "supports": "API页数和请求大小约束不同于本技能99张逐页图像的会话安排。"
+    },
+    {
+      "id": "Sprivacy",
+      "url": "https://studentprivacy.ed.gov/faq/i-want-use-online-tool-or-application-part-my-course-however-i-am-worried-it-violation-ferpa",
+      "title": "美国教育部课堂工具隐私FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:05:26.660319+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:58:00Z",
+        "end": "2026-10-20T02:59:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31408,
+      "sha256": "cfce933c97ca656a4e6f3d7da3e73b520c3be3063b3705053483b45332fcfd01",
+      "hash_scope": "Local capture bundle, not original HTML",
+      "supports": "教师应先确认学校批准工具及适用条件；不证明该技能合规。"
+    },
+    {
+      "id": "Srepo",
+      "url": "https://github.com/sallvainian/sallvain-marketplace",
+      "title": "列表指向的GitHub仓库",
+      "kind": "primary",
+      "status": "unavailable",
+      "error": "GitHub repository GET returned404 twice; no further retry or alternate access.",
+      "supports": "无法核验代码、许可、测试或当前实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "许可目录明确没有实测结果和批次耗时。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "第三方托管技能描述先建追踪文件，精确及模糊匹配可继续。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sskill"
+      ]
+    },
+    {
+      "statement": "托管技能在拆分阶段跳过Unknown，并更新Excel Total公式。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sskill"
+      ]
+    },
+    {
+      "statement": "Gradescope建议比较扫描前后页数并分离不规则长度作业。",
+      "type": "verified",
+      "source_ids": [
+        "Sscan"
+      ]
+    },
+    {
+      "statement": "Claude API PDF限制不能直接视为本技能逐页图像会话上限。",
+      "type": "verified",
+      "source_ids": [
+        "Spdf",
+        "Sskill"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "作业归档与提交登记，不是批改成绩",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill"
+      ],
+      "body": "目录描述识别姓名、按学生拆PDF、在Excel登记提交和列出缺交。托管技能还描述增加作业列、标X并更新Total公式；这里没有对答案评分、判定学习质量的证据。标题中的grading不能扩展成自动批改。代码仓库两次404，不能核验实现、依赖或许可；原介绍没有准确率样本、批次耗时或真实学校采用结果，因此本篇按简报计数。"
+    },
+    {
+      "id": "workflow",
+      "title": "可见技能流程中的两处落差",
+      "source_ids": [
+        "Sskill",
+        "Sdirectory"
+      ],
+      "body": "第三方托管SKILL先建立追踪文件再让用户确认计划，而许可目录模板要求写入任何内容之前展示计划。复用时需把预览与写入边界统一。技能把精确匹配列高置信度、模糊匹配列中置信度并继续，只有低置信度留人工处理；这不等于人工逐项确认所有学生。全准确的宣传不能代替独立测量。本文只阅读这些指令，没有执行、安装或发送任何扫描件。"
+    },
+    {
+      "id": "attribution",
+      "title": "未知姓名要保留待核对区",
+      "source_ids": [
+        "Sskill"
+      ],
+      "body": "技能一处要求所有页都归属学生，拆分阶段却跳过Unknown。研究者据此提出：未知页必须单独保留并计数，不能强行分给最像的姓名，更不能因为它未入个人PDF就认定某学生未交。每页需保留输入页号、候选、置信原因、人工结论和输出文件对应；同名同班、多页无姓名、换班、重复扫描、空白和旋转页都应进入测试。姓名相似不是身份相同。"
+    },
+    {
+      "id": "scan",
+      "title": "先减少扫描问题，再比较agent收益",
+      "source_ids": [
+        "Sscan"
+      ],
+      "body": "Gradescope建议扫描前清点纸页，扫描后比较PDF页数，固定长度作业分组，异常长度另行处理并保持纸张格式一致。研究者将这些作为低成本对照：标准姓名栏、明确学生编号、固定页序与人工分组，可能先减少大部分错误。Gradescope现成流程也是替代，但本轮未核定机构报价或全部功能。不能只与最混乱的手工场景比较，然后将改进全归功于agent。"
+    },
+    {
+      "id": "limits",
+      "title": "99页是技能安排，不是统一平台上限",
+      "source_ids": [
+        "Sskill",
+        "Spdf"
+      ],
+      "body": "托管技能按每会话最多99张图像分批并保存逐页状态。当前Claude API文档按上下文给出PDF请求100页或600页的上限及32MB请求约束，还受内容密度影响。API整份PDF与Claude Code逐页图像流程不同，不能直接替换阈值或说99页已失效。可复制性需要核对实际工具版本、上下文、恢复文件和幂等性，验证续跑不会重复标记或漏页。"
+    },
+    {
+      "id": "privacy",
+      "title": "先获学校批准，再考虑真实学生资料",
+      "source_ids": [
+        "Sprivacy",
+        "Sskill"
+      ],
+      "body": "学生姓名、作业和提交状态可能属于教育记录。美国教育部FAQ建议教师先核对学校或学区批准的工具，相关例外有学校控制及用途等条件；其他地区须另行核对，本文不认定该技能符合法律。托管技能提到困难页面可交另一模型协助，这会增加接收方和成本，不能默认启用。优先用虚构编号与合成页验证，实际使用前确认数据处理、保留、访问、删除和备份规则。"
+    },
+    {
+      "id": "business",
+      "title": "买方可能是学校，收益尚未测出",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill"
+      ],
+      "body": "商业需求假设是教师反复整理纸质作业，付款人可能是学校、教研组或教师本人。可设想按校交付配置、培训和维护，或按明确批次提供校内处理支持；目前没有价格、客户、收入或采购周期证据。获客假设是提供合成样本演示及可审阅差异清单，而不是先索取真实学生资料。与学校现有作业系统和标准化扫描比较后，只有复核后仍节约时间才有继续验证的理由。"
+    },
+    {
+      "id": "cost",
+      "title": "错误复核和维护可能吃掉节省",
+      "source_ids": [
+        "Sskill",
+        "Sscan"
+      ],
+      "body": "模型、已有订阅或API使用成本未知，不能声称免费。成本项还包括扫描准备、名单清理、姓名歧义处理、逐页核验、Excel公式和备份、版本更新、学校审查、培训及获客。关键指标应是每批总人工分钟和错分修复分钟，不只模型运行时间。没有这些数据不编造利润表或ROI；本简报保留待测成本，不冒称符合完整深研的经济测算门槛。"
+    },
+    {
+      "id": "personal",
+      "title": "教师自用也需要独立核对",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill"
+      ],
+      "body": "适合已获准处理作业、能够审核页码与表格差异的教师。可能收益是少做重命名、拆分和抄表，实际收益未知。首次需准备扫描规范、花名册字段、目录副本和Excel映射；每学期维护班级变化，每次检查缺页、同名和公式。频率跟随作业批次。隐私风险来自学生记录出机，错误风险是错分给同学、误报缺交和误改累计统计；不得直接据输出采取扣分或通知家长等后续行动。"
+    },
+    {
+      "id": "next",
+      "title": "合成批次先验页数守恒与无覆盖",
+      "source_ids": [
+        "Sskill",
+        "Sscan"
+      ],
+      "body": "拟议演练使用虚构学生编号，设计同名、漏名、多页、重复和跨99页恢复，不使用真实学生内容。输出待审映射、每人PDF计划、未知页清单和表格差异；所有输入页都必须落在已确认输出或明确待核对区。确认后也只写副本，检查公式、原始扫描未变和重复运行不重复登记。对照人工标准答案，测总复核时间；若仍错分或比规范人工流程更慢，停止扩大使用。本轮未实际试用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "7049674d40f9451493208f92c9f534def7ea448a9345cb41d5c07ba7dee38d8a",
+      "How it went": "8b941986ef0f78bcbac9b56f0d5efcfcddba51a7becd9dc6e56fe85ee9e7df71",
+      "Worth knowing": "7a062a8d9000ba0ad356103640a5d0f95655632f05647e41c60bd7056c1f7571"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Create a reusable skill that processes batches of scanned handwritten homework PDFs in [folder path]. It should read the handwritten student name on each page, match it against the roster in [roster file], split the scans into one PDF per student, and update [completion spreadsheet] to mark who turned the work in. Finish with a list of students with missing work and any names you couldn't match confidently. Show me the planned splits and spreadsheet changes before writing anything, and never delete the original scans.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+    "observed_at": "2026-10-19T07:18:15.712713+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "967e3fc7dbbc26772fe81e167b90b48a73add7089e0f0f293e11e22089dffcbf"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://mcpmarket.com/tools/skills/homework-grading-workflow",
+    "source_title": "Homework Grading Workflow",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T03:05:26.660319+00:00",
+    "source_sha256": "777cac80f7698e509eadfd51087926b3fe05820374bdf67e5c79e448fbe6dd76",
+    "steps": [
+      {
+        "en": "Load a roster, inspect scanned pages, group by student, and record submission status.",
+        "zh": "读取花名册，检查扫描页，按学生分组并登记提交状态。"
+      }
+    ],
+    "unavailable_reason": "方法来自第三方托管技能文本，源仓库404，未核验作者代码或运行。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "归档与抄表可能减少，但复核后节省未测。",
+    "audience": "获得学校授权并能复核的教师。",
+    "use": "作业扫描归档和提交状态草稿。",
+    "benefit": "无实测准确率、耗时或教师收益。",
+    "setup_cost": "扫描规范、花名册字段、表格映射和副本。",
+    "maintenance_cost": "名单更新、歧义复核、公式和版本适配。",
+    "frequency": "跟随作业批次。",
+    "privacy_risk": "学生姓名、作业及提交记录可能进入外部模型。",
+    "error_risk": "错分、漏页、误报缺交、公式损坏。",
+    "source_ids": [
+      "Sdirectory",
+      "Sskill",
+      "Sprivacy"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "保留许可目录原模板；下方仅为原创合成资料演练。",
+    "prerequisites": "虚构学生编号、合成扫描、人工答案和表格副本。",
+    "tools": "已有获准Claude Code及本地PDF/表格；本轮未安装技能。",
+    "expected_result": "可核对的页号映射、未知页清单与表格差异；未实际运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Create a reusable skill that processes batches of scanned handwritten homework PDFs in [folder path]. It should read the handwritten student name on each page, match it against the roster in [roster file], split the scans into one PDF per student, and update [completion spreadsheet] to mark who turned the work in. Finish with a list of students with missing work and any names you couldn't match confidently. Show me the planned splits and spreadsheet changes before writing anything, and never delete the original scans."
+      },
+      {
+        "title": "合成扫描归档演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sskill",
+          "Sscan"
+        ],
+        "attribution": "原创合成演练，未执行",
+        "text": "只用给定虚构编号和合成作业页，先输出逐页映射、歧义、未匹配页及表格拟改差异。每页必须可追溯，未知不得强配或用于认定缺交。未确认前不写文件，确认后仅写副本，保留原扫描和公式；不访问真实学生资料，不调用额外模型。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "托管列表宣传不算独立使用反馈；无真实学校样本。"
+  },
+  "disconfirming_evidence": "人工核验不保证全准确；未知页跳过与所有页归属存在张力；追踪文件写入时机与目录模板不一致。",
+  "limitations": "未安装执行技能、处理真实学生资料或验证代码许可；未试用或测收益。",
+  "archive_source_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+  "translation_sha256": "35bd458239c6fb829bcae16a7873acfacbce9382dc8a11332d2ee5768b9337fa"
+}
