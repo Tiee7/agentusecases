@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **96**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **97**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -106,3 +106,4 @@
 | 用Manus查询附近商店的商品库存 | [简报](../../reports/brief/phone-stores-to-check-if-items-are-in-stock.md) |
 | 用Claude Cowork与Maya迭代游戏工具代码 | [简报](../../reports/brief/build-a-game-tool-with-claude-cowork-and-maya.md) |
 | 在隔离虚拟机中用Claude Code提交PR | [简报](../../reports/brief/run-claude-code-in-an-isolated-vm-that-opens-prs.md) |
+| 用Doozy在Slack线程中查询支持问题 | [简报](../../reports/brief/run-support-queries-and-bug-checks-from-slack-threads.md) |
