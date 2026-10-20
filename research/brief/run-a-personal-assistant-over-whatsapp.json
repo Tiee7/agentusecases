@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-a-personal-assistant-over-whatsapp",
+  "url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp",
+  "title": "用OpenClaw通过WhatsApp管理日历、语音笔记和习惯记录",
+  "industry": "自托管个人助手",
+  "researched_at": "2026-10-20T10:03:57.999084+00:00",
+  "brief_reason": "原始运行文章受阻，缺实际配置、使用日志、账单和独立效果复现；可核组件文档和相关历史缺陷，不能据此证明稳定替代付费软件。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核权限持久性与总维护成本",
+    "reason": "手机入口和文本归档有实际用途，但5美元VPS不是总成本，配置问题也有版本与包装器边界。",
+    "next_action": "在合成资料上先验证只读、身份隔离、重启后权限和可恢复记录。",
+    "stop_condition": "重启扩大权限、混入家人数据、误发消息或维护负担超过替代收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:59:59Z",
+        "end": "2026-10-20T10:00:06Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "characters": 13799,
+      "sha256": "e832385ef8535fe5728b9b2009d9f00bae1b7f8e53440015678a72261620dfda",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "低价VPS、自托管工具链、取消订阅、eSIM通话、启动配置问题及2GB共享内存均为目录转述，未实测。"
+    },
+    {
+      "id": "Swhatsapp",
+      "url": "https://github.com/openclaw/openclaw/blob/main/docs/channels/whatsapp.md",
+      "title": "OpenClaw WhatsApp官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:00:23Z",
+        "end": "2026-10-20T10:00:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "github_connector_file",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "receipt_text": "官方支持独立号码及个人号码自聊模式；dmPolicy/allowFrom控制入站，显式群组或频道外发不受同一DM名单直接约束。需要按动作另核授权。",
+      "characters": 73,
+      "sha256": "32934d56dd1dafd78ea8bb06b889fe7b21661dc5578933fa23eab7e9bbcb1a88",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方支持独立号码及个人号码自聊模式；dmPolicy/allowFrom控制入站，显式群组或频道外发不受同一DM名单直接约束。需要按动作另核授权。"
+    },
+    {
+      "id": "Sgog",
+      "url": "https://github.com/openclaw/gogcli/blob/main/docs/commands/gog.md",
+      "title": "gog命令行官方参考",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:00:23Z",
+        "end": "2026-10-20T10:00:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "github_connector_file",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "receipt_text": "文档分别列出readonly、enable-commands-exact、gmail-no-send；read-only不是仅靠提示词，也不应把只读、草稿与发送权限混为一谈。",
+      "characters": 87,
+      "sha256": "38107f14fda131c504cdf1bbb64e53393ec90ae4abf98b46f9488d2b59cf4918",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "文档分别列出readonly、enable-commands-exact、gmail-no-send；read-only不是仅靠提示词，也不应把只读、草稿与发送权限混为一谈。"
+    },
+    {
+      "id": "Sissue",
+      "url": "https://github.com/openclaw/openclaw/issues/79738",
+      "title": "配置重写问题公开记录",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:00:23Z",
+        "end": "2026-10-20T10:00:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "github_connector_issue",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "receipt_text": "问题针对OpenClaw2026.5.7与u4s-openclaw包装器组合，报告重启改写allowFrom等配置。状态closed，关闭日期2026-08-02；不能泛化为所有当前版本必然行为。",
+      "characters": 98,
+      "sha256": "4b7a0c37a819b9764e01ddcd8bdde93a741a29f77d96d13a40783e81a7359032",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "问题针对OpenClaw2026.5.7与u4s-openclaw包装器组合，报告重启改写allowFrom等配置。状态closed，关闭日期2026-08-02；不能泛化为所有当前版本必然行为。"
+    },
+    {
+      "id": "Sclose",
+      "url": "https://github.com/openclaw/openclaw/issues/79738#issuecomment-4412129834",
+      "title": "问题关闭说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:00:23Z",
+        "end": "2026-10-20T10:00:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "github_connector_comments",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "receipt_text": "关闭评论称当前main已保护插件启用的源配置修改和单次启动快照，同时明确未执行包装器。属于维护/自动审查说明，不是本研究独立复现或作者部署已修复证明。",
+      "characters": 75,
+      "sha256": "11fdffcf64e9b33cb5f78bdd5d03bc1ecb1b57df8b32b6536f651fdac79604f4",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "关闭评论称当前main已保护插件启用的源配置修改和单次启动快照，同时明确未执行包装器。属于维护/自动审查说明，不是本研究独立复现或作者部署已修复证明。"
+    },
+    {
+      "id": "Sdocker",
+      "url": "https://docs.docker.com/engine/containers/run/",
+      "title": "Docker官方运行资源约束",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:01:06Z",
+        "end": "2026-10-20T10:01:22Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T10:03:57.999084+00:00",
+      "receipt_text": "shm-size设定/dev/shm大小，默认64m；与容器memory内存上限为不同参数。未证明每个Chromium场景均必须2GB或作者VPS容量足够。",
+      "characters": 78,
+      "sha256": "017fb487aa786708d96afbd991adf1e033b210176594cf5bf59e7f42b47afd80",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "shm-size设定/dev/shm大小，默认64m；与容器memory内存上限为不同参数。未证明每个Chromium场景均必须2GB或作者VPS容量足够。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://medium.com/@srechakra/sda-f079871369ae",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "原文位于本次已确认Cloudflare阻断的Medium origin，未继续访问或换路；只保留许可目录转述。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述5美元/月VPS及取消三个付费工具。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "官方gog文档区分只读、精确命令白名单与禁发邮件。",
+      "type": "verified",
+      "source_ids": [
+        "Sgog"
+      ]
+    },
+    {
+      "statement": "相关配置重写issue针对特定版本/包装器且已关闭。",
+      "type": "verified",
+      "source_ids": [
+        "Sissue",
+        "Sclose"
+      ]
+    },
+    {
+      "statement": "Docker共享内存大小与容器总内存上限是不同参数。",
+      "type": "verified",
+      "source_ids": [
+        "Sdocker"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "手机入口后面仍是一套需要维护的系统",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录描述的是WhatsApp入口、VPS上的Docker与Chromium、gog日历邮箱、Gemini语音、Markdown习惯记录和私有Git归档。用途横跨多个组件，某个测试成功不能代表所有动作可靠。未取得作者配置和版本，不能把一段模板当成可复制安装包。"
+    },
+    {
+      "id": "evidence",
+      "title": "取消订阅是个人选择，不是净收益证明",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "作者说停用了Notion、Todoist和习惯追踪器，但没有原套餐、实际节省金额、缺失功能或持续使用时长。服务可以替代他个人用到的部分功能，不等于完整替代这些产品。电话和预订也是自述，没有对方确认或完整成功率；不把它们当本研究演示。"
+    },
+    {
+      "id": "config",
+      "title": "不要把旧配置问题写成当前普遍行为",
+      "source_ids": [
+        "Sdirectory",
+        "Sissue",
+        "Sclose"
+      ],
+      "body": "目录原文保留“启动重写白名单”的表述，分析需补充边界：相关公开issue讨论2026.5.7与特定包装器组合，已关闭；关闭说明称main已有保护，但没有执行包装器。现有材料不足以证明作者就是该issue场景，也不足以承诺所有发布版已经修好。应固定版本并实测启动、重启、升级后的实际权限，而非默认必须持续覆盖配置。"
+    },
+    {
+      "id": "permissions",
+      "title": "入站白名单不是所有动作的总开关",
+      "source_ids": [
+        "Swhatsapp",
+        "Sgog"
+      ],
+      "body": "WhatsApp文档区分入站DM政策与显式群组/频道外发；gog又提供只读、命令限制和禁发邮件等不同控制。配置一个允许来信的号码，不能推断它限制了所有外发或日历修改。复制时应分别列出能读、能写、能发的动作，禁止项在工具层落实，不能只写“请先问我”。"
+    },
+    {
+      "id": "family",
+      "title": "分成两个agent不自动获得严格隔离",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "家人路由到另一个agent是作者配置自述，尚无会话、目录、账号凭据和日志隔离的测试。家庭成员同意什么数据被处理也需要明确。建议用虚构的两套联系人和笔记验证检索不串、路由正确、撤权立即生效；不需要为研究收集家人实际聊天。"
+    },
+    {
+      "id": "memory",
+      "title": "2GB共享内存不等于整机只需2GB",
+      "source_ids": [
+        "Sdirectory",
+        "Sdocker"
+      ],
+      "body": "Docker的shm-size与memory是不同配置，浏览器页面数量、模型客户端和其他进程仍影响总资源使用。目录给出的2GB是该方案的说法，不是通用最低硬件标准。应通过实际工作负载测量并关闭不用的标签，而不是仅调大一个参数就宣布解决内存问题。"
+    },
+    {
+      "id": "cost",
+      "title": "每月5美元只是VPS一项",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "还要核算模型调用、语音处理、号码及通话、存储备份、维护与故障恢复。目录只写5美元eSIM，未说明计费周期，不擅自算成每月5美元。自用应比较取消订阅后的现金变化与新增维护时间；对外服务还要计入获客、账号接入、客户支持和退出迁移，无法凭VPS价格算毛利。"
+    },
+    {
+      "id": "business",
+      "title": "可验证的商业方向是有限范围配置服务",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "假设付费人是有高频跨工具事务但不愿自己维护的个人或小团队。收入可探索一次性设置加维护，而非先卖“万能秘书订阅”。获客演示应限定一套合成日历和笔记，展示权限、失败恢复和导出；实际客户是否愿付钱没有证据。跨账号定制与持续支持若无法标准化，会吞掉低价服务的空间。"
+    },
+    {
+      "id": "alternatives",
+      "title": "一套聊天助手不必替代全部工具",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可以先保留原日历和任务应用，仅将语音转成待确认的行动项，再比较是否值得接入更广功能。Markdown加Git有可追踪记录的价值，但需要版本、同步和删除政策；私有仓库也不是对数据拥有者自动合规或绝对私密的保证。替代方案按实际必需功能比较，不按功能列表长短决定。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值取决于频率和运维意愿",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合有基本服务器管理能力、经常在手机上记录和协调事务的人。潜在收益是减少工具切换，净时间未测。初期需要接入、路由、权限与备份；后续要处理登录失效、组件升级、配置漂移、误识别和费用。低频用户可能用原生应用更省心，不能把能安装等同于适合长期使用。"
+    },
+    {
+      "id": "trial",
+      "title": "先验收只读与重启恢复，再考虑写入",
+      "source_ids": [
+        "Sgog",
+        "Sissue"
+      ],
+      "body": "先用虚构邮件标题、日历和习惯记录生成候选操作，不连接真实服务。技术试点若另行开展，应保存版本/权限基线，测试重启与升级后是否保持限制，并核对每个已执行动作的回执与可恢复记录。发现未知外发、越权读取或权限漂移应停止写操作；本轮不运行安装、授权或真实消息测试。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp",
+    "observed_at": null,
+    "body_sha256": "6d5d85556fb488b2ee53a7b2d2dc9e91016e38b865e376e136e6df618c25677c",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d077a5d4e14e02bf94f57af56c5a3e93a010679b35cb68a150bf6bd5b8fef493",
+      "How it went": "e20fef82e4a66954bb72cb9177d79169a0b61542e1e2b11083032d9bd455e678",
+      "Worth knowing": "6132d643a7272a6934b7143c39714a61b88a264a81f43edcea97f6eaf6f97e22"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T09:59:59Z",
+      "end": "2026-10-20T10:00:06Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up a personal assistant I can message over [WhatsApp/Telegram] that can check and edit my calendar at [calendar service], browse the web, transcribe voice notes, and log daily habits ([list habits]) to a text file in a Git repo at [path]. Walk me through setup on my [VPS/computer], then test it by having me send one message of each type. Setup is done when each of those tests works; ask before it sends any message to anyone besides me or changes any calendar events.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e832385ef8535fe5728b9b2009d9f00bae1b7f8e53440015678a72261620dfda",
+    "observation_window": {
+      "start": "2026-10-20T09:59:59Z",
+      "end": "2026-10-20T10:00:06Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://medium.com/@srechakra/sda-f079871369ae",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T10:03:57.999084+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原文位于本次已确认Cloudflare阻断的Medium origin，未继续访问或换路；只保留许可目录转述。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "用途具体但净收益、稳定性和隔离未测。",
+    "audience": "有高频手机事务且能维护自托管服务的人。",
+    "use": "日历与邮箱辅助、语音行动项、习惯文本记录。",
+    "benefit": "可能减少入口切换，取消订阅收益未量化。",
+    "setup_cost": "服务器、容器、消息渠道、授权、路由和备份。",
+    "maintenance_cost": "版本兼容、登录失效、配置变化、复核与费用。",
+    "frequency": "按真实日常记录与协调需求。",
+    "privacy_risk": "私人消息、邮箱、家人数据和Git记录的访问范围。",
+    "error_risk": "误发、错改日历、配置漂移、数据串用和语音误识别。",
+    "source_ids": [
+      "Sdirectory",
+      "Swhatsapp",
+      "Sgog"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "虚构消息、日历、两名用户的合成笔记，不登录真实账号。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "按身份隔离的只读建议、明确待批准项和恢复检查表；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-a-personal-assistant-over-whatsapp",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Set up a personal assistant I can message over [WhatsApp/Telegram] that can check and edit my calendar at [calendar service], browse the web, transcribe voice notes, and log daily habits ([list habits]) to a text file in a Git repo at [path]. Walk me through setup on my [VPS/computer], then test it by having me send one message of each type. Setup is done when each of those tests works; ask before it sends any message to anyone besides me or changes any calendar events."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只处理我提供的合成数据。把语音转写文本整理为行动项，按用户隔离日历和笔记，列出需要批准的动作及对应依据。不要安装软件、接入账号、发消息、改日历或提交Git。输出重启后权限核对清单，标记未知情况。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "相关GitHub缺陷是相邻部署反馈，不能当作者实测；缺独立效果和客户付费证据。"
+  },
+  "disconfirming_evidence": "低VPS费用漏掉模型和维护；配置问题有特定版本边界；跨组件及家庭隔离未验证。",
+  "limitations": "只读公开资料，无安装、真实账号授权、消息发送、日历修改、电话预订或付费API。",
+  "archive_source_sha256": "6d5d85556fb488b2ee53a7b2d2dc9e91016e38b865e376e136e6df618c25677c",
+  "translation_sha256": "d3570fe1f7522bb490c6ffc528787c671035b8e679460bb2ebc2558adb7db205"
+}

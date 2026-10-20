@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "run-a-personal-assistant-over-whatsapp",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "6d5d85556fb488b2ee53a7b2d2dc9e91016e38b865e376e136e6df618c25677c",
+  "translated_at": "2026-10-20T10:03:57.999084+00:00",
+  "body": "通过WhatsApp运行个人助手\n作者在一台低价VPS上运行OpenClaw，通过WhatsApp发消息，让它管理日历、浏览网页、回复语音笔记，并把习惯记录写入由Git跟踪的文件。\n使用的是\nOC\nOpenClaw\n他们做了什么\nOpenClaw运行在每月5美元的VPS上的Docker容器中，用无头Chromium浏览网页，网关只能通过SSH隧道访问。作者通过WhatsApp与它通信。它借助gog命令行工具管理Google Calendar和Gmail，把习惯记录到Markdown文件，并用Gemini把语音笔记转成归档的行动项。它把笔记提交到一个私有GitHub仓库。家人被路由到另一个agent。\n进展与成效\n他停用了付费的Notion、Todoist和一款习惯追踪器。agent还通过自己的一个5美元eSIM号码打电话和预订。来源没有给出准确性或可靠性测量。\n值得了解\nOpenClaw在启动时会重写配置并移除WhatsApp白名单，因此他加入了基准配置恢复和看门狗。Docker中的Chromium还需要2GB共享内存。\n亲自尝试\n使用\nOpenClaw\n复制提示词\n设置一个我可以通过[WhatsApp/Telegram]发送消息的个人助手，它能查看和编辑[日历服务]中的日历、浏览网页、转录语音笔记，并把日常习惯（[习惯列表]）记录到位于[路径]的Git仓库中的文本文件。指导我在[VPS/电脑]上完成设置，再让我分别发送每种类型的一条消息进行测试。当所有测试都正常工作时，设置才算完成；向我之外的任何人发送消息或更改任何日历事件之前，先询问我。\n原始来源：https://medium.com/@srechakra/sda-f079871369ae",
+  "body_sha256": "d3570fe1f7522bb490c6ffc528787c671035b8e679460bb2ebc2558adb7db205",
+  "scope": "Complete licensed directory text; not external article full text."
+}
