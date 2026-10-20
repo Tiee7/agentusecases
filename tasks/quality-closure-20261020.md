@@ -14,7 +14,7 @@
 | spark_second10 | automate-amazon-brand-bookkeeping-and-product-images | pending_repair | 尚无 |
 | spark_second10 | scrub-your-phone-number-from-data-brokers-to-stop-spam | pending_repair | 尚无 |
 | spark_second10 | run-contractor-back-office-jobs-and-churn-recovery | pending_repair | 尚无 |
-| spark_second10 | scrape-ai-news-three-times-a-day-with-a-custom-bot | pending_validation_and_remote_publication | 已修订，测试与远端发布尚未完成 |
+| spark_second10 | scrape-ai-news-three-times-a-day-with-a-custom-bot | completed | [修订报告](../reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md)，[PR79](https://github.com/Tiee7/agentusecases/pull/79)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39450279684)，合并及远端回读通过 |
 | spark_second10 | run-a-company-reddit-presence-with-a-bot | pending_repair | 尚无 |
 | spark_second10 | handle-multi-click-chores-like-dmv-returns-and-appointments | pending_repair | 尚无 |
 | spark_second10 | hand-seo-tasks-to-a-chatgpt-agent | pending_repair | 尚无 |
