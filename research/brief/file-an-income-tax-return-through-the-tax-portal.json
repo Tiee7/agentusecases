@@ -1,0 +1,384 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "file-an-income-tax-return-through-the-tax-portal",
+  "url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
+  "title": "用Claude Desktop整理并填写ITR-1申报资料",
+  "industry": "税务资料整理",
+  "researched_at": "2026-10-20T14:30:03.513839+00:00",
+  "brief_reason": "原帖不可读、无提交或验证回执、无税务正确性与完整耗时证据；仅作流程与风险简报，不把个案当通用无人报税能力。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅先验证资料整理辅助",
+    "headline": "可研究核对与草稿，声明和正式申报交由本人处理",
+    "reason": "点击提交不等于税务正确、验证完成或审定通过，真实敏感资料与责任需独立处理。",
+    "next_action": "用虚构双雇主工资资料测试来源对账、重复与缺项识别，不登录真实门户。",
+    "stop_condition": "要求真实身份号、账户凭据、自动声明或付款，或擅自改变数字只为过校验。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:25:36Z",
+        "end": "2026-10-20T14:25:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T14:30:03.513839+00:00",
+      "characters": 13488,
+      "sha256": "fd5f5f8de149aa1abf1e389fb3ca94f22549a26b4936ce69bb0c8cb1160dbbba",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "目录声称Claude Desktop完成ITR1、Form16/AIS核对、雇主切换和错误恢复并提交；缺回执、课税年度、e-verification与后续税务结果。"
+    },
+    {
+      "id": "Smanual",
+      "url": "https://www.incometax.gov.in/iec/foportal/newdownloads/itr/itr-UM?mobile-app=1",
+      "title": "印度税务部门ITR-1在线手册",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:26:42Z",
+        "end": "2026-10-20T14:26:56Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T14:30:03.513839+00:00",
+      "receipt_text": "当前手册明确AY2026-27，要求满足ITR1资格、复核预填字段，区分声明、校验和验证。首次读取错误，单次重试成功；不将当前规则反套未知年份原案。",
+      "characters": 74,
+      "sha256": "d0b99f2df1ec5e275df922af049d0bc366df4a6f67a50ac9ac7f4fd314c3ec5f",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "当前手册明确AY2026-27，要求满足ITR1资格、复核预填字段，区分声明、校验和验证。首次读取错误，单次重试成功；不将当前规则反套未知年份原案。"
+    },
+    {
+      "id": "Sverify",
+      "url": "https://www.incometax.gov.in/iec/foportal/itr-v-faqs",
+      "title": "印度税务部门30天验证FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:26:00Z",
+        "end": "2026-10-20T14:26:08Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T14:30:03.513839+00:00",
+      "receipt_text": "官方说明电子验证或ITR-V期限通常为申报后30天，迟验会影响申报日期及后果，未验证申报被视为无效。用于区分提交与最终有效状态，不证明原案已验证。",
+      "characters": 73,
+      "sha256": "43d14e3196dac4e7399ddc32cec81936353b29aaebc367b904cec526fae9c0c6",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方说明电子验证或ITR-V期限通常为申报后30天，迟验会影响申报日期及后果，未验证申报被视为无效。用于区分提交与最终有效状态，不证明原案已验证。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://x.com/trq212/status/2067255423842103670",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "X原帖普通读取首次Internal Error，按规则仅重试一次返回403 Forbidden，此后停止。未读取私人税表、身份或银行信息，也未登录税务门户。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    },
+    {
+      "id": "Seligibility",
+      "url": "https://www.incometax.gov.in/iec/foportal/help/individual/return-applicable-1",
+      "title": "印度税务部门：AY2026-27工资收入者适用表格",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:04:06Z",
+        "end": "2026-10-20T18:04:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_visible_page",
+      "receipt_created_at": "2026-10-20T18:06:38.083026+00:00",
+      "receipt_text": "2026-10-20自有云浏览器读取官方AY2026-27工资收入者页面：ITR-1限定居民身份、收入类型与额度，并列董事、短期资本利得、境外资产或收入等排除条件。Form16由雇主提供，AIS包含多类税务信息；换雇主不自动决定适用表格。页面内容更新标2026-07-09，与全站页脚日期不同。这里只核适用边界，不替具体纳税人选表。",
+      "characters": 166,
+      "sha256": "987309fca7899be39e79f5810053872932671f0cfa6d77cfc340734fae9c6da0",
+      "hash_scope": "Researcher summary of actual visible read, not full webpage bytes",
+      "supports": "2026-10-20自有云浏览器读取官方AY2026-27工资收入者页面：ITR-1限定居民身份、收入类型与额度，并列董事、短期资本利得、境外资产或收入等排除条件。Form16由雇主提供，AIS包含多类税务信息；换雇主不自动决定适用表格。页面内容更新标2026-07-09，与全站页脚日期不同。这里只核适用边界，不替具体纳税人选表。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录称agent处理双雇主资料、会话超时和校验错误后提交ITR1。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "三小时手工操作避免及没有会计师参与是目录转述，未独立计时。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "当前官方手册说明ITR1适用资格并明确其示例课税年度。",
+      "type": "verified",
+      "source_ids": [
+        "Smanual"
+      ]
+    },
+    {
+      "statement": "官方FAQ区分上传与验证，未验证申报可被视为无效。",
+      "type": "verified",
+      "source_ids": [
+        "Sverify"
+      ]
+    },
+    {
+      "statement": "当前官方工资收入者页面明确AY2026-27及ITR-1资格与排除条件；更换雇主本身不足以判断适用表格。",
+      "type": "verified",
+      "source_ids": [
+        "Seligibility"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "提交、验证与正确性不是一件事",
+      "source_ids": [
+        "Sdirectory",
+        "Sverify"
+      ],
+      "body": "目录给出的终点是提交，没有回执、验证状态、税务计算或后续处理结果。官方FAQ明确存在申报后的验证环节，因此不能把页面提交当作全部完成，也不能推断已收到退款、节税或免除后续责任。三小时是目录中的手工基线表述，未取得实际对照计时。"
+    },
+    {
+      "id": "eligibility",
+      "title": "先固定年度和适用表格",
+      "source_ids": [
+        "Smanual",
+        "Seligibility"
+      ],
+      "body": "当前官方手册以AY2026-27示例并列适用条件，原案没有披露年度与完整收入情况。不能因为作者用了ITR1就把它推荐给所有工资收入者，也不把今天的规则倒推为原作者当时适用。拟议流程首先核对年度、居民身份和收入类别，复杂情况需要合格专业人员判断。这里不替具体纳税人选表或制度。 续接时实际读取的官方工资收入者页面还列出境外资产/收入、董事身份等排除条件，不能只凭两份Form16断言适用。"
+    },
+    {
+      "id": "workflow",
+      "title": "多雇主核对需要来源账",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "换工作时应分别追踪每份资料对应雇主、期间和金额来源，检查重叠、缺失以及同一项在不同报表中重复出现。agent可以提出差异清单，但不应在没有依据时把不一致数值改成相等。预期交付是每个字段到文件及原字段的映射、差异与待问事项，不是一个无法追溯的最终总额。"
+    },
+    {
+      "id": "validation",
+      "title": "校验通过不证明事实正确",
+      "source_ids": [
+        "Smanual"
+      ],
+      "body": "门户校验可检查字段形式或规则，却不等于所有收入真实完整。发生错误应记录原因、拟改字段、证据和审核人，不能为了让界面接受而猜数字。会话超时恢复先确认保存状态，避免重复提交。此处是设计建议，本轮没有操作门户、修正任何真实申报或验证agent能处理这些错误。"
+    },
+    {
+      "id": "commercial",
+      "title": "可交付边界比无人报税更清楚",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "候选商业需求是减少资料整理、对账和人工复核往返，不是仅靠浏览器自动点击替代税务判断。假设可为获准专业服务团队提供资料清单与差异报告，具体资质、责任、客户授权和适用法律仍需核查。本案没有付费用户、收入、定价或获客渠道证据，不将未请会计师推成可复制会计费收入。"
+    },
+    {
+      "id": "cost",
+      "title": "一次年度任务也有维护成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包括资料整理、隐私处理、模型、人工复核、异常恢复和年度表格规则更新。三小时不能直接乘客户数得到节省或利润，也不能把无会计师参与等同零成本。与人工、官方离线工具或已有税务软件比较时，应固定同样资料复杂度和最终审核标准，不只比较填写速度。"
+    },
+    {
+      "id": "delivery",
+      "title": "候选交付、获客与复用条件",
+      "source_ids": [
+        "Sdirectory",
+        "Seligibility"
+      ],
+      "body": "可测试的交付单位是一个年度、一名客户的一份资料来源映射与差异清单，由有权限的专业人员复核，不承诺申报正确或节税。潜在付款者可能是已有客户的税务服务团队；通过现有文档管理或专业服务合作关系展示虚构样例，只是渠道假设，本轮未联系或获客。可复用部分是雇主/期间/字段规范、重复项检测和差异说明；税年规则、客户复杂度及最终判断不能无条件复制。客户自己看官方说明或用现有税务软件是替代，并非每个人需要新agent。"
+    },
+    {
+      "id": "economics_scenarios",
+      "title": "两种资料整理成本情景，不是报价",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "仅演示同一交付单位的敏感性：每月10份年度资料差异清单，不含税务判断、正式申报与验证。低返工假设每份人工20分钟，按15美元/小时机会成本为5美元，模型预算0.2，已列小计5.2；高返工假设60分钟和模型0.5，小计15.5。对应月度已列小计52和155美元。工时、人工单价、用量和模型预算均为研究者假设，不是本案实测、官方报价或专业税务服务费。工具固定费、获客、培训、年度维护及其他费用未知，须另加；售价与愿付价未知，因此不计算利润或宣称某预算内可开业。"
+    },
+    {
+      "id": "personal",
+      "title": "自用收益取决于可审查性",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用人群是了解自身收入且能检查结果的纳税人，潜在收益为减少重复核对。设置需准备完整资料并定义待审输出；维护随税年与门户变化，通常季节性而非日常高频。错漏收入、选错适用表格或误触声明的风险远高于普通文本整理，因此应先保留人工核验和操作控制。"
+    },
+    {
+      "id": "privacy",
+      "title": "不把真实税务材料放进公开案例",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "Form16和AIS可能包含身份、收入、雇主、账户与其他个人信息。公开研究只保存已许可目录与原创分析，不保存私人税表、身份号码、凭据或银行资料。拟议试验完全使用合成数据；涉及正式声明、签署、付款或身份验证时由本人处理，不以目录Copy prompt代替实际授权。"
+    },
+    {
+      "id": "trial",
+      "title": "合成双雇主样例只做核对",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备虚构两家雇主记录、一个重复项目、一处缺失期间和一个金额不一致项，预先给出标准差异表。让助手列字段来源、未解决问题和待审草稿，不给真实身份信息、不访问门户、不选择税制、不提交。预期是能发现重复缺项并保留未知，而不是自动生成自信的正确申报。本轮未运行试验。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
+    "observed_at": null,
+    "body_sha256": "8a077809277a1cb485e239b42039882b59ef9bda9397d78e357ea87ab5741cae",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "e9f2770b9b35f3808d6633a9b2c180a6f285754c403c0d822779773098dcfc45",
+      "How it went": "7c8cc6fbbeff7daa2dd2aebb69e59765fb21eba7d8a6e409fe2f0949ddacbdb8"
+    },
+    "actual_agents": [
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T14:25:36Z",
+      "end": "2026-10-20T14:25:52Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me prepare my income tax return for [tax year] on [tax portal URL]. I'll log in myself. Cross-check my salary and income figures against [Form 16, AIS, or equivalent statements in this folder], account for [any job change or other income], and fill in the return form. Fix any validation errors you find, then stop and show me a full summary of every figure before you submit anything, and wait for my go-ahead to file.",
+    "agent": "Claude",
+    "source_url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "fd5f5f8de149aa1abf1e389fb3ca94f22549a26b4936ce69bb0c8cb1160dbbba",
+    "observation_window": {
+      "start": "2026-10-20T14:25:36Z",
+      "end": "2026-10-20T14:25:52Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://x.com/trq212/status/2067255423842103670",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T14:30:03.513839+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "X原帖普通读取首次Internal Error，按规则仅重试一次返回403 Forbidden，此后停止。未读取私人税表、身份或银行信息，也未登录税务门户。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可探索核对和草稿辅助，正式报税正确性未证实。",
+    "audience": "能审核本人收入资料的纳税人及获准专业协作者。",
+    "use": "整理多份工资来源，标注差异和缺项。",
+    "benefit": "可能减少核对，目录三小时说法非独立实测。",
+    "setup_cost": "完整资料、年度范围、差异标准与敏感信息处理。",
+    "maintenance_cost": "税年、门户、表格规则及人工审核更新。",
+    "frequency": "通常按税年和实际申报需求。",
+    "privacy_risk": "身份、收入与银行资料泄露。",
+    "error_risk": "错表、重复或漏报、猜测修正、未验证却称完成。",
+    "source_ids": [
+      "Sdirectory",
+      "Smanual",
+      "Sverify"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "虚构双雇主记录与标准差异表，不含身份号码或银行信息。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "字段来源和差异清单、待审草稿；不登录、不声明、不提交、不付款，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Help me prepare my income tax return for [tax year] on [tax portal URL]. I'll log in myself. Cross-check my salary and income figures against [Form 16, AIS, or equivalent statements in this folder], account for [any job change or other income], and fill in the return form. Fix any validation errors you find, then stop and show me a full summary of every figure before you submit anything, and wait for my go-ahead to file."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "根据以下虚构工资资料生成字段来源对照与差异清单，标记重复、缺失和冲突。不要补造数据，不访问门户、不判断实际税制、不提交申报或付款。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "一份年度资料来源映射与差异清单；不含正式申报",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.2,
+      "human_cost": 5,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 10,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "20分钟×15美元/小时；仅已列小计5.2/份、52/月。全部是假设，其他成本未知非零。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "一份年度资料来源映射与差异清单；不含正式申报",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.5,
+      "human_cost": 15,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 10,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "60分钟×15美元/小时；仅已列小计15.5/份、155/月。全部是假设，其他成本未知非零。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    }
+  ],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "未取得原帖、回执、验证状态或独立使用者反馈。"
+  },
+  "disconfirming_evidence": "官方存在人工/离线流程；过门户校验不保证税务正确，年度规则与复核成本持续存在。",
+  "limitations": "仅目录转述，原帖读取失败后停止；无真实资料、试用、工时、金额或验证证据。",
+  "archive_source_sha256": "8a077809277a1cb485e239b42039882b59ef9bda9397d78e357ea87ab5741cae",
+  "translation_sha256": "1a879e3cc0ffc0775122a462995994dff20930f63490f94b035176f4a114c5c1",
+  "resumed_at": "2026-10-20T18:06:38.083026+00:00",
+  "resumed_from_saved_commit": "96ab3e6"
+}

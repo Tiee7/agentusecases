@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **92**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **93**；深度研究 **74**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -102,3 +102,4 @@
 | 用OpenClaw结合代码库诊断客户问题 | [简报](../../reports/brief/resolve-a-churning-customer-s-issue-quickly.md) |
 | 用Agent将Gmail旅行邮件整理为日历事件 | [简报](../../reports/brief/turn-gmail-travel-emails-into-google-calendar-events.md) |
 | 用浏览器Agent从公司CRM提取销售线索字段 | [简报](../../reports/brief/extract-prospecting-data-from-a-company-crm.md) |
+| 用Claude Desktop整理并填写ITR-1申报资料 | [简报](../../reports/brief/file-an-income-tax-return-through-the-tax-portal.md) |
