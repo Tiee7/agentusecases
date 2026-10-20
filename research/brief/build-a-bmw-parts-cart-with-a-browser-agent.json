@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "build-a-bmw-parts-cart-with-a-browser-agent",
+  "url": "https://agentusecases.ai/use-case/build-a-bmw-parts-cart-with-a-browser-agent",
+  "title": "用Operator整理BMW维修零件购物车",
+  "industry": "汽车配件采购",
+  "researched_at": "2026-10-20T12:15:21.541861+00:00",
+  "brief_reason": "只有简短目录转述，没有购物车、车型配置、适配依据或复验记录；不足以验证节时、准确率及经营收入。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "让agent整理候选零件，由人确认适配和购买",
+    "reason": "机械整理有用，但购物车完成不等于维修方案或零件适配已经验证。",
+    "next_action": "用脱敏的三项已知零件清单检查编号、数量、适配证据和停购规则。",
+    "stop_condition": "擅自替换型号、猜测适配、重复加购或未经确认付款。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/build-a-bmw-parts-cart-with-a-browser-agent",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:08:10Z",
+        "end": "2026-10-20T12:08:40Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T12:15:21.541861+00:00",
+      "characters": 13868,
+      "sha256": "48616f16f719f9ff127e0b5812bda3307185724452d6626a0ad4c7cfb3bbf434",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "许可目录转述BMW330Ci悬架零件清单购物车与约30分钟节省；具体网站、数量、价格、错误和购买结果未给出。"
+    },
+    {
+      "id": "Sbmw",
+      "url": "https://faq.bmwusa.com/s/article/FAQ-Parts-Accessories-BMW-part-numbers-BMW-USA-t5WAp",
+      "title": "BMW官方配件查询说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:14:00Z",
+        "end": "2026-10-20T12:14:03Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T12:15:21.541861+00:00",
+      "receipt_text": "BMW官方建议通过VIN或车型年份和系列筛选兼容产品，也可向BMW中心配件团队查询。该说明不证明本案购物车的适配性。",
+      "characters": 58,
+      "sha256": "2935425aded9767e1dab31b216a9a8f54da319d1033c90ffa0ef85c611fd6e8f",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "BMW官方建议通过VIN或车型年份和系列筛选兼容产品，也可向BMW中心配件团队查询。该说明不证明本案购物车的适配性。"
+    },
+    {
+      "id": "Sretailer",
+      "url": "https://www.fcpeuro.com/Parts/",
+      "title": "FCP Euro零件目录",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T12:14:00Z",
+        "end": "2026-10-20T12:14:03Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T12:15:21.541861+00:00",
+      "receipt_text": "零售商提供按关键词、零件号或SKU、类别和品牌搜索，并有车辆筛选。它是可见替代工作流，不是已知原案零售商。",
+      "characters": 53,
+      "sha256": "c00fcba7413ee744af7470c025806872ac6d490ae286d46635dbc1c4ef729893",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "零售商提供按关键词、零件号或SKU、类别和品牌搜索，并有车辆筛选。它是可见替代工作流，不是已知原案零售商。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1m7p23s",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Reddit原帖在此前已出现访问限制，本轮不重试或绕过；未取得原作者购物车或完整操作记录。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述一位评论者用浏览器agent建立BMW330Ci悬架更新零件购物车。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录声称约节省30分钟，未附计时、购物车或数量价格证据。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "BMW官方提供VIN或年份及系列的配件筛选路径。",
+      "type": "verified",
+      "source_ids": [
+        "Sbmw"
+      ]
+    },
+    {
+      "statement": "FCP Euro目录支持零件号或SKU等检索方式。",
+      "type": "verified",
+      "source_ids": [
+        "Sretailer"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "购物车完成与适配验证分开",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "本案正面评价来自许可目录转述，缺少原始输出。没有件数、错配、退货或安装结果，不能计算成功率。约30分钟属于评论者自述的节省，不是本轮测试或一般效率基准；没有证据表明购买已完成。"
+    },
+    {
+      "id": "identity",
+      "title": "不要把其他评论的登录步骤当本案记录",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录开头把暂停凭据与此案例一起概括，但详细段落将登录暂停描述归于评论区其他用户。本报告保留译文，同时不据此重建作者确切登录路径。目录列出Operator与ChatGPT Agent，不证明作者实际先后用过两者；Copy prompt只是目录提供的模板。"
+    },
+    {
+      "id": "fitment",
+      "title": "先核对零件号与车辆条件",
+      "source_ids": [
+        "Sbmw"
+      ],
+      "body": "拟议输入应包含用户已确认的零件清单和车辆条件，对每项保留编号、数量、左右侧或套装单位以及页面适配说明。BMW提供VIN或年份及系列查询，但这不是对任意第三方零件的保证。不完整信息标为待确认，涉及悬架的最终选型和安装交给具备能力的人审核。"
+    },
+    {
+      "id": "workflow",
+      "title": "从候选表开始，再处理加购",
+      "source_ids": [
+        "Sdirectory",
+        "Sretailer"
+      ],
+      "body": "先输出零件号、链接、数量、价格观测时间和适配依据；无法匹配的项目独立列出。用户确认后才按授权加购，读回购物车以检查重复数量、替代品牌或缺货变更。登录与付款需要本人接管；提交订单不是整理购物车的默认授权。"
+    },
+    {
+      "id": "commercial",
+      "title": "付款需求尚未建立",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "潜在客户是假设中的维修店采购人员或一次性修车的车主，前者可能重复处理清单，后者需求较低频。本案没有客户付款或商业服务。若验证服务需求，应交付可审查候选表而不是承诺包适配；本轮不招揽、不联系、不采购。"
+    },
+    {
+      "id": "cost",
+      "title": "核验与返工决定净节省",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包含清单规范化、零件匹配、人工核对、缺货处理和错购退货协作。简单点击省时可能被核验抵消。收入机制可假设为按清单服务费或已有采购流程内部节时，但没有成交和工时数据，不能填利润或把节省半小时当现金收益。"
+    },
+    {
+      "id": "alternatives",
+      "title": "原生目录与配件人员是直接替代",
+      "source_ids": [
+        "Sbmw",
+        "Sretailer"
+      ],
+      "body": "BMW官方查询入口及配件团队、零售商零件号检索已能解决部分匹配问题。agent若只是重复搜索，额外收费理由较弱；可能价值是统一多个页面的清单和缺项记录。FCP Euro仅作替代示例，未证实为原案网站，也不推荐特定商品。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值取决于已有明确清单",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合已有维修方案、愿意复核的车主或采购人员。设置需整理清单、允许品牌与替代规则；维护需应对网页变化、缺货和价格变化。需求按维修发生，不应推定月订阅。隐私风险包括VIN、地址及账号被不必要发送，凭据不进入报告或提示词记录。"
+    },
+    {
+      "id": "trial",
+      "title": "三项离线清单测试边界",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备三项虚构或脱敏零件信息，其中一项缺适配证据、一项存在套装数量歧义。要求助手生成表格，未知保持未知，不创建实际购物车，不登录或支付。预期是识别缺项并明确待确认，本轮未执行真实试购或安装验证。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/build-a-bmw-parts-cart-with-a-browser-agent",
+    "observed_at": null,
+    "body_sha256": "71312c9bc5b94c134d99642afd2214fda0ed7a5ed23b34338716133847a7c253",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "c6dbb0540ea237db3bbe866fb45b6de89f7b6aa4145180cb926e29b48e283830",
+      "How it went": "6941a35bc522ef376086f612284da3bf5c8d7d51f339f3a534d7a10069b31807"
+    },
+    "actual_agents": [
+      "Operator",
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T12:08:10Z",
+      "end": "2026-10-20T12:08:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Go to [parts retailer website] and build a cart with the parts I need for my [year, make, model]: [list of parts]. Confirm each part fits my vehicle and choose [preferred brand or price range] where possible. Stop at checkout, show me the cart with prices and fitment notes, and pause for me to enter any login or payment details myself before anything is purchased.",
+    "agent": "Operator",
+    "source_url": "https://agentusecases.ai/use-case/build-a-bmw-parts-cart-with-a-browser-agent",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "48616f16f719f9ff127e0b5812bda3307185724452d6626a0ad4c7cfb3bbf434",
+    "observation_window": {
+      "start": "2026-10-20T12:08:10Z",
+      "end": "2026-10-20T12:08:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/OpenAI/comments/1m7p23s",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T12:15:21.541861+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit原帖在此前已出现访问限制，本轮不重试或绕过；未取得原作者购物车或完整操作记录。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "整理候选清单可能有帮助，但原案准确性和净收益未验证。",
+    "audience": "已有维修清单并能审核零件的车主或采购人员。",
+    "use": "将候选零件、数量和适配依据整理成表。",
+    "benefit": "可能减少重复录入，30分钟仅目录转述，未实测。",
+    "setup_cost": "整理车型条件、零件号和替代规则。",
+    "maintenance_cost": "网页、价格、库存和零件替代更新。",
+    "frequency": "随维修任务，个人通常非每日。",
+    "privacy_risk": "VIN、地址、登录及支付信息过度暴露。",
+    "error_risk": "错配、左右侧错误、套装重复和未经确认购买。",
+    "source_ids": [
+      "Sdirectory",
+      "Sbmw",
+      "Sretailer"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "三项虚构或脱敏零件清单，不提供真实VIN、账号或支付信息。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "候选表列出编号、数量、来源和待确认项；不加购不付款，尚未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/build-a-bmw-parts-cart-with-a-browser-agent",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Go to [parts retailer website] and build a cart with the parts I need for my [year, make, model]: [list of parts]. Confirm each part fits my vehicle and choose [preferred brand or price range] where possible. Stop at checkout, show me the cart with prices and fitment notes, and pause for me to enter any login or payment details myself before anything is purchased."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅整理给定三项零件资料，逐项列编号、数量、适配依据和缺失信息。不要猜测适配或替代型号；套装数量歧义标记待确认。不要登录、创建实际购物车或付款。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "只有目录转述单条评论，没有可核验独立复现或购买结果。"
+  },
+  "disconfirming_evidence": "零售商原生检索和专业配件团队可能足够；错误零件与人工复核可能抵消点击节省。",
+  "limitations": "未访问受限Reddit，未确认原案零售商、购买、安装或价格；未实际运行agent购物。",
+  "archive_source_sha256": "71312c9bc5b94c134d99642afd2214fda0ed7a5ed23b34338716133847a7c253",
+  "translation_sha256": "6d2dc8d20b0811520c82149d34b669a5ef85db915a8adbf84b85c0762068924d"
+}
