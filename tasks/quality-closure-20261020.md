@@ -13,7 +13,7 @@
 | spark_second10 | run-x-and-reddit-accounts-with-agents-on-android-phones | pending_repair | 尚无 |
 | spark_second10 | automate-amazon-brand-bookkeeping-and-product-images | pending_repair | 尚无 |
 | spark_second10 | scrub-your-phone-number-from-data-brokers-to-stop-spam | pending_repair | 尚无 |
-| spark_second10 | run-contractor-back-office-jobs-and-churn-recovery | pending_validation_and_remote_publication | 实质修订已写，待测试及远端验收 |
+| spark_second10 | run-contractor-back-office-jobs-and-churn-recovery | completed | [修订报告](../reports/run-contractor-back-office-jobs-and-churn-recovery.md)，[PR81](https://github.com/Tiee7/agentusecases/pull/81)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39453040456)，合并及远端回读通过 |
 | spark_second10 | scrape-ai-news-three-times-a-day-with-a-custom-bot | completed | [修订报告](../reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md)，[PR79](https://github.com/Tiee7/agentusecases/pull/79)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39450279684)，合并及远端回读通过 |
 | spark_second10 | run-a-company-reddit-presence-with-a-bot | pending_repair | 尚无 |
 | spark_second10 | handle-multi-click-chores-like-dmv-returns-and-appointments | pending_repair | 尚无 |
