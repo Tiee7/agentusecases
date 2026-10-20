@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **54**；深度研究 **59**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **55**；深度研究 **59**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -64,3 +64,4 @@
 | 用ChatGPT根据菜单照片整理点餐清单 | [简报](../../reports/brief/order-from-a-restaurant-menu-photo-with-chatgpt.md) |
 | 用Claude Code跟踪公开交易披露并记录小额账户操作 | [简报](../../reports/brief/trade-a-small-robinhood-account-by-tracking-politician-trade.md) |
 | 用三个AI agent整理副业内容、客户邮件和Etsy账目 | [简报](../../reports/brief/run-a-side-hustle-with-three-agents-for-content-email-and-bo.md) |
+| 用AI agent汇总销售联系前的线索资料 | [简报](../../reports/brief/enrich-leads-with-an-agent-before-sales-outreach.md) |

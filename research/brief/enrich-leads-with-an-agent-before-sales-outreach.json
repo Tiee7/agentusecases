@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "enrich-leads-with-an-agent-before-sales-outreach",
+  "url": "https://agentusecases.ai/use-case/enrich-leads-with-an-agent-before-sales-outreach",
+  "title": "用AI agent汇总销售联系前的线索资料",
+  "industry": "销售研究",
+  "researched_at": "2026-10-20T01:52:51.507086+00:00",
+  "brief_reason": "原帖受既有访问限制未读取；缺可核对实现、样本、转化及成本数据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验收身份匹配和来源，再比较节省时间",
+    "reason": "业务用途明确，但原案例效果只有目录转述。",
+    "next_action": "用虚构线索做同名、时效和覆盖规则演练。",
+    "stop_condition": "错配写回、来源不可追溯或核对成本抵消省时。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/enrich-leads-with-an-agent-before-sales-outreach",
+      "title": "许可目录与当前云浏览器核验",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T01:52:51.507086+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:49:58Z",
+        "end": "2026-10-20T01:50:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 8359,
+      "sha256": "99300a0ea2e58d8b80c71a8d846b322d5351551e22f3341e3ed28ecfccddca64",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "100多部署及30秒为目录转述，未核验原帖。"
+    },
+    {
+      "id": "Srecords",
+      "url": "https://knowledge.hubspot.com/records/enrich-your-contact-and-company-data",
+      "title": "HubSpot记录补充条件",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T01:52:51.507086+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:49:58Z",
+        "end": "2026-10-20T01:50:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30971,
+      "sha256": "0515236938c6fcf6ae381fde83bfe5aeab3edb856595da805ce58c5bae30b327",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "需业务邮箱或公司域名；资料可用才填充，各模式覆盖规则不同。"
+    },
+    {
+      "id": "Ssettings",
+      "url": "https://knowledge.hubspot.com/records/manage-data-enrichment-settings",
+      "title": "HubSpot字段映射与覆盖规则",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T01:52:51.507086+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:49:58Z",
+        "end": "2026-10-20T01:50:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 30971,
+      "sha256": "0515236938c6fcf6ae381fde83bfe5aeab3edb856595da805ce58c5bae30b327",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "工作流和对话补充可不受全局覆盖规则约束。"
+    },
+    {
+      "id": "Sdata",
+      "url": "https://knowledge.hubspot.com/records/how-data-enrichment-works-in-hubspot",
+      "title": "HubSpot数据使用说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T01:52:51.507086+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:49:58Z",
+        "end": "2026-10-20T01:50:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 21841,
+      "sha256": "8589a48ac86de40955af36423dc839db1bb86936306d9c86ea06f08c074b55e0",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "部分业务联系字段可能回流商业数据集，仅持续补充有例外；模型训练与补充开关分开。"
+    },
+    {
+      "id": "Slindy",
+      "url": "https://www.lindy.ai/use-cases/qualify-and-route-every-lead",
+      "title": "Lindy线索分配产品页",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T01:52:51.507086+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:49:58Z",
+        "end": "2026-10-20T01:50:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 21841,
+      "sha256": "8589a48ac86de40955af36423dc839db1bb86936306d9c86ea06f08c074b55e0",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "供应商展示补充、评分和分配功能，不当作本案例实测。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/AI_Sales/comments/1qtxwvk/after_implementing_100_ai_agents_for_sales_teams",
+      "title": "原始销售经验讨论",
+      "kind": "primary",
+      "status": "unavailable",
+      "error": "Not attempted after existing Reddit security block; no alternate access.",
+      "supports": "原作者身份、100多次部署、时间及评论未独立核验。"
+    },
+    {
+      "id": "Slindy_skill",
+      "url": "https://www.lindy.ai/skills/hubspot-enrich-leads",
+      "title": "Lindy单项技能页",
+      "kind": "primary",
+      "status": "unavailable",
+      "error": "Ordinary internal read failure twice, stopped; separate official use-case page read.",
+      "supports": "此页不计实际读取来源。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述100多销售agent部署经验，未给此工作流专属转化数据。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录的30秒生成和模板的30秒读完是两个指标。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "HubSpot联系人补充要求业务邮箱，公司补充要求域名。",
+      "type": "verified",
+      "source_ids": [
+        "Srecords"
+      ]
+    },
+    {
+      "statement": "HubSpot工作流覆盖行为可能与全局只填空设置不同。",
+      "type": "verified",
+      "source_ids": [
+        "Ssettings"
+      ]
+    },
+    {
+      "statement": "HubSpot资料补充与AI训练为独立设置，有限联系字段可能回流商业数据集。",
+      "type": "verified",
+      "source_ids": [
+        "Sdata"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "先把两种30秒分开",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录说档案生成约30秒，Copy prompt则要求销售代表能在30秒内读完简报，两者是不同指标。20分钟人工研究与30秒生成都是转述，原帖未核验，没有计时样本、正确率或返工日志。目录当前显示来源日期2026年2月19日，收录日为10月18日；来源日期也只是目录所示。本案实际工具未具名，Lindy是目录推荐，不能据此补写作者实现。"
+    },
+    {
+      "id": "demand",
+      "title": "客户买的是可用资料和减少核对",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "研究者判断：最可能有需求的是线索量稳定、销售开发代表反复查公司的团队，付款人可能是销售运营负责人。交付应是一份可追溯的联系前备忘录，而不是越多字段越好。原帖的100多部署不是100个本产品付费客户，也没有本工作流转化率。只有核对加返工仍比原流程少，才有可测价值。"
+    },
+    {
+      "id": "identity",
+      "title": "先确认同一家公司和同一个人",
+      "source_ids": [
+        "Srecords"
+      ],
+      "body": "HubSpot的原生补充要求业务邮箱或公司域名，有可用资料才填充，个人邮箱不适用。研究者建议用公司域名、姓名与现任职信息交叉核对；同名、换工作或集团子公司不明时标待确认，不把搜索第一条写回CRM。这个门槛比生成一段流畅简介更重要；没有资料应保留未知，而不是推断出公司规模或融资。"
+    },
+    {
+      "id": "inference",
+      "title": "事实、信号和开场白分层",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "融资公告和招聘页可以作为带日期的事实来源，但“可能痛点”和“建议开场白”属于推断。研究者建议每个字段记录来源、日期、取得时间和置信理由；旧融资不能自动当近期预算，技术栈也可能只是局部网页服务。先保存原始获准证据与摘要的关联，再由人决定是否使用，避免用一句个性化话术掩盖信息不确定性。"
+    },
+    {
+      "id": "overwrite",
+      "title": "全局只填空，不一定挡住工作流覆盖",
+      "source_ids": [
+        "Ssettings"
+      ],
+      "body": "HubSpot文档明确：对话补充和Enrich record工作流动作可以按自己的设置覆盖字段，即使映射规则设成只填空。因此拟议交付不能只截图一个全局开关就宣称不会覆盖客户备注。需逐条检查实际写入动作、允许字段和来源优先级，保留变更前后值；本轮只研究说明，没有更改任何CRM设置。"
+    },
+    {
+      "id": "privacy",
+      "title": "补充数据也涉及向服务商传递资料",
+      "source_ids": [
+        "Sdata"
+      ],
+      "body": "HubSpot说明被处理的有限业务联系字段可能进入其商业数据集；仅使用持续补充时有不加入的例外。关闭资料补充与关闭模型训练是分开的设置，停止补充也不会自动删除已填的字段。研究者建议复制前核对实际字段、服务商用途和客户授权，优先用虚构资料测试；本报告没有上传真实线索或采集私人通信。"
+    },
+    {
+      "id": "alternatives",
+      "title": "原生补充与现成工作流是直接替代",
+      "source_ids": [
+        "Srecords",
+        "Slindy"
+      ],
+      "body": "HubSpot已有记录补充，Lindy产品页展示线索补充、评分和分配，这些是替代能力的供应商描述，不是对原案例效果的验证。若客户只需职位、公司规模等常见字段，原生能力可能已经足够。自建服务的候选差异是特定行业证据、来源时效和人工可快速核查的备忘录，仍需客户验证。页面演示秒数和评分不当成性能或销售转化。"
+    },
+    {
+      "id": "economics",
+      "title": "成本要按验收可用的一条计",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "本案缺真实收费、调用量和数据采购费用，不编造利润。商业假设可按范围明确的配置费加维护费，或按通过人工验收的资料条数收费；成本分别记录模型、数据供应商、失败重试、核对、售后和获客。获客可从既有CRM用户的小样本对比开始，尚无转化证据。若每条都需重新查证、供应商覆盖不足或客户原生功能已满足，毛利和切换意愿都会下降。"
+    },
+    {
+      "id": "personal",
+      "title": "只做简报，保留人工联系决定",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用者是自己承担销售准备的经营者。潜在收益是少切换网页，实际净省时未知。设置需明确目标客户、来源、字段和核对规则；维护包括工作变动、新闻过期、字段冲突和重复触发。按新线索或会前准备运行即可，不必持续扫描。隐私风险是上传联系人资料，错误风险是同名错配与虚构痛点。模板明确不发邮件，本轮也没有任何外联。"
+    },
+    {
+      "id": "next",
+      "title": "用虚构同名和冲突字段验证",
+      "source_ids": [
+        "Ssettings",
+        "Srecords"
+      ],
+      "body": "下一步可制作十条虚构线索及资料片段，加入同名不同公司、员工换工作、过期新闻、个人邮箱、空值、重复触发和已有人工备注。预期输出带来源的短简报及待确认项，写回前展示差异，未经确认不改原字段、不发信。记录正确率、人工复核时间和覆盖率；本轮未执行该演练。错配仍写回、找不到来源或净耗时不降时停止扩张。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/enrich-leads-with-an-agent-before-sales-outreach",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "93b362a1d5a2cb58ff98b856f6fa0f81094b2962e732a435715ea710534d0aa3",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "17a04a3314ecc41047661ad6604833fd1e34e4853f9f0a863cb778fd87d6d163",
+      "How it went": "17a3fd936c0fb07c93ecc1ea8abe96720061511c99d6341b97bda775cf9211c7",
+      "Worth knowing": "c186a0ae5f608c062b1e4cb9229567d5d02064af939ec35866e1d2816feaf142"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a lead enrichment agent that triggers when a new lead lands in [CRM or sheet]. It should look up the person and company on [sources, e.g. LinkedIn, website, news] and add [role, company size, recent news, likely pain points, suggested opener] to the lead record. It's done when a test lead comes back with a short brief my rep can read in 30 seconds. Don't send any outreach emails; only write the brief, and show me the first few results before turning it on for all leads.",
+    "agent": "Lindy",
+    "source_url": "https://agentusecases.ai/use-case/enrich-leads-with-an-agent-before-sales-outreach",
+    "observed_at": "2026-10-19T07:18:23.824907+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "e435758f81dc26732954cb209679d43cd95c3cf8debda90afa883bd8ad1d59a6"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/AI_Sales/comments/1qtxwvk/after_implementing_100_ai_agents_for_sales_teams",
+    "source_title": "After implementing 100+ AI agents for sales teams",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T01:52:51.507086+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "既有Reddit安全阻断后不再访问；这里只保留许可目录转述。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可减少资料整理，身份正确性和净省时尚未实测。",
+    "audience": "自己研究潜在客户的销售人员或经营者。",
+    "use": "带出处的联系前备忘录。",
+    "benefit": "30秒与20分钟是目录转述，不是本轮测试。",
+    "setup_cost": "目标客户、来源、字段及身份核对规则。",
+    "maintenance_cost": "时效核对、工作变动、冲突字段与异常恢复。",
+    "frequency": "新线索出现或会前准备时。",
+    "privacy_risk": "联系人资料可能传给供应商并用于数据集，需核对实际使用范围。",
+    "error_risk": "同名错配、过期新闻、虚构痛点或覆盖人工记录。",
+    "source_ids": [
+      "Sdirectory",
+      "Sdata",
+      "Ssettings"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "目录建议Lindy不代表实际作者工具；保持不发信边界。",
+    "prerequisites": "十条虚构线索与人工答案、获准资料片段和字段规则。",
+    "tools": "本地表格或已有获准助手，不接CRM或真实联系人。",
+    "expected_result": "带来源的短简报、未确定字段与写回差异；未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/enrich-leads-with-an-agent-before-sales-outreach",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Build me a lead enrichment agent that triggers when a new lead lands in [CRM or sheet]. It should look up the person and company on [sources, e.g. LinkedIn, website, news] and add [role, company size, recent news, likely pain points, suggested opener] to the lead record. It's done when a test lead comes back with a short brief my rep can read in 30 seconds. Don't send any outreach emails; only write the brief, and show me the first few results before turning it on for all leads."
+      },
+      {
+        "title": "线索资料核对演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Srecords",
+          "Ssettings"
+        ],
+        "attribution": "原创虚构数据测试，未执行",
+        "text": "仅用给定虚构资料，先核对姓名、公司域名和任职时间。每个事实列出处及日期，冲突或缺失标未知；可能痛点和开场白单独标推断。保留已有人工备注，给出建议变更，不写回CRM，不发邮件，不采集新个人资料。重复输入保持同一记录ID。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "未读取原讨论评论；供应商演示不算独立反馈。"
+  },
+  "disconfirming_evidence": "身份错配和过期资料；原生工具替代；工作流覆盖例外；数据用途与人工核对成本。",
+  "limitations": "原帖未读取；Lindy技能页普通失败重试一次后换官方产品页；无账户连接或真实试用。",
+  "archive_source_sha256": "93b362a1d5a2cb58ff98b856f6fa0f81094b2962e732a435715ea710534d0aa3",
+  "translation_sha256": "1ce705cf8cfb73f138abde2db6bdd9b91280c6e8534dbc6e3ecb66ae9ca27479"
+}
