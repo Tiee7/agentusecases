@@ -98,14 +98,26 @@ def store_local(db,html,url,at,root=Path('data/source-archive')):
 def apply(db,root=Path('registry/archives')):
     if not db.execute("SELECT 1 FROM sqlite_master WHERE name='archive_observations'").fetchone():return
     root.mkdir(parents=True,exist_ok=True)
-    for url,at,payload in db.execute('SELECT url,observed_at,payload FROM archive_observations ORDER BY observed_at'):
+    # Older rows must not temporarily invalidate translations of the latest body.
+    latest={url:(at,payload) for url,at,payload in db.execute('SELECT url,observed_at,payload FROM archive_observations ORDER BY observed_at')}
+    for url,(at,payload) in latest.items():
         key=urlsplit(url).path.rstrip('/').rsplit('/',1)[-1]
         if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,199}',key):raise ValueError('Invalid archive ID')
         path=root/(key+'.json');value=json.loads(payload)
         old=json.loads(path.read_text()) if path.exists() else {}
-        if (old.get('observed_at') or '')>at:continue
+        if (old.get('observed_at') or '')>(at or ''):continue
         if old.get('editorial'):value['editorial']=old['editorial']
-        if old.get('translation'):value['translation']=old['translation']
+        history=list(old.get('source_history',[]))
+        old_source=old.get('source_text',{})
+        if old_source.get('body') and old.get('body_sha256')!=value.get('body_sha256') and sha(old_source['body'])==old.get('body_sha256'):
+            snapshot={key:old[key] for key in ('observed_at','observation_window','body_sha256','source_text','translation') if key in old}
+            if snapshot not in history:history.append(snapshot)
+        if history:value['source_history']=history
+        if old.get('translation'):
+            translation=dict(old['translation'])
+            if translation.get('based_on_body_sha256')!=value.get('body_sha256'):
+                translation.update(status='stale',review_required=True,stale_reason='source_body_changed')
+            value['translation']=translation
         if not value.get('source_text',{}).get('body') and old.get('body_sha256')==value.get('body_sha256') and old.get('source_text'):
             value['source_text']=old['source_text']
         path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')

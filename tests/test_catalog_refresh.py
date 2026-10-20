@@ -33,3 +33,41 @@ class CatalogRefreshTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'No successful'):refresh('history.sqlite3')
         save(db,'https://agentusecases.ai/','site_category_top',[{'url':self.url,'title':'Updated','body':'Detail'}],{self.url:None,'https://agentusecases.ai/use-case/unsampled':None});db.close()
         result=refresh('history.sqlite3');self.assertFalse(result['details_complete']);self.assertEqual(result['catalog_observed'],2)
+    def test_null_registry_source_timestamp_is_replaced_without_modifying_research(self):
+        from agentwatch.source_case import observe
+        body='What they did\nExisting public detail'
+        registry=json.loads(Path('registry/cases.json').read_text())
+        registry['cases'][0]['source_case']=observe(body,self.url,None)
+        registry['cases'][0]['source_case']['summary']={'fixture':'reviewed summary'}
+        Path('registry/cases.json').write_text(json.dumps(registry))
+        db=database('history.sqlite3')
+        save(db,'https://agentusecases.ai/','site_category_top',[{'url':self.url,'title':'Updated','body':body}],{self.url:None})
+        fetched_at=db.execute('SELECT fetched_at FROM runs ORDER BY id DESC LIMIT 1').fetchone()[0]
+        db.close()
+        before=research_fingerprints()
+        metadata=refresh('history.sqlite3')
+        self.assertTrue(metadata['details_complete'])
+        self.assertEqual(research_fingerprints(),before)
+        result=json.loads(Path('registry/cases.json').read_text())['cases'][0]['source_case']
+        self.assertEqual(result['observed_at'],fetched_at)
+        self.assertEqual(result['summary'],{'fixture':'reviewed summary'})
+        registry_bytes=Path('registry/cases.json').read_bytes()
+        refresh('history.sqlite3')
+        self.assertEqual(Path('registry/cases.json').read_bytes(),registry_bytes)
+        self.assertEqual(research_fingerprints(),before)
+    def test_refresh_keeps_exact_registered_sources_separate_from_latest_links(self):
+        registered=['https://author.test/post/','https://earlier.test/report']
+        observed=['https://author.test/post','https://different.test/new-source']
+        registry=json.loads(Path('registry/cases.json').read_text())
+        registry['cases'][0]['original_sources']=registered
+        Path('registry/cases.json').write_text(json.dumps(registry))
+        db=database('history.sqlite3')
+        body='Public detail\n'+'\n'.join('Original source: '+url for url in observed)
+        save(db,'https://agentusecases.ai/','site_category_top',[{'url':self.url,'title':'Updated','body':body}],{self.url:None});db.close()
+        before=research_fingerprints();refresh('history.sqlite3')
+        entry=json.loads(Path('registry/cases.json').read_text())['cases'][0]
+        self.assertEqual(entry['latest_original_sources'],observed)
+        self.assertEqual(entry['original_sources'],observed+registered)
+        self.assertEqual(research_fingerprints(),before)
+        refresh('history.sqlite3')
+        self.assertEqual(json.loads(Path('registry/cases.json').read_text())['cases'][0],entry)

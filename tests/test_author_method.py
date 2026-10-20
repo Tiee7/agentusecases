@@ -23,6 +23,12 @@ class AuthorMethodTests(unittest.TestCase):
         with self.assertRaises(ValueError):validate_author_method({'author_method':m},self.entry,self.receipts,True)
         with self.assertRaises(ValueError):validate_author_method({},self.entry,[],True)
         validate_author_method({},self.entry)
+    def test_unregistered_url_variants_are_not_assumed_equivalent(self):
+        for url in ('https://author.test/story/','https://author.test/story?ref=other','https://different.test/story'):
+            with self.subTest(url=url):
+                method=dict(self.method,source_url=url)
+                with self.assertRaisesRegex(ValueError,'registered original source'):
+                    validate_author_method({'author_method':method},self.entry,[dict(self.receipts[0],url=url)],True)
     def test_all_backfilled_methods_have_receipts_and_markdown_order(self):
         root=Path(__file__).resolve().parents[1]
         entries=json.loads((root/'registry/cases.json').read_text())['cases'];count=0

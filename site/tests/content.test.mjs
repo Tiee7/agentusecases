@@ -103,6 +103,7 @@ test('originals and full translations are distinct from editorial summaries and 
  const c=catalog.find(c=>c.archive.translationText);const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'registry/archives',c.id+'.json')));
  assert.equal(projectArchive(raw,{id:c.id,url:raw.url}).sourceText,raw.source_text.body);
  raw.translation.based_on_body_sha256='0'.repeat(64);const stale=projectArchive(raw,{id:c.id,url:raw.url});assert.equal(stale.translationText,'');assert(stale.translationStale);
+ raw.translation.based_on_body_sha256=raw.body_sha256;raw.translation.status='stale';const review=projectArchive(raw,{id:c.id,url:raw.url});assert.equal(review.translationText,'');assert(review.translationStale);
  raw.source_text.body+='tampered';assert.equal(projectArchive(raw,{id:c.id,url:raw.url}).sourceText,'');
 });
 

@@ -91,6 +91,14 @@ test('source originals and full Chinese translations render without becoming bus
  }
  const pending=catalog.find(c=>!c.archive.translationText);await page.goto(`/cases/${pending.id}/`);await expect(page.locator('.source-translation')).toHaveCount(0);await expect(page.locator('#source-translation')).toHaveCount(0);
 });
+test('stale translations are pending review while the current English source stays available',async({page})=>{
+ for(const c of catalog.filter(c=>c.archive.translationStale)){
+  await page.goto(`/cases/${c.id}/`);
+  await expect(page.locator('.translation-review')).toHaveText('中文译文待复核。');
+  await expect(page.locator('#source-translation')).toHaveCount(0);
+  await expect(page.locator('#source-original')).toHaveText(c.archive.sourceText);
+ }
+});
 
 test('reader copy stays concise while source records keep provenance',async({page})=>{
  const translated=catalog.find(c=>c.archive.translationText);const pending=catalog.find(c=>!c.archive.translationText);const unread=reports.find(r=>r.authorMethod.status==='unavailable');

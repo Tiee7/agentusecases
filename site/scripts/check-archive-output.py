@@ -85,7 +85,7 @@ def main():
         if raw:
             assert hashlib.sha256(raw.encode()).hexdigest() == archive['body_sha256']
             originals += 1
-        translated = translation.get('body') if translation.get('based_on_body_sha256') == archive['body_sha256'] else None
+        translated = translation.get('body') if translation.get('status') == 'available' and translation.get('based_on_body_sha256') == archive['body_sha256'] else None
         if translated:
             assert hashlib.sha256(translated.encode()).hexdigest() == translation['body_sha256']
             translations += 1
@@ -98,6 +98,8 @@ def main():
             paths.append(brief)
         for path in paths:
             html = path.read_text()
+            if translation.get('status') == 'stale':
+                assert '中文译文待复核。' in html, (str(path.relative_to(root)), 'Missing translation review status')
             for name, expected in [('source-original', raw), ('source-translation', translated)]:
                 try:
                     check_text_block(html, name, expected)
