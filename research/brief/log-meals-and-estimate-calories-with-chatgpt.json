@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "log-meals-and-estimate-calories-with-chatgpt",
+  "url": "https://agentusecases.ai/use-case/log-meals-and-estimate-calories-with-chatgpt",
+  "title": "用ChatGPT整理饮食日志并粗估营养数值",
+  "industry": "个人记录工具",
+  "researched_at": "2026-10-20T05:25:38.009634+00:00",
+  "brief_reason": "原帖不可读，具体流程为评论者转述，缺准确率、持久保存与健康效果证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先把单位、来源和保存核验做好",
+    "reason": "记录便利可能存在，但手动操作和数值漂移尚未解决。",
+    "next_action": "虚构标签离线测试换算、修订和去重。",
+    "stop_condition": "丢条目、无依据改数或超范围处理健康数据。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/log-meals-and-estimate-calories-with-chatgpt",
+      "title": "许可目录饮食记录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:25:38.009634+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:23:27Z",
+        "end": "2026-10-20T05:23:31Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1686,
+      "sha256": "52660c4093769d93ae46d3d5886a4546140e2c83fd720f56ac64ad9f181a2d50",
+      "hash_scope": "Existing licensed archive body; live text checked",
+      "receipt_text": null,
+      "supports": "较具体流程属于评论者，非原发帖者；需称重、专用聊天与每晚手动PDF往返。目录报告记忆与数字漂移，无误差率或健康效果。"
+    },
+    {
+      "id": "Sfda",
+      "url": "https://www.fda.gov/food/nutrition-facts-label/serving-size-nutrition-facts-label",
+      "title": "FDA食品标签份量说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:25:38.009634+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:24:04Z",
+        "end": "2026-10-20T05:24:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 39,
+      "sha256": "5c38478a28c005cf0e58584704e9cc467675ee51e39b39a796885c6cc129937c",
+      "hash_scope": "Researcher summary below, not source HTML",
+      "receipt_text": "营养标签通常按每份，也可能列整包；实际份数需要换算。标签份量不是建议应吃多少。",
+      "supports": "营养标签通常按每份，也可能列整包；实际份数需要换算。标签份量不是建议应吃多少。"
+    },
+    {
+      "id": "Susda",
+      "url": "https://fdc.nal.usda.gov/data-documentation/",
+      "title": "USDA食物数据类型说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:25:38.009634+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:24:04Z",
+        "end": "2026-10-20T05:24:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 67,
+      "sha256": "a3343decd19cadfaa024936d9203386d7be4ba2a374e27af823dbf12964c4ed1",
+      "hash_scope": "Researcher summary below, not source HTML",
+      "receipt_text": "Foundation分析样本、FNDDS调查食物与份重、Branded厂家标签等有不同来源与更新周期，不能把所有值都当该餐实验室测定。",
+      "supports": "Foundation分析样本、FNDDS调查食物与份重、Branded厂家标签等有不同来源与更新周期，不能把所有值都当该餐实验室测定。"
+    },
+    {
+      "id": "Smemory",
+      "url": "https://help.openai.com/en/articles/8590148-memory-in-chatgpt",
+      "title": "ChatGPT记忆说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:25:38.009634+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:24:04Z",
+        "end": "2026-10-20T05:24:09Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 47,
+      "sha256": "e4c7bda7a17f5fb07866a26bb13b8776af5c2cddd06b1cb6fcb9483c3783dca1",
+      "hash_scope": "Researcher summary below, not source HTML",
+      "receipt_text": "记忆用于相关背景个性化，不保留每次对话每个细节；能力和设置因账户而异。不能当逐笔准确账本承诺。",
+      "supports": "记忆用于相关背景个性化，不保留每次对话每个细节；能力和设置因账户而异。不能当逐笔准确账本承诺。"
+    },
+    {
+      "id": "Scrono",
+      "url": "https://support.cronometer.com/hc/en-us/articles/360018240312-Create-a-Custom-Food",
+      "title": "Cronometer自定义食品说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:25:38.009634+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:24:09Z",
+        "end": "2026-10-20T05:24:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 66,
+      "sha256": "0e527e0279a507373f5274aa70d63e6633653fad6c23d00695953fbdaa6d385a",
+      "hash_scope": "Researcher summary below, not source HTML",
+      "receipt_text": "可按包装份量创建食品、录入标签与条码；自制多成分食品使用食谱；文档当前更新2026-10-07。属于现成记录替代，非本轮实测准确性。",
+      "supports": "可按包装份量创建食品、录入标签与条码；自制多成分食品使用食谱；文档当前更新2026-10-07。属于现成记录替代，非本轮实测准确性。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1woyx7h/chatgpt_being_a_janky_nutrition_and_fitness",
+      "title": "原Reddit饮食记录讨论",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Prior explicit Reddit security restriction respected; original and incidental snippets not used.",
+      "supports": "评论者经历未独立核验，效果只作为目录转述。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "具体每晚PDF往返流程由评论者描述。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录转述记忆、Drive日志和数值漂移问题。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "食品标签份量不是摄入量建议。",
+      "type": "verified",
+      "source_ids": [
+        "Sfda"
+      ]
+    },
+    {
+      "statement": "USDA不同数据类型有不同来源。",
+      "type": "verified",
+      "source_ids": [
+        "Susda"
+      ]
+    },
+    {
+      "statement": "ChatGPT记忆不保留每个对话细节。",
+      "type": "verified",
+      "source_ids": [
+        "Smemory"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "status",
+      "title": "评论者的手动流程不是全自动成功",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录把原发帖者的尝试与评论者的较具体做法放在一起。应分清：专用聊天、称重与每晚PDF更新来自评论者，不能直接归成原发帖者已经稳定实现Drive自动记录。日常可用是转述，没有持续天数、缺失率、数值误差或健康结果。没有原帖阅读与独立复现，不计算成功率。"
+    },
+    {
+      "id": "demand",
+      "title": "自然语言输入与可靠账本之间有缺口",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "推断需求是降低逐项找食物、填表与回顾的操作负担。但如果每天还要称重、拍标签、上传PDF和保存版本，系统可能只是把界面换成聊天，并未消除记录劳动。需要比较同一组输入在聊天、表格和专用应用中的录入时间、纠错步骤与遗漏，而不是把能回答总计当长期记录可靠。"
+    },
+    {
+      "id": "quantities",
+      "title": "每份、整包、克重必须对应",
+      "source_ids": [
+        "Sfda",
+        "Susda"
+      ],
+      "body": "FDA说明标签份量与整包信息可能不同，份量也不是个人摄入建议。USDA不同数据类型来源不同，品牌标签与通用食物样本不应混成一条精确测量。拟议记录应保存品牌、食物状态、计量单位、实际数量及数据出处；不清楚油、酱料或份量时保留未知范围，不根据一句餐名生成看似精确的小数。"
+    },
+    {
+      "id": "memory",
+      "title": "个性化记忆不能替代逐笔存储",
+      "source_ids": [
+        "Smemory",
+        "Sdirectory"
+      ],
+      "body": "官方说明记忆不保留每次对话的每个细节，因此一个聊天长期累积不等于有完整可恢复日志。更稳妥的拟议结构是把已确认条目与计算结果存在明确版本的表中，聊天只处理输入和解释。这里是设计建议，不是声称当前ChatGPT不具备任何文件工具；本轮没有测试其Drive连接或写入能力。"
+    },
+    {
+      "id": "delivery",
+      "title": "每次更新都能核对新增与修订",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议最小产物是日期、条目、数量、来源、估算标识、修订原因与总计。重复上传要先识别已处理版本，修改一餐不能改变其他记录；保存后要重新读出核对，而不是只回复已更新。饮食摄入与运动消耗可分别展示，不未经核验就合成精确净值。用户质疑数字时应回查依据，而不是迎合改数。"
+    },
+    {
+      "id": "alternatives",
+      "title": "现成食品库已覆盖部分重复劳动",
+      "source_ids": [
+        "Scrono"
+      ],
+      "body": "Cronometer文档提供自定义食品、包装份量和条码录入，复杂自制食品另走食谱流程。它说明现成结构化记录路径已经存在，但厂商帮助文档并不是该工具准确率的独立测试。新方案要验证自然语言是否真的减少步骤且不增加错误，而不能仅凭聊天界面就认定比已有工具更好。"
+    },
+    {
+      "id": "revenue",
+      "title": "收费假设应围绕整理便利而非健康效果",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可假设提供通用记录整理、数据导入和版本核对工具，但本案无付款意愿、付费客户或持续留存。健康目标与营养决策属于另一层，不能把估算日志包装成治疗或保证减重服务。收费前应先证明可见的录入省时和纠错优势，并明确敏感资料的处理范围；本轮不开展经营或收集个人数据。"
+    },
+    {
+      "id": "cost",
+      "title": "人工复核和版本维护不能省略",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本未知项包括使用工具、食物库维护、标签识别核对、单位换算、手动保存和历史记录修订。原例强调重复劳动，反而提示长期坚持可能是瓶颈。没有真实时间、准确率或订阅数据，不填成本收益数字。低频用户用普通表格记录也可能足够，是否需要额外agent应由实际流程比较决定。"
+    },
+    {
+      "id": "personal",
+      "title": "自用边界与风险",
+      "source_ids": [
+        "Sdirectory",
+        "Smemory"
+      ],
+      "body": "适合想整理一般饮食记录、能复核条目的人；本案未证明健康收益。设置需要日期、计量口径、来源与固定保存位置，维护包括纠错和备份。频率依真实记录习惯，原例为每天。体重、饮食、运动及健康信息具有隐私性，不应默认上传或共享。错误可能是漏记、重复、换算错和估算漂移；本轮不设个人热量目标或调整饮食。"
+    },
+    {
+      "id": "next",
+      "title": "只用虚构标签测试算术和去重",
+      "source_ids": [
+        "Sfda",
+        "Sdirectory"
+      ],
+      "body": "拟议离线演练使用虚构包装标签与记录，包含半份、两份、整包和重复上传，预先给定正确总和。要求输出来源、单位和待核项，修订后旧版本可追溯。无需真实体重、照片或饮食数据，也不生成摄入建议。本轮未运行；若算术不稳定、丢条目或无依据更改数字，就先修记录流程。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/log-meals-and-estimate-calories-with-chatgpt",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "52660c4093769d93ae46d3d5886a4546140e2c83fd720f56ac64ad9f181a2d50",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "cfee848bcfefd48c8a5f139499906c3b9e8b651739b76e0dcc6948abab6e9549",
+      "How it went": "a1a43073f5180a1e1b87dd222e31fd125ec217f6dd6c85ececc1e6d1732f89cb",
+      "Worth knowing": "d9bb89802357edabc6452bef19996d1679dcfed330ed58a5b2015e2b37dd0666"
+    },
+    "actual_agents": [
+      "ChatGPT"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Act as my food log. I'll tell you what I ate in plain language, like '[example meal]', and you estimate calories and protein, add it to a running list for today, and show the daily total. My goal is about [calorie target] calories per day. At the end of the day, give me a short summary of how I did and note that the numbers are rough estimates.",
+    "agent": "ChatGPT",
+    "source_url": "https://agentusecases.ai/use-case/log-meals-and-estimate-calories-with-chatgpt",
+    "observed_at": "2026-10-19T07:18:03.827902+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "8f989188f4f3fe01e6e25183bffc8458884d8b45948024ed84989c9d5aef4abd"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1woyx7h/chatgpt_being_a_janky_nutrition_and_fitness",
+    "source_title": "ChatGPT being a janky nutrition and fitness tracker",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T05:25:38.009634+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit既有安全限制；仅保留许可目录转述，未读取或翻译原帖。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "一般记录便利尚无净省时或准确率测量。",
+    "audience": "愿核对来源与条目的一般饮食记录使用者。",
+    "use": "整理已提供的食物记录和粗略数值。",
+    "benefit": "无健康效果或净省时证据。",
+    "setup_cost": "计量单位、来源、日期与版本保存。",
+    "maintenance_cost": "标签核对、缺失补录、纠错与备份。",
+    "frequency": "按记录习惯，原例每天。",
+    "privacy_risk": "饮食、运动、体重和健康信息。",
+    "error_risk": "漏记重复、单位错、估算漂移和保存失败。",
+    "source_ids": [
+      "Sdirectory",
+      "Smemory"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "保留许可模板的目标占位符，不为用户设定目标。",
+    "prerequisites": "虚构标签、份量和预先算好的总和，不含个人健康资料。",
+    "tools": "本地表格或获准助手的离线整理。",
+    "expected_result": "单位、来源、修订和去重可核；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/log-meals-and-estimate-calories-with-chatgpt",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Act as my food log. I'll tell you what I ate in plain language, like '[example meal]', and you estimate calories and protein, add it to a running list for today, and show the daily total. My goal is about [calorie target] calories per day. At the end of the day, give me a short summary of how I did and note that the numbers are rough estimates."
+      },
+      {
+        "title": "虚构标签核对",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sfda"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只用给定虚构食品标签和条目做算术、单位与去重检查。保留来源、未知项和修订历史，不读取其他资料、不上传健康数据、不设个人摄入目标或饮食计划。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖未读；官方帮助只核能力边界，不能当实际效果反馈。"
+  },
+  "disconfirming_evidence": "重复手动操作、记忆及数值漂移、已有结构化记录工具。",
+  "limitations": "未处理任何真实饮食、体重、照片或健康数据，未建立Drive日志、营养方案或试用；原帖未读。",
+  "archive_source_sha256": "52660c4093769d93ae46d3d5886a4546140e2c83fd720f56ac64ad9f181a2d50",
+  "translation_sha256": "95e1ff1c5d7ccd2976e3bfe9c5d38f7807ecc363a82f8fa94be71a9f7deebe92"
+}
