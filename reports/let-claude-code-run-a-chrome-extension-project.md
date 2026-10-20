@@ -41,45 +41,6 @@
 
 </details>
 
-## English
-
-    Let Claude Code run a Chrome extension project
-    The author gave Claude Code the CEO role for a free Chrome extension. In week one it had him rename it and built the next version, but it still needs his approval before each post.
-    Done with
-    CC
-    Claude Code
-    What they did
-    The author set Claude Code to run nightly at 9 pm in the desktop app with a self-edited markdown playbook. Using Playwright on a signed-in Chrome profile, it checked the Chrome Web Store dashboard, comments, and subreddits, planned posts, worked on the extension, and wrote a pinned Notion report; the human still had to reply "go" before anything public was posted.
-    How it went
-    In its first week it pushed a rename after spotting a near-duplicate featured extension, fixed stale privacy copy, and built a new version with onboarding and a window-stashing feature that was sent for store review after 67 unit and 55 end-to-end checks. Results were still tiny: 4 weekly users, 14 installs in 30 days, 0 reviews, $0 spent, and a release sat five days when Google forced a re-login.
-    Worth knowing
-    The main catch was authentication: Google re-prompted for the store password every few days, and the author later added upfront checks so failed logins show up at the top of the nightly report.
-    Try it yourself
-    with
-    Claude Code
-    Copy prompt
-    Act as the CEO of my project [project name], a free [type of tool], for the next week. Look at the current state in [folder or repo] and propose three priorities for the week with reasons. Then build the first one in the code and write a short update on what changed. Anything public, like a post, a release, or a rename, needs my approval first, so show me the draft and wait.
-    Original source: https://www.reddit.com/r/ClaudeAI/comments/1wvh6iy/i_gave_claude_code_the_ceo_job_for_my_free_chrome
-
-## 中文
-
-    让Claude Code运营一个Chrome扩展项目
-    作者让Claude Code担任一款免费Chrome扩展的CEO。第一周，它要求作者改名，并构建了下一版本，但每次发帖前仍需作者批准。
-    使用的是
-    Claude Code
-    他们做了什么
-    作者在桌面应用中设置Claude Code每晚9点运行，使用一份由它自行编辑的Markdown操作手册。它通过Playwright操控已登录的Chrome配置文件，查看Chrome应用商店后台、评论和子版块，规划帖子，开发扩展，并在Notion中写一份置顶报告；任何公开帖子发出之前，仍需要人回复“go”。
-    进展与成效
-    第一周，它发现一款名称近似且获得精选标识的扩展，推动项目改名，修正过时的隐私说明，并构建了含新手引导与整窗口标签收存功能的新版本。该版本经过67项单元检查和55项端到端检查后，提交商店审核。结果仍很小：每周4名用户、30天内14次安装、0条评价、花费0美元；Google要求重新登录时，一个发布版本搁置了5天。
-    值得注意
-    主要障碍是身份验证：Google每隔几天会要求重新输入商店密码。作者后来添加了运行前检查，使登录失败出现在每晚报告的顶部。
-    亲自尝试
-    使用
-    Claude Code
-    复制提示词
-    未来一周，担任我的项目[项目名称]的CEO，这是一款免费的[工具类型]。查看[文件夹或仓库]中的当前状态，提出本周的三项优先事项并说明理由。随后在代码中实现第一项，并写一份简短更新，说明改了什么。所有公开事项，例如发帖、发布版本或改名，都必须先获得我的批准，所以请先展示草稿并等待。
-    原始来源：https://www.reddit.com/r/ClaudeAI/comments/1wvh6iy/i_gave_claude_code_the_ceo_job_for_my_free_chrome
-
 ## 原作者的方法与来源
 
 来源：[intensityflow describes a nightly project loop](https://www.reddit.com/r/ClaudeAI/comments/1wvh6iy/i_gave_claude_code_the_ceo_job_for_my_free_chrome)

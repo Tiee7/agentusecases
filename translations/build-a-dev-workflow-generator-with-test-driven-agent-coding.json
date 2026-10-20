@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "build-a-dev-workflow-generator-with-test-driven-agent-coding",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "3b1b738a324147c55afca38da5a358a6e43ba688419394c3da78e73d0ea0e42b",
+  "translated_at": "2026-10-20T21:48:20.558058+00:00",
+  "body": "通过测试驱动的agent编程构建开发工作流生成器\n作者完全使用Claude Code构建了一个开源系统，通过访谈生成项目专用的开发工作流；Claude Code编写并调试了550多项测试。\n使用的是\nClaude Code\n他们做了什么\n作者称，整个系统都在Claude Code会话中构建：通过/bootstrap访谈了解项目技术栈后，生成项目专用的斜杠命令、防护钩子、推送前检查和agent配置。Claude Code还编写了主要代码文件，在测试驱动工作流中生成并调试550多项测试，使用四个并行审查agent开展自审，并通过/task-hunter和Backlog.md CLI自主选择任务、实现改动、提交和关闭任务。\n进展与成效\n产出是采用MIT许可的开源工作流系统；作者称它包含1.5万多行代码、200多项任务和20多个钩子文件，支持许多常见Web技术栈以及通用模式。作者指出的不足是Claude Code需要防护措施：没有钩子、任务结构和自动审查，它会写入错误目录、丢失上下文，并漏过细微错误。\n值得注意\n要按描述试用，需要Claude Code CLI和Backlog.md CLI，然后将模板指向自己的代码库并运行/bootstrap。\n亲自尝试\n使用\nClaude Code\n复制提示词\n帮助我用[语言]通过测试驱动开发构建[实现X的工具]。对于每个功能，先编写会失败的测试，再编写使测试通过的代码；每完成一步就运行完整测试套件，并自行调试失败项。当[功能列表]全部实现且所有测试通过时停止，然后总结测试覆盖范围。\n原始来源：https://www.reddit.com/r/claude/comments/1s383nj/i_built_agentic_workflow_entirely_with_claude",
+  "body_sha256": "ec970d6deef90a6b64ef44bf40286fc161272d2b11403ad262198dfe9e079d3e",
+  "scope": "Complete licensed directory translation only."
+}
