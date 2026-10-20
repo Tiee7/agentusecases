@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **80**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **81**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -90,3 +90,4 @@
 | 用OpenClaw退订邮件列表并整理文件 | [简报](../../reports/brief/unsubscribe-from-newsletters-and-tidy-files.md) |
 | 用OpenClaw跨邮箱、日历和Notion处理客户项目 | [简报](../../reports/brief/handle-a-client-project-across-gmail-calendar-and-notion.md) |
 | 用OpenClaw通过WhatsApp管理日历、语音笔记和习惯记录 | [简报](../../reports/brief/run-a-personal-assistant-over-whatsapp.md) |
+| 用OpenClaw读取Obsidian日记并每晚生成新条目 | [简报](../../reports/brief/read-an-obsidian-journal-and-write-nightly-entries.md) |
