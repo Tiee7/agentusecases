@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "split-work-between-chatgpt-architect-and-codex-executor",
+  "url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
+  "title": "用ChatGPT规划审阅并由Codex执行本地任务",
+  "industry": "软件工作流与本地执行",
+  "researched_at": "2026-10-20T11:21:49.211906+00:00",
+  "brief_reason": "原帖与桥接代码未取得，案例为实验性单次叙述；无完整版本、对照测试、成本或独立用户反馈，保留有依据简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先用可追溯交接验证分工，再考虑自动桥接",
+    "reason": "规划与执行分离有明确组织用途，但两个角色不自动带来更高质量或独立审计。",
+    "next_action": "在虚构小仓库上用计划、差异和测试结果做离线交接演练。",
+    "stop_condition": "计划版本错配、无法回读实际变更、重复写入或越过原有权限确认。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T11:16:34Z",
+        "end": "2026-10-20T11:16:40Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T11:21:49.211906+00:00",
+      "characters": 16039,
+      "sha256": "3a1de36d8e990bbde72f592c0481ae90258c176367608ae81a0afe74c57e61b0",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "许可目录转述Windows实验桥接、一次CAD体验及基本角色分工；无性能数字，未读原作者代码。"
+    },
+    {
+      "id": "Splatform",
+      "url": "https://developers.openai.com/blog/codex-as-a-platform",
+      "title": "Codex官方集成层说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T11:17:00Z",
+        "end": "2026-10-20T11:17:11Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T11:21:49.211906+00:00",
+      "receipt_text": "官方说明codex exec适合有边界任务、SDK适合程序化操作、app-server提供持久会话事件与批准处理；不证明作者桥接实现或实际收益。",
+      "characters": 72,
+      "sha256": "852c1dc8f6c5996e871ae16072ad1e65857dc9ba76badc3d93e4af073c2ee64e",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方说明codex exec适合有边界任务、SDK适合程序化操作、app-server提供持久会话事件与批准处理；不证明作者桥接实现或实际收益。"
+    },
+    {
+      "id": "Supdate",
+      "url": "https://developers.openai.com/blog/openai-for-developers-2025",
+      "title": "OpenAI开发者回顾更新",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T11:17:00Z",
+        "end": "2026-10-20T11:17:11Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T11:21:49.211906+00:00",
+      "receipt_text": "页面明确2026-09-05更新称Codex MCP server已移除。这是Codex作为MCP服务端，不等于所有MCP客户端或自定义文件桥接被移除。",
+      "characters": 76,
+      "sha256": "fb49dfd6d5b8125df38ef38a91424b5253bd6c0063c36a8dd70ce2c881449036",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "页面明确2026-09-05更新称Codex MCP server已移除。这是Codex作为MCP服务端，不等于所有MCP客户端或自定义文件桥接被移除。"
+    },
+    {
+      "id": "Scookbook",
+      "url": "https://developers.openai.com/cookbook/examples/codex/codex_mcp_agents_sdk/building_consistent_workflows_codex_cli_agents_sdk",
+      "title": "Codex工作流Cookbook",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T11:17:00Z",
+        "end": "2026-10-20T11:17:11Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T11:21:49.211906+00:00",
+      "receipt_text": "本轮页面仍含旧MCP示例，同时提到app-server更深入集成；历史样例不能当作当前版本已实测的安装指南。",
+      "characters": 54,
+      "sha256": "ae4cf4a42d647a9daca380063af57a4d35cad14912ea5af577b1c33cf7b7aec8",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "本轮页面仍含旧MCP示例，同时提到app-server更深入集成；历史样例不能当作当前版本已实测的安装指南。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1uow2ld/i_built_a_bridge_between_chatgpt_and_codex",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "原帖与补充账户链接均在此前受限的Reddit，本轮未访问或使用偶然摘要，未取得原文和实现。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录称CAD输出一般，桥接尚无性能数字。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "官方提供exec、SDK和app-server等不同集成层。",
+      "type": "verified",
+      "source_ids": [
+        "Splatform"
+      ]
+    },
+    {
+      "statement": "官方2026-09-05更新称Codex MCP server已移除。",
+      "type": "verified",
+      "source_ids": [
+        "Supdate"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "一次CAD体验不是通用模型排名",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录描述特定任务、环境和当时表现，未给模型版本、相同输入或重复次数；不能据此宣布ChatGPT永远擅长架构而Codex只能执行。近一小时协作也不是净节省数据。"
+    },
+    {
+      "id": "contract",
+      "title": "交接应携带计划版本和验收证据",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议交接包包括任务范围、允许修改的路径、当前提交、验收条件和停止条件。执行者返回实际差异、命令与结果，规划者检查这些证据，而不是只阅读另一模型的成功总结。计划改变后需明确替换旧版本，避免执行过期要求。"
+    },
+    {
+      "id": "review",
+      "title": "第二个角色不天然独立",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "两边如果都依赖同一错误前提，复述计划不会形成有效复核。审阅应针对文件和测试证据，加入已知反例与失败样本。重要操作仍由有权限的人确认，不用多agent一致意见代替用户授权。"
+    },
+    {
+      "id": "versions",
+      "title": "区分MCP式桥接与已移除的旧服务端",
+      "source_ids": [
+        "Supdate",
+        "Scookbook"
+      ],
+      "body": "目录没有足够实现细节判断作者使用何种桥接。官方移除Codex MCP server的更新不能外推到全部MCP能力；反过来，旧Cookbook命令仍可见也不证明在当前版本可直接运行。复制时先确认接口版本和支持状态，本轮没有安装或验证旧示例。"
+    },
+    {
+      "id": "alternatives",
+      "title": "不一定需要操控另一个应用界面",
+      "source_ids": [
+        "Splatform"
+      ],
+      "body": "官方集成层提供不同生命周期控制，适合自有应用的方案应按任务范围选择，而非依赖脆弱的界面点击。最轻方案仍是用户手工传递计划与结果。目录提到的桌面操作失败只是作者经验，不是普遍产品限制，更不是绕过安全限制的授权。"
+    },
+    {
+      "id": "commercial",
+      "title": "收费价值可能在交接治理，而非两个聊天窗口",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "候选收入是特定团队流程配置与维护，但本案没有付款、留存或销售证据。获客验证应展示可审阅的差异与故障恢复，询问真实交接损失；不能以双agent概念推定客户会订阅。"
+    },
+    {
+      "id": "cost",
+      "title": "分工也会增加传递与维护成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包括两端运行、重复上下文、人工审阅、版本兼容与失败恢复。若小任务用一个助手已经足够，引入桥接可能更慢。没有计时或报价，不给利润与固定预算门槛；先比较人工总时间、返工和成功率。"
+    },
+    {
+      "id": "personal",
+      "title": "适合已有本地工具和复核能力者",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用者需能理解计划、测试和权限，频率随项目任务。设置包括仓库范围、回执格式、失败规则；维护包括版本变化与上下文同步。风险是文件泄露、误命令、旧计划执行和把摘要当真实测试；传递敏感文件前要明确两端数据去向。"
+    },
+    {
+      "id": "trial",
+      "title": "先做只读计划和合成结果审阅",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "使用一个虚构任务及预制的正确/错误差异，要求识别超范围修改、失败测试与缺失证据，不实际访问仓库或运行命令。通过标准是能指出未知、拒绝以成功总结代替证据，且保留删除和推送前确认。本轮未运行桥接、CAD或桌面应用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
+    "observed_at": null,
+    "body_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "25a27aebb91d217cdd958512ce3a4520a64b75b4d539dc3822ba39d542ba6e53",
+      "How it went": "f5c3fc66ffec7c25c72b162603be0bc38e1745d86ece022b03564b98927755ea",
+      "Worth knowing": "bf415a3d33fbfa85a7787c68c2fffcf4d5708f34eb6c5c8c5ef64c70f89f4a29"
+    },
+    "actual_agents": [
+      "ChatGPT",
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T11:16:34Z",
+      "end": "2026-10-20T11:16:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm using ChatGPT as the planner and reviewer for [project or repo path], and you're the executor. Read the plan I paste below, carry it out step by step in the local repo, and run [tests or build command] after each step. When finished, give me a short summary of what changed, the files touched, and any test results that I can paste back to ChatGPT for review. Pause and ask me before deleting files or pushing anything. Plan: [paste plan from ChatGPT]",
+    "agent": "ChatGPT",
+    "source_url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "3a1de36d8e990bbde72f592c0481ae90258c176367608ae81a0afe74c57e61b0",
+    "observation_window": {
+      "start": "2026-10-20T11:16:34Z",
+      "end": "2026-10-20T11:16:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/OpenAI/comments/1uow2ld/i_built_a_bridge_between_chatgpt_and_codex",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T11:21:49.211906+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原帖与补充账户链接均在此前受限的Reddit，本轮未访问或使用偶然摘要，未取得原文和实现。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可改善交接清晰度，质量和时间收益尚未验证。",
+    "audience": "有本地仓库和测试基础、愿意审阅变更的开发者。",
+    "use": "分离计划、执行和证据审阅。",
+    "benefit": "可能减少含糊任务和漏检，未量化。",
+    "setup_cost": "版本、路径范围、验收条件及回执约定。",
+    "maintenance_cost": "接口变更、计划同步、测试和恢复。",
+    "frequency": "按项目复杂任务，不推定持续后台运行。",
+    "privacy_risk": "代码、文件或日志跨两端传输。",
+    "error_risk": "旧计划、重复执行、无证据成功报告和权限扩大。",
+    "source_ids": [
+      "Sdirectory",
+      "Splatform"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "虚构计划与预制差异、测试日志，无真实代码或凭据。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "指出超范围修改、失败测试和缺失证据的审阅表；不执行，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/split-work-between-chatgpt-architect-and-codex-executor",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I'm using ChatGPT as the planner and reviewer for [project or repo path], and you're the executor. Read the plan I paste below, carry it out step by step in the local repo, and run [tests or build command] after each step. When finished, give me a short summary of what changed, the files touched, and any test results that I can paste back to ChatGPT for review. Pause and ask me before deleting files or pushing anything. Plan: [paste plan from ChatGPT]"
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "比较这份虚构计划、差异和测试日志，列出验收通过项、失败项、未知项和超范围修改。不要仅凭执行者总结认定成功。不要访问文件、运行命令、删除或推送任何内容。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖未读，官方文档是能力说明而非该桥接的独立用户结果。"
+  },
+  "disconfirming_evidence": "额外角色增加上下文与同步成本，原案例无对照结果且CAD成品一般；现成集成层可替代脆弱UI控制。",
+  "limitations": "未启动新会话、连接本地环境、创建凭据、安装桥接、调用付费API或实际运行CAD。",
+  "archive_source_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
+  "translation_sha256": "1145928906160f0d0d2496efc36a79543ab7c94bd9ca7244eb59ad71ae3295ad"
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "reference_only": false,
+  "id": "split-work-between-chatgpt-architect-and-codex-executor",
+  "language": "zh-CN",
+  "format": "full_extracted_text_translation",
+  "based_on_body_sha256": "74e15d3a0405b14b2c04363637c8f20de971200c47f9e004dc9ab8830d40b53f",
+  "translated_at": "2026-10-20T11:21:49.211906+00:00",
+  "body": "让ChatGPT架构师与Codex执行者分工\n发帖者搭建了一座桥梁，让ChatGPT负责规划和审阅，Codex负责本地执行工作。\n使用的是\nGP\nChatGPT\nCX\nCodex\n他们做了什么\n发帖者看到ChatGPT通过澄清问题、与子agent协作近一小时来处理本地CAD任务后，使用MCP式本地文件访问，将ChatGPT与本地Codex环境连接起来。随后，他们构建了一个小型工作流层，把规划与审阅交给ChatGPT，文件操作、运行命令和检查结果等本地执行步骤交给Codex，并添加了基本安全边界。\n进展与成效\n当时的CAD测试显示ChatGPT的高层次能力强于Codex，不过CAD输出本身只是一般。这座桥梁仍是实验性的，尚无性能数字，作者也在询问他人会怎样设计这个工作流。\n值得了解\n它是为Windows版Codex构建的。作者说，直接在ChatGPT桌面应用等原生应用里使用电脑操作通常失败，所以改用Codex网页端的Chrome控制来避开这一问题。\n亲自尝试\n使用\nChatGPT\n复制提示词\n我将ChatGPT用作[项目或仓库路径]的规划者和审阅者，你是执行者。阅读我在下面粘贴的计划，在本地仓库中逐步执行，每一步之后运行[测试或构建命令]。完成后，简要总结修改内容、涉及的文件和测试结果，供我粘贴回ChatGPT审阅。删除文件或推送任何内容之前，先暂停并询问我。计划：[粘贴ChatGPT给出的计划]\n原始来源：https://www.reddit.com/r/OpenAI/comments/1uow2ld/i_built_a_bridge_between_chatgpt_and_codex",
+  "body_sha256": "1145928906160f0d0d2496efc36a79543ab7c94bd9ca7244eb59ad71ae3295ad",
+  "scope": "Complete licensed directory text; not external article full text."
+}
