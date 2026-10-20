@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **100**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **101**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -110,3 +110,4 @@
 | 用Claude Code检查应用用户体验 | [简报](../../reports/brief/scan-an-app-for-ux-improvements-with-computer-use.md) |
 | 用Claude in Chrome关闭Reddit社区通知 | [简报](../../reports/brief/turn-off-notifications-for-every-subreddit-via-browser.md) |
 | 用Claude Cowork排队整理文件和生成文档 | [简报](../../reports/brief/queue-file-organizing-and-doc-generation-in-cowork.md) |
+| 用AI agent筛选创始人并准备联系 | [简报](../../reports/brief/screen-new-founders-and-run-outreach-for-venture-investing.md) |
