@@ -1,0 +1,403 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+  "url": "https://agentusecases.ai/use-case/plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+  "title": "用Claude规划PRD并分派实现任务",
+  "industry": "软件开发工作流",
+  "researched_at": "2026-10-20T20:53:26.751592+00:00",
+  "brief_reason": "内部流程无公开实现/验收产物/测量，Python编排仍开发；官方能力不能替代作者降本证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先按验收功能对比总成本",
+    "headline": "低单价不保证低交付成本",
+    "reason": "规划、重复上下文、审查、返工与维护都需计入。",
+    "next_action": "自有演示仓库同范围小功能，对照单模型与分层的总消耗和缺陷。",
+    "stop_condition": "增加返工、削弱测试、越权写入或不能明确任务责任。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+      "title": "许可目录：PRD与分层agent工作流",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:51:02Z",
+        "end": "2026-10-20T20:51:21Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 14484,
+      "sha256": "10f457d74f2126a3a027371532989127ded0e2492a160ebd386f03d1741cc7dd",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "完整目录和模板，历史日期2026-04-01；没有量化结果。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1stmgpn/serious_question_whats_your_actual_ai_workflow",
+      "title": "spoupervisor：内部TDD及记忆系统",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:51:13Z",
+        "end": "2026-10-20T20:51:49Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:53:26.751592+00:00",
+      "receipt_text": "目标评论者spoupervisor描述任务/TDD、多agent/Git树、记忆hooks/HouseStyle；高层Opus或Sonnet规划，Haiku实现；PythonAPI编排仍在构建，无测量。其他评论者的GitHub工具和额度规避不是此人的实现，未使用。",
+      "characters": 132,
+      "sha256": "d37895973b522607459824b85604a0ec89d3f4ae2a0347241b83934189b98970",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "目标评论者spoupervisor描述任务/TDD、多agent/Git树、记忆hooks/HouseStyle；高层Opus或Sonnet规划，Haiku实现；PythonAPI编排仍在构建，无测量。其他评论者的GitHub工具和额度规避不是此人的实现，未使用。"
+    },
+    {
+      "id": "Sagents",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "title": "Claude Code自定义子agent文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:51:13Z",
+        "end": "2026-10-20T20:51:49Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:53:26.751592+00:00",
+      "receipt_text": "子agent可选择模型和工具/权限，在独立上下文请求并消耗相同用量限制；有worktree配置但具体版本和实际执行模型需要核对，不把文档默认当历史作者配置。",
+      "characters": 78,
+      "sha256": "71a86c0841ecfabc328c9f1b412838aac225eeb0ef5af9c92cb693b523dba746",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "子agent可选择模型和工具/权限，在独立上下文请求并消耗相同用量限制；有worktree配置但具体版本和实际执行模型需要核对，不把文档默认当历史作者配置。"
+    },
+    {
+      "id": "Sgit",
+      "url": "https://git-scm.com/docs/git-worktree",
+      "title": "Git工作树官方说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:51:13Z",
+        "end": "2026-10-20T20:51:49Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:53:26.751592+00:00",
+      "receipt_text": "工作树可并行检出不同分支，有独立HEAD但共享部分refs和默认配置；不是资源或权限安全隔离。仅阅读，未创建测试仓库。",
+      "characters": 59,
+      "sha256": "4696c942d2e8f74e908e3d3cdfaf541992b22e8f147f043955339f8c45f8ef7c",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "工作树可并行检出不同分支，有独立HEAD但共享部分refs和默认配置；不是资源或权限安全隔离。仅阅读，未创建测试仓库。"
+    },
+    {
+      "id": "Scost",
+      "url": "https://code.claude.com/docs/en/costs",
+      "title": "Claude Code成本与用量说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:51:13Z",
+        "end": "2026-10-20T20:51:49Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:53:26.751592+00:00",
+      "receipt_text": "API消耗、订阅配额与usage美元估算不同；真实账单以Console为准，多agent各自上下文增加请求与tokens。未采用文档平均费用作为本案例价格。",
+      "characters": 78,
+      "sha256": "6d8f0536fce43cdee59bb9f7c6988b6dd02d5a5722a20493f05929cd31b4cd76",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "API消耗、订阅配额与usage美元估算不同；真实账单以Console为准，多agent各自上下文增加请求与tokens。未采用文档平均费用作为本案例价格。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "spoupervisor描述TDD任务系统与持久记忆，PythonAPI编排器仍在搭建。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "原评论没有性能、费用或业务结果指标。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "当前子agent文档支持模型选择，其请求消耗相同用量限制。",
+      "type": "verified",
+      "source_ids": [
+        "Sagents"
+      ]
+    },
+    {
+      "statement": "Git工作树独立HEAD但共享部分refs与默认配置。",
+      "type": "verified",
+      "source_ids": [
+        "Sgit"
+      ]
+    },
+    {
+      "statement": "usage美元估算与订阅账单不同。",
+      "type": "verified",
+      "source_ids": [
+        "Scost"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "有流程描述，没有节省账单",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "目标来源是spoupervisor的评论，不是主帖作者，也不是旁边贴出多个GitHub仓库的另一个人。评论没有提交记录、已验收功能、测试日志或费用对照。内部任务和记忆系统被描述为已创建，Python编排器明确仍在构建；不能把整套未完成框架写成已成熟投产的产品。"
+    },
+    {
+      "id": "planning",
+      "title": "PRD是任务契约，不是长文越多越好",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "以下是研究者复制设计：先写目标、非目标、输入输出、约束和验收例，再拆成可单独检查的小任务。每项至少有依赖、允许修改范围和完成证据。涉及共享接口或数据库迁移的任务不应为了并行而假装独立，先统一接口再实现，避免多个低价agent各自补出不同需求。"
+    },
+    {
+      "id": "routing",
+      "title": "便宜模型需要相同验收条件",
+      "source_ids": [
+        "Sagents"
+      ],
+      "body": "当前文档允许对子agent选择模型与工具，实际模型仍应核对。把容易任务交给较低成本模型是候选策略，不是所有小模型都等价。先用同类任务对比首次通过率、重试次数和审核时间；超过预定返工预算再升级处理，不能为降低单次价格放松测试或隐瞒模型变化。原评论未提供这种对照。"
+    },
+    {
+      "id": "git",
+      "title": "工作树解决文件竞争但不替代安全隔离",
+      "source_ids": [
+        "Sgit"
+      ],
+      "body": "Git工作树可让不同分支各自检出，部分引用和配置仍共享。端口、数据库、外部账号和机器资源不会因为有工作树就独立。因此需要分开的输出/测试资源和单一合并负责人；串行合并后重新测试组合结果，不以各分支单测成功推断最终无冲突。此处是工程设计分析，不是原作者已验证的能力。"
+    },
+    {
+      "id": "tests",
+      "title": "TDD约束还需要独立验收",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "先写失败测试有助于明确目标，但agent也可能写出只验证自己实现的测试。建议保留需求负责人审核的验收例、边界输入与回归基线，禁止用删除或放宽测试来让任务通过。完成应关联代码、测试结果和审查意见，任务卡打勾本身不算交付。原案没有公开测试覆盖与缺陷结果。"
+    },
+    {
+      "id": "memory",
+      "title": "长期记忆必须可纠正",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "项目记忆可减少重复说明，也可能让过期假设持续传播。建议区分用户要求、代码事实、决策和暂时猜测，记录来源与更新时间；新版要求覆盖旧规则而不是累加矛盾。密钥、私人通信和多项目无关内容不应混入共享记忆。hooks执行什么、有什么权限与失败方式都需审核，不把持久化等同可靠性。"
+    },
+    {
+      "id": "business",
+      "title": "客户付费的是稳定开发交付",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "假设面向已有代码仓库、测试和审核者的小团队，预算属于研发负责人。可提供固定范围的工作流配置、验收示例和维护，而非只售PRD模板或保证降本比例。获客可从现有开发服务的小样本演示开始，本轮不联系任何人。原案无真实客户、销售或复购信息，商业化仍待验证。"
+    },
+    {
+      "id": "cost",
+      "title": "应比较每个验收功能的总成本",
+      "source_ids": [
+        "Scost"
+      ],
+      "body": "研究者假设一包同范围功能：单模型基线模型12USD+人工2h×40=80，共92。顺利分层时规划2+实现1+审查2=模型5，加同样人工80，共85，每月10包850；高返工时模型2+6+5=13、人工3h×40=120，共133，每月1330。都是情景预算不是现价或作者账单。顺利情景只省7美元，多10.5分钟人工就抵消；维护、CI、获客未知另计，售价未知不计利润。"
+    },
+    {
+      "id": "billing",
+      "title": "配额与API成本不能直接混算",
+      "source_ids": [
+        "Scost",
+        "Sagents"
+      ],
+      "body": "订阅额度、API账单和命令显示的美元估算不是一个数。子agent请求仍消耗用量，不能用多开agent当作额外免费额度。记录实际模式、模型版本、规划/执行/审查及失败请求，才能复算一项已验收交付的消耗。本轮没有付费API调用、切换模型或更改用户的执行策略。"
+    },
+    {
+      "id": "personal",
+      "title": "自用需要能看懂和验收代码",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "适合任务较多且已有工程经验、能判断实现是否满足目标的开发者。潜在收益是把重复实现交出去，但净省时未知，维护自己的编排框架也会消耗时间。准备测试仓库、明确任务边界和不覆盖原件的备份；频率随开发任务而定，维护来自依赖、模型行为、规则及上下文变化。"
+    },
+    {
+      "id": "trial",
+      "title": "先让同范围任务形成证据",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "用自有演示仓库挑两个可回归的小功能，固定验收与版本，只比较规划、实现和审核总时间/成本及遗漏缺陷。原站模板要求规划后先停给用户审阅，不能跳过直接实现。若分层产生更多返工或模糊责任，就退回较简单流程。本轮仅研究公开来源，没有跑作者框架或修改其他项目。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+    "observed_at": null,
+    "body_sha256": "6ba33c8676ccadc018ccd9f10a2602591f92d8bad31f2b7a10c85b7b5eafbc6d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "08ccc8ccb27bdd8d009ee9ada405a3f019e4b35df5055d3ffbfad13f709be6aa",
+      "How it went": "fec28e932073788b583b2e15de1bf7e72780ef52eed3810b689f3aa6c8a17da7",
+      "Worth knowing": "2e37034e85ce8347f0e60972268654dd5c0e2e7d046305d7b5b05060537bfa94"
+    },
+    "actual_agents": [
+      "Claude Code",
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T20:51:02Z",
+      "end": "2026-10-20T20:51:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I want to build [feature or project] in [repo path]. First write a short PRD covering goals, scope, and acceptance criteria, then split it into small, independent tasks in a TASKS.md file with clear done criteria for each. Stop and show me the PRD and task list so I can review it before anything is implemented, so I can hand the tasks to a cheaper model.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "10f457d74f2126a3a027371532989127ded0e2492a160ebd386f03d1741cc7dd",
+    "observation_window": {
+      "start": "2026-10-20T20:51:02Z",
+      "end": "2026-10-20T20:51:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeCode/comments/1stmgpn/serious_question_whats_your_actual_ai_workflow",
+    "source_title": "spoupervisor describes a custom internal task and memory workflow",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T20:51:21Z",
+    "source_sha256": "d37895973b522607459824b85604a0ec89d3f4ae2a0347241b83934189b98970",
+    "steps": [
+      {
+        "en": "Work with a high-level agent to produce a PRD and decompose it into tasks.",
+        "zh": "与高层agent一起编写PRD，并拆成任务。"
+      },
+      {
+        "en": "Use lower-cost agents for implementation within a task-driven TDD system.",
+        "zh": "在任务驱动的TDD系统中使用成本更低的agent实现。"
+      },
+      {
+        "en": "Maintain project rules and memory; the Python API orchestrator was still being built.",
+        "zh": "维护项目规则和记忆；Python API编排器仍在开发。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "没有净省时、费用或缺陷测量。",
+    "audience": "能审核代码和测试、具有重复开发任务的开发者。",
+    "use": "需求规划、任务拆解、受控实现与验收。",
+    "benefit": "可能降低实现消耗，返工可能抵消。",
+    "setup_cost": "演示仓库、验收、工作树/权限与规则。",
+    "maintenance_cost": "框架、模型、依赖、旧记忆和集成冲突。",
+    "frequency": "随软件开发任务，原案无固定频率。",
+    "privacy_risk": "代码、密钥和项目记忆跨agent外发。",
+    "error_risk": "错误拆分、测试自证、语义冲突和任务卡误报完成。",
+    "source_ids": [
+      "Sauthor",
+      "Sagents"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整源模板只做PRD/TASKS规划，明确先审阅再实现。",
+    "prerequisites": "自有演示仓库、固定验收例与修改边界。",
+    "tools": "Claude/Claude Code；原作者Python编排器仍开发，本轮未运行。",
+    "expected_result": "可审阅PRD和任务清单，不冒充代码已完成。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/plan-with-prds-and-delegate-tasks-to-cheaper-agents",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I want to build [feature or project] in [repo path]. First write a short PRD covering goals, scope, and acceptance criteria, then split it into small, independent tasks in a TASKS.md file with clear done criteria for each. Stop and show me the PRD and task list so I can review it before anything is implemented, so I can hand the tasks to a cheaper model."
+      },
+      {
+        "title": "分层交付成本核验计划",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Scost",
+          "Sgit"
+        ],
+        "attribution": "研究者编写，未实测",
+        "text": "先为自有演示功能写目标、非目标、验收例和任务依赖，不实现。比较单模型与分层方案时记录规划/实现/审查/返工及人工总成本。不得放宽测试或改权限；用户审阅后才另行授权实现。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "顺利分层",
+      "unit": "一包同范围且通过验收的演示功能",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 5,
+      "human_cost": 80,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 10,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "规划2+实现1+审查2=5，人工2h×40=80，85/包850/月；基线模型12+人工80=92。",
+      "source_ids": [
+        "Scost"
+      ]
+    },
+    {
+      "scenario": "高返工分层",
+      "unit": "一包同范围且通过验收的演示功能",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 13,
+      "human_cost": 120,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 10,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "规划2+实现6+审查5=13，人工3h×40=120，133/包1330/月；其他未知另计。",
+      "source_ids": [
+        "Scost"
+      ]
+    }
+  ],
+  "economics_assumptions": "研究者预算，不是当前模型价格/作者账单；基线92与低场景85差7，相当40USD/h下10.5分钟。",
+  "feedback": {
+    "independent_user_feedback_count": 1,
+    "note": "原作者流程自述无测量；其他评论不同实现，不合并为本案成功或基准。"
+  },
+  "disconfirming_evidence": "自建框架仍未完成，低价执行的重试和审查可能吞掉差额。",
+  "limitations": "无代码、验收/成本日志或真实客户；未调用付费API或运行模型，未采用其他评论者的额度规避方式。",
+  "archive_source_sha256": "6ba33c8676ccadc018ccd9f10a2602591f92d8bad31f2b7a10c85b7b5eafbc6d",
+  "translation_sha256": "49494393c274b8256776bf7ed6cd92f581d07289865431f6fb234f2b9755a9ec"
+}
