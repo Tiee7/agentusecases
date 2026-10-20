@@ -11,8 +11,16 @@ const weights={demand:20,outcome:20,economics:20,distribution:15,moat:10,executi
 test('every report badge uses its actual research score and agrees with the breakdown',async({page})=>{
  for(const report of reports){
   const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',`${report.id}.json`)));
-  const expected=Math.round(Object.entries(weights).reduce((sum,[key,weight])=>sum+raw.scores[key].score*weight/5,0)*10)/10;
+  const available=Object.keys(weights).every(key=>typeof raw.scores?.[key]?.score==='number' && Number.isFinite(raw.scores[key].score) && raw.scores[key].score>=0 && raw.scores[key].score<=5);
   await page.goto(`/reports/${report.id}/`);
+  if(!available){
+   await expect(page.locator('.report-score-value')).toHaveText('待评分');
+   await expect(page.locator('#score')).toContainText('评分资料不完整');
+   await expect(page.locator('#score h2 .red')).toHaveCount(0);
+   await expect(page.locator('.report-score')).toHaveAccessibleName('商业评分待补充；查看评分依据');
+   continue;
+  }
+  const expected=Math.round(Object.entries(weights).reduce((sum,[key,weight])=>sum+raw.scores[key].score*weight/5,0)*10)/10;
   await expect(page.locator('.report-score-value')).toHaveText(`${expected}/100`);
   await expect(page.locator('#score h2 .red')).toHaveText(String(expected));
   await expect(page.locator('.report-score')).toHaveAccessibleName(`商业评分 ${expected} 分，满分 100；查看评分依据`);

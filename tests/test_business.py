@@ -64,6 +64,22 @@ class BusinessTests(unittest.TestCase):
         self.assertEqual(weighted_score(self.record),76)
         self.assertEqual(WEIGHTS['feedback'],5)
         self.assertIn('月经营贡献',render(self.record))
+    def test_explicit_unknown_scores_do_not_fabricate_total(self):
+        self.record['score_status']='not_assessed'
+        for d in self.record['scores'].values(): d['score']=None
+        validate(self.record,self.receipts,'real-case')
+        self.assertIsNone(weighted_score(self.record))
+        self.assertIn('未评定',render(self.record))
+        self.record.pop('score_status')
+        with self.assertRaises(ValueError): validate(self.record,self.receipts,'real-case')
+    def test_unknown_revenue_keeps_cost_but_no_profit(self):
+        m=self.record['unit_economics'][0]
+        m['price']=None;m['revenue_status']='unknown'
+        validate(self.record,self.receipts,'real-case')
+        self.assertEqual(economics(m),(40,None,None))
+        self.assertIn('待核实',render(self.record))
+        m.pop('revenue_status')
+        with self.assertRaises(ValueError): validate(self.record,self.receipts,'real-case')
     def test_path_traversal_is_rejected(self):
         with self.assertRaises(ValueError):safe_id('../stolen')
     def test_nonfinite_financial_assumptions_are_rejected(self):
