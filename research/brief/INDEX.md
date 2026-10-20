@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **82**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **83**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -92,3 +92,4 @@
 | 用OpenClaw通过WhatsApp管理日历、语音笔记和习惯记录 | [简报](../../reports/brief/run-a-personal-assistant-over-whatsapp.md) |
 | 用OpenClaw读取Obsidian日记并每晚生成新条目 | [简报](../../reports/brief/read-an-obsidian-journal-and-write-nightly-entries.md) |
 | 用Meta Muse整理处方狗粮发票并填写宠物保险报销申请 | [简报](../../reports/brief/file-pet-insurance-reimbursements-for-prescription-dog-food.md) |
+| 用ChatGPT规划审阅并由Codex执行本地任务 | [简报](../../reports/brief/split-work-between-chatgpt-architect-and-codex-executor.md) |
