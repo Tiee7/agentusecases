@@ -2,8 +2,8 @@
 import { dateLabel, tone } from '../lib/content.mjs';
 const { report:r, index = 0 } = Astro.props;
 ---
-<article class="report-card" data-item data-search={`${r.id} ${r.title} ${r.industry} ${r.sections.map(s=>s.body).join(' ')}`} data-personal={r.personal.level} data-decision={r.verdict.decision} data-date={r.date} data-score={r.score}>
+<article class="report-card" data-item data-search={`${r.id} ${r.title} ${r.industry} ${r.sections.map(s=>s.body).join(' ')}`} data-personal={r.personal.level} data-decision={r.verdict.decision} data-date={r.date} data-score={r.scoreAvailable?r.score:''}>
 <div class="card-meta"><span class="serial">{String(index+1).padStart(2,'0')}</span><span class={`badge ${tone(r.verdict.decision)}`}>{r.verdict.decision}</span></div>
 <p class="personal-summary"><strong>自用价值 · {r.personal.level}</strong></p>
-<h3><a href={r.path || `/reports/${r.id}/`}>{r.title}</a></h3><p>{r.verdict.headline}</p><div class="card-bottom"><span>{r.date && dateLabel(r.date)}<br/>{r.minutes} 分钟阅读</span>{r.depth==='brief'?<span class="brief-card-label">简报</span>:<span class="score">{r.score}<small> / 100</small></span>}<span class="card-arrow" aria-hidden="true">↗</span></div>
+<h3><a href={r.path || `/reports/${r.id}/`}>{r.title}</a></h3><p>{r.verdict.headline}</p><div class="card-bottom"><span>{r.date && dateLabel(r.date)}<br/>{r.minutes} 分钟阅读</span>{r.depth==='brief'?<span class="brief-card-label">简报</span>:<span class="score">{r.scoreAvailable?<>{r.score}<small> / 100</small></>:'未评定'}</span>}<span class="card-arrow" aria-hidden="true">↗</span></div>
 </article>

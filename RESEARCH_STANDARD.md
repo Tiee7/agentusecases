@@ -83,3 +83,7 @@
 遵守 `schemas/editorial-title-policy.json`，运行 `agentwatch.titles.validate_editorial_title`。发布校验拦截已知评价短语，人工仍需检查是否夹带结论；不能靠避开关键词通过。保持案例 ID、slug 和链接稳定；不改 `registry/cases.json` 的源站标题、归档英文原文／原始标题、译文及引用来源标题。未编辑的源站标题仍按来源原样保留，规范仅约束本站编辑标题。
 
 发布前核对研究 JSON title 与 Markdown H1 一致，重新生成 `python -m agentwatch.business index`，执行仓库与阅读站测试，并确认 reports/cases/trials 的 H1、浏览器标题、首页卡片与目录入口一致。
+
+## 缺证数值处理（2026-10-20修订）
+
+不为通过格式验证编造收入或评分。明确未评估的记录可设 `score_status: not_assessed`，相应维度为 null，但仍必须写有来源的理由；任一维度未知就不生成总分。已观测零与缺证未知不同。收入未知可设情景 `revenue_status: unknown`、`price: null`，保留有明确假设的成本测算，不计算收入贡献或利润；未知不转成零收入。此兼容不降低来源、事实、十节分析、双情景和反馈调查要求。四周200美元不是用户质量准入条件。

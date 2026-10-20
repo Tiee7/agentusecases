@@ -114,6 +114,8 @@ def refs(values,source_ids):
         raise ValueError('Claim references an unread or unknown source')
 
 def weighted_score(record):
+    if any(record.get('scores',{}).get(k,{}).get('score') is None for k in WEIGHTS):
+        return None
     return round(sum(WEIGHTS[k]*record['scores'][k]['score']/5 for k in WEIGHTS),1)
 
 def validate(record,receipts,expected_id):
@@ -166,7 +168,8 @@ def validate(record,receipts,expected_id):
     for key in WEIGHTS:
         dimension=record['scores'][key]
         score=dimension.get('score')
-        if isinstance(score,bool) or not isinstance(score,(int,float)) or not 0<=score<=5 or len(dimension.get('rationale',''))<30:
+        unknown = score is None and record.get('score_status') == 'not_assessed'
+        if (not unknown and (isinstance(score,bool) or not isinstance(score,(int,float)) or not math.isfinite(score) or not 0<=score<=5)) or len(dimension.get('rationale',''))<30:
             raise ValueError('Every score must be justified and between zero and five')
         refs(dimension.get('source_ids'),ids)
     searches=record.get('feedback',{}).get('searches',[])
@@ -176,7 +179,7 @@ def validate(record,receipts,expected_id):
         refs([observation['source_id']],ids)
         if observation.get('directness') not in ('direct_user','adjacent_workflow') or not observation.get('bias'):
             raise ValueError('Classify direct versus adjacent users and selection bias')
-    if not record['feedback'].get('observations') and record['scores']['feedback']['score']!=0:
+    if not record['feedback'].get('observations') and record['scores']['feedback']['score'] not in (0,None):
         raise ValueError('No verified feedback means zero independent feedback signal, not a claimed negative user rating')
     models=record.get('unit_economics',[])
     if len(models)<2:
@@ -184,12 +187,13 @@ def validate(record,receipts,expected_id):
     for model in models:
         for key in ('price','api_cost','human_cost','other_variable_cost','acquisition_cost','units_per_month','fixed_monthly_cost'):
             v=model.get(key)
-            if isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) or v<0:
+            unknown_price = key == 'price' and v is None and model.get('revenue_status') == 'unknown'
+            if not unknown_price and (isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) or v<0):
                 raise ValueError('Economic inputs must be nonnegative numbers')
         if not model.get('assumptions') or not model.get('unit') or not model.get('currency') or not model.get('scenario'):
             raise ValueError('Label every economic assumption and delivery unit')
         refs(model.get('source_ids'),ids)
-        if not all(math.isfinite(v) for v in economics(model)):
+        if not all(v is None or math.isfinite(v) for v in economics(model)):
             raise ValueError('Computed economic results must be finite')
     if not record.get('disconfirming_evidence') or not record.get('limitations'):
         raise ValueError('Include contrary evidence and concrete unverified claims')
@@ -198,8 +202,8 @@ def validate(record,receipts,expected_id):
 
 def economics(model):
     variable=sum(model[k] for k in ('api_cost','human_cost','other_variable_cost','acquisition_cost'))
-    contribution=model['price']-variable
-    profit=contribution*model['units_per_month']-model['fixed_monthly_cost']
+    contribution=None if model['price'] is None else model['price']-variable
+    profit=None if contribution is None else contribution*model['units_per_month']-model['fixed_monthly_cost']
     return variable,contribution,profit
 
 def render(record):
@@ -208,14 +212,17 @@ def render(record):
     from .reader_copy import project
     record=project(record)
     v=record['verdict']
-    lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']}",'',f"**商业评分：{weighted_score(record):.1f}/100。用户反馈信号占5%。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
+    score=weighted_score(record)
+    score_label='未评定；缺证不补零，不生成总分' if score is None else f'{score:.1f}/100。用户反馈信号占5%'
+    amount=lambda value: '待核实' if value is None else f'{value:.2f}'
+    lines=[f"# {record['title']}",'',f"**商业结论：{v['decision']}。{v['headline']}**",'',v['reason'],'',f"案例ID：`{record['id']}` · 案例来源：{record['url']}",f"研究时间：{record['researched_at']}",'',f"**商业评分：{score_label}。**",'','| 维度 | 权重 | 分数 /5 | 商业依据 |','|---|---:|---:|---|']
     from .author_method import render_author_method
     from .source_case import render as render_source_case
     lines = lines[:1] + render_source_case(record.get('source_case')) + render_author_method(record) + ['','## 我们的分析'] + lines[1:]
     for key,weight in WEIGHTS.items():
         d=record['scores'][key]
         rationale=d['rationale'].replace('|','\\|').replace('\n',' ')
-        lines.append(f"| {LABELS[key]} | {weight}% | {d['score']} | {rationale} [{', '.join(d['source_ids'])}] |")
+        lines.append(f"| {LABELS[key]} | {weight}% | {d['score'] if d['score'] is not None else '待核实'} | {rationale} [{', '.join(d['source_ids'])}] |")
     lines += ['', *render_personal(record), '', '## 已核验事实', '']
     for fact in record['facts']:
         lines.append(f"- {fact['statement']} [{', '.join(fact['source_ids'])}]")
@@ -224,7 +231,7 @@ def render(record):
     lines += ['','## 单位经济测算：情景假设，不是项目已实现的财务结果','','| 情景 / 交付单位 | 收入 | 可变成本（含获客） | 单位贡献 | 月交付量 | 月固定成本 | 月经营贡献 |','|---|---:|---:|---:|---:|---:|---:|']
     for model in record['unit_economics']:
         variable,contribution,profit=economics(model)
-        lines.append(f"| {model['scenario']} / {model['unit']} ({model['currency']}) | {model['price']:.2f} | {variable:.2f} | {contribution:.2f} | {model['units_per_month']} | {model['fixed_monthly_cost']:.2f} | {profit:.2f} |")
+        lines.append(f"| {model['scenario']} / {model['unit']} ({model['currency']}) | {amount(model['price'])} | {variable:.2f} | {amount(contribution)} | {model['units_per_month']} | {model['fixed_monthly_cost']:.2f} | {amount(profit)} |")
     for model in record['unit_economics']:
         lines += ['',f"{model['scenario']}假设：{model['assumptions']}；API成本 {model['api_cost']}，人工成本 {model['human_cost']}，其他可变成本 {model['other_variable_cost']}，分摊获客成本 {model['acquisition_cost']}。依据：{', '.join(model['source_ids'])}"]
     lines += ['','## 反证与未核实信息','',record['disconfirming_evidence'],'',record['limitations'],'','## 具体动作与止损条件','',v['next_action'],'',f"停止投入条件：{v['stop_condition']}",'','## 来源与对应关系','']
@@ -242,7 +249,7 @@ def indexes():
         (completed if state=='completed' else drafts if state=='legacy_draft' else pending).append(item)
     lines=['# 商业深度研究总索引','',f"已完成深度研究 **{len(completed)}** / 注册案例 **{len(cases)}**。旧版简略初稿 **{len(drafts)}** 份不计入完成。",'','两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。','', '[完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)','', '| 案例 | 商业结论 | 分数 /100 | 自用价值 | 源站试用模板 | 行业 | 研究时间 |','|---|---|---:|---|---|---|---|']
     for case,_,record in completed:
-        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record)} | {record.get('personal_value', {}).get('level', '待核实')} | {record.get('source_trial', {}).get('status', 'not_observed')} | {record['industry']} | {record['researched_at']} |")
+        lines.append(f"| [{record['title']}]({case['report']}) | {record['verdict']['decision']} | {weighted_score(record) if weighted_score(record) is not None else '未评定'} | {record.get('personal_value', {}).get('level', '待核实')} | {record.get('source_trial', {}).get('status', 'not_observed')} | {record['industry']} | {record['researched_at']} |")
     lines += ['','## 需要重做的旧版简略初稿','']
     for case,_,_ in drafts:
         lines.append(f"- [{case['title']}]({case['report']}) · `{case['id']}`")

@@ -28,7 +28,7 @@ if (root) {
  function update() {
   const terms = input.value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   const filtered = items.filter(el => (!personal?.value || el.dataset.personal === personal.value) && terms.every(t => (el.dataset.search || '').toLocaleLowerCase().includes(t)) && (!filter.value || (el.dataset.decision || el.dataset.status) === filter.value));
-  if (sort) filtered.sort((a,b) => sort.value === 'score' ? Number(b.dataset.score)-Number(a.dataset.score) : (b.dataset.date || '').localeCompare(a.dataset.date || ''));
+  if (sort) filtered.sort((a,b) => sort.value === 'score' ? (b.dataset.score?.trim()?Number(b.dataset.score):-Infinity)-(a.dataset.score?.trim()?Number(a.dataset.score):-Infinity) : (b.dataset.date || '').localeCompare(a.dataset.date || ''));
   const pages = Math.max(1,Math.ceil(filtered.length/size)); page = Math.min(page,pages);
   items.forEach(el => el.hidden = true);
   filtered.forEach((el,i) => { list.append(el); el.hidden = i < (page-1)*size || i >= page*size; });

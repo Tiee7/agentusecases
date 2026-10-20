@@ -23,14 +23,14 @@ test('only completed v2 records with existing reports and matching identity beco
  }finally{fs.rmSync(root,{recursive:true,force:true})}
 });
 test('untrusted IDs and nonpublic schemes are rejected',()=>{assert(!safeId('../secret'));assert(!safeId('UpperCase'));assert.equal(safeUrl('javascript:alert(1)'),'');assert.equal(safeUrl('https://user:password@example.org'),'');assert.equal(safeUrl('file:///tmp/secret'),'')});
-test('actual published reports match score, source references and repository eligibility',()=>{const {reports,catalog}=loadContent();assert(reports.length>0);assert(catalog.length>=reports.length);for(const r of reports){const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));assert.equal(raw.schema_version,2);assert.equal(raw.status,'completed');assert(fs.existsSync(path.join(repoRoot,'reports',r.id+'.md')));assert.equal(r.sections.length,10);assert(r.sources.length>=6);assert(r.score>=0&&r.score<=100);assert(r.facts.every(f=>f.refs.length>0));assert(r.sections.every(s=>s.refs.length>0));assert(r.models.length>=2)}});
+test('actual published reports match score, source references and repository eligibility',()=>{const {reports,catalog}=loadContent();assert(reports.length>0);assert(catalog.length>=reports.length);for(const r of reports){const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));assert.equal(raw.schema_version,2);assert.equal(raw.status,'completed');assert(fs.existsSync(path.join(repoRoot,'reports',r.id+'.md')));assert.equal(r.sections.length,10);assert(r.sources.length>=6);assert(r.scoreAvailable ? typeof r.score==='number'&&r.score>=0&&r.score<=100 : r.score===null);assert(r.facts.every(f=>f.refs.length>0));assert(r.sections.every(s=>s.refs.length>0));assert(r.models.length>=2)}});
 test('commercial scores match raw weighted research and missing dimensions remain unavailable',()=>{
  const weights={demand:20,outcome:20,economics:20,distribution:15,moat:10,execution:10,feedback:5};
  const {reports}=loadContent();
  for(const r of reports){
   const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',r.id+'.json')));
   const expected=Math.round(Object.entries(weights).reduce((sum,[key,weight])=>sum+raw.scores[key].score*weight/5,0)*10)/10;
-  assert.equal(r.scoreAvailable,true,r.id);assert.equal(r.score,expected,r.id);
+  if(raw.score_status==='not_assessed' && Object.values(raw.scores).some(d=>d.score===null)){assert.equal(r.scoreAvailable,false,r.id);assert.equal(r.score,null,r.id);}else{assert.equal(r.scoreAvailable,true,r.id);assert.equal(r.score,expected,r.id);}
  }
  const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json'))),entry={id:raw.id,url:raw.url};
  for(const value of [0,5,1.1]){
@@ -122,3 +122,7 @@ test('editorial usage titles are shared by report and catalog while source title
   assert.equal(raw.title,r.title);assert.equal(fs.readFileSync(path.join(repoRoot,'reports',r.id+'.md'),'utf8').split('\n')[0],`# ${r.title}`);
  }
 });
+
+test('unknown revenue is never projected as zero sales',()=>{const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));raw.unit_economics[0].price=null;raw.unit_economics[0].revenue_status='unknown';const r=projectReport(raw,{id:raw.id,url:raw.url});assert.equal(r.models[0].price,null);});
+
+test('unknown score never becomes numeric zero in public projection or cards',()=>{const {reports}=loadContent();const raw=JSON.parse(fs.readFileSync(path.join(repoRoot,'research',reports[0].id+'.json')));raw.score_status='not_assessed';for(const d of Object.values(raw.scores))d.score=null;const r=projectReport(raw,{id:raw.id,url:raw.url});assert.equal(r.score,null);assert.equal(r.scoreAvailable,false);for(const f of ['site/src/components/ReportCard.astro','site/src/pages/index.astro'])assert(fs.readFileSync(path.join(repoRoot,f),'utf8').includes('未评定'));});
