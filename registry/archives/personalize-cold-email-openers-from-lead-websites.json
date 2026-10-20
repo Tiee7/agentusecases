@@ -102,5 +102,14 @@
     "at": "2026-10-19T07:17:19.867549+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+    "translated_at": "2026-10-20T06:45:22.230152+00:00",
+    "body": "根据线索网站个性化撰写冷邮件开场白\n一个n8n工作流通过Apify从Apollo获取线索，阅读每条线索的网站，让AI把个性化开场白写入电子表格，供发送工具使用。\n使用的是\nN8\nn8n\n他们做了什么\n作者重建了Nick Saraev的n8n系统。它获取线索，阅读线索的主页和最多两个重要页面，让AI总结并把开场白草稿写入Google Sheets，供发送工具使用。由于Apify的Apollo抓取器已废弃，他改用Podcast Index线索。通过OpenRouter调用的Claude为每条线索提取三项有来源的事实；在发送任何内容之前，他会阅读每份草稿。\n进展与成效\nPodcast Index每100条提供40条可用线索，而Apify来源每100条只有6到8条。每条优质线索的AI成本约为0.006美元。回复结果还没有出来，草稿读起来比较平淡。\n值得了解\n发送成本远高于AI：Smartlead每月39美元，Google Workspace每个邮箱8.40美元，邮箱预热需要数周。\n亲自尝试\n使用\nn8n\n复制提示词\n为我搭建一个工作流，从[电子表格或线索来源]读取线索，访问每条线索的网站[网站列]，并用AI为关于[我的产品或服务]的冷邮件写一句个性化开场白。把每句内容写到电子表格中该线索旁的新列，不要发送任何邮件。先测试5条线索，在运行完整列表之前给我看结果。\n原始来源：https://unpromptable.substack.com/p/ai-cold-email-system-tested",
+    "body_sha256": "af3f3d19683250f37351fb4519d79151a33e14b163f1454ff17e820f487b1779",
+    "status": "available"
   }
 }

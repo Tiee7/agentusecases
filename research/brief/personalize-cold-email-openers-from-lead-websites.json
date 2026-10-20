@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "personalize-cold-email-openers-from-lead-websites",
+  "url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+  "title": "用n8n读取线索网站并起草邮件开场白",
+  "industry": "销售内容准备",
+  "researched_at": "2026-10-20T06:45:22.230152+00:00",
+  "brief_reason": "原文两次不可读，目录指标无法独立核实，回复与收入未知，草稿质量存在反证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验事实和改稿成本，再谈规模",
+    "reason": "模型成本低不等于获客成本低。",
+    "next_action": "小样本核事实引用与人工改稿时间。",
+    "stop_condition": "事实不可核或稿件修订成本无改善。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+      "title": "许可目录冷邮件开场白案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:45:22.230152+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:43:15Z",
+        "end": "2026-10-20T06:43:23Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1479,
+      "sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "导语Apollo/Apify与正文改用Podcast Index须分开；40/100对6–8/100、$0.006/goodlead均目录转述，回复未有结果且草稿平淡。"
+    },
+    {
+      "id": "Ssmart",
+      "url": "https://helpcenter.smartlead.ai/en/articles/439-smartlead-pricing-plans",
+      "title": "Smartlead价格说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:45:22.230152+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:43:32Z",
+        "end": "2026-10-20T06:43:38Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 63,
+      "sha256": "e144190eebe724ae5e779b5c4c7640c2bb95a61a82fb836f1f9f52bee31dc487",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "2026-10-20读取更新2026-08-21页面：Base起$39/月，6K发送和2K联系人存储，部分验证等附加项另收费。"
+    },
+    {
+      "id": "Sgoogle",
+      "url": "https://knowledge.workspace.google.com/admin/billing/compare-flexible-and-annual-fixed-term-payment-plans",
+      "title": "Google Workspace计划价格",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:45:22.230152+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:43:32Z",
+        "end": "2026-10-20T06:43:38Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 61,
+      "sha256": "cdc11584b1c104717becb66ddc308495d67dcab6874be3f38319abb8ac28a066",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "Business Starter灵活计划$8.40/月/用户，年承诺$7/月/用户，提前取消需付剩余承诺；地区和优惠另核。"
+    },
+    {
+      "id": "Sn8n",
+      "url": "https://docs.n8n.io/integrations/builtin/handle-rate-limits.md",
+      "title": "n8n限流处理",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:45:22.230152+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:43:32Z",
+        "end": "2026-10-20T06:43:38Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 36,
+      "sha256": "cb2f47ec00113e7508bb622ac202c32986100684a804c2300aad7560fb22e4ff",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "提供重试、等待和分批处理方法；技术重试不授予目标站数据访问或绕限制权限。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "导语Apollo/Apify与正文改用Podcast Index须分开；40/100对6–8/100、$0.006/goodlead均目录转述，回复未有结果且草稿平淡。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "2026-10-20读取更新2026-08-21页面：Base起$39/月，6K发送和2K联系人存储，部分验证等附加项另收费。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Ssmart"
+      ]
+    },
+    {
+      "statement": "Business Starter灵活计划$8.40/月/用户，年承诺$7/月/用户，提前取消需付剩余承诺；地区和优惠另核。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sgoogle"
+      ]
+    },
+    {
+      "statement": "提供重试、等待和分批处理方法；技术重试不授予目标站数据访问或绕限制权限。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sn8n"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "需要逐条阅读网站、准备针对性开场白的销售人员可能希望减少研究时间。付款人可能是销售团队或服务商，但没有客户付费、购买意愿或成交证据。可用线索不是有购买意向的客户。"
+    },
+    {
+      "id": "workflow",
+      "title": "实际流程和工具",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "保留旧导语，同时以正文说明作者换成Podcast Index，不能继续宣传Apollo链路已成功。n8n编排、Claude经OpenRouter提取事实、Google Sheets存稿，人工逐条审核；现成模板不代表无需维护。"
+    },
+    {
+      "id": "metrics",
+      "title": "数据能说明什么",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "40/100与6–8/100只是作者被转述的可用线索比例，定义、样本和筛选条件未独立核实。不得称5至6倍回复率或转化提升。每条good lead的模型成本也不包含人工、失败输入及发送。"
+    },
+    {
+      "id": "offer",
+      "title": "收入机制与交付",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可假设按已核验草稿包或工作流实施收费，但须对事实可追溯和内容质量验收。不能承诺回复或约见。没有真实服务价格，不构造毛利。"
+    },
+    {
+      "id": "cost",
+      "title": "费用边界与可复算示例",
+      "source_ids": [
+        "Ssmart",
+        "Sgoogle",
+        "Sdirectory"
+      ],
+      "body": "假设一个灵活Workspace用户、Smartlead Base及100条good lead，并暂按转述模型成本，则39+8.40+100×0.006=48美元/月的局部小计。它不是报价或完整成本，仍缺n8n/采集、域名、验证、税费、人工和失败重跑；只起草不发送时并不必购买发送工具。"
+    },
+    {
+      "id": "acquisition",
+      "title": "获客和替代",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "替代方案包括人工读网站写开场白或既有CRM流程。应先比较少量草稿的来源准确率与人工修改分钟数，而非扩大量。销售模板的复制门槛低，行业知识与事实审核更可能构成交付价值；本轮无外联。"
+    },
+    {
+      "id": "operation",
+      "title": "维护与失败恢复",
+      "source_ids": [
+        "Sn8n"
+      ],
+      "body": "限定允许读取的网站和页面数，限流可等待分批，但访问拒绝直接停该源。失败不应编造个性化，也不应重复写行。保存线索ID、来源URL、读取时间、稿件版本与审核状态。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用分析",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合愿意逐条审核、已有明确服务和合法数据来源的人。可能少些摘录，但草稿平淡意味着仍需编辑；无净省时。设置数据列、证据字段与人工审稿，按线索批次运行，维护页面变化与来源弃用。"
+    },
+    {
+      "id": "risks",
+      "title": "隐私和错误风险",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "同名企业、过期网页、虚构赞美和把播客线索当通用商业买家都会失真。事实来源公开不代表可无限采集、发送或共享联系人。预热数周是来源说法，不是投递成功保证；不要把读稿批准当所有后续发送许可。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "仅建议受控试点。先用虚构或已获准的少量网站材料生成草稿，测事实引用是否正确、是否空洞、人工改稿耗时；本轮未运行。若资料无法核验或编辑成本不降，不扩大自动化。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d8caf28be837b71180e62d69b82bbf0da9ed12eb6dbdb2e4a97f6de7d3f76462",
+      "How it went": "e7bdab592f5e14a74e8c668d52d6b0e04ca6623a817b49a1eb592448605e79a8",
+      "Worth knowing": "08297622ec3f33820189f3a1ddff497f5634da9cdd5ce93f952fc9df69da3e65"
+    },
+    "actual_agents": [
+      "n8n"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build me a workflow that reads leads from [spreadsheet or lead source], visits each lead's website [website column], and uses AI to write a one-sentence personalized opening line for a cold email about [what I offer]. Write each line into a new column next to the lead in my spreadsheet, and don't send any emails. Test it on 5 leads first and show me the results before running the full list.",
+    "agent": "n8n",
+    "source_url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+    "observed_at": "2026-10-19T07:17:19.867549+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "4446110bef4c9ae454d6543dfcff1ac565ed9f13c437658414ddbff4436ca6cc"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://unpromptable.substack.com/p/ai-cold-email-system-tested",
+    "source_title": "AI cold email system tested",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:45:22.230152+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "公开web普通读取和一次重试均失败；不以目录或模板冒充原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可减少摘录的假设需与逐条改稿成本比较。",
+    "audience": "有明确服务及获准线索来源的独立销售或小团队。",
+    "use": "从网站事实准备邮件开场白供人工审阅。",
+    "benefit": "无回复或净省时证据；来源称草稿平淡。",
+    "setup_cost": "数据来源、列映射、证据字段和审核标准。",
+    "maintenance_cost": "页面变化、来源弃用、限流与人工修订。",
+    "frequency": "按线索批次，实际频率未知。",
+    "privacy_risk": "联系人、公司资料和潜在外联受众。",
+    "error_risk": "同名错配、事实过期、空泛或虚构个性化。",
+    "source_ids": [
+      "Sdirectory",
+      "Sn8n"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "目录模板要求先5条不发送；本轮不处理真实联系人。",
+    "prerequisites": "虚构公司网页材料、明确服务和预期事实。",
+    "tools": "本地草稿表，原文流程工具仅作为研究对象。",
+    "expected_result": "每条开场白引用真实给定事实并保留未知项；本轮未试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/personalize-cold-email-openers-from-lead-websites",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Build me a workflow that reads leads from [spreadsheet or lead source], visits each lead's website [website column], and uses AI to write a one-sentence personalized opening line for a cold email about [what I offer]. Write each line into a new column next to the lead in my spreadsheet, and don't send any emails. Test it on 5 leads first and show me the results before running the full list."
+      },
+      {
+        "title": "开场白事实验收",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只用给定虚构公司网页材料，为明确服务写一句开场白并附事实出处；没有证据则留空说明。不要采集真实联系人、写入外部表格、连接发送工具或发送邮件。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原作者数据未经原文核验，未取得独立使用者结果。"
+  },
+  "disconfirming_evidence": "来源替换、usable定义未知、无回复结果、草稿平淡与发送固定成本。",
+  "limitations": "没有真实线索抓取、Sheet写入、邮件草稿/发送/预热或购买；价格仅2026-10-20所读官方条件。",
+  "archive_source_sha256": "8346f273f9da62751c9a21ada3813002d26145f28875e0074c356900541bb597",
+  "translation_sha256": "af3f3d19683250f37351fb4519d79151a33e14b163f1454ff17e820f487b1779"
+}
