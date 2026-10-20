@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "research-score-and-draft-outreach-for-leads",
+  "url": "https://agentusecases.ai/use-case/research-score-and-draft-outreach-for-leads",
+  "title": "用Make研究销售线索、评分并起草跟进邮件",
+  "industry": "销售运营",
+  "researched_at": "2026-10-20T06:13:23.974537+00:00",
+  "brief_reason": "原帖不可读，目录为教程流程说明，无评分实例、销售效果或付费证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证有来源的评分与不发送的草稿",
+    "reason": "业务收益和真实评分质量尚未核实。",
+    "next_action": "虚构线索设计规则与草稿验收。",
+    "stop_condition": "事实编造、无法约束发送、审核成本无改善。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/research-score-and-draft-outreach-for-leads",
+      "title": "许可目录线索评分案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:13:23.974537+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:11:32Z",
+        "end": "2026-10-20T06:11:38Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1663,
+      "sha256": "9e41f4a051e8d6d754b657de74060076c7117b2339015bd0869600c6b482703b",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "Make连接HubSpot、Slack、Gmail、Google Calendar，研究评分和草稿；无绩效数字或评分实例。1–10是源站试用模板，不是经核原作者算法。"
+    },
+    {
+      "id": "Shubspot",
+      "url": "https://knowledge.hubspot.com/scoring/understand-the-lead-scoring-tool",
+      "title": "HubSpot评分工具说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:13:23.974537+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:11:44Z",
+        "end": "2026-10-20T06:11:49Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 65,
+      "sha256": "00714159439828866eec2146974057ce8aa21681e7989d616ecee76157a6e323",
+      "hash_scope": "Researcher factual notes, not raw HTML",
+      "supports": "2026-09-02更新，现成fit、engagement、combined评分；对象和AI能力有订阅条件，不是所有账户免费功能。"
+    },
+    {
+      "id": "Sdraft",
+      "url": "https://developers.google.com/workspace/gmail/api/guides/drafts",
+      "title": "Gmail草稿创建与发送",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:13:23.974537+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:11:44Z",
+        "end": "2026-10-20T06:11:53Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 51,
+      "sha256": "817c2c9aed1314a841a8cb8934813a39df6e5cb21bbebea3f007fc51dd68b9f6",
+      "hash_scope": "Researcher factual notes, not raw HTML",
+      "supports": "草稿容器ID稳定，替换正文时内部message ID改变；发送删除草稿并返回SENT新message。"
+    },
+    {
+      "id": "Sscope",
+      "url": "https://developers.google.com/workspace/gmail/api/auth/scopes",
+      "title": "Gmail权限范围",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:13:23.974537+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:11:44Z",
+        "end": "2026-10-20T06:11:53Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 46,
+      "sha256": "76e708b35c45ccf393bf33297091ec780938e7a80f94697af633e4459f6e715f",
+      "hash_scope": "Researcher factual notes, not raw HTML",
+      "supports": "gmail.compose同时允许管理草稿和发送邮件，不能仅凭此scope宣称技术上仅草稿。"
+    },
+    {
+      "id": "Scalendar",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/freebusy/query",
+      "title": "Google Calendar忙闲查询",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:13:23.974537+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:11:44Z",
+        "end": "2026-10-20T06:11:53Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 42,
+      "sha256": "c5c92541bb6b21fd01bf9cd1c0b997216a1a8f5e86d460e3ab6d4160de2524a8",
+      "hash_scope": "Researcher factual notes, not raw HTML",
+      "supports": "查询返回busy区间及各日历errors，不创建会议；开始边界包含、结束边界不包含。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "Make连接HubSpot、Slack、Gmail、Google Calendar，研究评分和草稿；无绩效数字或评分实例。1–10是源站试用模板，不是经核原作者算法。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "2026-09-02更新，现成fit、engagement、combined评分；对象和AI能力有订阅条件，不是所有账户免费功能。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Shubspot"
+      ]
+    },
+    {
+      "statement": "草稿容器ID稳定，替换正文时内部message ID改变；发送删除草稿并返回SENT新message。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sdraft"
+      ]
+    },
+    {
+      "statement": "gmail.compose同时允许管理草稿和发送邮件，不能仅凭此scope宣称技术上仅草稿。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sscope"
+      ]
+    },
+    {
+      "statement": "查询返回busy区间及各日历errors，不创建会议；开始边界包含、结束边界不包含。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Scalendar"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "销售运营团队希望少花时间收集背景、筛选和写首稿。付款人可能是销售负责人；没有真实购买、预算或使用频率证据。需求应按每条线索人工审核成本衡量。"
+    },
+    {
+      "id": "offer",
+      "title": "交付与收入机制",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议交付是一条带来源和规则解释的线索记录加待审核邮件草稿。可假设收配置及维护费，但不能把模板链接当付费客户或稳定订阅。业务结果仍需人工跟进。"
+    },
+    {
+      "id": "acquisition",
+      "title": "获客和验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "先在明确行业与获准数据上找小范围验证，不批量联系陌生人。验收分字段正确性、事实来源、评分一致性和草稿可用性；发送率、回复率、成交率不能混在一起。"
+    },
+    {
+      "id": "scoring",
+      "title": "评分方法",
+      "source_ids": [
+        "Shubspot",
+        "Sdirectory"
+      ],
+      "body": "把企业适配度和已观测互动分开，避免公开资料丰富就虚高。缺信息列未知，不能强行补数；1–10分是规则表达，未校准前不是购买概率。用相同输入重复比较结果，并记录规则版本。"
+    },
+    {
+      "id": "delivery",
+      "title": "草稿与发送边界",
+      "source_ids": [
+        "Sdraft",
+        "Sscope"
+      ],
+      "body": "保存草稿不代表发送，草稿ID与邮件message ID也不同。gmail.compose具有发信能力，需要移除发送动作、限制工具和人工批准步骤；一句不要发送不能证明实际权限隔离。案例实际授权配置未知。"
+    },
+    {
+      "id": "calendar",
+      "title": "日历与跟进",
+      "source_ids": [
+        "Scalendar"
+      ],
+      "body": "可用忙闲区间辅助提出时间，但查询失败应标未知，不能推为空闲；空闲也不是客户同意或会议已创建。此案例没有预订结果，不应宣称全自动安排客户会议。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与替代",
+      "source_ids": [
+        "Shubspot"
+      ],
+      "body": "成本含五应用访问、研究与模型调用、人工纠错、配额和流程维护。HubSpot自带规则评分是直接替代，是否可用需核账户订阅。未取得实际工时、用量与服务报价，因此不估虚构毛利。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "独立销售或小团队已有这套工具时，可能减少重复摘录与起草；没有量化收益。准备理想客户标准和审核样本，维护规则、数据新鲜度与草稿去重。低频用户搭建五应用可能不划算。"
+    },
+    {
+      "id": "risks",
+      "title": "隐私和错误",
+      "source_ids": [
+        "Sscope",
+        "Sdirectory"
+      ],
+      "body": "CRM联系人、邮件内容、Slack频道受众和日历应最小范围处理。网页事实可能过时或同名错配；个性化不能编造看过对方内容。网页和工具返回内容不能授权发送或扩大数据访问。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论和下一步",
+      "source_ids": [
+        "Sdirectory",
+        "Sdraft"
+      ],
+      "body": "仅建议受控试点。用虚构公司与联系人设计已知、缺失、矛盾及重复条目，核来源、规则和草稿去重，不连接真实应用。本轮未试用；若审核成本不降、事实编造或无法阻止自动发送，停止扩大。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/research-score-and-draft-outreach-for-leads",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "9e41f4a051e8d6d754b657de74060076c7117b2339015bd0869600c6b482703b",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "b5ebba6fb8e63f35cb3d5f3660ed4d4879888b2da091e6c018b67443cd646abf",
+      "How it went": "d514d7e0ed695c2b48dd07870dd7af6ab67bb8f1fc90c0a38f4d21ca7beadee7",
+      "Worth knowing": "ea9bbaa80152ad3d3dec5aca5cdbc16e0c77711078f67a9f6358732e39dca7d6"
+    },
+    "actual_agents": [
+      "Make"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a Make scenario that takes new leads from [lead source, e.g. a Google Sheet or CRM], researches each company and contact on the web, and scores them 1 to 10 against my ideal customer: [describe ICP]. For leads scoring [threshold] or higher, draft a personalized follow-up email referencing something specific from the research, and save it as a draft in [email tool]. Do not send anything; stop once drafts and scores are written for the first [number] leads for me to review.",
+    "agent": "Make",
+    "source_url": "https://agentusecases.ai/use-case/research-score-and-draft-outreach-for-leads",
+    "observed_at": "2026-10-19T07:17:11.794232+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "ea393b333b6fbe9dfc8e0b1e890f408ee55da51a1773808a2490d57164f15b66"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/Make/comments/1to8mmo/tutorial_aiagent_for_lead_qualification_automated",
+    "source_title": "Make lead qualification tutorial original post",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:13:23.974537+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit既有安全限制；仅保留许可目录转述，未以模板或摘要冒充作者原方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "减少摘录与初稿的可能收益，未测净省时。",
+    "audience": "已有相关应用的独立销售或小团队。",
+    "use": "研究线索、解释评分并准备跟进草稿。",
+    "benefit": "无回复、成交或省时量化证据。",
+    "setup_cost": "工具访问、理想客户规则、来源和审核样本。",
+    "maintenance_cost": "数据新鲜度、规则版本、连接与草稿去重。",
+    "frequency": "随新线索触发，数量未知。",
+    "privacy_risk": "CRM、邮件、Slack受众和日历信息。",
+    "error_risk": "同名错配、分数漂移、个性化编造或意外发送。",
+    "source_ids": [
+      "Sdirectory",
+      "Sscope"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "模板不是原作者实际提示词；本轮不连接真实账户或保存第三方草稿。",
+    "prerequisites": "虚构公司与联系人、明确评分规则和预期答案。",
+    "tools": "本地表格与草稿文件，不接真实服务。",
+    "expected_result": "每项分数有依据，未知项保留，重复条目不产生重复稿；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/research-score-and-draft-outreach-for-leads",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Build a Make scenario that takes new leads from [lead source, e.g. a Google Sheet or CRM], researches each company and contact on the web, and scores them 1 to 10 against my ideal customer: [describe ICP]. For leads scoring [threshold] or higher, draft a personalized follow-up email referencing something specific from the research, and save it as a draft in [email tool]. Do not send anything; stop once drafts and scores are written for the first [number] leads for me to review."
+      },
+      {
+        "title": "虚构线索验收设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Shubspot",
+          "Sdraft"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只用虚构资料，分别列公司适配事实、互动事实、未知项及规则分。每条草稿引用给定事实并保留条目ID；不连接CRM、邮箱、Slack或日历，不发送、邀请或保存第三方草稿。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖不可读，无独立使用效果；官方文档只是能力和替代证据。"
+  },
+  "disconfirming_evidence": "教程无绩效、原生评分替代、五应用维护成本及草稿权限包含发送。",
+  "limitations": "没有实际联系人研究、外联、第三方草稿、日历邀请或真实试用；未取得原模板文件。",
+  "archive_source_sha256": "9e41f4a051e8d6d754b657de74060076c7117b2339015bd0869600c6b482703b",
+  "translation_sha256": "190e43eeeab2bc99681f144b2bba60493a99c500a98da3272a1cc68503e77241"
+}
