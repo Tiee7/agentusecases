@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **67**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **68**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -77,3 +77,4 @@
 | 用Claude搜索种子并交给qBittorrent处理 | [简报](../../reports/brief/have-claude-find-a-torrent-and-add-it-to-qbittorrent.md) |
 | 用Operator比较跨店商品并准备购买 | [简报](../../reports/brief/do-your-online-shopping-through-operator.md) |
 | 为Perplexity Comet生成交易信号和操作提示 | [简报](../../reports/brief/generate-prompts-for-a-browser-agent-to-execute-trades.md) |
+| 用Claude Code查询会话统计并制作演讲幻灯片 | [简报](../../reports/brief/query-session-records-and-build-talk-slides-with-claude-code.md) |
