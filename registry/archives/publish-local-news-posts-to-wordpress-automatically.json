@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/publish-local-news-posts-to-wordpress-automatically",
-  "observed_at": "2026-10-19T07:17:31.767824+00:00",
-  "html_sha256": "4f0682d52728fe6cefdf002ea24442ff675bc5c5e9b51dfd648230988687b7d6",
+  "observed_at": null,
+  "html_sha256": "ef68fdc86a8c95034f8fca448c62003992fdfbf1492419b052b843d593302439",
   "body_sha256": "04f1a0425f3b4c658f85da52d9d34d7b84194e182e3bdf5fd54b525a003b7119",
   "status": "observed",
   "fields": {
@@ -78,9 +78,10 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "observed",
-      "value": "2026-10-17",
-      "sha256": "1381c67fef4c36c5f4f08ad71a41b9758ba2ac250e7f674cabff6bcc152db3e1"
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "try_it": {
       "status": "observed",
@@ -95,12 +96,27 @@
     "language": "en",
     "body": "Publish local news posts to WordPress automatically\nClaude Code agents research local news, write HTML posts, upload them to WordPress, set featured images, verify and log results, and also check Airtable and Gmail.\nDone with\nCC\nClaude Code\nWhat they did\nKoka Sexton runs Claude Code in a terminal with credentials for WordPress, Airtable and Gmail. The agent researches local news, fetches source articles and writes full HTML posts. It then uploads them with WP-CLI or a script it writes, sets featured images, checks HTTP responses and logs the results. Publishing three articles takes a single request.\nHow it went\nHe says a 90-minute human process now happens in one conversation turn. The throughput figures come from his own internal benchmarks, and the article gives no independent measurements.\nWorth knowing\nWrite the verification script before the first output, because hallucinations can go live otherwise. The article also suggests running the agent in parallel with a human for two weeks.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a workflow that researches recent news about [my town or topic], writes [number] short HTML posts with sources, and prepares them as drafts on my WordPress site [site URL] with a featured image. Afterward, check each draft loads correctly and log the titles and links in [Airtable or a spreadsheet]. Stop with the drafts ready and show me them before anything is published.\nOriginal source: https://kokasexton.com/claude-code-marketing-ops-power-tool/",
     "body_sha256": "04f1a0425f3b4c658f85da52d9d34d7b84194e182e3bdf5fd54b525a003b7119",
-    "archived_at": "2026-10-19T07:17:31.767824+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T11:01:44Z",
+      "end": "2026-10-20T11:01:51Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:17:31.767824+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-20T11:01:44Z",
+    "end": "2026-10-20T11:01:51Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "capture_basis": "Own cloud browser main DOM",
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "04f1a0425f3b4c658f85da52d9d34d7b84194e182e3bdf5fd54b525a003b7119",
+    "translated_at": "2026-10-20T11:06:31.706905+00:00",
+    "body": "自动将本地新闻文章发布到WordPress\nClaude Code agent研究本地新闻、撰写HTML文章、上传到WordPress、设置特色图片、核验并记录结果，也会检查Airtable和Gmail。\n使用的是\nCC\nClaude Code\n他们做了什么\nKoka Sexton在终端里运行Claude Code，并为它配置WordPress、Airtable和Gmail的凭据。agent研究本地新闻，获取来源文章并撰写完整HTML文章。随后，它使用WP-CLI或自己编写的脚本上传文章，设置特色图片，检查HTTP响应并记录结果。发布三篇文章只需提出一次请求。\n进展与成效\n他说，原本需要人工90分钟完成的流程，现在一个对话轮次就能完成。吞吐量数字来自他自己的内部基准，文章没有提供独立测量结果。\n值得了解\n在生成第一份输出之前就编写验证脚本，否则幻觉内容可能直接上线。文章还建议让agent与人工流程并行运行两周。\n亲自尝试\n使用\nClaude Code\n复制提示词\n搭建一个工作流，研究关于[我的城镇或主题]的近期新闻，撰写[数量]篇附带来源的简短HTML文章，并在我的WordPress网站[网站URL]上将它们准备为带特色图片的草稿。之后，检查每份草稿是否正常加载，并将标题和链接记录到[Airtable或电子表格]。草稿准备好后停下来，在发布任何内容之前先展示给我。\n原始来源：https://kokasexton.com/claude-code-marketing-ops-power-tool/",
+    "body_sha256": "426aa4f8277d12104f3502ae20f481afc7997671f0bb9a52fc4905fa65a96431",
+    "status": "available"
   }
 }
