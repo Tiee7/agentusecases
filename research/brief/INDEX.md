@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **73**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **74**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -83,3 +83,4 @@
 | 用智能体浏览器整理旅行与公寓候选信息 | [简报](../../reports/brief/use-agentic-browsers-for-quizzes-trip-planning-and-apartment.md) |
 | 用Make把Monday订单同步到Xero票据和附件 | [简报](../../reports/brief/sync-monday-orders-to-xero-pos-invoices-and-bills.md) |
 | 用Make研究销售线索、评分并起草跟进邮件 | [简报](../../reports/brief/research-score-and-draft-outreach-for-leads.md) |
+| 用ChatGPT和GitHub MCP把讨论摘要存入仓库 | [简报](../../reports/brief/save-ai-q-a-summaries-into-git-repos-as-persistent-notes.md) |

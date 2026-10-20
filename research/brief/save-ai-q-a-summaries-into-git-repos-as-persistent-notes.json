@@ -1,0 +1,305 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+  "url": "https://agentusecases.ai/use-case/save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+  "title": "用ChatGPT和GitHub MCP把讨论摘要存入仓库",
+  "industry": "个人知识管理",
+  "researched_at": "2026-10-20T06:24:31.980411+00:00",
+  "brief_reason": "原作者评论两次无法读取，目录仅自述可靠性改善，无量化或商业验证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "保存、准确摘要与下一次检索分别验收",
+    "reason": "文件通路可解释，实际可靠性收益未测。",
+    "next_action": "虚构项目测试保存和按版本恢复决定。",
+    "stop_condition": "误写承诺、敏感内容入库或检索成本无改善。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+      "title": "许可目录Git持久笔记案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:24:31.980411+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:22:21Z",
+        "end": "2026-10-20T06:22:27Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1408,
+      "sha256": "a445d9ecd51efcae4bd24f1c2c38f49711aa32c859e52b721113444c759bf4a2",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "用户用ChatGPT、GitHub MCP和AGENTS.md存摘要，声称更可靠但无量化证据。"
+    },
+    {
+      "id": "Smcp",
+      "url": "https://github.com/github/github-mcp-server",
+      "title": "GitHub官方MCP服务器",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:24:31.980411+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:22:27Z",
+        "end": "2026-10-20T06:22:38Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 58,
+      "sha256": "492787bc50a1891e10b74a0d925894be16956c13cd78812d8bad7d4ee8f93f30",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "支持工具选择和read-only模式；只读跳过写工具。MCP工具通路不保证摘要正确、自动读取指定文件或未来会话召回。"
+    },
+    {
+      "id": "Scontents",
+      "url": "https://docs.github.com/en/rest/repos/contents",
+      "title": "GitHub文件内容API",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:24:31.980411+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:22:44Z",
+        "end": "2026-10-20T06:23:15Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 53,
+      "sha256": "2fe709c2e118c020b05624fd49e2e09c138b88c182cc301aadc795e887f76a86",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "更新需文件blob SHA；创建/更新和删除并发可冲突，官方要求串行。写文件需要相应Contents权限。"
+    },
+    {
+      "id": "Srevert",
+      "url": "https://git-scm.com/docs/git-revert",
+      "title": "Git revert说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:24:31.980411+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:22:44Z",
+        "end": "2026-10-20T06:22:52Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 38,
+      "sha256": "e48a728b3a5ddd5e9895c4a668320ce600c38573f39793ff7c206bc6c68f4a7a",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "revert创建新提交逆转旧改动，不抹去已有历史；应区分修正正文与清除历史。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "用户用ChatGPT、GitHub MCP和AGENTS.md存摘要，声称更可靠但无量化证据。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "支持工具选择和read-only模式；只读跳过写工具。MCP工具通路不保证摘要正确、自动读取指定文件或未来会话召回。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Smcp"
+      ]
+    },
+    {
+      "statement": "更新需文件blob SHA；创建/更新和删除并发可冲突，官方要求串行。写文件需要相应Contents权限。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Scontents"
+      ]
+    },
+    {
+      "statement": "revert创建新提交逆转旧改动，不抹去已有历史；应区分修正正文与清除历史。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Srevert"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "长期项目反复解释背景、忘记先前决定，适合考虑外部可检索记录。用户是维护多个仓库的人；没有付费客户或团队采购证据。不能把个人习惯直接当知识管理市场需求验证。"
+    },
+    {
+      "id": "offer",
+      "title": "交付和收入假设",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可设想交付摘要模板、目录和检索约定，按配置与维护收费；实际收费未知。价值应是恢复上下文更快、决定可追溯，而不是多生成文件。"
+    },
+    {
+      "id": "acquisition",
+      "title": "获客与验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "先从已有多个长期项目、愿意审核摘要的人验证。用事先指定的问题测试下一会话能否找回决定和理由，再比较人工笔记；本轮没有联系用户或做效果实验。"
+    },
+    {
+      "id": "workflow",
+      "title": "存储与检索的区别",
+      "source_ids": [
+        "Smcp",
+        "Sdirectory"
+      ],
+      "body": "一次提交成功只表示文件已保存，不保证以后自动读取。AGENTS.md在此案例是用户约定的入口，不是所有宿主通用自动加载保证。开始会话需明确选仓库、分支及相关笔记，并展示来源版本。"
+    },
+    {
+      "id": "quality",
+      "title": "摘要准确性",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "问题、选项、已作决定、待确认项分开，避免把助手建议写成用户承诺。保留日期、背景和决定者，并让用户先看内容。摘要会丢细节，不能以版本控制代替事实审核。"
+    },
+    {
+      "id": "delivery",
+      "title": "版本与并发",
+      "source_ids": [
+        "Scontents",
+        "Srevert"
+      ],
+      "body": "写前读最新版本和文件SHA，串行更新或走分支审核；冲突时合并而不整份覆盖。提交后读回路径、内容和commit。更正可用新提交保留说明，但旧敏感内容仍可能留在历史。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与替代",
+      "source_ids": [
+        "Smcp"
+      ],
+      "body": "成本主要是摘要审核、命名索引、权限和检索维护，而不只是文本存储。普通Markdown人工笔记是低门槛替代；没有净省时、维护工时或定价，不给虚构毛利。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合已有Git习惯、跨会话长期研究的人；临时聊天未必值得配置。设置入口文件与目录规则，维护失效链接、过期决定和矛盾笔记。每次长问答后按需记录，实际频率未知。"
+    },
+    {
+      "id": "privacy",
+      "title": "隐私与错误风险",
+      "source_ids": [
+        "Smcp",
+        "Srevert"
+      ],
+      "body": "仓库可见性、协作者和工具写权限应明确；只记录获准的非敏感摘要，不提交凭据、私人通信全文或无许可资料。仓库文本属于背景，不能替用户授予新操作权限。版本留存也会延长误存信息暴露。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Sdirectory",
+        "Scontents"
+      ],
+      "body": "适合内部效率工具，商业证据不足。先用虚构项目做“摘要审核→保存→新会话按指定版本找回”测试，检查未知项和改决定后旧版引用；本轮未试用。若召回仍需大量手动查找或摘要误写承诺，先修规则再扩大。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "a445d9ecd51efcae4bd24f1c2c38f49711aa32c859e52b721113444c759bf4a2",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "dfac52dcc8402bef684aa862fabc0b1dbca081d3206e9aa99d7e47ad05857d6c",
+      "How it went": "06fe0f8f9c331aabb3b82b1f11bf9650cf113ee3364cefed382884e51309f3b2",
+      "Worth knowing": "563c68f9e0fb74c58a191716f133bdce29f7f7736d67e5aca4b2e10a3b60963d"
+    },
+    "actual_agents": [
+      "ChatGPT"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Connect to my GitHub repo [owner/repo] and read its AGENTS.md for where notes belong. At the end of our conversation about [topic], write a short summary of the question, the options we weighed, and the decision we reached into a new markdown file at [notes folder path]. Show me the file contents and target path before you commit anything, and stop once I approve and the commit is made.",
+    "agent": "ChatGPT",
+    "source_url": "https://agentusecases.ai/use-case/save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+    "observed_at": "2026-10-19T07:16:57.865342+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c5158284761fe743a5ed6771570088b84c39f240cfa5941816d80d3afe2e8fa7"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50128580",
+    "source_title": "HN discussion on persistent repository notes",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:24:31.980411+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "公开网页工具普通读取失败并重试一次仍失败；停止该来源，未以目录模板代替作者原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可追溯持久文件有实用性，但未测净省时和召回。",
+    "audience": "维护长期项目且熟悉Git的个人。",
+    "use": "保存讨论、选择、决定和待办背景。",
+    "benefit": "目录作者声称更可靠，无数字或失败实例。",
+    "setup_cost": "已有MCP访问、仓库权限、目录和入口规则。",
+    "maintenance_cost": "摘要审核、链接、过期决定和版本冲突处理。",
+    "frequency": "长问答后按需；未给次数。",
+    "privacy_risk": "敏感摘要或私人通信误入有历史和协作者的仓库。",
+    "error_risk": "建议误写决定、丢上下文、旧版本覆盖和未来会话未检索。",
+    "source_ids": [
+      "Sdirectory",
+      "Scontents"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源模板要求先看内容路径再批准；本轮不配置新权限或导出真实对话。",
+    "prerequisites": "虚构项目对话、指定笔记路径和可验证决定。",
+    "tools": "本地Markdown与版本比较；实际写远端需明确授权。",
+    "expected_result": "摘要准确区分选项/决定/未知，读回内容版本一致；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/save-ai-q-a-summaries-into-git-repos-as-persistent-notes",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Connect to my GitHub repo [owner/repo] and read its AGENTS.md for where notes belong. At the end of our conversation about [topic], write a short summary of the question, the options we weighed, and the decision we reached into a new markdown file at [notes folder path]. Show me the file contents and target path before you commit anything, and stop once I approve and the commit is made."
+      },
+      {
+        "title": "虚构决定摘要验收",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Scontents"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只用给定虚构讨论写本地摘要，分清问题、选项、已确认决定和待确认项。不要把建议写成承诺，不读取其他对话，不连接仓库或配置凭据；给出拟议路径、版本和用于下次检索的关键词。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原评论未取得，官方工具文档不当使用收益反馈。"
+  },
+  "disconfirming_evidence": "保存不等于召回，摘要仍可失真，索引维护与历史隐私负担。",
+  "limitations": "未新增MCP、凭据、仓库、权限或实际试用；不比较未经测量的内置记忆性能。",
+  "archive_source_sha256": "a445d9ecd51efcae4bd24f1c2c38f49711aa32c859e52b721113444c759bf4a2",
+  "translation_sha256": "2371ef6ace2bb0f344389884b1554bd4e5afbfdd087903ca4809741a401126d8"
+}
