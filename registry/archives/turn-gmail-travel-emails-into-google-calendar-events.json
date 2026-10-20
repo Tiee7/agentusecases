@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
-  "observed_at": "2026-10-19T07:16:15.703722+00:00",
-  "html_sha256": "1a72facb79d6955c1c0b428feb8f5203fdaad79e7b4e2223d1f2f0f8a4fa25f2",
+  "observed_at": null,
+  "html_sha256": "8968a392b6a908f5ada332a24f6ddeda9dc78796f580ae2ecb355a5a08a935dc",
   "body_sha256": "f7fece3492f0f185f904e95b02d1384faff4b9597b52d78da545eacbbae47071",
   "status": "observed",
   "fields": {
@@ -79,9 +79,10 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "observed",
-      "value": "2026-10-16",
-      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "try_it": {
       "status": "observed",
@@ -96,12 +97,27 @@
     "language": "en",
     "body": "Turn Gmail travel emails into Google Calendar events\nUser tried Manus and ChatGPT Agent to read Gmail travel details and create a calendar event; Manus was slow and both failed.\nDone with\nMA\nManus\nGA\nChatGPT Agent\nWhat they did\nThe poster tried Manus, and also ChatGPT Agent, on a travel-admin task: read booking details from Gmail and turn them into a Google Calendar event. They had to supervise the process heavily, and Manus was supposed to handle the Gmail and Google Calendar integrations but was so slow and unreliable that the poster abandoned it and finished the work manually.\nHow it went\nIt did not work for this use case. The poster says supervising Manus took about 1.5 hours for work they estimate would take 15 minutes by hand, and both Manus and ChatGPT Agent failed to create the travel event from Gmail; they add that Claude chat succeeded in under a minute.\nWorth knowing\nThe main catch was reliability of the Gmail and Google Calendar integrations: the poster says the agentic route became a net negative because oversight took far longer than doing it directly.\nTry it yourself\nwith\nManus\nCopy prompt\nSearch my Gmail for travel confirmation emails from [airline, hotel, or train company] for [trip or date range]. For each booking, pull the dates, times, confirmation number, and location, then draft a Google Calendar event with those details in the description. Show me the list of events you plan to create and wait for my approval before saving any of them.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1ry946y/manus_review_for_a_task_chatgpt_agent_couldnt",
     "body_sha256": "f7fece3492f0f185f904e95b02d1384faff4b9597b52d78da545eacbbae47071",
-    "archived_at": "2026-10-19T07:16:15.703722+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T13:47:28Z",
+      "end": "2026-10-20T13:47:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:16:15.703722+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-20T13:47:28Z",
+    "end": "2026-10-20T13:47:40Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "capture_basis": "Own cloud browser main DOM, not full SSR",
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "f7fece3492f0f185f904e95b02d1384faff4b9597b52d78da545eacbbae47071",
+    "translated_at": "2026-10-20T13:57:38.548565+00:00",
+    "body": "将Gmail旅行邮件转换为Google日历事件\n用户尝试让Manus和ChatGPT Agent读取Gmail中的旅行详情并创建日历事件；Manus很慢，而且两者都失败了。\n使用的是\nManus\nChatGPT Agent\n他们做了什么\n发帖者尝试了Manus，也尝试了ChatGPT Agent，来完成一项旅行行政任务：读取Gmail中的预订详情，并将其转换为Google日历事件。他们不得不密切监督整个过程。Manus本应处理Gmail和Google日历的集成，但它太慢且不可靠，因此发帖者放弃了它，手动完成了工作。\n进展与成效\n这个用例没有成功。发帖者说，监督Manus花了约1.5小时，而他们估计手动完成这项工作只需15分钟；Manus和ChatGPT Agent都未能根据Gmail创建旅行事件。他们还补充说，Claude聊天在不到一分钟内成功了。\n值得了解\n主要问题是Gmail和Google日历集成的可靠性：发帖者说，智能体方式带来了负收益，因为监督所花的时间远远超过直接完成任务。\n亲自尝试\n使用\nManus\n复制提示词\n搜索我的Gmail，查找[航空公司、酒店或铁路公司]发来的、涉及[行程或日期范围]的旅行确认邮件。对每项预订，提取日期、时间、确认号和地点，然后起草Google日历事件，并把这些详情放在描述里。向我展示你打算创建的事件列表，在保存任何事件之前等待我的批准。\n原始来源：https://www.reddit.com/r/ChatGPT/comments/1ry946y/manus_review_for_a_task_chatgpt_agent_couldnt",
+    "body_sha256": "0f894dd0c512d98080492595002f43b0219df64d78699c4099d775795e4067e1",
+    "status": "available"
   }
 }
