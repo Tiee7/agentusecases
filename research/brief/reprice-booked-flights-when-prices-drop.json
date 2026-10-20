@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "reprice-booked-flights-when-prices-drop",
+  "url": "https://agentusecases.ai/use-case/reprice-booked-flights-when-prices-drop",
+  "title": "用AI agent监测已订航班与酒店的降价",
+  "industry": "旅行预订管理",
+  "researched_at": "2026-10-20T06:55:10.037719+00:00",
+  "brief_reason": "原帖受限、服务未具名，节省与退款类型未独立核验，缺收费和运营证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先确认同等条件、净收益与退款形式",
+    "reason": "发现降价与获得现金退款不是同一结果。",
+    "next_action": "虚构预订条款与审批测试。",
+    "stop_condition": "条件不明、净收益不明或无法安全恢复原预订。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/reprice-booked-flights-when-prices-drop",
+      "title": "许可目录预订后降价案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:55:10.037719+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:52:54Z",
+        "end": "2026-10-20T06:53:01Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1635,
+      "sha256": "e84506083300e9ae1d400ef306fea7673974f5b2b544e60bf8f0a7fadf977e81",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "半年$2000、酒店20–30%及评论退款为目录转述；服务未具名，Claude in Chrome只是建议试用工具。"
+    },
+    {
+      "id": "Sdelta",
+      "url": "https://www.delta.com/us/en/travel-planning-center/travel-planning-faqs",
+      "title": "Delta旅行计划FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:55:10.037719+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:53:10Z",
+        "end": "2026-10-20T06:53:15Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 50,
+      "sha256": "1d0a0ea61ef696a484aa875c5e155c1a362ddd3e0a080595dae17219cf80f51b",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "适用票价变更的较低差额可为eCredit；Basic和部分地区可能有费用。不是所有降价都会现金返还。"
+    },
+    {
+      "id": "Smarriott",
+      "url": "https://www.marriott.com/online-hotel-booking.mi",
+      "title": "Marriott最佳价格保证",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:55:10.037719+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:53:10Z",
+        "end": "2026-10-20T06:53:22Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 64,
+      "sha256": "76f8fedb92988f38c865dbf7be44031c78e6297d69f49b1de6d66519f4cf25e1",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "直接预订后24小时内且入住前至少24小时提出，同房型等条件的非Marriott比较价；后续官网降价不属该比较价，需满足其他条款。"
+    },
+    {
+      "id": "Sdot",
+      "url": "https://www.transportation.gov/individuals/aviation-consumer-protection/refunds",
+      "title": "美国交通部退款说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:55:10.037719+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:53:10Z",
+        "end": "2026-10-20T06:53:22Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 49,
+      "sha256": "b0bea80efb0660acc95998ed3c6cd34c7913b0c72669e3758f130c5450765edc",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "航司取消/重大变更等条件与旅客主动放弃正常运行不可退款票不同；不能据此推所有市场降价有现金退差权。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "半年$2000、酒店20–30%及评论退款为目录转述；服务未具名，Claude in Chrome只是建议试用工具。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "适用票价变更的较低差额可为eCredit；Basic和部分地区可能有费用。不是所有降价都会现金返还。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sdelta"
+      ]
+    },
+    {
+      "statement": "直接预订后24小时内且入住前至少24小时提出，同房型等条件的非Marriott比较价；后续官网降价不属该比较价，需满足其他条款。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Smarriott"
+      ]
+    },
+    {
+      "statement": "航司取消/重大变更等条件与旅客主动放弃正常运行不可退款票不同；不能据此推所有市场降价有现金退差权。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sdot"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "提前订机票酒店且条款允许调整的旅客，希望减少反复查价。用户有节省动机，但本例未证付费服务合同、收费结构或订单量。商旅、家庭旅行和不可改基础票的收益条件不同。"
+    },
+    {
+      "id": "offer",
+      "title": "交付与收入机制",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可假设收监测费或按核实净收益分成，但要定义现金、抵用额度、积分和未来折扣如何计价。旅客节省$2000不是服务商收入，更不是利润；本案例服务名与实际费率未知。"
+    },
+    {
+      "id": "matching",
+      "title": "同等条件比较",
+      "source_ids": [
+        "Smarriott",
+        "Sdelta"
+      ],
+      "body": "必须匹配航班时刻/舱等/行李与退改条件，酒店还需同日期、房型、床型、入住人数及包含项。不同限制的低价不能直接作为等价节省；席位或房价可能在确认前消失。"
+    },
+    {
+      "id": "mechanism",
+      "title": "退款机制分开",
+      "source_ids": [
+        "Sdelta",
+        "Sdot",
+        "Smarriott"
+      ],
+      "body": "Delta差价可能是eCredit；航司取消/重大变更退款与市场降价不同；Marriott最佳价保证有24小时窗口且不是官网后续降价保证。官方示例说明边界，不表示作者实际用了这两家。"
+    },
+    {
+      "id": "delivery",
+      "title": "执行与恢复",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "先形成可审查的比较结果、费用和受影响权益，再取得具体变更批准。监测授权不等于取消或重新购买授权；避免先取消旧行程再发现新价不可得。失败要核原预订状态，不能重复退款申请。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与经济边界",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包括邮箱解析、持续查价、规则适配、人工核价、客服、支付与退款争议。没有真实单位成本或服务费，不编造毛利。净收益还应扣费用，并单列抵用额度能否在有效期内实际使用。"
+    },
+    {
+      "id": "alternatives",
+      "title": "获客与替代",
+      "source_ids": [
+        "Sdelta",
+        "Smarriott"
+      ],
+      "body": "航司和酒店已有自助渠道，可先评估人工或价格提醒够不够。服务的潜在价值在跨预订持续核查与条件解释，不只是发现数字变小；没有执行获客或联络供应商。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "有多次可调整预订的个人可能减少查价，偶发且不可退改的用户收益可能很低。设置需明确行程范围与提醒规则，维护退改条件、价格来源、额度到期与邮箱权限。目录自述省钱尚无独立回款核验。"
+    },
+    {
+      "id": "privacy",
+      "title": "隐私和错误风险",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "邮箱含行程、身份和无关私信，确认码与信用卡也有风险。只提取必要预订信息、限制保存范围；不能因注册流程要求就代填凭据。错配旅客、重复预订、失去座位或优惠是高成本错误。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Sdirectory",
+        "Sdelta"
+      ],
+      "body": "仅建议受控验证：用虚构预订和公开条款测试同价条件、现金/额度区分、费用及批准步骤，不执行变更。本轮未试用。若不能核实票价条件和净收益，停止自动重订。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/reprice-booked-flights-when-prices-drop",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "e84506083300e9ae1d400ef306fea7673974f5b2b544e60bf8f0a7fadf977e81",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "1748d0e60b19dae504f51d4071ba47531c851146d9beaceb4d2f54bacd20d363",
+      "How it went": "c62d6dcb4f150deeb105db2355b09c5945fd269774d5b7f4b947fd75f7068de0",
+      "Worth knowing": "8a6357865ecbfa4726d9a60399f28492af53ca85999f539cdf06898703585537"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I've booked a flight with [airline] under confirmation code [code]. Check the airline's site today for the current price on the same flights and tell me whether it's lower than what I paid ([amount]). If it is, show me the refund or rebooking options and what each would cost or credit me, and pause for my approval before changing or submitting anything.",
+    "agent": "Claude in Chrome",
+    "source_url": "https://agentusecases.ai/use-case/reprice-booked-flights-when-prices-drop",
+    "observed_at": "2026-10-19T07:17:23.782630+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "2f948015d4b7af387fd826932642d53abcd0fcefd97a816ec5ac23a2c872a7e6"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/aiagents/comments/1rcr8cb/has_anyone_tried_ai_agents_for_postbooking_price",
+    "source_title": "Post-booking price agent discussion",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:55:10.037719+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit既有安全限制，未读取或使用镜像/搜索摘要替代。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "潜在省钱需以净费用、票价规则和实际回款核验。",
+    "audience": "经常提前预订且有可调整票价的旅客。",
+    "use": "持续比较已订航班酒店与当前同条件价格。",
+    "benefit": "目录有节省自述，未独立确认现金/额度及扣费。",
+    "setup_cost": "明确预订范围、价格条件、提醒与审批。",
+    "maintenance_cost": "查价、规则变更、费用、额度到期和权限检查。",
+    "frequency": "预订后至出行期间，具体间隔未知。",
+    "privacy_risk": "邮箱、行程、确认码、旅客及支付资料。",
+    "error_risk": "错配条件、额度误当现金、重复订取消及权益丢失。",
+    "source_ids": [
+      "Sdirectory",
+      "Sdelta"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "Claude in Chrome为推荐工具，原案例agent未具名；不输入真实确认码。",
+    "prerequisites": "虚构行程和票价规则、公开政策，预设比较条件。",
+    "tools": "只读规则核查与本地比较表。",
+    "expected_result": "明确差价、费用、现金/额度、未知和审批点；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/reprice-booked-flights-when-prices-drop",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I've booked a flight with [airline] under confirmation code [code]. Check the airline's site today for the current price on the same flights and tell me whether it's lower than what I paid ([amount]). If it is, show me the refund or rebooking options and what each would cost or credit me, and pause for my approval before changing or submitting anything."
+      },
+      {
+        "title": "虚构行程退差验收",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdelta",
+          "Smarriott"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只比较虚构预订与给定价格，列出是否同航班/房型/退改条件，区分现金、抵用额度及费用。不要访问邮箱、输入确认码或支付资料、取消、预订、联系或提交退款。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "目录转述多位评论，原帖与回款未核，不能计独立证实收益。"
+  },
+  "disconfirming_evidence": "条款/时间窗口限制、额度不是现金、部分预订零节省、邮箱和支付资料顾虑。",
+  "limitations": "政策示例截至2026-10-20读取，不替任何具体旅客认定权益；无个人行程或交易操作。",
+  "archive_source_sha256": "e84506083300e9ae1d400ef306fea7673974f5b2b544e60bf8f0a7fadf977e81",
+  "translation_sha256": "86b4bc15c671d0c2973b4fb74c9c9a61724116d88f9b6ea139c3ad4a1aee0432"
+}
