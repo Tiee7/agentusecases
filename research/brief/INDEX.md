@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **78**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **79**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -88,3 +88,4 @@
 | 用n8n读取线索网站并起草邮件开场白 | [简报](../../reports/brief/personalize-cold-email-openers-from-lead-websites.md) |
 | 用AI agent监测已订航班与酒店的降价 | [简报](../../reports/brief/reprice-booked-flights-when-prices-drop.md) |
 | 用OpenClaw退订邮件列表并整理文件 | [简报](../../reports/brief/unsubscribe-from-newsletters-and-tidy-files.md) |
+| 用OpenClaw跨邮箱、日历和Notion处理客户项目 | [简报](../../reports/brief/handle-a-client-project-across-gmail-calendar-and-notion.md) |

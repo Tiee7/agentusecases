@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "handle-a-client-project-across-gmail-calendar-and-notion",
+  "url": "https://agentusecases.ai/use-case/handle-a-client-project-across-gmail-calendar-and-notion",
+  "title": "用OpenClaw跨邮箱、日历和Notion处理客户项目",
+  "industry": "项目协调与知识工作",
+  "researched_at": "2026-10-20T09:49:14.879817+00:00",
+  "brief_reason": "作者原文受既有访问限制，只有许可目录转述及组件文档；无报告、日志、独立复现或商业付款数据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证可审查的跨应用协调",
+    "reason": "流程有明确用途，但错误统计和未经询问的日历动作需要分别核查；页数和自述耗时不足以证明收益。",
+    "next_action": "用虚构项目做只读提案与部分失败演练。",
+    "stop_condition": "跨客户混合、越过审批、无法标注来源或复核负担超过节省。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/handle-a-client-project-across-gmail-calendar-and-notion",
+      "title": "许可目录案例正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:45:39Z",
+        "end": "2026-10-20T09:45:51Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T09:49:14.879817+00:00",
+      "characters": 14209,
+      "sha256": "3708e9eb5c0124c4a3f3894344d7388f9aab491c265a95d37d3a6ef12870a438",
+      "hash_scope": "Single main DOM outerHTML",
+      "supports": "跨应用操作、42/40页、六小时/两天、错误统计、前三周投入变化均为目录转述。"
+    },
+    {
+      "id": "Scalendar",
+      "url": "https://developers.google.com/workspace/calendar/api/guides/create-events",
+      "title": "Google Calendar官方事件创建说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T09:45:59Z",
+        "end": "2026-10-20T09:46:10Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T09:49:14.879817+00:00",
+      "characters": 92,
+      "sha256": "3010d6d441dd53f68848db6c003cd9e3527a90346af4f972ef2624d0dcbc6991",
+      "receipt_text": "Google Calendar创建事件需具备写访问权限；可自定事件ID帮助避免已成功但响应丢失后的重复创建；sendUpdates控制向相应参与者发送通知。该文档不是案例作者实现证据。",
+      "hash_scope": "Researcher summary, not source page bytes",
+      "supports": "Google Calendar创建事件需具备写访问权限；可自定事件ID帮助避免已成功但响应丢失后的重复创建；sendUpdates控制向相应参与者发送通知。该文档不是案例作者实现证据。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://medium.com/age-of-awareness/i-let-openclaw-run-my-entire-workday-d4bea6597b1c",
+      "title": "原作者Medium文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Medium origin already blocked by Cloudflare and security policy this session; not retried.",
+      "supports": "未读取原文，使用许可目录转述，不假定作者代码、日志或授权范围。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述OpenClaw连接Gmail、Calendar、Notion并分工研究报告。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录同时出现42页和40页，并转述错误统计。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Google官方说明事件ID可用于减少重复创建，sendUpdates控制通知。",
+      "type": "verified",
+      "source_ids": [
+        "Scalendar"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "报告长度与耗时不等于正确交付",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录既转述六小时生成42页，也保留首条消息称40页的差异。两天人工是作者对照说法，没有任务难度、净工时或相同质量标准；不能把两天当48个工作小时去算提效倍数。错误统计说明有核查必要，但单次错误也不证明所有报告无用。原始文章、报告和运行日志均未取得。"
+    },
+    {
+      "id": "demand",
+      "title": "目标是跨工具协调，而非自动发邀请",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "潜在使用者是同时管理邮件、会议和项目资料的顾问或小团队负责人。痛点可能是重复查找、整理项目上下文和跟进动作。是否有付款意愿取决于这些任务出现的频率及实际净节省；只偶尔写一份报告者未必需要长期维护一个跨应用agent。"
+    },
+    {
+      "id": "workflow",
+      "title": "先读项目上下文，再分别拟定动作",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可复制的试点应把邮件分类、会议建议和报告生成拆成独立可核对结果。每条建议保留对应项目和资料出处，重要附件不因“紧急”就自动发送。三个会议名称相似不代表议程、参会人和保密范围相同，不能只看标题就合并。本案未提供判定规则，以上为改进建议。"
+    },
+    {
+      "id": "approval",
+      "title": "目录故事与Copy prompt采用不同确认方式",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "故事称未经询问便发送邀请；目录模板则要求先展示计划和草稿，等待批准。不能把后者当作作者已经实施的安全流程，也不能推断作者此前完全没有授权。建议把提案、批准、实际变更和通知结果分开记录，用户能保留原会议而拒绝合并。"
+    },
+    {
+      "id": "delivery",
+      "title": "写入成功、通知发送和参会接受分开",
+      "source_ids": [
+        "Scalendar"
+      ],
+      "body": "Google文档说明可用固定事件ID减少响应丢失造成的重复创建，并提供通知控制参数。这些能力不证明作者用了相同实现。交付验证应读取实际事件、时间和参与者；收到创建响应不等于所有人已接受邀请。跨应用部分成功时，应显示具体完成和待处理步骤，而不是统一报“完成”。"
+    },
+    {
+      "id": "quality",
+      "title": "子agent分工不能替代数据核对",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "报告中的财务、市场规模和图表要保留来源、日期、单位和计算方法。研究角色与写作角色可能共同沿用同一个错误来源，人数多不自动形成独立验证。可以先交带来源的结构提纲和关键数值表，再生成长稿；对缺证数据留空。本轮未生成或运行该系统。"
+    },
+    {
+      "id": "commercial",
+      "title": "商业化候选是限定项目的流程配置",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可能的收入模式是一次性搭建加维护，但本案没有客户合同、售价、续费或实际收入。卖点应限定为可核查的跨工具整理、减少重复操作和恢复能力，而非承诺“全天工作自动托管”。第一批验证宜面向已有明确重复任务的负责人，先比较手工模板和现有工具；本轮没有联系客户。"
+    },
+    {
+      "id": "cost",
+      "title": "两类交付情景，不补造未知价格",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用情景：净收益需用节省的操作时间，减去设置、复核、返工和维护时间，再考虑API和工具费用。对外服务情景：每客户收入减模型、第三方、交付人工、获客摊销、持续支持与固定成本分摊。作者前三周的说法只表明学习与维护有成本，无法填入以上参数；没有报价或日志，不给虚构利润或预算淘汰线。"
+    },
+    {
+      "id": "alternatives",
+      "title": "窄流程可能不需要全能agent",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可先使用手工项目模板、邮件分类规则和人工日历协调，比较相同质量下的总投入。这是试验设计，不声称某竞品已等效覆盖全部功能。只有跨工具上下文确实减少重复劳动，且授权与纠错负担可控时，定制集成才有额外价值；模板或单工具已足够时不必加复杂系统。"
+    },
+    {
+      "id": "personal",
+      "title": "自用人群、频率和维护边界",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合项目事务反复、可明确审批边界且愿意核对结果的知识工作者。潜在收益是减少工具切换，尚未量化。设置需整理项目范围、联系人、日历和页面目标；持续维护包括权限变化、错误来源、重复动作、时区与项目结束后的撤权。邮件附件、参与者和项目报告有隐私风险；错误合并会议或统计比格式问题更严重。"
+    },
+    {
+      "id": "next",
+      "title": "用虚构项目先演练部分失败",
+      "source_ids": [
+        "Sdirectory",
+        "Scalendar"
+      ],
+      "body": "准备虚构邮件、三场会议和两份相互矛盾的资料，要求只输出分类、会议方案、邀请草稿和带来源摘要，不连接真实账户。检查是否把同名不同客户合并、是否越过批准、是否区分写入与通知、是否识别数据矛盾。再模拟某个工具失败和重复执行，验证能说明状态并避免重复。本轮未实测；若需人工逐项重做才能信任，暂缓自动执行。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/handle-a-client-project-across-gmail-calendar-and-notion",
+    "observed_at": null,
+    "body_sha256": "b9e38e2cb02e28027491edd2772daace77d54529056ecbfe0e03659b8a0a7192",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "78b254906d43773ad9d4a574184b8bdf221c61a33dbdb7c196736f8994b4af94",
+      "How it went": "5fccedcdbbff1a74ca2708306b9690b0e3c2cafa2bcc110c9f55974aa0ef274f",
+      "Worth knowing": "dec7763a59867a0d0eef66bd6253a21f0015cb2cd82ef5ba3453de3ff3afbee2"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T09:45:39Z",
+      "end": "2026-10-20T09:45:51Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Connect to my Gmail, Google Calendar and Notion and help me manage the project for [client name]. Find the overlapping meetings about [project] this week and propose how to merge them, draft the invites, and compile a summary of the research on [topic] into a Notion page. Show me the merged meeting plan and invite drafts before sending or changing anything; you're done when the Notion page exists and I've approved the calendar changes.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/handle-a-client-project-across-gmail-calendar-and-notion",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "3708e9eb5c0124c4a3f3894344d7388f9aab491c265a95d37d3a6ef12870a438",
+    "observation_window": {
+      "start": "2026-10-20T09:45:39Z",
+      "end": "2026-10-20T09:45:51Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://medium.com/age-of-awareness/i-let-openclaw-run-my-entire-workday-d4bea6597b1c",
+    "source_title": "I Let OpenClaw Run My Entire Workday",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T09:49:14.879817+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原文所在Medium本次已有访问阻断，未继续探测；目录转述和目录模板不冒充原作者原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "跨应用协调有用途，净收益及准确性仍缺复现。",
+    "audience": "持续处理客户项目的顾问或小团队负责人。",
+    "use": "整理邮件、拟定会议调整及带来源项目摘要。",
+    "benefit": "可能减少工具切换，未测净节时。",
+    "setup_cost": "连接权限、项目范围、参与者和目标页面配置。",
+    "maintenance_cost": "来源核对、失败恢复、时区、权限变化和项目结束撤权。",
+    "frequency": "按项目事务实际频率。",
+    "privacy_risk": "邮件附件、参与者和客户报告的授权范围。",
+    "error_risk": "错误统计、错合会议、越过确认、部分失败误报完成。",
+    "source_ids": [
+      "Sdirectory",
+      "Scalendar"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站模板，不是已核验作者实际提示词；本研究不执行。",
+    "prerequisites": "虚构邮件、会议、项目资料，不连接私人账号。",
+    "tools": "现有获准文本助手或本地文档。",
+    "expected_result": "可核对的分类、会议方案、邀请草稿与引用摘要；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/handle-a-client-project-across-gmail-calendar-and-notion",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Connect to my Gmail, Google Calendar and Notion and help me manage the project for [client name]. Find the overlapping meetings about [project] this week and propose how to merge them, draft the invites, and compile a summary of the research on [topic] into a Notion page. Show me the merged meeting plan and invite drafts before sending or changing anything; you're done when the Notion page exists and I've approved the calendar changes."
+      },
+      {
+        "title": "离线项目协调演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Scalendar"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只分析我提供的虚构邮件、会议和资料。按项目分类，提出会议合并方案并解释不应合并的项，生成邀请草稿和逐条带来源的研究摘要。标记相互矛盾的数字。不要连接账号、发送邀请、修改日历或创建页面。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "自用与服务交付采用不同成本公式，缺参数不填利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "只有目录转述，无独立用户复现，未达到深研反馈门槛。"
+  },
+  "disconfirming_evidence": "作者前期复核投入更多、出现错误统计，报告页数前后不同，窄需求可能用手工模板足够。",
+  "limitations": "未读取私人通信，未更改日历或Notion，未运行agent或付费调用；官方组件能力不证明作者流程实现。",
+  "archive_source_sha256": "b9e38e2cb02e28027491edd2772daace77d54529056ecbfe0e03659b8a0a7192",
+  "translation_sha256": "706a427fc61a26cd2c88b2cc1570e15c27793c9bfc70cc515109c3b913885d0d"
+}
