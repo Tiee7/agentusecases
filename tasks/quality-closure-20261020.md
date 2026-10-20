@@ -7,19 +7,20 @@
 - 四周现金 200 美元不是用户准入标准，不作为失败条件。
 - 两项关闭前暂停认领新案例；已测试税务门户草稿保留独立分支，未发布。
 - 每次接续先查本清单及在途分支，唯一串行写者；最终报告主动交付。
+- 剩余7案逐案核来源和语义，累计一批统一全站测试/发布，避免每篇重复发布与完成记录PR；原30先审既有材料，仅修实际缺陷。
 
 | 批次 | 案例 | 状态 | 完成证据 |
 |---|---|---|---|
-| spark_second10 | run-x-and-reddit-accounts-with-agents-on-android-phones | pending_repair | 尚无 |
-| spark_second10 | automate-amazon-brand-bookkeeping-and-product-images | pending_repair | 尚无 |
-| spark_second10 | scrub-your-phone-number-from-data-brokers-to-stop-spam | pending_repair | 尚无 |
+| spark_second10 | run-x-and-reddit-accounts-with-agents-on-android-phones | repaired_pending_shared_batch_validation | 逐案核验完成，待批量测试发布 |
+| spark_second10 | automate-amazon-brand-bookkeeping-and-product-images | repaired_pending_shared_batch_validation | 逐案核验完成，待批量测试发布 |
+| spark_second10 | scrub-your-phone-number-from-data-brokers-to-stop-spam | repaired_pending_shared_batch_validation | 逐案核验完成，待批量测试发布 |
 | spark_second10 | run-contractor-back-office-jobs-and-churn-recovery | completed | [修订报告](../reports/run-contractor-back-office-jobs-and-churn-recovery.md)，[PR81](https://github.com/Tiee7/agentusecases/pull/81)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39453040456)，合并及远端回读通过 |
 | spark_second10 | scrape-ai-news-three-times-a-day-with-a-custom-bot | completed | [修订报告](../reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md)，[PR79](https://github.com/Tiee7/agentusecases/pull/79)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39450279684)，合并及远端回读通过 |
-| spark_second10 | run-a-company-reddit-presence-with-a-bot | pending_repair | 尚无 |
-| spark_second10 | handle-multi-click-chores-like-dmv-returns-and-appointments | pending_repair | 尚无 |
-| spark_second10 | hand-seo-tasks-to-a-chatgpt-agent | pending_repair | 尚无 |
+| spark_second10 | run-a-company-reddit-presence-with-a-bot | repaired_pending_shared_batch_validation | 逐案核验完成，待批量测试发布 |
+| spark_second10 | handle-multi-click-chores-like-dmv-returns-and-appointments | repaired_pending_shared_batch_validation | 逐案核验完成，待批量测试发布 |
+| spark_second10 | hand-seo-tasks-to-a-chatgpt-agent | repaired_pending_shared_batch_validation | 逐案核验已完成，待共享批次全站测试与发布 |
 | spark_second10 | connect-an-agent-to-email-with-scoped-access | completed | [修订报告](../reports/connect-an-agent-to-email-with-scoped-access.md)，[PR77](https://github.com/Tiee7/agentusecases/pull/77)，[测试](https://github.com/Tiee7/agentusecases/actions/runs/39445799518)，合并及远端回读通过 |
-| spark_second10 | run-a-10-agent-seo-content-pipeline | pending_repair | 尚无 |
+| spark_second10 | run-a-10-agent-seo-content-pipeline | repaired_pending_shared_batch_validation | 逐案核验已完成，待共享批次全站测试与发布 |
 | own_original30 | track-personal-investments-with-a-claude-built-portfolio-tra | pending_final_audit | 尚无 |
 | own_original30 | find-errors-in-production-agent-traces | pending_final_audit | 尚无 |
 | own_original30 | book-a-restaurant-table-and-add-it-to-the-calendar | pending_final_audit | 尚无 |

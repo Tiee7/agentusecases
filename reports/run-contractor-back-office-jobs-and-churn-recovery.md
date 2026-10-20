@@ -82,7 +82,7 @@
 
 来源：[Creators AI: Grok Bot Realistic Guide](https://thecreatorsai.com/p/i-gave-grok-bot-a-real-job-realistic)
 
-作者方法摘要
+报道摘要
 
 1. 文章转述两个不同操作者，不是一个复合业务。
    English summary: The article reports two separate operators, not one combined business.

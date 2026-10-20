@@ -1,0 +1,559 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "scrub-your-phone-number-from-data-brokers-to-stop-spam",
+  "url": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam",
+  "title": "用Grok Bot提交电话号码移除请求并复查",
+  "industry": "个人资料清理与隐私辅助",
+  "researched_at": "2026-10-20T16:48:48.358758+00:00",
+  "confidence": "medium",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "可以研究请求管理，不能承诺清除所有垃圾来电",
+    "reason": "本案适合在明确授权和最小资料范围内研究退出请求管理，不足以认定已成功降低垃圾电话。下一步先用虚构样例检查匹配和状态流转，再由真实使用者决定是否授权实际站点处理。真实验证应分别记录原先存在的列表、请求提交回执、后续可见状态、重新出现，以及同一窗口的来电记录；不能把请求数当移除数，也不能用删除列表数替代来电因果效果。若网站要求额外身份信息、付款、存在同名匹配疑点或无法核验，应交回处理并保留未知。自用价值可能在减少重复操作，实际节省时间还要扣除设置和维护。无真实试用、交易、净工时或收入数据时保持未知评分，不因低价替代或四周预算就将案例判失败。",
+    "next_action": "虚构样例检查状态与授权边界，真实处理另获明确许可。",
+    "stop_condition": "同名歧义、身份或付款要求、拒绝访问及结果无法核验。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam",
+      "title": "许可目录当前正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "完整许可目录保存，免费技能、确认邮件、定期复查和无效果结果均保留。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:38:31Z",
+        "end": "2026-10-20T16:38:48Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 14232,
+      "sha256": "9a7dadcb86264bce45e86ce8620f346f5aebaba81ebcd0997505467296d9bbf7",
+      "hash_scope": "Captured main DOM",
+      "read_method": "permitted_own_cloud_browser_main_dom"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/",
+      "title": "Teslarati原始报道",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "10月17日Gene报道Arash的免费Spam-Call Scrubber，依赖Grok Bot，提交退出、确认邮件、定期复查。没有效果结果，非法呼叫不受此保证。",
+      "receipt_text": "10月17日Gene报道Arash的免费Spam-Call Scrubber，依赖Grok Bot，提交退出、确认邮件、定期复查。没有效果结果，非法呼叫不受此保证。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:38:49Z",
+        "end": "2026-10-20T16:40:25Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 82,
+      "sha256": "2ce41a3f30ffe991ea957c73e27d7f7f5b7d18b8e859d4da1ab65f6e7d6d86bb",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sdrop",
+      "url": "https://privacy.ca.gov/drop/",
+      "title": "加州DROP官方",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "免费平台面向加州居民，2026年1月开放；8月起经纪商每45天处理，状态可能90天，不是全球免费即时删除。",
+      "receipt_text": "免费平台面向加州居民，2026年1月开放；8月起经纪商每45天处理，状态可能90天，不是全球免费即时删除。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:39:01Z",
+        "end": "2026-10-20T16:39:25Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 53,
+      "sha256": "528d90eabe6dec509c04b7e54ca5e32d9acd5b3c2347c2c5dec7a24219ceb3c4",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sprice",
+      "url": "https://www.optery.com/pricing/",
+      "title": "Optery方案价格",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Core3.99月付/39年付，Extended14.99/149，Ultimate24.99/249。覆盖和人工QA随档位及Expanded Reach不同，截图周期约90天，不能混配最低价与最高服务。",
+      "receipt_text": "Core3.99月付/39年付，Extended14.99/149，Ultimate24.99/249。覆盖和人工QA随档位及Expanded Reach不同，截图周期约90天，不能混配最低价与最高服务。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:39:01Z",
+        "end": "2026-10-20T16:39:25Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 102,
+      "sha256": "ea17f084bfc7054e9cfc8b650b87c0c145349f0a3535e689e2a6a79bad54b77d",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Strust",
+      "url": "https://uk.trustpilot.com/review/www.optery.com",
+      "title": "Optery公开用户评价",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "Douglas H与John de Haan肯定信息发现/删除；Jan Turner反馈UI和报告问题，BR反馈取消计费及同期来电，后者不是因果证据。自选样本不等独立实测。",
+      "receipt_text": "Douglas H与John de Haan肯定信息发现/删除；Jan Turner反馈UI和报告问题，BR反馈取消计费及同期来电，后者不是因果证据。自选样本不等独立实测。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:39:17Z",
+        "end": "2026-10-20T16:40:25Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 86,
+      "sha256": "f726035d8c2cd1aeb4061101af1f8bfadbb4de25a3f266a9b11d4ef6a2b19641",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sapp",
+      "url": "https://apps.apple.com/us/app/optery/id6503983126?platform=ipad&see-all=reviews",
+      "title": "Optery App Store使用评价",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "正面用户报告暴露列表减少；另有用户报告长期删除不足。RK1188RK质疑Removed/Not Found混合状态，开发者确认合并展示；Eraoz2025-07-24早期界面/扫描体验不是完成效果。",
+      "receipt_text": "正面用户报告暴露列表减少；另有用户报告长期删除不足。RK1188RK质疑Removed/Not Found混合状态，开发者确认合并展示；Eraoz2025-07-24早期界面/扫描体验不是完成效果。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:46:12Z",
+        "end": "2026-10-20T16:46:16Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 99,
+      "sha256": "623f36ad1827d0c4ce2b2b78fc48d06818d08b5c1795db4aeb6a9ccffdca456f",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sgrok",
+      "url": "https://x.ai/bot",
+      "title": "Grok Bot官方方案",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "本日先前实际读取的30/100/200美元月费方案，仅作为成本参照；免费skill不等于运行免费，不证明作者用了哪档。",
+      "receipt_text": "本日先前实际读取的30/100/200美元月费方案，仅作为成本参照；免费skill不等于运行免费，不证明作者用了哪档。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:49:09Z",
+        "end": "2026-10-20T15:49:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:48:48.358758+00:00",
+      "characters": 59,
+      "sha256": "e99c4bb678417958b3b19d403f944061d757a16d2bdead3059b7c4410df56bd4",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    }
+  ],
+  "facts": [
+    {
+      "type": "author_claim",
+      "statement": "原报道描述Arash发布免费技能，依赖Grok Bot，并没有首次用户效果结果。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "许可目录提示词要求遇到身份证明或付款暂停，不是无条件提交全部表单。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "报道提醒信息可能重新出现，非法自动拨号者不会被此流程消除。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "DROP当前已开放，免费资格限定加州居民，不能继续写成未来未上线。",
+      "source_ids": [
+        "Sdrop"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "DROP处理存在周期与状态等待，不能保证即时删除所有资料。",
+      "source_ids": [
+        "Sdrop"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Optery Core月付3.99与年付39不同，档位覆盖和人工服务不能混用。",
+      "source_ids": [
+        "Sprice"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "公开用户评价包含积极删除体验和负面报告体验，不是只有一种结论。",
+      "source_ids": [
+        "Strust",
+        "Sapp"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "App Store开发者回复解释Removed和Not Found合并显示，需要区分未发现与删除。",
+      "source_ids": [
+        "Sapp"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "减少公开暴露与减少来电是两种目标",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ],
+      "body": "本案起点是Arash厌烦垃圾电话，制作免费Spam-Call Scrubber技能，由Grok Bot查找其号码并提交退出请求。能确认的是一个工作流和工具发布，不是来电已经下降。需求可拆成找出公开个人资料、向接受删除的网站提出请求、记录结果，以及观察后续骚扰频率。四者相关但不能互相替代。自用者可能重视隐私与节约逐站操作时间，潜在付费者可能需要持续复查和清晰记录，但原案没有收费订单、收入或客户留存。报告不以“免费技能”推断无商业价值，也不凭隐私焦虑推断所有人都会付费。对资料暴露少或只有一两个站点的人，手工退出可能足够；对重复出现资料的人，持续维护才可能是主要工作量。 对不同动机应采用不同验收：关心公开住址的人看特定记录是否消失，关心电话的人还需单独记录来电变化。一个指标改善不应掩盖另一指标无变化。不能把用户愿意免费尝试解释为愿意持续付费，亦不能假定所有用户都能使用加州入口。"
+    },
+    {
+      "id": "workflow",
+      "title": "保留原方法，不替作者补造效果",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ],
+      "body": "目录与原报道描述的流程是搜索号码所在的人员搜索和数据经纪商网站，提出退出请求，完成确认邮件，再按用户选择的时间表复查。目录Copy prompt另写遇到身份证明或付款须暂停给用户查看，这属于试用模板，不应冒充作者实际输入。报道没有首次用户效果，因此不能写成已经减少骚扰、所有网站都能删除或长期免维护。研究本轮只读公开材料，没有输入任何真实号码、登录邮箱、递交表单或运行技能。真正使用时应把资料匹配、授权、请求提交、确认与复查分成可检查步骤。错误匹配同名者会影响他人，网站要求补件也不意味着代理能自行扩大权限。只读发现记录与外部删除动作必须分开。 站点清单应记录准确域名与原记录链接，确认邮件应匹配相应请求而非自动点击任意来信。复查时先检查上次状态，避免同一项不停重复申请。研究保存的是工具流程，不保存真实个人号码，也没有将原文模板视为本轮操作指令。"
+    },
+    {
+      "id": "market",
+      "title": "替代方案证明需求存在，不证明本案收入",
+      "source_ids": [
+        "Sdrop",
+        "Sprice"
+      ],
+      "body": "DROP和商业删除服务表明个人资料清理存在公开制度与产品替代，但不能由产品存在推导本案用户数或销量。加州DROP是符合条件居民的免费入口，2026年1月已开放，经纪商从8月起按周期处理；把它继续写成未来未开放会误导用户。其地区资格、处理周期和覆盖范围有边界，不能向所有海外用户推荐为即时通用替代。商业服务按不同覆盖、人工检查与持续维护定价，说明需求可以分层，而不是只比较最低标价。机会假设更接近整理证据、减少重复检查和解释状态，而非保证消灭所有垃圾电话。尚缺目标人群对净省时、资料托管风险和价格的真实接受数据，不能把公开评论数量视为市场规模。 需求验证还应问用户更在意资料公开、电话打扰还是不想处理复杂表单，三种动机对应的结果不一样。没有明确痛点与替代成本时，不能用数据经纪商数量乘一个假定客单价来生成收入预测。"
+    },
+    {
+      "id": "competition",
+      "title": "比较同一覆盖与观察窗口",
+      "source_ids": [
+        "Sprice",
+        "Sdrop"
+      ],
+      "body": "Optery本轮价格页Core月付3.99美元或年付39美元，Extended14.99或149，Ultimate24.99或249。年付折算月价不是首期仅付该月数；Core、Extended和Ultimate的覆盖站点、人工QA及额外请求不同，Expanded Reach开启与否也改变标注覆盖。不能用Core价格搭配Ultimate人工服务，再把旧研究中不同服务档位的结果贴上去。对本案应固定同一个人的十个指定站点、初始请求及四个月复查，再检查各替代是否真的覆盖这些站点和动作。Core四个月月费15.96只是现金参照，不是验证了等效交付；DROP免费也不等于没有人工核对成本或所有站点相同。较便宜方案可能足够，但须先核适用资格和实际范围。"
+    },
+    {
+      "id": "economics",
+      "title": "完整列出设置、人工与持续订阅",
+      "source_ids": [
+        "Sgrok",
+        "Sprice"
+      ],
+      "body": "统一成本单位是一个人的十个指定站点初次处理及四个月观察，不承诺来电减少。低工作量假设设置1小时、十站初次各6分钟共1小时、三次复查每站2分钟共1小时、例外处理0.5小时，合计3.5小时按25美元为87.50；若单独维持30美元月费四个月为120，总207.50。高工作量假设设置2小时、初次各12分钟2小时、三次复查各4分钟2小时、例外2小时，人工200；100美元月费四个月400，另20调用预算，共620。高档只是情景假设，不声称该任务必须购买。已有订阅的边际现金可另列，不能用它代替新人完整投入。工时、异常和调用预算未实测，售价、实际收入与利润未知，200美元或四周不作为用户质量准入条件。 若多人共享既有订阅，需要先确认实际允许的使用与隔离方式，再按合理单位分摊，不能为了压低数字默认无限客户。设置摊销和固定费用应保留原始计算，观察四个月的工作不可偷换成一天完成，也不把等待时间全算人工工时。"
+    },
+    {
+      "id": "distribution",
+      "title": "先解释交付范围，再讨论服务",
+      "source_ids": [
+        "Sdirectory",
+        "Sdrop",
+        "Sapp"
+      ],
+      "body": "可探索的服务形式是假设中的自助检查清单、个人内部提醒或经授权的人工辅助清理，而非销售无法保证的零骚扰承诺。获客可以研究用户对暴露报告和复查状态的疑问，但本轮没有联系任何潜在客户或发布广告。若为别人处理，必须明确哪些资料、哪些网站、什么动作得到授权，不能因为购买者提供一个姓名就搜索和删除所有同名记录。地区资格和服务代理条件也要另行核对，不将个人可用入口自动当成可对外经营的接口。App Store关于删除和未发现混合展示的反馈提示一种解释需求，但不能据此声称本案具有独特技术优势或已有付费转化。报价应说明站点范围、观察时间、异常交回规则与结果不确定性。"
+    },
+    {
+      "id": "moat",
+      "title": "可靠记录比多点几个按钮更有价值",
+      "source_ids": [
+        "Sapp",
+        "Sdirectory"
+      ],
+      "body": "可复制的基础步骤较简单，可能形成价值的是准确匹配本人、保存最小必要状态、识别重新出现资料，并让用户看懂哪些请求尚未完成。这是能力假设，不是已建成的产品护城河。状态至少应区分未发现、已发现、已提交、待确认、已确认移除、再次出现和无法核验，不能把未发现也计为成功删除。部分站点变化会提高维护成本，网页自动化失效、邮件确认到期和身份要求都需要有界的异常处理。记录不应保存多余个人资料、邮箱秘密或身份证件，长期维护不能靠建立新的大规模敏感资料库。业务是否能复制取决于权限、覆盖与核验质量，而不是技能能否一键安装，也不是一次扫描显示多少个站点。 验收可加入同名不同城市、一个站点多条记录、此前未发现、本次新增以及请求已提交但仍可见的样例。系统应保留这些区别，而不是只输出绿色成功标签；可解释的未完成状态比没有证据的完成更有用。"
+    },
+    {
+      "id": "execution",
+      "title": "隐私清理本身也会新增暴露",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal",
+        "Sdrop"
+      ],
+      "body": "为退出而提供姓名、号码、住址或邮箱，会把信息传给处理方，需要明确目的、接收方和最小必要字段。不能把隐私任务当作可以无限抓取、登录或传证件的授权。遇到付款、身份证明、验证码、安全警告或拒绝访问，应按实际权限暂停相应动作，不绕过。原报道对平台条款的提醒不足以支持旧稿中的具体责任上限、例外或必然法律结论，本轮移除这些未核数字，而不是用笼统风险包装成核实事实。删除请求可能被拒、资料可能重新出现、非法呼叫者可能完全不依赖这些公开目录，都是交付边界。对真实法律权利的判断应以适用地区与官方流程为准，DROP只作为已读取的加州入口说明，不扩展到所有国家。 本轮不再沿用原稿把创业者推测写成已发生伤害的表述。安全分析应说明可能路径和所需授权，而不是给未调查的作者或供应商定性。合法入口与免费方案也不自动证明资料接收方没有风险，用户仍需理解实际披露范围。"
+    },
+    {
+      "id": "feedback",
+      "title": "同时保留正面和负面体验",
+      "source_ids": [
+        "Strust",
+        "Sapp",
+        "Soriginal"
+      ],
+      "body": "公开用户反馈并非一致无效：Trustpilot有用户肯定找出未知暴露与删除服务，也有界面、报告与取消计费投诉。个别人称使用后同期来电增加，只能记录时间上的同时发生，不能断定服务导致新骚扰。App Store同时出现暴露减少的自述和长期清理不足的抱怨；其中关于Removed与Not Found混合显示的质疑得到开发者解释，适合用于设计更清晰的状态表，不适合推算全行业失败率。Eraoz在2025年7月24日描述界面与早期扫描体验，不是最终删除结果。平台评价有自选、账户无法独立核验等限制，均为相邻服务而非本技能复验。Consumer Reports文章与PDF本轮读取失败，不把搜索片段当已读方法，也不继续引用盲测或旧档位对应现价的断言。"
+    },
+    {
+      "id": "decision",
+      "title": "可试点请求管理，效果须另行观察",
+      "source_ids": [
+        "Soriginal",
+        "Sdrop",
+        "Sapp"
+      ],
+      "body": "本案适合在明确授权和最小资料范围内研究退出请求管理，不足以认定已成功降低垃圾电话。下一步先用虚构样例检查匹配和状态流转，再由真实使用者决定是否授权实际站点处理。真实验证应分别记录原先存在的列表、请求提交回执、后续可见状态、重新出现，以及同一窗口的来电记录；不能把请求数当移除数，也不能用删除列表数替代来电因果效果。若网站要求额外身份信息、付款、存在同名匹配疑点或无法核验，应交回处理并保留未知。自用价值可能在减少重复操作，实际节省时间还要扣除设置和维护。无真实试用、交易、净工时或收入数据时保持未知评分，不因低价替代或四周预算就将案例判失败。 建议验收表至少包含站点、匹配依据、请求日期、确认日期、最后复查、证据链接和当前状态。来电记录另表仅计实际观察窗口，避免选择性挑选最安静的一天作为成功。停止某站的越权动作不必否定其他合规只读研究，但该站结果保持未完成。"
+    }
+  ],
+  "score_status": "not_assessed",
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "原案未报告效果、收入或净省时，不以假设成本和旧研究替代实测评分。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    }
+  },
+  "unit_economics": [
+    {
+      "scenario": "低例外工作量",
+      "unit": "一人十站初次请求及四个月复查",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 87.5,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 0.25,
+      "fixed_monthly_cost": 30,
+      "assumptions": "3.5h×25+30×4=207.50美元完整四个月；十站覆盖待核。 全部工时和调用预算是假设非实测，不承诺来电下降；税费和额外身份处理未知，售价收入利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Sprice"
+      ]
+    },
+    {
+      "scenario": "高例外工作量",
+      "unit": "一人十站初次请求及四个月复查",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 20,
+      "human_cost": 200,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 0.25,
+      "fixed_monthly_cost": 100,
+      "assumptions": "8h×25+100×4+20=620美元；100档仅情景不是必要购买。 全部工时和调用预算是假设非实测，不承诺来电下降；税费和额外身份处理未知，售价收入利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Sprice"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开使用文章",
+        "query": "\"data removal\" \"spam calls\" \"experience\" -site:reddit.com",
+        "outcome": "未取得本技能独立效果复验。"
+      },
+      {
+        "channel": "服务评价",
+        "query": "\"Optery\" review \"used\"",
+        "outcome": "读取Trustpilot与App Store正反体验，区分相邻服务。"
+      },
+      {
+        "channel": "消费体验检索",
+        "query": "\"DeleteMe\" \"reviews\" \"calls\" -site:reddit.com",
+        "outcome": "同名不同服务不混用，未将摘要当完整核验。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Strust",
+        "directness": "adjacent_workflow",
+        "finding": "积极移除体验与界面计费投诉并存，来电同期变化不当因果。",
+        "bias": "自选评论，未独立核对其账户和实际删除。"
+      },
+      {
+        "source_id": "Sapp",
+        "directness": "adjacent_workflow",
+        "finding": "正反用户自述，开发者确认删除与未发现合并状态。",
+        "bias": "不是本技能测试，评价不能推全体成功率。"
+      }
+    ]
+  },
+  "disconfirming_evidence": "请求不等移除，移除不等来电减少；旧研究档位时间窗不能套当前最低价；DROP有地区与周期限制。",
+  "limitations": "没有执行退出、邮箱确认或真实试用。CR正文与PDF临时读取失败，未据摘要断言其完整方法。Grok方案重用本日已读取来源窗口。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam",
+    "observed_at": null,
+    "body_sha256": "4049304eab0c78d9adbcb206876d809661b528c93babb8ec6a2ffcccb5511820",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "ebf1f16bf4fef0c65e90ba70ef56125c3da40bf63d5759d0a985081fc3492e45",
+      "How it went": "d3898677ca957b8eb655561c57b55612630ac9f8e65de41379d3bc5b7e53f1d8",
+      "Worth knowing": "75ec75c875254ef21c03e82ac3dc369d8bdcde21919721076283d75c8c01f320"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T16:38:31Z",
+      "end": "2026-10-20T16:38:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Search the main people-search and data broker sites (Spokeo, Whitepages, BeenVerified, and similar) for my phone number [phone number] and name [full name, city]. For each listing you find, file an opt-out or removal request and complete any confirmation emails sent to [email address]. Pause and show me before submitting any form that asks for ID or payment. Finish by giving me a list of sites, request status, and set a recheck every [30] days.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "9a7dadcb86264bce45e86ce8620f346f5aebaba81ebcd0997505467296d9bbf7",
+    "observation_window": {
+      "start": "2026-10-20T16:38:31Z",
+      "end": "2026-10-20T16:38:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "revenue_observation": {
+    "status": "unknown",
+    "amount": null
+  },
+  "archive_source_sha256": "4049304eab0c78d9adbcb206876d809661b528c93babb8ec6a2ffcccb5511820",
+  "translation_sha256": "87b1ea0297c9cdbdcd1dd5801ff62c6ed57dd4df21c7a0ed681462c2747a0c35",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "可能减少重复退出操作，但结果与隐私托管须分别核对。",
+    "audience": "有本人资料处理权限且愿意检查状态的人。",
+    "use": "发现列表、管理请求与定期复查。",
+    "benefit": "潜在节省重复劳动，未实测来电下降。",
+    "setup_cost": "本人信息匹配、目标站点范围、邮箱权限和停机规则。",
+    "maintenance_cost": "网站变化、再次出现、确认到期和异常处理。",
+    "frequency": "按授权计划复查，不高频重交。",
+    "privacy_risk": "号码姓名邮箱及身份证明可能新增传递和留存风险。",
+    "error_risk": "同名误匹配、误报删除、重复请求、确认链接失效。",
+    "source_ids": [
+      "Sdirectory",
+      "Soriginal",
+      "Sdrop"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板并非作者实际prompt；原文保留，不构成实际执行授权。",
+    "prerequisites": "先用虚构资料离线验收，真实处理需本人明确授权及最小权限。",
+    "tools": "原案Grok Bot和Spam-Call Scrubber技能；未安装或运行。",
+    "expected_result": "逐站请求状态与待核问题，不保证垃圾电话消失。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/scrub-your-phone-number-from-data-brokers-to-stop-spam",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Search the main people-search and data broker sites (Spokeo, Whitepages, BeenVerified, and similar) for my phone number [phone number] and name [full name, city]. For each listing you find, file an opt-out or removal request and complete any confirmation emails sent to [email address]. Pause and show me before submitting any form that asks for ID or payment. Finish by giving me a list of sites, request status, and set a recheck every [30] days."
+      },
+      {
+        "title": "离线验收模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅用虚构样例生成请求状态表，区分未发现、待提交、待确认、已核移除及再次出现；遇身份证明、付款、歧义或拒绝访问停止。不要登录、发送或提交。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/",
+    "source_title": "Teslarati原始报道",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T16:48:48.358758+00:00",
+    "access_time_note": "Receipt compiled now; actual read bracket in evidence.",
+    "source_sha256": "2ce41a3f30ffe991ea957c73e27d7f7f5b7d18b8e859d4da1ab65f6e7d6d86bb",
+    "steps": [
+      {
+        "en": "Find the user’s number on people-search listings.",
+        "zh": "查找人员搜索列表中的用户号码。"
+      },
+      {
+        "en": "Submit opt-out requests and complete confirmation emails.",
+        "zh": "提交退出请求并完成确认邮件。"
+      },
+      {
+        "en": "Recheck on the schedule selected by the user.",
+        "zh": "按用户选择的计划复查。"
+      }
+    ]
+  }
+}
