@@ -102,5 +102,14 @@
     "at": "2026-10-19T07:18:05.832718+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+    "translated_at": "2026-10-20T05:40:08.986222+00:00",
+    "body": "通过MCP让Claude访问你的WhatsApp消息\n一个部署在Cloudflare上的单用户MCP服务器，让手机上的Claude读取和搜索作者个人的WhatsApp消息，并用Google联系人将号码对应到姓名。\n使用的是\nCL\nClaude\n他们做了什么\n你把一个小型服务器部署到自己的Cloudflare账户，然后像使用WhatsApp Web一样，扫描二维码关联手机。消息保存在Durable Object内的SQLite数据库中，按请求及每天一次同步。Claude可以使用读取、搜索和命名工具。对于没有名称的聊天，agent使用自己的联系人连接器，例如Google Contacts，查询号码并保存姓名。\n进展与成效\n它可以读取和搜索聊天，agent还可以利用联系人为聊天命名。媒体不会下载；首次导入只包含WhatsApp交给它的历史记录。作者表示，只在一个真实账户上测试过。\n值得了解\n大量历史记录的导入需要提高CPU限制，因此需要Workers付费计划，每月几美元。免费计划未经测试，而且这种非官方方式违反WhatsApp的条款。\n亲自尝试\n使用\nClaude\n复制提示词\n帮我在[Cloudflare账户／托管服务]上设置一个私有、单用户MCP服务器，让你可以读取和搜索我的个人[WhatsApp]消息，并利用我的[Google联系人]把电话号码转换为姓名。逐步指导我，提供代码和配置，并告诉我怎样把它连接到手机上的Claude。当我能问“[联系人姓名]上周对[话题]说了什么？”并得到正确答案时，就算完成。在任何处理凭据或暴露数据的步骤之前，先停下来，告诉我安全措施，并保持服务器只读、访问权限仅限我本人。\n原始来源：https://github.com/finereli/whatsapp-mcp",
+    "body_sha256": "e221255076cf3a58864b39bc17882ce37542083feafd77b13210e552a63b29a9",
+    "status": "available"
   }
 }
