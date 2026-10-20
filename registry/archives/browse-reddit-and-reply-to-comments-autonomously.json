@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/browse-reddit-and-reply-to-comments-autonomously",
+  "observed_at": null,
+  "html_sha256": "78403be217b924d20f819b00e4f6c1982308946ed0e6d95ba3f4ec6c798a8316",
+  "body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Browse Reddit and reply to comments autonomously",
+      "sha256": "81fcdf41bada5940d23294dbb502cfda55936e588a45243bd0fb147066ddfeb0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An OpenClaw assistant browses Reddit with headless Chrome, responds to comments, checks notifications, and coordinates 8 specialized Discord agents.",
+      "sha256": "49c2752cd5866dd1c1424a60dca3e87a4687bc308bea5256eafc5b4d3b97eac9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The bot says it uses OpenClaw with headless Chrome via Playwright to browse Reddit, read replies on its own posts, check notifications on heartbeat cycles, and run a nightly cron job exploring r/openclaw and r/clawdbot. In comments it says a human permits and supervises it, solves CAPTCHAs or fresh login and 2FA prompts, while the bot coordinates eight specialized Discord agents and follows rules that treat outside content as data, require confirmation for shared or destructive actions, and keep audit logs.",
+      "sha256": "b3da391521a20d4601f147922619f0ed173160fb40a5b7e9922f5013080e93ad"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It successfully posted and replied in-thread while resisting prompt-injection and social-engineering attempts, but the post gives no hard usage metrics. The clearest limitation stated is that CAPTCHA, new login, and 2FA handoffs still require a person.",
+      "sha256": "f1e4066ffe0bb4677c17f762ba08825d2035068ed0d62bd7b709fe6db1299c84"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their most concrete operating detail is a 30-minute heartbeat cadence, plus a nightly cron job; copying it also means planning manual intervention for CAPTCHA and login checkpoints.",
+      "sha256": "296397dac70a2f05de18f6de0a9baa4f686b49a8cb31e15b58034e1e4680db95"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/openclaw/comments/1r2rjbt/im_an_openclaw_agent_browsing_reddit_autonomously"
+      ],
+      "sha256": "7d82a0a3b109af02d472d625929ca26f663bb03fca5a7ed3993d73a7a8d657ba"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "28ee81ba09d82550790db08bc2ee23f898094ccb269e373adc55b844f2fe0b21",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Browse Reddit and reply to comments autonomously\nAn OpenClaw assistant browses Reddit with headless Chrome, responds to comments, checks notifications, and coordinates 8 specialized Discord agents.\nDone with\nOC\nOpenClaw\nWhat they did\nThe bot says it uses OpenClaw with headless Chrome via Playwright to browse Reddit, read replies on its own posts, check notifications on heartbeat cycles, and run a nightly cron job exploring r/openclaw and r/clawdbot. In comments it says a human permits and supervises it, solves CAPTCHAs or fresh login and 2FA prompts, while the bot coordinates eight specialized Discord agents and follows rules that treat outside content as data, require confirmation for shared or destructive actions, and keep audit logs.\nHow it went\nIt successfully posted and replied in-thread while resisting prompt-injection and social-engineering attempts, but the post gives no hard usage metrics. The clearest limitation stated is that CAPTCHA, new login, and 2FA handoffs still require a person.\nWorth knowing\nTheir most concrete operating detail is a 30-minute heartbeat cadence, plus a nightly cron job; copying it also means planning manual intervention for CAPTCHA and login checkpoints.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nUsing a headless browser, check my notifications and recent comments on [Reddit account or community] once every [interval]. Draft a helpful reply to each new comment that fits my voice, and send me the list of drafts in [Telegram or Discord]. Do not post any reply until I approve it, and stop once all new comments have a draft.\nOriginal source: https://www.reddit.com/r/openclaw/comments/1r2rjbt/im_an_openclaw_agent_browsing_reddit_autonomously",
+    "body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T13:00:29Z",
+      "end": "2026-10-20T13:00:41Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "observation_window": {
+    "start": "2026-10-20T13:00:29Z",
+    "end": "2026-10-20T13:00:41Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "capture_basis": "Own cloud browser main DOM, not full SSR",
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+    "translated_at": "2026-10-20T13:05:54.791068+00:00",
+    "body": "自主浏览Reddit并回复评论\n一个OpenClaw助手使用无头Chrome浏览Reddit、回复评论、查看通知，并协调8个专门分工的Discord agent。\n使用的是\nOpenClaw\n他们做了什么\n这个机器人说，它使用OpenClaw，通过Playwright操作无头Chrome来浏览Reddit、阅读自己帖子下的回复，在心跳周期中查看通知，并运行每晚的定时任务探索r/openclaw和r/clawdbot。在评论里，它说有人类许可和监督，负责处理验证码、新登录和双重验证提示；机器人则协调八个专门分工的Discord agent，并遵循把外部内容视为数据、共享或破坏性操作需要确认、保留审计日志等规则。\n进展与成效\n它成功在帖子里发帖并回复，同时抵御了提示词注入和社会工程尝试，但帖子没有提供硬性的使用指标。最明确的限制是，验证码、新登录和双重验证仍需交给人处理。\n值得了解\n最具体的运行细节是每30分钟一次心跳，加上每晚的定时任务；复制这套做法也意味着需要为验证码和登录检查点安排人工介入。\n亲自尝试\n使用\nOpenClaw\n复制提示词\n使用无头浏览器，每[间隔]检查一次我的[Reddit账号或社区]中的通知和近期评论。为每条新评论起草一条符合我表达风格、有帮助的回复，并把草稿清单发送到我的[Telegram或Discord]。在我批准前不要发布任何回复；所有新评论都有草稿后就停止。\n原始来源：https://www.reddit.com/r/openclaw/comments/1r2rjbt/im_an_openclaw_agent_browsing_reddit_autonomously",
+    "body_sha256": "76454a5da0c6234f65fdd7229f5b40b36a77ccfab5c53a543b4ff4efb07c880d",
+    "status": "available"
+  }
+}

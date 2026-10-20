@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **87**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **88**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -97,3 +97,4 @@
 | 用Operator搜集YouTube创作者资料并整理名单 | [简报](../../reports/brief/gather-a-list-of-influencers-with-a-browser-agent.md) |
 | 用Operator整理BMW维修零件购物车 | [简报](../../reports/brief/build-a-bmw-parts-cart-with-a-browser-agent.md) |
 | 用OpenClaw与编码agent维护多个网站 | [简报](../../reports/brief/manage-several-websites-across-wordpress-astro-and-eleventy.md) |
+| 用OpenClaw浏览Reddit并处理评论回复 | [简报](../../reports/brief/browse-reddit-and-reply-to-comments-autonomously.md) |
