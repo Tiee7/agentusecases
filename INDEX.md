@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **59** / 注册案例 **1442**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **60** / 注册案例 **1442**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -60,6 +60,7 @@
 | [用 ChatGPT Agent 上架并出售闲置物品](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
 | [用本地Codex辅导纸笔练习并保存学习记录](reports/tutor-you-through-pen-and-paper-math-with-a-local-agent.md) | 仅建议受控试点 | 35.0 | 中 | available | 个人学习工具 | 2026-10-20T01:24:22.548256+00:00 |
+| [用Claude Code指导SQL项目迁移并练习dbt](reports/use-claude-code-as-an-agentic-tutor-in-your-learning-environ.md) | 仅建议受控试点 | 37.0 | 中 | available | 成人技术学习 | 2026-10-20T02:45:22.422735+00:00 |
 | [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 不建议商业投入 | 28.5 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
 | [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
 | [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |

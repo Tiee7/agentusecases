@@ -1,0 +1,684 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "analysis_depth": "deep",
+  "id": "use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+  "url": "https://agentusecases.ai/use-case/use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+  "title": "用Claude Code指导SQL项目迁移并练习dbt",
+  "industry": "成人技术学习",
+  "researched_at": "2026-10-20T02:45:22.422735+00:00",
+  "confidence": "原作者过程与固定仓库可读，方法和实现证据较强；独立学习增益、客户与营收仍未知。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先检验学员独立完成能力与辅导工时，再评估收费",
+    "reason": "作者把真实项目用于学习，并公开了最终导师说明和测试配置，具备可研究的具体方法。但助手抢先代做、给出不可靠解释的反例也明确存在；官方Learning风格和dbt课程已有替代。潜在付款人是已有基础的成年学习者或培训负责人，是否愿为个性化核验付费、人工准备和维护是否可控都尚未得到验证，适合小范围受控试点。",
+    "next_action": "设计原创合成数据迁移题，对比有无有限提示后的独立变式表现与服务工时。",
+    "stop_condition": "仍依赖助手完成、关键概念误导、未经批准代写或人工工时使服务亏损。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 8245,
+      "sha256": "5b999e0db5dd2866799450714f8b6f4b9c228a293aad5e1a458d6a1bcf9e71b5",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "保留原始用法、正负结果和完整试用模板，不改写为成功宣传。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://rmoff.net/2026/02/20/claude-the-instructor/",
+      "title": "Robin Moffatt教学实践文章",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 40460,
+      "sha256": "518e1c08339e2be03ae91d67cd5bfaa7d217467e3626ca891ba76a33aa3f38e3",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "2026-02-20文章展示学习过程与反例；2026-03-02补入反馈，效果为作者自述。"
+    },
+    {
+      "id": "Sbrief",
+      "url": "https://github.com/rmoff/env-agency-dbt/blob/2e63f3348438fcabf1ace74e9f9df1bb46c94b53/CLAUDE.md",
+      "title": "项目固定版本导师说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 27097,
+      "sha256": "6d34a15079dba5c70316b4928d7d42bb7c05adb662cc227c07420064a7a2e9f7",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "最终说明含教学边界、进度与数据约束；不是开篇初始版本或硬权限策略。"
+    },
+    {
+      "id": "Sreadme",
+      "url": "https://github.com/rmoff/env-agency-dbt/blob/2e63f3348438fcabf1ace74e9f9df1bb46c94b53/README.md",
+      "title": "项目README与运行步骤",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 10235,
+      "sha256": "48442461d410fbbde6b63361c398528015faee1bfd4c32a00fa3bc8f6cd43f2c",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "Python、DuckDB、dbt和Dagster依赖；安装说明无版本锁定承诺。"
+    },
+    {
+      "id": "Stests",
+      "url": "https://github.com/rmoff/env-agency-dbt/blob/2e63f3348438fcabf1ace74e9f9df1bb46c94b53/models/marts/fct_readings.yml",
+      "title": "事实表单元测试配置",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 4700,
+      "sha256": "989b64c75c8a4232280c2122db14c998a83b54871ab37d55f2e350729c2afd2b",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "有两个来源合并的合成输入期望结果；只读验证测试存在，未执行。"
+    },
+    {
+      "id": "Scontract",
+      "url": "https://github.com/rmoff/env-agency-dbt/blob/2e63f3348438fcabf1ace74e9f9df1bb46c94b53/models/marts/dim_stations.yml",
+      "title": "维表契约与列说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 4668,
+      "sha256": "56a95803845c0a651f2081aaf1739f74d4dd4c9cd749d2b65c3b49c0154e9174",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "声明契约、唯一非空测试与真实业务键说明；不是本轮数据质量实测。"
+    },
+    {
+      "id": "Sdagster",
+      "url": "https://github.com/rmoff/env-agency-dbt/blob/2e63f3348438fcabf1ace74e9f9df1bb46c94b53/orchestration/definitions.py",
+      "title": "Dagster编排实现",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 8649,
+      "sha256": "8765d3f18c6a9f2c2a36c3278f086650cd5110e84c255ccc4c7658a4c8770a67",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "所需与可选加载错误处理不同、顺序执行和15分钟调度配置，未启动。"
+    },
+    {
+      "id": "Scommunity",
+      "url": "https://lobste.rs/s/nmyrxg/how_i_got_claude_teach_me_dbt",
+      "title": "Lobsters公开讨论",
+      "kind": "independent",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31384,
+      "sha256": "f6b9c3eb8e4b82b985ff8c159e4d26efc378acc29d3969db62ae6ec8c6bbeb81",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "两位相邻学习用户表达不同工具取舍，另有评论质疑自述学习证据。"
+    },
+    {
+      "id": "Sstyle",
+      "url": "https://code.claude.com/docs/en/output-styles",
+      "title": "Claude Code输出风格说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31384,
+      "sha256": "f6b9c3eb8e4b82b985ff8c159e4d26efc378acc29d3969db62ae6ec8c6bbeb81",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "Learning仍会自己做常规实现，风格不是强制约束；不同于完全不写代码。"
+    },
+    {
+      "id": "Spermissions",
+      "url": "https://code.claude.com/docs/en/permissions",
+      "title": "Claude Code权限说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 31384,
+      "sha256": "f6b9c3eb8e4b82b985ff8c159e4d26efc378acc29d3969db62ae6ec8c6bbeb81",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "读写和命令权限独立于教学风格，按实际模式设置。"
+    },
+    {
+      "id": "Scourse",
+      "url": "https://learn.getdbt.com/courses/dbt-fundamentals",
+      "title": "dbt官方基础课程目录",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 12143,
+      "sha256": "a91851c70fb9dc9cfeb271c87650d982d26481e1e0f01c8d12d066caae159e71",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "当前课程含模型、来源、测试、文档、部署；需注册，未参加课程。"
+    },
+    {
+      "id": "Scost",
+      "url": "https://support.claude.com/en/articles/8325606-what-is-the-pro-plan",
+      "title": "Claude Pro官方价格与额度",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 15029,
+      "sha256": "64f42470cf55c4637467a62ba4be69f4db2ee4e44391d9f1965b0a78e4b8cfb5",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "美国20美元月付含Claude Code；API单独，额度并非无限，作者实际账单未知。"
+    },
+    {
+      "id": "Squickstart",
+      "url": "https://docs.getdbt.com/guides/manual-install",
+      "title": "dbt官方本地快速入门",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 15029,
+      "sha256": "64f42470cf55c4637467a62ba4be69f4db2ee4e44391d9f1965b0a78e4b8cfb5",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "已有本地编辑与命令行学习路径，凭据配置需与项目代码分开。"
+    },
+    {
+      "id": "Srepo",
+      "url": "https://github.com/rmoff/env-agency-dbt",
+      "title": "公开仓库元数据与文件清单",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 11560,
+      "sha256": "47b3e643eb22564dc4bbc9514319b22e470eceaefa4c3c455d230531d2559d3b",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "本次API license为null，树未见LICENSE；不把公开可读当完整商用复制许可。"
+    },
+    {
+      "id": "Sissues",
+      "url": "https://github.com/rmoff/env-agency-dbt/issues",
+      "title": "公开问题检索",
+      "kind": "independent",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:45:22.422735+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:38:33Z",
+        "end": "2026-10-20T02:40:54Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "existing_github_connector_read",
+      "characters": 506,
+      "sha256": "fc48da4398292948b6a8ed6da76e05368de6218f174adc0feb089954f74c678b",
+      "hash_scope": "Local capture bundle, possibly several pages; not HTML",
+      "supports": "state=all返回空，无该仓库独立复现反馈；不是零缺陷证明。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "原文2026-02-20发布，展示以旧SQL项目学习dbt并保留负面案例。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "固定仓库CLAUDE.md含教学边界与进度，是项目结束后的演化版本。",
+      "source_ids": [
+        "Sbrief",
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "事实表配置有两来源合并的合成输入与预期输出单元测试。",
+      "source_ids": [
+        "Stests"
+      ]
+    },
+    {
+      "statement": "维表配置声明契约、非空和唯一性等检查，未由本研究执行。",
+      "source_ids": [
+        "Scontract"
+      ]
+    },
+    {
+      "statement": "Dagster实现区分必要与可选加载失败，并配置顺序执行及15分钟计划。",
+      "source_ids": [
+        "Sdagster"
+      ]
+    },
+    {
+      "statement": "官方Learning风格仍处理常规实现，给人保留部分设计决策代码。",
+      "source_ids": [
+        "Sstyle"
+      ]
+    },
+    {
+      "statement": "官方Pro美国月付20美元含Claude Code，但API和使用额度另有边界。",
+      "source_ids": [
+        "Scost"
+      ]
+    },
+    {
+      "statement": "官方dbt课程目录覆盖模型、来源、测试、文档和部署，需注册进入。",
+      "source_ids": [
+        "Scourse"
+      ]
+    },
+    {
+      "statement": "公开仓库license字段为null且树未见LICENSE，不认定商业复制许可。",
+      "source_ids": [
+        "Srepo"
+      ]
+    },
+    {
+      "statement": "Lobsters有两条相邻学习亲历，不能当本dbt项目独立复现。",
+      "source_ids": [
+        "Scommunity"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "先面向已有项目的成年技术学习者",
+      "source_ids": [
+        "Sdirectory",
+        "Sreadme",
+        "Scourse"
+      ],
+      "body": "本案的具体任务是借自己已有SQL项目学会dbt，而不是最快拿到迁移后的成品。研究者判断，最匹配的初始人群是会读SQL、能够核查代码、愿意亲手完成练习的成年人。使用者和个人付款人可以是同一人；若由团队采购，则付款理由需要落到新人能独立解释数据模型和排查错误，而不能只用课程完成率。没有任何材料证明作者经营培训服务、招收学员或取得收入。为此不从一篇好评推导大规模教育市场，也不默认适用于儿童、零基础者或高风险生产数据库。拟议需求访谈应先问最近一次学新工具在哪一步卡住：概念、环境、调试还是缺少反馈，再决定是否需要能执行命令的助手。只想了解概念的人，普通对话和官方课程可能更省事；已有复杂项目的人才可能愿意为上下文适配和人工检查付费。用户能够自己安装并不代表愿意为安装付费，真正需要验证的是少走弯路与独立完成任务的提升。"
+    },
+    {
+      "id": "workflow",
+      "title": "教学环节与代做环节分别约定",
+      "source_ids": [
+        "Sauthor",
+        "Sbrief",
+        "Stests",
+        "Scontract",
+        "Sdagster"
+      ],
+      "body": "作者展示了讲解、填空骨架与本人实现相结合的过程，也主动把部分编排代码交给助手。固定版本说明保存了教学边界和项目进度；测试文件中可见合成输入与预期结果，维表有契约，编排有顺序执行及定时配置。本轮仅静态读取，未安装、调用模型或运行流水线。研究者建议将一次教学交付拆为目标确认、只读理解、单步练习、学员作答、反馈、独立复做六步；环境诊断和代码代写应另列明确动作。每节开始时写清哪项必须本人实现、哪项允许助手代劳，避免把一句“继续”解释成完成全部迁移。完成记录应保存学员自己的解释、错误与修正，而非只记代码测试通过。技术测试能检查数据转换，不会自动检查学员理解；两套验收需要并行存在。使用合成数据和可回退目录能降低初次练习成本，但不能因只是学习项目就忽略写文件、安装依赖和启动后台任务的影响。"
+    },
+    {
+      "id": "market",
+      "title": "需求信号存在，教学增益还没有对照",
+      "source_ids": [
+        "Scommunity",
+        "Sauthor",
+        "Scourse"
+      ],
+      "body": "公开讨论中有相邻编程学习者认可通过提问和提示学习，也有人更倾向不给助手工具，避免它直接代做。这支持“交互式解释有需求”的有限判断，不能证明此dbt项目的教学质量、付费规模或长期留存。官方基础课程已提供明确知识路径，说明通用入门供给充足。研究者建议把可进入市场限定为项目型学习中的个性化卡点，先比较普通文档、官方课程加答疑，以及具备环境操作能力的导师三种方式。评估重点应是撤掉助手后能否解释模型、修复相似错误、完成一个新变式，而非只问体验是否愉快。样本选择也应保留失败者和中途退出者，否则容易只看到愿意分享成功的人。若成年人已经能通过现成课程满足需求，新增工具和权限可能反而提高设置负担。当前没有足够数据量化市场规模或推定学习效率增长率，商业验证应从具体学习任务开始，而非从AI教育大盘倒推营收。"
+    },
+    {
+      "id": "competition",
+      "title": "Learning风格并不等于绝不代写",
+      "source_ids": [
+        "Sstyle",
+        "Scourse",
+        "Squickstart"
+      ],
+      "body": "官方Learning风格会解释决策并留部分代码给人填写，但常规实现仍由Claude处理；输出风格本质是指令，不是强制执行的权限边界。它因此是直接替代，也与本案例要求“由我亲手做”存在范围差别。dbt官方课程目录涵盖模型、来源、测试、文档和部署，本地快速入门则提供另一条可自行操作的路线；本轮只读目录，未注册或参加课程，也没有把课程标注约五小时当学员实际完成时间。研究者建议先试现成路径加少量定向解释，仅在固定项目材料、错误反馈和环境排障确实改善结果时提供定制服务。比较必须使用同一学习目标与相近难度，不能拿复杂旧项目的迁移时间和最短入门示例直接比速度。定制方案也需保留退出路径：学员应能带走原创练习、自己的笔记和代码，在没有专属助手时继续学习，否则锁定成本可能成为反对采购的理由。"
+    },
+    {
+      "id": "economics",
+      "title": "按限定辅导服务测算，不把订阅当免费",
+      "source_ids": [
+        "Scost",
+        "Sreadme"
+      ],
+      "body": "官方Pro美国月付标价为20美元并含Claude Code，API另行计费，实际额度受任务和账户影响；作者的订阅、耗时和账单未知。以下完全是研究者对原创辅导服务的敏感性假设，不是作者报价或已经获得的收入。交付单位定义为一次限定两节的项目学习辅导与验收包，假设价格149美元，用户自有账号自付订阅，服务商不代付API。基准人工两小时乘30美元为60，其他变动成本5，获客摊销20，单位贡献64；月8单、固定费用200，结果312美元。压力情景改为人工四小时120、其他8、获客35，贡献为负14；月4单仍有固定200，结果负256美元。未包含税、退款或超范围维护，不能把上述贡献称净利润。人工成本包含准备、审查和售后，因此环境问题、反复纠正代写和个别资料清理会迅速改变结果。若用户需新订阅，则其20美元等支出另计，不应从服务商零API成本误读为总学习成本为零。"
+    },
+    {
+      "id": "distribution",
+      "title": "用可复做样例获客，避免承诺学会一切",
+      "source_ids": [
+        "Sauthor",
+        "Scommunity",
+        "Sreadme"
+      ],
+      "body": "作者文章、公开项目和社区讨论构成可以观察的传播入口，但没有公开访问到付费的转化数据。研究者提出的获客假设是面向已有SQL基础的技术社群，用一份自有版权、合成数据的小迁移练习展示教学方式，再邀请自愿成人比较两种学习路径。对外展示应包含助手曾经抢答、需要人核验以及没有理解的部分，不能只放最后成功的终端输出。交付前约定主题、会话数、时间上限、允许操作范围和最终独立题，避免用户把辅导服务理解为无限软件维护。对企业则应先使用脱敏示例，采购需要说明公司源码和数据库信息是否离开设备、谁能访问、何时删除；这些准备都应进入报价。用户自行登录自己的订阅，服务商不收集密码或共用账户。若渠道只能依赖持续付费投放而每单支持时间增加，前述低客单价情景很容易亏损，不能把一篇受欢迎文章当稳定获客能力。"
+    },
+    {
+      "id": "moat",
+      "title": "可积累验收题与错误库，角色提示本身很薄",
+      "source_ids": [
+        "Sbrief",
+        "Sstyle",
+        "Srepo",
+        "Stests"
+      ],
+      "body": "一份导师角色文件很容易模仿，平台已有Learning输出风格也降低了通用包装的差异。研究者认为更值得积累的是原创任务序列、错误分类、独立复做题、环境兼容清单和人工审核方法；这些资产需要持续维护，不能靠把开源链接换成自己的品牌建立壁垒。此仓库本次元数据license为null且文件树未见许可证，公开可读不等于获得完整商业再分发许可。可以分析其方法并独立创作自己的练习，但若要复制代码、说明文件或文章进入收费教材，应先确认相应权利；本报告没有将外链长文或完整CLAUDE.md复制到公开站。测试配置说明项目有工程性检查，却不直接构成教育护城河。真正可比较的积累应包括常见误解怎样被识别、提示顺序怎样减少直接答案泄露、错误后的恢复怎样不覆盖学员原作。没有持续测量之前，不能宣称某套提示带来更高成绩或更低流失。"
+    },
+    {
+      "id": "execution",
+      "title": "把权限、版本和学习模式一起验收",
+      "source_ids": [
+        "Spermissions",
+        "Sstyle",
+        "Sreadme",
+        "Sdagster"
+      ],
+      "body": "当前权限文档将只读、文件修改和命令执行分开；教学风格不能替代这些设置。研究者建议初期在隔离练习目录中使用最小权限，先读后讨论，只允许与当前学习目标有关的写入和依赖操作。不要把导师配置直接用于生产库或含凭据目录，也不要为了省确认而关闭保护。仓库README有安装命令但没有完整锁定环境，本轮没有运行，因此不承诺在任意系统安装成功。编排文件存在启动后可运行的调度定义，复制前需明确是否真的要后台刷新，测试结束需检查进程与资源，不应意外留下长期任务。每次换模型、版本或学习风格后重新做一个小验收：能否等待学员作答、拒绝未授权改动、正确识别资料缺失、保留原文件。错误提示和数据契约应有来源，不能为了让练习显得完整而编造字段取值。涉及公司资料时还要核对组织政策；本研究未改任何第三方账户或软件权限。"
+    },
+    {
+      "id": "feedback",
+      "title": "相邻亲历支持交互答疑，也提供工具负担反证",
+      "source_ids": [
+        "Scommunity",
+        "Sissues",
+        "Sdirectory"
+      ],
+      "body": "Lobsters的jorsk讲述自己做C与SDL项目时让Claude只回答问题的经历；kraxen72描述长期用模型辅助编程和数学，并更偏好不给工具的对话界面。这两条是相邻工作流的个人自述，不是本dbt仓库的独立复现。其他评论提醒“感觉学到了”和经过研究验证的学习效果有区别。仓库全部问题列表为空，不能据此认定没有缺陷。研究者将这些材料用于调整试点方向：让用户选择只解释、给骨架或明确代做，而不是强行给所有人完整工具权限；同时记录每次人工制止和错误纠正。反馈计数不以投票数、评论总数或同作者补充重复累加。由于样本来自自选技术社区、缺盲测与长期跟踪，独立反馈信号仅给低分。后续若收集试用，须把无帮助、学员退出和不想让助手执行的人同样留下，避免把喜欢新工具的人群当全部潜在客户。"
+    },
+    {
+      "id": "decision",
+      "title": "只做受控试点，先证明独立完成能力",
+      "source_ids": [
+        "Sdirectory",
+        "Stests",
+        "Sstyle",
+        "Scourse"
+      ],
+      "body": "结论是仅建议受控试点。原作者过程、最终配置与项目代码能支持方法确实存在，也有可追溯反例；它们尚未证明独立教学效果、付费需求或可盈利交付。研究者建议先设计一项原创、合成数据的短SQL迁移任务，明确两三个概念，先用普通文档完成基线，再提供有限提示，最后在不使用助手的情况下做新变式并解释理由。记录的是正确性、解释质量、人工准备与核对时间，以及助手代做次数，不把测试绿灯等同学员学会。本轮只完成来源和静态实现研究，没有招募、运行模型、安装课程环境或真实教学实验。继续条件可以预先设为：独立题改善且支持工时在报价范围内，关键操作全部获准，资料可追溯；停止条件是仍靠助手完成、常见概念被误导、持续越权代写或服务时间超过可承受范围。比较时还需先测原有基础，交替使用难度相近而非同一道题，避免把重复练习的熟悉程度当助手带来的增益。试点即使有效，也应限定到相似基础和主题，再决定是否扩展到团队培训或其他学科。"
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "web_author_discussion",
+        "query": "\"Claude the Instructor\" rmoff learning feedback -site:reddit.com",
+        "outcome": "找到原作者和Lobsters讨论，重复文章不算独立证据。"
+      },
+      {
+        "channel": "web_author_discussion",
+        "query": "\"rmoff\" \"Claude\" \"tutor\" feedback -site:reddit.com",
+        "outcome": "补核原作者反馈链接，未取得定量学习研究。"
+      },
+      {
+        "channel": "github_issues",
+        "query": "rmoff/env-agency-dbt issues state=all per_page=100",
+        "outcome": "返回空，无仓库独立使用反馈；不是无缺陷。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Scommunity",
+        "directness": "adjacent_workflow",
+        "finding": "jorsk自述用无代写的问答完成C/SDL学习；非本项目。",
+        "bias": "公开技术社区自选自述，未核验学习前后成绩。"
+      },
+      {
+        "source_id": "Scommunity",
+        "directness": "adjacent_workflow",
+        "finding": "kraxen72自述长期借提示学编程数学，并认为工具权限可能妨碍学习。",
+        "bias": "相邻个人经验，无本dbt复现或随机比较。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "基准假设：限定两节辅导包",
+      "unit": "一次原创项目辅导与独立题验收包",
+      "currency": "USD",
+      "price": 149,
+      "api_cost": 0,
+      "human_cost": 60,
+      "other_variable_cost": 5,
+      "acquisition_cost": 20,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 200,
+      "assumptions": "全部为假设，非实绩。人工2小时×30；8×(149-0-60-5-20)-200=312。用户自有账号另付订阅；零服务商API不代表模型免费；未计税退款。",
+      "source_ids": [
+        "Scost",
+        "Sreadme"
+      ]
+    },
+    {
+      "scenario": "压力假设：个别环境与复核耗时翻倍",
+      "unit": "一次原创项目辅导与独立题验收包",
+      "currency": "USD",
+      "price": 149,
+      "api_cost": 0,
+      "human_cost": 120,
+      "other_variable_cost": 8,
+      "acquisition_cost": 35,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 200,
+      "assumptions": "全部为假设。人工4小时×30；4×(149-0-120-8-35)-200=-256。订阅由用户另付；未计税退款和超范围维护。",
+      "source_ids": [
+        "Scost",
+        "Scourse"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "原作者反复制止代写、纠正编造；相邻用户偏好无工具对话；平台Learning与官方课程替代；缺独立学习和收入证据；仓库复制许可未确认。",
+  "limitations": "仅静态代码与公开来源研究，没有安装运行、调用模型、招募学员或真实试用；无学习前后对照、真实账单或营收。仓库未见许可证，不公开复制完整代码和外链长文。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "170009eb28e9421717dbaa08e4735353ea42977182b4fa424aa3ce18bcd5bd6c",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "5fd6a9ddd4d007cad1a896d7fde84ba176a227a75cfcdc67560084ca644529b7",
+      "How it went": "48a9af97e9a45f5fdbd1ea7db7ae00e73574dc9276625cd75ffe19735f177929",
+      "Worth knowing": "cd62ae1f08d16b952accf66d77d83fc85b87cce8f4fd1dbabccff4d8cac2ad6c"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Act as my tutor for [subject, e.g. Rust or linear algebra] inside this project folder. First write a CLAUDE.md that says: explain concepts at [my level], ask me questions before giving answers, and use the files, notebooks and exercises in this folder as teaching material. Then read the folder and start with a short lesson on [first topic] followed by one exercise for me. Don't change or delete my files without asking me first.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+    "observed_at": "2026-10-19T07:18:09.782027+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "cabe23f96669248aee163c4d67a714b04d83292c4c9ad6acccfd73734c16c159"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://rmoff.net/2026/02/20/claude-the-instructor/",
+    "source_title": "Claude the Instructor",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T02:39:10Z",
+    "source_sha256": "518e1c08339e2be03ae91d67cd5bfaa7d217467e3626ca891ba76a33aa3f38e3",
+    "steps": [
+      {
+        "en": "The author used an existing SQL project as learning material, alternated explanations with his own implementation, and delegated selected environment work.",
+        "zh": "作者以已有SQL项目为教材，在解释和本人实现之间交替，并把部分环境工作交给助手。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "可适配已有项目并即时解释，但需主动限制代做、核验概念，学习增益待测。",
+    "audience": "已有SQL基础、愿意亲手练习的成年技术学习者。",
+    "use": "概念讲解、填空骨架、代码反馈和限定环境诊断。",
+    "benefit": "作者评价积极且公开过程，没有可量化学习增益或省时保证。",
+    "setup_cost": "隔离目录、合成数据、学习目标、账号额度与操作边界。",
+    "maintenance_cost": "检查模型解释、依赖版本、进度文件和练习答案。",
+    "frequency": "按学习会话使用，长期留存未知。",
+    "privacy_risk": "项目文件和数据库可能含业务数据或凭据，应限定获准材料。",
+    "error_risk": "抢先代写、虚构概念或字段、运行环境改动、把测试通过当掌握。",
+    "source_ids": [
+      "Sdirectory",
+      "Sbrief",
+      "Spermissions"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "原创SQL小练习、合成输入、人工答案与明确允许动作。",
+    "tools": "先只读材料设计，若运行需已有获准Claude Code环境；本轮未安装或调用。",
+    "expected_result": "一节有限提示和独立变式验收设计；本轮不是教学试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-an-agentic-tutor-in-your-learning-environ",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录试用模板",
+        "text": "Act as my tutor for [subject, e.g. Rust or linear algebra] inside this project folder. First write a CLAUDE.md that says: explain concepts at [my level], ask me questions before giving answers, and use the files, notebooks and exercises in this folder as teaching material. Then read the folder and start with a short lesson on [first topic] followed by one exercise for me. Don't change or delete my files without asking me first."
+      },
+      {
+        "title": "项目学习验收设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Stests",
+          "Sstyle"
+        ],
+        "attribution": "原创设计，未执行",
+        "text": "基于这份原创SQL和合成数据，设计一节概念说明、一个留空骨架和一个无助手独立变式。先问我的理解，给提示后等我作答，不代写答案。不执行命令、不改文件或数据库；列出人工答案、概念检查点、错误分类和需要额外授权的环境动作。"
+      }
+    ]
+  },
+  "scores": {
+    "demand": {
+      "score": 2,
+      "rationale": "有具体项目学习需求与相邻自述，但没有本方案付费学员、采购预算或复购证据。",
+      "source_ids": [
+        "Sauthor",
+        "Scommunity"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "原作者过程与代码可查，未有独立学习前后对照，项目完成不等同掌握知识。",
+      "source_ids": [
+        "Sauthor",
+        "Stests"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "两种原创辅导假设对人工时间敏感，缺成交账单和实际服务工时，不能判断稳定盈利。",
+      "source_ids": [
+        "Scost",
+        "Sreadme"
+      ]
+    },
+    "distribution": {
+      "score": 2,
+      "rationale": "作者博客社区有可见传播入口，但访问到付费转化没有数据，获客计划仍是假设。",
+      "source_ids": [
+        "Sauthor",
+        "Scommunity"
+      ]
+    },
+    "moat": {
+      "score": 1,
+      "rationale": "角色文件容易模仿且平台有替代，原创题与验收积累可能有价值但尚未形成证明。",
+      "source_ids": [
+        "Sstyle",
+        "Scourse"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "可读项目与测试支持工程可检查，教学模式漂移、权限与环境兼容仍需人工验收。",
+      "source_ids": [
+        "Sbrief",
+        "Spermissions"
+      ]
+    },
+    "feedback": {
+      "score": 1,
+      "rationale": "两条相邻学习亲历有正反面取舍，无该项目独立复现或量化教学效果，只计弱信号。",
+      "source_ids": [
+        "Scommunity",
+        "Sissues"
+      ]
+    }
+  }
+}
