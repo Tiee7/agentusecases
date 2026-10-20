@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "run-support-queries-and-bug-checks-from-slack-threads",
+  "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+  "title": "用Doozy在Slack线程中查询支持问题",
+  "industry": "SaaS客户支持",
+  "researched_at": "2026-10-20T19:28:34.199522+00:00",
+  "brief_reason": "原始讨论、代码与业务验收数据未取得；只验证目录转述和相关安全机制，不冒充完整Doozy实现研究。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先验证只读查询边界",
+    "headline": "将密钥隔离、数据权限与回复范围分别验收",
+    "reason": "内部日用人数不能替代收益；安全网关不自动解决工具滥用与数据披露。",
+    "next_action": "自有合成客户数据、一类只读问题、逐项允许/拒绝和结果核对。",
+    "stop_condition": "跨客户数据暴露、未经批准写操作、结果无法追溯或维护成本高于手工查询。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+      "title": "许可目录：Doozy支持查询流程",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:06:37Z",
+        "end": "2026-10-20T19:07:00Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 14289,
+      "sha256": "64040d6b2303f29a426f6cd9043fd15214775ac6614e7b88a0250dd925adcd7d",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "目录转述Spur内部Doozy工作流与13人日用；未核实原作者、真实运行或客户收益。"
+    },
+    {
+      "id": "Se2b",
+      "url": "https://e2b.dev/resources/introducing-e2b-secrets",
+      "title": "E2B：沙箱外凭据注入",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:26:19Z",
+        "end": "2026-10-20T19:26:33Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:28:34.199522+00:00",
+      "receipt_text": "2026-10-07官方说明通过目标HTTPS规则在沙箱外插入请求头，避免将真实密钥放入沙箱环境/文件；这支持一种机制，不证明Doozy具体实现。持有工具调用能力仍需权限边界。",
+      "characters": 88,
+      "sha256": "9972d05ea1ba548ff55d98696f054345ea76035cb53ccacedf361d65c693c9f8",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "2026-10-07官方说明通过目标HTTPS规则在沙箱外插入请求头，避免将真实密钥放入沙箱环境/文件；这支持一种机制，不证明Doozy具体实现。持有工具调用能力仍需权限边界。"
+    },
+    {
+      "id": "Spg",
+      "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+      "title": "PostgreSQL18：行级权限",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:26:19Z",
+        "end": "2026-10-20T19:26:33Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:28:34.199522+00:00",
+      "receipt_text": "表访问权限与行级策略不同；默认无行策略，启用RLS且无适用策略时默认拒绝，owner/superuser/BYPASSRLS例外。只读不等于只能读获准客户数据。",
+      "characters": 80,
+      "sha256": "1b10ae5cd1ee34503ee9ea5d6c80b688da0cc771784088dcb0eaaaf68c042239",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "表访问权限与行级策略不同；默认无行策略，启用RLS且无适用策略时默认拒绝，owner/superuser/BYPASSRLS例外。只读不等于只能读获准客户数据。"
+    },
+    {
+      "id": "Sslack",
+      "url": "https://docs.slack.dev/concepts/security/",
+      "title": "Slack：最小权限与数据外传防护",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:26:19Z",
+        "end": "2026-10-20T19:27:00Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:28:34.199522+00:00",
+      "receipt_text": "官方要求最小scope、请求来源核验、凭据关联owner并避免日志回显；模型输出URL可能经链接预览造成外传，建议默认关闭unfurl并约束出口。",
+      "characters": 73,
+      "sha256": "5876095d11f2cd371a4ef804a3ea1878090bbda6dc8d1a42a8f706e0c326297b",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方要求最小scope、请求来源核验、凭据关联owner并避免日志回显；模型输出URL可能经链接预览造成外传，建议默认关闭unfurl并约束出口。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://news.ycombinator.com/item?id=50166597",
+      "title": "HN原始讨论（未读取）",
+      "kind": "primary",
+      "status": "unavailable",
+      "attempts": [
+        {
+          "window": "2026-10-20T19:07:07Z/19:07:15Z",
+          "result": "not accessible via this tool"
+        },
+        {
+          "window": "2026-10-20T19:26:06Z/19:26:19Z",
+          "result": "same;one ordinary retry exhausted"
+        }
+      ],
+      "supports": "保留原链接，不捏造原作者或代码；不再重试。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述Spur有13名人员每日使用自建Doozy执行支持查询，没有可核验工单和收入数据。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "E2B官方提供沙箱外按HTTPS目标注入请求头凭据的机制。",
+      "type": "verified",
+      "source_ids": [
+        "Se2b"
+      ]
+    },
+    {
+      "statement": "Postgres表访问权限与行级权限不同，只读本身不限制所有可见客户行。",
+      "type": "verified",
+      "source_ids": [
+        "Spg"
+      ]
+    },
+    {
+      "statement": "Slack官方提示模型生成URL的预览可能外传数据，并建议限制出口和默认关闭预览。",
+      "type": "verified",
+      "source_ids": [
+        "Sslack"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "identity",
+      "title": "先避免同名产品错配",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "本案是Spur内部名为Doozy的Slack助手，目录标记自建agent；试用区推荐Claude Code不证明实际底层模型是Claude Code。搜索出现同名Doozy服务和不同Spur代码项目，未取得可靠交叉身份链接，因此未把它们的功能、价格或客户数据拼入本案。原HN及实现代码不可得，保留为证据简报。"
+    },
+    {
+      "id": "workflow",
+      "title": "把任务入口、查询和结果分开",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录转述支持人员在线程内提及助手，助手进入新沙箱、经网关访问业务系统，并返回结果与文件。13人日用是内部采用主张，不是13个客户、付费席位或已处理工单数。没有公开准确率、处理时长、人工接管率和最终客户满意度，不能由重要组成部分的评价算省时或收入。初版读文件能力弱，说明输入完整性也需验收。"
+    },
+    {
+      "id": "secrets",
+      "title": "密钥保密与工具授权不是一回事",
+      "source_ids": [
+        "Se2b",
+        "Sdirectory"
+      ],
+      "body": "E2B官方提供沙箱外HTTPS请求头注入，说明不必把密钥交给可执行代码；但本次不能证明原案使用该特定产品或配置。即使拿不到密钥，agent仍可能用获准接口读出不该读取的数据，或发起范围过宽的动作。目录的无法泄露密钥应作为来源主张保留，而不是整套系统安全保证。需要同时限定身份、目标、动作和输出。"
+    },
+    {
+      "id": "data",
+      "title": "只读查询仍有敏感数据边界",
+      "source_ids": [
+        "Spg"
+      ],
+      "body": "只读账户能阻止一部分写入，却可能读取整张表。PostgreSQL行级策略可约束数据行，但默认、角色和所有者例外必须核对。研究建议把Slack请求者映射到被允许的客户和字段，采用限定查询、结果行数与超时，避免任意SQL。这些是设计建议，未连接数据库或检验原案租户隔离，也不声称它已采用RLS。"
+    },
+    {
+      "id": "output",
+      "title": "线程回复也是一次数据披露",
+      "source_ids": [
+        "Sslack"
+      ],
+      "body": "查询获得结果不意味着线程里的每个人都有权看到。返回文件尤其可能扩大范围，建议只给必要摘要与授权记录链接，并核对目标频道与接收者。Slack官方提示模型生成URL的预览可能带来外传，关闭不必要预览与限制出站目标可降低风险，但不能代替内容审查。本轮未读取私人Slack或发送任何消息到团队。"
+    },
+    {
+      "id": "business",
+      "title": "商业需求在跨系统交接",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "假设客户是支持团队已在Slack沟通、排错却经常要向工程师追问的SaaS公司。潜在付款者为支持或工程负责人，购买的是更快得到可检查线索、减少上下文切换，而不是一个聊天入口。可交付项目可能包括只读连接、业务字段映射、权限测试与人工接管。需求频率和预算需实际验证；原案没有外部销售、套餐或收益，不能直接包装成已验证SaaS生意。"
+    },
+    {
+      "id": "alternatives",
+      "title": "优先对比已有支持工具",
+      "source_ids": [
+        "Sdirectory",
+        "Spg"
+      ],
+      "body": "人工支持控制台、固定SQL报表和工单内的已有记录链接都可能解决主要问题，不一定需要能写代码的沙箱。对于少数固定问法，受限查询模板更易审查；任务跨多个系统且长尾多时，自由工具编排才可能有额外价值。复制条件包括清晰schema、工单与用户ID对应、获准数据范围及业务负责人；这些通常比模型调用本身更费维护。"
+    },
+    {
+      "id": "delivery",
+      "title": "先交付一个可复核问题类型",
+      "source_ids": [
+        "Sdirectory",
+        "Sslack"
+      ],
+      "body": "建议从自有合成数据中的一种查询开始，例如解释失败状态并附记录链接，不执行退款、改订单或修改客户信息。每条结果应包含查到什么、没有查到什么和人工下一步。假设首批客户来自已有支持系统集成合作，使用演示证据获得试点；本轮没有联系第三方。若每客户都需要大量定制字段和权限，服务更接近集成项目，而非低成本自助订阅。"
+    },
+    {
+      "id": "economics",
+      "title": "人工复核决定单位成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "以一份跨系统问题调查摘要为单位，每月200份。低返工假设审核5分钟×24USD/h=2，模型预算0.10，已列2.10/份、420/月；高返工15分钟=6，模型0.30，6.30/份、1260/月。均为研究者情景，不是作者工时或工具报价。沙箱、存储、接口维护、首次集成与获客成本未知另计，不能默认零；售价未知，不算利润。13名内部用户不足以确定月工单量。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值需要团队条件",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适用的是已有多系统访问需求且能审查结果的支持/成功团队，而不是普通个人随手安装就用。可能收益为减少切换和重复问询，实际净省时待核实。设置需要映射数据、授权与日志，维护依赖系统更新、密钥轮换和权限撤销。使用可随工单每日发生，但低量团队维护负担可能更高。错误包括查错客户、误认状态、混淆线程与把未知写成已解决。"
+    },
+    {
+      "id": "trial",
+      "title": "只制定合成数据试用计划",
+      "source_ids": [
+        "Se2b",
+        "Spg",
+        "Sslack"
+      ],
+      "body": "用两组互不授权的合成客户和一条失败交易状态，验证结果仅返回正确范围与必要字段；拒绝跨客户查询和任何写操作，确认敏感值不出现在日志、文件或URL。计划应区分任务成功、权限拒绝、来源不可达和需人工接管，不把失败沉默处理成无异常。本轮未搭沙箱、创建密钥、连接业务系统或进行真实试用；目标是可审阅验收方案。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+    "observed_at": null,
+    "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d819e230a0c02aa2cc20d56dc5e2e961433578745546884ae0f4ad6fa0615b0d",
+      "How it went": "10df0191d77accf9906b326f587cd88c13d438685b01dc9dc52ef6b3b79e374b",
+      "Worth knowing": "07a970bfc95998d3d983f906ac58d2f1f417b1ea1f6123a9667829e9912d80bb"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T19:06:37Z",
+      "end": "2026-10-20T19:07:00Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "64040d6b2303f29a426f6cd9043fd15214775ac6614e7b88a0250dd925adcd7d",
+    "observation_window": {
+      "start": "2026-10-20T19:06:37Z",
+      "end": "2026-10-20T19:07:00Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50166597",
+    "source_title": "HN original discussion",
+    "source_language": "en",
+    "accessed_at": null,
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "普通读取失败后一次重试仍不可读；目录转述未当作作者方法原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "内部采用人数为目录转述，净省时与准确率无独立核验。",
+    "audience": "在Slack协作且需跨系统查问题的支持团队。",
+    "use": "只读排错、整理证据、生成线程摘要。",
+    "benefit": "可能减少系统切换，未量化实际收益。",
+    "setup_cost": "系统连接、客户ID与权限映射、合成样例与输出审批。",
+    "maintenance_cost": "schema变化、接口、密钥轮换、撤销与日志治理。",
+    "frequency": "随支持工单，目录称每日使用但工单量未知。",
+    "privacy_risk": "客户数据、跨租户结果、线程接收者及输出链接。",
+    "error_risk": "错误关联客户、状态误判、遗漏文件与误报解决。",
+    "source_ids": [
+      "Sdirectory",
+      "Spg",
+      "Sslack"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "目录建议Claude Code，不代表实际Doozy底层模型或作者原始提示。",
+    "prerequisites": "自有合成数据、两组隔离客户、限定查询和输出范围。",
+    "tools": "获准只读查询接口与助手；本轮无实际部署。",
+    "expected_result": "一份有来源、未知项与人工下一步的支持摘要计划，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Set up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it."
+      },
+      {
+        "title": "支持查询权限测试计划",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Spg",
+          "Sslack"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只使用提供的合成数据制定支持查询计划。列出请求者、获准客户、字段和回复接收者；只读、不改状态、不退款、不外发。区分成功、拒绝、来源不可达与未知，并提出跨客户拒绝和输出脱敏测试。不要连接真实服务或索取密钥。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "一份跨系统支持调查摘要",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.1,
+      "human_cost": 2,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 200,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "5min×24USD/h=2，模型0.1；2.1/份420/月，集成/沙箱/维护/获客未知另计。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "一份跨系统支持调查摘要",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.3,
+      "human_cost": 6,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 200,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "15min×24USD/h=6，模型0.3；6.3/份1260/月，集成/沙箱/维护/获客未知另计。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    }
+  ],
+  "economics_assumptions": "全部情景假设非作者账单；未知成本不填零，未知售价不计算利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "未取得原作者和独立使用者资料；同名产品不作替代证据。"
+  },
+  "disconfirming_evidence": "初版文件读取不稳；密钥隔离仍可误用工具，13人日用没有量化结果；固定查询控制台可能已足够。",
+  "limitations": "HN原帖一次重试仍失败；没有可靠代码或产品身份交叉证据，没有真实数据库/Slack/付款操作或试用。",
+  "archive_source_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+  "translation_sha256": "a1300ce4e6de123ca84c4fc8ed4b5bca6ef9ab3714941fe4646740a9421815fa"
+}

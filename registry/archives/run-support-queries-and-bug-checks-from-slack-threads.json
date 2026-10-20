@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+  "observed_at": null,
+  "html_sha256": "64040d6b2303f29a426f6cd9043fd15214775ac6614e7b88a0250dd925adcd7d",
+  "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run support queries and bug checks from Slack threads",
+      "sha256": "09f60814b57691563cdc5d77763bccbf2e0d4d9d4864edab3f50dd9a0e744bae"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Doozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.",
+      "sha256": "4a57d4e41564c6ade751363b5cf06437ee41a241a143d45f0bc447ad9b73120c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "At Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.",
+      "sha256": "cad96d170b5d704308c31c5c5405eb770ef5e31518e85c2657d65899bcc4e4f8"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.",
+      "sha256": "8a92b4b0afbc15efa0418cca27f84e9a15039ce29bd7e08e0cbd4666877171cf"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Keep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.",
+      "sha256": "815c7f27c483682e18693ad60a80bff56269951051a053a2073d3a63a876900d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50166597"
+      ],
+      "sha256": "4694087210a483dd4ed0f55bc019a83b9625dec123d16c989de26a8e2f802407"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "09ea89e4dcc16eb48df46bad3237df9df49afb32d65a79f65b9964a9a4eca837",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run support queries and bug checks from Slack threads\nDoozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAt Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.\nHow it went\n13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.\nWorth knowing\nKeep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it.\nOriginal source: https://news.ycombinator.com/item?id=50166597",
+    "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T19:06:37Z",
+      "end": "2026-10-20T19:07:00Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "observation_window": {
+    "start": "2026-10-20T19:06:37Z",
+    "end": "2026-10-20T19:07:00Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+    "translated_at": "2026-10-20T19:28:34.199522+00:00",
+    "body": "从Slack讨论串执行支持查询和缺陷检查\nDoozy是一款Slack agent，它接收支持人员交办的任务，在沙箱内对Postgres、Stripe、GitHub和Linear执行操作，再将结果发回讨论串；有13个人每天使用它。\n使用的是\n自建或未具名agent\n他们做了什么\n在Spur，支持人员在Slack讨论串中提及Doozy并交给它任务。它在一个全新、不保存凭据的E2B沙箱中运行，由外部网关针对每次请求添加凭据。它查询Postgres、Stripe、GitHub、Linear、PostHog、MCP服务器或网页，然后将结果和文件发回讨论串。破坏性工具默认被拒绝，直到所有者启用。\n进展与成效\nSpur有13个人每天使用它，主要是支持和客户成功人员，而不是工程师；作者称它已成为团队的重要组成部分。最初的版本比较粗糙，连讨论串里发来的文件都不太能读取。\n值得注意\n将凭据放在沙箱外，并默认拒绝破坏性工具；作者表示，提示词注入仍可能滥用已授权工具，但无法泄露密钥。\n亲自尝试\n使用\nClaude Code\n复制提示词\n配置一个可以接收支持任务的助手。当我描述问题，例如[客户付款失败或疑似缺陷]时，通过对[你的数据库、Stripe、GitHub和Linear]的只读访问进行查询，并写下发现，附上对应记录的链接。当你给出一份可以发到Slack讨论串的简短摘要时，任务完成。不要修改或删除任何数据；在写入或发送任何内容之前，暂停并向我展示。\n原始来源：https://news.ycombinator.com/item?id=50166597",
+    "body_sha256": "a1300ce4e6de123ca84c4fc8ed4b5bca6ef9ab3714941fe4646740a9421815fa",
+    "status": "available"
+  }
+}
