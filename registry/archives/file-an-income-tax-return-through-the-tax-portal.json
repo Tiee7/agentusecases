@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/file-an-income-tax-return-through-the-tax-portal",
-  "observed_at": "2026-10-19T07:16:09.802378+00:00",
-  "html_sha256": "17d14e58a574bb8ccc882ab13910fce218fcbe551d1c582a383b659ab3968659",
+  "observed_at": null,
+  "html_sha256": "fd5f5f8de149aa1abf1e389fb3ca94f22549a26b4936ce69bb0c8cb1160dbbba",
   "body_sha256": "8a077809277a1cb485e239b42039882b59ef9bda9397d78e357ea87ab5741cae",
   "status": "observed",
   "fields": {
@@ -79,9 +79,10 @@
       "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "added_at": {
-      "status": "observed",
-      "value": "2026-10-16",
-      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "try_it": {
       "status": "observed",
@@ -96,12 +97,27 @@
     "language": "en",
     "body": "File an income tax return through the tax portal\nClaude Desktop agent filed the user's ITR-1: cross-checked salary against AIS, handled an employer switch, fixed validation errors, and submitted.\nDone with\nCL\nClaude\nWhat they did\nUser supplied Form 16s and instructed the Claude Desktop agent to file ITR-1. The agent opened the income tax portal, cross-checked salary figures against AIS, automatically handled the mid-year employer switch, recovered from session timeouts, corrected a portal validation error, and submitted the return.\nHow it went\nThe ITR-1 was filed with no CA or accountant involved and without three hours of manual portal work.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me prepare my income tax return for [tax year] on [tax portal URL]. I'll log in myself. Cross-check my salary and income figures against [Form 16, AIS, or equivalent statements in this folder], account for [any job change or other income], and fill in the return form. Fix any validation errors you find, then stop and show me a full summary of every figure before you submit anything, and wait for my go-ahead to file.\nOriginal source: https://x.com/trq212/status/2067255423842103670",
     "body_sha256": "8a077809277a1cb485e239b42039882b59ef9bda9397d78e357ea87ab5741cae",
-    "archived_at": "2026-10-19T07:16:09.802378+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T14:25:36Z",
+      "end": "2026-10-20T14:25:52Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:16:09.802378+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-20T14:25:36Z",
+    "end": "2026-10-20T14:25:52Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "capture_basis": "Own cloud browser main DOM, not full SSR",
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "8a077809277a1cb485e239b42039882b59ef9bda9397d78e357ea87ab5741cae",
+    "translated_at": "2026-10-20T14:30:03.513839+00:00",
+    "body": "通过税务门户提交所得税申报表\nClaude Desktop agent提交了用户的ITR-1：将工资与AIS交叉核对、处理更换雇主的情况、修正校验错误，并提交申报。\n使用的是\nClaude\n他们做了什么\n用户提供了多份Form 16，并指示Claude Desktop agent提交ITR-1。agent打开所得税门户，将工资数字与AIS交叉核对，自动处理年中更换雇主的情况，从会话超时中恢复，修正门户的一项校验错误，然后提交申报表。\n进展与成效\nITR-1已提交，没有CA（特许会计师）或会计师参与，也无需花三小时手动操作门户。\n亲自尝试\n使用\nClaude\n复制提示词\n帮助我在[税务门户网址]准备[税务年度]的所得税申报表。我会自行登录。将我的工资和收入数字与[这个文件夹中的Form 16、AIS或同等报表]交叉核对，考虑[工作变动或其他收入]，并填写申报表。修正你发现的所有校验错误，然后停下来，在提交任何内容前向我展示每个数字的完整汇总，等待我同意后再申报。\n原始来源：https://x.com/trq212/status/2067255423842103670",
+    "body_sha256": "1a879e3cc0ffc0775122a462995994dff20930f63490f94b035176f4a114c5c1",
+    "status": "available"
   }
 }
