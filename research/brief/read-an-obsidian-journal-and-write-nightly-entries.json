@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "read-an-obsidian-journal-and-write-nightly-entries",
+  "url": "https://agentusecases.ai/use-case/read-an-obsidian-journal-and-write-nightly-entries",
+  "title": "用OpenClaw读取Obsidian日记并每晚生成新条目",
+  "industry": "个人笔记与反思写作",
+  "researched_at": "2026-10-20T10:19:08.768263+00:00",
+  "brief_reason": "原作者文章和实际日记/配置未取得，缺长期运行、净收益和付费证据；组件资料能核实现行能力，但不能独立复现该作者结果。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "保留原日记，只生成可追溯的独立草稿",
+    "reason": "反思辅助有明确用途，持续价值需由使用者审阅判断；现行工具与历史安装描述已有差异。",
+    "next_action": "用虚构日记验证范围、引用、重复执行与独立输出。",
+    "stop_condition": "改写原始笔记、读取范围越界、混淆AI生成与本人记录或无法说明数据去向。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/read-an-obsidian-journal-and-write-nightly-entries",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:16:08Z",
+        "end": "2026-10-20T10:16:21Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T10:19:08.768263+00:00",
+      "characters": 13705,
+      "sha256": "9ae343edfa5d30833127b501fc58758033b53dd8f4ff056a424f1d6d33603233",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "作者安装、日记读取、Spotify控制、首次日记、本地小模型失败与睡眠掉线均为目录转述；安装平台描述按原文保留。"
+    },
+    {
+      "id": "Sskill",
+      "url": "https://github.com/openclaw/openclaw/blob/main/skills/obsidian/SKILL.md",
+      "title": "OpenClaw当前Obsidian技能",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:16:58Z",
+        "end": "2026-10-20T10:17:10Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "github_connector_file",
+      "receipt_created_at": "2026-10-20T10:19:08.768263+00:00",
+      "receipt_text": "当前main技能使用官方obsidian CLI，要求Obsidian1.12.7+、启用命令行、PATH注册及应用运行；说明Markdown可直接编辑，包含macOS和Linux注册说明。与目录所述旧Homebrew/obsidian-cli方式不同，不能直接当当前通用安装结论。",
+      "characters": 141,
+      "sha256": "710c594c869e7308faecc998cb7532b2ec3648aca3532c5875b66b3b07139ec9",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "当前main技能使用官方obsidian CLI，要求Obsidian1.12.7+、启用命令行、PATH注册及应用运行；说明Markdown可直接编辑，包含macOS和Linux注册说明。与目录所述旧Homebrew/obsidian-cli方式不同，不能直接当当前通用安装结论。"
+    },
+    {
+      "id": "Scli",
+      "url": "https://obsidian.md/cli",
+      "title": "Obsidian官方CLI",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:17:10Z",
+        "end": "2026-10-20T10:17:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T10:19:08.768263+00:00",
+      "receipt_text": "官方提供命令行入口，可用于应用自动化；不证明作者当时使用的obsidian-cli就是当前官方CLI。",
+      "characters": 51,
+      "sha256": "73fe1e712eaac5590fa6086f6eb0f62633a9709c4a61b7de0f280eda439597aa",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方提供命令行入口，可用于应用自动化；不证明作者当时使用的obsidian-cli就是当前官方CLI。"
+    },
+    {
+      "id": "Suri",
+      "url": "https://obsidian.md/help/Extending%2BObsidian/Obsidian%2BURI",
+      "title": "Obsidian官方URI说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:17:10Z",
+        "end": "2026-10-20T10:17:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T10:19:08.768263+00:00",
+      "receipt_text": "原生URI支持创建、打开和搜索笔记；daily动作可创建或打开每日笔记，需启用Daily notes。它不是自动生成反思内容的功能证明。",
+      "characters": 68,
+      "sha256": "e9160070954b2a1dcb7841ad4c05076b554d18b43ff940b028a261eab66203aa",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "原生URI支持创建、打开和搜索笔记；daily动作可创建或打开每日笔记，需启用Daily notes。它不是自动生成反思内容的功能证明。"
+    },
+    {
+      "id": "Sprivacy",
+      "url": "https://obsidian.md/help/Obsidian%20Sync/Security%20and%20privacy",
+      "title": "Obsidian Sync安全与隐私",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T10:17:10Z",
+        "end": "2026-10-20T10:17:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T10:19:08.768263+00:00",
+      "receipt_text": "官方区分远程库的同步加密与本地库；本地库不由Obsidian加密。同步端到端加密不能自动保护被授权读取本地明文的其他进程或其模型传输。",
+      "characters": 67,
+      "sha256": "df43773114f75b1b3fc27290021313e08e2b6ff01bca371e64c9e6bab7ad2987",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方区分远程库的同步加密与本地库；本地库不由Obsidian加密。同步端到端加密不能自动保护被授权读取本地明文的其他进程或其模型传输。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.makeuseof.com/openclaw-introduction-and-review/",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "MakeUseOf原文通过公开网页工具两次普通读取均失败，未取得正文；只保存许可目录转述，未用其他访问路径绕过。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述首次生成日记成功，MacBook睡眠后agent离线。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "当前OpenClaw main技能使用官方obsidian CLI并要求应用运行。",
+      "type": "verified",
+      "source_ids": [
+        "Sskill"
+      ]
+    },
+    {
+      "statement": "Obsidian URI提供daily创建或打开每日笔记动作。",
+      "type": "verified",
+      "source_ids": [
+        "Suri"
+      ]
+    },
+    {
+      "statement": "Obsidian Sync加密选择只影响远程库，本地库不由其加密。",
+      "type": "verified",
+      "source_ids": [
+        "Sprivacy"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "第一次写入成功与每晚可靠运行不同",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录说明agent开始写日记，但没有连续运行天数、失败次数、实际内容或用户评价。几分钟连接工具是设置经历，不等于长期可用。MacBook睡眠后离线是明确运行边界；单次本地小模型设置失败也不能概括所有本地模型都不适用。"
+    },
+    {
+      "id": "versions",
+      "title": "历史安装方式不能直接作为今天的教程",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill",
+        "Scli"
+      ],
+      "body": "许可目录中的Homebrew与第三方obsidian-cli描述保留不改。当前OpenClaw main技能已经指向官方obsidian CLI，要求应用运行，并有不同系统注册说明。复制时应先固定OpenClaw和Obsidian版本、确认实际加载的技能，不能混用同名CLI或把历史平台差异写成产品永久限制。主干文档也不保证用户已安装发布版与之相同。"
+    },
+    {
+      "id": "demand",
+      "title": "需求是帮助回看，而不是代替本人记录",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "潜在人群是已有持续日记、愿意审阅主题整理的写作者或知识工作者。AI可以拟定回顾草稿，但应与本人当天经历分开，标清生成日期、输入范围和引用。不能把文学化的“agent自己的日记”呈现成已验证的真实经历或意识感受，也不能让新增文字悄悄变成用户原始记忆。"
+    },
+    {
+      "id": "scope",
+      "title": "目录模板比故事里的读取范围更窄",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "故事称读取整个日记库，模板则指定文件夹和最近若干天，并限制新建输出文件。应保留这种差异。实际试点可从少量人工挑选的副本开始，明确不读附件、其他人的记录或额外目录；不要仅因能访问整个vault就认为都在本次授权范围内。"
+    },
+    {
+      "id": "reliability",
+      "title": "定时执行需要可检查的主机与回执",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill"
+      ],
+      "body": "宿主休眠或应用关闭会影响相应运行链。拟议方案应记录计划时间、实际写入时间、输入范围和文件路径；错过一次任务应显示缺口，不补造过去日期或声称当时已写。重复触发先查当天已有结果，不覆盖旧条目。本文未测试补跑、常开主机或升级稳定性。"
+    },
+    {
+      "id": "privacy",
+      "title": "本地存储与模型本地运行不是一回事",
+      "source_ids": [
+        "Sprivacy"
+      ],
+      "body": "Obsidian本地库的访问权限和远程Sync加密是不同边界。授权一个agent读取本地笔记后，还需确定它是否把内容发给模型、插件、日志或远端备份。建议只提供选定输入副本、分离输出目录、约定保留删除方式；不应仅靠“Obsidian本地”或“Sync加密”就宣布全链路不外发。"
+    },
+    {
+      "id": "alternatives",
+      "title": "只要每日记录，原生功能已经能做一部分",
+      "source_ids": [
+        "Suri"
+      ],
+      "body": "原生daily动作能创建或打开每日笔记，不需要LLM才能生成一个日期文件。新增agent的差异应在主题整理、关联提示或反思草稿是否有用，而不是文件创建本身。如果用户只要提醒和模板，保持原生工作流更简单；这并非声称原生功能等效提供AI反思。"
+    },
+    {
+      "id": "commercial",
+      "title": "付费价值尚未验证",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "候选收入可以是隐私优先的配置服务或个人化回顾功能，但本案没有客户付款、留存或订阅转化。获客验证宜展示虚构日记的前后对照，询问哪些输出真正被采纳，不以“懂你”作为未经证明卖点。重复产生泛泛文字而无人回看，就缺乏长期维护理由。"
+    },
+    {
+      "id": "cost",
+      "title": "内容增长会改变成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用情景需计入设置、审阅、纠错、模型输入输出及宿主运行成本；整库反复读取与有限时间窗不是同一成本。对外服务还需加入接入支持、数据隔离、退出导出与安全维护。没有日志和报价就不填净节省或利润；存量日记长不自动意味着用户更愿付费。"
+    },
+    {
+      "id": "personal",
+      "title": "有价值的是可用草稿，而非自动输出数量",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适用频率由本人写作与回顾习惯决定。设置要明确输入副本、时间窗、输出目录和语气；维护包括失败提示、权限、模型变化及删除策略。错误风险有错归因、过度解读、把AI内容当事实和重复文件；使用者应能逐条追到原笔记，并直接拒绝不合适的草稿。"
+    },
+    {
+      "id": "trial",
+      "title": "先用三篇虚构笔记验边界",
+      "source_ids": [
+        "Sdirectory",
+        "Sskill"
+      ],
+      "body": "设计少量虚构日记及一个明确禁止读取的文件，要求只输出主题草稿、对应日期和不确定项，不做心理诊断或补造经历。随后模拟同日重复运行、空输入、主机错过时间和用户拒绝语气。通过标准是原文件不变、范围正确、生成身份清楚、失败不冒充完成；本轮未实际运行该演练。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/read-an-obsidian-journal-and-write-nightly-entries",
+    "observed_at": null,
+    "body_sha256": "6df1df8e4a7260c454b727b4f64dacfbd45056566fc5e43ecec151eed3482d94",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "04625ac2dca6a8dea2a5e4b5adf0eee0c9df05dd5126c618d94adce007594c06",
+      "How it went": "98f6ced9660b7893c4adf375a5dd3f477f9984c2761e01e0380309bb1d699356",
+      "Worth knowing": "17cda2e59f6278e3b3bff97248f2578bd8165047cc2b43dfc6a093f7b6179340"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T10:16:08Z",
+      "end": "2026-10-20T10:16:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Connect to my Obsidian vault at [path] and read my journal entries from the last [number] days in [folder]. Each night at [time], write a short reflective journal entry of your own in a new folder called [folder name], noting themes you've noticed in my writing. Only create new files in that folder and never edit or delete my existing notes; you're done when the first entry is written and I've confirmed the tone is right.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/read-an-obsidian-journal-and-write-nightly-entries",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "9ae343edfa5d30833127b501fc58758033b53dd8f4ff056a424f1d6d33603233",
+    "observation_window": {
+      "start": "2026-10-20T10:16:08Z",
+      "end": "2026-10-20T10:16:21Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.makeuseof.com/openclaw-introduction-and-review/",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T10:19:08.768263+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "MakeUseOf原文通过公开网页工具两次普通读取均失败，未取得正文；只保存许可目录转述，未用其他访问路径绕过。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "反思草稿可能有用，长期使用和净收益未测。",
+    "audience": "有持续日记习惯且愿意审阅AI草稿的个人。",
+    "use": "从有限笔记整理主题并生成独立反思草稿。",
+    "benefit": "可能减少回看整理工作，未量化。",
+    "setup_cost": "版本/CLI、输入范围、输出目录、定时和语气。",
+    "maintenance_cost": "宿主唤醒、应用运行、失败恢复、权限和内容复核。",
+    "frequency": "按本人日记与回顾频率。",
+    "privacy_risk": "日记明文、模型传输、插件和日志的数据去向。",
+    "error_risk": "过度解读、错归因、改原笔记、重复文件、补造过往经历。",
+    "source_ids": [
+      "Sdirectory",
+      "Sskill",
+      "Sprivacy"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "三篇虚构日记副本和明确输出规则，不读取真实私人笔记。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "带输入日期与来源的独立AI草稿；原文件不变，未运行测试。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/read-an-obsidian-journal-and-write-nightly-entries",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Connect to my Obsidian vault at [path] and read my journal entries from the last [number] days in [folder]. Each night at [time], write a short reflective journal entry of your own in a new folder called [folder name], noting themes you've noticed in my writing. Only create new files in that folder and never edit or delete my existing notes; you're done when the first entry is written and I've confirmed the tone is right."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只分析以下三篇虚构日记，按日期列出可见主题并生成一篇明确标为AI草稿的反思。不要补造经历、心理状态或意识感受，不作诊断。只输出文本，不访问文件系统。标记不确定项，说明同日重复和缺失输入应如何处理。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "仅目录转述首次体验，官方文档不是独立用户成效验证；无长期复用/付费证据。"
+  },
+  "disconfirming_evidence": "原生每日笔记可覆盖文件创建；主机休眠和设置失败，现行技能与旧教程不同，输出采纳未知。",
+  "limitations": "未访问私人日记、安装CLI、修改vault、连接Telegram/Spotify或启动定时任务。",
+  "archive_source_sha256": "6df1df8e4a7260c454b727b4f64dacfbd45056566fc5e43ecec151eed3482d94",
+  "translation_sha256": "5c8c616baae102e75b3a25189d3fb72ae26a3785e42a6ba7ae54a5e790cd6234"
+}
