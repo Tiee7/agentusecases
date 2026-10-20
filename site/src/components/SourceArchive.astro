@@ -8,6 +8,7 @@ const translationLines=archiveLines(a.translationText || '');
 <section id="source-case"><p class="eyebrow">CASE ARCHIVE</p><h2>案例档案</h2>
 <div class="case-meta"><p class="case-tools">原始agent：{a.agents.join(' · ') || '未收录'}{trial?.agent && ` · 推荐工具：${trial.agent}`}</p>{a.addedAt && <time class="case-added" datetime={a.addedAt}>收录于 {a.addedAt}</time>}</div>
 {a.translationText && <details class="source-translation source-pane" open><summary>中文</summary><div id="source-translation" lang="zh-CN" class="archive-body archive-translation-body">{translationLines.map(line=><>{line.kind==='title'?<h3 class="archive-title">{line.text}</h3>:line.kind==='heading'?<h3 class="archive-heading">{line.text}</h3>:<p class:list={{'archive-blank-line':line.kind==='blank'}}>{line.text}</p>}<Fragment set:html={archiveEndings[line.ending]}/></>)}</div></details>}
+{a.translationStale && <p class="translation-review">中文译文待复核。</p>}
 {a.sourceText && <details class="source-original source-pane"><summary>English</summary><pre id="source-original" lang="en" class="archive-body">{a.sourceText}</pre></details>}
 {metadata.length>0 && <dl class="archive-details">{metadata.map(([label,value])=><div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>}
 <p><a href={a.url} target="_blank" rel="noopener noreferrer">来源页面 ↗</a></p>{a.originals.length>0 && <p>相关来源：{a.originals.map(u=><a href={u} target="_blank" rel="noopener noreferrer">{new URL(u).hostname} ↗ </a>)}</p>}

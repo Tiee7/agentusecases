@@ -38,6 +38,41 @@ class ArchiveTests(unittest.TestCase):
             self.assertEqual(got['body_sha256'],'new');self.assertEqual(got['editorial'],old['editorial'])
             self.assertEqual(got['last_attempt']['status'],'failed')
             db.close()
+    def test_changed_source_preserves_old_text_and_translation_as_stale_history(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);db=database(root/'db')
+            old_source={'format':'extracted_page_text','language':'en','body':'Old source','body_sha256':sha('Old source'),'archived_at':TIME}
+            translation={'status':'available','format':'full_extracted_text_translation','body':'旧译文','body_sha256':sha('旧译文'),'based_on_body_sha256':sha('Old source'),'translated_at':TIME}
+            old={'observed_at':TIME,'body_sha256':sha('Old source'),'source_text':old_source,'translation':translation}
+            (root/'fixture.json').write_text(json.dumps(old))
+            at='2026-10-17T09:00:00+00:00'
+            new_source=dict(old_source,body='New source',body_sha256=sha('New source'),archived_at=at)
+            payload={'url':URL,'observed_at':at,'body_sha256':sha('New source'),'source_text':new_source}
+            db.execute('INSERT INTO archive_observations VALUES(?,?,?,?)',(URL,at,'hash',json.dumps(payload)))
+            apply(db,root);got=json.loads((root/'fixture.json').read_text())
+            self.assertEqual(got['source_text'],new_source)
+            self.assertEqual(got['translation']['status'],'stale')
+            self.assertTrue(got['translation']['review_required'])
+            self.assertEqual(got['translation']['stale_reason'],'source_body_changed')
+            for field in ('body','body_sha256','based_on_body_sha256','translated_at'):
+                self.assertEqual(got['translation'][field],translation[field])
+            self.assertEqual(got['source_history'][0]['source_text'],old_source)
+            self.assertEqual(got['source_history'][0]['translation'],translation)
+            before=(root/'fixture.json').read_bytes();apply(db,root)
+            self.assertEqual((root/'fixture.json').read_bytes(),before)
+            db.close()
+    def test_only_latest_capture_determines_translation_freshness(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp);db=database(root/'db')
+            translation={'status':'available','body':'译文','body_sha256':sha('译文'),'based_on_body_sha256':sha('Current source')}
+            old={'observed_at':None,'body_sha256':sha('Current source'),'translation':translation}
+            (root/'fixture.json').write_text(json.dumps(old))
+            for at,body in ((TIME,'Earlier source'),('2026-10-17T09:00:00+00:00','Current source')):
+                payload={'url':URL,'observed_at':at,'body_sha256':sha(body)}
+                db.execute('INSERT INTO archive_observations VALUES(?,?,?,?)',(URL,at,'hash',json.dumps(payload)))
+            apply(db,root)
+            self.assertEqual(json.loads((root/'fixture.json').read_text())['translation'],translation)
+            db.close()
     def test_export_retains_case_body_actual_agents_and_hash(self):
         with tempfile.TemporaryDirectory() as tmp:
             source=Path(tmp)/'source';target=Path(tmp)/'public'
@@ -69,7 +104,12 @@ class ArchiveTests(unittest.TestCase):
         for p in Path('registry/archives').glob('*.json'):
             a=json.loads(p.read_text());t=a.get('translation')
             if t:
-                count+=1;self.assertEqual(t['based_on_body_sha256'],a['body_sha256'])
                 self.assertEqual(sha(t['body']),t['body_sha256'])
-                for url in a['fields']['original_sources']['value'] or []:self.assertIn(url,t['body'])
+                if t['status']=='available':
+                    count+=1;self.assertEqual(t['based_on_body_sha256'],a['body_sha256'])
+                    for url in a['fields']['original_sources']['value'] or []:self.assertIn(url,t['body'])
+                else:
+                    self.assertEqual(t['status'],'stale');self.assertTrue(t['review_required'])
+                    self.assertEqual(t['stale_reason'],'source_body_changed')
+                    self.assertTrue(any(h.get('body_sha256')==t['based_on_body_sha256'] and sha(h['source_text']['body'])==t['based_on_body_sha256'] for h in a.get('source_history',[])),p.name)
         self.assertGreaterEqual(count,7)

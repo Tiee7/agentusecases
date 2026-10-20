@@ -30,7 +30,8 @@ def observe(body, url, observed_at):
             'publication': 'source_case_metadata'}
 
 def merge(previous, observation):
-    if previous and previous.get('observed_at', '') > observation['observed_at']:
+    # Legacy captures may have no exact timestamp; prefer dated observations.
+    if previous and (previous.get('observed_at') or '') > (observation.get('observed_at') or ''):
         return previous
     if previous and previous.get('body_sha256') == observation['body_sha256'] and previous.get('summary'):
         observation['summary'] = previous['summary']
@@ -61,6 +62,6 @@ def render(value):
     if hashlib.sha256(source['body'].encode()).hexdigest()!=archive.get('body_sha256'):return []
     lines=['','## English','','\n'.join('    '+line if line else '' for line in source['body'].splitlines())]
     translation=archive.get('translation',{})
-    if translation.get('based_on_body_sha256')==archive.get('body_sha256') and translation.get('body') and hashlib.sha256(translation['body'].encode()).hexdigest()==translation.get('body_sha256'):
+    if translation.get('status')=='available' and translation.get('based_on_body_sha256')==archive.get('body_sha256') and translation.get('body') and hashlib.sha256(translation['body'].encode()).hexdigest()==translation.get('body_sha256'):
         lines+=['','## 中文','','\n'.join('    '+line if line else '' for line in translation['body'].splitlines())]
     return lines
