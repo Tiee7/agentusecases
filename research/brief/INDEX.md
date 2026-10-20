@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **89**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **90**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -99,3 +99,4 @@
 | 用OpenClaw与编码agent维护多个网站 | [简报](../../reports/brief/manage-several-websites-across-wordpress-astro-and-eleventy.md) |
 | 用OpenClaw浏览Reddit并处理评论回复 | [简报](../../reports/brief/browse-reddit-and-reply-to-comments-autonomously.md) |
 | 用Operator搜集工作资料并整理表格 | [简报](../../reports/brief/try-a-work-task-with-a-browser-agent.md) |
+| 用OpenClaw结合代码库诊断客户问题 | [简报](../../reports/brief/resolve-a-churning-customer-s-issue-quickly.md) |

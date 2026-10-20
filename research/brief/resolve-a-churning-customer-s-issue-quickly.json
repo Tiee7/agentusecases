@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "resolve-a-churning-customer-s-issue-quickly",
+  "url": "https://agentusecases.ai/use-case/resolve-a-churning-customer-s-issue-quickly",
+  "title": "用OpenClaw结合代码库诊断客户问题",
+  "industry": "客户支持",
+  "researched_at": "2026-10-20T13:37:55.109035+00:00",
+  "brief_reason": "缺原始修复、客户与账单证据、人工时间及长期留存；只能说明一种人审加代码诊断工作流，不能验证获利或可复制留客率。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先帮助人定位原因，回复与账户动作另行确认",
+    "reason": "明确权限分工减少外部动作风险，但解决速度、留存和净收益未独立核实。",
+    "next_action": "用虚构客户问题与脱敏代码片段建立诊断和人审清单。",
+    "stop_condition": "泄露客户内容、自动改账单、未经测试部署或把未证实原因写成承诺。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/resolve-a-churning-customer-s-issue-quickly",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:34:25Z",
+        "end": "2026-10-20T13:34:38Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T13:37:55.109035+00:00",
+      "characters": 13529,
+      "sha256": "712b36839696a1c946ac42fd71831123bcaf5b4dcc38495c5c06f7a944127923",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "目录转述不到20分钟解决并留客，明确无邮件/计费权限、客户消息截图加代码库、人负责外部操作，未给具体修复与金额。"
+    },
+    {
+      "id": "Sscope",
+      "url": "https://docs.openclaw.ai/gateway/sandbox-vs-tool-policy-vs-elevated",
+      "title": "OpenClaw沙箱与工具策略文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:36:16Z",
+        "end": "2026-10-20T13:36:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T13:37:55.109035+00:00",
+      "receipt_text": "官方区分工具运行位置、工具是否允许和提升执行权限；工作区访问与挂载模式也分别控制。虚拟环境一词不能证明有效隔离或只读权限。",
+      "characters": 61,
+      "sha256": "de017931e93d03915ed70a5d3586debbc9986be87b3e0b47c54902797806c506",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方区分工具运行位置、工具是否允许和提升执行权限；工作区访问与挂载模式也分别控制。虚拟环境一词不能证明有效隔离或只读权限。"
+    },
+    {
+      "id": "Sassist",
+      "url": "https://support.zendesk.com/hc/en-us/articles/8037936748570-Turning-on-suggested-first-replies",
+      "title": "Zendesk建议首次回复文档",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:36:16Z",
+        "end": "2026-10-20T13:36:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T13:37:55.109035+00:00",
+      "receipt_text": "官方说明客服可接受、修改或拒绝建议回复，来源随渠道不同；该功能已公告于2027-01-19停止，不能当作长期不变的新建方案。",
+      "characters": 62,
+      "sha256": "529e47fb278374eecea3eb3bfc548c0224e56d4359115464ef3bac560f747c98",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方说明客服可接受、修改或拒绝建议回复，来源随渠道不同；该功能已公告于2027-01-19停止，不能当作长期不变的新建方案。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/openclaw/comments/1rcp5xw/my_openclaw_just_paid_for_itself",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "原帖在此前受限Reddit，本轮不重试或绕过。未读取客户私人消息、截图、代码库、账单、原作者日志或后续续费。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录称作者没有授予邮件或计费访问，用客户消息截图和代码库辅助诊断。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "不到20分钟与客户保留均是目录转述，未给具体修复和后续计费结果。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "OpenClaw官方区分沙箱位置和工具允许策略。",
+      "type": "verified",
+      "source_ids": [
+        "Sscope"
+      ]
+    },
+    {
+      "statement": "Zendesk建议首次回复文档提供人审选项并公告2027-01-19停用该功能。",
+      "type": "verified",
+      "source_ids": [
+        "Sassist"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "留住一次不等于验证留存收入",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "没有客户标识、账单或观察时间，无法确认后来是否续费、何时取消、价值多少。问题解决、客户口头愿意留下和实际持续付款是不同结果。原帖标题中的回本含义不能转成已核现金收益；不到20分钟也没有完整人工与agent计时。"
+    },
+    {
+      "id": "workflow",
+      "title": "截图和代码提供不同证据",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "截图能说明客户看到的现象，却可能缺版本、环境和复现步骤；代码说明可能原因，却不证明线上运行的是同一版本。拟议流程先提问和定位假设，再建立最小复现、测试修复、审核回复。不得把“找到可能原因”提前写成已解决。"
+    },
+    {
+      "id": "privacy",
+      "title": "不接邮件不等于没有客户数据",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "人手工上传截图仍是传输客户内容，应先遮掉无关姓名、邮箱、账号、付款与其他客户信息，并核对授权和目的。保留最少诊断事实即可，不将客户私人通信或截图发布到公共研究仓库。本轮没有获取这些材料。"
+    },
+    {
+      "id": "permissions",
+      "title": "虚拟环境不是权限结论",
+      "source_ids": [
+        "Sscope"
+      ],
+      "body": "官方文档区分运行位置、工具许可和工作区可见性。代码只读与可执行、可写、可部署也应分别设定；不能因为叫虚拟环境就认定安全隔离。拟议原型仅用脱敏只读代码，不开放生产账单、发信或部署能力，审查实际有效权限而不是只写提示词。"
+    },
+    {
+      "id": "commercial",
+      "title": "首先是内部客服工程协作",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "假设付款人是有软件产品的团队，需求是减少客服与工程师之间的信息往返；本案未说明业务类型，不直接断定SaaS或电商。候选交付可以是诊断说明、验证结果与待审回复，收入机制可探索按支持工作量或维护范围收费，但没有成交证据。获客需证明问题处理质量，而不是承诺挽回多少收入。"
+    },
+    {
+      "id": "cost",
+      "title": "强模型成本之外还要算人审",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "总成本包括上下文整理、代码检索、模型调用、测试、复核、客户追问及返工。作者提醒规模化可能昂贵，没有价格或token用量，不能计算利润。是否值得重复使用应比较同类工单的总处理时间、复开情况和人工负担，不能用单次20分钟推年化收益。"
+    },
+    {
+      "id": "alternatives",
+      "title": "已有客服助手也提供待审回复",
+      "source_ids": [
+        "Sassist"
+      ],
+      "body": "Zendesk官方说明建议回复可由客服接受、修改或拒绝，但它不是本案的代码诊断实现。当前文档还公告该特定功能将在2027年1月19日停止，所以只能作为现有工作方式的对照，不能无条件推荐新建依赖。原有工单系统加工程师人工诊断也是基线，是否需要自建agent取决于实际缺口。"
+    },
+    {
+      "id": "personal",
+      "title": "适合掌握产品代码的维护者",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用人群是能审查诊断、测试和对外承诺的维护者。设置需准备版本说明、最小代码上下文及回复标准；维护包括代码版本、知识与权限变化。频率随真实支持问题，不推定日常高频。风险包括过度自信诊断、客户信息泄漏和把草稿变为未经批准的承诺。"
+    },
+    {
+      "id": "trial",
+      "title": "虚构问题只输出待验证方案",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备一段虚构报错、简化代码和当前版本说明，要求列出已知事实、可能原因、待问信息、验证步骤和待审回复。预期是未知保持未知，不退款、不改订阅、不发消息、不部署。本轮没有运行该试验，也没有实际留住客户。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/resolve-a-churning-customer-s-issue-quickly",
+    "observed_at": null,
+    "body_sha256": "df6bf9000bd28ea078b98426b3e5a55b2d6184af2badb64bbc333284536db9e8",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "110bfb4af4d99984f3b8f31bfe1de4f8c1eae151dfaedfe2921a8d0cbed75b8a",
+      "How it went": "60f0cc09a7b9984a163045505b96d452c1d00fe29960a0561f2294e3af944b99",
+      "Worth knowing": "d4cfe6542fd88415f368291542af49716361cee74e1c0f3f76ba2cf7c7bac428"
+    },
+    "actual_agents": [
+      "OpenClaw"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T13:34:25Z",
+      "end": "2026-10-20T13:34:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "A customer is thinking of canceling and their issue is: [describe problem and context]. Using the docs and information I give you at [link or pasted notes], diagnose the likely cause and draft a clear, friendly reply with step-by-step fixes. Show me the draft before anything is sent, and include a short list of follow-up questions in case the first fix does not work.",
+    "agent": "OpenClaw",
+    "source_url": "https://agentusecases.ai/use-case/resolve-a-churning-customer-s-issue-quickly",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "712b36839696a1c946ac42fd71831123bcaf5b4dcc38495c5c06f7a944127923",
+    "observation_window": {
+      "start": "2026-10-20T13:34:25Z",
+      "end": "2026-10-20T13:34:38Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/openclaw/comments/1rcp5xw/my_openclaw_just_paid_for_itself",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T13:37:55.109035+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原帖在此前受限Reddit，本轮不重试或绕过。未读取客户私人消息、截图、代码库、账单、原作者日志或后续续费。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可辅助诊断和组织回复，但需要能审核技术与客户承诺的人。",
+    "audience": "掌握产品代码和支持背景的维护者。",
+    "use": "将用户问题与代码线索整理成诊断和待审回复。",
+    "benefit": "可能减少信息整理，20分钟留客为未独立核实自述。",
+    "setup_cost": "脱敏问题、版本、代码范围与验收规则。",
+    "maintenance_cost": "代码、文档、权限和模型费用变化。",
+    "frequency": "按实际支持问题，不推定每天。",
+    "privacy_risk": "手动截图同样可能泄露客户私人信息。",
+    "error_risk": "误判根因、未经测试修复或擅自作退款/续费承诺。",
+    "source_ids": [
+      "Sdirectory",
+      "Sscope"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "虚构问题与脱敏只读代码，无真实客户通信或凭据。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "假设、验证步骤、追问及待审回复；不执行外部动作，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/resolve-a-churning-customer-s-issue-quickly",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "A customer is thinking of canceling and their issue is: [describe problem and context]. Using the docs and information I give you at [link or pasted notes], diagnose the likely cause and draft a clear, friendly reply with step-by-step fixes. Show me the draft before anything is sent, and include a short list of follow-up questions in case the first fix does not work."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "根据以下虚构问题和脱敏代码，分别列已知事实、可能原因、缺失信息与测试方法，再写待审回复。不要声称已修复，不联系客户、不退款、不改订阅、不部署。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "未取得原帖或客户后续反馈，不将作者单次留客声称当独立验证。"
+  },
+  "disconfirming_evidence": "人工截图整理和审核仍花时间；现有工单助手及人工诊断可能足够，留客归因不明。",
+  "limitations": "未实测、未读取私人通信/代码/账单、未确认具体修复和长期留存；来源日期仅目录所示。",
+  "archive_source_sha256": "df6bf9000bd28ea078b98426b3e5a55b2d6184af2badb64bbc333284536db9e8",
+  "translation_sha256": "3312a1e092ac6c55597b97784ebabf293024c02d598a182e5aa387ce0f50c60f"
+}
