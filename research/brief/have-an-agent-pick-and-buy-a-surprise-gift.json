@@ -1,0 +1,376 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "have-an-agent-pick-and-buy-a-surprise-gift",
+  "url": "https://agentusecases.ai/use-case/have-an-agent-pick-and-buy-a-surprise-gift",
+  "title": "用ChatGPT选择并购买惊喜礼物",
+  "industry": "购物辅助",
+  "researched_at": "2026-10-20T02:16:11.062420+00:00",
+  "brief_reason": "原帖和订单未核验，缺偏好选择过程、费用与履约证据；官方产品资料不能补成原案例实测。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证候选匹配和总价，再讨论购买步骤",
+    "reason": "选礼用途可理解，但交易完成和商业收益未独立核验。",
+    "next_action": "虚构偏好下只生成三项候选，不进入购物车。",
+    "stop_condition": "忽略预算禁忌、版本或最终费用无法核对、发生重复交易风险。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/have-an-agent-pick-and-buy-a-surprise-gift",
+      "title": "许可目录及当前云浏览器核验",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 8299,
+      "sha256": "416981c7b322380c1b640d8a4e89f2f4e5eed94dd5f3130f86493bd39b6bc3fc",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "购买完成、书名与账户担忧为目录转述，原帖未核验。"
+    },
+    {
+      "id": "Sbook",
+      "url": "https://www.penguin.co.uk/books/438132/how-to-invent-everything-by-ryan-north/9780753552568",
+      "title": "Penguin出版社书目",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 33701,
+      "sha256": "8d49662fdb8f664dd6684028bfa300fe63758108dda488df7d347be87f5cf6a0",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "确认Ryan North书籍和版本存在，不证明原订单或成交价。"
+    },
+    {
+      "id": "Ssearch",
+      "url": "https://help.openai.com/en/articles/11128490-shopping-with-chatgpt-search",
+      "title": "OpenAI购物搜索说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 33701,
+      "sha256": "8d49662fdb8f664dd6684028bfa300fe63758108dda488df7d347be87f5cf6a0",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "商品覆盖、评论、价格标签和价格更新存在局限。"
+    },
+    {
+      "id": "Sresearch",
+      "url": "https://help.openai.com/en/articles/12911370-using-shopping-research-in-chatgpt",
+      "title": "OpenAI购物研究说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 33701,
+      "sha256": "8d49662fdb8f664dd6684028bfa300fe63758108dda488df7d347be87f5cf6a0",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "可按偏好比较候选；最终价格、税运费和库存需商店核对。"
+    },
+    {
+      "id": "Sbrowser",
+      "url": "https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt",
+      "title": "OpenAI云浏览器说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 9079,
+      "sha256": "75afffa6159c887cfc11e243893a09713b31eafc6103d3a43e2f8e0952163a06",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "云端与桌面浏览器分开，会话可保留；网站访问权限与重要动作批准分开。"
+    },
+    {
+      "id": "Swork",
+      "url": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "title": "OpenAI Work当前说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 33701,
+      "sha256": "8d49662fdb8f664dd6684028bfa300fe63758108dda488df7d347be87f5cf6a0",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "Work用于多步骤交付，云端与本地上下文分别处理。"
+    },
+    {
+      "id": "Slegacy",
+      "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "title": "旧Agent帮助页迁移提示",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:16:11.062420+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:13:41Z",
+        "end": "2026-10-20T02:14:20Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 13508,
+      "sha256": "c98b41c6c140a35b264c97feb97e97319b3ef3b672b474f3558436c4b55b74fb",
+      "hash_scope": "Local capture bundle, possibly multiple pages, not HTML",
+      "supports": "页首说明Agent不可用并引导Work，正文仍有旧入口与额度，不用旧数作为当前依据。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1x4az7m/update_i_asked_gpt_to_get_me_a_surprise_gift_this",
+      "title": "原始惊喜礼物讨论",
+      "kind": "primary",
+      "status": "unavailable",
+      "error": "Not attempted after existing Reddit security block, including linked additional account; no alternate route.",
+      "supports": "未核验订单、授权过程、到账或配送。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述购买Ryan North的书和便条，没有给出价格或送达时间。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Penguin书目确认书名和作者，不能验证本案订单。",
+      "type": "verified",
+      "source_ids": [
+        "Sbook"
+      ]
+    },
+    {
+      "statement": "目录试用模板要求加购物车和购买前停止。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "官方说明云浏览器与用户设备浏览器的会话分开，登录可持续保留。",
+      "type": "verified",
+      "source_ids": [
+        "Sbrowser"
+      ]
+    },
+    {
+      "statement": "购物搜索初始价格未必最低，商品数据可能延迟更新。",
+      "type": "verified",
+      "source_ids": [
+        "Ssearch"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "确认书籍存在，不等于确认订单",
+      "source_ids": [
+        "Sdirectory",
+        "Sbook"
+      ],
+      "body": "目录显示来源日期2026年10月13日，收录日为10月18日。它转述购买了Ryan North的书并附便条，但没有价格、配送时间或完整选择过程。出版社页面能确认书籍与版本存在，不能替代原订单凭证；英国版标价也不能套作原Amazon成交金额。原讨论因既有站点安全阻断未读取，因此交付简报，不计完整深研或真实购买试验。"
+    },
+    {
+      "id": "choice",
+      "title": "惊喜与适合需要明确约束",
+      "source_ids": [
+        "Sdirectory",
+        "Sresearch"
+      ],
+      "body": "研究者判断：用途是减少选择负担并产生惊喜，潜在人群是需要给亲友选礼物的人，付款人通常是送礼者。关键输入是预算、兴趣、已有物品和禁忌，不需要收集对方完整私人资料。目录模板展示三个候选并等待确认，适合先评估推荐相关性；这个模板与原帖所述后台完成购买不是同一授权或操作流程。"
+    },
+    {
+      "id": "access",
+      "title": "登录状态和购买许可分别核对",
+      "source_ids": [
+        "Sbrowser"
+      ],
+      "body": "当前官方云浏览器说明登录会话可以保留到过期或清除，网站访问权限也与重要动作批准分开。研究者据此认为，“没有输入银行资料”不表示已登录商店没有可用付款方式，但也不能把目录中“没有什么阻止再次购物”的说法推成产品普遍行为。应核实本次预算、商店、商品和购买步骤的实际许可。本轮没有登录Amazon或接触付款资料。"
+    },
+    {
+      "id": "environment",
+      "title": "案例的桌面浏览器不能直接等同云浏览器",
+      "source_ids": [
+        "Sdirectory",
+        "Sbrowser",
+        "Slegacy",
+        "Swork"
+      ],
+      "body": "目录描述桌面Work内置浏览器。官方说明云浏览器在独立云电脑运行，不共享用户设备浏览器的登录；桌面内置浏览器是另一种界面。旧Agent帮助页首已引导Work，但正文仍保留旧入口和额度，复制时不据旧页面断言当前套餐额度或必然可购买。报告保留目录原agent标签，另将当前环境差异明确写出。"
+    },
+    {
+      "id": "price",
+      "title": "候选价格不是最终总价",
+      "source_ids": [
+        "Ssearch",
+        "Sresearch"
+      ],
+      "body": "OpenAI购物说明指出价格与配送条款更新可能延迟，初始价格不一定是最低价，评论摘要和标签也不是独立核验。研究者建议比较相同版本、规格、卖家和数量，单列税费、运费、礼品包装及实际到货窗口。最终以商店结账展示为准；礼物是否按时送到也应由配送状态验证，不能从点击购买推断。"
+    },
+    {
+      "id": "business",
+      "title": "消费支出不等于服务收入",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "案例中的买书是用户消费，未显示开发者或代购服务收费、佣金、销量和利润。商业假设可以是选礼咨询或限定范围礼品策划，仍需验证愿付费；获客可能依赖特定场景如节日和兴趣社群，而不是无限泛化代买。商品成本、退换货、客服、人工核对、模型费用和获客都影响收益，没有数据时不编造经济测算。"
+    },
+    {
+      "id": "alternatives",
+      "title": "先与现成比较功能和商店清单比较",
+      "source_ids": [
+        "Sresearch",
+        "Sbook"
+      ],
+      "body": "现有购物研究已能按偏好比较候选，出版社与零售商页面提供具体版本资料。自建服务若只有随机挑选，差异不足；可能的价值在更好理解偏好、避免重复礼物和确认配送细节，仍是假设。用户是否喜欢附言或某本书只是一例转述，不能推成普遍满意度。若复核与退换货成本超过用户省下的时间，应缩小服务范围。"
+    },
+    {
+      "id": "personal",
+      "title": "低频使用，复核比盲目自动化更重要",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用价值待核实：选择过程可能更轻松，但本案缺偏好匹配、总成本和收货证据。设置是预算、商店和避选条件；维护是更新价格库存、核对地址与订单状态。频率通常随送礼场景发生，未有统计。隐私包括收件地址和关系偏好，错误包括选错版本、重复下单、迟到与不合喜好；本轮只读公共资料。"
+    },
+    {
+      "id": "next",
+      "title": "先做不加购物车的选择演练",
+      "source_ids": [
+        "Sdirectory",
+        "Sresearch"
+      ],
+      "body": "用虚构成年人偏好和固定预算，要求三个公开商品候选，列来源、版本、核对日期、未知运费及排除理由。人工判断匹配度与信息完整度，输出可审阅清单；不登录、不加购物车、不购买。本轮未执行选品试验。如候选缺实际来源、价格条件不清，或忽略已拥有物品，先修复推荐再考虑交易流程。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/have-an-agent-pick-and-buy-a-surprise-gift",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "091c1558a0d4ecc50e72e7423b54536f728dc852981166681dd1c2ac87d0890f",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "d31c0235816956a7aa7042d8c542e993e629a8d4014a534c935f4382945754af",
+      "How it went": "8d78add8bfb407c76e4074253a7d3333d11d518548bfc3f5286838145dee851f",
+      "Worth knowing": "f46b5331bb694c73113b46e855c921f0023911ac03bc21ad5ac8bde0b2ed5cee"
+    },
+    "actual_agents": [
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I want to surprise [person] with a gift under [$ budget]. Their interests are [interests], and they already have [things to avoid]. Browse [store or stores] and pick your top 3 candidates with prices, delivery dates, and why each fits. Stop before adding anything to the cart or buying anything. Show me your choice and wait for my explicit go-ahead before any purchase step.",
+    "agent": "ChatGPT Agent",
+    "source_url": "https://agentusecases.ai/use-case/have-an-agent-pick-and-buy-a-surprise-gift",
+    "observed_at": "2026-10-19T07:18:19.915988+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "17fe0c8a81f0dcf90f93606abe99ce40ef3b6a075e8aa53acd9b0a3ea86a1aa5"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1x4az7m/update_i_asked_gpt_to_get_me_a_surprise_gift_this",
+    "source_title": "I asked GPT to get me a surprise gift",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T02:16:11.062420+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原讨论及附加经历链接均未访问，保留目录转述，不据此确认订单。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能减少选择负担，但匹配度、成交与履约未独立核验。",
+    "audience": "需要按偏好和预算选择礼物的成年人。",
+    "use": "候选比较与送礼准备。",
+    "benefit": "惊喜与便条好评仅为目录转述，无本轮试用。",
+    "setup_cost": "预算、兴趣、已有物品与允许商店。",
+    "maintenance_cost": "价格库存、版本、配送条件和订单状态核对。",
+    "frequency": "有送礼需求时，具体次数未知。",
+    "privacy_risk": "账户会话、收件信息与关系偏好可能暴露。",
+    "error_risk": "错版本、错预算、重复下单、延迟配送和偏好不符。",
+    "source_ids": [
+      "Sdirectory",
+      "Sbrowser",
+      "Ssearch"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "保留原模板的加购物车与购买前停止要求；本研究不授权交易。",
+    "prerequisites": "虚构成年收礼者偏好、预算与排除项。",
+    "tools": "公开商品页及已有获准助手，无登录或付款步骤。",
+    "expected_result": "三项带出处候选及未知费用；没有加入购物车或购买，本轮未试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/have-an-agent-pick-and-buy-a-surprise-gift",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I want to surprise [person] with a gift under [$ budget]. Their interests are [interests], and they already have [things to avoid]. Browse [store or stores] and pick your top 3 candidates with prices, delivery dates, and why each fits. Stop before adding anything to the cart or buying anything. Show me your choice and wait for my explicit go-ahead before any purchase step."
+      },
+      {
+        "title": "惊喜礼物候选演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Sresearch"
+        ],
+        "attribution": "原创演练模板，未执行",
+        "text": "根据虚构成年人的兴趣、预算和已拥有物品，仅给三个候选。列准确版本、公开来源、看到的标价和日期；税费运费、到货和退换条件未确认就标未知。解释为何适合与可能不适合。不登录、不加购物车、不购买，不收集地址或付款信息。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原讨论与额外经历未核验；出版社书评不算agent用户反馈。"
+  },
+  "disconfirming_evidence": "无原订单；偏好匹配未知；会话持续访问风险；价格更新延迟；现成比较工具替代。",
+  "limitations": "仅公共页面研究；未登录、下单、付款或真实试用。旧Agent文档有迁移提示与遗留内容，未照搬旧额度。",
+  "archive_source_sha256": "091c1558a0d4ecc50e72e7423b54536f728dc852981166681dd1c2ac87d0890f",
+  "translation_sha256": "963b03c3a19edf270381d3232a55552832d05fcc8995cb586a365efa7ba31dfb"
+}
