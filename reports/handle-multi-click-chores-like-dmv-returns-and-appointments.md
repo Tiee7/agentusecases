@@ -80,7 +80,7 @@
 
 来源：[Layer3Labs原始评述](https://www.layer3labs.io/guides/grok-bot-review)
 
-作者方法摘要
+报道摘要
 
 1. 评述描述持久云电脑处理多步骤网页事务。
    English summary: The review describes a persistent cloud computer handling multi-step web chores.

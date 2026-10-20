@@ -80,7 +80,7 @@
 
 来源：[原始教程中的Alex案例](https://aiblewmymind.substack.com/p/claude-code-subagents-explained)
 
-作者方法摘要
+报道摘要
 
 1. 教程列出Claude Code辅助记账和商品图两项用途。
    English summary: The tutorial identifies bookkeeping and listing images as uses of Claude Code.

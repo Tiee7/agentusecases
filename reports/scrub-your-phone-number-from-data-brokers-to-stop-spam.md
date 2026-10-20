@@ -80,7 +80,7 @@
 
 来源：[Teslarati原始报道](https://www.teslarati.com/grok-bot-spam-call-text-scrubber-elon-musk/)
 
-作者方法摘要
+报道摘要
 
 1. 查找人员搜索列表中的用户号码。
    English summary: Find the user’s number on people-search listings.
