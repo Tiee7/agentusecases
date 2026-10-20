@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **75** / 注册案例 **1478**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **76** / 注册案例 **1479**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -106,3 +106,5 @@
 - Add groceries, buy on Amazon, and price-shop flights · `add-groceries-buy-on-amazon-and-price-shop-flights`
 
 | [用Claude Code维护并运营Chrome扩展](reports/let-claude-code-run-a-chrome-extension-project.md) | 适合内部效率工具 | 未评定 | 中 | 已收录 | 浏览器扩展 | 2026-10-20T19:14:58.334033+00:00 |
+
+| [用Claude Code构建项目开发工作流生成器](reports/build-a-dev-workflow-generator-with-test-driven-agent-coding.md) | 适合内部效率工具 | 未评定 | 中 | 已收录 | 开发者工具 | 2026-10-20T21:48:20.558058+00:00 |
