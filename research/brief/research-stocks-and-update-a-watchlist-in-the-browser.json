@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "research-stocks-and-update-a-watchlist-in-the-browser",
+  "url": "https://agentusecases.ai/use-case/research-stocks-and-update-a-watchlist-in-the-browser",
+  "title": "用Perplexity Comet研究公司信息并整理股票观察清单",
+  "industry": "公开信息研究",
+  "researched_at": "2026-10-20T02:28:19.359590+00:00",
+  "brief_reason": "原文普通读取失败两次；Sheets结果未展示，缺可复核输出、成本和长期效率。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "保留来源和时间线，单独验收表格写入",
+    "reason": "资料整理有潜在用途，深度与写入可靠性尚未核验。",
+    "next_action": "用虚构公司资料生成本地待审行并检查差异。",
+    "stop_condition": "关键结论无出处、核对工作未减少或表格变化无法回读。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/research-stocks-and-update-a-watchlist-in-the-browser",
+      "title": "许可目录及当前云浏览器核验",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:28:19.359590+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:25:00Z",
+        "end": "2026-10-20T02:26:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 8246,
+      "sha256": "183d71fc2a6ccf4c6e584e781abe7a919ee83195004d43361ff4c51f1b079fb2",
+      "hash_scope": "Local capture bundle, not HTML",
+      "supports": "作者尝试Sheets但未展示结果；深度不足为目录转述。"
+    },
+    {
+      "id": "Srelease",
+      "url": "https://www.perplexity.ai/en-GB/changelog/what-we-shipped-october-3rd",
+      "title": "Comet开放下载公告",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:28:19.359590+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:25:00Z",
+        "end": "2026-10-20T02:26:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 29382,
+      "sha256": "dc573861464bdf3566ffef871ac695bef1f14c620feeda25a30cc2341564b958",
+      "hash_scope": "Local capture bundle, not HTML",
+      "supports": "2025年10月公告已开放免费下载，不能把2025年8月邀请限制写成现在。"
+    },
+    {
+      "id": "Splans",
+      "url": "https://www.perplexity.ai/help-center/en/articles/11187416-which-perplexity-subscription-plan-is-right-for-you",
+      "title": "Perplexity套餐比较",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:28:19.359590+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:25:00Z",
+        "end": "2026-10-20T02:26:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 29382,
+      "sha256": "dc573861464bdf3566ffef871ac695bef1f14c620feeda25a30cc2341564b958",
+      "hash_scope": "Local capture bundle, not HTML",
+      "supports": "当前浏览器agent查询按套餐限制；免费下载不等于自动化功能免费无限。"
+    },
+    {
+      "id": "Sprivacy",
+      "url": "https://www.perplexity.ai/comet/resources/articles/comet-data-privacy-security-faq-s",
+      "title": "Comet数据隐私说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:28:19.359590+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:25:00Z",
+        "end": "2026-10-20T02:26:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 5712,
+      "sha256": "e642ae0268aadb32fb60fce73ed72ba49ff809133ffa9dc3a71d205815c6877a",
+      "hash_scope": "Local capture bundle, not HTML",
+      "supports": "个人化请求可使用当前页和相关历史，部分数据服务器处理；不是全离线。"
+    },
+    {
+      "id": "Ssheets",
+      "url": "https://support.google.com/docs/answer/190843?hl=en",
+      "title": "Google文件版本与单元格历史",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T02:28:19.359590+00:00",
+      "read_window": {
+        "start": "2026-10-20T02:25:00Z",
+        "end": "2026-10-20T02:26:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 29382,
+      "sha256": "dc573861464bdf3566ffef871ac695bef1f14c620feeda25a30cc2341564b958",
+      "hash_scope": "Local capture bundle, not HTML",
+      "supports": "可检查变化但部分变化不在单元格历史中，恢复旧版有额外影响。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://rhinoinsight.substack.com/p/is-perplexity-comet-the-best-browser",
+      "title": "原作者Comet体验文章",
+      "kind": "primary",
+      "status": "unavailable",
+      "error": "Same own cloud browser returned Site Unavailable twice; stopped source, no alternate route.",
+      "supports": "无法核验原文、截图、作者身份或Sheets实际变化。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录明确说原作者未展示Google Sheets步骤的结果。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录转述几分钟生成公司列表，也转述结果深度不足。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "官方后续公告已开放免费下载，当前助手查询仍分套餐。",
+      "type": "verified",
+      "source_ids": [
+        "Srelease",
+        "Splans"
+      ]
+    },
+    {
+      "statement": "Comet个人化请求可使用页面与相关历史，部分内容服务端处理。",
+      "type": "verified",
+      "source_ids": [
+        "Sprivacy"
+      ]
+    },
+    {
+      "statement": "Google单元格历史不包含所有变化，恢复旧版也影响逐格历史。",
+      "type": "verified",
+      "source_ids": [
+        "Ssheets"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "研究输出与表格写入分开验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录描述作者跨标签页研究、摘要和尝试更新观察清单，同时明确没有展示Sheets步骤的结果。不能因为标题写了更新，就认定写入成功。几分钟返回清单和内容有时浅也是转述，缺原文、输出和测量；原文章两次返回Site Unavailable后停止读取。本篇是有依据简报，不把通用功能介绍补成原作者工作流验证。"
+    },
+    {
+      "id": "time",
+      "title": "2025年的访问条件不用于今天报价",
+      "source_ids": [
+        "Srelease",
+        "Splans",
+        "Sdirectory"
+      ],
+      "body": "目录说文章写于2025年8月，仅Max或受邀用户可用是当时背景。后续官方公告已开放免费下载；当前套餐表仍对Comet Assistant查询分层，免费层列为无浏览器agent查询。研究者据此区分浏览器安装与助手运行额度，复制前查看实际账户。原作者订阅成本和用量未知，不把免费下载推成零运行成本，也不照搬旧邀请门槛。"
+    },
+    {
+      "id": "claims",
+      "title": "关税主题只是历史研究线索",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "本案没有提供公司名单、政策生效日、收入地域、产品税号或财报证据，因此不报告哪些股票现在受益或受损。研究者建议把“关注某主题”与“证实公司业务暴露”分开，每条结论保留事件日期、原始公告、公司披露与尚未验证的因果链。社交帖热度不是经营影响，更不是交易信号；本报告不创建真实投资建议或订单。"
+    },
+    {
+      "id": "workflow",
+      "title": "先在草稿中保留可追溯事实",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议流程是固定观察清单版本和日期范围，按公司标识核对来源，区分新闻事实、评论观点和研究推断，再生成待审新增行。每行保存公司名称、代码与市场、来源链接、日期、摘要、未知项和去重键；同名代码或不同市场必须明确。研究者建议优先公司原始披露，再用评论补充观点，不把同一消息的转载当多条独立验证。"
+    },
+    {
+      "id": "writeback",
+      "title": "新标签页也需要检查目标和差异",
+      "source_ids": [
+        "Ssheets"
+      ],
+      "body": "Google说明版本历史可追溯变化，但单元格历史不一定显示行列增删、格式或公式产生的变化；恢复旧版会清除此前部分逐格编辑历史。研究者建议在写入前保存版本标识，明确新标签名称和列映射，写后回读行数、字段与原表未变。权限或冲突不明时保留草稿，不覆盖整表。本轮没有打开或修改任何私人观察清单。"
+    },
+    {
+      "id": "privacy",
+      "title": "本地浏览器不等于研究内容全留本机",
+      "source_ids": [
+        "Sprivacy"
+      ],
+      "body": "官方隐私FAQ说明个人化请求会使用当前标签页和相关浏览历史，部分页面资料可能在Perplexity服务器处理。该资源页含面向未来版本的描述，不将其当全部当前设置的完整清单。研究者建议只提供公开公司资料或虚构观察名单，避免同开账户余额、持仓和私人通信；核对实际页面与连接范围后才考虑接入。本轮没有登录Comet或证券账户。"
+    },
+    {
+      "id": "business",
+      "title": "可验证的是整理服务，不是收益优势",
+      "source_ids": [
+        "Sdirectory",
+        "Splans"
+      ],
+      "body": "潜在用户是反复整理公开公司信息的研究者，付款人可能是本人或研究团队。商业假设为限定主题资料整理、来源核验和表格维护，按明确交付范围收费；获客可以通过可复核的研究样例，但本案没有客户、报价或复购证据。浏览器助手、普通搜索和表格已有替代，差异需来自来源质量与核对节省。订阅、人工复核、数据许可、维护和获客成本均待测，不能把研究速度当投资收益。"
+    },
+    {
+      "id": "personal",
+      "title": "减少切换是可能价值，深度仍要人补",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用价值待核实。适用者需要能审查来源、公司标识和时间线；预期减少多页整理和复制，原作者却报告深度有时不足。准备需清楚主题和表头，维护需处理失效链接、重复条目及新旧观点。频率可按资讯更新或定期复核，而非自动高频刷新。错误风险是混淆事实和观点、过期政策、错写表格及误把热门评论当结论。"
+    },
+    {
+      "id": "next",
+      "title": "离线清单演练先证明没有漏写错写",
+      "source_ids": [
+        "Ssheets",
+        "Sdirectory"
+      ],
+      "body": "用三家虚构公司、固定资料片段和本地空表演练：生成带日期来源的草稿，模拟同名、重复、缺失日期和字段冲突，比较人工答案。预期得到可审阅的研究记录和拟新增行，不涉及买卖或真实账户。本轮未实际运行。若每条都需重新研究、缺出处或表格变更无法精确回读，应停止扩大自动化范围。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/research-stocks-and-update-a-watchlist-in-the-browser",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "3b4ffd43f289fa6a57e59b49594dd836cf18f33104c6306c06d3ff72a52af1a8",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "9e84664366047f45916a0b7faa8271839ceefb212836868def54c7378b684f6c",
+      "How it went": "2413aae92c6dbde4ed6d803b2547e57b49239264d8e6c546a61e811a749df055",
+      "Worth knowing": "d0d1d22c85a765a8d9a884f68730f385758a12ea24f868a92d85ea948a751eac"
+    },
+    "actual_agents": [
+      "Perplexity Comet"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Open my watchlist in [Google Sheet link] and check each company for recent news. Then find [type of companies, e.g. Swiss firms hurt by US tariffs] and summarize what [Reddit communities and news sites] are saying about them. Add your top [number] picks to a new tab of the sheet with a one-line reason and source link each, then stop and show me what you added.",
+    "agent": "Perplexity Comet",
+    "source_url": "https://agentusecases.ai/use-case/research-stocks-and-update-a-watchlist-in-the-browser",
+    "observed_at": "2026-10-19T06:31:17.627622+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "57e90273573dcab217330c8890796a99f8d01df1a3d946445856d80f1a3759eb"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://rhinoinsight.substack.com/p/is-perplexity-comet-the-best-browser",
+    "source_title": "Is Perplexity Comet the best browser?",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T02:28:19.359590+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "同一自有云浏览器两次Site Unavailable后停止读取；原文与截图未核验。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能减少跨页整理，但深度和表格结果证据不足。",
+    "audience": "能审查公开公司信息的研究者。",
+    "use": "公开资料摘要与观察清单草稿。",
+    "benefit": "几分钟产出是转述，不代表正确性或收益。",
+    "setup_cost": "主题、公司标识、时间范围、表头与去重规则。",
+    "maintenance_cost": "来源失效、观点更新、字段冲突和写入回读。",
+    "frequency": "按资讯更新或定期复核。",
+    "privacy_risk": "观察名单和相邻标签可能含财务敏感信息。",
+    "error_risk": "旧政策、混淆观点事实、代码错配、重复或覆盖表格。",
+    "source_ids": [
+      "Sdirectory",
+      "Sprivacy",
+      "Ssheets"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "忠实保留目录原模板；本研究只提出虚构资料的离线草稿演练。",
+    "prerequisites": "三家虚构公司、固定来源片段、人工答案与本地表头。",
+    "tools": "本地表格或已有获准助手，不连接私人清单或券商。",
+    "expected_result": "含日期来源的研究记录及待审新增行；本轮未试用、不提供真实买卖建议。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/research-stocks-and-update-a-watchlist-in-the-browser",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Open my watchlist in [Google Sheet link] and check each company for recent news. Then find [type of companies, e.g. Swiss firms hurt by US tariffs] and summarize what [Reddit communities and news sites] are saying about them. Add your top [number] picks to a new tab of the sheet with a one-line reason and source link each, then stop and show me what you added."
+      },
+      {
+        "title": "观察清单草稿演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Ssheets"
+        ],
+        "attribution": "原创虚构资料演练，未执行",
+        "text": "仅依据给定虚构公司与资料，输出公司标识、来源日期、事实、评论观点、推断和未知项。不得把热点推成经营影响或买卖建议。按给定表头生成待审新增行，以标识和来源去重；不连接或修改Google表格，不访问证券账户。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原作者原文未读；目录负面转述保留，不计独立样本。"
+  },
+  "disconfirming_evidence": "结果深度不足；Sheets未展示结果；访问条件变化；上下文数据出机与表格回滚局限。",
+  "limitations": "无Comet安装或登录，无私人表格、证券账户、交易或真实试用；不核定当前关税及公司受影响情况。",
+  "archive_source_sha256": "3b4ffd43f289fa6a57e59b49594dd836cf18f33104c6306c06d3ff72a52af1a8",
+  "translation_sha256": "b782f74a681bc56107375d8d47f258e3eb61e5759522f7656e9a2addf1e6e16b"
+}
