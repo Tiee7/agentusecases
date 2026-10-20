@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **50**；深度研究 **58**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **51**；深度研究 **58**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -60,3 +60,4 @@
 | 用编程智能体生成讲解测验并执行规格检查 | [简报](../../reports/brief/build-code-with-agents-while-keeping-a-working-understanding.md) |
 | 用 ChatGPT Agent 生成会议材料并整理 SharePoint 文件 | [简报](../../reports/brief/turn-meeting-transcripts-into-decks-and-organize-sharepoint-.md) |
 | 让专用电脑上的智能体整理日常业务并提交审核 | [简报](../../reports/brief/run-daily-business-operations-on-a-dedicated-agent-machine.md) |
+| 用Claude生成并审查Home Assistant自动化 | [简报](../../reports/brief/build-home-assistant-automations-with-claude.md) |
