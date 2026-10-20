@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **64**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **65**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -74,3 +74,4 @@
 | 用Grok Bot整理健康数据与个人财务报告 | [简报](../../reports/brief/run-personal-assistant-tasks-like-medical-data-and-finance-r.md) |
 | 用Meta Muse处理家庭预约、提醒和资料研究 | [简报](../../reports/brief/handle-family-logistics-reminders-and-research-with-a-person.md) |
 | 用Grok Bot筛选本地纹身推荐请求并起草回复 | [简报](../../reports/brief/find-tattoo-clients-on-reddit-and-draft-replies.md) |
+| 用Claude搜索种子并交给qBittorrent处理 | [简报](../../reports/brief/have-claude-find-a-torrent-and-add-it-to-qbittorrent.md) |
