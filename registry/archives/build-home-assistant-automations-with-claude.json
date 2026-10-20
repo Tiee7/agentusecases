@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-home-assistant-automations-with-claude",
-  "observed_at": "2026-10-19T07:17:57.711411+00:00",
-  "html_sha256": "7a6732dbec7d3bb5afde47e70fc5f246316b3ea490d93c8b8f7fbe517d45d7e6",
+  "observed_at": null,
+  "html_sha256": "6cfe6b0d1338fd7267dc75edbfe6afdbf3a91d30659520326feda0dbe835eb38",
   "body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
   "status": "observed",
   "fields": {
@@ -95,12 +95,26 @@
     "language": "en",
     "body": "Build Home Assistant automations with Claude\nA time-strapped parent had Claude build Home Assistant automations, including a helper that infers whether the stove is on from power usage.\nDone with\nCL\nClaude\nWhat they did\nThe poster, a busy parent who had let Home Assistant sit mostly dormant, connected Claude to their HA instance using MCP and used it to build and improve automations instead of hand-writing YAML. In the thread, they and others describe Claude reviewing devices and automations, generating logic like occupancy and state checks, and in one example building a helper that infers whether the stove is on from range power usage, then adding warnings and exhaust-fan automation; people still review plans, code, and backups themselves.\nHow it went\nThey say tasks that used to take days now take minutes, and one commenter said an automation that normally would have taken days worked on the first shot in 10 minutes. The main limitation raised is that Claude can overcomplicate things or act on more HA data than some users are comfortable exposing.\nWorth knowing\nA repeated catch is to keep backups Claude cannot access, review its plan or YAML before applying changes, and be aware MCP setups may consume a lot of tokens.\nTry it yourself\nwith\nClaude\nCopy prompt\nI use Home Assistant and want an automation that [what I want to happen, e.g. alert me if the stove has likely been left on]. My relevant devices and entities are [list entities, e.g. smart plug power sensor sensor.stove_power]. Write the full YAML, including any helpers or template sensors needed to infer the state, and explain step by step where to paste it and how to test it safely.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1wpy5q6/claude_and_home_assistant",
     "body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
-    "archived_at": "2026-10-19T07:17:57.711411+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T00:28:52Z",
+      "end": "2026-10-20T00:29:03Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:17:57.711411+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-20T00:28:52Z",
+    "end": "2026-10-20T00:29:03Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
+    "translated_at": "2026-10-20T00:29:13.656563+00:00",
+    "body": "用Claude构建Home Assistant自动化\n一位时间紧张的家长让Claude构建Home Assistant自动化，包括一个根据用电情况推断炉灶是否开启的辅助实体。\n使用的是\nClaude\n他们做了什么\n发帖者是一位忙碌的家长，此前Home Assistant基本闲置。他通过MCP把Claude连接到自己的HA实例，用它构建和改进自动化，而不再手写YAML。帖子中，他和其他人描述了让Claude检查设备与自动化，生成有人活动检测和状态检查等逻辑。其中一个例子是创建辅助实体，根据炉灶功率推断炉灶是否开启，再添加警告和排风扇自动化；人们仍然自己审核方案、代码和备份。\n进展与成效\n他们说，以前需要几天的任务现在只需几分钟。一位评论者说，通常需要几天的自动化，第一次尝试便在10分钟内成功。讨论的主要限制是Claude可能把事情复杂化，或者处理超出部分用户愿意暴露范围的HA数据。\n值得了解\n反复被提到的注意事项是：保留Claude无法访问的备份，应用更改前审核它的方案或YAML，并注意MCP配置可能消耗大量词元。\n亲自尝试\n使用Claude\n复制提示词\n我使用Home Assistant，希望实现一个自动化：[希望发生的事情，例如在炉灶可能忘记关闭时提醒我]。相关设备和实体是[列出实体，例如智能插座功率传感器sensor.stove_power]。请编写完整YAML，包括推断状态所需的辅助实体或模板传感器，并逐步解释应粘贴到哪里，以及如何安全地测试。\n原始来源：https://www.reddit.com/r/homeassistant/comments/1wpy5q6/claude_and_home_assistant",
+    "body_sha256": "ab291749456d7a4d67e55a809c04cecd8797f5a746262a33840d747d9ed2027f",
+    "status": "available"
   }
 }
