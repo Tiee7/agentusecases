@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "trade-a-small-robinhood-account-by-tracking-politician-trade",
+  "url": "https://agentusecases.ai/use-case/trade-a-small-robinhood-account-by-tracking-politician-trade",
+  "title": "用Claude Code跟踪公开交易披露并记录小额账户操作",
+  "industry": "投资研究工具",
+  "researched_at": "2026-10-20T01:06:29.390526+00:00",
+  "brief_reason": "原作者流程可读，但完整技能、披露时点处理、长期流水、成本和收益验证缺失；不把接口可用性等同策略可复制。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "不建议商业投入",
+    "headline": "先检验公开披露和日志工具，不以试验浮盈售卖收益",
+    "reason": "执行流程有展示，交易策略和商业收益没有足够证据。",
+    "next_action": "仅用虚构事件做时点、去重与恢复演练。",
+    "stop_condition": "无法重建信息可用时点、只提供收益截图或成本不可核对。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/trade-a-small-robinhood-account-by-tracking-politician-trade",
+      "title": "许可目录既有正文档案",
+      "kind": "aggregator",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "permitted_cloud_browser_and_existing_licensed_archive",
+      "characters": 8232,
+      "sha256": "5356c28175e2970853ab234032c4704edd4d8d0154bb83c9172ab74f6d4113e2",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "原文及模板保留；原档案日期不冒充本次采集。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://ryandoser.com/ai-trading-agent-robinhood/",
+      "title": "Ryan Doser的2026-06-11实操文章",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 31102,
+      "sha256": "c08bcef3ef464b11d815b0857a55b793e90bd07e0a0e819c4d33ad2408459c8c",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "100美元、四笔买入、33美分为作者自述，展示连接和日志流程，未证明收益。"
+    },
+    {
+      "id": "Saccess",
+      "url": "https://robinhood.com/us/en/support/articles/agentic-trading-overview/",
+      "title": "Robinhood外部智能体接入说明",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 31102,
+      "sha256": "c08bcef3ef464b11d815b0857a55b793e90bd07e0a0e819c4d33ad2408459c8c",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "交易限专用账户，读取范围涉及所有Robinhood账户。"
+    },
+    {
+      "id": "Sapproval",
+      "url": "https://robinhood.com/us/en/support/articles/trading-with-your-agent/",
+      "title": "Robinhood交易审核设置",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 36074,
+      "sha256": "641623b086673c5e4b1482939b46688b1c6549a94a3c824ac719dc5e99d6ba98",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "内置与外部账户默认审核设置不同，MCP审核功能仍在逐步开放。"
+    },
+    {
+      "id": "Shouse",
+      "url": "https://ethics.house.gov/financial-disclosure/",
+      "title": "众议院交易披露期限",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 31102,
+      "sha256": "c08bcef3ef464b11d815b0857a55b793e90bd07e0a0e819c4d33ad2408459c8c",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "特定超过1000美元证券交易以知悉30日/交易45日孰早为期限。"
+    },
+    {
+      "id": "Ssec",
+      "url": "https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins-69",
+      "title": "SEC投资者教育：Form 4",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 32442,
+      "sha256": "5c42ce1c2a55159491de8fd16f59d5cf4a0185f8056e543ef49f9f606501d91f",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "两工作日及交易代码区分，出售不必然表达看空。"
+    },
+    {
+      "id": "Scost",
+      "url": "https://robinhood.com/us/en/support/articles/token-usage-billing/",
+      "title": "Robinhood托管智能体计费边界",
+      "kind": "primary",
+      "status": "fetched",
+      "fetched_at": "2026-10-20T01:06:29.390526+00:00",
+      "read_method": "supported_public_web_tool",
+      "characters": 32442,
+      "sha256": "5c42ce1c2a55159491de8fd16f59d5cf4a0185f8056e543ef49f9f606501d91f",
+      "hash_scope": "Local capture bundle, possibly multiple pages",
+      "supports": "该词元充值说明只适用于托管智能体，不适用于本案外部Claude Code。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者文章2026-06-11介绍小额交易实验；目录收录时间另为2026-10-18。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "100美元、四只股票和约33美分变化为作者自述，不是审计业绩。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "外部智能体读取范围覆盖全部Robinhood账户，交易限专用账户。",
+      "type": "verified",
+      "source_ids": [
+        "Saccess"
+      ]
+    },
+    {
+      "statement": "外部MCP账户交易审核默认关闭且该功能仍逐步开放。",
+      "type": "verified",
+      "source_ids": [
+        "Sapproval"
+      ]
+    },
+    {
+      "statement": "众议院相关披露采用知悉后30日或交易后45日孰早期限。",
+      "type": "verified",
+      "source_ids": [
+        "Shouse"
+      ]
+    },
+    {
+      "statement": "Form 4通常两工作日提交，事件代码区分购买与授予、行权等。",
+      "type": "verified",
+      "source_ids": [
+        "Ssec"
+      ]
+    },
+    {
+      "statement": "Robinhood词元充值文档不适用于外部智能体。",
+      "type": "verified",
+      "source_ids": [
+        "Scost"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "已展示连接与买入流程，策略仍不可复核",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ],
+      "body": "作者文章日期为2026年6月11日，本次目录按10月18日收录顺序处理，两者不是同一时间。文章有连接、交易日志和持仓的展示，但没有完整可下载策略、输入披露数据版本、长期交易流水或受控比较。因此交付有依据简报，不能把通用交易接口资料补成对作者策略的完整深研，也不能把营销作者的介绍转为审计结论。"
+    },
+    {
+      "id": "performance",
+      "title": "33美分不是稳定赚钱模式",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录明确说收益未证实。100美元是实验本金，33美分是开盘时点的账户变化，不是收费收入、完整周期净收益或风险调整结果。研究者判断：缺交易费用、价差、持仓风险、持续时间和基准，任何年化外推都没有依据。一次成功调用买入工具只能说明执行链路发生，无法证明选股信息有优势。"
+    },
+    {
+      "id": "latency",
+      "title": "披露时点必须与交易时点分开",
+      "source_ids": [
+        "Shouse",
+        "Ssec"
+      ],
+      "body": "众议院要求相关人员对部分超过1000美元证券交易在知悉后30日与交易后45日两者较早的日期申报。Form 4通常在交易后两个工作日提交，两类数据不能混为实时信号。研究者建议记录交易日、披露日和系统实际取得时间；模拟只能使用当时已公开的信息，不能把后来公开的记录回填到过去，否则会产生前视偏差。"
+    },
+    {
+      "id": "codes",
+      "title": "不是所有高管持仓变化都是主动买卖信号",
+      "source_ids": [
+        "Ssec"
+      ],
+      "body": "SEC教育材料区分购买、出售、授予、行权、缴税和赠与等交易代码，并说明出售可能出于流动性或分散需求。研究者建议先规范事件分类，再讨论是否形成信号；把所有增加都当看多、所有减少都当看空会混淆含义。还需核对主体、重复报告和更正版本，这些处理本案没有可审查实现。"
+    },
+    {
+      "id": "access",
+      "title": "专用交易账户不代表数据全部隔离",
+      "source_ids": [
+        "Saccess"
+      ],
+      "body": "当前官方说明外部智能体可读取全部Robinhood账户的账号、余额、持仓和交易历史，但交易权限限专用Agentic账户。因此100美元实验资金不能等同于只暴露100美元账户资料。只读访问也可能涉及敏感财务数据，复制前必须看实际授权范围。本轮只读公共说明，没有连接券商、访问个人账户、创建凭据或资金操作。"
+    },
+    {
+      "id": "approval",
+      "title": "提示词确认与平台审核设置分别核对",
+      "source_ids": [
+        "Sapproval",
+        "Sdirectory"
+      ],
+      "body": "官方说明内置Robinhood Agents默认开启交易审核，外部MCP账户默认关闭；MCP审核功能仍逐步开放，并非所有客户已有。开启后用户需在应用内审核并手动下单。目录模板要求等待明确确认，这是模板文字，不能据此认定账户已有强制审核。研究建议的演练只保留离线记录，不进入真实下单；不能用聊天中的泛化许可替代实际金融操作边界。"
+    },
+    {
+      "id": "cost",
+      "title": "不能用托管智能体价格套算外部Claude",
+      "source_ids": [
+        "Scost",
+        "Sdirectory"
+      ],
+      "body": "Robinhood词元充值页面明确限定托管智能体，不能据此为外部Claude Code计算费用。作者的运行环境、订阅占用、披露数据服务、维护与复核总工时仍未知。研究者建议将模型和数据费用、运行维护、人工复核以及交易成本分别记录；不以本金规模代替运行成本，也不把Markdown日志自动出现当作模型已经有效学习。"
+    },
+    {
+      "id": "business",
+      "title": "更可检验的是研究记录工具，而不是收益承诺",
+      "source_ids": [
+        "Saccess",
+        "Ssec"
+      ],
+      "body": "商业假设可限于公开披露去重、时点标注和研究日志整理，先与手工检索官方披露比较。潜在付款人是确有重复研究负担的人，尚未验证本案愿付费或留存。现有券商数据和公开官方查询已提供基础替代，自定义工具需证明减少核对工作。若进一步涉及他人资金、个性化建议或代执行，需另行核实适用资质与义务；本报告不认定某种服务天然合规，也不代用户开展经营。"
+    },
+    {
+      "id": "personal",
+      "title": "个人价值取决于能否持续校验",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "自用者应具备理解公开披露和检验交易记录的能力。价值可能在组织资料、解释动作和保留日志；实际净收益待测。初始设置包括策略定义和数据口径，维护包括会话运行、数据延迟、重复任务和错误恢复。目录提醒本案例定时任务依赖Claude Code持续开启，这不是所有平台的通用限制。频率需要根据披露更新而设，没有必要用高频调用制造“实时”假象。"
+    },
+    {
+      "id": "next",
+      "title": "先完成不接账户的历史可用性审计",
+      "source_ids": [
+        "Shouse",
+        "Ssec"
+      ],
+      "body": "下一步可自制几条虚构披露事件，逐条写交易日、公开日、取得日、事件代码和假设观察价，验证程序不会提前看到未来资料。输出研究日志和缺失项，不输出真实订单，不连接账户；加入重复事件、更正和会话中断，检查恢复后是否重复处理。只有拿到原策略与完整成本资料，才能继续评价复制价值。若只剩收益截图、无法重建时点，或费用超过可解释的研究价值，应停止投入。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/trade-a-small-robinhood-account-by-tracking-politician-trade",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "0e434920212a35933940f67b282aa683b79fb406b81bfa8e6f2d26a9958faed5",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "eb7c1ce60c55db2c584ab9778cef2c30d0fdd3ab2c95c674db6b92edcd78ff8d",
+      "How it went": "341be1f9df16c49610d9162a02c2d384a45fbeb7426e233b0b37ae10b9a8be32",
+      "Worth knowing": "d750aea4fc8480f95a380e6eb6ad551622995354d04e4af15ff1623a501f6c81"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me build a small experiment that watches publicly disclosed trades by [politicians or executives] and keeps a log of my positions with live profit and loss for a [dollar amount] account at [broker]. Start in read-only mode and give me a daily report of what you would trade and why. Before placing any real order, stop and show me the ticker, size and price and wait for my explicit yes.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/trade-a-small-robinhood-account-by-tracking-politician-trade",
+    "observed_at": "2026-10-19T07:17:53.789624+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "d7c4520e340f13db180d103647d95849d267c062c0a45b38453bd381da88e1fe"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://ryandoser.com/ai-trading-agent-robinhood/",
+    "source_title": "How to Build an AI Trading Agent on Robinhood (With Claude)",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T01:06:29.390526+00:00",
+    "source_sha256": "c08bcef3ef464b11d815b0857a55b793e90bd07e0a0e819c4d33ad2408459c8c",
+    "steps": [
+      {
+        "en": "The author connected a dedicated brokerage account, specified preferences, and monitored a small experiment.",
+        "zh": "作者接入专用券商账户，设定偏好并观察小额实验。"
+      },
+      {
+        "en": "He describes a generated decision log and a locally running session; performance remains unproven.",
+        "zh": "他描述了生成的决策日志与依赖本地会话的运行方式，业绩仍未证实。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可组织公开资料，但本案净效率和可靠性未测，真实资金风险高。",
+    "audience": "能审查披露时点和研究日志的投资研究者。",
+    "use": "公开资料整理与离线研究日志。",
+    "benefit": "不把开盘浮盈当收益；研究省时尚未独立测量。",
+    "setup_cost": "数据口径、事件分类、日志与风险边界。",
+    "maintenance_cost": "会话在线、数据更新、去重、异常恢复与人工审查。",
+    "frequency": "按信息更新开展，原案例定时任务依赖本地会话。",
+    "privacy_risk": "连接外部智能体可能暴露多个账户的敏感财务数据。",
+    "error_risk": "披露滞后、前视偏差、误分类、重复操作与资金损失。",
+    "source_ids": [
+      "Sdirectory",
+      "Saccess",
+      "Ssec"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "忠实保留目录原模板；本报告只提出不接账户的离线演练。",
+    "prerequisites": "虚构披露事件与人工可核验的时间线，无账户数据。",
+    "tools": "本地表格或已有获准助手；不连券商、不建立MCP访问。",
+    "expected_result": "时点明确的研究日志、重复项和未知项清单；本轮未测试。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/trade-a-small-robinhood-account-by-tracking-politician-trade",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Help me build a small experiment that watches publicly disclosed trades by [politicians or executives] and keeps a log of my positions with live profit and loss for a [dollar amount] account at [broker]. Start in read-only mode and give me a daily report of what you would trade and why. Before placing any real order, stop and show me the ticker, size and price and wait for my explicit yes."
+      },
+      {
+        "title": "公开披露时间线演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Shouse",
+          "Ssec"
+        ],
+        "attribution": "原创离线演练，未执行",
+        "text": "只分析给定虚构事件，不联网取账户数据，不连接券商或下单。分别记录交易日、公开日、取得时间和事件代码；没有公开的资料在模拟当时不可使用。识别重复和更正，生成研究日志与未知项；不要给真实证券买卖建议或收益承诺。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原作者可读，无独立复制该策略或审计收益的证据；没有用同类帖子冒充。"
+  },
+  "disconfirming_evidence": "公开披露滞后、事件混淆、数据权限大于交易账户、外部审核默认关闭、长期业绩与成本未知。",
+  "limitations": "原策略和完整流水未取得；无账户连接、开户、资金转移、真实交易或模拟业绩；官方功能随账户开放而异。",
+  "archive_source_sha256": "0e434920212a35933940f67b282aa683b79fb406b81bfa8e6f2d26a9958faed5",
+  "translation_sha256": "58b1b5d4800c6929cd5f26d4a86938ad48ca8617eaf0ec326d5dd3f6d2a8758c"
+}

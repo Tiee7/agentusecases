@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **52**；深度研究 **58**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **53**；深度研究 **58**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -62,3 +62,4 @@
 | 让专用电脑上的智能体整理日常业务并提交审核 | [简报](../../reports/brief/run-daily-business-operations-on-a-dedicated-agent-machine.md) |
 | 用Claude生成并审查Home Assistant自动化 | [简报](../../reports/brief/build-home-assistant-automations-with-claude.md) |
 | 用ChatGPT根据菜单照片整理点餐清单 | [简报](../../reports/brief/order-from-a-restaurant-menu-photo-with-chatgpt.md) |
+| 用Claude Code跟踪公开交易披露并记录小额账户操作 | [简报](../../reports/brief/trade-a-small-robinhood-account-by-tracking-politician-trade.md) |
