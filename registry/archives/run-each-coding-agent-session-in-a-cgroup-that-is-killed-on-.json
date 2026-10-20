@@ -102,5 +102,14 @@
     "at": "2026-10-19T07:17:33.829446+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+    "translated_at": "2026-10-20T06:34:46.330261+00:00",
+    "body": "让每次编码agent会话运行在完成后会被终止的cgroup中\n一位开发者制作了agent启动器，让每次编码agent会话在独立cgroup中运行，并在任务完成时终止遗留进程；另外还设置了清理过期tmp文件的任务。\n使用的是\nCX\nCodex\n他们做了什么\n开发者发现，大量交换空间使用来自基于内存的tmpfs /tmp，以及早先编码agent派生后遗留的进程。他们增加了一个频繁执行的任务，删除约两小时未使用、且没有任何命令持有打开句柄的tmp文件。他们还让agent启动器把每次会话放进独立cgroup，任务结束时终止其中所有进程。\n进展与成效\n来源没有给出测量数据。它称清理任务和每会话cgroup解决了交换空间占用及遗留进程问题，但只是简短论坛评论，没有前后对比数字。\n值得了解\n先确认交换空间占用是否真的来自基于内存的tmpfs /tmp，再判断是否由agent导致；清理任务只删除没有打开句柄的文件。\n亲自尝试\n使用\nCodex\n复制提示词\n在我的仓库[路径]中，为[Linux发行版或systemd环境]编写一个小型agent启动脚本，让每次编码agent会话在独立cgroup中运行，并在任务完成或失败时终止该cgroup中所有遗留进程。另外增加一个定时任务，删除[tmp目录]中超过[小时数]的过期文件。最后运行一次会留下后台进程的测试会话，向我展示它被清理。在删除任何文件或终止测试以外的进程之前，先展示将处理的对象，并等待我的批准。\n原始来源：https://news.ycombinator.com/item?id=50136354",
+    "body_sha256": "e4e64e56363b1450d6620c57db65c173caeb9d08daf176db50adb7e397f91fc2",
+    "status": "available"
   }
 }
