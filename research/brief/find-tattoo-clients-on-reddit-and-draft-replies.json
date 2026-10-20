@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "find-tattoo-clients-on-reddit-and-draft-replies",
+  "url": "https://agentusecases.ai/use-case/find-tattoo-clients-on-reddit-and-draft-replies",
+  "title": "用Grok Bot筛选本地纹身推荐请求并起草回复",
+  "industry": "本地服务获客",
+  "researched_at": "2026-10-20T04:31:25.764972+00:00",
+  "brief_reason": "目录明确为构想与变通建议，原帖不可读，无完整运行、客户或成交证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先证明筛选与审核省时，再看增量预约",
+    "reason": "有明确本地检索需求，但数据可用性与实际获客均未验证。",
+    "next_action": "用虚构帖子离线演练匹配与不回复边界。",
+    "stop_condition": "来源无许可、绕过限制或草稿鼓励违规推广。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/find-tattoo-clients-on-reddit-and-draft-replies",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:27:43Z",
+        "end": "2026-10-20T04:27:46Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1642,
+      "sha256": "f946de0cbd9ceb9347efc612b3c9b0a417b7672857a4f564d73dedce54b209d7",
+      "hash_scope": "Licensed normalized visible directory text",
+      "receipt_text": null,
+      "supports": "目录仅展示想法及变通建议，无成交、收入、准确率或完成运行记录。"
+    },
+    {
+      "id": "Sclosure",
+      "url": "https://gummysearch.com/closing-time/",
+      "title": "GummySearch停止新业务公告",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:27:59Z",
+        "end": "2026-10-20T04:28:04Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 80,
+      "sha256": "6941b4be0cc6796b959dce96d372117cb8b3eae5460ed91acb8fb52c174d30cd",
+      "hash_scope": "Researcher summary below, not source HTML or full article",
+      "receipt_text": "2025-11-30公告：不接新用户；老用户按剩余订阅服务，LTD到2026-11-30。关闭原因是创始人自己的API政策表述，不据此推断所有商业用法均被禁止。",
+      "supports": "2025-11-30公告：不接新用户；老用户按剩余订阅服务，LTD到2026-11-30。关闭原因是创始人自己的API政策表述，不据此推断所有商业用法均被禁止。"
+    },
+    {
+      "id": "Stimeline",
+      "url": "https://gummysearch.com/docs/gummysearch-is-now-closed-6533h",
+      "title": "GummySearch关闭时间表",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:28:08Z",
+        "end": "2026-10-20T04:28:13Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 61,
+      "sha256": "d3cd0b50b667bb2e5a23407fbacaaf073a10349772f57a80da9f1c61ca1ccd3c",
+      "hash_scope": "Researcher summary below, not source HTML or full article",
+      "receipt_text": "现有付费客户按账期保留；不接新注册、购买、续费；2026-12-01完全关闭并删用户数据。是同一厂商补充，非独立交叉验证。",
+      "supports": "现有付费客户按账期保留；不接新注册、购买、续费；2026-12-01完全关闭并删用户数据。是同一厂商补充，非独立交叉验证。"
+    },
+    {
+      "id": "Sgoogle",
+      "url": "https://support.google.com/business/answer/7091?hl=en",
+      "title": "Google本地搜索排名说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:27:59Z",
+        "end": "2026-10-20T04:28:04Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 48,
+      "sha256": "7897f502eacf849f94794aa1988c83ac90b51dddf2b9175cf10b135d104a06d6",
+      "hash_scope": "Researcher summary below, not source HTML or full article",
+      "receipt_text": "完善信息与作品图等是另一种本地发现渠道；相关性、距离、知名度影响排名，不能花钱要求更好自然排名。",
+      "supports": "完善信息与作品图等是另一种本地发现渠道；相关性、距离、知名度影响排名，不能花钱要求更好自然排名。"
+    },
+    {
+      "id": "Smetrics",
+      "url": "https://support.google.com/business/answer/9918094?hl=en",
+      "title": "Google商家资料指标说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:28:13Z",
+        "end": "2026-10-20T04:28:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 54,
+      "sha256": "55e3556d0dce991361f912770b959d68e665c45b6608dd00a2448957c1647abe",
+      "hash_scope": "Researcher summary below, not source HTML or full article",
+      "receipt_text": "Calls统计点击电话按钮，不是接通或成交；Bookings需通过支持的预约提供方管理；部分指标因商家而异。",
+      "supports": "Calls统计点击电话按钮，不是接通或成交；Bookings需通过支持的预约提供方管理；部分指标因商家而异。"
+    },
+    {
+      "id": "Sgrok",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "title": "Grok Bot权限与共享电脑说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T04:31:25.764972+00:00",
+      "read_window": {
+        "start": "2026-10-20T04:28:13Z",
+        "end": "2026-10-20T04:28:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 57,
+      "sha256": "7e0984078d41cc6b37c380fdb95351d254a3f71008c939c29dcb009921e2ab95",
+      "hash_scope": "Researcher summary below, not source HTML or full article",
+      "receipt_text": "建议只读与草稿开始，发布保留批准。多个Bot共用云电脑文件与浏览器会话，不构成账号隔离。更新2026-10-12。",
+      "supports": "建议只读与草稿开始，发布保留批准。多个Bot共用云电脑文件与浏览器会话，不构成账号隔离。更新2026-10-12。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/GrokBot/comments/1xa4kex/did_someone_managed_to_connect_grok_bot_to_reddit",
+      "title": "原Reddit纹身师讨论",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "Existing explicit Reddit security block respected. No original, mirror or search snippet used as evidence.",
+      "supports": "原帖和评论未独立核验，仅保留目录转述。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录明确未展示带结果的完整案例。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "纹身师据称已组建Bot团队并希望监看本地推荐请求。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "GummySearch关闭新用户注册，现有用户过渡期有终止日期。",
+      "type": "verified",
+      "source_ids": [
+        "Sclosure",
+        "Stimeline"
+      ]
+    },
+    {
+      "statement": "Google电话指标是按钮点击，不是实际接通。",
+      "type": "verified",
+      "source_ids": [
+        "Smetrics"
+      ]
+    },
+    {
+      "statement": "Grok Bot多个机器人共用云电脑与会话。",
+      "type": "verified",
+      "source_ids": [
+        "Sgrok"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "status",
+      "title": "构想、草稿与获客结果分开",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录首段以正在运行的口吻描述，正文又明确说只是想法和变通方案。应采用较窄结论：作者据称有Bot团队，想寻找本地纹身推荐请求；尚无完整运行与商业结果。不能把评论者的人工发布习惯归成作者已经实现的工作流。本轮未读取原帖，不用搜索摘要补成独立反馈。"
+    },
+    {
+      "id": "demand",
+      "title": "本地高意向请求仍需匹配风格与地点",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "推断需求是纹身师没有时间持续查看本地求推荐帖。与泛流量相比，主动寻找服务可能更接近咨询，但帖子也可能过期、求不同风格或来自异地。城市名称、风格、排期、服务范围要单独核对；缺少这些信息时留待人工判断，不能把提到纹身的全部帖子计为客户。"
+    },
+    {
+      "id": "delivery",
+      "title": "最小交付是带理由的待审清单",
+      "source_ids": [
+        "Sdirectory",
+        "Sgrok"
+      ],
+      "body": "原始工具是Grok Bot，RSS/JSON和第三方连接器只是目录所转述的建议，未被本轮验证。可提出的交付是来源链接、发布时间、匹配理由、未确定信息、社区规则状态及回复草稿。读取权限和发布权限分别处理；出现安全限制就停该来源，不把登录、换接口或第三方转发当作绕过方法。"
+    },
+    {
+      "id": "revenue",
+      "title": "收入假设依赖增量预约",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "纹身师自身价值来自更及时的合适咨询，最终仍靠作品、沟通与履约。若作为服务出售，可假设按设置和审核维护收费，但本案无购买意愿或客户付款。不要按抓到的帖子数承诺订单。记录有效咨询、预约、实际到店、取消与可归因收入，并与原有获客渠道比较，才能评估是否值得付费。"
+    },
+    {
+      "id": "acquisition",
+      "title": "先验证一个工作室的审核负担",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议验证对象应是已有作品与空余排期、愿审核草稿的单个工作室。交付方先用获准材料制作少量例子，解释为何匹配及何时不该回复，再比较人工查找耗时。没有获准数据来源和社区许可时，服务范围只能缩小为客户提供材料的整理。不能为了展示自动化而群发私信或伪装顾客推荐。"
+    },
+    {
+      "id": "cost",
+      "title": "低量城市可能不值得持续机器人",
+      "source_ids": [
+        "Sdirectory",
+        "Sgrok"
+      ],
+      "body": "未知成本包括Bot套餐、可用数据源许可、误报复核、重复去除、社区规则更新与账号维护。低频本地请求可能让人工偶尔搜索更便宜。可计算净节省=原人工分钟减审核和维护分钟；没有实测输入，不填虚构单价或收益。草稿数量增加也可能增加纹身师负担，应观察每条有效机会需要多少审核。"
+    },
+    {
+      "id": "market",
+      "title": "数据许可影响工具持续性",
+      "source_ids": [
+        "Sclosure",
+        "Stimeline"
+      ],
+      "body": "GummySearch官方说明已于2025年11月30日停止新业务，现有用户有有限过渡期，2026年12月1日完全关闭。它不能作为新用户现在可购买的替代方案。创始人对API政策的说法只代表该服务关闭原因；本轮未读取Reddit政策正文，不能推广成所有商业读取都违法或所有连接器均可靠。"
+    },
+    {
+      "id": "alternatives",
+      "title": "和商家资料及人工发现比较",
+      "source_ids": [
+        "Sgoogle",
+        "Smetrics"
+      ],
+      "body": "Google商家资料提供另一种本地发现路径，作品与准确信息也重要；这不等于保证排名或预约。对比渠道时口径要一致：电话按钮点击并非接通，网页点击并非客户，预约也可能取消。把本地帖子匹配、咨询与到店分层记录，并按客户来源去重，避免同一人被多个渠道重复记功。"
+    },
+    {
+      "id": "personal",
+      "title": "工作室自用收益与风险",
+      "source_ids": [
+        "Sdirectory",
+        "Sgrok"
+      ],
+      "body": "适合已有清晰风格和服务区域、能及时审核的独立纹身师；实际收益尚无测量。设置要准备商家真实简介、作品链接、城市和风格词、排除条件及停止规则。频率按真实帖量决定，日更只是源模板。维护涉及来源可用性、误报和社区规则。公开帖子也不应延伸采集私密健康或身体资料；共享Bot电脑可能暴露同一会话，回复错误会损害商家声誉。"
+    },
+    {
+      "id": "next",
+      "title": "先用合成请求测试筛选",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议离线演练用十条虚构帖子，含同城合适风格、异地、旧帖、纯分享、重复、缺失风格及禁止推广等情况。每条只输出匹配或不匹配理由、待核问题和草稿，不访问社区或发布。预期得到可人工复核的清单；本轮未运行。若系统仍把禁推广或不合适帖子列为应回复，先修规则再考虑真实获准样本。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/find-tattoo-clients-on-reddit-and-draft-replies",
+    "observed_at": null,
+    "body_sha256": "f946de0cbd9ceb9347efc612b3c9b0a417b7672857a4f564d73dedce54b209d7",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "21982364a53d67e665609ef66eb464b7569becaa317537eb1b7103a489b3e864",
+      "How it went": "72d2870f265d83f8956d676ef86dd1a9270c1170cd49d1e7478fb34aff652eff",
+      "Worth knowing": "acb4eaa519ade4acb7a980e0769fd3de3d3e3e4f7f92b86bf262308b128a947e"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T04:27:43Z",
+      "end": "2026-10-20T04:27:46Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Every day, check [subreddits, e.g. my city's subreddit] for posts where people ask for [type of service] recommendations near [my city]. For each match, draft a friendly, non-spammy reply that mentions [my business and what makes it relevant] and give me the post link plus your draft. Do not post anything yourself; wait for me to review and approve each reply.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/find-tattoo-clients-on-reddit-and-draft-replies",
+    "observed_at": null,
+    "observation_window": {
+      "start": "2026-10-20T04:27:43Z",
+      "end": "2026-10-20T04:27:46Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": null
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/GrokBot/comments/1xa4kex/did_someone_managed_to_connect_grok_bot_to_reddit",
+    "source_title": "Did someone managed to connect grok bot to reddit?",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T04:31:25.764972+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原站既有安全限制，未访问或绕过；目录仅转述构想与评论建议。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "减少找帖和初稿劳动的潜力尚未测量。",
+    "audience": "有作品、清晰风格、排期且能审核的独立纹身师。",
+    "use": "筛选本地推荐请求，生成来源与待审草稿。",
+    "benefit": "无确认运行、节省或获客数字。",
+    "setup_cost": "城市、风格、商家事实、排除规则与合法可用来源。",
+    "maintenance_cost": "误报复核、去重、来源变化与社区规则。",
+    "frequency": "按真实帖量，源模板为每天。",
+    "privacy_risk": "公开用户信息过度聚合及共享云电脑会话。",
+    "error_risk": "异地旧帖误判、虚假推荐、违规推广与重复回复。",
+    "source_ids": [
+      "Sdirectory",
+      "Sgrok"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整保留许可目录模板，不执行其外部访问。",
+    "prerequisites": "十条虚构需求与真实规则的模拟表、虚构工作室资料。",
+    "tools": "本地文档或已有获准助手；不连接社区账号。",
+    "expected_result": "匹配理由、排除理由和草稿；本轮未运行，不发帖或私信。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/find-tattoo-clients-on-reddit-and-draft-replies",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Every day, check [subreddits, e.g. my city's subreddit] for posts where people ask for [type of service] recommendations near [my city]. For each match, draft a friendly, non-spammy reply that mentions [my business and what makes it relevant] and give me the post link plus your draft. Do not post anything yourself; wait for me to review and approve each reply."
+      },
+      {
+        "title": "离线匹配演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "原创模拟演练，未执行",
+        "text": "只分析我提供的虚构帖子和虚构工作室资料。按城市、风格、时间、重复与允许推广规则筛选，缺信息标待核。输出来源标识、匹配或排除理由和待审草稿；不得冒充顾客，不访问外部社区、不发布或私信。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖未读；工具关闭公告不当作纹身师实际效果反馈。"
+  },
+  "disconfirming_evidence": "目录仅构想；读取限制、低本地帖量和审核成本可能抵消收益；历史工具停止接新用户。",
+  "limitations": "未连接账号、采集真实客户、生成对外回复或投放广告；不建议绕过任何访问限制；无当前套餐或获客效果数据。",
+  "archive_source_sha256": "f946de0cbd9ceb9347efc612b3c9b0a417b7672857a4f564d73dedce54b209d7",
+  "translation_sha256": "d5fb54998e405d03b4ba8248b49fd3a741ad541b10f1aea8da11bde3b40d1025"
+}
