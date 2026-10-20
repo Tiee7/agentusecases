@@ -1,0 +1,630 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "run-contractor-back-office-jobs-and-churn-recovery",
+  "url": "https://agentusecases.ai/use-case/run-contractor-back-office-jobs-and-churn-recovery",
+  "title": "用Grok Bot准备承包商后台材料与客户召回草稿",
+  "industry": "后台行政与客户留存（分场景）",
+  "researched_at": "2026-10-20T15:54:01.195589+00:00",
+  "confidence": "medium",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "分开验收文档准备与历史客户召回，不混合收入或替代方案",
+    "reason": "结论为仅建议受控试点：承包商侧先核对材料转录和差异清单，软件侧先核对名单、历史上下文与待审消息。它们都有明确工作对象，但都缺少可复核的质量、净时间、收入与长期稳定数据，不适合直接宣称商业成功或全面否定。下一步是准备已知答案的合成数据，记录人工基线与agent输出，逐项验证错误和恢复；本轮没有真正执行这些试验。成本情景只是预算敏感性分析，允许正常舍入，不为符合校验器改变真实价格。四周200美元并非用户质量门槛，已移除相关准入与失败判断。若出现未经允许的外发/提交、无法解释字段来源、反复漏关键差异或客户不批准数据流，就停止相关工作包。是否扩大规模应由实际验收和付费证据决定，而不是机器人数量或一篇正面案例。",
+    "next_action": "用合成材料分别验收字段来源、差异、名单排除和草稿，不外发不提交。",
+    "stop_condition": "越权提交、无来源字段、反复漏关键差异或未获准数据流。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-contractor-back-office-jobs-and-churn-recovery",
+      "title": "许可目录当前正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "实际读取并保存许可目录正文、原链接、Grok Bot与Copy prompt，两操作者分开。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:48:29Z",
+        "end": "2026-10-20T15:48:57Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 14254,
+      "sha256": "765018be6298ea791fb23786553b760ae5aa9ff0cf297bfe400cbef87338881d",
+      "hash_scope": "Captured main DOM",
+      "read_method": "permitted_own_cloud_browser_main_dom"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://thecreatorsai.com/p/i-gave-grok-bot-a-real-job-realistic",
+      "title": "Creators AI: Grok Bot Realistic Guide",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "2026-09-17公开段可读，付费教程未访问。两名不同操作者自述；召回过去6月取消者、个性消息、反馈分析五步计划。承包商两日文档与网页工作。作者自拟界面映射不是原操作者完整实测方法。金额未公布。",
+      "receipt_text": "2026-09-17公开段可读，付费教程未访问。两名不同操作者自述；召回过去6月取消者、个性消息、反馈分析五步计划。承包商两日文档与网页工作。作者自拟界面映射不是原操作者完整实测方法。金额未公布。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:48:58Z",
+        "end": "2026-10-20T15:49:08Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 98,
+      "sha256": "4277d65368de84d50e2ce83f5ecdc882fbc058bf1e51162010de1c1e150f4824",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sgrok",
+      "url": "https://x.ai/bot",
+      "title": "Grok Bot current plans",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "当前月付30/100/200美元与周额度、额外用量；不能说本案必须Ultra或只可120美元。",
+      "receipt_text": "当前月付30/100/200美元与周额度、额外用量；不能说本案必须Ultra或只可120美元。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:49:09Z",
+        "end": "2026-10-20T15:49:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 47,
+      "sha256": "f38c5e44b76217daadfebd3e10a3ea76197d96d33f65b874be532fa89438da70",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sfaq",
+      "url": "https://docs.x.ai/grok-bot/faq",
+      "title": "Grok Bot FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "同一用户共享电脑与登录；不同Bot不是安全隔离。删除Bot可能保留电脑文件会话。",
+      "receipt_text": "同一用户共享电脑与登录；不同Bot不是安全隔离。删除Bot可能保留电脑文件会话。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:48:58Z",
+        "end": "2026-10-20T15:49:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 40,
+      "sha256": "16e9a5cd56716bc4efa8cbf9f0f9581ef2e731854ce2e72d58f64299b6eae385",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Scomputer",
+      "url": "https://docs.x.ai/grok-bot/computer-and-apps",
+      "title": "Use computer and apps",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "持续云电脑供浏览器、终端、文件与连接工具使用，不依赖用户笔记本持续开机。",
+      "receipt_text": "持续云电脑供浏览器、终端、文件与连接工具使用，不依赖用户笔记本持续开机。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:49:09Z",
+        "end": "2026-10-20T15:50:06Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 36,
+      "sha256": "072ad5899869a203238e3438eea7aa02ec57c3a74ea7ab742e0dfa8aa1b47597",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sapproval",
+      "url": "https://docs.x.ai/grok-bot/approvals-security-and-privacy",
+      "title": "Approvals security and privacy",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "审批针对拟执行动作，不回滚先前动作；模型审核应配合最小权限和人工确认，不能替代权限控制。",
+      "receipt_text": "审批针对拟执行动作，不回滚先前动作；模型审核应配合最小权限和人工确认，不能替代权限控制。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:50:07Z",
+        "end": "2026-10-20T15:50:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 44,
+      "sha256": "50bde71b189d06e879b88649ef9cd86b4aeab4caf03d2a34c978bd64de390a8f",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sjobber",
+      "url": "https://www.getjobber.com/pricing/",
+      "title": "Jobber pricing",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "单人Core常规月付49美元，首3月35；年预付月均首12月21之后29。Connect常规月付139，首3月98；年预付首12月70之后99。税另计；提醒与QuickBooks在Connect。未证外部市政/COI流程等价。",
+      "receipt_text": "单人Core常规月付49美元，首3月35；年预付月均首12月21之后29。Connect常规月付139，首3月98；年预付首12月70之后99。税另计；提醒与QuickBooks在Connect。未证外部市政/COI流程等价。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:48:58Z",
+        "end": "2026-10-20T15:49:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 113,
+      "sha256": "b87dac974e871f8f6b20efaa480f79bec1499111594ff7cc79be8926b1068483",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Schurnkey",
+      "url": "https://churnkey.co/pricing",
+      "title": "Churnkey pricing",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Starter250美元月均按年，低于5000美元月流失量；取消流/扣款恢复。SDK可自托管取消流不等于历史六个月取消客户召回全流程。",
+      "receipt_text": "Starter250美元月均按年，低于5000美元月流失量；取消流/扣款恢复。SDK可自托管取消流不等于历史六个月取消客户召回全流程。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:48:58Z",
+        "end": "2026-10-20T15:49:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 67,
+      "sha256": "e720c328ea933badad8b24491bc80c73dcddeec2dbab14eed9439f261198d760",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Shuuush",
+      "url": "https://huuush.com/en/blog/development-automation/grok-bot-win-back-churned-customers",
+      "title": "Huuush win-back account",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "2026-08-20二手转述Liam Fallen，不是独立复现；未披露收入数据，历史120美元说法不用于当前预算。",
+      "receipt_text": "2026-08-20二手转述Liam Fallen，不是独立复现；未披露收入数据，历史120美元说法不用于当前预算。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:50:07Z",
+        "end": "2026-10-20T15:50:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 58,
+      "sha256": "aefabcce137e1601060b5a3d0442dbc0565456e38995556fc0460a09520d1017",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Slatent",
+      "url": "https://www.latent.space/p/grok-bot",
+      "title": "Dan McAteer five-day experience",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "9月5日五日体验包含每15分钟检查Freshdesk、管理便利和用量/控制权权衡。是相邻工作流非保险核验或召回复现。",
+      "receipt_text": "9月5日五日体验包含每15分钟检查Freshdesk、管理便利和用量/控制权权衡。是相邻工作流非保险核验或召回复现。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:50:07Z",
+        "end": "2026-10-20T15:50:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:54:01.195589+00:00",
+      "characters": 58,
+      "sha256": "457cf3a33b2a98fee6a3c71d12dd82836696cf5f76d35c2e4a94c16250a91d7c",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    }
+  ],
+  "facts": [
+    {
+      "type": "author_claim",
+      "statement": "目录与原文描述两个不同操作者，承包商和软件企业收益不能合并。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "原文称承包商处理两日后台任务，没有公开量化工时或准确率。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "软件企业针对此前六个月取消者召回并分析回复，未公布收入金额。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "原文章公开部分可读，但收费教程部分未访问，不再称全文不可读。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "作者的界面映射建议与原操作者被报道的动作在文章中分别陈述。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Grok当前官方月付档位有30/100/200美元，并非必须Ultra。",
+      "source_ids": [
+        "Sgrok"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "同一用户的多个Bot共享电脑文件和会话，不能当安全隔离。",
+      "source_ids": [
+        "Sfaq"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Jobber促销价、常规价、年预付与月付不同，不能只引用最低价。",
+      "source_ids": [
+        "Sjobber"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Churnkey Starter列取消流和支付恢复，不足以证明历史召回等价。",
+      "source_ids": [
+        "Schurnkey"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "两个操作者分别分析",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ],
+      "body": "目录把承包商后台行政和软件企业流失召回放在同一条目，但它们不是同一个客户、同一业务或一份收入证明。承包商侧使用者可能是老板或行政人员，面对合同、材料和外部网页的重复录入；软件企业侧可能由客户成功或经营者处理已取消客户。两者均可能存在可交由工具准备的工作，但是否愿意付费、能否授权数据和谁承担审核责任，需要分别验证。原交付关于所有承包商都不会信任外包者、单人绝不可能服务两个行业的绝对判断没有成交研究支撑，应改为明确的获客难点。不能把一个软件企业的恢复订阅说法拿来证明承包商业务盈利。优先选择自己有领域知识或既有客户关系的一条路线，建立单一交付范围，再决定是否扩展，这是研究建议而非已完成的商业试点。"
+    },
+    {
+      "id": "workflow",
+      "title": "原操作者做法与作者建议分层",
+      "source_ids": [
+        "Soriginal",
+        "Sdirectory",
+        "Sapproval"
+      ],
+      "body": "公开原文可读部分足以补充方法，不应继续写原文完全不可读。承包商报告的是两日跨文档和网页事务；软件企业报告的是面向此前六个月取消用户的消息和反馈分析。文章随后提供Stripe、支持系统、Gmail与审批界面的组织建议，那是作者的设计解释，不是原操作者已经公开的完整技术配置。研究保留这三层：目录摘要、原文转述的动作、作者建议的界面流程，不把它们合成已验证部署。实际复制作业应先确定原始记录、输出清单、审核人及停止点；每一步保存可核对来源，任何推断字段单列。承包商的文档预处理与软件客户外发权限分别核验，不能因一次授权读取文件就擅自递交表单或联系客户。自动保存和重复触发也可能造成外部状态变化，失败恢复必须先确认已做了什么。 同一输入重新运行时还要区分更新现有工单与新建副本，记录版本和日期；对已经有回复的客户，应避免又生成首次召回消息。执行日志只保存必要状态，不因审计无限留存全部敏感正文。"
+    },
+    {
+      "id": "market",
+      "title": "有工作负担，不等于已经有市场规模",
+      "source_ids": [
+        "Soriginal",
+        "Sjobber",
+        "Schurnkey"
+      ],
+      "body": "Jobber和Churnkey的存在说明工程业务管理与订阅留存有成熟软件供给，但不证明购买通用agent代办的客户数量。原案例没有公开承包商节省工时、错误率或付款意愿，软件企业没有给出触达人数、恢复人数的精确值、退款、续费持续时间或净收入。恢复的订阅是否本来也会回来，需要对照或至少清楚的归因规则；仅说覆盖工具费用不能推导投资回报率。潜在需求可以围绕多个旧网站之间重复输入、历史客服资料不易汇总等具体缺口识别，不宜以通用AI热度代替访谈。市场核验应问当前任务由谁完成、频率、允许数据范围、审核成本和失败代价。没有这些信息时保留待验证，而不是填入一个通用企业采用率或工资数字来制造确定性。"
+    },
+    {
+      "id": "competition",
+      "title": "取消前挽留不是取消后召回",
+      "source_ids": [
+        "Sjobber",
+        "Schurnkey",
+        "Soriginal"
+      ],
+      "body": "承包商替代可考虑Jobber内部的报价、排期、发票与任务管理，但它是否能够核对保险凭证并填写任意市政网站，当前价格页没有证明。Core单人常规无承诺月付49美元，促销首三个月35；年预付月均首十二个月21之后29。Connect月付常规139，提醒和QuickBooks等功能需看对应档位；这些条件不能简化为29美元包含一切。软件侧Churnkey Starter为250美元月均年付，主要列取消流和扣款恢复；免费SDK自托管取消流，也不自动包含历史六个月取消客户的个性召回和反馈归因。取消前挽留、支付失败恢复、取消后召回是三种不同任务。原交付宣称垂直工具在实时性、合规性、转化率全面胜出没有同任务测试，应删除。比较先固定输入、动作与人审标准，再看首期现金、持续费用和维护。"
+    },
+    {
+      "id": "economics",
+      "title": "统一算术但不制造观察价格",
+      "source_ids": [
+        "Sgrok",
+        "Soriginal"
+      ],
+      "body": "为避免把两个行业拼成一个收益模型，本节两组数字只用于承包商文档准备假设：每包含一份合同、一份保险凭证和一份待审网页字段表，月20包，不含提交或专业核保。低负荷人工复核0.35小时×25美元，月维护1.5小时×25分20包，初设100美元分100包，15%返工概率×0.4小时×25，人工与设置月摊合计13.125美元/包；假设100美元月套餐分20包5美元，列示总成本18.125，正常显示18.13，不修改套餐为99.90来迎合精确小数。高负荷同样20包，复核1.2小时、维护4小时/月、初设200分100包、35%返工1小时，人工45.75，加其他2、获客15和200美元套餐分摊10，列示72.75/包。档位只是压力情景不是必要条件，概率不是实测。软件召回另有名单与回复量驱动，不能套这两个数；两条路线收入、售价和利润均未知。 这两组列示费用尚未报价专业复核、税费或专用隔离设施，不能称完整经营成本。套餐超额度的调用另计，零额外调用只是情景条件。应同时观察每包返工和月度维护，避免将一次初设时间全部藏在固定费里。"
+    },
+    {
+      "id": "distribution",
+      "title": "先卖明确交付，不承诺替客户决策",
+      "source_ids": [
+        "Soriginal",
+        "Sapproval"
+      ],
+      "body": "若探索商业交付，承包商路线可以先限定资料转录、差异清单和待审工单；软件路线可以限定合法历史名单的整理、待审文案和反馈分类。两者都需要客户明确提供审核人、数据范围和修改权限，不能泛称全自动代运营。一种可验证的收入机制是设置与培训费用，另一种是持续维护与复核服务，但本案没有这两类成交或续费证据。获客应展示具体样例和退出方式，解释哪些事情仍由客户处理，而不是展示若干Bot头像。已有关系能降低解释成本，但不是安全或专业资质的替代。对没有行业背景的人，先与实际使用者核对字段和错误后果，再决定是否提供服务。本轮没有联系第三方、建账户、代发邮件或申请任何许可证，所述路径全部是待验证建议。"
+    },
+    {
+      "id": "moat",
+      "title": "可复制的是边界明确的工作包",
+      "source_ids": [
+        "Sfaq",
+        "Sjobber",
+        "Slatent"
+      ],
+      "body": "单纯浏览网页和写草稿并不稀缺，真正可能积累的能力是领域字段字典、异常分类、来源引用、恢复程序和可核对验收样例。它们能否形成客户愿意持续付费的优势尚无证据，不能直接说不存在任何护城河，也不能说简单提示词就是资产。承包商所在城市、供应商和项目类型变化，会改变表单与审核要求；软件产品、取消原因与客户语气变化，会改变召回材料。共享电脑使多个Bot便于协作，但不为多客户数据提供自动隔离，账号边界必须单独设计。现成垂直软件可能减少维护，也可能覆盖不了跨网站缺口，应按实际缺口判断。复制前需要确认输入权限、字段标准、输出负责人、恢复与撤销方法，而不是假设录十分钟演示就能稳定重现全部复杂业务。"
+    },
+    {
+      "id": "execution",
+      "title": "把文档辅助与高影响动作隔开",
+      "source_ids": [
+        "Sapproval",
+        "Sfaq",
+        "Sdirectory"
+      ],
+      "body": "承包商材料可含合同、地址和保险资料，软件名单可含联系信息和客服历史，公共报告不保存这些真实记录。建议先用合成材料测试日期、名称、缺页、重复与不确定字段，不把找出一处差异等同完整合规审查；专业判断仍交给有责任的人员。审批只控制接下来的动作，不会撤回之前的自动保存或提交，因此提交前必须看完整字段与目标。登录、验证码、声明与签名遇到限制时按规定停下，不绕过访问控制。客户召回需要名单合法来源、退订与排除规则、明确外发授权及批准的优惠，不能编造承诺或把沉默当继续追发许可。个人账号内换一个Bot名字不构成独立测试环境。验收应检查错配客户、重复执行、拒绝后的继续行为和异常时是否明确报告半成品。 建议样例至少覆盖姓名近似但不同客户、保险日期缺失、合同多版本、曾明确拒绝联系的历史客户，以及执行中断后重试。每种情况有预期输出和禁止动作，才方便用户直接核对，而不是仅凭摘要语气判断正确。"
+    },
+    {
+      "id": "feedback",
+      "title": "不把二手报道当多次复现",
+      "source_ids": [
+        "Slatent",
+        "Shuuush",
+        "Soriginal"
+      ],
+      "body": "本轮检索了公开承包商体验、召回报道和权限相关评价。Huuush转述Liam Fallen的召回经历，其公开页面本身提供AI服务且没有底层收入数据；它不构成第二次独立成功，页面历史120美元也不能覆盖当前官方价格。Latent Space作者报告五日使用中支持工单检查与行政便利，同时指出控制上下文和用量的权衡，属于相邻工作流，不是保险核验或历史客户召回的复现。LinkedIn检索出现一名相邻行业使用者，但打开原页是Cache miss，本轮不把搜索片段当已核实实测；没有绕回别的接口读取。原始转述也没有公开操作者身份或原始日志。原包中的Reddit多用户、eBay封号和单日500美元说法未在本轮获准来源中重验，因此不继续当本案事实，也不用通用77.3%指标推出本案22.7%返工率。"
+    },
+    {
+      "id": "decision",
+      "title": "两条路线分别做小范围验收",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok",
+        "Sapproval"
+      ],
+      "body": "结论为仅建议受控试点：承包商侧先核对材料转录和差异清单，软件侧先核对名单、历史上下文与待审消息。它们都有明确工作对象，但都缺少可复核的质量、净时间、收入与长期稳定数据，不适合直接宣称商业成功或全面否定。下一步是准备已知答案的合成数据，记录人工基线与agent输出，逐项验证错误和恢复；本轮没有真正执行这些试验。成本情景只是预算敏感性分析，允许正常舍入，不为符合校验器改变真实价格。四周200美元并非用户质量门槛，已移除相关准入与失败判断。若出现未经允许的外发/提交、无法解释字段来源、反复漏关键差异或客户不批准数据流，就停止相关工作包。是否扩大规模应由实际验收和付费证据决定，而不是机器人数量或一篇正面案例。 验收记录应把正确完成、等待人工、部分完成和失败分开，不能以生成文件当作整项业务完成。召回效果至少区分回复、愿意再聊、实际重新订阅和持续留存，不能把礼貌回复算恢复收入；承包商则区分字段转录正确与业务许可已经批准，避免行政辅助越过最终责任边界。"
+    }
+  ],
+  "score_status": "not_assessed",
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "公开自述不足以量化需求成交、准确率或收入；保留未知，不能将通用基准作为本案评分和概率。",
+      "source_ids": [
+        "Soriginal",
+        "Sfaq"
+      ]
+    }
+  },
+  "unit_economics": [
+    {
+      "scenario": "低负荷准备假设",
+      "unit": "1份合同+1份保险凭证+1份待审网页字段表/包；每月20包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 13.125,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 100,
+      "assumptions": "0.35h×25+1.5h×25/20+100/100+15%×0.4h×25=13.125；套餐100/20=5，总18.125显示18.13。均为研究假设非观测工时或失败率；档位是情景非必需。超额调用、专业复核、税费和隔离实际费用未知；不套用软件召回。收入售价利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Soriginal"
+      ]
+    },
+    {
+      "scenario": "较高复核负荷假设",
+      "unit": "1份合同+1份保险凭证+1份待审网页字段表/包；每月20包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 45.75,
+      "other_variable_cost": 2,
+      "acquisition_cost": 15,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 200,
+      "assumptions": "1.2h×25+4h×25/20+200/100+35%×1h×25=45.75；其他2、获客15、套餐200/20=10，总72.75。均为研究假设非观测工时或失败率；档位是情景非必需。超额调用、专业复核、税费和隔离实际费用未知；不套用软件召回。收入售价利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Soriginal"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开用户体验",
+        "query": "\"Grok Bot\" \"contractor\" review -site:reddit.com",
+        "outcome": "找到LinkedIn相邻用户，但原页读取Cache miss，仅搜索片段不作为实测证据。"
+      },
+      {
+        "channel": "商业案例报道",
+        "query": "\"Grok Bot\" \"churn\" customer experience -site:reddit.com",
+        "outcome": "读取Huuush二手转述，非独立复现，历史120美元不当当前价格。"
+      },
+      {
+        "channel": "公开用户体验",
+        "query": "\"Grok Bot\" \"review\" \"permissions\" -site:reddit.com",
+        "outcome": "读取Latent Space五日体验，作为相邻工作流反馈；当前权限官方页单独核实。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Slatent",
+        "directness": "adjacent_workflow",
+        "finding": "用户实际报告支持检查和行政便利，也指出用量与上下文控制权衡。",
+        "bias": "五日个人体验，不是COI或客户召回复现。"
+      }
+    ]
+  },
+  "disconfirming_evidence": "同一召回说法被不同网站转述不增加独立成功次数；现成垂直产品覆盖部分流程但未证完整等价；专业复核、真实工时及费用未知。",
+  "limitations": "没有运行Bot、接触真实合同/保险/客户数据或外发；原文收费教程不访问。LinkedIn原页Cache miss未作已读实测。Reddit旧结论未重验不沿用。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-contractor-back-office-jobs-and-churn-recovery",
+    "observed_at": null,
+    "body_sha256": "d2a4a7fb37b6efbdcf521920e0ab89ffc665f459d5ae319b93b1aa2263df2e62",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "46ed1beca1bc09a57f4a5b31e8bf86a81ddcacfd63cb0acfbd566013f12ab279",
+      "How it went": "7e86bd60025dfbc6aabf6f484aa6126ba603f63fedb1388821a331e680c50ee4",
+      "Worth knowing": "58d89814a65300d2c9c2f29ca51d927b4f137d0cf9ba46e9aa1f73d6482e9cd3"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T15:48:29Z",
+      "end": "2026-10-20T15:48:57Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Review [insurance certificates, contracts, or customer list] in [folder or inbox] and flag any discrepancies, such as mismatched coverage dates or names. Then create [work orders or draft win-back messages] for each [contract or lapsed customer] and put them in [spreadsheet or draft folder]. Do not send anything or submit any form until I have reviewed the drafts. Finish with a summary of what you flagged and what you created.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/run-contractor-back-office-jobs-and-churn-recovery",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "765018be6298ea791fb23786553b760ae5aa9ff0cf297bfe400cbef87338881d",
+    "observation_window": {
+      "start": "2026-10-20T15:48:29Z",
+      "end": "2026-10-20T15:48:57Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "revenue_observation": {
+    "status": "unknown",
+    "amount": null
+  },
+  "archive_source_sha256": "d2a4a7fb37b6efbdcf521920e0ab89ffc665f459d5ae319b93b1aa2263df2e62",
+  "translation_sha256": "270b0b66882e5ffa3ed252fc00241d8a8082d3ec033bd2c422b627c3bdd50627",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "重复资料准备可能有帮助，两个场景净收益均待测。",
+    "audience": "有合法资料访问权并能审核的承包商行政人员或软件经营者。",
+    "use": "前者整理字段和工单，后者整理取消名单与待审文案，分别使用。",
+    "benefit": "可能减少转录与上下文整理；没有实测节省时间或已核验收入。",
+    "setup_cost": "分场景权限范围、字段规则、合成样例与人工基线。",
+    "maintenance_cost": "网站/字段变化、名单排除、用量、异常与数据清理。",
+    "frequency": "承包商两日试用；召回针对六个月历史名单，后续频率未披露。",
+    "privacy_risk": "合同与客户历史进入共享云环境，应限范围和留存。",
+    "error_risk": "错配人名、漏差异、重复工单或消息、擅自提交和编造承诺。",
+    "source_ids": [
+      "Sdirectory",
+      "Soriginal",
+      "Sfaq"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板并非作者实际prompt；原文保留，不构成实际执行授权。",
+    "prerequisites": "两套独立合成数据与已知答案；明确只生成会话草稿；人工复核人。",
+    "tools": "Grok Bot（原案）；获准文档和名单。Jobber/Churnkey仅部分替代对照。",
+    "expected_result": "输出可追溯字段、差异和待审材料；本报告未实际试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-contractor-back-office-jobs-and-churn-recovery",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Review [insurance certificates, contracts, or customer list] in [folder or inbox] and flag any discrepancies, such as mismatched coverage dates or names. Then create [work orders or draft win-back messages] for each [contract or lapsed customer] and put them in [spreadsheet or draft folder]. Do not send anything or submit any form until I have reviewed the drafts. Finish with a summary of what you flagged and what you created."
+      },
+      {
+        "title": "离线验收模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只处理我提供的合成样例。承包商材料与取消客户名单分开，逐项列来源、差异和未知；只在会话中生成待审工单或消息，不登录、外发、提交或承诺优惠。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://thecreatorsai.com/p/i-gave-grok-bot-a-real-job-realistic",
+    "source_title": "Creators AI: Grok Bot Realistic Guide",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T15:54:01.195589+00:00",
+    "access_time_note": "Receipt compiled now; actual read bracket in evidence.",
+    "source_sha256": "4277d65368de84d50e2ce83f5ecdc882fbc058bf1e51162010de1c1e150f4824",
+    "steps": [
+      {
+        "en": "The article reports two separate operators, not one combined business.",
+        "zh": "文章转述两个不同操作者，不是一个复合业务。"
+      },
+      {
+        "en": "A contractor prepared documents and browser forms; a software business worked on past cancellations and replies.",
+        "zh": "承包商准备文档与网页表单；软件企业处理历史取消用户和回复。"
+      },
+      {
+        "en": "The interface mapping is the writer’s proposal; quantified revenue and full operator logs are unavailable.",
+        "zh": "界面组织方式是作者建议；量化收入和完整操作者日志未公开。"
+      }
+    ]
+  }
+}
