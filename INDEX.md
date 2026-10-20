@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **65** / 注册案例 **1459**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **66** / 注册案例 **1460**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -76,6 +76,8 @@
 | [用Claude Code整理本地新闻并上传WordPress文章](reports/publish-local-news-posts-to-wordpress-automatically.md) | 适合内部效率工具 | 41.5 | 中 | available | 内容运营与新闻草稿准备 | 2026-10-20T11:06:31.706905+00:00 |
 
 | [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:57:06.189353+00:00 |
+
+| [用Grok Bot每天三次收集AI新闻](reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 行业信息整理 | 2026-10-20T15:34:56.410756+00:00 |
 
 ## 需要重做的旧版简略初稿
 

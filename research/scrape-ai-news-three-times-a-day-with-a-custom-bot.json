@@ -1,0 +1,666 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "scrape-ai-news-three-times-a-day-with-a-custom-bot",
+  "url": "https://agentusecases.ai/use-case/scrape-ai-news-three-times-a-day-with-a-custom-bot",
+  "title": "用Grok Bot每天三次收集AI新闻",
+  "industry": "行业信息整理",
+  "researched_at": "2026-10-20T15:34:56.410756+00:00",
+  "confidence": "medium",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核对新闻摘要的准确性与净工时，再决定商品化",
+    "reason": "结论是适合对固定主题有持续阅读需求的人开展受控试点，而不是直接认定已经成立的商业产品。自用收益可能来自少切换页面和少看重复内容，但净收益要扣去设置、复核与维护，作者没有给可量化分钟数。优先用现有合法来源和明确答案样例检验任务是否稳定，再记录一段实际使用中的全部成本；这只是建议，当前没有替用户开通服务或运行外部任务。若主要需求只是固定RSS阅读，传统阅读器可能已足够；若确需跨站登录与复杂操作，通用agent的灵活性才可能抵消风险和维护成本。持续遗漏重要公告、输出无出处、重复通知无法修复或费用超出用户批准范围，应暂停相应工作流。评分暂未评定而非补造数字；待有真实工时、质量与付费材料后再更新商业判断，不能用统一降级代替这次逐项修正。",
+    "next_action": "准备获准公开样例与已知重复项，先做单轮离线摘要验收，不外发不建立任务。",
+    "stop_condition": "反复遗漏重要消息、无来源、不可恢复的重复通知或超过批准费用。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/scrape-ai-news-three-times-a-day-with-a-custom-bot",
+      "title": "许可目录当前正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "许可目录完整正文、工具与Copy prompt已读；历史电脑和套餐措辞保留，当前边界另据官方说明。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:20:22Z",
+        "end": "2026-10-20T15:20:50Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 13843,
+      "sha256": "8a92e08d3653f5b7710eda0f417ff8c1688c240ecdb99b3c05fd41ae3e705d2a",
+      "hash_scope": "Captured main DOM",
+      "read_method": "permitted_own_cloud_browser_main_dom"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://christopheralarcon.com/blog/what-is-grok-bot",
+      "title": "Chris Alarcon: What is Grok Bot",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "2026-08-28作者自述第一周建三个Bot；新闻每日三次效果简单有用，另一个线索Bot失败；100美元档曾触及用量上限，不能归因于单独新闻任务。未公开完整来源清单和准确率。",
+      "receipt_text": "2026-08-28作者自述第一周建三个Bot；新闻每日三次效果简单有用，另一个线索Bot失败；100美元档曾触及用量上限，不能归因于单独新闻任务。未公开完整来源清单和准确率。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:21:31Z",
+        "end": "2026-10-20T15:21:42Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 88,
+      "sha256": "a4df44c057f85e84b429158a4f2165a1373d3479d344b6628512519933081ff3",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sgrok",
+      "url": "https://x.ai/bot",
+      "title": "Grok Bot official pricing and FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "当前按月30/100/200美元档位，周用量及额外用量收费；同一用户Bots共享电脑文件和登录，不是每Bot隔离。",
+      "receipt_text": "当前按月30/100/200美元档位，周用量及额外用量收费；同一用户Bots共享电脑文件和登录，不是每Bot隔离。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:23:32Z",
+        "end": "2026-10-20T15:23:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 57,
+      "sha256": "07ddfd8129031b4caf4d932de3a4e22a2e9b37326d17aeca0eafbbaa5ab70349",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sinoprice",
+      "url": "https://www.inoreader.com/pricing",
+      "title": "Inoreader pricing",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Pro页面欧元价格6.67/月按年付或8.99按月，未含VAT；摘要与报告不能混同。Pro2500RSS、网页源20，刷新至少每小时。",
+      "receipt_text": "Pro页面欧元价格6.67/月按年付或8.99按月，未含VAT；摘要与报告不能混同。Pro2500RSS、网页源20，刷新至少每小时。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:21:31Z",
+        "end": "2026-10-20T15:22:00Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 67,
+      "sha256": "94d64a0a81f720a3ad01081e8ca2484fa17cf1b6ab76506970cef39e9831ae55",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sinofeature",
+      "url": "https://www.inoreader.com/features/intelligence",
+      "title": "Inoreader Intelligence",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "Pro文章摘要等与Intelligence reports分开，报告附加包或Team Intelligence；定时报告支持日/周，未证本案每日三次相同能力。",
+      "receipt_text": "Pro文章摘要等与Intelligence reports分开，报告附加包或Team Intelligence；定时报告支持日/周，未证本案每日三次相同能力。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:23:08Z",
+        "end": "2026-10-20T15:23:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 79,
+      "sha256": "72ed4305c9522fd932aa0e6156257967f63c9b7bd7359d528d2ef0b6dc4fbf1a",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sinohelp",
+      "url": "https://www.inoreader.com/help/intelligence/intelligence-reports/are-intelligence-reports-available-in-all-plans",
+      "title": "Intelligence reports plan eligibility",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "报告在Pro/Custom需附加包，Team Intelligence包含，不是普通Pro基础价全部包含。",
+      "receipt_text": "报告在Pro/Custom需附加包，Team Intelligence包含，不是普通Pro基础价全部包含。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:23:08Z",
+        "end": "2026-10-20T15:23:23Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 53,
+      "sha256": "d0f03ed081270f4ead7d4a8aa11c316e8a4a2fe062117836e50270cc71b06032",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sreadless",
+      "url": "https://www.readless.app/blog/feedly-vs-inoreader-vs-newsblur-2026",
+      "title": "Readless vendor comparison",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Readless Team自身比较文，明确基于文档非控制实验；其Pro4.90美元/月，RSS及newsletter定时摘要，不证每日三次跨轮语义去重。",
+      "receipt_text": "Readless Team自身比较文，明确基于文档非控制实验；其Pro4.90美元/月，RSS及newsletter定时摘要，不证每日三次跨轮语义去重。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:21:31Z",
+        "end": "2026-10-20T15:22:00Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 76,
+      "sha256": "4933e1bd8e0763836e21f7538ce3bf9526b0bbc06c104da2e31647c1709cdb8a",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sn8n",
+      "url": "https://n8n.io/pricing/",
+      "title": "n8n official pricing",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Starter20欧元/月按年计费，2500工作流执行；Community可自托管，托管、来源服务、模型及维护不因此免费。",
+      "receipt_text": "Starter20欧元/月按年计费，2500工作流执行；Community可自托管，托管、来源服务、模型及维护不因此免费。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:21:31Z",
+        "end": "2026-10-20T15:23:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 61,
+      "sha256": "ec70cd9bb2b5e997a340173e23afc7f468fa4a0fb77e47b07fdf9be713905226",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Slicense",
+      "url": "https://github.com/n8n-io/n8n/blob/master/LICENSE.md",
+      "title": "n8n Sustainable Use License",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "官方仓库许可区分内部业务或个人非商业使用与其他商业用途，企业文件另有条件；不能由免费自托管推导任意转售许可。",
+      "receipt_text": "官方仓库许可区分内部业务或个人非商业使用与其他商业用途，企业文件另有条件；不能由免费自托管推导任意转售许可。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:24:09Z",
+        "end": "2026-10-20T15:24:16Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 54,
+      "sha256": "0e8816f6f02391274d1d6e783b2be5ce60d9c44a8d2d911b71dd35a3ef5ea6e8",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Slatent",
+      "url": "https://www.latent.space/p/grok-bot",
+      "title": "Dan McAteer five-day Grok Bot experience",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "2026-09-05具名作者五日体验含按X兴趣制作每日新闻简报，评价易用；无每日三次准确率或净工时数据。",
+      "receipt_text": "2026-09-05具名作者五日体验含按X兴趣制作每日新闻简报，评价易用；无每日三次准确率或净工时数据。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:23:08Z",
+        "end": "2026-10-20T15:23:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 52,
+      "sha256": "cc3b65494d038e30005a7ea928f1c75d35d29a36f3868e97be6c2f801152dc9d",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Shn",
+      "url": "https://news.ycombinator.com/item?id=49282146",
+      "title": "Hacker News thenbrent comment",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "评论者自述OpenClaw更新问题后转Hermes；对Grok易用性的看法不是本新闻任务试验，也不是Grok故障证据。",
+      "receipt_text": "评论者自述OpenClaw更新问题后转Hermes；对Grok易用性的看法不是本新闻任务试验，也不是Grok故障证据。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T15:23:32Z",
+        "end": "2026-10-20T15:23:52Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T15:34:56.410756+00:00",
+      "characters": 59,
+      "sha256": "0cf822e42f7812b635a314d81d75f5318e8b7cefcc3cc8f20144d9e551fe6a5e",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    }
+  ],
+  "facts": [
+    {
+      "type": "author_claim",
+      "statement": "作者自述新闻Bot每日三次并有用，另一个线索Bot没有产出。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "作者触及100美元档额度一次，未给新闻任务独立用量。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "当前官方有30/100/200美元月付档位，额外用量另计。",
+      "source_ids": [
+        "Sgrok"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "当前官方说明同一用户的Bots共享电脑、文件和登录，名称不同不构成隔离。",
+      "source_ids": [
+        "Sgrok"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Inoreader报告在Pro/Custom需附加包，Team Intelligence包含。",
+      "source_ids": [
+        "Sinohelp"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "n8n Starter20欧元月均按年，2500工作流执行。",
+      "source_ids": [
+        "Sn8n"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Readless比较由其自身团队撰写，不是控制实验。",
+      "source_ids": [
+        "Sreadless"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "另一位作者五日体验包含每日新闻简报，没有准确率测量。",
+      "source_ids": [
+        "Slatent"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "n8n官方仓库许可区分适用范围，免费自托管不等同任意商业托管转售授权。",
+      "source_ids": [
+        "Slicense"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "从个人关注到潜在付费需求",
+      "source_ids": [
+        "Soriginal",
+        "Slatent"
+      ],
+      "body": "原案服务的是需要持续关注AI变化的个人，作者明确偏好简单、无聊但稳定的助手，而不是花哨展示。另一位使用者也描述每日新闻简报，说明相邻需求并非只出现一次，但两篇个人文章不能确定需求规模、付费转化或留存。可能需要这种整理的人包括研究人员、内容编辑和负责行业跟踪的小团队；这是使用场景推断，不是已经成交的客户名单。潜在付款对象要与阅读者分开：个人可能仅使用已有订阅，团队负责人可能为来源筛选、核对与维护付费。新闻少、只需固定RSS或不要求跨站整理的人未必需要通用agent。先问清是缺消息、重复太多、阅读太慢还是不知道可信度，再选择方案，不能以每天三次自动运行本身当成商业价值。实际节省时间和阅读质量仍需以原有流程为基线测量。"
+    },
+    {
+      "id": "workflow",
+      "title": "三次运行必须有可核对的边界",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal",
+        "Sgrok"
+      ],
+      "body": "目录给出了定时收集、短摘要、链接及去重的Copy prompt，但作者没有公开实际完整指令、来源列表、调度日志或去重实现。应保留模板和作者自述之间的区别。拟议流程是预先批准来源与时区，收集更新，保留文章时间和检索时间，生成有链接的短摘要，再与前轮已发条目比对，最后按获准渠道发送。相同报道转载、旧文更新与同一事件的新进展不能只凭标题相似就删除；可同时保留规范化URL和事件标记，再人工抽查。每日三次不是实时监控承诺，一次失败时先检查是否已经产出或发送，避免补跑造成重复。目录历史措辞称每Bot独立电脑，当前官方说明同一用户共享环境；中文忠实保留原文，同时在分析中指出这个差异。商业多客户隔离不能直接套用个人Bot名称。 调度还应明确夏令时与跨时区解释、当天是否包含前一天晚间消息、断线后补发几轮，以及先前失败的来源恢复后是否把旧内容混进最新简报。每轮记录成功来源数和未完成项，比只记录任务已运行更能判断交付是否可靠。"
+    },
+    {
+      "id": "market",
+      "title": "需求线索不是销量证明",
+      "source_ids": [
+        "Soriginal",
+        "Slatent",
+        "Sreadless"
+      ],
+      "body": "两篇实际用户文章和多个阅读产品的摘要功能，支持新闻整理是现有需求类别；它们没有给出本案市场份额、订阅收入或真实购买人数。供应商提供同类功能既说明用户可选择替代，也意味着简单摘要不稀缺。需要细分的不是笼统AI新闻，而是某人需要在什么时间做什么决策，例如编辑确定选题、开发者判断接口变化、团队了解行业公告。不同场景对时效、来源原始性、误报容忍和交付频率差异很大。不能把作者本身经营内容业务推成他已经售出这一自动化服务，也不能用点赞和讨论数量估算销量。值得验证的需求应能描述目前怎样收集、漏掉什么造成什么影响以及愿意审核多少内容。目前这些都没有成交层面的证据，先做小范围需求核验比建立通用订阅平台更合理。"
+    },
+    {
+      "id": "competition",
+      "title": "替代方案按同一个任务比较",
+      "source_ids": [
+        "Sinoprice",
+        "Sinofeature",
+        "Sinohelp",
+        "Sreadless",
+        "Sn8n"
+      ],
+      "body": "比较单位固定为同一主题、同一来源清单、每天三次、每条短摘要与链接、跨轮去重、每月30天。Inoreader Pro的6.67欧元月均价要求年付，8.99欧元为按月且未含VAT；文章摘要不等于报告附加包，更不能把普通Pro价直接视为三次自动报告的全部费用。Readless的4.90美元月价来自供应商自己的比较文，不是独立用户测评；其定时摘要与本案三次调度、语义去重是否完全一致仍待核实。n8n Starter20欧元月均年付有2500次工作流额度，90次基础运行只是计划算术，失败重跑和额外流程另算。Folo免费三篇摘要不能替代每日三轮多源任务，因此不再作为零成本同等功能证据。没有验证相同输入输出前，只能列候选和差异，不能用低价宣判某一路线必胜。 欧元与美元价格不在未取汇率时直接相减；年度月均价也不等于首月现金支出。比较表应另列首期付款、可取消条件、来源数量和人工介入责任。工作流平台的执行额度与大模型调用额度是不同单位，不能把2500次流程直接说成2500次免费智能摘要。"
+    },
+    {
+      "id": "economics",
+      "title": "现金与人工成本分别计算",
+      "source_ids": [
+        "Sgrok",
+        "Sn8n",
+        "Soriginal"
+      ],
+      "body": "两种情景都以一个主题30天90轮摘要为月度单位，以当前Grok最低30美元月订阅作为现金参照，不把已有订阅分摊6美元写成新用户实际只需付6美元。低负荷假设月复核0.5小时、维护0.25小时、初设0.5小时分12月摊销，15%概率发生0.5小时月度返工，人工时薪25美元，人工月摊21.67美元，列示合计51.67美元。高负荷假设复核1.5小时、维护0.5小时、初设2小时分6月、35%概率发生1小时返工，人工67.08美元，加15美元获客摊销和30订阅，合计112.08美元；现金列示是45而非30美元。所有工时和概率是研究假设，不是作者记录；额外调用为零仅表示假设未超额度。来源付费、版权授权、异常增加与税费未报价，不能称完整经营成本。售价、收入、利润均未知，不把零填成真实收入，也不再使用四周200美元准入线。"
+    },
+    {
+      "id": "distribution",
+      "title": "交付来源规则而不只是一个Bot",
+      "source_ids": [
+        "Soriginal",
+        "Slatent",
+        "Slicense"
+      ],
+      "body": "一种待验证的服务形式是为有明确主题的人配置来源清单、分类规则、摘要格式、去重与异常处理，并交付可自行停用的任务说明。初始获客可以围绕用户已经手动维护的信息流展开，但本研究没有联系客户、投放、收款或验证转化率。一次性设置费或持续维护费都只是收入机制假设，后者需要对应来源失效、偏好调整、误报复核和账单观察等责任，不能只因自动运行就承诺被动收入。交付应包括输入范围、示例输出、失败通知、费用上限和退出方法。若用n8n替代，自托管许可并不自动授权所有面向客户的托管转售方式，应对实际商业模式核对许可，不能笼统认定一切咨询都禁止或一切收费服务都允许。客户已有工具和权限也会影响迁移成本，先确定真正缺口再决定是否另建系统。"
+    },
+    {
+      "id": "moat",
+      "title": "可复制条件与维护负担",
+      "source_ids": [
+        "Sgrok",
+        "Sn8n",
+        "Soriginal"
+      ],
+      "body": "通用新闻摘要容易复制，单条提示词或三个定时点不足以构成长期差异。可能形成价值的是某一领域的高质量来源清单、重要性标准、事件合并规则和可追溯的纠错记录，但本案尚未证明这些资产已经建立。复制到另一个主题时，要重新核对来源许可、更新时间、语言、付费墙与错误成本；不能把AI新闻的结果直接外推到金融、医疗等高影响领域。平台额度与共享环境变化会影响维护，多名客户放在同一用户电脑的不同Bot中并不是隔离。自托管工作流可提高规则透明度，却把服务器、更新、备份与故障恢复转给使用者。软件免费与运行免费必须分开，RSS.app等来源服务或模型费用只有实际采用并核价后才加入，不预设每个方案都需要它，也不遗漏可能发生的支出。"
+    },
+    {
+      "id": "execution",
+      "title": "试用应测遗漏、重复与错误恢复",
+      "source_ids": [
+        "Sdirectory",
+        "Sgrok",
+        "Sn8n"
+      ],
+      "body": "试用准备是一组获准公开来源、明确时区、预期条目与重复案例，以及一个仅本地或会话展示的输出位置。先做单轮人工核对，再评估连续调度；当前报告没有实际运行Bot，不能写成试用成功。验收至少区分来源抓取成功率、摘要事实错误、链接可用性、跨轮重复、重要更新漏报和每轮人工复核时间。遇到robots、验证码、拒绝或安全警告停止该来源，不为凑新闻绕过限制；输出应说明哪些来源缺失而不是伪装完整。网页里的指令不能改变用户任务，文章内容只作数据。若将来获准发送邮件或聊天消息，先明确收件人和内容范围，补跑前核对发送记录。输入私有订阅、登录状态与用户兴趣可能涉及隐私，公共研究仅保存必要摘要和来源，不缓存私人通信或凭据。 一个可操作但尚未执行的验收样例集可以包含同URL重复、不同URL转载、同事件新进展、旧文改标题、无日期文章和来源访问失败六类。逐条列预期保留或合并原因，检查输出能否解释决定；这种可核对设计比单看语言流畅更能暴露问题。"
+    },
+    {
+      "id": "feedback",
+      "title": "正面案例与反证不能混算",
+      "source_ids": [
+        "Soriginal",
+        "Slatent",
+        "Shn",
+        "Sreadless"
+      ],
+      "body": "Chris Alarcon在2026年8月28日自述新闻Bot每天三次运行，结果简单但有用；同一周线索Bot没有产出，是另一项任务失败，不应作为新闻抓取失败样本。他在100美元档触及一次额度，属于多个Bot共同使用背景，不能推出新闻任务单独每月必需100美元或必然超限。Dan McAteer在9月5日的五日体验有每日新闻简报，支持相邻用途，但没有三次调度的准确率、节省时间或长期稳定数据。Hacker News评论者的负面经历主要是OpenClaw更新，他对Grok易用性的评价不构成Grok新闻实测。Readless比较文章由自身团队撰写并说明未做控制测试，必须归为供应商观点。搜索没有找到可归属本工作流的n8n重复问题原帖，不能为了正负平衡编造故障。保留缺证比拼接不相干评论更有用。 原始文章日期、读取日期和产品当前价格日期也分别保存，避免把八月的套餐体验写成十月的购买条件。"
+    },
+    {
+      "id": "decision",
+      "title": "先验证个人价值，再决定是否商品化",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok",
+        "Sinofeature"
+      ],
+      "body": "结论是适合对固定主题有持续阅读需求的人开展受控试点，而不是直接认定已经成立的商业产品。自用收益可能来自少切换页面和少看重复内容，但净收益要扣去设置、复核与维护，作者没有给可量化分钟数。优先用现有合法来源和明确答案样例检验任务是否稳定，再记录一段实际使用中的全部成本；这只是建议，当前没有替用户开通服务或运行外部任务。若主要需求只是固定RSS阅读，传统阅读器可能已足够；若确需跨站登录与复杂操作，通用agent的灵活性才可能抵消风险和维护成本。持续遗漏重要公告、输出无出处、重复通知无法修复或费用超出用户批准范围，应暂停相应工作流。评分暂未评定而非补造数字；待有真实工时、质量与付费材料后再更新商业判断，不能用统一降级代替这次逐项修正。"
+    }
+  ],
+  "score_status": "not_assessed",
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "作者体验有限；需求成交、准确率、净时间和收入缺测量，不补造分数。",
+      "source_ids": [
+        "Soriginal",
+        "Sgrok"
+      ]
+    }
+  },
+  "unit_economics": [
+    {
+      "scenario": "低负荷自用假设",
+      "unit": "单主题30天90轮摘要/月",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 21.6666666667,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 1,
+      "fixed_monthly_cost": 30,
+      "assumptions": "复核0.5h×25+维护0.25h×25+初设0.5h×25/12+15%×0.5h×25=21.6667；合计51.67。工时、返工概率与获客全为假设，未实测；零额外调用假设未超套餐额度，来源授权及税费未知，收入利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Soriginal"
+      ]
+    },
+    {
+      "scenario": "较高维护交付假设",
+      "unit": "单主题30天90轮摘要/月",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 67.0833333333,
+      "other_variable_cost": 0,
+      "acquisition_cost": 15,
+      "units_per_month": 1,
+      "fixed_monthly_cost": 30,
+      "assumptions": "复核1.5h×25+维护0.5h×25+初设2h×25/6+35%×1h×25=67.0833；加获客15和订阅30合计112.08；已列现金45。工时、返工概率与获客全为假设，未实测；零额外调用假设未超套餐额度，来源授权及税费未知，收入利润未知。",
+      "source_ids": [
+        "Sgrok",
+        "Soriginal"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开体验",
+        "query": "\"Grok Bot\" \"news\" review -site:reddit.com",
+        "outcome": "读取Latent Space具名体验，保留工作流与测量限制。"
+      },
+      {
+        "channel": "社区",
+        "query": "\"Grok Bot\" \"news scraper\" site:news.ycombinator.com",
+        "outcome": "读取原文链接的HN评论，属于相邻工具体验。"
+      },
+      {
+        "channel": "工作流社区",
+        "query": "site:community.n8n.io \"news\" \"duplicate\" RSS",
+        "outcome": "未获得可归属本案的原始用户结果，不编造故障。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Soriginal",
+        "directness": "direct_user",
+        "finding": "新闻每日三次简单有用；另一个Bot失败。",
+        "bias": "作者自报，未独立复现或计量。"
+      },
+      {
+        "source_id": "Slatent",
+        "directness": "direct_user",
+        "finding": "五日体验含每日新闻简报。",
+        "bias": "短期技术用户，无三次准确率。"
+      },
+      {
+        "source_id": "Shn",
+        "directness": "adjacent_workflow",
+        "finding": "OpenClaw更新负面与Grok易用性观点。",
+        "bias": "不是Grok新闻实测，不转移故障归属。"
+      }
+    ]
+  },
+  "disconfirming_evidence": "现成阅读工具可能已满足固定RSS需求，通用agent不必然更优。；新闻Bot未公开来源、准确率、独立费用，原作者整体额度不能归因单任务。",
+  "limitations": "本轮未运行Bot、付费、联系客户或取得成交记录。；外部文章只作有限原创摘要；目录历史措辞与当前官方差异单独解释。；旧n8n文档URL普通404后改读官方仓库许可，未绕过访问限制。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/scrape-ai-news-three-times-a-day-with-a-custom-bot",
+    "observed_at": null,
+    "body_sha256": "7c02dfb18b3c6b3be32293ab13154d4fe7487aa24e3d06fc6bd6bbb9db95ca0d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "0696f738566805840087ad44801a43b544ac363be791e4b35640d4d25b908aae",
+      "How it went": "97032d8104e74dd45eb880e9045e2075fc13e4597e0359bfbb9884ac129bbc50",
+      "Worth knowing": "3850e0dcca397fcd6bbd550770bd0a7b2505311ef62c03d570bd43e4c41a5d52"
+    },
+    "actual_agents": [
+      "Grok Bot"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T15:20:22Z",
+      "end": "2026-10-20T15:20:50Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up a recurring job that runs [three times a day, at 8am, 1pm, 6pm] to collect the latest news on [topic] from [sources or sites]. Summarize each item in one or two sentences with a link, remove duplicates from earlier runs, and send the digest to [email or chat]. Run it once now so I can check the format, then ask me what to adjust before scheduling it.",
+    "agent": "Grok Bot",
+    "source_url": "https://agentusecases.ai/use-case/scrape-ai-news-three-times-a-day-with-a-custom-bot",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "8a92e08d3653f5b7710eda0f417ff8c1688c240ecdb99b3c05fd41ae3e705d2a",
+    "observation_window": {
+      "start": "2026-10-20T15:20:22Z",
+      "end": "2026-10-20T15:20:50Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "revenue_observation": {
+    "status": "unknown",
+    "amount": null
+  },
+  "archive_source_sha256": "7c02dfb18b3c6b3be32293ab13154d4fe7487aa24e3d06fc6bd6bbb9db95ca0d",
+  "translation_sha256": "680d11546ba236429081b3e568796fcfc39ad02bd5a7305cfe4b3e65109bbd57",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "固定主题可能省整理动作，净时间和稳定性待测。",
+    "audience": "有持续行业阅读需求且能审核结果的人。",
+    "use": "一天三次有链接的新闻摘要与去重。",
+    "benefit": "可能少切换页面与重复阅读，没有实测节省分钟数。",
+    "setup_cost": "定义来源、时区、主题、去重规则与验收样例。",
+    "maintenance_cost": "源失效、额度、误报遗漏与定时任务恢复。",
+    "frequency": "原作者每天三次；不是实时监控。",
+    "privacy_risk": "兴趣与登录来源、共享环境可能暴露信息。",
+    "error_risk": "旧闻当新、重复、漏关键更新、摘要失真和重复发送。",
+    "source_ids": [
+      "Soriginal",
+      "Sgrok",
+      "Slatent"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板并非作者实际prompt；原文保留，不构成实际执行授权。",
+    "prerequisites": "获准来源清单和明确时区；已知答案与重复样例；先在会话或本地查看，外发另需明确授权",
+    "tools": "Grok Bot（原案）；合法新闻来源；其他阅读器仅作替代比较",
+    "expected_result": "预期得到可核对链接的短摘要与重复处理说明，非实际试用结果。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/scrape-ai-news-three-times-a-day-with-a-custom-bot",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Set up a recurring job that runs [three times a day, at 8am, 1pm, 6pm] to collect the latest news on [topic] from [sources or sites]. Summarize each item in one or two sentences with a link, remove duplicates from earlier runs, and send the digest to [email or chat]. Run it once now so I can check the format, then ask me what to adjust before scheduling it."
+      },
+      {
+        "title": "离线验收模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅对我提供的获准样例做一次离线摘要。每条保留原链接、发布时间和不确定处；说明被合并的重复项。不要登录、发送或建立定时任务。让我核对后再讨论后续授权。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://christopheralarcon.com/blog/what-is-grok-bot",
+    "source_title": "Chris Alarcon: What is Grok Bot",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T15:34:56.410756+00:00",
+    "access_time_note": "Receipt compiled now; actual read bracket in evidence.",
+    "source_sha256": "a4df44c057f85e84b429158a4f2165a1373d3479d344b6628512519933081ff3",
+    "steps": [
+      {
+        "en": "The author set up a news bot to collect AI news three times daily.",
+        "zh": "作者设置新闻机器人，每天三次收集AI新闻。"
+      },
+      {
+        "en": "He described it as simple and useful; another lead-scout bot failed.",
+        "zh": "他认为新闻机器人简单有用；另一个寻找线索的机器人失败。"
+      },
+      {
+        "en": "He hit the plan limit once, without reporting this task’s separate usage or full setup.",
+        "zh": "他曾触及套餐额度一次，未报告本任务独立用量或完整设置。"
+      }
+    ]
+  }
+}
