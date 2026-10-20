@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **90**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **91**；深度研究 **62**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -100,3 +100,4 @@
 | 用OpenClaw浏览Reddit并处理评论回复 | [简报](../../reports/brief/browse-reddit-and-reply-to-comments-autonomously.md) |
 | 用Operator搜集工作资料并整理表格 | [简报](../../reports/brief/try-a-work-task-with-a-browser-agent.md) |
 | 用OpenClaw结合代码库诊断客户问题 | [简报](../../reports/brief/resolve-a-churning-customer-s-issue-quickly.md) |
+| 用Agent将Gmail旅行邮件整理为日历事件 | [简报](../../reports/brief/turn-gmail-travel-emails-into-google-calendar-events.md) |

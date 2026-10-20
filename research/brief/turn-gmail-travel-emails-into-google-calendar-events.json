@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "turn-gmail-travel-emails-into-google-calendar-events",
+  "url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
+  "title": "用Agent将Gmail旅行邮件整理为日历事件",
+  "industry": "旅行行政",
+  "researched_at": "2026-10-20T13:57:38.548565+00:00",
+  "brief_reason": "只有目录转述，缺同输入、权限、输出与计时记录；适合可靠性简报，不能给三种产品性能排名或收入结论。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先验证原生功能",
+    "headline": "先查原生日历是否已覆盖，再做异常旅行邮件整理",
+    "reason": "普通确认邮件已有自动事件功能，定制价值需落在真实缺口而非重复造轮子。",
+    "next_action": "以虚构跨时区和改签邮件制作待审清单，与现有日历功能比较。",
+    "stop_condition": "事件重复、时区错误、误发邀请或需要无关邮箱权限。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:47:28Z",
+        "end": "2026-10-20T13:47:40Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T13:57:38.548565+00:00",
+      "characters": 15097,
+      "sha256": "8968a392b6a908f5ada332a24f6ddeda9dc78796f580ae2ecb355a5a08a935dc",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "许可目录转述两种agent失败、Manus监督约1.5小时对比估计手动15分钟，以及Claude聊天不到一分钟成功的自述，未提供同条件结果。"
+    },
+    {
+      "id": "Snative",
+      "url": "https://support.google.com/calendar/answer/6084018?co=GENIE.Platform%3DDesktop&hl=en",
+      "title": "Google日历：Gmail事件",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:53:10Z",
+        "end": "2026-10-20T13:53:16Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T13:57:38.548565+00:00",
+      "receipt_text": "官方支持从旅行确认邮件自动生成事件并随预订变化更新；受设置、账户和邮件类型限制，抄送、邮件列表及转自其他账户的邮件等不适用。",
+      "characters": 62,
+      "sha256": "1f4aea16c4115dcf31e52a2523795f92a75284939ae2b1d42b60f5c9500affc1",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方支持从旅行确认邮件自动生成事件并随预订变化更新；受设置、账户和邮件类型限制，抄送、邮件列表及转自其他账户的邮件等不适用。"
+    },
+    {
+      "id": "Screate",
+      "url": "https://developers.google.com/workspace/calendar/api/guides/create-events",
+      "title": "Google Calendar创建事件指南",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:53:10Z",
+        "end": "2026-10-20T13:53:16Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T13:57:38.548565+00:00",
+      "receipt_text": "官方要求目标日历写权限，支持调用方生成符合规则的事件ID，避免后端已成功而客户端失败后的重复创建；添加受邀人并发送更新会产生通知。",
+      "characters": 65,
+      "sha256": "94c4a445a995b0d01738c2d00575684ffad2a352d89517728697bee849e4ac8d",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方要求目标日历写权限，支持调用方生成符合规则的事件ID，避免后端已成功而客户端失败后的重复创建；添加受邀人并发送更新会产生通知。"
+    },
+    {
+      "id": "Sevent",
+      "url": "https://developers.google.com/workspace/calendar/api/v3/reference/events",
+      "title": "Google Calendar事件字段",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T13:53:10Z",
+        "end": "2026-10-20T13:53:16Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T13:57:38.548565+00:00",
+      "receipt_text": "事件开始和结束分别有日期、带偏移的日期时间和时区字段，定时与全天事件需区分。",
+      "characters": 38,
+      "sha256": "23fccbd7e3d5bf1f17636bf6876cc52725b3dfc341a5ec41c2b0d36cb2cd45d4",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "事件开始和结束分别有日期、带偏移的日期时间和时区字段，定时与全天事件需区分。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1ry946y/manus_review_for_a_task_chatgpt_agent_couldnt",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "原帖位于此前明确受限Reddit，本轮不重试或绕过。未读取私人邮件、账户、日历、执行日志或Claude输出。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述Manus和ChatGPT Agent没有完成该旅行事件任务。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "1.5小时监督、15分钟手动估计和Claude不到一分钟均非本轮实测。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Google官方已有Gmail旅行确认邮件自动事件功能，但受设置和邮件类型限制。",
+      "type": "verified",
+      "source_ids": [
+        "Snative"
+      ]
+    },
+    {
+      "statement": "Google官方提供自定义事件ID来避免特定失败重试情形下重复创建。",
+      "type": "verified",
+      "source_ids": [
+        "Screate"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "失败是工作流线索，不是模型排行榜",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录记录的是一次作者体验，没有相同邮件、账户、权限、提示词和输出验收。Claude聊天“成功”究竟指提取文本、生成文件还是实际写入日历未知；不能与两种agent的端到端写入直接比较。15分钟是作者估计而非配对计时，监督1.5小时也缺具体失败阶段。"
+    },
+    {
+      "id": "native",
+      "title": "先用现成功能建立基线",
+      "source_ids": [
+        "Snative"
+      ],
+      "body": "Google已有旅行确认邮件生成日历事件并随预订变化更新的功能，但需检查智能功能及事件设置。抄送、邮件列表、跨账户转来的邮件等有限制。本案是否符合条件未知；应先检查是否已有事件，避免agent再创建一份。未启用不代表系统不能做，已启用也不保证每封邮件都支持。"
+    },
+    {
+      "id": "workflow",
+      "title": "把提取、批准和写入拆开",
+      "source_ids": [
+        "Sdirectory",
+        "Screate"
+      ],
+      "body": "先限定日期范围与发件方，只提取本次旅行相关资料，输出每项来源和不确定字段。用户核对后才创建，不擅自邀请他人或发送通知。写入后应读取事件ID和实际字段核对，网络超时先查是否已经成功，再决定重试。提供可追溯ID不等于完整解决同一订单不同邮件的语义去重。"
+    },
+    {
+      "id": "time",
+      "title": "跨时区和跨日需要逐字段核对",
+      "source_ids": [
+        "Sevent"
+      ],
+      "body": "拟议验收应覆盖出发与到达时区不同、过午夜、夏令时转换、酒店入住退房日期以及缺失结束时间。不能把邮件显示时区默认当机场当地时区，也不要凭空补抵达时间。全天与定时事件分开处理；不确定时先标待确认，不用一个看似完整的事件掩盖未知。"
+    },
+    {
+      "id": "commercial",
+      "title": "商业缺口是异常处理而非普通转录",
+      "source_ids": [
+        "Snative",
+        "Sdirectory"
+      ],
+      "body": "假设人群是经常出差或管理复杂行程的人，但本案没有用户规模和付费证据。候选服务应先验证原生功能没覆盖的转发、多来源、改签冲突等问题，交付待审行程和核对记录。可以探索按行程整理收费或持续维护，但获客、支付意愿和稳定交付均待验证，不能靠“AI日历”标签推定需求。"
+    },
+    {
+      "id": "cost",
+      "title": "监督时间可能吃掉便利",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包括设置、授权、筛选、核对时区、处理重复与改签、等待和返工。没有调用账单、模型版本和真实人工基线，不计算利润或节约率。自用是否划算需比较全部时间与错误代价，不只统计生成文字速度。低频旅行者可能用原生事件加人工更省事。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值与维护分开判断",
+      "source_ids": [
+        "Sdirectory",
+        "Snative"
+      ],
+      "body": "适合有重复旅行整理需求且愿意审核的人。设置需要限定邮箱范围与目标日历；维护包括连接器权限、邮件格式、改签与取消同步。频率按真实出行而非假设每天。可能收益是减少抄写，但漏航班或错误提醒损失较大，不能把一封成功处理当长期可靠。"
+    },
+    {
+      "id": "privacy",
+      "title": "确认号和行程不应默认公开",
+      "source_ids": [
+        "Sdirectory",
+        "Screate"
+      ],
+      "body": "邮件可能包含姓名、确认号、住址、同行人及个人行踪。最小化读取并核对目标日历可见性，描述中只保留必要内容，不默认把邮件全文复制进去。API受邀人和通知字段可能把行程发给第三方，必须单独确认；本轮没有访问邮箱或修改任何日历。"
+    },
+    {
+      "id": "trial",
+      "title": "先离线做合成样例",
+      "source_ids": [
+        "Sdirectory",
+        "Sevent"
+      ],
+      "body": "准备虚构航班、酒店、改签、取消、重复邮件和缺失时区样例，预先列正确日期与是否创建。只输出草稿清单和待确认项，检查重复、更新与删除建议，不执行真实写入。预期结果是来源对应、未知不补造、变更可审核；本轮未进行此试验。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
+    "observed_at": null,
+    "body_sha256": "f7fece3492f0f185f904e95b02d1384faff4b9597b52d78da545eacbbae47071",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "38d15e936b4b2b61cb9cb2670b9ad4c3fc787a85991c856ad20a5f94b9677bca",
+      "How it went": "2cf11bb8ce80ee21edf18f3714cafa5d0e9c97f2ddff55e75d73c85db7544cae",
+      "Worth knowing": "d10a2fda1dba4704d4d85e3166d7b5be801a77019d0735bd9a01d3afa924f32f"
+    },
+    "actual_agents": [
+      "Manus",
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T13:47:28Z",
+      "end": "2026-10-20T13:47:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Search my Gmail for travel confirmation emails from [airline, hotel, or train company] for [trip or date range]. For each booking, pull the dates, times, confirmation number, and location, then draft a Google Calendar event with those details in the description. Show me the list of events you plan to create and wait for my approval before saving any of them.",
+    "agent": "Manus",
+    "source_url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "8968a392b6a908f5ada332a24f6ddeda9dc78796f580ae2ecb355a5a08a935dc",
+    "observation_window": {
+      "start": "2026-10-20T13:47:28Z",
+      "end": "2026-10-20T13:47:40Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1ry946y/manus_review_for_a_task_chatgpt_agent_couldnt",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T13:57:38.548565+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原帖位于此前明确受限Reddit，本轮不重试或绕过。未读取私人邮件、账户、日历、执行日志或Claude输出。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有重复行程整理时可能有帮助，但原生功能与审核成本先比较。",
+    "audience": "频繁出行且能审核日历详情的人。",
+    "use": "从指定旅行邮件提取行程，形成待审日历草稿。",
+    "benefit": "可能减少抄写；作者此次反而花更多监督时间，未独立实测。",
+    "setup_cost": "限定邮件、检查原生设置、目标日历和时区。",
+    "maintenance_cost": "邮件格式、连接器、重复、改签取消与权限变化。",
+    "frequency": "按实际出行频率。",
+    "privacy_risk": "行程和确认号可能泄露给共享日历或受邀人。",
+    "error_risk": "时区、日期、重复和取消处理错误。",
+    "source_ids": [
+      "Sdirectory",
+      "Snative"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "虚构旅行邮件与预期结果表，不接真实邮箱日历。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "待审事件清单、来源、时区和未知字段，不保存、不通知；未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/turn-gmail-travel-emails-into-google-calendar-events",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Search my Gmail for travel confirmation emails from [airline, hotel, or train company] for [trip or date range]. For each booking, pull the dates, times, confirmation number, and location, then draft a Google Calendar event with those details in the description. Show me the list of events you plan to create and wait for my approval before saving any of them."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅从以下虚构旅行邮件提取事件草稿。标注来源、起止日期时区、重复与改签关系；缺失信息写待确认。不访问账户、不保存日历、不发送邀请。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "只有目录转述一次体验，没有独立原帖、日历输出或后续反馈。"
+  },
+  "disconfirming_evidence": "原生自动事件可能足够；作者报告监督成本高，Claude比较条件不明。",
+  "limitations": "未实测或读取私人邮件；未核实原帖、三种工具权限和输出，不能进行产品性能排名。",
+  "archive_source_sha256": "f7fece3492f0f185f904e95b02d1384faff4b9597b52d78da545eacbbae47071",
+  "translation_sha256": "0f894dd0c512d98080492595002f43b0219df64d78699c4099d775795e4067e1"
+}
