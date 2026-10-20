@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "turn-off-notifications-for-every-subreddit-via-browser",
+  "url": "https://agentusecases.ai/use-case/turn-off-notifications-for-every-subreddit-via-browser",
+  "title": "用Claude in Chrome关闭Reddit社区通知",
+  "industry": "个人数字生活整理",
+  "researched_at": "2026-10-20T19:59:28.969278+00:00",
+  "brief_reason": "本案只有访问被拒的失败评论，没有完成清单、根因或净省时，不能当成功自动化。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先核验原生设置与获准访问",
+    "headline": "一次失败不证明平台永久禁止，也不证明服务可经营",
+    "reason": "原评论仅报告拒绝；免费设置替代和账号隐私限制需优先评估。",
+    "next_action": "在自有账号先核对少量范围、保留名单和原生设置成本。",
+    "stop_condition": "访问拒绝、无法回读保存状态、误改保留项或交付成本高于人工价值。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/turn-off-notifications-for-every-subreddit-via-browser",
+      "title": "许可目录：逐社区关闭通知尝试",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:57:16Z",
+        "end": "2026-10-20T19:57:44Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 14845,
+      "sha256": "0534feaa3f84f220f0586f4078d7dd1c77718018b688f90c9ab64dc21bc42e8b",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "完整许可目录及模板；Undated。目录将访问失败归因Reddit，分析另核对原评论证据。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1prcypb/anthropic_just_dropped_claude_for_chrome_ai_that",
+      "title": "armyofda12mnkeys：订阅社区通知修改失败",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:57:32Z",
+        "end": "2026-10-20T19:57:58Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:59:28.969278+00:00",
+      "receipt_text": "原帖主为stackattackpro，但本案来自armyofda12mnkeys评论，不是主帖演示。评论者询问是否Reddit阻止Claude，并报告Cannot assist拒绝；不知道根因。页面相对9mo不补造精确发布日期。原评论在父帖1197至1206行实际读取，独立链接/o0df05y一次Cache miss未用其作为成功读取。",
+      "characters": 169,
+      "sha256": "31666bfa286aab0ccd4ac58cd1dd3c49b5856b2a811de3b50af8f35774d29d53",
+      "hash_scope": "Researcher summary, not raw external source bytes",
+      "supports": "原帖主为stackattackpro，但本案来自armyofda12mnkeys评论，不是主帖演示。评论者询问是否Reddit阻止Claude，并报告Cannot assist拒绝；不知道根因。页面相对9mo不补造精确发布日期。原评论在父帖1197至1206行实际读取，独立链接/o0df05y一次Cache miss未用其作为成功读取。"
+    },
+    {
+      "id": "Sreddit",
+      "url": "https://support.reddithelp.com/hc/en-us/articles/360043034552-How-do-I-opt-in-or-out-of-notifications",
+      "title": "Reddit官方通知设置",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:57:32Z",
+        "end": "2026-10-20T19:57:58Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:59:28.969278+00:00",
+      "receipt_text": "更新2026-08-18，Web设置的Notifications页可开关通知类型，iOS和Android也有管理通知入口。该说明不证明每个订阅社区当前可一键批量关闭。",
+      "characters": 83,
+      "sha256": "ee07294497b50f4552c4ddc7a08bfbf9f45feac428689cb402b2779f19631305",
+      "hash_scope": "Researcher summary, not raw external source bytes",
+      "supports": "更新2026-08-18，Web设置的Notifications页可开关通知类型，iOS和Android也有管理通知入口。该说明不证明每个订阅社区当前可一键批量关闭。"
+    },
+    {
+      "id": "Ssafety",
+      "url": "https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely",
+      "title": "Claude in Chrome安全说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:57:32Z",
+        "end": "2026-10-20T19:57:58Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:59:28.969278+00:00",
+      "receipt_text": "官方说明内容和动作分类器、站点屏蔽、按风险暂停，以及可见页面截图进入对话和提示注入残余风险。未给出本历史评论的特定错误根因，不能据此推断现在Reddit一律禁止。",
+      "characters": 81,
+      "sha256": "8ba43b40fc542490dfa0011e74c17f42b0fdda95efa629e3db9867ce97e22151",
+      "hash_scope": "Researcher summary, not raw external source bytes",
+      "supports": "官方说明内容和动作分类器、站点屏蔽、按风险暂停，以及可见页面截图进入对话和提示注入残余风险。未给出本历史评论的特定错误根因，不能据此推断现在Reddit一律禁止。"
+    },
+    {
+      "id": "Sadmin",
+      "url": "https://support.claude.com/en/articles/13065128-claude-in-chrome-admin-controls",
+      "title": "Claude组织站点访问控制",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T19:57:32Z",
+        "end": "2026-10-20T19:57:58Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T19:59:28.969278+00:00",
+      "receipt_text": "Team/Enterprise管理者可设allowlist/blocklist，名单限制Claude可导航和操作的URL；用户手动打开组织屏蔽URL也不会自动启用工具。仅作为区分站点/组织/工具限制的依据，不证明本案用了企业账号。",
+      "characters": 115,
+      "sha256": "6e902389d30b5aa142558cf1cb54fd49c6483a9f4eafeb2a50f8876f6b9ac6b7",
+      "hash_scope": "Researcher summary, not raw external source bytes",
+      "supports": "Team/Enterprise管理者可设allowlist/blocklist，名单限制Claude可导航和操作的URL；用户手动打开组织屏蔽URL也不会自动启用工具。仅作为区分站点/组织/工具限制的依据，不证明本案用了企业账号。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "本案来自armyofda12mnkeys评论，其报告访问拒绝而未完成通知修改。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "评论者询问是否Reddit阻止工具，没有提供确定根因。",
+      "type": "verified",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Reddit官方文档提供Web、iOS、Android管理通知类型的入口。",
+      "type": "verified",
+      "source_ids": [
+        "Sreddit"
+      ]
+    },
+    {
+      "statement": "Claude当前有内容/动作风险筛查及组织站点访问控制。",
+      "type": "verified",
+      "source_ids": [
+        "Ssafety",
+        "Sadmin"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "result",
+      "title": "实际证据是一条失败评论",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "本案不是主帖展示的成功演示，而是armyofda12mnkeys在评论中的亲历反馈。目标是减少所订阅社区的通知，不是退订社区、删除账号或管理版主任务。工具在访问步骤拒绝，没有逐项修改清单、完成数量或省时记录。将其记录为有依据简报，而非自动清理成功案例。"
+    },
+    {
+      "id": "cause",
+      "title": "不能把拒绝提示直接归因为Reddit封禁",
+      "source_ids": [
+        "Sauthor",
+        "Ssafety",
+        "Sadmin"
+      ],
+      "body": "目录用Reddit阻止或限制的措辞，中文译文忠实保留；原评论实际上是疑问，只有Claude无法协助的提示。可能存在工具或组织访问边界，但本案没有账号类型、策略或日志，根因未知。当前官方资料证明存在不同控制层，不证明历史发生了哪一种，也不能宣称换工具或换网址即可解决。"
+    },
+    {
+      "id": "alternative",
+      "title": "先分清要关闭哪一种通知",
+      "source_ids": [
+        "Sreddit",
+        "Sauthor"
+      ],
+      "body": "官方支持Web及手机端按类型调整通知。社区动态、回复和推荐不应混为一个目标；用户要保留的例外需单独列明。官方入门页未说明当前存在覆盖全部已订阅社区的一键关闭，因此既不能承诺有万能按钮，也不能照搬历史评论认定必须逐个操作。对一次性需求，先检查原生设置可能比建立自动化更省力。"
+    },
+    {
+      "id": "verification",
+      "title": "逐项清单要区分尝试与已保存",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "拟议流程先记录范围与保留名单，再对可获准访问的项目记录修改前后状态并回读；遇分页、虚拟列表或无法列全，数量只能代表已检查项，不能冒称所有订阅。已关闭项跳过，不通过反复切换来重试；保存结果不确定先读取，避免重复副作用。本案没有这些产物，以下为研究者设计而非作者已经实现。"
+    },
+    {
+      "id": "business",
+      "title": "更像一次性数字整理服务",
+      "source_ids": [
+        "Sauthor",
+        "Sreddit"
+      ],
+      "body": "潜在付费者是订阅较多又不愿逐项处理的个人，需求可能出现于通知过载或换账号时。可交付的是经授权的设置清单、例外和失败项，不是保证安静或永久无通知。免费原生设置是直接替代，原案无客户、收费和复购证据；独立订阅产品的收入机制偏弱，打包在数字整理服务只是待验证假设。"
+    },
+    {
+      "id": "delivery",
+      "title": "获客与交付都受账号信任约束",
+      "source_ids": [
+        "Sauthor",
+        "Ssafety"
+      ],
+      "body": "假设从已有个人技术支持关系演示小范围整理，按一次限定范围交付，不以广泛账号接管换取低价。用户自行完成登录与敏感步骤，只授权指定通知项；结束时保留变更摘要和撤销依据。账号隐私顾虑和排障可能超过点击本身的成本，本轮不联系用户、不收集账号或操作真实设置。"
+    },
+    {
+      "id": "cost",
+      "title": "把失败接管也计入成本",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "研究者假设一个最多50个指定社区的整理包，每月20包。低返工人工15分钟×24USD/h=6，加模型预算0.2，共6.2/包、124/月；高返工60分钟×24=24，加模型0.8，共24.8/包、496/月。不是作者耗时、真实报价或收益，套餐、获客与维护未知另计，售价未知不计算利润。若原生设置几分钟完成，这种服务未必有优势。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值是减少打扰而不是退订",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "适合明确知道哪些通知不需要、又想继续订阅内容的人。作者没有测净省时或完成效果，工具拒绝已经说明配置成本可能吞掉收益。频率通常一次设置加偏好变动后的复核，不必每日跑。准备保留名单、允许修改范围和恢复方式；维护成本主要是页面变化、账号状态和工具政策变化。"
+    },
+    {
+      "id": "privacy",
+      "title": "通知设置页也可能暴露私人兴趣",
+      "source_ids": [
+        "Ssafety"
+      ],
+      "body": "订阅列表和通知内容可能涉及健康、工作、身份或他人信息；浏览器截图与页面内容需要限定范围，不能当成毫无隐私的数据。页面中的帖子或评论不是新的用户指令，不能让其改变整理目标。遇明确访问拒绝立即停止该路径，不建议代理、脚本或更换账户绕过。"
+    },
+    {
+      "id": "trial",
+      "title": "先核验入口，再决定是否值得自动化",
+      "source_ids": [
+        "Sreddit",
+        "Sauthor"
+      ],
+      "body": "下一步可以由用户在自己的账号确认当前原生通知入口，记录少量已授权项目，比较人工设置与受控自动化的总耗时和复核成本。预期结果是少量可回读变更及例外清单；如果无法获准读取、不能确认保存或误改保留项，应停止扩量。本轮仅研究公开资料，没有登录、关闭通知、取消订阅或实测。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/turn-off-notifications-for-every-subreddit-via-browser",
+    "observed_at": null,
+    "body_sha256": "a3925648121ed62f901e085324dcc980a29128e8e852c87a64c91995b4c274ff",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "18d910a0f50a330921b50fc910ebd3a6c3f9beedda0cb827c1697d43fd0a63d4",
+      "How it went": "588af73827ea1dfb6b24d97a5666cfa6a85b1051b43e02bd92f60460d42fbd9c",
+      "Worth knowing": "8944e4c0e160e83b90f8b1429448a8ec51adcf369a2c52356844e92d1a2f45d7"
+    },
+    "actual_agents": [
+      "Claude in Chrome"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T19:57:16Z",
+      "end": "2026-10-20T19:57:44Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Go to my Reddit notification settings and turn off notifications for every subreddit I'm subscribed to, one by one, except [subreddits to keep]. Keep a running count and stop when each subscribed subreddit has been checked. Finish with a list of any you couldn't change. Don't unsubscribe from anything or change other settings.",
+    "agent": "Claude in Chrome",
+    "source_url": "https://agentusecases.ai/use-case/turn-off-notifications-for-every-subreddit-via-browser",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "0534feaa3f84f220f0586f4078d7dd1c77718018b688f90c9ab64dc21bc42e8b",
+    "observation_window": {
+      "start": "2026-10-20T19:57:16Z",
+      "end": "2026-10-20T19:57:44Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeAI/comments/1prcypb/anthropic_just_dropped_claude_for_chrome_ai_that",
+    "source_title": "armyofda12mnkeys reports an unsuccessful notification-settings task in a comment",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T19:57:58Z",
+    "source_sha256": "31666bfa286aab0ccd4ac58cd1dd3c49b5856b2a811de3b50af8f35774d29d53",
+    "steps": [
+      {
+        "en": "Ask Claude for Chrome to turn off notifications for all subscribed subreddits through the settings interface.",
+        "zh": "要求Claude for Chrome通过设置界面关闭所有已订阅社区的通知。"
+      },
+      {
+        "en": "The page showed an access refusal before the task could be completed.",
+        "zh": "页面显示访问拒绝，任务未能完成。"
+      },
+      {
+        "en": "The commenter asked whether Reddit was blocking the tool; the cause was not established.",
+        "zh": "评论者询问是否Reddit阻止了工具，但未确定原因。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "未完成设置，无净省时测量。",
+    "audience": "关注多个社区、希望保留订阅但减少通知的人。",
+    "use": "限定范围的通知偏好整理。",
+    "benefit": "可能减少打扰，原案未实现。",
+    "setup_cost": "核对原生设置、允许范围、保留名单与访问资格。",
+    "maintenance_cost": "页面和工具政策变化，偏好改变后的复核。",
+    "frequency": "通常一次性及偏好变化时。",
+    "privacy_risk": "订阅兴趣、通知内容和截图中的私人信息。",
+    "error_risk": "关闭保留通知、遗漏分页、误退订或把点击当保存。",
+    "source_ids": [
+      "Sauthor",
+      "Ssafety"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板，保留例外、计数、失败清单、不退订和不改其他设置。",
+    "prerequisites": "自有账号、限定社区清单、保留例外、可获准访问。",
+    "tools": "Claude in Chrome或原生通知设置；本轮未安装运行。",
+    "expected_result": "可回读的限定变更及失败清单，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/turn-off-notifications-for-every-subreddit-via-browser",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Go to my Reddit notification settings and turn off notifications for every subreddit I'm subscribed to, one by one, except [subreddits to keep]. Keep a running count and stop when each subscribed subreddit has been checked. Finish with a list of any you couldn't change. Don't unsubscribe from anything or change other settings."
+      },
+      {
+        "title": "限定通知整理计划",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sreddit",
+          "Ssafety"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只制定通知整理计划，列目标类型、最多五个指定社区和保留例外。先比较原生设置，不修改账号。后续每项操作需明确授权并回读；访问拒绝停止，不退订、不改其他设置。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "最多50个指定社区的一次整理包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.2,
+      "human_cost": 6,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 20,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "15分钟×24USD/h=6，加模型0.2，6.2/包124/月；其他成本未知。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "最多50个指定社区的一次整理包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.8,
+      "human_cost": 24,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 20,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "60分钟×24USD/h=24，加模型0.8，24.8/包496/月；其他成本未知。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    }
+  ],
+  "economics_assumptions": "研究者假设，非真实成交/作者账单；未知成本不默认零，售价未知不算利润。",
+  "feedback": {
+    "independent_user_feedback_count": 1,
+    "note": "一条直接失败体验，不是成功样本或市场规模。另一个25项显示问题链接读取两次失败，不计成功来源。"
+  },
+  "disconfirming_evidence": "任务访问即失败；原生设置免费，低频且有隐私/接管成本。",
+  "limitations": "没有真实设置实测、失败日志、版本、完成清单、收入或精确评论日期；访问拒绝根因未知。",
+  "archive_source_sha256": "a3925648121ed62f901e085324dcc980a29128e8e852c87a64c91995b4c274ff",
+  "translation_sha256": "8b6aee4ec0f8c9925ac622c6e15ece4f2e66982513bc54a31fed6756067f8806"
+}

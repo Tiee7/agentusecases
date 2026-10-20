@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **98**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **99**；深度研究 **75**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -108,3 +108,4 @@
 | 在隔离虚拟机中用Claude Code提交PR | [简报](../../reports/brief/run-claude-code-in-an-isolated-vm-that-opens-prs.md) |
 | 用Doozy在Slack线程中查询支持问题 | [简报](../../reports/brief/run-support-queries-and-bug-checks-from-slack-threads.md) |
 | 用Claude Code检查应用用户体验 | [简报](../../reports/brief/scan-an-app-for-ux-improvements-with-computer-use.md) |
+| 用Claude in Chrome关闭Reddit社区通知 | [简报](../../reports/brief/turn-off-notifications-for-every-subreddit-via-browser.md) |
