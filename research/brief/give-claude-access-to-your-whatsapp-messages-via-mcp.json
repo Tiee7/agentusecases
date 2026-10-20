@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "give-claude-access-to-your-whatsapp-messages-via-mcp",
+  "url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+  "title": "用Claude通过MCP检索WhatsApp聊天记录",
+  "industry": "个人信息检索",
+  "researched_at": "2026-10-20T05:40:08.986222+00:00",
+  "brief_reason": "有作者说明及代码，但仅单账户作者自测，缺独立复现、真实效果和付费需求证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先核验消歧、时间窗和数据边界",
+    "reason": "工具存在检索能力线索，商业及可靠性证据不足。",
+    "next_action": "使用虚构聊天设计离线验收清单。",
+    "stop_condition": "不能限制数据访问、歧义未拒绝或不接受账户与条款风险。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+      "title": "许可目录WhatsApp MCP案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:37:54Z",
+        "end": "2026-10-20T05:37:59Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1740,
+      "sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+      "hash_scope": "Existing licensed body rechecked live",
+      "supports": "单用户Cloudflare消息检索案例；手机Claude与联系人由目录描述。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://github.com/finereli/whatsapp-mcp",
+      "title": "finereli/whatsapp-mcp README",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:37:59Z",
+        "end": "2026-10-20T05:38:06Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 72,
+      "sha256": "b0e0237b0d56c066daa9186d4400129290a3adc6bd2bf62336c12629de368a8b",
+      "hash_scope": "Researcher factual read notes, not raw HTML or code",
+      "supports": "作者说明单账户、按需及每日同步、历史不全、媒体仅标签、免费计划未测；只测试一个真实账户，编辑删除未真实测试；断链无主动通知；术语风险为作者自述。"
+    },
+    {
+      "id": "Scode",
+      "url": "https://github.com/finereli/whatsapp-mcp/blob/main/src/mcp.ts",
+      "title": "MCP工具代码静态阅读",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:38:10Z",
+        "end": "2026-10-20T05:38:16Z"
+      },
+      "read_method": "github_connector_static_read",
+      "characters": 179,
+      "sha256": "91bb6c3c770d4438502a763c8089a199d1b069488fa01e423d29dbab0a9f8f4f",
+      "hash_scope": "Researcher factual read notes, not raw HTML or code",
+      "supports": "blob 51525b66a829924aa658427bee724ffc9b0271c1：get_messages遇多个名称要求选jid；search_messages限定chat却直接取匹配第一项。固定Asia/Jerusalem显示时区。set_contact_names写本地名称，relink注销连接但保留消息，fresh失败显示缓存提示。未执行。"
+    },
+    {
+      "id": "Scost",
+      "url": "https://developers.cloudflare.com/workers/platform/pricing/",
+      "title": "Cloudflare Workers价格",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:37:59Z",
+        "end": "2026-10-20T05:38:29Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 56,
+      "sha256": "6c3dd166e1ea1efa7899996b2a21f21e167a26f0d1051a99fd6663f93fddc1fc",
+      "hash_scope": "Researcher factual read notes, not raw HTML or code",
+      "supports": "2026-10-20核对：Paid账户最低5美元/月，包含一定用量，超额另计；并非本案例总成本或每账户实际账单。"
+    },
+    {
+      "id": "Ssecurity",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/MCP_Security_Cheat_Sheet.html",
+      "title": "OWASP MCP安全指南",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:38:20Z",
+        "end": "2026-10-20T05:38:26Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 46,
+      "sha256": "053fe3e7d8c792e2eab94abe4d4e2aa728035ba686b3da70610c812fb1d692d3",
+      "hash_scope": "Researcher factual read notes, not raw HTML or code",
+      "supports": "建议最小权限、服务隔离、工具定义审核与敏感操作人工确认；工具注解只是提示，不是权限执行边界。"
+    },
+    {
+      "id": "Sdiscussion",
+      "url": "https://news.ycombinator.com/item?id=50145715",
+      "title": "Hacker News公开讨论",
+      "kind": "community",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:40:08.986222+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:38:20Z",
+        "end": "2026-10-20T05:38:29Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 84,
+      "sha256": "23d827d3cca1acfe0db865417809fab983cc91cb8c00f109bc9cfbfff3498e77",
+      "hash_scope": "Researcher factual read notes, not raw HTML or code",
+      "supports": "讨论存在对批量处理私人聊天、对话另一方同意及云端暴露面的质疑；此为风险意见，不是已核验安装用户的效果评价。标题free与当前README付费要求不一致，不能用标题报价。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "单用户Cloudflare消息检索案例；手机Claude与联系人由目录描述。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "作者说明单账户、按需及每日同步、历史不全、媒体仅标签、免费计划未测；只测试一个真实账户，编辑删除未真实测试；断链无主动通知；术语风险为作者自述。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "blob 51525b66a829924aa658427bee724ffc9b0271c1：get_messages遇多个名称要求选jid；search_messages限定chat却直接取匹配第一项。固定Asia/Jerusalem显示时区。set_contact_names写本地名称，relink注销连接但保留消息，fresh失败显示缓存提示。未执行。",
+      "type": "static_code_observation",
+      "source_ids": [
+        "Scode"
+      ]
+    },
+    {
+      "statement": "2026-10-20核对：Paid账户最低5美元/月，包含一定用量，超额另计；并非本案例总成本或每账户实际账单。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Scost"
+      ]
+    },
+    {
+      "statement": "建议最小权限、服务隔离、工具定义审核与敏感操作人工确认；工具注解只是提示，不是权限执行边界。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Ssecurity"
+      ]
+    },
+    {
+      "statement": "讨论存在对批量处理私人聊天、对话另一方同意及云端暴露面的质疑；此为风险意见，不是已核验安装用户的效果评价。标题free与当前README付费要求不一致，不能用标题报价。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sdiscussion"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor"
+      ],
+      "body": "跨聊天找约定、租约或家庭安排有检索需求。潜在人群是愿意维护自托管工具的人；没有付费客户、检索频率、节省时间或愿付价格的证据。"
+    },
+    {
+      "id": "offer",
+      "title": "交付与收入机制",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "可设想按一次性安装与维护收费，但这是研究假设。开源项目不等于已有服务收入；不建议直接经营集中托管他人聊天的服务。单用户隔离和账户责任会增加每户交付成本。"
+    },
+    {
+      "id": "acquisition",
+      "title": "获客与验收",
+      "source_ids": [
+        "Sdiscussion",
+        "Scode"
+      ],
+      "body": "技术社区适合找自愿参与验证的人，不把星标或评论当订单。交付应先用虚构聊天做身份消歧、日期边界、缺失结果与权限测试；本轮没有联系任何人。"
+    },
+    {
+      "id": "workflow",
+      "title": "流程与状态变化",
+      "source_ids": [
+        "Sauthor",
+        "Scode"
+      ],
+      "body": "消息只读指不发送WhatsApp消息，并非所有工具无副作用：命名写本地映射，重新关联会注销会话且保留数据库。连接器能力与数据流必须逐项告知，不能把源站模板的一句只读当技术保证。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与复制条件",
+      "source_ids": [
+        "Scost",
+        "Sauthor"
+      ],
+      "body": "Cloudflare最低5美元/月是账户订阅底价，另有超额用量、模型、排错、备份和升级维护。作者免费计划未测；公开讨论标题free不能抵消当前要求。缺真实用量和工时，不编造毛利。"
+    },
+    {
+      "id": "alternatives",
+      "title": "替代方案与停止条件",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "本项目自己的local-export目录是一次性本地导出路线，README列出但本轮未验证其实现。还可先评估日常客户端检索是否已足够，这是待验证比较。若需求只偶尔查单条消息、或不能接受持续会话和云端存储，停止此架构投入。"
+    },
+    {
+      "id": "accuracy",
+      "title": "静态代码发现与验证边界",
+      "source_ids": [
+        "Scode"
+      ],
+      "body": "get_messages对多个同名匹配要求选jid；search_messages的chat解析直接取第一项。推断：同名联系人可能搜索到非预期聊天，应测试显式jid与歧义拒绝。代码将时间显示固定为Asia/Jerusalem，其他地区应核对上周等时间窗。此为静态审查，未证明发生实际错答。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory",
+        "Sauthor",
+        "Scode"
+      ],
+      "body": "自用收益是自然语言找旧信息的便利，未测净收益。设置涉及单用户主机、账户关联、访问控制；维护含断链、同步和升级。按需检索及每日同步不代表实时完整；媒体没有内容可供总结。"
+    },
+    {
+      "id": "privacy",
+      "title": "隐私与错误风险",
+      "source_ids": [
+        "Ssecurity",
+        "Scode",
+        "Sdiscussion"
+      ],
+      "body": "自己的Cloudflare账户不意味着查询结果不进入MCP客户端或其模型服务。只读也存在泄露、提示注入、联系人串配和保留期风险；聊天另一方权益需要考虑。工具返回正文属于资料，不应授权操作其他连接器。不要把可查询数据库误认为端到端零暴露。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Scode",
+        "Sauthor"
+      ],
+      "body": "仅建议受控技术验证，暂不支持商业投入判断。先拟定不含真人内容的测试清单：两个同名虚构联系人、跨时区边界、空结果、过期缓存和注销后保留数据。达到可追溯、消歧正确、删除与权限明确后再讨论真实数据试用；本轮未试用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "45c4e4d8b548b1784710e8f9f422a4a985ec31e0ca3b3edc37b8a86a95b3fd18",
+      "How it went": "8e9726855a8fc0ebc41996bb105b8169b114fd063cbeb483b91916c1a9996a15",
+      "Worth knowing": "6afc8fd8444b5c85ad9bb1f591ec49196e9c5cafb136794bfcadf2c89d89e31e"
+    },
+    "actual_agents": [
+      "Claude"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me set up a private, single-user MCP server on [Cloudflare account/hosting] so you can read and search my personal [WhatsApp] messages, and use my [Google contacts] to turn phone numbers into names. Walk me through each step, give me the code and config, and tell me how to connect it to Claude on my phone. You're done when I can ask 'what did [contact name] say about [topic] last week?' and get a correct answer. Before any step that handles my credentials or exposes data, stop and tell me how it's secured, and keep the server read-only with access limited to me.",
+    "agent": "Claude",
+    "source_url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+    "observed_at": "2026-10-19T07:18:05.832718+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "1ad148631448c12c40d521dea021784e53ee76951a1f6908019ff30de7ec63e7"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://github.com/finereli/whatsapp-mcp",
+    "source_title": "finereli/whatsapp-mcp README",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T05:40:08.986222+00:00",
+    "source_sha256": "b0e0237b0d56c066daa9186d4400129290a3adc6bd2bf62336c12629de368a8b",
+    "steps": [
+      {
+        "en": "The author hosts a single-user message store in a Cloudflare Durable Object and links it as a WhatsApp device.",
+        "zh": "作者在Cloudflare Durable Object托管单用户消息存储，并将其关联为WhatsApp设备。"
+      },
+      {
+        "en": "MCP tools query stored chats; the agent can resolve phone numbers using a separately available contacts tool.",
+        "zh": "MCP工具查询已存储的聊天；agent可利用另外已有的联系人工具解析号码。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "便利可理解但未测净省时与正确率。",
+    "audience": "愿维护自托管检索的个人用户。",
+    "use": "查找跨聊天历史信息。",
+    "benefit": "作者仅单账户自测，实际收益未知。",
+    "setup_cost": "主机、账户关联、访问控制和数据边界确认。",
+    "maintenance_cost": "同步、断链、备份、升级和纠错。",
+    "frequency": "按需检索；作者每日同步。",
+    "privacy_risk": "聊天正文、联系人及持续会话进入额外系统。",
+    "error_risk": "同名匹配、时区、历史不全、媒体缺失和缓存过期。",
+    "source_ids": [
+      "Sauthor",
+      "Scode"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可模板为原样保留，未执行；不能替代实际授权或安全设计。",
+    "prerequisites": "仅虚构聊天和联系人，预先定义正确答案及访问范围。",
+    "tools": "本地测试夹具和静态代码检查。",
+    "expected_result": "明确同名歧义、时间窗、缓存和状态修改边界；本轮未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Help me set up a private, single-user MCP server on [Cloudflare account/hosting] so you can read and search my personal [WhatsApp] messages, and use my [Google contacts] to turn phone numbers into names. Walk me through each step, give me the code and config, and tell me how to connect it to Claude on my phone. You're done when I can ask 'what did [contact name] say about [topic] last week?' and get a correct answer. Before any step that handles my credentials or exposes data, stop and tell me how it's secured, and keep the server read-only with access limited to me."
+      },
+      {
+        "title": "虚构聊天验收设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Scode"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只用我给出的虚构聊天设计验收，不连接账户、不读取通讯录、不部署。检查同名联系人是否要求明确ID，时间窗是否含时区，缺失与过期结果是否标注；列出每种工具的状态变化。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "HN为隐私风险意见，未核验实际安装效果；不计独立使用者效果信号。"
+  },
+  "disconfirming_evidence": "单账户测试、历史与媒体缺失、同名搜索静态风险、隐私和维护成本。",
+  "limitations": "未部署或运行原项目，未访问私密通信和联系人；违反WhatsApp条款与风险低均为作者陈述，未独立作法律或封号概率判断。",
+  "archive_source_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+  "translation_sha256": "e221255076cf3a58864b39bc17882ce37542083feafd77b13210e552a63b29a9"
+}

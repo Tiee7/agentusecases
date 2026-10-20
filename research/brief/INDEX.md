@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **69**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **70**；深度研究 **60**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -79,3 +79,4 @@
 | 为Perplexity Comet生成交易信号和操作提示 | [简报](../../reports/brief/generate-prompts-for-a-browser-agent-to-execute-trades.md) |
 | 用Claude Code查询会话统计并制作演讲幻灯片 | [简报](../../reports/brief/query-session-records-and-build-talk-slides-with-claude-code.md) |
 | 用ChatGPT整理饮食日志并粗估营养数值 | [简报](../../reports/brief/log-meals-and-estimate-calories-with-chatgpt.md) |
+| 用Claude通过MCP检索WhatsApp聊天记录 | [简报](../../reports/brief/give-claude-access-to-your-whatsapp-messages-via-mcp.md) |
