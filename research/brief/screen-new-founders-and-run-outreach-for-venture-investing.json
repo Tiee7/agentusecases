@@ -1,0 +1,426 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "screen-new-founders-and-run-outreach-for-venture-investing",
+  "url": "https://agentusecases.ai/use-case/screen-new-founders-and-run-outreach-for-venture-investing",
+  "title": "用AI agent筛选创始人并准备联系",
+  "industry": "投资团队项目线索研究",
+  "researched_at": "2026-10-20T20:39:00.454589+00:00",
+  "brief_reason": "匿名二手访谈缺实现、数据许可、产物和指标；官方资料只核对复制边界，不能替代案例效果证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先验证获准数据与人工复核流程",
+    "headline": "可研究资料流程，不承诺投研回报或自动触达",
+    "reason": "注册记录不等于创始人，入口不等于可采集数据流，原系统无指标。",
+    "next_action": "10条获准样本，仅资料和草稿，核对关联/未知/审核耗时。",
+    "stop_condition": "来源不允许采集、身份关联错误、无法解释评分或触达未获授权。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/screen-new-founders-and-run-outreach-for-venture-investing",
+      "title": "许可目录：创始人筛选及联系工作流",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:35:56Z",
+        "end": "2026-10-20T20:36:27Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 13767,
+      "sha256": "7a863b3a7e8eefb207c9e41b5c038c48bac98c91d70f48ece20cab746d2031c6",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "完整目录英文/中文与模板；实际自建未具名agent，Lindy仅为推荐。目录日期10月20日不是原文发表日期。"
+    },
+    {
+      "id": "Sessay",
+      "url": "https://mgilfoyle.substack.com/p/part-1-of-2-ai-is-changing-the-job",
+      "title": "Maria A Gilfoyle：AI与风险投资工作",
+      "kind": "secondary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:36:16Z",
+        "end": "2026-10-20T20:37:17Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:39:00.454589+00:00",
+      "receipt_text": "原文2026-07-31。访谈对象匿名，描述filings到创始人研究/邮件/会议/问题流程，无指标；八页提示词在一家机构，未证明与前述同一家。最终决策仍由人负责。未取得代码、数据源或八页原提示词。",
+      "characters": 99,
+      "sha256": "ae6531692863601c310a8db07a0639b3d3d166da670c8d1c45f75de4b1cb045d",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "原文2026-07-31。访谈对象匿名，描述filings到创始人研究/邮件/会议/问题流程，无指标；八页提示词在一家机构，未证明与前述同一家。最终决策仍由人负责。未取得代码、数据源或八页原提示词。"
+    },
+    {
+      "id": "Sdelaware",
+      "url": "https://icis.corp.delaware.gov/eCorp/EntitySearch/NameSearch.aspx",
+      "title": "Delaware实体查询范围与访问限制",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:36:16Z",
+        "end": "2026-10-20T20:37:17Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:39:00.454589+00:00",
+      "receipt_text": "静态入口列免费字段：名称、编号、成立日期、注册代理等；不提供完整创始人身份。明示禁止数据挖掘及过量反复搜索，自动工具可能被停用。本轮只读说明，未提交查询或采集实体。",
+      "characters": 82,
+      "sha256": "9640bd10a60853b10cd30e6a9fd7f742f710326691daaed41b0f901a0c513338",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "静态入口列免费字段：名称、编号、成立日期、注册代理等；不提供完整创始人身份。明示禁止数据挖掘及过量反复搜索，自动工具可能被停用。本轮只读说明，未提交查询或采集实体。"
+    },
+    {
+      "id": "Sfaq",
+      "url": "https://corp.delaware.gov/faqs/",
+      "title": "Delaware公司信息FAQ",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:36:16Z",
+        "end": "2026-10-20T20:37:17Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:39:00.454589+00:00",
+      "receipt_text": "免费查询结果包含活跃和不活跃实体，不等于当前状态；注册代理与公司实体信息不是创始人确认。不能把搜索有结果当企业经营中或有融资需求。",
+      "characters": 65,
+      "sha256": "aa119d9454712f4db216a2b765baa3dae98a365cdf06aec0f3a8260d9cd3db6b",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "免费查询结果包含活跃和不活跃实体，不等于当前状态；注册代理与公司实体信息不是创始人确认。不能把搜索有结果当企业经营中或有融资需求。"
+    },
+    {
+      "id": "Sformd",
+      "url": "https://www.sec.gov/about/forms/formd.pdf",
+      "title": "SEC Form D官方表格及说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:36:16Z",
+        "end": "2026-10-20T20:37:17Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:39:00.454589+00:00",
+      "receipt_text": "豁免证券发行通知，不是公司成立登记。说明要求适用发行首次销售后15日内申报，也可事先申报；首次销售指不可撤销投资承诺。表格区分成立年份、发行首售时间及首次尚未发生，不替代新公司全集。",
+      "characters": 91,
+      "sha256": "89372bd7c89fc69c93929e4fe3b1b0567ad3b13d0cdf86e0f2206628d8dd0188",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "豁免证券发行通知，不是公司成立登记。说明要求适用发行首次销售后15日内申报，也可事先申报；首次销售指不可撤销投资承诺。表格区分成立年份、发行首售时间及首次尚未发生，不替代新公司全集。"
+    },
+    {
+      "id": "Sftc",
+      "url": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+      "title": "FTC商业邮件合规指南",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T20:36:16Z",
+        "end": "2026-10-20T20:37:17Z",
+        "basis": "system_time_bracketing_tool_calls"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T20:39:00.454589+00:00",
+      "receipt_text": "商业邮件适用主要目的判断，B2B不是一般豁免；商业消息需真实头部/主题、规定信息、退订机制及处理。不是对所有投资人邀请的具体法律分类，本轮不发送。",
+      "characters": 73,
+      "sha256": "564a024ea55064b3da86f9af040290cad10f03b15b5b46344395cfc3a2f6251e",
+      "hash_scope": "Researcher summary, not external source bytes",
+      "supports": "商业邮件适用主要目的判断，B2B不是一般豁免；商业消息需真实头部/主题、规定信息、退订机制及处理。不是对所有投资人邀请的具体法律分类，本轮不发送。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "文章是2026-07-31匿名投资人访谈转述，未提供该系统指标或代码。",
+      "type": "verified",
+      "source_ids": [
+        "Sessay"
+      ]
+    },
+    {
+      "statement": "目录实际agent未具名，Lindy只是试用推荐。",
+      "type": "verified",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "Delaware实体查询页明确禁止数据挖掘并限制自动工具。",
+      "type": "verified",
+      "source_ids": [
+        "Sdelaware"
+      ]
+    },
+    {
+      "statement": "Form D为证券豁免发行通知，不是新设公司登记。",
+      "type": "verified",
+      "source_ids": [
+        "Sformd"
+      ]
+    },
+    {
+      "statement": "FTC商业邮件规则按主要目的判断，B2B无一般豁免。",
+      "type": "verified",
+      "source_ids": [
+        "Sftc"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "匿名采访不是可复现产品说明",
+      "source_ids": [
+        "Sessay",
+        "Sdirectory"
+      ],
+      "body": "原文发表于7月31日，目录显示10月20日，二者应分开。原案仅提供匿名采访转述，没有可复核系统、名单、邮件回执或会议结果；八页提示词没有公开，也不确定与整套自动化属于同一机构。因此用reported_summary呈现方法，不将采访者、受访投资人和推荐工具拼成一个实名实施者。"
+    },
+    {
+      "id": "tool",
+      "title": "推荐Lindy不是原始技术栈",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "原站实际agent字段是自建或未具名，试用模板推荐Lindy。保留这两个字段，但不声称原作者使用Lindy，也不替未知系统补造API、CRM或部署架构。模板要求先展示草稿并批准才能发信或预约，其权限边界比文章描述的自动外联更窄，应完整保留。"
+    },
+    {
+      "id": "feed",
+      "title": "注册处网页不等于获准增量数据流",
+      "source_ids": [
+        "Sdelaware"
+      ],
+      "body": "模板举例Delaware，并不证明受访者使用它。该查询页明确限制数据挖掘和自动工具，不能把一个可打开的搜索框直接改成每日爬虫。复制前必须取得明确允许的增量数据来源与使用范围；本轮只读入口说明，没有查询公司、批量抓取或尝试绕过限制。数据供应不成立时，先停自动采集分支而不是扩大重试。"
+    },
+    {
+      "id": "entity",
+      "title": "公司注册代理不是创始人",
+      "source_ids": [
+        "Sdelaware",
+        "Sfaq"
+      ],
+      "body": "实体名称、注册编号和成立日期可以作为公司记录线索，注册代理联系方式不能直接当作创始人联系方式。搜索结果也不证明当前经营状态。研究者建议用公司官网和经过核对的职业资料连接公司与人，同名或冲突标未知，不让模型猜联系人。注册日期更不能单独证明公司正在融资。"
+    },
+    {
+      "id": "timing",
+      "title": "Form D不能替代公司新设数据",
+      "source_ids": [
+        "Sformd"
+      ],
+      "body": "官方表格是豁免发行通知，成立时间与证券首售时间分开列示；可在首售前提交，适用申报也可能在首售后才出现。它可作为不同性质的公开线索，但不是所有新公司的及时名单。把新申报数量称为新创始人数量会混淆样本范围，原案实际使用哪一种申报仍未知。"
+    },
+    {
+      "id": "criteria",
+      "title": "匹配评分应服务人工复核",
+      "source_ids": [
+        "Sessay"
+      ],
+      "body": "以下为研究者设计：将行业、阶段、产品与可核实的职业经历写成可解释条件，保留每项出处、未知项和拒绝原因。不要从姓名、照片或敏感资料推断背景，也不要自动排除人。定期抽查低分和未知样本，观察标准是否遗漏非典型团队。匹配度不是投资收益概率，本轮不评价任何真实创始人、不作投资决定。"
+    },
+    {
+      "id": "outreach",
+      "title": "起草、发送和预约是三种权限",
+      "source_ids": [
+        "Sftc",
+        "Sdirectory"
+      ],
+      "body": "草稿应由获授权人员检查收件人与事实，发送需要独立明确授权；对方确认之前不把日历占位算会议成功。若属于商业邮件，要核对FTC关于主要目的和退订等要求，B2B并非自动豁免；具体投资邀约的适用性需按内容与地区审查，不在此作统一法律判断。本轮无邮件、表单、会议或投资操作。"
+    },
+    {
+      "id": "business",
+      "title": "可能卖资料与流程，不卖投资回报",
+      "source_ids": [
+        "Sessay"
+      ],
+      "body": "假设客户是需要持续发现项目的小型投资团队，预算归属运营或投研负责人。可交付带证据的候选资料、人工复核队列及会前问题；按固定研究包或受控持续服务收费是商业假设。获客可从现有专业合作验证小样本，原案没有付费客户、售价或采购流程，不能把投资机构资金规模当服务商收入。"
+    },
+    {
+      "id": "cost",
+      "title": "单位成本按已审核资料计",
+      "source_ids": [
+        "Sessay"
+      ],
+      "body": "研究者假设每月100份已审核候选资料。低返工每份15分钟×40USD/h=10，加模型与工具预算0.5，已列10.5/份1050/月；高返工45分钟×40=30，加预算1.5，为31.5/份3150/月。许可数据费、系统接入、固定维护和获客未知另计，不默认零；售价未知，不算利润。结果应按合格资料与真实确认的会面分开，而非用生成邮件量证明价值。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值也依赖数据与复核",
+      "source_ids": [
+        "Sessay"
+      ],
+      "body": "对已有清晰研究范围和专业判断能力的人，可能减少整理线索的重复劳动；实际净省时未知，不适合把提示词当投资判断替代品。需准备获准来源、已有公司去重表和客观条件，持续维护身份关联、资料新鲜度和误判记录。频率随数据更新而定，可日或周批量审阅，但原案未给精确节奏。"
+    },
+    {
+      "id": "privacy",
+      "title": "公开信息也需要最小化处理",
+      "source_ids": [
+        "Sftc"
+      ],
+      "body": "订阅数据、历史联系和会议笔记的权限应分开，不因做研究而复制私人通信。只保留必要的职业和公司事实；删除过时或错误关联，避免多个agent重复联系同一人。未获许可的联系人数据、敏感特征或隐蔽信息不纳入评分。错误外联会损害信任，人工审核成本是交付的一部分。"
+    },
+    {
+      "id": "trial",
+      "title": "先做不发送的小样本",
+      "source_ids": [
+        "Sdirectory",
+        "Sdelaware"
+      ],
+      "body": "下一步只用已获准的10条样本，核对来源许可、公司人名关联和标准解释，产出候选表及邮件草稿，不发送不预约。先统计未知率、错误关联和审核时间，与人工基线比较；无法取得许可数据、不断误关联或无法解释排除原因时不扩量。本轮没有运行原系统，官方说明只是复制条件，不补足匿名案例的效果证据。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/screen-new-founders-and-run-outreach-for-venture-investing",
+    "observed_at": null,
+    "body_sha256": "b8444ff55e5c23aaab5acb878f65e4117bcbc69123bd961847046cae3070fa39",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "f4026be66949130aed075b6413f68201e63bc2ee7c695dd1eb5e6982a76870d0",
+      "How it went": "5881e0769df2d25f05ad82ba11d809cde2733beefe905e801abfca04ddc05a88",
+      "Worth knowing": "cb0f79ec0b8665b09c648a83e84826446c0ed140842772ea0e9d812b56d66ff3"
+    },
+    "actual_agents": [],
+    "agent_status": "custom_or_unnamed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T20:35:56Z",
+      "end": "2026-10-20T20:36:27Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Every [day/week], check [source of new company filings, e.g. state registry or Delaware filings] for new companies that match [sector, stage, location]. Research each founder and give me a short profile with a fit rating against [my investment criteria], plus draft an outreach email for the good matches. Don't send any emails or book any meetings until you've shown me the drafts and I approve them.",
+    "agent": "Lindy",
+    "source_url": "https://agentusecases.ai/use-case/screen-new-founders-and-run-outreach-for-venture-investing",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "7a863b3a7e8eefb207c9e41b5c038c48bac98c91d70f48ece20cab746d2031c6",
+    "observation_window": {
+      "start": "2026-10-20T20:35:56Z",
+      "end": "2026-10-20T20:36:27Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://mgilfoyle.substack.com/p/part-1-of-2-ai-is-changing-the-job",
+    "source_title": "Interview essay describes an anonymous investor system, not the system owner’s direct instructions",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T20:36:27Z",
+    "source_sha256": "ae6531692863601c310a8db07a0639b3d3d166da670c8d1c45f75de4b1cb045d",
+    "steps": [
+      {
+        "en": "The essay reports monitoring company filings and researching founders against investor criteria.",
+        "zh": "访谈文章转述系统监控公司申报并按照投资人标准研究创始人。"
+      },
+      {
+        "en": "It reports outreach and meeting preparation; technical implementation and measured outcomes are absent.",
+        "zh": "文章转述联系及会前准备流程，没有技术实现或量化结果。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "没有净省时与误判数据，效果未知。",
+    "audience": "有专业研究目标且能核对公司与职业资料的投资研究人员。",
+    "use": "公开职业/公司资料整理与会前准备，不代替决策。",
+    "benefit": "可能减少重复整理，未经测量。",
+    "setup_cost": "许可来源、去重表、客观标准、人工审核与发送边界。",
+    "maintenance_cost": "来源变化、身份关联、未知项与偏差抽检。",
+    "frequency": "按数据节奏日或周审核，原案未给频率。",
+    "privacy_risk": "联系人、职业资料和内部笔记不应无边界合并。",
+    "error_risk": "注册代理误当创始人、错误评分、重复邮件及预约误报。",
+    "source_ids": [
+      "Sessay",
+      "Sdelaware"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "完整模板保留审批后发送/预约；推荐Lindy不等于实际作者工具。",
+    "prerequisites": "10条明确获准样本、非敏感职业字段、去重及审核条件。",
+    "tools": "原系统未具名；Lindy为原站建议，本轮未验证其执行。",
+    "expected_result": "来源可追溯的候选表和未发送草稿，不含投资建议或收益预测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/screen-new-founders-and-run-outreach-for-venture-investing",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Every [day/week], check [source of new company filings, e.g. state registry or Delaware filings] for new companies that match [sector, stage, location]. Research each founder and give me a short profile with a fit rating against [my investment criteria], plus draft an outreach email for the good matches. Don't send any emails or book any meetings until you've shown me the drafts and I approve them."
+      },
+      {
+        "title": "小样本线索核验计划",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdelaware",
+          "Sformd"
+        ],
+        "attribution": "研究者编写，未实测",
+        "text": "仅对已获准的10条公司样本制作核验计划。区分成立日期与融资申报，注册代理不当创始人，记录职业事实出处、未知和冲突。不推断敏感属性，不自动排除，不发信不预约不投资。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "一份人工审核的候选资料",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.5,
+      "human_cost": 10,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 100,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "15分钟×40USD/h=10，加模型工具0.5，为10.5/份1050/月；许可数据等另计未知。",
+      "source_ids": [
+        "Sessay"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "一份人工审核的候选资料",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 1.5,
+      "human_cost": 30,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 100,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "45分钟×40USD/h=30，加模型工具1.5，为31.5/份3150/月；许可数据等另计未知。",
+      "source_ids": [
+        "Sessay"
+      ]
+    }
+  ],
+  "economics_assumptions": "全部研究者假设，非真实报价/交易/收益；未知成本不默认零。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "匿名二手采访，没有可核对使用者产物或独立效果评价。"
+  },
+  "disconfirming_evidence": "同质化信息不等于关系优势；入口禁止挖掘、注册记录与创始人错配、无效果指标。",
+  "limitations": "原系统、实际数据来源、代码、八页提示词、客户、收益均未知；不做真实个人筛选、联系或金融交易。",
+  "archive_source_sha256": "b8444ff55e5c23aaab5acb878f65e4117bcbc69123bd961847046cae3070fa39",
+  "translation_sha256": "6b84968133e79c38a11992e2cabd5a03ff8597461b1f57181fc6ffcb88f38552"
+}
