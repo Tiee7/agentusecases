@@ -1,0 +1,671 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "analysis_depth": "deep",
+  "id": "tutor-you-through-pen-and-paper-math-with-a-local-agent",
+  "url": "https://agentusecases.ai/use-case/tutor-you-through-pen-and-paper-math-with-a-local-agent",
+  "title": "用本地Codex辅导纸笔练习并保存学习记录",
+  "industry": "个人学习工具",
+  "researched_at": "2026-10-20T01:24:22.548256+00:00",
+  "confidence": "中：固定源码、许可与上游CI可核；本轮未运行应用，缺独立学习成效和付费证据。",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证纸笔反馈与独立解题，再判断是否值得包装服务",
+    "reason": "ari有可追溯的开源实现、可编辑教学与用户文档，以及照片反馈和记录恢复设计，复制条件比短评论清楚。但本地界面仍会把提交内容发给模型，现有订阅有额度成本，设备和版本需要维护。公开讨论没有独立成效证据，成熟替代已提供低价家庭辅导。先限定成年自用和合成作答验收，验证总工时与撤掉AI后的表现，再判断商业投入。",
+    "next_action": "准备原创题与合成作答验收集，先人工核量规；经运行授权后再做隔离实测。",
+    "stop_condition": "反馈不可靠、维护大于收益、独立后测无改善或需要未经授权的学生数据。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/tutor-you-through-pen-and-paper-math-with-a-local-agent",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_method": "permitted_cloud_browser",
+      "characters": 8171,
+      "sha256": "8127557b29152726c0ae6699d796f3c856034ebca363a1fd2d7725c24fa6f606",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "保留许可正文和原试用模板；目录只描述短评论，不提供效果测量。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://news.ycombinator.com/item?id=50147872",
+      "title": "nichochar作者评论",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "permitted_cloud_browser",
+      "characters": 5123,
+      "sha256": "4d49f1a2775fa1f7247d22ce72ddc1f1b8b52cecd897ddbdfbe9afcac62e43b8",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "作者直接给出ari仓库与TUTOR.md思路，主张有趣而非提供学习成效数据。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sdiscussion",
+      "url": "https://news.ycombinator.com/item?id=50147861",
+      "title": "HN完整讨论上下文",
+      "kind": "independent",
+      "status": "fetched",
+      "read_method": "permitted_cloud_browser",
+      "characters": 6498,
+      "sha256": "5235f4a33847703708a4a68762aac0266ce92a88733ab8cb7a0515065ca5cd5a",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "可读讨论仅作者自己一条评论，无独立复制用户；不能把投票数当学习验证。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sreadme",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/README.md",
+      "title": "ari固定版本README",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 4533,
+      "sha256": "7e87365c678e21029ff951fb3886f98681d46c95d2181b2537a8059b113f4d75",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "本地单用户、摄像头与主动提交、数据备份、订阅登录和安装条件。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Slicense",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/LICENSE",
+      "title": "ari MIT许可证",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 1366,
+      "sha256": "a604dc9eb928b8522964128eebaba3ba96bb5d6a5ee37c825ff644912ffca141",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "允许按MIT条件复制和修改，需保留版权与许可声明，不承诺教育效果。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Scode",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/server/app.ts",
+      "title": "请求与评分校验代码",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 41149,
+      "sha256": "e1f56cfd023440c33f4f7586d70f4080649e6a0f2097695864c57eb9049a98cb",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "可读性、相关性、评分量规和来源限制；只读代码审查，不是运行验收。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sprompt",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/server/ai.ts",
+      "title": "辅导与验证提示逻辑",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 15469,
+      "sha256": "da52ebb84661dd25369af239a68f9e2b7a85d96dc8ad666a5855440b7b2a99df",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "提示/问答/检查模式区分，生成与再验证调用；提示约束不等于稳定效果证明。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sprovider",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/server/codex-provider.ts",
+      "title": "Codex短请求适配器",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 7705,
+      "sha256": "f7d771c4fca5cf724ff46672ef41a548407b2315191d257aa008863f81f31161",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "read-only与工具禁用、图像输入、额度错误处理；本地启动仍调用模型服务。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Spersonal",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/server/personalization.ts",
+      "title": "个性化文档实现",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 28207,
+      "sha256": "f339bc6ddba2b799de8f88a73342fa34a38bca66425c86eb35167722095e25b6",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "教学与用户文档及记忆的范围、哈希更新和恢复标识，不是已证明学习掌握。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sagent",
+      "url": "https://github.com/nichochar/ari/blob/b0c63994c3df49222efc2289f2c1d49145f3396f/server/codex-learning-provider.ts",
+      "title": "会话与工具恢复实现",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 33655,
+      "sha256": "16e840749df543fcb080ee5ac08961d158ea413b6be8a8be9e75a9fb34e15868",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "原生会话、工具回执及不自动换模型逻辑；区别短请求路径与持续学习代理。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sci",
+      "url": "https://github.com/nichochar/ari/actions/runs/39198839019",
+      "title": "上游固定提交CI",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 1103,
+      "sha256": "ff25cfa04843d20379e427288ab3652ea97b4c1884162e978bafbade1c9092a9",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "固定提交上游privacy/test/build步骤成功；不是研究者实测或学习效果试验。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sissues",
+      "url": "https://github.com/nichochar/ari/issues",
+      "title": "公开问题与PR检索",
+      "kind": "independent",
+      "status": "fetched",
+      "read_method": "existing_github_connector_read",
+      "characters": 485,
+      "sha256": "12b99f528c2808d08a0d3d3167b4b9810a2d6ddcc1203109e77796e4b454c5a9",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "state=all列表空，本轮未取得独立用户问题；零问题不是零缺陷。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Skhan",
+      "url": "https://www.khanmigo.ai/parents",
+      "title": "Khanmigo家庭替代",
+      "kind": "competitor",
+      "status": "fetched",
+      "read_method": "supported_public_web_tool",
+      "characters": 32716,
+      "sha256": "9dd25344c38e77080ebd59ed196b6ecda28b70036ebacc48abe20192c2da9d24",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "官方4美元每月/44每年税前和美国开通条件，提供课程与家长功能；不是同等本地摄影流程。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sstudy",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2422633122",
+      "title": "2025年数学辅导随机试验",
+      "kind": "independent",
+      "status": "fetched",
+      "read_method": "supported_public_web_tool",
+      "characters": 32716,
+      "sha256": "9dd25344c38e77080ebd59ed196b6ecda28b70036ebacc48abe20192c2da9d24",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "相邻GPT4课堂研究区分练习表现与撤掉AI后的测验，不能迁移为ari有效性证明。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    },
+    {
+      "id": "Sauth",
+      "url": "https://learn.chatgpt.com/docs/auth",
+      "title": "官方订阅与API登录区别",
+      "kind": "primary",
+      "status": "fetched",
+      "read_method": "supported_public_web_tool",
+      "characters": 17319,
+      "sha256": "c602b8a42890453c1a6bc288b554e86b3598e1d7c194bc06223c3501c0012bfa",
+      "hash_scope": "Local captured tool response; bundles may contain multiple pages",
+      "supports": "订阅登录与API按量登录分开，额度与权限按实际账户，不能称无限免费。",
+      "receipt_created_at": "2026-10-20T01:24:22.548256+00:00",
+      "read_window": {
+        "start": "2026-10-20T01:14:50Z",
+        "end": "2026-10-20T01:17:22Z",
+        "basis": "system_time_bracketing_tool_calls"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者HN评论直接链接ari仓库并说明采用TUTOR.md教学文件。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "固定ari提交使用MIT许可证，复制实质代码需保留版权与许可声明。",
+      "source_ids": [
+        "Slicense"
+      ]
+    },
+    {
+      "statement": "README要求Node24及Codex账号，内置摄像头桥有Mac平台限制。",
+      "source_ids": [
+        "Sreadme"
+      ]
+    },
+    {
+      "statement": "本地保存不等于离线推理，主动提交的作答与上下文仍发送OpenAI。",
+      "source_ids": [
+        "Sreadme"
+      ]
+    },
+    {
+      "statement": "固定代码区分提示、解释和检查，无法可靠识别的作答不得评分。",
+      "source_ids": [
+        "Scode",
+        "Sprompt"
+      ]
+    },
+    {
+      "statement": "个性化文件的更新包含哈希检查和路径约束，但不证明学会了知识。",
+      "source_ids": [
+        "Spersonal"
+      ]
+    },
+    {
+      "statement": "上游固定提交CI的隐私检查、测试和构建均显示成功，本轮未运行应用。",
+      "source_ids": [
+        "Sci"
+      ]
+    },
+    {
+      "statement": "官方登录文档区分ChatGPT订阅访问和API按量访问，仍受实际额度限制。",
+      "source_ids": [
+        "Sauth"
+      ]
+    },
+    {
+      "statement": "Khanmigo官方家庭价税前4美元每月或44每年，开通有美国等条件。",
+      "source_ids": [
+        "Skhan"
+      ]
+    },
+    {
+      "statement": "公开HN上下文仅作者自己的评论，问题列表空，不构成独立效果验证。",
+      "source_ids": [
+        "Sdiscussion",
+        "Sissues"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "先服务能自己安装的成年学习者",
+      "body": "事实是ari定位个人纸笔学习，本地单用户程序要求Node、Codex账号和设备配置。最贴近的首批使用者是已有订阅、愿意自己练数学或物理的技术型成年人，而不是默认把儿童和学校当容易成交的客户。前者可以自己判断安装、拍摄和额度是否值得，后者还涉及监护、课程匹配、采购、设备维护和学生数据处理。研究者判断应先把“即时提示”“检查过程”和“安排学习”拆开，找出使用者最常卡住的一步，不能把完整导师人格当所有人都会购买的功能。付款人若是本人，比较的是现有订阅加个人时间；若是家长，比较的是可信内容、监督与孩子独立解题，而不只是一款能聊天的软件。目前没有本案付费用户、留存或客单价，下面的经营情景仅检验假设，不声称作者正在经营这些服务。对已有编程能力的人，复制安装可能较容易，但这也会降低他们为通用部署付费的意愿。应验证是否存在持续的教学检查需求，而非只问是否觉得演示有趣。",
+      "source_ids": [
+        "Sreadme",
+        "Skhan"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "把纸面练习、主动提交和反馈拆成可审查步骤",
+      "body": "代码与README呈现的流程是讨论目标、形成课程或单课、在学习桌上练习、提交照片或文字、请求提示或检查，并保存反思。服务器按模式处理反馈，缺少相关且可辨认的作答时不应评分；评分还要对应量规。多张照片可按顺序作为同一道题的不同视图，重复页面不应重复得分。这个设计比“拍一张图直接报分”更完整，但静态分支和提示词存在不等于真实手写识别每次正确。研究者建议为一次提交绑定练习ID、照片顺序、题目版本和反馈版本，测模糊字、擦改、错页、缺步和只拍题面等情况。学生得到下一步提示后继续纸面尝试，而不是把答案复制回来作为掌握证据。实时摄像头画面与实际发送给模型的作答也要区别，界面应清楚显示正在预览还是已提交。本轮没有启动应用、开启摄像头、调用模型或上传作业，所以这里只描述固定源码支持的设计和必须验证的路径。",
+      "source_ids": [
+        "Scode",
+        "Sprompt",
+        "Sreadme"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "已有学习产品与现有订阅共同限制收费空间",
+      "body": "可核验的市场参照是Khanmigo官方家庭页税前每月4美元或每年44美元，并有美国居住和账单等开通条件。它提供课程和家长功能，但并不等同ari的本地文档、摄像头与可编辑个性化流程，也不能把地区限制外推成某个地区一定有空白市场。ari作者公开表达自己的使用兴趣，HN讨论没有独立学习者的效果数据；搜索发现的介绍文章也不能作为真实使用和付费证明。研究者的可检验需求假设是：已有模型订阅的人仍需要把纸笔作业、课程和反馈记录放在一个清楚的界面里。市场大小不能由GitHub星数、评论赞同或模型用户总数推算。下一步需要观察人在不用辅导工具时是否仍能独立完成相似题，并了解维护和复核是否增加负担。如果用户只是偶尔问一道题，现有聊天工具足以替代，安装本地应用反而提高进入成本。",
+      "source_ids": [
+        "Skhan",
+        "Sauth",
+        "Sauthor"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "原生学习工具、直接对话和开源自装各有替代边界",
+      "body": "与直接上传照片聊天相比，ari的差别主要是把课程、练习、提示、反思和可编辑学习档案串起来；这属于可用性和持续状态组织，不能直接称为教学效果优势。与Khanmigo相比，ari可查看和修改源码、保存本地数据，却缺已核实的同等家长管理、课程覆盖和学校服务能力。与人工辅导相比，异步提示有时间灵活性，但错误诊断、鼓励和学习动机仍可能需要真人。本案MIT许可降低复制技术的门槛，同时削弱仅靠封装开源界面的独占性；若分发实质源码需保留许可证，品牌和素材另按实际权利处理。比较时应固定一道题、同样的作答照片和同样的“先提示后解答”标准，计入安装、拍照、等待、澄清与教师核验总时间。不能拿最快的一次模型回答与老师完整辅导课比较。若现成工具已覆盖用户最常用需求，合理选择可能是继续使用现成方案，而不新增软件订阅。",
+      "source_ids": [
+        "Skhan",
+        "Sreadme",
+        "Slicense"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "把软件服务收入与学习者模型支出分开",
+      "body": "以下两组是研究者为“成年人的一次本地设置与限定验收服务”设定的假设，非作者报价、成交或市场承诺。基础情景每单99美元，服务方不代付模型API，人工按1小时30美元，其他变量4美元，获客摊销12美元，每月10单，固定维护300美元：每单贡献53美元，月贡献扣固定成本230美元。压力情景仍99美元，人工增至3小时90美元，其他变量6美元，获客25美元，每月5单、固定300美元：每单贡献负22美元，月结果负410美元。两者均未含税、退款和额外保修，不是净利润预测。学习者已有订阅额度、摄像头和电脑不在服务商成本内，却是客户总成本，不能因api_cost填0就称整套免费；若使用API模式，必须另按实际用量核算。99美元高于现成工具月费，能否成立取决于明确的安装或验收价值，目前没有愿付证据。最敏感变量是人工支持时间与获客，而不是代码生成速度；任何“无限维护”都会改变该交付单位。",
+      "source_ids": [
+        "Sreadme",
+        "Sauth",
+        "Skhan"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "先用可复核的演示解释价值，再讨论收费",
+      "body": "作者已有HN和公开代码作为分发入口，但可读讨论主要是作者自己的介绍，不能称作自然增长或成熟销售渠道。研究者建议若验证需求，应面向自愿的成年纸笔学习者，展示同一道题从作答、逐步提示到关掉AI后迁移练习的过程，并明确哪些步骤是真实完成、哪些仅演示。演示材料应是原创题与无个人身份的合成作答，不收集学生姓名、学校或健康信息。潜在合作对象可包括愿意审核题库的成人教育教师，但本轮没有联系任何第三方或招募用户。获取一名愿意反馈的使用者与获取一名续费客户是不同阶段，要分别记录入口、安装完成、练习完成、返工次数和付费意愿。不要把开源星标换算成交，也不把竞品网站上的精选家长评价移植为本产品口碑。一个短期试点只有在复核负担可控、学习者确实愿意持续使用时，才值得继续投入包装和销售。",
+      "source_ids": [
+        "Sauthor",
+        "Sissues",
+        "Sreadme"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "可积累的是经审核内容与恢复质量",
+      "body": "可编辑的TUTOR.md和用户档案使偏好能够被检查与修正，源码还为记忆路径、内容大小、哈希冲突和恢复标识设边界。持续学习代理保存工具回执并处理会话中断，这些是减少重复动作和历史丢失的工程基础。它们不自动构成教育护城河，因为开源实现可复制，且错误的学习档案可能在后续会话反复影响反馈。研究者认为更难积累的是明确适用范围的题目、经过人工核验的评分量规、常见误解分类、可重放的失败样本和跨版本兼容测试。更新学习者档案时应区分本人陈述、一次错误和多次证据，不能因一道题错了就给人贴固定标签；也不能把AI评分当真正掌握。若产品只新增人格文本和聊天外观，其价值很容易被现有模型功能吸收。若能减少恢复和内容审核时间，则可形成服务交付优势，但仍需要实际使用数据来证明，不能由源码结构推断成本已经下降。",
+      "source_ids": [
+        "Spersonal",
+        "Sagent",
+        "Slicense"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "本地界面不等于离线模型或零隐私成本",
+      "body": "README说明聊天、作业与进度保存在本地，主动提交的作答和相关上下文会发送到OpenAI；因此“本地运行”不能被宣传为所有信息不离开电脑。短请求适配器禁用多类工具并使用read-only，主学习会话另有应用提供的工作区工具，不能拿一个路径的限制概括整个应用。服务器限制回环地址，现成程序应保持单用户localhost，不把它直接改为面向学校的公网服务。摄像头桥有Mac与设备适配条件，浏览器摄像头和照片上传是不同路径；不能保证所有设备即装即用。固定提交的上游CI显示隐私检查、测试和构建成功，但本轮没有运行它，也没有实测手写识别、浏览器权限或教学对话。复制前仍需明确安装来源、模型额度、所提交资料和恢复步骤，未成年人资料需要相应授权与保护。产品交付若跨账号、多人或公网，权限与数据边界都发生实质变化，必须另行设计和验证，不能沿用本地演示的结论。",
+      "source_ids": [
+        "Sreadme",
+        "Sprovider",
+        "Scode",
+        "Sci"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "学习成效要在撤掉AI后测",
+      "body": "独立证据方面，公开问题列表为空、HN只有作者评论，搜索没有得到可核验的ari独立学习效果评价。这表示反馈证据不足，不表示没人使用、用户不满或软件没有缺陷。相邻PNAS研究在土耳其一所高中、近千名学生中比较GPT4辅导设计：有AI时练习表现提升，不加适当限制的一组在撤掉AI后测验表现下降；有教师设计提示的一组减轻了该负面效应，却未证明相对对照组有正向测验提升。这不是对ari、当前模型或长期家庭学习的实验，不能直接套用百分比。研究者据此选择的验收目标是独立解题，而不只是会话满意度、答题速度或系统给分。拟议评估可用匹配难度的前测、辅助练习和不带AI的后测，并把图像误读和评分误判单独登记。没有对照或仅一次顺利演示时，只能报告流程可用性，不能宣传提高成绩或替代教师。",
+      "source_ids": [
+        "Sstudy",
+        "Sdiscussion",
+        "Sissues"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "限定个人效率试点，暂不承诺教学收益",
+      "body": "结论是仅建议受控试点。源码、许可证和数据路径提供了比单条评论更明确的复制基础，值得验证“纸笔尝试—按需提示—可审查反馈—反思”是否减少个人学习摩擦。但订阅额度不免费、设备与版本有维护负担，独立学习收益和商业愿付仍未知。第一步不必安装或调用额外付费模型：先用原创题和合成作答制定验收表，覆盖正确过程、正确答案但步骤错、看不清、只拍题目、重复页与更正页，人工标注应答。取得需要的软件运行及资料授权后，再在隔离目录做实际测试，并记录全部失败与总工时。初始范围限定成年自用，不接学校成绩、不上传孩子作业、不承诺长期托管。若可靠反馈需要比原先更多人工，用户离开AI后无法完成相似题，或现有工具已满足需求，就停止商业投入；若验证有益，再分开讨论资源包、安装服务或长期辅导，不能把三种不同责任混成一个无限订阅。",
+      "source_ids": [
+        "Sreadme",
+        "Sprompt",
+        "Skhan",
+        "Sstudy"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "HN社区",
+        "query": "50147872 parent50147861作者和上下文",
+        "outcome": "作者一条评论链接代码，没有独立学习者反馈。"
+      },
+      {
+        "channel": "GitHub问题",
+        "query": "nichochar/ari issues state=all per_page=100",
+        "outcome": "返回空列表，不推断无缺陷或满意度。"
+      },
+      {
+        "channel": "公开检索",
+        "query": "\"nichochar/ari\" tutor review; \"ari\" \"nichochar\" \"tutor\" feedback",
+        "outcome": "主要作者仓库和介绍文章；介绍页读取失败，未计用户证据。"
+      }
+    ],
+    "observations": []
+  },
+  "unit_economics": [
+    {
+      "scenario": "基础假设：限定成人本地安装与验收",
+      "unit": "一次安装及限定验收服务",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 0,
+      "human_cost": 30,
+      "other_variable_cost": 4,
+      "acquisition_cost": 12,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 300,
+      "assumptions": "全部为研究假设，非作者报价。10×(99-0-30-4-12)-300=230。用户自有模型订阅及设备另付，不含税退款或无限维护。",
+      "source_ids": [
+        "Sreadme",
+        "Sauth"
+      ]
+    },
+    {
+      "scenario": "压力假设：支持时间升至三小时",
+      "unit": "一次安装及限定验收服务",
+      "currency": "USD",
+      "price": 99,
+      "api_cost": 0,
+      "human_cost": 90,
+      "other_variable_cost": 6,
+      "acquisition_cost": 25,
+      "units_per_month": 5,
+      "fixed_monthly_cost": 300,
+      "assumptions": "全部为研究假设，非实绩。5×(99-0-90-6-25)-300=-410。服务商不代付API不代表用户模型免费；未计税退款。",
+      "source_ids": [
+        "Sreadme",
+        "Skhan"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "无独立ari学习效果或付费证据；本地不等于离线；订阅额度与安装维护成本；低价成熟替代；练习表现不等于独立掌握。",
+  "limitations": "仅公开只读源码和来源研究；未安装运行ari、登录Codex、开启摄像头或调用模型；上游CI不是本轮测试，PNAS不是ari评测；没有使用私人学生材料。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/tutor-you-through-pen-and-paper-math-with-a-local-agent",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "c9383201a67f5adfabd3940034a38486dee954d24a939ea98440c26b1307d42c",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "ce9dd04959380c4014948263146f2227cdb3d2cb7cb27bfcc2cb80b4a23d7220",
+      "How it went": "acbbc765395728281a2a439b2d9d7517f046936923727175e255aa9fe4bfad4b",
+      "Worth knowing": "1307183852f028e57d62fe81d7cbd49785ca60c20f031c9407765ddd0cf3eadf"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up a local math tutor for me in this folder. Write a TUTOR.md brief telling you to teach [topic, e.g. algebra or calculus] at [my level] by giving me one problem at a time to work out on paper, then asking me to type or describe my answer and steps, and giving hints before solutions. The setup is done when I can start a session, receive a first problem, and get feedback on my attempt. Don't delete or overwrite any existing files without showing me first.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/tutor-you-through-pen-and-paper-math-with-a-local-agent",
+    "observed_at": "2026-10-19T07:18:07.716519+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "b6e0af41eb01e854112db64746f34eae95c23985c427c24fd837a8b086d9c9d4"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://news.ycombinator.com/item?id=50147872",
+    "source_title": "nichochar on ari",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T01:24:22.548256+00:00",
+    "source_sha256": "4d49f1a2775fa1f7247d22ce72ddc1f1b8b52cecd897ddbdfbe9afcac62e43b8",
+    "steps": [
+      {
+        "en": "The author publishes a local Codex tutor and adapts a Markdown brief to guide paper-based practice.",
+        "zh": "作者公开本地Codex辅导应用，用Markdown教学说明指导纸笔练习。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "已有订阅且能审核反馈的成年人可验证自用，学习收益与净省时待测。",
+    "audience": "有纸笔练习习惯、能自行安装和审核的成年学习者。",
+    "use": "按需提示、照片或文字反馈、课程与反思记录。",
+    "benefit": "流程组织有源码支持，不能承诺提高成绩或替代真人辅导。",
+    "setup_cost": "电脑、Node/Codex环境、账号额度、拍摄或照片工作流。",
+    "maintenance_cost": "版本、设备权限、反馈复核、档案纠错和备份恢复。",
+    "frequency": "按个人练习安排使用，实际长期留存未知。",
+    "privacy_risk": "提交作答与相关上下文会发给模型；本地文件也需妥善保护。",
+    "error_risk": "手写误读、错误量规、过早给答案、把AI分数当掌握。",
+    "source_ids": [
+      "Sreadme",
+      "Scode",
+      "Sstudy"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "原创题、无身份合成作答、人工标准答案与量规。",
+    "tools": "先文档评审；软件运行、账号和资料提交另按授权，不使用额外付费API。",
+    "expected_result": "一组可复核的提示与评分验收标准；本轮无真实教学试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/tutor-you-through-pen-and-paper-math-with-a-local-agent",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录试用模板",
+        "text": "Set up a local math tutor for me in this folder. Write a TUTOR.md brief telling you to teach [topic, e.g. algebra or calculus] at [my level] by giving me one problem at a time to work out on paper, then asking me to type or describe my answer and steps, and giving hints before solutions. The setup is done when I can start a session, receive a first problem, and get feedback on my attempt. Don't delete or overwrite any existing files without showing me first."
+      },
+      {
+        "title": "纸笔反馈验收设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Scode",
+          "Sstudy"
+        ],
+        "attribution": "原创验收模板，未执行",
+        "text": "仅用这些原创题和合成作答设计测试。区分提示、解释和检查，不因最终答案正确而推断步骤正确；看不清或只有题面时不评分。列重复页、更正页、错题页、版本变化和撤掉AI后独立解题的验收标准。不安装软件、不登录账户、不开启摄像头、不上传真实学生数据。"
+      }
+    ]
+  },
+  "scores": {
+    "demand": {
+      "score": 2,
+      "rationale": "具体纸笔自用场景存在，但仅作者自述，尚无目标成人付费需求或长期留存验证。",
+      "source_ids": [
+        "Sauthor",
+        "Skhan"
+      ]
+    },
+    "outcome": {
+      "score": 2,
+      "rationale": "代码和上游CI支持工程流程存在，未实测教学反馈或独立解题收益，不能计作效果证明。",
+      "source_ids": [
+        "Scode",
+        "Sci",
+        "Sstudy"
+      ]
+    },
+    "economics": {
+      "score": 2,
+      "rationale": "两种假设对支持工时高度敏感，缺真实账单与成交；自有订阅不是总成本为零。",
+      "source_ids": [
+        "Sreadme",
+        "Sauth"
+      ]
+    },
+    "distribution": {
+      "score": 1,
+      "rationale": "作者有HN和开源入口，但没有可核验转化或独立用户复用，渠道价值尚待验证。",
+      "source_ids": [
+        "Sauthor",
+        "Sissues"
+      ]
+    },
+    "moat": {
+      "score": 2,
+      "rationale": "可积累验收内容和恢复工程，但MIT实现可复制，教学优势缺独立检验。",
+      "source_ids": [
+        "Spersonal",
+        "Slicense"
+      ]
+    },
+    "execution": {
+      "score": 2,
+      "rationale": "本地回环与校验有设计，设备兼容、模型错误和数据提交仍有维护责任，未运行验收。",
+      "source_ids": [
+        "Scode",
+        "Sprovider",
+        "Sreadme"
+      ]
+    },
+    "feedback": {
+      "score": 0,
+      "rationale": "没有独立ari使用效果反馈，记为证据信号不足，不表示用户不满或产品无效。",
+      "source_ids": [
+        "Sdiscussion",
+        "Sissues"
+      ]
+    }
+  }
+}
