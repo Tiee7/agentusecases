@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "extract-prospecting-data-from-a-company-crm",
+  "url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
+  "title": "用浏览器Agent从公司CRM提取销售线索字段",
+  "industry": "销售运营",
+  "researched_at": "2026-10-20T14:13:48.231171+00:00",
+  "brief_reason": "缺原始输出、CRM身份、记录总量、耗时与现行复现；这是产品变化与数据提取边界简报，不构成已验证获客生意。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先核实现有导出能力",
+    "headline": "先验证权限、字段和完整性，再决定是否使用浏览器Agent",
+    "reason": "历史完成不保证今天复现，CRM原生视图导出或连接器可能更直接。",
+    "next_action": "使用合成CRM样例和已知正确结果测试分页、空值与重复。",
+    "stop_condition": "需绕过导出限制、越权访问、漏页或向未批准位置传送客户数据。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
+      "title": "许可目录现场正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:08:52Z",
+        "end": "2026-10-20T14:09:19Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "receipt_created_at": "2026-10-20T14:13:48.231171+00:00",
+      "characters": 14561,
+      "sha256": "a1794ebc7920d6aa9f700fad13eba733156bad0d5e39629c6e704af84532a30d",
+      "hash_scope": "Single captured main DOM outerHTML",
+      "supports": "目录仅转述旧agent曾提取CRM数据，当前作者无法复现且没有确认替代流程；CRM品牌、数量与收益未披露。"
+    },
+    {
+      "id": "Sexport",
+      "url": "https://knowledge.hubspot.com/import-and-export/export-records",
+      "title": "HubSpot导出记录官方说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:10:43Z",
+        "end": "2026-10-20T14:10:49Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T14:13:48.231171+00:00",
+      "receipt_text": "官方区分导出权限、视图字段/关联与活动数据。用于现成替代对照，不证明原作者使用HubSpot。",
+      "characters": 47,
+      "sha256": "d6c0523a143a1faddf9df0f6a229b7afb3e306d371c718605e6150ace2012b4f",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方区分导出权限、视图字段/关联与活动数据。用于现成替代对照，不证明原作者使用HubSpot。"
+    },
+    {
+      "id": "Sagent",
+      "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "title": "OpenAI agent帮助页",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:10:43Z",
+        "end": "2026-10-20T14:10:49Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T14:13:48.231171+00:00",
+      "receipt_text": "当前概览写旧agent不再可用并指向Work，但页面下方仍保留旧启动及可用性文字；记录页面内部不一致，不据旧段落承诺可复现。",
+      "characters": 62,
+      "sha256": "1f80401f2d098a80e7ea6f908ca2a1ae4a532d0d958f0bb4a818daee25161702",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "当前概览写旧agent不再可用并指向Work，但页面下方仍保留旧启动及可用性文字；记录页面内部不一致，不据旧段落承诺可复现。"
+    },
+    {
+      "id": "Sbrowser",
+      "url": "https://help.openai.com/en/articles/20001280-using-cloud-browser-in-chatgpt",
+      "title": "OpenAI云浏览器帮助页",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T14:12:15Z",
+        "end": "2026-10-20T14:12:23Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T14:13:48.231171+00:00",
+      "receipt_text": "官方支持获准网站的登录后任务，优先可用连接器；云浏览器与本机登录独立，网站或具体步骤仍可能不支持。",
+      "characters": 49,
+      "sha256": "b02d44e651c9bdc0d4ac515c618750ee459538c388a72fe20ea93186169b14d2",
+      "hash_scope": "Researcher summary, not full source bytes",
+      "supports": "官方支持获准网站的登录后任务，优先可用连接器；云浏览器与本机登录独立，网站或具体步骤仍可能不支持。"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1v1cmxi/chatgpt_work_worse_than_agent",
+      "title": "原作者文章",
+      "kind": "primary",
+      "status": "not_fetched",
+      "error": "原帖位于此前明确受限Reddit，不重试或绕过。未登录任何公司CRM、读取客户记录、导出真实名单或运行试用。",
+      "supports": "原文未读；目录转述和试用模板不冒充作者实现。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者曾成功的说法来自目录转述，没有实际CRM输出。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "目录未提供已确认的当前替代工作流。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "HubSpot官方要求导出权限，并区分普通记录属性与活动数据。",
+      "type": "verified",
+      "source_ids": [
+        "Sexport"
+      ]
+    },
+    {
+      "statement": "OpenAI旧agent帮助页概览与下方旧启动描述存在不一致。",
+      "type": "verified",
+      "source_ids": [
+        "Sagent"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "过去做过和现在可复现分开",
+      "source_ids": [
+        "Sdirectory",
+        "Sagent"
+      ],
+      "body": "作者说旧agent曾浏览CRM并提取数据，没有给数量、字段准确率、处理时间和人工复核。当前无法重复也没有错误日志，不能认定某模型更弱或所有Work都不支持。官方旧agent页概览已引导Work，下方却残留旧可用性描述，研究记录这一矛盾，不自行补出发布日期、迁移完成时间或账号能力。"
+    },
+    {
+      "id": "alternative",
+      "title": "先查CRM本身能否导出",
+      "source_ids": [
+        "Sexport"
+      ],
+      "body": "HubSpot只是现成能力的例子，不是已确认的案例工具。其视图可导出当前属性与关联，活动记录另有路径，并要求导出权限。真实任务应先核对所需字段是否属于普通记录还是互动历史；若原生导出已覆盖，无须为了使用AI逐页点击。没有导出权限不是换浏览器绕限制的理由。"
+    },
+    {
+      "id": "workflow",
+      "title": "筛选范围与完整性是交付核心",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "拟议流程先写清对象、筛选条件、时间范围、字段定义和允许输出位置，再核对总匹配数。分页、滚动加载、关联对象、多联系人和空值都可能让表格看似完整却漏数。保留记录ID和来源定位用于去重，抽查首末页与例外，不能把显示行数当总记录数。"
+    },
+    {
+      "id": "permissions",
+      "title": "能登录不代表可搬运全部数据",
+      "source_ids": [
+        "Sbrowser"
+      ],
+      "body": "官方说明云浏览器有独立登录会话，能做支持网站上的任务，但访问与动作能力依网站而异。应使用获准安全登录方式，不在研究报告存密码或客户名单；只读取指定范围。表格输出本身仍可能传输内部客户信息，须先明确目的、字段、保存位置与可见人群。"
+    },
+    {
+      "id": "commercial",
+      "title": "交付是可靠数据整理而非承诺成交",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "潜在需求是销售运营减少重复筛选抄录。可假设交付按批次收费或长期维护，但本案没有付款人、成交单价、销售转化或营收证据。获客需要展示同一CRM中字段完整、无重复、可追溯和安全边界，不能把抓到联系人称为拿到客户。工具模式升级导致的维护也应包含在服务范围里。"
+    },
+    {
+      "id": "cost",
+      "title": "把产品变化算进维护成本",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "成本包含登录配合、视图配置、读取等待、校验、返工、保存及产品变动适配。原作者没有费用与耗时，不填利润模型。低频导出可能直接人工更便宜；高频任务也应先比较现成导出或正式接口，而不是以浏览器每次能跑完为唯一成功标准。"
+    },
+    {
+      "id": "personal",
+      "title": "自用需要能核对业务字段",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "适合有合法CRM权限且知道字段含义的销售运营人员。预期收益是减少重复抄录，实际节省未知。设置要明确视图与字段，维护随CRM界面、权限和工具变化。频率按业务批次；风险包括错配联系人、漏页、混淆最近活动时间，以及将无权外传信息复制到别处。"
+    },
+    {
+      "id": "trial",
+      "title": "合成样例验证边界",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "准备一份虚构CRM列表，含分页、相同公司多联系人、同名联系人、空职位、不同阶段和不匹配记录，预先建立正确输出。要求只读提取，不修改、不发信、不删除，遇登录或权限不足停止。验收包括筛选准确、记录ID去重、匹配总数与缺失说明。本轮没有实际运行或接触公司数据。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
+    "observed_at": null,
+    "body_sha256": "47806e44cf9b2604b0db0a43d645cbf69a68b03da90747383297f86a39df2357",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "b892e3c97e1379b4379fb9d584caabecbb6f4a6ffb40e6fc1e06c2efab6f229c",
+      "How it went": "27f2242a8056c8f4a04bfdbe73b9a4c770cb815e232ab55a35ed1bcd0cb72a14",
+      "Worth knowing": "4795294c0be1e6e447ced9a37a81097c3a61354e688fdc7c779689a82710dfc8"
+    },
+    "actual_agents": [
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T14:08:52Z",
+      "end": "2026-10-20T14:09:19Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Log into our company CRM at [CRM URL] (I'll sign in myself when you reach the login page). Go through [the accounts, leads, or a saved view] and pull [fields such as company name, contact, role, last activity, deal stage] for every record that matches [prospecting criteria]. Put the result in a table I can copy into a spreadsheet and stop when you've covered all matching records. Do not edit, delete, or send anything in the CRM.",
+    "agent": "ChatGPT Agent",
+    "source_url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "a1794ebc7920d6aa9f700fad13eba733156bad0d5e39629c6e704af84532a30d",
+    "observation_window": {
+      "start": "2026-10-20T14:08:52Z",
+      "end": "2026-10-20T14:09:19Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ChatGPT/comments/1v1cmxi/chatgpt_work_worse_than_agent",
+    "source_title": "Original case source",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T14:13:48.231171+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原帖位于此前明确受限Reddit，不重试或绕过。未登录任何公司CRM、读取客户记录、导出真实名单或运行试用。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可能减少已获准的重复抄录，但现成导出与完整性校验应优先。",
+    "audience": "有CRM权限且理解销售字段的运营人员。",
+    "use": "将指定范围内记录整理为可核对表格。",
+    "benefit": "潜在省抄录时间，实际收益未知。",
+    "setup_cost": "定义筛选、字段、登录和允许输出位置。",
+    "maintenance_cost": "权限、CRM界面、字段和agent产品变化。",
+    "frequency": "按真实销售运营批次。",
+    "privacy_risk": "客户联系人、交易阶段与内部活动可能被外传。",
+    "error_risk": "漏页、错配联系人、重复和筛选不完整。",
+    "source_ids": [
+      "Sdirectory",
+      "Sexport"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站Copy prompt原样保留，非作者实际提示词或本次实测。",
+    "prerequisites": "合成CRM样例、正确答案与只读范围；不接真实账户。",
+    "tools": "已有获准助手或本地文档。",
+    "expected_result": "字段表、记录ID、缺失与覆盖说明，不写回或联系；未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Log into our company CRM at [CRM URL] (I'll sign in myself when you reach the login page). Go through [the accounts, leads, or a saved view] and pull [fields such as company name, contact, role, last activity, deal stage] for every record that matches [prospecting criteria]. Put the result in a table I can copy into a spreadsheet and stop when you've covered all matching records. Do not edit, delete, or send anything in the CRM."
+      },
+      {
+        "title": "离线验证模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "从以下虚构CRM列表按指定条件提取字段，保留记录ID，列出匹配数、去重结果和缺失项。不要补造字段，不访问账号、不写回、不发信。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "economics_assumptions": "区分成本构成与情景，不把未知填零；没有付款/工时证据不填虚构利润。",
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "目录没有成功的当前替代流程，外部原帖未读；官方能力不是案例成功回执。"
+  },
+  "disconfirming_evidence": "原生导出可能更直接；历史流程依赖已变化产品，公开证据不足以证明新流程稳定。",
+  "limitations": "未读取私人CRM、未实测、无记录数/准确率/费用/收益，原CRM品牌未知。",
+  "archive_source_sha256": "47806e44cf9b2604b0db0a43d645cbf69a68b03da90747383297f86a39df2357",
+  "translation_sha256": "7455f82cbc925becaf5d5d8f0a41f23383dadb8e15de14ca2de9d333d6033c0e"
+}

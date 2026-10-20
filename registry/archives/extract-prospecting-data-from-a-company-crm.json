@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/extract-prospecting-data-from-a-company-crm",
-  "observed_at": "2026-10-19T07:16:03.780960+00:00",
-  "html_sha256": "ba7cc7e665a169407b9ddaef4249c2c8b3bc74e017ce840184c49879a4349f2f",
+  "observed_at": null,
+  "html_sha256": "a1794ebc7920d6aa9f700fad13eba733156bad0d5e39629c6e704af84532a30d",
   "body_sha256": "47806e44cf9b2604b0db0a43d645cbf69a68b03da90747383297f86a39df2357",
   "status": "observed",
   "fields": {
@@ -78,9 +78,10 @@
       "reason": "Source explicitly labels the external publication date Undated."
     },
     "added_at": {
-      "status": "observed",
-      "value": "2026-10-16",
-      "sha256": "de936b9b36d6a0dd8450fade2c7fa75c875ad7a4bda2120b6583a96fe7c08b76"
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
     },
     "try_it": {
       "status": "observed",
@@ -95,12 +96,27 @@
     "language": "en",
     "body": "Extract prospecting data from a company CRM\nA user had ChatGPT agent navigate their company's CRM and pull useful data for sales prospecting.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe poster says they had previously used ChatGPT agent to open their company CRM, navigate the site, and extract useful prospecting data from it. In the thread they ask whether that depended on the old agent’s own browser plus a human taking over to log in, because the newer ChatGPT Work no longer seems able to do the same task.\nHow it went\nThe source only establishes that this had worked before and that the user now cannot get ChatGPT Work to repeat it. Replies suggest newer tools are different or folded into the ChatGPT app, but no one reports a successful replacement workflow here.\nWorth knowing\nThe catch is product drift: this use case appears tied to an older agent mode, and the thread gives no confirmed current method for reproducing it.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nLog into our company CRM at [CRM URL] (I'll sign in myself when you reach the login page). Go through [the accounts, leads, or a saved view] and pull [fields such as company name, contact, role, last activity, deal stage] for every record that matches [prospecting criteria]. Put the result in a table I can copy into a spreadsheet and stop when you've covered all matching records. Do not edit, delete, or send anything in the CRM.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1v1cmxi/chatgpt_work_worse_than_agent",
     "body_sha256": "47806e44cf9b2604b0db0a43d645cbf69a68b03da90747383297f86a39df2357",
-    "archived_at": "2026-10-19T07:16:03.780960+00:00",
-    "scope": "Captured case text; external linked articles and HTML excluded."
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T14:08:52Z",
+      "end": "2026-10-20T14:09:19Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
   },
-  "last_attempt": {
-    "at": "2026-10-19T07:16:03.780960+00:00",
-    "status": "fetched",
-    "error": null
+  "observation_window": {
+    "start": "2026-10-20T14:08:52Z",
+    "end": "2026-10-20T14:09:19Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "capture_basis": "Own cloud browser main DOM, not full SSR",
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "47806e44cf9b2604b0db0a43d645cbf69a68b03da90747383297f86a39df2357",
+    "translated_at": "2026-10-20T14:13:48.231171+00:00",
+    "body": "从公司CRM中提取潜客开发数据\n一位用户让ChatGPT agent浏览其公司的CRM，并从中提取用于销售潜客开发的有用数据。\n使用的是\nChatGPT Agent\n他们做了什么\n发帖者说，他们此前曾使用ChatGPT agent打开公司CRM、浏览网站，并提取有用的潜客开发数据。在帖子中，他们询问这是否依赖旧agent自己的浏览器，加上由人接管完成登录，因为较新的ChatGPT Work似乎已无法完成同样的任务。\n进展与成效\n来源只能表明这件事以前成功过，而用户现在无法让ChatGPT Work重复完成。回复认为新工具有所不同，或已整合到ChatGPT应用中，但这里没有人报告成功的替代工作流。\n值得了解\n问题在于产品变化：这个用例似乎依赖较旧的agent模式，帖子没有给出已确认的当前复现方法。\n亲自尝试\n使用\nChatGPT Agent\n复制提示词\n登录我们位于[CRM网址]的公司CRM（到达登录页时我会自行登录）。浏览[账户、线索或一个已保存的视图]，为每条符合[潜客开发条件]的记录提取[公司名、联系人、职位、最近活动、交易阶段等字段]。把结果放进一张我能复制到电子表格中的表格，覆盖全部匹配记录后停止。不要在CRM中编辑、删除或发送任何内容。\n原始来源：https://www.reddit.com/r/ChatGPT/comments/1v1cmxi/chatgpt_work_worse_than_agent",
+    "body_sha256": "7455f82cbc925becaf5d5d8f0a41f23383dadb8e15de14ca2de9d333d6033c0e",
+    "status": "available"
   }
 }
