@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-claude-code-in-an-isolated-vm-that-opens-prs",
+  "observed_at": null,
+  "html_sha256": "b9c50995cdfdb55e131afb6ddd5bb0cad59e92472e3bbc32a3b1283554dafdf9",
+  "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run Claude Code in an isolated VM that opens PRs",
+      "sha256": "980028945c39aa2be815d6058b5f9d1358eb10c6479ced31093a11fb001d5f3a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.",
+      "sha256": "05904672c5102c28c94cd0f77e1514866d1edd254a8c0be12d813a94f4b24ee2"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Claude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.",
+      "sha256": "5d5d05c26f2fddf797b29fba52fb7028543cb416d1080d5681a15f9c2d9eca51"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.",
+      "sha256": "c30366f95851c98e7994de328946729352f2c97a0741130f323d06d1d5696a8f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "In local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.",
+      "sha256": "ee080181386ba5afc857782e41e0148ba741bb9a712637dd6d2662a0a9aa2fcb"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50164831"
+      ],
+      "sha256": "c2b08347135904264f321dcd7ee77f10d68d29ac9fd8a5f0b85d1e3bb0a4ba91"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2d5cbeca49a740ea8601c5ff75679ecccfbd2c71ed22dda2e7808c6a5346d551",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Claude Code in an isolated VM that opens PRs\nThe author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.\nHow it went\nThe source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.\nWorth knowing\nIn local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a locked-down virtual machine for running you on my project [repo name]. Give it only the permissions it needs: reading the code, getting secrets from [secrets manager], and opening issues and pull requests on [Git host], with no ability to merge. Walk me through the setup step by step, and finish by having it open a small test pull request. Pause and show me each command that changes my system or credentials before you run it.\nOriginal source: https://news.ycombinator.com/item?id=50164831",
+    "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+    "archived_at": null,
+    "scope": "Captured case text; external linked articles and HTML excluded.",
+    "observation_window": {
+      "start": "2026-10-20T18:51:48Z",
+      "end": "2026-10-20T18:52:06Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "observation_window": {
+    "start": "2026-10-20T18:51:48Z",
+    "end": "2026-10-20T18:52:06Z",
+    "basis": "system_time_bracketing_tool_call"
+  },
+  "translation": {
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "based_on_body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+    "translated_at": "2026-10-20T18:54:41.108796+00:00",
+    "body": "在隔离虚拟机中运行Claude Code并创建PR\n作者在受限虚拟机中运行Claude Code，通过Infisical提供密钥。它只能在Forgejo上创建问题和拉取请求；由人手动合并，然后CI部署。\n使用的是\nClaude Code\n他们做了什么\nClaude Code运行在独立虚拟机中，所在VLAN受到严格限制，只能访问互联网、作者的Forgejo实例、Infisical，并允许从作者电脑发起的单向SSH连接。密钥通过Infisical提供，因此agent看不到它们。它的Forgejo用户只能创建问题和拉取请求。作者手动合并后，CI打包并部署到应用服务器虚拟机。\n进展与成效\n来源没有给出量化结果。它称这套配置有些过度，但为了降低个人数据被外传的风险仍然值得。开发模式仍可能在本地暴露部分密钥。\n值得注意\n在本地开发模式中，agent仍可能看到密钥，因此Infisical的保护只有在该模式之外才完全成立。\n亲自尝试\n使用\nClaude Code\n复制提示词\n帮我为在我的项目[仓库名称]上运行你，配置一台锁定权限的虚拟机。只给它所需权限：读取代码、从[密钥管理器]获取密钥，以及在[Git托管平台]创建问题和拉取请求，但不能合并。逐步带我完成配置，最后让它创建一个小型测试拉取请求。执行任何会更改系统或凭据的命令之前，都要暂停并向我展示命令。\n原始来源：https://news.ycombinator.com/item?id=50164831",
+    "body_sha256": "b6ff16e23feff2885b499d9668f430abd63c792ce4755e9923805e994fe60bc1",
+    "status": "available"
+  }
+}
