@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **60** / 注册案例 **1447**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **61** / 注册案例 **1447**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -56,6 +56,7 @@
 | [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
 | [用 Claude for Word 生成原生修订并处理批注](reports/redline-lawyer-documents-with-native-word-tracked-changes.md) | 仅建议受控试点 | 44.0 | 中 | available | 专业文档流程配置与审核辅助 | 2026-10-19T22:14:26Z |
 | [用 11 个 agent 分工完成交易前准备](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
+| [用Claude Code生成素材并管理Meta广告活动](reports/run-meta-ad-campaigns-autonomously-for-a-newsletter.md) | 仅建议受控试点 | 41.0 | 中 | available | 营销投放与newsletter运营 | 2026-10-20T07:12:41.065326+00:00 |
 | [用 Grok Bot 夜间巡检迷因币并发送提醒](reports/run-overnight-memecoin-checks-and-alerts.md) | 适合内部效率工具 | 29.0 | 中 | available | 链上信息筛选与研究提醒 | 2026-10-16T16:08:47.863325+00:00 |
 | [用 ChatGPT Agent 上架并出售闲置物品](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
