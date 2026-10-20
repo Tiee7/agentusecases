@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **67** / 注册案例 **1461**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **74** / 注册案例 **1468**。旧版简略初稿 **0** 份不计入完成。
 
 当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -80,6 +80,14 @@
 | [用Grok Bot每天三次收集AI新闻](reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 行业信息整理 | 2026-10-20T15:34:56.410756+00:00 |
 
 | [用Grok Bot准备承包商后台材料与客户召回草稿](reports/run-contractor-back-office-jobs-and-churn-recovery.md) | 仅建议受控试点 | 未评定 | 中 | available | 后台行政与客户留存（分场景） | 2026-10-20T15:54:01.195589+00:00 |
+
+| [用ChatGPT智能体整理Yooda关键词与Ahrefs竞品资料](reports/hand-seo-tasks-to-a-chatgpt-agent.md) | 仅建议受控试点 | 未评定 | 待核实 | available | SEO研究与数据整理 | 2026-10-20T16:15:51.778918+00:00 |
+| [用十个智能体分工研究与起草SEO文章](reports/run-a-10-agent-seo-content-pipeline.md) | 仅建议受控试点 | 未评定 | 待核实 | available | 内容研究与编辑辅助 | 2026-10-20T16:29:01.855102+00:00 |
+| [用自建智能体准备企业Reddit互动内容](reports/run-a-company-reddit-presence-with-a-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 社区反馈与品牌沟通辅助 | 2026-10-20T16:36:53.674967+00:00 |
+| [用Grok Bot提交电话号码移除请求并复查](reports/scrub-your-phone-number-from-data-brokers-to-stop-spam.md) | 仅建议受控试点 | 未评定 | 中 | available | 个人资料清理与隐私辅助 | 2026-10-20T16:48:48.358758+00:00 |
+| [用OpenClaw连接安卓手机浏览和评论社交内容](reports/run-x-and-reddit-accounts-with-agents-on-android-phones.md) | 仅建议受控试点 | 未评定 | 中 | available | 移动端社交工作流研究 | 2026-10-20T16:54:05.962122+00:00 |
+| [用Claude Code辅助亚马逊品牌分类账和商品图应用](reports/automate-amazon-brand-bookkeeping-and-product-images.md) | 仅建议受控试点 | 未评定 | 中 | available | 电商品牌内部运营 | 2026-10-20T17:00:18.838227+00:00 |
+| [用Grok Bot辅助车辆登记、退货和预约流程](reports/handle-multi-click-chores-like-dmv-returns-and-appointments.md) | 仅建议受控试点 | 未评定 | 中 | available | 生活事务信息准备 | 2026-10-20T17:04:51.198125+00:00 |
 
 ## 需要重做的旧版简略初稿
 

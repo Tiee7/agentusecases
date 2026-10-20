@@ -1,0 +1,629 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "automate-amazon-brand-bookkeeping-and-product-images",
+  "url": "https://agentusecases.ai/use-case/automate-amazon-brand-bookkeeping-and-product-images",
+  "title": "用Claude Code辅助亚马逊品牌分类账和商品图应用",
+  "industry": "电商品牌内部运营",
+  "researched_at": "2026-10-20T17:00:18.838227+00:00",
+  "confidence": "medium",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "财务和图片分别验收，保留作者有限省时结果",
+    "reason": "可受控试点，财务先输出可回溯的归类和差异表，图片先输出真实产品一致的候选图，两条分别验收。作者本人少花时间的经验值得保留，但其业务知识、既有接口和持续提供背景是前提。试点若发现无法解释的余额、误分品牌、重复交易、产品形状标签错误或无依据卖点，应停止相应输出进入正式系统。图片质量和转化未知时不能承诺提高利润，财务表一致也不能承诺无错误。下一步可准备跨月结算、退款、相同金额多笔、不同币种和产品细节的虚构样例，对照预期结果检查。四周200美元不是用户门槛；不因模型金额略超假设就判失败，也不靠删掉人工成本强行使其可行。 样例验收不要求真实第三方账号或商业经营即可开始，重点是边界和错误是否会被正确指出。只有在用户理解需要的访问与动作后，才讨论接入实际系统；本轮仍仅做研究与记录，没有实施那些权限变化。",
+    "next_action": "虚构交易与真实授权产品素材测试差异核对和图片一致性，不连接真实财务账号。",
+    "stop_condition": "余额无法解释、重复或错误归属、产品失真、越权或来源缺失。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/automate-amazon-brand-bookkeeping-and-product-images",
+      "title": "许可目录当前正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "完整许可目录英文中文与原提示词，目录缺细节不抹去后续另读作者方法。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:54:35Z",
+        "end": "2026-10-20T16:55:23Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 14703,
+      "sha256": "06a043b425bb84bbf6910ac75771163c9a0bbf6078e5227dfb6c31626295b4e6",
+      "hash_scope": "Captured main DOM",
+      "read_method": "permitted_own_cloud_browser_main_dom"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://aiblewmymind.substack.com/p/claude-code-subagents-explained",
+      "title": "原始教程中的Alex案例",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "仅举Alex Willen使用Claude Code做记账及商品图片，链接其刊物，没有介绍具体设置和效果。",
+      "receipt_text": "仅举Alex Willen使用Claude Code做记账及商品图片，链接其刊物，没有介绍具体设置和效果。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:55:23Z",
+        "end": "2026-10-20T16:55:35Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 53,
+      "sha256": "55c2d71e77a80033e8c038e02ca22d155f3ac4ff8c58560f5d614e91fb1d6a79",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sledger",
+      "url": "https://theautomatedoperator.substack.com/p/updating-financial-ledgers-with-claude",
+      "title": "Alex财务分类账原文",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "5月28日：按品牌账本，API和本人登录后CSV，重叠时间去重、金额日期匹配、疑项询问、批准后写表并复查。自报每月2至3小时变几分钟提供输入，不是全部计算耗时。",
+      "receipt_text": "5月28日：按品牌账本，API和本人登录后CSV，重叠时间去重、金额日期匹配、疑项询问、批准后写表并复查。自报每月2至3小时变几分钟提供输入，不是全部计算耗时。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:15Z",
+        "end": "2026-10-20T16:56:29Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 80,
+      "sha256": "5833b72cc67886c847e290668812cba55dccb14447382abe9665e1b33754e731",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sbooks",
+      "url": "https://theautomatedoperator.substack.com/p/can-ai-do-my-bookkeeping",
+      "title": "Alex记账原文",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "1月22日从ChatGPT指导本人操作发展为Claude Code经QBO API写账；本人仍提供背景及合理性检查。其简单业务经验不是普遍合规或审计保证。",
+      "receipt_text": "1月22日从ChatGPT指导本人操作发展为Claude Code经QBO API写账；本人仍提供背景及合理性检查。其简单业务经验不是普遍合规或审计保证。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:55:42Z",
+        "end": "2026-10-20T16:55:58Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 77,
+      "sha256": "8a4edb8b7530eda5cc033f5146e314a9d20470c4f5148215e6c9368ec69f13b9",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Simages",
+      "url": "https://theautomatedoperator.substack.com/p/opus-45-codes-gemini-3-writes-the",
+      "title": "Alex商品图应用原文",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "1月15日本地app由Claude Code编写，Gemini3Pro构思，NanoBananaPro API生成，人选风格；报告模型名错误和重复素材修正，未给转化A/B结果。",
+      "receipt_text": "1月15日本地app由Claude Code编写，Gemini3Pro构思，NanoBananaPro API生成，人选风格；报告模型名错误和重复素材修正，未给转化A/B结果。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:55:42Z",
+        "end": "2026-10-20T16:55:58Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 88,
+      "sha256": "07f090f685a2069db5797ba8d8c80a9dff537245b02bdbcb5ec26b99c99b55c1",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Spermissions",
+      "url": "https://code.claude.com/docs/en/permissions",
+      "title": "Claude Code权限官方文档",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "命令规则与OS沙箱不同，Bash允许规则或独立工作目录不等只读安全边界，需要实际文件/网络权限控制。",
+      "receipt_text": "命令规则与OS沙箱不同，Bash允许规则或独立工作目录不等只读安全边界，需要实际文件/网络权限控制。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:15Z",
+        "end": "2026-10-20T16:56:47Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 50,
+      "sha256": "9c109f323e8798c0f4cfb6c46db14a81e498815f6c6bcc79414291fb9141e866",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Ssettle",
+      "url": "https://sell.amazon.com/es/blog/amazon-business-invoice",
+      "title": "Amazon延期交易说明",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "延期交易可因开票或交付产生，释放后才转余额；销售发生、平台结算和银行到账不能混作同一时点。",
+      "receipt_text": "延期交易可因开票或交付产生，释放后才转余额；销售发生、平台结算和银行到账不能混作同一时点。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:22Z",
+        "end": "2026-10-20T16:56:35Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 45,
+      "sha256": "27d7cd6162ea56780d9d64c0f5cf402cf6543154b142dd7edc0cbe6f5be5a249",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sa2x",
+      "url": "https://www.a2xaccounting.com/amazon/pricing",
+      "title": "A2X Amazon方案",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Mini29美元/月200订单1Merchant ID，不含COGS；Starter59美元/月1000订单含COGS。11月14涨价预告非本日现价，Mini除外。",
+      "receipt_text": "Mini29美元/月200订单1Merchant ID，不含COGS；Starter59美元/月1000订单含COGS。11月14涨价预告非本日现价，Mini除外。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:22Z",
+        "end": "2026-10-20T16:56:35Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 82,
+      "sha256": "6fa17cec891eb196f876b1e54db8084feacc04e71a92eb88d67007d19654f517",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sg2",
+      "url": "https://www.g2.com/products/a2x/reviews",
+      "title": "A2X具名用户评价",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "Zakhar I 2025-07-09肯定Amazon到Xero分类，认为贵且新分类需维护；Kira V 2023-12-13肯定省时但设置映射难，历史体验不当当前全体故障。",
+      "receipt_text": "Zakhar I 2025-07-09肯定Amazon到Xero分类，认为贵且新分类需维护；Kira V 2023-12-13肯定省时但设置映射难，历史体验不当当前全体故障。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:41Z",
+        "end": "2026-10-20T16:57:17Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 87,
+      "sha256": "bfe0d8063c2e4c6c3ee198a41bcdda5c9cbddfc22d03c9ab0f3d8e38b2c70835",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sphoto",
+      "url": "https://www.reddit.com/r/AI_In_ECommerce/comments/1wm984u/are_you_using_ai_for_product_photos_yet_or_still/",
+      "title": "商品图实际体验讨论",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "有背景和修光局部使用，也有SellAmzSell付费外包后多次修图仍弃用自述。发帖者推销自家额度，不能视为完全中立。相对日期不硬换准确发布日期。",
+      "receipt_text": "有背景和修光局部使用，也有SellAmzSell付费外包后多次修图仍弃用自述。发帖者推销自家额度，不能视为完全中立。相对日期不硬换准确发布日期。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:56:35Z",
+        "end": "2026-10-20T16:56:41Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T17:00:18.838227+00:00",
+      "characters": 72,
+      "sha256": "54dfd6104e442a116ea2d7b34657018d8fd1e30cfc4548508d2df52a68217cef",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    }
+  ],
+  "facts": [
+    {
+      "type": "verified",
+      "statement": "许可目录及初始教程只简述两项用途，具体方法需要另读作者刊物。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "作者分类账流程包括取数、去重、金额日期匹配、询问疑项、写表和复查。",
+      "source_ids": [
+        "Sledger"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "作者自报本人每月两三小时减少到几分钟提供输入，不是独立实测总耗时。",
+      "source_ids": [
+        "Sledger"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "作者记账原文保留本人提供业务背景及合理性检查，没有自动审计保证。",
+      "source_ids": [
+        "Sbooks"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "商品图原文是Claude编写本地app调用Google模型API，并有人选风格和修正。",
+      "source_ids": [
+        "Simages"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Claude Code命令权限和操作系统沙箱有区别，工作目录隔离不自动只读。",
+      "source_ids": [
+        "Spermissions"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Amazon延期交易存在释放时滞，平台销售和银行到账不必同一时点。",
+      "source_ids": [
+        "Ssettle"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "A2X Mini当前29美元/月不含COGS，不是整套财务加商品图服务。",
+      "source_ids": [
+        "Sa2x"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "多品牌运营中的两种重复工作",
+      "source_ids": [
+        "Sdirectory",
+        "Sledger",
+        "Simages"
+      ],
+      "body": "许可目录只简述Alex经营亚马逊品牌并用Claude Code辅助记账和商品图，不能因为这段很短就忽略作者另有可读详细文章。财务需求是把共享银行和信用卡中的流水正确归属品牌，图片需求则是把真实产品素材变成风格一致的上架候选图。两者使用同一编程助手，却不是同一个模型调用或一套验收。作者熟悉自己的财务和产品，这些背景是复制条件，不是任何小白安装工具就获得的能力。服务对象可以是多品牌经营者或内部运营团队，但原案没有售卖自动化服务的收入数据。减少本人操作时间有价值，是否值得外包还需要看输入质量、重复频率、权限和人工审核，不能由工具名字直接推导客户会购买。 自用收益要按本人从流程中实际退出了多少操作来衡量，而不是只看agent跑了多久。设置、首次纠错和日常例外的时间应分开，成熟流程的几分钟输入不能代表新用户第一天的投入。"
+    },
+    {
+      "id": "workflow",
+      "title": "保留有归属的财务方法与正面效果",
+      "source_ids": [
+        "Sledger",
+        "Sbooks"
+      ],
+      "body": "作者5月28日的分类账文章描述从既有账本确定拉取起点，留重叠时间去重，匹配金额和日期，归类费用，询问无法判断的项目，再写表并检查完整性。他自报每月原来两三小时的本人工作变成几分钟提供输入，这是有限正面证据，应保留；并不等于机器总耗时只有几分钟或任何账都百分之百正确。1月记账文章涉及另一层正式QBO记录，本人仍给背景并核对结果，不能把品牌管理表等同全部会计账务。重新试用建议先用去敏副本与差异表，不直接连真实财务系统。每条数据要能回到源记录，疑项保持待判断，跨品牌分摊规则由负责人确认，不能只因合计一致就宣称分类准确。 原文分摊共同费用的方法仅是其内部管理安排，复制时应确认自身管理口径，不直接当会计或税务通则。资金在账户之间移动也不能一律归为经营收入，来源信息不足的条目应询问而不是猜测。"
+    },
+    {
+      "id": "market",
+      "title": "省时自述不等可售收入",
+      "source_ids": [
+        "Sledger",
+        "Sbooks",
+        "Sg2"
+      ],
+      "body": "这个案例比只有概念的演示多了经营者的具体流程与省时自述，但没有独立复验，也没有外部客户付费或服务价格。可能需求来自多品牌共享账户、平台结算描述不清和重复月结，频率低或数据少的经营者可能仍觉得手动更省事。A2X用户对分类同步便利和维护负担都有反馈，说明软件替代与人工核对并存，而不是会计业务已经没有需求。适用性应按法人、品牌、币种、交易类型和现有账务习惯分层，不能宣称CSV天然不合规或自动表格天然审计合格。研究也不替作者认定税务处理是否适用于其他人。销售机会仅是假设，优先验证能否解释差异、减少重复输入，而非先按品牌总数估计营收。 图片业务也要先区分主图、说明图与广告素材，不能把某种适用画面直接推广到所有展示位置。读不到完整官方规则时应把具体发布资格留作待核，而不是凭作者说Amazon-ready就替平台验收。"
+    },
+    {
+      "id": "competition",
+      "title": "会计连接器不是完整图片工作流",
+      "source_ids": [
+        "Sa2x",
+        "Simages",
+        "Sg2"
+      ],
+      "body": "A2X Mini当前29美元月费、200订单、一个Merchant ID，不含成本货物功能；Starter59美元、1000订单且包括COGS。价页预告11月14日部分涨价，不能把未来价格当10月20日现价。它覆盖结算入账的一部分，不负责本案商品图，也不自动完成所有品牌内部费用分摊。因此旧稿用207.92完全成本对71.99订阅现金判胜负不成立。若要对比，两边都应承担相同月度流水核验、歧义处理、图片规划与人工修图，另列软件、设置和维护。图片应用在作者原文中是本地自建app调用Google模型API，不是Claude自己原生输出位图，也不是未证实的MCP方案；模型与版本、调用量和重生成次数决定成本。 作者图片方案中的人工选择风格与检查真实产品不能在竞品比较中消失。六张最终候选图往往需要超过六次生成，技术上生成完成与可用于发布是不同验收节点；没有真实调用记录时保留预算而非伪造精确单价。"
+    },
+    {
+      "id": "economics",
+      "title": "用相同任务保留可替换的成本假设",
+      "source_ids": [
+        "Sa2x",
+        "Simages"
+      ],
+      "body": "统一示例是单品牌单月100条交易的管理分类账核对，加一个SKU六张候选商品图，不含报税、法定审计、真实入账或上架。自建辅助方案假设财务检查2小时、图片2小时、维护1小时、设置8小时分6月，共6.3333小时×25美元为158.33；再加助手订阅预算30、既有会计系统预算40、文本图片API预算12，共240.33美元。连接器辅助方案假设财务1.5小时、图片2小时、维护0.5小时、设置6小时分6月，共5小时人工125；加A2X Mini29、相同会计预算40、相同图片API预算12与助手预算30，共236。除A2X标价外均为假设，不宣称哪个必然便宜。Mini缺失的COGS或超范围交易需另计，不偷偷放进已覆盖任务；真实收入售价利润未知。 若已有会计订阅，可以另列增量现金，但两边必须用同一基线；若需要新购买，首期现金不得只写摊销金额。获客、税费、退款支持与实际对客安全评审未包含，因此这只是内部使用场景，不是假装完整服务利润表。"
+    },
+    {
+      "id": "distribution",
+      "title": "把交付拆成可以验收的小单元",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ],
+      "body": "可讨论的交付形式是品牌交易分类规则、月度差异清单、商品图应用设置或候选图审核，而不是用一个含糊的全自动经营包覆盖财务与营销。前者需要交易来源、品牌映射及跨期说明，后者需要真实照片、产品参数、可用卖点和风格选择。获客假设可以针对已明确存在重复工作的人，展示去敏前后流程与可核对样例，但本轮没有联系客户或发广告。即使同一店铺购买两项服务，也应分别约定输入、输出、修改范围与验收责任，不能把财务资料开放给图片流程的第三方工具。试用要先确定范围，不因会生成图就直接上架，也不因能写表就替人提交税表或更改真实账务。 初次客户还需要确认所用照片和产品卖点有使用依据，不能把一张生成图中的装饰或人物姿势当作真实产品属性。服务交付要保留不能确定的部分，而不是把原始信息缺口交给模型编造。"
+    },
+    {
+      "id": "moat",
+      "title": "余额桥与证据链比漂亮表格重要",
+      "source_ids": [
+        "Ssettle",
+        "Sledger"
+      ],
+      "body": "自包含核验应先统一币种、截止时间和平台余额范围。示意恒等式是期末平台总未结余额=期初总未结余额+本期计入平台的收入及其他入项−退款−平台扣费±已识别调整−本期平台转出；余额必须包含适用的储备与延期部分，释放只是子余额之间移动，不再算新增收入。银行侧另核：本期到账=本期平台转出+期初在途−期末在途，另将汇兑或银行扣费单独列出。此为核验框架，不是所有平台报表字段的直接公式，更不是利润或税基。未核映射、重复报表和负余额应列差异，不能强行调平。可积累的价值是正确规则、可追溯异常和重复运行去重，不是把数字放进表格就获得审计保证。 例如示意期初100、本期净增加800、转出700、期末200可以平衡，但仍须核800由哪些收入退款费用组成。如果其中50属于重复记录，算式表面平衡也不代表账务正确，去重与逐项凭证仍不可省略。"
+    },
+    {
+      "id": "execution",
+      "title": "目录隔离与只读权限不是一回事",
+      "source_ids": [
+        "Spermissions",
+        "Sbooks"
+      ],
+      "body": "Bash允许列表、提示词写“不要覆盖”和Git worktree都不能单独保证只读；命令规则、文件权限、外部接口权限与操作系统沙箱需要分别核实。作者真实流程能写QBO和Sheets，研究不能把它包装成只读。建议演练只提供去敏输入副本，输出到新目录，比较原文件哈希并列出变更，任何真实写账另获授权。本轮不创建服务账号、密钥或新访问，不读私密账单，不照作者文章执行认证步骤。财务权限与图像API分开配置，秘密不进仓库或提示词日志。CSV只是格式，其是否充分保留凭证取决于业务和适用要求；不能仅因表格就判不合规，也不能反过来保证足以满足审计。 只读测试也应检查输出有没有意外复制敏感字段。去敏不只是删姓名，还要考虑账户标识、供应商合同和交易描述等组合能否重新识别主体。研究报告只需要流程与合成例子，不需要保存真实财务通信或凭据。"
+    },
+    {
+      "id": "feedback",
+      "title": "把改图返工与账务维护算进去",
+      "source_ids": [
+        "Simages",
+        "Sg2",
+        "Sphoto"
+      ],
+      "body": "作者商品图文章既有满意结果，也承认初期模型名称错误、素材重复和风格细节需重生成；没有公开本案转化提升A/B数据，不能把以前人类设计师的收益套到AI图上。相邻G2用户Zakhar I肯定分类同步同时认为需要跟随新分类维护，Kira V认为设置映射有难度；历史用户体验不能代表当前所有版本。商品图讨论里有人只用AI改背景或修光，也有付费外包多轮返工后弃用的自述，发帖者在推销自家额度，商业偏向须保留。样本不够计算平均返工率，但足以提醒成本模型不能只有生成费用。没有本案独立长期复用记录，保持作者自报与相邻反馈不同等级，不用评论数推销量。"
+    },
+    {
+      "id": "decision",
+      "title": "先验证两条独立流程，再扩大权限",
+      "source_ids": [
+        "Sledger",
+        "Simages",
+        "Spermissions"
+      ],
+      "body": "可受控试点，财务先输出可回溯的归类和差异表，图片先输出真实产品一致的候选图，两条分别验收。作者本人少花时间的经验值得保留，但其业务知识、既有接口和持续提供背景是前提。试点若发现无法解释的余额、误分品牌、重复交易、产品形状标签错误或无依据卖点，应停止相应输出进入正式系统。图片质量和转化未知时不能承诺提高利润，财务表一致也不能承诺无错误。下一步可准备跨月结算、退款、相同金额多笔、不同币种和产品细节的虚构样例，对照预期结果检查。四周200美元不是用户门槛；不因模型金额略超假设就判失败，也不靠删掉人工成本强行使其可行。 样例验收不要求真实第三方账号或商业经营即可开始，重点是边界和错误是否会被正确指出。只有在用户理解需要的访问与动作后，才讨论接入实际系统；本轮仍仅做研究与记录，没有实施那些权限变化。"
+    }
+  ],
+  "score_status": "not_assessed",
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "有作者有限正面自述但缺独立净收益与付费数据，不据假设成本形成确定评分。",
+      "source_ids": [
+        "Sledger",
+        "Simages"
+      ]
+    }
+  },
+  "unit_economics": [
+    {
+      "scenario": "自建辅助",
+      "unit": "100条管理账核对+一SKU六张候选图/月",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 12,
+      "human_cost": 158.3333333333,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 1,
+      "fixed_monthly_cost": 70,
+      "assumptions": "(2+2+1+8/6)小时×25+70+12=240.33。 所有工时、助手30和会计40及图像文本API12都是预算假设，A2X29为当前标价；非真实账单，不含税务审计或实际入账发布，收入未知。",
+      "source_ids": [
+        "Sa2x",
+        "Simages"
+      ]
+    },
+    {
+      "scenario": "连接器辅助",
+      "unit": "100条管理账核对+一SKU六张候选图/月",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 12,
+      "human_cost": 125,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 1,
+      "fixed_monthly_cost": 99,
+      "assumptions": "(1.5+2+.5+6/6)小时×25+99+12=236；同范围，A2X缺失部分不声称已覆盖。 所有工时、助手30和会计40及图像文本API12都是预算假设，A2X29为当前标价；非真实账单，不含税务审计或实际入账发布，收入未知。",
+      "source_ids": [
+        "Sa2x",
+        "Simages"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "软件评价",
+        "query": "\"A2X\" \"used\" \"review\"",
+        "outcome": "Capterra正文失败，实际读取G2具名正反体验。"
+      },
+      {
+        "channel": "电商使用讨论",
+        "query": "\"AI product images\" \"experience\" \"Amazon\" review",
+        "outcome": "读取产品图讨论，保留局部使用与返工弃用及商业偏向。"
+      },
+      {
+        "channel": "工作流体验",
+        "query": "\"Claude Code\" \"bookkeeping\" \"experience\" -site:reddit.com",
+        "outcome": "补作者真实工作流，不把营销教程当独立复验。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sledger",
+        "directness": "direct_user",
+        "finding": "作者本人省时自报及实际步骤，未独立核账。",
+        "bias": "作者推广自身刊物，未获原始账务验证。"
+      },
+      {
+        "source_id": "Sg2",
+        "directness": "adjacent_workflow",
+        "finding": "用户肯定同步同时指出维护或映射负担。",
+        "bias": "历史版本、自选评价，不当当前总体故障率。"
+      },
+      {
+        "source_id": "Sphoto",
+        "directness": "adjacent_workflow",
+        "finding": "背景修光与外包返工弃用并存，不是本案图像模型复验。",
+        "bias": "发帖者推销额度，评论者身份和交易未独立核实。"
+      }
+    ]
+  },
+  "disconfirming_evidence": "作者自述省时不等转化收益；输出平衡不等分类正确；API可写不能称只读；图片与财务成本分开验收。",
+  "limitations": "未执行真实账务、凭据创建、交易或上架；官方产品照片页面两次临时失败，不据搜索摘要宣称已核全部图片规则。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/automate-amazon-brand-bookkeeping-and-product-images",
+    "observed_at": null,
+    "body_sha256": "312e614e5ada1e6f68be26678c5aa3c375ab6fe2c07a356d21b9f8f6ff894192",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "fc5ab08774a9517e8b1400771b363fc2ea11330025d74eb2e999bbb6bd569ce3",
+      "How it went": "b35ef4327fa68155cc6945ffbce78274d7cc9d0fa57c85fe932bfb10f351ea9d",
+      "Worth knowing": "ee1799390007d78d2fb2f1a9ffaadfc037ee4d885d19a04ca2235637d2877d6e"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T16:54:35Z",
+      "end": "2026-10-20T16:55:23Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I run an Amazon brand and keep my records in [folder path with exported sales reports, fee statements and receipts]. Read the files, categorize each transaction into bookkeeping categories, and produce a monthly profit and loss summary as a spreadsheet for [month]. Then, using the product photos in [image folder] and the key selling points I list here: [selling points], generate a set of listing image concepts or scripts for [product name]. You are done when the spreadsheet and the image set are saved in a new folder and you have listed any transactions you were unsure about. Do not delete or overwrite any of my original files.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/automate-amazon-brand-bookkeeping-and-product-images",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "06a043b425bb84bbf6910ac75771163c9a0bbf6078e5227dfb6c31626295b4e6",
+    "observation_window": {
+      "start": "2026-10-20T16:54:35Z",
+      "end": "2026-10-20T16:55:23Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "revenue_observation": {
+    "status": "unknown",
+    "amount": null
+  },
+  "archive_source_sha256": "312e614e5ada1e6f68be26678c5aa3c375ab6fe2c07a356d21b9f8f6ff894192",
+  "translation_sha256": "0c5550680a5eaba752a2f8c2a341ad9674930c20cb9d128a19909f3031e69200",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "熟悉自身业务且愿核对的人可探索辅助，不能直接替代全部责任。",
+    "audience": "有本人品牌财务和产品资料合法权限的经营者。",
+    "use": "管理分类账差异核对与商品图候选制作。",
+    "benefit": "作者报告减少本人输入时间；本轮未实测。",
+    "setup_cost": "映射规则、数据副本、隔离权限、产品素材与样例。",
+    "maintenance_cost": "交易类型变化、跨期、币种、图片重生成和人工复核。",
+    "frequency": "财务按月，图片按产品更新，不混为持续全天经营。",
+    "privacy_risk": "财务流水、客户或供应商信息及图像向第三方传递。",
+    "error_risk": "重复交易、错归属、余额时滞、产品失真和错误卖点。",
+    "source_ids": [
+      "Sledger",
+      "Simages",
+      "Spermissions"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板并非作者实际prompt；原文保留，不构成实际执行授权。",
+    "prerequisites": "去敏副本、品牌规则、期初期末数据和合法产品照片；真实写入另授权。",
+    "tools": "Claude Code；作者财务有QBO/Sheets/API，图片是本地app+Gemini/NanoBanana API，不混成单工具原生能力。",
+    "expected_result": "差异表和候选图构思，不是已报税、入账或上架。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/automate-amazon-brand-bookkeeping-and-product-images",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I run an Amazon brand and keep my records in [folder path with exported sales reports, fee statements and receipts]. Read the files, categorize each transaction into bookkeeping categories, and produce a monthly profit and loss summary as a spreadsheet for [month]. Then, using the product photos in [image folder] and the key selling points I list here: [selling points], generate a set of listing image concepts or scripts for [product name]. You are done when the spreadsheet and the image set are saved in a new folder and you have listed any transactions you were unsure about. Do not delete or overwrite any of my original files."
+      },
+      {
+        "title": "离线验收模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "仅分析去敏副本，建立品牌映射与余额桥，疑项不猜。图片仅给候选构思并注明待核产品细节。输出新目录，不覆盖原件，不登录或写入外部系统。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://aiblewmymind.substack.com/p/claude-code-subagents-explained",
+    "source_title": "原始教程中的Alex案例",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T17:00:18.838227+00:00",
+    "access_time_note": "Receipt compiled now; actual read bracket in evidence.",
+    "source_sha256": "55c2d71e77a80033e8c038e02ca22d155f3ac4ff8c58560f5d614e91fb1d6a79",
+    "steps": [
+      {
+        "en": "The tutorial identifies bookkeeping and listing images as uses of Claude Code.",
+        "zh": "教程列出Claude Code辅助记账和商品图两项用途。"
+      },
+      {
+        "en": "It directs readers to Alex Willen’s publication for the actual workflows.",
+        "zh": "具体流程需另读Alex Willen的刊物，原教程未展开。"
+      }
+    ]
+  }
+}

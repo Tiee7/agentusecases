@@ -1,0 +1,570 @@
+{
+  "schema_version": 2,
+  "analysis_depth": "deep",
+  "status": "completed",
+  "id": "hand-seo-tasks-to-a-chatgpt-agent",
+  "url": "https://agentusecases.ai/use-case/hand-seo-tasks-to-a-chatgpt-agent",
+  "title": "用ChatGPT智能体整理Yooda关键词与Ahrefs竞品资料",
+  "industry": "SEO研究与数据整理",
+  "researched_at": "2026-10-20T16:15:51.778918+00:00",
+  "confidence": "medium",
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "核对当前工具入口与同任务数据范围，再验证净人工收益",
+    "reason": "本案适合作为受控的数据整理思路参考，不宜直接包装成已验证的全自动SEO服务。原作者快速试验确有正面观察，也有接管、纠正和额度负担；没有同任务工时、精确错误率、支付或渠道证据，评分未评定而不是全部打低分填满。下一步应先核当前可用工具，再用同一三竞品样例分别比较提取与导出流程，记录来源一致性和净人工时间。本轮未执行该试验，也没有绕过任何站点限制。停止条件是无法得到获准数据、错误来源无法纠正、未经允许修改或外发以及维护负担超过用户批准范围。四周200美元不是准入门槛；准确修正数据和归属比维持旧结论重要。只有真实观察支持时，才更新净收益、报价和可复制商业判断。",
+    "next_action": "使用获准三竞品样例比较提取与导出，检查字段来源；不登录新账户或修改网站。",
+    "stop_condition": "获准数据不可得、错误不可纠正或未经允许的外发修改。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/hand-seo-tasks-to-a-chatgpt-agent",
+      "title": "许可目录当前正文",
+      "kind": "aggregator",
+      "status": "fetched",
+      "supports": "许可目录正文、原工具与Copy prompt完整保存；风险描述不升级成作者已见幻觉。日期与历史审查有差异，原文元数据保留不擅改。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:04:55Z",
+        "end": "2026-10-20T16:05:15Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 14224,
+      "sha256": "3f9b35ba37ab73aab997449be22389be775a2444c20587891ee524ef2dc6e2a9",
+      "hash_scope": "Captured main DOM",
+      "read_method": "permitted_own_cloud_browser_main_dom"
+    },
+    {
+      "id": "Soriginal",
+      "url": "https://www.reddit.com/r/SEO/comments/1mapuzl/i_might_have_found_a_nice_chatgpt_agent_use_case",
+      "title": "历史独立审查记录对应原帖",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "沿用2026-10-19独立审查：作者说当时未见幻觉，同时担忧潜在阻断后需核验；评论者不都使用过agent，CSV/API建议不构成零错误证明。当前只重读审查记录，不重新访问受限站点，不冒称live。",
+      "receipt_text": "沿用2026-10-19独立审查：作者说当时未见幻觉，同时担忧潜在阻断后需核验；评论者不都使用过agent，CSV/API建议不构成零错误证明。当前只重读审查记录，不重新访问受限站点，不冒称live。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-19T23:14:00Z",
+        "end": "2026-10-19T23:16:00Z",
+        "basis": "prior independent review documented approximate window"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 100,
+      "sha256": "6c28175684118a6c8724135e32d04dd79c4b50fb5e9299d256323e6fd969d620",
+      "hash_scope": "Researcher paraphrase of preserved prior review, not Reddit full text",
+      "read_method": "prior_independent_review_reused_and_locally_reread",
+      "historical_source": true,
+      "current_local_reviewed_at": "2026-10-20T16:05:38Z",
+      "not_a_fresh_external_fetch": true
+    },
+    {
+      "id": "Sprice",
+      "url": "https://ahrefs.com/pricing",
+      "title": "Ahrefs当前价格与配额",
+      "kind": "competitor",
+      "status": "fetched",
+      "supports": "Lite129美元/月、Standard249；Lite每月导出500000行、单报告2500行，API/MCP100行每请求，单位与限制不可混用；免费自有站不等三竞品。",
+      "receipt_text": "Lite129美元/月、Standard249；Lite每月导出500000行、单报告2500行，API/MCP100行每请求，单位与限制不可混用；免费自有站不等三竞品。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:05:39Z",
+        "end": "2026-10-20T16:06:06Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 85,
+      "sha256": "6b727eb7525012ce3e204ed9173ca2bddc53e23669681573c0494288dcc4e1cd",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sstarter",
+      "url": "https://help.ahrefs.com/en/articles/9419051-about-ahrefs-starter-plan",
+      "title": "Ahrefs Starter官方限制",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "2026-09-03说明Starter29美元、250行/报告、无导出；Lite129、500000导出行/月。",
+      "receipt_text": "2026-09-03说明Starter29美元、250行/报告、无导出；Lite129、500000导出行/月。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:05:39Z",
+        "end": "2026-10-20T16:06:06Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 56,
+      "sha256": "95c71262ce94a7b960c3ec6eda66c331082fd8316b413892bfae01bb31487d70",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sopenai",
+      "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "title": "ChatGPT agent官方帮助现状",
+      "kind": "primary",
+      "status": "fetched",
+      "supports": "页首明确agent已不再可用，指向Work与云浏览器；下方仍有旧/agent入口和40/400额度，内部未完全更新，不把旧字段当当前承诺。",
+      "receipt_text": "页首明确agent已不再可用，指向Work与云浏览器；下方仍有旧/agent入口和40/400额度，内部未完全更新，不把旧字段当当前承诺。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:05:39Z",
+        "end": "2026-10-20T16:06:18Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 69,
+      "sha256": "a9d8b3310e83e31d54c968d7452a492a52e342715fd69fc7ca82f8e88f3bc258",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sreview",
+      "url": "https://www.techradar.com/pro/ahrefs-brand-radar-review",
+      "title": "Pawan Singh Ahrefs Brand Radar评测",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "2026-10-19作者实际比较Saily及两竞品，数据需判断，估算曝光不等实际触达；页面披露affiliate。是相邻工具，不是原案复现。",
+      "receipt_text": "2026-10-19作者实际比较Saily及两竞品，数据需判断，估算曝光不等实际触达；页面披露affiliate。是相邻工具，不是原案复现。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:05:55Z",
+        "end": "2026-10-20T16:06:18Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 70,
+      "sha256": "eb160e9f0aa1d61dcd2f5eea26b3a21a09313cacf2f3202fc95a04f10cb1e0ab",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    },
+    {
+      "id": "Sforum",
+      "url": "https://forum.seocontentmachine.com/t/open-beta-the-seo-workspace-agent-workflow-i-wish-existed-so-im-building-it/1037",
+      "title": "SEO Content Machine开发者讨论",
+      "kind": "independent",
+      "status": "fetched",
+      "supports": "开发者Tim介绍自建SEO工作流；6月26日明确部分所谓用户验证用ChatGPT扮演，不是真实用户测试。商业关联明确，不能当独立买家证言。",
+      "receipt_text": "开发者Tim介绍自建SEO工作流；6月26日明确部分所谓用户验证用ChatGPT扮演，不是真实用户测试。商业关联明确，不能当独立买家证言。",
+      "observed_at": null,
+      "read_window": {
+        "start": "2026-10-20T16:05:55Z",
+        "end": "2026-10-20T16:06:18Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "receipt_created_at": "2026-10-20T16:15:51.778918+00:00",
+      "characters": 69,
+      "sha256": "470e9bafc1fdde74872e5701a55ae042801d28ebca145ba3f57f2bd20866f37d",
+      "hash_scope": "Source-specific researcher paraphrase, not full page text",
+      "read_method": "supported_public_web_tool"
+    }
+  ],
+  "facts": [
+    {
+      "type": "author_claim",
+      "statement": "目录转述作者快速测试Yooda与Ahrefs，仍需要人工登录、验证码与纠正。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "历史独立审查记录作者当时未观察到幻觉，同时认为潜在阻挡后需核验。",
+      "source_ids": [
+        "Soriginal"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "当前官方帮助页首称旧ChatGPT agent不再可用，下方旧说明未完全同步。",
+      "source_ids": [
+        "Sopenai"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Ahrefs Lite当前标价129美元/月，月导出500000行而非500行。",
+      "source_ids": [
+        "Sprice"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "Starter官方帮助列29美元且无导出，不能替代同范围CSV任务。",
+      "source_ids": [
+        "Sstarter"
+      ]
+    },
+    {
+      "type": "verified",
+      "statement": "API/MCP每请求行数与报告行数、月导出总量属于不同限制。",
+      "source_ids": [
+        "Sprice"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "TechRadar作者报告相邻Brand Radar竞品实测，并披露联盟佣金关系。",
+      "source_ids": [
+        "Sreview"
+      ]
+    },
+    {
+      "type": "author_claim",
+      "statement": "开发者Tim明确部分用户验证通过模型扮演完成，不是真实客户试用。",
+      "source_ids": [
+        "Sforum"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "customer",
+      "title": "关键词与竞品资料整理的具体需求",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ],
+      "body": "原案例是让浏览器agent操作Yooda和Ahrefs，整理关键词、竞品外链与建议。使用者需要的不是一个漂亮报告，而是能据此决定哪些页面值得改、依据在哪里，以及是否还需要购买或导出数据。历史独立审查记录显示作者计划面向本地小企业，但没有证据说明其动机是用Plus替代所有付费SEO工具，也没有已成交客户资料。因此不能把价格动机、买方预算和作者资历补进故事。潜在人群包括已有合法数据工具访问权的独立SEO顾问和小团队，是否需要浏览器代操作取决于重复查询量及接口可用性。没有数据订阅的人不能因为有聊天模型就获得相同竞品数据。需求验证应针对已有流程中的具体重复动作和审核负担，不以AI兴趣或论坛评论数量当付款意愿。 还要分清使用者与付款人：顾问可能已有工具席位，客户只购买建议；小企业自己使用则承担全部订阅和学习成本。不同购买关系不能直接套一个分摊数字。先明确报告会支持哪一项业务决定，能避免为没有用途的数据做自动化。"
+    },
+    {
+      "id": "workflow",
+      "title": "保留作者观察，纠正幻觉归因",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal",
+        "Sopenai"
+      ],
+      "body": "原文方法在历史独立审查中核对为关键词工具查询、区分长短尾、查看竞品反链、汇总报告，并需要人工接管登录和验证码。作者还报告理解指令需要多次纠正与Plus额度压力。这些可以作为作者自述；“阻断后会不会幻觉”是待检查风险，不能升级为已经编造数据，尤其审查记录还保留作者当时未观察到幻觉的相反信息。源目录今天的摘要和完整翻译保留，但分析明确其风险措辞不是新实测结论。当前官方帮助页首表示旧agent模式不再可用，虽然下方仍残留旧入口与额度，不能继续告诉读者照旧菜单操作就能复现。应把历史用法与当前可用工具分开，重新核实账户入口和能力，不把产品改版归为原作者任务失败。"
+    },
+    {
+      "id": "market",
+      "title": "交付价值在可执行依据，而非排名保证",
+      "source_ids": [
+        "Sprice",
+        "Sreview",
+        "Soriginal"
+      ],
+      "body": "已有SEO工具提供关键词、外链和竞品查询，说明数据整理有成熟市场；但这不证明客户需要另买浏览器agent报告。报告的商业价值可以是把可核对数据转为页面优先级和行动解释，是否愿意支付还需实际买方验证。竞品数据覆盖范围、采集时间、地区和指标定义影响结论，不能把工具返回值当全网绝对真相。TechRadar的相邻评测也区分估算曝光与真实触达，但这不是本案例的错误率测试。原交付无来源的30至50美元支付区间应删除，收入未知不等于市场没人付费。也不能承诺特定搜索排名或把一张报告直接当新增销售来源。较好的需求问题是用户是否能用报告决定一项具体改动、是否理解证据限制，而不是询问是否喜欢AI。 关键词排名、搜索量估计、反链数量与真实订单是不同指标。即使数据准确，内容实施、网站基础、竞争变化和客户服务仍会影响经营结果。研究交付只应承诺自己的资料范围和核对过程，不把外部排名变化当可控交付。"
+    },
+    {
+      "id": "competition",
+      "title": "相同三竞品与数据范围才能对照",
+      "source_ids": [
+        "Sprice",
+        "Sstarter",
+        "Sdirectory"
+      ],
+      "body": "建议比较同一目标站、三个竞品、同一地区与时间窗、最多300行资料、相同字段与审核要求。浏览器提取、CSV导出加模型分析、API或MCP获取都围绕这份任务，而不是一边查竞品、一边只用免费自有站数据。Ahrefs当前Lite为129美元/月，官方帮助列月导出500000行而不是500，Starter29美元却无导出；单报告行数和API每请求行数又是不同限制。CSV能减少页面点击，不保证来源数据和模型解释绝对正确；API也要处理缺失、分页、字段定义与配额。没有计时对照，不能写2分钟、3分钟或15分钟完成。Yooda本轮普通读取失败，历史19欧元不冒充现价；也不继续无来源列出其他产品价格。选择应看用户已有权限和数据范围，不因某一路径听起来更技术化就认定优胜。 还要核对导出是否包含所需字段，而不是只看总行数。三个竞品各100行与只导出一站300行不是同样的覆盖；去重后不足预定行数应标实际数量，不补造记录。"
+    },
+    {
+      "id": "economics",
+      "title": "统一月量和费用类别的敏感性模型",
+      "source_ids": [
+        "Sprice",
+        "Sstarter"
+      ],
+      "body": "两组情景统一为一份三竞品、最多300行的待审分析报告，每月8份，成本只是研究假设。使用129美元Lite作已核实数据订阅参照，另列20美元AI工具预算假设，并非当前ChatGPT套餐报价；Yooda实际费用未知未包含。低负荷每份分析复核1小时×25美元、月维护1小时×25分8、初设100美元分25份、15%返工0.5小时×25，人工合计34美元，月固定149分8为18.625，列示52.625美元/份。高负荷复核2小时×25、维护2小时×25分8、初设150分25、30%返工1小时×25，人工69.75；另假设额外调用4美元及获客15，固定同149分8，列示107.375美元/份。全部概率、工时和AI预算未观测，未列数据服务费与税费使其不是完整经营成本。售价收入利润保持未知，不用假设成本证明真实亏损。 预算还需分首次付款与长期摊销：八份报告只是月产量假设，少交几份会提高每份固定分摊。已有订阅用户可以另看边际现金，但不能用边际值作为新购买者最低投入；实际订阅与配额以购买前核对为准。"
+    },
+    {
+      "id": "distribution",
+      "title": "小范围样例与审核交付",
+      "source_ids": [
+        "Soriginal",
+        "Sforum"
+      ],
+      "body": "可探索的交付形式是一次有明确边界的竞品分析与可执行修改清单，随后才考虑持续复核。初始获客需要展示同一组数据怎样形成建议，哪些是事实、哪些是解释以及客户怎样复查，而不是许诺agent绕过工具订阅或全天无人看管。原帖的本地业务背景不等于作者讨论了GBP、NAP或评价管理，原交付这类错误归属应移除；若未来扩展Local SEO，另设任务和来源。开发者论坛的工作流演示可以说明有人尝试组织数据输入，但其模型扮演用户不能算真实销售验证。本研究没有对外联系或投放，不给未经验证的渠道转化率。潜在设置费和维护费需要对应可核对交付与维护责任，客户最终支付多少仍未知。"
+    },
+    {
+      "id": "moat",
+      "title": "规则、数据口径与审核能力比点击更重要",
+      "source_ids": [
+        "Sprice",
+        "Sstarter",
+        "Sforum"
+      ],
+      "body": "浏览器点击本身容易被现成导出或连接工具替代，可能留下的差异是行业关键词意图、数据口径说明、异常识别和与客户业务相关的建议。它们需要专业判断及长期案例才能证明有效，不能因为十几步自动化就宣称护城河，也不能因竞品存在就推导一定没有价值。复制到不同语言、地区或行业前，必须检查工具覆盖与搜索意图，法语工具使用经验不自然等同所有英语市场。结构化导出可以提升复查便利，但仍需要保留时间戳、过滤条件和字段解释。模板应固定输出与验收，不应强制不同客户得到同样策略。迁移、培训、权限、配额和平台改版都属于维护负担，尤其原案的旧agent入口已经变化，当前复现要重新确认执行能力而非机械照抄历史配置。 对重复使用的模板要保留版本和修订理由，避免平台字段变化后继续输出旧含义。客户更换目标地区或竞品时，应重新确认研究范围，不能把旧报告只替换公司名就当新交付。这样的维护责任比一次演示更接近真实服务成本。"
+    },
+    {
+      "id": "execution",
+      "title": "从可核对样例开始而不是绕过阻挡",
+      "source_ids": [
+        "Sopenai",
+        "Sdirectory",
+        "Sprice"
+      ],
+      "body": "试用准备应使用获准数据和预定答案：三个公开竞品、明确查询范围、保留原表字段及缺失值。输出每个结论对应的原记录和时间，找不到的数据写缺失，不用语言流畅掩盖抓取失败。源站登录、验证码或访问拒绝都按实际规定处理，不能预设Cloudflare或hCaptcha必然逐页出现，更不能无对应条款断言永久封号。没有理由配置所谓防封代理作为默认成本。只读任务不能擅自改客户网站或提交外部表单；数据上传需要相应授权，公开报告不保存客户凭据。验收应检查分页遗漏、单位误读、多个站点混合、引用错配和失败重试，不仅检查是否生成表格。API与CSV路径同样要抽查，权限确定不等于数据分析零错误。 可加入一条明显不存在的指标、一条日期过旧记录和两个同名不同域名，验证模型是否承认未知、保留历史日期并正确区分主体。应保存检查结果而不是反复修改输入直到得到漂亮摘要。"
+    },
+    {
+      "id": "feedback",
+      "title": "旁观意见、开发者演示和真实评测分开",
+      "source_ids": [
+        "Soriginal",
+        "Sreview",
+        "Sforum"
+      ],
+      "body": "历史审查恢复了被省略的限定：作者未见幻觉但想进一步核对，一位评论者反自动化观点带不确定语气，另一位明确尚未充分使用agent。不能将他们统一标为本方案使用者或专家共识。当前检索增加了专业评测和开发者社区两类渠道：Pawan Singh在10月19日描述Brand Radar竞品比较，页面披露联盟佣金，属于相邻工具实际体验而非Yooda浏览器流程复现；Tim的SEO工作区帖子属于自家产品开发记录，部分验证是模型角色扮演，不是用户实测。搜索未找到可独立核验的原流程长期复用与净收益资料，如实保留缺口。正反评价都要写清对象和版本，不把“有人建议导出”转换为导出已被测得绝对更快、更准确。"
+    },
+    {
+      "id": "decision",
+      "title": "保留历史方法，更新当前试用边界",
+      "source_ids": [
+        "Sdirectory",
+        "Sopenai",
+        "Sprice"
+      ],
+      "body": "本案适合作为受控的数据整理思路参考，不宜直接包装成已验证的全自动SEO服务。原作者快速试验确有正面观察，也有接管、纠正和额度负担；没有同任务工时、精确错误率、支付或渠道证据，评分未评定而不是全部打低分填满。下一步应先核当前可用工具，再用同一三竞品样例分别比较提取与导出流程，记录来源一致性和净人工时间。本轮未执行该试验，也没有绕过任何站点限制。停止条件是无法得到获准数据、错误来源无法纠正、未经允许修改或外发以及维护负担超过用户批准范围。四周200美元不是准入门槛；准确修正数据和归属比维持旧结论重要。只有真实观察支持时，才更新净收益、报价和可复制商业判断。"
+    }
+  ],
+  "score_status": "not_assessed",
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "缺少独立复现、同任务工时及买方付款证据；不将担忧当失败或用低分填补未知。",
+      "source_ids": [
+        "Sdirectory",
+        "Soriginal"
+      ]
+    }
+  },
+  "unit_economics": [
+    {
+      "scenario": "低复核负荷",
+      "unit": "三竞品最多300行待审分析报告/份；每月8份",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0,
+      "human_cost": 34,
+      "other_variable_cost": 0,
+      "acquisition_cost": 0,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 149,
+      "assumptions": "1h×25+1h×25/8+100/25+15%×0.5h×25=34；加149/8=52.625。 固定149=已核Ahrefs Lite129+AI工具预算假设20（非当前套餐报价）。不含未知Yooda/税费，不是完整成本；概率工时未实测，收入利润未知。",
+      "source_ids": [
+        "Sprice",
+        "Sstarter"
+      ]
+    },
+    {
+      "scenario": "高复核负荷",
+      "unit": "三竞品最多300行待审分析报告/份；每月8份",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 4,
+      "human_cost": 69.75,
+      "other_variable_cost": 0,
+      "acquisition_cost": 15,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 149,
+      "assumptions": "2h×25+2h×25/8+150/25+30%×1h×25=69.75；加4+15+149/8=107.375。 固定149=已核Ahrefs Lite129+AI工具预算假设20（非当前套餐报价）。不含未知Yooda/税费，不是完整成本；概率工时未实测，收入利润未知。",
+      "source_ids": [
+        "Sprice",
+        "Sstarter"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "专业实测文章",
+        "query": "ChatGPT agent SEO hands on review Ahrefs Yooda -site:reddit.com",
+        "outcome": "读取TechRadar相邻Brand Radar实际体验，商业关系注明。"
+      },
+      {
+        "channel": "营销使用报告",
+        "query": "ChatGPT agent marketing tested five tasks SE Ranking",
+        "outcome": "没有取得对应原流程复验，未当本案成功率。"
+      },
+      {
+        "channel": "开发者社区",
+        "query": "ChatGPT agent SEO experience export data community -site:reddit.com",
+        "outcome": "读取SCM开发者讨论，模型扮演不计真实用户验证。"
+      }
+    ],
+    "observations": [
+      {
+        "source_id": "Sreview",
+        "directness": "adjacent_workflow",
+        "finding": "作者实际比较Brand Radar，但需人工判断且估算曝光不等实际触达。",
+        "bias": "联盟佣金披露、不同产品与任务。"
+      },
+      {
+        "source_id": "Sforum",
+        "directness": "adjacent_workflow",
+        "finding": "开发者报告工具流程，明确部分验证用模型扮演用户。",
+        "bias": "自家商业产品，非独立买家评价。"
+      }
+    ]
+  },
+  "disconfirming_evidence": "原作者未见幻觉的相反证据恢复；接管和纠正不证明全部失败，CSV/API不保证零错误，未发现同流程独立复验。",
+  "limitations": "Reddit沿用2026-10-19有记录独立审查，不冒称本轮live；Yooda当前页Internal Error，现价未知。未实测、付款或变更客户站点。官方旧agent帮助有自相矛盾残留。",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/hand-seo-tasks-to-a-chatgpt-agent",
+    "observed_at": null,
+    "body_sha256": "5fd32cfc79815baeebd4454aba4abce32cd6584553ab3061086e3278f82f4654",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "cd573a93b481bf5214874b735eeb43b8dcb1388146067fd7bd9aea9ee2a74a3b",
+      "How it went": "2d0fa77d988608ec8d3b8d2515cc5ff9bb5b1d58b01f6938aef8ba893c054245",
+      "Worth knowing": "66869de3cb95b51ae563c0d53e212c4a518c7cabcfb3116e06acc7d507d39a28"
+    },
+    "actual_agents": [
+      "ChatGPT Agent"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T16:04:55Z",
+      "end": "2026-10-20T16:05:15Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Help me with SEO for [website URL] in the niche of [topic]. Research the top [number] competitors for the keyword [target keyword], summarize their page structure, title tags and content gaps, and suggest [number] pages or updates I should make. If a tool needs my login, stop and let me take over the browser, then continue afterward. You are done when I have a prioritized action list in a table, and do not change anything on my site or submit any forms without asking me first.",
+    "agent": "ChatGPT Agent",
+    "source_url": "https://agentusecases.ai/use-case/hand-seo-tasks-to-a-chatgpt-agent",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "3f9b35ba37ab73aab997449be22389be775a2444c20587891ee524ef2dc6e2a9",
+    "observation_window": {
+      "start": "2026-10-20T16:04:55Z",
+      "end": "2026-10-20T16:05:15Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "revenue_observation": {
+    "status": "unknown",
+    "amount": null
+  },
+  "archive_source_sha256": "5fd32cfc79815baeebd4454aba4abce32cd6584553ab3061086e3278f82f4654",
+  "translation_sha256": "30333bb978b80d51e2298f4264d3b3a869f000f5926d64ab3094d218f4c46705",
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "历史任务有用法线索，当前入口变化和净工时尚未验证。",
+    "audience": "已有合法SEO数据权限并能复核的个人或团队。",
+    "use": "整理关键词、竞品数据和待审行动建议。",
+    "benefit": "可能少做重复整理，无实测节省分钟数。",
+    "setup_cost": "当前工具可用性、数据权限、字段与验收样例核对。",
+    "maintenance_cost": "工具改版、配额、导出格式和错误复核。",
+    "frequency": "原案快速试验，长期频率未明确。",
+    "privacy_risk": "客户策略和工具账户进入执行环境，需限定数据。",
+    "error_risk": "错读指标、漏分页、混域名、旧数据当新与无来源建议。",
+    "source_ids": [
+      "Sdirectory",
+      "Sopenai"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板并非作者实际prompt；原文保留，不构成实际执行授权。",
+    "prerequisites": "合法三竞品样例和字段定义，当前可用工具确认，先离线核对。",
+    "tools": "历史原案ChatGPT Agent、Yooda、Ahrefs；当前入口与订阅需另核。",
+    "expected_result": "可追溯数据表和待审优先级，未实际执行或保证排名。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/hand-seo-tasks-to-a-chatgpt-agent",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Help me with SEO for [website URL] in the niche of [topic]. Research the top [number] competitors for the keyword [target keyword], summarize their page structure, title tags and content gaps, and suggest [number] pages or updates I should make. If a tool needs my login, stop and let me take over the browser, then continue afterward. You are done when I have a prioritized action list in a table, and do not change anything on my site or submit any forms without asking me first."
+      },
+      {
+        "title": "离线验收模板",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只分析我提供的获准三竞品样例，保留字段名、日期、原链接和缺失值，区分数据与建议，不猜指标，不改网站或提交表单。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/SEO/comments/1mapuzl/i_might_have_found_a_nice_chatgpt_agent_use_case",
+    "source_title": "历史独立审查记录对应原帖",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T16:15:51.778918+00:00",
+    "access_time_note": "Receipt compiled now; actual read bracket in evidence.",
+    "source_sha256": "6c28175684118a6c8724135e32d04dd79c4b50fb5e9299d256323e6fd969d620",
+    "steps": [
+      {
+        "en": "The directory describes keyword research in Yooda followed by competitor backlink checks in Ahrefs.",
+        "zh": "目录描述先在Yooda研究关键词，再在Ahrefs检查竞品反链。"
+      },
+      {
+        "en": "Manual access and corrections remained necessary in the reported quick test.",
+        "zh": "据报告的快速测试仍需要人工访问和纠正。"
+      },
+      {
+        "en": "A preserved prior review distinguishes possible hallucination concerns from the author’s observation of none so far.",
+        "zh": "保留的历史独立审查区分潜在幻觉担忧与作者当时尚未观察到幻觉。"
+      }
+    ]
+  }
+}
