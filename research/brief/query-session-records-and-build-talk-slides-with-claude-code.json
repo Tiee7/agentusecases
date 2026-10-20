@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "query-session-records-and-build-talk-slides-with-claude-code",
+  "url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+  "title": "用Claude Code查询会话统计并制作演讲幻灯片",
+  "industry": "工作复盘与演讲制作",
+  "researched_at": "2026-10-20T05:15:27.485521+00:00",
+  "brief_reason": "有作者公开产物，缺底层数据复核、净省时和独立商业客户证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先核统计口径，再形成演讲叙事",
+    "reason": "可浏览产物已验证，价值与成本没有对照测量。",
+    "next_action": "用虚构会话表演练去重、时区和只读输出。",
+    "stop_condition": "查询不可复现、修改输入或导出敏感会话。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:15:27.485521+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:12:07Z",
+        "end": "2026-10-20T05:12:12Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1673,
+      "sha256": "aa611d2d9c6e13581face9316f5545f9bcd8551265c0e95d31f7dffcdf1b4427",
+      "hash_scope": "Existing licensed archive body; visible text checked",
+      "receipt_text": null,
+      "supports": "自定义SQLite记录器是前置；统计、幻灯片、转录和摘要的链路来自作者转述，历史API等价费用不是本轮账单。"
+    },
+    {
+      "id": "Sslides",
+      "url": "https://www.geoffreychallen.com/talks/2026-01-15-illinois-faculty-retreat-day-of-claude/slides.html",
+      "title": "作者公开演讲幻灯片",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:15:27.485521+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:12:25Z",
+        "end": "2026-10-20T05:12:50Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "public_web_and_own_cloud_browser",
+      "characters": 117,
+      "sha256": "f894609fb286ea91f67d53759550012bc9bf07bb9d314c999e14d051860f09b3",
+      "hash_scope": "Researcher summary below, not original HTML or full talk",
+      "receipt_text": "作者2026-01-15公开幻灯片：前一天903提示、17小时、63提交，16266新增及5801删除；两个项目分别26和37提交。公开HTML首页及下一页实际可浏览。底层记录未核，公开实物不等于指标独立审计；不复制其会话或学生引文。",
+      "supports": "作者2026-01-15公开幻灯片：前一天903提示、17小时、63提交，16266新增及5801删除；两个项目分别26和37提交。公开HTML首页及下一页实际可浏览。底层记录未核，公开实物不等于指标独立审计；不复制其会话或学生引文。"
+    },
+    {
+      "id": "Ssqlite",
+      "url": "https://sqlite.org/uri.html",
+      "title": "SQLite URI只读说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:15:27.485521+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:12:25Z",
+        "end": "2026-10-20T05:13:01Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 53,
+      "sha256": "992bc32a5c69f4ddfd54161d9b10a01c72faf955714ef27190b408e6643eddbb",
+      "hash_scope": "Researcher summary below, not original HTML or full talk",
+      "receipt_text": "支持URI的连接可用mode=ro打开只读；immutable会跳过锁与变更检查，不能用于仍在变化的文件。",
+      "supports": "支持URI的连接可用mode=ro打开只读；immutable会跳过锁与变更检查，不能用于仍在变化的文件。"
+    },
+    {
+      "id": "Sreveal",
+      "url": "https://revealjs.com/installation/",
+      "title": "reveal.js安装与运行方式",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T05:15:27.485521+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:12:25Z",
+        "end": "2026-10-20T05:13:01Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 52,
+      "sha256": "b2e26b52e9ef7a6c17a7651cfd4f09bc66dac3f8bfb755dc4577e09b90d3c0fa",
+      "hash_scope": "Researcher summary below, not original HTML or full talk",
+      "receipt_text": "基础方案可浏览器打开，无需构建；外部Markdown等功能需要服务器，HTML文件不自动等于离线自包含。",
+      "supports": "基础方案可浏览器打开，无需构建；外部Markdown等功能需要服务器，HTML文件不自动等于离线自包含。"
+    },
+    {
+      "id": "Sarticle",
+      "url": "https://www.geoffreychallen.com/talks/2026-01-15-a-day-with-claude-using-and-teaching-coding-agents",
+      "title": "作者演讲摘要的检索版本",
+      "kind": "primary",
+      "status": "search_index_only",
+      "supports": "成功搜索返回摘要正文；未另行打开该www规范页。非www变体普通读取失败两次后停止，不将检索副本记为现场完整读取。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者公开HTML封面及下一页可浏览。",
+      "type": "verified",
+      "source_ids": [
+        "Sslides"
+      ]
+    },
+    {
+      "statement": "903提示、17小时、63提交等是作者自报。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sslides"
+      ]
+    },
+    {
+      "statement": "自定义记录器是目录说明的前置。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "SQLite支持只读URI模式，immutable有不同前提。",
+      "type": "verified",
+      "source_ids": [
+        "Ssqlite"
+      ]
+    },
+    {
+      "statement": "reveal.js基础方式可直接浏览，部分功能需要服务器。",
+      "type": "verified",
+      "source_ids": [
+        "Sreveal"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "status",
+      "title": "公开幻灯片可见，底层数字仍属作者报告",
+      "source_ids": [
+        "Sdirectory",
+        "Sslides"
+      ],
+      "body": "作者公开HTML实物已读取，并在云浏览器打开封面及下一页。它支持确有可浏览演讲产物；底层SQLite、日志与Git提交没有独立审计。903提示、63提交和新增行数不能换算为完成业务价值、节省工时或教学效果。未描述幻灯片制作失败也不意味着全流程零失败。"
+    },
+    {
+      "id": "demand",
+      "title": "把散落工作证据转为可讲述材料",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "推断需求是教师或工程负责人在准备汇报时，不想凭记忆整理一段工作的过程。记录器先积累结构化数据，agent再做查询与叙事，价值在于可追溯的统计和可理解的时间线。没有历史记录的用户无法仅用一句提示复现，应先明确数据是否存在、覆盖哪些项目与时间。"
+    },
+    {
+      "id": "metrics",
+      "title": "统计口径比数字大小重要",
+      "source_ids": [
+        "Sdirectory",
+        "Sslides"
+      ],
+      "body": "拟议复现必须定义日期边界、时区、会话去重、合并提交、生成文件与删除行的口径。17小时是报告中的时间范围，不自动代表连续有效劳动；新增行数也可能包含重复或生成内容。作者两项目26加37等于63，只是内部算术一致，不能代替逐条核验。最好给每项数字附查询方法与异常处理说明。"
+    },
+    {
+      "id": "pipeline",
+      "title": "数据库分析、幻灯片与练习转录分开验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录所述原始agent是Claude Code，前置是Claude Recorder/SQLite，输出用reveal.js，练习录音用WhisperX。应分别检查聚合数字、图表叙事、页面呈现与转录校对。能生成HTML并不说明每个图准确，转录顺畅也不证明讲话内容正确。本轮没有使用WhisperX、读取录音或重建原作者系统。"
+    },
+    {
+      "id": "readonly",
+      "title": "用实际只读边界保护数据",
+      "source_ids": [
+        "Ssqlite",
+        "Sdirectory"
+      ],
+      "body": "原模板明确不要修改数据库。SQLite提供只读连接方式，但仍要确认连接实现识别URI参数；只在提示词里写只读不是完整控制。若数据持续变化，不能把immutable当通用加速开关。拟议流程只使用用户提供且获准的稳定脱敏副本，限制查询与导出；本轮不读取任何私人会话数据库或受限日志目录。"
+    },
+    {
+      "id": "delivery",
+      "title": "演讲文件需要浏览与脱网条件说明",
+      "source_ids": [
+        "Sreveal",
+        "Sslides"
+      ],
+      "body": "作者实物是公开网页，可浏览的事实已经验证，所有依赖是否完全内嵌和离线可用没有独立测试。交付时应说明所需浏览器、字体与资源、打印或PDF替代、时间线标签与无障碍阅读方式。reveal.js基础文件可直接打开，但外部Markdown等功能可能需要服务，不能把一种部署方式概括为所有演讲文件都通用。"
+    },
+    {
+      "id": "revenue",
+      "title": "收费候选是证据整理与汇报质量",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可以假设为已有日志的团队提供周期汇报或定制演讲制作，按数据接入、统计核验和制作范围收费。但本案是教师自用，没有外部客户、订单或付费意愿。若只提供漂亮模板，已有办公工具与人工导出是替代；若卖可靠证据链，需要更严格的权限、查询审计与人工签核，本案未证明商业交付成熟。"
+    },
+    {
+      "id": "cost",
+      "title": "历史API等价数不能当现金节省",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "约1,000美元是那天用量的API等价估算，200美元是当时作者月订阅陈述，不是本轮核验的当前报价或真实日成本。不能直接相减得出一天省800美元，也不能按月无限外推。实际成本还包括记录器开发、存储、资料脱敏、查询复核、演讲修订与转录；当前套餐、用量限制和净省时均未知。"
+    },
+    {
+      "id": "personal",
+      "title": "适用人群、维护与隐私单列",
+      "source_ids": [
+        "Sdirectory",
+        "Ssqlite"
+      ],
+      "body": "适合已经有可授权工作记录、需定期复盘或演讲的人。实际收益仅确认作者产物存在，节省未测量。设置需要字段字典、时间范围、统计规则和脱敏；维护要跟进记录器版本、缺失会话及异常值。频率可按演讲或复盘周期。会话可能含私人通信、学生资料和凭据，不能把全部原文导入公开幻灯片；错误汇总也可能误导评价个人工作。"
+    },
+    {
+      "id": "next",
+      "title": "用合成会话表验证计数与页面",
+      "source_ids": [
+        "Ssqlite",
+        "Sreveal"
+      ],
+      "body": "拟议演练只使用虚构的少量会话和提交记录，刻意加入重复提交、跨午夜及缺字段。预期得到查询口径、去重结果和简单时间线，并验证输入未被改写。此演练尚未执行，当前只核对作者公开产物。若合成数据尚算不准或输出暴露不需展示字段，应先修统计与导出规则，而不是接真实私人日志。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "aa611d2d9c6e13581face9316f5545f9bcd8551265c0e95d31f7dffcdf1b4427",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "db9afa00d771f093c6880886ad9453f058bb6e9aa2bb8cbc82c0a84a133a1ea5",
+      "How it went": "aa59631c3d0b1ca0fde48d4a4af21438202eb069faa69981e9743ef88bdf2fbf",
+      "Worth knowing": "8e5c18c5fd3cb516a809cf2152de62a0d8f80b9426a51d992734fcc14fd0101d"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I have a database of recorded work sessions at [path to database]. Explore its structure, then answer these questions: [e.g. commit counts per week, a timeline of the project, the biggest changes]. Then build a slide deck for a [length]-minute talk to [audience] on [topic] using those findings. You're done when I have the numbers with a note on how you computed them, plus a slide file I can open. Don't modify the database.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+    "observed_at": "2026-10-19T07:18:17.715830+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "28161ca6c3a2b20c616bb755e4c2c2198ac63eb9fe8f72757e9901afe4d24ffc"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.geoffreychallen.com/talks/2026-01-15-illinois-faculty-retreat-day-of-claude/slides.html",
+    "source_title": "A Day With Claude: Using and Teaching Coding Agents",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T05:15:27.485521+00:00",
+    "source_sha256": "f894609fb286ea91f67d53759550012bc9bf07bb9d314c999e14d051860f09b3",
+    "steps": [
+      {
+        "en": "The author presents self-recorded work statistics and project timelines in a public HTML slide deck.",
+        "zh": "作者在公开HTML演讲中展示自录工作统计和项目时间线。"
+      },
+      {
+        "en": "The artifact is observable, while underlying records and causal productivity gains were not independently checked.",
+        "zh": "演讲实物可见，底层记录与生产率提升因果尚未独立核验。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "能把已有工作记录整理成材料，但净省时未测。",
+    "audience": "已有可授权记录的教师、开发者与汇报者。",
+    "use": "可追溯统计、时间线和演讲草稿。",
+    "benefit": "确认公开产物，无对照效率或业务收益。",
+    "setup_cost": "记录器、字段字典、统计范围与脱敏。",
+    "maintenance_cost": "数据覆盖、版本、去重和口径复核。",
+    "frequency": "按复盘或演讲周期。",
+    "privacy_risk": "会话中的私人通信、学生信息、凭据及内部细节。",
+    "error_risk": "时区和重复计数、指标误读、错图表及泄露。",
+    "source_ids": [
+      "Sdirectory",
+      "Ssqlite"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板保留，实际研究不读取私人数据库。",
+    "prerequisites": "虚构会话及提交小表、预期计数和时间口径。",
+    "tools": "只读数据处理与HTML阅读；不访问私人会话。",
+    "expected_result": "可复核聚合与时间线，输入不变；合成演练未运行。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/query-session-records-and-build-talk-slides-with-claude-code",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "I have a database of recorded work sessions at [path to database]. Explore its structure, then answer these questions: [e.g. commit counts per week, a timeline of the project, the biggest changes]. Then build a slide deck for a [length]-minute talk to [audience] on [topic] using those findings. You're done when I have the numbers with a note on how you computed them, plus a slide file I can open. Don't modify the database."
+      },
+      {
+        "title": "合成工作记录演练",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Ssqlite",
+          "Sreveal"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只使用提供的虚构会话和提交表，明确日期时区，去除重复，列出缺失项和计算方法，输出简单演讲时间线。不要修改输入、读取其他会话目录或包含个人通信。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "作者摘要与幻灯片同一来源；未核独立客户或听众效果。"
+  },
+  "disconfirming_evidence": "依赖前置记录器；工作量指标不是业务效果；历史费用对比不是实际现金节省。",
+  "limitations": "未访问底层SQLite、私人日志、练习录音；未复算全部作者数字或测试离线资源；未运行记录器和转录程序。",
+  "archive_source_sha256": "aa611d2d9c6e13581face9316f5545f9bcd8551265c0e95d31f7dffcdf1b4427",
+  "translation_sha256": "7c166b90d4dc95dee110ee52701f47560574cb6952b94b038edbaea50a4ea596"
+}
