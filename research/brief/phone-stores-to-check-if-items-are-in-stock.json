@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "phone-stores-to-check-if-items-are-in-stock",
+  "url": "https://agentusecases.ai/use-case/phone-stores-to-check-if-items-are-in-stock",
+  "title": "用Manus查询附近商店的商品库存",
+  "industry": "购物与库存核对",
+  "researched_at": "2026-10-20T18:22:47.680849+00:00",
+  "brief_reason": "原作者失败自述可读，但缺商品/门店/会话/工具调用与时点证据，无法还原真实拨号实现或复现库存结果；有依据分析流程边界和替代，不冒充完整实现研究。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先核工具能力与来源可靠性",
+    "headline": "库存答复必须有方法和时间，不把猜测当确认",
+    "reason": "失败自述支持明确风险，不能估总体成功率；免费替代有边界，尚无独立收费证据。",
+    "next_action": "用虚构门店资料验证来源/型号/时效分类；真实联系另获授权。",
+    "stop_condition": "没有可靠来源仍肯定报有货，或未获准拨号、录音、预留、购买。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/phone-stores-to-check-if-items-are-in-stock",
+      "title": "许可目录：电话询问库存案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:19:10Z",
+        "end": "2026-10-20T18:19:30Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 13609,
+      "sha256": "a8842fdf6f1a1d24a779cf6071cfa61342b112330d9ca9ed5acedd453b1bdbfa",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "目录完整原文、实际Manus与编辑试用模板；一次个人失败经历不是总体成功率。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/ManusOfficial/comments/1q6cjfc/good_manus_ai_use_cases_not_covered_by_chatgpt",
+      "title": "nimjay：Manus免费档三项任务体验",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:19:30Z",
+        "end": "2026-10-20T18:19:49Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:22:47.680849+00:00",
+      "receipt_text": "作者nimjay自述取消预约未拨号、在线预约遇验证码且耗时超过十分钟、查库存误报有货且未拨号；明确Manus Lite/free。作者也说为库存特地打电话可能过度，因此不能把未拨号本身等同所有失败。无商店、商品、会话或通话证据。其他评论的YouTube采集月花费不属于本案。",
+      "characters": 137,
+      "sha256": "e032a37bc314d21384a5a62682d3e73ebe34baab5bbd6fcd2fbbfcea604434ef",
+      "hash_scope": "Researcher summary of read source, not full external text",
+      "supports": "作者nimjay自述取消预约未拨号、在线预约遇验证码且耗时超过十分钟、查库存误报有货且未拨号；明确Manus Lite/free。作者也说为库存特地打电话可能过度，因此不能把未拨号本身等同所有失败。无商店、商品、会话或通话证据。其他评论的YouTube采集月花费不属于本案。"
+    },
+    {
+      "id": "Sgoogle",
+      "url": "https://support.google.com/googleshopping/answer/16742225?hl=en",
+      "title": "Google：让Google致电附近商店",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:19:30Z",
+        "end": "2026-10-20T18:19:39Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:22:47.680849+00:00",
+      "receipt_text": "官方库存电话功能支持美国已登录用户英文查询，排除IN/LA/MN/MT/NE；多数服装及食品不支持，不能加自定义问题。结果包含电话和在线库存，需区分来源；没有据此推断为用户保留商品。",
+      "characters": 91,
+      "sha256": "6decf6164b5b8792064aa4c5bd0a818f4f643326049c310f6b40b1eb0c4cec6f",
+      "hash_scope": "Researcher summary of read source, not full external text",
+      "supports": "官方库存电话功能支持美国已登录用户英文查询，排除IN/LA/MN/MT/NE；多数服装及食品不支持，不能加自定义问题。结果包含电话和在线库存，需区分来源；没有据此推断为用户保留商品。"
+    },
+    {
+      "id": "Sbusiness",
+      "url": "https://support.google.com/business/answer/7690269?hl=en",
+      "title": "Google：面向商家的自动电话说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:19:30Z",
+        "end": "2026-10-20T18:19:39Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:22:47.680849+00:00",
+      "receipt_text": "代客户查询可免费使用；电话受质量监控和录音，商家可以退出，地区/语言与频次有限，避免深夜清晨拨打。官方称有已提供的商品数据时可直接使用而不再电话询问。",
+      "characters": 75,
+      "sha256": "e99ccfcf922c328c0bd59f343bb1a2aa59ae752906e0958d5b4982a53eed6b6c",
+      "hash_scope": "Researcher summary of read source, not full external text",
+      "supports": "代客户查询可免费使用；电话受质量监控和录音，商家可以退出，地区/语言与频次有限，避免深夜清晨拨打。官方称有已提供的商品数据时可直接使用而不再电话询问。"
+    },
+    {
+      "id": "Sinventory",
+      "url": "https://support.google.com/business/answer/13738543?hl=en",
+      "title": "Google：库存状态如何判断",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:19:30Z",
+        "end": "2026-10-20T18:19:39Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:22:47.680849+00:00",
+      "receipt_text": "Local Inventory原Pointy：库存状态可按扫描和销售规律推断，低频商品可显示可用性未知；更长使用时间、更多扫描、POS和库存数量可改善准确度，不等于逐件现场核实或保留库存。",
+      "characters": 94,
+      "sha256": "8259c39d12109c15699ec4111c6673a3f010fa682d8813691f4f596c0f77b6c2",
+      "hash_scope": "Researcher summary of read source, not full external text",
+      "supports": "Local Inventory原Pointy：库存状态可按扫描和销售规律推断，低频商品可显示可用性未知；更长使用时间、更多扫描、POS和库存数量可改善准确度，不等于逐件现场核实或保留库存。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者明确使用Manus Lite免费档，报告错误有货信息与没有拨号。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者承认查库存特地打电话可能过度，故不应将未拨号与库存错误混为同一失败。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Google官方提供有地区/类别限制的库存电话查询，结果可能同时使用线上库存。",
+      "type": "verified",
+      "source_ids": [
+        "Sgoogle",
+        "Sbusiness"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "错误库存与没有打电话分别看",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "原帖可读，作者描述的是一次免费档使用经历，不是我们实测。核心反证是有货答复与作者核实不一致；作者自己也承认为库存特地打电话可能过度，所以只要可靠线上来源已满足需求，不拨号不必然代表失败。真正问题在于没有解释实际查证方法，却给出不可靠库存结论。缺商品、门店、查询时点和会话记录，无法复现原因或统计失败率。"
+    },
+    {
+      "id": "capability",
+      "title": "历史经历不能替代当前能力核查",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "目录标2026年1月16日，原帖本次显示相对时间，未独立确定精确发帖日。作者明确用Manus Lite免费档，不能推广到全部版本、付费方案或今天的接入。针对官方域名检索未取得足以确认当前原生拨号能力的文档，这是本轮资料缺口，不是“不支持电话”的证明。第三方连接器宣传也不能当作Manus官方已验证能力。"
+    },
+    {
+      "id": "workflow",
+      "title": "交付要保留方法、时间与商品身份",
+      "source_ids": [
+        "Sauthor",
+        "Sinventory"
+      ],
+      "body": "拟议输出先固定门店地址、精确型号/规格/尺码、数量和查询时间，再分别标注门店人员答复、官方库存页面、聚合库存或未确认。官网列出商品不等于该分店现货；确认时有货也不保证到店时仍在。Google库存说明显示某些状态由销售扫描规律推断，提示不能把所有“有货”标签当逐件实时盘点。无法接通、对方不确定和不出售该型号要分开，不让模型补全肯定答复。"
+    },
+    {
+      "id": "need",
+      "title": "谁可能需要，谁未必付款",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "自用需求可能来自急需某个确定型号、希望少跑空趟的人；低频普通购物多半可以自己看官网或打一通电话。拟议付款者还可能是已有客户的采购或跑腿团队，但本案没有收费、续费或订单证据。可以探索减少多店核对与人工交接的成本，不应把一条吐槽当成大市场。商品紧急程度、替代型号接受度和跨店数量，会影响价值。"
+    },
+    {
+      "id": "alternative",
+      "title": "已有免费的部分替代",
+      "source_ids": [
+        "Sgoogle",
+        "Sbusiness"
+      ],
+      "body": "Google官方已有致电商店查询库存功能，代客户查询可免费；这使通用“替人问有货没”的包装面对直接替代。覆盖并不普遍：地区、语言、商品类别和问题类型有限，不能把免费方案说成所有市场完全等价，也不能把库存查询扩展成预留或购买能力。结果还可能混合电话和网页资料，用户应看到每条结论来源，而不只看到一个统一推荐分。"
+    },
+    {
+      "id": "delivery",
+      "title": "可复制的是核对流程，不是通用承诺",
+      "source_ids": [
+        "Sauthor",
+        "Sgoogle"
+      ],
+      "body": "候选交付是固定数量门店的带来源清单，明确未确认项与过期时间，不承诺一定买到。获客可以假设从已有采购协作或本地服务关系提供合成样例开始；这不是已验证渠道，本轮没有联系商家或潜在客户。复制前必须核实际拨号工具、号码地域、收费、语言和商家退出要求。只卖一段提示词差异很弱；可能积累的是产品字段规范、失败分类和交接记录，但尚无付费验证。"
+    },
+    {
+      "id": "cost",
+      "title": "同范围的两种成本压力情景",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "以一份最多五家商店的来源核对清单为单位，每月20份，不含采购或保留商品。低返工假设人工15分钟、按20美元/小时为5美元，加模型预算0.2，已列小计5.2/份、104/月；高返工45分钟为15美元，加模型0.5，小计15.5/份、310/月。全是研究者假设，不是Manus价格或实际工资。电话分钟费、工具固定费、获客、维护、税费未知，必须另加；售价未知，不计算利润或把缺项填零。"
+    },
+    {
+      "id": "privacy",
+      "title": "明确同意和通话边界",
+      "source_ids": [
+        "Sbusiness"
+      ],
+      "body": "拨号是联系第三方，不只是搜索。若以后开展真实试点，需要批准商店、目的、频次和费用，按实际地区要求处理身份说明、录音与商家退出，不冒充真人或熟客。查询库存通常不需要透露用户家庭住址、购物历史或账户资料。Google公开说明存在监控与录音，不能向客户承诺所有语音系统不留痕。本轮只读公开网页，没有拨号、提交请求、预留或购买。"
+    },
+    {
+      "id": "personal",
+      "title": "自用净收益与维护独立核对",
+      "source_ids": [
+        "Sauthor",
+        "Sgoogle"
+      ],
+      "body": "适用人群是愿意核对商品细节、能够判断来源是否可靠的购物者。可能省去重复查询与跑店，但原案只有失败自述，没有净节省数据。设置包括明确型号、地点、可接受替代与来源格式，维护包括号码、营业时间、工具能力和库存时效；频率随实际购买需求而定。应比较总核查与返工时间，不用生成一张表的速度代替实际收益。"
+    },
+    {
+      "id": "trial",
+      "title": "不拨号的合成验收",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "先准备三条虚构门店记录：网页有商品但库存未知、店员明确确认指定型号、旧库存记录已过期。要求输出来源/时间/型号/状态，并把不确定项保留为未知。添加同名不同地址与相似型号作为反例；没有通话回执就不得标记“已致电”。预期是正确分类和人工待办，不是证明真实电话任务可用。本轮未运行模型或电话试用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/phone-stores-to-check-if-items-are-in-stock",
+    "observed_at": null,
+    "body_sha256": "bf25b887c30e676c168e46c92456da0182549f6e8c2f1ae02e7dc80eaf07fd7d",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "67668b85e94cb94d7fe2b164c407ae57ed0389b5ec389c4181e5d35564c012ac",
+      "How it went": "96629e628f36a5e50fb5e2d7852db4fed034c19cea587d19c8653c29f6627ea5",
+      "Worth knowing": "be8c74ccb0ab0a190220e262826225e03dd27afe5aeb142152d64d4d14c1bb43"
+    },
+    "actual_agents": [
+      "Manus"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T18:19:10Z",
+      "end": "2026-10-20T18:19:30Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Please call or contact [store names or nearby stores] and ask whether they have [item, size, or model] in stock today. If you cannot place calls, tell me so right away instead of guessing. When finished, give me a list showing each store, its answer, its hours, and its phone number. Do not reserve or buy anything without showing me the details and getting my approval first.",
+    "agent": "Manus",
+    "source_url": "https://agentusecases.ai/use-case/phone-stores-to-check-if-items-are-in-stock",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "a8842fdf6f1a1d24a779cf6071cfa61342b112330d9ca9ed5acedd453b1bdbfa",
+    "observation_window": {
+      "start": "2026-10-20T18:19:10Z",
+      "end": "2026-10-20T18:19:30Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ManusOfficial/comments/1q6cjfc/good_manus_ai_use_cases_not_covered_by_chatgpt",
+    "source_title": "nimjay on stock checks with Manus Lite",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T18:19:49Z",
+    "source_sha256": "e032a37bc314d21384a5a62682d3e73ebe34baab5bbd6fcd2fbbfcea604434ef",
+    "steps": [
+      {
+        "en": "The author asked Manus Lite to check local product stock by calling stores.",
+        "zh": "作者要求Manus Lite致电当地商店确认商品库存。"
+      },
+      {
+        "en": "They report a false in-stock answer and no calls, while acknowledging that a call might have been unnecessary.",
+        "zh": "作者报告收到错误的有货答复，且没有发生通话，同时承认为此拨号可能没有必要。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "原案失败，无净省时测量；来源清晰才可能减少跑空。",
+    "audience": "有明确型号需求、能复核门店资料的购物者。",
+    "use": "整理库存来源、时点和待确认门店，不代替预留或购买。",
+    "benefit": "可能减少重复核对，但没有独立收益证据。",
+    "setup_cost": "商品规格、门店地点、工具实际能力与输出标准。",
+    "maintenance_cost": "号码、营业时间、库存时效和工具额度变化。",
+    "frequency": "按购买需求，通常非每日固定高频。",
+    "privacy_risk": "位置、联络方式和录音处理；只给必要资料。",
+    "error_risk": "相似型号、分店错配、旧数据、未接通被补成有货。",
+    "source_ids": [
+      "Sauthor",
+      "Sgoogle",
+      "Sbusiness"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板，非作者实际提示词或本轮试用。",
+    "prerequisites": "三条虚构门店与已知状态，加入同名分店和过期记录，不含真实客户信息。",
+    "tools": "已有文本助手或本地表格；不连接拨号工具。",
+    "expected_result": "来源、型号、时间与未知状态清楚；未拨号不写已致电，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/phone-stores-to-check-if-items-are-in-stock",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录试用模板",
+        "text": "Please call or contact [store names or nearby stores] and ask whether they have [item, size, or model] in stock today. If you cannot place calls, tell me so right away instead of guessing. When finished, give me a list showing each store, its answer, its hours, and its phone number. Do not reserve or buy anything without showing me the details and getting my approval first."
+      },
+      {
+        "title": "合成库存来源核对",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sauthor"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只用以下虚构记录核对商品型号、分店、查询时间与库存状态。没有来源就标未知；过期或型号不一致列待确认。没有通话回执不得写已致电。不要访问门店、不拨号、不发送消息、不预留或购买。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "最多五店的一份来源核对清单",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.2,
+      "human_cost": 5,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 20,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "15分钟×20美元/小时，模型0.2；已列104/月，电话/工具/获客/维护等未知非零。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "最多五店的一份来源核对清单",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.5,
+      "human_cost": 15,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 20,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "45分钟×20美元/小时，模型0.5；已列310/月，电话/工具/获客/维护等未知非零。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    }
+  ],
+  "economics_assumptions": "均为研究者预算假设非本案成本；未知收入及其他成本不填零，不计算利润。",
+  "feedback": {
+    "independent_user_feedback_count": 1,
+    "note": "一位公开发帖者的失败自述，非独立复现或统计样本；其他用途评论不作本案收入/满意度。"
+  },
+  "disconfirming_evidence": "原案未拨号且误报库存；免费部分替代存在，低频购物可能不需要付费服务。",
+  "limitations": "没有真实工具调用、完整商品门店信息、通话或订单回执；未确认当前Manus原生拨号能力，无真实试用。",
+  "archive_source_sha256": "bf25b887c30e676c168e46c92456da0182549f6e8c2f1ae02e7dc80eaf07fd7d",
+  "translation_sha256": "e61dd43e5858c09dc968b8cc8841317ac179a2abb127d0b56624042d3879c11d"
+}
