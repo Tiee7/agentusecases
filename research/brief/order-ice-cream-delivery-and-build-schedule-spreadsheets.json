@@ -1,0 +1,364 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "order-ice-cream-delivery-and-build-schedule-spreadsheets",
+  "url": "https://agentusecases.ai/use-case/order-ice-cream-delivery-and-build-schedule-spreadsheets",
+  "title": "用Operator订购冰淇淋配送并制作日程表",
+  "industry": "购物与个人事务",
+  "researched_at": "2026-10-20T03:18:33.025569+00:00",
+  "brief_reason": "历史二手测试报道，缺原始表格、可复现过程和净节省测量。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先测监督与修正后的净节省",
+    "reason": "送达与表格正确性须分别验收，必要确认不能算作可删除步骤。",
+    "next_action": "用虚构订单和日程草稿作人工对照。",
+    "stop_condition": "基本字段仍错、需全程监督或总人工时间不降。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/order-ice-cream-delivery-and-build-schedule-spreadsheets",
+      "title": "许可目录案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:08Z",
+        "end": "2026-10-20T03:15:48Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 1848,
+      "sha256": "308097b77c0d9ca709fad1e51a6c71908a4124b8e025004b28c70e381195da0e",
+      "hash_scope": "Local capture bundle; not HTML",
+      "supports": "完整许可正文、模板与历史使用描述。"
+    },
+    {
+      "id": "Sarticle",
+      "url": "https://tech.yahoo.com/ai/articles/openais-ai-agent-monitored-nonstop-183005989.html",
+      "title": "Futurism在Yahoo发布的Operator体验报道",
+      "kind": "independent",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:12Z",
+        "end": "2026-10-20T03:15:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser",
+      "characters": 615,
+      "sha256": "be528cf5dd8b190e269b44a91f027aa47375040f943ad37fe5ee1288e9137740",
+      "hash_scope": "Researcher observation note",
+      "supports": "2025-02-01文章转述Rachel Metz测试；不是我们实测或彭博原文。"
+    },
+    {
+      "id": "Slaunch",
+      "url": "https://openai.com/index/introducing-operator/",
+      "title": "OpenAI Operator历史发布说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:59Z",
+        "end": "2026-10-20T03:16:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 34426,
+      "sha256": "103dd12bab692f86682b0de7defa00f4426269cbb243bbb236d7a21ad4725a8e",
+      "hash_scope": "Local capture bundle; not HTML",
+      "supports": "2025-01-23研究预览，历史复杂界面限制；后续迁移说明。"
+    },
+    {
+      "id": "Sretired",
+      "url": "https://help.openai.com/en/articles/11752874-chatgpt-agent",
+      "title": "ChatGPT agent现行页面顶部状态",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:59Z",
+        "end": "2026-10-20T03:16:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 34426,
+      "sha256": "103dd12bab692f86682b0de7defa00f4426269cbb243bbb236d7a21ad4725a8e",
+      "hash_scope": "Local capture bundle; not HTML",
+      "supports": "顶部声明已不可用、改用Work；下文遗留旧额度不作现价依据。"
+    },
+    {
+      "id": "Swork",
+      "url": "https://help.openai.com/en/articles/20001275-chatgpt-work-and-codex",
+      "title": "ChatGPT Work当前说明",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:59Z",
+        "end": "2026-10-20T03:16:24Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 34426,
+      "sha256": "103dd12bab692f86682b0de7defa00f4426269cbb243bbb236d7a21ad4725a8e",
+      "hash_scope": "Local capture bundle; not HTML",
+      "supports": "当前工作入口有自己的工具、权限及可用性，不能把旧Operator当现产品。"
+    },
+    {
+      "id": "Sorder",
+      "url": "https://www.instacart.com/help/section/360008835771",
+      "title": "Instacart订单变更说明",
+      "kind": "competitor",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T03:18:33.025569+00:00",
+      "read_window": {
+        "start": "2026-10-20T03:15:59Z",
+        "end": "2026-10-20T03:16:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "characters": 34426,
+      "sha256": "103dd12bab692f86682b0de7defa00f4426269cbb243bbb236d7a21ad4725a8e",
+      "hash_scope": "Local capture bundle; not HTML",
+      "supports": "商品可能缺货或换店移除，替代与退款需检查，已有原生操作可对照。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "2025-02-01Yahoo/Futurism文章转述记者测试，而非本轮实测。",
+      "type": "verified",
+      "source_ids": [
+        "Sarticle"
+      ]
+    },
+    {
+      "statement": "记者被报道全程监督、购物需帮助且日程细节出错。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sarticle"
+      ]
+    },
+    {
+      "statement": "官方Operator历史说明承认复杂界面限制并要求重要操作确认。",
+      "type": "verified",
+      "source_ids": [
+        "Slaunch"
+      ]
+    },
+    {
+      "statement": "现行agent帮助页顶部声明不可用并引导Work，下文遗留旧说明。",
+      "type": "verified",
+      "source_ids": [
+        "Sretired",
+        "Swork"
+      ]
+    },
+    {
+      "statement": "Instacart订单可能因缺货或地址与店铺变化而移除商品。",
+      "type": "verified",
+      "source_ids": [
+        "Sorder"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "一次送达与持续可用性分别判断",
+      "source_ids": [
+        "Sarticle",
+        "Sdirectory"
+      ],
+      "body": "2025年2月1日，Frank Landymore在Futurism/Yahoo文章中转述Rachel Metz测试：冰淇淋送达，但需要指导、付款信息与批准；她全程监督，日程表细节经常错误。本轮读到的是这篇二手报道，没有取得彭博原始测试记录、订单回执、具体等待分钟或错误率。目录和报道属于同一证据链，不能计作两组独立体验。因缺可重复工作流、客户及成本，本篇交付简报。"
+    },
+    {
+      "id": "time",
+      "title": "200美元与Operator入口属于历史背景",
+      "source_ids": [
+        "Slaunch",
+        "Sretired",
+        "Swork"
+      ],
+      "body": "官方2025年1月23日发布说明定位为美国Pro用户研究预览；同页2025年7月更新记载整合至ChatGPT agent。当前agent帮助页顶部又声明该功能不可用并指向Work，但下文仍残留旧额度说明。本报告保留源站原文，同时提醒复制时查看现有账号实际入口和权限，不把每月200美元写成今天完成购物必须购买的套餐。历史界面错误也不能直接当成当前版本错误率。"
+    },
+    {
+      "id": "approval",
+      "title": "付款确认是正常控制步骤",
+      "source_ids": [
+        "Slaunch",
+        "Sarticle"
+      ],
+      "body": "报道语气把多次求助和确认放在一起。研究者建议区分两类成本：身份登录、付款和订单批准属于正常控制；反复理解错商品、卡在界面和修正表格则属于执行返工。不能为了提高表面无人值守率删除支付审核。应分别测主动操作分钟、等待时间、必要批准次数与错误纠正次数。人类确认存在并不自动证明失败，成功送达也不证明节省了人类时间。"
+    },
+    {
+      "id": "shopping",
+      "title": "购物车草稿应说明缺货与最终变化",
+      "source_ids": [
+        "Sorder"
+      ],
+      "body": "Instacart现行说明允许检查已选商品、替代品和退款；换地址、换店或缺货可使商品从购物车移除，部分提前预订类商品下单后不能编辑。研究者建议从明确商品规格、数量、预算、配送窗口开始，在付款前核对实际购物车，不把搜索结果价当最终总价。替代后金额或关键规格变化需要重新审阅。平台本身已提供这类功能，应以原生购物流程作效率对照。"
+    },
+    {
+      "id": "spreadsheet",
+      "title": "日程表要按字段与约束验收",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "研究者提出独立的表格验收方法：用固定输入清单核对日期、时区、起止时间、人员、持续时长和冲突，检查遗漏与重复，再交付可编辑文件。界面上出现一个表格不代表细节正确；能订购商品不证明能维护日历。这个案例没有提供具体表格内容，本轮也没有猜测错误细节或改动真实日历。纯数据整理可以先输出结构化草稿，再决定是否需要浏览器操作。"
+    },
+    {
+      "id": "commercial",
+      "title": "最可能先验证的是限定任务服务",
+      "source_ids": [
+        "Sarticle",
+        "Sorder"
+      ],
+      "body": "商业假设是帮助频繁整理采购需求或不便操作网页的人，把明确清单变成可批准订单草稿；另一类是组织内的日程资料整理。买方、预算与需要完全不同，不应以同一个购物成功样例推导通用个人助理订阅可卖。获客可以用虚构订单和可复核表格展示，交付限定在拟购清单及检查结果。现有购物应用、人工助理和表格工具是直接替代，未发现本案付费客户、复购或第三方服务收入。"
+    },
+    {
+      "id": "cost",
+      "title": "把监督与售后算入成本",
+      "source_ids": [
+        "Sarticle"
+      ],
+      "body": "未取得当事人实际账单、每单模型成本或完成时间，不做收益数字推断。研究者列出需要测的成本：工具使用、人工准备、全程观察、错选修正、配送异常、退换协助和流程变更维护；服务经营还包含获客、支持和退款风险。低价单件购物节省可能不足以覆盖这些成本。只有相对熟练手动流程仍减少总人工时间，且质量没有下降，才值得扩大测试。"
+    },
+    {
+      "id": "personal",
+      "title": "自用收益取决于是否真能少盯屏幕",
+      "source_ids": [
+        "Sdirectory",
+        "Sarticle"
+      ],
+      "body": "适用者是假定已有合适工具、能明确规格并愿审查最终金额的个人。潜在收益是减少网站切换和重复录入，实际收益未测。设置需要清单、商店偏好和批准边界；维护涉及商品替代、账号会话、地址与配送条件变动。频率跟随实际购物或排程需要。隐私风险是地址、支付和账户资料，错误风险是错品、重复单、超预算和日程冲突。本轮没有登录商店、提交真实地址或下单。"
+    },
+    {
+      "id": "next",
+      "title": "先做不下单的对照演练",
+      "source_ids": [
+        "Sorder",
+        "Sdirectory"
+      ],
+      "body": "拟议小测试使用三件虚构商品和两份相互冲突的日程输入，先手动计时，再让已有获准助手生成购物比较草稿与日程表。保留人工标准答案，统计准备、监督与修正分钟；期待得到能逐项核对的清单、费用待确认项和冲突提示。本轮没有执行测试。若仍需全程盯屏幕、表格基本字段错或总时间不降，停止扩大；不将聊天回复中的完成字样当订单或文件回执。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/order-ice-cream-delivery-and-build-schedule-spreadsheets",
+    "observed_at": null,
+    "body_sha256": "d71528431ebc4f28eb372c107107f248e0b31b1a930c0fbfa8d3109a396dfb24",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "6f7402fffe528f4e8870f595435eb6400a222487cb67a78c32e205b35f308472",
+      "How it went": "c084a80edabf03d87e3ec74265cbf725de37e8c06e9b668c9fc53c90b47bfda9",
+      "Worth knowing": "9f5db458940deb0c34b6258b9694fb74dd2c8617abedd4202fc5edc401d4b93d"
+    },
+    "actual_agents": [
+      "Operator"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T03:15:08Z",
+      "end": "2026-10-20T03:15:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Order [item, e.g. a pint of ice cream] for delivery to [my address] from [delivery service or store], with a budget of [amount]. Pick the best-reviewed option that fits, and add it to the cart. Stop before entering payment details or placing the order, and show me the cart, total, and delivery time so I can approve it.",
+    "agent": "Operator",
+    "source_url": "https://agentusecases.ai/use-case/order-ice-cream-delivery-and-build-schedule-spreadsheets",
+    "observed_at": null,
+    "observation_window": {
+      "start": "2026-10-20T03:15:08Z",
+      "end": "2026-10-20T03:15:48Z",
+      "basis": "system_time_bracketing_tool_call"
+    },
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": null
+  },
+  "author_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://tech.yahoo.com/ai/articles/openais-ai-agent-monitored-nonstop-183005989.html",
+    "source_title": "OpenAI's AI Agent Has to Be Monitored Nonstop to Catch Its Constant Screwups",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T03:18:33.025569+00:00",
+    "source_sha256": "be528cf5dd8b190e269b44a91f027aa47375040f943ad37fe5ee1288e9137740",
+    "steps": [
+      {
+        "en": "A reporter supervised Operator while it arranged delivery, provided guidance and approved payment; schedule details needed correction.",
+        "zh": "记者监督Operator安排配送，提供指导并批准付款；日程细节需要纠正。"
+      }
+    ],
+    "note": "第三方报道转述，未读到彭博原始文章。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "监督和修正后是否仍省时未知。",
+    "audience": "能明确商品规格并核对日程的个人。",
+    "use": "购物车及日程表草稿。",
+    "benefit": "报道送达不等于净节省；本轮未试用。",
+    "setup_cost": "清单、偏好、预算和批准边界。",
+    "maintenance_cost": "商品替代、账号会话和表格字段校验。",
+    "frequency": "按真实购物或排程需求。",
+    "privacy_risk": "地址、付款与账户信息。",
+    "error_risk": "错品、重复单、超预算和日程冲突。",
+    "source_ids": [
+      "Sdirectory",
+      "Sarticle",
+      "Sorder"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "源站旧Operator模板原样保留；当前产品入口须另核。",
+    "prerequisites": "虚构商品、固定价格片段、日程输入与人工标准答案。",
+    "tools": "已有获准助手和本地表格；不用旧链接注册付费。",
+    "expected_result": "可核对的购物与日程草稿，不下单；本轮未试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/order-ice-cream-delivery-and-build-schedule-spreadsheets",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Order [item, e.g. a pint of ice cream] for delivery to [my address] from [delivery service or store], with a budget of [amount]. Pick the best-reviewed option that fits, and add it to the cart. Stop before entering payment details or placing the order, and show me the cart, total, and delivery time so I can approve it."
+      },
+      {
+        "title": "购物和日程对照草稿",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sdirectory",
+          "Sorder"
+        ],
+        "attribution": "原创虚构资料演练，未执行",
+        "text": "只依据提供的虚构商品和日程，列出商品规格、数量、费用未知项与替代差异；日程逐项检查日期、时区、时长、重叠和遗漏。输出待审草稿，不登录、加入真实购物车、付款或修改日历。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "一条媒体转述链；未把目录与报道重复计数。"
+  },
+  "disconfirming_evidence": "全程监督、慢和日程细节错误；现有原生购物流程可能更省事。",
+  "limitations": "未取得彭博原始记录、实际订单或表格；未试用、下单或核实当前付费方案。",
+  "archive_source_sha256": "d71528431ebc4f28eb372c107107f248e0b31b1a930c0fbfa8d3109a396dfb24",
+  "translation_sha256": "e20b487e9b6d9cc18ce9144faf4a3ac69adf0846c170794e1ca46d384c83d73e"
+}
