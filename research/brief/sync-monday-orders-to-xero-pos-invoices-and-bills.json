@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "sync-monday-orders-to-xero-pos-invoices-and-bills",
+  "url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+  "title": "用Make把Monday订单同步到Xero票据和附件",
+  "industry": "运营流程自动化",
+  "researched_at": "2026-10-20T06:02:39.753269+00:00",
+  "brief_reason": "原帖受限，生产与全测试为目录转述；缺量化运行、去重配置和付费证据。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "headline": "先验证重复事件与部分成功的恢复",
+    "reason": "跨系统状态重试必须避免重复账单和邮件。",
+    "next_action": "虚构订单验收，无真实账务或邮件。",
+    "stop_condition": "业务键、目标ID、收件人与审批不能明确。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+      "title": "许可目录Monday-Xero案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:43Z",
+        "end": "2026-10-20T05:59:49Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1740,
+      "sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "三条Make场景和Needs Attention人工修正；生产运行及测试是作者经目录转述，无交易量、收益或独立复现。"
+    },
+    {
+      "id": "Smake",
+      "url": "https://help.make.com/scenario-settings",
+      "title": "Make场景设置",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:54Z",
+        "end": "2026-10-20T05:59:59Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 63,
+      "sha256": "8f455f9f7e84627690ad5ca9b437a9a393a25ed459a4572ebf1123eda61be000",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "webhooks默认并行，可按顺序执行；未完成执行、日志载荷保留与存储满丢弃均取决于设置。错误处理不等于外部业务动作自动去重。"
+    },
+    {
+      "id": "Sidempotency",
+      "url": "https://developer.xero.com/documentation/guides/idempotent-requests/idempotency/",
+      "title": "Xero幂等请求",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:59Z",
+        "end": "2026-10-20T06:00:15Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 69,
+      "sha256": "b7abe28abbd4ad62f104cf59caece9ec50650d4f104a716d16566de28035a683",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "POST/PUT/PATCH可用相同请求相同key；缓存6分钟，过期后可能重新执行，重复请求仍计限流；反复错误应先GET检查资源是否存在。"
+    },
+    {
+      "id": "Sinvoices",
+      "url": "https://developer.xero.com/documentation/api/accounting/invoices",
+      "title": "Xero Invoices官方接口",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:00:44Z",
+        "end": "2026-10-20T06:01:01Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 116,
+      "sha256": "0fb6b121939ae65dbaa16d622ca90c89f2b612e4322acf8fb118cc7d8579fea2",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "ACCPAY账单编号非唯一；销售发票发送要求ACCREC及SUBMITTED/AUTHORISED/PAID。发给主邮箱与IncludeInEmails联系人。204为请求成功，SentToContact只是标记；demo不能发信。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "三条Make场景和Needs Attention人工修正；生产运行及测试是作者经目录转述，无交易量、收益或独立复现。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "webhooks默认并行，可按顺序执行；未完成执行、日志载荷保留与存储满丢弃均取决于设置。错误处理不等于外部业务动作自动去重。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Smake"
+      ]
+    },
+    {
+      "statement": "POST/PUT/PATCH可用相同请求相同key；缓存6分钟，过期后可能重新执行，重复请求仍计限流；反复错误应先GET检查资源是否存在。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sidempotency"
+      ]
+    },
+    {
+      "statement": "ACCPAY账单编号非唯一；销售发票发送要求ACCREC及SUBMITTED/AUTHORISED/PAID。发给主邮箱与IncludeInEmails联系人。204为请求成功，SentToContact只是标记；demo不能发信。",
+      "type": "verified_source_statement",
+      "source_ids": [
+        "Sinvoices"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "need",
+      "title": "需求与付款人",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "使用Monday管理订单、Xero记账的运营或财务团队，需要减少重复录入和附件寻找。潜在付款人是流程负责人；作者说为客户实施，但合同、收费、付款和订单量未知。"
+    },
+    {
+      "id": "offer",
+      "title": "交付与收入机制",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "可假设收一次性实施费加维护费；交付包括字段映射、异常队列、审批与重复事件保护，不只把模块连起来。没有真实服务收入或客户续费证据。"
+    },
+    {
+      "id": "acquisition",
+      "title": "获客与范围",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "从已同时使用两个系统且有重复录入痛点的团队验证，比泛称AI记账更明确。先取得匿名字段样本和工作量基线，再决定范围。本轮没有联系客户、读取账单或获得账务操作授权。"
+    },
+    {
+      "id": "workflow",
+      "title": "流程与AI角色",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "目录能支持三条状态触发自动化，未给出LLM判断或智能体推理证据。Make是实际工具归属，不应自动称为自主财务agent。建PO、建bill、上传附件、发客户邮件应分别保存成功状态与目标ID。"
+    },
+    {
+      "id": "retry",
+      "title": "重试与去重",
+      "source_ids": [
+        "Smake",
+        "Sidempotency"
+      ],
+      "body": "Needs Attention只是业务提示。网络超时可能发生在Xero已写入之后；先查询确认再恢复。Xero幂等缓存6分钟，不能替代隔天员工修正重跑的持久去重表。串行可减竞态，但不保证业务只执行一次。"
+    },
+    {
+      "id": "matching",
+      "title": "附件与业务准确性",
+      "source_ids": [
+        "Sinvoices"
+      ],
+      "body": "ACCPAY编号并非唯一，所以仅按PO引用匹配存在多结果风险。拟议验收应同时核供应商、租户、币种、金额和明确InvoiceID；多候选停下人工核对。创建采购订单并不等于供应商开票、货物验收或付款完成。"
+    },
+    {
+      "id": "cost",
+      "title": "成本与复制条件",
+      "source_ids": [
+        "Smake"
+      ],
+      "body": "成本有Make执行与失败重跑、两端订阅/API条件、字段维护、权限管理及人工排错。无真实用量和报价，不构造毛利。保密日志设置与排错能力存在取舍，不能为了方便长期保存完整私密发票。"
+    },
+    {
+      "id": "personal",
+      "title": "独立自用价值",
+      "source_ids": [
+        "Sdirectory"
+      ],
+      "body": "个人或极小团队只有确实同时使用这两个系统才可能受益；低频手工录入可能更便宜。设置包括映射、账务审核规则、批准人与测试数据；维护包括字段变更、失败修正和重复事件检查。发生频率按订单事件，未给次数或省时。"
+    },
+    {
+      "id": "email",
+      "title": "邮件和测试边界",
+      "source_ids": [
+        "Sinvoices"
+      ],
+      "body": "Xero发送销售发票与SentToContact标记不同，204不证明收件或付款。DRAFT不在发送状态，收件人还可能含附加联系人。demo组织不能发信；模板的测试模式应先用模拟邮件输出，不把测试凭空等同真实安全沙箱。"
+    },
+    {
+      "id": "verdict",
+      "title": "结论与下一步",
+      "source_ids": [
+        "Sdirectory",
+        "Sidempotency"
+      ],
+      "body": "仅建议受控试点：以虚构订单测试重复Ready、写入后超时、同PO多bill、附件失败及收件人变化。先验幂等与人工审核，不发真实邮件、不形成实际账务。若不能保证去重和明确目标，停止生产启用。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+    "observed_at": "2026-10-19T07:18:23.865362+00:00",
+    "body_sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "b8011ba22092dd443ca56e0eea1bf0bc969fac331bb9d47030db7e7c121f29aa",
+      "How it went": "fffd5ca72dea3efe7ac5eb50eff6801533d2fde248c6f9abdcfcab0e80dd6385",
+      "Worth knowing": "ec72b85b2f24fe0a3baea7b942c7bc11e3dc74150dfd43d6b67519251cc6193c"
+    },
+    "actual_agents": [
+      "Make"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Build a Make scenario that watches my Monday.com board [board name] and, when an item reaches [status], creates a purchase order in Xero from its details and emails the client invoice. Also match supplier invoice files uploaded to [folder or column] to the right Xero bill, and post any failures or mismatches to [Slack channel or email] instead of guessing. Create the Xero records and emails in test mode first and show me a sample of each before turning anything live.",
+    "agent": "Make",
+    "source_url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+    "observed_at": "2026-10-19T07:17:07.717930+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "34ed6e31b2660c391e09c6927d925c44d334050cb43eaf2e31bc8e2b2ef9cf5d"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/mondaydotcom/comments/1tgn8rm/built_a_monday_xero_automation_in_makecom_sharing",
+    "source_title": "Monday Xero Make automation original post",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T06:02:39.753269+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "Reddit既有安全限制；只保留许可目录转述，不以模板代替作者原方法。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "取决于订单频率和人工复核成本，未测省时。",
+    "audience": "同时使用Monday和Xero的小团队或个体经营者。",
+    "use": "同步订单票据、附件及异常状态。",
+    "benefit": "可能减少重复录入；本例无量化收益。",
+    "setup_cost": "字段映射、权限、账务规则和虚构数据验收。",
+    "maintenance_cost": "失败修正、字段变动、重复事件及连接维护。",
+    "frequency": "随订单和文件上传触发；频率未知。",
+    "privacy_risk": "供应商、客户、发票金额、附件及邮箱。",
+    "error_risk": "重复账单、附件错配、税费/币种映射和错误收件人。",
+    "source_ids": [
+      "Sdirectory",
+      "Sinvoices"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可模板不代表本轮执行授权；测试模式需具体界定。",
+    "prerequisites": "虚构订单/联系人/发票和模拟邮件，明确预期结果。",
+    "tools": "本地测试夹具及官方接口文档。",
+    "expected_result": "重复事件、超时和多匹配能安全拒绝或恢复；本轮未实际试用。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录模板",
+        "text": "Build a Make scenario that watches my Monday.com board [board name] and, when an item reaches [status], creates a purchase order in Xero from its details and emails the client invoice. Also match supplier invoice files uploaded to [folder or column] to the right Xero bill, and post any failures or mismatches to [Slack channel or email] instead of guessing. Create the Xero records and emails in test mode first and show me a sample of each before turning anything live."
+      },
+      {
+        "title": "订单恢复验收设计",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sidempotency",
+          "Sinvoices"
+        ],
+        "attribution": "原创拟议演练",
+        "text": "只根据虚构订单设计测试，不连真实账户、不建账、不发信。覆盖重复触发、写入后超时、六分钟后重试、同引用多个账单、附件失败、收件人变化；列明业务键、目标ID、人工审核与预期状态。"
+      }
+    ]
+  },
+  "unit_economics": [],
+  "feedback": {
+    "independent_user_feedback_count": 0,
+    "note": "原帖与跨贴未读取；官方文档仅证明能力边界，不是项目效果反馈。"
+  },
+  "disconfirming_evidence": "生产叙述无独立验证；重试短期key、非唯一账单编号、邮件副作用及低量维护成本。",
+  "limitations": "没有支付、建账、发邮件、登录或实际试用；没有将PO创建等同到货或付款；AI角色未证明。",
+  "archive_source_sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+  "translation_sha256": "fccc66241721cc8450cc5d0304a385c5d7a90818f037d38b0023f6426953b091"
+}

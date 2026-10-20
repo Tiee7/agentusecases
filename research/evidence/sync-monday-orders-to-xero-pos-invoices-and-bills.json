@@ -1,0 +1,80 @@
+{
+  "id": "sync-monday-orders-to-xero-pos-invoices-and-bills",
+  "created_at": "2026-10-20T06:02:39.753269+00:00",
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
+      "title": "许可目录Monday-Xero案例",
+      "kind": "aggregator",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:43Z",
+        "end": "2026-10-20T05:59:49Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 1740,
+      "sha256": "38d7dd50a6b174b21ce258c7a1d7bfe8fdd1ed24cbcf27d83e775d1b396213c9",
+      "hash_scope": "Licensed archived body rechecked live",
+      "supports": "三条Make场景和Needs Attention人工修正；生产运行及测试是作者经目录转述，无交易量、收益或独立复现。"
+    },
+    {
+      "id": "Smake",
+      "url": "https://help.make.com/scenario-settings",
+      "title": "Make场景设置",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:54Z",
+        "end": "2026-10-20T05:59:59Z"
+      },
+      "read_method": "public_web_tool",
+      "characters": 63,
+      "sha256": "8f455f9f7e84627690ad5ca9b437a9a393a25ed459a4572ebf1123eda61be000",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "webhooks默认并行，可按顺序执行；未完成执行、日志载荷保留与存储满丢弃均取决于设置。错误处理不等于外部业务动作自动去重。"
+    },
+    {
+      "id": "Sidempotency",
+      "url": "https://developer.xero.com/documentation/guides/idempotent-requests/idempotency/",
+      "title": "Xero幂等请求",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T05:59:59Z",
+        "end": "2026-10-20T06:00:15Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 69,
+      "sha256": "b7abe28abbd4ad62f104cf59caece9ec50650d4f104a716d16566de28035a683",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "POST/PUT/PATCH可用相同请求相同key；缓存6分钟，过期后可能重新执行，重复请求仍计限流；反复错误应先GET检查资源是否存在。"
+    },
+    {
+      "id": "Sinvoices",
+      "url": "https://developer.xero.com/documentation/api/accounting/invoices",
+      "title": "Xero Invoices官方接口",
+      "kind": "primary",
+      "status": "fetched",
+      "receipt_created_at": "2026-10-20T06:02:39.753269+00:00",
+      "read_window": {
+        "start": "2026-10-20T06:00:44Z",
+        "end": "2026-10-20T06:01:01Z"
+      },
+      "read_method": "own_cloud_browser",
+      "characters": 116,
+      "sha256": "0fb6b121939ae65dbaa16d622ca90c89f2b612e4322acf8fb118cc7d8579fea2",
+      "hash_scope": "Researcher factual notes, not full HTML",
+      "supports": "ACCPAY账单编号非唯一；销售发票发送要求ACCREC及SUBMITTED/AUTHORISED/PAID。发给主邮箱与IncludeInEmails联系人。204为请求成功，SentToContact只是标记；demo不能发信。"
+    }
+  ],
+  "limitations": [
+    "Original Reddit access restriction respected; cross-post not read or counted independently.",
+    "Xero web-tool JS-only responses not counted; subsequent browser render succeeded.",
+    "Make overview lower-case URL returned404, not used; scenario-settings used.",
+    "No account connection, accounting record, email, payment or actual trial."
+  ]
+}
