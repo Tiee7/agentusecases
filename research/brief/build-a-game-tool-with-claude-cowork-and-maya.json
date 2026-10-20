@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "build-a-game-tool-with-claude-cowork-and-maya",
+  "url": "https://agentusecases.ai/use-case/build-a-game-tool-with-claude-cowork-and-maya",
+  "title": "用Claude Cowork与Maya迭代游戏工具代码",
+  "industry": "3D制作与工具开发",
+  "researched_at": "2026-10-20T18:38:28.271471+00:00",
+  "brief_reason": "原作者说明人工开发循环，但没有工具规格、代码、版本、最终产物或验收数据，无法还原具体工具实现；以有依据流程简报交付，不称完整产品研究。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先验证最小制作闭环",
+    "headline": "保留人工视觉判断，把代码、环境和渲染证据串起来",
+    "reason": "几个月使用自述不等于完成或净省时；环境与截图交接明确，商业结果未知。",
+    "next_action": "自有简单场景、小步代码、固定机位、日志与回退；不导入真实客户机密资产。",
+    "stop_condition": "覆盖原资产、越权访问、无法回退、视觉与功能无法核对，或维护负担超过实际收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/build-a-game-tool-with-claude-cowork-and-maya",
+      "title": "许可目录：Cowork与Maya开发流程",
+      "kind": "aggregator",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:34:51Z",
+        "end": "2026-10-20T18:35:14Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "permitted_own_cloud_browser_main_dom",
+      "characters": 14652,
+      "sha256": "341a8b70eced4cb1190da38bd555b7fcf15872157d9a5fa78180242b90858611",
+      "hash_scope": "Captured main DOM outerHTML",
+      "supports": "完整目录原文、实际Cowork与试用模板；未声称成品或性能数据。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://www.reddit.com/r/ClaudeAI/comments/1u8atjx/claude_coworker_claude_coder",
+      "title": "Intelligent_Day_7282：Coworker到Coder的流程讨论",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:35:14Z",
+        "end": "2026-10-20T18:35:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:38:28.271471+00:00",
+      "receipt_text": "作者自述3D艺术家不会代码，几个月使用Cowork讨论架构、生成代码，再人工PowerShell运行、导入Maya、发截图；偶尔Claude审查送ChatGPT。作者说未用过Claude Code，想了解收益；毛发需要着色渲染，蓝色样条难判断。评论提出自动化或CLI互通，但未证明作者已采用。没有成品、代码、性能或收入。",
+      "characters": 160,
+      "sha256": "c5cc1f2bad5c637950007e49b3ed3dbcbf144121119a07c1d1aee8e3b9c675c9",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "作者自述3D艺术家不会代码，几个月使用Cowork讨论架构、生成代码，再人工PowerShell运行、导入Maya、发截图；偶尔Claude审查送ChatGPT。作者说未用过Claude Code，想了解收益；毛发需要着色渲染，蓝色样条难判断。评论提出自动化或CLI互通，但未证明作者已采用。没有成品、代码、性能或收入。"
+    },
+    {
+      "id": "Smaya",
+      "url": "https://help.autodesk.com/cloudhelp/2026/ENU/Maya-Scripting/files/GUID-D457D6A0-1E7F-4ED2-B0B4-8B57153B563B.htm",
+      "title": "Autodesk Maya2026：Python初始化与退出",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:35:20Z",
+        "end": "2026-10-20T18:35:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:38:28.271471+00:00",
+      "receipt_text": "外部Python/mayapy需加载初始化Maya库并正确退出；Maya脚本编辑器内已初始化，不应重复调用。这个环境边界不证明原作者具体用哪种脚本，也不证明渲染视觉已正确。",
+      "characters": 86,
+      "sha256": "5245e84d3448e8c604da5e8bd26c0bd3e415c2e72519a254c619aaaa9012d2af",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "外部Python/mayapy需加载初始化Maya库并正确退出；Maya脚本编辑器内已初始化，不应重复调用。这个环境边界不证明原作者具体用哪种脚本，也不证明渲染视觉已正确。"
+    },
+    {
+      "id": "Sarchitecture",
+      "url": "https://support.claude.com/en/articles/14479288-claude-cowork-architecture-overview",
+      "title": "Anthropic：Cowork架构说明",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:35:20Z",
+        "end": "2026-10-20T18:35:32Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:38:28.271471+00:00",
+      "receipt_text": "当前说明新会话默认云端，Pro/Max自2026-10-06后新任务为云端，旧本地任务例外；本地文件经在线Desktop及已连文件夹访问，读入内容在服务端处理。不能把旧本地VM描述当当前全局事实，也不能把企业数据承诺套所有个人账户。",
+      "characters": 116,
+      "sha256": "1f2b9209afdb8ea12c4261e21138a2642168dab0a722fe030472b8b01076d6b3",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "当前说明新会话默认云端，Pro/Max自2026-10-06后新任务为云端，旧本地任务例外；本地文件经在线Desktop及已连文件夹访问，读入内容在服务端处理。不能把旧本地VM描述当当前全局事实，也不能把企业数据承诺套所有个人账户。"
+    },
+    {
+      "id": "Scomputer",
+      "url": "https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork",
+      "title": "Anthropic：Cowork computer use",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:35:32Z",
+        "end": "2026-10-20T18:36:11Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:38:28.271471+00:00",
+      "receipt_text": "当前Pro/Max computer use为beta，macOS/Windows Desktop需应用权限与在线设备；连接器、浏览器、屏幕按适用路径处理。官方提示复杂任务仍可能出错，截图可见资料有暴露风险。不能据此称自动Maya毛发渲染已验收。",
+      "characters": 123,
+      "sha256": "a3e0ffe7b086d566890777fa719af8926fbb5047392852cf23d3563646ec8da1",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "当前Pro/Max computer use为beta，macOS/Windows Desktop需应用权限与在线设备；连接器、浏览器、屏幕按适用路径处理。官方提示复杂任务仍可能出错，截图可见资料有暴露风险。不能据此称自动Maya毛发渲染已验收。"
+    },
+    {
+      "id": "Ssurface",
+      "url": "https://support.claude.com/en/articles/15520349-use-claude-cowork-on-web-desktop-and-mobile",
+      "title": "Anthropic：各端Cowork与10月6日变化",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-20T18:35:32Z",
+        "end": "2026-10-20T18:36:11Z",
+        "basis": "system_time_bracketing_tool_call"
+      },
+      "read_method": "supported_public_web_tool",
+      "receipt_created_at": "2026-10-20T18:38:28.271471+00:00",
+      "receipt_text": "2026-10-06后Pro/Max新Cowork任务在云端，旧本地任务保留；访问本机文件/浏览器/应用仍要求Desktop在线。新任务若需只在本机运行，官方指向Claude Code Desktop；历史作者体验与当前能力应分开。",
+      "characters": 116,
+      "sha256": "5316ead1dab23de6f2a6176e88b535fc326dce41ca59f9d36d40cda59f64b376",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "2026-10-06后Pro/Max新Cowork任务在云端，旧本地任务保留；访问本机文件/浏览器/应用仍要求Desktop在线。新任务若需只在本机运行，官方指向Claude Code Desktop；历史作者体验与当前能力应分开。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述为不会编程的3D艺术家，使用Cowork、PowerShell、Maya及人工截图迭代，偶尔征求ChatGPT意见。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者明确尚未使用Claude Code；评论中的自动化建议不代表已实现。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Maya官方区分脚本编辑器与外部Python初始化方式。",
+      "type": "verified",
+      "source_ids": [
+        "Smaya"
+      ]
+    },
+    {
+      "statement": "当前官方专项说明Pro/Max新Cowork任务自2026-10-06起在云端，旧本地任务有例外。",
+      "type": "verified",
+      "source_ids": [
+        "Sarchitecture",
+        "Ssurface"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "原案是一条人工参与的开发循环",
+      "source_ids": [
+        "Sauthor",
+        "Sdirectory"
+      ],
+      "body": "能核实的是作者公开描述了几个月的使用方式，不是工具已经交付。架构讨论、代码执行、Maya导入和截图评价由人串起来；不能改写成Cowork自主控制Maya，也不能把评论者建议CLI互通写成作者已实现。帖子没有工具规格、代码仓库、运行环境版本或成功产物，无法复现其具体功能，因此保留为有依据简报。"
+    },
+    {
+      "id": "visual",
+      "title": "代码通过与视觉通过分开",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "作者解释毛发在未着色时像难辨形体的蓝色样条，截图不是多余附件，而是视觉评价的输入。拟议验收应固定相机、灯光、材质和渲染设置，并保存生成代码版本及对应截图；不把两张机位不同的图误判为改进。截图能帮助判断形状与体积，却不能证明动画、导出、性能或游戏内效果。每轮应说明哪些是人工美术判断、哪些由程序检查。"
+    },
+    {
+      "id": "execution",
+      "title": "PowerShell不等于Maya运行环境",
+      "source_ids": [
+        "Smaya",
+        "Sauthor"
+      ],
+      "body": "PowerShell只是命令入口，不能从名字判断里面运行普通Python、mayapy还是外部工具。Autodesk说明Maya脚本编辑器和外部解释器的初始化方式不同，说明环境明确比“代码能运行”更重要。建议记录Maya/Python/插件版本、输入文件、命令、输出和错误；这些是改进建议，不是原作者已有配置。本轮没有安装Maya、启动其许可证或运行未知脚本。"
+    },
+    {
+      "id": "current",
+      "title": "今天的Cowork与历史帖子分开",
+      "source_ids": [
+        "Sarchitecture",
+        "Ssurface"
+      ],
+      "body": "本次2026年10月20日读取的官方专项文档已说明：Pro/Max新Cowork任务自10月6日起在云端，之前开始的本地任务保留；接触本机文件和应用仍需要在线Desktop。目录所述历史工作流仍忠实保存，不用今天架构倒推作者当时设置。部分通用安装介绍仍有本地VM表述，当前范围判断优先采用明确日期与条件的专项说明，不把所有账户或旧任务一概而论。"
+    },
+    {
+      "id": "alternatives",
+      "title": "换工具不能自动消除交接",
+      "source_ids": [
+        "Scomputer",
+        "Ssurface"
+      ],
+      "body": "当前官方提供computer use beta和本地Claude Code路线，证明存在不同接入方式，不证明Maya里的复杂渲染已经可靠自动化。可以先把稳定文件处理和脚本步骤整理成明确命令，再对比手工截图流程；视觉审美和异常处理仍需验证。现有Maya脚本工具、技术美术协作或继续人工循环也是替代，不能只因为CLI更可编程就假定更适合不会代码的作者。"
+    },
+    {
+      "id": "customer",
+      "title": "谁可能为这类协作付钱",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "直接使用者是懂3D目标但不熟悉编程的艺术家，可能付款者是有重复制作需求的小团队或工作室。可销售的假设不是一款已成型的毛发工具，而是边界明确的流程配置、脚本辅助和验收材料。本案没有客户、合同、收入或净省时数据，使用几个月也不等于有商业复购。低频单次需求可能更适合请技术美术完成；重复任务才值得评估维护成本。"
+    },
+    {
+      "id": "distribution",
+      "title": "先以小范围可检查交付验证",
+      "source_ids": [
+        "Sauthor",
+        "Smaya"
+      ],
+      "body": "假设从已有3D制作合作或工具支持关系展示自有样例，先承诺一个输入、一个输出和明确不改的场景对象，而非承诺完全代替开发者。获客渠道与愿付价未验证，本轮没有联系作者或客户。复制条件包括目标DCC版本、插件许可、场景规范、原资产授权和回退方法；如果每个客户的材质与工具链都不同，收益更接近定制工时服务而非通用订阅。"
+    },
+    {
+      "id": "economics",
+      "title": "两种同范围成本情景",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "以一个小脚本的实现与一次受控场景验收包为单位，每月4包，不含大型工具产品或持续无限修改。低返工假设人工4小时按30美元为120、模型预算2，已列122/包、488/月；高返工12小时为360、模型预算6，已列366/包、1464/月。所有数值是研究者假设，不是作者工资、套餐价或实际耗时。Maya及插件许可、渲染硬件、获客和长期版本维护未知，另计且不能默认为零。售价未知，不算利润。"
+    },
+    {
+      "id": "personal",
+      "title": "自用价值在于降低表达与尝试门槛",
+      "source_ids": [
+        "Sauthor"
+      ],
+      "body": "对能明确表达形状目标并判断结果的艺术家，讨论架构和分步生成代码可能帮助尝试原本难以启动的工具。但设置、执行、截图、解释错误和返工都消耗时间，原案没有量化净收益。频率随项目迭代而非固定每日任务；维护依赖软件更新和插件兼容。不会编程仍不意味着可以跳过文件备份、差异检查和简单失败恢复。"
+    },
+    {
+      "id": "privacy",
+      "title": "项目资产与截图也可能需要许可",
+      "source_ids": [
+        "Sarchitecture",
+        "Scomputer"
+      ],
+      "body": "客户模型、纹理、路径和截图里的项目名称可能受保密约束。当前云端工作流不能描述为所有资料不离本机；应先核哪些文件允许处理，只提供自有或获准样例，关闭无关敏感窗口。生成脚本先审其文件访问与删除行为，输出到副本而非覆盖原场景。第二模型意见不自动增加正确性，也不是把客户资产再传给另一服务的授权。"
+    },
+    {
+      "id": "trial",
+      "title": "建议先验证一个最小闭环",
+      "source_ids": [
+        "Smaya",
+        "Sauthor"
+      ],
+      "body": "用自有简单场景定义一个可观察修改，保留原文件和标准截图。每次只执行一小步，记录运行环境、命令、日志和产物；含错误回退及重复运行是否意外叠加的检查。视觉比较用固定条件，功能与性能另列。预期得到可复核的改动链，不是成品游戏工具。本轮未执行Maya或模型试用，原始Claude.md未取得，不能编造其内容。"
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/build-a-game-tool-with-claude-cowork-and-maya",
+    "observed_at": null,
+    "body_sha256": "b5df99e21aba7ba59328af88b571391e8db54ac219d3452fc1d20d70cf1a080e",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "285bd5d380ed1e99870e1c2c681f9bb19cee942c66c116ba6afe4ce7bdfa370d",
+      "How it went": "260b9e3b90b0d854d6890bde38ab26e1663c20f0fb8027bf1b78ffe6cedeb42f",
+      "Worth knowing": "50145c20f2ce654e1b28f642b4fad9cd3f9c9d4f780230f673b0987df553d793"
+    },
+    "actual_agents": [
+      "Claude Cowork"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata",
+    "observation_window": {
+      "start": "2026-10-20T18:34:51Z",
+      "end": "2026-10-20T18:35:14Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm building a tool for [game or 3D pipeline] in [Maya or another app]. Here's the goal: [describe the tool]. Talk through the architecture with me, then write the code in small testable steps, and tell me where to run each piece. I'll send back error messages and screenshots so you can fix problems. We're done when the tool does [expected behavior] in my project.",
+    "agent": "Claude Cowork",
+    "source_url": "https://agentusecases.ai/use-case/build-a-game-tool-with-claude-cowork-and-maya",
+    "observed_at": null,
+    "method": "dom",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "341a8b70eced4cb1190da38bd555b7fcf15872157d9a5fa78180242b90858611",
+    "observation_window": {
+      "start": "2026-10-20T18:34:51Z",
+      "end": "2026-10-20T18:35:14Z",
+      "basis": "system_time_bracketing_tool_call"
+    }
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeAI/comments/1u8atjx/claude_coworker_claude_coder",
+    "source_title": "Intelligent_Day_7282 describes a manual Cowork–Maya loop",
+    "source_language": "en",
+    "accessed_at": "2026-10-20T18:35:32Z",
+    "source_sha256": "c5cc1f2bad5c637950007e49b3ed3dbcbf144121119a07c1d1aee8e3b9c675c9",
+    "steps": [
+      {
+        "en": "Discuss architecture in Cowork, then run generated code in PowerShell and import results into Maya.",
+        "zh": "在Cowork讨论架构，再用PowerShell运行生成代码，并将结果导入Maya。"
+      },
+      {
+        "en": "Send rendered screenshots back for review; sometimes pass Claude’s audit to ChatGPT for another opinion.",
+        "zh": "把渲染截图发回审查；有时将Claude的审查交给ChatGPT获取另一份意见。"
+      },
+      {
+        "en": "The author had not used Claude Code and was asking whether switching would improve this workflow.",
+        "zh": "作者当时尚未使用Claude Code，正在询问切换是否会改善流程。"
+      }
+    ]
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "人工流程有自述，但没有功能成品或净省时测量。",
+    "audience": "能判断3D效果、希望分步构建工具的艺术家。",
+    "use": "架构讨论、小步代码、日志与截图反馈。",
+    "benefit": "可能降低开始制作工具的门槛，未量化收益。",
+    "setup_cost": "明确目标、软件/插件版本、自有样例和回退副本。",
+    "maintenance_cost": "版本兼容、失败恢复、截图与渲染成本。",
+    "frequency": "随项目反复迭代，非固定高频。",
+    "privacy_risk": "客户资产、屏幕内容与云端处理权限。",
+    "error_risk": "运行环境错配、无关场景修改、重复执行和视觉误判。",
+    "source_ids": [
+      "Sauthor",
+      "Smaya",
+      "Sarchitecture"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录模板，非作者原始Claude.md。",
+    "prerequisites": "自有简单Maya场景、明确目标与不改范围、软件版本和备份。",
+    "tools": "获准助手及合法可用Maya环境；本轮没有安装或执行。",
+    "expected_result": "小步改动、日志、固定条件截图及回退记录，未实测。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/build-a-game-tool-with-claude-cowork-and-maya",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "许可目录试用模板",
+        "text": "I'm building a tool for [game or 3D pipeline] in [Maya or another app]. Here's the goal: [describe the tool]. Talk through the architecture with me, then write the code in small testable steps, and tell me where to run each piece. I'll send back error messages and screenshots so you can fix problems. We're done when the tool does [expected behavior] in my project."
+      },
+      {
+        "title": "最小视觉工具验收计划",
+        "language": "zh",
+        "kind": "ours",
+        "source_url": null,
+        "source_ids": [
+          "Sauthor",
+          "Smaya"
+        ],
+        "attribution": "我们编写，未实测",
+        "text": "只为这份自有简单场景制定一项小改动计划。先列运行环境、输入输出、不可修改对象、日志、固定相机截图和回退方法；不执行脚本、不覆盖文件、不上传客户资产。区分代码正确、视觉判断和性能验证。"
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "低返工",
+      "unit": "一个小脚本及一次受控场景验收包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 2,
+      "human_cost": 120,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 4,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "4h×30USD/h，模型2，已列122/包488/月；许可/硬件/获客/维护未知另计。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "scenario": "高返工",
+      "unit": "一个小脚本及一次受控场景验收包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 6,
+      "human_cost": 360,
+      "other_variable_cost": null,
+      "acquisition_cost": null,
+      "units_per_month": 4,
+      "fixed_monthly_cost": null,
+      "value_type": "hypothesis",
+      "assumptions": "12h×30USD/h，模型6，已列366/包1464/月；许可/硬件/获客/维护未知另计。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    }
+  ],
+  "economics_assumptions": "全部为研究者假设非作者价格或账单；未知收入和许可等成本不填零。",
+  "feedback": {
+    "independent_user_feedback_count": 1,
+    "note": "一位作者的持续使用自述，无成品复验；其他评论是建议，未合并为已成功样本。"
+  },
+  "disconfirming_evidence": "几个月仍需人工交接，毛发视觉依赖渲染截图；无成品与净省时。换工具也不自动解决视觉验收。",
+  "limitations": "原始Claude.md、代码、版本和产物未提供；当前官方能力不证明作者使用方式；没有真实Maya执行、客户收益或效果测试。",
+  "archive_source_sha256": "b5df99e21aba7ba59328af88b571391e8db54ac219d3452fc1d20d70cf1a080e",
+  "translation_sha256": "3372f27440c006281016f77b43bc08ca9c2533cea6d1c487bc6c7b3402409947"
+}
