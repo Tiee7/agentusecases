@@ -1,0 +1,393 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "analysis_depth": "brief",
+  "id": "use-claude-code-as-co-developer-with-agents-md-and-logging",
+  "url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+  "title": "用 Claude Code 配合项目规则与数值日志开发终端应用",
+  "industry": "软件开发与调试",
+  "researched_at": "2026-10-21T13:02:13.293802+00:00",
+  "brief_reason": "公开项目和方法资料可核，但原作者完整调试轨迹、效率及收入缺证，保存有依据简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先用于内部开发验证",
+    "headline": "交付可复现的修复证据，而不是依赖代理猜测",
+    "reason": "项目存在不等于开发效率或付费需求已被证明。",
+    "next_action": "同一授权缺陷记录修复前失败、实测日志、修复后和正常路径回归。",
+    "stop_condition": "无法复现、无测量或扩大范围却缺回归。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+      "title": "许可目录：共同开发与数值日志",
+      "supports": "目录转述七个月开发、一次五次错误猜测后通过数值日志修复；不是效率实验或经营收入。",
+      "status": "fetched",
+      "read_method": "licensed_archive",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "目录转述七个月开发、一次五次错误猜测后通过数值日志修复；不是效率实验或经营收入。",
+      "sha256": "db0d22829b0a6c41390009c1aa859f2332b5061ae2471aa2b57307f1dc915eee",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Srepo",
+      "url": "https://github.com/RoversX/ThinkTerm",
+      "title": "ThinkTerm公开项目README",
+      "supports": "公开项目基于Rust与WezTerm，介绍桌面、TUI和Web会话接入；移动端仍在开发。项目存在不等于各平台已由本研究实测。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "公开项目基于Rust与WezTerm，介绍桌面、TUI和Web会话接入；移动端仍在开发。项目存在不等于各平台已由本研究实测。",
+      "sha256": "452d237ebef190c4bc5db13f682f5499fc78ac65770312db1ad5c03404e0b486",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Smemory",
+      "url": "https://code.claude.com/docs/en/memory",
+      "title": "Claude Code指令文件文档",
+      "supports": "现行AGENTS.md直接加载受版本与配置影响，默认有CLAUDE.md时优先后者；文件存在本身不证明本次会话加载。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "现行AGENTS.md直接加载受版本与配置影响，默认有CLAUDE.md时优先后者；文件存在本身不证明本次会话加载。",
+      "sha256": "f6d8496b4879977dd2458f2e4402c74b8d3e67d22a471816edbef02091849fb9",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Swez",
+      "url": "https://wezterm.org/multiplexing.html",
+      "title": "WezTerm复用文档",
+      "supports": "上游已有本地与远程复用能力；远程SSH复用需兼容远端组件。无需假定所有会话管理价值由新应用创造。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "上游已有本地与远程复用能力；远程SSH复用需兼容远端组件。无需假定所有会话管理价值由新应用创造。",
+      "sha256": "13d798c798f3aee2027afc8a0a98fd2fec7e29d6f70219a62b6486370a2e27d2",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Sstudy",
+      "url": "https://arxiv.org/abs/2607.27250",
+      "title": "上下文文件消融研究摘要",
+      "supports": "2026年7月预印本摘要报告两种代理、17任务、3仓库及288次运行，该样本未测得上下文策略显著改变正确性；仅读摘要，不泛化为规则文件无用。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "2026年7月预印本摘要报告两种代理、17任务、3仓库及288次运行，该样本未测得上下文策略显著改变正确性；仅读摘要，不泛化为规则文件无用。",
+      "sha256": "bb77c9f125d6222f19ffa0d268917ec89d41d488c8e5eb261000caea6ea18b3a",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Sissue",
+      "url": "https://github.com/RoversX/ThinkTerm/issues/6",
+      "title": "ThinkTerm远端Codex识别问题",
+      "supports": "0.1.9用户报告远端识别问题，讨论后称启用设置后工作正常；随后还有独立的Connect部署讨论。不能把全部问题合并成产品不可用或全部修好。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "0.1.9用户报告远端识别问题，讨论后称启用设置后工作正常；随后还有独立的Connect部署讨论。不能把全部问题合并成产品不可用或全部修好。",
+      "sha256": "8e7513e5af2fe1548b7141491064d561d9a9997e620b840d210daf0020ef9434",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    },
+    {
+      "id": "Scost",
+      "url": "https://code.claude.com/docs/en/costs",
+      "title": "Claude Code成本说明",
+      "supports": "本日已读官方区分订阅额度、可选额外用量与API计费；持续调试的模型费用和人工监督须分别核算。",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T13:02:13.293802+00:00",
+      "receipt_text": "本日已读官方区分订阅额度、可选额外用量与API计费；持续调试的模型费用和人工监督须分别核算。",
+      "sha256": "4f6d050d0394305a394089817816ac490cd53ec71c9e379a13d0fc3c43770137",
+      "hash_scope": "Researcher factual summary, not full external source hash"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录转述七个月开发、一次五次错误猜测后通过数值日志修复；不是效率实验或经营收入。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "公开项目基于Rust与WezTerm，介绍桌面、TUI和Web会话接入；移动端仍在开发。项目存在不等于各平台已由本研究实测。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Srepo"
+      ]
+    },
+    {
+      "statement": "现行AGENTS.md直接加载受版本与配置影响，默认有CLAUDE.md时优先后者；文件存在本身不证明本次会话加载。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Smemory"
+      ]
+    },
+    {
+      "statement": "上游已有本地与远程复用能力；远程SSH复用需兼容远端组件。无需假定所有会话管理价值由新应用创造。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Swez"
+      ]
+    },
+    {
+      "statement": "2026年7月预印本摘要报告两种代理、17任务、3仓库及288次运行，该样本未测得上下文策略显著改变正确性；仅读摘要，不泛化为规则文件无用。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sstudy"
+      ]
+    },
+    {
+      "statement": "0.1.9用户报告远端识别问题，讨论后称启用设置后工作正常；随后还有独立的Connect部署讨论。不能把全部问题合并成产品不可用或全部修好。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sissue"
+      ]
+    },
+    {
+      "statement": "本日已读官方区分订阅额度、可选额外用量与API计费；持续调试的模型费用和人工监督须分别核算。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Scost"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "开源成果可查，开发收益仍未量化",
+      "body": "本案例研究的是Claude Code共同开发工作流，不是把ThinkTerm当作已盈利产品。目录中的七个月和五次猜错来自作者体验，没有对照工时、缺陷率或收入凭据。公开仓库提供了真实项目这一层证据，但不证明模型独立完成、每个平台都稳定，或该方法比传统开发节省多少。原Reddit全文未取得，作者方法标不可读，目录转述与当前仓库资料分别保存。",
+      "source_ids": [
+        "Sdirectory",
+        "Srepo"
+      ]
+    },
+    {
+      "id": "method",
+      "title": "从猜原因转到可重复测量",
+      "body": "可复制的核心是把一个具体错误变成可观测事件：固定输入与版本，记预期和实际尺寸、坐标或状态，先复现失败，再改变一个相关因素并复测。日志应包含单位、测量时机和对象，单纯增加编号却仍打印推断结论没有帮助。对于界面，保存PNG可能补充观察，但截图、几何数据、交互和实际GPU渲染并不等价。研究者建议用同一错误样例做修复前失败、修复后成功与正常路径回归，不把某次测试通过当所有画面正确。此处是验证设计，未运行ThinkTerm或复现原作者错误。",
+      "source_ids": [
+        "Sdirectory",
+        "Srepo"
+      ]
+    },
+    {
+      "id": "instructions",
+      "title": "指令文件应先确认真正加载",
+      "body": "目录保留AGENTS.md或Claude.md原写法；现在产品文档则有版本门槛与加载优先级。复制时应先核当前版本、实际读入哪些文件和工作目录，不要在已有CLAUDE.md旁增加另一份后就默认两者生效。规则最好写项目真实测试命令、约束和可验证要求，而非堆积笼统口号。预印本摘要提示上下文文件不必然提高任务正确性，但它样本有限，不能据此删除所有规则。更稳妥的目标是减少约定遗漏，并用失败样例验证具体改进，而不是把文件本身当质量保证。",
+      "source_ids": [
+        "Smemory",
+        "Sstudy"
+      ]
+    },
+    {
+      "id": "value",
+      "title": "客户付的是修好的问题，不是日志行数",
+      "body": "自用人群是能审查变更、理解测试边界的开发者。潜在经营方向可以是范围明确的缺陷修复或维护服务，付款人可能是产品负责人，但本案没有客户和预算证据。客户需要可复现修复、兼容性说明和回归记录，通常不会单独为一份规则文件长期付费。若任务无法复现、没有测试环境或需要凭据迁移，交付成本会迅速上升。不能从作者完成开源项目推断有人愿意购买其开发方法，更不能把程序会话数量当销量。",
+      "source_ids": [
+        "Sdirectory",
+        "Srepo"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "原生复用与传统调试都是对照",
+      "body": "ThinkTerm建立在已有终端基础上，WezTerm本来就有复用与远程域；其具体优势应在工作区组织与交互中实测，而不是宣称持久会话此前不存在。对于开发方法，调试器、可重复测试和人工审查也是现成路线。代理的价值是减少规划、修改和重复执行负担，但如果人仍需不断纠正猜测，净节省未必成立。用户问题#6说明配置与远端组件理解也是交付的一部分；回复中的成功应保留，不能只摘最初投诉营销。",
+      "source_ids": [
+        "Swez",
+        "Sissue"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "按一次验收修复计算",
+      "body": "所有输入均为研究者假设。轻量修复：工具摊销3美元、人工30分钟按40美元/小时计20、其它2、获客5，单位30；每月12次加固定维护40，共400美元。高监督修复：工具12、人工120分钟计80、其它5、获客10，单位107；同12次加固定维护100，共1384美元。实际售价未知，不计算毛利。初次环境准备和跨设备测试未取得工时，必须另记，不默认为零。重复猜错不仅耗模型额度，还占用审阅时间，因此应以最终验收所耗总资源为分母，而不是只统计最后一次成功执行。",
+      "source_ids": [
+        "Scost",
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "复制条件、获客与责任",
+      "body": "若未来验证服务，可以从既有软件维护关系里承接一个能够复现的具体缺陷，先交复现、日志证据、最小补丁和回归说明，限制变更范围。这里没有联系第三方或承接订单。客户代码与日志可能含账号和业务信息，应只采必要字段并避免持久保存凭据；公开错误报告也不能授权修改用户远端设备。经营壁垒更可能来自特定系统经验和可信验收，而非使用同一模型。任何重新分发开源代码的安排还应另核项目许可，本轮仅观察README许可说明，没有给法律结论或打包分发。",
+      "source_ids": [
+        "Srepo",
+        "Sissue"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "反证与下一步",
+      "body": "本轮检索公开项目、问题讨论和独立研究，未取得原案例五次猜错的完整轨迹或同条件效率复验。ThinkTerm用户反馈属于产物使用，不等于开发工作流的独立效果证明；预印本仅为方法反证，不能当商业市场数据。下一步可用自己已授权项目的一项可重复视觉尺寸错误，比较有测量日志与只描述症状的修复过程，记录实际修改、回归、人工分钟和工具成本。不运行额外付费API，不新增凭据。若不能复现、日志无真实测量、修改扩大范围或失败被隐藏，就停止交付并先补证据。",
+      "source_ids": [
+        "Sissue",
+        "Sstudy",
+        "Sdirectory"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "70958d72bbebe903376a9551bc6bbbc7542855baad56104ef1fd1ae2b976da93",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "1ca92f078a083bca0fe77c700d59da13b063ca1725792ea3fe74082ffb3841b4",
+      "How it went": "124273a87d0b65083c70d646c3bb10858c4c4c21d7dfc8eed17460325d6bcdce",
+      "Worth knowing": "4d15bbe9d516594a2e35f744160749c8ad6ed0fe7f589211b34a33f4989028e7"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Create an AGENTS.md file in [repo path] that describes the project's structure, how to run and test it, coding conventions, and rules for you to follow. Then help me with [feature or bug] by planning first, then coding, testing, and debugging, adding clear numbered log lines so you can verify behavior from the output. Stop when the tests pass and show me a summary of the changes.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+    "observed_at": "2026-10-21T06:33:33.179876+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "11e5559c33a4d163243cdd93705b14c8be7720b90e8f719430d1941a12a8e08c"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+    "source_sha256": "70958d72bbebe903376a9551bc6bbbc7542855baad56104ef1fd1ae2b976da93",
+    "steps": [
+      {
+        "en": "Claude Code assisted planning, implementation and tests while the author reviewed changes.",
+        "zh": "Claude Code辅助规划、实现和测试，作者审查修改。"
+      },
+      {
+        "en": "The directory reports a debugging breakthrough after replacing repeated guesses with measured numeric logs.",
+        "zh": "目录称，改用实际数值日志代替反复猜测后取得了调试进展。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeWorkflows/comments/1xax029/workflow_claude_code_as_a_codeveloper_planning",
+    "source_title": "ThinkTerm共同开发工作流原帖",
+    "source_language": "en",
+    "accessed_at": "2026-10-21T13:02:13.293802+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原Reddit完整页面受既有访问限制，未读取；目录转述与公开项目另列。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "定性推断：已具开发与审查能力的人可借助规则和实测提高可核查性，但净收益未实测。",
+    "audience": "能阅读代码并验证运行结果的开发者。",
+    "use": "规划、补丁、测试和以实测为依据的调试。",
+    "benefit": "可能减少重复操作，不保证所有错误都更快修复。",
+    "setup_cost": "可复现环境、项目规则、测量点和测试命令。",
+    "maintenance_cost": "规则与工具版本、日志噪声、跨平台回归。",
+    "frequency": "随开发任务持续使用。",
+    "privacy_risk": "代码和日志可能带业务数据、凭据或远端信息。",
+    "error_risk": "猜测写成事实、测试范围不足、截图与实际渲染混淆。",
+    "source_ids": [
+      "Sdirectory",
+      "Smemory",
+      "Sstudy"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录建议模板，不冒充作者原始开发指令。",
+    "prerequisites": "自有授权仓库、可重复错误、版本和正常路径测试。",
+    "tools": "Claude Code与本地日志/测试；本轮仅研究未安装运行。",
+    "expected_result": "可核对的最小补丁和复现记录，不是跨平台质量认证。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/use-claude-code-as-co-developer-with-agents-md-and-logging",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录建议模板",
+        "text": "Create an AGENTS.md file in [repo path] that describes the project's structure, how to run and test it, coding conventions, and rules for you to follow. Then help me with [feature or bug] by planning first, then coding, testing, and debugging, adding clear numbered log lines so you can verify behavior from the output. Stop when the tests pass and show me a summary of the changes."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "轻量假设",
+      "unit": "一次验收完成的具体修复",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 3,
+      "human_cost": 20,
+      "other_variable_cost": 2,
+      "acquisition_cost": 5,
+      "units_per_month": 12,
+      "fixed_monthly_cost": 40,
+      "value_type": "hypothesis",
+      "assumptions": "人工30分钟×40美元/小时；单位30，月400。初次接入工时另核。",
+      "source_ids": [
+        "Scost",
+        "Sdirectory"
+      ]
+    },
+    {
+      "scenario": "高监督假设",
+      "unit": "一次验收完成的具体修复",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 12,
+      "human_cost": 80,
+      "other_variable_cost": 5,
+      "acquisition_cost": 10,
+      "units_per_month": 12,
+      "fixed_monthly_cost": 100,
+      "value_type": "hypothesis",
+      "assumptions": "人工120分钟×40美元/小时；单位107，月1384。真实收入未知。",
+      "source_ids": [
+        "Scost",
+        "Sdirectory"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开项目检索",
+        "query": "\"ThinkTerm\" review bugs agent sessions",
+        "outcome": "读取公开项目与用户问题；未得收入或开发效率统计。"
+      },
+      {
+        "channel": "代码问题检索",
+        "query": "site.github.com/RoversX/ThinkTerm/issues logging sizes",
+        "outcome": "未取得原作者数值尺寸错误完整复现。"
+      },
+      {
+        "channel": "公开讨论检索",
+        "query": "\"Claude Code\" \"numerical\" \"debugging\" ThinkTerm",
+        "outcome": "搜索定位原帖，不将片段当完整阅读。"
+      }
+    ],
+    "independent_user_feedback_count": 0,
+    "note": "问题#6是产物体验，非本案开发方法独立效率验证；抽象研究非同项目实测。"
+  },
+  "disconfirming_evidence": "原生复用已有，规则文件不保证正确性；原作者反复猜测与用户配置问题说明人审和环境维护仍在。",
+  "limitations": "未读取原Reddit全文、未运行ThinkTerm、未测GPU或远端连接、未读预印本全文。issue2与LICENSE链接普通工具读取失败，未用于结论；README许可描述不是法律审查。自有云浏览器12:57导航超时，公开资料用支持的Web读取。 云端首导航超时后标签实际出现，但13:03的DOM与截图仅有Skip to content外壳；一次正常重载后仍如此，未取得云端README，不再重试。",
+  "archive_source_sha256": "70958d72bbebe903376a9551bc6bbbc7542855baad56104ef1fd1ae2b976da93",
+  "translation_sha256": "ede8367f9d3e67fe253bdb3979782098451d092629fa085aba341cab4b9a3c14"
+}
