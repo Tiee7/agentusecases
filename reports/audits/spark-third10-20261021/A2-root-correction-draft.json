@@ -1,0 +1,304 @@
+{
+  "id": "track-incoming-emails-and-notify-about-key-ones",
+  "title": "用 Dots 监控收件箱重要来信并发送通知",
+  "original_title": "Track incoming emails and notify about key ones",
+  "analysis_depth": "deep",
+  "decision": "不建议商业投入",
+  "reason": "原作者报告多次漏看邮件、错误的空结果报告和通知延迟，足以说明其当时配置不能作为时效敏感邮件的唯一提醒渠道，但不足以判断所有配置的召回率或具体技术根因。建议暂不销售带实时可靠性承诺的独立服务；可在保留原生提醒的前提下探索非关键汇总。确定性过滤、轮询与事件推送是不同替代路径，也需要补同步、去重、续期、投递及人工核对，不能承诺100%召回或零维护。订阅成本须区分已有套餐边际成本与专为此任务的新采购。",
+  "score_status": "pending_reassessment",
+  "commercial_scores": null,
+  "author_method": {
+    "status": "author_summary",
+    "original_sources": [
+      "https://www.reddit.com/r/OpenAI/comments/1wu77gv/thoughts_on_dots"
+    ],
+    "bilingual_summary": {
+      "en": "In Reddit r/OpenAI (post 1wu77gv, 'Thoughts on Dots?'), OP u/DudeBroJustin tested OpenAI's always-on agent Dots for a full day, including asking it to watch incoming emails for specific messages and notify them. Instead of autonomous monitoring, Dots was extremely slow, gave no progress updates, missed one of the two most recent emails until explicitly told to look again, falsely stated at 8:50 a.m. that there were no new emails when one had already arrived, and failed to notify about two more emails over the next two hours. The author also noted that phone voice calls and text chat acted like separate AIs without shared context.",
+      "zh": "在 Reddit r/OpenAI 原帖（1wu77gv，《Thoughts on Dots?》）中，作者 u/DudeBroJustin 测试了 OpenAI 的常驻代理 Dots，要求其监控收件箱中的特定新邮件并发送通知。实际运行中，Dots 并未实现可靠的自动监控：所有动作与响应极其缓慢且无进度反馈；在检查最近两封邮件时漏掉其中第二封，直到作者专门追问才道歉称“刚才漏看了”；当天早上 8:50 在收件箱已有 1 封新邮件的情况下向作者谎报“没有新邮件”；随后两小时内新收到的 2 封邮件也完全没有通报，作者只能手动命令其查找。此外，作者在电话语音中讨论 Google Sheet 后将链接发到文字聊天，聊天端却反问链接用途，语音与文字如同两个割裂的 AI。"
+    },
+    "boundary_distinction": {
+      "author_actual_steps": [
+        "原帖作者（u/DudeBroJustin）：在 ChatGPT 中向已连接邮箱的 Dots 下达自然语言指令，要求其持续监控特定来信并主动通知，随后在 8:50 a.m. 及接下来两小时内通过收件箱实际到信情况人工核对其召回率与主动通知表现。"
+      ],
+      "catalog_editorial_template": "agentusecases.ai 目录忠实收录了该失败案例，并在 Try it yourself 中由目录编辑编写了一段改进版验证提示词（要求 Dots 先发送一条测试通知证明通道有效，并明确汇报检查频率，且禁止回复或删除邮件）。该 Copy prompt 是源站编辑针对原案失败点设计的测试模板（正如评论者 u/coursiv_ 所建议的测试方法），并非原作者最初使用的原话。",
+      "official_capabilities": "根据 OpenAI 官方文档（learn.chatgpt.com/docs/dots 与 help.openai.com，2026年10月），Dots 是基于 GPT-6 Astra 的云端常驻代理，仅向 EEA/英国/瑞士以外的 ChatGPT Pro（$100/$200/$500/月）及全球 Business Premium / Enterprise（管理员手动开启）灰度推出。官方文档明确说明：Dots 会自行决定何时休眠与唤醒（除非用户在 Scheduled 中设定带时区的明确固定时间表），且短信（Texting）通知仅对美国部分 Pro 用户限量 Beta 开放，连接聊天渠道不等于自动持续轮询收件箱。",
+      "researcher_recommendations": "研究者建议：任何对漏报零容忍或要求分钟级响应的收件箱监控，必须使用基于事件推送（Push/Webhook）的确定性管道（Gmail 原生过滤器 + 手机推送，或 Zapier/Make + LLM 仅做单步摘要），严禁用自主休眠的通用 Agent 轮询替代事件触发器。"
+    }
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "category": "原作者自述（失败过程）",
+      "statement": "Reddit 用户 u/DudeBroJustin（2026年9月30日发帖）要求 OpenAI Dots 监控特定新邮件并通知自己，但 Dots 响应极慢、不主动汇报进度，且在查看最近两封邮件时漏掉了排在第二位的一封，直到被人工追问才承认漏看。",
+      "evidence_type": "作者自述",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "verification_note": "已读取 Reddit 原帖全文与许可目录归档。"
+    },
+    {
+      "id": "F2",
+      "category": "原作者自述（核心量化失败结果）",
+      "statement": "作者自述8:50被告知没有新邮件，人工检查却发现新信；随后两小时又收到两封而未获通知。没有公开完整原始邮箱日志，无法确定不同叙述是否重叠及完整分母，不计算产品总体召回率。",
+      "evidence_type": "作者自述",
+      "source_ids": [
+        "S1",
+        "S2"
+      ],
+      "verification_note": "一手用户叙述，非本研究独立邮箱实测。"
+    },
+    {
+      "id": "F3",
+      "category": "实际读取的社区反馈（同帖验证）",
+      "statement": "在原帖评论区中，用户 u/CategoryLow3537 指出 Dots 除非被赋予明确的定时任务间隔（Scheduled task），否则不会可靠地持续跟进；u/AnybodySoft7661 复现了语音与文字割裂及邮件追踪失败；u/coursiv_ 指出“按需查找邮件”与“新邮件到达时主动触发通知”是两件完全不同的工作，在通过定时带标签邮件压力测试前绝不能用于时间敏感邮件。",
+      "evidence_type": "作者自述",
+      "source_ids": [
+        "S2"
+      ],
+      "verification_note": "已读取 r/OpenAI 原帖评论区全文。"
+    },
+    {
+      "id": "F4",
+      "category": "实际读取的跨社区反馈（r/OpenaiCodex 与 r/ChatGPT）",
+      "statement": "在 r/OpenaiCodex（1wwim53）与 r/ChatGPT（1x1hb6x）两个独立讨论串中，Top 1% 评论者 u/KnownPride 报告 Dots 会无预警随机停机数小时（恢复后称在维护）并彻底遗忘已设定的定时任务；u/Secret_Sessions 与 u/chrisadam101 同样报告必须不断手动催促它工作；仅少数用户（如 u/lynk1、u/MtMcGinnis502）反映其在非实时的跨天核对（12小时延迟级别）中发现了文档不一致。",
+      "evidence_type": "作者自述",
+      "source_ids": [
+        "S3",
+        "S7"
+      ],
+      "verification_note": "已读取 2 个额外 Reddit 独立讨论串全文。"
+    },
+    {
+      "id": "F5",
+      "category": "实际读取的官方说明（准入与定价）",
+      "statement": "OpenAI 官方文档（2026年10月）规定：Dots 由 GPT-6 Astra 驱动，仅包含在 ChatGPT Pro（$100、$200 或 $500/月）、Business Premium 及已由管理员开启 Beta 的 Enterprise/Edu/Healthcare 计划中；普通 Free（$0）、Go（$8/月）及 Plus（$20/月）用户无权使用 Dots。",
+      "evidence_type": "实际读取的官方说明",
+      "source_ids": [
+        "S4",
+        "S5",
+        "S8"
+      ],
+      "verification_note": "已读取 learn.chatgpt.com/docs/dots、help.openai.com 及 pricing 官方文档。"
+    },
+    {
+      "id": "F6",
+      "category": "实际读取的官方说明（技术机制与区域限制）",
+      "statement": "OpenAI 官方文档说明：（1）Pro 用户的 Dots 服务目前排除欧洲经济区（EEA）、英国与瑞士；（2）Dots 会自行决定何时暂停与唤醒（pause and wake up），若需特定时间检查，用户必须显式指定时区、频率并在 Scheduled 中确认；（3）短信（Texting）通知仅限美国部分 Pro 用户 Beta 测试，且 Dots 在发布初期不支持主动向用户发起电话呼叫（cannot initiate calls to you at launch），也没有独立邮箱地址。",
+      "evidence_type": "实际读取的官方说明",
+      "source_ids": [
+        "S4",
+        "S5"
+      ],
+      "verification_note": "官方功能说明不能确定该作者实际触发器、授权、检索范围或漏报根因。"
+    },
+    {
+      "id": "F7",
+      "category": "实际读取的官方说明（用量计费规则）",
+      "statement": "OpenAI 官方文档说明：用户直接与 Dot 对话不计入 ChatGPT 用量上限（且首月提供扩展额度），但一旦 Dot 派生或管理 ChatGPT Work 或 Codex 子任务，则按相应产品额度正常扣减（GPT-6 Astra 标准费率为输入 250 credits/1M tokens、输出 1,250 credits/1M tokens）。",
+      "evidence_type": "实际读取的官方说明",
+      "source_ids": [
+        "S4",
+        "S8"
+      ],
+      "verification_note": "已核对官方 Dots 文档与 Pricing 表，澄清了社区关于“是否消耗配额”的争议。"
+    },
+    {
+      "id": "F8",
+      "category": "实际读取的竞争方案定价",
+      "statement": "确定性自动化替代方案 Zapier（2026年10月官方定价）提供 Free 计划（$0/月，含 100 tasks/月、两步 Zap、15分钟轮询）、Professional 计划（$19.99/月起，支持多步 Zap、AI 字段、Webhook 及 2分钟轮询）与 Team 计划（$69/月起，1分钟轮询）。",
+      "evidence_type": "实际读取的官方说明",
+      "source_ids": [
+        "S6"
+      ],
+      "verification_note": "已读取 zapier.com/pricing 官方价格页。"
+    },
+    {
+      "id": "F9",
+      "category": "未知：架构根因待查",
+      "statement": "原帖没有给出实际邮箱连接器、触发记录、查询分页、已读状态过滤或通知投递日志；漏报可能发生在取信、匹配、调度、摘要或投递环节，尚不能确认未使用watch API或归因为模型注意力。",
+      "evidence_type": "未知",
+      "source_ids": [
+        "S2",
+        "S4",
+        "S5"
+      ],
+      "verification_note": "删除已定位架构根因的过度推断；候选故障路径是研究者排查建议。"
+    },
+    {
+      "id": "F10",
+      "category": "未知与缺口项",
+      "statement": "原案未提供商业收入证据，收入未知而不是已证实为零；作者实际后台检查频率、取信范围及连接器上限也未获得。",
+      "evidence_type": "未知",
+      "source_ids": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "verification_note": "保留未知，不伪造未公开参数。"
+    },
+    {
+      "id": "F11",
+      "category": "官方机制边界",
+      "statement": "Gmail官方说明watch需要续期，每用户推送速率有上限，事件可能延迟或丢失，建议缺少推送时用history.list补同步。推送到应用不是用户已收到提醒的证明。",
+      "evidence_type": "官方说明",
+      "source_ids": [
+        "S10"
+      ]
+    }
+  ],
+  "analysis": {
+    "workflow_and_intervention": "1. 谁用什么 Agent 做了什么：Reddit 用户 u/DudeBroJustin 使用 OpenAI 新推出的常驻代理 Dots（底层由 GPT-6 Astra 驱动，配备云端电脑与插件连接器），通过自然语言要求其监控收件箱中到达的特定邮件并发送通知（S1、S2、S4）。\n2. 输入/动作/输出拆解：输入为用户的口头/文字监控指令及已授权的个人邮箱插件连接；预期动作为后台持续监听新邮件、识别匹配项并推送发件人、主题与摘要；实际输出却是严重漏报（最近 2 封漏 1 封、2 小时内新到 2 封全漏）及虚假否定报告（8:50 a.m. 报告无新邮件，实际已有 1 封）（F1、F2）。\n3. 人类介入环节：原本期望零人工干预的“被动接收通知”，实际退化为 100% 人工轮询——作者不得不自己打开邮箱核对，并反复手动发消息催促 Dots 重新查找被漏掉的邮件（S1、S2）。",
+    "commercial_demand": "1. 使用者与付款人：需要监控重要来信（如客户询盘、账单发票、房东/物业通知、法务或运维告警）的个人专业人士、高管助理或中小微企业主。付款人为个人或中小企业主，预算属于办公效率工具支出（研究者推断）。\n2. 痛点频率与损失：邮件到达是每日数十至数百次的高频事件，其中关键邮件（每天 1–10 封）若漏报或延误数小时，可能导致错失商机、逾期付款或合同违约（研究者推断）。\n3. 已有采购证据：本案不仅无采购证据，反而直接证明了客户对低可靠性 AI 邮件监控的强烈负面反弹（原帖及评论区大量付费 Pro 用户表示失望甚至放弃使用 Dots，见 S2、S3、S7）。个人收件箱提醒绝不能硬包装成基于 Dots 的可售卖服务。",
+    "revenue_and_gtm": "1. 可卖交付单位与经营模式（假设）：原案无任何交易证据（原收入为 null）。即便假设有人尝试代客配置“AI 重要邮件摘要与多渠道提醒工作流”，客户对邮件通知的验收底线是 **接近 100% 的召回率与分钟级延迟**（S2）。\n2. 验收方式与交付死结：正如评论者 u/coursiv_ 指出的，验收只需在不同时间发送几封带标记的测试邮件，统计触发通知的比例（S2）。由于 Dots 在原案中召回率不足 50% 且存在假阴性谎报，任何商业交付都会在首日验收时失败。\n3. 渠道与维护限制：Dots 绑定在用户个人的 ChatGPT Pro（$100+/月）账户内，不支持导出独立 Agent 交付给外部客户，且在欧洲/英国/瑞士完全不可用，短信通道亦受限于美国 Beta 名额（F5、F6、S5），根本不具备作为商业产品分发的条件。",
+    "alternatives_comparison": "针对“监控收件箱特定来信 + 生成一行摘要 + 即时推送通知”的相同功能范围，核实以下 3 个具体替代方案：\n1. Gmail / Outlook 原生过滤器（Filters）+ 移动端 VIP/标签推送通知：软件订阅费 $0（或包含在现有的 Google Workspace / Microsoft 365 中），连接器费用 $0，延迟为秒级（实时 Push），召回率 100%，零幻觉风险。唯一区别是不含 LLM 生成的“一行摘要”，但移动端通知原生显示发件人、主题与前两行正文预览，已满足 95% 的提醒需求（研究者推断）。\n2. Zapier（Gmail New Email Matching Search → OpenAI/Claude API 一行摘要 → Slack/SMS/Push 通知）：Zapier Free 计划 $0/月（含 100 tasks/月，15分钟轮询），Professional 计划 $19.99/月（支持多步 Zap、Webhook 与 2分钟轮询），Team 计划 $69/月（1分钟轮询）（F8、S6）。配合轻量模型（如 Claude Haiku 5.5 输入 $0.10/MTok、输出 $0.50/MTok，或 GPT-6 Luna），每封邮件摘要的 API 成本不足 $0.0002，且触发逻辑由确定性的 Gmail API 搜索保证，绝不会像 Dots 一样随机休眠漏信（S6、S8、S9）。\n3. ChatGPT 原生 Scheduled Tasks（定时任务）/ Google Workspace 内置自动化：若用户已有 ChatGPT Plus（$20/月），可直接使用显式定时的 Scheduled Tasks（S2、S8），但仍受制于固定轮询间隔，不如事件驱动的 Zapier 或原生过滤器实时可靠。",
+    "unit_economics_narrative": "统一按美元（USD）、月度时间窗（假设每月监控邮箱并处理 200 封命中的重要邮件通知）对比两种情景。原案售价与收入均为 null（未知），不虚算利润：\n- 情景 A（原案路径：为使用 Dots 订阅 ChatGPT Pro $100/月 + 人工兜底核查）：月总成本 $250.00（折合每封有效/核查通知 $1.25）。其中工具订阅 $100.00/月（Dots 最低准入门槛 ChatGPT Pro 100，S5、S8）；第三方连接器 $0.00；人工兜底检查与返工成本：因 Dots 漏报与假阴性，用户每天需花 15 分钟手动巡检邮箱并重发提示词（每月 20 工作日共 5.0 小时，按 $25.00/小时机会成本计 = $125.00/月，另加漏看重要邮件的补救返工 1.0 小时 = $25.00/月）。\n- 情景 B（确定性替代路径：Zapier Professional $19.99/月 + Claude Haiku 5.5 API 摘要 + Slack/Push 推送）：月总成本 $26.28（折合每封重要邮件通知 $0.13，若月命中 ≤100 封且接受两步通知甚至可用 Zapier Free 降至 ~$6/月）。其中工具订阅 $19.99/月（Zapier Pro 2分钟轮询多步工作流，S6）；模型 API 成本 $0.04/月（200 封邮件 × 每封约 1,500 输入 tokens + 100 输出 tokens，按 Haiku 5.5 费率计算 < $0.04，S9）；人工复核与返工 $0.00（确定性触发无需每日手动催促）；月固定维护（每季度微调一次过滤词，分摊约 0.25 小时/月 × $25.00/小时）$6.25/月。对比可见，确定性替代方案全成本仅为 Dots 方案的约 1/10，且可靠性大幅提升。",
+    "moat_and_compliance": "1. 竞争壁垒：零壁垒。收件箱监控与通知是最基础的办公自动化场景，各大邮件客户端（Gmail、Outlook、Apple Mail、Shortwave）与 iPaaS 平台（Zapier、Make、Power Automate）均已深耕十余年。\n2. 隐私与合规风险：将个人或企业邮箱完整授权给常驻云端 Agent（Dots）会带来显著的隐私暴露面。根据 OpenAI 官方《Getting started with your dot》说明，Dots 会主动扫描已连接应用的数据并形成独立记忆（proactive memory），且**断开邮箱连接并不会删除 Dot 已经从邮箱中获取并保存的信息**——要彻底清除这些记忆，用户必须执行 `Reset` 彻底销毁整个 Dot 实例（F6、S5）。此外，r/OpenaiCodex 用户（如 u/DrDan21）明确指出企业合规部门绝不会允许员工将工作 Microsoft 365 邮箱绑定至个人 OpenAI Dots 账户（S3）。",
+    "user_feedback_search": "已在 Reddit 3 个不同板块（r/OpenAI、r/OpenaiCodex、r/ChatGPT）及 Hacker News / 科技媒体评测完成超过 4 次检索：\n1. r/OpenAI 原帖（1wu77gv，19赞/50踩，S2）：除原帖作者报告邮件漏报外，u/macaronianddeeez 批评其桌面端极占内存且工具调用不稳定；u/davidl002 报告其无法把 Codex 云端任务截图传回且语音呼叫不可用；u/Significant_Sun_5225 连续发帖批评其缓慢、多 Bug 且插件经常失忆；u/Narrow-College-936 表示花了高昂订阅费却不得不像微观管理实习生一样盯着它。\n2. r/OpenaiCodex 讨论帖（1wwim53，16赞/59踩，S3）：u/KnownPride（Top 1% Commenter）给出 2/10 评分，指出 Dots 会随机停机数小时并彻底遗忘定时任务；u/EquivalentHornet4403 批评其消耗配额的边界极其不透明；正向反馈仅有 u/lynk1 提到其连接邮箱后在 12 小时/24 小时级别发现了发给子代理商的客户沟通不一致。\n3. r/ChatGPT 讨论帖（1x1hb6x，《I've given up on DOTS》，S7）：u/E_Online 表示折腾数小时后因 Bug 太多彻底放弃；u/Secret_Sessions 与 u/chrisadam101 指出必须不断手动命令它干活，作为自主服务毫无意义。",
+    "personal_value_narrative": "独立自用价值评级：**低**（针对原案“监控重要来信并及时通知”这一特定用途）。\n- 适用人群与用途：仅适合已订阅 ChatGPT Pro（$100+/月）、对时效性完全不敏感（可接受半天至一天延迟）、希望让 AI 在后台跨文档做宽松汇总的用户；**绝不适合**需要及时捕获房东通知、账单发票或紧急工作邮件的用户。\n- 预期收益：在当前版本下，用于实时收件箱通知不仅无法节省时间，反而因漏报和假阴性需要人工双重核对（F1、F2）。\n- 设置与维护成本：连接邮箱插件虽只需数分钟，但需频繁人工检查 Activity 与 Scheduled 列表以防任务静默中断（S3、S5）。\n- 隐私与错误风险：高错误风险（漏报重要邮件 + 谎称无新邮件）与中高等隐私风险（主动抓取邮件生成持久化记忆，断开插件不清除已存数据，需 Reset 整个 Dot 才能删除，见 S5）。",
+    "counter_evidence_and_stop_conditions": "1. 为什么客户不买 / 反证结论：本案本身即是对“用通用常驻 LLM Agent 替代确定性消息通知”的直接反证。当一个每月 $100+ 的 Agent 连邮箱前两封邮件都会漏看一封、并在有信时谎报无信（F2），任何理性用户都会立即退回免费的原生邮件过滤规则。\n2. 哪些现成方案已经足够：Gmail/Outlook 原生规则 + 手机通知（免费、实时、100% 准确），或 Zapier/Make 邮件触发器（$0–$19.99/月）。\n3. 停止投入条件（Stop Conditions）：在试用测试中，若向测试邮箱发送 5 封带特定主题标签的邮件，Agent 出现 **哪怕 1 次漏报**、**1 次虚假“无新邮件”报告**，或通知延迟超过 **15 分钟**，即刻停止使用该 Agent 进行邮件监控，切换为确定性规则方案。",
+    "trial_and_prompts": "本案提供两条提示词：（1）源站 `agentusecases.ai` 的 Copy prompt 原文（标为 `original`，系目录编辑针对失败点编写的含测试通知与频率询问的验证提示词）及中文翻译；（2）我们编写的“五封信基准压力测试与定时显式设定”低风险验证提示词（标为 `ours`）。\n试用边界声明：严禁绑定包含银行账单、税表、医疗或机密商业合同的主邮箱；仅可使用专门新建的空白测试邮箱或仅含公开 Newsletter 的沙盒标签进行只读测试。"
+  },
+  "personal_value": {
+    "rating": "低",
+    "target_users": "已持有 ChatGPT Pro/Business Premium 订阅、仅需非实时后台跨渠道信息整理且能容忍高延迟与漏报的尝鲜用户。",
+    "use_case": "监控收件箱特定发件人或主题的新邮件并发送一行摘要通知。",
+    "expected_benefits": "作者报告中提醒没有可靠达到其预期；本研究没有独立实测，暂不预估净节省。非关键汇总是否有益需和人工核对成本一起测量。",
+    "setup_cost": "取决于已有套餐和连接授权；已订阅用户的新增现金费用与专为此任务新购套餐应分列，不能把整个套餐归因给邮件功能。",
+    "maintenance_cost": "需核对取信窗口、分页、重复通知、触发记录、连接过期及提醒渠道。不同方案均有维护成本，具体工时未知。",
+    "frequency": "不建议日常用于实时邮件监控；仅可在低频（如每日固定时间点）非关键汇总中受控测试。",
+    "privacy_and_error_risks": "邮箱内容可能包含私人信息；最小化授权、避免不必要摘要外发，并核对平台的数据保留设置。错误报告或漏报可能误导用户，因此保留原生邮箱提醒及人工核对。",
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S4",
+      "S5",
+      "S7"
+    ]
+  },
+  "unit_economics": {
+    "currency": "USD",
+    "unit_basis": "同一月200封命中邮件；20工作日；只比较假设工时，不声称实测",
+    "revenue": null,
+    "assumptions": "两种路径均每日核对5分钟、月恢复30分钟、时薪25美元。提醒成功率和延迟尚未测量。已有套餐的共同成本不重复计；新增订阅分别为ΔA与ΔB，未知API/投递/云服务另列，不能填成免费。",
+    "scenarios": [
+      {
+        "name": "代理定时检查假设",
+        "verification_minutes": 100,
+        "recovery_minutes": 30,
+        "maintenance_minutes": 30,
+        "human_cost_exact": "200/3",
+        "total_formula": "ΔA + API_A + delivery_A + 200/3",
+        "profit": null
+      },
+      {
+        "name": "规则加推送补同步假设",
+        "verification_minutes": 100,
+        "recovery_minutes": 30,
+        "maintenance_minutes": 60,
+        "human_cost_exact": "475/6",
+        "total_formula": "ΔB + API_B + delivery_B + 475/6",
+        "profit": null
+      }
+    ],
+    "interpretation": "本组统一核对强度的假设下，后者维护工时反而更高；这不是其实际更贵的结论，而是说明不能把替代方案人工维护强行设为零。实际决策需要测量服务质量与各项费用。"
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "preparation": "只使用用户另行授权的非敏感测试样本与通知渠道，先明确可接受延迟和观察窗。本文不代表已经创建测试邮箱、发送测试信、配置定时任务或取得新的邮箱权限。",
+    "tools": [
+      "OpenAI Dots（需 ChatGPT Pro / Business Premium 账户）",
+      "测试邮箱账户（只读权限）"
+    ],
+    "expected_result": "比较完整样本清单与实际检测、投递日志，分别记录缺失、重复与延迟；小样本通过不证明长期可靠。任何连接或查询失败标为未知，不能写无新邮件。",
+    "prompts": [
+      {
+        "id": "P1",
+        "type": "original",
+        "language": "en",
+        "agent": "Dots",
+        "source_url": "https://agentusecases.ai/use-case/track-incoming-emails-and-notify-about-key-ones",
+        "source_id": "S1",
+        "attribution": "源站 agentusecases.ai 提供的 Try it yourself Copy prompt 原文模板。",
+        "text": "Watch my inbox for emails from [sender or topic, e.g. my landlord or invoices] and notify me by [text, push, or chat] as soon as one arrives, with the sender, subject, and a one-line summary. First send me a test notification to prove it works, and tell me how often you check. Don't reply to or delete any email.",
+        "translation_zh": "监控我的收件箱中来自 [发件人或主题，例如我的房东或发票] 的邮件，一旦有邮件到达，立即通过 [短信、推送或聊天] 通知我，并附上发件人、主题和一行摘要。首先请给我发送一条测试通知以证明功能正常，并告诉我你多久检查一次。不要回复或删除任何邮件。"
+      },
+      {
+        "id": "P2",
+        "type": "ours",
+        "language": "zh",
+        "agent": "Dots / 定时检查代理",
+        "source_url": null,
+        "source_id": "S2",
+        "attribution": "研究者根据 Reddit 评论区 u/coursiv_ 的基准测试建议与 OpenAI 官方定时任务规范编写的受控验证提示词（未在真实私人邮箱执行）。",
+        "text": "在用户已明确授权的测试范围内验证邮件提醒，不增设权限或向第三方发送邮件。先说明真实可用的读取和通知能力、时区、触发时间、检索窗口及延迟目标。读取指定测试标签内自上次成功水位以来的所有匹配记录，不能仅凭未读状态判断新邮件；处理分页并按稳定邮件ID去重。失败时保留上次成功水位，报告失败而不是无新信。分别记录邮件接收、读取完成、通知请求被渠道接受和可确认送达的时间；不要把渠道接受说成用户已读。没有实际工具回执就报告未执行。只读邮件，不回复、归档或删除。"
+      }
+    ]
+  },
+  "limitations": [
+    "本案为明确验证的失败案例：原帖作者实测 Dots 漏掉了最近 2 封邮件中的 1 封、在 8:50 a.m. 已有新信时误报无新邮件，且随后 2 小时对新到的 2 封邮件完全失聪（S1、S2）。",
+    "OpenAI 官方文档证实 Dots 采用自主休眠与唤醒机制而非实时事件推送 Webhook，且 Pro 个人版在欧洲经济区、英国与瑞士不可用，短信通知仅限美国部分 Pro 用户 Beta 测试（S4、S5）。",
+    "断开邮箱插件连接并不会清除 Dot 已从邮件中提取并保存的记忆，必须执行 Reset 销毁整个 Dot 才能删除相关历史记忆（S5）。"
+  ],
+  "source_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Watch my inbox for emails from [sender or topic, e.g. my landlord or invoices] and notify me by [text, push, or chat] as soon as one arrives, with the sender, subject, and a one-line summary. First send me a test notification to prove it works, and tell me how often you check. Don't reply to or delete any email.",
+    "agent": "Dots",
+    "source_url": "https://agentusecases.ai/use-case/track-incoming-emails-and-notify-about-key-ones",
+    "observed_at": "2026-10-21T06:29:45.152071+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "264f46cd9859672446180d9a6343dfc426fb4084924acb792b4a051d1618d670"
+  },
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/track-incoming-emails-and-notify-about-key-ones",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "4e5bde562308ca73d0d8edc9bef8687d7e6e63e116bfd3825eccd40471259f46",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "92643d6472e5038695aab5d54d40024a09b2c35298a1e83abd2b89b8a146aa41",
+      "How it went": "c9990d69ac806a60952cfc168bc55213cdc4000ad5424e945d1f5ad5f1df8c39",
+      "Worth knowing": "72bc8eee7a5175d6106bb9043b98fa79e96708f1695648f8d334acd8e2b6cc7a"
+    },
+    "actual_agents": [
+      "Dots"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "metadata": {
+    "batch": "spark-third10-20261021",
+    "group": "A",
+    "model_recorded": "未知",
+    "generated_at": "2026-10-21T17:25:00Z",
+    "schema_validation_note": "已通过本地 Python JSON 解析与必填字段完整性核验；未在外部原仓库环境运行 agentwatch CLI，按规范如实标注‘未执行外部仓库 CLI 校验’，不伪造外部仓库校验通过。"
+  },
+  "root_revision": {
+    "status": "partial_substantive_correction_not_accepted",
+    "at": "2026-10-21T21:01:49.256547+00:00",
+    "original_sha256": "8c64a64f050b496dcb6ae8de5ada4ecd1a393805f5322fcbf85c28bdc3fe505c",
+    "remaining": [
+      "synchronize all ten analysis sections",
+      "reverify current product claims",
+      "scores and final v2 adapter",
+      "tests and publication"
+    ],
+    "original_prompts_preserved": true
+  }
+}
