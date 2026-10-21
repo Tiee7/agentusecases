@@ -52,3 +52,8 @@
 独立目录刷新不得改写已翻译或已编辑的发布版档案，`registry/archives/<id>.json` 保持逐字节不变。最新爬取原文、字段和读取凭据单独保存在 `registry/archive-observations/<id>.json`；`published_edition` 指向已发布档案文件及原文哈希，正文不同明确标 `review_required: true`。新观察不携带旧译文冒充新正文译文，研究者复核时再决定如何发布新版本。未审档案仍正常刷新。覆盖与刷新元数据列出待复核数量/ID，目录增长不增加深研完成数。
 
 固定30案仍检查原档案完整文件哈希、英文正文和中文译文哈希。Copy prompt约束逐字段保持工具、完整文本、URL和状态，仅允许独立读取凭据（method、observed_at、observation_window、html_sha256）随新抓取变化；语义字段变化仍使检查失败。
+
+
+## 2026-10-21 用户另派Spark第三批10案
+
+读取 [第三批固定预留清单](spark-third10-assignment-20261021.json) 和 [分组说明](spark-third10-assignment-20261021.md)。这些ID预留给用户自行启动的两个Gemini Spark会话，不由自动研究重复认领；主助手接收包后串行复验入库。未收到包不代表可抢占或已完成。此补充不改变原Spark20排除、既有已授权返修或其他完成标准。
