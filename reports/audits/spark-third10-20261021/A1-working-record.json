@@ -14,130 +14,93 @@
       "https://github.com/anthropics/claude-code/issues/34385"
     ],
     "bilingual_summary": {
-      "en": "In Reddit r/codex (post 1ry39bx), OP u/Lost-Application4693 describes creating a ChatGPT Project with extended thinking to handle strategy, versioning rules, and prompt writing, then manually copy-pasting prompts and outputs back and forth between ChatGPT (GPT-5.4 extended) and Codex (5.3 extended), starting fresh threads when 'thread sludge' slows rendering. Separately, commenter u/Future_Candidate2732 (GitHub @tweakyourpc in anthropics/claude-code#34385) built a named port registry called 'portbroker' integrated via AGENTS.md so concurrent coding agents reserve a deterministic free port and inject it into $PORT instead of fighting over ports 3000/8000/8080.",
-      "zh": "在 Reddit r/codex 原帖（1ry39bx）中，发帖人 u/Lost-Application4693 描述了其双端切分工作流：在 ChatGPT 中建立 Project（开启深度思考）负责架构规划、版本号纪律与提示词编写，再通过消息底部的复制按钮，将提示词与执行结果在 ChatGPT（作者自述用 5.4 extended）与本地 Codex（自述用 5.3 extended）之间手工来回粘贴；当长会话出现卡顿（称为“thread sludge”）或切换版本号时，让 ChatGPT 生成交接提示词并开启新线程。另一方面，评论者 u/Future_Candidate2732（即 GitHub 用户 @tweakyourpc，见 anthropics/claude-code Issue #34385）针对多代理并发时争抢 3000/8000/8080 等常用端口并互相杀进程的问题，开发了独立于代理的命名端口注册表工具 portbroker，通过一行 AGENTS.md 指令让代理在启动服务前申请命名端口、记录日志并注入 $PORT 环境变量。"
+      "en": "The original poster describes manual handoffs between ChatGPT planning and Codex execution. Separately, the discussion describes a named port registry for concurrent local agents. These are reported workflows, not one independently tested end-to-end system.",
+      "zh": "原帖作者描述在ChatGPT规划与Codex执行之间人工交接。另有讨论介绍并发本地代理使用的命名端口登记方法。这些是来源描述的工作方式，不是一个已经独立端到端实测的系统。"
     },
     "boundary_distinction": {
       "author_actual_steps": [
-        "原帖作者（u/Lost-Application4693）：在 ChatGPT 侧边栏新建 Project 保存项目上下文，手工在 ChatGPT 与 Codex 之间复制粘贴提示词与输出，使用版本号对齐两端状态，遇到长对话卡顿时让 ChatGPT 生成新会话启动提示词，并配合 GitHub 连接与 Playwright 测试。",
-        "评论者（u/Future_Candidate2732 / @tweakyourpc）：编写外部命名端口注册工具 portbroker，在 AGENTS.md 中写入规则，要求代理启动开发服务器前先向 portbroker 申请固定名称对应的空闲端口并注入 $PORT。"
+        "原帖作者描述人工复制规划与执行结果；长会话卡顿时迁移上下文。",
+        "端口登记工具来自另一个使用线索，不推断原帖作者已部署它。"
       ],
-      "catalog_editorial_template": "agentusecases.ai 目录将原帖作者的“低干预规划”与评论者的“portbroker 端口预留”合并提炼为同一卡片，并由目录编辑编写了 Try it yourself 下的 Codex 英文提示词模板（让 Codex 读取仓库内计划文件、自动挑选空闲端口并通过环境变量传入）。该 Copy prompt 系源站编辑模板，并非原作者或评论者公开的原始提示词。",
-      "official_capabilities": "根据 OpenAI 官方文档（2026年10月），Codex 已深度集成于 ChatGPT 账户体系（Free/Go/Plus/Pro/Business/Enterprise），支持 CLI、VS Code/Cursor 插件、桌面端与 Codex Cloud，原生提供 Git Worktrees 隔离多任务、Multi-agent 协同、/init 生成 AGENTS.md 以及 Auto-review 自动安全审批；GPT-5.4 已于 2026年8月31日从 ChatGPT 登录版 Codex 退役，当前官方推荐模型为 GPT-6.1 Sol、GPT-6 Astra 与 GPT-6 Luna。",
-      "researcher_recommendations": "研究者建议开发者直接使用 Codex CLI 原生 Git Worktrees + AGENTS.md 端口分配脚本或 PreToolUse 钩子，摒弃低效且易丢失上下文的跨窗口手工复制粘贴。"
+      "catalog_editorial_template": "完整源站模板保留为P1；不是作者原始提示词。",
+      "official_capabilities": "已核官方开发功能与本案个人方法分开，不用worktrees推断网络隔离。",
+      "researcher_recommendations": "见修订自编模板P2。先确认服务自身支持的动态绑定或已有协调流程，不运行来源中的自动安装命令。"
     }
   },
   "facts": [
     {
       "id": "F1",
-      "category": "原作者自述",
-      "statement": "Reddit 用户 u/Lost-Application4693（发帖时间显示为 2026年3月19日，约7个月前）声称在 ChatGPT Project 与 Codex 之间通过手工复制粘贴（ChatGPT 5.4 extended 与 Codex 5.3 extended）进行开发，并声称因其企业拥有 200+ 员工，正倾向于借此裁减 50–55 名开发人员。",
-      "evidence_type": "作者自述",
+      "statement": "许可目录把人工规划与代码执行的交接，以及另一评论者的端口协调工具放在同一卡片；不得据此合并为单人完整实测流程。",
       "source_ids": [
-        "S1",
-        "S2"
+        "S1"
       ],
-      "verification_note": "已读取 Reddit 原帖全文；裁员与 200+ 员工规模系发帖人单方自述，评论区多名开发者质疑其真实性，无第三方经营证据。"
+      "evidence_type": "目录编者叙述"
     },
     {
       "id": "F2",
-      "category": "作者自述与缺陷",
-      "statement": "原帖作者与跟帖用户（如 u/johnmaytokes）确认，该方法的核心瓶颈是对话过长后界面渲染严重卡顿（称为“thread sludge”），且每次交接均依赖人工点击复制粘贴按钮。",
-      "evidence_type": "作者自述",
+      "statement": "Reddit原帖作者描述在ChatGPT与Codex间手工传递提示词和结果，并报告长会话卡顿；这些是其个人体验，不是受控效率测量。",
       "source_ids": [
-        "S1",
         "S2"
       ],
-      "verification_note": "原帖及评论区多条一手回复交叉印证。"
+      "evidence_type": "作者自述"
     },
     {
       "id": "F3",
-      "category": "作者自述",
-      "statement": "评论者 u/Future_Candidate2732（GitHub 账号 @tweakyourpc）在原帖及 2026年3月14日提交的 Claude Code Issue #34385 中说明：当同一台机器并发运行多个 Codex、Claude Code 或 OpenCode 会话时，代理会盲目争抢 3000、8000、8080 等默认端口并互相终止进程，因此他开发了命名端口注册表工具 portbroker，通过 AGENTS.md 指令将分配的空闲端口注入 $PORT。",
-      "evidence_type": "作者自述",
+      "statement": "Claude Code #34385提出并发代理争抢常用端口的问题，并讨论外部命名端口登记方式；该需求帖本身不证明付费采购。",
       "source_ids": [
-        "S1",
-        "S2",
         "S3"
       ],
-      "verification_note": "已读取 Reddit 评论与 GitHub Issue #34385 全文；Issue #34385 已于 2026年5月18日因不活跃被 GitHub Actions 自动关闭（Closed as not planned）。"
+      "evidence_type": "作者自述"
     },
     {
       "id": "F4",
-      "category": "实际读取的社区技术方案",
-      "statement": "在 GitHub Issue #34385 中，开发者 @yurukusa 提供了无需第三方二进制工具的替代实现：通过约 20 行 Bash 的 PreToolUse 钩子（利用 ss -tlnp 检测端口占用并调用 python3 socket 分配空闲端口）结合会话哈希端口区间（10000–60000）与规则文件即可拦截端口冲突。",
-      "evidence_type": "作者自述",
+      "statement": "同一Issue中的Hook示例在发现占用后输出建议并退出，而非自动改写后执行；讨论也指出先检测后绑定存在竞态。",
       "source_ids": [
         "S3"
       ],
-      "verification_note": "已读取 GitHub Issue #34385 评论区完整脚本代码。"
+      "evidence_type": "已读代码片段及讨论"
     },
     {
       "id": "F5",
-      "category": "实际读取的社区反证与开源替代",
-      "statement": "Reddit 原帖评论区中，开发者 u/bienbienbienbienbien 提供了开源工具 agentchattr（github.com/bcurts/agentchattr），u/Past_Barnacle_6901 提及 MCP 桥接器 PatchBay（github.com/velhud/PatchBay），均可让多实例代理直接通信而无需手工复制粘贴；评论者 u/-Davster- 指出 ChatGPT Web 端无本地文件上下文，手工复制粘贴使耗时翻倍且损失上下文。",
-      "evidence_type": "作者自述",
+      "statement": "OpenAI官方说明包含worktrees与多代理等开发功能；这些功能说明不能推导出宿主机网络端口已经隔离。",
       "source_ids": [
-        "S2"
+        "S5"
       ],
-      "verification_note": "已读取 Reddit 原帖评论区全文。"
+      "evidence_type": "官方能力说明与边界分析"
     },
     {
       "id": "F6",
-      "category": "实际读取的官方说明（历史对比当前）",
-      "statement": "OpenAI 官方文档显示，原帖作者提及的 GPT-5.4 与 GPT-5.4 mini 已于 2026年8月31日从 ChatGPT 账户登录的 Codex 中退役（官方指引替换为 GPT-5.6 Terra 与 GPT-5.6 Luna），GPT-5.5 亦于 2026年10月14日退役；当前（2026年10月）OpenAI 推荐的 Codex 主力模型为 GPT-6.1 Sol、GPT-6 Astra 与 GPT-6 Luna。",
-      "evidence_type": "实际读取的官方说明",
+      "statement": "已读公开portbroker仓库页面包含命名登记CLI、使用文档和安装脚本链接；本轮没有安装或执行该项目。",
       "source_ids": [
-        "S4",
-        "S5",
-        "S7"
+        "S11"
       ],
-      "verification_note": "已读取 OpenAI Help Center 与 ChatGPT Learn Pricing 官方文档，严格区分历史案例模型与当前规格。"
+      "evidence_type": "公开项目页面"
     },
     {
       "id": "F7",
-      "category": "实际读取的官方说明",
-      "statement": "OpenAI 官方定价（2026年10月）规定：Codex 包含在 ChatGPT 订阅计划中（Free $0/月、Go $8/月、Plus $20/月、Pro $100/$200/$500/月、Business 年付 $20/人/月或月付 $25/人/月）；Plus 与 Standard Business 每5小时窗口约可发送 15–160 条 GPT-6.1 Sol 本地消息（或 5–45 条 GPT-6 Astra 消息），Pro 计划无5小时窗口限制；按积分计费时 GPT-6.1 Sol 标准速率为输入 50 credits/1M tokens、缓存输入 2.5 credits/1M、输出 250 credits/1M。",
-      "evidence_type": "实际读取的官方说明",
+      "statement": "许可目录提供的Codex Copy prompt是目录试用模板，不是原作者实际使用提示词；其英文和中文保留在P1。",
       "source_ids": [
-        "S4",
-        "S5"
+        "S1"
       ],
-      "verification_note": "已读取 learn.chatgpt.com/docs/pricing 官方价格表。"
+      "evidence_type": "许可目录归档"
     },
     {
       "id": "F8",
-      "category": "实际读取的官方说明",
-      "statement": "OpenAI Codex CLI（github.com/openai/codex）采用 Apache-2.0 开源许可，截至 2026年10月21日拥有约 130.3k GitHub Stars、20.5k Forks，最新版本为 0.163.0，原生支持 Git Worktrees 多任务隔离、Multi-agent 工具、/init 生成 AGENTS.md 以及免费的 Auto-review 安全检查。",
-      "evidence_type": "实际读取的官方说明",
+      "statement": "受控本地socket交错实验中，探测socket关闭后，第二个socket成功占用原端口，后续绑定得到errno98；实验仅检验探测后关闭并非持续预留。",
       "source_ids": [
-        "S5",
-        "S6"
+        "L1"
       ],
-      "verification_note": "已读取 github.com/openai/codex 与 OpenAI Help Center 官方说明。"
+      "evidence_type": "有限本地实验"
     },
     {
       "id": "F9",
-      "category": "实际读取的竞争与基准说明",
-      "statement": "竞品方面，Cursor（2026年10月官方定价）提供 Free（$0）、Plus（$8/月，仅限 Grok 模型）、Premium（$30/月）、Super（$100/月）、Ultra（$200/月）及 Teams（$30+/人/月），第三方模型按 API 目录价另计；在 Terminal-Bench 2.1（2026年10月17日数据）中，Claude Code + Opus 5.5 得分为 64.85%，Codex + GPT-6.1 Sol 与 Codex + GPT-6 Astra 并列 58.18%。",
-      "evidence_type": "实际读取的官方说明",
-      "source_ids": [
-        "S7",
-        "S8"
-      ],
-      "verification_note": "已读取 cursor.com/pricing 官方价格页与 morphllm.com 对比分析。"
-    },
-    {
-      "id": "F10",
-      "category": "未知与缺口项",
-      "statement": "原案例作者的商业收入、portbroker 的独立付费用户数及实际节省工时百分比均为未知（null），不可填为 0。",
-      "evidence_type": "未知",
+      "statement": "已读资料未提供本案独立付费客户、收入到账或可复现实测工时；对应数值保持未知，而非零。",
       "source_ids": [
         "S1",
         "S2",
         "S3"
       ],
-      "verification_note": "严格遵守缺证数值处理规范，保留 null/未知。"
+      "evidence_type": "证据范围说明"
     }
   ],
   "analysis": {
@@ -229,9 +192,12 @@
     ]
   },
   "limitations": [
-    "原帖作者声称“用 Codex 替代 50–55 名员工”属于无第三方证据支持的个人夸大表述，评论区多位工程师指出其手工跨窗口复制粘贴工作流反而增加了认知负担与上下文截断风险（S2）。",
-    "评论者提及的 `portbroker` 独立仓库未在公开搜索中检出标准发行版，其提交的 Claude Code 原生端口分配特性请求（Issue #34385）已被标记为 `closed as not planned`（S3）。",
-    "原帖使用的 GPT-5.4 / Codex 5.3 模型已于 2026年8月从 ChatGPT 登录版 Codex 退役，历史体验不能直接等同于当前 GPT-6.1 Sol / GPT-6 Astra 模型的表现（S4、S5）。"
+    "未安装或端到端运行portbroker，未测量真实并发碰撞频率。",
+    "未取得独立付费客户、收入、留存或实测节省工时。",
+    "本地socket实验只针对bind后close的示例，不是portbroker漏洞认定。",
+    "仓库网页已通过Web读取；自有云浏览器两次导航超时，未取得云浏览器正文，不再重试该来源。",
+    "评分、完整报告和本仓库v2字段适配仍待完成，当前记录不得发布或计入完成。",
+    "新增三个一手帖子支持交接痛点，属于同类工作流反馈，不是portbroker独立使用或愿付证据。"
   ],
   "source_ids": [
     "S1",
@@ -284,13 +250,14 @@
   },
   "review_state": {
     "status": "working_copy_not_publishable",
-    "reviewed_at": "2026-10-21T19:00:07.801064+00:00",
+    "reviewed_at": "2026-10-21T19:20:57.135474+00:00",
     "original_sha256": "bc8c858a16e1f04188d45f477898877c9d91ecdb40170a015514143eb9b8933f",
     "remaining": [
-      "fact source verification",
+      "source metadata/IDs adaptation including S11 and L1",
       "full report and score reassessment",
       "schema adaptation and website checks"
     ],
     "not_completed": true
-  }
+  },
+  "feedback_followup": "A1-feedback-followup.md"
 }
