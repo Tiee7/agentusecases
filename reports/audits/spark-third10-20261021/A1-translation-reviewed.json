@@ -1,0 +1,10 @@
+{
+  "status": "available",
+  "language": "zh-CN",
+  "body": "让 Codex 在低干预规划下运行并预留端口\n\n一位评论者让 Codex 在人工规划和复核下基本上自主执行，并配合使用一个可预留并注入端口的 portbroker 工具。\n\n实际使用工具：\nCX\nCodex\n\n他们做了什么：\n该评论者描述了一种拆分式工作流：ChatGPT 负责规划、策略、版本控制纪律以及编写下一条提示词，而 Codex 负责具体实现，人工在两个开启了深度思考（extended-thinking）的聊天窗口之间手动来回复制粘贴输出内容。在类似的设置中，另一位评论者添加了一个名为 portbroker 的小型工具，使代理能够自动预留一个空闲端口、记录日志并将其注入到 $PORT 中，从而减少并行运行期间的手动环境处理。\n\n实际效果如何：\n他们表示，这减少了提示词漂移（prompt drift），并使多代理或并行本地开发更加稳定和可预测。提到的主要缺点是交接过程仍然是手动的，长对话线程会导致速度变慢，并且偶尔需要开启全新的会话。\n\n值得注意的事项：\n实际使用中的痛点在于 ChatGPT 和 Codex 之间的复制粘贴循环，以及当对话线程因过长而产生“淤泥感（sludge）”卡顿时需要重置会话。\n\n亲自试用\n推荐搭配工具：\nCodex\n\n复制提示词（Copy prompt）：\n我已在 [repo path] 中为 [task] 编写了一份计划：[粘贴或指向计划文件]。请基本上独立执行该计划，并且在启动任何需要网络端口的开发服务器或测试之前，先挑选一个空闲端口、将其预留，并通过 [环境变量或配置项] 传入，以免与其他正在运行的任务冲突。完成后，请汇总你所做的更改以及通过了哪些检查以便我复核，并在推送或删除任何内容之前先询问我。\n\n原始来源：https://www.reddit.com/r/codex/comments/1ry39bx/use_chatgpt_as_your_development_and_engineering",
+  "body_sha256": "0b76111fb28837f07fd99392f47b989b8d487c5350d4d29cf23c8c978e91d17e",
+  "based_on_body_sha256": "b019a916cdf8eed28d0962f37bfdd7cf4811a98125a01e9ed51c1fb9ebefa249",
+  "translated_at": "2026-10-21T20:49:29.101650+00:00",
+  "method": "Spark supplied translation, root checked paragraph-by-paragraph against licensed archive; normalized table to prose",
+  "scope": "licensed catalog only; no external long-form translation"
+}

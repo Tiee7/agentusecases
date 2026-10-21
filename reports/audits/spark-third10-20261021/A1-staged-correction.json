@@ -1,0 +1,60 @@
+{
+  "id": "run-codex-with-low-touch-planning-and-port-reservation",
+  "status": "partial_corrections_ready_full_review_pending",
+  "original_record_sha256": "bc8c858a16e1f04188d45f477898877c9d91ecdb40170a015514143eb9b8933f",
+  "preserve": [
+    "source_trial",
+    "source_case",
+    "try_it.prompts[P1]",
+    "original_title",
+    "id"
+  ],
+  "replacement_fields": {
+    "try_it.prompts[P2].text": "读取测试分支的 PLAN.md，在授权范围内实现其中的小任务。启动本地服务前先检查该服务实际支持的端口配置和监听地址：\n\n1. 优先让服务自身绑定 127.0.0.1 的动态端口（如果支持端口 0），从真实启动结果读取端口，并将它传给后续测试。不要先关闭一个探测 socket 后仍声称保留了该端口。\n2. 如果服务必须指定固定端口，使用项目已有、经过确认的分配流程协调并发任务。明确区分协作式登记与操作系统的真实绑定；启动失败时读取实际错误，重新分配并有限重试。不得终止不属于本任务的进程来夺取端口。\n3. 若服务支持继承监听 socket，可考虑由启动器持有并传递已绑定 socket；不支持时不要编造此能力。没有可靠端口分配方式，就串行运行相关测试，而不是声称并发已安全。\n4. 记录实际 PID、监听地址、端口、启动与退出结果。只清理本任务创建的服务，不清理未知 PID。\n5. 按用户既有 Git 授权执行；模板本身不增加推送、删除、生产发布或凭据使用的权限。完成后报告真实检查结果与未验证项。",
+    "try_it.expected_result": "读取计划后完成测试分支变更；以实际服务启动结果确认监听地址与端口，输出真实检查结果，不承诺消除所有冲突。",
+    "personal_value.setup_cost": "未实测。取决于服务是否支持动态端口、现有配置与跨平台兼容性，不提供确定10–15分钟安装承诺。",
+    "personal_value.maintenance_cost": "未实测。需要跟踪代理工具配置变化、启动器兼容和失效登记回收。",
+    "personal_value.expected_benefits": "可能减少手工交接、误连服务与端口争抢；收益待同任务对照测量。工作树隔离不等于网络隔离。",
+    "reason": "建议当前把它作为内部开发流程组件验证，而不是立即投入独立订阅产品。已读资料支持多代理抢占本地端口与手工交接的使用痛点，但尚未取得独立付费客户、合同、留存或可复现工时收益证据。这个证据缺口不能改写成“客户绝不会付费”。免费替代带来价格压力，不等于所有用户都能零成本迁移。"
+  },
+  "unit_economics_replacement": {
+    "scope": "same tasks, same hourly rate, same subscription C; illustrative internal-use opportunity cost only",
+    "currency": "USD",
+    "tasks_per_month": 100,
+    "hourly_rate": 25,
+    "core_subscription_variable": "C",
+    "manual": {
+      "review_minutes_per_task": 3,
+      "handoff_minutes_per_task": 4,
+      "rework_hours": 0.5,
+      "maintenance_minutes": 20,
+      "human_cost_exact": "625/2",
+      "total_formula": "C + 312.50"
+    },
+    "coordinated": {
+      "review_minutes_per_task": 3,
+      "handoff_minutes_per_task": 1,
+      "rework_hours": 0.5,
+      "maintenance_minutes": 60,
+      "human_cost_exact": "1225/6",
+      "total_formula": "C + 1225/6"
+    },
+    "monthly_opportunity_difference_exact": "325/3",
+    "monthly_opportunity_difference_display": 108.33,
+    "additional_costs_excluded": [
+      "migration",
+      "overage models",
+      "taxes",
+      "other services"
+    ],
+    "revenue": null,
+    "profit": null,
+    "causal_savings_verified": false
+  },
+  "not_final": [
+    "remaining fact verification",
+    "scores and source evidence reconciliation",
+    "full report rendering and translation layout",
+    "repository schema and site validation"
+  ]
+}
