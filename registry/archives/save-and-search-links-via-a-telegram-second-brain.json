@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/save-and-search-links-via-a-telegram-second-brain",
-  "observed_at": "2026-10-19T06:52:07.782793+00:00",
-  "html_sha256": "10f5e205b865ff5eced45f8a52a9551f146c6d5fd0f2d5d56df82a10203f3bdd",
+  "observed_at": "2026-10-21T06:05:27.165791+00:00",
+  "html_sha256": "4a7c93c083d31766932ba5b6fa3f6cc6d2df355ab536639a19dac5ce4583c9d9",
   "body_sha256": "a081643c2ad412c238b3c3ee187e64baee45c3d230ec0e03fdeffe2e6d1d8f6e",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Save and search links via a Telegram second brain\nAn n8n Telegram agent reads links sent to it, summarises and categorises them into Google Sheets, and answers questions from the library using Supabase semantic search.\nDone with\nN8\nn8n\nWhat they did\nA Telegram AI agent sorts each message: a URL is saved, a question is searched, anything else gets a short how-to reply. Saving goes through a webhook that normalises the URL, reads the page with Jina Reader, and has an AI librarian write a summary and reuse existing categories. It then upserts into Google Sheets by URL and re-embeds the full text into Supabase. Two search tools cover the Sheet and the page text.\nHow it went\nThe author describes the workflow as working: re-sent links update the existing card instead of duplicating, and unreadable pages are not filed. The post gives no usage numbers or benchmarks.\nWorth knowing\nSetup needs a Telegram bot token, Supabase (the free tier is fine), Gemini embeddings, a shared Header Auth credential, and your own webhook URL in the save_link tool.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow with a Telegram bot that I can send links to. For each link it should fetch the page, write a short summary, assign a category from [my list of categories], and add a row to my Google Sheet [sheet name]. It should also answer questions like 'what did I save about [topic]?' by searching the saved summaries. You're done when I can send one test link and then ask a question that returns it; show me the plan before activating the bot.\nOriginal source: https://community.n8n.io/t/second-brain-on-telegram-save-and-search-your-links-google-sheets-supabase-rag/304330",
     "body_sha256": "a081643c2ad412c238b3c3ee187e64baee45c3d230ec0e03fdeffe2e6d1d8f6e",
-    "archived_at": "2026-10-19T06:52:07.782793+00:00",
+    "archived_at": "2026-10-21T06:05:27.165791+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T06:52:07.782793+00:00",
+    "at": "2026-10-21T06:05:27.165791+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/generate-prompts-for-a-browser-agent-to-execute-trades",
+  "observed_at": "2026-10-21T05:45:09.134202+00:00",
+  "html_sha256": "773f828a516237d08cd1862476e04ba3a4a7d957e5b0ba9c080a4682aa7abb73",
+  "body_sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Generate prompts for a browser agent to execute trades",
+      "sha256": "d7cbfe938c200c647f3bddd349b3a76fd6096f3a24961afcb572b969be685338"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer's signal generator reads stock and crypto portfolio files and produces browser-automation prompts for Perplexity Comet to execute trades on brokerage sites.",
+      "sha256": "d99a0c6b232de48720b2804b413214e423ec8b6a4f7a82f95680590cb1d1378c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A Python script reads a CSV or Excel portfolio. It scores each holding from technical indicators, Yahoo Finance news sentiment and X posts, using weights set by time horizon. It maps scores to Strong Buy, Buy, Hold, Trim or Sell with allocation changes. It then writes a signals CSV and a text file of brokerage-specific prompts for Comet. Prompts pause for 2FA and order confirmation.",
+      "sha256": "697a12fa34c861414226b3b4f2f33d43797e9ceb3c7b3e57bd5ee419dbc2a639"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The repo includes sample signal and prompt files from several runs, plus backtest outputs. The README gives no trade-execution results or performance numbers.",
+      "sha256": "fa1ecd8761d84e70d912e1a396f548766d8b23deea12761301b88665bbdd1e0c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The README calls it educational, not financial advice, and recommends testing with paper trading first. Always review signals and prompts before Comet submits orders.",
+      "sha256": "601db41478e3ccbaa63b31cb3fa16aa83f3c6ca94dd52ee8b5c374482faa0e40"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Perplexity Comet"
+      ],
+      "sha256": "2c0f3a7a5a039626013830034631dd07576530ccb33805c257c2bf5d6008ae68"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/cometportfolio/CometAgent"
+      ],
+      "sha256": "01095eb468b150d95befdfd5150da01217463acdc0d53c45f13465549fdfe684"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "9b6d718c99e249d2112ca0daca105ba11c3f7fdbaac5b01c8e362fb8e22820a4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate prompts for a browser agent to execute trades\nA developer's signal generator reads stock and crypto portfolio files and produces browser-automation prompts for Perplexity Comet to execute trades on brokerage sites.\nDone with\nPC\nPerplexity Comet\nWhat they did\nA Python script reads a CSV or Excel portfolio. It scores each holding from technical indicators, Yahoo Finance news sentiment and X posts, using weights set by time horizon. It maps scores to Strong Buy, Buy, Hold, Trim or Sell with allocation changes. It then writes a signals CSV and a text file of brokerage-specific prompts for Comet. Prompts pause for 2FA and order confirmation.\nHow it went\nThe repo includes sample signal and prompt files from several runs, plus backtest outputs. The README gives no trade-execution results or performance numbers.\nWorth knowing\nThe README calls it educational, not financial advice, and recommends testing with paper trading first. Always review signals and prompts before Comet submits orders.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nWrite a script that reads my portfolio files in [folder] and turns my trading signals into clear step-by-step instructions I can give a browser agent for [brokerage site]. Each instruction should include the ticker, buy or sell, quantity and limit price. Output them to [file] for me to review, and make sure the instructions tell the agent to stop and ask me before submitting any order.\nOriginal source: https://github.com/cometportfolio/CometAgent",
+    "body_sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+    "archived_at": "2026-10-21T05:45:09.134202+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "28a71f430cacb56ccd0cd598fdbdd2c2981e9b520302da8f933f6d01ee3175c5",
+    "body_sha256": "629f0da4b81e74a6b7a1c05b150c178a48a8ac1366e02d4929c47a8f80f5efb3",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T05:45:09.134202+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

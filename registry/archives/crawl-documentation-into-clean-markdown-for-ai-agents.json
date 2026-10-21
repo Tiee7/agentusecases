@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/crawl-documentation-into-clean-markdown-for-ai-agents",
-  "observed_at": "2026-10-19T07:00:51.741332+00:00",
-  "html_sha256": "1f0e239a181f0eb21537065059e7f9d2e32cbaad2abc787da66d1008bdf0d4a3",
+  "observed_at": "2026-10-21T06:14:11.094489+00:00",
+  "html_sha256": "908fbc03c7ac5f7515edc82193a4a95e156d8352c8cef3c278fdc8af74a058d0",
   "body_sha256": "6008233d5eba52316161f74880b6c1988891f8ee5b81e2c56524a28841a6eaf2",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Crawl documentation into clean Markdown for AI agents\nThe author built a documentation crawler for their AI agents that pulled 60 pages of clean Markdown in 49 seconds.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built pulpie-mcp, an MCP server with four tools: fetch, save, crawl and list. It runs a local extraction model behind a backend that starts automatically. Claude was asked to crawl a 60-page docs site. It found pages through robots.txt and sitemaps, used four concurrent workers, and wrote Markdown files with frontmatter to disk instead of returning them to the context window.\nHow it went\nTotal time was about 49 seconds: roughly 10 for backend cold start and 37 for crawling and saving 60 pages. Untested on client-rendered pages, which may come back empty. PDFs aren't supported.\nWorth knowing\nThe model is licensed CC BY-NC 4.0 (non-commercial), and it has only been tested on Linux with an NVIDIA GPU, using about 420 MB of VRAM.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a crawler that takes the documentation site [docs URL], follows its internal links, and saves each page as clean Markdown (no nav or footer) in a folder called docs-md, one file per page. Respect robots.txt and rate limit politely. Done when you have crawled the whole site and given me a count of pages saved and a list of any that failed.\nOriginal source: https://dev.to/sizzlebop/i-gave-my-ai-agents-their-own-documentation-crawler-and-pulled-60-pages-of-clean-markdown-in-49-2cl7",
     "body_sha256": "6008233d5eba52316161f74880b6c1988891f8ee5b81e2c56524a28841a6eaf2",
-    "archived_at": "2026-10-19T07:00:51.741332+00:00",
+    "archived_at": "2026-10-21T06:14:11.094489+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T07:00:51.741332+00:00",
+    "at": "2026-10-21T06:14:11.094489+00:00",
     "status": "fetched",
     "error": null
   }

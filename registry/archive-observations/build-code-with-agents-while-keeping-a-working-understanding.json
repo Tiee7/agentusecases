@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-code-with-agents-while-keeping-a-working-understanding",
+  "observed_at": "2026-10-21T06:32:29.162747+00:00",
+  "html_sha256": "332bf45022f4a2e88755c96c6c58c8bea5cf154be991d992e8610434208453c9",
+  "body_sha256": "3752a5e1b354bc1e5d3f2d1218f8f462d3ff85dbbd40b1f205e217f6f7409012",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build code with agents while keeping a working understanding",
+      "sha256": "0f811cb515675cb5d377532b6f88b498db3fd4974ab8a6e2023e72fd9de81ca6"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer describes a workflow where the agent interviews them on ambiguities, makes the minor decisions, generates explainers and quizzes, and runs verifiers in the coding loop.",
+      "sha256": "eb9372d0863230b24770f6f7c6f397b49c092f8233adcef2f6065724c5059260"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Before building, the agent interviews the developer on ambiguities in the spec (a /grill-me style prompt). The developer makes decisions on stack and architecture only for differentiating parts and leaves minor details and commodity subsystems like login to the agent. A skill generates interactive explainers with quizzes. Linters, type checkers, pre-commit hooks, tests, formal-method traces and a headless-browser design verifier keep the agent checking its own work.",
+      "sha256": "24db684f065d82c729f6b26b436f040c29de41ae979d5411ff0f2f0683af16e0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The developer says this keeps them out of the 2am fix-and-break loop while still building understanding. No measurements are given, and they note other engineers are split on whether understanding the code matters.",
+      "sha256": "192c3ba6b986d6d7bf6076d0e70dd222a44d825624e75eb30fc14e09232f3ba8"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The design verifier turns spec requirements into mechanical rules checked against DOM measurements in a headless browser, which the author says was impractical before agents.",
+      "sha256": "3b12c5c538506e089c642fdecdf37774716e8de9d888df278653bfa090d12942"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50158650"
+      ],
+      "sha256": "36c5d9509992dde10272c54d62b0feef91e47bd65db2f8ab6d43985a27376952"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-19",
+      "sha256": "61341b09a3c76a1d7be2c4e0bd7aa6a050c7aa655d73a1c54be8c8a16e4f76f9"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "5e1c258da96a42a155e72fa541db618f38235e92b7d0c011ae039df09be0d315",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build code with agents while keeping a working understanding\nA developer describes a workflow where the agent interviews them on ambiguities, makes the minor decisions, generates explainers and quizzes, and runs verifiers in the coding loop.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nBefore building, the agent interviews the developer on ambiguities in the spec (a /grill-me style prompt). The developer makes decisions on stack and architecture only for differentiating parts and leaves minor details and commodity subsystems like login to the agent. A skill generates interactive explainers with quizzes. Linters, type checkers, pre-commit hooks, tests, formal-method traces and a headless-browser design verifier keep the agent checking its own work.\nHow it went\nThe developer says this keeps them out of the 2am fix-and-break loop while still building understanding. No measurements are given, and they note other engineers are split on whether understanding the code matters.\nWorth knowing\nThe design verifier turns spec requirements into mechanical rules checked against DOM measurements in a headless browser, which the author says was impractical before agents.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build [feature or project] in this codebase, and I want to stay able to understand everything you write. Before coding, interview me about any ambiguities in the plan, one question at a time, and make the minor decisions yourself, listing them for me. After each major piece, write a short explainer of how it works and give me a 3-question quiz on it, then run the tests or checks before moving on.\nOriginal source: https://news.ycombinator.com/item?id=50158650",
+    "body_sha256": "3752a5e1b354bc1e5d3f2d1218f8f462d3ff85dbbd40b1f205e217f6f7409012",
+    "archived_at": "2026-10-21T06:32:29.162747+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "507d387f33d55e9459cdcefce3fb67ceb8dbdf65f0eb9d50110ba5da1bb08c7a",
+    "body_sha256": "3752a5e1b354bc1e5d3f2d1218f8f462d3ff85dbbd40b1f205e217f6f7409012",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:32:29.162747+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

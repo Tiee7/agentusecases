@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/split-and-log-handwritten-homework-scans-for-teachers",
+  "observed_at": "2026-10-21T06:31:35.169092+00:00",
+  "html_sha256": "78ad1a74d210137ea3fe2691d813fe37321fbebf0601d6c7f0433a897ca9eb6b",
+  "body_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Split and log handwritten homework scans for teachers",
+      "sha256": "d9d3f550a18bf6b40cfae1a931b78b7493c789cc5e876c17b7e0006b9612f65b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code skill reads handwritten names on batched scans, matches them to a roster, splits PDFs per student, updates the completion spreadsheet and flags missing work.",
+      "sha256": "edcd5f0f0052d89d61dd7dc8e405a1b620cdfe3107cf016ac8191bd4c0bd0bda"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The skill takes a batched PDF of scanned homework and uses vision to read the handwritten name on each page. It fuzzy-matches those names to the student roster, so spelling variations still match. It then splits the PDF into one file per student and updates the Excel completion spreadsheet. For batches over 99 pages it can resume a session. It requires a manual verification step.",
+      "sha256": "5fbdede0853ac6c3ba68f69d5c003886eedcacc347da761149789471d7465aa7"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The listing gives no measured results or timings. It says the manual verification step is meant to make student attribution fully accurate, and it describes missing-assignment identification across large rosters as a use case.",
+      "sha256": "00657bd5eacf5fe0faf053d8da37d499784f0861545dbb93ff35e32188ffe7bc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect to check the name matches by hand, because the skill requires manual verification. Batches over 99 pages need its session-resume feature.",
+      "sha256": "31e4c711fb5780f33294409bc919217bc3c4398a14b4e32263f731b2f6f8ed91"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://mcpmarket.com/tools/skills/homework-grading-workflow"
+      ],
+      "sha256": "369337c178c05d936b1a5bcf1b995cfdd348a890ab4c0d753d4d1bd217db1f39"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fa2c1c5a71102560fa7e0690e408ba48ef2f49e1f3b13ad8280f2c39d2fc4482",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Split and log handwritten homework scans for teachers\nA Claude Code skill reads handwritten names on batched scans, matches them to a roster, splits PDFs per student, updates the completion spreadsheet and flags missing work.\nDone with\nCC\nClaude Code\nWhat they did\nThe skill takes a batched PDF of scanned homework and uses vision to read the handwritten name on each page. It fuzzy-matches those names to the student roster, so spelling variations still match. It then splits the PDF into one file per student and updates the Excel completion spreadsheet. For batches over 99 pages it can resume a session. It requires a manual verification step.\nHow it went\nThe listing gives no measured results or timings. It says the manual verification step is meant to make student attribution fully accurate, and it describes missing-assignment identification across large rosters as a use case.\nWorth knowing\nExpect to check the name matches by hand, because the skill requires manual verification. Batches over 99 pages need its session-resume feature.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a reusable skill that processes batches of scanned handwritten homework PDFs in [folder path]. It should read the handwritten student name on each page, match it against the roster in [roster file], split the scans into one PDF per student, and update [completion spreadsheet] to mark who turned the work in. Finish with a list of students with missing work and any names you couldn't match confidently. Show me the planned splits and spreadsheet changes before writing anything, and never delete the original scans.\nOriginal source: https://mcpmarket.com/tools/skills/homework-grading-workflow",
+    "body_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+    "archived_at": "2026-10-21T06:31:35.169092+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "a254c61fd1cbae030948deadc91dd0497bafa6e3eafb8dc947bf6737629cf63a",
+    "body_sha256": "d13d53819fcecdb19360c1f41140fe169dd1e9d1660a1610852e48de0ee6fcda",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:31:35.169092+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

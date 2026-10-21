@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-daily-arxiv-papers-into-a-notion-database",
-  "observed_at": "2026-10-19T06:52:11.750801+00:00",
-  "html_sha256": "943f4124387ab36a9ec79610819f59a62b70383d8fdde767e1b2445c19591a98",
+  "observed_at": "2026-10-21T06:05:31.194181+00:00",
+  "html_sha256": "210367ceaef31e4accffb7ab608c167e6158dc9eba53dd17c3d275bee8572d58",
   "body_sha256": "223d082fe88491a8edc9ebd69fd1e5f9c05f07554676ddc5085e96c80abd7927",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Track daily arXiv papers into a Notion database\nAn n8n workflow fetches arXiv papers daily for a keyword, summarizes them with Gemini 2.5 Flash, writes them to Notion and sends Feishu and Gmail notifications.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA daily 6:00 AM n8n schedule queries the arXiv API for the previous day's submissions on one keyword. It cleans the Atom response into JSON with authors and categories as arrays. Gemini 2.5 Flash then analyzes each paper and writes a daily summary with translation. Pages are created in two Notion tables, and Feishu and Gmail messages go out. GPT was used to design the HTML email template.\nHow it went\nThe source gives no results or measurements. It expects fewer than 20 papers a day and doesn't report how well the summaries turned out.\nWorth knowing\nNotion's create-page node only adds entries and never updates them. Multi-select fields need real arrays, and null values cause a 400 error.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every day at [time], fetches new arXiv papers matching the keyword [keyword], summarizes each in 2-3 sentences with an AI model, and adds them to my Notion database [database name] with title, authors, link and summary. Then send me one email digest listing the new papers. You're done when a test run adds the latest papers without duplicates; pause and show me the email before the first send.\nOriginal source: https://n8n.io/workflows/8847-daily-rag-research-paper-hub-with-arxiv-gemini-ai-and-notion/",
     "body_sha256": "223d082fe88491a8edc9ebd69fd1e5f9c05f07554676ddc5085e96c80abd7927",
-    "archived_at": "2026-10-19T06:52:11.750801+00:00",
+    "archived_at": "2026-10-21T06:05:31.194181+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T06:52:11.750801+00:00",
+    "at": "2026-10-21T06:05:31.194181+00:00",
     "status": "fetched",
     "error": null
   }

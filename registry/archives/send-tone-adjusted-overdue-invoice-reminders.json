@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/send-tone-adjusted-overdue-invoice-reminders",
-  "observed_at": "2026-10-19T06:40:37.615217+00:00",
-  "html_sha256": "5b7e0b822760e9db2cf31ec0d352f4c520037c86a22e1b619c60b5dba5909d04",
+  "observed_at": "2026-10-21T05:53:57.157025+00:00",
+  "html_sha256": "571c0e09d3e76f45dd2c498feb220b1c605a92f5445b1235ea4984dd37f3707a",
   "body_sha256": "540312ccf8597dbc2dd3902d2a9a243cd4af9a80bede3a82ed72d2ad7ccefaef",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Send tone-adjusted overdue invoice reminders\nAn n8n agent checks customer payment statuses, finds overdue invoices, picks a polite or firmer tone by days overdue, and emails reminders, skipping already-reminded customers.\nDone with\nN8\nn8n\nWhat they did\nThe author ran n8n locally in Docker and built a chat-triggered AI agent using Gemini (gemini-2.0-flash-lite) with simple memory. It had two tools: a Data Table read (getInvoices) and a Gmail SMTP email sender. The prompt tells it to filter for past-due, positive-balance, Pending rows, skip Reminded ones, and soften or firm up the tone by days overdue.\nHow it went\nThe source describes the finished workflow, which runs from one chat command and returns a JSON summary of emails sent. It reports no test results, numbers, or example outputs.\nWorth knowing\nGmail sending needs an app password, and the agent filters the rows itself from a full-table fetch. The source doesn't mention updating Status to Reminded after sending.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that runs every [day or week], reads invoices from [accounting tool or spreadsheet], and finds ones overdue. For each, write a reminder email that's polite if under [number] days overdue and firmer after that, and skip customers already reminded in the last [number] days. Log each reminder in [sheet or database]. Before any email is sent, show me the list of recipients and the draft text for approval.\nOriginal source: https://dev.to/canankorkut/build-your-first-ai-agent-with-n8n-32pf",
     "body_sha256": "540312ccf8597dbc2dd3902d2a9a243cd4af9a80bede3a82ed72d2ad7ccefaef",
-    "archived_at": "2026-10-19T06:40:37.615217+00:00",
+    "archived_at": "2026-10-21T05:53:57.157025+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T06:40:37.615217+00:00",
+    "at": "2026-10-21T05:53:57.157025+00:00",
     "status": "fetched",
     "error": null
   }

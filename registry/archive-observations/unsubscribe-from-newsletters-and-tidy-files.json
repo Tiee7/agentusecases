@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/unsubscribe-from-newsletters-and-tidy-files",
+  "observed_at": "2026-10-21T06:32:47.180763+00:00",
+  "html_sha256": "af93a9b938b78c0e8cab8a20ec701fe7cb4238606239a4339a2564687db75986",
+  "body_sha256": "4d0230a2fb02a7e8d4ed5475e460d5a2fe9defa4395361725472d2e607fedb6f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Unsubscribe from newsletters and tidy files",
+      "sha256": "9e9166964396b397dcd81117ae922739c35da37ad77145c9202bdef9b0101e59"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer tested OpenClaw on an isolated laptop: it processed 847 emails and unsubscribed from 203 lists at about 90% accuracy, missing a few client emails, and also sent invites and renamed files.",
+      "sha256": "6f71c2be388b548a705f2c9325d391de8a2dc4a22e419968a1454403b44368b5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "On an old, isolated Ubuntu laptop, the developer connected OpenClaw to a throwaway Gmail account holding about 2,000 emails and told it to unsubscribe from newsletters and promotions. It also sent calendar invites, and sorted and renamed 300 mixed files into folders. He spot-checked about 50 emails afterward.",
+      "sha256": "62ba2bc29981a91da634ddeac10afd65f97481b9437d203ca5496b96e5790688"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It handled 847 newsletter emails in about 20 minutes and unsubscribed from 203 lists, at roughly 90% accuracy. It missed some legitimate client emails sent through a marketing platform. File renaming worked well. The calendar task reported success when it hadn't fully worked.",
+      "sha256": "6031c04b86bd10c80fd60278a7e892804de8d51fd661a26e410e8e19d6fa8dad"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The email run cost about $8 in Claude Sonnet API calls, and the whole week cost $47, so set usage limits on your API keys from the start.”",
+      "sha256": "c6490ecfa9a540dfbda13eb8898af6ed4ca408ba0e30e31b2174529b5b87550d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://medium.com/@likhitkumarvp/i-spent-47-testing-openclaw-for-a-week-heres-what-s-actually-happening-c274dc26a3fd"
+      ],
+      "sha256": "86e1704188f0c447b8e0a1ae0565a8df1605a81b35bbd2e3d00f9213edbd6758"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2078bfe7a8732d0fcb179808c572577e8f89ea589ecb4545965b5d1e536d264e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Unsubscribe from newsletters and tidy files\nA developer tested OpenClaw on an isolated laptop: it processed 847 emails and unsubscribed from 203 lists at about 90% accuracy, missing a few client emails, and also sent invites and renamed files.\nDone with\nOC\nOpenClaw\nWhat they did\nOn an old, isolated Ubuntu laptop, the developer connected OpenClaw to a throwaway Gmail account holding about 2,000 emails and told it to unsubscribe from newsletters and promotions. It also sent calendar invites, and sorted and renamed 300 mixed files into folders. He spot-checked about 50 emails afterward.\nHow it went\nIt handled 847 newsletter emails in about 20 minutes and unsubscribed from 203 lists, at roughly 90% accuracy. It missed some legitimate client emails sent through a marketing platform. File renaming worked well. The calendar task reported success when it hadn't fully worked.\nWorth knowing\nThe email run cost about $8 in Claude Sonnet API calls, and the whole week cost $47, so set usage limits on your API keys from the start.”\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nGo through my inbox at [email account] and find newsletters and promotional mailing lists I haven't opened in [number] months. Build a list of the senders you plan to unsubscribe from, and never include anything from [clients, family, or important senders]. Show me the full list and wait for my approval before unsubscribing from anything or sending any invites or renaming files; you're done when I've approved the list and you've given me a report of what was unsubscribed.\nOriginal source: https://medium.com/@likhitkumarvp/i-spent-47-testing-openclaw-for-a-week-heres-what-s-actually-happening-c274dc26a3fd",
+    "body_sha256": "4d0230a2fb02a7e8d4ed5475e460d5a2fe9defa4395361725472d2e607fedb6f",
+    "archived_at": "2026-10-21T06:32:47.180763+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "85b23922b4892cc4145cec44a43a677743245a8c98a56811239b6ef8b887891f",
+    "body_sha256": "4d0230a2fb02a7e8d4ed5475e460d5a2fe9defa4395361725472d2e607fedb6f",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:32:47.180763+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

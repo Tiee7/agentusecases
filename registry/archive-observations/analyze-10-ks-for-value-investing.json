@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
+  "observed_at": "2026-10-21T06:27:51.155100+00:00",
+  "html_sha256": "5fbd76b80091c22466022f3f0ac3af65304c7dc9056803b2413be48412d461b6",
+  "body_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Analyze 10-Ks for value investing",
+      "sha256": "43e32cacf31a6608adc8022595a404f2cfc62d1a7f204991c2eb560f4a94b873"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster is experimenting with an LLM agent that reads 10-Ks and handles normalized earnings, ROIC, owner earnings and a rough reverse DCF.",
+      "sha256": "cabd1df315ed4f325bfec0aa5b2786958a06dfac9f538fba17a68f83206a60ca"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster was testing an LLM investing assistant that read 10-Ks and tried to produce normalized earnings, ROIC, owner earnings, and a rough reverse DCF. In the thread, they say they first used EDGAR/XBRL Companyfacts, then easier APIs, but ran into custom tags, footnotes, and backtest leakage; commenters pushed a workflow that combines structured headline figures with retrieval over filing text, stores source passages and year-by-year claims outside the chat, and leaves the human to verify tricky comparability issues.",
+      "sha256": "4069d517d28b195efefca37474ae002a4c1277b8154786e752df8534879d4034"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source reports no performance results, only problems and partial fixes: feeding whole filing histories hit context limits, chunking led to missed evidence and invented facts, and backtests looked unrealistically good because of restatements and filing lag. The poster’s takeaway was that retrieval with citations, sanity checks, and point-in-time inputs made the setup more trustworthy but did not solve cross-company footnote comparisons.",
+      "sha256": "a1fc5ae5f03ed3f55128ce6c820e5177dd71bd7d387a5600ca51d8ac968fe20b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Most practical advice was about avoiding false confidence: process filings once, keep extracted structure and passage locations, and only run new filings afterward to control cost.",
+      "sha256": "aa193582c59416b1aa38ea4081bbba98e61fd681ab671e02baeabf0bb03c01cb"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ValueInvesting/comments/1x52d8o/anyone_building_a_value_investing_agent_what_are"
+      ],
+      "sha256": "c9d7b33043a690108f074482e77637f17b50180f69a89e850a01e8d31c6b0026"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-14",
+      "sha256": "ffabbde475be33a5fe34128904c9a6af10d2bb26db6fb1fd1d24b5824297d5a7"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "38b79530827d444a9af933505c2a42118754994688350365c5572cff0da95754",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze 10-Ks for value investing\nThe poster is experimenting with an LLM agent that reads 10-Ks and handles normalized earnings, ROIC, owner earnings and a rough reverse DCF.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster was testing an LLM investing assistant that read 10-Ks and tried to produce normalized earnings, ROIC, owner earnings, and a rough reverse DCF. In the thread, they say they first used EDGAR/XBRL Companyfacts, then easier APIs, but ran into custom tags, footnotes, and backtest leakage; commenters pushed a workflow that combines structured headline figures with retrieval over filing text, stores source passages and year-by-year claims outside the chat, and leaves the human to verify tricky comparability issues.\nHow it went\nThe source reports no performance results, only problems and partial fixes: feeding whole filing histories hit context limits, chunking led to missed evidence and invented facts, and backtests looked unrealistically good because of restatements and filing lag. The poster’s takeaway was that retrieval with citations, sanity checks, and point-in-time inputs made the setup more trustworthy but did not solve cross-company footnote comparisons.\nWorth knowing\nMost practical advice was about avoiding false confidence: process filings once, keep extracted structure and passage locations, and only run new filings afterward to control cost.\nTry it yourself\nwith\nClaude\nCopy prompt\nAnalyze the latest 10-K for [company name or ticker], which I'll attach or link: [file or URL]. Calculate normalized earnings, ROIC, and owner earnings, showing each adjustment and the line items you used. Then build a rough reverse DCF showing what growth the current price of [price] implies at a [discount rate]% discount rate. Finish with a one-page summary that notes your assumptions and anything you were unsure about.\nOriginal source: https://www.reddit.com/r/ValueInvesting/comments/1x52d8o/anyone_building_a_value_investing_agent_what_are",
+    "body_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+    "archived_at": "2026-10-21T06:27:51.155100+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "792a69a522ab0d49d8452fc0b113a38b2167dfe8a21e2bb85abeee861f7d3e07",
+    "body_sha256": "444e1aed86f96c7a6074a70e92f5b4e6edc5a676e814fac6f6fed9d6a0cf737f",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:27:51.155100+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

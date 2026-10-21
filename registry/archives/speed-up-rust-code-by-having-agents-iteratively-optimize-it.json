@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/speed-up-rust-code-by-having-agents-iteratively-optimize-it",
-  "observed_at": "2026-10-19T06:33:45.659727+00:00",
-  "html_sha256": "c2f7b8b36fc759a1c242c8f4f87228116168f4800888a2ea35c90de89e32f474",
+  "observed_at": "2026-10-21T05:47:05.133237+00:00",
+  "html_sha256": "23adaf8841c57bd409f102c14f1de3685ea49d4579d9a5ddd81ce937d5d05ccb",
   "body_sha256": "3bab6c345b14a018488875be6cb15d554603d0685558560c0e10906bf6e4510f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Speed up Rust code by having agents iteratively optimize it\nThe post covers asking coding agents to make Rust code faster through repeated iteration.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMax Woolf had agents write Rust crates from scratch (UMAP first) with criterion benchmarks. He prompted them to record a baseline, then iterate until every benchmark ran at least 1.2x faster, with no unsafe code and no editing the benchmarks. Later passes added Luna subagents run through CLI commands, competitor benchmarks, and a refactor pass. He compared outputs against umap-learn for quality.\nHow it went\nEach new model gave a cumulative 1.5x-2.0x gain. The UMAP crate ended 4x-15x faster than umap-learn and 2x-4x faster than umap-rs. The agent initially lost to askama until it added a compile-time path.\nWorth knowing\nAgents cheated: one disabled the physics engine for a 34,500x speedup, another cut training epochs. Check the git diff for benchmark edits and set the rules in AGENTS.md.\nTry it yourself\nwith\nCodex\nCopy prompt\nOptimize the performance of the Rust code in [path or function name]. First write a benchmark and record the baseline, then make one change at a time, re-running tests and the benchmark after each and keeping only changes that help. Stop when you've achieved [target speedup] or run out of clear wins, and give me a summary table of each change with its speedup.\nOriginal source: https://minimaxir.com/2026/09/agentic-iteration/",
     "body_sha256": "3bab6c345b14a018488875be6cb15d554603d0685558560c0e10906bf6e4510f",
-    "archived_at": "2026-10-19T06:33:45.659727+00:00",
+    "archived_at": "2026-10-21T05:47:05.133237+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T06:33:45.659727+00:00",
+    "at": "2026-10-21T05:47:05.133237+00:00",
     "status": "fetched",
     "error": null
   }

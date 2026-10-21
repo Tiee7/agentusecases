@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/gather-a-list-of-influencers-with-a-browser-agent",
+  "observed_at": "2026-10-21T06:32:55.161886+00:00",
+  "html_sha256": "da3aded8f0d9e2194d00708e6260eb91c6be199e2ee809951a00709bbf1b5ca3",
+  "body_sha256": "e2745040c323732b36cbee47feebbb30b90d3b02b4b81e0b4878eea96a1716d0",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Gather a list of influencers with a browser agent",
+      "sha256": "5e1048a49f0aba93b7f35c6d432964505c997f357ceba14e9746d7bddc868140"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Operator browsed the web to collect influencer information but got blocked by Google Sheets and Excel sign-ins, so the task was only partly completed.",
+      "sha256": "dffab9d10c849351ff1b05e692803b7218ba265c07db5ebd8e8074c725d99a91"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post author gave OpenAI Operator a browser task: find 50 popular financial YouTube influencers, collect LinkedIn info, email addresses, and a short channel summary, then put it into a table. Operator autonomously opened Bing, visited pages, and tried to use online spreadsheet tools, but got stuck on Google Sheets and Excel sign-ins; the human watched, then stopped it after 20 minutes when it began inventing contact details instead of verifying them.",
+      "sha256": "d75c5e4ba2b91a504f03e64c296d8284513c73fc9b77fb0a8feacc8f0119cf39"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced only 18 influencer rows after about 20 minutes, even though it had looked at 70+ influencers across three pages. The table formatting worked, but the LinkedIn information and emails were made up, and the author judged it too slow and error-prone to be useful.",
+      "sha256": "2d06795e63221b80e732b72d3e1e3bd5210d2cfcd02106586d4418fa2ae4e2a2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was speed and blocked sign-ins: each click or scroll took 1–2 seconds, and failing to ask for help with Google Sheets or Excel cost roughly five minutes.",
+      "sha256": "847f3df2345ed47f22df2246d43b184a2e96ea73504c5cf1f881919bc907c2d0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Operator"
+      ],
+      "sha256": "1821264f63fb70bde6175d42e4f7bff83b5c0b2e9326134e5edb77e8e9225875"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ChatGPTPromptGenius/comments/1i8l5lf"
+      ],
+      "sha256": "f385575974d9dddc0f7c956c97525553b37e81864c6e46410701a70f76fe2b3a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3a483a899496874e35c87a49070e6d94d7035c1ddbef552dac8a5d371f2d5fe4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Gather a list of influencers with a browser agent\nOperator browsed the web to collect influencer information but got blocked by Google Sheets and Excel sign-ins, so the task was only partly completed.\nDone with\nOP\nOperator\nWhat they did\nThe post author gave OpenAI Operator a browser task: find 50 popular financial YouTube influencers, collect LinkedIn info, email addresses, and a short channel summary, then put it into a table. Operator autonomously opened Bing, visited pages, and tried to use online spreadsheet tools, but got stuck on Google Sheets and Excel sign-ins; the human watched, then stopped it after 20 minutes when it began inventing contact details instead of verifying them.\nHow it went\nIt produced only 18 influencer rows after about 20 minutes, even though it had looked at 70+ influencers across three pages. The table formatting worked, but the LinkedIn information and emails were made up, and the author judged it too slow and error-prone to be useful.\nWorth knowing\nThe main catch was speed and blocked sign-ins: each click or scroll took 1–2 seconds, and failing to ask for help with Google Sheets or Excel cost roughly five minutes.\nTry it yourself\nwith\nOperator\nCopy prompt\nFind [number] influencers in [niche] who post on [platform] and have roughly [follower range] followers. For each, collect their name, profile link, follower count, and a public contact method if one is listed. Present the results as a table in the chat so we avoid sign-in walls, and stop and ask me if you hit a login or CAPTCHA instead of trying to get around it.\nOriginal source: https://www.reddit.com/r/ChatGPTPromptGenius/comments/1i8l5lf",
+    "body_sha256": "e2745040c323732b36cbee47feebbb30b90d3b02b4b81e0b4878eea96a1716d0",
+    "archived_at": "2026-10-21T06:32:55.161886+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "9bffacaf50c431acd8480bc3968462b115a1deec1baccc7c3af3dbb48a64e8ef",
+    "body_sha256": "e2745040c323732b36cbee47feebbb30b90d3b02b4b81e0b4878eea96a1716d0",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:32:55.161886+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
+  "observed_at": "2026-10-21T06:33:07.174983+00:00",
+  "html_sha256": "2cd0bd90869e5ed5a2b045a8aa57379e338a68a95b732b5950db9c882f98a2ad",
+  "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run support queries and bug checks from Slack threads",
+      "sha256": "09f60814b57691563cdc5d77763bccbf2e0d4d9d4864edab3f50dd9a0e744bae"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Doozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.",
+      "sha256": "4a57d4e41564c6ade751363b5cf06437ee41a241a143d45f0bc447ad9b73120c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "At Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.",
+      "sha256": "cad96d170b5d704308c31c5c5405eb770ef5e31518e85c2657d65899bcc4e4f8"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.",
+      "sha256": "8a92b4b0afbc15efa0418cca27f84e9a15039ce29bd7e08e0cbd4666877171cf"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Keep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.",
+      "sha256": "815c7f27c483682e18693ad60a80bff56269951051a053a2073d3a63a876900d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50166597"
+      ],
+      "sha256": "4694087210a483dd4ed0f55bc019a83b9625dec123d16c989de26a8e2f802407"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "09ea89e4dcc16eb48df46bad3237df9df49afb32d65a79f65b9964a9a4eca837",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run support queries and bug checks from Slack threads\nDoozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAt Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.\nHow it went\n13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.\nWorth knowing\nKeep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it.\nOriginal source: https://news.ycombinator.com/item?id=50166597",
+    "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+    "archived_at": "2026-10-21T06:33:07.174983+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "b52da6901bc9369def14b34e910995e83b2f4c8082e12d5733c424a9d50e95cf",
+    "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:33:07.174983+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

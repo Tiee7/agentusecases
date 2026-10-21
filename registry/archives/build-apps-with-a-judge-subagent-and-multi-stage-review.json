@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
+  "observed_at": "2026-10-21T06:33:31.175636+00:00",
+  "html_sha256": "aa95d31df206dd154a181d184560cc0681890c2dc4c7469619605b49afeff26b",
+  "body_sha256": "66b643df46a2d8489f13cb5e351bb1d93f5d99893b1b3da7c1978fabe15a5412",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build apps with a judge subagent and multi-stage review",
+      "sha256": "f9dbc88fc79cf6e36fb030b1a0e8d5ce0e142acf86a28471cce4ed223729ddba"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code setup for app development uses a judge subagent, context management, and multi-stage review for quality control.",
+      "sha256": "6a44a58e31db3b20c6a42fe6fb6884d107f2477b0fbdbc6ffb695dc1ee759edd"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post describes a solo developer using Claude Code to build a Windows app with a separate read-only judge subagent for unresolved decisions. The judge had to label claims as confirmed, guessed, or unknown and avoid deciding from guesses; the developer also started each issue in a fresh child session, then ran two review passes on code: a general code review and a second pass using coding-guideline skills, with deferred issues left in PRs for human review.",
+      "sha256": "100835eda8c25662c1bbbf48f87040c122d033fa742b71c4f9f94a0b4fba3627"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The workflow reportedly led to a Microsoft Store shipment and 142 merged PRs in 17 days. The post also notes the setup is complex and may be hard for beginners.",
+      "sha256": "2e269e689772f5ed78d6e0942c7d4584b071e5dc6180cd3b6b2c9f7a896807e8"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is overhead: this workflow adds fresh sessions, a separate judge, and two review stages, so it is presented as an advanced setup rather than a lightweight default.",
+      "sha256": "e10756a2aa6827a609a36e7af636256e0aec204008b3ab8141690d5b617ec42d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeWorkflows/comments/1x9vwqf/workflow_advanced_claude_code_workflow_judge"
+      ],
+      "sha256": "ec20332328cf03116e520d2f62f8a878462db524a0fd5a8ab0773416de9e05d5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fd1239973aa8962840e941ade04bce6f830f86d0bfa84f0af8f1d01ed736a81b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build apps with a judge subagent and multi-stage review\nA Claude Code setup for app development uses a judge subagent, context management, and multi-stage review for quality control.\nDone with\nCC\nClaude Code\nWhat they did\nThe post describes a solo developer using Claude Code to build a Windows app with a separate read-only judge subagent for unresolved decisions. The judge had to label claims as confirmed, guessed, or unknown and avoid deciding from guesses; the developer also started each issue in a fresh child session, then ran two review passes on code: a general code review and a second pass using coding-guideline skills, with deferred issues left in PRs for human review.\nHow it went\nThe workflow reportedly led to a Microsoft Store shipment and 142 merged PRs in 17 days. The post also notes the setup is complex and may be hard for beginners.\nWorth knowing\nThe main catch is overhead: this workflow adds fresh sessions, a separate judge, and two review stages, so it is presented as an advanced setup rather than a lightweight default.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up my project in [repo path] so that after you implement each feature of [app description], a separate judge subagent reviews the work against the requirements and tests and sends back a list of problems. Repeat the fix and review loop until the judge has no blocking issues. Keep a short notes file of decisions so context survives between sessions, and summarize the final state when finished.\nOriginal source: https://www.reddit.com/r/ClaudeWorkflows/comments/1x9vwqf/workflow_advanced_claude_code_workflow_judge",
+    "body_sha256": "66b643df46a2d8489f13cb5e351bb1d93f5d99893b1b3da7c1978fabe15a5412",
+    "archived_at": "2026-10-21T06:33:31.175636+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:33:31.175636+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

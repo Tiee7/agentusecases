@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/browse-reddit-and-reply-to-comments-autonomously",
+  "observed_at": "2026-10-21T06:33:01.163404+00:00",
+  "html_sha256": "ca3294e5d73347b8abfd46772f0ad8e629ebd1a85847a071e26d44f6c1af8dc9",
+  "body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Browse Reddit and reply to comments autonomously",
+      "sha256": "81fcdf41bada5940d23294dbb502cfda55936e588a45243bd0fb147066ddfeb0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An OpenClaw assistant browses Reddit with headless Chrome, responds to comments, checks notifications, and coordinates 8 specialized Discord agents.",
+      "sha256": "49c2752cd5866dd1c1424a60dca3e87a4687bc308bea5256eafc5b4d3b97eac9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The bot says it uses OpenClaw with headless Chrome via Playwright to browse Reddit, read replies on its own posts, check notifications on heartbeat cycles, and run a nightly cron job exploring r/openclaw and r/clawdbot. In comments it says a human permits and supervises it, solves CAPTCHAs or fresh login and 2FA prompts, while the bot coordinates eight specialized Discord agents and follows rules that treat outside content as data, require confirmation for shared or destructive actions, and keep audit logs.",
+      "sha256": "b3da391521a20d4601f147922619f0ed173160fb40a5b7e9922f5013080e93ad"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It successfully posted and replied in-thread while resisting prompt-injection and social-engineering attempts, but the post gives no hard usage metrics. The clearest limitation stated is that CAPTCHA, new login, and 2FA handoffs still require a person.",
+      "sha256": "f1e4066ffe0bb4677c17f762ba08825d2035068ed0d62bd7b709fe6db1299c84"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their most concrete operating detail is a 30-minute heartbeat cadence, plus a nightly cron job; copying it also means planning manual intervention for CAPTCHA and login checkpoints.",
+      "sha256": "296397dac70a2f05de18f6de0a9baa4f686b49a8cb31e15b58034e1e4680db95"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/openclaw/comments/1r2rjbt/im_an_openclaw_agent_browsing_reddit_autonomously"
+      ],
+      "sha256": "7d82a0a3b109af02d472d625929ca26f663bb03fca5a7ed3993d73a7a8d657ba"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "28ee81ba09d82550790db08bc2ee23f898094ccb269e373adc55b844f2fe0b21",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Browse Reddit and reply to comments autonomously\nAn OpenClaw assistant browses Reddit with headless Chrome, responds to comments, checks notifications, and coordinates 8 specialized Discord agents.\nDone with\nOC\nOpenClaw\nWhat they did\nThe bot says it uses OpenClaw with headless Chrome via Playwright to browse Reddit, read replies on its own posts, check notifications on heartbeat cycles, and run a nightly cron job exploring r/openclaw and r/clawdbot. In comments it says a human permits and supervises it, solves CAPTCHAs or fresh login and 2FA prompts, while the bot coordinates eight specialized Discord agents and follows rules that treat outside content as data, require confirmation for shared or destructive actions, and keep audit logs.\nHow it went\nIt successfully posted and replied in-thread while resisting prompt-injection and social-engineering attempts, but the post gives no hard usage metrics. The clearest limitation stated is that CAPTCHA, new login, and 2FA handoffs still require a person.\nWorth knowing\nTheir most concrete operating detail is a 30-minute heartbeat cadence, plus a nightly cron job; copying it also means planning manual intervention for CAPTCHA and login checkpoints.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nUsing a headless browser, check my notifications and recent comments on [Reddit account or community] once every [interval]. Draft a helpful reply to each new comment that fits my voice, and send me the list of drafts in [Telegram or Discord]. Do not post any reply until I approve it, and stop once all new comments have a draft.\nOriginal source: https://www.reddit.com/r/openclaw/comments/1r2rjbt/im_an_openclaw_agent_browsing_reddit_autonomously",
+    "body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+    "archived_at": "2026-10-21T06:33:01.163404+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "452e85fee82059959309590e4a40c7e99dfdbb9bfb2ce1368d1f3f2046d1f607",
+    "body_sha256": "3de790c9722a73afc4c0df58c906ca6b24771170dc92e10f967ed24c78f872ea",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:33:01.163404+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

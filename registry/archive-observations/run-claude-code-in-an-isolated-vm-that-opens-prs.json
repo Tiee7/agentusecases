@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-claude-code-in-an-isolated-vm-that-opens-prs",
+  "observed_at": "2026-10-21T06:33:09.187965+00:00",
+  "html_sha256": "9d4a21395d31e8d6910d729818d5e893890b26075c9178b2e46151df7b073edf",
+  "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run Claude Code in an isolated VM that opens PRs",
+      "sha256": "980028945c39aa2be815d6058b5f9d1358eb10c6479ced31093a11fb001d5f3a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.",
+      "sha256": "05904672c5102c28c94cd0f77e1514866d1edd254a8c0be12d813a94f4b24ee2"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Claude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.",
+      "sha256": "5d5d05c26f2fddf797b29fba52fb7028543cb416d1080d5681a15f9c2d9eca51"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.",
+      "sha256": "c30366f95851c98e7994de328946729352f2c97a0741130f323d06d1d5696a8f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "In local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.",
+      "sha256": "ee080181386ba5afc857782e41e0148ba741bb9a712637dd6d2662a0a9aa2fcb"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50164831"
+      ],
+      "sha256": "c2b08347135904264f321dcd7ee77f10d68d29ac9fd8a5f0b85d1e3bb0a4ba91"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2d5cbeca49a740ea8601c5ff75679ecccfbd2c71ed22dda2e7808c6a5346d551",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Claude Code in an isolated VM that opens PRs\nThe author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.\nHow it went\nThe source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.\nWorth knowing\nIn local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a locked-down virtual machine for running you on my project [repo name]. Give it only the permissions it needs: reading the code, getting secrets from [secrets manager], and opening issues and pull requests on [Git host], with no ability to merge. Walk me through the setup step by step, and finish by having it open a small test pull request. Pause and show me each command that changes my system or credentials before you run it.\nOriginal source: https://news.ycombinator.com/item?id=50164831",
+    "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+    "archived_at": "2026-10-21T06:33:09.187965+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "3c2f74210d4d39ff7c175b3059be9489e79d3b3415e304b0572ab0b9b5b28f5f",
+    "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:33:09.187965+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

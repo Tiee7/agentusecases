@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/scaffold-a-new-service-end-to-end-with-agents",
-  "observed_at": "2026-10-19T06:51:01.724382+00:00",
-  "html_sha256": "485c31288ceb9efba7397e972c7d2d22e602b777bde2c96cbf63aa62f42c4516",
+  "observed_at": "2026-10-21T06:04:21.212588+00:00",
+  "html_sha256": "73c8b9a3f51e57912a5a334ecc167a7c4624b33852d5036c05468cced6db64ff",
   "body_sha256": "a9e6b649b7f56dd8850148fb4865670db5b648f9268a34f211d0094ad8971a73",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Scaffold a new service end to end with agents\nCursor agents create Terraform, k8s manifests and CI, validate them and open a draft PR; one cleanup run wrongly deleted Terraform files.\nDone with\nCR\nCursor\nWhat they did\nA task file in the repo, run with a service name and team name, drives the agent. It first checks GitHub, the cluster and Terraform state for conflicts. It then writes the Terraform service file, the Kubernetes Deployment, Service and HPA, and a CI workflow with a Trivy scan. It runs terraform validate and kubectl dry-run, then opens a draft PR with a checklist. A senior engineer reviews before merge.\nHow it went\nThe article describes a new engineer producing convention-compliant files this way, with no timing stated for this run. Separately, a vague prompt to clean up unused resources deleted 14 files, three of them Terraform files still managing state. A checkpoint rollback fixed it.\nWorth knowing\nReplace vague prompts like cleanup with precise report-only tasks. Reviewers who skimmed let a cpu=10m limit through, so keep PRs small and use checkpoints.\nTry it yourself\nwith\nCursor\nCopy prompt\nScaffold a new service called [service name] including Terraform, Kubernetes manifests, and CI config, validating each file as you go. Open a draft pull request with the changes, but show me exactly what will be created or deleted before running any cleanup or deletion commands.\nOriginal source: https://blog.devops.dev/operationalizing-cursor-agents-in-devops-workflows-4eb13cdad645?gi=be8c938ee862",
     "body_sha256": "a9e6b649b7f56dd8850148fb4865670db5b648f9268a34f211d0094ad8971a73",
-    "archived_at": "2026-10-19T06:51:01.724382+00:00",
+    "archived_at": "2026-10-21T06:04:21.212588+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T06:51:01.724382+00:00",
+    "at": "2026-10-21T06:04:21.212588+00:00",
     "status": "fetched",
     "error": null
   }

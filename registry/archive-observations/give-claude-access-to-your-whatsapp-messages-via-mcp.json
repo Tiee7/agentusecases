@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
+  "observed_at": "2026-10-21T06:31:25.172677+00:00",
+  "html_sha256": "44dc65ad2a24e8331d67a883835b4c7c5d20284e60c034b7cd02eb5e7bdcedde",
+  "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Give Claude access to your WhatsApp messages via MCP",
+      "sha256": "2353655a448fc60a86f191c9ff42a77a45ae0798e19a1aac6f479ac8eba2ff31"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A single-user MCP server on Cloudflare lets Claude on mobile read and search the author's personal WhatsApp messages, using Google contacts to resolve names.",
+      "sha256": "f1293202e341e0beec81e3a2888494a769128e6b33796fe1059ba12443c61a11"
+    },
+    "method": {
+      "status": "observed",
+      "value": "You deploy a small server to your own Cloudflare account and link your phone by scanning a QR code, as with WhatsApp Web. It stores messages in SQLite inside a Durable Object and syncs on request and once a day. Claude gets read, search and naming tools. For unnamed chats, the agent looks numbers up with its own contacts connector, such as Google Contacts, and saves the names.",
+      "sha256": "41611244eca29952f41620d140b879148b19a627572909236d1bc8feb4563aa3"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It reads and searches chats, and the agent can name chats from contacts. Media isn't downloaded, and the first import only includes whatever history WhatsApp hands over. The author says it has only been tested on one real account.",
+      "sha256": "28b845e7dd3b7f5b0d46fc7d8445bd4eeb7bc31a0f8c55eb791b53632accce53"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Large history imports need a raised CPU limit, which needs the Workers Paid plan (a few dollars a month). The free plan is untested, and this unofficial approach breaks WhatsApp's terms.",
+      "sha256": "609f30959c1e8713068b45feb08b4692a287385f6d33420468f827510b3e6005"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/finereli/whatsapp-mcp"
+      ],
+      "sha256": "58ca2c5f96152620f832ce6caca6cd4873a682f73916d185d4dcc978ae5f6576"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c99d20cf5e65d98cccd011333143600258462053b3571eb022bd471289e7821a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give Claude access to your WhatsApp messages via MCP\nA single-user MCP server on Cloudflare lets Claude on mobile read and search the author's personal WhatsApp messages, using Google contacts to resolve names.\nDone with\nCL\nClaude\nWhat they did\nYou deploy a small server to your own Cloudflare account and link your phone by scanning a QR code, as with WhatsApp Web. It stores messages in SQLite inside a Durable Object and syncs on request and once a day. Claude gets read, search and naming tools. For unnamed chats, the agent looks numbers up with its own contacts connector, such as Google Contacts, and saves the names.\nHow it went\nIt reads and searches chats, and the agent can name chats from contacts. Media isn't downloaded, and the first import only includes whatever history WhatsApp hands over. The author says it has only been tested on one real account.\nWorth knowing\nLarge history imports need a raised CPU limit, which needs the Workers Paid plan (a few dollars a month). The free plan is untested, and this unofficial approach breaks WhatsApp's terms.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me set up a private, single-user MCP server on [Cloudflare account/hosting] so you can read and search my personal [WhatsApp] messages, and use my [Google contacts] to turn phone numbers into names. Walk me through each step, give me the code and config, and tell me how to connect it to Claude on my phone. You're done when I can ask 'what did [contact name] say about [topic] last week?' and get a correct answer. Before any step that handles my credentials or exposes data, stop and tell me how it's secured, and keep the server read-only with access limited to me.\nOriginal source: https://github.com/finereli/whatsapp-mcp",
+    "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+    "archived_at": "2026-10-21T06:31:25.172677+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "9a08549d8efe8fe56c29f893fa40a992673367957a91912c2158e64ad236ae32",
+    "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:31:25.172677+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

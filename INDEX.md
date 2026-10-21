@@ -1,8 +1,8 @@
 # 商业深度研究总索引
 
-已完成深度研究 **76** / 注册案例 **1480**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **76** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
 
-当前主对话单执行者按 /new 串行研究，排除 Spark20例；独立分支验证、合并和回读后接续。网站仅在用户要求时手动发布。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
+两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
 [完整案例目录与计划报告路径](registry/CATALOG.md) · [机器可读对应表](registry/cases.json) · [商业研究标准](RESEARCH_STANDARD.md)
 
@@ -44,50 +44,46 @@
 | [用 Devin 查询数据仓库并生成 SQL 与看板](reports/answer-data-questions-and-build-dashboards-from-the-warehous.md) | 适合内部效率工具 | 35.0 | 中 | available | 企业内部数据分析与BI辅助 | 2026-10-18T03:12:38.025709+00:00 |
 | [用 Alexa+ 查询上传文档并整理学校邮件](reports/answer-questions-from-uploaded-documents-and-school-emails.md) | 适合内部效率工具 | 28.5 | 中 | available | 家庭资料问答与学校日程整理 | 2026-10-18T03:42:28.183314+00:00 |
 | [用 AI Assist 回答租客问题并安排看房](reports/answer-renter-questions-and-schedule-tours.md) | 仅建议受控试点 | 48.0 | 中 | available | 多户住宅租赁沟通与看房行政流程 | 2026-10-18T03:53:22.588465+00:00 |
+| [用 MentionDesk 跟踪品牌在 AI 回答中的提及并整理改进计划](reports/audit-seo-and-ai-search-visibility-with-an-agent.md) | 仅建议受控试点 | 38.0 | 中 | available | 搜索营销与品牌监测 | 2026-10-19T19:27:31Z |
 | [用 ChatGPT Agent 在 LinkedIn 上自动申请职位](reports/auto-apply-to-jobs-on-linkedin-with-chatgpt-agent.md) | 不建议商业投入 | 30.0 | 中 | available | 求职岗位研究与申请材料准备 | 2026-10-16T16:13:51.249325+00:00 |
+| [用Claude Code辅助亚马逊品牌分类账和商品图应用](reports/automate-amazon-brand-bookkeeping-and-product-images.md) | 仅建议受控试点 | 未评定 | 中 | available | 电商品牌内部运营 | 2026-10-20T17:00:18.838227+00:00 |
 | [用 Claude Code 和 Claude for Word 起草文件并衔接法律工作流](reports/automate-legal-drafting-and-workflows-with-claude-code.md) | 适合内部效率工具 | 38.0 | 中 | available | 律师内部文书处理与知识工作流 | 2026-10-16T17:12:27.645268+00:00 |
+| [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 仅建议受控试点 | 未评定 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
+| [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
+| [用Claude Code构建项目开发工作流生成器](reports/build-a-dev-workflow-generator-with-test-driven-agent-coding.md) | 适合内部效率工具 | 未评定 | 中 | available | 开发者工具与工程流程集成 | 2026-10-20T21:48:20.558058+00:00 |
+| [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:55:09.576494+00:00 |
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
 | [用 Claude Code 根据银行流水起草税务申报](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 中 | not_observed | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
+| [用 Laminar Signals 分析智能体运行轨迹并聚类错误](reports/find-errors-in-production-agent-traces.md) | 仅建议受控试点 | 43.0 | 中 | available | 智能体可观测性与质量运营 | 2026-10-19T23:14:54Z |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [用 Claude Code 生成可在浏览器授课的互动 HTML 文件](reports/generate-custom-interactive-html-lessons-for-students.md) | 仅建议受控试点 | 44.0 | 中 | available | 英语互动课件制作与维护 | 2026-10-19T22:49:39Z |
 | [用 Claude Code 汇集市场数据并生成投资分析](reports/generate-investment-analysis-from-live-market-data.md) | 适合内部效率工具 | 36.0 | 中 | available | 个人投资研究与组合信息整理 | 2026-10-16T18:02:24.876149+00:00 |
+| [用ChatGPT智能体整理Yooda关键词与Ahrefs竞品资料](reports/hand-seo-tasks-to-a-chatgpt-agent.md) | 仅建议受控试点 | 未评定 | 待核实 | available | SEO研究与数据整理 | 2026-10-20T16:15:51.778918+00:00 |
+| [用Grok Bot辅助车辆登记、退货和预约流程](reports/handle-multi-click-chores-like-dmv-returns-and-appointments.md) | 仅建议受控试点 | 未评定 | 中 | available | 生活事务信息准备 | 2026-10-20T17:04:51.198125+00:00 |
 | [用 Resume 智能体搜索岗位、定制简历并跟踪申请](reports/hunt-jobs-tailor-resumes-and-apply-automatically.md) | 仅建议受控试点 | 42.0 | 中 | available | 求职岗位筛选与申请材料准备 | 2026-10-16T16:41:28.042672+00:00 |
+| [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
+| [用Claude Code维护并运营Chrome扩展](reports/let-claude-code-run-a-chrome-extension-project.md) | 适合内部效率工具 | 未评定 | 中 | available | 浏览器扩展与独立产品维护 | 2026-10-20T19:14:58.334033+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
 | [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
+| [用Claude Code整理本地新闻并上传WordPress文章](reports/publish-local-news-posts-to-wordpress-automatically.md) | 适合内部效率工具 | 41.5 | 中 | available | 内容运营与新闻草稿准备 | 2026-10-20T11:06:31.706905+00:00 |
 | [用 Claude for Word 生成原生修订并处理批注](reports/redline-lawyer-documents-with-native-word-tracked-changes.md) | 仅建议受控试点 | 44.0 | 中 | available | 专业文档流程配置与审核辅助 | 2026-10-19T22:14:26Z |
+| [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |
+| [用 Finance 智能体检索13F申报并整理机构持仓变化](reports/research-hedge-fund-portfolios-from-13f-filings.md) | 仅建议受控试点 | 41.0 | 中 | available | 公开金融披露研究与数据整理 | 2026-10-19T19:57:01Z |
+| [用十个智能体分工研究与起草SEO文章](reports/run-a-10-agent-seo-content-pipeline.md) | 仅建议受控试点 | 未评定 | 待核实 | available | 内容研究与编辑辅助 | 2026-10-20T16:29:01.855102+00:00 |
+| [用自建智能体准备企业Reddit互动内容](reports/run-a-company-reddit-presence-with-a-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 社区反馈与品牌沟通辅助 | 2026-10-20T16:36:53.674967+00:00 |
+| [用Claude进行技术面试并生成候选人报告](reports/run-ai-led-technical-interviews-for-recruiting.md) | 仅建议受控试点 | 44.0 | 中 | available | 技术招聘与面试辅助 | 2026-10-20T10:53:13.090855+00:00 |
 | [用 11 个 agent 分工完成交易前准备](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
+| [用Grok Bot准备承包商后台材料与客户召回草稿](reports/run-contractor-back-office-jobs-and-churn-recovery.md) | 仅建议受控试点 | 未评定 | 中 | available | 后台行政与客户留存（分场景） | 2026-10-20T15:54:01.195589+00:00 |
 | [用Claude Code生成代理机构文案、客户报告和入驻工作区](reports/run-marketing-agency-copy-reporting-and-onboarding-with-agen.md) | 适合内部效率工具 | 43.0 | 中 | available | 营销代理机构运营 | 2026-10-20T08:04:46.305390+00:00 |
 | [用Claude Code生成素材并管理Meta广告活动](reports/run-meta-ad-campaigns-autonomously-for-a-newsletter.md) | 仅建议受控试点 | 41.0 | 中 | available | 营销投放与newsletter运营 | 2026-10-20T07:12:41.065326+00:00 |
 | [用 Grok Bot 夜间巡检迷因币并发送提醒](reports/run-overnight-memecoin-checks-and-alerts.md) | 适合内部效率工具 | 29.0 | 中 | available | 链上信息筛选与研究提醒 | 2026-10-16T16:08:47.863325+00:00 |
+| [用OpenClaw连接安卓手机浏览和评论社交内容](reports/run-x-and-reddit-accounts-with-agents-on-android-phones.md) | 仅建议受控试点 | 未评定 | 中 | available | 移动端社交工作流研究 | 2026-10-20T16:54:05.962122+00:00 |
+| [用Grok Bot每天三次收集AI新闻](reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 行业信息整理 | 2026-10-20T15:34:56.410756+00:00 |
+| [用Grok Bot提交电话号码移除请求并复查](reports/scrub-your-phone-number-from-data-brokers-to-stop-spam.md) | 仅建议受控试点 | 未评定 | 中 | available | 个人资料清理与隐私辅助 | 2026-10-20T16:48:48.358758+00:00 |
 | [用 ChatGPT Agent 上架并出售闲置物品](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
 | [用本地Codex辅导纸笔练习并保存学习记录](reports/tutor-you-through-pen-and-paper-math-with-a-local-agent.md) | 仅建议受控试点 | 35.0 | 中 | available | 个人学习工具 | 2026-10-20T01:24:22.548256+00:00 |
 | [用Claude Code指导SQL项目迁移并练习dbt](reports/use-claude-code-as-an-agentic-tutor-in-your-learning-environ.md) | 仅建议受控试点 | 37.0 | 中 | available | 成人技术学习 | 2026-10-20T02:45:22.422735+00:00 |
-| [用 Meta Muse 预订餐厅并加入日历](reports/book-a-restaurant-table-and-add-it-to-the-calendar.md) | 仅建议受控试点 | 未评定 | 中 | available | 餐饮预订与个人事务协助 | 2026-10-19T15:28:51.062924+00:00 |
-| [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
-| [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |
-| [用 MentionDesk 跟踪品牌在 AI 回答中的提及并整理改进计划](reports/audit-seo-and-ai-search-visibility-with-an-agent.md) | 仅建议受控试点 | 38.0 | 中 | available | 搜索营销与品牌监测 | 2026-10-19T19:27:31Z |
-| [用 Finance 智能体检索13F申报并整理机构持仓变化](reports/research-hedge-fund-portfolios-from-13f-filings.md) | 仅建议受控试点 | 41.0 | 中 | available | 公开金融披露研究与数据整理 | 2026-10-19T19:57:01Z |
-| [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
-| [用 Laminar Signals 分析智能体运行轨迹并聚类错误](reports/find-errors-in-production-agent-traces.md) | 仅建议受控试点 | 43.0 | 中 | available | 智能体可观测性与质量运营 | 2026-10-19T23:14:54Z |
-
-| [用Claude进行技术面试并生成候选人报告](reports/run-ai-led-technical-interviews-for-recruiting.md) | 仅建议受控试点 | 44.0 | 中 | available | 技术招聘与面试辅助 | 2026-10-20T10:53:13.090855+00:00 |
-
-| [用Claude Code整理本地新闻并上传WordPress文章](reports/publish-local-news-posts-to-wordpress-automatically.md) | 适合内部效率工具 | 41.5 | 中 | available | 内容运营与新闻草稿准备 | 2026-10-20T11:06:31.706905+00:00 |
-
-| [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:57:06.189353+00:00 |
-
-| [用Grok Bot每天三次收集AI新闻](reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 行业信息整理 | 2026-10-20T15:34:56.410756+00:00 |
-
-| [用Grok Bot准备承包商后台材料与客户召回草稿](reports/run-contractor-back-office-jobs-and-churn-recovery.md) | 仅建议受控试点 | 未评定 | 中 | available | 后台行政与客户留存（分场景） | 2026-10-20T15:54:01.195589+00:00 |
-
-| [用ChatGPT智能体整理Yooda关键词与Ahrefs竞品资料](reports/hand-seo-tasks-to-a-chatgpt-agent.md) | 仅建议受控试点 | 未评定 | 待核实 | available | SEO研究与数据整理 | 2026-10-20T16:15:51.778918+00:00 |
-| [用十个智能体分工研究与起草SEO文章](reports/run-a-10-agent-seo-content-pipeline.md) | 仅建议受控试点 | 未评定 | 待核实 | available | 内容研究与编辑辅助 | 2026-10-20T16:29:01.855102+00:00 |
-| [用自建智能体准备企业Reddit互动内容](reports/run-a-company-reddit-presence-with-a-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 社区反馈与品牌沟通辅助 | 2026-10-20T16:36:53.674967+00:00 |
-| [用Grok Bot提交电话号码移除请求并复查](reports/scrub-your-phone-number-from-data-brokers-to-stop-spam.md) | 仅建议受控试点 | 未评定 | 中 | available | 个人资料清理与隐私辅助 | 2026-10-20T16:48:48.358758+00:00 |
-| [用OpenClaw连接安卓手机浏览和评论社交内容](reports/run-x-and-reddit-accounts-with-agents-on-android-phones.md) | 仅建议受控试点 | 未评定 | 中 | available | 移动端社交工作流研究 | 2026-10-20T16:54:05.962122+00:00 |
-| [用Claude Code辅助亚马逊品牌分类账和商品图应用](reports/automate-amazon-brand-bookkeeping-and-product-images.md) | 仅建议受控试点 | 未评定 | 中 | available | 电商品牌内部运营 | 2026-10-20T17:00:18.838227+00:00 |
-| [用Grok Bot辅助车辆登记、退货和预约流程](reports/handle-multi-click-chores-like-dmv-returns-and-appointments.md) | 仅建议受控试点 | 未评定 | 中 | available | 生活事务信息准备 | 2026-10-20T17:04:51.198125+00:00 |
 
 ## 需要重做的旧版简略初稿
 
@@ -99,12 +95,8 @@
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
 - Generate prompts for a browser agent to execute trades · `generate-prompts-for-a-browser-agent-to-execute-trades`
+- Accelerate scientific research with Codex · `accelerate-scientific-research-with-codex`
 - Add 61 kid-friendly mini-games to an app · `add-61-kid-friendly-mini-games-to-an-app`
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
 - Add agentic forgetting to an agent's memory · `add-agentic-forgetting-to-an-agent-s-memory`
 - Add family to a dental plan by voice from the car · `add-family-to-a-dental-plan-by-voice-from-the-car`
-- Add groceries, buy on Amazon, and price-shop flights · `add-groceries-buy-on-amazon-and-price-shop-flights`
-
-| [用Claude Code维护并运营Chrome扩展](reports/let-claude-code-run-a-chrome-extension-project.md) | 适合内部效率工具 | 未评定 | 中 | 已收录 | 浏览器扩展 | 2026-10-20T19:14:58.334033+00:00 |
-
-| [用Claude Code构建项目开发工作流生成器](reports/build-a-dev-workflow-generator-with-test-driven-agent-coding.md) | 适合内部效率工具 | 未评定 | 中 | 已收录 | 开发者工具 | 2026-10-20T21:48:20.558058+00:00 |

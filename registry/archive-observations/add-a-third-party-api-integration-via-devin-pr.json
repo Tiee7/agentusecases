@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/add-a-third-party-api-integration-via-devin-pr",
+  "observed_at": "2026-10-21T05:53:33.152692+00:00",
+  "html_sha256": "d2c43c2c23bd6e0c9e13f5dc9fac5571910eb195151b674f1ebe7f5fee87d49b",
+  "body_sha256": "34e8a84426b082d8d9949229b70bcba40e07fa7ab88a921a004d9fb331e65a01",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Add a third-party API integration via Devin PR",
+      "sha256": "cf607a13cd668ea2022610825290db2aae76a63411e48e8e15c8f6e8ee718ff8"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Devin opened a PR with the endpoint and backend wiring that was merged, but missed API key logic, code style and abstraction, needing review fixes.",
+      "sha256": "f0434f243792e89b7577897b2de662403e6bfbfd820be38902e1d9f99ee4946b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author asked Devin, through its Slack integration, to build a token-generation endpoint for a third-party service from the docs link. The prompt said to add it to an existing microservice and use the existing CDK secrets logic for the API key. Devin posted a plan, then opened a GitHub PR. The author left review comments on the PR, and Devin pushed fixes.",
+      "sha256": "b2d9fea2e08159f668f81e1242d8e0ea73e899d63d7f85ecd7f2a2c8d49c5ce5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "After 2-3 review rounds the code was production-ready, tests passed, and the PR merged. The whole task took about an hour, against roughly 15 minutes if done by hand. The author spent about 5 minutes reviewing.",
+      "sha256": "a57ae84da5259fd3106a9033510698e3554487b8d03490e3e1c1cb3607cbf775"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Devin left out the third-party API key in its calls and didn't put the client logic in the shared clients library, so review the PR as you would a junior's.",
+      "sha256": "baa4494cb9a8eed54f40b84a606609882c242fca8d22dde9631c91436f12271f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/prpatel05/a-real-world-coding-story-devin-ai-as-my-co-pilot-548"
+      ],
+      "sha256": "97892e1ee9207c76ea79cca70c42f214facc1aa53555157fdc5c43c63e478361"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b6786d37a3d1b9fa64c1aa0919e7092ab230a107a7023e7f5fd4a2046a9b0e1f",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Add a third-party API integration via Devin PR\nDevin opened a PR with the endpoint and backend wiring that was merged, but missed API key logic, code style and abstraction, needing review fixes.\nDone with\nDE\nDevin\nWhat they did\nThe author asked Devin, through its Slack integration, to build a token-generation endpoint for a third-party service from the docs link. The prompt said to add it to an existing microservice and use the existing CDK secrets logic for the API key. Devin posted a plan, then opened a GitHub PR. The author left review comments on the PR, and Devin pushed fixes.\nHow it went\nAfter 2-3 review rounds the code was production-ready, tests passed, and the PR merged. The whole task took about an hour, against roughly 15 minutes if done by hand. The author spent about 5 minutes reviewing.\nWorth knowing\nDevin left out the third-party API key in its calls and didn't put the client logic in the shared clients library, so review the PR as you would a junior's.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn the repo [repo URL], add an integration with [third-party API] including the endpoint, backend wiring, and config for the API key via [env var or secrets approach]. Follow the existing code style and abstractions in [folder or file] and add tests. Open a pull request listing what you changed and any assumptions, and stop there without merging.\nOriginal source: https://dev.to/prpatel05/a-real-world-coding-story-devin-ai-as-my-co-pilot-548",
+    "body_sha256": "34e8a84426b082d8d9949229b70bcba40e07fa7ab88a921a004d9fb331e65a01",
+    "archived_at": "2026-10-21T05:53:33.152692+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "77590c24bc67381cd421eee58039caf8592147c714445796ee8a42a8fd8f5011",
+    "body_sha256": "34e8a84426b082d8d9949229b70bcba40e07fa7ab88a921a004d9fb331e65a01",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T05:53:33.152692+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

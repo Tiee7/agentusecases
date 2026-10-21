@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/analyze-your-chess-games-into-commented-videos",
+  "observed_at": "2026-10-21T05:46:49.102728+00:00",
+  "html_sha256": "f252c6a7a9f5e1ecd27f487aa699ba57fea45ee8cfcef6af1aa0b781054d41fe",
+  "body_sha256": "52cf25273cc4b518dc969a45227cc457149b8957287e2e09fd6f7266a89c2808",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Analyze your chess games into commented videos",
+      "sha256": "27d03e29396280bfc04a54088ad8f92f1d23aaa8db732167e5195205c1d6b71c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code skill uses Claude vision plus Stockfish and your audio notes to turn a Lichess game into a commented video analysis.",
+      "sha256": "4da9bbd1fe2c82b1fa20155144ab416071fc253f9c4f47f915e6baba876a0542"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author recorded themselves thinking aloud during a 15+10 rapid game, then gave Claude Code the Lichess link and the mp3. Claude transcribed it locally with whisper.cpp and matched sentences to moves using PGN clock times. It ran a Stockfish sweep, and subagents questioned the engine about each mistake. A verifier pass checked the result, then a storyboard became a narrated video.",
+      "sha256": "24e750f6e40aa0c6c4fc50c900f4590da972b188339e7c871ab7985ad307944f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced an annotated PGN, an HTML board and a 6:49 narrated video with subtitles for the author's real game. The author says errors are rare but the AI can still get things wrong.",
+      "sha256": "502ce5dadbedd7c97888fff09e42cc5596ec6a60f7c753fe5e2061ee026a424f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A full run takes about an hour of processing, so use it on slow games where you took time to think, not on blitz.",
+      "sha256": "edbb87829be8616987d4c7fc4f6fe3108f4c97d9c99f1f1a929e7c615d1437fd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/brumar/chess-postmortem-skills"
+      ],
+      "sha256": "e4225ed5be3b2af811a1aa5b14c55b752ffa3d4d26f9c223b024f6ebeb5eba3c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-03",
+      "sha256": "e227789fe8c64cf753f2a8e2f2f1381e7b37281bd153149abd84df680366a2e0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "146b7f0156b0a0f9f6192bf44be12edc141a4e036a5eb2cf0029386f6a2cfe73",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze your chess games into commented videos\nA Claude Code skill uses Claude vision plus Stockfish and your audio notes to turn a Lichess game into a commented video analysis.\nDone with\nCC\nClaude Code\nWhat they did\nThe author recorded themselves thinking aloud during a 15+10 rapid game, then gave Claude Code the Lichess link and the mp3. Claude transcribed it locally with whisper.cpp and matched sentences to moves using PGN clock times. It ran a Stockfish sweep, and subagents questioned the engine about each mistake. A verifier pass checked the result, then a storyboard became a narrated video.\nHow it went\nIt produced an annotated PGN, an HTML board and a 6:49 narrated video with subtitles for the author's real game. The author says errors are rare but the AI can still get things wrong.\nWorth knowing\nA full run takes about an hour of processing, so use it on slow games where you took time to think, not on blitz.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nTake my chess game from Lichess at [game URL] and analyze it with Stockfish to find the biggest mistakes and best moves. Combine that with my notes in [audio file or text file] and produce a commented video walkthrough of the game. Stop when the video file is saved and give me a short list of the key moments covered.\nOriginal source: https://github.com/brumar/chess-postmortem-skills",
+    "body_sha256": "52cf25273cc4b518dc969a45227cc457149b8957287e2e09fd6f7266a89c2808",
+    "archived_at": "2026-10-21T05:46:49.102728+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "e6cd1a3ddfc511e6c7edfaeada3c4cdd2c5c6b0caddb9548e50cc1dbe1094935",
+    "body_sha256": "52cf25273cc4b518dc969a45227cc457149b8957287e2e09fd6f7266a89c2808",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T05:46:49.102728+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-home-assistant-automations-with-claude",
+  "observed_at": "2026-10-21T06:31:17.163621+00:00",
+  "html_sha256": "6e00dc9761814d6c83aa9766d59517676cdc5db125723eb3d732763a5ff963a1",
+  "body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build Home Assistant automations with Claude",
+      "sha256": "35211f1af24755710427606b78e08ecc5213ca3d229517713cc1f381bde1b79a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A time-strapped parent had Claude build Home Assistant automations, including a helper that infers whether the stove is on from power usage.",
+      "sha256": "f95f5bfa0ebf5b4f5ba8ff51139e27ab84dd9c8fbb6f0aeb758141c06015b34e"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster, a busy parent who had let Home Assistant sit mostly dormant, connected Claude to their HA instance using MCP and used it to build and improve automations instead of hand-writing YAML. In the thread, they and others describe Claude reviewing devices and automations, generating logic like occupancy and state checks, and in one example building a helper that infers whether the stove is on from range power usage, then adding warnings and exhaust-fan automation; people still review plans, code, and backups themselves.",
+      "sha256": "2158c690d3df289f0bc6ed2116e0d7019db06db4b07a8ecd97619fa8d7e97b6c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say tasks that used to take days now take minutes, and one commenter said an automation that normally would have taken days worked on the first shot in 10 minutes. The main limitation raised is that Claude can overcomplicate things or act on more HA data than some users are comfortable exposing.",
+      "sha256": "24cd89c043e9e8c691cddba5f0977fe835bbed1507d9df8e98f653d71d6d3ac6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A repeated catch is to keep backups Claude cannot access, review its plan or YAML before applying changes, and be aware MCP setups may consume a lot of tokens.",
+      "sha256": "c8b0628bda913b0196206a8932e7489b8c53f0a024366691d989edca4db2e163"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/homeassistant/comments/1wpy5q6/claude_and_home_assistant"
+      ],
+      "sha256": "33351c875c26d9e235157773b1710938427e891df03941449c4e57bc0b8f8794"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-18",
+      "sha256": "21d1b579b7a0841d97bb074f7fc02f025ada4443115c8006ba96a5395cf3a82d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ab47dd1b79e59556b6703512ac8f619a38217f69d4fd95287a2722b710644844",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build Home Assistant automations with Claude\nA time-strapped parent had Claude build Home Assistant automations, including a helper that infers whether the stove is on from power usage.\nDone with\nCL\nClaude\nWhat they did\nThe poster, a busy parent who had let Home Assistant sit mostly dormant, connected Claude to their HA instance using MCP and used it to build and improve automations instead of hand-writing YAML. In the thread, they and others describe Claude reviewing devices and automations, generating logic like occupancy and state checks, and in one example building a helper that infers whether the stove is on from range power usage, then adding warnings and exhaust-fan automation; people still review plans, code, and backups themselves.\nHow it went\nThey say tasks that used to take days now take minutes, and one commenter said an automation that normally would have taken days worked on the first shot in 10 minutes. The main limitation raised is that Claude can overcomplicate things or act on more HA data than some users are comfortable exposing.\nWorth knowing\nA repeated catch is to keep backups Claude cannot access, review its plan or YAML before applying changes, and be aware MCP setups may consume a lot of tokens.\nTry it yourself\nwith\nClaude\nCopy prompt\nI use Home Assistant and want an automation that [what I want to happen, e.g. alert me if the stove has likely been left on]. My relevant devices and entities are [list entities, e.g. smart plug power sensor sensor.stove_power]. Write the full YAML, including any helpers or template sensors needed to infer the state, and explain step by step where to paste it and how to test it safely.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1wpy5q6/claude_and_home_assistant",
+    "body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
+    "archived_at": "2026-10-21T06:31:17.163621+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "32d89c013469884a872bb6370dd4e68a7245e022ae9c1128ebc0a0a246522086",
+    "body_sha256": "3431ead4fb22cd54d21934dd0ff802d946a83191c8760ae18d1e16376c1f1459",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:31:17.163621+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

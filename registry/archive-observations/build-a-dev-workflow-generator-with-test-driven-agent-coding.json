@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-dev-workflow-generator-with-test-driven-agent-coding",
+  "observed_at": "2026-10-21T06:33:29.167090+00:00",
+  "html_sha256": "117cc51777eb3b2545182275cd33f98ed9afc2907170acd402d6740916d62635",
+  "body_sha256": "3b1b738a324147c55afca38da5a358a6e43ba688419394c3da78e73d0ea0e42b",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a dev-workflow generator with test-driven agent coding",
+      "sha256": "dacf0bfc1cc00c9c803ad843e410f221092c30af3d17a362cd53d5ee499b12a9"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author built an open-source system that generates project-specific dev workflows from an interview, entirely with Claude Code, which wrote and debugged 550+ tests.",
+      "sha256": "4f1ed072cdfb035475ccfa95be5ce3a83f4cb89c1ecfda40c044ac943c24c9f6"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author says they built the whole system through Claude Code sessions: after a /bootstrap interview about a project's stack, it generates project-specific slash commands, guard hooks, pre-push checks, and agent configs. Claude Code also wrote the main code files, produced and debugged 550+ tests in a test-driven workflow, ran self-audits with four parallel review agents, and, via /task-hunter plus Backlog.md CLI, picked tasks, implemented changes, committed, and closed them autonomously.",
+      "sha256": "8b1f8cf791374518a5d18c6925242703143ff44a0b9fe2d1386386dd81460304"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was an open-source, MIT-licensed workflow system the author says spans 15k+ lines, 200+ tasks, 20+ hook files, and supports many common web stacks plus a generic mode. The stated shortcoming was that Claude Code needed guardrails: without hooks, task structure, and automated review, it wrote to wrong directories, lost context, and let subtle bugs through.",
+      "sha256": "cd128c52260d7651ec7c144414073b5d2f24972dcfd0f74f3b09b452b310450c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "To try it as described, you need both Claude Code CLI and Backlog.md CLI, then point the template at your codebase and run /bootstrap.",
+      "sha256": "d7cf61fca56cb4cd2d544a62ba3dd3a19f96f19df1b9f746bc3dc41b21be7c2a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/claude/comments/1s383nj/i_built_agentic_workflow_entirely_with_claude"
+      ],
+      "sha256": "3c53c712dbaf845639b260f93e274f7cad68343a2f076f3920f73836e0682369"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-20",
+      "sha256": "29f81dedb1b691c8fc9ff32b6c7ab6d22d567b504d1b6007054a278642305329"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fd6041438ea75606af2da5431092ef14760f6b0651052071f99f8b2940bccf2d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a dev-workflow generator with test-driven agent coding\nThe author built an open-source system that generates project-specific dev workflows from an interview, entirely with Claude Code, which wrote and debugged 550+ tests.\nDone with\nCC\nClaude Code\nWhat they did\nThe author says they built the whole system through Claude Code sessions: after a /bootstrap interview about a project's stack, it generates project-specific slash commands, guard hooks, pre-push checks, and agent configs. Claude Code also wrote the main code files, produced and debugged 550+ tests in a test-driven workflow, ran self-audits with four parallel review agents, and, via /task-hunter plus Backlog.md CLI, picked tasks, implemented changes, committed, and closed them autonomously.\nHow it went\nThe result was an open-source, MIT-licensed workflow system the author says spans 15k+ lines, 200+ tasks, 20+ hook files, and supports many common web stacks plus a generic mode. The stated shortcoming was that Claude Code needed guardrails: without hooks, task structure, and automated review, it wrote to wrong directories, lost context, and let subtle bugs through.\nWorth knowing\nTo try it as described, you need both Claude Code CLI and Backlog.md CLI, then point the template at your codebase and run /bootstrap.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build [tool that does X] in [language] using test-driven development. For each feature, write failing tests first, then the code to make them pass, and run the full suite after each step, debugging any failures yourself. Stop when [the feature list] is implemented and all tests pass, then summarize the test coverage.\nOriginal source: https://www.reddit.com/r/claude/comments/1s383nj/i_built_agentic_workflow_entirely_with_claude",
+    "body_sha256": "3b1b738a324147c55afca38da5a358a6e43ba688419394c3da78e73d0ea0e42b",
+    "archived_at": "2026-10-21T06:33:29.167090+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "published_edition": {
+    "archive_file_sha256": "6e7cdbb8ed992640d1648cc5f8ae2be9bc2b691c940264f69d174d4b0b2b3413",
+    "body_sha256": "3b1b738a324147c55afca38da5a358a6e43ba688419394c3da78e73d0ea0e42b",
+    "review_required": false,
+    "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
+  },
+  "last_attempt": {
+    "at": "2026-10-21T06:33:29.167090+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

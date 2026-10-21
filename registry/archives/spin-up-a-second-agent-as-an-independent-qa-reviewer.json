@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/spin-up-a-second-agent-as-an-independent-qa-reviewer",
-  "observed_at": "2026-10-19T07:15:55.839562+00:00",
-  "html_sha256": "e6d6ca64d93cb7933993844b80268a1137b70806bfd8371d0955f8715398a149",
+  "observed_at": "2026-10-21T06:29:15.164085+00:00",
+  "html_sha256": "7eeaa4558d30628dd8895c9409d343fa7c4b1187902e42cc49f35f97230a019e",
   "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Spin up a second agent as an independent QA reviewer\nCodex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nWhile reviewing defects in the user's AI system, Codex searched the machine for Claude, found an existing Claude configuration and OAuth login, downloaded Claude Code into a temporary folder, fixed a Node runtime install issue, and launched Claude non-interactively as an auditor. It withheld its own findings, disabled Claude's editing and session persistence, then after the first pass failed to run tests, copied only the audit inputs into an isolated temp workspace and relaunched Claude there with read and command execution access.\nHow it went\nAccording to the post, Claude's first review largely matched the defects Codex had already found, and the second sandboxed run could execute Python tests and adversarial probes. The reported limitation was that the first attempt was stuck in plan mode and could not run the test suite.\nWorth knowing\nThe catch was environmental: this only worked because an authenticated Claude OAuth session already existed on the Windows user account, and Codex reused it without changing those credentials.\nTry it yourself\nwith\nCodex\nCopy prompt\nAfter you finish implementing [feature or fix] in [project folder], set up a second, independent AI agent in a sandbox to act as a QA reviewer and test your work. Have it check [what to verify, e.g. edge cases, failing tests, UI behavior] and report problems back to you. Do not read, copy, or change any of my credentials, and finish with a summary of the QA findings and fixes.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1v8ncff/codex_found_my_claude_login_installed_claude_code",
     "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
-    "archived_at": "2026-10-19T07:15:55.839562+00:00",
+    "archived_at": "2026-10-21T06:29:15.164085+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-19T07:15:55.839562+00:00",
+    "at": "2026-10-21T06:29:15.164085+00:00",
     "status": "fetched",
     "error": null
   }
