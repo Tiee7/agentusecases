@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "analysis_depth": "brief",
+  "status": "completed",
+  "id": "accelerate-scientific-research-with-codex",
+  "url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+  "title": "用 Codex 和 ChatGPT 辅助量子化学计算与分析",
+  "industry": "计算科学与科研软件",
+  "researched_at": "2026-10-21T09:23:39.169529+00:00",
+  "brief_reason": "缺少原作者可复跑工程、数据、模型版本、用量账单及成果验收；周边论文不能补作本案实测。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "先做受控复现验证",
+    "headline": "让研究员掌握科学判断，把重复操作交给可追踪流程",
+    "reason": "有使用线索，但净效率、费用和商业需求均未核验。",
+    "next_action": "公开小任务与可信基线对照，完整记录人时算力和恢复。",
+    "stop_condition": "不可复跑、参数无法解释、越权或成本超出预算。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+      "title": "许可目录科研流程",
+      "status": "fetched",
+      "read_method": "existing_licensed_archive_read",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "保留归档称理论化学研究者用Codex与ChatGPT做分子模拟分析及协调。效能、500美元补偿和3000美元消耗均为转述自述，未见账单、数据或可复跑产物。",
+      "sha256": "5db2bfddc69156e9bd0b00c764ac692864ca32ee4b3a3d2845b14155edd07cc4",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "保留归档称理论化学研究者用Codex与ChatGPT做分子模拟分析及协调。效能、500美元补偿和3000美元消耗均为转述自述，未见账单、数据或可复跑产物。"
+    },
+    {
+      "id": "Saiida",
+      "url": "https://aiida.readthedocs.io/projects/aiida-core/en/stable/intro/index.html",
+      "title": "AiiDA官方简介",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "MIT开源计算科学工作流支持输入输出与元数据溯源、检查点和HPC调度器；是可核对的现成流程基础，不证明本案作者采用。",
+      "sha256": "41f6f88cda03740fb0c417a61a3de97fa498240aee64791f8b4813fa28a92c29",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "MIT开源计算科学工作流支持输入输出与元数据溯源、检查点和HPC调度器；是可核对的现成流程基础，不证明本案作者采用。"
+    },
+    {
+      "id": "Sfrontier",
+      "url": "https://openai.com/index/frontierscience/",
+      "title": "FrontierScience官方研究",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "2025年12月16日介绍专家编写的物理化学生物约束任务，Research金标准集60题；页面明确并不覆盖研究人员所有日常工作，不能替代此案例真实效率。",
+      "sha256": "ecd993c2baf81563c4fcb70ce025329e99a1542878301e166f426c7164036c8e",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "2025年12月16日介绍专家编写的物理化学生物约束任务，Research金标准集60题；页面明确并不覆盖研究人员所有日常工作，不能替代此案例真实效率。"
+    },
+    {
+      "id": "Ssessions",
+      "url": "https://arxiv.org/abs/2609.15096",
+      "title": "OpenAI4S预印本",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "2026年9月14日社区预印本采用持久计算会话、逐单元执行记录、版本产物与检查点；作者承认所有被测系统的环境描述和完整重跑仍弱。不是OpenAI官方产品，也不是本案例部署。",
+      "sha256": "01fd7b0a54f901757d32c6fd9c787088bfb6b476f882bbe6be7842a5f370661b",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "2026年9月14日社区预印本采用持久计算会话、逐单元执行记录、版本产物与检查点；作者承认所有被测系统的环境描述和完整重跑仍弱。不是OpenAI官方产品，也不是本案例部署。"
+    },
+    {
+      "id": "Sera",
+      "url": "https://www.nature.com/articles/s41586-026-10658-6",
+      "title": "ERA科研软件研究",
+      "status": "fetched",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "2026年5月19日论文研究以明确质量指标和树搜索改进科学软件；受控任务结果不等于任何Codex工作流都有效，本文没有重跑论文。",
+      "sha256": "8e969de7593dfd39e5297a0cabe3cc452947749a224648258b89a7465654e5c1",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "2026年5月19日论文研究以明确质量指标和树搜索改进科学软件；受控任务结果不等于任何Codex工作流都有效，本文没有重跑论文。"
+    },
+    {
+      "id": "Srepo",
+      "url": "https://github.com/aiidateam/aiida-core",
+      "title": "AiiDA公开仓库",
+      "status": "fetched",
+      "read_method": "supported_public_search_full_repository_result",
+      "receipt_created_at": "2026-10-21T09:23:39.169529+00:00",
+      "receipt_text": "官方仓库警告不要直接使用快速变化的main分支，以免影响数据存储；部署稳定版本与迁移验证是成本。",
+      "sha256": "14f6fd8fb69702e07ae0f5e8a0558e97660b3359f37445219f3b1aee5d3d7bea",
+      "hash_scope": "Researcher summary of read source, not full source text",
+      "supports": "官方仓库警告不要直接使用快速变化的main分支，以免影响数据存储；部署稳定版本与迁移验证是成本。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "保留归档称理论化学研究者用Codex与ChatGPT做分子模拟分析及协调。效能、500美元补偿和3000美元消耗均为转述自述，未见账单、数据或可复跑产物。",
+      "type": "reported_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "MIT开源计算科学工作流支持输入输出与元数据溯源、检查点和HPC调度器；是可核对的现成流程基础，不证明本案作者采用。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Saiida"
+      ]
+    },
+    {
+      "statement": "2025年12月16日介绍专家编写的物理化学生物约束任务，Research金标准集60题；页面明确并不覆盖研究人员所有日常工作，不能替代此案例真实效率。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sfrontier"
+      ]
+    },
+    {
+      "statement": "2026年9月14日社区预印本采用持久计算会话、逐单元执行记录、版本产物与检查点；作者承认所有被测系统的环境描述和完整重跑仍弱。不是OpenAI官方产品，也不是本案例部署。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Ssessions"
+      ]
+    },
+    {
+      "statement": "2026年5月19日论文研究以明确质量指标和树搜索改进科学软件；受控任务结果不等于任何Codex工作流都有效，本文没有重跑论文。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sera"
+      ]
+    },
+    {
+      "statement": "官方仓库警告不要直接使用快速变化的main分支，以免影响数据存储；部署稳定版本与迁移验证是成本。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Srepo"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "scope",
+      "title": "原案能说明什么，缺什么",
+      "body": "目录描述的是理论化学家对研究辅助工具的使用经验。对象包括分子在化学环境中的行为、激发和自旋计算；流程中有人决定复杂推理的升级。它没有提供模型确切版本、模拟程序、输入文件、实验编号、错误率或可复现成果。所谓一天完成一周工作是个人评价，不应换算成七倍准确率、工资节省或已到账收入。额度补偿也是作者转述的服务处理结果，不是收入，更不代表其他用户可以获得同样补偿。由于核心工程和账单无法核对，本篇是有依据简报，不用旁边几篇论文补成这个人的完整深研。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "buyer",
+      "title": "谁需要，谁可能付钱",
+      "body": "自用人群是懂得判断计算结果的研究人员；潜在付款人是掌握软件或算力预算的课题组负责人、机构平台团队。需要买的可能是可靠的数据解析、批量计算管理和复现记录，而非一个声称会发现新科学的聊天框。把科研产出转为商业服务还要解决机构数据政策、采购、已有计算集群接入及学科验收。研究者个人喜欢一个工具不等于实验室存在外包预算，能使用免费软件也不等于没有维护成本。当前没有客户价格、采购意愿或合同证据。",
+      "source_ids": [
+        "Sdirectory",
+        "Saiida"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "把自动操作和科学判断分开",
+      "body": "建议先固定已有可信基线、软件环境、输入数据哈希和预期误差，再让助手生成或检查分析脚本。每次运行保存计算任务编号、参数、退出状态、日志和输出对应关系；额度或连接中断后从已完成步骤恢复，不能盲目重启昂贵计算。启动停止作业和复制文件是操作权限，接受一个科学结论是研究判断，两者不应混在同一条“完成”状态。脚本退出码为零只表示程序跑完；单位、边界条件、收敛性和结果对照仍需领域人员检查。这是研究者建议，不声称作者已经按此执行。",
+      "source_ids": [
+        "Saiida",
+        "Ssessions"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "为什么不直接用现成流程",
+      "body": "AiiDA已经提供工作流、输入输出溯源及集群调度接入，适合流程结构稳定的计算任务。智能体可以作为规划或脚本辅助层，而不必替换每一个确定性调度步骤。对于可重复的解析与提交，先比较普通脚本或现成插件，避免为简单动作反复调用昂贵推理。ERA采用明确评分指标的专门搜索策略；它说明科学软件优化可能需要任务设计，而不是证明通用助手随意探索就能得到同样结果。任何替代都要比较迁移、维护和人员学习成本，本轮没有安装或实测。",
+      "source_ids": [
+        "Saiida",
+        "Sera"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "成本按一次可接受分析计",
+      "body": "以下均为研究者假设，非作者账单或当前产品报价。轻量流程：模型摊销5美元、人工1小时按50美元计50、算力和存储10、获客摊销5，合计70美元；每月10份，加固定维护40，为740美元。高返工流程：模型20、人工4小时计200、算力存储80、获客20，合计320美元；每月10份加固定维护100，为3300美元。收入未知所以不算利润。科研软件许可、机构安全审核等未取得的费用另计，已列成本不是完整报价。自用不需要获客项，但不能把研究员审核时间当免费；订阅额度变化可能使流程停滞，应测的是每份验收结果的成本而非每条消息。",
+      "source_ids": [
+        "Sdirectory",
+        "Saiida"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "获客、交付和复制条件",
+      "body": "若将来验证服务机会，先限制在一种模拟软件及一种重复数据处理任务，交付可重跑脚本、环境说明、输入输出清单和人工验收记录。只能在机构明确授权后接触数据和计算账户；本任务不联系研究者、不注册、不提交表单、不启动实验。第一批客户的合理来源假设是既有科研软件合作关系，而不是对泛研究人员群发“自动发现”承诺。持续价值应体现在稳定插件、领域测试集和故障恢复，不在于简单模型分工容易复制。没有这些能力时，直接使用现成工作流更合理。",
+      "source_ids": [
+        "Saiida",
+        "Srepo"
+      ]
+    },
+    {
+      "id": "risk",
+      "title": "隐私与错误风险影响真实收益",
+      "body": "未发表数据、合作单位资料和运行日志可能有保密义务，不能为了排错把整个工作目录交给外部模型。还要防止误删原始数据、重复提交作业、错误终止别人的任务和无上限尝试消耗预算。来源可追溯不等于研究结果一定正确，但没有环境和参数记录几乎无法追责。OpenAI4S预印本对完整重跑仍弱的披露是重要反证；FrontierScience也明确限定测量范围，因此不把基准分数用作科学正确性的担保。",
+      "source_ids": [
+        "Ssessions",
+        "Sfrontier"
+      ]
+    },
+    {
+      "id": "next",
+      "title": "怎样进行最小验证",
+      "body": "挑一个公开、非敏感、已有参考结果的分析任务，在隔离副本中比较原方法和辅助方法。人工先定义正确性容差、最高算力预算和停止规则；分别记录总人时、模型费、计算费、失败和重跑次数。必须由另一次干净环境重跑核对，不只检查一次漂亮图表。如果关键参数无法解释、数字不能复现、费用超出授权或人工修正抵消收益，就停止扩大流程。这里没有四周或200美元的统一门槛，也不以更换更多模型作为默认解决办法。",
+      "source_ids": [
+        "Saiida",
+        "Ssessions"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "d2cf98c51f45f9ab2a8ccbe8a4bd5a7b01aafa0ede0ffc0f1522722b945fb278",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "0c53cf2126820aabca5b52c1baa8540b2ce3c9eeedb8e4dd466198bebad8285f",
+      "How it went": "cfbc9154b26e5b8dfe91f1755ca66a5157f8d8784c9f9b8d41413e91b5c5b24e",
+      "Worth knowing": "6c62051aa1fefcaa34062a7e4887b41deffeff83455ddf11e314b4443f95a682"
+    },
+    "actual_agents": [
+      "Codex",
+      "ChatGPT"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "I'm researching [scientific question or topic]. Using the data and code in [folder path], reproduce [analysis or result], then run [next experiment or analysis] and summarize the findings with plots saved to [output folder]. Keep a log of assumptions and anything you couldn't verify. You're done when the scripts run end to end and I have a short write-up of the results and open questions.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+    "observed_at": "2026-10-21T06:33:39.165654+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c41bf0acc25599441c84d413fc05cf72418bbd30d9b30c5a4b57d22c7c5bea22"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/OpenaiCodex/comments/1xae775/codex_used_to_supercharge_my_scientific_research",
+    "source_title": "原作者科研用量讨论",
+    "source_language": "en",
+    "accessed_at": "2026-10-21T09:23:39.169529+00:00",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "既有Reddit浏览限制不绕过；仅目录转述与搜索片段，未冒称完整原帖读取。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "领域专家可能受益，但无净省时对照。",
+    "audience": "已有量子化学与计算基础的科研人员。",
+    "use": "分析脚本、数据解析及可追踪计算协调。",
+    "benefit": "预期减少重复操作，不保证正确发现或节省金额。",
+    "setup_cost": "公开样例、可信结果、环境与权限边界。",
+    "maintenance_cost": "版本、数据格式、队列及中断恢复维护。",
+    "frequency": "随项目高频运行，依研究阶段变化。",
+    "privacy_risk": "未发表数据、机构资料、凭据和日志外传。",
+    "error_risk": "单位或收敛条件错误、重复计算、误删及误停。",
+    "source_ids": [
+      "Sdirectory",
+      "Saiida"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "许可目录建议模板，不是原作者实际提示词。",
+    "prerequisites": "已授权公开数据副本、可信基线、预算和停止条件。",
+    "tools": "Codex和研究者已有合法科研环境；本轮未安装执行。",
+    "expected_result": "脚本、参数、运行日志、图表与未决问题；须另做科学验收。",
+    "prompts": [
+      {
+        "title": "源站 Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录建议模板",
+        "text": "I'm researching [scientific question or topic]. Using the data and code in [folder path], reproduce [analysis or result], then run [next experiment or analysis] and summarize the findings with plots saved to [output folder]. Keep a log of assumptions and anything you couldn't verify. You're done when the scripts run end to end and I have a short write-up of the results and open questions."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "轻量假设",
+      "unit": "一份人工验收分析包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 5,
+      "human_cost": 50,
+      "other_variable_cost": 10,
+      "acquisition_cost": 5,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 40,
+      "value_type": "hypothesis",
+      "assumptions": "1h×50美元；已列70/份，740/月；许可等未知另计。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "scenario": "高返工假设",
+      "unit": "一份人工验收分析包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 20,
+      "human_cost": 200,
+      "other_variable_cost": 80,
+      "acquisition_cost": 20,
+      "units_per_month": 10,
+      "fixed_monthly_cost": 100,
+      "value_type": "hypothesis",
+      "assumptions": "4h×50美元；已列320/份，3300/月；许可等未知另计。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    }
+  ],
+  "economics_assumptions": "研究者假设而非实测或报价；真实收入未知，不算毛利。",
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开搜索",
+        "query": "Codex scientific research usage researcher",
+        "outcome": "相似自述不计独立验证样本。"
+      },
+      {
+        "channel": "公开代码仓库",
+        "query": "site.github.com aiidateam aiida-core issues restart provenance",
+        "outcome": "找到AiiDA官方仓库，不是本案作者工程或客户反馈。"
+      },
+      {
+        "channel": "研究资料搜索",
+        "query": "OpenAI4S reproducibility review",
+        "outcome": "找到预印本，非本案用户口碑或独立重跑。"
+      }
+    ],
+    "independent_user_feedback_count": 0,
+    "note": "搜索见相似自述但不计独立样本；公开仓库资料用于替代方案，未证明本案用户满意度。"
+  },
+  "disconfirming_evidence": "费用与限额可能抵消收益；原工程未公开；专门研究也承认完整重跑困难。",
+  "limitations": "此前Reddit浏览限制未绕过；本轮没有完整读取原帖，未查私人通信或账单。云端/new导航超时，顺序用支持的公开网页阅读器核实。案例页普通网页读取失败，使用已有获许可归档。没有应用或科学计算实测。",
+  "archive_source_sha256": "d2cf98c51f45f9ab2a8ccbe8a4bd5a7b01aafa0ede0ffc0f1522722b945fb278",
+  "translation_sha256": "27dca3e7346652a639da8d2b6a2a75898468b58e9b87536cd6eff988b00a7890",
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/accelerate-scientific-research-with-codex",
+    "source_title": "许可目录对研究者方法的转述",
+    "source_language": "en",
+    "accessed_at": "2026-10-21T06:33:39.165654+00:00",
+    "source_sha256": "d2cf98c51f45f9ab2a8ccbe8a4bd5a7b01aafa0ede0ffc0f1522722b945fb278",
+    "steps": [
+      {
+        "en": "The directory reports separate models for analysis, final review, and routine calculation operations.",
+        "zh": "目录转述称，分析、最终审查与日常计算操作由不同模型承担。"
+      },
+      {
+        "en": "The researcher decides when harder reasoning is needed and checks cost against performance.",
+        "zh": "由研究人员决定何时需要更复杂推理，并衡量成本与性能。"
+      }
+    ]
+  }
+}

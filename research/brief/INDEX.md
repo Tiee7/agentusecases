@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **104**；深度研究 **76**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **105**；深度研究 **77**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -114,3 +114,5 @@
 | 用Claude规划PRD并分派实现任务 | [简报](../../reports/brief/plan-with-prds-and-delegate-tasks-to-cheaper-agents.md) |
 | 用OpenClaw发送下班WhatsApp通知 | [简报](../../reports/brief/message-your-wife-on-whatsapp-when-work-ends.md) |
 | 用Claude电脑操作起草并发送邮件和消息 | [简报](../../reports/brief/send-emails-and-imessages-by-letting-claude-control-your-com.md) |
+
+| 用 Codex 和 ChatGPT 辅助量子化学计算与分析 | [简报](../../reports/brief/accelerate-scientific-research-with-codex.md) |
