@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "analysis_depth": "brief",
+  "id": "screen-interview-code-submissions-with-a-codex-review-agent",
+  "url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+  "title": "用 Codex 按预设规则初审面试代码提交",
+  "industry": "代码审查与招聘评估辅助",
+  "researched_at": "2026-10-21T16:07:13.092950+00:00",
+  "brief_reason": "保留目录完整原文及翻译，并分析具体规则和替代方案；原案没有样本、指标或独立效果验证，交付有依据简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "reason": "辅助整理代码证据，不把文件数变成自动招聘决定。",
+    "next_action": "用合成或获授权样本比较确定性脚本与人工复核成本。",
+    "stop_condition": "合理实现被误标、不可解释的结论或人工复核成本上升。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+      "title": "许可目录案例",
+      "status": "fetched",
+      "supports": "作者自述用定向agents.md和文件数规则初筛面试代码；没有指标、示例或人工对照。",
+      "read_method": "licensed_archive",
+      "receipt_created_at": "2026-10-21T16:07:13.092950+00:00",
+      "receipt_text": "作者自述用定向agents.md和文件数规则初筛面试代码；没有指标、示例或人工对照。",
+      "sha256": "759b74afb1c1fbeec9789586b1185dcb35c73922363faa228a8955de8c3ab953",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sgit",
+      "url": "https://git-scm.com/docs/git-diff",
+      "title": "Git差异文档",
+      "status": "fetched",
+      "supports": "差异取决于工作树、索引、提交端点或共同祖先，比较基础需要明确。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:07:13.092950+00:00",
+      "receipt_text": "差异取决于工作树、索引、提交端点或共同祖先，比较基础需要明确。",
+      "sha256": "a2f252a961ed96bf9cd1addbf6c2493444218c6445aaa9f5728728104b032768",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sreview",
+      "url": "https://docs.github.com/en/pull-requests/get-started/reviewing-pull-requests-quickstart",
+      "title": "GitHub代码审查流程",
+      "status": "fetched",
+      "supports": "审查先理解上下文，再针对改动行评论；评论、批准与请求更改是不同结果。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:07:13.092950+00:00",
+      "receipt_text": "审查先理解上下文，再针对改动行评论；评论、批准与请求更改是不同结果。",
+      "sha256": "6067e8e01db74eb6489b1b3dcc0401de78dbcebe0ef40d66aeb00e0168630d62",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Scopilot",
+      "url": "https://docs.github.com/en/copilot/responsible-use/agents",
+      "title": "Copilot审查应用说明",
+      "status": "fetched",
+      "supports": "另一产品Copilot结合代码、PR上下文和自定义指令生成意见；官方指出漏报、误报和语言或风格偏差。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:07:13.092950+00:00",
+      "receipt_text": "另一产品Copilot结合代码、PR上下文和自定义指令生成意见；官方指出漏报、误报和语言或风格偏差。",
+      "sha256": "32f933ac48dcb60452b5af00af84293c775f5607be5846d406c47909844220f8",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sbenchmark",
+      "url": "https://arxiv.org/abs/2608.27442",
+      "title": "MCR-Bench研究摘要",
+      "status": "fetched",
+      "supports": "2026年8月27日摘要描述2269个五语言多轮代码审查任务，报告跨轮状态跟踪与缺陷识别局限；不是招聘有效性或Codex专项实验。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:07:13.092950+00:00",
+      "receipt_text": "2026年8月27日摘要描述2269个五语言多轮代码审查任务，报告跨轮状态跟踪与缺陷识别局限；不是招聘有效性或Codex专项实验。",
+      "sha256": "0ed0c045960afe11b60df62159f60e2d8f330e2847750ab8daa65679ab0a7003",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "作者自述用定向agents.md和文件数规则初筛面试代码；没有指标、示例或人工对照。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "差异取决于工作树、索引、提交端点或共同祖先，比较基础需要明确。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sgit"
+      ]
+    },
+    {
+      "statement": "审查先理解上下文，再针对改动行评论；评论、批准与请求更改是不同结果。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sreview"
+      ]
+    },
+    {
+      "statement": "另一产品Copilot结合代码、PR上下文和自定义指令生成意见；官方指出漏报、误报和语言或风格偏差。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Scopilot"
+      ]
+    },
+    {
+      "statement": "2026年8月27日摘要描述2269个五语言多轮代码审查任务，报告跨轮状态跟踪与缺陷识别局限；不是招聘有效性或Codex专项实验。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sbenchmark"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "文件数量筛查不是能力评估",
+      "body": "目录明确说有人实际使用自动拒绝，但没有给出规则阈值、样本、误拒率或招聘结果。原文翻译保留这种表述，不等于认可其效果。文件改动多可能来自重命名、项目结构或生成物，少也可能只是把大量改动塞进一个文件。由数量推断能力或是否使用AI没有本案证据。源站试用模板写的是给人建议，又不同于摘要里自动拒绝的行为，不能把两种流程混为一谈。",
+      "source_ids": [
+        "Sdirectory",
+        "Sgit"
+      ]
+    },
+    {
+      "id": "need",
+      "title": "需求是减轻审阅负担，付款尚未验证",
+      "body": "可能使用者是技术面试官或工程负责人，付款预算可能来自招聘评估或工程管理。但案例没有说明公司、提交量、人工成本或采购意愿。需求假设是让人尽早看到不符合明确作业规范的位置，而不是把候选人排序交给黑箱。低频招聘或作业很短的团队，直接人工检查或CI规则更省事；只有大量同题提交且规则明确，整理证据的工具才可能降低重复劳动。",
+      "source_ids": [
+        "Sdirectory",
+        "Sreview"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "先规范输入，再输出可核对证据",
+      "body": "研究者建议固定作业模板与基准提交，记录提交SHA，确认比较的是候选人的有效改动而非仓库历史。文件数量、禁止路径和是否存在测试可以用确定性检查完成；代理再解释具体违规位置、缺失上下文和不确定项。候选人提供的README、注释或agents.md属于待审内容，不应成为覆盖评估规则的指令。输出应有规则编号、文件行号和支持证据，并让人复核；本轮没有处理任何真实候选资料，也没有给出招聘决定。",
+      "source_ids": [
+        "Sgit",
+        "Sreview",
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "validation",
+      "title": "评价工具也需要被评价",
+      "body": "先用人工标注的合成或获授权样本检验规则，覆盖合理多文件实现、少文件但错误实现、重命名、缺测试和运行环境失败。记录错误标记、遗漏问题、人工复核时间及不同语言的表现，而不只记录处理速度。没有跑通依赖与业务测试时，应标为未验证，而不是直接判定代码不合格。MCR-Bench摘要研究多轮代码审查，不是本案筛选器，因此只用于提示上下文与缺陷状态问题，不能搬用为候选人识别准确率。",
+      "source_ids": [
+        "Sbenchmark",
+        "Scopilot"
+      ]
+    },
+    {
+      "id": "alternative",
+      "title": "无需模型的规则应先用脚本",
+      "body": "若唯一标准是新增或修改文件不能超过某个数，Git差异统计配合固定规则脚本更容易解释、复现和测试，未必需要付出模型调用与提示维护成本。GitHub原生审查支持逐行证据及请求修改，Copilot则是已有的AI审查替代，但官方仍要求人工检查其误报和遗漏。采用代理的额外价值应体现在理解任务语义与整理证据，而不是把一个简单计数包装成AI招聘产品。",
+      "source_ids": [
+        "Sgit",
+        "Sreview",
+        "Scopilot"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "按一份提交的辅助审查计算",
+      "body": "下列是研究者假设，美元计价，不是本案报价或收入。规则稳定情景：模型0.10、人工5分钟按40/小时=3.33、其它0.07、获客摊销0.50，单位4.00；每月100份另加固定40，共440。复杂情景：模型0.80、人工20分钟按40/小时=13.33、其它0.37、获客1.50，单位16.00；每月100份加固定160，共1760。售价未知，不计算利润。规则设计、数据授权、人工标注和争议复核另计，不能用token费用冒充总成本。",
+      "source_ids": [
+        "Scopilot",
+        "Sreview"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "可试点证据整理，不销售自动淘汰承诺",
+      "body": "可探索为已有技术招聘客户提供规则配置、代码证据报告和审查留痕服务，但属于经营假设。获客可用虚构提交展示规则如何解释，不公开候选代码或姓名；本轮无外联。交付包括规则版本、基准、验证日志和未解决问题，最终评估仍交由负责的人。没有误拒与复核成本资料时，不应承诺更公平、更准确或自动辨别AI作弊。客户已有CI与审阅规范时，切换成本很可能大于一个计数筛选器的收益。",
+      "source_ids": [
+        "Sdirectory",
+        "Sreview"
+      ]
+    },
+    {
+      "id": "personal",
+      "title": "自用更适合提交前自检",
+      "body": "个人开发者可用同类规则检查自己的练习是否越界修改、是否缺测试，再人工理解具体原因。设置要定义文件范围、生成物例外、基准与测试命令；维护要跟随模板及依赖升级，频率按每次练习提交而非日常打卡。可能收益是少遗漏显式要求，但未实测省时。私密代码与身份资料不应随便放入外部提示，错误风险包括把环境问题当实现问题、把简洁风格当唯一正确风格。",
+      "source_ids": [
+        "Sdirectory",
+        "Sgit",
+        "Scopilot"
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "不建议据此投入自动筛人业务",
+      "body": "当前仅建议受控的代码证据辅助试点，不支持把这个案例当可复制的自动淘汰商业机会。原作者方法全文未读取，真实样本和独立用户效果反馈都缺失。多次社区及问题库搜索主要命中工具权限或环境问题，未找到能验证本案招聘效果的反馈，不能拿不相干投诉凑数。若规则对同样合理的实现给出不同结论，或人工复核时间超过原流程，应停止扩大；先补明确定义、对照样本和可解释证据，再讨论收费。",
+      "source_ids": [
+        "Sdirectory",
+        "Sbenchmark",
+        "Scopilot"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "85152ca50b1c6d25e8fdfb73952cac3a05456a594930826a882a1bdf8f8fcde3",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "4c400a5160e4c1f1d4949f94feb39c0eaaf5d8bfa754a909adbc13c8601e4026",
+      "How it went": "8ef072e14579589b022ead9bfcfe1a1b8db39830f35e09c9256d9fe60920622d",
+      "Worth knowing": "1bdd494ed47fe66bf0b39c03a2b79854524a757020e34c7af1d6060a780d3b4c"
+    },
+    "actual_agents": [
+      "Codex",
+      "ChatGPT"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Write an agents.md for [repo or take-home project] that tells you how to screen candidate submissions: flag any submission that changes or adds more than [number] files, doesn't follow [requirement], or lacks tests. Then review the submission in [folder path] against it and give me a pass or reject recommendation with reasons. You're done when I have a short review I can use; don't contact the candidate or post anything anywhere.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+    "observed_at": "2026-10-21T06:33:45.173722+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c1f28a63f768cfaf29b71b24a4e51ddc4ee7fa908d89d069e4a0a4143f30be43"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+    "source_sha256": "85152ca50b1c6d25e8fdfb73952cac3a05456a594930826a882a1bdf8f8fcde3",
+    "steps": [
+      {
+        "en": "The directory reports targeted agents.md and file-change-count rules for first-pass screening.",
+        "zh": "目录转述用定向agents.md和改动文件数规则进行初步筛查。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ExperiencedDevs/comments/1qbw1t3/dealing_with_the_flood_of_incompetent_aitethered",
+    "source_title": "面试代码初筛原始讨论",
+    "source_language": "en",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原Reddit全文未读取，不绕既有访问限制；目录模板不是作者实际agents.md。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "适合自己的练习提交前检查，不支持据此判断他人整体能力。",
+    "audience": "开发者和负责人工复核的代码审阅者。",
+    "use": "检查显式作业规范并整理代码级证据。",
+    "benefit": "可能减少遗漏和重复检查，净省时与误报率未知。",
+    "setup_cost": "固定基准、允许路径、生成物规则与验证命令。",
+    "maintenance_cost": "随作业模板和依赖更新规则，复核误报。",
+    "frequency": "每次提交或审阅时使用。",
+    "privacy_risk": "候选代码和个人资料可能私密，使用前需明确授权与最少输入。",
+    "error_risk": "文件数代理指标失真、上下文缺失、环境失败被误判、风格偏差。",
+    "source_ids": [
+      "Sdirectory",
+      "Sgit",
+      "Scopilot"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "获许可目录试用模板，保留原文，未执行。",
+    "prerequisites": "合成或获授权代码样本、固定基准、公开明确的作业规范与人工复核。",
+    "tools": "Codex、Git和项目现有测试工具；原案例另标ChatGPT。",
+    "expected_result": "可核对规则与代码证据的审查草稿，不联络候选人、不自动作招聘决定。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/screen-interview-code-submissions-with-a-codex-review-agent",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录试用模板",
+        "text": "Write an agents.md for [repo or take-home project] that tells you how to screen candidate submissions: flag any submission that changes or adds more than [number] files, doesn't follow [requirement], or lacks tests. Then review the submission in [folder path] against it and give me a pass or reject recommendation with reasons. You're done when I have a short review I can use; don't contact the candidate or post anything anywhere."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "规则稳定假设",
+      "unit": "一份代码提交的辅助审查",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.1,
+      "human_cost": 3.33,
+      "other_variable_cost": 0.07,
+      "acquisition_cost": 0.5,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 40,
+      "value_type": "hypothesis",
+      "assumptions": "人工5分钟×40/小时四舍五入3.33；单位4，月440；标注接入另计。",
+      "source_ids": [
+        "Sreview",
+        "Scopilot"
+      ]
+    },
+    {
+      "scenario": "复杂假设",
+      "unit": "一份代码提交的辅助审查",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 0.8,
+      "human_cost": 13.33,
+      "other_variable_cost": 0.37,
+      "acquisition_cost": 1.5,
+      "units_per_month": 100,
+      "fixed_monthly_cost": 160,
+      "value_type": "hypothesis",
+      "assumptions": "人工20分钟×40/小时四舍五入13.33；单位16，月1760；售价未知。",
+      "source_ids": [
+        "Sreview",
+        "Scopilot"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "query": "site.github.com/openai/codex code review false positive issue",
+        "searched_at": "2026-10-21T15:59:49Z",
+        "outcome": "Results mostly safeguard or environment failures, not validation of interview screening; do not count as relevant hiring feedback."
+      },
+      {
+        "query": "site.community.openai.com Codex code review false positive",
+        "searched_at": "2026-10-21T15:59:49Z",
+        "outcome": "Results mostly safeguard or environment failures, not validation of interview screening; do not count as relevant hiring feedback."
+      },
+      {
+        "query": "site.github.com/openai/codex/issues review nonexistent",
+        "searched_at": "2026-10-21T15:59:49Z",
+        "outcome": "Results mostly safeguard or environment failures, not validation of interview screening; do not count as relevant hiring feedback."
+      },
+      {
+        "query": "site.community.openai.com code review hallucinations",
+        "searched_at": "2026-10-21T15:59:49Z",
+        "outcome": "Results mostly safeguard or environment failures, not validation of interview screening; do not count as relevant hiring feedback."
+      }
+    ],
+    "independent_user_feedback_count": 0,
+    "note": "未找到本案或等效招聘筛查的可核验独立用户反馈；不相关工具阻塞报告不计入。"
+  },
+  "limitations": "无真实候选数据处理、招聘决定、代码执行或收益实测。浏览器首次导航及5分钟后唯一恢复均超时，使用获许可存档；论文只读摘要。",
+  "archive_source_sha256": "85152ca50b1c6d25e8fdfb73952cac3a05456a594930826a882a1bdf8f8fcde3",
+  "translation_sha256": "1b9436f5280cb9f2d8cac6306eb647a3aabbc684d005fc30aea6292360252bf3"
+}
