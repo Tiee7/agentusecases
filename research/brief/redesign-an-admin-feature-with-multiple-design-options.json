@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "analysis_depth": "brief",
+  "id": "redesign-an-admin-feature-with-multiple-design-options",
+  "url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+  "title": "用 Codex CLI 为后台功能生成五种设计方案",
+  "industry": "后台界面设计与开发",
+  "researched_at": "2026-10-21T15:02:49.835806+00:00",
+  "brief_reason": "已有工具、方法和反证依据，但原案截图、实现、可用性与经营结果缺失，交付有依据简报，不以外围文档充当原案效果验证。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合受控原型比较",
+    "reason": "验收价值比候选数量重要，付费需求及效果待验证。",
+    "next_action": "同一功能、同一角色和任务比较旧版与候选，保留失败状态。",
+    "stop_condition": "同质化候选、权限语义遗漏或人工返工超过约定。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+      "title": "许可目录案例",
+      "status": "fetched",
+      "supports": "目录描述语言学习平台后台的五种设计，用户喜欢结果；无截图、代码、时间或经营指标。",
+      "read_method": "licensed_archive",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "目录描述语言学习平台后台的五种设计，用户喜欢结果；无截图、代码、时间或经营指标。",
+      "sha256": "2e0d68fc0df6f56c263e976a74cd99896b85508e4b589350019f13bb8fbd5d0b",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T14:57:15Z"
+    },
+    {
+      "id": "Scli",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "title": "Codex CLI官方说明",
+      "status": "fetched",
+      "supports": "CLI可在本地项目中检查、编辑并运行已有开发工具，支持图像输入、代码审核与Git检查点；这些能力不证明本案五种实现通过验收。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "CLI可在本地项目中检查、编辑并运行已有开发工具，支持图像输入、代码审核与Git检查点；这些能力不证明本案五种实现通过验收。",
+      "sha256": "ed4ec0f6b7167b0564327891b3e4bc3b324ca8692c89874d1bddc5cb1746e6e3",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T14:58:14Z"
+    },
+    {
+      "id": "Sparallel",
+      "url": "https://www.nngroup.com/articles/parallel-design/",
+      "title": "Nielsen与Faber并行设计研究",
+      "status": "fetched",
+      "supports": "1996年电话界面案例讨论独立方案、整合与用户测试，强调早期方案不必全部精修；研究数字不能转用为Codex收益。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "1996年电话界面案例讨论独立方案、整合与用户测试，强调早期方案不必全部精修；研究数字不能转用为Codex收益。",
+      "sha256": "dc9d1290db817ed56dfdde0eef7bc691deaebcf7510e6a3fed1ef384d7c82d58",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T14:58:14Z"
+    },
+    {
+      "id": "Sforms",
+      "url": "https://www.w3.org/WAI/tutorials/forms/",
+      "title": "W3C表单教程",
+      "status": "fetched",
+      "supports": "表单标签、分组、说明、输入验证与成功错误通知需要明确，界面美观不替代这些交互要求。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "表单标签、分组、说明、输入验证与成功错误通知需要明确，界面美观不替代这些交互要求。",
+      "sha256": "7c8f91dc5b47f81949cecd8e762bc4157a452aa0ae85f91287605b3022993c5e",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T14:58:06Z"
+    },
+    {
+      "id": "Sadmin",
+      "url": "https://marmelab.com/react-admin/",
+      "title": "React-admin官方介绍",
+      "status": "fetched",
+      "supports": "现成后台框架提供表格、表单、权限及数据和认证适配，支持不同UI套件；是具体替代路线，不等于零集成成本。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "现成后台框架提供表格、表单、权限及数据和认证适配，支持不同UI套件；是具体替代路线，不等于零集成成本。",
+      "sha256": "ff1252c61a8dd0f94dbf3c4ca234067082bc90aec3fe52a4f2b50ab31ea5665b",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T15:00:12Z"
+    },
+    {
+      "id": "Svisual",
+      "url": "https://playwright.dev/docs/test-snapshots",
+      "title": "Playwright视觉比较",
+      "status": "fetched",
+      "supports": "截图比较依赖基线，操作系统、硬件和渲染环境会影响结果；同环境视觉回归不自动证明业务任务好用。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "截图比较依赖基线，操作系统、硬件和渲染环境会影响结果；同环境视觉回归不自动证明业务任务好用。",
+      "sha256": "765bec40e44762bdf18f805743bcd6b1b357695ef82ebdbca6970cf37f02f8de",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T15:00:12Z"
+    },
+    {
+      "id": "Sfeedback",
+      "url": "https://github.com/openai/codex/issues/55280",
+      "title": "Codex公开界面生成反馈",
+      "status": "fetched",
+      "supports": "2026-10-19报告者称两套生成界面通过脚本流程却遗漏持续交互缺陷；是相邻工作流自述，未提供公开完整项目或证明版本回退。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:02:49.835806+00:00",
+      "receipt_text": "2026-10-19报告者称两套生成界面通过脚本流程却遗漏持续交互缺陷；是相邻工作流自述，未提供公开完整项目或证明版本回退。",
+      "sha256": "345043f7acecc899f8a22bc7ce8f7fb5877bd4746af176d09d9ea8a2be3afb96",
+      "hash_scope": "Researcher factual receipt, not full external source hash",
+      "accessed_at": "2026-10-21T15:00:48Z"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录描述语言学习平台后台的五种设计，用户喜欢结果；无截图、代码、时间或经营指标。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "CLI可在本地项目中检查、编辑并运行已有开发工具，支持图像输入、代码审核与Git检查点；这些能力不证明本案五种实现通过验收。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Scli"
+      ]
+    },
+    {
+      "statement": "1996年电话界面案例讨论独立方案、整合与用户测试，强调早期方案不必全部精修；研究数字不能转用为Codex收益。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sparallel"
+      ]
+    },
+    {
+      "statement": "表单标签、分组、说明、输入验证与成功错误通知需要明确，界面美观不替代这些交互要求。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sforms"
+      ]
+    },
+    {
+      "statement": "现成后台框架提供表格、表单、权限及数据和认证适配，支持不同UI套件；是具体替代路线，不等于零集成成本。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sadmin"
+      ]
+    },
+    {
+      "statement": "截图比较依赖基线，操作系统、硬件和渲染环境会影响结果；同环境视觉回归不自动证明业务任务好用。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Svisual"
+      ]
+    },
+    {
+      "statement": "2026-10-19报告者称两套生成界面通过脚本流程却遗漏持续交互缺陷；是相邻工作流自述，未提供公开完整项目或证明版本回退。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sfeedback"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "喜欢五种方案，不等于五种都可交付",
+      "body": "原案具体价值是给后台功能生成可比较的设计选择。作者的喜欢属于主观接受度，关于不循环、首次改对的描述还是对工具的广泛印象，不能直接推成这次改版的成功率。目录没有页面截图、交互状态、代码差异、任务耗时和真实业务结果。CLI与网页环境也不能混用规格：当前官方能力只是可实现条件，不是过去案例的复现实验。",
+      "source_ids": [
+        "Sdirectory",
+        "Scli"
+      ]
+    },
+    {
+      "id": "need",
+      "title": "需求首先是减少决策盲区",
+      "body": "适用方可能是已有后台和技术团队、但缺少设计探索时间的产品负责人。需要改善的应是具体操作，例如找到一个学生记录、处理失败任务或修改一项配置，而不是抽象地追求好看。潜在付款人是产品或工程预算负责人；本案没有付费合同。若已有统一组件且流程简单，直接微调现有界面可能比五套重写便宜。只有能把需求、权限边界和验收任务说清，外包设计比较才有明确交付单位。",
+      "source_ids": [
+        "Sdirectory",
+        "Sadmin"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "先固定共同约束，再比较真正不同的方案",
+      "body": "研究者建议先保存基线、使用合成数据，并把功能清单和角色权限固定。五种方案可以分别探索信息结构、操作入口、数据密度或步骤安排，而不是只换颜色。每个方案应能独立预览，避免相互覆盖或污染现有实现；源码分支不自动等于运行时隔离，仍要明确预览路由、端口和数据写入范围。人类决定采用哪些元素，整合后的最终版本再测试，不必为所有探索方案都承担完整生产维护。",
+      "source_ids": [
+        "Scli",
+        "Sparallel"
+      ]
+    },
+    {
+      "id": "testing",
+      "title": "看静态页面之外的完整操作",
+      "body": "后台需要空数据、加载中、失败、长文本、多角色和窄屏等状态。W3C表单指南给出标签、验证和反馈的基本检查点。截图比较能发现意外变化，但基线如果本就难用，一致也不是正确；环境差异会制造噪声。建议让实际管理员按同一任务比较旧版和候选版，记录完成、错误与需要解释的位置。公开反馈55280提到预览随对话滚走、操作对象不清等问题，说明连续使用要检查，但不能据单条报告断言所有Codex界面都失败。",
+      "source_ids": [
+        "Sforms",
+        "Svisual",
+        "Sfeedback"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "现成后台框架与设计师仍是对照",
+      "body": "React-admin有数据和认证适配及现成后台组件，能够减少重复搭建，但采用它可能需要重构与迁移。已有技术栈的设计系统往往是更低切换成本的替代；人工设计师可先做低保真探索，而不产出五套可执行代码。并行设计原始研究强调独立思路和后续整合，不能把同一模型连续输出五套近似页面视为五个独立设计师的证据。没有用户任务对照，就无法证明生成数量增加带来更好选择。",
+      "source_ids": [
+        "Sadmin",
+        "Sparallel"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "单位经济按一个后台功能比较包",
+      "body": "以下是研究者假设，美元计价，不是Codex报价或本案收入。轻量情景按一个功能、五个候选及一次对比：模型与工具摊销5、人工2小时×40=80、其它5、获客10，单位100；每月8包加固定维护80，共880。高返工情景工具20、人工8小时×40=320、其它15、获客40，单位395；同样8包加固定维护160，共3320。售价和成交均未知，不计算毛利。初次理解代码、敏感数据处理、用户招募与正式集成未包含，必须另估，不能以订阅费代替全部交付成本，也不能把复用模板当零人工。",
+      "source_ids": [
+        "Scli",
+        "Sadmin"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "收入机制取决于验收服务而非图片数量",
+      "body": "可探索按功能收取比较设计和可运行原型服务费，再另计获准的实现与维护；这是经营假设，不是已有产品。获客可优先已有技术服务客户，用脱敏前后任务演示沟通，不展示客户后台数据。本轮没有外联。交付应包括共同需求、差异和取舍、独立预览、状态矩阵与最终选择依据；不能以五张图交付五套生产系统。壁垒在理解具体业务、可维护实现与用户验证，而不是转售一次生成。",
+      "source_ids": [
+        "Sdirectory",
+        "Sforms",
+        "Sadmin"
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "停止扩大和补证条件",
+      "body": "先取得原作者可分享的界面、任务和实际改动证据，才可能把这个案例提升为效果已验证深研。小试点中若五种只在装饰上不同、真实任务更慢或权限语义丢失，应停止继续堆方案，回到单一任务和现有组件。未读到原Reddit全文，不用目录转述补造作者提示词；源站Copy prompt是目录试用模板，也不代表作者原话。本轮没有运行CLI、生成五种后台、上传私有代码或实测任何性能与可用性。",
+      "source_ids": [
+        "Sdirectory",
+        "Sfeedback",
+        "Sparallel"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "e216067f59f13bd2d31fdd8123f4bd0c2beeea5a6a448e65bb6f06ef7d6d18f3",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "8df60e978ee58a9855187fd28ceeb86db2e14f162b6dcfac8edd2323c8d211b1",
+      "How it went": "9f4e62692e4112ff4feb25ef99e7d3994d0a2aeaf490be922614158316a263ac",
+      "Worth knowing": "f8dcda9dbaee0a0f5a0607068921145be75db68abec6482ee4f69b131a4bc629"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "In my codebase at [repo path], redesign the [admin feature name] screen. Produce five distinct design options, each in its own file or branch under [folder], with a short note on the tradeoffs of each. Don't touch the existing implementation. You're done when all five run or preview and I can compare them.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+    "observed_at": "2026-10-21T06:33:41.166801+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "136274262e5c0230e59e325888abe52fc5c743f7c92ae088952d295dd094d37e"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+    "source_sha256": "e216067f59f13bd2d31fdd8123f4bd0c2beeea5a6a448e65bb6f06ef7d6d18f3",
+    "steps": [
+      {
+        "en": "The directory says the user requested five admin-feature designs with Codex CLI and reviewed the options.",
+        "zh": "目录说用户让Codex CLI生成五种后台功能设计，并由人类审核选择。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/ClaudeAI/comments/1mza71x/started_using_codex_today_and_wow_im_impressed",
+    "source_title": "后台五方案作者原帖",
+    "source_language": "en",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原Reddit全文未读取；既有访问限制不绕，目录转述不是作者原文。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "可辅助探索，缺原案可运行成果与用户任务对照。",
+    "audience": "能阅读代码并评价业务流程的开发者和产品负责人。",
+    "use": "为一个已有后台功能探索多种可比较原型。",
+    "benefit": "可能减少空白起稿并暴露取舍，未测节省时间或错误率。",
+    "setup_cost": "固定需求、合成数据、组件约束、预览环境和基线。",
+    "maintenance_cost": "候选分支清理、依赖升级、最终整合和状态回归。",
+    "frequency": "按功能改版阶段使用，不需为凑频率每天生成。",
+    "privacy_risk": "代码、截图和后台数据可能含客户信息，应脱敏并按实际工具设置确认处理范围。",
+    "error_risk": "视觉好看但流程不通、权限按钮误导、五种同质化和修改相互覆盖。",
+    "source_ids": [
+      "Scli",
+      "Sforms",
+      "Sfeedback"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "获许可目录模板，非作者实际提示词；未执行。",
+    "prerequisites": "已有项目的安全副本、合成数据、明确功能和预览方式。",
+    "tools": "Codex CLI与项目原有开发工具。",
+    "expected_result": "五个可比较方案及取舍，不自动替换或上线原实现。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/redesign-an-admin-feature-with-multiple-design-options",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录试用模板",
+        "text": "In my codebase at [repo path], redesign the [admin feature name] screen. Produce five distinct design options, each in its own file or branch under [folder], with a short note on the tradeoffs of each. Don't touch the existing implementation. You're done when all five run or preview and I can compare them."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "轻量假设",
+      "unit": "一个后台功能的五候选比较包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 5,
+      "human_cost": 80,
+      "other_variable_cost": 5,
+      "acquisition_cost": 10,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 80,
+      "value_type": "hypothesis",
+      "assumptions": "人工2小时×40；单位100，每月880；额外接入集成另估。",
+      "source_ids": [
+        "Scli",
+        "Sadmin"
+      ]
+    },
+    {
+      "scenario": "高返工假设",
+      "unit": "一个后台功能的五候选比较包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 20,
+      "human_cost": 320,
+      "other_variable_cost": 15,
+      "acquisition_cost": 40,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 160,
+      "value_type": "hypothesis",
+      "assumptions": "人工8小时×40；单位395，每月3320；售价未知。",
+      "source_ids": [
+        "Scli",
+        "Sadmin"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "query": "Codex CLI admin redesign five designs \"1mza71x\"",
+        "outcome": "No full original obtained."
+      },
+      {
+        "query": "site:github.com/openai/codex issues UI screenshot design regression",
+        "outcome": "实际读取公开问题55280，作为相邻工作流个人自述，未当原案验证。"
+      },
+      {
+        "query": "site:nngroup.com AI generated prototypes usability design alternatives",
+        "outcome": "Search found research/task PDF summaries; not full-read feedback."
+      }
+    ],
+    "independent_user_feedback_count": 1,
+    "note": "55280为相邻UI生成工作流个人报告，不是本案或受控复现；官方文档不算用户反馈。"
+  },
+  "limitations": "无原案截图、代码或付费数据；无CLI或用户项目实测。自有云浏览器14:58:44首次导航超时，15:03前核实无目标页，15:04:44一次普通恢复仍超时，停止该来源恢复；目录采用已获许可档案，其他资料为Web实际读取。",
+  "archive_source_sha256": "e216067f59f13bd2d31fdd8123f4bd0c2beeea5a6a448e65bb6f06ef7d6d18f3",
+  "translation_sha256": "3326002730de539f3848f0c76f7213be103554c73601d2c88a402b891ae9fd58"
+}
