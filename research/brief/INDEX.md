@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **114**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **115**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -134,3 +134,5 @@
 | 用 Codex 执行多文件重构与定义明确的系统管理任务 | [简报](../../reports/brief/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi.md) |
 
 | 用 Codex 按预设规则初审面试代码提交 | [简报](../../reports/brief/screen-interview-code-submissions-with-a-codex-review-agent.md) |
+
+| 用 Manus 批量研究公开资料并制作演示文稿 | [简报](../../reports/brief/research-hundreds-of-people-and-build-slide-decks-at-scale.md) |
