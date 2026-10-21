@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **112**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **113**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -130,3 +130,5 @@
 | 用 Claude Code 在 Git 提交前检查代码风险 | [简报](../../reports/brief/scan-every-git-commit-for-secrets-and-injection-flaws.md) |
 
 | 用 Codex CLI 为后台功能生成五种设计方案 | [简报](../../reports/brief/redesign-an-admin-feature-with-multiple-design-options.md) |
+
+| 用 Codex 执行多文件重构与定义明确的系统管理任务 | [简报](../../reports/brief/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi.md) |
