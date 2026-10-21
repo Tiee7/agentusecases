@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "analysis_depth": "brief",
+  "id": "run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+  "url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+  "title": "用 Codex 执行多文件重构与定义明确的系统管理任务",
+  "industry": "软件维护与系统管理",
+  "researched_at": "2026-10-21T15:47:05.052718+00:00",
+  "brief_reason": "已核对工具文档和相邻正反反馈，原案只给主观对比，没有复现步骤、净省时和经营结果，交付有依据简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "reason": "先区分代码行为验证与系统状态恢复，不把异步执行包装成无人维护服务。",
+    "next_action": "单一非关键任务建立原有工具与代理的净时间、返工和恢复对照。",
+    "stop_condition": "越界修改、无法恢复或复核成本吞掉收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+      "title": "许可目录案例",
+      "status": "fetched",
+      "supports": "不同评论者认可明确任务和异步执行，也有五文件以上重构更偏好Claude的反例；没有可复现过程。",
+      "read_method": "licensed_archive",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "不同评论者认可明确任务和异步执行，也有五文件以上重构更偏好Claude的反例；没有可复现过程。",
+      "sha256": "89907d0789dbe1352daa5e3905f338c0c48dd2bde3c4d925dc2d999b34184bd5",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Scli",
+      "url": "https://learn.chatgpt.com/docs/codex/cli",
+      "title": "Codex CLI文档",
+      "status": "fetched",
+      "supports": "CLI能够在选定项目中读取、编辑和运行工具；能运行命令不等于已经接通用户内网或得到生产权限。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "CLI能够在选定项目中读取、编辑和运行工具；能运行命令不等于已经接通用户内网或得到生产权限。",
+      "sha256": "6870773222c690cc564bd33f219508c744aad225dc1e1701660a98ba6f03b0df",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sgit",
+      "url": "https://git-scm.com/docs/git-diff",
+      "title": "Git差异文档",
+      "status": "fetched",
+      "supports": "Git diff比较工作树、暂存区和提交端点，是改动检查工具，不是运行正确性证明。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "Git diff比较工作树、暂存区和提交端点，是改动检查工具，不是运行正确性证明。",
+      "sha256": "95db6158e6856ab463a51e1d8346f7676696d8ba070f03ebe8810dbb24c37e8b",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sansible",
+      "url": "https://docs.ansible.com/projects/ansible/latest/playbook_guide/playbooks_checkmode.html",
+      "title": "Ansible检查与差异模式",
+      "status": "fetched",
+      "supports": "检查模式是模拟，部分模块无输出；任务可通过check_mode:false在检查时仍实际执行，差异输出可能含敏感信息。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "检查模式是模拟，部分模块无输出；任务可通过check_mode:false在检查时仍实际执行，差异输出可能含敏感信息。",
+      "sha256": "1eda54cc8aa761b481900918502f682fe201af2a57d8aaaa3e45f06995e043fb",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Scommunity",
+      "url": "https://community.openai.com/t/how-to-achieve-greater-code-refactoring-automation/1385318",
+      "title": "PHP迁移用户讨论",
+      "status": "fetched",
+      "supports": "2026年6月30日至7月1日，发帖者描述测试服务器上反复复制命令的负担，随后称解决环境问题后能持续迭代，最终人工审核并保存检查点。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "2026年6月30日至7月1日，发帖者描述测试服务器上反复复制命令的负担，随后称解决环境问题后能持续迭代，最终人工审核并保存检查点。",
+      "sha256": "4ad34cee01ea077bddd676b5ae17d3eb50ed00c5885aa9a240d80857ae3a98fd",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sissue",
+      "url": "https://github.com/openai/codex/issues/16628",
+      "title": "重构破坏代码的公开报告",
+      "status": "fetched",
+      "supports": "2026年4月2日报告者称混用补丁与重写导致语法错误；其填写CLI0.118.0、gpt-4o-mini、WSL2，不能代表本案或当前所有模型。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "2026年4月2日报告者称混用补丁与重写导致语法错误；其填写CLI0.118.0、gpt-4o-mini、WSL2，不能代表本案或当前所有模型。",
+      "sha256": "f54e106bb30054917eb737eb331fa755c8f436389a95e0a187596d075bb337fd",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Svendor",
+      "url": "https://openai.com/business/guides-and-resources/how-openai-uses-codex/",
+      "title": "厂商内部工程实践",
+      "status": "fetched",
+      "supports": "厂商介绍跨文件修改、清理模块与开发环境准备；属于内部经验，不是独立商业回报验证。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T15:47:05.052718+00:00",
+      "receipt_text": "厂商介绍跨文件修改、清理模块与开发环境准备；属于内部经验，不是独立商业回报验证。",
+      "sha256": "0e2e009103f225988ce2281d30e1f4a408da0d20922c6f1494b282e53d29c12d",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "不同评论者认可明确任务和异步执行，也有五文件以上重构更偏好Claude的反例；没有可复现过程。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "CLI能够在选定项目中读取、编辑和运行工具；能运行命令不等于已经接通用户内网或得到生产权限。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Scli"
+      ]
+    },
+    {
+      "statement": "Git diff比较工作树、暂存区和提交端点，是改动检查工具，不是运行正确性证明。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sgit"
+      ]
+    },
+    {
+      "statement": "检查模式是模拟，部分模块无输出；任务可通过check_mode:false在检查时仍实际执行，差异输出可能含敏感信息。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sansible"
+      ]
+    },
+    {
+      "statement": "2026年6月30日至7月1日，发帖者描述测试服务器上反复复制命令的负担，随后称解决环境问题后能持续迭代，最终人工审核并保存检查点。",
+      "type": "author_claim",
+      "source_ids": [
+        "Scommunity"
+      ]
+    },
+    {
+      "statement": "2026年4月2日报告者称混用补丁与重写导致语法错误；其填写CLI0.118.0、gpt-4o-mini、WSL2，不能代表本案或当前所有模型。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sissue"
+      ]
+    },
+    {
+      "statement": "厂商介绍跨文件修改、清理模块与开发环境准备；属于内部经验，不是独立商业回报验证。",
+      "type": "author_claim",
+      "source_ids": [
+        "Svendor"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "先分开重构与服务器操作",
+      "body": "本案不是一个完整产品，而是多位评论者对适用任务的讨论。多文件重构主要要证明行为未变，系统管理则还牵涉运行中服务、数据和回滚。把两者都叫电脑工作会掩盖验收差异。半个Claude五小时额度和Codex的2%不是同一计量单位，缺模型、任务、上下文和限额条件，不能换算成本节省率。20美元够用也是个人历史体验，不作为当前定价或质量门槛。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "demand",
+      "title": "更适合已有团队的内部效率工具",
+      "body": "具体使用者是有代码或设备管理经验的人，潜在付款人为小团队技术负责人、维护预算负责人，而不是所有网络电脑用户。可减少的是重复查找依赖、跨文件一致修改和复制命令的工作；是否节省净时间取决于复核和恢复成本。社区PHP迁移发帖者的复制负担提供相邻需求信号，但没有购买托管服务的证据。个人机器偶发维护通常难覆盖服务商的获客与支持支出。",
+      "source_ids": [
+        "Scommunity",
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "refactor",
+      "title": "重构交付以行为契约为单位",
+      "body": "研究者建议先记录现有测试结果、固定基础提交和允许路径，再将任务拆成单一可验收变更，例如改名而不同时升级框架。检查受影响调用点、配置、序列化字段和外部接口，避免文本替换遗漏动态引用。候选改动通过原有行为测试和新增边界测试后，审阅差异与命令日志。仅有漂亮报告、修改文件数量或测试命令退出零并不充分，需确认测试真正覆盖用户的行为契约。本轮没有替用户运行重构任务。",
+      "source_ids": [
+        "Sgit",
+        "Sissue",
+        "Svendor"
+      ]
+    },
+    {
+      "id": "sysadmin",
+      "title": "系统管理需单独定义可恢复边界",
+      "body": "研究者建议先只读列出目标机器、服务和配置，再在隔离环境验证；生产变更须有明确授权、备份与恢复验证。程序重启、数据库迁移与文件修改不能靠同一Git回滚覆盖，数据库和系统状态需要自己的恢复路径。不能把目录模板里的机器路径当作实际内网接入，也不应为演示索取长期凭据。Ansible可以提供结构化配置变更，但检查模式仍需查看模块支持和任务覆盖设置，不能因为命令含check便宣称绝无副作用。",
+      "source_ids": [
+        "Sansible",
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "确定性工具先做确定性部分",
+      "body": "简单符号重命名可先使用已有IDE语义重构，重复配置用已有Ansible流程；代理更适合帮助理解例外和跨模块意图。这是按任务选择工具的建议，不是三者性能实测。采用新代理仍要配置环境、测试入口和权限边界，已有自动化成熟时迁移收益可能很小。厂商内部实践只能说明使用方向，不证明客户必须购买外包服务，也不能替代在自己的老旧项目上验证。",
+      "source_ids": [
+        "Sansible",
+        "Svendor",
+        "Sgit"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "成本取决于复核与故障责任",
+      "body": "以下按一个有明确验收边界的小型变更包计美元，均为研究者假设，不是产品报价或实际收入。轻量：模型工具摊销5、人工2小时×40=80、其它5、获客摊销10，单位100；每月8包另加固定80，共880。高返工：工具20、人工10小时×40=400、其它20、获客40，单位480；每月8包另加固定160，共4000。售价未知，不计算毛利。初始接入、备份存储、停机损失、长期值守和事故赔偿未含，必须另计。不能将一次订阅费当整个交付成本。",
+      "source_ids": [
+        "Scli",
+        "Sansible"
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "可能收费的是可验收维护，不是无人值守承诺",
+      "body": "可试探按变更包收费，交付基础版本、范围、改动、测试日志、恢复步骤和残余风险；这是商业假设。持续维护可另约范围和服务时间，但本案无合同、收入或客户名单。第一批验证可从已有开发维护关系中选择非关键系统，用脱敏示例说明验收方式；本轮没有联系第三方。信誉、业务上下文、恢复能力可能构成差异，单纯帮客户转发提示词容易被现成工具替代。",
+      "source_ids": [
+        "Scommunity",
+        "Svendor"
+      ]
+    },
+    {
+      "id": "counter",
+      "title": "正反反馈都不等于整体成功率",
+      "body": "社区用户报告从手工复制转为更长迭代，提示环境工程可能限制收益，而不只是模型水平。GitHub16628则报告改动留下语法问题；其工具和模型条件明确不同，未读取附件或独立复现，关闭状态不代表问题已被证明解决。这两份来源是相邻工作流反馈而非本案客户证言。异步离开只描述交互方式，不能推出无需监督或可靠处理任意生产故障。",
+      "source_ids": [
+        "Scommunity",
+        "Sissue"
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "先用可回退的内部试点补证",
+      "body": "适合内部效率工具，暂不据此扩大商业投入。先选有现成测试的非关键仓库任务，记录准备、等待、复核和返工时间，再与原有工具完成同类任务比较。系统管理另用测试机，不与代码试点混成一个成功率。若反复超出允许范围、无可恢复快照、隐藏测试失败或复核成本吞掉收益，应停止扩大。原作者逐步过程、机器配置、实际用量口径和付费意愿仍未知；补外围文档不能填补这些结果证据。",
+      "source_ids": [
+        "Sdirectory",
+        "Sgit",
+        "Sansible"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "02955f8f0663393e4a134ff94091cf0a7b55bfdcff6dbadb8874675909257e09",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "0ddad8ee8c27105430f3752a1e1a6548944be75346e5dfa476cb3bada2d5868c",
+      "How it went": "c2d437fffeb571ff5cf47dd358e8811dc4032dea78f659b12437e08bb8c8b4d0",
+      "Worth knowing": "e11f6ef8e6e4079b7e908902425c1604bdc0ad7489706d1ca03c5c6df4147a53"
+    },
+    "actual_agents": [
+      "Codex"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "On [machine or repo path], carry out this task: [precisely defined refactor or sysadmin job, e.g. rename function X across all files and update tests]. Work through all affected files, run [test or verification command], and report what changed. Pause and show me the plan before running anything destructive such as deleting files, restarting services, or changing system config.",
+    "agent": "Codex",
+    "source_url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+    "observed_at": "2026-10-21T06:33:43.232008+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "c8044d1aed45c3447a5fe05621f3b8d49892ddce83692f6f13676039eb6f6915"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+    "source_sha256": "02955f8f0663393e4a134ff94091cf0a7b55bfdcff6dbadb8874675909257e09",
+    "steps": [
+      {
+        "en": "Different commenters describe clearly defined refactors and network-machine tasks; no stepwise workflow is provided.",
+        "zh": "不同评论者描述明确的重构与网络机器任务，没有提供逐步工作流。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/OpenAI/comments/1t3pqc6/is_codex_the_best_right_now",
+    "source_title": "原始Codex讨论",
+    "source_language": "en",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "未读取原Reddit全文，不绕既有访问限制；目录转述与试用模板不冒充作者实际流程。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "有明确任务的个人开发维护可试点，原案净收益未测。",
+    "audience": "能判断差异和恢复错误的开发者、家庭实验室维护者。",
+    "use": "多文件一致改动和边界明确的机器维护，分别验收。",
+    "benefit": "可能减少重复操作和等待期间占用；没有净省时或正确率数据。",
+    "setup_cost": "版本基线、任务边界、测试环境、备份及授权范围。",
+    "maintenance_cost": "依赖与测试维护、环境差异诊断和失败恢复。",
+    "frequency": "按实际重构或维护需求触发，个人低频任务不宜固定购买重型服务。",
+    "privacy_risk": "代码、配置、日志和差异可能包含凭据或个人数据，应限制输入与输出并脱敏。",
+    "error_risk": "遗漏跨文件依赖、语法正确但行为变化、误重启或错误配置造成中断。",
+    "source_ids": [
+      "Sdirectory",
+      "Sgit",
+      "Sansible",
+      "Sissue"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "目录提供的模板，非作者实际提示词，未执行。",
+    "prerequisites": "非关键项目或测试机器、版本或系统备份、明确任务、验证命令和恢复范围。",
+    "tools": "Codex与已有开发/运维工具；本案未明确具体接入工具。",
+    "expected_result": "限定改动与实际验证记录；不保证任何机器都可访问或自动上线。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/run-multi-file-refactors-and-sysadmin-tasks-on-network-machi",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录试用模板",
+        "text": "On [machine or repo path], carry out this task: [precisely defined refactor or sysadmin job, e.g. rename function X across all files and update tests]. Work through all affected files, run [test or verification command], and report what changed. Pause and show me the plan before running anything destructive such as deleting files, restarting services, or changing system config."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "轻量假设",
+      "unit": "一个有边界的小型变更包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 5,
+      "human_cost": 80,
+      "other_variable_cost": 5,
+      "acquisition_cost": 10,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 80,
+      "value_type": "hypothesis",
+      "assumptions": "人工2小时×40；单位100，月880；接入和事故成本另计。",
+      "source_ids": [
+        "Scli",
+        "Sansible"
+      ]
+    },
+    {
+      "scenario": "高返工假设",
+      "unit": "一个有边界的小型变更包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 20,
+      "human_cost": 400,
+      "other_variable_cost": 20,
+      "acquisition_cost": 40,
+      "units_per_month": 8,
+      "fixed_monthly_cost": 160,
+      "value_type": "hypothesis",
+      "assumptions": "人工10小时×40；单位480，月4000；售价未知。",
+      "source_ids": [
+        "Scli",
+        "Sansible"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "query": "site.github.com/openai/codex/issues refactor multiple files regression",
+        "searched_at": "2026-10-21T15:42:48Z",
+        "outcome": "First batch empty; second batch returned issue16628 and developer community1385318; opened primary pages."
+      },
+      {
+        "query": "Codex multi file refactoring user experience sysadmin server",
+        "searched_at": "2026-10-21T15:42:48Z",
+        "outcome": "First batch empty; second batch returned issue16628 and developer community1385318; opened primary pages."
+      },
+      {
+        "query": "site.github.com/openai/codex/issues refactor files",
+        "searched_at": "2026-10-21T15:42:48Z",
+        "outcome": "First batch empty; second batch returned issue16628 and developer community1385318; opened primary pages."
+      }
+    ],
+    "independent_user_feedback_count": 2,
+    "note": "社区发帖者与GitHub报告者为相邻任务自述，不是同案例或受控比较。"
+  },
+  "limitations": "本轮只读资料，未运行代理重构、访问网络机器、修改系统配置或实测收益。云浏览器首次超时后一次5分钟恢复仍失败，停止该来源重试，使用许可存档并另读公开一手资料。",
+  "archive_source_sha256": "02955f8f0663393e4a134ff94091cf0a7b55bfdcff6dbadb8874675909257e09",
+  "translation_sha256": "53aa0e6d0db9c1f85df0ec08deb1b0e28d5e64e3509ad287ac8c606f2d161bbe"
+}
