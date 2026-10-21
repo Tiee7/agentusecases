@@ -8,6 +8,12 @@ ROOT=Path(__file__).resolve().parents[3]
 RUN=Path(__file__).parent
 read=lambda p:json.loads(p.read_text())
 sha=lambda text:hashlib.sha256(text.encode()).hexdigest()
+def trial_content(value):
+ # Capture receipt metadata can advance independently; prompt, agent, URL,
+ # availability and every other field remain part of this fixed-batch contract.
+ receipt_fields={'method','observed_at','observation_window','html_sha256'}
+ return {k:v for k,v in value.items() if k not in receipt_fields}
+
 def verify():
  scope=read(RUN/'scope.json');entries={x['id']:x for x in read(ROOT/'registry/cases.json')['cases']};checks=[]
  assert len(scope['cases'])==30 and len({x['id'] for x in scope['cases']})==30
@@ -23,7 +29,7 @@ def verify():
   assert sha(a['translation']['body'])==a['translation']['body_sha256']
   assert a['translation']['based_on_body_sha256']==a['body_sha256']
   assert sha((ROOT/'registry/archives'/f'{k}.json').read_text())==x['baseline_archive_file_sha256'], 'Licensed original and full translation must be preserved'
-  assert r['source_trial']==entry['source_trial'], 'Copy prompt and suggested agent must match registered observation'
+  assert trial_content(r['source_trial'])==trial_content(entry['source_trial']), 'Copy prompt and suggested agent must match registered observation'
   ids={s['id'] for s in r['sources']}
   def refs(o):
    if isinstance(o,dict):

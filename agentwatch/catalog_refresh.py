@@ -21,7 +21,7 @@ def refresh(db_path):
     sampled = db.execute('SELECT count(*) FROM observations WHERE run_id=?', (run,)).fetchone()[0]
     count = bootstrap(db_path, sync_research=False)
     from .archive import apply
-    apply(db)
+    apply(db,preserve_reviewed=True)
     from .archive_coverage import update
     update()
     indexes()
@@ -29,7 +29,9 @@ def refresh(db_path):
         raise RuntimeError('Catalog refresh modified research-owned files; refuse publication')
     metadata = {'schema_version':1, 'fetched_at':fetched_at, 'listing_url':listing,
                 'run_id':run, 'catalog_observed':observed, 'registered_cases':count,
-                'detail_pages_read':sampled, 'details_complete':sampled == observed}
+                'detail_pages_read':sampled, 'details_complete':sampled == observed,
+                'reviewed_archives_preserved':sum(1 for p in Path('registry/archive-observations').glob('*.json')),
+                'reviewed_source_changes_pending':sum(bool(json.loads(p.read_text()).get('published_edition',{}).get('review_required')) for p in Path('registry/archive-observations').glob('*.json'))}
     Path('registry/refresh.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+'\n')
     db.close()
     return metadata

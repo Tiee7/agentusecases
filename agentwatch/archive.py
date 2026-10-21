@@ -95,7 +95,7 @@ def store_local(db,html,url,at,root=Path('data/source-archive')):
     db.execute('INSERT OR REPLACE INTO archive_observations VALUES(?,?,?,?)',(url,at,raw['html_sha256'],json.dumps(public_observation(raw),ensure_ascii=False)))
     db.commit();return raw
 
-def apply(db,root=Path('registry/archives')):
+def apply(db,root=Path('registry/archives'),preserve_reviewed=False):
     if not db.execute("SELECT 1 FROM sqlite_master WHERE name='archive_observations'").fetchone():return
     root.mkdir(parents=True,exist_ok=True)
     # Older rows must not temporarily invalidate translations of the latest body.
@@ -105,6 +105,22 @@ def apply(db,root=Path('registry/archives')):
         if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,199}',key):raise ValueError('Invalid archive ID')
         path=root/(key+'.json');value=json.loads(payload)
         old=json.loads(path.read_text()) if path.exists() else {}
+        if preserve_reviewed and (old.get('translation') or old.get('editorial')):
+            # Daily observations are not a new editorial review. Keep the exact
+            # published bilingual edition and retain fresh evidence separately.
+            pending_root=root.parent/'archive-observations'
+            pending_root.mkdir(parents=True,exist_ok=True)
+            pending=pending_root/path.name
+            prior=json.loads(pending.read_text()) if pending.exists() else {}
+            latest_at=max(old.get('observed_at') or '',prior.get('observed_at') or '')
+            if latest_at>(at or ''):continue
+            value['published_edition']={'archive_file_sha256':sha(path.read_text()),
+                'body_sha256':old.get('body_sha256'),
+                'review_required':old.get('body_sha256')!=value.get('body_sha256'),
+                'policy':'Published original and translation unchanged; latest capture awaits explicit review if body differs.'}
+            if prior.get('last_attempt'):value['last_attempt']=prior['last_attempt']
+            pending.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
+            continue
         if (old.get('observed_at') or '')>(at or ''):continue
         if old.get('editorial'):value['editorial']=old['editorial']
         history=list(old.get('source_history',[]))
@@ -127,6 +143,11 @@ def apply(db,root=Path('registry/archives')):
             key=urlsplit(url).path.rstrip('/').rsplit('/',1)[-1]
             if not re.fullmatch(r'[a-z0-9][a-z0-9-]{0,199}',key):raise ValueError('Invalid attempt ID')
             value=json.loads(path.read_text()) if path.exists() else {'version':1,'url':url,'status':'not_observed','fields':{}}
+            if preserve_reviewed and (value.get('translation') or value.get('editorial')):
+                pending_root=root.parent/'archive-observations'
+                pending_root.mkdir(parents=True,exist_ok=True)
+                path=pending_root/path.name
+                value=json.loads(path.read_text()) if path.exists() else {'version':1,'url':url,'status':'not_observed','fields':{}}
             if (value.get('last_attempt',{}).get('at') or '') > at:continue
             value['last_attempt']={'at':at,'status':status,'error':error};path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n')
 

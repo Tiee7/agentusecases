@@ -97,6 +97,33 @@ class ArchiveTests(unittest.TestCase):
                 self.assertEqual(set(a['editorial']['sections']),{'introduction','method','outcome','notes'})
         self.assertGreaterEqual(reviewed,23)
 
+    def test_daily_preserves_exact_reviewed_edition_and_retains_latest_evidence(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base=Path(tmp);root=base/'archives';root.mkdir();db=database(base/'db')
+            old={'url':URL,'observed_at':TIME,'body_sha256':sha('Old source'),
+                 'source_text':{'body':'Old source'},'translation':{'body':'旧译文','status':'available'}}
+            exact=json.dumps(old,ensure_ascii=False,indent=4)+'\n'
+            path=root/'fixture.json';path.write_text(exact)
+            at='2026-10-21T06:00:00+00:00'
+            payload={'url':URL,'observed_at':at,'body_sha256':sha('New source'),'source_text':{'body':'New source'}}
+            db.execute('INSERT INTO archive_observations VALUES(?,?,?,?)',(URL,at,'hash',json.dumps(payload)))
+            db.execute('INSERT INTO fetch_attempts VALUES(?,?,?,?)',(URL,at,'ok',None))
+            apply(db,root,preserve_reviewed=True)
+            self.assertEqual(path.read_text(),exact)
+            pending=base/'archive-observations/fixture.json';got=json.loads(pending.read_text())
+            self.assertEqual(got['source_text']['body'],'New source')
+            self.assertNotIn('translation',got)
+            self.assertEqual(got['published_edition']['archive_file_sha256'],sha(exact))
+            self.assertTrue(got['published_edition']['review_required'])
+            self.assertEqual(got['last_attempt']['status'],'ok')
+            before=pending.read_bytes();apply(db,root,preserve_reviewed=True)
+            self.assertEqual(pending.read_bytes(),before);self.assertEqual(path.read_text(),exact)
+            # Older capture cannot replace a newer separately retained observation.
+            db.execute('DELETE FROM archive_observations')
+            db.execute('INSERT INTO archive_observations VALUES(?,?,?,?)',(URL,TIME,'old',json.dumps(dict(payload,observed_at=TIME))))
+            apply(db,root,preserve_reviewed=True)
+            self.assertEqual(pending.read_bytes(),before);db.close()
+
     def test_external_articles_are_outside_archive_scope(self):
         with self.assertRaises(ValueError):public_observation({'url':'https://other.example/article'})
     def test_full_translations_match_source_version_and_hash(self):
