@@ -102,5 +102,15 @@
     "at": "2026-10-21T06:33:33.179876+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "body": "用 AGENTS.md 和日志，让 Claude Code 充当共同开发者\n作者将 Claude Code 用于规划、编码、测试和调试，通过 AGENTS.md 和数值日志改善准确性与上下文处理。\n使用工具\nCC\nClaude Code\n做了什么\n作者花了约七个月，在 WezTerm 基础上构建 Rust 终端复用器 ThinkTerm，让 Claude Code 充当共同开发者。Claude Code 负责规划、编写代码、测试和基准测试，作者审查输出；硬性规则写在 AGENTS.md 或 Claude.md 中。对于没有界面框架的 UI 工作，由于 Claude 看不到窗口，它会把画面保存为 PNG。\n结果如何\n成果是一个面向 macOS、Linux 和 Windows 的开源应用，作者称它可以管理多台机器上的智能体会话。作者指出的主要短板是调试准确性：Claude 曾在一个问题上反复猜错，直到作者让它记录实际尺寸数值。\n值得了解\n最具体的经验是强制 Claude 记录数字和真实测量值，而不是推测；作者说这样在五次错误猜测后修好了一个问题。\n亲自试用\n使用\nClaude Code\n复制提示词\n在[仓库路径]创建 AGENTS.md，描述项目结构、运行和测试方式、编码约定以及需要遵循的规则。然后帮助我处理[功能或问题]，先规划，再编码、测试和调试，并添加清晰的编号日志行，以便从输出核实行为。测试通过后停止，向我展示修改摘要。\n原始来源：https://www.reddit.com/r/ClaudeWorkflows/comments/1xax029/workflow_claude_code_as_a_codeveloper_planning",
+    "body_sha256": "ede8367f9d3e67fe253bdb3979782098451d092629fa085aba341cab4b9a3c14",
+    "based_on_body_sha256": "70958d72bbebe903376a9551bc6bbbc7542855baad56104ef1fd1ae2b976da93",
+    "translated_at": "2026-10-21T13:02:13.293802+00:00",
+    "attribution": "获许可目录忠实完整翻译；文件名大小写按来源保留，现行加载行为另列核查。"
   }
 }
