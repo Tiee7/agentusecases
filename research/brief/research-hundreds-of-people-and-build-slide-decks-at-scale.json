@@ -1,0 +1,391 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "analysis_depth": "brief",
+  "id": "research-hundreds-of-people-and-build-slide-decks-at-scale",
+  "url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+  "title": "用 Manus 批量研究公开资料并制作演示文稿",
+  "industry": "研究资料整理与演示交付",
+  "researched_at": "2026-10-21T16:33:05.796470+00:00",
+  "brief_reason": "有实际功能与覆盖核对依据，但指南示例未给逐项结果、失败记录或独立效果验证，交付有依据简报。",
+  "commercial_score": null,
+  "verdict": {
+    "decision": "仅建议受控试点",
+    "reason": "先验证条目覆盖与来源，再谈规模与展示效率。",
+    "next_action": "小批公开条目比较端到端时间、来源覆盖和人工修复。",
+    "stop_condition": "错误或缺失被隐藏、来源失效、净返工成本超过收益。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+      "title": "许可目录案例",
+      "status": "fetched",
+      "supports": "指南介绍250人物研究、活动表转幻灯片和100论文表转网站，时间和生产可用性都是帖子声称，核验细节不足。",
+      "read_method": "licensed_archive",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "指南介绍250人物研究、活动表转幻灯片和100论文表转网站，时间和生产可用性都是帖子声称，核验细节不足。",
+      "sha256": "2af6dcade6696bd1c34609de56ee98e28e78ff907bb672d83f5ea476e62e7351",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Swide",
+      "url": "https://help.manus.im/en/articles/11960169-what-is-wide-research",
+      "title": "Wide Research帮助中心",
+      "status": "fetched",
+      "supports": "当前帮助页称付费用户可用、系统自动触发、可同时运行20子任务，每个子任务额度上限50credits。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "当前帮助页称付费用户可用、系统自动触发、可同时运行20子任务，每个子任务额度上限50credits。",
+      "sha256": "0f00c72cb4374827473e36213e56b82336f2b2c40b3094586ac25af92bfe1792",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sguide",
+      "url": "https://manus.im/docs/features/wide-research",
+      "title": "Wide Research官方文档",
+      "status": "fetched",
+      "supports": "厂商描述按条目分配独立上下文再汇总，给出250人物示例回放链接；回放本轮只有标题，未核250行或过程。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "厂商描述按条目分配独立上下文再汇总，给出250人物示例回放链接；回放本轮只有标题，未核250行或过程。",
+      "sha256": "c9ab9159042df1a1d43a6a73cb9b52b2a1ecdeb47dc173637734b478690f2868",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sslides",
+      "url": "https://manus.im/docs/features/slides",
+      "title": "Manus Slides官方文档",
+      "status": "fetched",
+      "supports": "支持PPTX模板、CSV/Excel输入，以及PPTX/PDF/网页幻灯片和备注导出；时间与效果是厂商说明。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "支持PPTX模板、CSV/Excel输入，以及PPTX/PDF/网页幻灯片和备注导出；时间与效果是厂商说明。",
+      "sha256": "10cc07e7a2767b95ce7a04150a0d71a466f7e5547638c8c83b890c2bbfe7aaf1",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Sintegration",
+      "url": "https://github.com/aigorahub/elves/blob/main/references/provider-shortcuts.md",
+      "title": "Elves第三方集成文档",
+      "status": "fetched",
+      "supports": "该项目描述按清单核对结果ID与缺失项，并区分请求原生Wide和外层独立任务；文档不是本案性能实测。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "该项目描述按清单核对结果ID与缺失项，并区分请求原生Wide和外层独立任务；文档不是本案性能实测。",
+      "sha256": "75476f696ae5519cd9a1b373bec50a87dc3f070f27ac6ace90aff6f15453ef69",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    },
+    {
+      "id": "Srefine",
+      "url": "https://openrefine.org/docs/manual/cellediting",
+      "title": "OpenRefine数据清理文档",
+      "status": "fetched",
+      "supports": "提供列变换、分面与相似字符串聚类；聚类建议需要人确认，类型转换未成功项要检查。",
+      "read_method": "supported_public_web_reader",
+      "receipt_created_at": "2026-10-21T16:33:05.796470+00:00",
+      "receipt_text": "提供列变换、分面与相似字符串聚类；聚类建议需要人确认，类型转换未成功项要检查。",
+      "sha256": "f99aa37aae5967dcfe3d18a2c375d3cfd0a6a344fb6bf582134add012b56961e",
+      "hash_scope": "Researcher factual receipt, not external full text hash"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "指南介绍250人物研究、活动表转幻灯片和100论文表转网站，时间和生产可用性都是帖子声称，核验细节不足。",
+      "type": "author_claim",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "当前帮助页称付费用户可用、系统自动触发、可同时运行20子任务，每个子任务额度上限50credits。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Swide"
+      ]
+    },
+    {
+      "statement": "厂商描述按条目分配独立上下文再汇总，给出250人物示例回放链接；回放本轮只有标题，未核250行或过程。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sguide"
+      ]
+    },
+    {
+      "statement": "支持PPTX模板、CSV/Excel输入，以及PPTX/PDF/网页幻灯片和备注导出；时间与效果是厂商说明。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sslides"
+      ]
+    },
+    {
+      "statement": "该项目描述按清单核对结果ID与缺失项，并区分请求原生Wide和外层独立任务；文档不是本案性能实测。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Sintegration"
+      ]
+    },
+    {
+      "statement": "提供列变换、分面与相似字符串聚类；聚类建议需要人确认，类型转换未成功项要检查。",
+      "type": "verified_source_description",
+      "source_ids": [
+        "Srefine"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "id": "evidence",
+      "title": "批量产出与逐项可信是两层要求",
+      "body": "这个案例来自指南式介绍，不是附完整测试材料的交付复盘。250个人物、10至15分钟、可供生产使用都保留为原文声称。厂商回放链接在本轮只显示250AI研究者标题，未看到逐行数据、引用和运行日志，所以不能把标题当成功验收。分析重点是能否稳定完成每个条目并准确汇总，而不是宣传启动了多少代理。",
+      "source_ids": [
+        "Sdirectory",
+        "Sguide"
+      ]
+    },
+    {
+      "id": "capacity",
+      "title": "任务总数不能直接当同时运行数量",
+      "body": "当前帮助中心明确写20个并发子任务；指南和产品文档又以250条目或数百代理描述规模，两者可分别指总任务数与并发数，并非必须相互矛盾。每子任务50credits上限也不是整个项目总价。即便假设正好250个子任务，其上限算术为12500credits，仍未覆盖主任务、额外修复或展示加工，且不是实际账单。没有当前账户计费明细，不转换美元，也不承诺固定时长。",
+      "source_ids": [
+        "Swide",
+        "Sguide"
+      ]
+    },
+    {
+      "id": "demand",
+      "title": "购买者要的是可使用的比较资料",
+      "body": "可能需求来自会务研究、行业分析、市场团队或需要公开研究资料的编辑；付款人可能是项目负责人。价值应体现在统一字段、来源可追溯、遗漏可见和成品可修改，而不在名单长度。案例没有付费客户、销售或净节省时间数据。若现有数据已完整，只差整理和展示，用表格加幻灯片模板或人工分析更简单；如果每个条目问题完全不同，分成同质并行任务反而可能失去必要上下文。",
+      "source_ids": [
+        "Sdirectory",
+        "Srefine",
+        "Sslides"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "先固定清单和字段，再研究",
+      "body": "研究者建议在开始前明确条目ID、纳入标准、时间窗、字段定义、来源优先级和无法核实的标记。人物同名、雇主变动、论文版本等都可能造成错配，应记录来源日期并交叉核对，而不是用一列名字当唯一标识。把每个独立条目拆开有助于控范围，但最终还需验证所有ID恰好出现一次，并把失败或未知行保留下来。并行不能保证不同代理实际使用了独立来源，也不能消除共同提示词造成的系统性错误。",
+      "source_ids": [
+        "Sguide",
+        "Sintegration"
+      ]
+    },
+    {
+      "id": "verification",
+      "title": "验收应分数据、摘要与展示三关",
+      "body": "第一关检查名单覆盖、重复、字段类型、引用是否真的支持对应陈述；第二关检验汇总数字的分母、缺失处理和比较口径；第三关逐页检查图表、字号、溢出、来源脚注和可编辑导出。做成精美幻灯片不会修复错误资料，网站公开也不代表通过内容审查。建议先用少量已知结果测试字段，再扩大清单，并保留原始表到图表的映射。OpenRefine能帮助统一格式，但相似名字聚类仍需人判断，不能自动合并成同一人。",
+      "source_ids": [
+        "Srefine",
+        "Sslides",
+        "Sintegration"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "title": "连接器不是免费且自动可用的资源",
+      "body": "原文提到Luma导出、Google表格、SimilarWeb和品牌模板，但没有逐项提供权限、配额或费用。拥有数据文件不等于获准公开个人资料或长文，工具连接也不等于所有字段都能取到。确定性清理可由OpenRefine与表格承担，研究判断和图表审校交给人；这是具体替代流程，不是声称OpenRefine可替代网络研究。自建编排可更明确追踪任务ID，但需要开发维护和接口预算。本轮没有安装集成、调用付费API或上传任何私有名单。",
+      "source_ids": [
+        "Sdirectory",
+        "Srefine",
+        "Sintegration"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "按一份100条目研究加10页简报估算",
+      "body": "以下全为研究者假设，美元计价，不是Manus报价。资料整齐情景：工具及额度摊销15、人工5小时×40=200、其它10、获客25，单位250；每月4包另加固定80，共1080。高返工情景：工具60、人工15小时×40=600、其它30、获客80，单位770；每月4包加固定160，共3240。售价未知，不算毛利。SimilarWeb等数据许可、客户接入、专门审稿和持续更新另计；不能把10分钟运行当总交付工时，模板复用也不能把人工复核归零。",
+      "source_ids": [
+        "Swide",
+        "Sslides",
+        "Sdirectory"
+      ]
+    },
+    {
+      "id": "business",
+      "title": "服务边界应是可核对交付包",
+      "body": "可探索按一份有明确清单、字段与展示页数的交付包收费，再另计后续更新；这是经营假设。本案没有证据支持按代理数量收费或保证资料完整。第一批客户可以来自已有会务或咨询合作，用虚构或公开非敏感样本展示来源链和缺失行，不群发陌生人画像。本轮没有获客外联。可保留的竞争力在选题、数据口径、领域判断和复核，而非简单转售一个宽泛提示词。客户自用工具已能满足时，外包必须说明额外验收价值。",
+      "source_ids": [
+        "Sdirectory",
+        "Sslides",
+        "Srefine"
+      ]
+    },
+    {
+      "id": "counter",
+      "title": "外围资料只证明机制，不证明本案收益",
+      "body": "帮助文档与集成项目提供拆分、格式和覆盖核对的依据，但都是功能或设计说明。官方关于任意规模质量一致、没有其他工具能做的说法缺独立对照，本报告不采用为事实。社区、评价站和代码渠道检索未取得本案等效的可核验用户结果；评论索引片段不算完整反馈。模板支持和导出格式也不证明复杂品牌稿必然完全可编辑或无需人工修复。",
+      "source_ids": [
+        "Swide",
+        "Sguide",
+        "Sintegration"
+      ]
+    },
+    {
+      "id": "stop",
+      "title": "只建议受控试点",
+      "body": "先选择非敏感、字段稳定的小规模公开资料任务，与人工或表格流程比较总时间、错误、缺失、引用覆盖及返工成本，验收后再增加数量。若引用无法支持结论、同名错误反复发生、缺失被静默补齐，或最终人工复核超过约定，应停止扩大。公开网站另设发布确认，人物画像不延伸到敏感属性或高影响个体判断。原案逐步日志、实交数据、真实成本和客户付费仍待补，因此当前是有依据简报而非效果已验证的深研。",
+      "source_ids": [
+        "Sdirectory",
+        "Sguide",
+        "Sintegration"
+      ]
+    }
+  ],
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "8df30448596eb134a5d0904e839a8652ccc0164b5ecdc0e86f4de0ea6a20a285",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "623f215f95d517196418dca762f9153501704daac565914149f38ce51e792922",
+      "How it went": "16750a1d3eb6163598766aafe0b41927173fb2416238aa6ed5a30fd3a1d763db",
+      "Worth knowing": "217b1f40719ee2df9180a9609e7bd5ca1dbc1efdb3b7c2a50d4c40003b170f93"
+    },
+    "actual_agents": [
+      "Manus"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Research [list or group, e.g. the top 100 people in a field] and build a spreadsheet with [columns, e.g. name, employer, notable work, source link] for each. Use public sources only and cite a link for every row. When the sheet is complete, turn the key findings into a [number]-slide deck, and flag any rows where you were unsure of the facts.",
+    "agent": "Manus",
+    "source_url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+    "observed_at": "2026-10-21T06:29:37.169085+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "cb8a7982fbb10bde0f33f9073274291d63b52d65a71cad679e956b037b5aef03"
+  },
+  "reported_method": {
+    "version": 1,
+    "status": "reported_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+    "source_sha256": "8df30448596eb134a5d0904e839a8652ccc0164b5ecdc0e86f4de0ea6a20a285",
+    "steps": [
+      {
+        "en": "The directory describes supplied lists and templates, parallel research, then table/deck/site outputs.",
+        "zh": "目录描述输入清单和模板、并行研究，再输出表格、演示文稿或网站。"
+      }
+    ]
+  },
+  "author_method": {
+    "version": 1,
+    "status": "unavailable",
+    "presentation": "bilingual_summary",
+    "source_url": "https://www.reddit.com/r/promptingmagic/comments/1qruaq7/the_complete_guide_to_metas_ai_agent_manus_the",
+    "source_title": "Manus指南原始讨论",
+    "source_language": "en",
+    "source_sha256": null,
+    "steps": [],
+    "unavailable_reason": "原Reddit全文未读取；官方示例回放仅标题可读，不补造作者运行步骤。"
+  },
+  "personal_value": {
+    "version": 1,
+    "level": "待核实",
+    "reason": "对清单式公开资料整理有适用性，但规模效率和准确性仍需自己验证。",
+    "audience": "有明确研究清单、能核对来源和使用表格的个人研究者或编辑。",
+    "use": "把同类条目整理成结构表，再生成阅读简报。",
+    "benefit": "可能减少重复搜集与排版，未测净时间或正确率。",
+    "setup_cost": "名单去重、字段定义、合法公开来源、模板与工具权限。",
+    "maintenance_cost": "来源失效、人物信息变化、模板兼容与修复失败行。",
+    "frequency": "按报告或资料更新周期使用，不必为低频小任务启动大批代理。",
+    "privacy_risk": "名单和活动导出可能含个人信息，需最小输入与单独发布审阅。",
+    "error_risk": "同名错配、共同错误来源、缺失填造、图表分母错误与过时资料。",
+    "source_ids": [
+      "Sdirectory",
+      "Swide",
+      "Srefine"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "获许可目录试用模板，非实际作者完整任务，未执行。",
+    "prerequisites": "公开非敏感清单、明确字段、允许来源、模板及工具可用额度。",
+    "tools": "Manus；按原案例需要提供表格、模板与相应连接器。",
+    "expected_result": "带逐项来源和未知标记的表格及简报，须人工核对再发布。",
+    "prompts": [
+      {
+        "title": "源站Copy prompt",
+        "language": "en",
+        "kind": "original",
+        "source_url": "https://agentusecases.ai/use-case/research-hundreds-of-people-and-build-slide-decks-at-scale",
+        "source_ids": [
+          "Sdirectory"
+        ],
+        "attribution": "获许可目录试用模板",
+        "text": "Research [list or group, e.g. the top 100 people in a field] and build a spreadsheet with [columns, e.g. name, employer, notable work, source link] for each. Use public sources only and cite a link for every row. When the sheet is complete, turn the key findings into a [number]-slide deck, and flag any rows where you were unsure of the facts."
+      }
+    ]
+  },
+  "unit_economics": [
+    {
+      "scenario": "资料整齐假设",
+      "unit": "100条目研究及10页演示交付包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 15,
+      "human_cost": 200,
+      "other_variable_cost": 10,
+      "acquisition_cost": 25,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 80,
+      "value_type": "hypothesis",
+      "assumptions": "人工5小时×40；单位250，月1080；工具费用是假设非报价。",
+      "source_ids": [
+        "Swide",
+        "Sslides"
+      ]
+    },
+    {
+      "scenario": "高返工假设",
+      "unit": "100条目研究及10页演示交付包",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 60,
+      "human_cost": 600,
+      "other_variable_cost": 30,
+      "acquisition_cost": 80,
+      "units_per_month": 4,
+      "fixed_monthly_cost": 160,
+      "value_type": "hypothesis",
+      "assumptions": "人工15小时×40；单位770，月3240；数据许可和接入另计。",
+      "source_ids": [
+        "Swide",
+        "Sslides"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "query": "site.reddit.com/r/ManusOfficial wide research sources",
+        "searched_at": "2026-10-21T16:25:23Z",
+        "outcome": "Found integration documentation; no original-case measured user outcome. Search-indexed review snippets not full verified feedback."
+      },
+      {
+        "query": "site.trustpilot.com/review/manus.im research credits",
+        "searched_at": "2026-10-21T16:25:23Z",
+        "outcome": "Found integration documentation; no original-case measured user outcome. Search-indexed review snippets not full verified feedback."
+      },
+      {
+        "query": "site.github.com Manus wide research error",
+        "searched_at": "2026-10-21T16:25:23Z",
+        "outcome": "Found integration documentation; no original-case measured user outcome. Search-indexed review snippets not full verified feedback."
+      }
+    ],
+    "independent_user_feedback_count": 0,
+    "note": "第三方集成文档不是实际效果评论；未取得同案例可核验独立反馈。"
+  },
+  "limitations": "只读研究，未运行250代理、采集人物画像、上传私密名单或付费调用。云浏览器首次及一次5分钟恢复均超时；采用许可存档和公开Web正文。官方回放仅标题，未核结果。",
+  "archive_source_sha256": "8df30448596eb134a5d0904e839a8652ccc0164b5ecdc0e86f4de0ea6a20a285",
+  "translation_sha256": "5162e88e31643d06f2018719e812af4046794969b233d301884bda0d3dc8a0d8"
+}
