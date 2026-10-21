@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **78** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **79** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -75,6 +75,7 @@
 | [用自建智能体准备企业Reddit互动内容](reports/run-a-company-reddit-presence-with-a-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 社区反馈与品牌沟通辅助 | 2026-10-20T16:36:53.674967+00:00 |
 | [用Claude进行技术面试并生成候选人报告](reports/run-ai-led-technical-interviews-for-recruiting.md) | 仅建议受控试点 | 44.0 | 中 | available | 技术招聘与面试辅助 | 2026-10-20T10:53:13.090855+00:00 |
 | [用 11 个 agent 分工完成交易前准备](reports/run-an-11-agent-team-for-trading-prep.md) | 仅建议受控试点 | 36.0 | 中 | available | 交易研究与盘前准备 | 2026-10-16T13:36:23.225171+00:00 |
+| [用 ChatGPT 和 Codex 交接开发计划并协调本地服务端口](reports/run-codex-with-low-touch-planning-and-port-reservation.md) | 适合内部效率工具 | 33.5 | 中 | available | 软件开发与开发者工具 | 2026-10-21T20:43:26.725977+00:00 |
 | [用Grok Bot准备承包商后台材料与客户召回草稿](reports/run-contractor-back-office-jobs-and-churn-recovery.md) | 仅建议受控试点 | 未评定 | 中 | available | 后台行政与客户留存（分场景） | 2026-10-20T15:54:01.195589+00:00 |
 | [用Claude Code生成代理机构文案、客户报告和入驻工作区](reports/run-marketing-agency-copy-reporting-and-onboarding-with-agen.md) | 适合内部效率工具 | 43.0 | 中 | available | 营销代理机构运营 | 2026-10-20T08:04:46.305390+00:00 |
 | [用Claude Code生成素材并管理Meta广告活动](reports/run-meta-ad-campaigns-autonomously-for-a-newsletter.md) | 仅建议受控试点 | 41.0 | 中 | available | 营销投放与newsletter运营 | 2026-10-20T07:12:41.065326+00:00 |
