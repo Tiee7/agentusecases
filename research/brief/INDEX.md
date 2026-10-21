@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **108**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **109**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -122,3 +122,5 @@
 | 用 Manus 处理旅行查询与浏览器预订事务 | [简报](../../reports/brief/delegate-browser-tasks-like-flight-booking-to-manus.md) |
 
 | 用 Comet 按杂货清单搜索商品与优惠 | [简报](../../reports/brief/order-groceries-and-hunt-deals-with-comet.md) |
+
+| 用 Comet 辅助填写表单并执行浏览器指令 | [简报](../../reports/brief/have-comet-fill-out-forms-and-follow-instructions.md) |
