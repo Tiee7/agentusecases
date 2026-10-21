@@ -102,5 +102,15 @@
     "at": "2026-10-21T06:33:31.175636+00:00",
     "status": "fetched",
     "error": null
+  },
+  "translation": {
+    "status": "available",
+    "language": "zh-CN",
+    "format": "full_extracted_text_translation",
+    "body": "使用裁决子智能体和多阶段审查开发应用\n这套用于应用开发的 Claude Code 配置，通过裁决子智能体、上下文管理和多阶段审查进行质量控制。\n使用工具\nCC\nClaude Code\n做了什么\n帖子描述了一位独立开发者使用 Claude Code 开发 Windows 应用，并将尚未解决的决策交给一个独立、只读的裁决子智能体。裁决者必须把说法标为已确认、推测或未知，且不能以推测作出决定。开发者还会为每个问题开启全新的子会话，然后对代码进行两轮审查：先做一般代码审查，再用编码规范技能做第二轮检查；暂缓处理的问题留在拉取请求中，交由人工审阅。\n结果如何\n据帖子转述，这套流程促成了应用在 Microsoft Store 上架，并在17天内合并142个拉取请求。帖子也指出，配置较复杂，初学者可能难以掌握。\n值得注意\n主要代价是额外开销：流程增加了新会话、独立裁决者和两轮审查，因此它被呈现为高级配置，而非轻量的默认方案。\n亲自试用\n使用\nClaude Code\n复制提示词\n请配置我在[仓库路径]中的项目：每次你实现[应用描述]的一个功能后，由独立的裁决子智能体依据需求和测试审查工作，并返回问题清单。重复修复与审查循环，直到裁决者认为没有阻塞性问题。保留一份简短决策笔记，使上下文能跨会话延续；结束时总结最终状态。\n原始来源：https://www.reddit.com/r/ClaudeWorkflows/comments/1x9vwqf/workflow_advanced_claude_code_workflow_judge",
+    "body_sha256": "73fd6cd3324b02aa13fb9cc12d2efb6b462bb4b61610d897c45037ba86ae4db0",
+    "based_on_body_sha256": "66b643df46a2d8489f13cb5e351bb1d93f5d99893b1b3da7c1978fabe15a5412",
+    "translated_at": "2026-10-21T08:42:36.412924+00:00",
+    "attribution": "获许可目录正文的完整中文翻译；原始外链未全文复制。"
   }
 }
