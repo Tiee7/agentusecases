@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **79** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **80** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -84,6 +84,7 @@
 | [用Grok Bot每天三次收集AI新闻](reports/scrape-ai-news-three-times-a-day-with-a-custom-bot.md) | 仅建议受控试点 | 未评定 | 中 | available | 行业信息整理 | 2026-10-20T15:34:56.410756+00:00 |
 | [用Grok Bot提交电话号码移除请求并复查](reports/scrub-your-phone-number-from-data-brokers-to-stop-spam.md) | 仅建议受控试点 | 未评定 | 中 | available | 个人资料清理与隐私辅助 | 2026-10-20T16:48:48.358758+00:00 |
 | [用 ChatGPT Agent 上架并出售闲置物品](reports/sell-your-unused-items-online-with-an-agent.md) | 适合内部效率工具 | 39.0 | 中 | available | 二手商品交易与卖家工具 | 2026-10-16T11:47:59.953036+00:00 |
+| [用 Dots 追踪指定来信并发送提醒](reports/track-incoming-emails-and-notify-about-key-ones.md) | 不建议商业投入 | 27.5 | 低 | available | 个人与小团队邮件工作流 | 2026-10-21T21:27:43.393487+00:00 |
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
 | [用本地Codex辅导纸笔练习并保存学习记录](reports/tutor-you-through-pen-and-paper-math-with-a-local-agent.md) | 仅建议受控试点 | 35.0 | 中 | available | 个人学习工具 | 2026-10-20T01:24:22.548256+00:00 |
 | [用Claude Code指导SQL项目迁移并练习dbt](reports/use-claude-code-as-an-agentic-tutor-in-your-learning-environ.md) | 仅建议受控试点 | 37.0 | 中 | available | 成人技术学习 | 2026-10-20T02:45:22.422735+00:00 |
