@@ -1,0 +1,439 @@
+{
+  "schema_version": 2,
+  "status": "completed",
+  "id": "build-apps-with-a-judge-subagent-and-multi-stage-review",
+  "url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
+  "title": "用 Claude Code 裁决子智能体和分阶段审查开发应用",
+  "industry": "开发者工具与桌面软件交付",
+  "researched_at": "2026-10-21T08:49:24.868128+00:00",
+  "confidence": "流程构成有作者与官方文档支撑；交付数字为作者自述，缺陷率、工时净收益、留存、收入与付费意愿未核验。本篇接续原在途案例，丢失稿未冒称恢复。",
+  "verdict": {
+    "decision": "适合内部效率工具",
+    "headline": "先用于已有工程团队的受控审查流程，不把裁决提示词或免费应用上架直接当生意",
+    "reason": "这个案例最有用的是把实现、证据核查和人工决策责任分开，适合已能写验收用例、管理权限并处理回归的小团队。可见资料不足以证明它降低总交付成本，更没有付费客户、缺陷率或留存对照。若经营服务，买方应购买可验收的工程改进和维护，而非几份通用提示词；若经营笔记应用，则仍要单独验证日常留存和相对现成免费产品的优势。当前因此先判为内部效率工具，不给未经证实的收入和商业分数。",
+    "next_action": "在有授权的单个测试仓库选取同等难度的小任务，记录原流程与裁决流程的人类总工时、验收缺陷、调用费用和返工；把未决事项及实际设备测试单列。先做内部验证，不联系或代运营客户。",
+    "stop_condition": "若审查误报与返工抵消节省，或需反复人工解释才能完成基本需求，停止扩展；若设备问题仍被单元测试漏过，不出售无人值守交付承诺。"
+  },
+  "sources": [
+    {
+      "id": "Sdirectory",
+      "url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
+      "title": "获许可案例目录：裁决子智能体与多阶段审查",
+      "supports": "许可目录归档保留Claude Code、只读裁决、两阶段审查及完整Copy prompt；142 PR/17天为目录转述，不是实测或收入。"
+    },
+    {
+      "id": "Sauthor",
+      "url": "https://note.com/lirispp/n/n4112b5c7b620",
+      "title": "作者开发回顾：Jotteo与可逆决策",
+      "supports": "作者自述按决策可逆性分工，使用只读judge与每Issue新会话；截至10月13日合并142PR/17天，152项AI决策只人工审过1项，部分Windows实机验证仍需人。10月15日补记v1.0上架。并非独立效率或缺陷率测量。"
+    },
+    {
+      "id": "Sclaude",
+      "url": "https://code.claude.com/docs/en/sub-agents",
+      "title": "Claude Code官方子智能体文档",
+      "supports": "官方允许独立上下文、工具白名单和权限配置；子智能体请求占用同一用量限额。配置只读工具是能力限制，不能把提示词宣称只读当作权限隔离。"
+    },
+    {
+      "id": "Srust",
+      "url": "https://microsoft.github.io/rust-guidelines/guidelines/ai/index.html",
+      "title": "微软Rust AI工程规范",
+      "supports": "规范强调类型、文档、可测试API和有意义行为测试，并反对只重复定义的同义反复测试；可作为复核规则来源，而非某应用质量认证。"
+    },
+    {
+      "id": "Sapp",
+      "url": "https://note.com/lirispp/n/n2e443e811f2d",
+      "title": "作者Jotteo产品发布说明",
+      "supports": "10月18日作者称Jotteo免费、无广告、无需账户，笔记及手写识别留在本机；已有功能保持免费，未来可能只对部分新功能收费。面向Windows手写/PDF记录人群，未见销量、活跃或到账证明。"
+    },
+    {
+      "id": "Ssurvey",
+      "url": "https://survey.stackoverflow.co/2025/ai",
+      "title": "2025 Stack Overflow开发者调查",
+      "supports": "历史调查页面显示46%受访开发者不信任AI输出准确性，33%信任；这是2025受访者态度，不能当2026审查服务销量或本方法增益。"
+    },
+    {
+      "id": "Sonenote",
+      "url": "https://support.microsoft.com/en-us/onenote/what-s-the-difference-between-the-onenote-versions",
+      "title": "Microsoft官方OneNote版本对比",
+      "supports": "官方页面列出受支持OneNote版本可免费下载使用及部分付费高级功能；Windows桌面版支持本地笔记存储。免费和本地存储因此不是Jotteo独有卖点，未实测手写体验。"
+    },
+    {
+      "id": "Ssupport",
+      "url": "https://github.com/liris/jotteo-support",
+      "title": "Jotteo公开支持仓库",
+      "supports": "公开README明确仓库只放支持、帮助与隐私政策，不含应用源码；公开issues列表当前为空，不能据此验证私有应用142PR，也不能推导没有缺陷。"
+    }
+  ],
+  "facts": [
+    {
+      "statement": "目录将实际工具标为Claude Code，并给出独立的建议试用模板；模板不等于作者实际提示词。",
+      "source_ids": [
+        "Sdirectory"
+      ]
+    },
+    {
+      "statement": "作者回顾把决策可逆性作为自动推进与人工介入的分界；这是一名开发者自述的方法，不是对照实验。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "作者截至2026年10月13日自述17天合并142个PR，同时152项AI决策只人工审阅1项；不能把合并数量当缺陷少或收益高。",
+      "source_ids": [
+        "Sauthor"
+      ]
+    },
+    {
+      "statement": "Claude Code官方说明子智能体有独立上下文并可限制工具，但其请求仍计入共享用量限额。",
+      "source_ids": [
+        "Sclaude"
+      ]
+    },
+    {
+      "statement": "微软Rust规范把可测试API与行为覆盖列为AI协作工程条件，并提醒避免只复述定义的测试。",
+      "source_ids": [
+        "Srust"
+      ]
+    },
+    {
+      "statement": "Jotteo作者在10月18日称现有功能免费、无广告和无需注册，未来只可能对部分新增功能收费；不是现有订阅收入证明。",
+      "source_ids": [
+        "Sapp"
+      ]
+    },
+    {
+      "statement": "2025 Stack Overflow调查中不信任AI输出准确性的比例高于信任比例；这一历史样本只能辅助解释复核需求。",
+      "source_ids": [
+        "Ssurvey"
+      ]
+    },
+    {
+      "statement": "微软官方页面列有可免费使用的OneNote和支持本地笔记的Windows桌面版，构成具体替代，而非空白市场。",
+      "source_ids": [
+        "Sonenote"
+      ]
+    },
+    {
+      "statement": "公开jotteo-support仓库明确不含应用源码；当前空issues列表不能核验作者私有应用的PR数量或用户质量。",
+      "source_ids": [
+        "Ssupport"
+      ]
+    }
+  ],
+  "scores": {
+    "demand": {
+      "score": null,
+      "rationale": "工程审查痛点合理，但没有本流程的付费试点或采购预算证据，不能由开发者调查直接量化购买需求。",
+      "source_ids": [
+        "Ssurvey",
+        "Ssupport"
+      ]
+    },
+    "outcome": {
+      "score": null,
+      "rationale": "作者的PR合并数与上架陈述缺少对照工时和缺陷数据，也不能核对私有源码，不给效果百分制。",
+      "source_ids": [
+        "Sauthor",
+        "Ssupport"
+      ]
+    },
+    "economics": {
+      "score": null,
+      "rationale": "仅有两种研究者假设的成本模型，真实售价、调用账单、返工分布与支持成本均未取得，利润未知。",
+      "source_ids": [
+        "Sclaude",
+        "Sapp"
+      ]
+    },
+    "distribution": {
+      "score": null,
+      "rationale": "未见销售渠道转换率、客户案例或复购资料；技术文章的可见度不能替代服务获客验证。",
+      "source_ids": [
+        "Ssupport",
+        "Sapp"
+      ]
+    },
+    "moat": {
+      "score": null,
+      "rationale": "官方原生子智能体与公开规范降低方法独占性，尚未看到专有评测集或可验证的持续交付优势。",
+      "source_ids": [
+        "Sclaude",
+        "Srust"
+      ]
+    },
+    "execution": {
+      "score": null,
+      "rationale": "权限限制和可测性可设计，但作者工程未执行，设备适配、恢复流程与发布责任的实际负担待测。",
+      "source_ids": [
+        "Sclaude",
+        "Srust"
+      ]
+    },
+    "feedback": {
+      "score": null,
+      "rationale": "没有核实到独立采用该开发流程并给出结果的客户样本；空issues不是差评也不是质量背书。",
+      "source_ids": [
+        "Ssupport",
+        "Ssurvey"
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "customer",
+      "title": "谁真正需要，谁会付钱",
+      "body": "本案应拆成两类用户，而不能用“独立开发者做出了应用”混为一种需求。第一类是已经持续维护软件的小团队、技术负责人或独立开发者，他们缺的是把需求、实现、审查、设备验证连起来的可靠流程。工具使用者往往就是工程师，潜在预算所有者则是承担延期和事故责任的负责人。第二类是Windows手写笔记用户，他们关心笔迹、PDF、检索、备份和数据迁移，不会因为开发过程用了裁决智能体就付钱。作者发布说明能够帮助界定后一人群，但没有揭示其中多少人持续使用或愿意购买。我们的判断是：先把流程用于内部工程交付，产品端另行评估，不能把两边的利益混合计算。对小型一次性脚本，增加多阶段审查可能比问题本身更贵；对有文件格式、用户数据和设备适配的软件，遗漏的返工成本更值得测量。这是场景推断，不是已有客户调查。付款问题最终应落到“谁为少一次返工或更清楚的验收证据买单”，而非“谁喜欢多智能体”。",
+      "source_ids": [
+        "Sauthor",
+        "Sapp",
+        "Ssurvey"
+      ]
+    },
+    {
+      "id": "workflow",
+      "title": "从需求到可验收交付",
+      "body": "可复制对象不是一句让judge检查的提示词，而是一条有版本和证据的交付链：先固定需求与验收输入，再由实现者提交可复核变更，裁决者仅返回有位置、有依据的问题，最后由构建、测试及适用设备验证确认结果。官方工具权限支持把审查者限制为读文件等能力，但实际配置仍需逐项检查；不要假定它因为名字叫只读就不可能执行写入。建议保留任务标识、基线提交、问题清单、修复提交和最终验证产物，让审查结论能对应到确切代码。每轮应区分代码错误、测试夹具失效和环境故障，避免为了全绿删除有效断言。审查者说“没有阻塞”只说明这次检查未发现问题，不是全面正确证明。对于设备输入、渲染或系统集成，单独列出不能被本地合成测试覆盖的项目。我们没有安装作者应用或运行他的私有工程；上述链路是从公开方法抽取的实施建议，不是已完成客户部署。",
+      "source_ids": [
+        "Sdirectory",
+        "Sclaude",
+        "Srust"
+      ]
+    },
+    {
+      "id": "market",
+      "title": "需求信号与市场证据边界",
+      "body": "审查需求有合理动机，但不能从AI使用增长推导某个裁决流程的付费市场。2025开发者调查的信任问题说明人们担心输出准确性，调查时间、样本自选和问题措辞都限制外推；它没有问受访者是否购买本案配置。真正应找的需求信号，是团队已有未处理缺陷、审查排队或重复返工，以及他们愿意提供基线和接受明确验收。作者的开发记录是一个方法线索，而不是企业需求样本。若将它作为服务，优先限定一种代码栈和一种交付单位，先测流程是否减少总工时；若推广为通用平台，必须承担更多权限、项目差异和支持成本。也不能把独立开源项目或工具教程中的热度当采购预算。市场规模在此保留未知，不编造团队数量、转换率或客单价。与其估算一个缺乏证据的大市场，不如把能被一次授权试点证伪的条件写清：真实任务重复发生，结果可量化，负责人愿意把人工复核计入成本。",
+      "source_ids": [
+        "Ssurvey",
+        "Ssupport",
+        "Sclaude"
+      ]
+    },
+    {
+      "id": "competition",
+      "title": "替代品来自工程流程和终端产品两侧",
+      "body": "流程侧最直接的替代不是另一个名字相近的judge插件，而是工程师自己采用官方子智能体能力、成熟的编译测试、人工代码评审和清晰的合并规则。已有团队往往不需要再购买通用提示词，而需要针对其代码库排除具体失败模式。可销售的差异只能建立在适配、回归样本、权限配置和持续维护上。产品侧则不能把免费、本地存储、手写笔记都当独占优势：微软官方OneNote资料已覆盖免费使用及Windows桌面本地笔记能力。比较时应限定具体任务，例如同一设备导入一份PDF、手写一页、检索并导出，而不是泛称谁更好。不同应用在数据格式、同步和输入体验上可能有差别，但本轮没有运行对比，不能编造胜负。若用户现有工具已经完成任务，迁移成本本身就是强反证。最终应把“开发效率更高”与“用户愿意换软件”当成两个独立假设，分别取得证据，而不是让前者替代后者。",
+      "source_ids": [
+        "Sclaude",
+        "Srust",
+        "Sonenote"
+      ]
+    },
+    {
+      "id": "economics",
+      "title": "按验收后的任务计算，而非按PR数量",
+      "body": "本轮不填售价和利润，收入状态为未知。两种成本情景以一个通过验收的小功能为单位，不以一次调用或一个PR为单位：简单场景假设工具调用摊销3美元、人工20分钟按60美元每小时计20美元、其他可变成本3美元、获客摊销5美元，合计31美元；每月20个单位加40美元固定费，总成本660美元。复杂场景假设8美元工具成本、人工60分钟计60美元、其他8美元、获客10美元，合计86美元；每月20个加80美元固定费，总成本1800美元。所有输入都是研究者假设，不是作者账单，也不绑定某个订阅价格。人工应包含解释需求、筛掉误报、真实设备验证、回读部署和事后支持，而非只算写代码的时间。若拿31美元作为报价下限还不够，因为失败任务、退款和未成交沟通未必均匀摊销。内部自用可把获客项设零重新计算，但不能因此把人工变免费。多个子智能体共用用量预算，重试和额外上下文都会吃掉节省，需在试点里单独记录。",
+      "source_ids": [
+        "Sclaude",
+        "Srust"
+      ]
+    },
+    {
+      "id": "distribution",
+      "title": "怎样获得第一批客户并交付",
+      "body": "当前没有证据说明作者出售了流程配置或获得外部服务收入，因此以下是待验证的获客方案，不是经营成果。最小服务应面向已有工程负责人、已有代码和明确验收的小团队，展示一个可复查的前后对照，而不是宣传一天生成多少代码。客户需要看到失败样例、边界和回滚办法，才可能评估是否值得让外部流程接触仓库。交付物可以是只读审查规则、权限清单、验收用例和一份带提交号的试点报告，后续维护应明确包含哪些升级与故障。触达渠道可考虑已有技术合作关系和公开案例展示，但本任务只做研究，不发送信息、不接入客户仓库也不代收款。销售周期、购买人和持续付费仍未知。免费内容能够帮助建立可信度，但若只能吸引想复制提示词的人，不足以支撑持续服务；应把成功指标放在完成有预算的试点和复购维护，而不是教程浏览量。也不能默认可把作者文章或私有配置打包销售，原创交付与许可边界必须独立处理。",
+      "source_ids": [
+        "Ssupport",
+        "Sclaude",
+        "Sapp"
+      ]
+    },
+    {
+      "id": "moat",
+      "title": "壁垒应是累积的失败知识，而非角色名字",
+      "body": "裁决者、实现者和分阶段审查这些构件容易被复制，官方产品已经提供基础能力。因此，把一个角色文件当作长期壁垒并不稳健。若要形成可积累价值，应该来自某一行业或代码栈的真实失败样本、可复现回归用例、稳定的交付约束和对系统边界的理解。每次问题都能落到明确输入与断言，下一次才有机会更快识别，而不是让模型重新猜测。反过来，若审查规范只是泛泛要求“代码质量高”，它既难以验收也容易被替代。还要防止指标被流程自己优化：发现问题多、合并PR多、反复给出通过结论，都不等于交付价值上升。应记录漏检、误报、人工撤销决策及发布后的回归，允许这些记录推翻最初假设。两次同模型审查也不构成统计意义的独立验证；共享需求误读可能在所有角色中重复。长期维护的优势应体现在更少真实故障和更低总成本，而非更多自动化层级。",
+      "source_ids": [
+        "Sclaude",
+        "Srust",
+        "Ssurvey"
+      ]
+    },
+    {
+      "id": "execution",
+      "title": "权限、隐私、交付与责任",
+      "body": "要复用该方法，先限定测试仓库、可读取目录、允许执行的检查，以及哪些动作必须由负责人确认。源码、日志、客户数据和认证材料不能为了审查方便被全量上传。让审查者只读能降低它意外改坏文件的风险，但它读到的内容仍可能敏感；角色隔离与数据访问授权不是一回事。对不可逆数据格式、外部发布或付费动作，应有真实权限控制，而不是只靠提示词提醒。验收应覆盖恢复路径：中断后如何找到原任务和提交，如何识别已经成功的发布，如何避免同一任务重复执行，以及如何保存不可丢失的证据。代码层测试、实际设备测试和上线回读分别记录，不能互相冒充。作为服务方也不能承诺把所有判断责任移给模型，客户仍需指定需求与最终责任人。作者产品关于本机存储的说明只涉及终端应用的设计自述，不自动证明开发过程中源码或笔记没有进入第三方服务；两条数据路径要分别审查。",
+      "source_ids": [
+        "Sclaude",
+        "Sapp",
+        "Srust"
+      ]
+    },
+    {
+      "id": "feedback",
+      "title": "反馈调查与反证怎样改变判断",
+      "body": "本轮复核了产品评价公开检索、公开支持仓库及相邻代码审查讨论三个方向。公开支持仓库的issues为空只是一项观察，既不代表没有用户，也不代表没有bug；仓库本身还明确不含应用源码，不能用它替作者私有开发记录背书。公开搜索没有提供可核验的该工作流付费客户、净节省工时或持续留存，本篇因此不填写用户星级，也不把没有资料写成差评。邻近工作流教程只能提示可能的失败方式，不能转成Jotteo用户反馈。目录原链属于自动汇编帖，其评价性分数不是独立调查；本次没有突破此前对该站的读取限制。原作者对未审决策积累的披露是重要反证，它说明“不中断推进”可能把审查工作延后，而非消除工作。经营判断因此更保守：优先测延后的人工负债，不能只把短期产出速度视作成功。若后续拿到真实用户材料，也应区分使用应用的人和采用开发流程的人，两者不能混算。",
+      "source_ids": [
+        "Ssupport",
+        "Ssurvey",
+        "Sdirectory",
+        "Sauthor"
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "最小可执行验证与停止条件",
+      "body": "当前结论是内部效率工具，而不是已经验证的独立生意。可执行的下一步是选一个有权限、无敏感生产数据的小仓库，先建立人工认可的验收样例，再用同等难度任务比较原流程与新流程。只统计最终接受的交付，记录总人工分钟、模型调用成本、误报和漏检、恢复次数及设备验收发现的问题。样本不足时不宣称普遍提效，发生关键回归时应扩大对应测试而不是放宽标准。如果流程省下的实现时间被审查、反复解释和维护耗尽，就停止增加角色；若只在作者熟悉的工程上可用，不能直接出售通用承诺。若要做笔记应用商业化，则另测同一批用户在现成替代与新应用之间的真实迁移、重复使用和愿付，不能拿工程交付数字代替市场验证。本文给出的成本情景只是帮助确定需要测什么，不是收入预测，也不是四周或200美元的准入规则。本轮未安装应用、未执行原流程、未联系任何人；文档审查和算术验证的边界随报告保留。",
+      "source_ids": [
+        "Sonenote",
+        "Sclaude",
+        "Sapp",
+        "Ssurvey"
+      ]
+    }
+  ],
+  "feedback": {
+    "searches": [
+      {
+        "channel": "公开产品反馈搜索",
+        "query": "\"Jotteo\" review feedback",
+        "outcome": "未取得可核验的本流程付费客户或完整结果；检索片段不作为原文实测。"
+      },
+      {
+        "channel": "GitHub公开支持仓库",
+        "query": "liris/jotteo-support/issues?state=all&per_page=100",
+        "outcome": "实际连接器返回空列表，不能推导无缺陷或应用源码PR数量。"
+      },
+      {
+        "channel": "相邻工作流公开搜索",
+        "query": "\"judge subagent\" code review experience",
+        "outcome": "找到通用评审教程和自动汇编，未作为本应用真实用户满意度。"
+      }
+    ],
+    "observations": []
+  },
+  "unit_economics": [
+    {
+      "scenario": "研究者假设：简单变更",
+      "unit": "一个验收通过的小功能",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 3,
+      "human_cost": 20,
+      "other_variable_cost": 3,
+      "acquisition_cost": 5,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 40,
+      "assumptions": "全部输入是假设；人工20分钟×60美元/小时=20；工具3、其他3、获客5；单位31，每月31×20+40=660，无真实售价。",
+      "source_ids": [
+        "Sclaude",
+        "Srust"
+      ]
+    },
+    {
+      "scenario": "研究者假设：复杂变更",
+      "unit": "一个验收通过的小功能",
+      "currency": "USD",
+      "price": null,
+      "revenue_status": "unknown",
+      "api_cost": 8,
+      "human_cost": 60,
+      "other_variable_cost": 8,
+      "acquisition_cost": 10,
+      "units_per_month": 20,
+      "fixed_monthly_cost": 80,
+      "assumptions": "全部输入是假设；人工60分钟×60美元/小时=60；工具8、其他8、获客10；单位86，每月86×20+80=1800，无真实售价。",
+      "source_ids": [
+        "Sclaude",
+        "Srust"
+      ]
+    }
+  ],
+  "disconfirming_evidence": "作者未审决策负债、公开仓库不含应用源码、现成免费本地笔记替代以及缺少净工时/付费验证，共同限制从产出速度推导生意成立。",
+  "limitations": "未安装Jotteo、未运行作者私有工程、未取得142PR列表或到账/留存资料。2025调查不是2026销量。源站建议模板不是作者实际提示词。原在途稿丢失后，本篇基于保留归档和重新读取的来源完成恢复，未冒称旧草稿复原；云浏览器note两次普通导航超时，采用支持的公开网页阅读器，未绕限制。",
+  "personal_value": {
+    "version": 1,
+    "level": "中",
+    "reason": "有工程基础的人可借鉴只读复核和证据记录，但实际节省时间取决于已有验收能力；对初学者额外配置可能增加负担。",
+    "audience": "已有代码库与测试基础的独立开发者或小团队；不是无需编程知识的全自动造应用方案。",
+    "use": "在实现之外设置独立检查，把可逆小决策与需要负责人确认的大决策分开，记录版本与未决问题。",
+    "benefit": "预期减少自我确认式审查与上下文混乱；未量化净节省、缺陷下降或交付成功率。",
+    "setup_cost": "准备仓库副本、需求和验收样例、只读角色权限、合并规则及真实设备验证清单；不需要本任务新建凭据。",
+    "maintenance_cost": "每次模型、依赖或业务规则变化后维护测试和权限；清理误报、未审决策及失效来源仍需人工。",
+    "frequency": "适合持续迭代时按任务调用；低频一次性脚本可先用普通测试和人工审查，避免固定开销。",
+    "privacy_risk": "审查者读取的代码和日志仍有泄露风险，限制可见范围并排除凭据及生产个人数据。",
+    "error_risk": "多个角色可能共享需求误读，测试可能只是复述实现；真实设备与上线状态必须另验。",
+    "source_ids": [
+      "Sclaude",
+      "Srust",
+      "Sauthor"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "collected",
+    "source_prompt_note": "已收录源站提供的建议模板，不代表案例原作者实际提示词；自编模板作为补充，未做模型实测。",
+    "prerequisites": "有授权的测试仓库、一个明确小功能、已知通过与失败样例、可回滚分支；先确认只读审查者的实际工具权限。",
+    "tools": "Claude Code及其子智能体、版本控制、项目自身测试；不自动安装或接入真实客户系统。",
+    "expected_result": "得到问题清单及其代码位置、修复提交、未决事项、实际执行检查与设备验收缺口；不预设首次成功或商业收益。",
+    "prompts": [
+      {
+        "title": "限定范围的只读复核模板",
+        "language": "zh",
+        "kind": "ours",
+        "attribution": "研究者编写，非作者原提示词，未实测",
+        "source_url": null,
+        "source_ids": [
+          "Sclaude",
+          "Srust"
+        ],
+        "text": "在已授权测试仓库中，只审查指定基线到当前提交的这一项功能。逐条对照验收条件，列出文件位置、可复现输入与结果；区分事实、推断、未知。不要改文件，不运行写入外部系统的动作，不处理无关任务。报告未覆盖的设备与环境检查。只有负责人允许后实现者才能修改或发布；结束时列出确切提交和检查状态。"
+      }
+    ]
+  },
+  "source_trial": {
+    "version": 1,
+    "status": "available",
+    "text": "Set up my project in [repo path] so that after you implement each feature of [app description], a separate judge subagent reviews the work against the requirements and tests and sends back a list of problems. Repeat the fix and review loop until the judge has no blocking issues. Keep a short notes file of decisions so context survives between sessions, and summarize the final state when finished.",
+    "agent": "Claude Code",
+    "source_url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
+    "observed_at": "2026-10-21T06:33:31.175636+00:00",
+    "method": "ssr",
+    "attribution": "源站提供的试用模板；不代表案例原作者实际使用的提示词。",
+    "html_sha256": "aa95d31df206dd154a181d184560cc0681890c2dc4c7469619605b49afeff26b"
+  },
+  "author_method": {
+    "version": 1,
+    "status": "author_summary",
+    "presentation": "bilingual_summary",
+    "source_url": "https://note.com/lirispp/n/n4112b5c7b620",
+    "source_title": "作者开发回顾：Jotteo与可逆决策",
+    "source_language": "ja",
+    "accessed_at": "2026-10-21T08:41:21+00:00",
+    "source_sha256": "fae74a1922aec3a0b78502812c4ff32c8e5315f3d0fddbfcc51fbae5b23c1c6d",
+    "steps": [
+      {
+        "en": "A read-only judge separates reversible decisions from consequential ones requiring human input.",
+        "zh": "只读裁决者区分可逆决策与需要人工处理的重大决策。"
+      },
+      {
+        "en": "Fresh issue sessions implement changes, then run tests and two review stages.",
+        "zh": "每个问题用新会话实现，再运行测试和两阶段审查。"
+      },
+      {
+        "en": "Keep unreviewed decisions visible and reserve device-specific verification for human review.",
+        "zh": "显式保留未审决策，并把特定设备验证留给人工。"
+      }
+    ]
+  },
+  "analysis_depth": "deep",
+  "score_status": "not_assessed",
+  "source_case": {
+    "version": 1,
+    "status": "observed",
+    "source_url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
+    "observed_at": "2026-10-21T06:33:53.238532+00:00",
+    "body_sha256": "66b643df46a2d8489f13cb5e351bb1d93f5d99893b1b3da7c1978fabe15a5412",
+    "hash_scope": "observations.body UTF-8",
+    "section_sha256": {
+      "What they did": "454f338c7924a137d6f3205c43d18e48166ac173ec0fba1abf28b559e7778685",
+      "How it went": "f151d3cf653a9210f35f14a7706f3f47cab80e0a66100569ee1f74489749b0e9",
+      "Worth knowing": "398156f3a2f9490b42878317f320954fe73e7aa98f85ce7f5ea571f503ae9c47"
+    },
+    "actual_agents": [
+      "Claude Code"
+    ],
+    "agent_status": "observed",
+    "agent_basis": "source Done with; source attribution, not independent verification",
+    "publication": "source_case_metadata"
+  }
+}
