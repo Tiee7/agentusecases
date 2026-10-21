@@ -1,6 +1,6 @@
 # 简要分析索引
 
-已完成简要分析 **111**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
+已完成简要分析 **112**；深度研究 **78**，分别统计。简要记录不作为 completed v2 深研发布。
 
 | 用途 | 报告 |
 |---|---|
@@ -128,3 +128,5 @@
 | 用 Claude Code 配合项目规则与数值日志开发终端应用 | [简报](../../reports/brief/use-claude-code-as-co-developer-with-agents-md-and-logging.md) |
 
 | 用 Claude Code 在 Git 提交前检查代码风险 | [简报](../../reports/brief/scan-every-git-commit-for-secrets-and-injection-flaws.md) |
+
+| 用 Codex CLI 为后台功能生成五种设计方案 | [简报](../../reports/brief/redesign-an-admin-feature-with-multiple-design-options.md) |
