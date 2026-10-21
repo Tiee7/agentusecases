@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **77** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **78** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -59,6 +59,7 @@
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [用 Claude Code 生成可在浏览器授课的互动 HTML 文件](reports/generate-custom-interactive-html-lessons-for-students.md) | 仅建议受控试点 | 44.0 | 中 | available | 英语互动课件制作与维护 | 2026-10-19T22:49:39Z |
 | [用 Claude Code 汇集市场数据并生成投资分析](reports/generate-investment-analysis-from-live-market-data.md) | 适合内部效率工具 | 36.0 | 中 | available | 个人投资研究与组合信息整理 | 2026-10-16T18:02:24.876149+00:00 |
+| [用 Claude Code 汇总发布变更与产品 KPI 周报](reports/generate-recurring-weekly-reports-combining-kpis-and-pull-re.md) | 适合内部效率工具 | 未评定 | 中 | available | 产品运营与研发分析 | 2026-10-21T12:25:09.661110+00:00 |
 | [用ChatGPT智能体整理Yooda关键词与Ahrefs竞品资料](reports/hand-seo-tasks-to-a-chatgpt-agent.md) | 仅建议受控试点 | 未评定 | 待核实 | available | SEO研究与数据整理 | 2026-10-20T16:15:51.778918+00:00 |
 | [用Grok Bot辅助车辆登记、退货和预约流程](reports/handle-multi-click-chores-like-dmv-returns-and-appointments.md) | 仅建议受控试点 | 未评定 | 中 | available | 生活事务信息准备 | 2026-10-20T17:04:51.198125+00:00 |
 | [用 Resume 智能体搜索岗位、定制简历并跟踪申请](reports/hunt-jobs-tailor-resumes-and-apply-automatically.md) | 仅建议受控试点 | 42.0 | 中 | available | 求职岗位筛选与申请材料准备 | 2026-10-16T16:41:28.042672+00:00 |
