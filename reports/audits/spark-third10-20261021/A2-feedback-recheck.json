@@ -1,0 +1,74 @@
+{
+  "at": "2026-10-21T21:21:12.571625+00:00",
+  "sources": [
+    {
+      "id": "S2",
+      "url": "https://www.reddit.com/r/OpenAI/comments/1wu77gv/thoughts_on_dots",
+      "kind": "primary",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-21T21:19:38+00:00",
+        "end": "2026-10-21T21:19:58+00:00"
+      },
+      "read_method": "Web正文限定段落",
+      "summary": "作者自述漏看最近邮件、8:50错误空结果及两小时未提醒；没有原始邮箱日志或完整分母。",
+      "sha256": "9e4064ea8b37906a2ba164fd560c06e32c8e6e1edbe76031e5847c6b34beef6f",
+      "hash_scope": "analyst_summary_utf8; not full HTML",
+      "date_note": "相对时间与搜索日期不一致，不采用未经核对的精确发布日期。"
+    },
+    {
+      "id": "S3",
+      "url": "https://www.reddit.com/r/OpenaiCodex/comments/1wwim53/thoughts_on_dots/",
+      "kind": "independent",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-21T21:19:38+00:00",
+        "end": "2026-10-21T21:19:58+00:00"
+      },
+      "read_method": "Web正文限定段落",
+      "summary": "讨论既有速度慢、用量不明的抱怨，也有处理非项目任务、Slack与邮件的正面自述；不是即时提醒性能测试。",
+      "sha256": "516f4fdc047adf4ec94673fad479bcbe5d9987a3e19dd319f793928e6e7bd731",
+      "hash_scope": "analyst_summary_utf8; not full HTML",
+      "date_note": "相对时间与搜索日期不一致，不采用未经核对的精确发布日期。"
+    },
+    {
+      "id": "S14",
+      "url": "https://www.reddit.com/r/ChatGPT/comments/1ww1kr7/dots_stopped_sending_push_notifications/",
+      "kind": "independent",
+      "status": "fetched",
+      "read_window": {
+        "start": "2026-10-21T21:19:38+00:00",
+        "end": "2026-10-21T21:19:58+00:00"
+      },
+      "read_method": "Web正文限定段落",
+      "summary": "作者区分任务完成却无设备通知；另一用户报告任务未完成，作者又称发送邮件可用。应分开检查执行与通知，不据此定位具体根因。",
+      "sha256": "f87271ef783667f3c39db8d68862147a736372b175b08fb2ac1c90a74de6cedd",
+      "hash_scope": "analyst_summary_utf8; not full HTML",
+      "date_note": "相对时间与搜索日期不一致，不采用未经核对的精确发布日期。"
+    }
+  ],
+  "searches": [
+    {
+      "channel": "社区",
+      "query": "site:reddit.com \"Dots\" \"email\" \"notifications\"",
+      "outcome": "找到通知讨论并打开正文；排除无关launcher红点结果。"
+    },
+    {
+      "channel": "社区",
+      "query": "site:reddit.com \"Thoughts on Dots\" scheduled",
+      "outcome": "复核原帖及额外社区原文，混合任务反馈不作邮件召回率。"
+    },
+    {
+      "channel": "公开代码",
+      "query": "site:github.com \"Gmail\" \"history.list\" \"notifications\" missed",
+      "outcome": "找到实现说明候选；未打开的摘要不计作已核实反馈，机制仍以Google原文为准。"
+    }
+  ],
+  "cloud_attempt": {
+    "url": "https://learn.chatgpt.com/docs/automations",
+    "at": "2026-10-21T21:19:17+00:00",
+    "result": "Page.navigate timeout; no body verified",
+    "retry_not_before": "2026-10-21T21:24:17+00:00",
+    "remaining_retries": 1
+  }
+}
