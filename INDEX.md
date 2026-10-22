@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **80** / 注册案例 **1492**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **80** / 注册案例 **1520**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -102,5 +102,5 @@
 - Accelerate scientific research with Codex · `accelerate-scientific-research-with-codex`
 - Add 61 kid-friendly mini-games to an app · `add-61-kid-friendly-mini-games-to-an-app`
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
+- Add a filtered report page to a Razor Pages app · `add-a-filtered-report-page-to-a-razor-pages-app`
 - Add agentic forgetting to an agent's memory · `add-agentic-forgetting-to-an-agent-s-memory`
-- Add family to a dental plan by voice from the car · `add-family-to-a-dental-plan-by-voice-from-the-car`

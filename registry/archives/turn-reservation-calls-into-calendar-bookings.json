@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-reservation-calls-into-calendar-bookings",
-  "observed_at": "2026-10-21T06:04:33.167870+00:00",
-  "html_sha256": "d750710cf3f063e9a43a4f9bcc478c15cb76b6153e35604be18465a1f52813c7",
+  "observed_at": "2026-10-22T06:06:24.630969+00:00",
+  "html_sha256": "3200381d095b6c355a1063caa49701e98cb3df46c5d691cbee62c1a1b28e121d",
   "body_sha256": "80e3a6edc499a4f4b1e3d719bf09a35db3f2e7f105a1ab1653550a867ce98239",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn reservation calls into calendar bookings\nAn n8n workflow takes Vapi call transcripts, extracts reservation details, creates Calendar events, logs to Sheets and sends follow-ups.\nDone with\nN8\nn8n\nWhat they did\nWhen Vapi finishes a call, it posts the transcript to an n8n webhook, and an IF node lets only call_ended events through. A Groq-hosted Llama model turns the transcript into fixed JSON: name, phone, email, guests, date, time and requests, plus a drafted confirmation email. n8n then creates the Google Calendar event, appends to Sheets and Supabase, and sends Gmail and Twilio SMS confirmations.\nHow it went\nThe authors give no booking counts or test results. They put running cost at about $60–100 a month and argue that recovering one lost reservation a week pays for it. They flag double-booking as an open risk.\nWorth knowing\nAdd an availability check before the calendar insert, or two callers can get the same slot. Cost is roughly $60–100 a month, or $0.10–0.12 per call minute.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives call transcripts from [Vapi or my voice-agent tool], extracts the guest name, phone number, date, time and party size, and creates a Google Calendar event on [my calendar]. It should also log each booking to a Google Sheet and draft a follow-up message. It's done when a sample transcript produces a calendar event and a sheet row; pause and show me the follow-up before anything is sent.\nOriginal source: https://www.clixlogix.com/n8n-ai-receptionist-24-7-booking-agent/",
     "body_sha256": "80e3a6edc499a4f4b1e3d719bf09a35db3f2e7f105a1ab1653550a867ce98239",
-    "archived_at": "2026-10-21T06:04:33.167870+00:00",
+    "archived_at": "2026-10-22T06:06:24.630969+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T06:04:33.167870+00:00",
+    "at": "2026-10-22T06:06:24.630969+00:00",
     "status": "fetched",
     "error": null
   }

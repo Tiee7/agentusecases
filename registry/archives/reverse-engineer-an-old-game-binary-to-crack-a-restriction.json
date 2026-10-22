@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-an-old-game-binary-to-crack-a-restriction",
-  "observed_at": "2026-10-21T06:29:13.174132+00:00",
-  "html_sha256": "5cee3e53ea85f88a1bffb99e7197feba8ece32cb0aa2e6b3209878184aa99675",
+  "observed_at": "2026-10-22T06:31:04.693049+00:00",
+  "html_sha256": "8d4c613dfbb9cce4baecdbd9803683e1d41b962d990198e9853d35c9bdf27b30",
   "body_sha256": "ad8bea9bd75244e9f57cb6c72ac0155c57cfbb1226c9a819fce0ce6eb41b73c5",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Reverse engineer an old game binary to crack a restriction\nA poster used Claude Code alongside Ghidra to trace a call graph across many validation sites in a 13-year-old game binary and crack a restriction.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster pointed Claude Code in Opus high-reasoning mode at a 2013 Disney Infinity game binary with no symbols, source, or prior reverse-engineering notes. Claude traced the FindPlaysetForCharacter call graph through the codebase, found 13 separate validation sites across six code areas, recognized the x86 branch patterns after each call, and helped identify the exact bytes to patch after some failed attempts.\nHow it went\nIt produced 17 binary patches plus 3 modified data files so any character could be used in any playset, packaged as a free open-source mod with a reported two-minute install. The poster says simpler one-off patches had failed because the remaining checks still blocked the game.\nWorth knowing\nThe poster says the whole effort took under 24 hours.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm analyzing [old program or game binary] that I own, to understand how it enforces [restriction] for [research or preservation purpose]. Using Ghidra output in [project folder], trace the call graph from [function or string] and list every place the check is validated. Finish with a written map of the validation sites and a proposed patch plan; don't modify any files until I approve.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1ru3irp/i_used_claude_code_to_reverse_engineer_a",
     "body_sha256": "ad8bea9bd75244e9f57cb6c72ac0155c57cfbb1226c9a819fce0ce6eb41b73c5",
-    "archived_at": "2026-10-21T06:29:13.174132+00:00",
+    "archived_at": "2026-10-22T06:31:04.693049+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T06:29:13.174132+00:00",
+    "at": "2026-10-22T06:31:04.693049+00:00",
     "status": "fetched",
     "error": null
   }

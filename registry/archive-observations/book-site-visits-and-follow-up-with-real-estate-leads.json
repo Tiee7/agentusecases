@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-site-visits-and-follow-up-with-real-estate-leads",
-  "observed_at": "2026-10-21T06:32:19.185565+00:00",
-  "html_sha256": "368addef9c08f98eefbbcc44124551ea9476f94d89e9a2f38a3a370f017bb117",
+  "observed_at": "2026-10-22T06:34:10.875320+00:00",
+  "html_sha256": "8c775c1ded814575a9248184bbc58b7980d4ef46689553b41f187da2937c2460",
   "body_sha256": "dc4da3b00a4efe65009cbc7a7c187b31f1273d9a8bd68a898b0885a562bb1d21",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Book site visits and follow up with real-estate leads\nThe poster built an n8n-based sales assistant that books site visits, sends emails, follows up with leads and updates the CRM.\nDone with\nN8\nn8n\nWhat they did\nThe poster built the assistant in n8n with OpenAI, Airtable, WhatsApp, Gmail, and Google Calendar. New leads are stored in Airtable, the agent tracks fields like welcome sent, visit status, and follow-up date, answers property questions, recommends listings, pulls property images from Airtable, books site visits with calendar conflict checks, sends HTML confirmation emails, and updates the CRM; a separate daily workflow sends WhatsApp follow-ups only to declined leads due that day.\nHow it went\nThey say it now handles a significant part of the real-estate sales pipeline and avoids duplicate welcomes and follow-ups. The main issues were WhatsApp webhook loops from status events and getting the agent to reliably use Gmail, Calendar, Airtable, and the property-search tool with structured outputs.\nWorth knowing\nThe biggest catch was debugging reliability: filtering WhatsApp status webhooks and making tool outputs match the parser took substantial work before the flow became dependable.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow for my [real estate business] that triggers when a new lead arrives from [form/source], emails them to offer site visit times from [calendar], and books the visit once they reply. If they don't reply in [X days], send a follow-up, and update the lead's status in [CRM] at every step. Show me a sample of each email template for approval before any message goes to a real lead, and stop once a test lead runs through end to end.\nOriginal source: https://www.reddit.com/r/aiagents/comments/1uhus5x/i_built_an_ai_real_estate_sales_assistant_that",
     "body_sha256": "dc4da3b00a4efe65009cbc7a7c187b31f1273d9a8bd68a898b0885a562bb1d21",
-    "archived_at": "2026-10-21T06:32:19.185565+00:00",
+    "archived_at": "2026-10-22T06:34:10.875320+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-21T06:32:19.185565+00:00",
+    "at": "2026-10-22T06:34:10.875320+00:00",
     "status": "fetched",
     "error": null
   }

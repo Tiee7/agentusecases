@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-phone-voice-agent-that-answers-in-under-half-a-secon",
-  "observed_at": "2026-10-21T05:45:33.099034+00:00",
-  "html_sha256": "d3db14958dd5bb613745b8e80d39863e2ebf7da319574d342a5afbf76684e7d6",
+  "observed_at": "2026-10-22T05:47:24.595719+00:00",
+  "html_sha256": "efbf61011672a91fb725ae1818c566b4f8f760c2fd88b56ac04783bf537c83ef",
   "body_sha256": "69e8cb7563054ad29c413493dd67a4968afcda50e7a0d0991a6660c175719d33",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a phone voice agent that answers in under half a second\nA from-scratch voice agent averaging about 400ms end to end, with streaming speech-to-text, LLM, and text-to-speech and clean barge-ins.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA FastAPI server takes Twilio's audio over a WebSocket and sends it to Deepgram Flux, which handles transcription and turn detection. When a turn ends, the transcript goes to an LLM, tokens stream into ElevenLabs TTS, and the audio goes straight back to Twilio. A barge-in cancels the LLM and TTS and flushes Twilio's buffer. Pre-connected TTS sockets are kept warm.\nHow it went\nRun locally, latency was about 1.7s. Deploying in the EU cut it to about 790ms, slightly better than Vapi's estimate of about 840ms. Swapping gpt-4o-mini for Groq's llama-3.3-70b brought it to about 400ms. The first turn was slower.\nWorth knowing\nThe build took about a day and roughly $100 in API credits. Keep the server in the same region as Twilio, Deepgram and ElevenLabs, because location halved latency.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a phone voice agent in [language, e.g. Python] for [use case, e.g. answering calls for a dental office] using streaming speech-to-text, an LLM, and streaming text-to-speech, with the goal of responding in under 500ms and handling interruptions cleanly. Scaffold the project, wire up [providers, e.g. Deepgram, an LLM API, ElevenLabs, Twilio], and add latency logging. Finish when a test call works and the log shows average latency; ask before making any real phone calls or purchasing numbers.\nOriginal source: https://www.ntik.me/posts/voice-agent",
     "body_sha256": "69e8cb7563054ad29c413493dd67a4968afcda50e7a0d0991a6660c175719d33",
-    "archived_at": "2026-10-21T05:45:33.099034+00:00",
+    "archived_at": "2026-10-22T05:47:24.595719+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T05:45:33.099034+00:00",
+    "at": "2026-10-22T05:47:24.595719+00:00",
     "status": "fetched",
     "error": null
   }

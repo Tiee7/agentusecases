@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/get-microsoft-office-running-on-linux-via-wine",
-  "observed_at": "2026-10-21T05:46:55.128846+00:00",
-  "html_sha256": "0bee9e798de3f04e477a0d5d90005c77f7c736cc5aa6b23a90499a350af30538",
+  "observed_at": "2026-10-22T05:48:46.566776+00:00",
+  "html_sha256": "155cc362dd9cbe453c5183692e908b33f1ccf85d2a5d8af183b2aed491cf2c64",
   "body_sha256": "25f1b6db4b07cf7739006a5a92067ca39db01c970353c25c56480f7247f94274",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Get Microsoft Office running on Linux via Wine\nClaude Code did most of the work to make desktop Office 365 run under Wine on Linux without virtualization, packaged as a Nix flake.\nDone with\nCC\nClaude Code\nWhat they did\nThe repo is a Nix flake that runs click-to-run Microsoft 365 through umu-launcher and GE-Proton instead of stock Wine. Each blocker was found by reading Wine and Click-to-Run logs and fixed with a small shim DLL or registry change. These cover licensing, missing Windows APIs, sign-in errors and Direct2D rendering. The README doesn't describe the agent's role.\nHow it went\nThe full suite installs and Word starts, and sign-in with a personal account works. Licensing was never verified because the test account had no subscription. Excel, PowerPoint and Outlook are installed but untested.\nWorth knowing\nThe install downloads several GB and the installer window looks frozen for long stretches. A Microsoft 365 licence is required, and sign-in needs a 680 MB WebView2 install.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to run [Windows desktop app, e.g. Microsoft Office] on [Linux distro] using Wine, without a virtual machine. Work in this folder, try Wine configurations until the app installs and launches, and package the setup as [Nix flake / shell script] so I can reproduce it. Finish by writing a short README of the steps and any known issues, and ask me before installing system-wide packages or deleting anything.\nOriginal source: https://github.com/Tombert/office365_flake",
     "body_sha256": "25f1b6db4b07cf7739006a5a92067ca39db01c970353c25c56480f7247f94274",
-    "archived_at": "2026-10-21T05:46:55.128846+00:00",
+    "archived_at": "2026-10-22T05:48:46.566776+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T05:46:55.128846+00:00",
+    "at": "2026-10-22T05:48:46.566776+00:00",
     "status": "fetched",
     "error": null
   }

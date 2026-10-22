@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/hunt-for-unpatched-vulnerabilities-in-sqlite-commits",
-  "observed_at": "2026-10-21T06:01:15.047280+00:00",
-  "html_sha256": "dd6ccf96a46b209a91a9140980a77a05870268e7dc81fa2b91b9b3062301f5f6",
+  "observed_at": "2026-10-22T06:03:06.615147+00:00",
+  "html_sha256": "e766a9ab1bcbc982485d440e1ad1c8e715b0b0260b9047f86c5605c3d4bc486a",
   "body_sha256": "02488013e6d4817c3c304955b6629c40474bf9c40b1e0f05c262a56c6a94e95d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Hunt for unpatched vulnerabilities in SQLite commits\nGoogle's Big Sleep agent reviewed recent SQLite commits starting from a patched bug and found an exploitable flaw, which was fixed before release.\nDone with\nGE\nGemini\nWhat they did\nA Gemini 1.5 Pro agent ran in Project Zero's Naptime framework, which gives it a code browser, debugger, reporter tool and a sandbox for Python scripts. Researchers gave it a previously fixed SQLite bug, plus recent commit messages and diffs, and asked it to look for unresolved similar issues. It linked the old bug to other code, wrote a test case, triggered a crash, and produced a root-cause analysis.\nHow it went\nIt found a stack buffer underflow in seriesBestIndex, and SQLite fixed it the same day, before any release. Fuzzing for 150 CPU hours failed to rediscover it. The team calls Big Sleep highly experimental.\nWorth knowing\nThe bug was in a development version only. The researchers think a target-specific fuzzer would likely be at least as effective as the agent today.\nTry it yourself\nwith\nGemini\nCopy prompt\nIn this repo [path or URL], review the commits from the last [time period or number], starting with the fix for [known patched bug or commit]. Look for similar flaws that the fix may have missed, especially [bug class, e.g. memory safety]. Write a report listing each suspect commit, why it looks vulnerable, and how you'd confirm it. Don't modify the code or disclose anything publicly.\nOriginal source: https://www.scworld.com/news/googles-big-sleep-llm-agent-discovers-exploitable-bug-in-sqlite",
     "body_sha256": "02488013e6d4817c3c304955b6629c40474bf9c40b1e0f05c262a56c6a94e95d",
-    "archived_at": "2026-10-21T06:01:15.047280+00:00",
+    "archived_at": "2026-10-22T06:03:06.615147+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T06:01:15.047280+00:00",
+    "at": "2026-10-22T06:03:06.615147+00:00",
     "status": "fetched",
     "error": null
   }

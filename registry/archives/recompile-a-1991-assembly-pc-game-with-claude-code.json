@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/recompile-a-1991-assembly-pc-game-with-claude-code",
-  "observed_at": "2026-10-21T05:49:07.124259+00:00",
-  "html_sha256": "b6985095c231722ae0cccded069c8441bae4689bcca2a08d981ec38fe04e255f",
+  "observed_at": "2026-10-22T05:50:58.600772+00:00",
+  "html_sha256": "221748d94b2cec9bf0cf5907bac546ff5dfc73d9d370de8ba681f28d2763d681",
   "body_sha256": "31f4853ce66024aea7deeeae51f1d7c69786ef3333461e36b478ef8b08686d56",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Recompile a 1991 assembly PC game with Claude Code\nThe author uses Claude Code CLI with Sonnet to get the source of their 1991 386+ assembly game compiling again.\nDone with\nCC\nClaude Code\nWhat they did\nThe author took the full source of an unpublished 1991 386+ assembly game and set up UASM, which is MASM-compatible, with DOSBox for running results. Using Claude Code CLI with Sonnet, they got the old build utilities compiling. They also asked the model to locate bugs mentioned in their own old code comments.\nHow it went\nThe picture converters and sprite extractor now compile and run in DOSBox, but the main game doesn't compile yet; the author expects a few more hours. Sonnet 4.6 immediately spotted a clash with a reserved name, incbin.\nWorth knowing\nOld macro names may now be reserved words in modern assemblers; here a macro called incbin blocked UASM compilation until the model pointed it out.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have the source code of an old [language, e.g. 386 assembly] project at [path to folder] that I last built in [year]. Work out which assembler, linker and tools it needs, set up a way to build it on my [OS], and fix errors until it compiles and runs. Explain each change you make, and ask me before you delete or overwrite any original files.\nOriginal source: https://news.ycombinator.com/item?id=47689685",
     "body_sha256": "31f4853ce66024aea7deeeae51f1d7c69786ef3333461e36b478ef8b08686d56",
-    "archived_at": "2026-10-21T05:49:07.124259+00:00",
+    "archived_at": "2026-10-22T05:50:58.600772+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T05:49:07.124259+00:00",
+    "at": "2026-10-22T05:50:58.600772+00:00",
     "status": "fetched",
     "error": null
   }

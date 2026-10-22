@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-agents-a-multi-engine-math-kernel-via-mcp",
-  "observed_at": "2026-10-21T05:47:13.126952+00:00",
-  "html_sha256": "b1783daac1dbbd624015a381150da4e61b98fae6a51cb4b4874d9cdb8a9b30e8",
+  "observed_at": "2026-10-22T05:49:04.570422+00:00",
+  "html_sha256": "8cf7ea03eacdc9f27a0912eb6a4b228f6a5165f9991f56887a61a51e8bc74fef",
   "body_sha256": "ecdede2f1eb9591b02fcce68560536e294464dc8ed1a21152e5be93a101dd6af",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Give agents a multi-engine math kernel via MCP\nMathKernel is an evidence-aware multi-engine mathematics kernel exposed as an MCP server for agents to use.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMathKernel runs as an MCP server (mathkernel-mcp, stdio, 162 math_ tools). The model parses and plans, and the kernel does the computing across SymPy, Z3, Lean, mpmath and numba/CUDA. A typical session discovers capabilities, parses an expression, creates a context, then calls math_reason to solve and verify. Long sweeps go through async jobs. Every result carries a trust label and a derivation trail.\nHow it went\nThe source gives no benchmark or outcome numbers. It documents the design: trust is capped at the weakest evidence, and decimal inputs drop a result to numeric, which blocks Lean and SMT proofs.\nWorth knowing\nLean 4 and Mathlib install on first server start unless MATHKERNEL_SKIP_LEAN_INSTALL=1 is set. CUDA needs the extra nvidia pip packages, otherwise it falls back to CPU.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect the MCP server for [math tool, e.g. MathKernel or a computer algebra system] to this project, then use it to solve [math problem or set of equations] and show the result along with which engine produced it and how it was verified. If engines disagree, flag it and explain. Done means I get the answer, the evidence for it, and a note on any assumptions you made.\nOriginal source: https://github.com/Staatsgeheim/MathKernel",
     "body_sha256": "ecdede2f1eb9591b02fcce68560536e294464dc8ed1a21152e5be93a101dd6af",
-    "archived_at": "2026-10-21T05:47:13.126952+00:00",
+    "archived_at": "2026-10-22T05:49:04.570422+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-21T05:47:13.126952+00:00",
+    "at": "2026-10-22T05:49:04.570422+00:00",
     "status": "fetched",
     "error": null
   }
