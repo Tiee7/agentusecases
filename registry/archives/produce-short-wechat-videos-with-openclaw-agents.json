@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/produce-short-wechat-videos-with-openclaw-agents",
+  "observed_at": "2026-10-23T06:36:02.109733+00:00",
+  "html_sha256": "836d902ddf0c5a3c49a4dce994187e23718dfa9688dfc5b54398ed270df46064",
+  "body_sha256": "02c7b63bd09c8c733ce29b1e7e250ba9a293f3148c20bfe93b0892fb4737dc16",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Produce short WeChat videos with OpenClaw agents",
+      "sha256": "188674d8e1287b1dffdb8ae1872773110c5ca4d140eb7dcaa7b27817b5ccf239"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A creator uses OpenClaw agents with Remotion and a cloned voice to suggest topics, write narration, generate TTS and render videos, confirming in Telegram in about 15 minutes.",
+      "sha256": "60ffb56ac112053115e1d1b349953576640f396ba673cfd1d1849df19786e5d3"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A cron job has one agent push five topic ideas to Telegram each morning, and the creator picks one. A writing agent then drafts a roughly 200-character narration and generates cloned-voice TTS through MiniMax on fal.ai. It extracts timestamps with local Whisper, fills a scenes file, and renders with Remotion. The creator reviews the video and confirms, and another agent publishes it.",
+      "sha256": "530a7f1c88b5b8a863ce8892bb586e66fab76100379cb405914bb3eaa6434d82"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Each video took about 15 minutes, with roughly 10 of those unattended, and cost about ¥0.1. One video reached 1,595 views, and three days totaled 9,018. Before this, views averaged under 200.",
+      "sha256": "071a3903600a4c88b7ac3b0f59ae3c02f715e5fb1f4f7a62e9b9032789a26e5b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Don't downgrade the writing agent's model to save money: switching from Opus to Sonnet made scripts much worse, and the author switched back within 6 minutes. Whisper timestamps can drift, so watch the render.",
+      "sha256": "97cb6fdcd2349abb64550ed2c68a9502a1601962051c7687080094423b83b563"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://cloud.tencent.com/developer/article/2633924"
+      ],
+      "sha256": "6a4833a9e42ab80c91c85c1f5e44807275472d0be087fead83f8090c8db0d5f5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-22",
+      "sha256": "fd0175365c91578628f21ebb2c87ba147bb447e89ac7d11548f6327b147a9651"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2c86b422345f183ff72799701198bb8e304a3607f2777b660e87620f8e6ea2a5",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Produce short WeChat videos with OpenClaw agents\nA creator uses OpenClaw agents with Remotion and a cloned voice to suggest topics, write narration, generate TTS and render videos, confirming in Telegram in about 15 minutes.\nDone with\nOC\nOpenClaw\nWhat they did\nA cron job has one agent push five topic ideas to Telegram each morning, and the creator picks one. A writing agent then drafts a roughly 200-character narration and generates cloned-voice TTS through MiniMax on fal.ai. It extracts timestamps with local Whisper, fills a scenes file, and renders with Remotion. The creator reviews the video and confirms, and another agent publishes it.\nHow it went\nEach video took about 15 minutes, with roughly 10 of those unattended, and cost about ¥0.1. One video reached 1,595 views, and three days totaled 9,018. Before this, views averaged under 200.\nWorth knowing\nDon't downgrade the writing agent's model to save money: switching from Opus to Sonnet made scripts much worse, and the author switched back within 6 minutes. Whisper timestamps can drift, so watch the render.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nAct as my short-video producer for [platform, e.g. WeChat Channels]. Suggest 5 topics in my niche of [niche], and once I pick one, write a [length, e.g. 60-second] narration script in my voice. Generate the voiceover with [my TTS or cloned voice setup] and render a video with Remotion using [visual style]. Send me the finished file in Telegram and do not publish anything until I confirm.\nOriginal source: https://cloud.tencent.com/developer/article/2633924",
+    "body_sha256": "02c7b63bd09c8c733ce29b1e7e250ba9a293f3148c20bfe93b0892fb4737dc16",
+    "archived_at": "2026-10-23T06:36:02.109733+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-23T06:36:02.109733+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

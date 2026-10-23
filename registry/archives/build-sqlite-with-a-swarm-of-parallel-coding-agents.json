@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-sqlite-with-a-swarm-of-parallel-coding-agents",
-  "observed_at": "2026-10-22T05:49:40.578679+00:00",
-  "html_sha256": "fe851c4e6b41e11fae5230f445eae87fdc8a194ef552b5d76dd8faf2ef66e76c",
+  "observed_at": "2026-10-23T05:48:45.943648+00:00",
+  "html_sha256": "e5c10e9be4fdbb6aa2171356dfc995b938bdbee5418f5a57645142c210993a6b",
   "body_sha256": "c1d8779d508711245e3b343767dbdb44bdc53efa427548485c4aad2970817782",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build SQLite with a swarm of parallel coding agents\nThe author recounts using parallel coding agents to build a SQLite implementation and shares experience from it.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOne Claude run bootstrapped docs, a crate skeleton and a test harness. Then six workers (two each of Claude, Codex and Gemini) looped in separate workspaces. Each pulled main, claimed a task through a lock file, implemented it and tested against sqlite3 as an oracle, updated shared notes, and pushed. A separate Gemini coalescer was meant to remove duplication.\nHow it went\nAbout 19k lines of Rust in 154 commits, with 282 AI-written unit tests passing. It passed only 64 SQLLogicTest queries, since subqueries and CASE are unsupported. It has no concurrency, and the code has some slop.\nWorth knowing\n54.5% of commits were lock and claim coordination. The coalescer ran only once, at the end, and Codex used 100% of a Pro weekly quota.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [project, e.g. SQLite-style database engine] in [language] using several parallel agents. First write a spec that splits the work into independent modules ([e.g. parser, storage, query executor]), then run one sub-agent per module in separate worktrees with tests for each. Stop when the modules are merged and a test suite of [number] basic queries passes, and show me what failed along the way.\nOriginal source: https://kiankyars.github.io/machine_learning/2026/02/12/sqlite.html",
     "body_sha256": "c1d8779d508711245e3b343767dbdb44bdc53efa427548485c4aad2970817782",
-    "archived_at": "2026-10-22T05:49:40.578679+00:00",
+    "archived_at": "2026-10-23T05:48:45.943648+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T05:49:40.578679+00:00",
+    "at": "2026-10-23T05:48:45.943648+00:00",
     "status": "fetched",
     "error": null
   }

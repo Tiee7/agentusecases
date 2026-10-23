@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-claude-access-to-your-whatsapp-messages-via-mcp",
-  "observed_at": "2026-10-22T06:33:16.594470+00:00",
-  "html_sha256": "bfbad19b34eedd862d637e87a7a4fe7f5f06694711a14ece3daf51f2252ead73",
+  "observed_at": "2026-10-23T06:32:22.005811+00:00",
+  "html_sha256": "a4e667bf5f812758f804a4def0058d417f84bc48960edc1525cf35e8150049a6",
   "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Give Claude access to your WhatsApp messages via MCP\nA single-user MCP server on Cloudflare lets Claude on mobile read and search the author's personal WhatsApp messages, using Google contacts to resolve names.\nDone with\nCL\nClaude\nWhat they did\nYou deploy a small server to your own Cloudflare account and link your phone by scanning a QR code, as with WhatsApp Web. It stores messages in SQLite inside a Durable Object and syncs on request and once a day. Claude gets read, search and naming tools. For unnamed chats, the agent looks numbers up with its own contacts connector, such as Google Contacts, and saves the names.\nHow it went\nIt reads and searches chats, and the agent can name chats from contacts. Media isn't downloaded, and the first import only includes whatever history WhatsApp hands over. The author says it has only been tested on one real account.\nWorth knowing\nLarge history imports need a raised CPU limit, which needs the Workers Paid plan (a few dollars a month). The free plan is untested, and this unofficial approach breaks WhatsApp's terms.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me set up a private, single-user MCP server on [Cloudflare account/hosting] so you can read and search my personal [WhatsApp] messages, and use my [Google contacts] to turn phone numbers into names. Walk me through each step, give me the code and config, and tell me how to connect it to Claude on my phone. You're done when I can ask 'what did [contact name] say about [topic] last week?' and get a correct answer. Before any step that handles my credentials or exposes data, stop and tell me how it's secured, and keep the server read-only with access limited to me.\nOriginal source: https://github.com/finereli/whatsapp-mcp",
     "body_sha256": "0861fc87d29d673dd3652ac4dbe0c4f5c1034c2d6be2302f238c02df5dc55bec",
-    "archived_at": "2026-10-22T06:33:16.594470+00:00",
+    "archived_at": "2026-10-23T06:32:22.005811+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-22T06:33:16.594470+00:00",
+    "at": "2026-10-23T06:32:22.005811+00:00",
     "status": "fetched",
     "error": null
   }

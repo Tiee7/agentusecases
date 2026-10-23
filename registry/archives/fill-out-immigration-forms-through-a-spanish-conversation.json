@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-out-immigration-forms-through-a-spanish-conversation",
-  "observed_at": "2026-10-22T06:31:32.703771+00:00",
-  "html_sha256": "c196d7e6b173868cccf613c4b611defc30e82d412079bff66949d367644125a3",
+  "observed_at": "2026-10-23T06:30:38.092557+00:00",
+  "html_sha256": "539f90be23c358e8f422842055bb055f8b9e018f2be76f5bc8b66f1b4918cf51",
   "body_sha256": "8d69359c433753d69d29e3963c97fcfe3a3469584baa3830286559d60d166015",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Fill out immigration forms through a Spanish conversation\nA developer built a mode where Claude asks plain-Spanish questions and enters each answer into an immigration form, keeping sensitive IDs like SSN out of what is sent.\nDone with\nCL\nClaude\nWhat they did\nOn each form, the user can pick a conversational mode. Claude asks plain-Spanish questions and proposes answers through an answer_question tool. The app runs each answer through its normal validation and saves it on the device, so a live card fills in. A stateless Vercel Function relays the chat and stores nothing. Social Security, A-Number and USCIS account numbers go in a separate box and are never sent. ID-like numbers typed in chat are masked.\nHow it went\nA real preview-deployment conversation filled the I-765 reason and asked a clarifying question about a middle name. The pull request is still a draft, and 486 tests pass.\nWorth knowing\nOpt-in notice comes first, and AGENT_ENABLED=false switches the assistant off without a deploy. Relative imports in Vercel's api/ folder need file extensions, or the function crashes.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me fill out my [type of immigration form, e.g. I-485] by interviewing me in [Spanish or my preferred language], one plain-language question at a time. Record each answer in the matching form field, and do not ask me for or store my SSN, A-number, or passport number; leave those fields marked for me to fill in myself. When every non-sensitive field is done, show me the full list of answers for review and flag anything unclear.\nOriginal source: https://github.com/rarevalo0306-hash/immigration-Forms/pull/6",
     "body_sha256": "8d69359c433753d69d29e3963c97fcfe3a3469584baa3830286559d60d166015",
-    "archived_at": "2026-10-22T06:31:32.703771+00:00",
+    "archived_at": "2026-10-23T06:30:38.092557+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T06:31:32.703771+00:00",
+    "at": "2026-10-23T06:30:38.092557+00:00",
     "status": "fetched",
     "error": null
   }

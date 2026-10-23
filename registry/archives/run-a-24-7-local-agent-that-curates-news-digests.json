@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-24-7-local-agent-that-curates-news-digests",
+  "observed_at": "2026-10-23T06:35:48.066411+00:00",
+  "html_sha256": "2ab1fd4814dbb2bff034f3cf113dbd43c3ec7de952d4ea689b58f2df4a2d747d",
+  "body_sha256": "01e1c363391f852d3b3790a9664fc6b940cf9341db2e881f38321e6ea7527f41",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a 24/7 local agent that curates news digests",
+      "sha256": "ea0be2695ba9e2bc9c4291f3e758b0f40d6625518ec0386ab8de92f987e0ee87"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author runs Hermes Agent on a Proxmox VM with a local Qwen model, monitoring RSS feeds, curating news digests, and reporting via Telegram.",
+      "sha256": "b9edf64c122f8c6293cb207c53389c985cd4a905d2972eb3b1080f82aef93b77"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Hermes Agent runs on a small Proxmox VM (4 vCPU, 8 GB RAM, no GPU) and calls a Qwen 3.6 MoE llama-server on the author's RTX 5060 Ti. The author sent one Telegram message asking for a daily 8 AM cron job. Hermes created it, pulled RSS and MCP data, compared against its memory, and sent briefings to Telegram topics.",
+      "sha256": "0e5fa1b0332602cf81d6af390e272159014644a778b93ad8ddc2af3a866ed213"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The agent delivers daily briefings and a 9 AM startup/VC digest at no API cost. Memory builds up over weeks into trend-aware reports, and Hermes writes reusable skills. The post gives no formal quality measurements.",
+      "sha256": "53c5ea9dcc706e25276bdbd39c22db77947b530ca41dc7486b41068c1a26ff49"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Don't over-prompt the cron job: a clear goal worked better than detailed steps. The fast MoE model beat the dense 27B, which was about 3x slower.",
+      "sha256": "0e82ba871b7907ededa01e9579aa9cc56b4fd764ae5283bb3148a7b276e6605f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://njannasch.dev/blog/hermes-agent-local-ai-automation/"
+      ],
+      "sha256": "6c39786794343458ed747c09926bb613f2fd72e4cd33fff7d009bad3780ced1f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-22",
+      "sha256": "fd0175365c91578628f21ebb2c87ba147bb447e89ac7d11548f6327b147a9651"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7f2a5674b080f7b98f357ce6eebc4245d0fab4aa53beb83d5e6e5ed5648faca2",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a 24/7 local agent that curates news digests\nThe author runs Hermes Agent on a Proxmox VM with a local Qwen model, monitoring RSS feeds, curating news digests, and reporting via Telegram.\nDone with\nHA\nHermes Agent\nWhat they did\nHermes Agent runs on a small Proxmox VM (4 vCPU, 8 GB RAM, no GPU) and calls a Qwen 3.6 MoE llama-server on the author's RTX 5060 Ti. The author sent one Telegram message asking for a daily 8 AM cron job. Hermes created it, pulled RSS and MCP data, compared against its memory, and sent briefings to Telegram topics.\nHow it went\nThe agent delivers daily briefings and a 9 AM startup/VC digest at no API cost. Memory builds up over weeks into trend-aware reports, and Hermes writes reusable skills. The post gives no formal quality measurements.\nWorth knowing\nDon't over-prompt the cron job: a clear goal worked better than detailed steps. The fast MoE model beat the dense 27B, which was about 3x slower.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up a news digest for me. Monitor these RSS feeds: [list of feed URLs], and every [morning at 7am / every 4 hours] pick the [5-10] most relevant stories on [topics I care about], skipping duplicates and clickbait. Send me a short digest on [Telegram / other channel] with a one-line summary and link for each story, and confirm by sending me a test digest now.\nOriginal source: https://njannasch.dev/blog/hermes-agent-local-ai-automation/",
+    "body_sha256": "01e1c363391f852d3b3790a9664fc6b940cf9341db2e881f38321e6ea7527f41",
+    "archived_at": "2026-10-23T06:35:48.066411+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-23T06:35:48.066411+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

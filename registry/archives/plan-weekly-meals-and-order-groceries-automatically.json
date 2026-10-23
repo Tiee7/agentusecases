@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/plan-weekly-meals-and-order-groceries-automatically",
+  "observed_at": "2026-10-23T06:36:18.005150+00:00",
+  "html_sha256": "a13cd90906cb5ce4a5c9121042e10146558f76172be5d7cad4b5ee939d74acc5",
+  "body_sha256": "ec9980aa1e8ff4903ff47d25a98664358923af13fd81274ded88f8870aa63aae",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Plan weekly meals and order groceries automatically",
+      "sha256": "a22305c8fd4927e1fd306d0e19e582290b2da67167d3939d9d1ac9b098bc1d9c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A single dad had Hermes create meal plans and grocery orders, with a weekly cron job scraping the HEB ad for a meal-planning skill, needing only some steering.",
+      "sha256": "461198fb40a0d673a67de047e1f3d9bc2766c1d8123e8b296ff11d0b3d8eb7f1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster first gave Hermes their height, weight, dietary restrictions, and weight-loss goal so it could draft a meal plan, then asked it to turn that plan into a grocery order. Hermes investigated ordering options, used Walmart in Chromium via Chrome DevTools/browser-control skills, inspected the page DOM and ran small scripts to add items and adjust quantities, while the user logged in manually and nudged it to use the right browser.",
+      "sha256": "8cc1cbdeec49854bd08fdd202e437d611bd18e546174ef8aea925348a78eaf94"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It built the cart end to end and swapped meal-plan ingredients when local items were unavailable, which the poster said saved major time and mental effort. It was not fully hands-off: Walmart’s built-in browser path failed on quantity changes, and login/bot protection still needed human help.",
+      "sha256": "dc033f4b1a81a2372f079489edda3b1c672271e323654f93997ac40c7802b4b8"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was authentication: the poster logged in manually and said silent cron-style runs would likely fail because of bot protection.",
+      "sha256": "d2611a9939256601f2859f05a703b8996850bca46482eccd31b1d47ff5720c9b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/hermesagent/comments/1vz4iwj/i_let_hermes_handle_my_meal_planning_and_grocery"
+      ],
+      "sha256": "b6606a0f8baf27f2e946e42bd201edebe3d9aa9feadebe8e08cf7be8c7607d3d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-22",
+      "sha256": "fd0175365c91578628f21ebb2c87ba147bb447e89ac7d11548f6327b147a9651"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2af47409df97e10708a9cd94a771f68c4c6b43b4e4a5785ccb8a8c13ea23460e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Plan weekly meals and order groceries automatically\nA single dad had Hermes create meal plans and grocery orders, with a weekly cron job scraping the HEB ad for a meal-planning skill, needing only some steering.\nDone with\nHA\nHermes Agent\nWhat they did\nThe poster first gave Hermes their height, weight, dietary restrictions, and weight-loss goal so it could draft a meal plan, then asked it to turn that plan into a grocery order. Hermes investigated ordering options, used Walmart in Chromium via Chrome DevTools/browser-control skills, inspected the page DOM and ran small scripts to add items and adjust quantities, while the user logged in manually and nudged it to use the right browser.\nHow it went\nIt built the cart end to end and swapped meal-plan ingredients when local items were unavailable, which the poster said saved major time and mental effort. It was not fully hands-off: Walmart’s built-in browser path failed on quantity changes, and login/bot protection still needed human help.\nWorth knowing\nThe main catch was authentication: the poster logged in manually and said silent cron-style runs would likely fail because of bot protection.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nEvery [day of week] at [time], check this week's [store name] ad at [URL], and build a dinner meal plan for [number] people that favors discounted items and fits [dietary needs and budget]. Then write a grocery list organized by store section and save both the plan and list to [location]. Stop there and message me the summary; do not place any order without showing me the list and total and getting my approval first.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1vz4iwj/i_let_hermes_handle_my_meal_planning_and_grocery",
+    "body_sha256": "ec9980aa1e8ff4903ff47d25a98664358923af13fd81274ded88f8870aa63aae",
+    "archived_at": "2026-10-23T06:36:18.005150+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-23T06:36:18.005150+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

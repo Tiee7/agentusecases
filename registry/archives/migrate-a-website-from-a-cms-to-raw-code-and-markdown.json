@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/migrate-a-website-from-a-cms-to-raw-code-and-markdown",
+  "observed_at": "2026-10-23T06:36:05.998159+00:00",
+  "html_sha256": "fc52d0860cefdd0e95c89bd3477f52cee3c50a51d1bbc3614f45d34603fb33e4",
+  "body_sha256": "482d3f1247f4317e6cbda635b23e4d9770e56bc05db9e621eca64917b092111d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Migrate a website from a CMS to raw code and Markdown",
+      "sha256": "dd57e11b17c753f8a06ac5ec1a2353d9f138b0919c1c9d63a44ef2a2b5afd4b3"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Lee Robinson used Cursor agents to move cursor.com off its CMS in three days for $260 in tokens, with subagents handling a broad refactor.",
+      "sha256": "b5cc120b84f21a41f2b53019fa5c6724805a07a3ad06cd03cf7713ed61584cc7"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Lee planned the migration with Opus 4.5 in Cursor. The agent suggested using the existing CMS API key to write scripts that export content, validate it, convert it to Markdown files in the repo, and upload images and videos to object storage. About 10 runs got it 80% of the way. He then ran an agent on each mismatched page, using browser screenshots to compare against production. Subagents handled the wider refactor in parallel.",
+      "sha256": "e2058ffe82976d5dbf45695807c457d48458382fcb8da3bd6c76d6cee205557e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It took three days and $260.32 in tokens, against his estimate of 1-2 weeks. That covered 344 agent requests and 67 commits (+43K/-322K lines). Builds got 2x faster. The last 20% took most of the time.",
+      "sha256": "66d0886e6a42d15281dcfc7c3deb5840c503402e4070a08babf803bac7be308a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect the final 20% (pages that don't match production) to take most of the effort. Per-page agent runs with screenshot comparison were how he closed that gap.",
+      "sha256": "3ee41c3874c43e74c0f9fb761a086a2283f19e6829f1d16e108230a7e4fbc1a0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://leerob.com/agents"
+      ],
+      "sha256": "932f58cd6e6685308a4aa2d7dd8be0415885dfd31e48fa6ae29dea7b95bbb35e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-22",
+      "sha256": "fd0175365c91578628f21ebb2c87ba147bb447e89ac7d11548f6327b147a9651"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "68a86d7e3a2d4ea2326bb51e625cbd2520dbd92d06870d6cb69465378c5845ca",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate a website from a CMS to raw code and Markdown\nLee Robinson used Cursor agents to move cursor.com off its CMS in three days for $260 in tokens, with subagents handling a broad refactor.\nDone with\nCR\nCursor\nWhat they did\nLee planned the migration with Opus 4.5 in Cursor. The agent suggested using the existing CMS API key to write scripts that export content, validate it, convert it to Markdown files in the repo, and upload images and videos to object storage. About 10 runs got it 80% of the way. He then ran an agent on each mismatched page, using browser screenshots to compare against production. Subagents handled the wider refactor in parallel.\nHow it went\nIt took three days and $260.32 in tokens, against his estimate of 1-2 weeks. That covered 344 agent requests and 67 commits (+43K/-322K lines). Builds got 2x faster. The last 20% took most of the time.\nWorth knowing\nExpect the final 20% (pages that don't match production) to take most of the effort. Per-page agent runs with screenshot comparison were how he closed that gap.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want to move my website at [repo or folder] off [CMS name] and into plain code with Markdown files for content. First export the existing content from [CMS or export location], then use subagents to convert pages and posts into Markdown and update the templates and routes to read from those files. Finished means the site builds locally, the pages match the originals, and you give me a list of anything you could not migrate. Show me the plan before you delete any CMS code or integrations.\nOriginal source: https://leerob.com/agents",
+    "body_sha256": "482d3f1247f4317e6cbda635b23e4d9770e56bc05db9e621eca64917b092111d",
+    "archived_at": "2026-10-23T06:36:05.998159+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-23T06:36:05.998159+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-and-roll-back-bad-config-during-outages",
-  "observed_at": "2026-10-22T06:02:48.608167+00:00",
-  "html_sha256": "20f9f9c8438136cc9a37eef4c2876d737c1f2bdeb0d3e94601362eb7ee0ebd39",
+  "observed_at": "2026-10-23T06:01:53.952872+00:00",
+  "html_sha256": "c664b6b15c4cf562b3e1b49ff8d349ccbf669680818f84d378e38e04c62f9ac7",
   "body_sha256": "356c8c082205b62c60ad54781cb29bfb50ed976a3be500e0608ef2cc77cccce9",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Diagnose and roll back bad config during outages\nGoogle SREs use Gemini CLI to pull logs, find a bad config push, generate a reverting changelist, and file postmortem action items via MCP.\nDone with\nGE\nGemini\nWhat they did\nIn a simulated outage, an SRE opened Gemini CLI, which pulled incident details, correlated time series and analyzed logs through Google's internal ProdAgent tools. It proposed a restart playbook, and the SRE approved it. The restart failed, so the agent checked the service's source and recent changes, found a bad config push, and drafted a reverting changelist. A custom command then wrote the postmortem and filed action items via MCP.\nHow it went\nThe agent found the faulty config push in under two minutes, and the SRE-approved revert rolled out and the service recovered. The article gives no other measurements, and the scenario was simulated.\nWorth knowing\nHumans approved each production change, and the agent could only use typed, policy-checked tools. Several tools here are Google-internal, so you'd need your own MCP servers.\nTry it yourself\nwith\nGemini\nCopy prompt\nAn outage is happening in [service name]. Pull the recent logs from [log source or command], find the most recent config change that lines up with the errors, and explain your evidence. Then draft a revert of that change as a patch or pull request, and write a list of postmortem action items. Stop once the revert and action items are ready, and show me both before you push, deploy, or file anything.\nOriginal source: https://cloud.google.com/blog/topics/developers-practitioners/how-google-sres-use-gemini-cli-to-solve-real-world-outages",
     "body_sha256": "356c8c082205b62c60ad54781cb29bfb50ed976a3be500e0608ef2cc77cccce9",
-    "archived_at": "2026-10-22T06:02:48.608167+00:00",
+    "archived_at": "2026-10-23T06:01:53.952872+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T06:02:48.608167+00:00",
+    "at": "2026-10-23T06:01:53.952872+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-invoices-payments-and-refunds",
-  "observed_at": "2026-10-22T06:26:04.727634+00:00",
-  "html_sha256": "f6f2360acf60eb8d91521947f47dfaa43fda6edc4b962d3bd168a1059491502b",
+  "observed_at": "2026-10-23T06:25:10.055339+00:00",
+  "html_sha256": "ae69d0880000a09638b6ff812789b46e49c29e79147c1244f67750d582368df8",
   "body_sha256": "2529167680415b4a95ab6f7bd4dcfb3452369b92a886bf1d069360d695f9efcf",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Automate invoices, payments, and refunds\nAn n8n workflow manages invoices, payments, and refunds, updating records with status, PDF links, and timestamps.\nDone with\nN8\nn8n\nWhat they did\nThe setup was a single n8n workflow triggered by a webhook, with API-key validation up front and separate routes for invoice, payment, and refund events. It used Google Sheets for records, PDFbro to create invoice PDFs, Google Drive to store them, and Resend to send emails; before each path ran, it checked for duplicates, then updated statuses, links, balances, and timestamps after processing.\nHow it went\nThe result was an end-to-end flow that kept invoice, payment, and refund handling in one orchestration layer while preventing duplicate records and duplicate notifications. The post frames it as a practical, reliability-focused example, but gives no performance metrics or business impact numbers.\nWorth knowing\nThe main catch is that the design emphasizes state management and duplicate checking, not just connecting apps, so copying it means modeling each event path and its status updates carefully.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that handles invoices, payments, and refunds for [business] using [Stripe/other payment tool]. When an invoice is created, paid, or refunded, update my [Airtable/Google Sheet] row with the status, a link to the invoice PDF, and a timestamp. Require my manual approval before any refund is actually issued, and test it using sandbox mode with one example of each event.\nOriginal source: https://www.reddit.com/r/n8n/comments/1wakr0s/n8n_workflow_that_handles_invoices_payments_and",
     "body_sha256": "2529167680415b4a95ab6f7bd4dcfb3452369b92a886bf1d069360d695f9efcf",
-    "archived_at": "2026-10-22T06:26:04.727634+00:00",
+    "archived_at": "2026-10-23T06:25:10.055339+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T06:26:04.727634+00:00",
+    "at": "2026-10-23T06:25:10.055339+00:00",
     "status": "fetched",
     "error": null
   }

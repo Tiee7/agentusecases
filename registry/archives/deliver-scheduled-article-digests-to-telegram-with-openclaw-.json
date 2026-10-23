@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/deliver-scheduled-article-digests-to-telegram-with-openclaw-",
-  "observed_at": "2026-10-22T05:57:56.598055+00:00",
-  "html_sha256": "52761580137c9c9ff11e255a6055165849f80a8ae4ca752741c917229e6df2db",
+  "observed_at": "2026-10-23T05:57:01.958317+00:00",
+  "html_sha256": "8013a8b60e5484e47251a9f7026d560b6ba161b5428f9deb1e542906fa8ee7d5",
   "body_sha256": "b55ca11291724f0ba0877dfc5acb13bd21d89e7234c8e324ce1aac25711ebfea",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Deliver scheduled article digests to Telegram with OpenClaw cron jobs\nA developer fixed OpenClaw cron jobs that ran without delivering by turning thinking mode off, after which six articles reached Telegram in 30 seconds.\nDone with\nOC\nOpenClaw\nWhat they did\nThe cron job scanned RSS feeds, filtered articles and wrote a digest. A separate announce agent then forwarded the digest to Telegram. With thinking on, the model did all its work inside the thinking block, so the summary was empty and nothing was sent. The developer set thinking to off in the heartbeat config, using DeepSeek Chat as the heartbeat/cron model, and added isolated sessions.\nHow it went\nWith thinking enabled, jobs averaged 88 seconds and delivered nothing across five test runs. With thinking off, the same job took 30 seconds and delivered six articles to Telegram on the first attempt.\nWorth knowing\nThe delivered:true status only means the announce agent ran without error, so confirm in Telegram. A daily digest cost about $0.03/day on OpenRouter.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nMy scheduled job that sends [N] article digests to [Telegram] at [time] runs but nothing arrives. Check the cron job settings and logs, find why delivery fails (try turning thinking mode off), and fix it. Finish by running it once so the digest actually shows up in Telegram, and ask before changing other jobs.\nOriginal source: https://blog.rezvov.com/openclaw-troubleshooting-no-reply-workflow-auto-delivery-failures",
     "body_sha256": "b55ca11291724f0ba0877dfc5acb13bd21d89e7234c8e324ce1aac25711ebfea",
-    "archived_at": "2026-10-22T05:57:56.598055+00:00",
+    "archived_at": "2026-10-23T05:57:01.958317+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T05:57:56.598055+00:00",
+    "at": "2026-10-23T05:57:01.958317+00:00",
     "status": "fetched",
     "error": null
   }

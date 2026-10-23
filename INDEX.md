@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **80** / 注册案例 **1520**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **80** / 注册案例 **1536**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -8,7 +8,7 @@
 
 | 案例 | 商业结论 | 分数 /100 | 自用价值 | 源站试用模板 | 行业 | 研究时间 |
 |---|---|---:|---|---|---|---|
-| [用 Counterforce Health 起草拒赔申诉并致电保险公司](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 中 | available | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
+| [用 Kudos 电话代理协商账单续约折扣](reports/negotiate-retention-discounts-on-bills-by-phone.md) | 仅建议受控试点 | 54.0 | 中 | available | 美国消费者电信账单管理与个人财务会员服务 | 2026-10-15T12:10:36.206078+00:00 |
 | [用 Claude Code 整理税务扣除凭证和 Schedule C](reports/compile-deductions-and-schedule-c-with-claude-code.md) | 适合内部效率工具 | 45.0 | 中 | available | 美国个人税务资料准备 | 2026-10-15T00:03:06.932856+08:00 |
 | [用 Claude 按旧姓名查询州政府无人认领财产数据库](reports/search-state-databases-for-unclaimed-property-under-old-name.md) | 适合内部效率工具 | 34.5 | 中 | available | 美国个人无人认领财产发现与认领辅助 | 2026-10-15T04:29:13.220582+00:00 |
 | [用 Meta Muse 协商账单、处理退货并取消订阅](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 中 | available | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
@@ -23,7 +23,7 @@
 | [用 Gemini 起草旅行保险拒赔申诉](reports/appeal-a-denied-travel-insurance-claim.md) | 适合内部效率工具 | 36.0 | 中 | not_observed | 旅行保险／消费者申诉辅助 | 2026-10-15T13:08:53.684403+00:00 |
 | [用 Claude Computer Use 填写 Form 1040](reports/fill-out-a-form-1040-with-computer-use.md) | 仅建议受控试点 | 27.0 | 中 | not_observed | 税务资料录入与事务所内部自动化 | 2026-10-15T13:37:37.079875+00:00 |
 | [用 Manus 编写交易信号脚本并记录交易日志](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 低 | not_observed | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
-| [用 Kudos 电话代理协商账单续约折扣](reports/negotiate-retention-discounts-on-bills-by-phone.md) | 仅建议受控试点 | 54.0 | 中 | available | 美国消费者电信账单管理与个人财务会员服务 | 2026-10-15T12:10:36.206078+00:00 |
+| [用 Counterforce Health 起草拒赔申诉并致电保险公司](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 中 | available | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [用 Claude 根据文件夹资料准备联邦和州税表](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) | 适合内部效率工具 | 31.5 | 中 | not_observed | 美国个人税务资料整理与报税辅助 | 2026-10-15T15:07:39.086321+00:00 |
 | [用 Meta Muse 查找无人认领款项并发起申领](reports/find-unclaimed-money-and-start-the-claim.md) | 适合内部效率工具 | 39.0 | 中 | not_observed | 个人资产找回／无人认领财产申领辅助 | 2026-10-15T16:46:05.228548+00:00 |
 | [用 ChatGPT 起草停车罚单申诉](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |

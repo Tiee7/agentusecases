@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/text-every-world-cup-final-score-to-a-friends-signal-group",
-  "observed_at": "2026-10-22T06:28:32.582075+00:00",
-  "html_sha256": "8508bfed991b5c6366725660838f4f39f9de2e2e3d313cd79993f9d12e51661c",
+  "observed_at": "2026-10-23T06:27:38.053290+00:00",
+  "html_sha256": "abb290b333bd4b670eaa76df468678c54b5b139139b22664700efcab60c6206d",
   "body_sha256": "a97510bfef4838bb0eca515bcbb79081e192d3dc8942430d38b788ada6e6d6ab",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Text every World Cup final score to a friends' Signal group\nA Claude Code-built agent checked ESPN every 30 minutes and sent each 2026 World Cup final score, written up in a persona, to a 3-person Signal group, with a code check on scores.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nBuilt with Claude Code in one evening. A macOS LaunchDaemon runs a Python script every 30 minutes. It pulls ESPN's public scoreboard, finds finished matches not yet sent, and has Claude Haiku write each result as the persona Claudia. A plain non-AI check confirms the score appears before sending through signal-cli. If the check fails, it sends the plain score line.\nHow it went\nAll 104 matches were sent over 39 days with no duplicates or send errors. 101 got persona write-ups and 3 fell back to plain lines. One shipped bug reported a penalty-shootout win as a 1–1 tie before it was fixed.\nWorth knowing\nFetch yesterday's and today's ESPN scoreboards, and check match status so shootouts aren't read as draws. Cost was pennies, one short Haiku call per match.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small agent that checks [ESPN or another scores site] every [30 minutes] during [tournament or season] and texts each final score for [team or league] to my [Signal/WhatsApp] group, written in the voice of [a persona, e.g. a dramatic sports announcer]. Add a code check so it only sends a score once the game is final and never sends the same result twice. Before you send anything to the group, show me a sample message and wait for my okay.\nOriginal source: https://github.com/bronsonelliott/worldcup-scores-bot-public",
     "body_sha256": "a97510bfef4838bb0eca515bcbb79081e192d3dc8942430d38b788ada6e6d6ab",
-    "archived_at": "2026-10-22T06:28:32.582075+00:00",
+    "archived_at": "2026-10-23T06:27:38.053290+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-22T06:28:32.582075+00:00",
+    "at": "2026-10-23T06:27:38.053290+00:00",
     "status": "fetched",
     "error": null
   }
