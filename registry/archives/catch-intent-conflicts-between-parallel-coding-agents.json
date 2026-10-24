@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-intent-conflicts-between-parallel-coding-agents",
-  "observed_at": "2026-10-23T05:47:53.902036+00:00",
-  "html_sha256": "109afb5ad8051b89299e23e09fe44d6bb11cb7aece87bf83971924268165b754",
+  "observed_at": "2026-10-24T05:26:30.326157+00:00",
+  "html_sha256": "92587b5b5d5e7c5399b63d3b9a8e90edf1d9dfdfc25df003aa0d687dd3702741",
   "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
   "status": "observed",
   "fields": {
@@ -97,11 +97,11 @@
     "language": "en",
     "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
     "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
-    "archived_at": "2026-10-23T05:47:53.902036+00:00",
+    "archived_at": "2026-10-24T05:26:30.326157+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:47:53.902036+00:00",
+    "at": "2026-10-24T05:26:30.326157+00:00",
     "status": "fetched",
     "error": null
   }

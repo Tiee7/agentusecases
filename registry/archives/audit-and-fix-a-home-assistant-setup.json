@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/audit-and-fix-a-home-assistant-setup",
-  "observed_at": "2026-10-23T05:58:21.947429+00:00",
-  "html_sha256": "be403b8c65719569b604b229efcfffe9a439bf2b9d7d0968c6e4c10de710737a",
+  "observed_at": "2026-10-24T05:36:58.375836+00:00",
+  "html_sha256": "c208e16124a38e0f2c18cd537ccb5b6986115756493cf3ad488cc3671fe2cbfd",
   "body_sha256": "20d27b5980387e20e020c0817636850d529ef4d3a864bd25d4477c7c7ca535a4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Audit and fix a Home Assistant setup\nThe writer had Claude audit their Home Assistant config, using the Chrome connector to click through the dashboard and paste config blocks into editors when the MCP couldn't edit directly.\nDone with\nCH\nClaude in Chrome\nWhat they did\nThe writer ran a local MCP proxy on a Mac, authenticated with a Long-Lived Access Token, and linked it to Claude Desktop. Claude audited the device registry. Because the Home Assistant MCP can't write config, Claude drove the Chrome connector to paste YAML into the editors, and used JavaScript injection when typing garbled the text. It then read a visual trace to debug the automation. The writer watched each step.\nHow it went\nThe audit found triplicate TV entities, ghost duplicates, unassigned lights, and a fan registered as a plain switch. A toggle automation was built and its bug fixed in minutes. The whole job took one afternoon.\nWorth knowing\nBrowser automation is slow and fragile across Home Assistant UI updates, so if you already know the change, doing it yourself is faster. Supervise Claude, since it could break or delete entities.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nAudit my Home Assistant setup at [your Home Assistant URL]. Click through the dashboard and review my automations, integrations, and config for errors, unused or broken entities, and anything that could be simplified. Finish with a prioritized list of fixes, and for each one give me the exact config block to paste. Pause and show me any change before you save it in an editor.\nOriginal source: https://www.androidauthority.com/using-claude-fix-home-assistant-smart-home-3674998/",
     "body_sha256": "20d27b5980387e20e020c0817636850d529ef4d3a864bd25d4477c7c7ca535a4",
-    "archived_at": "2026-10-23T05:58:21.947429+00:00",
+    "archived_at": "2026-10-24T05:36:58.375836+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:58:21.947429+00:00",
+    "at": "2026-10-24T05:36:58.375836+00:00",
     "status": "fetched",
     "error": null
   }

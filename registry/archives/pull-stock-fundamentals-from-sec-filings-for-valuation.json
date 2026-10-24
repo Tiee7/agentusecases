@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/pull-stock-fundamentals-from-sec-filings-for-valuation",
-  "observed_at": "2026-10-23T06:17:40.000371+00:00",
-  "html_sha256": "1acfb219eb99db92b5cba671bfa532536a906a10b6a383b8d3ad6e49ba95502b",
+  "observed_at": "2026-10-24T05:56:16.414375+00:00",
+  "html_sha256": "dd9c517f2381bca75859754bf9c9befa5a25ba0881262787edb81eab52a46548",
   "body_sha256": "188fda0acae5f3938d43fc386e781433675c92b1fb4f120475a0b8d07313a2bd",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Pull stock fundamentals from SEC filings for valuation\nA developer used ChatGPT Agent mode to extract revenue growth, free cash flow and net cash from 10-Q filings with source URLs, feeding a multi-agent valuation and sentiment workflow.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe developer prompted ChatGPT Agent mode, chosen for its web search, to produce fundamentals for four tickers (AAPL, MSFT, NVDA, TSLA) from SEC 10-Q filings. For each metric the agent returned a value, trend direction, 1-5 score, explanation, filing URL and the exact derivation. Claude helped write the prompts. A Fundamental agent in a LangGraph workflow then used the output.\nHow it went\nThe agent output fed a working pipeline that combined valuation, sentiment and fundamental votes and backtested the picks over 63 trading days. The README states no accuracy figures for the extracted numbers.\nWorth knowing\nUse only filings public before your decision date; the author limited decision dates to August 2024 to avoid leakage. The whole prototype took roughly 8-10 hours.</parameter>\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nFor [ticker symbols], open the latest 10-Q on SEC EDGAR and extract revenue growth year over year, free cash flow, and net cash or debt. Put the results in a table with a source URL for every number, and flag any figure you couldn't confirm. Stop when every ticker has all three metrics or an explicit note on why it's missing.\nOriginal source: https://github.com/phanhpp/Multi-Agent-Stock-Analysis-System",
     "body_sha256": "188fda0acae5f3938d43fc386e781433675c92b1fb4f120475a0b8d07313a2bd",
-    "archived_at": "2026-10-23T06:17:40.000371+00:00",
+    "archived_at": "2026-10-24T05:56:16.414375+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:17:40.000371+00:00",
+    "at": "2026-10-24T05:56:16.414375+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/use-n8n-workflows-as-a-home-assistant-voice-agent",
-  "observed_at": "2026-10-23T06:05:48.066665+00:00",
-  "html_sha256": "7b758212a5a2c39ae1f93379e35e9deb971ffffda373e61408f4f34fa5f8e2d7",
+  "observed_at": "2026-10-24T05:44:24.397203+00:00",
+  "html_sha256": "abddf4c91401c17728a492542d819f220d74452049a41409cc13eb427c683bd5",
   "body_sha256": "5ef802bdce2883a11c053750d03fd72e3c8770fa138b0934f510759d45f1533c",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Use n8n workflows as a Home Assistant voice agent\nA custom integration sends voice requests and exposed entities to an n8n workflow that can use AI and trigger automations, speaking the reply back.\nDone with\nN8\nn8n\nWhat they did\nYou install the Webhook Conversation custom integration through HACS and point it at the production webhook URL of an n8n webhook node, in a workflow that is set active. Home Assistant sends the conversation history, the user's query and the exposed entities with states, areas and aliases. An n8n agent node handles it and returns JSON, and the reply is spoken. For controlling devices, one user added the Home Assistant call service node.\nHow it went\nUsers got state and attribute queries working, plus device control through n8n's Home Assistant nodes. Continued conversation reportedly triggers when a reply ends in a question mark. The integration doesn't support tool calls directly, and a 403 error appeared when the webhook required authentication.\nWorth knowing\nThe integration times out after 30 seconds by default, so slow multi-tool agent runs fail with an intent recognition error unless you raise the timeout.\nTry it yourself\nwith\nn8n\nCopy prompt\nSet up an n8n workflow that acts as a voice agent for my Home Assistant at [Home Assistant URL]. It should receive the spoken request and list of exposed entities, use an AI model to decide what to do, call the matching Home Assistant services, and return a short reply to be spoken back. Start with only [list of safe entities, e.g. lights, media player] and exclude locks and alarms; you're done when I can say \"[example command]\" and it works.\nOriginal source: https://community.home-assistant.io/t/webhook-conversation/917228",
     "body_sha256": "5ef802bdce2883a11c053750d03fd72e3c8770fa138b0934f510759d45f1533c",
-    "archived_at": "2026-10-23T06:05:48.066665+00:00",
+    "archived_at": "2026-10-24T05:44:24.397203+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:05:48.066665+00:00",
+    "at": "2026-10-24T05:44:24.397203+00:00",
     "status": "fetched",
     "error": null
   }

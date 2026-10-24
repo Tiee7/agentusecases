@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/iterate-on-tasks-with-copilot-cli-autopilot-and-fleet",
-  "observed_at": "2026-10-23T06:26:46.111377+00:00",
-  "html_sha256": "d2f220b4c32a22b5d7f55e72e1c64883e13f3255197c95fb4711feaf70413995",
+  "observed_at": "2026-10-24T06:05:22.488932+00:00",
+  "html_sha256": "7801f3ceec561f5f7f29523779c4b94e3a0489c772843f78c05f325d9b446450",
   "body_sha256": "4c52e8d7da497baea2511efe466d23e6f471384a648b56b6376de55d30216aa7",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Iterate on tasks with Copilot CLI autopilot and fleet\nThe author used autopilot to iterate until done and /fleet to split work across parallel subagents, noting overhead on small tasks.\nDone with\nGH\nGitHub Copilot\nWhat they did\nDaniel Ward turned on /experimental, then used autopilot mode, which loops until a large task is done without the ask_user tool. He pairs it with /plan for a guiding plan and /fleet, which spins up parallel subagents, including custom agents. He caps loops with a flag when he can't watch the run.\nHow it went\nAutopilot lets Copilot finish a big task without repeated prompting, which suits quick proofs-of-concept. Fleet adds orchestration overhead that slows prompts, so small tasks may do better without it.\nWorth knowing\nSet --max-autopilot-continues if you can't monitor the run. The CLI recommends yolo mode for autopilot, and Ward avoids autopilot for production work because it makes review harder.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nUsing Copilot CLI in [repo path], work on [task] in autopilot mode and keep iterating until [definition of done, e.g. all tests pass]. If the task has clearly separate parts, such as [part A] and [part B], use /fleet to split them across parallel subagents; otherwise stay with a single agent. When you finish, summarize what was done and flag anything you weren't sure about.\nOriginal source: https://daninacan.com/10-cool-things-you-can-do-with-github-copilot-cli/",
     "body_sha256": "4c52e8d7da497baea2511efe466d23e6f471384a648b56b6376de55d30216aa7",
-    "archived_at": "2026-10-23T06:26:46.111377+00:00",
+    "archived_at": "2026-10-24T06:05:22.488932+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:26:46.111377+00:00",
+    "at": "2026-10-24T06:05:22.488932+00:00",
     "status": "fetched",
     "error": null
   }

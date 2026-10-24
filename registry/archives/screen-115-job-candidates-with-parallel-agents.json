@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/screen-115-job-candidates-with-parallel-agents",
-  "observed_at": "2026-10-23T05:51:59.920737+00:00",
-  "html_sha256": "090a7d09faa4b90d422c8096bcef8a82c0b601c2ef01680c375301fd7513fef1",
+  "observed_at": "2026-10-24T05:30:36.366527+00:00",
+  "html_sha256": "e8581b3d13a504461a765f46ca26b21a63f2eed1fee64abc9ed6c861bc98151b",
   "body_sha256": "0bb73b56c9146b985ba4dc1602a0fd7d22bb71a66c3f9a7d4298c6681fb7323b",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Screen 115 job candidates with parallel agents\nA team connected Notion to Claude Code, dispatching one agent per candidate to check data and GitHub evidence against a rubric, producing a ranked shortlist for $65.\nDone with\nCC\nClaude Code\nWhat they did\nThe team pulled their Notion hiring database into one data file per candidate with the Notion CLI. A script then dispatched 115 Claude agents in parallel. Each agent read markdown rubric files, visited the candidate's GitHub and portfolio links, and returned structured JSON scores. Code computed the rankings, and 10 devil's-advocate agents challenged the top candidates' scores. Code then enforced a 5% cap on the top grade.\nHow it went\nThe run took about 13 minutes and cost about $65, roughly $0.57 per candidate. No one reached S or A, 6 candidates scored B, and adversarial review cut the top two from about 82 to about 75.\nWorth knowing\nCache writes were the largest cost line, because each parallel agent builds its own cache. The authors suggest Sonnet for scoring and Opus only for review to cut cost 70 to 80%.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have [number] job candidates in [Notion database/spreadsheet] for the [role] position. Read my scoring rubric: [paste criteria]. Run one sub-agent per candidate to check their data and public evidence like [GitHub/portfolio] against the rubric, then produce a ranked shortlist with a one-paragraph reason for each. Don't contact any candidates or change records. You're done when I have the ranked list and the cost of the run.\nOriginal source: https://happycapy.ai/blog/hiring-dynamic-workflow",
     "body_sha256": "0bb73b56c9146b985ba4dc1602a0fd7d22bb71a66c3f9a7d4298c6681fb7323b",
-    "archived_at": "2026-10-23T05:51:59.920737+00:00",
+    "archived_at": "2026-10-24T05:30:36.366527+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:51:59.920737+00:00",
+    "at": "2026-10-24T05:30:36.366527+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/answer-support-tickets-with-chatgpt-connected-to-freshdesk",
+  "observed_at": "2026-10-24T06:15:26.511318+00:00",
+  "html_sha256": "4c0f8330365d0cc387f58232cc19d70a6dd56910a72c039c683814a4f165777d",
+  "body_sha256": "9da4f751ad9fc89bf329baa97a8122f4c386cf52d885dd53f819214004bc6957",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Answer support tickets with ChatGPT connected to Freshdesk",
+      "sha256": "2b34b1ae9529718076ca97f5f5645dc026cc1e7d0911c92af1365d9889816be4"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A SaaS owner connected ChatGPT to Freshdesk with ticket history and internal tools, but dropped full autonomy because choosing the right answer and knowing when not to respond was unreliable.",
+      "sha256": "5e8ac6a977b76632cebb7e9e20a8d63543348f481531167994ce54db52424b00"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The SaaS owner first gathered years of support tickets plus scraped docs and the knowledge base into a searchable dataset, then built a custom Freshdesk integration so ChatGPT could access ticket history, customer conversations, source code, and internal tools through an MCP server. Instead of letting an autonomous agent answer customers, they used ChatGPT interactively for tasks like flagging tickets needing attention, summarizing a ticket, checking whether an issue had happened before, and drafting replies while the human stayed in control.",
+      "sha256": "217eceba25a0eee80d6186dbd479c73cf3546d5ec92d63c03600f644df69e5ec"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say this worked better than a fully autonomous support agent: it cut time spent searching, made replies more consistent, and helped them process tickets faster. The autonomous version was dropped because reliable decision-making, edge-case recovery, and knowing when not to answer proved too hard.",
+      "sha256": "8029845ebab13e3b327a3643204600be8f44dcde5166dff3dc1ba43fda8ae823"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was scope: they found themselves spending more time improving the autonomous agent than actually using it.",
+      "sha256": "854483b26497763640f67ede46aae11b3112cb4a5ca3ac1da45e84286d864f8f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT"
+      ],
+      "sha256": "82e451268285d424c611a7a33277446d5e018e11c1752ebdc4ea4c6c13533e4e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/SaaS/comments/1vevgnd/i_stopped_building_an_ai_support_agent_and"
+      ],
+      "sha256": "3e2ebb8e9b127804c829a0e02356be4f4f893e92022dd89cd770fbc6922b03e8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-23",
+      "sha256": "973384eff6a5cc4532559352a57bcecf9b681e1e0023d733779dc8244be93c8f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "38093708250adaddc25ebc5349a356a8b9a6c595b7286e4f419431dcf42f1d5c",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Answer support tickets with ChatGPT connected to Freshdesk\nA SaaS owner connected ChatGPT to Freshdesk with ticket history and internal tools, but dropped full autonomy because choosing the right answer and knowing when not to respond was unreliable.\nDone with\nGP\nChatGPT\nWhat they did\nThe SaaS owner first gathered years of support tickets plus scraped docs and the knowledge base into a searchable dataset, then built a custom Freshdesk integration so ChatGPT could access ticket history, customer conversations, source code, and internal tools through an MCP server. Instead of letting an autonomous agent answer customers, they used ChatGPT interactively for tasks like flagging tickets needing attention, summarizing a ticket, checking whether an issue had happened before, and drafting replies while the human stayed in control.\nHow it went\nThey say this worked better than a fully autonomous support agent: it cut time spent searching, made replies more consistent, and helped them process tickets faster. The autonomous version was dropped because reliable decision-making, edge-case recovery, and knowing when not to answer proved too hard.\nWorth knowing\nThe main catch was scope: they found themselves spending more time improving the autonomous agent than actually using it.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nHere are [number] past support tickets and my answers from [help desk name], plus my product docs: [paste or attach]. Draft replies to these new tickets: [paste tickets]. For each, give a confidence level, and mark any ticket you should not answer automatically (billing disputes, angry customers, unclear problems) with the reason, so I can review before anything is sent.\nOriginal source: https://www.reddit.com/r/SaaS/comments/1vevgnd/i_stopped_building_an_ai_support_agent_and",
+    "body_sha256": "9da4f751ad9fc89bf329baa97a8122f4c386cf52d885dd53f819214004bc6957",
+    "archived_at": "2026-10-24T06:15:26.511318+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-24T06:15:26.511318+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

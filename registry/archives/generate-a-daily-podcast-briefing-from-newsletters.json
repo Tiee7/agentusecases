@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-a-daily-podcast-briefing-from-newsletters",
-  "observed_at": "2026-10-23T05:57:41.932676+00:00",
-  "html_sha256": "0c242067c1edfb3e4f84fd86c434d461f805bbfb73b477e488e7b37466816733",
+  "observed_at": "2026-10-24T05:36:18.403782+00:00",
+  "html_sha256": "4b703b746095ec8686b7c377ee752ae264cc6b4323e070763d9cb13d3d8c78af",
   "body_sha256": "3f9df89654b116ba0c21a364c8f6da0f9ddb32954623395d1cb3cd2eebb34fc2",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Generate a daily podcast briefing from newsletters\nThe author tested Cowork on a morning podcast from newsletters via Readwise and n8n MCP, plus video and 3D print design, noting what worked and what failed.\nDone with\nCW\nClaude Cowork\nN8\nn8n\nWhat they did\nNewsletters are forwarded to Readwise. Because Cowork has no network access, the author ran n8n as an MCP server with a workflow that calls the Readwise API. Cowork fetched the previous day's articles through it and wrote a two-page Word briefing with an executive summary. It then tried to turn the briefing into a 2-3 minute MP3.\nHow it went\nThe briefing document worked and the n8n bridge ran without problems. Audio failed: with no access to a good text-to-speech model, Cowork fell back to the local Flite library, and the result was robotic and not worth listening to.\nWorth knowing\nCowork can't reach cloud text-to-speech models. The author plans to rebuild this in Claude Code, which can call the Readwise API directly and use ElevenLabs or OpenAI TTS.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nEvery morning at [time], gather the newsletters I received in [email or Readwise source], pick the most important stories on [my topics], and write a [number]-minute podcast-style script. Save it to [folder] as a text file, and turn it into audio if a tool is connected. Tell me which steps worked and which didn't.\nOriginal source: https://ishyshkova.substack.com/p/claude-cowork-review-real-use-cases",
     "body_sha256": "3f9df89654b116ba0c21a364c8f6da0f9ddb32954623395d1cb3cd2eebb34fc2",
-    "archived_at": "2026-10-23T05:57:41.932676+00:00",
+    "archived_at": "2026-10-24T05:36:18.403782+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:57:41.932676+00:00",
+    "at": "2026-10-24T05:36:18.403782+00:00",
     "status": "fetched",
     "error": null
   }

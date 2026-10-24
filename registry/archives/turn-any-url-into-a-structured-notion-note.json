@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-any-url-into-a-structured-notion-note",
-  "observed_at": "2026-10-23T06:06:21.988493+00:00",
-  "html_sha256": "94c146571fb235829e091e29e279e137067e126662349cd9aa339eef29a625f8",
+  "observed_at": "2026-10-24T05:44:58.365953+00:00",
+  "html_sha256": "f01aaa0e039786eb8bf6f9457d5152cab565134e461a5518ab81760dd5de35d0",
   "body_sha256": "ed74b1ba703321cf50d267f0d70b7e74324a0833d6a836525e5e8910c8e8d44f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn any URL into a structured Notion note\nAn n8n workflow fetches a submitted URL, strips it to readable content, has OpenAI summarise it into structured fields, and saves a Notion note.\nDone with\nN8\nn8n\nWhat they did\nA webhook receives a URL, an HTTP Request node fetches the page, and a Code node removes scripts, styles and tags, then truncates the text to 8,000 characters. OpenAI, in JSON output mode, returns title, summary, key insights and tags. The Notion node maps these to six properties with no parsing step.\nHow it went\nStripping the HTML first cut the payload from about 60K tokens to under 4K. Summaries improved and cost dropped significantly. JavaScript-heavy single-page apps return empty shell HTML, and some sites block requests.\nWorth knowing\nShare the Notion database with your n8n integration first, or the write fails silently. Adding a Mozilla/5.0 User-Agent header clears most 403 errors.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that starts from a webhook or form where I submit a [URL]. It should fetch the page, strip it down to readable text, ask an AI model to produce a title, a 3-sentence summary, key points and 3 tags, then create a new note in my Notion database [database name] with those fields. You're done when a test URL I submit produces a correctly filled Notion note; show me the draft workflow before you activate it.\nOriginal source: https://community.n8n.io/t/turns-any-article-into-a-structured-notion-note/297566",
     "body_sha256": "ed74b1ba703321cf50d267f0d70b7e74324a0833d6a836525e5e8910c8e8d44f",
-    "archived_at": "2026-10-23T06:06:21.988493+00:00",
+    "archived_at": "2026-10-24T05:44:58.365953+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:06:21.988493+00:00",
+    "at": "2026-10-24T05:44:58.365953+00:00",
     "status": "fetched",
     "error": null
   }

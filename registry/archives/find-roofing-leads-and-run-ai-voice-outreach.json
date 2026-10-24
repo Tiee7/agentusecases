@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-roofing-leads-and-run-ai-voice-outreach",
-  "observed_at": "2026-10-23T06:27:04.088000+00:00",
-  "html_sha256": "b0fd39a42ad7d0c46d5f9ad6755afc8e989140dde9ef3205852da6f6aaad8b06",
+  "observed_at": "2026-10-24T06:05:40.420238+00:00",
+  "html_sha256": "be2761201e58eb16770d081312d9447aab305f567ec06e906930a2bfc22ae73f",
   "body_sha256": "f7919013cbc184c9b2419748eaa05c18026837c8a1460f38ea1d9e1c634a154a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Find roofing leads and run AI voice outreach\nn8n workflows find roofing businesses, log them in Sheets, personalize outreach, place voice calls, and classify call outcomes back into the sheet.\nDone with\nN8\nn8n\nWhat they did\nTwo n8n workflows. Discovery pulls roofing businesses for a target city through Apify and Google Places, filters them, checks phone numbers and duplicates, and writes them to Google Sheets. Outreach picks one lead, with follow-ups first, and checks local calling hours. It then searches for competitor info (SerpAPI), has OpenAI write an opener, calls through Vapi, polls the call status, and has AI classify the outcome into the sheet.\nHow it went\nThe article gives no results, volumes or conversion numbers. It presents the architecture and lessons: define lead states first, keep timing, routing and retries in deterministic logic, and plan for API failures.\nWorth knowing\nThe state-to-timezone mapping and business-plus-phone dedupe have gaps. Commenters note that some states span two time zones and that phone formats need normalizing before comparing.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me n8n workflows that find [type of local business] in [city/region] using [lead source], log name, phone, and website in a Google Sheet, and draft a personalized outreach script for each. Then set up voice calls through [voice AI provider] and write each call outcome (interested, not interested, no answer, callback) back to the sheet. Do not place any calls until you have shown me the script, the first batch of numbers, and the calling hours for my approval.\nOriginal source: https://dev.to/olamilekanadebayo55cmyk/how-i-built-an-n8n-ai-voice-outreach-workflow-for-roofing-leads-36ge",
     "body_sha256": "f7919013cbc184c9b2419748eaa05c18026837c8a1460f38ea1d9e1c634a154a",
-    "archived_at": "2026-10-23T06:27:04.088000+00:00",
+    "archived_at": "2026-10-24T06:05:40.420238+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:27:04.088000+00:00",
+    "at": "2026-10-24T06:05:40.420238+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/refactor-a-million-line-repo-with-1-393-subagents",
-  "observed_at": "2026-10-23T06:03:18.237088+00:00",
-  "html_sha256": "345079942bb38d05bbfcbc8fd05749a2600791e4c788ae2872b35d2adfa41a23",
+  "observed_at": "2026-10-24T05:41:54.443954+00:00",
+  "html_sha256": "c341bc2854483ede2ab9e17e5748a86dd10a4828e230a451554cedd0d8d821f1",
   "body_sha256": "0996bee851d1845d50cf8b9a061d5c750ab4c3b089270003636b3716ba7ac272",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Refactor a million-line repo with 1,393 subagents\nA Nous Research developer had Hermes dispatch 1,393 subagents over about 19 hours to clean up its own repo, cutting non-test Python source by 34.4% in a merged PR.\nDone with\nHA\nHermes Agent\nWhat they did\nTeknium gave his everyday Hermes agent a standing goal with /goal, plus a dev skill it had built up over time. The orchestrator split the code into 36 non-overlapping groups and wrote briefs for workers. Workers used separate git worktrees, committed after each verified step, and checked interfaces against the original. An expired token killed the run at about fifty minutes, so a separate session prepared a handoff and the run resumed.\nHow it went\nNon-test Python fell from 1,063,826 to 698,363 lines (34.4%), and gateway/run.py from 34,847 to 5,512 lines. Reviewers found regressions the tests missed, and six files still exceeded 5,000 lines.\nWorth knowing\nModel spend was about $19,300 for the main run, roughly $25k with follow-ups, excluding human review. Review caught removed public names that plugins use and altered exception handling at about 65 sites.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nAudit my repo at [path or repo name] for dead code, duplicated logic, and over-complicated modules. Split the cleanup into independent chunks, work on each in a separate branch, and run [test command] after every change. Finish with one pull request summary showing lines removed and test results, and pause for my review before merging or deleting anything.\nOriginal source: https://nousresearch.com/refactoring-hermes-with-1393-agents",
     "body_sha256": "0996bee851d1845d50cf8b9a061d5c750ab4c3b089270003636b3716ba7ac272",
-    "archived_at": "2026-10-23T06:03:18.237088+00:00",
+    "archived_at": "2026-10-24T05:41:54.443954+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:03:18.237088+00:00",
+    "at": "2026-10-24T05:41:54.443954+00:00",
     "status": "fetched",
     "error": null
   }

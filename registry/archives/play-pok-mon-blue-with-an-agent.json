@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/play-pok-mon-blue-with-an-agent",
-  "observed_at": "2026-10-23T06:01:57.961922+00:00",
-  "html_sha256": "049d534e5b9b77d82af3f281cfa4d667273f65dabda4127bc5a4bbac755ef60a",
+  "observed_at": "2026-10-24T05:40:34.305653+00:00",
+  "html_sha256": "a9102f6f9cacfd0d94c0cd4fc66f98a34afdce114ce39e4eb17fd939dc3d6aa2",
   "body_sha256": "6d9c9a330f6ad1f82b656eb2a404aff12276d269710d8ae51a59653d1d1ad50d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Play Pokémon Blue with an agent\nThe Gemini Plays Pokémon agent reads game RAM and screenshots, turns actions into button presses, and uses pathfinder and boulder-puzzle sub-agents.\nDone with\nGE\nGemini\nWhat they did\nAn independent developer, Joel Zhang, built a harness that gives Gemini 2.5 Pro a subset of Game Boy RAM as text, overlaid on a screenshot. Gemini picks actions that become button presses. The harness summarizes history every 100 turns and runs a critic instance every 25 turns. It also provides pathfinder and boulder-puzzle sub-agents, which are prompted Gemini instances.\nHow it went\nThe agent beat Pokémon Blue in 813 hours on run 1, then in 406.5 hours on a fully autonomous second run. It looped on long contexts, hallucinated items from other games, and handled raw pixels poorly.\nWorth knowing\nThe model struggled to read raw screen pixels, so the RAM-to-text translation was needed. Behavior also degraded once context grew well past 100k tokens.\nTry it yourself\nwith\nGemini\nCopy prompt\nHelp me build an agent that plays [game, e.g. Pokémon Blue] in an emulator at [emulator path or setup]. It should read the game state from [RAM or screenshots], decide on an action, and send it as button presses, with a simple helper for [subtask, e.g. pathfinding]. You're done when it can play for [number] steps on its own and log what it decided at each step.\nOriginal source: https://arxiv.org/pdf/2507.06261",
     "body_sha256": "6d9c9a330f6ad1f82b656eb2a404aff12276d269710d8ae51a59653d1d1ad50d",
-    "archived_at": "2026-10-23T06:01:57.961922+00:00",
+    "archived_at": "2026-10-24T05:40:34.305653+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:01:57.961922+00:00",
+    "at": "2026-10-24T05:40:34.305653+00:00",
     "status": "fetched",
     "error": null
   }

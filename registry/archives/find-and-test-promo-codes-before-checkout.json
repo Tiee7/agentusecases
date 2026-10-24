@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/find-and-test-promo-codes-before-checkout",
+  "observed_at": "2026-10-24T06:14:58.527222+00:00",
+  "html_sha256": "7056a3963bbe805275405b91de67cee0750aa76ce1f34176916a33e7d329fb2d",
+  "body_sha256": "eb9dd893abc3e37cb80cf51b267ff24e3d1a77dc7444f0b08602232dccfaf771",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Find and test promo codes before checkout",
+      "sha256": "3064c02981a6ec4100523b5874a2680f9b29610c98f28433d3d9522ef6ed6b0e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "ChatGPT searches for public discounts, tests promo codes and confirms the final checkout price before the user buys.",
+      "sha256": "35cc6f638a80f45332df5306a071bb566e1b568c8c72816aed805d1941f4cb26"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post describes a two-step ChatGPT Work workflow: first give the agent the exact product link, chosen variant, quantity, and shipping destination so it searches for public codes, sales, retailer offers, rebates, cashback, competing sellers, and price-match options. Then, in the same chat, ask it to use its browser on supported sites to open the cart, try each candidate code one by one, record the before-and-after totals, reset the cart between tests, and pause for the user on logins, CAPTCHA, or other sensitive steps.",
+      "sha256": "652ed32d7e8084a3cddb575b91d7967f7935ccf4d492c70c867d13d877fcf167"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The claimed result is a ranked comparison of which codes actually worked, why others failed, and the lowest displayed final total before purchase. The post gives no measured savings from a real run, and notes sites may block automation or require user takeover.",
+      "sha256": "f6d9af7a002ba2b80fa4797560b1a8dc640ef849e88b1af855f1fe8a0898e066"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is setup: use ChatGPT Work, start from the exact product page with the item already configured in the cart, and explicitly tell it to stop before placing the order.",
+      "sha256": "05d65fa6be0857008ccd08cec5de7d94498bb81fdaa75d7678b9f0bb075b2d85"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT"
+      ],
+      "sha256": "82e451268285d424c611a7a33277446d5e018e11c1752ebdc4ea4c6c13533e4e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/promptingmagic/comments/1v7dvjz/get_the_best_deal_on_anything_you_buy_with"
+      ],
+      "sha256": "2f8d0e206bb8ef5e90a0a70037db1c838365f51675d9350c85e11bab71a0ec25"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-23",
+      "sha256": "973384eff6a5cc4532559352a57bcecf9b681e1e0023d733779dc8244be93c8f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "bfdf616d4401b913add317bf8f7c79a864855dcbe4babb0d3f31e8c71675b513",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find and test promo codes before checkout\nChatGPT searches for public discounts, tests promo codes and confirms the final checkout price before the user buys.\nDone with\nGP\nChatGPT\nWhat they did\nThe post describes a two-step ChatGPT Work workflow: first give the agent the exact product link, chosen variant, quantity, and shipping destination so it searches for public codes, sales, retailer offers, rebates, cashback, competing sellers, and price-match options. Then, in the same chat, ask it to use its browser on supported sites to open the cart, try each candidate code one by one, record the before-and-after totals, reset the cart between tests, and pause for the user on logins, CAPTCHA, or other sensitive steps.\nHow it went\nThe claimed result is a ranked comparison of which codes actually worked, why others failed, and the lowest displayed final total before purchase. The post gives no measured savings from a real run, and notes sites may block automation or require user takeover.\nWorth knowing\nThe main catch is setup: use ChatGPT Work, start from the exact product page with the item already configured in the cart, and explicitly tell it to stop before placing the order.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nI'm about to buy [product] from [store or website] and want the lowest price. Search for current public promo codes and discounts, tell me which ones are likely to work, and list the sources. Give me a ranked list of codes to try and the expected final price, and don't purchase anything.\nOriginal source: https://www.reddit.com/r/promptingmagic/comments/1v7dvjz/get_the_best_deal_on_anything_you_buy_with",
+    "body_sha256": "eb9dd893abc3e37cb80cf51b267ff24e3d1a77dc7444f0b08602232dccfaf771",
+    "archived_at": "2026-10-24T06:14:58.527222+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-24T06:14:58.527222+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
