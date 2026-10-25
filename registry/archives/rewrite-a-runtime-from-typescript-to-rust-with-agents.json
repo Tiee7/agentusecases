@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/rewrite-a-runtime-from-typescript-to-rust-with-agents",
-  "observed_at": "2026-10-24T06:05:16.483681+00:00",
-  "html_sha256": "3430221e3daed881131d84ab19accacf74818fbb53cb860fc6c21ae5d1647745",
+  "observed_at": "2026-10-25T06:24:02.439185+00:00",
+  "html_sha256": "f067a58187c6f815a1602824eea0132dd3a944b03b4d525347a18814dcfa39db",
   "body_sha256": "4a6e29ebbaea6918d4a985f20e2f44dcc986d097e027486ecf183ee4ddf56b01",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Rewrite a runtime from TypeScript to Rust with agents\nGitHub engineers used Copilot tools to have agents write most of an 800,000-line Rust rewrite of the Copilot runtime across 128 PRs, fixing a few regressions.\nDone with\nGH\nGitHub Copilot\nWhat they did\nOne developer, Stephen Toub, used the Copilot app and CLI to port the runtime in place, one component per PR. Each PR replaced TypeScript with a thin shim into Rust and kept the existing end-to-end tests running. Parent sessions spawned child sessions, each in its own worktree, plus subagents. He checked results, challenged decisions and enforced quality gates.\nHow it went\nThe runtime became 100% Rust, about 832,000 production lines, across 128 PRs in roughly 14.5 weeks. A few regressions were fixed quickly, and the post says performance improved by orders of magnitude.\nWorth knowing\nFifteen concurrent agents building at once froze his laptop. He fixed it by letting only the parent build, then by making a chat session hand out build permission one session at a time.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nI want to migrate [module or component] in [owner/repo] from [current language] to [target language]. First write a plan that splits the work into small, independently reviewable pull requests, and show it to me before starting. Then work through them one at a time, with each PR passing the existing tests, and list any behavior differences you find.\nOriginal source: https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
     "body_sha256": "4a6e29ebbaea6918d4a985f20e2f44dcc986d097e027486ecf183ee4ddf56b01",
-    "archived_at": "2026-10-24T06:05:16.483681+00:00",
+    "archived_at": "2026-10-25T06:24:02.439185+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T06:05:16.483681+00:00",
+    "at": "2026-10-25T06:24:02.439185+00:00",
     "status": "fetched",
     "error": null
   }

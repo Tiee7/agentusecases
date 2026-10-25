@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/replace-token-heavy-jira-and-gitlab-mcps-with-cli-skills",
-  "observed_at": "2026-10-24T05:53:02.393812+00:00",
-  "html_sha256": "970c461ade3bdbb73e95b90853e0db104ca161b38cf82dd8752859bb3a384781",
+  "observed_at": "2026-10-25T06:11:48.424889+00:00",
+  "html_sha256": "4d4d9afc88cba6ac3b4ef5879431b4aee17717ef7b5fa47ce31616b817c2d689",
   "body_sha256": "6034ea85ef4392cb7d3d2e01ed88d981dc08651fbd4c3bf7bbd56f28b79e7296",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Replace token-heavy Jira and GitLab MCPs with CLI skills\nThe author had Claude run --help on Atlassian and GitLab CLIs, saved the actions as Markdown, and built lightweight agent plugins that cut token use.\nDone with\nCC\nClaude Code\nWhat they did\nAfter finding the Jira and GitLab MCPs used too many tokens, the author installed the Atlassian and GitLab CLIs instead. They had Claude recursively run --help on each CLI and save every available action into separate Markdown files. Those files became two lightweight plugins, acli-skills and glab-skills, so the agent stops re-discovering commands each time.\nHow it went\nThe author says the plugins do what the MCPs did with significantly less token consumption. No measured figures are given. Both repositories were open-sourced.\nWorth knowing\nThe author still finds MCPs worthwhile for rapid prototyping and internal tools, especially sampling and progress notifications for long-running tasks, so this swap suits single-purpose integrations.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI use the [Jira, GitLab, or other] command line tool and want to replace its token-heavy MCP server with a lightweight skill. Run --help on the CLI and its subcommands, then write a Markdown skill file listing the common actions I need, such as [create ticket, list merge requests, comment], with exact example commands. Stop when the skill works on one real read-only task, and ask me before running any command that creates, changes or deletes anything.\nOriginal source: https://news.ycombinator.com/item?id=49788468",
     "body_sha256": "6034ea85ef4392cb7d3d2e01ed88d981dc08651fbd4c3bf7bbd56f28b79e7296",
-    "archived_at": "2026-10-24T05:53:02.393812+00:00",
+    "archived_at": "2026-10-25T06:11:48.424889+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T05:53:02.393812+00:00",
+    "at": "2026-10-25T06:11:48.424889+00:00",
     "status": "fetched",
     "error": null
   }

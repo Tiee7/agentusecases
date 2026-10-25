@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/plan-weekly-meals-and-order-groceries-automatically",
-  "observed_at": "2026-10-24T06:14:54.540454+00:00",
-  "html_sha256": "cad6de7ba71b45b4d66cbe87c7c42a5a31d7492a67146048888cdd5a202ac00b",
+  "observed_at": "2026-10-25T06:33:40.509034+00:00",
+  "html_sha256": "3e753951b7f513ad602e22556a8e9c59fa820cf49fc7164458af093ae582aaaf",
   "body_sha256": "ec9980aa1e8ff4903ff47d25a98664358923af13fd81274ded88f8870aa63aae",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Plan weekly meals and order groceries automatically\nA single dad had Hermes create meal plans and grocery orders, with a weekly cron job scraping the HEB ad for a meal-planning skill, needing only some steering.\nDone with\nHA\nHermes Agent\nWhat they did\nThe poster first gave Hermes their height, weight, dietary restrictions, and weight-loss goal so it could draft a meal plan, then asked it to turn that plan into a grocery order. Hermes investigated ordering options, used Walmart in Chromium via Chrome DevTools/browser-control skills, inspected the page DOM and ran small scripts to add items and adjust quantities, while the user logged in manually and nudged it to use the right browser.\nHow it went\nIt built the cart end to end and swapped meal-plan ingredients when local items were unavailable, which the poster said saved major time and mental effort. It was not fully hands-off: Walmart’s built-in browser path failed on quantity changes, and login/bot protection still needed human help.\nWorth knowing\nThe main catch was authentication: the poster logged in manually and said silent cron-style runs would likely fail because of bot protection.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nEvery [day of week] at [time], check this week's [store name] ad at [URL], and build a dinner meal plan for [number] people that favors discounted items and fits [dietary needs and budget]. Then write a grocery list organized by store section and save both the plan and list to [location]. Stop there and message me the summary; do not place any order without showing me the list and total and getting my approval first.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1vz4iwj/i_let_hermes_handle_my_meal_planning_and_grocery",
     "body_sha256": "ec9980aa1e8ff4903ff47d25a98664358923af13fd81274ded88f8870aa63aae",
-    "archived_at": "2026-10-24T06:14:54.540454+00:00",
+    "archived_at": "2026-10-25T06:33:40.509034+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T06:14:54.540454+00:00",
+    "at": "2026-10-25T06:33:40.509034+00:00",
     "status": "fetched",
     "error": null
   }

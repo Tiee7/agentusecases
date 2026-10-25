@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/keep-coding-agents-running-autonomously-for-long-stretches",
-  "observed_at": "2026-10-24T05:25:00.327748+00:00",
-  "html_sha256": "22acd6d705b27fb3dc8432d7e0069591a2c8c56bcf5e7ec5e33c2e161f0b33f6",
+  "observed_at": "2026-10-25T05:43:46.312881+00:00",
+  "html_sha256": "e0879bc5966eb6a020d1a522bf24bf8a5ca683692109c813b4ec6e8c420f9d38",
   "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Keep coding agents running autonomously for long stretches\nCursor's write-up on scaling long-running autonomous coding.\nDone with\nCR\nCursor\nWhat they did\nCursor ran hundreds of concurrent agents on one project. Flat self-coordination through a shared file with locks, then optimistic concurrency, failed. They switched to planners that explore the code and create tasks, and workers that each grind on one task and push. A judge agent decided at the end of each cycle whether to continue, and the next cycle started fresh.\nHow it went\nA browser built from scratch ran close to a week and produced over 1 million lines across 1,000 files. A Solid-to-React migration took over three weeks and passed CI but still needs careful review.\nWorth knowing\nPrompting mattered more than the harness or model. Agents sometimes ran far too long, and periodic fresh starts were still needed to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want a background agent to work on [large task, e.g. migrating all API handlers to the new validation library] in my repo [repo] for an extended stretch. Break it into small checkable steps, work through them one by one, run tests after each, and commit after each step that passes. Stop when all handlers are done or after [number, e.g. 3] consecutive failures, and leave me a progress log.\nOriginal source: https://cursor.com/blog/scaling-agents",
     "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
-    "archived_at": "2026-10-24T05:25:00.327748+00:00",
+    "archived_at": "2026-10-25T05:43:46.312881+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T05:25:00.327748+00:00",
+    "at": "2026-10-25T05:43:46.312881+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-a-week-of-github-activity-into-a-blog-post",
-  "observed_at": "2026-10-24T05:25:40.478991+00:00",
-  "html_sha256": "e55b8d3f5584ce9be3e9cf277330932a7ff3d962db7d3c721ca128cc2464f0f7",
+  "observed_at": "2026-10-25T05:44:26.295565+00:00",
+  "html_sha256": "5aec14fca0861bb548f03325ae59b630cef11b1ae660a6649c24d4bcc15340d1",
   "body_sha256": "987efd9769a06da03c1c457bb408a9bf9ab971e773824615da4454baef348dac",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn a week of GitHub activity into a blog post\nA three-agent pipeline that drafts weekly posts from commit history and publishes to Notion and DEV.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built DevNotion on Mastra, run by a Sunday GitHub Actions cron. A GraphQL call pulls the week's commits, PRs, issues, reviews and language stats with no LLM. Gemini then writes a first-person post, with a deterministic fallback if it fails. The publisher creates a DEV.to draft and a Notion planner page with tables.\nHow it went\nIt reliably produces a draft each week, which the author edits before publishing. The source gives no engagement figures. Gemini gave the best output among the models tried, including Ollama and Groq ones.\nWorth knowing\nAsking Gemini for native structured output added 20-40 seconds per call. Plain text with YAML frontmatter parsing was 3-4x faster, and Notion needs rate limiting.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a weekly workflow that pulls my commits and pull requests from [GitHub repo or username] for the past 7 days, has one step summarize the changes, a second draft a blog post in [tone], and a third format it for [Notion and DEV]. Save the output as a draft in Notion. Finished means I can review a draft each week, and the workflow must pause for my approval before publishing anything publicly.\nOriginal source: https://dev.to/yashksaini/i-built-a-3-agent-pipeline-that-turns-my-github-activity-into-weekly-blog-posts-on-notion-devto-1ndn",
     "body_sha256": "987efd9769a06da03c1c457bb408a9bf9ab971e773824615da4454baef348dac",
-    "archived_at": "2026-10-24T05:25:40.478991+00:00",
+    "archived_at": "2026-10-25T05:44:26.295565+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T05:25:40.478991+00:00",
+    "at": "2026-10-25T05:44:26.295565+00:00",
     "status": "fetched",
     "error": null
   }

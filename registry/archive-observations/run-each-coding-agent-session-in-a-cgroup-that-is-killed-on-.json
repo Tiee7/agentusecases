@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
-  "observed_at": "2026-10-24T06:10:26.492883+00:00",
-  "html_sha256": "336c7a625eeee79e194478872a6be6033f88273d04c58d6c780b5ea0c86a2d45",
+  "observed_at": "2026-10-25T06:29:12.472950+00:00",
+  "html_sha256": "2a556189409d588d61a893f4443bad128fcd939190cdced09b0f91180da04245",
   "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run each coding agent session in a cgroup that is killed on completion\nA developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.\nDone with\nCX\nCodex\nWhat they did\nThe developer traced heavy swapping to a RAM-backed tmpfs /tmp and to processes that earlier coding agents had forked and abandoned. They added a frequently run job that deletes tmp files unused for about two hours and not held open by any command. They also built their agent spawner to launch each session in its own cgroup, killing every process in it when the task finishes.\nHow it went\nThe source gives no measurements. It says the cleanup job and per-session cgroups addressed the swap usage and the leftover processes, but it is a brief forum comment with no before-and-after figures.\nWorth knowing\nCheck whether swap is really coming from a RAM-backed tmpfs /tmp before blaming the agents; the cleanup job only removes files with no open handles.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval.\nOriginal source: https://news.ycombinator.com/item?id=50136354",
     "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
-    "archived_at": "2026-10-24T06:10:26.492883+00:00",
+    "archived_at": "2026-10-25T06:29:12.472950+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-24T06:10:26.492883+00:00",
+    "at": "2026-10-25T06:29:12.472950+00:00",
     "status": "fetched",
     "error": null
   }

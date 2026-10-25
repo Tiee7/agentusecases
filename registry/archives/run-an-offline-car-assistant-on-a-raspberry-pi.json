@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-an-offline-car-assistant-on-a-raspberry-pi",
-  "observed_at": "2026-10-24T05:27:20.255526+00:00",
-  "html_sha256": "79c4f5db2393e153e90a3b4e2656b019003791d1244b1e9660918156e8635285",
+  "observed_at": "2026-10-25T05:46:06.305522+00:00",
+  "html_sha256": "4e9336f1d8b1188e3037d3fda5516764df11c84bd36a83fe9c7e22043218c237",
   "body_sha256": "51a25ce5313d9f3a15d216063e322d9862026ced1692b1350f4501b23b536993",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run an offline car assistant on a Raspberry Pi\nA local Qwen model on a Pi reads car OBD data and the manual to answer car questions, controls AC and locks via cloud, and alerts other agents to a breakdown so they can look up train tickets.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA Raspberry Pi 5 (16 GB) rides in the car and runs a local Qwen3.6-35B model through llama.cpp. It reads live OBD data over a Bluetooth ELM327 adapter and answers voice questions from the 489-page owner's manual, with page citations. It posts to a chat room as an agent. The repo says cloud lock and window commands work through Home Assistant, and that precondition (AC) is only the next planned command.\nHow it went\nThe model runs at about 3.5 tokens/s generation, and the voice, manual and OBD loops are marked proven on a real car. The README does not mention train tickets. Preconditioning and agent-to-agent cases are listed as enabled, not demonstrated.\nWorth knowing\nLoading the 14 GB model from microSD takes about three minutes, and generation is slow. Smaller models run faster on the Pi but suit simple questions better.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp me build an offline car assistant on a [Raspberry Pi model] using a local model. It should read OBD data from my [car make/model/year] through a [OBD adapter type] and answer questions using the owner's manual PDF at [path]. Finish with a working script I can run and a test question answered from live or sample data; pause before sending any commands that change car settings, such as locks or AC.\nOriginal source: https://github.com/ThinkOffApp/CarWatch",
     "body_sha256": "51a25ce5313d9f3a15d216063e322d9862026ced1692b1350f4501b23b536993",
-    "archived_at": "2026-10-24T05:27:20.255526+00:00",
+    "archived_at": "2026-10-25T05:46:06.305522+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T05:27:20.255526+00:00",
+    "at": "2026-10-25T05:46:06.305522+00:00",
     "status": "fetched",
     "error": null
   }

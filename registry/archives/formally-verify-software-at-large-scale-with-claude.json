@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/formally-verify-software-at-large-scale-with-claude",
-  "observed_at": "2026-10-24T06:14:56.448674+00:00",
-  "html_sha256": "e0126a4550d683e43f6fd4571f153a0594379a3cf12b1ca3d8accabb9ad8e00d",
+  "observed_at": "2026-10-25T06:33:42.552875+00:00",
+  "html_sha256": "a9d77fad55c72615773a0105f1affba633cc6e4318ec1575883ad5c4e9f825f6",
   "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
     "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
-    "archived_at": "2026-10-24T06:14:56.448674+00:00",
+    "archived_at": "2026-10-25T06:33:42.552875+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-24T06:14:56.448674+00:00",
+    "at": "2026-10-25T06:33:42.552875+00:00",
     "status": "fetched",
     "error": null
   }
