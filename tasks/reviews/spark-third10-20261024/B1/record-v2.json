@@ -1,0 +1,351 @@
+{
+  "id": "compare-costco-bag-prices-and-savings-from-a-jumbled-request",
+  "title": "用 Alexa+ 从零散语音提问中比对 Costco 等多店商品单价与差价",
+  "analysis_depth": "deep",
+  "decision": "不建议商业投入",
+  "reason": "本案记录了消费者利用家庭语音助手（Amazon Alexa+）在日常交谈中进行的一次性大米规格折算与跨店均价口头对比（S1, S2）。维持“不建议商业投入”的审慎判断，理由基于以下已核实的证据边界：(1) 独立付费需求与转换意愿尚未得到验证——Alexa+ 已免费包含在 Amazon Prime 会员中（S3），且通用对话模型（如 ChatGPT Shopping Research）与零售商 App 均提供免费查价渠道，目前无任何用户愿为“跨店口头折算单价”单独付费的交易证据；(2) 原案价格来源与准确性未知——原作者在评论区表示直接询问 Hy-Vee 价格时 Alexa+ 当时答不出、随后在综合回答中给出了均价（S2），但原帖未记录具体播报金额，且现有公开资料未提供 Alexa+ 获取 Hy-Vee 或 Costco 门店实时价格的具体通道证据，不能凭单次口头体验确认其价格准确性（也不反推其必定使用何种底层语料架构）；(3) 跨商超真实比价涉及复杂的门店区域差异、线上线下价差、会员门槛、税费配送及大包装损耗，单靠语音问答无法低成本解决真实线下核价闭环。",
+  "score_status": "not_assessed",
+  "scores": {
+    "paid_demand": null,
+    "business_value_evidence": null,
+    "unit_economics": null,
+    "go_to_market": null,
+    "competitive_moat": null,
+    "delivery_risk": null,
+    "independent_feedback": null,
+    "total": null,
+    "note": "原案例为消费者家庭语音闲聊比价，无任何商业定单、售价或客户采购证据。按最新研究规范设 score_status 为 not_assessed，各维度保持 null 并附可核验理由，不强行编造商业总分。"
+  },
+  "author_method": {
+    "status": "author_summary",
+    "source_ids": [
+      "S1",
+      "S2"
+    ],
+    "bilingual_summary": {
+      "en": "After buying Basmati rice at Hy-Vee, the author and his wife debated whether Walmart or Costco would be cheaper and asked Alexa+ about three loosely connected voice questions regarding Basmati vs. Jasmine rice, prices at Walmart and Hy-Vee, and Costco bag sizes. Without an explicit structured prompt, Alexa+ inferred their comparison intent, converted Costco's 20-pound bag price into a per-5-pound equivalent, and compared average 5-pound prices across Hy-Vee, Walmart, and Costco.",
+      "zh": "原作者在 Hy-Vee 购买印度香米后与妻子讨论去 Walmart 或 Costco 是否更划算，随口向 Alexa+ 连续问了约3个松散关联的语音问题（印度香米与茉莉香米的区别、Walmart 与 Hy-Vee 的价格、Costco 的大米包装规格）。在未输入结构化提示词的情况下，Alexa+ 自行推断出两人在做跨店比价，将 Costco 的 20 磅大包装折算为每 5 磅均价，并给出了 Hy-Vee、Walmart 与 Costco 的 5 磅装平均价格对比及差价说明。"
+    },
+    "distinction_note": "原作者实际做法是夫妻间自然交谈中连续提出约3个口头语音问题（无固定文本模板，且未记录具体播报金额或核验门店实际货架价）；源站 AgentUseCases.ai 提供的 Copy prompt 是目录编辑事后提炼的结构化试用模板，并非原作者原话。"
+  },
+  "facts": [
+    {
+      "id": "F1",
+      "claim": "原作者 u/Mrbeankc 与妻子在围绕 Hy-Vee、Walmart 与 Costco 的印度香米（Basmati）和茉莉香米（Jasmine）成本讨论时，向 Alexa+ 提出了约 3 个零散的语音问题。",
+      "classification": "作者自述",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "F2",
+      "claim": "Alexa+ 主动识别出跨店比价意图，将 Costco 的 20 磅袋装大米折算为每 5 磅均价，并输出 Hy-Vee、Walmart 与 Costco 的 5 磅装均价对比及购买 20 磅装的节省情况。",
+      "classification": "作者自述",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "F3",
+      "claim": "原作者在评论区补充：直接询问 Walmart 和 Hy-Vee 价格时，Alexa+ 知道第一个（Walmart）但那一刻不知道第二个（Hy-Vee），随后在综合回答（spiel）中包含了 Hy-Vee 的价格；原帖未记录具体美元数字，其数据来源通道与当日门店真实货架价的偏差率均属未知。",
+      "classification": "作者自述",
+      "source_ids": [
+        "S1",
+        "S2"
+      ]
+    },
+    {
+      "id": "F4",
+      "claim": "原作者指出当时使用的是 Alexa+ Beta 版，升级后其原有的 Roku 技能无法正常工作，且认为官方在此领域缺乏透明说明。",
+      "classification": "作者自述",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "id": "F5",
+      "claim": "Amazon 官方公布 Alexa+ 于 2026 年 2 月面向全美开放，单独订阅价为 19.99 美元/月，Amazon Prime 会员免费享有无限量完整访问权限，非 Prime 用户可在网页端和 App 使用受限免费聊天。",
+      "classification": "实际读取的官方说明",
+      "source_ids": [
+        "S3",
+        "S4"
+      ]
+    },
+    {
+      "id": "F6",
+      "claim": "Amazon 官方介绍显示 Alexa+ 底层采用 Amazon Nova 与 Anthropic 模型，并深度集成 Amazon.com、Whole Foods、Amazon Fresh 购物功能；在已读官方说明中未发现其接入 Costco 或 Hy-Vee 线下门店实时价格接口的证据（本案中其播报价格的具体数据通道与准确性保持未知，不臆断底层架构）。",
+      "classification": "实际读取的官方说明",
+      "source_ids": [
+        "S3",
+        "S4",
+        "S5"
+      ]
+    },
+    {
+      "id": "F7",
+      "claim": "OpenAI 官方文档说明 ChatGPT Shopping Research 可通过 Agentic Commerce Protocol (ACP) 和公开零售网页做多约束商品对比，但明确声明价格与库存随时变动且部分零售商屏蔽自动访问，用户下单前必须在零售商网站核对最终价格、税费与运费。",
+      "classification": "实际读取的官方说明",
+      "source_ids": [
+        "S6"
+      ]
+    },
+    {
+      "id": "F8",
+      "claim": "源站提供的试用提示词要求比较商品价格、计算每单位（如每盎司）成本、说明购买特定数量的节省额，并加上“未经询问不得加购或下单”的安全限制。",
+      "classification": "许可目录存档",
+      "source_ids": [
+        "S1"
+      ]
+    },
+    {
+      "id": "F9",
+      "claim": "r/alexa 社区与独立评测显示用户对 Alexa+ 评价分化：认可多轮自然对话能力，但部分用户反馈第三方技能（Roku、Sengled、Samsung TV）兼容性退化、回答冗长，且有评论者质疑其比价结果未经真实性核验。",
+      "classification": "独立评测与社区反馈",
+      "source_ids": [
+        "S2",
+        "S7",
+        "S8",
+        "S9"
+      ]
+    },
+    {
+      "id": "F10",
+      "claim": "PCMag 与 Tom's Guide 独立评测指出，Alexa+ 在非 Amazon 站外购物检索上引用来源较少，且部分跨应用代理操作（如按历史订单点餐）在实测中提示暂不支持。",
+      "classification": "独立评测与社区反馈",
+      "source_ids": [
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "id": "F11",
+      "claim": "Instacart 官方定价说明指出，其线上展示价格由各零售商设定，可能高于或不同于线下门店货架价及会员店店内价，且部分店内促销不适用，不能直接等同于线下实体店核价基准。",
+      "classification": "实际读取的官方说明",
+      "source_ids": [
+        "S10"
+      ]
+    },
+    {
+      "id": "F12",
+      "claim": "Amazon 官方设备与隐私 FAQ（Node 201602230）说明，默认仅在设备检测到唤醒词、按下按钮或处于已开启的连续对话窗口时才向云端发送音频，但存在误唤醒可能及已触发语音请求与购物偏好留存云端的隐私边界。",
+      "classification": "实际读取的官方说明",
+      "source_ids": [
+        "S11"
+      ]
+    }
+  ],
+  "analysis": {
+    "A_case_reconstruction": "夫妻二人在从 Hy-Vee 买回印度香米后讨论去 Walmart 或 Costco 是否更便宜，随口向 Alexa+ 问了约 3 个零散问题（品种差异、Walmart/Hy-Vee 价格、Costco 袋装规格）。Alexa+ 自动识别比价意图，将 Costco 20 磅装折算为每 5 磅成本并与 Hy-Vee、Walmart 5 磅装均价对比。需明确边界：原帖未记录具体价格数值，原帖未提供作者事后核价记录；对于“单问 Hy-Vee 答不出、综合回答却给出数字”的现象，仅记录该自述事实与价格准确性未知，不反推其必定调用了何种训练语料或内部接口。",
+    "B_commercial_demand": "终端使用者为家庭日常采购者，无企业级采购人或专项预算。若作为研究者情景假设（非原作者实测数据）：假设普通家庭每周进行 1–3 次日用品采购比价、单袋大米等商品跨店价差在 $2–$8 之间，痛点主要在于不同包装规格（20磅 vs 5磅）的口头心算繁琐。但由于现有免费或已捆绑工具众多，消费者为单一比价功能独立付费的意愿未经验证。",
+    "C_revenue_and_gtm": "原案例未提供商业收入证据（revenue_status: unknown, price: null）。若探讨潜在商业化假设（可能包括导购返佣、会员制比价清单、家庭预算插件或商超促销聚合等多种形式，不限于单一模式），均面临缺乏授权实时门店价格源、免费竞品分流及转化率未知的挑战。用户从语音助手转向打开手机 App 的操作门槛虽低，但具体转换成本与留存率尚未经受控实验测量。",
+    "D_alternatives_comparison": "同范围对比三类方案：(1) Amazon Alexa+（Prime 免费含 / 单独订阅 $19.99/月）：优势是远场免手语音交互，但非 Amazon 站外门店价格来源与实时性未知；(2) ChatGPT Shopping Research（Free / Plus $20/月）：支持 ACP 商户与公开网页比价并附来源链接，但官方同样声明价格与库存随时变动且受部分零售商反爬限制（S6）；(3) Instacart App + 手机计算器：虽可查看同城多家超市线上可买价与每盎司单价，但 Instacart 官方明确指出线上价格由零售商设定、往往含线上加价或服务费，不等于线下门店货架价或 Costco 现场会员卡价（S10）。此外，真实比价还受地区/具体门店、SKU/品牌等级（普通印度香米 vs 陈年有机香米）、Costco 年费门槛（$65–$130/年）、税费/配送费以及 20 磅大包装受潮生虫的家庭损耗成本影响。",
+    "E_unit_economics_summary": "保留家庭自用（月 30 次查询）与独立商业比价工具（月服务 1,000 用户、30,000 次查询）双情景，模型 Token 单价作为统一基准假设。必须明确未包含的成本边界：情景中仅估算了文本 Token 与基础抓取代理费，**尚未包含实时语音识别与合成（STT/TTS）开销、各连锁商超合规商业数据授权费、各地区门店线下实地验价人工成本以及买错价格的赔付成本**。情景二中较低的每次平均成本仅为规模分摊算术结果，绝不代表独立商业工具比家庭自用具有已证实的效率或准确性优势。",
+    "F_personal_value_summary": "独立自用价值评为“中”：适合家中已有 Echo 设备且已订阅 Amazon Prime 的家庭用户在做饭或整理家务时免手进行粗略单位换算与常识咨询，但涉及具体门店实时价格时存在明显幻觉风险，大额采购仍需打开零售商 App 核实。",
+    "G_counter_evidence_and_kill_criteria": "核心反证：(1) 价格真实性缺陷——原帖评论区用户 PsychologicalOne752 一针见血指出“你根本不知道分析是真的还是听起来像真的幻觉”，OP 本人也承认单问 Hy-Vee 价格时 Alexa+ 答不出；(2) 现成免费方案过剩；(3) 零售商反爬与区域定价壁垒。停止投入条件：若无法以低于 $0.005/次的合法 API 成本获取≥3家主流连锁商超的本地门店级实时准确标价，或用户月付费转化率低于 1%，立即停止任何商业化开发。",
+    "H_trial_plan_summary": "保留源站完整英文 Copy prompt 并提供忠实中文译文与1条带价格核验要求的改写版（adapted）。仅在已有 Alexa App / Echo 或通用 AI 聊天框中做只读问答测试，严禁授权自动下单。",
+    "I_user_feedback_summary": "完成4次跨渠道检索（Reddit r/alexa 原帖与专题帖、PCMag 评测、Tom's Guide 3个月长测）：正面反馈集中在免唤醒词自然对话与上下文连贯；负面反馈集中在站外价格凭空捏造/来源稀少、第三方智能家居技能（Roku/Sengled/Samsung）失效及话多啰嗦。",
+    "J_evidence_and_gaps": "已读取9份一手与独立来源（覆盖6个域名），原案例无明确发帖日期（Reddit 归档显示 1y ago，约 2025 年 7 月），原作者未记录 Alexa+ 播报的具体美元金额，上述缺口均如实保留为未知（null）。"
+  },
+  "personal_value": {
+    "rating": "中",
+    "target_users": "已拥有 Amazon Prime 会员及兼容 Echo 设备、经常在厨房或家务场景下需要免手估算日用品大包装单价（如每磅/每盎司成本）的家庭用户。",
+    "use_cases": "多规格商品单位价格换算、商品品类常识对比（如印度香米 vs 茉莉香米烹饪特性）、Amazon 站内商品历史价格查询。",
+    "expected_benefits": "免去双手沾湿或忙家务时掏手机按计算器的麻烦，在一次多轮对话中同时获得品类科普与包装规格折算逻辑（定性推断，未实测具体节省秒数）。",
+    "setup_cost": "已持有适用 Prime 权益和兼容设备时，Alexa+ 可按来源 S3 所述权益使用；设备购买、会员本身和首次配置所需时间未计入，实际支持情况须核对。",
+    "maintenance_cost": "需维护账户、网络和设备；旧第三方技能兼容性可能增加排查成本，实际维护时长未测。",
+    "usage_frequency": "每周 1–3 次仅为研究者低频使用情景，不是作者记录；经济表另用30次/月的较高频敏感性情景。",
+    "privacy_and_error_risks": "隐私风险：根据 Amazon 官方说明（S11），默认在检测到唤醒词、按键或开启的后续对话窗口内才会将音频上传云端（并非 24 小时无差别上传全部背景闲聊），但仍存在误唤醒风险，且已触发的语音请求与购物偏好会上传云端用于个性化推荐；价格失真与决策风险：原案中 Alexa+ 播报的 Hy-Vee 与 Costco 价格未提供线下货架核验记录，且未考虑 Costco 会员年费、线上线下价差及 20 磅大米长期存放损耗，直接按口播均价采购可能产生偏差。",
+    "source_ids": [
+      "S1",
+      "S2",
+      "S3",
+      "S7",
+      "S8",
+      "S9",
+      "S11"
+    ]
+  },
+  "unit_economics": {
+    "currency": "USD",
+    "task_unit": "单次多门店多规格商品比价与单位成本换算查询（含3轮上下文问答）",
+    "time_window": "每月（30天）",
+    "revenue_status": "unknown",
+    "price": null,
+    "scenarios": [
+      {
+        "name": "情景一：个人/家庭依托现有 Prime 会员自用（月均 30 次查询）",
+        "volume_per_month": 30,
+        "revenue_status": "unknown",
+        "price_per_unit": null,
+        "monthly_revenue": null,
+        "costs": {
+          "model_or_tool": {
+            "amount": 0.0,
+            "assumption": "家庭已因快递权益订阅 Amazon Prime，Alexa+ 免费包含（S3）；若非 Prime 单独为 Alexa+ 付费则为 $19.99/月（折合 $0.67/次）。"
+          },
+          "third_party_data": {
+            "amount": 0.0,
+            "assumption": "无外部商业价格 API 采购。"
+          },
+          "human_labor": {
+            "amount": 7.5,
+            "assumption": "假设家庭用户按 $15/小时机会成本计，每次口头提问及打开手机 App 抽检核实关键价格耗时 1 分钟，30 次共 0.5 小时 = $7.50。"
+          },
+          "rework_and_errors": {
+            "amount": 2.25,
+            "assumption": "研究者假设30%查询需要额外复核，9次各1分钟，按15美元/小时计2.25美元；不是原案错误率或已测故障原因。"
+          },
+          "customer_acquisition": {
+            "amount": 0.0,
+            "assumption": "个人自用无获客支出。"
+          },
+          "fixed_maintenance": {
+            "amount": 0.0,
+            "assumption": "无服务器或软件维护费。"
+          },
+          "total_monthly_cost": 9.75,
+          "unit_cost": 0.325
+        },
+        "monthly_profit": null,
+        "note": "个人自用无外部收费，不计算利润；若单独支付19.99美元/月订阅，假设月全成本29.74美元，单位0.9913美元。没有同等任务范围的替代方案实测成本，不能断言其更贵或更省。"
+      },
+      {
+        "name": "情景二：第三方构建“跨商超实时单价对比”商业工具（月服务 1,000 用户，共 30,000 次查询）",
+        "volume_per_month": 30000,
+        "revenue_status": "unknown",
+        "price_per_unit": null,
+        "monthly_revenue": null,
+        "costs": {
+          "model_or_tool": {
+            "amount": 45.0,
+            "assumption": "使用轻量级商用 LLM API（按每次多轮比价含检索上下文消耗约 1,500 tokens、平均综合费率 $1.00/1M tokens 估算，30,000 次约 $45.00）。"
+          },
+          "third_party_data": {
+            "amount": 300.0,
+            "assumption": "研究者假设公开网页检索服务0.01美元/次，30000次为300美元；不据此断言各商超没有API，也未取得商业门店数据授权报价。"
+          },
+          "human_labor": {
+            "amount": 400.0,
+            "assumption": "每周需约 4 小时人工抽检商品规格映射（如大袋/小袋净重识别）与处理用户报错，按 $25/小时计，每月 16 小时 = $400.00。"
+          },
+          "rework_and_errors": {
+            "amount": 150.0,
+            "assumption": "研究者另设每月6小时集中排查预算，按25美元/小时为150美元；没有按查询计算的处理时间或已测错误率，不保证能覆盖任意比例的异常查询，额外API重试费未计入。"
+          },
+          "customer_acquisition": {
+            "amount": 500.0,
+            "assumption": "假设每月推广支出500美元，按1000名活跃用户摊销0.50美元；用户规模和支出之间的因果关系未验证，非实测CAC。"
+          },
+          "fixed_maintenance": {
+            "amount": 50.0,
+            "assumption": "基础云主机、数据库与监控固定月费 $50.00。"
+          },
+          "total_monthly_cost": 1445.0,
+          "unit_cost": 0.0482
+        },
+        "monthly_profit": null,
+        "note": "售价、实际付费转化和导购返佣收入未知，保持null；1445美元仅为所列假设项小计，不是可经营报价或全成本。"
+      }
+    ],
+    "excluded_costs": [
+      "语音识别与合成费",
+      "商业门店价格数据授权费（可得性与金额未知）",
+      "线下验价与差错赔付",
+      "额外API重试费",
+      "设备与首次开发投入"
+    ]
+  },
+  "try_it": {
+    "source_prompt_status": "available",
+    "preparation": "准备一台已启用 Alexa+ 的 Echo 设备、Alexa 手机 App 或浏览器访问 Alexa.com（也可在 ChatGPT / Claude / Gemini 中直接对比测试）；在设置中确认已关闭“免确认直接语音下单”，仅做只读问答。",
+    "tools": [
+      "Alexa+ (推荐工具)",
+      "ChatGPT / Gemini (替代对比工具)"
+    ],
+    "expected_result": "输出统一单位的价格比较，区分账面差价与计入会员、税运和损耗后的净节省；价格不足时明确未知，未经许可不加购或下单。",
+    "prompts": [
+      {
+        "type": "original",
+        "language": "en",
+        "label": "源站 Copy prompt 原文（AgentUseCases.ai 提供）",
+        "text": "I have a few messy questions: compare the price of [product, e.g. a bag of coffee] at [store, e.g. Costco] with [other store or size], work out the cost per [unit, e.g. ounce], and tell me how much I'd save buying [quantity]. Give me a short comparison with a clear recommendation. Don't add anything to my cart or buy anything without asking me first.",
+        "source_url": "https://agentusecases.ai/use-case/compare-costco-bag-prices-and-savings-from-a-jumbled-request",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "original",
+        "language": "zh",
+        "label": "源站 Copy prompt 忠实中文翻译",
+        "text": "我有几个比较零散的问题：请比较 [商品，例如一袋咖啡] 在 [商店，例如 Costco] 与 [其他商店或规格] 的价格，算出每 [单位，例如盎司] 的成本，并告诉我购买 [数量] 可以省下多少钱。请给我一份简短的对比和明确的购买建议。在事先询问我之前，不要将任何商品加入购物车或购买任何东西。",
+        "source_url": "https://agentusecases.ai/use-case/compare-costco-bag-prices-and-savings-from-a-jumbled-request",
+        "source_ids": [
+          "S1"
+        ]
+      },
+      {
+        "type": "adapted",
+        "language": "zh",
+        "label": "防幻觉改写版提示词（增加实时价格来源核验与用户输入已知标价）",
+        "text": "我想对比同一品类在不同门店和包装下的真实单价：[填入商品与你在门店/App看到的真实价格，例如：Hy-Vee 5磅印度香米 $X、Walmart 5磅装 $Y、Costco 20磅装 $Z；若价格未知请明确说明你检索到的具体网页来源与日期，查不到实时标价请直接标“未知”而不要用历史均价猜测]。请统一折算为每磅和每5磅单价，计算买大包装的账面差价；仅在会员、税运、损耗与消耗速度等输入充分时估算净节省和回本周期，否则明确未知。仅输出对比表与建议，不要执行任何加购或下单操作。",
+        "changes_made": "增加价格出处、日期与未知项披露；不推断原案模型使用了训练均值或某种内部数据通道。模板未实测。",
+        "source_url": "https://agentusecases.ai/use-case/compare-costco-bag-prices-and-savings-from-a-jumbled-request",
+        "source_ids": [
+          "S1",
+          "S2",
+          "S6"
+        ]
+      }
+    ]
+  },
+  "feedback_searches": [
+    {
+      "query": "\"1m4jpzw\" OR \"basmati\" \"Hy-Vee\" \"Alexa+\" site:reddit.com & direct browse of https://www.reddit.com/r/alexa/comments/1m4jpzw",
+      "channel": "社区论坛 (Reddit r/alexa)",
+      "result_summary": "成功读取原帖及完整评论区（135赞）：OP 认可多轮对话综合能力，但评论区多名用户抱怨 Roku/Samsung TV/Sengled 技能损坏、语音啰嗦，且质疑比价数据为模型幻觉。",
+      "source_ids": [
+        "S2"
+      ]
+    },
+    {
+      "query": "Alexa+ shopping price comparison user review feedback site:reddit.com/r/alexa",
+      "channel": "社区论坛 (Reddit r/alexa 多帖检索)",
+      "result_summary": "检索到 r/alexa 多篇用户讨论帖（如 1kfqd51、1qpnhmr），用户普遍认为 Prime 免费包含尚可尝试，但单独付 $19.99/月不值，且部分基础功能不如旧版稳定。",
+      "source_ids": [
+        "S9"
+      ]
+    },
+    {
+      "query": "\"Alexa+\" shopping review site:theverge.com OR site:techcrunch.com OR site:pcmag.com OR site:tomsguide.com",
+      "channel": "独立科技媒体评测 (PCMag, Tom's Guide)",
+      "result_summary": "成功读取 PCMag 与 Tom's Guide 实测报告：均指出 Alexa+ 在 Amazon 站内购物尚可，但站外购物检索来源极少、跨应用代理动作经常不支持。",
+      "source_ids": [
+        "S7",
+        "S8"
+      ]
+    }
+  ],
+  "limitations": [
+    "原作者未在帖子中记录 Alexa+ 当时播报的具体美元价格，无法事后核查其播报的 Hy-Vee、Walmart 与 Costco 大米单价与当日门店实际标价的误差率。",
+    "Alexa+ 并无 Costco 或 Hy-Vee 线下门店收银台实时价格 API，其对线下门店价格的回答依赖网页检索或训练语料估算。",
+    "本案例完全属于个人家庭消费闲聊场景，不存在任何商业客户、订单或付费转化证据。",
+    "主助手2026-10-24发现v2报告与结构记录未完全同步，已修正候选；最终来源、schema与发布复验尚未完成。"
+  ],
+  "source_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "S10",
+    "S11"
+  ],
+  "version": "v2"
+}
