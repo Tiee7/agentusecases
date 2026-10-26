@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-cloud-outage-risks-before-they-happen",
-  "observed_at": "2026-10-25T05:45:48.324848+00:00",
-  "html_sha256": "68b8baf9e2d0706e31bd19c3b7c8f7482a803eab12f678d64ed852c66a3b5347",
+  "observed_at": "2026-10-26T05:50:23.341108+00:00",
+  "html_sha256": "44aa9a76f57e964ad5297b225410fb4bb30d6ee695852ff1caceddc3f4235739",
   "body_sha256": "a720ad64be4e69af466fb420c61ea5761e614bdc0d91b2d6a16e8f2a537e75d5",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Catch cloud outage risks before they happen\nAn autonomous ReAct agent that queries real data to stop cloud outages before they occur, built for the Sanity Challenge.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nSHIPCHECK is a ReAct agent connected to a Sanity Content Lake through MCP. Given a proposed upgrade, it calls four tools for component state, version constraints, cluster dependencies and a knowledge graph. It follows two-hop dependencies with GROQ and settles conflicting docs by an authority score from 1 to 10. Sanity held 18 seeded records.\nHow it went\nFor the payment service v2 to v4 upgrade, it ran 13 steps and found that the cluster's Payment SDK v2.4.1 was below the required v3.0.0. It returned DO NOT SHIP YET, and a simulated SDK fix flipped the verdict to safe.\nWorth knowing\nThe data is a small seeded set of 18 records, and the claim that hallucination fell from about 30% to 0% is stated without any evaluation method.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nUsing the logs and metrics export at [path], look for patterns that came before past outages, like rising error rates, saturated CPU, or expiring certificates. Write a script that checks current data for those signals and outputs a ranked list of risks with evidence. Finish when it runs on my sample data. Do not change any infrastructure.\nOriginal source: https://dev.to/rajan_mishra_a9f78ad216b4/shipcheck-an-autonomous-react-agent-that-stops-cloud-outages-before-they-happen-5ag1",
     "body_sha256": "a720ad64be4e69af466fb420c61ea5761e614bdc0d91b2d6a16e8f2a537e75d5",
-    "archived_at": "2026-10-25T05:45:48.324848+00:00",
+    "archived_at": "2026-10-26T05:50:23.341108+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T05:45:48.324848+00:00",
+    "at": "2026-10-26T05:50:23.341108+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/test-local-web-apps-and-fix-errors-in-one-session",
-  "observed_at": "2026-10-25T05:55:34.356560+00:00",
-  "html_sha256": "309fb5979c82c77e77190c0e1fb96a43cfea55d4ca04b9785047b9993de17b26",
+  "observed_at": "2026-10-26T06:00:09.325935+00:00",
+  "html_sha256": "5471e7200a0bf700ccc9b10a8770e0cae58497c1f83b81a067c6fb62c055de0e",
   "body_sha256": "1c57a93e8261a7d51748cfe9de6f3b35800ecbeda972560a12a6851046881566",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Test local web apps and fix errors in one session\nClaude Code with Claude in Chrome writes code, opens localhost, clicks through the UI, reads console errors and fixes them without the developer touching the browser.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nThe Claude in Chrome extension is connected to Claude Code with `claude --chrome` or `/chrome`. It shares the developer's real Chrome session, including logins, and new domains need approval once. Asked to add a dashboard table filter, Claude wrote the component, opened the page and tried the filter. It spotted that the URL query params weren't updating, fixed the router logic, and confirmed the fix with a reload.\nHow it went\nThe filter example took three iterations with no browser work from the developers. The setup is limited to a developer's own workstation: it needs a visible Chrome window, so no CI or headless runs, and it works in Chrome and Edge only.\nWorth knowing\nBrowser interaction uses a lot of tokens, about 7.7% of context per interaction. The authors call API pricing a money pit and say a Max subscription is needed for heavy use.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nStart my app locally with [start command], then open it in Chrome at [localhost URL] and click through [feature or flow]. Read the browser console and network errors, find the cause in the code, and fix it. Repeat until the flow works with no console errors. Then summarize what you changed. Don't commit or push anything without asking me.\nOriginal source: https://www.test-lab.ai/blog/claude-code-chrome-extension-local-testing",
     "body_sha256": "1c57a93e8261a7d51748cfe9de6f3b35800ecbeda972560a12a6851046881566",
-    "archived_at": "2026-10-25T05:55:34.356560+00:00",
+    "archived_at": "2026-10-26T06:00:09.325935+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T05:55:34.356560+00:00",
+    "at": "2026-10-26T06:00:09.325935+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
-  "observed_at": "2026-10-25T06:31:26.468680+00:00",
-  "html_sha256": "32b1f1f511d28d2dc6ed17c7770e1f8605dbb765e91c063537259dfe34242792",
+  "observed_at": "2026-10-26T06:36:01.428500+00:00",
+  "html_sha256": "b98ed2f54d6fff6a9e4a2a0688e1cd18ba4e5618b3e74e68e1b3ebda7802ae11",
   "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run support queries and bug checks from Slack threads\nDoozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAt Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.\nHow it went\n13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.\nWorth knowing\nKeep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it.\nOriginal source: https://news.ycombinator.com/item?id=50166597",
     "body_sha256": "a66336e249ca52c19cbc985dafb8ac21b611cb3e97d1d745614d5d6c5495b335",
-    "archived_at": "2026-10-25T06:31:26.468680+00:00",
+    "archived_at": "2026-10-26T06:36:01.428500+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-25T06:31:26.468680+00:00",
+    "at": "2026-10-26T06:36:01.428500+00:00",
     "status": "fetched",
     "error": null
   }

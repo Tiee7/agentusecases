@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-tickets-into-merged-pull-requests",
-  "observed_at": "2026-10-25T05:43:32.222990+00:00",
-  "html_sha256": "16212dfef214eaed5dae2356fbb3377d16e11f0bcd01fcddf2a82cf4fb8c5a6a",
+  "observed_at": "2026-10-26T05:48:07.330117+00:00",
+  "html_sha256": "9eba29557b7e53d51640c1ac3664b2d1dd919b792acdb9262655502cd3e6da14",
   "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
     "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
-    "archived_at": "2026-10-25T05:43:32.222990+00:00",
+    "archived_at": "2026-10-26T05:48:07.330117+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T05:43:32.222990+00:00",
+    "at": "2026-10-26T05:48:07.330117+00:00",
     "status": "fetched",
     "error": null
   }

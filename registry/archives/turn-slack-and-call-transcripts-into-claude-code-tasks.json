@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-slack-and-call-transcripts-into-claude-code-tasks",
-  "observed_at": "2026-10-25T06:20:50.324682+00:00",
-  "html_sha256": "04bf022864254981a8e56fa9dc13066a2f7441c67ea8e7ef9036a29e5b02f404",
+  "observed_at": "2026-10-26T06:25:25.433118+00:00",
+  "html_sha256": "ca0f9909d6eaf45fca25b07fb9bf4d818f20ef1cc3b8b2d182fe0cccea914bf0",
   "body_sha256": "1536b4fc9a8326d6a12b48251f7efa39df7a8c60af6eecde1af747e84dc8e260",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Turn Slack and call transcripts into Claude Code tasks\nThe poster wants a persistent Claude agent that watches Slack and call transcripts, spots tasks, and drafts the Claude Code prompts, removing them from the loop.\nDone with\nCL\nClaude\nCC\nClaude Code\nWhat they did\nThe post itself is a request, not a finished build: the poster says their company’s Claude enterprise setup already connects to Slack, call recordings/transcripts, a data warehouse, a knowledge base, Google Workspace, and internal tools, and they want a permanent agent to watch Slack and transcripts, identify tasks, draft Claude Code prompts, and let them approve or tweak before running. In comments, the most concrete similar setup described is a small always-on Slack app on a Mac that listens for mentions and alerts, starts Claude Code in headless mode per Slack thread, keeps phase one read-only, and gates write actions, sends, and higher-risk changes behind approval buttons.\nHow it went\nNo outcome is reported by the original poster because they are asking for advice. A commenter who built a similar system says it was a \"total game changer,\" but gives no hard metrics; others warn quality can drop without strong approval, deduping, and read-only staging.\nWorth knowing\nMost actionable catch: start read-only, separate task extraction from execution, and dedupe requests because the same ask may appear in both Slack and call transcripts.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead the [Slack export or channel folder] and the call transcripts in [folder path], and find action items that could be handed to a coding agent for [project name]. For each one, draft a clear, ready-to-run Claude Code prompt and note which message or transcript it came from. Save them as a single list in [file path], and don't run any of the tasks or send any messages yourself.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x0an42/serious_work_question_ive_become_a_human_api",
     "body_sha256": "1536b4fc9a8326d6a12b48251f7efa39df7a8c60af6eecde1af747e84dc8e260",
-    "archived_at": "2026-10-25T06:20:50.324682+00:00",
+    "archived_at": "2026-10-26T06:25:25.433118+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T06:20:50.324682+00:00",
+    "at": "2026-10-26T06:25:25.433118+00:00",
     "status": "fetched",
     "error": null
   }

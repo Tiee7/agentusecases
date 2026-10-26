@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-planner-and-cheap-executor-subagent-coding-pipeline",
+  "observed_at": "2026-10-26T06:40:11.358207+00:00",
+  "html_sha256": "1f985b6c9f3df38cc65d0ae0f489ebdae828890005591623e4d170ddb35acc6b",
+  "body_sha256": "752bd846a7750442b0d1116f350a491151eaa558e5dd3fe449e25d562be202fb",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a planner and cheap executor subagent coding pipeline",
+      "sha256": "36379976f37e28e41cedb2d2ede04116c92227f5103d6e22a88fe80f3453062e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The commenter uses Codex with GPT-5.5 as planner and a GPT-5.4 Mini agent as executor so cheaper models handle tasks that would otherwise cost too much.",
+      "sha256": "2ab8e3891fae9cb7c324523a3f5cea2f357a3558c23f14ba5e2de2e008f044bf"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the thread, the commenter says they built their own workflow instead of relying on Codex’s default agent flow. They use GPT-5.5 only to plan tasks, then hand those tasks to a GPT-5.4 Mini agent that does most of the actual work, specifically including file editing; the person chose and assembled this routing themselves.",
+      "sha256": "4fae26c331d2ba7527e3d37b0b6303b50bb7d6c0c112a55c2c4bf1fc97354b61"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The claimed result is lower-cost handling for most coding work because GPT-5.4 Mini covers most tasks while the pricier model is reserved for planning. The comment gives no metrics, examples, or failure cases.",
+      "sha256": "3b0f6629973e3dde00fcc6d401e6da8a5972d20a189e6d3e3cc488cf2358e540"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that they had to build the workflow themselves; the comment links a GitHub project but gives no setup time or cost numbers.",
+      "sha256": "eb80a04b217397178fe4d1a77848e1f53543db8a88b65a3488cb46e07f79ee10"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/codex/comments/1upz44z/codex_needs_cheaper_more_and_better_subagents"
+      ],
+      "sha256": "a62c7b0b387d13faff39610244350a27be82be92463e23fb8c3a04c8970ebd31"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-25",
+      "sha256": "4f07f33d9abd04addfc2bdacd69810735efb48835d2b4c2b3c38fef983829dae"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ba52c2b4cb25303ffd90563b964d735222f2c7bfe3ad06d662387f1a1c7fe600",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a planner and cheap executor subagent coding pipeline\nThe commenter uses Codex with GPT-5.5 as planner and a GPT-5.4 Mini agent as executor so cheaper models handle tasks that would otherwise cost too much.\nDone with\nCX\nCodex\nWhat they did\nIn the thread, the commenter says they built their own workflow instead of relying on Codex’s default agent flow. They use GPT-5.5 only to plan tasks, then hand those tasks to a GPT-5.4 Mini agent that does most of the actual work, specifically including file editing; the person chose and assembled this routing themselves.\nHow it went\nThe claimed result is lower-cost handling for most coding work because GPT-5.4 Mini covers most tasks while the pricier model is reserved for planning. The comment gives no metrics, examples, or failure cases.\nWorth knowing\nThe main catch is that they had to build the workflow themselves; the comment links a GitHub project but gives no setup time or cost numbers.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn [repo path], set up a two-stage workflow for this task: [task description]. First, use the strongest model to write a step-by-step plan with small, well-specified subtasks and acceptance tests. Then hand each subtask to a cheaper, smaller model as an executor subagent, and have the planner review each result. Stop when all acceptance tests pass, and give me a summary of the plan, the changes, and any subtasks that needed rework.\nOriginal source: https://www.reddit.com/r/codex/comments/1upz44z/codex_needs_cheaper_more_and_better_subagents",
+    "body_sha256": "752bd846a7750442b0d1116f350a491151eaa558e5dd3fe449e25d562be202fb",
+    "archived_at": "2026-10-26T06:40:11.358207+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-26T06:40:11.358207+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

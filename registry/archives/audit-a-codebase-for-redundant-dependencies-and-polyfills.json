@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/audit-a-codebase-for-redundant-dependencies-and-polyfills",
-  "observed_at": "2026-10-25T05:47:36.326854+00:00",
-  "html_sha256": "38e0f90b8d67c6a6ab97fda32369fadf680e62da6c7f05260850b02d1acc09ad",
+  "observed_at": "2026-10-26T05:52:11.299253+00:00",
+  "html_sha256": "6f84755f3d13c8cb1075ea041901dcb2144ddd245c5f66510e6930922aca6d17",
   "body_sha256": "855875c89ffa2f9b1e71734680770a0095212a1edb2ac0a198e8fa4b9a05d8af",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Audit a codebase for redundant dependencies and polyfills\nAn MCP server lets an agent check a codebase for redundant dependencies and polyfills, usable remotely or as a local stdio server.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou add the e18e MCP server to your agent, either as a remote streamable HTTP server (Claude Code has a one-line add command) or as the local stdio package @e18e/mcp. The agent can then check install commands for packages with better alternatives, parse source files and suggest replacements for their imports, look up replacements by name or topic, and read curated migration guides.\nHow it went\nThe page describes the tools and setup only. It gives no results, numbers, or example audit, so there is no evidence here of how well it works on a real codebase.\nWorth knowing\nThe code-checker works on a single source file at a time, so auditing a whole codebase means the agent has to run it file by file.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nAudit the project at [path to repo] for redundant dependencies and unnecessary polyfills, such as packages that can be replaced by built-in features in [runtime and version, e.g. Node 20]. Produce a report listing each one, why it's redundant, and the suggested replacement. Don't edit package files or install anything until I've reviewed the report.\nOriginal source: https://mcp.e18e.dev/",
     "body_sha256": "855875c89ffa2f9b1e71734680770a0095212a1edb2ac0a198e8fa4b9a05d8af",
-    "archived_at": "2026-10-25T05:47:36.326854+00:00",
+    "archived_at": "2026-10-26T05:52:11.299253+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T05:47:36.326854+00:00",
+    "at": "2026-10-26T05:52:11.299253+00:00",
     "status": "fetched",
     "error": null
   }

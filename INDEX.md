@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **81** / 注册案例 **1577**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **1606**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -24,6 +24,7 @@
 | [用 Claude Computer Use 填写 Form 1040](reports/fill-out-a-form-1040-with-computer-use.md) | 仅建议受控试点 | 27.0 | 中 | not_observed | 税务资料录入与事务所内部自动化 | 2026-10-15T13:37:37.079875+00:00 |
 | [用 Manus 编写交易信号脚本并记录交易日志](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 低 | not_observed | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
 | [用 Counterforce Health 起草拒赔申诉并致电保险公司](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 中 | available | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
+| [用 Claude Code 根据银行流水起草税务申报](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 中 | not_observed | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 | [用 Claude 根据文件夹资料准备联邦和州税表](reports/prepare-federal-and-state-tax-returns-from-a-folder.md) | 适合内部效率工具 | 31.5 | 中 | not_observed | 美国个人税务资料整理与报税辅助 | 2026-10-15T15:07:39.086321+00:00 |
 | [用 Meta Muse 查找无人认领款项并发起申领](reports/find-unclaimed-money-and-start-the-claim.md) | 适合内部效率工具 | 39.0 | 中 | not_observed | 个人资产找回／无人认领财产申领辅助 | 2026-10-15T16:46:05.228548+00:00 |
 | [用 ChatGPT 起草停车罚单申诉](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |
@@ -55,7 +56,6 @@
 | [用 Alexa+ 从零散语音提问中比对 Costco 等多店商品单价与差价](reports/compare-costco-bag-prices-and-savings-from-a-jumbled-request.md) | 不建议商业投入 | 未评定 | 中 | available | 家庭采购与商品单位价格比较 | 2026-10-24T02:50:58.393111+00:00 |
 | [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:55:09.576494+00:00 |
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
-| [用 Claude Code 根据银行流水起草税务申报](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 中 | not_observed | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |
 | [用 Laminar Signals 分析智能体运行轨迹并聚类错误](reports/find-errors-in-production-agent-traces.md) | 仅建议受控试点 | 43.0 | 中 | available | 智能体可观测性与质量运营 | 2026-10-19T23:14:54Z |
 | [用 ChatGPT 销售代理寻找网页设计客户](reports/find-web-design-prospects-with-sales-agents.md) | 适合内部效率工具 | 36.0 | 中 | available | 本地网页设计获客与销售准备 | 2026-10-16T14:06:28.136453+00:00 |
 | [用 Claude Code 生成可在浏览器授课的互动 HTML 文件](reports/generate-custom-interactive-html-lessons-for-students.md) | 仅建议受控试点 | 44.0 | 中 | available | 英语互动课件制作与维护 | 2026-10-19T22:49:39Z |
@@ -96,7 +96,6 @@
 ## 下一批优先案例
 
 - Research stocks and update a watchlist in the browser · `research-stocks-and-update-a-watchlist-in-the-browser`
-- Prepare S-Corp tax filings from bookkeeping data · `prepare-s-corp-tax-filings-from-bookkeeping-data`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
 - Generate prompts for a browser agent to execute trades · `generate-prompts-for-a-browser-agent-to-execute-trades`
@@ -105,3 +104,4 @@
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
 - Add a filtered report page to a Razor Pages app · `add-a-filtered-report-page-to-a-razor-pages-app`
 - Add agentic forgetting to an agent's memory · `add-agentic-forgetting-to-an-agent-s-memory`
+- Add family to a dental plan by voice from the car · `add-family-to-a-dental-plan-by-voice-from-the-car`

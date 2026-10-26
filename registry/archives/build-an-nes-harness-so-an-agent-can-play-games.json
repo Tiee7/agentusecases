@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-an-nes-harness-so-an-agent-can-play-games",
+  "observed_at": "2026-10-26T06:39:39.423508+00:00",
+  "html_sha256": "c2984fe09bf18b238422ae1c0802aa523c4fb56952f44b9ff7045e92c19ef6d4",
+  "body_sha256": "9a8ba5e31b2534db3d43210adc3286cec4d6b0a141089fbf02c8be710321e560",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build an NES harness so an agent can play games",
+      "sha256": "d67fe06291a6256914b33126cb7c310ccba7ddf4e8c1806862e9d0119d7476f9"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter is building an NES harness where an agent reads emulator state; it struggled detecting dialogs and menus, so they plan a per-frame state recorder.",
+      "sha256": "5d406ecce2ced3663c116d997e5f464231536d450c7dcfb163dc22121ecc4a61"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter is building a harness that lets an agent play NES games by reading emulator and game state. The agent kept stalling on detecting dialogs, menu navigation and screen changes. After a break, the commenter asked whether state could simply be read every frame instead of using clever detection. The agent agreed.",
+      "sha256": "4b1f50ef606fc5cdfc94273e981fbacd7ddc9e2800a5b1b1206df01eceb5099d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Not finished. The commenter hasn't resumed work, and plans to have the agent build a small recorder for frame-accurate state changes. The agent also raised a performance worry, which the commenter dismissed as nonsense, noting it was a flash model.",
+      "sha256": "2640e6709513d7ba32c1bf2a6bb0a7b0b72eeeda573349de8dbd9e1d89b8a7c5"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "When the agent churns on a clever approach, step back and suggest a simpler one yourself; agents struggle to notice ambiguity or missing context.",
+      "sha256": "c1922b63c05dc0ca57700f03096b0fdd1441e83fc45deecf433d9af2f6684c8d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50227940"
+      ],
+      "sha256": "9d1a1279d679c2805e1fd17ec5d8b285cc69a71ff800ee9780e7e40228f7e79d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-25",
+      "sha256": "4f07f33d9abd04addfc2bdacd69810735efb48835d2b4c2b3c38fef983829dae"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b01ad6b5a5058cded6ca9e47a6a14abb0d46dccc92a8ba372d78c5c8315ab3ea",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build an NES harness so an agent can play games\nA commenter is building an NES harness where an agent reads emulator state; it struggled detecting dialogs and menus, so they plan a per-frame state recorder.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter is building a harness that lets an agent play NES games by reading emulator and game state. The agent kept stalling on detecting dialogs, menu navigation and screen changes. After a break, the commenter asked whether state could simply be read every frame instead of using clever detection. The agent agreed.\nHow it went\nNot finished. The commenter hasn't resumed work, and plans to have the agent build a small recorder for frame-accurate state changes. The agent also raised a performance worry, which the commenter dismissed as nonsense, noting it was a flash model.\nWorth knowing\nWhen the agent churns on a clever approach, step back and suggest a simpler one yourself; agents struggle to notice ambiguity or missing context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a harness so an AI agent can play [NES game name] in an emulator. Set up [emulator, e.g. FCEUX or a Python NES library] so the agent can read game state like RAM values and screen frames, send controller inputs, and record a per-frame state log. Include detection for dialogs and menus (for example by watching specific RAM addresses), and stop when the agent can get through [first goal, e.g. the opening town] and show me the log format.\nOriginal source: https://news.ycombinator.com/item?id=50227940",
+    "body_sha256": "9a8ba5e31b2534db3d43210adc3286cec4d6b0a141089fbf02c8be710321e560",
+    "archived_at": "2026-10-26T06:39:39.423508+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-26T06:39:39.423508+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

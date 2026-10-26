@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-financial-plan-and-retirement-scenarios-from-stateme",
+  "observed_at": "2026-10-26T06:39:51.357838+00:00",
+  "html_sha256": "5af9866a8f1150827c76fce65be99efe8b70b8762fc48880875cf584b51645b6",
+  "body_sha256": "9de1ba651dc4c5c4960de0ca1d1fedd63da224c08fd4717dc6f59104e0f7018a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a financial plan and retirement scenarios from statements",
+      "sha256": "fa487d7df85c2f008fb062e0dc7999f94d7cf00d28858407e2db46ad6f870eec"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter used Claude Code to read assets, debt and income statements, interview them on goals, and dispatch sub-agents to produce a multiphase action plan and retirement scenarios.",
+      "sha256": "e3685ccad5f66b53624525490b5abcd233ccb8a696c57391fec72c94fed2d913"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter set up Claude Code as a small “financial firm” with separate agents: a budget analyst, a Boglehead-style retirement advisor, a more aggressive asset manager, a coding agent, and a lead advisor. They stored assets, liabilities, debt, and income in markdown, pulled YNAB spending data through its API, had Python scripts summarize transactions, and used the lead agent to interview them on goals, dispatch the sub-agents, and assemble a multiphase plan plus retirement scenarios.",
+      "sha256": "8bd0d33deb95f24dcd309d162d344757deda170fec1e7b8571314a61af0217f4"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced a full financial planning review, including budget feedback from two years of transactions and retirement options covering timing, location, lifestyle, and an estimated probability of reaching those goals. The commenter did not share measured performance or real-world results beyond that output.",
+      "sha256": "34d438173fae66914164bf9d32e2509dccf7fc1ace29e8080092080c24d6d924"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main practical catch was setup: they had to wire YNAB’s API and save the token in a local JSON file so the workflow was repeatable without rerunning the LLM for every summary.",
+      "sha256": "3d99e41c14fb31ad53fef54d935e506b81be96f71b32780d51f6599cf619b127"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1py5icg/whats_your_best_claude_code_noncoding_use_case"
+      ],
+      "sha256": "4e14c4f5bdbac669ce66f88144f937ad0fcd1fa9fe2931ba3a463d55f18f7e99"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-25",
+      "sha256": "4f07f33d9abd04addfc2bdacd69810735efb48835d2b4c2b3c38fef983829dae"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "16307ef5da6de318224fed9b90de2a9685091d2140a10e0df0f6447d4cced260",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a financial plan and retirement scenarios from statements\nA commenter used Claude Code to read assets, debt and income statements, interview them on goals, and dispatch sub-agents to produce a multiphase action plan and retirement scenarios.\nDone with\nCC\nClaude Code\nWhat they did\nA commenter set up Claude Code as a small “financial firm” with separate agents: a budget analyst, a Boglehead-style retirement advisor, a more aggressive asset manager, a coding agent, and a lead advisor. They stored assets, liabilities, debt, and income in markdown, pulled YNAB spending data through its API, had Python scripts summarize transactions, and used the lead agent to interview them on goals, dispatch the sub-agents, and assemble a multiphase plan plus retirement scenarios.\nHow it went\nIt produced a full financial planning review, including budget feedback from two years of transactions and retirement options covering timing, location, lifestyle, and an estimated probability of reaching those goals. The commenter did not share measured performance or real-world results beyond that output.\nWorth knowing\nThe main practical catch was setup: they had to wire YNAB’s API and save the token in a local JSON file so the workflow was repeatable without rerunning the LLM for every summary.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead the financial statements in [folder path] covering my assets, debts and income. Then interview me one question at a time about my goals, such as [retirement age, savings targets, big purchases]. When you have enough, write a multiphase action plan and a few retirement scenarios as markdown files in [output folder], with assumptions listed at the top of each.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1py5icg/whats_your_best_claude_code_noncoding_use_case",
+    "body_sha256": "9de1ba651dc4c5c4960de0ca1d1fedd63da224c08fd4717dc6f59104e0f7018a",
+    "archived_at": "2026-10-26T06:39:51.357838+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-26T06:39:51.357838+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

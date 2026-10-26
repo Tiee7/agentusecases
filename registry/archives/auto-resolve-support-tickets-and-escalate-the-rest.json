@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/auto-resolve-support-tickets-and-escalate-the-rest",
-  "observed_at": "2026-10-25T06:03:08.410029+00:00",
-  "html_sha256": "28928030e9ecfef9c8b057b2a92e22c3b5460107307aed95990ff7458b8c377c",
+  "observed_at": "2026-10-26T06:07:43.348259+00:00",
+  "html_sha256": "20955eb37d7bd5a1cfdc64a39e4dbf275b367cd7e9a2a912c3a29fde5f76edfd",
   "body_sha256": "dfa208ea04b90ee24cc54f10b222ec2d4ec7434ecd3744f4073927742d375b1a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Auto-resolve support tickets and escalate the rest\nAn n8n agent looks up the knowledge base and order history, replies by email or escalates to Slack with a draft; billing and security go to humans.\nDone with\nN8\nn8n\nWhat they did\nTickets arrive by webhook from a form, chat widget or API call. n8n runs a knowledge base search and an order history lookup in parallel. GPT-4o-mini then classifies the category, sets priority, reads sentiment and drafts a reply. Resolvable tickets get an HTML email, a Google Sheets log entry and a Slack post. Others go to a category-specific Slack channel with the draft, a confidence score and notes.\nHow it went\nThe author reports it runs cheaply. Billing and refund tickets always escalate, and account security goes to an urgent channel. The post gives no resolution rates or accuracy figures.\nWorth knowing\nCost is about $0.90 a month at 50 tickets a day with GPT-4o-mini. You need OpenAI, SMTP, Google Sheets and Slack credentials, and optionally knowledge base and order APIs.\nTry it yourself\nwith\nn8n\nCopy prompt\nCreate an n8n agent that reads incoming support tickets from [email or helpdesk], searches [knowledge base link] and looks up the customer's order in [order system or sheet]. If it's confident, have it draft the answer and show it to me before sending, while billing, refund and security issues go straight to [Slack channel] with a suggested draft. Finish by running three sample tickets and showing me how each was routed.\nOriginal source: https://community.n8n.io/t/ai-customer-support-agent-auto-resolves-tickets-escalates-to-humans/285840",
     "body_sha256": "dfa208ea04b90ee24cc54f10b222ec2d4ec7434ecd3744f4073927742d375b1a",
-    "archived_at": "2026-10-25T06:03:08.410029+00:00",
+    "archived_at": "2026-10-26T06:07:43.348259+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-25T06:03:08.410029+00:00",
+    "at": "2026-10-26T06:07:43.348259+00:00",
     "status": "fetched",
     "error": null
   }
