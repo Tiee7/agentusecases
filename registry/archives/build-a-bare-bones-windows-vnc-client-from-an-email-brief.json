@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-bare-bones-windows-vnc-client-from-an-email-brief",
-  "observed_at": "2026-10-23T05:50:11.974607+00:00",
-  "html_sha256": "bbfd7b810f85702ae53c1f5fc1bda1388b19382fe708e145adfe2a5dfa40aa57",
+  "observed_at": "2026-10-25T05:47:34.462712+00:00",
+  "html_sha256": "4d2854ec2d90100279843e33318bc3bf4ab63c60cf78692d4c95053edd75800e",
   "body_sha256": "746e322c1310bbd98f7472b868d7d390c78826f5ed5627c0893ee194e8141b6a",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Build a bare-bones Windows VNC client from an email brief\nThe author emailed Claude a spec for a minimal VNC viewer targeting Windows 10 over a local SSH tunnel, to be built on a Mac and delivered with a checksum.\nDone with\nCL\nClaude\nGP\nChatGPT\nWhat they did\nThe author emailed Claude a brief asking for a bare-bones x64 Windows 10 VNC viewer. It would connect only to localhost:5921 through an SSH tunnel, show only the remote cursor, and run at max quality over gigabit LAN. Claude was to build it on the Mac in Rust or C++, host the binary, and give a SHA-256 checksum plus the PowerShell command to verify it.\nHow it went\nIt failed. Claude kept producing broken builds, used up the whole 20x Max weekly limit, and was still delivering broken code after the reset three days later. The author deleted the project after about a week.\nWorth knowing\nA week of iteration burned the entire 20x Max weekly limit and still produced no working viewer, so budget for failure on a from-scratch protocol client.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a minimal [tool, e.g. VNC viewer] for [target OS and version] that connects over [connection details, e.g. a local SSH tunnel to localhost:port]. I'm developing on [my OS], so set up cross-compilation and keep dependencies to a minimum. Finish by giving me the built executable, its SHA-256 checksum, and short build and usage instructions.\nOriginal source: https://news.ycombinator.com/item?id=49244479",
     "body_sha256": "746e322c1310bbd98f7472b868d7d390c78826f5ed5627c0893ee194e8141b6a",
-    "archived_at": "2026-10-23T05:50:11.974607+00:00",
+    "archived_at": "2026-10-25T05:47:34.462712+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:50:11.974607+00:00",
+    "at": "2026-10-25T05:47:34.462712+00:00",
     "status": "fetched",
     "error": null
   }

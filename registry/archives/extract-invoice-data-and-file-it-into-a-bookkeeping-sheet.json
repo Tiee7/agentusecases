@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/extract-invoice-data-and-file-it-into-a-bookkeeping-sheet",
-  "observed_at": "2026-10-23T06:05:36.022773+00:00",
-  "html_sha256": "afdd954cd536235fe36f47d2f7a1f8acceaaac93f6beaa239e24d985c9d092b5",
+  "observed_at": "2026-10-25T06:02:58.398743+00:00",
+  "html_sha256": "5bc719ea3c84e9cad1e0c5118cc9285012f7fb5dd49dfde4d0ebf31d3c8cd37d",
   "body_sha256": "56aaeee0ef3b637df0ef1560a1ff09832b711a20be89152aacaa142be8d2a939",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Extract invoice data and file it into a bookkeeping sheet\nA self-hosted n8n workflow extracts accounting data from uploaded receipts and invoices with OpenAI, then after user review files the originals and appends data to a yearly sheet.\nDone with\nN8\nn8n\nWhat they did\nUsers upload an image or PDF through a web page to an n8n webhook, which looks up the user by token in Google Sheets. Images go to OpenAI vision. PDFs have their text extracted first, then analyzed. The model returns structured JSON (date, merchant, gross amount, VAT rate, category) for the user to review and edit. On save, the file goes into a Drive user/month folder, and the data is appended to a yearly sheet.\nHow it went\nThe source gives no accuracy or time-saving figures. It describes a working prototype with a demo video. The public repo holds sanitized exports that won't run until you configure your own credentials and IDs.\nWorth knowing\nYou need your own OpenAI, Google Drive and Sheets OAuth credentials, a user lookup sheet, a base Drive folder and an n8n webhook domain. The token lookup is a prototype stand-in for real authentication.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a self-hosted n8n workflow where I upload receipts or invoices to [folder or form], and OpenAI extracts vendor, date, totals, tax and invoice number. Show me the extracted data for review, then on approval file the original in [Drive folder] and append a row to my [year] bookkeeping sheet. It's done when a sample invoice flows through; do not file or write anything until I approve.\nOriginal source: https://github.com/Fabiano225/ai-invoice-automation",
     "body_sha256": "56aaeee0ef3b637df0ef1560a1ff09832b711a20be89152aacaa142be8d2a939",
-    "archived_at": "2026-10-23T06:05:36.022773+00:00",
+    "archived_at": "2026-10-25T06:02:58.398743+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:05:36.022773+00:00",
+    "at": "2026-10-25T06:02:58.398743+00:00",
     "status": "fetched",
     "error": null
   }

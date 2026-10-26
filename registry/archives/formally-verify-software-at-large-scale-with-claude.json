@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/formally-verify-software-at-large-scale-with-claude",
+  "observed_at": "2026-10-25T06:33:42.552875+00:00",
+  "html_sha256": "a9d77fad55c72615773a0105f1affba633cc6e4318ec1575883ad5c4e9f825f6",
+  "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Formally verify software at large scale with Claude",
+      "sha256": "e7f00bc574d2d76f3dfa9079ffca25d91c766d0f53b8869a278bc83b3fe887d1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Anthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.",
+      "sha256": "2a3beb9f455ca3db679688ddf3c55080c67dfdc5e78fd000c1f3a81e27df5da9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.",
+      "sha256": "16187affaa3358af5d9836b215ec55e36f7aa7faaff411c6294f854c41f94697"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Over a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.",
+      "sha256": "862543362fc4027bfb605b6eef4acbf822118defe800141d2e62175de8e9e47e"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Proofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.",
+      "sha256": "64246b351f0f1198a83729fed74c10c2c3f8ae6dfefe58bc68f643152682d8fc"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.anthropic.com/research/formal-verification"
+      ],
+      "sha256": "1f59679e7f858b760332f0a4d4578496079336c0b373a9ac2c913268d4e31848"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-23",
+      "sha256": "973384eff6a5cc4532559352a57bcecf9b681e1e0023d733779dc8244be93c8f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "643eee7df6047fbc704967976b49823b0ded55fd67e1df4ae58d70ebd0a78295",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
+    "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
+    "archived_at": "2026-10-25T06:33:42.552875+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-25T06:33:42.552875+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

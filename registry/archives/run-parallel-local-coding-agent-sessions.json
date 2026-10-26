@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-parallel-local-coding-agent-sessions",
-  "observed_at": "2026-10-23T06:26:20.105739+00:00",
-  "html_sha256": "17140af0f79f0ea283119bb3338dc4b02a9f733e163b409845fc03ad3c2687df",
+  "observed_at": "2026-10-25T06:23:42.462311+00:00",
+  "html_sha256": "09e3b0f0004c6284586526b9ec0831042fefc643a6f586977911d41cc0774736",
   "body_sha256": "878496a9cdd070409f6551ff645d5b609add1a2e3b9df4c4b5b5053170b1d189",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run parallel local coding agent sessions\nA developer runs up to 10 coding agent sessions at once, using Claude Code and local models on RTX 3090s with cached contexts for daily development work.\nDone with\nCC\nClaude Code\nWhat they did\nRoark66 runs coding agents on RTX 3090s with 24GB each, using Claude Code alongside local models. They keep up to 10 agent sessions open at once, though never more than 5 are active at the same moment. Because they control inference, they keep full contexts cached in RAM and can save the cache to disk, so a session isn't re-read in full after sitting idle.\nHow it went\nHolding about 15 full contexts cached in RAM pushes their local cache utilisation to 95% or more. They say their usage of roughly 1.3B input tokens a week would cost thousands of USD at API prices.\nWorth knowing\nCloud caches expire after 5 minutes or 1 hour, so an idle 500k context gets billed as full input again; local caching avoids that, but you need enough RAM to hold the contexts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to work on [N] separate tasks in my repo at [path] at the same time. For each task, create its own git worktree and branch, work on it independently, run the tests, and summarize what changed. The tasks are: [task 1], [task 2], [task 3]. Stop when each branch has a passing diff ready for my review, and do not merge anything.\nOriginal source: https://news.ycombinator.com/item?id=49992657",
     "body_sha256": "878496a9cdd070409f6551ff645d5b609add1a2e3b9df4c4b5b5053170b1d189",
-    "archived_at": "2026-10-23T06:26:20.105739+00:00",
+    "archived_at": "2026-10-25T06:23:42.462311+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:26:20.105739+00:00",
+    "at": "2026-10-25T06:23:42.462311+00:00",
     "status": "fetched",
     "error": null
   }

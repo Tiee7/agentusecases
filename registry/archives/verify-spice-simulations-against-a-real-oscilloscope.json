@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/verify-spice-simulations-against-a-real-oscilloscope",
-  "observed_at": "2026-10-23T05:48:33.994746+00:00",
-  "html_sha256": "7b3404b265973916d72222f2d96d3c2f8ca2093b783c3e868f3dac82b2e12683",
+  "observed_at": "2026-10-25T05:45:56.325817+00:00",
+  "html_sha256": "5cbe001918005b595425b9354d5dbc7468c4327cccd1afb4424abbf6395ab8ab",
   "body_sha256": "2063ea1d6e25fef3f7821c8eba60338ca43e81c7762c407510c615f99a03ebfc",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Verify SPICE simulations against a real oscilloscope\nMCP servers for an oscilloscope and SPICE simulator let Claude Code compare simulated circuits with real hardware measurements, closing the loop.\nDone with\nCC\nClaude Code\nWhat they did\nLucas Gerads gave Claude Code two MCP servers: one for a LeCroy oscilloscope and one wrapping spicelib for SPICE simulation. The demo uses a trivial RC filter driven by a simple microcontroller. Claude compares simulated and measured data. For firmware, he gave it a pinout map and a Makefile with build, flash, ping and erase targets.\nHow it went\nThe post says the setup became very valuable for validating SPICE circuits and models, and it removed tedious data analysis such as time-axis normalization and alignment. It gives no numbers, and the demo circuit is deliberately trivial.\nWorth knowing\nClaude can't see your physical wiring, so tell it what is connected where. Make sure it never reads stale captures, and save raw waveform data to files instead of pasting it into context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a SPICE simulation of [circuit] at [file path] and an oscilloscope reachable at [address] through an MCP server. Run the simulation, capture the real measurement of [signal or test point], and compare them on rise time, amplitude, and frequency. Report the differences and suggest model tweaks. Ask me before changing any hardware settings or sending output to the circuit.\nOriginal source: https://lucasgerads.com/blog/lecroy-mcp-spice-demo/",
     "body_sha256": "2063ea1d6e25fef3f7821c8eba60338ca43e81c7762c407510c615f99a03ebfc",
-    "archived_at": "2026-10-23T05:48:33.994746+00:00",
+    "archived_at": "2026-10-25T05:45:56.325817+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:48:33.994746+00:00",
+    "at": "2026-10-25T05:45:56.325817+00:00",
     "status": "fetched",
     "error": null
   }

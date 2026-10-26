@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-and-fix-flaky-tests-in-a-broken-ci-pipeline-overnight",
-  "observed_at": "2026-10-23T05:49:15.924699+00:00",
-  "html_sha256": "77feeef128a1b7131ffa4b8b4c26bfa70f45103ceba5eaca28fec02a813d860d",
+  "observed_at": "2026-10-25T05:46:38.338391+00:00",
+  "html_sha256": "a5abf99bb67498bd4cd113e9120da4917eca2768eb8ac3f800d25711e8b33afc",
   "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Find and fix flaky tests in a broken CI pipeline overnight\nClaude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\nDone with\nCC\nClaude Code\nWhat they did\nThe author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.\nHow it went\nOver a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.\nWorth knowing\nPlan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the last [number] CI runs for [repo name] and rank the tests by how often they flake. For the worst [number], reproduce the failure locally, find the cause, and propose a fix on a separate branch. Run each fix [number] times to confirm it's stable, discard any fix that doesn't hold, and summarize what worked. Don't merge anything without showing me the diff first.\nOriginal source: https://news.ycombinator.com/item?id=47970174",
     "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
-    "archived_at": "2026-10-23T05:49:15.924699+00:00",
+    "archived_at": "2026-10-25T05:46:38.338391+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:49:15.924699+00:00",
+    "at": "2026-10-25T05:46:38.338391+00:00",
     "status": "fetched",
     "error": null
   }

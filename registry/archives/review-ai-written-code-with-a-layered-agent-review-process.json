@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/review-ai-written-code-with-a-layered-agent-review-process",
-  "observed_at": "2026-10-23T06:30:54.075392+00:00",
-  "html_sha256": "1660fd7da8454e9b8e2bf12f06cb7b129422d3c6b1e70d75a40a600e4d65555b",
+  "observed_at": "2026-10-25T06:28:16.441913+00:00",
+  "html_sha256": "87ddd118cb7bba9a57af40f053b9f90b509b8a55edccc74fa0f0298f39d27f8d",
   "body_sha256": "b3133f517027c1a3216beed94c3390b86c14e0e18afaf266eb54eea9dfc913b5",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Review AI-written code with a layered agent review process\nAnthropic's Claude Code team describes how it changed its code review process so Claude can write most of Claude Code's code.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nClaude verifies its own work by running tests, builds or screenshots, and a fresh-context subagent reviews the diff. Every PR then gets parallel bug-hunting agents, with other agents voting on each finding, plus a blocking security review and CI. A classifier sets human approval to none, one or two people by risk. Merge queue, flags and gradual release follow.\nHow it went\nFrom June to September, merged PRs more than doubled and the share reverted fell by over 40 percent. Convergence changes cut mean reviews to pass from 2.08 to 1.32. Circuit breakers that tighten approval don't exist yet.\nWorth knowing\nAgent author and agent reviewer can loop: one PR went over fifty overnight rounds, so cap re-review rounds (they use three) and re-review only the new diff.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview the pull request on branch [branch name] in this repo in layers. First check it against the intent described in [PR description or ticket link], then look for bugs, missing tests and security issues, and finally check style against our conventions in [file or doc]. Finish with a list of issues sorted by severity and a verdict on whether it is safe to merge; do not change any code or push anything.\nOriginal source: https://claude.dev/blog/solving-code-review-at-anthropic/",
     "body_sha256": "b3133f517027c1a3216beed94c3390b86c14e0e18afaf266eb54eea9dfc913b5",
-    "archived_at": "2026-10-23T06:30:54.075392+00:00",
+    "archived_at": "2026-10-25T06:28:16.441913+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:30:54.075392+00:00",
+    "at": "2026-10-25T06:28:16.441913+00:00",
     "status": "fetched",
     "error": null
   }

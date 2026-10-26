@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/write-a-novel-chapter-by-chapter-with-a-subagent",
+  "observed_at": "2026-10-25T06:34:40.386354+00:00",
+  "html_sha256": "62536498ba582009a8752f3c49980b93a4f03ef5494f92d4a90cd5ee7ed08714",
+  "body_sha256": "368912d9680f575bbb898316738b0a26e4eaab03a84b99b9b4fc52d9a73761c9",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Write a novel chapter by chapter with a subagent",
+      "sha256": "3d53c57d9101fde107a46acccd7959e00b84413c537d8c2ee0a98be39eb743e3"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A author had a custom /write-chapter Claude Code subagent read outlines and prior text, then write and save 10 chapters in 17 minutes.",
+      "sha256": "ecfd99e04441ca7ba76add0c470ad12ce8bbc6114ade8de597fae9795fa19f39"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author asked Claude Code to set itself up as a novel-writing assistant. It created about 10 slash commands, including /brainstorm, /outline and /write-chapter, and the author pasted in their own writing SOPs. After picking one of five brainstormed ideas, the author had /outline produce a 10-chapter outline. Then one /write-chapter prompt made the agent write each chapter, read the earlier text plus the next outline entry, and save it as a txt file.",
+      "sha256": "a96d3cfea38eec3683d2fcd226cd29c151d9970b50b3756e800230893e1f6938"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced 10 chapters, about 32,000 words, in roughly 17 minutes. The author's manual read found a foreshadowing item planted in chapter 2 paid off correctly in chapter 9. The author judged the result a first draft.",
+      "sha256": "8e3b8415e666bccb9e0d360f49e337951fb3dc8c623a080926ebcacf873a318c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author's own writing SOPs went into the command files before the run. The author also asked Claude Code to save the commands to .claude/commands so the workflow could be reused.",
+      "sha256": "dbe02f5a898bde0aa7a062b89cd1ff85c5c04f035aa652590b77de9bb0273188"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.qq.com/rain/a/20251127A05F0800"
+      ],
+      "sha256": "a86dbf77a10bc5ad8936e5938babf48294ed8336809637af0ec3ba5892a916c1"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-24",
+      "sha256": "6484fdf06f96fdc8798ea7ad65d1bf470ca8dadbbe42e38c894d63839c90f6be"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a8a160f68c60ab80986620059da5c64678680dec0e0c8cc6ff25caa39ad4abae",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Write a novel chapter by chapter with a subagent\nA author had a custom /write-chapter Claude Code subagent read outlines and prior text, then write and save 10 chapters in 17 minutes.\nDone with\nCC\nClaude Code\nWhat they did\nThe author asked Claude Code to set itself up as a novel-writing assistant. It created about 10 slash commands, including /brainstorm, /outline and /write-chapter, and the author pasted in their own writing SOPs. After picking one of five brainstormed ideas, the author had /outline produce a 10-chapter outline. Then one /write-chapter prompt made the agent write each chapter, read the earlier text plus the next outline entry, and save it as a txt file.\nHow it went\nIt produced 10 chapters, about 32,000 words, in roughly 17 minutes. The author's manual read found a foreshadowing item planted in chapter 2 paid off correctly in chapter 9. The author judged the result a first draft.\nWorth knowing\nThe author's own writing SOPs went into the command files before the run. The author also asked Claude Code to save the commands to .claude/commands so the workflow could be reused.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm writing a [genre] novel called [title]. My outline is in [outline file path] and my chapters so far are in [folder]. Create a reusable /write-chapter subagent that reads the outline and all earlier chapters, then writes the next chapter in my established voice at about [word count] words and saves it as [filename pattern]. Start by writing just chapter [number], and stop there so I can review it before you do any more.\nOriginal source: https://news.qq.com/rain/a/20251127A05F0800",
+    "body_sha256": "368912d9680f575bbb898316738b0a26e4eaab03a84b99b9b4fc52d9a73761c9",
+    "archived_at": "2026-10-25T06:34:40.386354+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-25T06:34:40.386354+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

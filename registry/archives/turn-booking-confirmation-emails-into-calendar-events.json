@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-booking-confirmation-emails-into-calendar-events",
-  "observed_at": "2026-10-23T06:25:02.025841+00:00",
-  "html_sha256": "51cbfcbd0a4cb286d665736899817ff18d107b1178be0b910306abea43213fdf",
+  "observed_at": "2026-10-25T06:22:24.319372+00:00",
+  "html_sha256": "753a3d2c6127c8bec522aa79d5e512a240bdb2c655c7ec557352364bf644d27d",
   "body_sha256": "d542c56a48695e80e8d7e45b64619bb3d9e13fa08ac4449f8a04f19373d0436e",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn booking confirmation emails into calendar events\nAn n8n workflow extracts details from booking emails and PDF attachments and creates calendar events in a dedicated calendar, built for a CEO's flooded inbox.\nDone with\nN8\nn8n\nWhat they did\nThe workflow watches Gmail for emails a person labels \"Events,\" then extracts date, time, location, confirmation number, vendor, and notes from the email body plus any PDF attachments. In n8n, the email body is first wrapped into a PDF, both sources are parsed in parallel through one extractor pipeline, the results are merged with attachment data taking priority, and the workflow either creates an event in a separate Google Calendar with a link back to the email or flags the message for review and sends a missing-fields notification.\nHow it went\nIt was built for a CEO whose inbox was full of travel and booking confirmations, so the result was automatic event creation in a dedicated \"Auto-imported\" calendar instead of manual entry. The author says it does not yet have a dedicated step for confirmations containing multiple events in one message.\nWorth knowing\nThe main catch is that a human still has to label the Gmail message \"Events\" to trigger the workflow.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches my Gmail inbox for booking confirmation emails (flights, hotels, restaurants, [other types]). Extract the event name, date, time, location, and confirmation number from the email body or PDF attachment, then create an event in a dedicated Google Calendar called [calendar name]. It is done when a test confirmation email I forward shows up correctly as a calendar event; skip anything it can't parse and notify me instead of guessing.\nOriginal source: https://www.reddit.com/r/n8n/comments/1tc4fpb/built_an_n8n_workflow_that_turns_any_booking",
     "body_sha256": "d542c56a48695e80e8d7e45b64619bb3d9e13fa08ac4449f8a04f19373d0436e",
-    "archived_at": "2026-10-23T06:25:02.025841+00:00",
+    "archived_at": "2026-10-25T06:22:24.319372+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:25:02.025841+00:00",
+    "at": "2026-10-25T06:22:24.319372+00:00",
     "status": "fetched",
     "error": null
   }

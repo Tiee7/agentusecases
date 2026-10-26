@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **80** / 注册案例 **1536**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **1577**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -52,6 +52,7 @@
 | [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
 | [用Claude Code构建项目开发工作流生成器](reports/build-a-dev-workflow-generator-with-test-driven-agent-coding.md) | 适合内部效率工具 | 未评定 | 中 | available | 开发者工具与工程流程集成 | 2026-10-20T21:48:20.558058+00:00 |
 | [用 Claude Code 裁决子智能体和分阶段审查开发应用](reports/build-apps-with-a-judge-subagent-and-multi-stage-review.md) | 适合内部效率工具 | 未评定 | 中 | available | 开发者工具与桌面软件交付 | 2026-10-21T08:49:24.868128+00:00 |
+| [用 Alexa+ 从零散语音提问中比对 Costco 等多店商品单价与差价](reports/compare-costco-bag-prices-and-savings-from-a-jumbled-request.md) | 不建议商业投入 | 未评定 | 中 | available | 家庭采购与商品单位价格比较 | 2026-10-24T02:50:58.393111+00:00 |
 | [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:55:09.576494+00:00 |
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
 | [用 Claude Code 根据银行流水起草税务申报](reports/draft-a-tax-filing-from-bank-statements-with-claude-code.md) | 适合内部效率工具 | 36.5 | 中 | not_observed | 小微企业财务资料整理与报税准备 | 2026-10-15T14:42:30.692240+00:00 |

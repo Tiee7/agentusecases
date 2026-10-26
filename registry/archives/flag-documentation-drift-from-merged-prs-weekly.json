@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/flag-documentation-drift-from-merged-prs-weekly",
-  "observed_at": "2026-10-23T06:03:21.985606+00:00",
-  "html_sha256": "2dc5bfc14ef300a26f81091dc3c6cd0a50d5809165121cf37a068da35cdb59cd",
+  "observed_at": "2026-10-25T06:00:44.357268+00:00",
+  "html_sha256": "32e1df55569e36c33080f39b075cc1745c4d1133f3b8538419ca429eac6252a5",
   "body_sha256": "183cab42d8ab5fcdaf9e6bd8a7d5d11f1dc8ff677cef3e8f456579cce9737ddf",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Flag documentation drift from merged PRs weekly\nA weekly Hermes cron job checks merged PRs for changes to tool schemas, CLI commands, config options or env variables to flag docs needing updates.\nDone with\nHA\nHermes Agent\nWhat they did\nA Hermes cron job runs Mondays at 9am. It uses the gh CLI to list the last 30 merged PRs in the hermes-agent repo, keeps those from the past 7 days, and checks whether they touched tool, CLI, config or env-var code. For each such PR it checks whether the matching docs page changed in the same PR, then sends a Telegram report.\nHow it went\nThe source gives a copy-paste blueprint and no measured results. Output is a list of gaps where code changed but docs didn't. If everything is in sync, the agent replies [SILENT] and nothing is sent.\nWorth knowing\nThe prompt hardcodes this repo's file paths and fetches only 30 merged PRs, so adapt the paths and raise the limit if more than 30 PRs merge in a week.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nEvery [day and time], check the pull requests merged into [repo name] over the past week. Flag any that changed [tool schemas, CLI commands, config options, or environment variables] and list which docs pages in [docs path] likely need updating. Send me a short report with PR links and stop there without editing any docs.\nOriginal source: https://hermes-agent.nousresearch.com/docs/guides/automation-blueprints",
     "body_sha256": "183cab42d8ab5fcdaf9e6bd8a7d5d11f1dc8ff677cef3e8f456579cce9737ddf",
-    "archived_at": "2026-10-23T06:03:21.985606+00:00",
+    "archived_at": "2026-10-25T06:00:44.357268+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:03:21.985606+00:00",
+    "at": "2026-10-25T06:00:44.357268+00:00",
     "status": "fetched",
     "error": null
   }

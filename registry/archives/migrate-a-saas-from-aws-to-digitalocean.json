@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-a-saas-from-aws-to-digitalocean",
-  "observed_at": "2026-10-23T05:59:31.937041+00:00",
-  "html_sha256": "fc1049ebd96e589ac757a7f0c19801c74d97c26fe6a6f38f54ea556adf9fde80",
+  "observed_at": "2026-10-25T05:56:54.350069+00:00",
+  "html_sha256": "fd862b13c2325956535d9f550e928217832260cf4ce91d7f10ccf11331480231",
   "body_sha256": "713af366bf1bca7708d328c631325e6115df60ce82d897c8e25dc58cb60c27d2",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate a SaaS from AWS to DigitalOcean\nA developer used Claude Code as a pair programmer for provisioning, database seeding, SSL, DNS cutover and production debugging, finishing in about four hours with zero downtime by his account.\nDone with\nCC\nClaude Code\nWhat they did\nThe developer asked Claude Code to build GitHub Actions workflows that bootstrap DigitalOcean: droplet, managed Postgres, Spaces, Docker setup. Claude read failed run logs with the gh CLI, found the cause, and patched the workflows. It fixed the psql SSL setting, rewrote the database dump's owner references, generated Cloudflare origin certificates for nginx, and fixed the SPA routing proxy.\nHow it went\nThe author says the migration took four hours with zero downtime, moving 29 tables and 3000+ rows. Monthly cost fell from about $120 to about $44. The 4-hour and zero-downtime figures are his own claims.\nWorth knowing\nCheck that env var names match what your code reads. A VITE_API_URL versus VITE_API_BASE mismatch left the frontend calling localhost and cost 20 minutes.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nAct as my pair programmer to migrate my app from [current host, e.g. AWS] to [new host, e.g. DigitalOcean]. First inspect the repo and write a step-by-step plan covering provisioning, database migration, SSL, DNS cutover, and rollback. Work through it with me one step at a time, and pause and show me the command or change before anything that touches production, DNS, or deletes data.\nOriginal source: https://dev.to/anand_rathnas_d5b608cc3de/how-claude-code-helped-me-migrate-from-aws-to-digitalocean-in-4-hours-with-live-traffic-hmg",
     "body_sha256": "713af366bf1bca7708d328c631325e6115df60ce82d897c8e25dc58cb60c27d2",
-    "archived_at": "2026-10-23T05:59:31.937041+00:00",
+    "archived_at": "2026-10-25T05:56:54.350069+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:59:31.937041+00:00",
+    "at": "2026-10-25T05:56:54.350069+00:00",
     "status": "fetched",
     "error": null
   }

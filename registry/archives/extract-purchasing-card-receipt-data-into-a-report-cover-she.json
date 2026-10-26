@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/extract-purchasing-card-receipt-data-into-a-report-cover-she",
-  "observed_at": "2026-10-23T05:57:35.857920+00:00",
-  "html_sha256": "ee6f47f80f9a32aca60ed5cb39eb7342a1f97d9d0e6dc3e977d7650ed5b52f7f",
+  "observed_at": "2026-10-25T05:54:58.340382+00:00",
+  "html_sha256": "0f0e296b50d4ad60138059f967d34b5cf772be9e785c35ddac60588aa6e4d194",
   "body_sha256": "99b21beb7410fad7828d3f1732867fa0edf4f86ff7682c31b49eb5a367c28f5a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Extract purchasing-card receipt data into a report cover sheet\nA Duke staff member tested Cowork on a receipt PDF; it crashed partway, though it handled a folder of PDFs and wrote results to an outputs folder.\nDone with\nCW\nClaude Cowork\nWhat they did\nStephen Toback pointed Cowork at a purchasing-card receipt PDF and asked it to extract the data and produce a cover sheet for his report, a job he normally does by hand. Cowork ran a Python script in its local Linux VM, hit an error, debugged it, and wrote the output files itself. He also pointed it at a folder of PDFs.\nHow it went\nThe receipt workflow worked and the result files appeared in the outputs folder. Cowork then hung when his connectivity dropped. Restarting the app and the computer didn't fix it, and recovery required clearing the app's stored data.\nWorth knowing\nCowork's reasoning runs in Anthropic's cloud, so a connectivity drop mid-task can break the session. Avoid relying on it for time-sensitive work. Output files are ordinary files and survive the crash.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nI have purchasing-card receipts as PDFs in [folder path]. Extract vendor, date, amount and the business purpose from each one, and fill a cover sheet in the format of [template file or describe columns]. Process the files one at a time and save results to an outputs folder so progress isn't lost. List any receipts that couldn't be read.\nOriginal source: https://sites.duke.edu/ddmc/2026/02/24/what-claude-cowork-actually-does-and-what-it-doesnt/",
     "body_sha256": "99b21beb7410fad7828d3f1732867fa0edf4f86ff7682c31b49eb5a367c28f5a",
-    "archived_at": "2026-10-23T05:57:35.857920+00:00",
+    "archived_at": "2026-10-25T05:54:58.340382+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T05:57:35.857920+00:00",
+    "at": "2026-10-25T05:54:58.340382+00:00",
     "status": "fetched",
     "error": null
   }

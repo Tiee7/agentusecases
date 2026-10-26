@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-data-analysis-with-a-python-agent-on-a-local-model",
-  "observed_at": "2026-10-23T06:34:54.148865+00:00",
-  "html_sha256": "868316c40959edc0cc4d393560191b7a170c97cd7ce50101c6a6aee0a3124d6a",
+  "observed_at": "2026-10-25T06:32:16.484986+00:00",
+  "html_sha256": "6c454be0ecd0d9c8cc186b215ca028ad1fccd132729d38affb2d01bf9e368f62",
   "body_sha256": "fee8f35240714e16683893ebbb54fa274a286f3ec35484c57f71f0b2c57bab08",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run data analysis with a Python agent on a local model\nA commenter says LangChain's create_python_agent works reasonably well with the Nous Hermes model for data analysis.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe thread is very thin: the original poster asked about using Llama 2 with LangChain to analyze a CSV, after finding LangChain’s pandas-capable Python agent worked well with OpenAI models but poorly with a quantized 7B Llama. In replies, the same user said to use LangChain’s create_python_agent instead of the pandas agent, and said it worked reasonably well with the nous-hermes-llama2 13B model.\nHow it went\nThe only reported outcome is qualitative: the quantized 7B Llama gave disappointing results, while create_python_agent with Hermes/Nous Llama 2 13B worked reasonably well. The thread gives no example task, metrics, or failure details.\nWorth knowing\nThe main catch is that the source does not include a workflow, prompt, or benchmark; it only names create_python_agent and the Nous Hermes Llama 2 13B model.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nI have a dataset at [path to CSV or data file] and I want to understand [question, e.g. which products drive the most revenue by month]. Load the file, check for missing or odd values, then run the analysis by writing and executing Python code, showing me the code and results at each step. Finish with a short plain-language summary of the findings and one chart saved to [output folder]. Do not modify or delete the original data file.\nOriginal source: https://www.reddit.com/r/LocalLLaMA/comments/15re5jq/data_analytics_using_llama2",
     "body_sha256": "fee8f35240714e16683893ebbb54fa274a286f3ec35484c57f71f0b2c57bab08",
-    "archived_at": "2026-10-23T06:34:54.148865+00:00",
+    "archived_at": "2026-10-25T06:32:16.484986+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:34:54.148865+00:00",
+    "at": "2026-10-25T06:32:16.484986+00:00",
     "status": "fetched",
     "error": null
   }

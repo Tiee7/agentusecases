@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-a-coding-agent-a-paper-corpus-to-find-new-techniques",
-  "observed_at": "2026-10-23T06:18:16.005562+00:00",
-  "html_sha256": "82f18c35c89a5e4d8f0f18d1cbab6b83e48e8c3ee1d093230adefd303c006bf9",
+  "observed_at": "2026-10-25T06:15:38.419784+00:00",
+  "html_sha256": "3bd8925c3fe26007ee28084ce9cfb66bfdc1279eb3b92519af0c81b1747724d7",
   "body_sha256": "8732e11598fb7cf4263562e6fca9a985515648baba5fda6e4719c3cc6972b6f3",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Give a coding agent a paper corpus to find new techniques\nPoster gave a Claude Code agent access to about 2M papers to search before each attempt; it found techniques it otherwise wouldn't know and beat a baseline agent.\nDone with\nCC\nClaude Code\nWhat they did\nThe poster ran two identical Claude Code agents on the same job: optimize a small language model. One used only its built-in knowledge; the other was connected to Paper Lantern, an MCP search tool over 2M+ open-source computer science papers, and searched the literature before each attempt, scanning 520 papers, surfacing 25 ideas, and applying them with human-readable guidance.\nHow it went\nThe paper-enabled agent improved the model by 4.05% versus 3.67% for the baseline, and the poster says about 15 of the 25 suggested paper-based ideas worked. They also say the better config stayed 12+ minutes ahead on a 2-hour run, though commenters questioned how strong and general the result was.\nWorth knowing\nThe main catch is overhead: the system reads full papers and adds research cost, and the poster says it is meant for areas with active research communities.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBefore each attempt at improving [my project/benchmark], search the paper collection at [path or search tool] for techniques relevant to [problem], and note which paper inspired any idea you try. Then implement and test the idea against the current baseline score of [score]. Keep a log of ideas tried, source papers, and results, and stop after [number] experiments with a summary of what helped.\nOriginal source: https://www.reddit.com/r/artificial/comments/1s6afwm/i_tested_what_happens_when_you_give_an_ai_coding",
     "body_sha256": "8732e11598fb7cf4263562e6fca9a985515648baba5fda6e4719c3cc6972b6f3",
-    "archived_at": "2026-10-23T06:18:16.005562+00:00",
+    "archived_at": "2026-10-25T06:15:38.419784+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:18:16.005562+00:00",
+    "at": "2026-10-25T06:15:38.419784+00:00",
     "status": "fetched",
     "error": null
   }

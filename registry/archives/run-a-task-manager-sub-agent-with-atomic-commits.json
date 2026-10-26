@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-task-manager-sub-agent-with-atomic-commits",
-  "observed_at": "2026-10-23T06:30:14.063023+00:00",
-  "html_sha256": "561d70dd45a85d6a6f82457320fade75a929ce925628e0bc6edc5d8d727bc49b",
+  "observed_at": "2026-10-25T06:27:36.492307+00:00",
+  "html_sha256": "615ef3797b1b250d4d2eb3dc8afe073a1a8a1c1644c4932d218518f4e1684a0b",
   "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a task-manager sub-agent with atomic commits\nA poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\nDone with\nCC\nClaude Code\nWhat they did\nIn the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.\nHow it went\nThe reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.\nWorth knowing\nThe main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a Claude Code sub-agent called task-manager for [project]. It should fetch the next open task from [task file or tracker], hand it to me to work on, mark it complete when done, and require an atomic commit with a commit ID before closing any task. Finish by running it on one sample task and showing me the result.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1mzt2b3/not_sure_if_people_already_do_this",
     "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
-    "archived_at": "2026-10-23T06:30:14.063023+00:00",
+    "archived_at": "2026-10-25T06:27:36.492307+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-23T06:30:14.063023+00:00",
+    "at": "2026-10-25T06:27:36.492307+00:00",
     "status": "fetched",
     "error": null
   }

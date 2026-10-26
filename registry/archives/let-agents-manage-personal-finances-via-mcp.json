@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-agents-manage-personal-finances-via-mcp",
+  "observed_at": "2026-10-25T06:34:32.377962+00:00",
+  "html_sha256": "6eabae57876ad163cf7d4de6aa54f14a877052fdbf63d1d5c8e1432929affb94",
+  "body_sha256": "ecad4c53aa4f5ddf23d4194580aac27fef1ed3f67dc2d8f972bdf61b9cc706eb",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let agents manage personal finances via MCP",
+      "sha256": "22f329b8f1d9b76e684c403694682b210abce40c165d3729a3004fc9414d3436"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster built an MCP server connecting bank accounts through Plaid or statement uploads so a user's agent can handle ongoing personal finance management.",
+      "sha256": "3e2a39cd325d54897d0261d3c5a2b7b9bc143995efc248cd88290e1cb6177bfe"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster built Wise Penny as a hosted MCP server that links bank accounts through Plaid or, alternatively, statement uploads. After a one-time setup, the user is meant to hand ongoing finance work to their own agent or chat app; the poster says the agent/orchestrator stays on the user side, while Wise Penny provides the finance app functionality and transaction data, including a statement parser that uses Google’s PDF parsing and Plaid’s enrichment API.",
+      "sha256": "c0de6a63f0b8b543c266239451cd84cf2799ba3726b3515faaf39f69cf0adcdf"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The thread presents it as a showcase, not a measured case study, so it gives no usage results or performance numbers. The main shortcoming discussed is privacy: financial data is hosted, and the statement-upload path is not fully local.",
+      "sha256": "3a4d65d02106500ebb67a8ffbf81f98297921a53126d8aab1bff0b1f72bf5cbf"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "There is no free plan because Plaid charges per bank connection, and self-hosting is harder because Plaid requires a compliance process.",
+      "sha256": "e7c6214ff39a76ea893fb5e941d30092a8de6a1a49f795b11468d71c7995d7a8"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/mcp/comments/1u7zhb8/wise_penny_an_agentsonly_personal_finance_mcp"
+      ],
+      "sha256": "9715fba9cbe41b978a9cd08c9f06c14ada3e445a6d695b953396c805960882ff"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-24",
+      "sha256": "6484fdf06f96fdc8798ea7ad65d1bf470ca8dadbbe42e38c894d63839c90f6be"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "8288bc04d76fa337951588bbfa4b16992184fd966b4f415bbda5068463b8b069",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let agents manage personal finances via MCP\nThe poster built an MCP server connecting bank accounts through Plaid or statement uploads so a user's agent can handle ongoing personal finance management.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster built Wise Penny as a hosted MCP server that links bank accounts through Plaid or, alternatively, statement uploads. After a one-time setup, the user is meant to hand ongoing finance work to their own agent or chat app; the poster says the agent/orchestrator stays on the user side, while Wise Penny provides the finance app functionality and transaction data, including a statement parser that uses Google’s PDF parsing and Plaid’s enrichment API.\nHow it went\nThe thread presents it as a showcase, not a measured case study, so it gives no usage results or performance numbers. The main shortcoming discussed is privacy: financial data is hosted, and the statement-upload path is not fully local.\nWorth knowing\nThere is no free plan because Plaid charges per bank connection, and self-hosting is harder because Plaid requires a compliance process.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build an MCP server that gives my AI agent read-only access to my personal finances. It should pull transactions from [Plaid or uploaded bank statement CSVs], and expose tools to list transactions, summarize spending by category, and find recurring charges. Done when I can ask my agent 'what did I spend on [category] last month' and get a correct answer; keep credentials in environment variables and show me the plan before writing any code.\nOriginal source: https://www.reddit.com/r/mcp/comments/1u7zhb8/wise_penny_an_agentsonly_personal_finance_mcp",
+    "body_sha256": "ecad4c53aa4f5ddf23d4194580aac27fef1ed3f67dc2d8f972bdf61b9cc706eb",
+    "archived_at": "2026-10-25T06:34:32.377962+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-25T06:34:32.377962+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/screen-job-candidates-and-run-outreach-automatically",
+  "observed_at": "2026-10-25T06:33:54.486197+00:00",
+  "html_sha256": "9c01074abdb7a0a44352273c1874bb53be23cf1a097eab8c070aacb42a2bf21b",
+  "body_sha256": "9e4b6e017fd9eb16c88db16468dc2c47785b2f4e4fb45a2fc72128cd6c4eaa91",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Screen job candidates and run outreach automatically",
+      "sha256": "e7473bb420f9e12fa4e08f954fd3b47ba3b1bcb19e05d773689e608775a7539d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Make scenario parses resumes with AI, scores candidates, updates the ATS, emails acknowledgments, sends shortlists to recruiters in Slack and auto-declines non-responders; vendor how-to.",
+      "sha256": "7e5aa837a6ed9e495a7a0296c23347af57ef9762c78ccd78cb4001bcb1a4257b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A Make.com scenario fires on a new-application webhook from the ATS or career page. It sends the resume URL to an AI parsing API, calculates a weighted rubric score, writes it back to the ATS and emails the candidate an acknowledgment. Candidates above the threshold go to the recruiter in Slack with approve/reject buttons. Calendly scheduling, feedback reminders and automatic declines of unresponsive candidates follow.",
+      "sha256": "83f6b040e574ab0ecedb243e9971a468031ab28ba2755868f60c2175d4b31df0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no measured results. It says scoring and write-back happen within minutes of submission, and recruiters get a pre-scored queue instead of an unsorted inbox.",
+      "sha256": "f2ac7a10c59a5e0162231bb0b7972b42a3799f102a137038a40e1b951e883d5b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "If your ATS has no webhooks, poll its API every 15 minutes, which adds up to 15 minutes of lag. If it has no API, parse its notification emails instead.",
+      "sha256": "cc32855b6ef218dcdc3d91e1dc4c63cac7475bca9fc09c735a3c840860321322"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Make"
+      ],
+      "sha256": "0509e922cf9bb48aa8c605e35ac20ee21e9dc52eb40ca4f40974367fcc19533a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://4spotconsulting.com/automate-recruitment-your-step-by-step-guide-to-ai-screening-outreach/"
+      ],
+      "sha256": "2dbba53f803acdf950d98a52d9beaf5a68163feb2da0c49bab74290d107ae22d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-23",
+      "sha256": "973384eff6a5cc4532559352a57bcecf9b681e1e0023d733779dc8244be93c8f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "929d7615af979fec321ad1165f3b63f3169f7a5fc465a171ece65a46cecd1068",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Screen job candidates and run outreach automatically\nA Make scenario parses resumes with AI, scores candidates, updates the ATS, emails acknowledgments, sends shortlists to recruiters in Slack and auto-declines non-responders; vendor how-to.\nDone with\nMK\nMake\nWhat they did\nA Make.com scenario fires on a new-application webhook from the ATS or career page. It sends the resume URL to an AI parsing API, calculates a weighted rubric score, writes it back to the ATS and emails the candidate an acknowledgment. Candidates above the threshold go to the recruiter in Slack with approve/reject buttons. Calendly scheduling, feedback reminders and automatic declines of unresponsive candidates follow.\nHow it went\nThe source gives no measured results. It says scoring and write-back happen within minutes of submission, and recruiters get a pre-scored queue instead of an unsorted inbox.\nWorth knowing\nIf your ATS has no webhooks, poll its API every 15 minutes, which adds up to 15 minutes of lag. If it has no API, parse its notification emails instead.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a Make scenario that watches [email inbox or ATS] for new resumes for [job title]. Parse each resume with AI, score it against these criteria: [must-have skills and experience], and log the name, score, and a one-line rationale in [ATS or Google Sheet]. Post the top-scoring candidates to [Slack channel] for the recruiter. Before any acknowledgment or decline emails go out, pause and show me the drafts and the list of recipients for approval.\nOriginal source: https://4spotconsulting.com/automate-recruitment-your-step-by-step-guide-to-ai-screening-outreach/",
+    "body_sha256": "9e4b6e017fd9eb16c88db16468dc2c47785b2f4e4fb45a2fc72128cd6c4eaa91",
+    "archived_at": "2026-10-25T06:33:54.486197+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-25T06:33:54.486197+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
