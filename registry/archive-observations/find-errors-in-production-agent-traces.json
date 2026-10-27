@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-errors-in-production-agent-traces",
-  "observed_at": "2026-10-26T06:35:21.352863+00:00",
-  "html_sha256": "10f8db11597331e3bff98f05744a9dc63e4a469012591ce0b325950e14eda0ed",
+  "observed_at": "2026-10-27T06:47:33.666582+00:00",
+  "html_sha256": "269171343d4b6a959df9db4f2100dbe9dbb45caac86f33bea7ef33119389e89c",
   "body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Find errors in production agent traces\nLaminar's flow-1 model reads agent traces to catch implicit failures like wrong clicks or wrong citations, so every production trace can be analyzed without sampling.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nflow-1, a small open-source model fine-tuned and then trained with RL on synthetic investigations, runs inside a harness called Signals. It treats a trace like a repo with each span as a file, starts from a compressed trace plus a user prompt, greps spans, reads relevant ones in full, and returns findings as JSON in a user-defined schema.\nHow it went\nLaminar says it matches GPT-6-sol in detection quality on its own benchmark at 23x lower cost, making analysis of every trace affordable. Similar findings are clustered, though the benchmark is the vendor's own.\nWorth knowing\nSignals accepts general prompts, such as checking whether a browser agent completed a checkout, and clusters of failures can seed eval datasets for fixing them. Laminar is Apache 2.0 and self-hostable.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a folder of exported traces from my AI agent at [path to trace files]. Read through every trace and flag the ones with silent failures, such as wrong clicks, wrong citations, skipped steps, or answers that don't match the tool output. Finish with a table listing the trace ID, the failure type, and a one-line explanation for each flagged trace, plus a count of the most common failure patterns.\nOriginal source: https://news.ycombinator.com/item?id=50154029",
     "body_sha256": "f4d8144b2cf5b495af8b2e80703bfa26a575332f1c6e0e4aafebd1beb1fb993d",
-    "archived_at": "2026-10-26T06:35:21.352863+00:00",
+    "archived_at": "2026-10-27T06:47:33.666582+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:35:21.352863+00:00",
+    "at": "2026-10-27T06:47:33.666582+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/generate-lego-cad-models-in-ldraw-with-ai-agents",
-  "observed_at": "2026-10-26T05:49:53.286593+00:00",
-  "html_sha256": "9c2c96542175eb3adad53a3c4375e19041469ab8cffc3daacaadcbaf5d04948b",
+  "observed_at": "2026-10-27T06:02:05.620984+00:00",
+  "html_sha256": "87ac4ed4820329e36bf96efd2e86ff076b67e5237c13809cd1757b030fe5bd73",
   "body_sha256": "eae60383fe0f6fb451561912e94bf2977ad4aa09c8fae66cdf54bd3d894212aa",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Generate LEGO CAD models in LDraw with AI agents\nA toolset and docs let ChatGPT and Claude agents write LDraw source files that become LEGO CAD models, packaged as a dockerized web app.\nDone with\nGP\nChatGPT\nCL\nClaude\nWhat they did\nThe agent takes a prompt, reads the repo's instruction docs, and plans the parts and submodels. It does not place bricks directly. It writes a plan file, then Python generator scripts that output the LDraw file. It uses tools for part search, collision and gap detection, and headless rendering, and loops render, inspect and adjust until it judges the model finished.\nHow it went\nIt produces LDraw source, several viewers, and a Blender-editable glb file. The author says only expensive high-end models can build large, correct models. Generation is slow, spaceships are weak, and VR on Meta Quest 3 has many issues.\nWorth knowing\nThe Docker build needs about 5 GB of disk. Without a TypeSafe API key, part search falls back to full-text search, which may give worse models.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite an LDraw file (.ldr) for a LEGO model of [object, e.g. a small red sports car] using real LDraw part numbers and colors, and place the parts so they connect properly. Then validate the file, render a preview image if you can, and fix any floating or overlapping parts. Finish by giving me the final .ldr file and a parts list.\nOriginal source: https://github.com/anteloc/ldraw-nova",
     "body_sha256": "eae60383fe0f6fb451561912e94bf2977ad4aa09c8fae66cdf54bd3d894212aa",
-    "archived_at": "2026-10-26T05:49:53.286593+00:00",
+    "archived_at": "2026-10-27T06:02:05.620984+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T05:49:53.286593+00:00",
+    "at": "2026-10-27T06:02:05.620984+00:00",
     "status": "fetched",
     "error": null
   }

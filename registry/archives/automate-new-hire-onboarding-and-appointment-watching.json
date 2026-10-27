@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-new-hire-onboarding-and-appointment-watching",
+  "observed_at": "2026-10-27T06:53:37.722483+00:00",
+  "html_sha256": "1346d4ee900a3f461064044e530c9170ada18021bda2fc7b734112b572f52829",
+  "body_sha256": "8654677980f72c35d08efb62677509b71f2dbe721925c38d44577080c77931d9",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate new-hire onboarding and appointment watching",
+      "sha256": "c05eb7ddad35c3d09280ecee475a6d9ff9539d9b92838fedb04ba51898cc1732"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Commenters described n8n workflows that take HR input through approval, IT ticket and Azure account creation, and one that checks for medical appointment openings and notifies with booking buttons.",
+      "sha256": "753ecb6c7a55f58d8d12795927b12ce9a04497752d891a07c8ea388cd5b3b94c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One commenter built an n8n onboarding flow where HR started the process in chat, an AI turned that into structured data, the line manager got an approval email, and on approval the workflow opened an IT helpdesk ticket, created the Azure account, and sent the new hire an onboarding message to a personal email. Another set up two n8n workflows for medical bookings: one checked the appointment system every 15 minutes and pushed an ntfy alert when a slot appeared, and a second webhook-driven flow booked it and returned the generated PDF; the notification included buttons for hospital directions and an HTTP GET to book.",
+      "sha256": "364d08a5f0c2491bfe68a4001219865e0a4a7427946f21dd7db81dd1ee52c380"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The appointment watcher reportedly saved at least €400. The onboarding commenter said the AI version was worse than a normal form because it took longer and was less accurate without form validation.",
+      "sha256": "331ab65ecc6b26129250d46f1a12c2fc8508f260111b9b194823494654751556"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch was that the onboarding builder concluded not to use AI there: a regular validated form worked better and faster.",
+      "sha256": "da156491e002746d41cf513fc30dc76c5ece74578e3e3737fcf1c78221bb7b25"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1r0309s/what_was_the_first_workflow_that_made_you_go_okay"
+      ],
+      "sha256": "8a382fff7b15e636803d2984ff43b80210d842ee4c024d2bdf7f199319cb29bc"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c874adc95f10c8241a7ba4c370727a0b7f4b0b01ef8ac31b44c16518350116f0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate new-hire onboarding and appointment watching\nCommenters described n8n workflows that take HR input through approval, IT ticket and Azure account creation, and one that checks for medical appointment openings and notifies with booking buttons.\nDone with\nN8\nn8n\nWhat they did\nOne commenter built an n8n onboarding flow where HR started the process in chat, an AI turned that into structured data, the line manager got an approval email, and on approval the workflow opened an IT helpdesk ticket, created the Azure account, and sent the new hire an onboarding message to a personal email. Another set up two n8n workflows for medical bookings: one checked the appointment system every 15 minutes and pushed an ntfy alert when a slot appeared, and a second webhook-driven flow booked it and returned the generated PDF; the notification included buttons for hospital directions and an HTTP GET to book.\nHow it went\nThe appointment watcher reportedly saved at least €400. The onboarding commenter said the AI version was worse than a normal form because it took longer and was less accurate without form validation.\nWorth knowing\nThe clearest catch was that the onboarding builder concluded not to use AI there: a regular validated form worked better and faster.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow for new-hire onboarding: take HR's form input with [fields], send it to [manager] for approval, then open an IT ticket in [system] and create the account in [Azure/other directory] once approved. Pause for human approval before any account is created. Finish by testing with a fake employee and showing me each step's result.\nOriginal source: https://www.reddit.com/r/n8n/comments/1r0309s/what_was_the_first_workflow_that_made_you_go_okay",
+    "body_sha256": "8654677980f72c35d08efb62677509b71f2dbe721925c38d44577080c77931d9",
+    "archived_at": "2026-10-27T06:53:37.722483+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:37.722483+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

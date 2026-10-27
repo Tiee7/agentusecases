@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-an-app-from-a-simple-prompt-partial-result",
+  "observed_at": "2026-10-27T06:52:57.699767+00:00",
+  "html_sha256": "ababbe8fab0ad48a10a041b55ea02ddfe5037cfe04badb155422cc411c3faea3",
+  "body_sha256": "ba6d39f26aa4b5daca6ea8faf9af68f0d8d1a78f61fafd4f173d82a318004002",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build an app from a simple prompt (partial result)",
+      "sha256": "009b2f301e6248d35aec04354a9ae513b405729f2685e2f67e3b921c6575d0e1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster asked Replit to build an app from a simple prompt, but the login did not work, and they hit the free usage limit while feeding in errors.",
+      "sha256": "60877336c8f7f4652933e402ae435588f630d78f3a323c0e27c39ec2fa742b0c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster gave Replit a single prompt to build a website in front of an existing CV-to-job-match API, with user accounts, login, and file uploads. Replit generated the app and kept making code changes and redeploying after each reported auth error, but the poster’s role was mostly to test signup/login, paste back 401 and UI errors, and ask for another fix.",
+      "sha256": "e2b442f01f26685180df0ba435ad6577e4893c05c9b1f97278e7c6ef35517c34"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced a layout the poster liked, but never got the first login step working before the free Agent limit ran out after about 10 error-fix cycles. In a follow-up comment, the poster said they switched approaches and built the whole app in Firebase from roughly 20 Gemini-written prompts in a little over an hour.",
+      "sha256": "ec17f28aa3c5a33d32f5be77d002bac7edf77179c99159990dd333235e6cb5cf"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Catch: the free Replit trial was exhausted just iterating on login bugs, so debugging through repeated agent retries can consume usage fast.",
+      "sha256": "c7e936401e7f26a0d667da2ce1f4ae03aa4e9c45f0be3532c1e93a02cef3f03d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Replit Agent"
+      ],
+      "sha256": "910a085b099a967b8d6abf927dbd4d5b1ed9db7c227ee67efec06d6206bdf2c6"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/replit/comments/1kj7jj4/this_is_how_replit_worked_for_me"
+      ],
+      "sha256": "b1157b110c74ba1bba0e270e394d32086447fc257c5660d2226e5ccf72d6badf"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a222762d1fa8578d40d61744b9aabfa0fbf6e9ccb6d8313bbb897a2750a0ae5a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build an app from a simple prompt (partial result)\nThe poster asked Replit to build an app from a simple prompt, but the login did not work, and they hit the free usage limit while feeding in errors.\nDone with\nRA\nReplit Agent\nWhat they did\nThe poster gave Replit a single prompt to build a website in front of an existing CV-to-job-match API, with user accounts, login, and file uploads. Replit generated the app and kept making code changes and redeploying after each reported auth error, but the poster’s role was mostly to test signup/login, paste back 401 and UI errors, and ask for another fix.\nHow it went\nIt produced a layout the poster liked, but never got the first login step working before the free Agent limit ran out after about 10 error-fix cycles. In a follow-up comment, the poster said they switched approaches and built the whole app in Firebase from roughly 20 Gemini-written prompts in a little over an hour.\nWorth knowing\nCatch: the free Replit trial was exhausted just iterating on login bugs, so debugging through repeated agent retries can consume usage fast.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nBuild an app that [describe what it does] with user login. Before you say it's done, test sign-up and sign-in yourself, fix any errors you find, and give me a short summary of what you checked. Work in small steps so you use as few credits as possible, and pause to ask me before making large changes.\nOriginal source: https://www.reddit.com/r/replit/comments/1kj7jj4/this_is_how_replit_worked_for_me",
+    "body_sha256": "ba6d39f26aa4b5daca6ea8faf9af68f0d8d1a78f61fafd4f173d82a318004002",
+    "archived_at": "2026-10-27T06:52:57.699767+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:52:57.699767+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

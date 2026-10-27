@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/have-copilot-write-all-of-a-day-s-pushed-code",
+  "observed_at": "2026-10-27T06:53:07.700357+00:00",
+  "html_sha256": "19844e6bc29e2ca83a028f9c89e5e106ca591ce5e0b7c3a4222234f92d227d3f",
+  "body_sha256": "e429c9be23ce0b12318a68c5f7bdc960f2ec6190add6ba14959d5516c482eee1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Have Copilot write all of a day's pushed code",
+      "sha256": "11f8b334219b503f74272158743d338019de693a0443dcecdfef52a52e7c8ac2"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter had Copilot write every line pushed in a day; it mostly worked but one wrong change needed human review.",
+      "sha256": "fd14f2fcbc591451015b6e1fd021fb03fd011bf3ce39015d1e90c00631360a46"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter said they had Copilot write every line of code they pushed that day, but only by closely steering it the whole time. In the same thread, others described the practical pattern as giving one or two tightly scoped goals, specifying what not to touch, testing before accepting changes, and undoing whole sessions from backups when the agent mangled files.",
+      "sha256": "22eb80bef93aa244f7d5469da0552977b08ec8c2cb4d743e84cbc3881252e340"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It worked well enough for that day’s code, but only with constant hand-holding. The thread’s broader verdict was that agents are unreliable on larger tasks and often force rollbacks or restarts when they go off the rails.",
+      "sha256": "1f79fcd05f9316c6264718697249943110d4562417758cf17df684bb519d6301"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch was the supervision overhead: one user said a single game change took 2 days of trial, error, and rollbacks before it worked.",
+      "sha256": "a24c24ed2152584040a251e5c89e334ff5d6d8a06cbdd4b24462c42ebd83ce58"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1o8kq2t"
+      ],
+      "sha256": "addf18af69afccb4b8c75974d398018cb7a3818eb40145bb828fcb41131bdf04"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "40bd8cff8c7d2402abdb6063c9b91ac75fb49e60e041bdb1030801ddc58ce83c",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Have Copilot write all of a day's pushed code\nA commenter had Copilot write every line pushed in a day; it mostly worked but one wrong change needed human review.\nDone with\nGH\nGitHub Copilot\nWhat they did\nA commenter said they had Copilot write every line of code they pushed that day, but only by closely steering it the whole time. In the same thread, others described the practical pattern as giving one or two tightly scoped goals, specifying what not to touch, testing before accepting changes, and undoing whole sessions from backups when the agent mangled files.\nHow it went\nIt worked well enough for that day’s code, but only with constant hand-holding. The thread’s broader verdict was that agents are unreliable on larger tasks and often force rollbacks or restarts when they go off the rails.\nWorth knowing\nThe clearest catch was the supervision overhead: one user said a single game change took 2 days of trial, error, and rollbacks before it worked.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nHelp me implement [feature or fix] in my [repo/project] using Copilot for every code change. Work in small steps, and after each step list the files you touched and what changed so I can review the diff before moving on. Flag any change that alters existing behavior rather than just adding to it, and finish when [the feature works and tests pass].\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1o8kq2t",
+    "body_sha256": "e429c9be23ce0b12318a68c5f7bdc960f2ec6190add6ba14959d5516c482eee1",
+    "archived_at": "2026-10-27T06:53:07.700357+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:07.700357+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

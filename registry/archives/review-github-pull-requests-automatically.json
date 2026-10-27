@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/review-github-pull-requests-automatically",
-  "observed_at": "2026-10-26T06:08:29.361376+00:00",
-  "html_sha256": "daf15914af40c9a0afdf01c9f1c166ba84222cebe64e86a58a5d2d961aa6393a",
+  "observed_at": "2026-10-27T06:20:41.642586+00:00",
+  "html_sha256": "52377927e501ac7c14f65b9501d97a5dd572eac5c2d6df470c17aa98f6b7a77e",
   "body_sha256": "621bb769277426afb51a394d614b98e9911d602564442db20c65f1c29bf32122",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Review GitHub pull requests automatically\nAn n8n AI agent triggers on each new PR, fetches diffs, calls an LLM for a review, and posts comments and labels back on the PR.\nDone with\nN8\nn8n\nWhat they did\nA GitHub Trigger node in n8n fires when a PR is opened. An HTTP Request node calls GitHub's pull request files API, and a Code node merges each filename and diff into a prompt that casts the model as a senior iOS developer. The agent runs on an OpenAI chat model and reads a Google Sheet of team Swift best practices as a tool. GitHub nodes then post the comment and add a ReviewedByAI label.\nHow it went\nIn a test PR adding iota cryptocurrency support, the agent posted a comment and applied the label. The comment was one general comment, not line-level. Reviews were often too verbose and could miss the core problems.\nWorth knowing\nValidate each node's output as you build it. Inline comments would need a loop over each file's diff and line numbers, which the author lists as a next step and did not build.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow triggered when a new pull request opens in my GitHub repo [owner/repo]. It should fetch the diff, ask an AI model to review it for bugs, readability and missing tests, then post the review as a comment and add a label such as [label names]. You're done when a test PR gets a useful review comment; pause and show me the comment and label before anything is posted to GitHub.\nOriginal source: https://medium.com/@anirbanmukherjee1311/automate-github-code-reviews-with-n8ns-ai-agent-0b20be449c6c",
     "body_sha256": "621bb769277426afb51a394d614b98e9911d602564442db20c65f1c29bf32122",
-    "archived_at": "2026-10-26T06:08:29.361376+00:00",
+    "archived_at": "2026-10-27T06:20:41.642586+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:08:29.361376+00:00",
+    "at": "2026-10-27T06:20:41.642586+00:00",
     "status": "fetched",
     "error": null
   }

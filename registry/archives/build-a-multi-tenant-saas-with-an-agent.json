@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-multi-tenant-saas-with-an-agent",
-  "observed_at": "2026-10-26T06:26:53.462843+00:00",
-  "html_sha256": "8bb8bd0fd14d2904cda3a245cd564f44d6b6dda4681f16098e88cfe9c787ce76",
+  "observed_at": "2026-10-27T06:39:05.656055+00:00",
+  "html_sha256": "42627bbaf957ed156458550f64c53282c50cccfcff895c24600444247e3de5da",
   "body_sha256": "4303b41b2437aba898680abd210c2cbbd7e7d397c3aea4fc9973410692c2f739",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a multi-tenant SaaS with an agent\nThe poster built a production multi-tenant SaaS in 15 days with Replit Agent, but hit issues like RLS bypasses and production pointing at the dev database, so checking its work was essential.\nDone with\nRA\nReplit Agent\nWhat they did\nThe poster used only Replit Agent plus Architect to build a production multi-tenant SaaS over 15 days. Their workflow was spec-driven: write a spec, turn it into markdown, have Replit review it and propose a plan, sanity-check that plan with Perplexity or Codex, then let the agent work through a checklist while they repeatedly verified behavior and corrected issues like security, env vars, migrations, and deployment config.\nHow it went\nThey got the SaaS built, but said the speed was misleading because every layer broke in unexpected ways, including RLS bypasses, double-encrypted OAuth tokens, reverted environment variables, and production pointing at the dev database. Even after finishing, they were still dealing with integrations, and migrations still struggled with triggers and security-definer functions.\nWorth knowing\nThe main catch was supervision overhead: the poster says the real work was constant verification, and also notes the agent could not read production logs, which made debugging harder.\nTry it yourself\nwith\nReplit Agent\nCopy prompt\nHelp me build a multi-tenant SaaS for [type of customer] where each customer's data is fully isolated. After building it, review your own work for tenant data leaks, row-level security gaps and whether production and development use separate databases. Write a checklist of what you verified and what still needs my attention. Ask me before deploying or changing any production data.\nOriginal source: https://www.reddit.com/r/replit/comments/1pcl58p/my_first_serious_replit_build_a_production",
     "body_sha256": "4303b41b2437aba898680abd210c2cbbd7e7d397c3aea4fc9973410692c2f739",
-    "archived_at": "2026-10-26T06:26:53.462843+00:00",
+    "archived_at": "2026-10-27T06:39:05.656055+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:26:53.462843+00:00",
+    "at": "2026-10-27T06:39:05.656055+00:00",
     "status": "fetched",
     "error": null
   }

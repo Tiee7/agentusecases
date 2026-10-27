@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-production-deploys-and-port-scans-from-telegram-with-ope",
-  "observed_at": "2026-10-26T05:58:55.324327+00:00",
-  "html_sha256": "c46a00579839809d4da136a732e70e9e1d1694cf5c0b0abd7614d61fbdd82ba8",
+  "observed_at": "2026-10-27T06:11:07.592946+00:00",
+  "html_sha256": "208c1245d171503310aced9a1abcbbae083841c59388dcc24504b63fed221c11",
   "body_sha256": "d71efc4a86cc6d59c773b3e0d67e92c409322efbad101875ff398029ac19d803",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run production deploys and port scans from Telegram with OpenClaw\nA security professional uses an OpenClaw agent with read-only prod access, PR-only changes and manual approval for restarts to deploy changes and scan a VPS for exposed ports.\nDone with\nOC\nOpenClaw\nWhat they did\nSimon Roses runs an OpenClaw agent, AgentX, on a Raspberry Pi 5 and talks to it through a Telegram bot. He asks it to deploy the latest changes to prod. It has read-only production access, can only open PRs, and needs his manual approval to restart services. It also runs nmap from a VPS over SSH to check his public IP for exposed ports, and alerts him on Telegram.\nHow it went\nThe agent ran port-exposure checks and flagged an example exposed gateway port, with a suggested firewall command. He reports about €50 in API spend after two weeks. It sometimes gets stuck and needs manual intervention.\nWorth knowing\nThe scans and deploys needed sudo and docker group permissions. Keeping production read-only, PR-only and approval-gated for restarts is the safeguard to copy.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWork as my ops assistant over [Telegram] with read-only access to [production server]. When I ask, scan [VPS IP/host] for exposed ports and report findings, and propose deploy changes as pull requests on [repo] only. Do not restart services or change anything live until I approve each step.\nOriginal source: https://simonroses.com/2026/02/my-experience-using-openclaw-a-security-professionals-journey/",
     "body_sha256": "d71efc4a86cc6d59c773b3e0d67e92c409322efbad101875ff398029ac19d803",
-    "archived_at": "2026-10-26T05:58:55.324327+00:00",
+    "archived_at": "2026-10-27T06:11:07.592946+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T05:58:55.324327+00:00",
+    "at": "2026-10-27T06:11:07.592946+00:00",
     "status": "fetched",
     "error": null
   }

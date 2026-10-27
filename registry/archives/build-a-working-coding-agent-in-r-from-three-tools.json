@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-working-coding-agent-in-r-from-three-tools",
-  "observed_at": "2026-10-26T05:52:17.503309+00:00",
-  "html_sha256": "1f4af67b2868d34dc83d89b08d893c1abf0977eede6f5136761d00dda0d4a433",
+  "observed_at": "2026-10-27T06:04:29.569168+00:00",
+  "html_sha256": "3edc43c8865cf4740bec00b42f7a5cd1009867991da0b0ccf33472ad49d65b4d",
   "body_sha256": "0ff94f3266d15fb5dc096362d63faffc5adf5777f38876d27091e4c3f48b21f1",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a working coding agent in R from three tools\nAuthor builds a functional coding agent in R starting from three tools, then adds tools to make it safer and more efficient.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author uses R's ellmer package to build a Claude-backed agent from three plain R functions: read file, write file and run shell command. Each function returns a string to the model, and a short system prompt tells it to read before editing and to run tests. He then adds list and search tools, a path check that keeps access inside the project directory, and a targeted edit tool.\nHow it went\nThe three-tool agent can find a function, read the existing tests, write a new test and run the suite, though the author says it falls well short of Claude Code. The shell tool stays risky, and the author defers fuller security coverage to a later post.\nWorth knowing\nWrap every file tool in the path check, not just search. The unrestricted shell tool can still bypass it, so don't treat the project-directory check as full protection.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a small coding agent in [language, e.g. R] from three tools: read a file, write a file, and run a shell command. Wire them to [LLM provider] in a simple loop and test it on a small task in [path to scratch folder]. Then suggest and add tools that make it safer and more efficient, such as confirmation before running commands. Finish when it completes the test task end to end.\nOriginal source: https://tidydesign.substack.com/p/a-coding-agent-is-six-functions-in",
     "body_sha256": "0ff94f3266d15fb5dc096362d63faffc5adf5777f38876d27091e4c3f48b21f1",
-    "archived_at": "2026-10-26T05:52:17.503309+00:00",
+    "archived_at": "2026-10-27T06:04:29.569168+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T05:52:17.503309+00:00",
+    "at": "2026-10-27T06:04:29.569168+00:00",
     "status": "fetched",
     "error": null
   }

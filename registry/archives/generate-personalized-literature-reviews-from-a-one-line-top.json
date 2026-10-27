@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/generate-personalized-literature-reviews-from-a-one-line-top",
+  "observed_at": "2026-10-27T06:53:25.712690+00:00",
+  "html_sha256": "bc53d21ca4fa02d5be1d6234f17d0d035b800ac1f860f439d5617786e135c197",
+  "body_sha256": "bbd496cc8b4445bd56d4cee62c1eaa8f866f74f979cd2166ccb296848822d28d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Generate personalized literature reviews from a one-line topic",
+      "sha256": "84e5e39b095c5e35a6cb1cb6f708b34b4435b8789c962f35994e431a92729266"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A researcher built a literature-review Skill for an agent framework that outputs Markdown, Word and PDF reviews with GB/T 7714 references carrying DOIs or URLs, used by their team.",
+      "sha256": "1c86c4096ddd9bcc5a3fd37ca7e7be3688180bf4a095c2be87b26f1af6383067"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The skill goes into an agent framework and takes a one-line topic. It first sets boundaries: four layers of keywords, a time-sensitivity level, and routing to arXiv or PubMed by field. Then it runs ten scripts against OpenAlex, Semantic Scholar, CrossRef, Unpaywall, arXiv and PubMed in five search rounds. Titles and DOIs are used to remove duplicates, and metadata comes from the APIs, not from memory.",
+      "sha256": "2faa5fa6879c9b0212d9822a1e8bdd6b835dcc4409e4c6056d524eafe3e4686c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author has used and refined it with their team for over six months, and the students like it. Each reference carries a DOI or URL. The full post is paywalled, so later steps aren't visible.",
+      "sha256": "ab8bf28231975d5675843087e9ae6f03b48115302b4a18ddd31ed310b2bd9e18"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The online Feishu version works worse than the local one, though it is easier to share. The skill file itself is at the end of the paywalled post.",
+      "sha256": "2c3ee7f6e1b4562f79482baac51f7f951d42fa4052fb72c8413511f4743dce06"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://wangshuyi.substack.com/p/agent-skill"
+      ],
+      "sha256": "bb24edd797465a0d6986e48678639d43b9d3f64ddf7c75498a7eb9b4ae6837bf"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ead1e57203346f7de65cc11fe39fb2638959702449b0a1642198cd2adc79085a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate personalized literature reviews from a one-line topic\nA researcher built a literature-review Skill for an agent framework that outputs Markdown, Word and PDF reviews with GB/T 7714 references carrying DOIs or URLs, used by their team.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe skill goes into an agent framework and takes a one-line topic. It first sets boundaries: four layers of keywords, a time-sensitivity level, and routing to arXiv or PubMed by field. Then it runs ten scripts against OpenAlex, Semantic Scholar, CrossRef, Unpaywall, arXiv and PubMed in five search rounds. Titles and DOIs are used to remove duplicates, and metadata comes from the APIs, not from memory.\nHow it went\nThe author has used and refined it with their team for over six months, and the students like it. Each reference carries a DOI or URL. The full post is paywalled, so later steps aren't visible.\nWorth knowing\nThe online Feishu version works worse than the local one, though it is easier to share. The skill file itself is at the end of the paywalled post.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a reusable skill that takes a one-line topic like [example topic] and writes a literature review. It should find real papers, write the review in [language], and cite them in [citation style, e.g. APA or GB/T 7714] with a DOI or URL for every reference. Export it as Markdown, Word and PDF, and drop any reference you can't verify. Test it on [topic] and stop when all three files are saved.\nOriginal source: https://wangshuyi.substack.com/p/agent-skill",
+    "body_sha256": "bbd496cc8b4445bd56d4cee62c1eaa8f866f74f979cd2166ccb296848822d28d",
+    "archived_at": "2026-10-27T06:53:25.712690+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:25.712690+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

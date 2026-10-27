@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-a-killed-process-on-a-server",
-  "observed_at": "2026-10-26T06:02:11.342779+00:00",
-  "html_sha256": "767046ca5833bfb8dd82e76e3794e502e18b8e832694e670670ad4dce0b6720b",
+  "observed_at": "2026-10-27T06:14:23.581419+00:00",
+  "html_sha256": "b002f2a27f3e9f664a3839edeeed1abbb274f53f6057d9a1f54bb865b431b62e",
   "body_sha256": "d5de899f118b6022ca233eac341d1a279a9902e56964bb40b38a3a79c7ad2285",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Diagnose a killed process on a server\nCodex CLI over SSH found the OOM killer in kernel logs on a 2 GB droplet with no swap and listed fixes by risk without changing anything.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nClaude Code kept dying within seconds on the author's Ubuntu droplet. He ran Codex CLI on his Mac and gave it the SSH command for the server, plus the symptom and no hints. Codex asked approval to connect, then checked memory, processes and limits. It grepped the kernel log via journalctl for kill and OOM messages.\nHow it went\nCodex found the OOM killer ending claude at about 860 MB on a 1.9 GB droplet with no swap, with MySQL using about 786 MB. It ranked fixes and changed nothing.\nWorth knowing\nThe author resized the droplet, which caused its own problems. He says in hindsight that the first fix Codex listed, a 2 GB swap file, was cheaper.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nMy server at [user@host] has a process that keeps getting killed, namely [service name]. Connect over SSH and investigate read-only: check kernel logs, memory, swap, and service logs to find the cause. Finish with a diagnosis and a list of possible fixes ranked by risk. Do not change any settings, install anything, or restart services without showing me the exact command and getting my approval first.\nOriginal source: https://flaviocopes.com/server-process-killed/",
     "body_sha256": "d5de899f118b6022ca233eac341d1a279a9902e56964bb40b38a3a79c7ad2285",
-    "archived_at": "2026-10-26T06:02:11.342779+00:00",
+    "archived_at": "2026-10-27T06:14:23.581419+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:02:11.342779+00:00",
+    "at": "2026-10-27T06:14:23.581419+00:00",
     "status": "fetched",
     "error": null
   }

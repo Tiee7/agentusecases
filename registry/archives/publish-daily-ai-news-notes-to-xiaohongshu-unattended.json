@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/publish-daily-ai-news-notes-to-xiaohongshu-unattended",
+  "observed_at": "2026-10-27T06:53:23.688038+00:00",
+  "html_sha256": "2b4dd78b4e0114c1dc490048cb0dfd285e9308c93265946b84c80685fd2733d6",
+  "body_sha256": "cfe4026e7e4c0eb91038cc33a6aba20b51b0ac66f98f77978189c07b68269f90",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Publish daily AI news notes to Xiaohongshu unattended",
+      "sha256": "0017c177737a9f84a6cb7697e7d4ce44c165cc69407561f6935b83597cdcee13"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A cron-scheduled agent searches for AI news, verifies sources, writes and renders a post, and publishes via browser automation; 28 of 29 runs succeeded.",
+      "sha256": "91af205c213316d9b4af2ae3e514c56476ce318529730b6ce778e9f1097927d7"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A 09:00 cron job wakes the agent. It runs 3–4 web searches over the past 24–48 hours, opens each original source to verify it, and writes a spec file with 5 points and their URLs. Scripts render 1080×1440 images, then drive a dedicated, already-logged-in Edge profile over Chrome DevTools Protocol to upload, fill and publish. Finally it checks that the post went live. A person logs in manually when the session expires.",
+      "sha256": "0f0f9679309186dab36f17f956e1a2917f9c40109d0d3d6907a12d23a461d98f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In 36 days, 28 of 29 scheduled runs published, with no duplicates. The one failure was a model API timeout. Each run took 4–8 minutes. Hashtags end up as plain, non-clickable text.",
+      "sha256": "bdd8e003e1bbaea8dd808721b2217b6b95a1f0df1d69eb4c0e351312ef0c339f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Publishing is brittle: the publish button sits in a closed shadow DOM, coordinate clicks fail at random, and the editor ignores key events. The repo documents 20 failure modes.",
+      "sha256": "0b09b479713810b3a4298b750ef68854466ea270187d2b08973138801c666dcf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/Peng2505/xhs-daily-agent"
+      ],
+      "sha256": "4e4109b6675118472c6c5a5a40939c4890326b8152d3f2dfc336962889e9b8f9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ecc19c31d3b9fead1d5226f7f7fe41bbaf010ceab3bbcf189aac009302d3b20a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Publish daily AI news notes to Xiaohongshu unattended\nA cron-scheduled agent searches for AI news, verifies sources, writes and renders a post, and publishes via browser automation; 28 of 29 runs succeeded.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA 09:00 cron job wakes the agent. It runs 3–4 web searches over the past 24–48 hours, opens each original source to verify it, and writes a spec file with 5 points and their URLs. Scripts render 1080×1440 images, then drive a dedicated, already-logged-in Edge profile over Chrome DevTools Protocol to upload, fill and publish. Finally it checks that the post went live. A person logs in manually when the session expires.\nHow it went\nIn 36 days, 28 of 29 scheduled runs published, with no duplicates. The one failure was a model API timeout. Each run took 4–8 minutes. Hashtags end up as plain, non-clickable text.\nWorth knowing\nPublishing is brittle: the publish button sits in a closed shadow DOM, coordinate clicks fail at random, and the editor ignores key events. The repo documents 20 failure modes.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery day at [time], search for the top [number] news items about [topic] from the past 24 hours and verify each against at least two reliable sources. Write a short social post in [language/tone], render it as an image card, and save it to [folder]. Before publishing it to [platform], pause and show me the final text and image for approval. Finish by logging what was published, with the source links, and flag any run that failed.\nOriginal source: https://github.com/Peng2505/xhs-daily-agent",
+    "body_sha256": "cfe4026e7e4c0eb91038cc33a6aba20b51b0ac66f98f77978189c07b68269f90",
+    "archived_at": "2026-10-27T06:53:23.688038+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:23.688038+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

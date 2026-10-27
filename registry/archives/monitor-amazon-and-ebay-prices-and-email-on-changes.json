@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-amazon-and-ebay-prices-and-email-on-changes",
-  "observed_at": "2026-10-26T06:07:31.415447+00:00",
-  "html_sha256": "d1561189321c5a35ccbdc02dc4c3ba3494e9add43e25072179a47aad497513b4",
+  "observed_at": "2026-10-27T06:19:43.658119+00:00",
+  "html_sha256": "02c76387998be502e7dc43e39f352ea36f5381ef2fabf5cb87abfdcbb753b5a8",
   "body_sha256": "dae9896066efc68a02da73076c3c20d1456d0a32edd6b5e6d8343fd6087842c3",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Monitor Amazon and eBay prices and email on changes\nAn n8n workflow checks product URLs from a Google Sheet three times a day, compares prices, emails changes and logs every check.\nDone with\nN8\nn8n\nWhat they did\nA seven-node n8n workflow runs at 9am, 3pm and 9pm. It reads product names, URLs and last prices from a Google Sheet, fetches each page and pulls the price out with a regex in a code node. It compares that to the last price, emails an alert through Gmail if it changed, and logs results to a history sheet.\nHow it went\nThe author tracks 12 products, including 4 direct competitors, and says they now match competitor price drops within the hour instead of noticing days later. Logged history also revealed a competitor's Friday price-drop pattern.\nWorth knowing\nSome sites return 403 to scrapers, and the regex price extraction may need adjusting for other formats. A User-Agent header or an official API can help.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that reads product URLs from my Google Sheet [sheet name], checks the current Amazon or eBay price three times a day, and compares it to the last saved price. If the price changed, email me to [my email] with old and new prices, and log every check in the sheet. It's done when a test run updates the sheet and a simulated change sends one email.\nOriginal source: https://dev.to/flowkithq/stop-checking-competitor-prices-manually-automate-it-with-n8n-free-workflow-json-2li3",
     "body_sha256": "dae9896066efc68a02da73076c3c20d1456d0a32edd6b5e6d8343fd6087842c3",
-    "archived_at": "2026-10-26T06:07:31.415447+00:00",
+    "archived_at": "2026-10-27T06:19:43.658119+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:07:31.415447+00:00",
+    "at": "2026-10-27T06:19:43.658119+00:00",
     "status": "fetched",
     "error": null
   }

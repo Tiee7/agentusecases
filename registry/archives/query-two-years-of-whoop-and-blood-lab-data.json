@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/query-two-years-of-whoop-and-blood-lab-data",
+  "observed_at": "2026-10-27T06:53:27.704386+00:00",
+  "html_sha256": "6b17f97ea536b49a16776c766486476337e25b05116b289d7e6f80dcca9cff5b",
+  "body_sha256": "a1e00e56b525d04ef7422c51e2e32e6a26067b3f6ba3721fe02a7053a7c51418",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Query two years of WHOOP and blood-lab data",
+      "sha256": "dba0649866b6290ecfb8ab4915dfc64eb91f6c5e56637c52d5f069174ba53f5e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author built a Claude agent that answers questions over WHOOP biometrics and lab results extracted from emailed PDFs, and compared it with a Databricks Genie agent on 30 questions.",
+      "sha256": "6de8d34536cc56af888632c4a1c6e0d7cd9b80755630cfef70e5bf41da628640"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author kept Databricks tables built from a WHOOP export and lab PDFs parsed by Agent Bricks, and replaced the Genie agent with a small Claude agent. It writes SQL, runs it through a read-only SQL tool, reads the rows, and may query again. Answers were graded by a Claude Opus judge against hand-checked reference SQL on 30 questions.",
+      "sha256": "1392ad7d73086f4762e9899bf900175835f2710fa1805c7fc7f8ff9b9eb1ac6d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Every agent failed the questions that touched two date bugs in the author's gold table. After the data fix, Sonnet rose from 47% to 90% correct and Genie from 47% to 67%.",
+      "sha256": "26d8de3e1e4ab7d3dd4d18b1c22cf3921caae28a26dde5977f67a39da5a546de"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The sample is small (one run per config, 30 questions), and a Claude judge graded Claude answers. Sonnet cost about $0.017 per question against Opus at $0.062.",
+      "sha256": "421d43984f215be7a2b3f9da8ccb559ccf6e114f1d136ef4e9b2de3f2777694d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/snigdhabanda/health-agent-claude-"
+      ],
+      "sha256": "6de62cf4c603e2fb75eb72fa1e2671ee89672dc947a9ec779a6b1c16e9a7f60b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "415a9edd897958813b7bac102d9322494370d7e9e634ec526c1ceb957d0a10e9",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Query two years of WHOOP and blood-lab data\nThe author built a Claude agent that answers questions over WHOOP biometrics and lab results extracted from emailed PDFs, and compared it with a Databricks Genie agent on 30 questions.\nDone with\nCL\nClaude\nWhat they did\nThe author kept Databricks tables built from a WHOOP export and lab PDFs parsed by Agent Bricks, and replaced the Genie agent with a small Claude agent. It writes SQL, runs it through a read-only SQL tool, reads the rows, and may query again. Answers were graded by a Claude Opus judge against hand-checked reference SQL on 30 questions.\nHow it went\nEvery agent failed the questions that touched two date bugs in the author's gold table. After the data fix, Sonnet rose from 47% to 90% correct and Genie from 47% to 67%.\nWorth knowing\nThe sample is small (one run per config, 30 questions), and a Claude judge graded Claude answers. Sonnet cost about $0.017 per question against Opus at $0.062.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm uploading my [WHOOP export / wearable data] and my blood test PDFs from [date range]. Extract the lab values into a table, line them up by date with my biometrics, and answer: [question, e.g. how did my HRV and sleep change before my last two lab results?]. Show the numbers behind each answer and note anything that is uncertain or not medical advice. Finish with 3 follow-up questions worth asking my doctor.\nOriginal source: https://github.com/snigdhabanda/health-agent-claude-",
+    "body_sha256": "a1e00e56b525d04ef7422c51e2e32e6a26067b3f6ba3721fe02a7053a7c51418",
+    "archived_at": "2026-10-27T06:53:27.704386+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:27.704386+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

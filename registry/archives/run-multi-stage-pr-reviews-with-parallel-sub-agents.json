@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-multi-stage-pr-reviews-with-parallel-sub-agents",
-  "observed_at": "2026-10-26T05:48:09.286781+00:00",
-  "html_sha256": "dcd791f69c97e3eae806ffeb404a600215fd18df78c77c10c2e0f6f18c31373f",
+  "observed_at": "2026-10-27T06:00:21.557168+00:00",
+  "html_sha256": "68023a6185e4e7dad2d7ca9018ab2b996f7f94757bf46d6fdd76b7fa5dea8d18",
   "body_sha256": "12bb401cbbdeaa723934bf9db39e571785e45926fbe8dd8f30572e7c02ceb120",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Run multi-stage PR reviews with parallel sub-agents\nA Claude Code plugin that reviews pull requests in stages with sub-agents and validation passes, with optional ensemble review via Codex.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe /adamsreview:review command runs up to seven parallel sub-agent lenses (correctness, security, UX and others) on a branch or PR. Their findings go through dedup, a cheap-then-deep validation gate, and an optional Opus cross-cutting pass. With --ensemble it adds a Codex pass and a scrape of PR bot comments. /adamsreview:fix then runs fix sub-agents in parallel, re-reviews with Opus, reverts regressions and commits the rest. /adamsreview:walkthrough lets a person decide on uncertain findings.\nHow it went\nThe author reports, anecdotally on their own PRs (n=me), that it catches far more real bugs than /review, /ultrareview, CodeRabbit, Greptile and Codex review, with fewer false positives. No measured numbers are given.\nWorth knowing\n--ensemble costs more tokens and needs the Codex Claude Code plugin. Runs on a regular Claude Code subscription (Max recommended), not Extra Usage credits like /ultrareview.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview the pull request at [PR URL or branch name] in stages: use separate sub-agents to check correctness, security, tests, and style, then run a validation pass that discards findings you can't back up with a specific line of code. Finish with one ranked list of issues, each with file, line, and a suggested fix. Don't post any comments to the PR; just show me the list.\nOriginal source: https://github.com/adamjgmiller/adamsreview",
     "body_sha256": "12bb401cbbdeaa723934bf9db39e571785e45926fbe8dd8f30572e7c02ceb120",
-    "archived_at": "2026-10-26T05:48:09.286781+00:00",
+    "archived_at": "2026-10-27T06:00:21.557168+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T05:48:09.286781+00:00",
+    "at": "2026-10-27T06:00:21.557168+00:00",
     "status": "fetched",
     "error": null
   }

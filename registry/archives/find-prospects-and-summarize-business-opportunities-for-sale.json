@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-prospects-and-summarize-business-opportunities-for-sale",
-  "observed_at": "2026-10-26T06:08:05.345479+00:00",
-  "html_sha256": "3a8d6b0e80b9180b4f42d115c634496975709ab1f5273d158ab01ff328da3208",
+  "observed_at": "2026-10-27T06:20:17.599979+00:00",
+  "html_sha256": "389fae71db6a193eb4cd3b4cff1618e01880369858da54674b86a240c56e8e8a",
   "body_sha256": "9118695588471dbf007cbcb1e51cf29c6963b0667b46874252e744c2f4ef1df6",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Find prospects and summarize business opportunities for sales\nMulti-agent n8n workflow finds company URLs, scrapes prospect websites and summarizes opportunities that sales teams can use to tailor outreach.\nDone with\nN8\nn8n\nWhat they did\nA chat trigger starts an n8n workflow. A first agent on o4-mini picks relevant company URLs. Bright Data's Web Unblocker node fetches each page's HTML, and a Code node cleans it. Other agents on gpt-5 summarize page by page, a Merge node combines the summaries, and a final prompt synthesizes the opportunities.\nHow it went\nIt produces a list of business opportunities per prospect site for tailoring outreach. The source gives no numbers or accuracy results. A single all-in-one prompt gave irrelevant, poorly synthesized output.\nWorth knowing\nSplit the work into separate prompts (URL extraction, per-page summary, final synthesis) and use a cheaper model for URL filtering. A single prompt performed poorly.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes a list of [industry or search terms] and finds company website URLs, scrapes each homepage and about page, and has an AI step summarize what the company does and 2-3 opportunities where [my product or service] could help. Save each result as a row in a Google Sheet with the company, URL, summary and a suggested outreach angle. Stop after one test run of [5] companies and show me the sheet; do not send any outreach.\nOriginal source: https://dev.to/inforeole/the-unstoppable-lead-generation-engine-a-multi-agent-ai-workflow-with-n8n-bright-data-4k3j",
     "body_sha256": "9118695588471dbf007cbcb1e51cf29c6963b0667b46874252e744c2f4ef1df6",
-    "archived_at": "2026-10-26T06:08:05.345479+00:00",
+    "archived_at": "2026-10-27T06:20:17.599979+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T06:08:05.345479+00:00",
+    "at": "2026-10-27T06:20:17.599979+00:00",
     "status": "fetched",
     "error": null
   }

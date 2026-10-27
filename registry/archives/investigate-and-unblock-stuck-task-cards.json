@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/investigate-and-unblock-stuck-task-cards",
+  "observed_at": "2026-10-27T06:52:49.689225+00:00",
+  "html_sha256": "33c3a9316d1d77ed680a40b95f38b74842b41037de91633f3733edbb640b1f47",
+  "body_sha256": "926da58b4da533fec5216be2ae8185e5fc6b491bbcad14224f93e0cd4429c812",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Investigate and unblock stuck task cards",
+      "sha256": "04feeb16dee59e3f5406def9846170418ab3fe67306f4a2ae9ebc7f98211f570"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Hermes monitors blocked cards, investigates causes, tries to resolve them and reports in Discord; another user had it fix failed Home Assistant logins after a move.",
+      "sha256": "989d768450f368a8c5d3da424d5967eb092d5ef31a26a5fabf71d983d51b8bdd"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One user had Hermes create a “Kanban watchdog” cron that checks for blocked cards every five minutes. When it finds one, Hermes investigates why the card is blocked, tries to clear the blocker itself, and sends the outcome to Discord; the person only steps in when it needs access or other human input.",
+      "sha256": "bf2573e3b826ca83ab3d29746c0856988f19a7a64937a57f4c856c46371a8f86"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The user said it has worked well so far, with far fewer blocked tasks waiting by morning. It still escalates cases Hermes cannot resolve on its own, such as missing permissions.",
+      "sha256": "a37fcdfed999b58e326569adcf01b1daad07da874d81f6c9a13a2da2b231d598"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The concrete setup detail to copy is the 5-minute cron plus Discord reporting; the main catch mentioned was that unresolved access issues still need a human.",
+      "sha256": "9b50b2fa723c6b26d504aa1f79128e00c752eaa13ce4bbff8d0f56f0f0d50edb"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/hermesagent/comments/1w0mblq/what_have_you_done_with_hermes_agent_this_week"
+      ],
+      "sha256": "d093b81971d4804fa618836a2c1178600699a66e4899631b3c8ae37eb3a73c75"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2e5b3a2d6078bb8cd7a0b0a6efcd49d2f382f71a48ba669a901f0026c61c6b2b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Investigate and unblock stuck task cards\nHermes monitors blocked cards, investigates causes, tries to resolve them and reports in Discord; another user had it fix failed Home Assistant logins after a move.\nDone with\nHA\nHermes Agent\nWhat they did\nOne user had Hermes create a “Kanban watchdog” cron that checks for blocked cards every five minutes. When it finds one, Hermes investigates why the card is blocked, tries to clear the blocker itself, and sends the outcome to Discord; the person only steps in when it needs access or other human input.\nHow it went\nThe user said it has worked well so far, with far fewer blocked tasks waiting by morning. It still escalates cases Hermes cannot resolve on its own, such as missing permissions.\nWorth knowing\nThe concrete setup detail to copy is the 5-minute cron plus Discord reporting; the main catch mentioned was that unresolved access issues still need a human.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nWatch my [project board tool] for cards marked blocked. For each one, investigate why it's stuck by checking [relevant systems, logs, or services], try to fix it if the fix is safe, and post a short report in [Discord channel] saying what you found and what you did. Ask me before you change any settings, delete anything, or run a fix that can't be undone. Finish each card with either a resolved note or a clear explanation of what you need from me.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1w0mblq/what_have_you_done_with_hermes_agent_this_week",
+    "body_sha256": "926da58b4da533fec5216be2ae8185e5fc6b491bbcad14224f93e0cd4429c812",
+    "archived_at": "2026-10-27T06:52:49.689225+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:52:49.689225+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

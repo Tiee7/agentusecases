@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-one-goal-into-an-ordered-plan-of-coding-agent-tasks",
-  "observed_at": "2026-10-26T05:50:09.307135+00:00",
-  "html_sha256": "2d9b3a66785bbf04824fa4d33dea11f2f303897c880bda14715693d28388ff76",
+  "observed_at": "2026-10-27T06:02:21.544760+00:00",
+  "html_sha256": "81068299dd66ab3979024dee2524a6796d41a1b6b0ebb3e09d9d3c97b7740ca3",
   "body_sha256": "c56060f9d0c3b320cb3e8bc89ab0488be45d7e5ee7e05e8076984bf57bf94bd0",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn one goal into an ordered plan of coding-agent tasks\nOrdewell takes a single goal and breaks it into an ordered plan of tasks for coding agents.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou give Ordewell a goal. A planner, which can be a coding agent running read-only, researches the repo and asks clarifying questions. It then commits a plan where each task has its own runner, model, effort and mode. You can edit the plan before running it. On run, it starts a real coding-agent session per AI task, in parallel where dependencies allow, and passes each task its predecessors' results.\nHow it went\nIn the README's example, a rate-limiting goal became a four-task plan (three AI, one manual) that finished with 4 completed, 0 failed. A task passes only when its completion marker appears in the runner's output. No benchmarks are given.\nWorth knowing\nThe TUI needs tmux, and Windows users must run it under WSL. Parallelism defaults to 3 concurrent sessions (configurable from 1 to 5).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have one goal: [describe your goal]. Read my repo at [path] and break this goal into an ordered plan of small coding tasks, noting which tasks depend on others and what done looks like for each. Save the plan as PLAN.md and stop there without changing any code, so I can review it first.\nOriginal source: https://github.com/ordewell/ordewell",
     "body_sha256": "c56060f9d0c3b320cb3e8bc89ab0488be45d7e5ee7e05e8076984bf57bf94bd0",
-    "archived_at": "2026-10-26T05:50:09.307135+00:00",
+    "archived_at": "2026-10-27T06:02:21.544760+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-26T05:50:09.307135+00:00",
+    "at": "2026-10-27T06:02:21.544760+00:00",
     "status": "fetched",
     "error": null
   }

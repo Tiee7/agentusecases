@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-terminal-commands-via-copilot-cli-subagents",
+  "observed_at": "2026-10-27T06:53:19.734674+00:00",
+  "html_sha256": "f5569b7fbd5964740d057838f13e897eba13de401c5a249a52f49ae7437db479",
+  "body_sha256": "caff0815478a8f0ebd48a5672275822302d3a1c18e7137cf09cd23b21a8eb6a1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run terminal commands via Copilot CLI subagents",
+      "sha256": "88de915da48f2927cb8eaddc550a0fd9f1897115932eae763e01df7c7f5da67c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter uses Copilot CLI agents that execute terminal commands, including the /fleet command and subagent-style workflows.",
+      "sha256": "f6cb36c897c3ea72a90cb9c12234cc0d8adc3c2f43fc5a1f74828a206e74407f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter used GitHub Copilot CLI in several terminal sessions at once, usually on GPT-5.4 with xhigh reasoning and often in autopilot mode. Their workflow was to start in /plan, use commands like /fleet to spin up parallel subagents and /delegate for async cloud work, then run /review, manually inspect changes, and watch progress live in the linked VS Code chat pane.",
+      "sha256": "1acd4c6e77b3b1b596ce7f97cf3babda3fcead718f5c50e6d313fa75960576fe"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They said the setup let them send agents to tackle work they never had time to do before and iterate faster, but it still required review and feedback from a capable engineer. Another commenter noted parallel agents can collide on the same repo, with worktree suggested as the fix.",
+      "sha256": "142a659cc76f9d78dca709b9b79116900a492714eba4f74bf9133d7a3259244c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch is supervision: even the original poster said it still needs review, and they were checking in every 10–15 minutes while multiple terminals ran.",
+      "sha256": "a05d7f2cfb24df02c104e25d27fe8043fb34fc7013f0f0a134468f47fd95f074"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1rncmei/im_addicted_to_the_cli"
+      ],
+      "sha256": "15bb22a8c9926d2600bb5220ded6e188af4817cd4024cde3c19801c2f3ac6f01"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fd5613c749bc2fd6fda1c3acb7e08381655f57e10fd5ea7b663371198e82cd05",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run terminal commands via Copilot CLI subagents\nA commenter uses Copilot CLI agents that execute terminal commands, including the /fleet command and subagent-style workflows.\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe commenter used GitHub Copilot CLI in several terminal sessions at once, usually on GPT-5.4 with xhigh reasoning and often in autopilot mode. Their workflow was to start in /plan, use commands like /fleet to spin up parallel subagents and /delegate for async cloud work, then run /review, manually inspect changes, and watch progress live in the linked VS Code chat pane.\nHow it went\nThey said the setup let them send agents to tackle work they never had time to do before and iterate faster, but it still required review and feedback from a capable engineer. Another commenter noted parallel agents can collide on the same repo, with worktree suggested as the fix.\nWorth knowing\nThe clearest catch is supervision: even the original poster said it still needs review, and they were checking in every 10–15 minutes while multiple terminals ran.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nUse the Copilot CLI to tackle [large task, e.g. update all API endpoints to use the new auth helper] in my [repo]. Split it into independent pieces, use /fleet or subagents to run them in parallel, and have each one run its own terminal commands and tests. Show me the split plan before starting, and when done, give me a combined summary of changes and test results, and don't commit or push anything without asking.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1rncmei/im_addicted_to_the_cli",
+    "body_sha256": "caff0815478a8f0ebd48a5672275822302d3a1c18e7137cf09cd23b21a8eb6a1",
+    "archived_at": "2026-10-27T06:53:19.734674+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:19.734674+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

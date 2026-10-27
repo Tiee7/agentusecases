@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/assign-github-issues-to-copilot-coding-agent",
+  "observed_at": "2026-10-27T06:53:03.713416+00:00",
+  "html_sha256": "c112394672d51b07eb627786466064b0920528daf262f99ff389629c770c6fd5",
+  "body_sha256": "c195dae624e0559695a2a2f6bc5696e6a298441880aa3b9a8f227423729af2b7",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Assign GitHub issues to Copilot coding agent",
+      "sha256": "4d9184171912396b853481fbfe1197004f6a9412e38f499df6ed0be0ddf753f0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer assigned a GitHub issue to Copilot and watched it work, but it started from the default branch instead of the intended feature branch.",
+      "sha256": "af6c81429e25a2d811603ae59a4d61f0ab32e7a2ee09366dac59e52cff69b208"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer assigned Copilot to a GitHub issue and watched it create a new branch, open a pull request, work through the issue, run tests, and push changes on its own. They found it only worked well after rewriting the issue with very detailed instructions, then used PR comments to iterate while keeping human review, testing, and deployment decisions for themselves.",
+      "sha256": "89e49b8e330d041870f410c7af26f25db63f0b6f0c934dc243a6d729871f6011"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "After a few tries, Copilot successfully completed a real backlog issue, and the poster said they could hand it simpler tasks and review the PR later. The main shortcoming was that it always branched from the default branch, even when told to start from a specific feature branch.",
+      "sha256": "889d9fcb13bbd6ad7ca9467962e2b3dd2d1fd018976e53bd175e0034e854cafe"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was instruction quality: the poster said issues had to be overly descriptive and detailed before the agent performed well.",
+      "sha256": "acc7aafb26c6ee895942f8e012e87c64ca46dfb1b19cd397e922a4ab4bf9efcd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/github/comments/1kvatij/initial_experience_with_github_coding_agent"
+      ],
+      "sha256": "d0f1f99eb7308ba6291adc9db0d404780c6d2fd20e7a3f4291d9eab3db5407e3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a1d2824c7d4f3ec2743d00a50c51aab32fffdca742e88c4e077acfce2422225a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Assign GitHub issues to Copilot coding agent\nA developer assigned a GitHub issue to Copilot and watched it work, but it started from the default branch instead of the intended feature branch.\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe developer assigned Copilot to a GitHub issue and watched it create a new branch, open a pull request, work through the issue, run tests, and push changes on its own. They found it only worked well after rewriting the issue with very detailed instructions, then used PR comments to iterate while keeping human review, testing, and deployment decisions for themselves.\nHow it went\nAfter a few tries, Copilot successfully completed a real backlog issue, and the poster said they could hand it simpler tasks and review the PR later. The main shortcoming was that it always branched from the default branch, even when told to start from a specific feature branch.\nWorth knowing\nThe main catch was instruction quality: the poster said issues had to be overly descriptive and detailed before the agent performed well.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nAssign this GitHub issue to the Copilot coding agent: [issue link]. Before it starts, make sure it works from the [feature branch name] branch and not the default branch, and put that in the task instructions. When it finishes, give me a pull request against [feature branch name] with a short summary of what changed, and don't merge anything until I've reviewed it.\nOriginal source: https://www.reddit.com/r/github/comments/1kvatij/initial_experience_with_github_coding_agent",
+    "body_sha256": "c195dae624e0559695a2a2f6bc5696e6a298441880aa3b9a8f227423729af2b7",
+    "archived_at": "2026-10-27T06:53:03.713416+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:03.713416+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

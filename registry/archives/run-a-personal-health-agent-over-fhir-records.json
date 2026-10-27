@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-personal-health-agent-over-fhir-records",
+  "observed_at": "2026-10-27T06:53:29.679371+00:00",
+  "html_sha256": "db4386ae1a6981cc37f6e7d02659b932ad181904dd71b2da5a963bb7b51bb887",
+  "body_sha256": "a8bfd197c605bffe863c3fbda25bf1943ea5b80507fddcb6a429d330243ab731",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a personal health agent over FHIR records",
+      "sha256": "c2e315842d496a7224743edf18174f0cf5c9012670cc7918e596069c5fccea8e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A personal OpenClaw agent reads health data via a guardrail proxy to prep appointments, draft follow-ups, fill forms, write insurance appeals and track trends.",
+      "sha256": "d9dfc8ff74850cb258972bee02d0418ac926114a35ad5db5263f73bb1c73d6ae"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author had Claude Code design a guardrail proxy between OpenClaw and a private HAPI FHIR server. The server held Epic data from two health systems, pharmacy records, and Flexpa insurance claims. The proxy masks PHI, keeps audit logs, and requires human confirmation for clinical or financial actions. The agent then prepared appointments, drafted messages and appeals, and tracked trends.",
+      "sha256": "5a30aff02784b33edb07a04ff6c99d68e6b2b5904b1687f113df8ac36d9551be"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On a colonoscopy billed as diagnostic, which left a $1,000 deductible, the agent explained the billing, drafted a dispute and weighed escalation. The source gives no result for the dispute.",
+      "sha256": "962cbf8a5241f79ce498116cbf6f9e33b9d076fce1aeeef46de9daf60f2e0ad0"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Run the agent on an isolated machine (the author uses a Mac mini with its own account), avoid third-party skills, and enforce PHI reduction at the data layer, not in the model.",
+      "sha256": "4d2b1d904d6bdea84d364a54157f53ea143b09fb950179eca21c26801d8e2aad"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://evestel.substack.com/p/how-i-build-my-personal-openclaw"
+      ],
+      "sha256": "cb93761c6ce302cbd0e2dcf8b2a4b1f0a4eda6e24f3134a480689a61c848441e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-26",
+      "sha256": "dca4a87c4d36555251e4dfe2b41ed01549438ad85ca19d82e9afe5cbfe411dea"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "bdb02251505ed5526d5f9a7706e507953561930d0d686ce743d9b8b470d47da6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a personal health agent over FHIR records\nA personal OpenClaw agent reads health data via a guardrail proxy to prep appointments, draft follow-ups, fill forms, write insurance appeals and track trends.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author had Claude Code design a guardrail proxy between OpenClaw and a private HAPI FHIR server. The server held Epic data from two health systems, pharmacy records, and Flexpa insurance claims. The proxy masks PHI, keeps audit logs, and requires human confirmation for clinical or financial actions. The agent then prepared appointments, drafted messages and appeals, and tracked trends.\nHow it went\nOn a colonoscopy billed as diagnostic, which left a $1,000 deductible, the agent explained the billing, drafted a dispute and weighed escalation. The source gives no result for the dispute.\nWorth knowing\nRun the agent on an isolated machine (the author uses a Mac mini with its own account), avoid third-party skills, and enforce PHI reduction at the data layer, not in the model.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my health records at [FHIR source or export file] in read-only mode and prepare me for my [type] appointment on [date]. Summarize recent results, trends in [metric], current medications and open questions, then draft a list of questions to ask and a follow-up message to my provider. Do not send anything or submit any form without showing me the exact content first. Finish with a one-page briefing I can print.\nOriginal source: https://evestel.substack.com/p/how-i-build-my-personal-openclaw",
+    "body_sha256": "a8bfd197c605bffe863c3fbda25bf1943ea5b80507fddcb6a429d330243ab731",
+    "archived_at": "2026-10-27T06:53:29.679371+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-27T06:53:29.679371+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
