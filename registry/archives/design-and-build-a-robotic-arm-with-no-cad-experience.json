@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/design-and-build-a-robotic-arm-with-no-cad-experience",
-  "observed_at": "2026-10-27T06:12:57.575495+00:00",
-  "html_sha256": "c07bb644107105de41dc5506b98c2d0121b6a686b06a430d9cc979ab483b69dd",
+  "observed_at": "2026-10-28T06:52:10.564449+00:00",
+  "html_sha256": "1e9101de246af51a345c810604ce7f96d236cf09a3b7f7b8f20514e673307c95",
   "body_sha256": "aa53c8371dce1b7ccbb6878df786073f9dc53e1bfa9bbdfc8f6c0eebb5ef5fa4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Design and build a robotic arm with no CAD experience\nA builder used Claude Code with FreeCAD and Claude Vision to design, print, and assemble a 5-DOF servo arm with vision and voice control.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code wrote one Python macro that FreeCAD re-rendered live, building every part of the arm from boolean operations. The builder iterated by conversation, then printed and assembled the arm. For control, a laptop script sent Whisper speech and a webcam frame to Claude Vision. Claude returned JSON actions, local inverse-kinematics code converted target pixels to servo angles, and an ESP32 drove the servos.\nHow it went\nAbout 30 hours from design to assembly produced four working servos. The gripper is not built, there is no feedback loop, and the pixel-to-world calibration is only approximate.\nWorth knowing\nExpect print fixes. The builder taped two servos, glued a lid, reprinted the base turntable, and replaced a failed print-in-place hinge. FreeCAD's macro runner also needs ASCII-only scripts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a [N]-DOF robotic arm from scratch using FreeCAD via MCP, including part files ready for 3D printing and a servo control script, even though I have no CAD experience. Guide me through printing, assembly, and wiring, stopping to confirm before any step that involves ordering parts.\nOriginal source: https://hiitzroman.com/blog/robotic-arm-with-claude-code-and-freecad",
     "body_sha256": "aa53c8371dce1b7ccbb6878df786073f9dc53e1bfa9bbdfc8f6c0eebb5ef5fa4",
-    "archived_at": "2026-10-27T06:12:57.575495+00:00",
+    "archived_at": "2026-10-28T06:52:10.564449+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:12:57.575495+00:00",
+    "at": "2026-10-28T06:52:10.564449+00:00",
     "status": "fetched",
     "error": null
   }

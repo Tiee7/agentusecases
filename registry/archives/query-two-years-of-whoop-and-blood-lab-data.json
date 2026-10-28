@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/query-two-years-of-whoop-and-blood-lab-data",
-  "observed_at": "2026-10-27T06:53:27.704386+00:00",
-  "html_sha256": "6b17f97ea536b49a16776c766486476337e25b05116b289d7e6f80dcca9cff5b",
+  "observed_at": "2026-10-28T07:32:40.654200+00:00",
+  "html_sha256": "7931ccfec08d9120f813c7ca9ca5617076107faa1d4baec0f690ff1b132b22c9",
   "body_sha256": "a1e00e56b525d04ef7422c51e2e32e6a26067b3f6ba3721fe02a7053a7c51418",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Query two years of WHOOP and blood-lab data\nThe author built a Claude agent that answers questions over WHOOP biometrics and lab results extracted from emailed PDFs, and compared it with a Databricks Genie agent on 30 questions.\nDone with\nCL\nClaude\nWhat they did\nThe author kept Databricks tables built from a WHOOP export and lab PDFs parsed by Agent Bricks, and replaced the Genie agent with a small Claude agent. It writes SQL, runs it through a read-only SQL tool, reads the rows, and may query again. Answers were graded by a Claude Opus judge against hand-checked reference SQL on 30 questions.\nHow it went\nEvery agent failed the questions that touched two date bugs in the author's gold table. After the data fix, Sonnet rose from 47% to 90% correct and Genie from 47% to 67%.\nWorth knowing\nThe sample is small (one run per config, 30 questions), and a Claude judge graded Claude answers. Sonnet cost about $0.017 per question against Opus at $0.062.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm uploading my [WHOOP export / wearable data] and my blood test PDFs from [date range]. Extract the lab values into a table, line them up by date with my biometrics, and answer: [question, e.g. how did my HRV and sleep change before my last two lab results?]. Show the numbers behind each answer and note anything that is uncertain or not medical advice. Finish with 3 follow-up questions worth asking my doctor.\nOriginal source: https://github.com/snigdhabanda/health-agent-claude-",
     "body_sha256": "a1e00e56b525d04ef7422c51e2e32e6a26067b3f6ba3721fe02a7053a7c51418",
-    "archived_at": "2026-10-27T06:53:27.704386+00:00",
+    "archived_at": "2026-10-28T07:32:40.654200+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:53:27.704386+00:00",
+    "at": "2026-10-28T07:32:40.654200+00:00",
     "status": "fetched",
     "error": null
   }

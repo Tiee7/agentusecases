@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-and-fix-flaky-tests-in-a-broken-ci-pipeline-overnight",
-  "observed_at": "2026-10-27T06:03:25.570952+00:00",
-  "html_sha256": "a269a4230fa385fde990debdf4c8273bc1eda25746e08e873bb9f45403d35dd2",
-  "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
+  "observed_at": "2026-10-28T06:42:38.566987+00:00",
+  "html_sha256": "24ff7209ac5fe0e996d06c523e4de3115b6f30c517d52f23441721d850ab4e3f",
+  "body_sha256": "3e35e2b162a5ace4a9a8dd210ff31f002382c80c43d8b75b529585995974506e",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Claude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.",
-      "sha256": "bc7f0bda1ebe84dfff90dc3e69da2a65bc0ee178a2a6bb4c2694484e06897bc1"
+      "value": "Claude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\n·\nMay 1, 2026",
+      "sha256": "c4fb396a95e391a8850a341cc5b7a97173502430f6f290eb36194d917b2b4211"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Find and fix flaky tests in a broken CI pipeline overnight\nClaude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\nDone with\nCC\nClaude Code\nWhat they did\nThe author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.\nHow it went\nOver a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.\nWorth knowing\nPlan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the last [number] CI runs for [repo name] and rank the tests by how often they flake. For the worst [number], reproduce the failure locally, find the cause, and propose a fix on a separate branch. Run each fix [number] times to confirm it's stable, discard any fix that doesn't hold, and summarize what worked. Don't merge anything without showing me the diff first.\nOriginal source: https://news.ycombinator.com/item?id=47970174",
-    "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
-    "archived_at": "2026-10-27T06:03:25.570952+00:00",
+    "body": "Find and fix flaky tests in a broken CI pipeline overnight\nClaude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\n·\nMay 1, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.\nHow it went\nOver a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.\nWorth knowing\nPlan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the last [number] CI runs for [repo name] and rank the tests by how often they flake. For the worst [number], reproduce the failure locally, find the cause, and propose a fix on a separate branch. Run each fix [number] times to confirm it's stable, discard any fix that doesn't hold, and summarize what worked. Don't merge anything without showing me the diff first.\nOriginal source: https://news.ycombinator.com/item?id=47970174",
+    "body_sha256": "3e35e2b162a5ace4a9a8dd210ff31f002382c80c43d8b75b529585995974506e",
+    "archived_at": "2026-10-28T06:42:38.566987+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:03:25.570952+00:00",
+      "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Find and fix flaky tests in a broken CI pipeline overnight\nClaude monitors CI pass rates, identifies worst flaky tests, reproduces them and proposes fixes overnight; pipeline got 20 minutes faster and pass rate rose 35%, with some bad fixes discarded.\nDone with\nCC\nClaude Code\nWhat they did\nThe author gave Claude read access to CI artifacts and had it build tooling to track the rolling 30-day pass/fail rate. It picked the worst flaky tests, hypothesized test versus production causes, and narrowed to minimal repros. Without a deterministic repro, it guessed a fix and re-ran tests overnight to judge it statistically. The author reviewed PRs by day.\nHow it went\nOver a handful of weeks the pipeline got 20 minutes shorter and the pass rate rose 35%, from roughly 40% on master. Some of Claude's proposed solutions were bad and had to be thrown away.\nWorth knowing\nPlan to review every PR yourself; the author discarded some bad fixes, so overnight runs need daytime human checking.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the last [number] CI runs for [repo name] and rank the tests by how often they flake. For the worst [number], reproduce the failure locally, find the cause, and propose a fix on a separate branch. Run each fix [number] times to confirm it's stable, discard any fix that doesn't hold, and summarize what worked. Don't merge anything without showing me the diff first.\nOriginal source: https://news.ycombinator.com/item?id=47970174",
+        "body_sha256": "0ce93535c64b5145517a4de95836b09f29e6f58713403ae009045f9b1ec9b0cb",
+        "archived_at": "2026-10-27T06:03:25.570952+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:03:25.570952+00:00",
+    "at": "2026-10-28T06:42:38.566987+00:00",
     "status": "fetched",
     "error": null
   }

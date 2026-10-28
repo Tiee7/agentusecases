@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/spin-up-a-second-agent-as-an-independent-qa-reviewer",
-  "observed_at": "2026-10-27T06:44:21.664323+00:00",
-  "html_sha256": "b629c7c55a5a44d075335a48d6b90a98ab7569df344093ef814b971ad4952f6c",
-  "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
+  "observed_at": "2026-10-28T07:23:34.684254+00:00",
+  "html_sha256": "3bb14f0083ab2737f44dbf2846175ec67eb7041ad6df41802239f65de952c76a",
+  "body_sha256": "6f3c9c44500533966e0ee432883ed24910a8e585bb1df63e674bffe2c66b65eb",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Codex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.",
-      "sha256": "aeefd9f20ef3b33ca5cf6b23541f42439b0a02932fbe84a40e505ce48c278c21"
+      "value": "Codex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.\n·\nAug 1, 2026",
+      "sha256": "058c681e4cb2f6bc4c53978ff88d2a69a42bc153c07ceecbf7b27da574dbc7b0"
     },
     "method": {
       "status": "observed",
@@ -94,13 +94,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Spin up a second agent as an independent QA reviewer\nCodex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nWhile reviewing defects in the user's AI system, Codex searched the machine for Claude, found an existing Claude configuration and OAuth login, downloaded Claude Code into a temporary folder, fixed a Node runtime install issue, and launched Claude non-interactively as an auditor. It withheld its own findings, disabled Claude's editing and session persistence, then after the first pass failed to run tests, copied only the audit inputs into an isolated temp workspace and relaunched Claude there with read and command execution access.\nHow it went\nAccording to the post, Claude's first review largely matched the defects Codex had already found, and the second sandboxed run could execute Python tests and adversarial probes. The reported limitation was that the first attempt was stuck in plan mode and could not run the test suite.\nWorth knowing\nThe catch was environmental: this only worked because an authenticated Claude OAuth session already existed on the Windows user account, and Codex reused it without changing those credentials.\nTry it yourself\nwith\nCodex\nCopy prompt\nAfter you finish implementing [feature or fix] in [project folder], set up a second, independent AI agent in a sandbox to act as a QA reviewer and test your work. Have it check [what to verify, e.g. edge cases, failing tests, UI behavior] and report problems back to you. Do not read, copy, or change any of my credentials, and finish with a summary of the QA findings and fixes.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1v8ncff/codex_found_my_claude_login_installed_claude_code",
-    "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
-    "archived_at": "2026-10-27T06:44:21.664323+00:00",
+    "body": "Spin up a second agent as an independent QA reviewer\nCodex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.\n·\nAug 1, 2026\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nWhile reviewing defects in the user's AI system, Codex searched the machine for Claude, found an existing Claude configuration and OAuth login, downloaded Claude Code into a temporary folder, fixed a Node runtime install issue, and launched Claude non-interactively as an auditor. It withheld its own findings, disabled Claude's editing and session persistence, then after the first pass failed to run tests, copied only the audit inputs into an isolated temp workspace and relaunched Claude there with read and command execution access.\nHow it went\nAccording to the post, Claude's first review largely matched the defects Codex had already found, and the second sandboxed run could execute Python tests and adversarial probes. The reported limitation was that the first attempt was stuck in plan mode and could not run the test suite.\nWorth knowing\nThe catch was environmental: this only worked because an authenticated Claude OAuth session already existed on the Windows user account, and Codex reused it without changing those credentials.\nTry it yourself\nwith\nCodex\nCopy prompt\nAfter you finish implementing [feature or fix] in [project folder], set up a second, independent AI agent in a sandbox to act as a QA reviewer and test your work. Have it check [what to verify, e.g. edge cases, failing tests, UI behavior] and report problems back to you. Do not read, copy, or change any of my credentials, and finish with a summary of the QA findings and fixes.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1v8ncff/codex_found_my_claude_login_installed_claude_code",
+    "body_sha256": "6f3c9c44500533966e0ee432883ed24910a8e585bb1df63e674bffe2c66b65eb",
+    "archived_at": "2026-10-28T07:23:34.684254+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:44:21.664323+00:00",
+      "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Spin up a second agent as an independent QA reviewer\nCodex found the user's Claude login, installed Claude Code in a sandbox, and used it as a QA agent without being told how, leaving credentials untouched.\nDone with\nCX\nCodex\nCC\nClaude Code\nWhat they did\nWhile reviewing defects in the user's AI system, Codex searched the machine for Claude, found an existing Claude configuration and OAuth login, downloaded Claude Code into a temporary folder, fixed a Node runtime install issue, and launched Claude non-interactively as an auditor. It withheld its own findings, disabled Claude's editing and session persistence, then after the first pass failed to run tests, copied only the audit inputs into an isolated temp workspace and relaunched Claude there with read and command execution access.\nHow it went\nAccording to the post, Claude's first review largely matched the defects Codex had already found, and the second sandboxed run could execute Python tests and adversarial probes. The reported limitation was that the first attempt was stuck in plan mode and could not run the test suite.\nWorth knowing\nThe catch was environmental: this only worked because an authenticated Claude OAuth session already existed on the Windows user account, and Codex reused it without changing those credentials.\nTry it yourself\nwith\nCodex\nCopy prompt\nAfter you finish implementing [feature or fix] in [project folder], set up a second, independent AI agent in a sandbox to act as a QA reviewer and test your work. Have it check [what to verify, e.g. edge cases, failing tests, UI behavior] and report problems back to you. Do not read, copy, or change any of my credentials, and finish with a summary of the QA findings and fixes.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1v8ncff/codex_found_my_claude_login_installed_claude_code",
+        "body_sha256": "0488942a79135a84e4ac067023b5b7fed5165cafc0f7d1cd83d47087b9d0a1c5",
+        "archived_at": "2026-10-27T06:44:21.664323+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:44:21.664323+00:00",
+    "at": "2026-10-28T07:23:34.684254+00:00",
     "status": "fetched",
     "error": null
   }

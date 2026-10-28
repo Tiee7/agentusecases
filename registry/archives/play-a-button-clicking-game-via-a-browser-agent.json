@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/play-a-button-clicking-game-via-a-browser-agent",
-  "observed_at": "2026-10-27T06:16:09.666396+00:00",
-  "html_sha256": "76674abc1f23f8d9a654b507498576f3ab899d8b3d9a6efd19e92d0e9cacd1c2",
-  "body_sha256": "60a3f1ce5b0b09d1a41b79483e8c95801c95d99cf28a530ea66b5359a7b50687",
+  "observed_at": "2026-10-28T06:55:22.600952+00:00",
+  "html_sha256": "29fd9ce951d21b9df9f7c26679b819c180562a75889d24f4760618e7ec659007",
+  "body_sha256": "2b1ca69e46f61e4d3858ba794b8ace1b6e6b665e0455166cd6d333078b5c8e28",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "A developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.",
-      "sha256": "8ac69766d3e691ac1323f5e0ef7ce84cfaedc6609b249cf5d45258fcff066edd"
+      "value": "A developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\n·\nNov 3, 2025",
+      "sha256": "c39d29b5487fb248e4bf530c47c94722eca1422ca138334472a76c2455c69db0"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Play a button-clicking game via a browser agent\nA developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\nDone with\nGE\nGemini\nWhat they did\nGuillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.\nHow it went\nThe agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.\nWorth knowing\nSend a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse browser control to open [URL of a simple web game] and play it by looking at screenshots and clicking, for about [number] moves. Report whether your clicks landed where you intended, and note any mismatch between screenshot coordinates and actual click positions. Stop when you've finished the moves and summarize how it went.\nOriginal source: https://glaforge.dev/posts/2025/11/03/driving-a-web-browser-with-gemini-computer-use-model-in-java/",
-    "body_sha256": "60a3f1ce5b0b09d1a41b79483e8c95801c95d99cf28a530ea66b5359a7b50687",
-    "archived_at": "2026-10-27T06:16:09.666396+00:00",
+    "body": "Play a button-clicking game via a browser agent\nA developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\n·\nNov 3, 2025\nDone with\nGE\nGemini\nWhat they did\nGuillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.\nHow it went\nThe agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.\nWorth knowing\nSend a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse browser control to open [URL of a simple web game] and play it by looking at screenshots and clicking, for about [number] moves. Report whether your clicks landed where you intended, and note any mismatch between screenshot coordinates and actual click positions. Stop when you've finished the moves and summarize how it went.\nOriginal source: https://glaforge.dev/posts/2025/11/03/driving-a-web-browser-with-gemini-computer-use-model-in-java/",
+    "body_sha256": "2b1ca69e46f61e4d3858ba794b8ace1b6e6b665e0455166cd6d333078b5c8e28",
+    "archived_at": "2026-10-28T06:55:22.600952+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:16:09.666396+00:00",
+      "body_sha256": "60a3f1ce5b0b09d1a41b79483e8c95801c95d99cf28a530ea66b5359a7b50687",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Play a button-clicking game via a browser agent\nA developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\nDone with\nGE\nGemini\nWhat they did\nGuillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.\nHow it went\nThe agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.\nWorth knowing\nSend a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse browser control to open [URL of a simple web game] and play it by looking at screenshots and clicking, for about [number] moves. Report whether your clicks landed where you intended, and note any mismatch between screenshot coordinates and actual click positions. Stop when you've finished the moves and summarize how it went.\nOriginal source: https://glaforge.dev/posts/2025/11/03/driving-a-web-browser-with-gemini-computer-use-model-in-java/",
+        "body_sha256": "60a3f1ce5b0b09d1a41b79483e8c95801c95d99cf28a530ea66b5359a7b50687",
+        "archived_at": "2026-10-27T06:16:09.666396+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:16:09.666396+00:00",
+    "at": "2026-10-28T06:55:22.600952+00:00",
     "status": "fetched",
     "error": null
   }

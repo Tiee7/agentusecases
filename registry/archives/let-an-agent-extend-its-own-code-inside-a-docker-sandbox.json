@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-an-agent-extend-its-own-code-inside-a-docker-sandbox",
-  "observed_at": "2026-10-27T06:03:15.621077+00:00",
-  "html_sha256": "c35e630e6942b1bccd13af5bc23f5c5e2adaf5086d3bc9bdcd5456ffa991d786",
-  "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
+  "observed_at": "2026-10-28T06:42:28.540525+00:00",
+  "html_sha256": "ed6db164da738188395f15c4fe385d48443424aef57c29c8ea8efeba429fc7dd",
+  "body_sha256": "34b28ffa1a9d7747327398bf0f61b5360e9bf6394d0ee38c49a70202150f412b",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "An agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.",
-      "sha256": "d6edfb269c6c4ec927deff08ca27b965304027401e85f90eb4fee7e4821d9916"
+      "value": "An agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\n·\nMar 10, 2026",
+      "sha256": "148aee5247dfd098d5be38fb243d59032d827656eabe78c81ec70d6b68de5ee8"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Let an agent extend its own code inside a Docker sandbox\nAn agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\nDone with\nCL\nClaude\nWhat they did\nMiguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.\nHow it went\nIt finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.\nWorth knowing\nEach improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a Docker sandbox where an agent can add new capabilities to its own source code in [repo path]. Each change should run the tests, be committed if they pass, and be rolled back if they fail, with a log of what happened. Finish by having it add [first capability, e.g. a web search tool] and show me the commit and test results; pause before any change that touches files outside the sandbox.\nOriginal source: https://news.ycombinator.com/item?id=47329087",
-    "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
-    "archived_at": "2026-10-27T06:03:15.621077+00:00",
+    "body": "Let an agent extend its own code inside a Docker sandbox\nAn agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\n·\nMar 10, 2026\nDone with\nCL\nClaude\nWhat they did\nMiguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.\nHow it went\nIt finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.\nWorth knowing\nEach improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a Docker sandbox where an agent can add new capabilities to its own source code in [repo path]. Each change should run the tests, be committed if they pass, and be rolled back if they fail, with a log of what happened. Finish by having it add [first capability, e.g. a web search tool] and show me the commit and test results; pause before any change that touches files outside the sandbox.\nOriginal source: https://news.ycombinator.com/item?id=47329087",
+    "body_sha256": "34b28ffa1a9d7747327398bf0f61b5360e9bf6394d0ee38c49a70202150f412b",
+    "archived_at": "2026-10-28T06:42:28.540525+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:03:15.621077+00:00",
+      "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Let an agent extend its own code inside a Docker sandbox\nAn agent built on Claude and Agno implements capabilities in its own source code in Docker, with changes validated, committed, or rolled back; it reached 21+ capabilities.\nDone with\nCL\nClaude\nWhat they did\nMiguel, built on Claude and the Agno framework, runs inside Docker with the project mounted read-only and only its own code directory writable. A host-side runner snapshots git, gives the agent its source plus the next capability, then validates changes with AST, JSON schema and import checks. It commits on success and rolls back on failure.\nHow it went\nIt finished all 10 seed capabilities, wrote its own checklist, and reached 21+ capabilities. A consolidation batch cut code by 10% and the system prompt by 63%. It still sometimes makes questionable decisions.\nWorth knowing\nEach improvement batch costs roughly a few euros in Claude API calls, and the agent can exhaust its context by reading six or more of its own files before writing any code.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a Docker sandbox where an agent can add new capabilities to its own source code in [repo path]. Each change should run the tests, be committed if they pass, and be rolled back if they fail, with a log of what happened. Finish by having it add [first capability, e.g. a web search tool] and show me the commit and test results; pause before any change that touches files outside the sandbox.\nOriginal source: https://news.ycombinator.com/item?id=47329087",
+        "body_sha256": "895af0c6446e775009e8427fec0b4b332fe29d7c36c8cc0108536109c8e4fdda",
+        "archived_at": "2026-10-27T06:03:15.621077+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:03:15.621077+00:00",
+    "at": "2026-10-28T06:42:28.540525+00:00",
     "status": "fetched",
     "error": null
   }

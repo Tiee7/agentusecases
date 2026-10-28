@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/keep-coding-agents-running-autonomously-for-long-stretches",
-  "observed_at": "2026-10-27T06:00:33.640673+00:00",
-  "html_sha256": "3f17624da0cfc0fbd12431198851098f031f4fbc281babc69b1c8763cc4725e4",
-  "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
+  "observed_at": "2026-10-28T06:39:46.531359+00:00",
+  "html_sha256": "9caf154991fd157d817db8f3304513fcdbf8424a6851bc85b038fba51229e8ef",
+  "body_sha256": "2ea08b7a63f0fac15085dc7226eac2a583a0e4325a5843c31acf5e32a3811d74",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Cursor's write-up on scaling long-running autonomous coding.",
-      "sha256": "4545b086474a43d079629144eb82187f600fe7dc0218daf3dd82932bc70f83d9"
+      "value": "Cursor's write-up on scaling long-running autonomous coding.\n·\nJan 14, 2026",
+      "sha256": "99e89752b61a856228536ff796af6743c447d040c572ab5d43e3cf478b8b0094"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Keep coding agents running autonomously for long stretches\nCursor's write-up on scaling long-running autonomous coding.\nDone with\nCR\nCursor\nWhat they did\nCursor ran hundreds of concurrent agents on one project. Flat self-coordination through a shared file with locks, then optimistic concurrency, failed. They switched to planners that explore the code and create tasks, and workers that each grind on one task and push. A judge agent decided at the end of each cycle whether to continue, and the next cycle started fresh.\nHow it went\nA browser built from scratch ran close to a week and produced over 1 million lines across 1,000 files. A Solid-to-React migration took over three weeks and passed CI but still needs careful review.\nWorth knowing\nPrompting mattered more than the harness or model. Agents sometimes ran far too long, and periodic fresh starts were still needed to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want a background agent to work on [large task, e.g. migrating all API handlers to the new validation library] in my repo [repo] for an extended stretch. Break it into small checkable steps, work through them one by one, run tests after each, and commit after each step that passes. Stop when all handlers are done or after [number, e.g. 3] consecutive failures, and leave me a progress log.\nOriginal source: https://cursor.com/blog/scaling-agents",
-    "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
-    "archived_at": "2026-10-27T06:00:33.640673+00:00",
+    "body": "Keep coding agents running autonomously for long stretches\nCursor's write-up on scaling long-running autonomous coding.\n·\nJan 14, 2026\nDone with\nCR\nCursor\nWhat they did\nCursor ran hundreds of concurrent agents on one project. Flat self-coordination through a shared file with locks, then optimistic concurrency, failed. They switched to planners that explore the code and create tasks, and workers that each grind on one task and push. A judge agent decided at the end of each cycle whether to continue, and the next cycle started fresh.\nHow it went\nA browser built from scratch ran close to a week and produced over 1 million lines across 1,000 files. A Solid-to-React migration took over three weeks and passed CI but still needs careful review.\nWorth knowing\nPrompting mattered more than the harness or model. Agents sometimes ran far too long, and periodic fresh starts were still needed to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want a background agent to work on [large task, e.g. migrating all API handlers to the new validation library] in my repo [repo] for an extended stretch. Break it into small checkable steps, work through them one by one, run tests after each, and commit after each step that passes. Stop when all handlers are done or after [number, e.g. 3] consecutive failures, and leave me a progress log.\nOriginal source: https://cursor.com/blog/scaling-agents",
+    "body_sha256": "2ea08b7a63f0fac15085dc7226eac2a583a0e4325a5843c31acf5e32a3811d74",
+    "archived_at": "2026-10-28T06:39:46.531359+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:00:33.640673+00:00",
+      "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Keep coding agents running autonomously for long stretches\nCursor's write-up on scaling long-running autonomous coding.\nDone with\nCR\nCursor\nWhat they did\nCursor ran hundreds of concurrent agents on one project. Flat self-coordination through a shared file with locks, then optimistic concurrency, failed. They switched to planners that explore the code and create tasks, and workers that each grind on one task and push. A judge agent decided at the end of each cycle whether to continue, and the next cycle started fresh.\nHow it went\nA browser built from scratch ran close to a week and produced over 1 million lines across 1,000 files. A Solid-to-React migration took over three weeks and passed CI but still needs careful review.\nWorth knowing\nPrompting mattered more than the harness or model. Agents sometimes ran far too long, and periodic fresh starts were still needed to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want a background agent to work on [large task, e.g. migrating all API handlers to the new validation library] in my repo [repo] for an extended stretch. Break it into small checkable steps, work through them one by one, run tests after each, and commit after each step that passes. Stop when all handlers are done or after [number, e.g. 3] consecutive failures, and leave me a progress log.\nOriginal source: https://cursor.com/blog/scaling-agents",
+        "body_sha256": "76de5db8cd096cd8108aaded6490dd98d47c2fb1d2aa96f07fa279d0316a8c0a",
+        "archived_at": "2026-10-27T06:00:33.640673+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:00:33.640673+00:00",
+    "at": "2026-10-28T06:39:46.531359+00:00",
     "status": "fetched",
     "error": null
   }

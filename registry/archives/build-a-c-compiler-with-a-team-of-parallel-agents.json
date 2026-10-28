@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-c-compiler-with-a-team-of-parallel-agents",
-  "observed_at": "2026-10-27T06:00:17.564016+00:00",
-  "html_sha256": "d776c7dd500192ad124b471298c570bdfee265e24b0ddf5fbb155736a0d2efe4",
-  "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
+  "observed_at": "2026-10-28T06:39:30.543629+00:00",
+  "html_sha256": "cb665beb1d21799f7537ba469937b65e8364108d1d00ce47833cb0edb1b87bbe",
+  "body_sha256": "15b918b32fc638f93cdea5b5a668c267a16ce42117d7c80ccd69b75ddadbfba6",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Anthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.",
-      "sha256": "47c00f340b930e4752aaf01beaf204c5670e6560e2bf48827c750604a8909e96"
+      "value": "Anthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\n·\nFeb 5, 2026",
+      "sha256": "923d304d07d0ad8400a1503b6f8a6527593be7e7e63002b95caf3faf739b6c43"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Build a C compiler with a team of parallel agents\nAnthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\nDone with\nCL\nClaude\nWhat they did\nNicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.\nHow it went\nAbout 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.\nWorth knowing\nIt cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [tool, e.g. a Markdown-to-HTML converter in Python] from scratch with a spec-first approach. First write a short spec and a test suite in this folder, then split the work into independent pieces and use sub-agents to implement them in parallel. Stop when all tests pass, and give me a summary of what each sub-agent built and any tests you had to skip.\nOriginal source: https://www.anthropic.com/engineering/building-c-compiler",
-    "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
-    "archived_at": "2026-10-27T06:00:17.564016+00:00",
+    "body": "Build a C compiler with a team of parallel agents\nAnthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\n·\nFeb 5, 2026\nDone with\nCL\nClaude\nWhat they did\nNicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.\nHow it went\nAbout 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.\nWorth knowing\nIt cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [tool, e.g. a Markdown-to-HTML converter in Python] from scratch with a spec-first approach. First write a short spec and a test suite in this folder, then split the work into independent pieces and use sub-agents to implement them in parallel. Stop when all tests pass, and give me a summary of what each sub-agent built and any tests you had to skip.\nOriginal source: https://www.anthropic.com/engineering/building-c-compiler",
+    "body_sha256": "15b918b32fc638f93cdea5b5a668c267a16ce42117d7c80ccd69b75ddadbfba6",
+    "archived_at": "2026-10-28T06:39:30.543629+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:00:17.564016+00:00",
+      "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Build a C compiler with a team of parallel agents\nAnthropic's engineering write-up on tasking Opus 4.6 agent teams with building a C compiler.\nDone with\nCL\nClaude\nWhat they did\nNicholas Carlini ran 16 Claude agents in an endless loop, each in its own Docker container, pushing to a shared git repo. Agents claimed tasks by writing lock files, merged each other's work, and had no orchestrator. Carlini's main work was building tests, CI, and a GCC-based oracle so agents could fix different kernel bugs in parallel.\nHow it went\nAbout 2,000 sessions produced a 100,000-line Rust compiler that builds Linux 6.9 on x86, ARM and RISC-V and passes 99% of most test suites. It still calls GCC for 16-bit x86, its assembler and linker are buggy, and its output is inefficient.\nWorth knowing\nIt cost just under $20,000 in API fees over two weeks, and the quality of the test harness decided whether agents stayed on track. Run it in a container.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to build a small [tool, e.g. a Markdown-to-HTML converter in Python] from scratch with a spec-first approach. First write a short spec and a test suite in this folder, then split the work into independent pieces and use sub-agents to implement them in parallel. Stop when all tests pass, and give me a summary of what each sub-agent built and any tests you had to skip.\nOriginal source: https://www.anthropic.com/engineering/building-c-compiler",
+        "body_sha256": "36f3a74711dd1ec5e02e3121259f47ccb9de25d07120074dc539b2032d34f629",
+        "archived_at": "2026-10-27T06:00:17.564016+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:00:17.564016+00:00",
+    "at": "2026-10-28T06:39:30.543629+00:00",
     "status": "fetched",
     "error": null
   }

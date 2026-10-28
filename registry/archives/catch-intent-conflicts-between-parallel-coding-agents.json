@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/catch-intent-conflicts-between-parallel-coding-agents",
-  "observed_at": "2026-10-27T06:02:03.576060+00:00",
-  "html_sha256": "71ea647e383bf84bfc6a417f5cac32151b2e3bf4fbcb16bedcd15e44a709dfdc",
-  "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
+  "observed_at": "2026-10-28T06:41:16.530180+00:00",
+  "html_sha256": "aa3a1f936aa6a16ef08934db823ff3f755aac189010ab8ead633bab0d486ea6f",
+  "body_sha256": "a37a28aaa64f866cf3d6f70f1aec741e9c85660eb348ea31cce7b42844660a0a",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Agents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.",
-      "sha256": "3e188a766de0b287b9f219295c012e86d2744efeed4837e8d9e22b1652457ad3"
+      "value": "Agents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\n·\nSep 21, 2026",
+      "sha256": "ab1a99cd032f8d43fe438bc8dea075e8066e7c8d75798729f0645bc386d17666"
     },
     "method": {
       "status": "observed",
@@ -95,13 +95,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
-    "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
-    "archived_at": "2026-10-27T06:02:03.576060+00:00",
+    "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\n·\nSep 21, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
+    "body_sha256": "a37a28aaa64f866cf3d6f70f1aec741e9c85660eb348ea31cce7b42844660a0a",
+    "archived_at": "2026-10-28T06:41:16.530180+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:02:03.576060+00:00",
+      "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Catch intent conflicts between parallel coding agents\nAgents publish planned changes before editing so conflicting architecture changes across parallel worktrees get flagged before code is written.\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nWhat they did\nForemerge is a local CLI and MCP server that Claude Code, Codex or Cursor agents are wired to. Each agent registers and publishes its intent with semantic scopes such as symbol:PaymentService before editing, then claims that scope. A person installs it, runs setup, and registers the test command. The demo has one agent replacing PaymentService while another extends it.\nHow it went\nThe second agent's published intent immediately raised a HIGH replace_vs_extend advisory, with no files changed. Detection is heuristic, so it can miss synonyms or warn on compatible work. Claims only warn. No benchmark results are published.\nWorth knowing\nThis is a pre-1.0 local-only MVP: state lives in one SQLite database that agents on one machine share, and validation commands run unsandboxed with your permissions.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI run several coding agents in parallel git worktrees on [repo path]. Set up a lightweight convention where each agent writes a short planned-changes note to [shared folder or file] before editing, and write a script that compares the notes and flags conflicting architecture or file changes. Done means I can run the script and see a clear conflict report, and please show me the plan before changing any existing files.\nOriginal source: https://github.com/naw103/foremerge",
+        "body_sha256": "e9f70a251b0720c01fecbab18167724bd6dc2785a0628f5b5ada9a3fc4402018",
+        "archived_at": "2026-10-27T06:02:03.576060+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:02:03.576060+00:00",
+    "at": "2026-10-28T06:41:16.530180+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/audit-websites-for-seo-issues-with-a-browsing-agent",
+  "observed_at": "2026-10-28T07:33:14.665373+00:00",
+  "html_sha256": "556ff06c5ee3689a05babcbe9ec70d1f50d6abd6ddb846ffc82472429e73cb48",
+  "body_sha256": "dd48060ecd5fef2e83ee2feb6ca4273f4b7b28b9b402035d6901338073b52f11",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Audit websites for SEO issues with a browsing agent",
+      "sha256": "31ba0b6b459a7ff262127f0b258f568eaaad1ff60b8663a557ddb2b79d797530"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An open-source agent visits each URL in a real Chromium browser, extracts SEO tags, checks broken links, pauses for human login input, and writes a summary report.",
+      "sha256": "16ea18f37fb0c274350c814730323294d84b04ca3ef332c5c9894afabeb45ec9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "You list URLs in input.csv and run a Python tool built on Browser Use and the Claude API. It opens each page in a visible Chromium window, has Claude extract the title, description, H1s and canonical tag, and checks same-domain links with httpx. On 404s, login walls or redirects it pauses for you, or in auto mode logs them and moves on. Results save to report.json as it goes, so a run can resume.",
+      "sha256": "c7a9ff328ebcfdf9cfe9fc8c9c783f9dd7c0cff3a38b206ed6317a78348cc1ba"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It writes a plain-English summary with PASS/FAIL per URL. On the author's own sites it found a title competing with the homepage, a query at position 9.5 with 0% CTR, missing internal links, and an orphan page.",
+      "sha256": "f480c1e8c4cf6ddba833dbf8307007ff1fb1b32cff536cfe6604c41ecf436aa4"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A 20-URL audit costs about $0.12 with Sonnet, and the --tiered flag cuts that. The browser runs visibly, so it isn't suited to server-side CI, and a 2-second delay per URL is deliberate.",
+      "sha256": "e77a26ff18b72fd01489b9a8d245beecacdf8850fad24a4509809c1cac1e5c54"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/dannwaneri/seo-agent"
+      ],
+      "sha256": "2a40e819990da40433c022e78230017cd2a8598fa9b2970f87630461b5587945"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-27",
+      "sha256": "385ceada9f6cde107bed820a0c01f937118b3f5a6e311a373842d551c925b39f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a1895f10a10828be31e28d7e805bcc0d997c63085285c39f77b7aa210216c071",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Audit websites for SEO issues with a browsing agent\nAn open-source agent visits each URL in a real Chromium browser, extracts SEO tags, checks broken links, pauses for human login input, and writes a summary report.\nDone with\nCL\nClaude\nWhat they did\nYou list URLs in input.csv and run a Python tool built on Browser Use and the Claude API. It opens each page in a visible Chromium window, has Claude extract the title, description, H1s and canonical tag, and checks same-domain links with httpx. On 404s, login walls or redirects it pauses for you, or in auto mode logs them and moves on. Results save to report.json as it goes, so a run can resume.\nHow it went\nIt writes a plain-English summary with PASS/FAIL per URL. On the author's own sites it found a title competing with the homepage, a query at position 9.5 with 0% CTR, missing internal links, and an orphan page.\nWorth knowing\nA 20-URL audit costs about $0.12 with Sonnet, and the --tiered flag cuts that. The browser runs visibly, so it isn't suited to server-side CI, and a 2-second delay per URL is deliberate.\nTry it yourself\nwith\nClaude\nCopy prompt\nAudit these pages for SEO issues: [list of URLs]. For each page, open it in the browser, record the title tag, meta description, H1, canonical and any missing or duplicate tags, and check the links on it for broken ones. If a page needs a login, pause and ask me to sign in. Finish with a summary report listing issues by page, sorted by severity, and do not change anything on the site.\nOriginal source: https://github.com/dannwaneri/seo-agent",
+    "body_sha256": "dd48060ecd5fef2e83ee2feb6ca4273f4b7b28b9b402035d6901338073b52f11",
+    "archived_at": "2026-10-28T07:33:14.665373+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-28T07:33:14.665373+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

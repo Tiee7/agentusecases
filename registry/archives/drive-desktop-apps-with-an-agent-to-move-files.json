@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/drive-desktop-apps-with-an-agent-to-move-files",
-  "observed_at": "2026-10-27T06:33:51.653801+00:00",
-  "html_sha256": "97db5f7eefe5929389251deede20ea6bca8f9a8fbc42586191b5a73eeb3fa716",
-  "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
+  "observed_at": "2026-10-28T07:13:04.727792+00:00",
+  "html_sha256": "869d51d2f7fce795d11de1760bb30fbe37845c9f6b28a8bfb15d86352a4081a1",
+  "body_sha256": "7c04a6c77fc847c8e33ea049bbc31554881e9950b65111a516817efddd3d8c61",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "A poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.",
-      "sha256": "dc124cb7a933ffc74ecdb25b97dd7efcf3b318a2360b18778bb063cce810a861"
+      "value": "A poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\n·\nApr 9, 2026",
+      "sha256": "1ed34187e046d51ca199aca8ebd45ce86a8646cb239bb7ca09306736a94df4de"
     },
     "method": {
       "status": "observed",
@@ -94,13 +94,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
-    "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
-    "archived_at": "2026-10-27T06:33:51.653801+00:00",
+    "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\n·\nApr 9, 2026\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
+    "body_sha256": "7c04a6c77fc847c8e33ea049bbc31554881e9950b65111a516817efddd3d8c61",
+    "archived_at": "2026-10-28T07:13:04.727792+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:33:51.653801+00:00",
+      "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
+        "body_sha256": "b56c486fa9044109158b25307512bb3a4e585486893ad0f8ef45f86b301f2e1f",
+        "archived_at": "2026-10-27T06:33:51.653801+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:33:51.653801+00:00",
+    "at": "2026-10-28T07:13:04.727792+00:00",
     "status": "fetched",
     "error": null
   }

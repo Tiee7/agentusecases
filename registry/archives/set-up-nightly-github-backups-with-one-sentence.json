@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/set-up-nightly-github-backups-with-one-sentence",
-  "observed_at": "2026-10-27T06:49:59.757812+00:00",
-  "html_sha256": "ef857b7e7b3e1ae3374a1818a1209a9dcb86ba00f81b0788a128a1d4ef37db9c",
+  "observed_at": "2026-10-28T07:29:12.699795+00:00",
+  "html_sha256": "44a37352de14d426195fe19306890e439d7c05df48f9b25eeb350edf891f7987",
   "body_sha256": "8a00d48cba163309a150bef015898f590e26794be5f1e4d508b7631d199816c6",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Set up nightly GitHub backups with one sentence\nHermes took a single plain-English instruction, found its GitHub skills, created and verified a nightly push cron job, and added an hourly self-check to handle UTC versus central time.\nDone with\nHA\nHermes Agent\nWhat they did\nThrough Telegram, the user sent one sentence asking for a nightly push to a GitHub repo at midnight central time. Hermes searched its built-in GitHub skills, ran terminal checks, created the cron job and a nightly-github-sync skill, then listed jobs to confirm it registered. It also noted the automation in memory.md. The user first stored the GitHub token through the server terminal, not in chat.\nHow it went\nThe job registered and was verified. Hermes saw the Docker container runs in UTC and chose an hourly run that checks central time, which avoids daylight-saving breakage. The source gives no run results or numbers.\nWorth knowing\nSet the GitHub token with hermes config set over SSH, not in chat, and use a fine-grained token scoped to one repo with contents read/write.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nBack up [folder path] to my GitHub repo [repo URL] every night at [time] in [my timezone]. Create the scheduled job, handle any UTC versus local time differences, and add an hourly self-check that confirms the last push succeeded and alerts me on [Telegram / other channel] if it did not. Before the first push, show me what files will be included and wait for my OK, then run a test and verify the commit appears on GitHub.\nOriginal source: https://www.mindstudio.ai/blog/hermes-agent-cron-jobs-plain-english-github-backup",
     "body_sha256": "8a00d48cba163309a150bef015898f590e26794be5f1e4d508b7631d199816c6",
-    "archived_at": "2026-10-27T06:49:59.757812+00:00",
+    "archived_at": "2026-10-28T07:29:12.699795+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:49:59.757812+00:00",
+    "at": "2026-10-28T07:29:12.699795+00:00",
     "status": "fetched",
     "error": null
   }

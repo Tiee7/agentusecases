@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/summarize-newsletters-into-a-notion-database",
-  "observed_at": "2026-10-27T06:20:39.604821+00:00",
-  "html_sha256": "5bf572c5361500320ed4ec428db9b549f7e6a2a3e204d303d6e1664acb11b3ac",
+  "observed_at": "2026-10-28T06:59:52.600586+00:00",
+  "html_sha256": "2235e33802b67ae2650c82eff697e1a794b95383669c69fe726392beb38b3d8d",
   "body_sha256": "bf99e048a37ad47d2b9fc9c42b4b286c8ae2fb32f51abce2aea52de7106a2a1f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Summarize newsletters into a Notion database\nAn n8n workflow retrieves newsletters, summarizes them with an LLM and stores them in Notion, splitting long summaries to fit block limits.\nDone with\nN8\nn8n\nWhat they did\nThe n8n workflow reads unread emails over IMAP, then filters by date and by a list of allowed senders. An OpenAI-backed summarization chain turns each remaining newsletter into bullet points that keep source URLs. Summaries over 1,950 characters are split by a code node. The first chunk creates the Notion page, and the later chunks are appended to that page by its URL.\nHow it went\nIn the walkthrough, 15 unread emails were narrowed to 3 summaries, all written to Notion. The author's multi-email chunking fix worked. The IMAP filter rules were unreliable, and the author chose the wrong summarization method at first.\nWorth knowing\nOnly OpenAI ran reliably. Claude hit token limits mid-run after tokens were already spent, and local Llama2 errored. The author planned to switch from map-reduce to the simpler stuff method.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls newsletters from my [email label or folder], summarizes each one with an AI model into a title, sender, 5 key bullets and a link, and saves them to my Notion database [database name]. If a summary is longer than Notion's block limit, split it across several blocks. You're done when a test run saves my last [number] newsletters correctly; show me the workflow before activating it.\nOriginal source: https://medium.com/@syrom_85473/a-practical-n8n-workflow-example-from-a-to-z-part-2-aggregating-newsletter-summaries-in-a-688f30f69352",
     "body_sha256": "bf99e048a37ad47d2b9fc9c42b4b286c8ae2fb32f51abce2aea52de7106a2a1f",
-    "archived_at": "2026-10-27T06:20:39.604821+00:00",
+    "archived_at": "2026-10-28T06:59:52.600586+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:20:39.604821+00:00",
+    "at": "2026-10-28T06:59:52.600586+00:00",
     "status": "fetched",
     "error": null
   }

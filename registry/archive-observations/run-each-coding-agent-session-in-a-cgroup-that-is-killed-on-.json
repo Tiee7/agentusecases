@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-each-coding-agent-session-in-a-cgroup-that-is-killed-on-",
-  "observed_at": "2026-10-27T06:45:59.772005+00:00",
-  "html_sha256": "85b1c9b1b81b997774d560712af8ba82286f2166abc95fdc1e2c8c058e409e22",
-  "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
+  "observed_at": "2026-10-28T07:25:12.689667+00:00",
+  "html_sha256": "d2cdfb5ee2d5c6502a4fa47ef88f3d684974b9a71486a9e43f56ee4d84ebf1dd",
+  "body_sha256": "a4ac6fd9cf94c7fa11f8f5c66e115a73c6215719dcb39d0f959cc1dba4778ae8",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "A developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.",
-      "sha256": "37b2aff040d1f67aaaa62bea739132177974cb2592486533557c662022ca7838"
+      "value": "A developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.\n·\nOct 17, 2026",
+      "sha256": "315d534122cb2c482256c20a2f389f5a4949e8fd3dbaa49772557d17533a551c"
     },
     "method": {
       "status": "observed",
@@ -93,19 +93,19 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Run each coding agent session in a cgroup that is killed on completion\nA developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.\nDone with\nCX\nCodex\nWhat they did\nThe developer traced heavy swapping to a RAM-backed tmpfs /tmp and to processes that earlier coding agents had forked and abandoned. They added a frequently run job that deletes tmp files unused for about two hours and not held open by any command. They also built their agent spawner to launch each session in its own cgroup, killing every process in it when the task finishes.\nHow it went\nThe source gives no measurements. It says the cleanup job and per-session cgroups addressed the swap usage and the leftover processes, but it is a brief forum comment with no before-and-after figures.\nWorth knowing\nCheck whether swap is really coming from a RAM-backed tmpfs /tmp before blaming the agents; the cleanup job only removes files with no open handles.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval.\nOriginal source: https://news.ycombinator.com/item?id=50136354",
-    "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
-    "archived_at": "2026-10-27T06:45:59.772005+00:00",
+    "body": "Run each coding agent session in a cgroup that is killed on completion\nA developer built an agent spawner that launches each coding agent session in its own cgroup and kills leftover processes when the task completes, plus a job that clears stale tmp files.\n·\nOct 17, 2026\nDone with\nCX\nCodex\nWhat they did\nThe developer traced heavy swapping to a RAM-backed tmpfs /tmp and to processes that earlier coding agents had forked and abandoned. They added a frequently run job that deletes tmp files unused for about two hours and not held open by any command. They also built their agent spawner to launch each session in its own cgroup, killing every process in it when the task finishes.\nHow it went\nThe source gives no measurements. It says the cleanup job and per-session cgroups addressed the swap usage and the leftover processes, but it is a brief forum comment with no before-and-after figures.\nWorth knowing\nCheck whether swap is really coming from a RAM-backed tmpfs /tmp before blaming the agents; the cleanup job only removes files with no open handles.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path], write a small agent spawner script for [Linux distro or systemd setup] that launches each coding agent session in its own cgroup and kills every leftover process in that cgroup when the task finishes or fails. Also add a scheduled job that deletes stale files older than [number] hours in [tmp directory]. Finish by running a test session that leaves a background process behind and showing me that it gets cleaned up. Before deleting any files or killing processes outside the test, show me what would be removed and wait for my approval.\nOriginal source: https://news.ycombinator.com/item?id=50136354",
+    "body_sha256": "a4ac6fd9cf94c7fa11f8f5c66e115a73c6215719dcb39d0f959cc1dba4778ae8",
+    "archived_at": "2026-10-28T07:25:12.689667+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
     "archive_file_sha256": "92d6210fad5498dd06629fc586aece0f0ccfee9051e6e76ee7f0f6be5fa69e4f",
     "body_sha256": "4db54845a960bcac4cc238f1c7b47159dd2f740aa947b68ab53811c894636950",
-    "review_required": false,
+    "review_required": true,
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:45:59.772005+00:00",
+    "at": "2026-10-28T07:25:12.689667+00:00",
     "status": "fetched",
     "error": null
   }

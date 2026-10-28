@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/mine-reddit-threads-into-structured-notion-reports",
-  "observed_at": "2026-10-27T06:41:09.700099+00:00",
-  "html_sha256": "5385df44df80aa7c777aae64346b78168bdb14c71772c9417aef49775545532b",
+  "observed_at": "2026-10-28T07:20:22.906752+00:00",
+  "html_sha256": "2eb4870d4d1c4e9c8a2854eb9d415eecf2332d5bfeba9604f505854d562cc7f6",
   "body_sha256": "c0fd998bcec0ed0e4bc6af25896185f4a4b9f7b3a59f43ff0f4472804e5599ad",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Mine Reddit threads into structured Notion reports\nAn n8n workflow scrapes Reddit posts and comments via Bright Data, extracts concerns and themes with Gemini, and writes reports to Notion.\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nA schedule trigger runs the n8n workflow on a chosen subreddit. It reads the subreddit's RSS feed for recent post URLs and batches them to Bright Data, polling every 30 seconds until the snapshot is ready. It downloads titles, comments and upvotes, and a Gemini agent turns them into marketing insights. Those are converted to Notion blocks on a new page.\nHow it went\nThe author demos it on the SkincareAddiction subreddit and says it runs end to end without manual steps. No volume or accuracy numbers are given. Multi-subreddit support and Notion databases remain future work.\nWorth knowing\nThe hardest part was converting the agent's Markdown output into valid Notion blocks, which meant learning the Notion API's blocks and page IDs. The workflow is shared as a GitHub Gist.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that takes a Reddit thread or search URL from [trigger, e.g. form or chat message], scrapes the posts and comments with [scraping service], and uses Gemini to extract the main concerns, recurring themes, and notable quotes. Write one structured report per run into my Notion database [database name] with fields for [fields, e.g. topic, themes, concerns, source URL]. Test it on [example Reddit URL] and show me the resulting Notion page before activating it.\nOriginal source: https://dev.to/kichuman28/unstoppable-reddit-research-agent-real-time-insights-with-n8n-bright-data-34g0",
     "body_sha256": "c0fd998bcec0ed0e4bc6af25896185f4a4b9f7b3a59f43ff0f4472804e5599ad",
-    "archived_at": "2026-10-27T06:41:09.700099+00:00",
+    "archived_at": "2026-10-28T07:20:22.906752+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:41:09.700099+00:00",
+    "at": "2026-10-28T07:20:22.906752+00:00",
     "status": "fetched",
     "error": null
   }

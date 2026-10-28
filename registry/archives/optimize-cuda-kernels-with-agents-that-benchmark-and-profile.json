@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/optimize-cuda-kernels-with-agents-that-benchmark-and-profile",
-  "observed_at": "2026-10-27T06:01:49.576844+00:00",
-  "html_sha256": "351d2753b2532a6d101c8fc322643604d3a0e6b3a5977f9fb288f509670a564c",
-  "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
+  "observed_at": "2026-10-28T06:41:02.580450+00:00",
+  "html_sha256": "c9e582378d3b326ca926d92ef9a6b4532ae95126ec4afd01a780c6f1f2ddcb53",
+  "body_sha256": "a8df795106433ee2f4d7925794b88ca15f9db9b9eac2d408585729c91c144f9c",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "AI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.",
-      "sha256": "bf6fe421b152be5d755798951658c2034f15d866020476c3af51a740a5bf0c83"
+      "value": "AI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\n·\nSep 25, 2026",
+      "sha256": "2b90a3390b21d9607306113ad34b090965fd3df5e39c6391d0b55ef7e5e8ae69"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
-    "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
-    "archived_at": "2026-10-27T06:01:49.576844+00:00",
+    "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\n·\nSep 25, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
+    "body_sha256": "a8df795106433ee2f4d7925794b88ca15f9db9b9eac2d408585729c91c144f9c",
+    "archived_at": "2026-10-28T06:41:02.580450+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:01:49.576844+00:00",
+      "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
+        "body_sha256": "6bc132d00bb91b926c90bf4f473a2a73068c2466cfe36259bcde75bde32a93b1",
+        "archived_at": "2026-10-27T06:01:49.576844+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:01:49.576844+00:00",
+    "at": "2026-10-28T06:41:02.580450+00:00",
     "status": "fetched",
     "error": null
   }

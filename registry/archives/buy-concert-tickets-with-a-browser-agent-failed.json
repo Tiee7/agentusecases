@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/buy-concert-tickets-with-a-browser-agent-failed",
+  "observed_at": "2026-10-28T07:33:10.658196+00:00",
+  "html_sha256": "e867c50eb112f78066531569e3a8021fe4fa62ed98724f44b9726c5c4c2b19a0",
+  "body_sha256": "3c604821dafe6db9785eb3544242d77adceec05e46693f7e5b9adefaa3f8d707",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Buy concert tickets with a browser agent (failed)",
+      "sha256": "ec3f456d8020afc15013ef6342c41aa106d045d69e0714e4f2011dab3f2aa491"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent was given two general-admission Ticketmaster tickets but got stuck on the seating map and the cart expired twice.",
+      "sha256": "f170e7173a3dc4f9ce1b410204e2ca740aebf25861143629bff0843fe5e946e4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster tried agent-browser on Ticketmaster as a class side project, giving it the simple goal of buying two general-admission tickets. They say it handled token use better than a Playwright MCP setup, but once Ticketmaster showed captchas, modals, and the seating map, the agent kept retrying the same actions, including reopening one popup 11 times, while the person watched and babysat retries.",
+      "sha256": "71d0115cf06a2895dfade69e5754f48930bfcee583ece8bf85047cc48f12016b"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It failed: after about 40 minutes, the agent still had not bought the tickets, and the cart hold expired twice. The poster ended with no tickets and said the manual flow still wins on this site.",
+      "sha256": "e51d891a40edf9bbd7b92c7253765ebbb595e50f1def2ca60a8d7d352cddd6b6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was site hostility, not cost: Ticketmaster's captchas, shifting seating map, and expiring hold timer broke the run even though token use seemed fine.",
+      "sha256": "e1a4958e2d8346730ca32a48307eb03e831ed2b9cc72cf4eb3e512b53d3d6ef7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/AI_Agents/comments/1vnydav/my_agent_spent_40_minutes_on_a_task_that_takes_me"
+      ],
+      "sha256": "b5e9a412ad5c6bd11926cb614ecf9bfdf6ada670626026b8e1edd67d7d084d43"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-27",
+      "sha256": "385ceada9f6cde107bed820a0c01f937118b3f5a6e311a373842d551c925b39f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "edddc29c824a962ebcef5b01730ef2db97ac69c30f9b4f714e94845ea2dd26dd",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Buy concert tickets with a browser agent (failed)\nAn agent was given two general-admission Ticketmaster tickets but got stuck on the seating map and the cart expired twice.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster tried agent-browser on Ticketmaster as a class side project, giving it the simple goal of buying two general-admission tickets. They say it handled token use better than a Playwright MCP setup, but once Ticketmaster showed captchas, modals, and the seating map, the agent kept retrying the same actions, including reopening one popup 11 times, while the person watched and babysat retries.\nHow it went\nIt failed: after about 40 minutes, the agent still had not bought the tickets, and the cart hold expired twice. The poster ended with no tickets and said the manual flow still wins on this site.\nWorth knowing\nThe main catch was site hostility, not cost: Ticketmaster's captchas, shifting seating map, and expiring hold timer broke the run even though token use seemed fine.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nHelp me buy [number] general-admission tickets for [event] at [venue] on [date] on [ticket site], with a maximum price of [price] each. Navigate to the listing and get the tickets into my cart, and tell me right away if you get stuck on a seating map or a queue. Stop before payment and show me the cart, total and fees so I can check out myself before the timer expires.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1vnydav/my_agent_spent_40_minutes_on_a_task_that_takes_me",
+    "body_sha256": "3c604821dafe6db9785eb3544242d77adceec05e46693f7e5b9adefaa3f8d707",
+    "archived_at": "2026-10-28T07:33:10.658196+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-28T07:33:10.658196+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

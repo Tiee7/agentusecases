@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/fill-out-forms-from-images-with-a-form-filling-agent",
+  "observed_at": "2026-10-28T07:33:36.657668+00:00",
+  "html_sha256": "5b526f7ea821389c94e15c7bec7e7cf73739072338620a00bb9ae0682441cac1",
+  "body_sha256": "f86fc08875bc81e4977c2bfe3ebca53b4e6c194b594ff23c4155b424e0830bd8",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Fill out forms from images with a form-filling agent",
+      "sha256": "5785ae5bbaa47293869fc145e79535790ae99303f21ef7d9e454504df5805571"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author used Gemini to build an agent that plans the fields in a form image and matches them to bounding boxes, for a friend who wanted forms filled automatically.\n·\nApr 1, 2025",
+      "sha256": "a3bb154db7b4f3c67d89398d54a3524c4990adc15162abc3d9563e2ee00ffe2c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author said a friend wanted JPEG/PNG forms filled automatically, so they reused prior work with OmniParser and built an annotated dataset from IRS and OPM forms with clearly defined fields. They used Gemini to identify what fields were present in a document and match those fields to bounding boxes, noting GPT-4o plus YOLO could have done the same job.",
+      "sha256": "0691468f658033b03a62439b2ab3520fb75c26320372b781289c61edadcda86e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The post presents it as a working approach for automating tedious form filling, especially in manual supply-chain workflows. It does not give accuracy numbers, speed, or failure cases in the thread text shown.",
+      "sha256": "671e8bd4bc46427652b642d0829e14aea4da852812aa3abe1aef1aa66fc40e1e"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that they first compiled their own annotated dataset from real forms, rather than relying on prompting alone.",
+      "sha256": "7b62ac111fc20dbac381d145ae26536247f79e67b02db0d9ef39e035c3304f11"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Gemini"
+      ],
+      "sha256": "33465b812c627c77e1d7c620f21d042a47736b00fb898d5ecb4d7a4880940ce3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/OpenAI/comments/1k9ch4u"
+      ],
+      "sha256": "a837057d2d5a9550ef179f2101e0334e82a6ef570f380e3bf6f624f1dd4e9857"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-27",
+      "sha256": "385ceada9f6cde107bed820a0c01f937118b3f5a6e311a373842d551c925b39f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "873b536dbf6d6d8c47f95587f1974f7a0dafbb3e7de8b69c8feb862673c584d3",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill out forms from images with a form-filling agent\nThe author used Gemini to build an agent that plans the fields in a form image and matches them to bounding boxes, for a friend who wanted forms filled automatically.\n·\nApr 1, 2025\nDone with\nGE\nGemini\nWhat they did\nThe author said a friend wanted JPEG/PNG forms filled automatically, so they reused prior work with OmniParser and built an annotated dataset from IRS and OPM forms with clearly defined fields. They used Gemini to identify what fields were present in a document and match those fields to bounding boxes, noting GPT-4o plus YOLO could have done the same job.\nHow it went\nThe post presents it as a working approach for automating tedious form filling, especially in manual supply-chain workflows. It does not give accuracy numbers, speed, or failure cases in the thread text shown.\nWorth knowing\nThe main catch is that they first compiled their own annotated dataset from real forms, rather than relying on prompting alone.\nTry it yourself\nwith\nGemini\nCopy prompt\nBuild me a small tool that takes an image of a form at [file path], detects each blank field and its label, and draws bounding boxes where answers should go. Then fill the fields using the details in [my info file], and save the completed form as a new image at [output path]. Show me the result for review before treating it as done, and stop once the filled form lines up with every field.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1k9ch4u",
+    "body_sha256": "f86fc08875bc81e4977c2bfe3ebca53b4e6c194b594ff23c4155b424e0830bd8",
+    "archived_at": "2026-10-28T07:33:36.657668+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-28T07:33:36.657668+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

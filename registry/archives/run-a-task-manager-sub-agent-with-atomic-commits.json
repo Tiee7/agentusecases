@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-task-manager-sub-agent-with-atomic-commits",
-  "observed_at": "2026-10-27T06:44:23.908355+00:00",
-  "html_sha256": "579afe88ea4406fc1e27562ba5771942ae8cfe39ff3cd9f0783ff5f10b8465b4",
-  "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
+  "observed_at": "2026-10-28T07:23:36.688028+00:00",
+  "html_sha256": "853036e14cd39faca05fbc7f45e63468f9dddcd653fdad11481ad0f1d535071c",
+  "body_sha256": "3505d81a2c604224763a83f2744aedad2af8a18f8378b2fbf9967571833a9cc8",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "A poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.",
-      "sha256": "7065a50a32e2fa298a3f616448ced83d7c1aebd537a10d4dc3d03e3d274a5221"
+      "value": "A poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\n·\nMar 1, 2025",
+      "sha256": "15ae60279269d7df448dc3fe11c6c0d9b2904c4a6d82b703cf4db52c25d69ff7"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Run a task-manager sub-agent with atomic commits\nA poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\nDone with\nCC\nClaude Code\nWhat they did\nIn the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.\nHow it went\nThe reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.\nWorth knowing\nThe main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a Claude Code sub-agent called task-manager for [project]. It should fetch the next open task from [task file or tracker], hand it to me to work on, mark it complete when done, and require an atomic commit with a commit ID before closing any task. Finish by running it on one sample task and showing me the result.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1mzt2b3/not_sure_if_people_already_do_this",
-    "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
-    "archived_at": "2026-10-27T06:44:23.908355+00:00",
+    "body": "Run a task-manager sub-agent with atomic commits\nA poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\n·\nMar 1, 2025\nDone with\nCC\nClaude Code\nWhat they did\nIn the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.\nHow it went\nThe reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.\nWorth knowing\nThe main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a Claude Code sub-agent called task-manager for [project]. It should fetch the next open task from [task file or tracker], hand it to me to work on, mark it complete when done, and require an atomic commit with a commit ID before closing any task. Finish by running it on one sample task and showing me the result.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1mzt2b3/not_sure_if_people_already_do_this",
+    "body_sha256": "3505d81a2c604224763a83f2744aedad2af8a18f8378b2fbf9967571833a9cc8",
+    "archived_at": "2026-10-28T07:23:36.688028+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:44:23.908355+00:00",
+      "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Run a task-manager sub-agent with atomic commits\nA poster built a Claude Code sub-agent that fetches the next task, marks it complete, and enforces atomic commits with a mandatory commit id.\nDone with\nCC\nClaude Code\nWhat they did\nIn the thread, one commenter says they built a Python script to maintain a YAML todo file with task descriptions, then added a task-manager sub-agent with two actions: get_next_task and mark_task_completed. They required a commit ID when marking tasks complete so Claude Code would make atomic commits, while the person still had to watch for cases where it ignored the setup and used TodoWrite instead.\nHow it went\nThe reported result was better task-by-task control and enforced atomic commits, but the setup was not fully reliable because Claude Code sometimes tried to bypass the sub-agent workflow.\nWorth knowing\nThe main catch is reliability: even with the sub-agent and mandatory commit ID, the poster says Claude Code still sometimes bypassed it and used TodoWrite.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate a Claude Code sub-agent called task-manager for [project]. It should fetch the next open task from [task file or tracker], hand it to me to work on, mark it complete when done, and require an atomic commit with a commit ID before closing any task. Finish by running it on one sample task and showing me the result.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1mzt2b3/not_sure_if_people_already_do_this",
+        "body_sha256": "8a723f34cccb672cf46f6b4d368d77798dd1c0f555c549f9c1fef81c46af667f",
+        "archived_at": "2026-10-27T06:44:23.908355+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:44:23.908355+00:00",
+    "at": "2026-10-28T07:23:36.688028+00:00",
     "status": "fetched",
     "error": null
   }

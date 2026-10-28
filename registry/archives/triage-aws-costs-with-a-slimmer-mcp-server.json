@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/triage-aws-costs-with-a-slimmer-mcp-server",
+  "observed_at": "2026-10-28T07:33:04.713452+00:00",
+  "html_sha256": "a8cf9b6276224937ec37794b4523f13c56d82df0ef290d29235bf4085ffaf839",
+  "body_sha256": "664907481b66e1c6af1e053056b5d89c61205b561ff0854ce1edb244291b7216",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Triage AWS costs with a slimmer MCP server",
+      "sha256": "6304dad18ecae2b610daae38791a8f0897d4581f07b6034cf8f76761fee5bac7"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Author rebuilt an AWS cost-triage MCP server from 15 tools to 4, cutting a question from 7 tool calls to 2 with schemas 88% smaller.\n·\nOct 26, 2026",
+      "sha256": "54e4a114006325883343c80a9686a67114c00173c7454dff4eaf4e5ee4a7bf84"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author built a read-only AWS cost-triage MCP server twice, once as 15 thin boto3 wrappers and once as 4 outcome-level tools. Both ran in Kiro against the same real account, asked where money was being wasted. The lean version has a find_waste tool that runs the checks internally and returns five fields per finding. It also has constrained parameters and a separate estimate_savings tool.",
+      "sha256": "7d1af6805550f9b327b561bc53fc403c01986fc96490373f88071e8d9812956e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The bloated server needed 7 calls and the lean one 2. Tool descriptions shrank 88% (7,898 to 897 characters), and both found the same three wasted resources. The Elastic IP cost stayed unverified.",
+      "sha256": "b6d6cbcfc44e52ca2753a05b4f0b502457cc84eb802ed1506a07eec69ed95e4d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "On this small demo, Kiro's context meter only moved from 1.1% to 0.8%, so expect big savings only with many tools.",
+      "sha256": "fed803cda5588c5b2f2f8be4983a2bed9169360b6e31443e959bf0790e753e42"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek"
+      ],
+      "sha256": "a148112e1b04730ab7eb7e3e9807f5d4fe12a323e490c6741088bece144d7bd5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-27",
+      "sha256": "385ceada9f6cde107bed820a0c01f937118b3f5a6e311a373842d551c925b39f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "64dee5b63bd7ee43564cffcfff24c35e96f8ac2be057f9edd2519be140e8eb1d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Triage AWS costs with a slimmer MCP server\nAuthor rebuilt an AWS cost-triage MCP server from 15 tools to 4, cutting a question from 7 tool calls to 2 with schemas 88% smaller.\n·\nOct 26, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a read-only AWS cost-triage MCP server twice, once as 15 thin boto3 wrappers and once as 4 outcome-level tools. Both ran in Kiro against the same real account, asked where money was being wasted. The lean version has a find_waste tool that runs the checks internally and returns five fields per finding. It also has constrained parameters and a separate estimate_savings tool.\nHow it went\nThe bloated server needed 7 calls and the lean one 2. Tool descriptions shrank 88% (7,898 to 897 characters), and both found the same three wasted resources. The Elastic IP cost stayed unverified.\nWorth knowing\nOn this small demo, Kiro's context meter only moved from 1.1% to 0.8%, so expect big savings only with many tools.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview my MCP server in [path to project] that exposes [number] tools for [e.g. AWS cost data]. Propose a slimmer design that merges overlapping tools into as few as possible, trims the schemas, and still answers questions like [example question]. Show me the plan and the before and after tool counts before editing any files, then implement it and compare the number of tool calls on that question.\nOriginal source: https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
+    "body_sha256": "664907481b66e1c6af1e053056b5d89c61205b561ff0854ce1edb244291b7216",
+    "archived_at": "2026-10-28T07:33:04.713452+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-28T07:33:04.713452+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

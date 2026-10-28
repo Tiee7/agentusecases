@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-tickets-into-merged-pull-requests",
-  "observed_at": "2026-10-27T06:00:19.588575+00:00",
-  "html_sha256": "b6f66c048a01930f699c13d6907f1e9e25f22c38ed2811e81875c24d544271ae",
-  "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
+  "observed_at": "2026-10-28T06:39:32.524264+00:00",
+  "html_sha256": "85e4020f0110c2a17fc8e4430468c37c5b7cd795374ff6f21767cace19fc4cf9",
+  "body_sha256": "2024efbbcd02d4d25f376671b29d18482717f51873b74a95fdc5c22108a8d71e",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Pulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.",
-      "sha256": "522bf7ba7bb15235c7207f5ae20e0eca135b1d875a35c92f96fc6ea77de2b779"
+      "value": "Pulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\n·\nMar 25, 2026",
+      "sha256": "ceff44ee3886da975bd05292a5ea7fe29028f3135647836d75794075b0e4dec2"
     },
     "method": {
       "status": "observed",
@@ -94,13 +94,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
-    "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
-    "archived_at": "2026-10-27T06:00:19.588575+00:00",
+    "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\n·\nMar 25, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
+    "body_sha256": "2024efbbcd02d4d25f376671b29d18482717f51873b74a95fdc5c22108a8d71e",
+    "archived_at": "2026-10-28T06:39:32.524264+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:00:19.588575+00:00",
+      "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Turn tickets into merged pull requests\nPulls tasks from GitHub Issues or Linear, then runs Claude Code or Codex in isolated Kubernetes pods to carry each one through to a PR.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOptio is a self-hosted tool you run on Kubernetes. You assign it a GitHub Issue, Linear ticket or Jira card. It finds or creates a long-lived pod for the repo and adds a git worktree. It runs the agent there and opens a PR. A PR watcher polls CI and review state, and resumes the agent with context on CI failures, merge conflicts or review feedback. A review agent also runs.\nHow it went\nThe README says the pipeline runs end to end, squash-merging when CI is green and the review is done, then closing the linked issue and recording cost. It gives no success rates or benchmark numbers.\nWorth knowing\nIt needs Kubernetes v1.33 or newer, Helm, Postgres and Redis. Auto-resumes are capped by the OPTIO_MAX_AUTO_RESUMES setting, so stuck PRs can still need a person.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook at the open issues in my repo [owner/repo] labeled [label, e.g. good-first-issue] and pick the [number, e.g. 3] smallest ones. For each, work on its own branch, make the fix, run the tests, and prepare a draft pull request description. Pause and show me each diff and PR description before you push anything or open a PR.\nOriginal source: https://github.com/jonwiggins/optio",
+        "body_sha256": "b8557d75348096587c4770fefaa56d6b05078c667a5ba035175d4fa2e99a3d87",
+        "archived_at": "2026-10-27T06:00:19.588575+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:00:19.588575+00:00",
+    "at": "2026-10-28T06:39:32.524264+00:00",
     "status": "fetched",
     "error": null
   }

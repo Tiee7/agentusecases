@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-claude-code-in-an-isolated-vm-that-opens-prs",
-  "observed_at": "2026-10-27T06:48:15.736314+00:00",
-  "html_sha256": "ddcdd3a59eb2e15a2cec413d43c944f529c75f15669c274551923b02050d6214",
-  "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
+  "observed_at": "2026-10-28T07:27:28.696383+00:00",
+  "html_sha256": "17928a4f8ff49612fe779e53c403ba86d1d3301167b3501c1d64a7a2583fba4a",
+  "body_sha256": "babf0956561aa0d4f04cd5f7c144e24d1a3b115c7327ebdbafafee88c914bc52",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "The author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.",
-      "sha256": "05904672c5102c28c94cd0f77e1514866d1edd254a8c0be12d813a94f4b24ee2"
+      "value": "The author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.\n·\nOct 20, 2026",
+      "sha256": "acae018fab6f97a74bef904ba5a027a1389a3f3ba00cb6180b020fc86047e38e"
     },
     "method": {
       "status": "observed",
@@ -93,19 +93,19 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Run Claude Code in an isolated VM that opens PRs\nThe author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.\nHow it went\nThe source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.\nWorth knowing\nIn local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a locked-down virtual machine for running you on my project [repo name]. Give it only the permissions it needs: reading the code, getting secrets from [secrets manager], and opening issues and pull requests on [Git host], with no ability to merge. Walk me through the setup step by step, and finish by having it open a small test pull request. Pause and show me each command that changes my system or credentials before you run it.\nOriginal source: https://news.ycombinator.com/item?id=50164831",
-    "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
-    "archived_at": "2026-10-27T06:48:15.736314+00:00",
+    "body": "Run Claude Code in an isolated VM that opens PRs\nThe author runs Claude Code in a restricted VM with secrets served from Infisical. It can only create issues and PRs on Forgejo, and merges are manual before CI deploys.\n·\nOct 20, 2026\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code runs in its own VM on a heavily restricted VLAN that can reach only the internet, the author's Forgejo instance, Infisical, and one-way SSH from the author's machine. Secrets come through Infisical, so the agent never sees them. Its Forgejo user can only create issues and PRs. The author merges manually, then CI packages and deploys to an app server VM.\nHow it went\nThe source gives no measured results. It describes the setup as overkill but worth it to cut the risk of personal data exfiltration. Dev mode can still expose some secrets locally.\nWorth knowing\nIn local dev mode the agent may still see secrets, so the Infisical protection only fully holds outside that mode.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a locked-down virtual machine for running you on my project [repo name]. Give it only the permissions it needs: reading the code, getting secrets from [secrets manager], and opening issues and pull requests on [Git host], with no ability to merge. Walk me through the setup step by step, and finish by having it open a small test pull request. Pause and show me each command that changes my system or credentials before you run it.\nOriginal source: https://news.ycombinator.com/item?id=50164831",
+    "body_sha256": "babf0956561aa0d4f04cd5f7c144e24d1a3b115c7327ebdbafafee88c914bc52",
+    "archived_at": "2026-10-28T07:27:28.696383+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
     "archive_file_sha256": "3c2f74210d4d39ff7c175b3059be9489e79d3b3415e304b0572ab0b9b5b28f5f",
     "body_sha256": "0900a1f24489f5b05762479b26332b61d036f0f49fd1de6e9fb2ebd40ab689bc",
-    "review_required": false,
+    "review_required": true,
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-27T06:48:15.736314+00:00",
+    "at": "2026-10-28T07:27:28.696383+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/formally-verify-software-at-large-scale-with-claude",
-  "observed_at": "2026-10-27T06:50:29.717709+00:00",
-  "html_sha256": "d46b7ceda63d182f86f8261685f8db22413610a77f48b92386e3da495385bf00",
-  "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
+  "observed_at": "2026-10-28T07:29:42.802473+00:00",
+  "html_sha256": "808ab39839bc638b42334624368e0f16dc4f83d54afe8f4302d62d2fd7795d35",
+  "body_sha256": "78e5352649f68cc0ab9954ca3750ce7a81ba76f10e03703ecaeca3f83830a649",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "Anthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.",
-      "sha256": "2a3beb9f455ca3db679688ddf3c55080c67dfdc5e78fd000c1f3a81e27df5da9"
+      "value": "Anthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\n·\nOct 22, 2026",
+      "sha256": "d7bc1f14f969869b4604c07737514dda1223bbe032bbf22147d78272121db51c"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
-    "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
-    "archived_at": "2026-10-27T06:50:29.717709+00:00",
+    "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\n·\nOct 22, 2026\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
+    "body_sha256": "78e5352649f68cc0ab9954ca3750ce7a81ba76f10e03703ecaeca3f83830a649",
+    "archived_at": "2026-10-28T07:29:42.802473+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:50:29.717709+00:00",
+      "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
+        "body_sha256": "01c478b998fe6719277f2d08b9f3106417177b7407ef8cfadc131e57ae8604eb",
+        "archived_at": "2026-10-27T06:50:29.717709+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:50:29.717709+00:00",
+    "at": "2026-10-28T07:29:42.802473+00:00",
     "status": "fetched",
     "error": null
   }

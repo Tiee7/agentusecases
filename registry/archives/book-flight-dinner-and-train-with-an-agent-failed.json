@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/book-flight-dinner-and-train-with-an-agent-failed",
+  "observed_at": "2026-10-28T07:33:12.657925+00:00",
+  "html_sha256": "3cafbb2d4fba572ea04dc97de9174bb0284fe35eb100ccc850d5ff6f266728ec",
+  "body_sha256": "1a294ea5076a695c94da6d01b25ff6e0fa16e84c8c7d696edfa143e02176e554",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Book flight, dinner and train with an agent (failed)",
+      "sha256": "398f4924cdc97a6be9c54f1024236e5f00643147ca966a60187c391bf0d79cc2"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Poster gave an agent a flight, a London dinner for two and a train ticket; it finished none, with OpenTable blocking robots.",
+      "sha256": "ed9c3f98f41b82450ea5a49c854512745c58d6c332e75d8391a31bf452df8f69"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster ran a repeatable test where an agent used a headless browser step by step, identified itself in its user agent, checked robots.txt before each page, solved no CAPTCHAs, and entered no personal details. It tried booking a Saturday 8pm London dinner and a King's Cross–Edinburgh train, but mostly hit robots.txt bans, bot checks, broken retailer handoffs, or forms that required a person to supply card, name, and phone details.",
+      "sha256": "68bb487ce5c766cf60530d556995c966210f8c4b2debc4c08d0146bc72134d1a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It completed none of the three errands. For dinner it checked nine places in under ten minutes and only one let it search availability; for trains, National Rail found ten options quickly but the purchase flow failed before checkout.",
+      "sha256": "2c262b690f3ddcfe57d5cae2327d739d98145c70289814d54392e43c9bb911cf"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was not model capability but access: approved APIs existed for some flights, while restaurant and train booking paths were effectively closed to a consumer agent.",
+      "sha256": "45a0327e8c6a5511ce4f25a0a8d8fca5220a45160d1a0ab386fb39d2d7b66177"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/AgentsOfAI/comments/1xgg5me/i_gave_an_agent_three_everyday_errands_a_flight"
+      ],
+      "sha256": "ef39902f6b9da3d57acef3a7973a323d1a995e6d60b98f298b967117a0a02d21"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-27",
+      "sha256": "385ceada9f6cde107bed820a0c01f937118b3f5a6e311a373842d551c925b39f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d2262fbf0eedf13467977f0513d4923fa0acd8cfd7888db24f584abdb45a1d15",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book flight, dinner and train with an agent (failed)\nPoster gave an agent a flight, a London dinner for two and a train ticket; it finished none, with OpenTable blocking robots.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster ran a repeatable test where an agent used a headless browser step by step, identified itself in its user agent, checked robots.txt before each page, solved no CAPTCHAs, and entered no personal details. It tried booking a Saturday 8pm London dinner and a King's Cross–Edinburgh train, but mostly hit robots.txt bans, bot checks, broken retailer handoffs, or forms that required a person to supply card, name, and phone details.\nHow it went\nIt completed none of the three errands. For dinner it checked nine places in under ten minutes and only one let it search availability; for trains, National Rail found ten options quickly but the purchase flow failed before checkout.\nWorth knowing\nThe main catch was not model capability but access: approved APIs existed for some flights, while restaurant and train booking paths were effectively closed to a consumer agent.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nHelp me plan a trip to [city] from [date] to [date]: find flights from [origin], a dinner for [number] on [date] near [area], and a train from [city] to [city]. Search for options and give me links, times and prices for each, and if a site blocks you, tell me which one and give me the direct link instead. Do not book or pay for anything; present your top choice for each so I can confirm before you take any action.\nOriginal source: https://www.reddit.com/r/AgentsOfAI/comments/1xgg5me/i_gave_an_agent_three_everyday_errands_a_flight",
+    "body_sha256": "1a294ea5076a695c94da6d01b25ff6e0fa16e84c8c7d696edfa143e02176e554",
+    "archived_at": "2026-10-28T07:33:12.657925+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-28T07:33:12.657925+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

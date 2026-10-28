@@ -1,9 +1,9 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-daily-clickup-digests-to-stakeholders",
-  "observed_at": "2026-10-27T06:39:33.653561+00:00",
-  "html_sha256": "8d5978f458613096663426f67d52bde188ea5fda5042706e8f0b0d01c9548858",
-  "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
+  "observed_at": "2026-10-28T07:18:46.763855+00:00",
+  "html_sha256": "405420635c754ae3591e94ef8a62cc23d89dfdef2ea60c23b75a52a2c32f6c5d",
+  "body_sha256": "c86c6a5af2da5b0ad4512e5c1afc6752a95c6420328f13da36ebaed9d946a530",
   "status": "observed",
   "fields": {
     "title": {
@@ -13,8 +13,8 @@
     },
     "introduction": {
       "status": "observed",
-      "value": "A Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.",
-      "sha256": "6ae6dce5b3e88df5b6bf3bff22aaa8b08225d36a28a1b13df4b87d2507c563ac"
+      "value": "A Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\n·\nJul 1, 2026",
+      "sha256": "e47ea1f5b70dd526e50730cad1002ae8ab00d06a13f53fb5e525b2a3a8ba5247"
     },
     "method": {
       "status": "observed",
@@ -93,13 +93,27 @@
   "source_text": {
     "format": "extracted_page_text",
     "language": "en",
-    "body": "Email daily ClickUp digests to stakeholders\nA Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\nDone with\nMK\nMake\nWhat they did\nThey set up ClickUp with a master action-item list plus related project and contact lists, rolling stakeholder emails into each task and auto-adding the right contacts when a project is chosen. In Make, the intended flow was a 6 AM scheduled run that lists incomplete tasks, iterates them, groups them by project in a Text Aggregator, and sends one email digest to that project’s stakeholder email field; the person manually tested the outputs and email format.\nHow it went\nThe first version failed because the Text Aggregator was pulling whole ClickUp objects, so the email came out as JSON instead of task fields. Commenters said the fix was mapping individual fields and grouping by project name; no finished result or performance numbers were reported.\nWorth knowing\nA practical catch from the thread: test by writing the generated subject, recipients, and body to Google Sheets or a Make data store before turning on live email sends.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that runs every day at [time] and pulls tasks from my ClickUp [space or list] that are [due soon, changed, or blocked]. Format them into a clean email digest and send it to [stakeholder emails] who don't have ClickUp accounts. Send a test digest to me first and don't send it to stakeholders until I approve.\nOriginal source: https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
-    "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
-    "archived_at": "2026-10-27T06:39:33.653561+00:00",
+    "body": "Email daily ClickUp digests to stakeholders\nA Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\n·\nJul 1, 2026\nDone with\nMK\nMake\nWhat they did\nThey set up ClickUp with a master action-item list plus related project and contact lists, rolling stakeholder emails into each task and auto-adding the right contacts when a project is chosen. In Make, the intended flow was a 6 AM scheduled run that lists incomplete tasks, iterates them, groups them by project in a Text Aggregator, and sends one email digest to that project’s stakeholder email field; the person manually tested the outputs and email format.\nHow it went\nThe first version failed because the Text Aggregator was pulling whole ClickUp objects, so the email came out as JSON instead of task fields. Commenters said the fix was mapping individual fields and grouping by project name; no finished result or performance numbers were reported.\nWorth knowing\nA practical catch from the thread: test by writing the generated subject, recipients, and body to Google Sheets or a Make data store before turning on live email sends.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that runs every day at [time] and pulls tasks from my ClickUp [space or list] that are [due soon, changed, or blocked]. Format them into a clean email digest and send it to [stakeholder emails] who don't have ClickUp accounts. Send a test digest to me first and don't send it to stakeholders until I approve.\nOriginal source: https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
+    "body_sha256": "c86c6a5af2da5b0ad4512e5c1afc6752a95c6420328f13da36ebaed9d946a530",
+    "archived_at": "2026-10-28T07:18:46.763855+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
+  "source_history": [
+    {
+      "observed_at": "2026-10-27T06:39:33.653561+00:00",
+      "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
+      "source_text": {
+        "format": "extracted_page_text",
+        "language": "en",
+        "body": "Email daily ClickUp digests to stakeholders\nA Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\nDone with\nMK\nMake\nWhat they did\nThey set up ClickUp with a master action-item list plus related project and contact lists, rolling stakeholder emails into each task and auto-adding the right contacts when a project is chosen. In Make, the intended flow was a 6 AM scheduled run that lists incomplete tasks, iterates them, groups them by project in a Text Aggregator, and sends one email digest to that project’s stakeholder email field; the person manually tested the outputs and email format.\nHow it went\nThe first version failed because the Text Aggregator was pulling whole ClickUp objects, so the email came out as JSON instead of task fields. Commenters said the fix was mapping individual fields and grouping by project name; no finished result or performance numbers were reported.\nWorth knowing\nA practical catch from the thread: test by writing the generated subject, recipients, and body to Google Sheets or a Make data store before turning on live email sends.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that runs every day at [time] and pulls tasks from my ClickUp [space or list] that are [due soon, changed, or blocked]. Format them into a clean email digest and send it to [stakeholder emails] who don't have ClickUp accounts. Send a test digest to me first and don't send it to stakeholders until I approve.\nOriginal source: https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
+        "body_sha256": "c44a00b319ffa1d334d9ddab3bcbcc06cbbe74b0f9a8ca559e13ebfd1d1643b1",
+        "archived_at": "2026-10-27T06:39:33.653561+00:00",
+        "scope": "Captured case text; external linked articles and HTML excluded."
+      }
+    }
+  ],
   "last_attempt": {
-    "at": "2026-10-27T06:39:33.653561+00:00",
+    "at": "2026-10-28T07:18:46.763855+00:00",
     "status": "fetched",
     "error": null
   }
