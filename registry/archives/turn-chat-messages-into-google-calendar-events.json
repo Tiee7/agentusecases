@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-chat-messages-into-google-calendar-events",
-  "observed_at": "2026-10-28T06:48:18.563362+00:00",
-  "html_sha256": "e1ba098f905e3584e6abd90029861f9aede70a8b630dd041a0b7dfb0ab950133",
+  "observed_at": "2026-10-29T06:55:45.697106+00:00",
+  "html_sha256": "220c5efeaa9f471b730cc509dbb7ddbc52b5d597f83ff03649130b9e24c4b542",
   "body_sha256": "a8f9aefcc2bc65e503ef86a05ce6be57df70435c9a245d54812dd81381171ec5",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn chat messages into Google Calendar events\nAn n8n calendar agent takes a chat message, extracts event title, location and times, and creates a Google Calendar entry.\nDone with\nN8\nn8n\nWhat they did\nThe tutorial builds an n8n workflow with a chat trigger, an AI Agent node on an OpenAI chat model, and a Google Calendar node. The prompt tells the agent to resolve relative dates against the current time and default to 60 minutes. The agent calls a Date & Time tool to produce Unix timestamps, then returns structured JSON. Those fields are mapped into a calendar event.\nHow it went\nThe article says the workflow creates events, and the Google Calendar node returns an htmlLink to the new event. It shows no test results, accuracy figures or failure cases.\nWorth knowing\nSetup uses n8n's free OpenAI credits, a Google OAuth2 sign-in, and a free n8n cloud trial or self-hosting. A public chat URL lets others book events on your calendar.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me an n8n workflow that takes a chat message like 'Dinner with [person] at [place] on [day] at [time]' and extracts the event title, location, start and end times. Have it create an event in my [Google Calendar name] and reply in the chat with the details. If the time or date is missing or ambiguous, have it ask me before creating anything, and stop once a test message produces a correct event.\nOriginal source: https://www.freecodecamp.org/news/how-to-build-ai-workflows-with-n8n/",
     "body_sha256": "a8f9aefcc2bc65e503ef86a05ce6be57df70435c9a245d54812dd81381171ec5",
-    "archived_at": "2026-10-28T06:48:18.563362+00:00",
+    "archived_at": "2026-10-29T06:55:45.697106+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T06:48:18.563362+00:00",
+    "at": "2026-10-29T06:55:45.697106+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-issues-and-open-fix-prs-with-a-github-bot",
-  "observed_at": "2026-10-28T06:49:06.551546+00:00",
-  "html_sha256": "8ed4c1cba459fe776ba09013c0905d0c3b33a84fdbd8339044b147ee2127b27b",
+  "observed_at": "2026-10-29T06:56:33.663670+00:00",
+  "html_sha256": "3869786daa8735a4723ba5b0c4801405296f6ee197f642e4c1148be8615f3494",
   "body_sha256": "9ce3c4e514dfe55327602de9d5a2b02b49f1c9a1aeb6ec75691fddafe917223b",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Triage issues and open fix PRs with a GitHub bot\nA cookbook shows a GitHub bot that triages issues, reviews PRs, answers questions with citations, flags AI-slop contributions, and opens patch PRs for human review.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe bot runs on OpenCode in GitHub Actions with Muse Spark. Each agent is a markdown file with its own tool allow-list. Events route to agents: a PR runs review, a new issue runs triage, and an agent-fix label runs bugfix. A maintainer's /oc comment goes to an orchestrator agent. Bugfix reproduces the bug, patches it, adds a test, runs pytest and opens a PR. It cannot merge.\nHow it went\nSample outputs show triage asking for a repro, review flagging emoji churn as slop, and a prompt injection being flagged. No benchmark is reported yet. Long review turns sometimes return empty, so re-run.\nWorth knowing\nPrompts are tuned for Python, pytest and uv, so adapt AGENTS.md and the agent files. The allow-lists are not a sandbox; human gates and branch protection are the real boundary.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a GitHub bot for [owner/repo] that triages new issues with labels, reviews pull requests, answers questions with citations to the repo's docs or code, and flags low-effort AI-generated contributions. For clear small bugs it should open a patch PR for human review only. Build it, test it on a few existing issues in dry-run mode, and show me the output before it posts any comments or opens any PRs.\nOriginal source: https://dev.meta.ai/docs/cookbook/github-agent",
     "body_sha256": "9ce3c4e514dfe55327602de9d5a2b02b49f1c9a1aeb6ec75691fddafe917223b",
-    "archived_at": "2026-10-28T06:49:06.551546+00:00",
+    "archived_at": "2026-10-29T06:56:33.663670+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T06:49:06.551546+00:00",
+    "at": "2026-10-29T06:56:33.663670+00:00",
     "status": "fetched",
     "error": null
   }

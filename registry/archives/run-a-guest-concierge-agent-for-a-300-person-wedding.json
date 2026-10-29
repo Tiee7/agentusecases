@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-guest-concierge-agent-for-a-300-person-wedding",
+  "observed_at": "2026-10-29T07:41:29.773788+00:00",
+  "html_sha256": "70ecea7146b81a72efb605ef286c8a52d7dcea165902635ea0d2e13dec4f00b1",
+  "body_sha256": "b05b6f9b81a6023ded158eb57d14bb9cb0389a4d62b318189fb34e5dea6088d4",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a guest concierge agent for a 300-person wedding",
+      "sha256": "908036b1efe61a6630bb78427a6736ab360b2ba594f9611ae416e4dbeb66201a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster built a wedding planning app with Gemini-powered agents, including a guest concierge, and writes up the failure modes seen in deployment.\n·\nMay 1, 2026",
+      "sha256": "9789ef6c453a94e896a685485717fea9c44db464358c1ac18a4f5b0ef3b25bde"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster built a wedding planning app with two Gemini-powered agents, including a guest concierge that had MCP-tool read access to events, schedules, venues, dress codes, transport info, and guest profiles. Over roughly 10 days, 17 international guests used it; it answered questions, parsed uploaded flight itinerary photos/PDFs into arrival times for confirmation, and also generated schedule cards and other guest-facing content that the poster then shared manually in WhatsApp.",
+      "sha256": "2d3667a1c169f4828e3c750c47eb1f768a984207bda538e664d79098a0493c95"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The AI was mostly accurate, but guests still asked the groom to verify answers, and a few timezone mistakes in multi-leg flight parsing were enough to kill trust and force a fallback to a manual spreadsheet. The poster says the strongest real use was content generation, while many concierge sessions were guests trying to jailbreak it.",
+      "sha256": "a6c36eeb0042eb62ce5713cdd7d3dd22632feb07aab0a3665d7c478470ff8c7b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Assume confirmations will fail in practice: the poster estimates about 30% of users will just click through a verification step, and jailbreak attempts also ran up token costs.",
+      "sha256": "967604cc4c7e7309009ba089c991345028233eae906b0d4a82a272b0262e2186"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Gemini"
+      ],
+      "sha256": "33465b812c627c77e1d7c620f21d042a47736b00fb898d5ecb4d7a4880940ce3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/LLMDevs/comments/1t9jhgb/i_deployed_an_llm_agent_as_a_guest_concierge_for"
+      ],
+      "sha256": "c6a7cba49921c4ff6aa64e6a1784d18cf3e9d7220341b0ade563f523d7fc55b5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "30ba13318e8bf14dcc444d82ade3f397ba58853e962be66da1f517effd0c68e8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a guest concierge agent for a 300-person wedding\nThe poster built a wedding planning app with Gemini-powered agents, including a guest concierge, and writes up the failure modes seen in deployment.\n·\nMay 1, 2026\nDone with\nGE\nGemini\nWhat they did\nThe poster built a wedding planning app with two Gemini-powered agents, including a guest concierge that had MCP-tool read access to events, schedules, venues, dress codes, transport info, and guest profiles. Over roughly 10 days, 17 international guests used it; it answered questions, parsed uploaded flight itinerary photos/PDFs into arrival times for confirmation, and also generated schedule cards and other guest-facing content that the poster then shared manually in WhatsApp.\nHow it went\nThe AI was mostly accurate, but guests still asked the groom to verify answers, and a few timezone mistakes in multi-leg flight parsing were enough to kill trust and force a fallback to a manual spreadsheet. The poster says the strongest real use was content generation, while many concierge sessions were guests trying to jailbreak it.\nWorth knowing\nAssume confirmations will fail in practice: the poster estimates about 30% of users will just click through a verification step, and jailbreak attempts also ran up token costs.\nTry it yourself\nwith\nGemini\nCopy prompt\nAct as a guest concierge for my event, [wedding or event name], with about [number] guests. Using the details below ([schedule, venues, dress code, travel and lodging info, FAQs]), answer guest questions accurately, and say when you don't know and need to ask me. Test it with [5] typical guest questions and list any answers where you were guessing.\nOriginal source: https://www.reddit.com/r/LLMDevs/comments/1t9jhgb/i_deployed_an_llm_agent_as_a_guest_concierge_for",
+    "body_sha256": "b05b6f9b81a6023ded158eb57d14bb9cb0389a4d62b318189fb34e5dea6088d4",
+    "archived_at": "2026-10-29T07:41:29.773788+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:29.773788+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

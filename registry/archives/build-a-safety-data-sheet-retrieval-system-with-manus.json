@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-safety-data-sheet-retrieval-system-with-manus",
-  "observed_at": "2026-10-28T07:31:48.804083+00:00",
-  "html_sha256": "eae8be95c37e2da7a754b6072f71dae87144206a6c325a5a0ecb11d98e026a60",
+  "observed_at": "2026-10-29T07:39:15.924222+00:00",
+  "html_sha256": "fefdc7c1ff0494b7c2a17b3f4c88dc418fee2e65ab2d034f8c298d077ae52a6e",
   "body_sha256": "f9cce4beac4c549d85501ba2ab7e5882d676641934336d011445173f22d906ed",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Build a safety data sheet retrieval system with Manus\nThe author built an SDS retrieval app almost entirely through Manus, which finds the right SDS PDF online, downloads it, extracts the text and parses it into a JSON schema.\n·\nJan 25, 2026\nDone with\nMA\nManus\nWhat they did\nThe author used Manus to build a full-stack SDS retrieval app with a React frontend, Node/Express+tRPC backend, MySQL-compatible database, object storage for PDFs, and two OpenAI-driven steps: one model searched for the right SDS PDF, downloaded it, extracted text, and mapped it to a strict JSON schema, while a second model validated the result. After Manus began breaking things in long chat-driven iterations, the author shifted to database-backed pipeline tracing, cross-model repo reviews, and a tarball workflow where other models produced full patched repos and Manus mainly redeployed them.\nHow it went\nThe system ended with better observability, stricter status handling, PDF validation, and a more stable iteration process. The author says the sealed-repo workflow felt 3–5x better for useful progress per hour, with normal successful runs taking about 1–2 minutes, but production still needed separate work on security and operations.\nWorth knowing\nTheir main practical catch was that long-lived Manus threads degraded badly; exporting a full repo plus a Manus report each turn and treating Manus as a deploy robot was what made the project finish.\nTry it yourself\nwith\nManus\nCopy prompt\nBuild me a small app that takes a [product or chemical name], finds the matching safety data sheet PDF online, downloads it, extracts the text, and parses it into JSON with fields like [hazards, handling, first aid, storage]. Test it on [3 example names] and show me the JSON output for each. Finished means the app runs end to end and I can try it myself.\nOriginal source: https://www.reddit.com/r/ManusOfficial/comments/1plvv72/just_built_my_largest_application_yet_with_manus",
     "body_sha256": "f9cce4beac4c549d85501ba2ab7e5882d676641934336d011445173f22d906ed",
-    "archived_at": "2026-10-28T07:31:48.804083+00:00",
+    "archived_at": "2026-10-29T07:39:15.924222+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-28T07:31:48.804083+00:00",
+    "at": "2026-10-29T07:39:15.924222+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-in-flight-delay-compensation-claim-forms",
-  "observed_at": "2026-10-28T06:44:00.558239+00:00",
-  "html_sha256": "c97f84850fb64b682ad484f8aac0e381d6d8c3e3884ad3169f316239c1b1f598",
+  "observed_at": "2026-10-29T06:51:27.657952+00:00",
+  "html_sha256": "1033179c288971a09f9c935f7d3276dcf102be1c5430cf793c501f050f693125",
   "body_sha256": "9826e429215e14a1bcfe76f806157d9b1b572fa3ab84bdaf0a580f555edb5c5e",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Fill in flight delay compensation claim forms\nAn agent checks what happened to a flight, works out compensation owed under the law, and fills in the airline's claim form, stopping before Submit.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nGiven a flight number and date, the agent converts the airline code, scrapes FlightAware gate times, and cross-checks them against AirHelp. A model reads the regulation live from legislation.gov.uk, and a built-in table of rules checks the amounts. It then fills Air India's claim form in a cloud browser, with an injected lock that blocks any submission.\nHow it went\nOn Air India AI162 it found a 207-minute delay and an entitlement of £260 to £520. A full claim takes two to five minutes. A small model mis-filled fields, and 8 of 10 submit-trap pages got past the first text-based rule.\nWorth knowing\nEach claim costs about 14 Anakin credits. Use a capable model (gpt-5-mini worked, gpt-4.1-nano mis-filled fields), and block submits in the page itself, not by matching button text.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nCheck what happened to my flight [flight number] on [date] using public flight tracking sites, and work out whether I'm owed compensation under [EU261/other rule]. Then open [airline]'s claim form and fill it in using my details: [name, booking reference, contact info]. Stop before clicking Submit and show me the completed form and the amount you're claiming.\nOriginal source: https://dev.to/imarpan/i-built-an-ai-agent-that-fills-in-your-flight-delay-claim-ncb",
     "body_sha256": "9826e429215e14a1bcfe76f806157d9b1b572fa3ab84bdaf0a580f555edb5c5e",
-    "archived_at": "2026-10-28T06:44:00.558239+00:00",
+    "archived_at": "2026-10-29T06:51:27.657952+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T06:44:00.558239+00:00",
+    "at": "2026-10-29T06:51:27.657952+00:00",
     "status": "fetched",
     "error": null
   }

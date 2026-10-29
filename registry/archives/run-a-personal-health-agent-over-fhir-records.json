@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-personal-health-agent-over-fhir-records",
-  "observed_at": "2026-10-28T07:32:42.659445+00:00",
-  "html_sha256": "59811436b3a17a5851a2aa99549c57561d27c268cc4eabc8354cc623252313a9",
+  "observed_at": "2026-10-29T07:40:09.889016+00:00",
+  "html_sha256": "1caf4606b1a40a104e7fab4ab0e128d776c9a5feff73ddf5cae6900cc3bdd9d5",
   "body_sha256": "a8bfd197c605bffe863c3fbda25bf1943ea5b80507fddcb6a429d330243ab731",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a personal health agent over FHIR records\nA personal OpenClaw agent reads health data via a guardrail proxy to prep appointments, draft follow-ups, fill forms, write insurance appeals and track trends.\nDone with\nOC\nOpenClaw\nWhat they did\nThe author had Claude Code design a guardrail proxy between OpenClaw and a private HAPI FHIR server. The server held Epic data from two health systems, pharmacy records, and Flexpa insurance claims. The proxy masks PHI, keeps audit logs, and requires human confirmation for clinical or financial actions. The agent then prepared appointments, drafted messages and appeals, and tracked trends.\nHow it went\nOn a colonoscopy billed as diagnostic, which left a $1,000 deductible, the agent explained the billing, drafted a dispute and weighed escalation. The source gives no result for the dispute.\nWorth knowing\nRun the agent on an isolated machine (the author uses a Mac mini with its own account), avoid third-party skills, and enforce PHI reduction at the data layer, not in the model.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my health records at [FHIR source or export file] in read-only mode and prepare me for my [type] appointment on [date]. Summarize recent results, trends in [metric], current medications and open questions, then draft a list of questions to ask and a follow-up message to my provider. Do not send anything or submit any form without showing me the exact content first. Finish with a one-page briefing I can print.\nOriginal source: https://evestel.substack.com/p/how-i-build-my-personal-openclaw",
     "body_sha256": "a8bfd197c605bffe863c3fbda25bf1943ea5b80507fddcb6a429d330243ab731",
-    "archived_at": "2026-10-28T07:32:42.659445+00:00",
+    "archived_at": "2026-10-29T07:40:09.889016+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T07:32:42.659445+00:00",
+    "at": "2026-10-29T07:40:09.889016+00:00",
     "status": "fetched",
     "error": null
   }

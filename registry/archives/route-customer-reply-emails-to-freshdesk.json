@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/route-customer-reply-emails-to-freshdesk",
-  "observed_at": "2026-10-28T07:18:28.795917+00:00",
-  "html_sha256": "d00f94bdfbb62ae1b47844879401a25ffcc33009d44748eee1416c34680b90a4",
+  "observed_at": "2026-10-29T07:25:55.847436+00:00",
+  "html_sha256": "fa6e58b9f9a429acb5a801b11700bed3be5f9183aa182904dc84171d85a9a7ca",
   "body_sha256": "66da36f3cc347457571e6998d30521d00c9e92c19f6c50a811ca909fbab813b4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Route customer reply emails to Freshdesk\nAn n8n workflow catches customer replies to order confirmations and forwards support requests into Freshdesk.\nDone with\nN8\nn8n\nWhat they did\nThey built an n8n workflow around a dedicated catch-all Gmail inbox for replies to order-confirmation emails. An AI classifier checked each incoming message to decide whether it was a real support request, and if so the workflow forwarded it into Freshdesk instead of sending every reply to support; the post does not describe any manual review step.\nHow it went\nIt solved the problem of support replies landing in a generic info@ inbox without dumping unrelated mail into the support queue. The author says the first version took about 30 minutes to build, but gives no accuracy or volume numbers.\nWorth knowing\nThe main practical catch is that the source stays high level: it names Gmail, an AI classifier, and Freshdesk, but does not share the workflow, prompt, or classification criteria.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches [inbox] for customer replies to our order confirmation emails. Classify whether each reply is a support request, and if so create a Freshdesk ticket with the customer's email, order number, and message text. Ignore auto-replies and thank-yous, and finish by testing with two sample replies and showing me the resulting tickets.\nOriginal source: https://www.reddit.com/r/n8n/comments/1njjah9",
     "body_sha256": "66da36f3cc347457571e6998d30521d00c9e92c19f6c50a811ca909fbab813b4",
-    "archived_at": "2026-10-28T07:18:28.795917+00:00",
+    "archived_at": "2026-10-29T07:25:55.847436+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T07:18:28.795917+00:00",
+    "at": "2026-10-29T07:25:55.847436+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-kubernetes-alerts-with-mcp-servers",
-  "observed_at": "2026-10-28T06:59:56.610110+00:00",
-  "html_sha256": "7900bfd84434821a65ca04804de068d4795ad5d53350178315f725bef2447d27",
+  "observed_at": "2026-10-29T07:07:23.692686+00:00",
+  "html_sha256": "a177a3c6778b4d9980cfc1aa37d422e1cf2f855f77293975442c81e13018a94c",
   "body_sha256": "acb6f6e33eb8ea155664788d1006f816fdf0ef70e16a125b406e65867ab0e707",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Diagnose Kubernetes alerts with MCP servers\nAn n8n agent triggered by Alertmanager queries Kubernetes, Grafana and other MCP servers and posts a diagnostic report with root-cause hypotheses in a Mattermost thread.\nDone with\nN8\nn8n\nWhat they did\nAn Alertmanager webhook starts an n8n workflow. It deduplicates alerts over 48 hours and fetches the triggering PromQL expression from the Prometheus Rules API. An AI agent then investigates through Kubernetes, Grafana, DigitalOcean and GitHub MCP servers, plus a Qdrant store of internal docs. It is read-only. The workflow finds the original Mattermost alert post and replies in its thread.\nHow it went\nThe source gives no measured results. It describes a report with a summary, an event timeline, up to two root-cause hypotheses and troubleshooting steps. The author is still weighing extra data sources, such as database stats and pipeline status.\nWorth knowing\nLimit tool retries to one per failed call to avoid loops, and strip noisy labels like job and instance from the prompt. You must configure your own MCP endpoints and credentials.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that receives Alertmanager webhooks and starts an AI agent connected to my MCP servers for [Kubernetes, Grafana, other tools]. The agent should investigate the alert read-only, then post a diagnostic report with evidence and ranked root-cause hypotheses as a thread reply in [Mattermost channel]. You're done when a sample alert produces a report; it must not change anything in the cluster, and show me the report before the first post.\nOriginal source: https://community.n8n.io/t/ai-alert-assistant-automated-incident-diagnostics-with-5-mcp-servers-alertmanager-ai-agent-mattermost/285369",
     "body_sha256": "acb6f6e33eb8ea155664788d1006f816fdf0ef70e16a125b406e65867ab0e707",
-    "archived_at": "2026-10-28T06:59:56.610110+00:00",
+    "archived_at": "2026-10-29T07:07:23.692686+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T06:59:56.610110+00:00",
+    "at": "2026-10-29T07:07:23.692686+00:00",
     "status": "fetched",
     "error": null
   }

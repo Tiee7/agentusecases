@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-personal-matrix-based-assistant-agent-with-email-acces",
-  "observed_at": "2026-10-28T07:10:50.809241+00:00",
-  "html_sha256": "a8644078b1729f6217a62443d5b59da2142421a768578104a180f86bc6775728",
+  "observed_at": "2026-10-29T07:18:17.838920+00:00",
+  "html_sha256": "1d956d7933b8bd3115b64a57fa39109d396126cfd3774f4071cad0294d6e39be",
   "body_sha256": "3706f0694677972b6c7c6074c792622f4cc1040bede5fc383d6eca7a11bb7042",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run a personal Matrix-based assistant agent with email access\nThe author built a small Claw-like agent loop on Kimi and GLM5 that reads email read-only, messages via a self-hosted Matrix server, keeps memory files, and handles reminders and tasks.\n·\nOct 8, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe author had Kimi set up a local Matrix server and write a small Claw-like loop. Tools run in bubblewrap sandboxing, with identity, soul and memory files. Email is read-only because the agent has tools for read operations but never sees credentials. New Matrix messages are injected to start turns, and a heartbeat consolidates memory, advances tasks and handles reminders.\nHow it went\nThe source gives no metrics. It reports the setup working with a mix of Kimi and GLM5, reachable from a phone, a web app, and Claude, Codex or Kimi CLI through a small MCP wrapper. Code may be released later.\nWorth knowing\nBubblewrap isn't enough against untrusted data, and the agents still have web access, so the author plans to move it into a VM and warns to be careful.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet me up as a personal assistant that I can message through [Matrix or my chat app]. Give it read-only access to my email at [email provider], memory files for my preferences and ongoing tasks, and the ability to set reminders. When it's working, send me a test message summarizing my unread email from today, and ask me before taking any action beyond reading and reminding.\nOriginal source: https://news.ycombinator.com/item?id=50003674",
     "body_sha256": "3706f0694677972b6c7c6074c792622f4cc1040bede5fc383d6eca7a11bb7042",
-    "archived_at": "2026-10-28T07:10:50.809241+00:00",
+    "archived_at": "2026-10-29T07:18:17.838920+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-28T07:10:50.809241+00:00",
+    "at": "2026-10-29T07:18:17.838920+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-xiaohongshu-note-collection-and-publishing",
+  "observed_at": "2026-10-29T07:41:35.781329+00:00",
+  "html_sha256": "f6502dc426b907b738be64ad3d4af186c9c7f38395f7f0a12abd3fd1446a0feb",
+  "body_sha256": "d786fea3f99e12e32ead12bd310b9a4ecea821a7289bcc055e309dcaae946052",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate Xiaohongshu note collection and publishing",
+      "sha256": "89f33be8dce633c53f8559f58dbe00868a5b5d8a9be3d0674aff21767194187f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An RPA tool collects popular notes into a Feishu table, OpenClaw writes copy in batches, and xiaohongshu-mcp publishes them; author reports saving about 3 hours a day.\n·\nOct 28, 2026",
+      "sha256": "6123e46c22fb95f9f2a05d2a1f04f1eec12fd0fbc62eed5e5bbc97d6f5f91654"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A Yingdao RPA flow runs on a schedule. It searches Xiaohongshu by keyword, skips notes already in the table, and writes note and author fields into a Feishu Bitable. OpenClaw gets the Feishu app credentials and reads the table. Using a custom Xiaohongshu copywriting skill, it analyzes the data and drafts notes. xiaohongshu-mcp, installed through OpenClaw, then publishes them.",
+      "sha256": "93f3494058cbf883f51d94b71696ef2b7e31c02c28cbc9d38ad6aee24f08d6f6"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author got the full pipeline running, from collection to a published note, and says it saves 3 hours a day. The source gives no measured output figures. Some RPA fields came back empty and needed workarounds.",
+      "sha256": "8d40ab3d7a525200aab25090e9102e895ff1dcee43c5809a400b27d4913dcd98"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author budgets about 2 hours of uninterrupted setup. RPA does the scraping so the agent doesn't burn tokens on it.",
+      "sha256": "07fc4adb56f0eb6f02ded7b432236a00d798f056c7f7f4b9248ae8b7897fdd04"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://cloud.tencent.com/developer/article/2635239"
+      ],
+      "sha256": "d146d6cc11ad55d6175e0a604b920accecccf7fb922eb621fa754a2e6c322c22"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "21a2dae33d85161042cc3622ca373b784de40b8e5e87264eb6701ec25f28e3b0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate Xiaohongshu note collection and publishing\nAn RPA tool collects popular notes into a Feishu table, OpenClaw writes copy in batches, and xiaohongshu-mcp publishes them; author reports saving about 3 hours a day.\n·\nOct 28, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nA Yingdao RPA flow runs on a schedule. It searches Xiaohongshu by keyword, skips notes already in the table, and writes note and author fields into a Feishu Bitable. OpenClaw gets the Feishu app credentials and reads the table. Using a custom Xiaohongshu copywriting skill, it analyzes the data and drafts notes. xiaohongshu-mcp, installed through OpenClaw, then publishes them.\nHow it went\nThe author got the full pipeline running, from collection to a published note, and says it saves 3 hours a day. The source gives no measured output figures. Some RPA fields came back empty and needed workarounds.\nWorth knowing\nThe author budgets about 2 hours of uninterrupted setup. RPA does the scraping so the agent doesn't burn tokens on it.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a weekly content pipeline for my [platform, e.g. Xiaohongshu] account about [niche]. Collect the top [number] popular notes on [keywords] into my [Feishu table / Google Sheet], then write [number] original draft posts in my voice based on them. Stop when the drafts are in the table, and show me each draft for approval before publishing anything.\nOriginal source: https://cloud.tencent.com/developer/article/2635239",
+    "body_sha256": "d786fea3f99e12e32ead12bd310b9a4ecea821a7289bcc055e309dcaae946052",
+    "archived_at": "2026-10-29T07:41:35.781329+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:35.781329+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

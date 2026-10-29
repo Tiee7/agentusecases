@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-parallel-local-coding-agent-sessions",
-  "observed_at": "2026-10-28T07:19:42.833392+00:00",
-  "html_sha256": "f29eb7dbd8c86f6186cbed777a4d4920037bc12298876088b3f821948135d960",
+  "observed_at": "2026-10-29T07:27:09.820891+00:00",
+  "html_sha256": "d30e5d42925c497683651ff5c277f1c108a78c20f9cea808379287a5a7a84c11",
   "body_sha256": "4656041bc2268e2631e2ca6079002c84d6417818141999f17f1343f6a4638006",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run parallel local coding agent sessions\nA developer runs up to 10 coding agent sessions at once, using Claude Code and local models on RTX 3090s with cached contexts for daily development work.\n·\nOct 7, 2026\nDone with\nCC\nClaude Code\nWhat they did\nRoark66 runs coding agents on RTX 3090s with 24GB each, using Claude Code alongside local models. They keep up to 10 agent sessions open at once, though never more than 5 are active at the same moment. Because they control inference, they keep full contexts cached in RAM and can save the cache to disk, so a session isn't re-read in full after sitting idle.\nHow it went\nHolding about 15 full contexts cached in RAM pushes their local cache utilisation to 95% or more. They say their usage of roughly 1.3B input tokens a week would cost thousands of USD at API prices.\nWorth knowing\nCloud caches expire after 5 minutes or 1 hour, so an idle 500k context gets billed as full input again; local caching avoids that, but you need enough RAM to hold the contexts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to work on [N] separate tasks in my repo at [path] at the same time. For each task, create its own git worktree and branch, work on it independently, run the tests, and summarize what changed. The tasks are: [task 1], [task 2], [task 3]. Stop when each branch has a passing diff ready for my review, and do not merge anything.\nOriginal source: https://news.ycombinator.com/item?id=49992657",
     "body_sha256": "4656041bc2268e2631e2ca6079002c84d6417818141999f17f1343f6a4638006",
-    "archived_at": "2026-10-28T07:19:42.833392+00:00",
+    "archived_at": "2026-10-29T07:27:09.820891+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-28T07:19:42.833392+00:00",
+    "at": "2026-10-29T07:27:09.820891+00:00",
     "status": "fetched",
     "error": null
   }

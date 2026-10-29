@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-terraform-plan-and-apply-through-an-mcp-agent",
-  "observed_at": "2026-10-28T06:58:36.591097+00:00",
-  "html_sha256": "c626a2d783271b5294059867238f96ab400b761fa29556c73a910b8e5716d83e",
+  "observed_at": "2026-10-29T07:06:03.721297+00:00",
+  "html_sha256": "8949bf5ce0876dc0ceab8b3f2c87a1c786836cab42c5ea65f1158544a2d04476",
   "body_sha256": "3a355b52e5617c6bb5e0112bf7ab181025f8d09ea96531b8b56aa9141aacf061",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run Terraform plan and apply through an MCP agent\nThe author had Cursor run Terraform against Postgres via MCP; the apply hit a permissions error and he finished from the terminal.\nDone with\nCR\nCursor\nWhat they did\nWeston Platter installed the tfmcp server and added it to Cursor's mcp.json, pointing it at a local Terraform directory. He wrote a main.tf for a Postgres role, database and schema, then had the agent run plan and apply. When the apply failed, he ran it in the terminal and granted CREATEROLE and CREATEDB through psql.\nHow it went\nThe MCP never showed the actual Terraform errors. Cursor's own Run tool displayed them and suggested setting superuser = false, after which apply worked. He concluded tfmcp made the workflow no easier than the command line.\nWorth knowing\nThe MCP hid the Terraform error output, so be ready to run commands directly. Also, an MCP is third-party code running on your machine.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to my Terraform project and database via MCP, run a terraform plan against [resource/environment], and summarize what will change. Pause and show me the exact plan before running apply, since this will modify infrastructure.\nOriginal source: https://masterpoint.io/blog/using-mcps-to-run-terraform/",
     "body_sha256": "3a355b52e5617c6bb5e0112bf7ab181025f8d09ea96531b8b56aa9141aacf061",
-    "archived_at": "2026-10-28T06:58:36.591097+00:00",
+    "archived_at": "2026-10-29T07:06:03.721297+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T06:58:36.591097+00:00",
+    "at": "2026-10-29T07:06:03.721297+00:00",
     "status": "fetched",
     "error": null
   }

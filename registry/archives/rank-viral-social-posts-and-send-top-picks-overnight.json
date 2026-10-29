@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/rank-viral-social-posts-and-send-top-picks-overnight",
+  "observed_at": "2026-10-29T07:42:03.797088+00:00",
+  "html_sha256": "6adffc2c560e37177da82c02868809ef3244781ee8f95d8f08c14177629cfc44",
+  "body_sha256": "e609648c4373106d0d388c92bf074153d4a8297b15d8a46db6a9e66339e03c42",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Rank viral social posts and send top picks overnight",
+      "sha256": "638eeb267aa651bf2ee0641c20ef36978f9f858948671a14e2bb68e2977bda46"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Grok Bot runs Apify scrapers for X, TikTok and Instagram, normalizes engagement, ranks by save rate and sends the top three to Telegram.",
+      "sha256": "50a5e3d474adb9a67ff41a0861c3cfa9fba9799547b935d339de084e81213d3b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "With the Apify plugin installed in Grok Bot, the author prompts it to run Tweet Scraper, TikTok Scraper and Instagram Scraper. The bot first reports each Actor's engagement field names. It then normalizes them into one table, drops posts under 24 hours old, and ranks by save rate. Instagram has no public saves, so it uses comments divided by likes. A weekday schedule and a Telegram bot, connected through Composio, deliver the top three.",
+      "sha256": "7a9d37fb14e6968b4dd5c96c57e5bd7c7bd6028188061f00ba9c79e9a1686dee"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Of 150 posts scraped, 128 made the board; four were dropped as too new and 18 for having no usable save rate. The top three were all X posts, with save rates of 2.5 to 2.7.",
+      "sha256": "82d524d10a53ae018049962c42cb5590450ef1720a56c49e17cdc819891b82f9"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Have the bot show each Actor's returned field names before normalizing. Platforms name saves differently, and Instagram has none, so a wrong mapping ranks the wrong numbers.",
+      "sha256": "a66d1c86ef61a261a2117d62f355dd3a8fe6b741806e5d63f8604549d4336efa"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Grok Bot"
+      ],
+      "sha256": "5860acaa3c9f362c43df7296f5091d163857131e736a6ca95a173b16c2fd107e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://blog.apify.com/track-viral-posts-with-grok-bot/"
+      ],
+      "sha256": "deb095865603b7aadc87ac537e2381310ac7434fb58b066d4b07b3980e59284e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "28b5eaed0f04886985d9298c48a735abccd1ce521bd88f8635c7d2fc2cde1a4a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Rank viral social posts and send top picks overnight\nA Grok Bot runs Apify scrapers for X, TikTok and Instagram, normalizes engagement, ranks by save rate and sends the top three to Telegram.\nDone with\nGB\nGrok Bot\nWhat they did\nWith the Apify plugin installed in Grok Bot, the author prompts it to run Tweet Scraper, TikTok Scraper and Instagram Scraper. The bot first reports each Actor's engagement field names. It then normalizes them into one table, drops posts under 24 hours old, and ranks by save rate. Instagram has no public saves, so it uses comments divided by likes. A weekday schedule and a Telegram bot, connected through Composio, deliver the top three.\nHow it went\nOf 150 posts scraped, 128 made the board; four were dropped as too new and 18 for having no usable save rate. The top three were all X posts, with save rates of 2.5 to 2.7.\nWorth knowing\nHave the bot show each Actor's returned field names before normalizing. Platforms name saves differently, and Instagram has none, so a wrong mapping ranks the wrong numbers.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nEvery night, run scrapers for [X, TikTok, Instagram] on [keywords, hashtags, or accounts in my niche]. Normalize engagement across platforms, rank posts by [save rate or another metric], and send the top three with links and a one-line reason each to [Telegram or email] by [time]. A finished run is one message with three picks; don't post or engage with anything yourself.\nOriginal source: https://blog.apify.com/track-viral-posts-with-grok-bot/",
+    "body_sha256": "e609648c4373106d0d388c92bf074153d4a8297b15d8a46db6a9e66339e03c42",
+    "archived_at": "2026-10-29T07:42:03.797088+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:42:03.797088+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

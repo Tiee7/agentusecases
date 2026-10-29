@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/review-a-hardware-assembly-for-injection-molding-risks",
+  "observed_at": "2026-10-29T07:41:39.772127+00:00",
+  "html_sha256": "06e61a0190558ebe5d6376e04160d21ffe845fe1460fcf2d4ca29a6d0c844f78",
+  "body_sha256": "b25d5741519d6521170ed575eeea3f778d84b4eafdd7601d47f891578d5b3358",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Review a hardware assembly for injection-molding risks",
+      "sha256": "a0c5c8f8ecb1e46443a415da4988e3d5b342a88a7915af59c3698ef9f7357321"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Codex with local CAD tools checked a real assembly's geometry and configuration, flagged pre-tooling risks, and organized findings with measurements and closure criteria.\n·\nOct 28, 2026",
+      "sha256": "72c5ef05c79951be415842f141a172d4873531f8cf4bcee3e94caca2f3732c9a"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author distilled a real CAD structure and injection-molding review into a reusable Codex Skill. Given a STEP or native assembly plus the product configuration table, Codex uses local CAD to check version, units and pose, solid validity, interference, clearances, wall thickness and key sections. It then flags molding risks. A script records SHA-256 hashes of the input files.",
+      "sha256": "7f20fd21dffef8d2ca97cc4487985e4a834cd0e1e03496dada47422876e3f057"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The output is an editable report listing each issue's location, measurement method, recheck result and closure condition. The repo includes none of the original product's data or results, so conclusions must be re-verified on each new input.",
+      "sha256": "43724a62c5e0e06bd6b1beeca3fe197931af86cd6082f0236fac7e54fbd77bb6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Local geometry measurements are not mold-flow or physical test results. Material, loads and mold plan must come from you, and the report says which mold and trial evidence is still needed.",
+      "sha256": "ce5680e9f9560d90b772e3e441fa9132a4d770dbf69bb6a7048bb6b8afe2c0d0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/SvenKunkka/3d-structure-review"
+      ],
+      "sha256": "759e32169186165a0fb3aa3be9238cfd99e8139796a88b118d5dc800d20d65b4"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "science",
+        "label": "Security, Science & Hardware"
+      },
+      "sha256": "2f6aea2d6088fb073ea56be07086c7a9956482dd5646031b9f52382186bbd291"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "123540c76d0f66f3e44a447198037c609ea7c7bf5fd9bbd0d36a577ec058b741",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Review a hardware assembly for injection-molding risks\nCodex with local CAD tools checked a real assembly's geometry and configuration, flagged pre-tooling risks, and organized findings with measurements and closure criteria.\n·\nOct 28, 2026\nDone with\nCX\nCodex\nWhat they did\nThe author distilled a real CAD structure and injection-molding review into a reusable Codex Skill. Given a STEP or native assembly plus the product configuration table, Codex uses local CAD to check version, units and pose, solid validity, interference, clearances, wall thickness and key sections. It then flags molding risks. A script records SHA-256 hashes of the input files.\nHow it went\nThe output is an editable report listing each issue's location, measurement method, recheck result and closure condition. The repo includes none of the original product's data or results, so conclusions must be re-verified on each new input.\nWorth knowing\nLocal geometry measurements are not mold-flow or physical test results. Material, loads and mold plan must come from you, and the report says which mold and trial evidence is still needed.\nTry it yourself\nwith\nCodex\nCopy prompt\nReview the CAD files in [folder path] for injection-molding risks before tooling: wall thickness, draft angles, undercuts, sink risk, and parting lines. Make a list of findings ranked by severity, each with the measurement, the affected part, and a clear criterion for calling it fixed. Do not modify any files, and stop when the report is saved as [filename].\nOriginal source: https://github.com/SvenKunkka/3d-structure-review",
+    "body_sha256": "b25d5741519d6521170ed575eeea3f778d84b4eafdd7601d47f891578d5b3358",
+    "archived_at": "2026-10-29T07:41:39.772127+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:39.772127+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

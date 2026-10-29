@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/grade-student-submissions-from-canvas-against-a-rubric",
+  "observed_at": "2026-10-29T07:41:27.778117+00:00",
+  "html_sha256": "d0d2ef133f2b201645b6f2395d00a114f0272b85d67575a587977a42ae923203",
+  "body_sha256": "636f2407f875a838cb7d775fdeea0214efce8abea3c950c71e8597db331d322d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Grade student submissions from Canvas against a rubric",
+      "sha256": "f9e0be4a0a464fb34166259ed945fc8f6c9754f78de1a4311f52c88c9b9a93fc"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An instructor's pipeline pulls student files from Canvas, has Claude score each per criterion with comments, and posts grades back after human review.\n·\nMar 12, 2026",
+      "sha256": "705294ec2f7a2ded367779712bbdb4ced23a6811da67182012908994b6878ed1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Vaibhav Bhandari, who teaches a hacking course, used a personal Canvas API token to download submissions. For each one, a script extracts text, or renders scanned PDFs as images. It sends that and a YAML rubric to Claude, which returns per-criterion scores, a first-person comment and a flag. He reviews a CSV, then confirms the upload to Canvas.",
+      "sha256": "bbf6143f42482adba09731faf357278f860377400ea0a6719f1b1700bdf13515"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On Lab 5, 13 of 22 submissions were flagged, mostly for suspected AI-generated content or thin evidence. Scoring was consistent but not calibrated to his own grading. He still read every capstone submission and heard every presentation.",
+      "sha256": "40ec21d877a70921a855fbc8d9f5977d650f2fb6aa0665b004e46e85dba23fad"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Add examples of what a 90 looks like in the rubric's extra instructions, since scores weren't calibrated to his grading. Responses aren't cached, so re-runs call the API again.",
+      "sha256": "29e53526d3f77731a7c3b4dbb3f0dd817cd90008481f53f9bc2108c298768992"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.vitraag.com/2026/03/12/ai-assisted-grading-canvas-api-claude/"
+      ],
+      "sha256": "11b3ad53225d1927f384412ab0f34a0be078e1a91b5d1f524e661bc55fd6bcd5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7a9fbf6186b0b11951a00d8b4bd40a5dc7d5db2de25782ee5a76205ad3539aeb",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Grade student submissions from Canvas against a rubric\nAn instructor's pipeline pulls student files from Canvas, has Claude score each per criterion with comments, and posts grades back after human review.\n·\nMar 12, 2026\nDone with\nCL\nClaude\nWhat they did\nVaibhav Bhandari, who teaches a hacking course, used a personal Canvas API token to download submissions. For each one, a script extracts text, or renders scanned PDFs as images. It sends that and a YAML rubric to Claude, which returns per-criterion scores, a first-person comment and a flag. He reviews a CSV, then confirms the upload to Canvas.\nHow it went\nOn Lab 5, 13 of 22 submissions were flagged, mostly for suspected AI-generated content or thin evidence. Scoring was consistent but not calibrated to his own grading. He still read every capstone submission and heard every presentation.\nWorth knowing\nAdd examples of what a 90 looks like in the rubric's extra instructions, since scores weren't calibrated to his grading. Responses aren't cached, so re-runs call the API again.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead the student submissions in [folder path of downloaded Canvas files] and grade each against the rubric in [rubric file]. For every student, write a score and a short comment per criterion into a single spreadsheet at [output file], and flag any submission you're unsure about. Do not post anything back to Canvas; stop once the spreadsheet is complete so I can review it first.\nOriginal source: https://www.vitraag.com/2026/03/12/ai-assisted-grading-canvas-api-claude/",
+    "body_sha256": "636f2407f875a838cb7d775fdeea0214efce8abea3c950c71e8597db331d322d",
+    "archived_at": "2026-10-29T07:41:27.778117+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:27.778117+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

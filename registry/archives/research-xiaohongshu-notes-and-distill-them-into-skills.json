@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/research-xiaohongshu-notes-and-distill-them-into-skills",
+  "observed_at": "2026-10-29T07:41:37.788846+00:00",
+  "html_sha256": "af690d6a679eb1a70f202e8118bad9d3ca8c37e36b1c522e5a0811e9c99ed39d",
+  "body_sha256": "723455ace19a447d1a822099e8f32cd8d0e520960d8172c4c4065a879e895a63",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Research Xiaohongshu notes and distill them into skills",
+      "sha256": "624a7fbbb0fcc4732ed73ac157091af69829a9eca431c27415b56eddc77ed791"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent drives Chrome to search keywords, open top-liked notes, read screenshots and distill findings into reusable skills in a knowledge base.\n·\nOct 28, 2026",
+      "sha256": "a2470eb1847afc750763e6cd9d5eb62d624cc657cb9ce5a48b1a83d1ac165df9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The open-source rednote-bootstrap skill pack uses agent-browser, a CLI that controls Chrome. It splits a question into sub-dimensions and generates keyword searches. It reads the search-result snapshot, opens the top-liked notes, and screenshots each page. A vision model reads the text in the images. It then dedupes and cross-checks the findings into a sub-skill saved in a registry. The user scans a QR code to log in once.",
+      "sha256": "95de4ef432aa10e34e296e0535f7c7a4c053e6d8bbaba3283ce7e70291452acb"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "For the publishing-process question, it read 6 top notes (best had 4479 likes) and produced a full guide. A second skill, on account warm-up, came from 4 notes. The author calls the project early-stage.",
+      "sha256": "7f206054f07ddfdb187d994990da2d31013b1c3f25d7a1b5475028b38ab6a86f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A full research run takes roughly 5-10 minutes. Limits are 5 search rounds, 30 notes and 15 minutes, and the login state is saved to a local file for reuse.",
+      "sha256": "7850530c8cf0441854a5ffd50a8ba447f21a36ededfdc8ba4517b8bbbc27181e"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://mcp.csdn.net/6a2e2a5610ee7a33f27cbaeb.html"
+      ],
+      "sha256": "df2e5964aae361d0fea897cc3c4a85e829392b67b698918b885eea0222b47c0a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "113b3b5715d605a6fdb2b7d82afbd745553b843c889ffdf06e449d43e2ebde27",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Research Xiaohongshu notes and distill them into skills\nAn agent drives Chrome to search keywords, open top-liked notes, read screenshots and distill findings into reusable skills in a knowledge base.\n·\nOct 28, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe open-source rednote-bootstrap skill pack uses agent-browser, a CLI that controls Chrome. It splits a question into sub-dimensions and generates keyword searches. It reads the search-result snapshot, opens the top-liked notes, and screenshots each page. A vision model reads the text in the images. It then dedupes and cross-checks the findings into a sub-skill saved in a registry. The user scans a QR code to log in once.\nHow it went\nFor the publishing-process question, it read 6 top notes (best had 4479 likes) and produced a full guide. A second skill, on account warm-up, came from 4 notes. The author calls the project early-stage.\nWorth knowing\nA full research run takes roughly 5-10 minutes. Limits are 5 search rounds, 30 notes and 15 minutes, and the login state is saved to a local file for reuse.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen [platform, e.g. Xiaohongshu] and search for [keyword]. Open the top [number] most-liked notes, read each one including images, and note what they have in common: hooks, structure, format, and tone. Finish with a short reusable guide titled '[skill name]' that I can paste into my notes, and do not post, like, or comment on anything.\nOriginal source: https://mcp.csdn.net/6a2e2a5610ee7a33f27cbaeb.html",
+    "body_sha256": "723455ace19a447d1a822099e8f32cd8d0e520960d8172c4c4065a879e895a63",
+    "archived_at": "2026-10-29T07:41:37.788846+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:37.788846+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

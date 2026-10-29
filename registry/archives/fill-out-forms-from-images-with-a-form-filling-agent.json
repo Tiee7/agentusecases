@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fill-out-forms-from-images-with-a-form-filling-agent",
-  "observed_at": "2026-10-28T07:33:36.657668+00:00",
-  "html_sha256": "5b526f7ea821389c94e15c7bec7e7cf73739072338620a00bb9ae0682441cac1",
+  "observed_at": "2026-10-29T07:41:03.914145+00:00",
+  "html_sha256": "d137ccb6830e3d4299fdb318a5f053b38f46634db3708e98081bc1a586345fad",
   "body_sha256": "f86fc08875bc81e4977c2bfe3ebca53b4e6c194b594ff23c4155b424e0830bd8",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Fill out forms from images with a form-filling agent\nThe author used Gemini to build an agent that plans the fields in a form image and matches them to bounding boxes, for a friend who wanted forms filled automatically.\n·\nApr 1, 2025\nDone with\nGE\nGemini\nWhat they did\nThe author said a friend wanted JPEG/PNG forms filled automatically, so they reused prior work with OmniParser and built an annotated dataset from IRS and OPM forms with clearly defined fields. They used Gemini to identify what fields were present in a document and match those fields to bounding boxes, noting GPT-4o plus YOLO could have done the same job.\nHow it went\nThe post presents it as a working approach for automating tedious form filling, especially in manual supply-chain workflows. It does not give accuracy numbers, speed, or failure cases in the thread text shown.\nWorth knowing\nThe main catch is that they first compiled their own annotated dataset from real forms, rather than relying on prompting alone.\nTry it yourself\nwith\nGemini\nCopy prompt\nBuild me a small tool that takes an image of a form at [file path], detects each blank field and its label, and draws bounding boxes where answers should go. Then fill the fields using the details in [my info file], and save the completed form as a new image at [output path]. Show me the result for review before treating it as done, and stop once the filled form lines up with every field.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1k9ch4u",
     "body_sha256": "f86fc08875bc81e4977c2bfe3ebca53b4e6c194b594ff23c4155b424e0830bd8",
-    "archived_at": "2026-10-28T07:33:36.657668+00:00",
+    "archived_at": "2026-10-29T07:41:03.914145+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-28T07:33:36.657668+00:00",
+    "at": "2026-10-29T07:41:03.914145+00:00",
     "status": "fetched",
     "error": null
   }

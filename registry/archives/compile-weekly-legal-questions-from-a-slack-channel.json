@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/compile-weekly-legal-questions-from-a-slack-channel",
+  "observed_at": "2026-10-29T07:42:21.869621+00:00",
+  "html_sha256": "c0b2f526e2b7a60a3267a78c5f360a3044d5840d9b09ad79d9d669dcbb8a1535",
+  "body_sha256": "4c4d4c4ed2a9565156e41a3543aa76ee9903dddfe5f3c9dc812851ca687c6263",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Compile weekly legal questions from a Slack channel",
+      "sha256": "bb1a0ce980eeaea49eca138ae9e4a80d110013f2fbed66c1869a1e59624cec3e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An in-house counsel is building a ChatGPT agent that scans a Slack channel weekly and lists legal questions the team has about the Terms of Use.\n·\nJul 27, 2026",
+      "sha256": "c3490571a86177f82845691292350e7c90d5ceaedbdab652e50b6b667889d7a0"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post says the counsel is slowly building a ChatGPT agent that, once a week, scans the company’s #legal Slack channel and pulls out questions people ask about the Terms of Use. The intended workflow is for the agent to compile those questions into a section-by-section list that a human would then use to update and maintain the ToU FAQ; the lawyer notes they are still tuning prompts because it can grab unrelated issues like lease agreements.",
+      "sha256": "42d8c8de4d96343d2d5f194f877abb610600cfaf05719e40e074008639221c71"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "At the time of the post, it was still unreliable rather than a proven win: it sometimes misclassified non-ToU legal issues, and the author was unsure the exercise would be helpful enough to justify the effort.",
+      "sha256": "289e9e8726c1f317e647230bd8b6258578a3197d5e8aa302232b569409cff0fd"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch in the source is accuracy: even this narrow weekly Slack-triage task still needed more prompting or fine-tuning to avoid picking up unrelated legal questions.",
+      "sha256": "543da37c838ac6a6fb19c947249b032a16ce880a745ceab1770bd28aad5f3edf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT"
+      ],
+      "sha256": "82e451268285d424c611a7a33277446d5e018e11c1752ebdc4ea4c6c13533e4e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/legaltech/comments/1ux5hsz/ai_use_cases_for_inhouse_legal_counsels"
+      ],
+      "sha256": "62a67bbcd599e7de249ebe4c8b2e9102b6eb8d06a10f4631b0bb1e311fbf9f4f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "8494e69f1bc50cc5bf35ddfacd202e6ebb8f26bcd5080a674753ed6eb0f93138",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Compile weekly legal questions from a Slack channel\nAn in-house counsel is building a ChatGPT agent that scans a Slack channel weekly and lists legal questions the team has about the Terms of Use.\n·\nJul 27, 2026\nDone with\nGP\nChatGPT\nWhat they did\nThe post says the counsel is slowly building a ChatGPT agent that, once a week, scans the company’s #legal Slack channel and pulls out questions people ask about the Terms of Use. The intended workflow is for the agent to compile those questions into a section-by-section list that a human would then use to update and maintain the ToU FAQ; the lawyer notes they are still tuning prompts because it can grab unrelated issues like lease agreements.\nHow it went\nAt the time of the post, it was still unreliable rather than a proven win: it sometimes misclassified non-ToU legal issues, and the author was unsure the exercise would be helpful enough to justify the effort.\nWorth knowing\nThe main catch in the source is accuracy: even this narrow weekly Slack-triage task still needed more prompting or fine-tuning to avoid picking up unrelated legal questions.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nEvery [Friday], read the messages in my Slack channel [#channel-name] from the past week and pull out every question that touches [legal topic, e.g. our Terms of Use]. Give me a list with who asked, the date, a link to the message, and a one-line summary, grouped by theme. Don't post anything in Slack or message anyone; just send me the list for my review.\nOriginal source: https://www.reddit.com/r/legaltech/comments/1ux5hsz/ai_use_cases_for_inhouse_legal_counsels",
+    "body_sha256": "4c4d4c4ed2a9565156e41a3543aa76ee9903dddfe5f3c9dc812851ca687c6263",
+    "archived_at": "2026-10-29T07:42:21.869621+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:42:21.869621+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

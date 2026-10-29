@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-an-ai-agent-run-amazon-book-ads",
+  "observed_at": "2026-10-29T07:41:49.793679+00:00",
+  "html_sha256": "9deda6eaab2504b0e0957c95fa293ba39b584ba12c6adad676fc8164c89341f2",
+  "body_sha256": "5ea69969e100f00fe161ae4932bb3eda13917559da11cdb5adec83c19c240c20",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let an AI agent run Amazon book ads",
+      "sha256": "7bdfc25bd1a0236284bc6ae244bd5da2ee6a6c5848a1a791e2e5eb9d88206888"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An author gave an AI agent control of their Amazon ads account; it pulls reports via the Ads API on a schedule, changes bids, adds negatives, and pauses campaigns without approval.",
+      "sha256": "d6e6451f286788c940c435616b7c4f247fe3d20a7540c75510543800b1fe92d2"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author wired Claude to the Amazon Ads API to run every three days across about 10 nonfiction titles. It pulled reports, changed bids, added negative keywords, paused campaigns, and logged its reasoning, with hard limits in a config file for spend, bid changes, and campaign creation; the author also fed it search data from the GitHub tool kdp-scout and kept editorial changes as manual-only proposals.",
+      "sha256": "656833bffb9f762562954930da06d6f1b03728d5c5d0637e51befffb90dc6935"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "After about six weeks, June finished at $682 in royalties against $757 in ad spend, an improvement from losing more money before. It also made a costly mistake by cloning winning keywords into a higher-bid campaign that competed with the original and caused nearly two days of dead sales, though the author later added dedupe rules and the agent shut down unprofitable Germany and Spain campaigns on its own.",
+      "sha256": "4d1465318cf3e3dab0b02fe17f7acfac887637826da78052c5aa1de507d3151b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was attribution lag: the author learned to ignore the last two days of Amazon ads data before cutting anything, and capped the system with an €800 monthly budget plus daily limits.",
+      "sha256": "32e5554d624c52910de19339cf4f71b40e6bc3028510e52d2be94aaf45bc879c"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1umauys/anyone_else_letting_an_ai_run_their_book_ads"
+      ],
+      "sha256": "83a0dea25889a49f58eb95b49c1884869a603bedafab723f12918bb98e779455"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-28",
+      "sha256": "2a886ee9f697259e2667ea5bdb4f165f2d20a8e7c7fef8f9b954db8fd9c7444f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a1ad2382da3799ba854fb7f7f0bc428a4656b240581171b3e5bf7bb67d75bacd",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let an AI agent run Amazon book ads\nAn author gave an AI agent control of their Amazon ads account; it pulls reports via the Ads API on a schedule, changes bids, adds negatives, and pauses campaigns without approval.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author wired Claude to the Amazon Ads API to run every three days across about 10 nonfiction titles. It pulled reports, changed bids, added negative keywords, paused campaigns, and logged its reasoning, with hard limits in a config file for spend, bid changes, and campaign creation; the author also fed it search data from the GitHub tool kdp-scout and kept editorial changes as manual-only proposals.\nHow it went\nAfter about six weeks, June finished at $682 in royalties against $757 in ad spend, an improvement from losing more money before. It also made a costly mistake by cloning winning keywords into a higher-bid campaign that competed with the original and caused nearly two days of dead sales, though the author later added dedupe rules and the agent shut down unprofitable Germany and Spain campaigns on its own.\nWorth knowing\nThe main catch was attribution lag: the author learned to ignore the last two days of Amazon ads data before cutting anything, and capped the system with an €800 monthly budget plus daily limits.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to my Amazon Ads account using the API credentials in [secure location] and pull a report of my book campaigns for the last [number] days. Recommend bid changes, negative keywords, and campaigns to pause, with the numbers behind each. Show me the full list and wait for my approval before changing or pausing anything.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1umauys/anyone_else_letting_an_ai_run_their_book_ads",
+    "body_sha256": "5ea69969e100f00fe161ae4932bb3eda13917559da11cdb5adec83c19c240c20",
+    "archived_at": "2026-10-29T07:41:49.793679+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-29T07:41:49.793679+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
