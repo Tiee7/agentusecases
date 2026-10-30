@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-support-emails-and-draft-refund-policy-replies",
-  "observed_at": "2026-10-29T07:17:33.830760+00:00",
-  "html_sha256": "6312a052b283aec072e81ec8df7fe236c6d6c0928a7eba9d778967036abfe45f",
+  "observed_at": "2026-10-30T07:20:45.624601+00:00",
+  "html_sha256": "a2a248a838ff7c5baeba7af7364da41c8876f9c4f64612679794bd1531a14ee3",
   "body_sha256": "dbc94c036c648683771ec219f02c4dccfd9145b4c92b2d88ad4754f29c830e71",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Triage support emails and draft refund-policy replies\nA consultant built a Claude agent that reads support Gmail, looks up orders, applies refund policy, drafts replies for human approval and creates triage records with optional Slack alerts.\nDone with\nCL\nClaude\nWhat they did\nFor a fictional kitchenware brand demo, the consultant kept the returns policy and brand voice guide in Claude Projects. Gmail and Sheets connectors gave Claude the unread support emails and an orders sheet with final-sale, gift and prior-return flags. For each email it matched the order, walked a decision tree, and wrote a triage record with a drafted reply. Escalation flags sent edge cases to human review, and nothing was sent without a click.\nHow it went\nThe author estimates 12–18 support hours saved weekly, assuming about 70% of requests are routine. Rough spots: right decisions sometimes cite the wrong policy section, tone on hard cases is imperfect, and there is no memory across interactions.\nWorth knowing\nCost is roughly $0.05 per email, about $4 a day at 80 emails. Keep the prompt thin and make policy changes in the policy and voice documents.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nWatch the support inbox [Gmail address or label]. For each new email, look up the order in [order system], apply our refund policy: [paste policy], and write a draft reply saved in Gmail without sending. Create a triage record in [tool] with category and urgency, and post a Slack alert to [channel] for anything urgent. Never send a reply or issue a refund without my approval.\nOriginal source: https://medium.com/@nitin_26346/building-a-customer-support-triage-agent-with-claude-a-walkthrough-89a812cc09bf",
     "body_sha256": "dbc94c036c648683771ec219f02c4dccfd9145b4c92b2d88ad4754f29c830e71",
-    "archived_at": "2026-10-29T07:17:33.830760+00:00",
+    "archived_at": "2026-10-30T07:20:45.624601+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:17:33.830760+00:00",
+    "at": "2026-10-30T07:20:45.624601+00:00",
     "status": "fetched",
     "error": null
   }

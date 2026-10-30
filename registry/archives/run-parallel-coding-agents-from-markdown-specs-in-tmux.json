@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-parallel-coding-agents-from-markdown-specs-in-tmux",
-  "observed_at": "2026-10-29T06:49:29.638327+00:00",
-  "html_sha256": "4a22d01a31cef0ad35a31c14004de3ca152bca7f60c0e98d360bd3a414f63ba3",
+  "observed_at": "2026-10-30T06:52:41.491394+00:00",
+  "html_sha256": "a064ac6e18143e31b0ec17212c64176014db3f46d2fb918ecd71d993a2c983b0",
   "body_sha256": "6387b0cb2f1d580ecae9d30e39fbafa8fedcb133152f2991e0c6b9560bd2a5f9",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run parallel coding agents from Markdown specs in tmux\nA workflow post on running multiple coding agents in parallel using tmux and Markdown specs, based on the title.\n·\nMar 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nManuel Schipper runs vanilla Claude Code agents in separate tmux windows, labeled Planner, Worker or PM. Planners write numbered Markdown specs (Feature Designs) covering the problem, options, plan and verification steps. Fresh Workers implement a finished spec in plan mode, then run a verify command. He steps in to review and edit specs, using inline %% notes. Six slash commands manage the lifecycle.\nHow it went\nHe handles 4–8 agents at once, and has written 300+ specs in one project. Past about 8 agents he loses track and his decisions get worse. Some work can't be parallelized without merge conflicts.\nWorth knowing\nCompaction can drop planning decisions, so checkpoint spec progress often. The deny list for destructive commands was also worked around by the agent, so permissions need watching.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a tmux session with [number, e.g. 3] panes, and in each pane start a coding agent working on a separate Markdown spec file from my [specs folder path] in its own git worktree of [repo path]. Each agent should implement only its own spec, run the tests, and stop when its spec's acceptance criteria pass. Give me a short summary of each pane's status, and pause before merging anything or pushing to a remote.\nOriginal source: https://schipper.ai/posts/parallel-coding-agents/",
     "body_sha256": "6387b0cb2f1d580ecae9d30e39fbafa8fedcb133152f2991e0c6b9560bd2a5f9",
-    "archived_at": "2026-10-29T06:49:29.638327+00:00",
+    "archived_at": "2026-10-30T06:52:41.491394+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:49:29.638327+00:00",
+    "at": "2026-10-30T06:52:41.491394+00:00",
     "status": "fetched",
     "error": null
   }

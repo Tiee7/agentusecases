@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-phone-voice-agent-that-answers-in-under-half-a-secon",
-  "observed_at": "2026-10-29T06:47:19.667456+00:00",
-  "html_sha256": "fb2c566731142e5bb99e971c27727fb0105c2358ef62d28ebee478fa9a8d3d7f",
+  "observed_at": "2026-10-30T06:50:31.425303+00:00",
+  "html_sha256": "b6bd7b61910b29445dc88bca810be8baafd40796e7f01ed205525cf92fa239a4",
   "body_sha256": "7949bf913827f78f213c6122ce499eb2f06098122c1b310e472b37c0a4b3c19e",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Build a phone voice agent that answers in under half a second\nA from-scratch voice agent averaging about 400ms end to end, with streaming speech-to-text, LLM, and text-to-speech and clean barge-ins.\n·\nMar 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA FastAPI server takes Twilio's audio over a WebSocket and sends it to Deepgram Flux, which handles transcription and turn detection. When a turn ends, the transcript goes to an LLM, tokens stream into ElevenLabs TTS, and the audio goes straight back to Twilio. A barge-in cancels the LLM and TTS and flushes Twilio's buffer. Pre-connected TTS sockets are kept warm.\nHow it went\nRun locally, latency was about 1.7s. Deploying in the EU cut it to about 790ms, slightly better than Vapi's estimate of about 840ms. Swapping gpt-4o-mini for Groq's llama-3.3-70b brought it to about 400ms. The first turn was slower.\nWorth knowing\nThe build took about a day and roughly $100 in API credits. Keep the server in the same region as Twilio, Deepgram and ElevenLabs, because location halved latency.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a phone voice agent in [language, e.g. Python] for [use case, e.g. answering calls for a dental office] using streaming speech-to-text, an LLM, and streaming text-to-speech, with the goal of responding in under 500ms and handling interruptions cleanly. Scaffold the project, wire up [providers, e.g. Deepgram, an LLM API, ElevenLabs, Twilio], and add latency logging. Finish when a test call works and the log shows average latency; ask before making any real phone calls or purchasing numbers.\nOriginal source: https://www.ntik.me/posts/voice-agent",
     "body_sha256": "7949bf913827f78f213c6122ce499eb2f06098122c1b310e472b37c0a4b3c19e",
-    "archived_at": "2026-10-29T06:47:19.667456+00:00",
+    "archived_at": "2026-10-30T06:50:31.425303+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:47:19.667456+00:00",
+    "at": "2026-10-30T06:50:31.425303+00:00",
     "status": "fetched",
     "error": null
   }

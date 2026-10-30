@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/patch-laptop-bios-to-unlock-hidden-firmware-menus",
-  "observed_at": "2026-10-29T07:00:27.680705+00:00",
-  "html_sha256": "56e07cae0c9e12bd26241e6e37ff1cb00c485030774a07d59eefa199dbcce38f",
+  "observed_at": "2026-10-30T07:03:39.456559+00:00",
+  "html_sha256": "cd5b6e92980c5a0e63af8cb221b660401121bcf44338e5beda0ddd08ff466aa5",
   "body_sha256": "17608c4f48a2d4dbd2a2c00eccf4a3c554d48760d5a3deb8fe16761847870ac7",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Patch laptop BIOS to unlock hidden firmware menus\nA Reddit user gave Claude Code a BIOS dump; it disassembled it, found the signature check and patched it, unlocking hidden settings after flashing (secondhand account).\n·\nJul 22, 2026\nDone with\nCC\nClaude Code\nWhat they did\nA Reddit user gave Claude a raw BIOS dump from their laptop and asked it to unlock hidden firmware menus. Claude disassembled the binary, found the RSA signature-check function, and patched the verifier so it always returns true. The owner then flashed the modified firmware themselves. The article says there was no step-by-step prompting.\nHow it went\nAfter flashing, the owner could reach settings the manufacturer hid. The article is secondhand, relayed from X posts, and gives no laptop model, prompts, or timings.\nWorth knowing\nFlashing firmware with a disabled signature check carries risk; the source gives no details on backups or recovery, so check those before trying this.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a firmware dump for my own [laptop model] at [file path]. Disassemble it, explain how the settings menus are gated and where any signature check happens, and propose a patch to unlock the hidden options. Work only on a copy of the file and don't flash anything; show me the proposed patch and the recovery risks first so I can decide.\nOriginal source: https://enterprisedna.co/resources/ai-pulse/ai-pulse-2026-07-22-a-reddit-user-had-claude-code-reverse-engineer-their-laptop/",
     "body_sha256": "17608c4f48a2d4dbd2a2c00eccf4a3c554d48760d5a3deb8fe16761847870ac7",
-    "archived_at": "2026-10-29T07:00:27.680705+00:00",
+    "archived_at": "2026-10-30T07:03:39.456559+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:00:27.680705+00:00",
+    "at": "2026-10-30T07:03:39.456559+00:00",
     "status": "fetched",
     "error": null
   }

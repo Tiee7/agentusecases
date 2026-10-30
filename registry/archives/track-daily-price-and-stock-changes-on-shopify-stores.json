@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/track-daily-price-and-stock-changes-on-shopify-stores",
-  "observed_at": "2026-10-29T07:25:05.853483+00:00",
-  "html_sha256": "32e11343b426be8b9d9f7749c04cf8dd61a0fcb165296c7c98cbf092483cc5b9",
+  "observed_at": "2026-10-30T07:28:17.783394+00:00",
+  "html_sha256": "e7547c0c61cb753b18a49886a7baaf3be387ce8f67bc17273ec60c8977a3579a",
   "body_sha256": "d290b09f7f543ba5a1f14182e157e82f2bf22566a245fbeeebfd1fc63bd941a1",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Track daily price and stock changes on Shopify stores\nAn agent reads a Shopify store's public product feed daily and reports new, removed, price and stock changes, e.g. 692 products at allbirds.com.\n·\nOct 11, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe Store Price Tracker tool reads a Shopify store's public products.json feed, up to 250 products per page, and keeps a daily snapshot, because the feed has no price history. Each answer compares the latest snapshot with the previous day's: new and removed products, price changes and per-variant stock changes. It checks robots.txt first, identifies itself, and backs off on 429 responses.\nHow it went\nAcross three stores, allbirds.com showed 692 products, 0 price changes and 10 stock changes. gymshark.com had 10,027 products read, 6 new, 0 price changes and 266 stock changes. Kylie Cosmetics (247 products) was only just added.\nWorth knowing\nOn very large catalogs the read stops at a page limit, so removed products can't be counted. The /cart.json Shopify check also returns 404 on custom storefronts such as gymshark.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a small script that reads the public products feed of [store URL, e.g. store.com/products.json] each day and saves a snapshot. Compare each day to the previous one and report new products, removed products, price changes and stock changes in a short summary. Run it once now to create the first snapshot and show me the product count, then set it up to run daily at [time].\nOriginal source: https://tools.openkrill.app/blog/shopify-products-json-price-tracker",
     "body_sha256": "d290b09f7f543ba5a1f14182e157e82f2bf22566a245fbeeebfd1fc63bd941a1",
-    "archived_at": "2026-10-29T07:25:05.853483+00:00",
+    "archived_at": "2026-10-30T07:28:17.783394+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:25:05.853483+00:00",
+    "at": "2026-10-30T07:28:17.783394+00:00",
     "status": "fetched",
     "error": null
   }

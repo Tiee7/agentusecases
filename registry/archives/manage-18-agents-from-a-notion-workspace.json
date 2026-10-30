@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/manage-18-agents-from-a-notion-workspace",
-  "observed_at": "2026-10-29T06:47:29.630408+00:00",
-  "html_sha256": "94c7e64334318db5b5d4d729932cd3ee7ed58c95fd06f82fb729892d6041913a",
+  "observed_at": "2026-10-30T06:50:41.413725+00:00",
+  "html_sha256": "2a7d583f97d1e72482d2d6cc23092389b7386b4e486b04f49fda6a3233743cdc",
   "body_sha256": "cfb5c7249d6f31a39b8591775022e6d7c1e0fcea149b0e6242a054817ad9a82f",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Manage 18 agents from a Notion workspace\nNotion used as the control plane for a fleet of 18 OpenClaw agents.\n·\nMar 7, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe author built AgentOps, a Node/React server that uses Notion as its only database through the Notion API (MCP). Four Notion databases hold the agent registry, task queue, run log and alerts. A runtime polls Notion every 10 seconds and skips paused agents. Tasks created in Notion get dispatched. Prompts and configs sync both ways, and the fleet can be backed up or exported as JSON.\nHow it went\nIt tracked 18 agents, 78 logged runs and over 128K tokens. The author says migrating between instances takes minutes. A commenter raised concurrency concerns, and the author replied that the workloads are cron-based and run one at a time.\nWorth knowing\nDesigned as a single poller over cron-style jobs, so concurrent writes from many agents were not tested. Secrets are redacted before configs sync to Notion.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me set up a small team of [number] agents, each with a clear job such as [job 1, job 2, job 3], and track their tasks and status in [Notion or another workspace]. Create a task board where I can assign work and see results from each agent. Before any agent sends messages or changes things outside the board, pause and show me what it plans to do.\nOriginal source: https://dev.to/aws-heroes/i-turned-notion-into-a-control-plane-for-my-18-openclaw-ai-agents-5624",
     "body_sha256": "cfb5c7249d6f31a39b8591775022e6d7c1e0fcea149b0e6242a054817ad9a82f",
-    "archived_at": "2026-10-29T06:47:29.630408+00:00",
+    "archived_at": "2026-10-30T06:50:41.413725+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:47:29.630408+00:00",
+    "at": "2026-10-30T06:50:41.413725+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/play-a-button-clicking-game-via-a-browser-agent",
-  "observed_at": "2026-10-29T07:02:49.694695+00:00",
-  "html_sha256": "22fda0779776e8e65da72a3b381c66822f40d609a8a110662cbb52a241d33511",
+  "observed_at": "2026-10-30T07:06:01.667771+00:00",
+  "html_sha256": "73f63f86f07eb5e4bbdc37e172f15bb07f722b759e47d94937f8fba6e0b9531b",
   "body_sha256": "2b1ca69e46f61e4d3858ba794b8ace1b6e6b665e0455166cd6d333078b5c8e28",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Play a button-clicking game via a browser agent\nA developer wired Gemini's Computer Use model to Playwright in Java and had it play a simple button-clicking game to verify click-coordinate scaling.\n·\nNov 3, 2025\nDone with\nGE\nGemini\nWhat they did\nGuillaume Laforge built a Java loop around Gemini's computer-use preview model and Playwright's headless Chromium, with a 1000x1000 viewport. The model got a screenshot after every action and returned click actions with coordinates on a normalized 1000x1000 grid. His code scaled those to the viewport and clicked. He built a simple game where a red button moves after each click, and told the agent to click it 10 times and read the score.\nHow it went\nThe agent clicked the moving button and reported a final score of 10, which confirmed the click handling and coordinate scaling worked. The source mentions no failures in this test.\nWorth knowing\nSend a fresh screenshot to the model after every action, and wait about a second first so the page has finished rendering. Otherwise the model sees a blank or half-drawn page.\nTry it yourself\nwith\nGemini\nCopy prompt\nUse browser control to open [URL of a simple web game] and play it by looking at screenshots and clicking, for about [number] moves. Report whether your clicks landed where you intended, and note any mismatch between screenshot coordinates and actual click positions. Stop when you've finished the moves and summarize how it went.\nOriginal source: https://glaforge.dev/posts/2025/11/03/driving-a-web-browser-with-gemini-computer-use-model-in-java/",
     "body_sha256": "2b1ca69e46f61e4d3858ba794b8ace1b6e6b665e0455166cd6d333078b5c8e28",
-    "archived_at": "2026-10-29T07:02:49.694695+00:00",
+    "archived_at": "2026-10-30T07:06:01.667771+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:02:49.694695+00:00",
+    "at": "2026-10-30T07:06:01.667771+00:00",
     "status": "fetched",
     "error": null
   }

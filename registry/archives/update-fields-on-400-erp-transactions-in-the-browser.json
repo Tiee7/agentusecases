@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/update-fields-on-400-erp-transactions-in-the-browser",
+  "observed_at": "2026-10-30T07:46:15.649647+00:00",
+  "html_sha256": "112a68f80b3114e45263d68a10338848a89baac48b1961cb62e1c13df9e5dc38",
+  "body_sha256": "49fabd2114c504341d471ae4fade03d1964de20d046953c328e3c81f3c1bc832",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Update fields on 400 ERP transactions in the browser",
+      "sha256": "70ecd46ec30178ae0002d2e56ad34493a57c937960476d11f97535bbfcc2ab34"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author had Claude's Chrome extension edit 2 fields across about 400 ERP transactions; it was slow, asked for confirmation at each step and burned token limits, but ran in the background.",
+      "sha256": "6344cef5e2817cbcb8952e80ee037cadadd56aa21a96906cf71ed5756ccb581a"
+    },
+    "method": {
+      "status": "observed",
+      "value": "With help from a software engineer friend, the author set up Claude's Chrome extension and gave it instructions for a job that normally takes about 2 hours by hand: updating 2 fields on roughly 400 ERP transactions. Claude took screenshots of the page to carry out each step. The author kept rewriting the prompt, starting with a loose request and ending with numbered steps.",
+      "sha256": "baa547c063570395cf5fb82020359a28050b1e5de59045e1e5daef1fd22c69c9"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It moved very slowly. Token limits ran out about half the time, which meant a 5-hour wait for a refresh. The author spent at least as much time and effort as doing the job manually. The one upside was that it could run in the background.",
+      "sha256": "a5aa7cd4531274b0aa68aa11ae3650a283f8faa5bb91659da0f943d0d5a18734"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Prompt phrasing changed which steps Claude took, so expect to iterate. Screenshot-driven steps appeared to use up tokens quickly, and the author couldn't see where they went.",
+      "sha256": "c8f6e51bdee315ee97bb462b0789489068ad2bc42371daba4fa582d1894f2550"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude in Chrome"
+      ],
+      "sha256": "49ae92980e72e63420e334696837af4e6b23d13e60b98a0fee67f5146afddb6b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://medium.com/@mikefkoyama/toying-with-claude-chrome-and-getting-frustrated-f285798467d0"
+      ],
+      "sha256": "95d4353b3641227a42ac4360dbaa0603316fb09cd1ba5359a1919a9dfee6eaa8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-29",
+      "sha256": "e1367037a0810c421521d8e632205e4999e0f2efb694b3212b4c00bd8260ed6d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0352bff994c47cadeff56d2ebee62dd4cbf4e3f40daaed3a48a550a7a396ccd7",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Update fields on 400 ERP transactions in the browser\nThe author had Claude's Chrome extension edit 2 fields across about 400 ERP transactions; it was slow, asked for confirmation at each step and burned token limits, but ran in the background.\nDone with\nCH\nClaude in Chrome\nWhat they did\nWith help from a software engineer friend, the author set up Claude's Chrome extension and gave it instructions for a job that normally takes about 2 hours by hand: updating 2 fields on roughly 400 ERP transactions. Claude took screenshots of the page to carry out each step. The author kept rewriting the prompt, starting with a loose request and ending with numbered steps.\nHow it went\nIt moved very slowly. Token limits ran out about half the time, which meant a 5-hour wait for a refresh. The author spent at least as much time and effort as doing the job manually. The one upside was that it could run in the background.\nWorth knowing\nPrompt phrasing changed which steps Claude took, so expect to iterate. Screenshot-driven steps appeared to use up tokens quickly, and the author couldn't see where they went.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nI'm logged into [ERP system name] in this browser. For each transaction in [list, saved search, or report name], open it and set [field 1] to [value or rule] and [field 2] to [value or rule], then save. Do the first 5 and show me what you changed before continuing, and after I approve, work through the rest in batches of [number], keeping a running log of transaction IDs done, skipped, or failed. Stop when every transaction in the list is in the log, and pause and ask me if anything looks unusual or a field doesn't match what you expect.\nOriginal source: https://medium.com/@mikefkoyama/toying-with-claude-chrome-and-getting-frustrated-f285798467d0",
+    "body_sha256": "49fabd2114c504341d471ae4fade03d1964de20d046953c328e3c81f3c1bc832",
+    "archived_at": "2026-10-30T07:46:15.649647+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-30T07:46:15.649647+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

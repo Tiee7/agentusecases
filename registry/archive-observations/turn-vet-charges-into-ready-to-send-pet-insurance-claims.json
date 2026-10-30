@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-vet-charges-into-ready-to-send-pet-insurance-claims",
-  "observed_at": "2026-10-29T06:46:49.643280+00:00",
-  "html_sha256": "3dba253074ae85257303b9683759381cf3a7896b3255864d071306d2a39c03a4",
+  "observed_at": "2026-10-30T06:50:01.415928+00:00",
+  "html_sha256": "8d722c300abd9e72d53c40ea3937005946727762d2be1211e4f29baca456b04b",
   "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Turn vet charges into ready-to-send pet insurance claims\nA personal OpenClaw agent spots vet charges in the bank feed, finds the invoice in Gmail, fills the insurer's PDF form, drafts the email and tracks replies for the owner to review and send.\nDone with\nOC\nOpenClaw\nWhat they did\nThe owner uploads a bank CSV by hand, since the agent never stores bank logins. On a 15-minute tick the agent flags vet charges, searches Gmail for the matching invoice, and uses an LLM (Gemini) to extract it, falling back to OCR for scans. It fills the Petcover PDF, creates a Gmail draft, and asks on Telegram when unsure. It never sends.\nHow it went\nAcross ten live approval letters, its settlement arithmetic check passed to the cent, and a second check raised questions on five. Early bugs: its own request emails false-matched 12 claims, and old acknowledgements pushed two settled claims backwards.\nWorth knowing\nGmail OAuth in testing mode expires every 7 days, so you must re-authenticate regularly; the free Gemini tier needed a chain of fallback models once daily limits ran out.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nScan my [bank account or statement] for vet charges from the last [timeframe], find the matching invoices in my email, and fill out [insurer]'s claim form with them. Draft the claim email with the form and invoice attached, and finish by showing me the drafted claim. Don't send anything until I approve it.\nOriginal source: https://github.com/jagberg/Me.OpenClaw",
     "body_sha256": "e2d183869b1b6661c88f502c40e6e52923cbf4152e4e9ab452bb52a85b87fc8d",
-    "archived_at": "2026-10-29T06:46:49.643280+00:00",
+    "archived_at": "2026-10-30T06:50:01.415928+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-29T06:46:49.643280+00:00",
+    "at": "2026-10-30T06:50:01.415928+00:00",
     "status": "fetched",
     "error": null
   }

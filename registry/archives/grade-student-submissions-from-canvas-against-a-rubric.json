@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/grade-student-submissions-from-canvas-against-a-rubric",
-  "observed_at": "2026-10-29T07:41:27.778117+00:00",
-  "html_sha256": "d0d2ef133f2b201645b6f2395d00a114f0272b85d67575a587977a42ae923203",
+  "observed_at": "2026-10-30T07:44:39.618474+00:00",
+  "html_sha256": "d58ced0c6f4a43ebd83858ccb7c49c94e252512594cbd0f6fa37b48036c631eb",
   "body_sha256": "636f2407f875a838cb7d775fdeea0214efce8abea3c950c71e8597db331d322d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Grade student submissions from Canvas against a rubric\nAn instructor's pipeline pulls student files from Canvas, has Claude score each per criterion with comments, and posts grades back after human review.\n·\nMar 12, 2026\nDone with\nCL\nClaude\nWhat they did\nVaibhav Bhandari, who teaches a hacking course, used a personal Canvas API token to download submissions. For each one, a script extracts text, or renders scanned PDFs as images. It sends that and a YAML rubric to Claude, which returns per-criterion scores, a first-person comment and a flag. He reviews a CSV, then confirms the upload to Canvas.\nHow it went\nOn Lab 5, 13 of 22 submissions were flagged, mostly for suspected AI-generated content or thin evidence. Scoring was consistent but not calibrated to his own grading. He still read every capstone submission and heard every presentation.\nWorth knowing\nAdd examples of what a 90 looks like in the rubric's extra instructions, since scores weren't calibrated to his grading. Responses aren't cached, so re-runs call the API again.\nTry it yourself\nwith\nClaude\nCopy prompt\nRead the student submissions in [folder path of downloaded Canvas files] and grade each against the rubric in [rubric file]. For every student, write a score and a short comment per criterion into a single spreadsheet at [output file], and flag any submission you're unsure about. Do not post anything back to Canvas; stop once the spreadsheet is complete so I can review it first.\nOriginal source: https://www.vitraag.com/2026/03/12/ai-assisted-grading-canvas-api-claude/",
     "body_sha256": "636f2407f875a838cb7d775fdeea0214efce8abea3c950c71e8597db331d322d",
-    "archived_at": "2026-10-29T07:41:27.778117+00:00",
+    "archived_at": "2026-10-30T07:44:39.618474+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:41:27.778117+00:00",
+    "at": "2026-10-30T07:44:39.618474+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-claude-desktop-to-find-a-path-to-linux-supp",
-  "observed_at": "2026-10-29T06:58:39.653821+00:00",
-  "html_sha256": "27416d4426f5880367720a41e6ca55a3638e8b18e2720b9496a710220cd36924",
+  "observed_at": "2026-10-30T07:01:51.461133+00:00",
+  "html_sha256": "6d92453ef199e7d711e9f65a2b039e8b60608c1ab59811be88df0d3fc0fde61b",
   "body_sha256": "cdca044a263bce7d1beb05d81915def869475168cac4faee3b51a2e48f628dae",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Reverse engineer Claude Desktop to find a path to Linux support\nA maintainer pointed Claude at the minified Claude Desktop app to find why Cowork only runs on macOS; it found the VM and sandbox layers and mapped a route to Linux.\nDone with\nCC\nClaude Code\nCW\nClaude Cowork\nWhat they did\nThe maintainer of a Linux repackaging script for Claude Desktop extracted the app's minified JavaScript from the Windows installer and ran it through prettier. Claude then went through roughly 170,000 lines, renamed the obfuscated symbols, and documented the architecture. A contributor found x64 VM image URLs, and the maintainer downloaded and inspected that image.\nHow it went\nIt found a macOS-only Swift addon driving a Linux VM, with bubblewrap and seccomp inside it. It laid out three Linux routes: stub the addon, add bubblewrap, or run Firecracker. Nothing was implemented.\nWorth knowing\nMinified symbol names change with each release, so re-trace the patterns instead of searching for the names in this write-up (analysis covers version 1.1.799).\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReverse engineer [the app or binary] by inspecting its minified or compiled code to understand how a specific feature works or why it's limited to a certain platform, then write up what you find including any architectural layers involved. Produce a clear technical summary and a proposed path forward, stopping short of modifying or redistributing the original software.\nOriginal source: https://aaddrick.com/blog/reverse-engineering-claude-desktops-cowork-mode-a-deep-dive-into-vm-isolation-and-linux-possibilities",
     "body_sha256": "cdca044a263bce7d1beb05d81915def869475168cac4faee3b51a2e48f628dae",
-    "archived_at": "2026-10-29T06:58:39.653821+00:00",
+    "archived_at": "2026-10-30T07:01:51.461133+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T06:58:39.653821+00:00",
+    "at": "2026-10-30T07:01:51.461133+00:00",
     "status": "fetched",
     "error": null
   }

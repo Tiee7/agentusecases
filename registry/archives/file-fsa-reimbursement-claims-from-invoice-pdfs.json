@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/file-fsa-reimbursement-claims-from-invoice-pdfs",
-  "observed_at": "2026-10-29T06:58:53.663516+00:00",
-  "html_sha256": "daaca35ab32e11089c6d8325f1dfb9d78040a42ccb14987f20bd61a5267e4453",
+  "observed_at": "2026-10-30T07:02:05.449121+00:00",
+  "html_sha256": "d2653ce515f8ce37db0d8ebc98e53654684ccba9715fbae7f240bdca37c233b2",
   "body_sha256": "ecbf0481f48906c35f5fd3b34a7c0e2e74a473462bf3af19c76be774ec985961",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "File FSA reimbursement claims from invoice PDFs\nClaude Code with the Chrome extension parsed Amazon invoice PDFs and spotted duplicates, but couldn't upload files and was slow, so the user had to step in.\nDone with\nCC\nClaude Code\nCH\nClaude in Chrome\nWhat they did\nThe user exported 2025 Amazon invoice PDFs showing FSA-eligible amounts. They told Claude Code to read each PDF's eligible amount and order date, then submit a reimbursement claim in the already-open Optum portal through the Chrome extension. Claude parsed the PDFs and flagged two duplicates. The extension couldn't upload files, and ChatGPT agent mode and Claude Desktop also failed. Claude Code with Playwright MCP worked.\nHow it went\nPlaywright MCP could upload files and ran faster. After the first submission Claude Code wrote a script for the rest, and about a dozen claims were submitted in roughly two minutes.\nWorth knowing\nThe Chrome extension needed other Chrome extensions disabled to take screenshots, and it took nearly a minute to find a button. Playwright MCP avoided both problems.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nParse the invoice PDFs in [folder path] to extract amounts, dates and vendors for my FSA reimbursement claims, flagging any duplicates. Produce a clean summary spreadsheet ready for me to manually upload to my FSA portal, since file uploads may need to be done by hand.\nOriginal source: https://b2.broom9.com/?p=14418",
     "body_sha256": "ecbf0481f48906c35f5fd3b34a7c0e2e74a473462bf3af19c76be774ec985961",
-    "archived_at": "2026-10-29T06:58:53.663516+00:00",
+    "archived_at": "2026-10-30T07:02:05.449121+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T06:58:53.663516+00:00",
+    "at": "2026-10-30T07:02:05.449121+00:00",
     "status": "fetched",
     "error": null
   }

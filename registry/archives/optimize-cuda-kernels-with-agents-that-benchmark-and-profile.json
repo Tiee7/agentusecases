@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/optimize-cuda-kernels-with-agents-that-benchmark-and-profile",
-  "observed_at": "2026-10-29T06:48:29.644773+00:00",
-  "html_sha256": "a3813afcc611084458c43f05ec0c9ff15925908cac7b19bd5210eaf25eebd14c",
+  "observed_at": "2026-10-30T06:51:41.420082+00:00",
+  "html_sha256": "161945d8c10cb8fd131d507acf2603463336d88381aa186f80bc1070259444e4",
   "body_sha256": "a8df795106433ee2f4d7925794b88ca15f9db9b9eac2d408585729c91c144f9c",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Optimize CUDA kernels with agents that benchmark and profile\nAI agents run a C++ CUDA test harness, get benchmarks, and profile with Nsight to optimize kernels, built with LangGraph.\n·\nSep 25, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe user gives a workload description, or supplies their own signature, reference, kernel and input cases. A LangGraph agent proposes kernel and launch-config changes. A C++ harness compiles them with NVRTC and runs them through the CUDA Driver API. Python checks outputs against NumPy and times each candidate. Failed candidates get repaired within the iteration budget. Optional flags add Nsight Compute profiling and NVIDIA documentation research.\nHow it went\nThe README shows float32 GEMM runs on an RTX 3060 Laptop GPU, with a second run continuing from the first run's best kernel. It states no speedup numbers, and no comparison against cuBLAS.\nWorth knowing\nGenerated input scripts run unsandboxed on your machine and API usage (default gpt-5-mini) is billed to you. A generated reference is not an independent check of correctness.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOptimize the CUDA kernel in [file path] for [operation, e.g. matrix multiply]. Build a test harness that checks correctness, benchmark the baseline, profile it with Nsight, and try improvements one at a time, keeping only those that pass the correctness check. Stop when you have a faster version and a table of each change with its speedup.\nOriginal source: https://github.com/bertaye/agentic-cuda-optimizer",
     "body_sha256": "a8df795106433ee2f4d7925794b88ca15f9db9b9eac2d408585729c91c144f9c",
-    "archived_at": "2026-10-29T06:48:29.644773+00:00",
+    "archived_at": "2026-10-30T06:51:41.420082+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:48:29.644773+00:00",
+    "at": "2026-10-30T06:51:41.420082+00:00",
     "status": "fetched",
     "error": null
   }

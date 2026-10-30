@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/process-supplier-invoices-from-gmail-through-approval-and-pa",
-  "observed_at": "2026-10-29T07:06:27.789532+00:00",
-  "html_sha256": "03bddab10b9f60ae717211d61b8fce144f0d0730ed765ccd9dde0be0411a7aea",
+  "observed_at": "2026-10-30T07:09:39.690657+00:00",
+  "html_sha256": "531ad56958c9f3178a95c896bf8c950b27a704e8370c54e4d2a5bd9bd6cb1e25",
   "body_sha256": "a06a5c9cefc9ceb647e39031e53616d8a9578ecd61d196ec9653fcfcd1698a1b",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Process supplier invoices from Gmail through approval and payment\nAn n8n pipeline extracts invoice data, checks duplicates and suppliers, routes high-value invoices for approval, then creates accounting entries and schedules payment.\nDone with\nN8\nn8n\nWhat they did\nThis is Part 1 of a 3-part series, and it covers the infrastructure only. The author runs n8n in queue mode with PostgreSQL and Redis in Docker, plus a worker. Tables for suppliers, invoices and an audit log are set up, along with Gmail, OpenAI, Postgres and Slack credentials. The planned flow is Gmail, OCR, AI extraction, duplicate and supplier checks, classification, approval, journal entry, payment.\nHow it went\nNo results or numbers yet. The article ends with a running stack and schema ready. The extraction, validation, approval and accounting steps are left to Parts 2 and 3.\nWorth knowing\nQueue mode can retry stalled jobs, so each step must be idempotent. That is why duplicate detection matters, and why the n8n encryption key needs a backup.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that watches Gmail label [invoices] for supplier invoices, extracts supplier, amount, due date and invoice number, and checks for duplicates and known suppliers in [my supplier sheet]. Invoices over [amount] should go to [approver] for approval. It's finished when a test invoice reaches the approval step; pause before creating any accounting entry or scheduling any payment and show me the details.\nOriginal source: https://medium.com/@beulahdaizy/i-built-an-ai-powered-invoice-automation-pipeline-in-n8n-heres-how-part-1-the-stack-602d839eaf41",
     "body_sha256": "a06a5c9cefc9ceb647e39031e53616d8a9578ecd61d196ec9653fcfcd1698a1b",
-    "archived_at": "2026-10-29T07:06:27.789532+00:00",
+    "archived_at": "2026-10-30T07:09:39.690657+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:06:27.789532+00:00",
+    "at": "2026-10-30T07:09:39.690657+00:00",
     "status": "fetched",
     "error": null
   }

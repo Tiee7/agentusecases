@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-support-queries-and-bug-checks-from-slack-threads",
-  "observed_at": "2026-10-29T07:34:53.829463+00:00",
-  "html_sha256": "bc2ab14721de45d33a7624d104361e7ac451a17fa3c3c4335170c2c67c41ac99",
+  "observed_at": "2026-10-30T07:38:05.714423+00:00",
+  "html_sha256": "db8261bb670d6a48d7f2cb6f829ec704b125f14f193694b7f4f0248eea3c3f61",
   "body_sha256": "921069e9d8f69ef21fd108415078b4ea8c667af1dc7558c70c17e71404f9816e",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run support queries and bug checks from Slack threads\nDoozy, a Slack agent, takes tasks from support staff and runs them against Postgres, Stripe, GitHub and Linear in a sandbox, then posts results in the thread; 13 people use it daily.\n·\nOct 20, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nAt Spur, support staff mention Doozy in a Slack thread with a task. It runs in a fresh sandbox (E2B) holding no credentials, while gateways outside add them per request. It queries Postgres, Stripe, GitHub, Linear, PostHog, MCP servers or the web, then posts results and files back in the thread. Destructive tools start denied until owners enable them.\nHow it went\n13 people at Spur use it daily, mostly support and success rather than engineers, and the author calls it a critical part of the team. The first version was hacky and barely read files sent in a thread.\nWorth knowing\nKeep credentials outside the sandbox and deny destructive tools by default; the author says injection can still misuse granted tools, though it can't leak a key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a helper I can hand support tasks to. When I describe a problem, like [a customer's failed payment or a suspected bug], look it up using read-only access to [your database, Stripe, GitHub and Linear] and write up what you found with links to the records. You're done when you've given me a short summary I could post in a Slack thread. Never change or delete any data, and pause and show me anything you'd write or send before doing it.\nOriginal source: https://news.ycombinator.com/item?id=50166597",
     "body_sha256": "921069e9d8f69ef21fd108415078b4ea8c667af1dc7558c70c17e71404f9816e",
-    "archived_at": "2026-10-29T07:34:53.829463+00:00",
+    "archived_at": "2026-10-30T07:38:05.714423+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:34:53.829463+00:00",
+    "at": "2026-10-30T07:38:05.714423+00:00",
     "status": "fetched",
     "error": null
   }

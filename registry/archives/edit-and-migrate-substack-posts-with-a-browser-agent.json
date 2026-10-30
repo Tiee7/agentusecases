@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/edit-and-migrate-substack-posts-with-a-browser-agent",
-  "observed_at": "2026-10-29T06:59:05.662829+00:00",
-  "html_sha256": "3943ecef2dda8f0344011f6d2cedfcaca4924c2d8ef4e11e3fc518dd3b82e158",
+  "observed_at": "2026-10-30T07:02:17.458142+00:00",
+  "html_sha256": "90881e134574b2dc0a0271b2461b25cfc9f28e90e36e1a279a6e773f3a618a47",
   "body_sha256": "d5b0be3c61fb3293d17a74732a02027b9023ae020145f2ed8b80933ce62c346d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Edit and migrate Substack posts with a browser agent\nThe author gave Claude in Chrome three Substack tasks (live edit, post migration, note insertion), walked away, and returned to find all three published correctly.\nDone with\nCH\nClaude in Chrome\nWhat they did\nThe author pasted migration prompts into Claude in Chrome and left. For each task it opened the Substack editor and mapped the document tree to find exact insertion positions. It then inserted content through the editor's insertContentAt command, after execCommand merged text inline and Claude undid it. It checked the publish dialog's email settings and verified the result with screenshots and JavaScript.\nHow it went\nAll three tasks finished correctly: two edits to published posts sent no email, and the migrated post published with email on. One stray click on the comments setting was caught and fixed from a screenshot.\nWorth knowing\nHave Claude check the delivery settings in the publish dialog: the new post defaulted to paid-only audience and restricted comments, and had to be changed to Everyone.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen my Substack dashboard in this browser and do these tasks: [task 1: edit a live post, e.g. fix the headline of post X], [task 2: migrate a post from URL Y], [task 3: insert a note]. Keep formatting and links intact. Before you publish or save any change to a live post, pause and show me what will change. When finished, list each post you touched with its link.\nOriginal source: https://priscasolutionsai.substack.com/p/i-walked-away-while-claude-edited",
     "body_sha256": "d5b0be3c61fb3293d17a74732a02027b9023ae020145f2ed8b80933ce62c346d",
-    "archived_at": "2026-10-29T06:59:05.662829+00:00",
+    "archived_at": "2026-10-30T07:02:17.458142+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T06:59:05.662829+00:00",
+    "at": "2026-10-30T07:02:17.458142+00:00",
     "status": "fetched",
     "error": null
   }

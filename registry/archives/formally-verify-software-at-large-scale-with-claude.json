@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/formally-verify-software-at-large-scale-with-claude",
-  "observed_at": "2026-10-29T07:37:09.882973+00:00",
-  "html_sha256": "926f2d2ca0adaca1f9cbf38acc310e4a8c560f7fc1d7f3b2b8c30d86255b7141",
+  "observed_at": "2026-10-30T07:40:21.912650+00:00",
+  "html_sha256": "39f64514b6c5a62ec5c9f262a38b903d3043133c291f3541cec2fbcdf8240b01",
   "body_sha256": "78e5352649f68cc0ab9954ca3750ce7a81ba76f10e03703ecaeca3f83830a649",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Formally verify software at large scale with Claude\nAnthropic's Frontier Red Team used Claude to formally verify software, proving code is free of certain bugs on codebases larger than was historically feasible.\n·\nOct 22, 2026\nDone with\nCL\nClaude\nWhat they did\nThe team turned existing OSS-Fuzz fuzz tests into specs: the compiled RISC-V binary never crashes on any input under 64 MB. Using Theorem's RISC-V and Linux semantics, Claude wrote Rocq proofs that a proof checker verified. When a proof hit a bug, Claude patched the code, the spec was regenerated, and Claude continued. Patches were penalized and audited for reward hacking.\nHow it went\nOver a few weeks Claude proved no-crash for 239 entry points across 123 libraries, about 180 million lines of Rocq. It also found hundreds of bugs. The proofs cover only single-threaded static RISC-V binaries.\nWorth knowing\nProofs can take hundreds of millions of tokens each. Agents that could copy each other's proofs used 17% fewer tokens in the 36-task test.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to formally verify that [a specific module or library in my codebase at path] is free of [a bug class, e.g. out-of-bounds access or integer overflow]. Pick a suitable verification tool for [language], write the specifications and proofs, and run them. Finish with a report listing what was proven, what failed, and any bugs found, and don't change my source code without showing me the diff first.\nOriginal source: https://www.anthropic.com/research/formal-verification",
     "body_sha256": "78e5352649f68cc0ab9954ca3750ce7a81ba76f10e03703ecaeca3f83830a649",
-    "archived_at": "2026-10-29T07:37:09.882973+00:00",
+    "archived_at": "2026-10-30T07:40:21.912650+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:37:09.882973+00:00",
+    "at": "2026-10-30T07:40:21.912650+00:00",
     "status": "fetched",
     "error": null
   }

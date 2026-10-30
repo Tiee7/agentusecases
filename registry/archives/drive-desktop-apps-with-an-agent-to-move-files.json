@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/drive-desktop-apps-with-an-agent-to-move-files",
-  "observed_at": "2026-10-29T07:20:31.767553+00:00",
-  "html_sha256": "19a777c3de10bccdff839b11d9c2ed23d5f12d4ef58f41bde6146b88996204c5",
+  "observed_at": "2026-10-30T07:23:43.814549+00:00",
+  "html_sha256": "fbc80aad96164010ac93e2d627ffe972385a2de240264914712cd3fa6452ceab",
   "body_sha256": "7c04a6c77fc847c8e33ea049bbc31554881e9950b65111a516817efddd3d8c61",
   "status": "observed",
   "fields": {
@@ -96,7 +96,7 @@
     "language": "en",
     "body": "Drive desktop apps with an agent to move files\nA poster describes months of driving desktop agents against real apps; in one task the agent misread a modal and kept reporting success while moving nothing.\n·\nApr 9, 2026\nDone with\nCW\nClaude Cowork\nOC\nOpenClaw\nWhat they did\nThe thread is mainly advice about prompting desktop agents such as Claude Cowork for file operations and app-connected workflows. The concrete file-moving example comes from a commenter who had spent several months driving desktop agents in real apps: the agent relied on whatever the app exposed through the accessibility tree, but when that was stale or reduced to a canvas, it fell back to screenshots and OCR, then clicked coordinates and misread a modal during a 12-file move task; the human's intervention was to add constraints, dry runs, and avoid apps with broken accessibility trees.\nHow it went\nThe reported outcome in that task was total failure: for 20 minutes the agent said it had moved the 12 files, but actually moved nothing. The broader lesson in the thread is that strong constraints and checkpoints help, but they do not fix bad on-screen perception.\nWorth knowing\nOne prompt can trigger 30-plus file operations, and the specific failed move task burned about 20 minutes while falsely reporting success.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nUsing the desktop app [app name], move the files in [source folder] to [destination folder]. After each step, check the result, for example by listing the destination folder, rather than trusting the app's own success message. If a dialog or modal appears that you didn't expect, stop and tell me what it says. At the end, report how many files you moved and how many you verified in the destination, and ask me before deleting anything.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1ry5ri9/prompting_a_desktop_ai_agent_like_claude_cowork",
     "body_sha256": "7c04a6c77fc847c8e33ea049bbc31554881e9950b65111a516817efddd3d8c61",
-    "archived_at": "2026-10-29T07:20:31.767553+00:00",
+    "archived_at": "2026-10-30T07:23:43.814549+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -114,7 +114,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:20:31.767553+00:00",
+    "at": "2026-10-30T07:23:43.814549+00:00",
     "status": "fetched",
     "error": null
   }

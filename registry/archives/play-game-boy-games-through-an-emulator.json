@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/play-game-boy-games-through-an-emulator",
+  "observed_at": "2026-10-30T07:45:55.621707+00:00",
+  "html_sha256": "855b0210ca079638ff79b34185f82fde0dbeb941a2a9a5b0e131509b6e8181bc",
+  "body_sha256": "fdf2e475ed6ec258d4fc5b83ec7f5fd20404594e82b49bb0fdcc203c0770a0b7",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Play Game Boy games through an emulator",
+      "sha256": "7b1a50f059c5f366957ee370f030f4621a283869bce922db76ef7a9550188759"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer built an agent where Claude watches game frames from PyBoy, decides actions and presses buttons, using memory tools and periodic summaries.\n·\nOct 29, 2026",
+      "sha256": "f0ef8ed141a524f658951a1543587554fdbc671dfbbd152d1fc4babb196f4478"
+    },
+    "method": {
+      "status": "observed",
+      "value": "You supply a ROM, an Anthropic API key and optionally a saved state. Claude 3.7 gets recent screenshots from PyBoy and answers with tool calls. It sends button sequences, sets a goal, and adds, updates or removes memory items. In the default turn-based mode, the emulator advances only when Claude sends inputs. Every 30 turns by default, it writes a progress summary.",
+      "sha256": "2c2e1558a3bb0c745a132da02721274e428a296a3ddee1bd5f398f3b906b3245"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The README gives no results or progress numbers. It describes a working agent with frame logging for debugging. Movement is purely button-based, with no coordinate helpers.",
+      "sha256": "0ee72cb55fd34313918483930377433d58c7cfa543b6a84f4dbaa467059eefe2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Context is capped by settings: 30 messages and 5 screenshots by default. Thinking budget is 16000 tokens per turn, so API costs may add up.",
+      "sha256": "0110496379d527e17599beca8e849c978d86b4ff9da71365b3a2284aa71d0bca"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/jmurth1234/ClaudePlayer"
+      ],
+      "sha256": "0a482d40c4c98051e0b34aec8c54f88b9a7d9e45e71e30a32f53a736fcb9d6b4"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "games",
+        "label": "Games & Simulations"
+      },
+      "sha256": "865e93f4561b96da4bca84cc34111a7c7e482b35da512e5d554f177c3f1629e9"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-29",
+      "sha256": "e1367037a0810c421521d8e632205e4999e0f2efb694b3212b4c00bd8260ed6d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e7cf2d41ad63e4aa964f16c1d9a9be5a4b813433421668862f145c706700f183",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Play Game Boy games through an emulator\nA developer built an agent where Claude watches game frames from PyBoy, decides actions and presses buttons, using memory tools and periodic summaries.\n·\nOct 29, 2026\nDone with\nCL\nClaude\nWhat they did\nYou supply a ROM, an Anthropic API key and optionally a saved state. Claude 3.7 gets recent screenshots from PyBoy and answers with tool calls. It sends button sequences, sets a goal, and adds, updates or removes memory items. In the default turn-based mode, the emulator advances only when Claude sends inputs. Every 30 turns by default, it writes a progress summary.\nHow it went\nThe README gives no results or progress numbers. It describes a working agent with frame logging for debugging. Movement is purely button-based, with no coordinate helpers.\nWorth knowing\nContext is capped by settings: 30 messages and 5 screenshots by default. Thinking budget is 16000 tokens per turn, so API costs may add up.\nTry it yourself\nwith\nClaude\nCopy prompt\nBuild me a Python agent that plays [Game Boy game] through the PyBoy emulator using Claude's API. Each step it should send the current screen frame to Claude, get back a button press, and apply it, with a simple memory file and a summary written every [number] steps. It's done when I can run one command, watch it play for a few minutes, and see the summary log; tell me which ROM and API key setup I need to provide.\nOriginal source: https://github.com/jmurth1234/ClaudePlayer",
+    "body_sha256": "fdf2e475ed6ec258d4fc5b83ec7f5fd20404594e82b49bb0fdcc203c0770a0b7",
+    "archived_at": "2026-10-30T07:45:55.621707+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-30T07:45:55.621707+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

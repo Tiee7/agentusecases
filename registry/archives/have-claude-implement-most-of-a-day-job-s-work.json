@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/have-claude-implement-most-of-a-day-job-s-work",
-  "observed_at": "2026-10-29T07:24:21.846325+00:00",
-  "html_sha256": "7ab04104aea56840cd4e64559e0efc29e028e663e0ad26088ad3a8b8cd819b7d",
+  "observed_at": "2026-10-30T07:27:33.772669+00:00",
+  "html_sha256": "8b939d595cd3329504a00cc5da0616e4829c35c19450a9e2830809505afd20be",
   "body_sha256": "119c7ea653f1da2e9f30466287d39187d1d15aaf6f4ae28c6b6f671b7892a3bf",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Have Claude implement most of a day job's work\nThe poster gives Claude work tasks and has it implement most of the functionality, though the last 10% still takes the most time.\n·\nApr 11, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster built a simple .NET console app around Claude CLI and GitLab. Every 15 minutes it pulls assigned issues, classifies whether each one is ready, drafts a GitLab reply for unclear tickets, or starts Claude on the repo plus the issue text and image attachments; Claude then works on a new branch, opens a PR, and later applies PR comments, while the poster manually reviews and adjusts drafts before posting or merging.\nHow it went\nThey say it automated about 80% of the job and cut their hands-on time to roughly 2-3 hours a day for review and testing. On a recent masterdata feature, Claude produced most of a 2-3 hour task in 15-20 minutes, but the poster says it only works because they check every PR and still fix issues like style-guide adherence.\nWorth knowing\nTheir practical catch was usage limits: they were on Claude Max, only started new implementations with more than 20% tokens left, and let the loop run overnight.\nTry it yourself\nwith\nClaude\nCopy prompt\nHere is a work task: [describe the task, requirements, and any relevant code or docs]. Implement as much of it as you can, then list what is left unfinished or uncertain, especially edge cases, testing, and integration points. Finish with a checklist of the remaining steps I should handle myself.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1shngqm/i_automated_most_of_my_job",
     "body_sha256": "119c7ea653f1da2e9f30466287d39187d1d15aaf6f4ae28c6b6f671b7892a3bf",
-    "archived_at": "2026-10-29T07:24:21.846325+00:00",
+    "archived_at": "2026-10-30T07:27:33.772669+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T07:24:21.846325+00:00",
+    "at": "2026-10-30T07:27:33.772669+00:00",
     "status": "fetched",
     "error": null
   }

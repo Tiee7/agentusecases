@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-agents-edit-word-documents-via-mcp",
-  "observed_at": "2026-10-29T06:48:31.676710+00:00",
-  "html_sha256": "4010ba0f5522d997176487b751b5429a729af0ddb2a2cfb71b3bc051548ba7ba",
+  "observed_at": "2026-10-30T06:51:43.414997+00:00",
+  "html_sha256": "005bcc333805de678bb38fff21b283faa81920e9e3f510ac0d720f4775bc1a74",
   "body_sha256": "00074383368ccf010452bdf40dd60ded1d914fb43eb366f95a6cd6fc25af6795",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Let agents edit Word documents via MCP\nAn MCP lets AI agents edit Word documents, handling the OOXML mechanics, originally built for pharma regulatory document editing.\n·\nSep 28, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent edits a clean HTML version of the Word file instead of raw OOXML. A small fine-tuned model (3–8B, LoRA) turns each changed block's HTML into OOXML. A deterministic locator finds the matching block, then tracked changes are computed by diffing and patched into the .docx. The post doesn't mention pharma.\nHow it went\nOn the vendor's own 279-task benchmark, it was 2.7–2.9x cheaper and 2.7–3.5x faster than Anthropic's DOCX skill, with a higher pass rate. Pass rate on hyperlinks was only 25%.\nWorth knowing\nThe benchmark is the vendor's own. Comments, image attachment and latent styles aren't supported yet.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nOpen the Word document at [file path] and make these edits: [describe the changes, e.g. update section 3 wording, fix numbering, and add tracked changes]. Keep the original formatting and use tracked changes so I can review everything. Save the result as a new copy rather than overwriting the original, and list every change you made.\nOriginal source: https://www.vespper.com/blog/launching-vespper-docx-mcp",
     "body_sha256": "00074383368ccf010452bdf40dd60ded1d914fb43eb366f95a6cd6fc25af6795",
-    "archived_at": "2026-10-29T06:48:31.676710+00:00",
+    "archived_at": "2026-10-30T06:51:43.414997+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:48:31.676710+00:00",
+    "at": "2026-10-30T06:51:43.414997+00:00",
     "status": "fetched",
     "error": null
   }

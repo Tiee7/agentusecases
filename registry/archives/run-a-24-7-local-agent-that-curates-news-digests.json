@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-24-7-local-agent-that-curates-news-digests",
-  "observed_at": "2026-10-29T07:36:37.795293+00:00",
-  "html_sha256": "0e935bfe4687d8e3939d67914e4fb0ffa5f94d1f531a1d14c513e21784b99aee",
+  "observed_at": "2026-10-30T07:39:49.855604+00:00",
+  "html_sha256": "82e937b405dcc33438643f70a685164e62aaca4530592e293efdf81b021decf6",
   "body_sha256": "01e1c363391f852d3b3790a9664fc6b940cf9341db2e881f38321e6ea7527f41",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a 24/7 local agent that curates news digests\nThe author runs Hermes Agent on a Proxmox VM with a local Qwen model, monitoring RSS feeds, curating news digests, and reporting via Telegram.\nDone with\nHA\nHermes Agent\nWhat they did\nHermes Agent runs on a small Proxmox VM (4 vCPU, 8 GB RAM, no GPU) and calls a Qwen 3.6 MoE llama-server on the author's RTX 5060 Ti. The author sent one Telegram message asking for a daily 8 AM cron job. Hermes created it, pulled RSS and MCP data, compared against its memory, and sent briefings to Telegram topics.\nHow it went\nThe agent delivers daily briefings and a 9 AM startup/VC digest at no API cost. Memory builds up over weeks into trend-aware reports, and Hermes writes reusable skills. The post gives no formal quality measurements.\nWorth knowing\nDon't over-prompt the cron job: a clear goal worked better than detailed steps. The fast MoE model beat the dense 27B, which was about 3x slower.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up a news digest for me. Monitor these RSS feeds: [list of feed URLs], and every [morning at 7am / every 4 hours] pick the [5-10] most relevant stories on [topics I care about], skipping duplicates and clickbait. Send me a short digest on [Telegram / other channel] with a one-line summary and link for each story, and confirm by sending me a test digest now.\nOriginal source: https://njannasch.dev/blog/hermes-agent-local-ai-automation/",
     "body_sha256": "01e1c363391f852d3b3790a9664fc6b940cf9341db2e881f38321e6ea7527f41",
-    "archived_at": "2026-10-29T07:36:37.795293+00:00",
+    "archived_at": "2026-10-30T07:39:49.855604+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:36:37.795293+00:00",
+    "at": "2026-10-30T07:39:49.855604+00:00",
     "status": "fetched",
     "error": null
   }

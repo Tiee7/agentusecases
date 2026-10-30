@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/validate-firmware-in-simulation-with-ai-agents",
+  "observed_at": "2026-10-30T07:46:05.618092+00:00",
+  "html_sha256": "a571cb01d9be829ecc8d862c095ebad5f256927983e24ce67a53ecb74f1499b7",
+  "body_sha256": "65f4698a973c6066b849980a918d685c2cf33e0d9a9a578d171c0e7451f038f7",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Validate firmware in simulation with AI agents",
+      "sha256": "8b623fe0c0004243c88b43e76d6e5958a818f721c2f8d520832ba04eaa6b4248"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Simantic gives AI agents virtual devboards and a firmware code reviewer so they can test firmware without physical hardware.\n·\nOct 29, 2026",
+      "sha256": "fbcb8b90bb1d4096690d7217a39bad60f922a21d17e1c12d2e05ddb7299955ae"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Simantic gives agents virtual devboards that can be programmed and run with one API call from the terminal, backed by a simulation engine the founders rewrote in Rust after a Renode wrapper proved too slow and inaccurate. An AI reviewer uses the simulation as evidence for firmware decisions, and CI validates each commit against a simulated microcontroller.",
+      "sha256": "9444b96399746ab9afe6c9958bc4c47d008f298f3adf4b32de0e0193def0eb15"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The founders say validation that took hours on devboards now takes seconds. An early satellite startup tested firmware on hardware it lacked, at about a hundredth of the cost and time. Chip support is limited to some STM32, ESP32 and RP2040 models.",
+      "sha256": "9761f55384cd5cb69a7d437b69e9f0fc5cfd786f101ad26f3d268fc891401a27"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Supported models are limited to certain STM32F0/F4/H7, ESP32-S3/C3 and RP2040 parts, so check your microcontroller is covered first.",
+      "sha256": "1c585608e12fced56b7d0324a332f22cf8875b59bd6a0856eee8ee9699300043"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50291116"
+      ],
+      "sha256": "abbc8f682bd37aef7404b259346e0c1c0a0abecffa28f7f74f1afe102b1010d1"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-29",
+      "sha256": "e1367037a0810c421521d8e632205e4999e0f2efb694b3212b4c00bd8260ed6d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "f388524eec7ccbed75c13f5e25502ee22d3e8d958d630aa463091ab4c4397ae7",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Validate firmware in simulation with AI agents\nSimantic gives AI agents virtual devboards and a firmware code reviewer so they can test firmware without physical hardware.\n·\nOct 29, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nSimantic gives agents virtual devboards that can be programmed and run with one API call from the terminal, backed by a simulation engine the founders rewrote in Rust after a Renode wrapper proved too slow and inaccurate. An AI reviewer uses the simulation as evidence for firmware decisions, and CI validates each commit against a simulated microcontroller.\nHow it went\nThe founders say validation that took hours on devboards now takes seconds. An early satellite startup tested firmware on hardware it lacked, at about a hundredth of the cost and time. Chip support is limited to some STM32, ESP32 and RP2040 models.\nWorth knowing\nSupported models are limited to certain STM32F0/F4/H7, ESP32-S3/C3 and RP2040 parts, so check your microcontroller is covered first.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm developing firmware for [board or microcontroller] and don't always have the hardware on hand. Set up a simulation workflow, using an emulator like Renode or QEMU if one exists for my board, so you can build my firmware in [repo path], run it virtually, and check that it behaves as expected for [behavior to verify]. Then review the code for bugs such as race conditions and bad register use. You're done when you've run the simulated tests and given me a pass/fail report with the issues you found.\nOriginal source: https://news.ycombinator.com/item?id=50291116",
+    "body_sha256": "65f4698a973c6066b849980a918d685c2cf33e0d9a9a578d171c0e7451f038f7",
+    "archived_at": "2026-10-30T07:46:05.618092+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-30T07:46:05.618092+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

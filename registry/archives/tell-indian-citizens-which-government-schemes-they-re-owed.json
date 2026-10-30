@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/tell-indian-citizens-which-government-schemes-they-re-owed",
-  "observed_at": "2026-10-29T06:49:13.630974+00:00",
-  "html_sha256": "e110d50e81cca859fd7550e222fe87467ada9c41a2e1ee40a795ca6c4454953d",
+  "observed_at": "2026-10-30T06:52:25.425742+00:00",
+  "html_sha256": "2a5e393f08f328b884feb0e801cc7dc8bdc3a41f409db55239844ad3218b1d56",
   "body_sha256": "d891a38c1f27024ba958db791f952d074a77c5379aee31f0f7f32ac7ce322355",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Tell Indian citizens which government schemes they're owed\nAn agent built on Sanity queries real content to tell people in India which government schemes they are entitled to.\n·\nOct 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe agent runs on Inception's Mercury via the Vercel AI SDK and reaches a Sanity Context MCP endpoint in GROQ mode. It extracts the person's details, reads the schema, and makes one GROQ query for schemes with typed eligibility rules. It then checks every exclusion rule. A second pass formats cards as JSON, and the route attaches the apply and source URLs from the dataset.\nHow it went\nWorks in English and Kannada with follow-ups. The dataset has 125 schemes, but only 10 flagships have structured rules (33 rules, 11 exclusions). A run takes 30 to 45 seconds. The author did not verify every rule line by line.\nWorth knowing\nThe first Knowledge Base route burned 20 tool calls without answering. Switching to GROQ mode fixed it, but it needs a deployed Studio.\nTry it yourself\nwith\nPerplexity Comet\nCopy prompt\nI am a [age] year old [occupation] living in [state] in India with household income of about [amount] and [other relevant details like caste category, land, or family]. Search official government sites to find central and state schemes I may be eligible for. For each, give the benefit, eligibility, documents needed, and the official application link. Do not submit any applications or enter personal ID numbers.\nOriginal source: https://dev.to/varshithvhegde/entitled-an-ai-agent-that-tells-indians-which-government-schemes-theyre-owed-built-on-sanity-4dml",
     "body_sha256": "d891a38c1f27024ba958db791f952d074a77c5379aee31f0f7f32ac7ce322355",
-    "archived_at": "2026-10-29T06:49:13.630974+00:00",
+    "archived_at": "2026-10-30T06:52:25.425742+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-29T06:49:13.630974+00:00",
+    "at": "2026-10-30T06:52:25.425742+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/analyze-10-ks-for-value-investing",
-  "observed_at": "2026-10-29T07:29:37.946797+00:00",
-  "html_sha256": "03747b333cf18b147c75cb6572794cbfb96ab2acc086dd70107a6cf777ca1b89",
+  "observed_at": "2026-10-30T07:32:49.673610+00:00",
+  "html_sha256": "9161f8a217955413579ba07565c65b67f50d58f84cd27016ac9f6647c6421204",
   "body_sha256": "3187456cacccbdb7f13603d9df7dcd30915b21dc89ab03057fe955c74b735685",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Analyze 10-Ks for value investing\nThe poster is experimenting with an LLM agent that reads 10-Ks and handles normalized earnings, ROIC, owner earnings and a rough reverse DCF.\n·\nOct 13, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster was testing an LLM investing assistant that read 10-Ks and tried to produce normalized earnings, ROIC, owner earnings, and a rough reverse DCF. In the thread, they say they first used EDGAR/XBRL Companyfacts, then easier APIs, but ran into custom tags, footnotes, and backtest leakage; commenters pushed a workflow that combines structured headline figures with retrieval over filing text, stores source passages and year-by-year claims outside the chat, and leaves the human to verify tricky comparability issues.\nHow it went\nThe source reports no performance results, only problems and partial fixes: feeding whole filing histories hit context limits, chunking led to missed evidence and invented facts, and backtests looked unrealistically good because of restatements and filing lag. The poster’s takeaway was that retrieval with citations, sanity checks, and point-in-time inputs made the setup more trustworthy but did not solve cross-company footnote comparisons.\nWorth knowing\nMost practical advice was about avoiding false confidence: process filings once, keep extracted structure and passage locations, and only run new filings afterward to control cost.\nTry it yourself\nwith\nClaude\nCopy prompt\nAnalyze the latest 10-K for [company name or ticker], which I'll attach or link: [file or URL]. Calculate normalized earnings, ROIC, and owner earnings, showing each adjustment and the line items you used. Then build a rough reverse DCF showing what growth the current price of [price] implies at a [discount rate]% discount rate. Finish with a one-page summary that notes your assumptions and anything you were unsure about.\nOriginal source: https://www.reddit.com/r/ValueInvesting/comments/1x52d8o/anyone_building_a_value_investing_agent_what_are",
     "body_sha256": "3187456cacccbdb7f13603d9df7dcd30915b21dc89ab03057fe955c74b735685",
-    "archived_at": "2026-10-29T07:29:37.946797+00:00",
+    "archived_at": "2026-10-30T07:32:49.673610+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:29:37.946797+00:00",
+    "at": "2026-10-30T07:32:49.673610+00:00",
     "status": "fetched",
     "error": null
   }

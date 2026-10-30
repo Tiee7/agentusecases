@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/check-live-product-prices-before-buying",
-  "observed_at": "2026-10-29T07:40:57.805331+00:00",
-  "html_sha256": "8b0c59ecd82046931a67966ae306ddc8bb18d5956b69fdb2c2c9db2a8d4bdde8",
+  "observed_at": "2026-10-30T07:44:09.840953+00:00",
+  "html_sha256": "724c590be43bef0165e862eb18fdc98e55449804e660ad95b1014b36db447e33",
   "body_sha256": "f71ede224b79665a9e2a56d523ed91ceba6f55b3fbbdd458becd373ef4892ad1",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Check live product prices before buying\nThe poster stitched together tools that read product pages and validate them so an agent can check current prices, after ChatGPT quoted stale ones.\nDone with\nGP\nChatGPT\nWhat they did\nAfter ChatGPT gave stale camera prices, the poster built an MCP server that chains multiple page-reading tools: plain fetches, reader services, browser tools, stealth browsers, and optional paid scrapers. The agent tries cheaper tools first, then validates what came back before trusting it: product pages must include a price, search pages must show results, and bot checks, cookie walls, login redirects, or empty loads count as failures, so it escalates to the next tool; the person still recommends manually opening the link before any expensive purchase.\nHow it went\nOn a 150-site test set chosen in advance, the combined setup read 96% correctly, versus 85% for the best single tool, Firecrawl. Free tools alone reached 88%, but some sites such as Shopee and Temu still beat every tool they tried.\nWorth knowing\nThe main catch is speed: agent mode and multi-tool fallback are slower, especially on hard sites, even though the project itself is free and open source.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nBuild me a small tool that takes product links like [product URLs], loads each page, extracts the current price, availability, and seller, and validates that the data looks sane (such as a price that is present and in the expected currency). Output a table with the price and the time checked, flagging any page it couldn't read reliably. Finish once it runs successfully on my links, and do not make any purchases.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1x724a0/chatgpt_kept_quoting_me_prices_that_were_weeks",
     "body_sha256": "f71ede224b79665a9e2a56d523ed91ceba6f55b3fbbdd458becd373ef4892ad1",
-    "archived_at": "2026-10-29T07:40:57.805331+00:00",
+    "archived_at": "2026-10-30T07:44:09.840953+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-29T07:40:57.805331+00:00",
+    "at": "2026-10-30T07:44:09.840953+00:00",
     "status": "fetched",
     "error": null
   }
