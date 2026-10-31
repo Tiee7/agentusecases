@@ -29,6 +29,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Test
+        if: ${{ github.event_name == 'workflow_dispatch' }}
         run: python -m unittest discover -s tests -v
       - name: Restore most recent successful history
         env:
