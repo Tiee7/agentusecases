@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/collect-financial-data-on-100-independent-schools",
-  "observed_at": "2026-10-30T07:00:31.666742+00:00",
-  "html_sha256": "a771f064b5a73a15f3337357fa74dee1b1cd2e97ac05ef42f9f47f0b4f33aa37",
+  "observed_at": "2026-10-31T06:50:37.149575+00:00",
+  "html_sha256": "8b4c3518cf7b3181f34ce7c81b41673f9a9de7e86f6318a47454bf0b63d518c7",
   "body_sha256": "0ff24ad89e03e3a85ace7b6c1bcc84ccd5f57bbf34d762992861a2af06337ea2",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Collect financial data on 100 independent schools\nA writer had Operator gather financial data for independent schools in the background; it was slow and was stopped after about 25 schools, then the data went to o1 for analysis.\nDone with\nOP\nOperator\nWhat they did\nThe writer gave Operator a Google Sheet listing 100 school names, which came from an o3-mini-high query. Operator used its own browser to search ProPublica's Nonprofit Explorer for each school, read the summary financials, and paste them into the sheet. The writer mostly left it running in the background. They then pasted the sheet into o1, which wrote code for an interactive chart dashboard.\nHow it went\nOperator was very slow and was stopped after about 25 schools. It rounded numbers inconsistently and sometimes picked the wrong organization. o1's dashboard was usable, though basic and needing label fixes, and the writer chose not to share it.\nWorth knowing\nCheck every row. Operator confused schools with common names and began rounding figures after the first few, so the data needs verifying before you analyze it.\nTry it yourself\nwith\nOperator\nCopy prompt\nFor each of these [type of organization, e.g. independent schools] in [region], collect [data points, e.g. tuition, endowment, revenue] from their public websites and filings: [list or source]. Put results in a spreadsheet with a source link per row and mark any missing values. Start with the first [25] and stop there so I can check quality before you continue.\nOriginal source: https://fullstackeducator.substack.com/p/ai-agents-in-action",
     "body_sha256": "0ff24ad89e03e3a85ace7b6c1bcc84ccd5f57bbf34d762992861a2af06337ea2",
-    "archived_at": "2026-10-30T07:00:31.666742+00:00",
+    "archived_at": "2026-10-31T06:50:37.149575+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:00:31.666742+00:00",
+    "at": "2026-10-31T06:50:37.149575+00:00",
     "status": "fetched",
     "error": null
   }

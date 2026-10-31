@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-180-microservices-to-a-new-framework-version",
-  "observed_at": "2026-10-30T07:09:11.765608+00:00",
-  "html_sha256": "87fb520fe789396a3ffc7bfa0ba136c904d602911aa8e2ff3670c3df30599b50",
+  "observed_at": "2026-10-31T06:59:17.062708+00:00",
+  "html_sha256": "307a41caf4468a2283c709079505bc0516f3cfe4c227b220bf1e48f111098bff",
   "body_sha256": "64acc7fbb470be978c93f658e2eef53b94ae16316777b368a531b947d1383714",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate 180 microservices to a new framework version\nBrex built Cursor-based self-correcting agents that let one engineer migrate 180 microservices to a newer Micronaut version in about a month.\nDone with\nCR\nCursor\nWhat they did\nBrex split the work between two self-hosted Cursor agents. Creating a Linear ticket triggers a generation agent. It combines scripts with LLM reasoning, builds locally, self-corrects, and opens a draft PR. A GitHub label then triggers a validation agent. It deploys to dev, runs integration tests, and patches failures up to three times. Both agents load eleven small skills, one per failure type.\nHow it went\nOne engineer migrated 180 microservices in a month, which Brex puts at 32x per person. Cost per service fell about 90%. A few PRs passed all tests but still caused subtle production bugs.\nWorth knowing\nA single giant prompt run from laptops failed. Cloud-hosted agents, modular skills and a three-attempt cap fixed that. Human review was still required, and weak test coverage let bugs through.\nTry it yourself\nwith\nCursor\nCopy prompt\nWrite a self-correcting migration agent that updates [list of services/repos] from [old framework version] to [new framework version], running build and tests after each change and fixing failures automatically. Have it report progress per service and pause before opening any pull requests for my review.\nOriginal source: https://www.brex.com/journal/agent-automations-for-big-migrations",
     "body_sha256": "64acc7fbb470be978c93f658e2eef53b94ae16316777b368a531b947d1383714",
-    "archived_at": "2026-10-30T07:09:11.765608+00:00",
+    "archived_at": "2026-10-31T06:59:17.062708+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:09:11.765608+00:00",
+    "at": "2026-10-31T06:59:17.062708+00:00",
     "status": "fetched",
     "error": null
   }

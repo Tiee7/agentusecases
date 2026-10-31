@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **81** / 注册案例 **1718**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **1747**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -17,10 +17,10 @@
 | [用 ChatGPT Agent 取消流媒体订阅](reports/cancel-streaming-subscriptions-with-chatgpt-agent.md) | 不建议商业投入 | 28.0 | 中 | not_observed | 消费者订阅管理与个人数字事务 | 2026-10-15T07:13:27.818136+00:00 |
 | [用 Claude Cowork 将收据和银行数据整理为费用与税务摘要](reports/turn-forwarded-receipts-and-bank-data-into-expense-and-tax-s.md) | 适合内部效率工具 | 44.0 | 中 | not_observed | 小微企业费用整理与报税前资料准备 | 2026-10-15T08:13:42.813043+00:00 |
 | [用 Claude 填写税务资料清单并复查上年申报](reports/fill-in-a-tax-organizer-and-review-last-year-s-return.md) | 适合内部效率工具 | 41.0 | 中 | not_observed | 美国个人及小企业税务资料准备 | 2026-10-15T09:11:25.768067+00:00 |
+| [用 Gemini 起草旅行保险拒赔申诉](reports/appeal-a-denied-travel-insurance-claim.md) | 适合内部效率工具 | 36.0 | 中 | not_observed | 旅行保险／消费者申诉辅助 | 2026-10-15T13:08:53.684403+00:00 |
 | [用 Codex 操作电脑填表并复核税务申报](reports/fill-forms-and-review-tax-filings-with-codex-computer-use.md) | 适合内部效率工具 | 41.0 | 中 | not_observed | 美国个人税务资料整理与桌面流程自动化 | 2026-10-15T10:13:27.922299+00:00 |
 | [用 OpenClaw 处理复杂税务申报](reports/file-a-complex-tax-return-with-openclaw.md) | 仅建议受控试点 | 35.5 | 中 | not_observed | 美国小企业税务资料整理与专业复核 | 2026-10-15T11:02:36.633927+00:00 |
 | [用 Replit Agent 和 Plaid 构建消费洞察应用](reports/build-a-spending-insights-app-from-bank-transactions.md) | 适合内部效率工具 | 40.0 | 中 | not_observed | 个人财务管理／金融数据应用开发 | 2026-10-15T12:40:06.325402+00:00 |
-| [用 Gemini 起草旅行保险拒赔申诉](reports/appeal-a-denied-travel-insurance-claim.md) | 适合内部效率工具 | 36.0 | 中 | not_observed | 旅行保险／消费者申诉辅助 | 2026-10-15T13:08:53.684403+00:00 |
 | [用 Claude Computer Use 填写 Form 1040](reports/fill-out-a-form-1040-with-computer-use.md) | 仅建议受控试点 | 27.0 | 中 | not_observed | 税务资料录入与事务所内部自动化 | 2026-10-15T13:37:37.079875+00:00 |
 | [用 Manus 编写交易信号脚本并记录交易日志](reports/teach-an-agent-to-trade-with-signals-and-logging.md) | 适合内部效率工具 | 25.0 | 低 | not_observed | 期货模拟交易工具与个人交易日志 | 2026-10-15T14:10:28.450641+00:00 |
 | [用 Counterforce Health 起草拒赔申诉并致电保险公司](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 中 | available | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
@@ -32,8 +32,8 @@
 | [用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [用 Claude in Chrome 协商 AT&T 账单抵扣](reports/negotiate-a-billing-credit-from-at-t.md) | 不建议商业投入 | 36.0 | 中 | available | 个人通信账单争议准备与抵扣核对 | 2026-10-16T18:09:49.328837+00:00 |
-| [用 Codex 取消 Amazon 订阅并申请退款](reports/cancel-an-amazon-subscription-and-get-a-refund.md) | 不建议商业投入 | 28.5 | 中 | available | 个人订阅取消准备与退款状态核对 | 2026-10-18T00:17:13.506691+00:00 |
 | [用四个 AI 模型各管理 1,000 美元模拟股票组合](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
+| [用 Codex 取消 Amazon 订阅并申请退款](reports/cancel-an-amazon-subscription-and-get-a-refund.md) | 不建议商业投入 | 28.5 | 中 | available | 个人订阅取消准备与退款状态核对 | 2026-10-18T00:17:13.506691+00:00 |
 | [用 Devin 提交第三方 API 集成并通过 PR 审阅修正](reports/add-a-third-party-api-integration-via-devin-pr.md) | 适合内部效率工具 | 39.0 | 中 | available | 软件团队的第三方API集成与代码审阅 | 2026-10-18T00:52:43.508911+00:00 |
 | [用 OpenClaw 通过 Telegram 添加家庭待办事项](reports/add-home-todo-items-by-telegram-message.md) | 适合内部效率工具 | 22.0 | 中 | available | 家庭本地工具与消息自动化 | 2026-10-18T01:17:56.343554+00:00 |
 | [用 AI agent 将 Telegram 消息转为 Todoist 待办事项](reports/add-todo-items-to-todoist-from-telegram.md) | 适合内部效率工具 | 23.0 | 中 | available | 个人任务管理与聊天自动化 | 2026-10-18T01:45:22.239106+00:00 |

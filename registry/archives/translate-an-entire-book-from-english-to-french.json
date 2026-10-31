@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/translate-an-entire-book-from-english-to-french",
+  "observed_at": "2026-10-31T07:37:07.183607+00:00",
+  "html_sha256": "6f1aa503cc2fb344b3ff56d0bb6696a12e857468baea99c1d27d6dec4348b737",
+  "body_sha256": "8df0690ade08e6e2e6ab42ede4173c2f2a740eac33725d1692f8b0c01cef0195",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Translate an entire book from English to French",
+      "sha256": "efc1ea501c0e702f22e1861ef6c911c06fb62395d6b75bf7c076d416ed2e866b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A blogger's how-to guide uses Claude Code on local files to translate a whole book into French, re-reading chapters for consistency while the user reviews; it is a guide, not a finished result.\n·\nOct 30, 2026",
+      "sha256": "ea554e5f191bf65b0b90cad1e98fde1f5a57377fe15d61e0d64f6c929eb6b588"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user puts the book as one text file in a folder and pastes a long startup prompt into Claude Code. In phase 1 the agent skims the book, asks questions, offers sample translations in different tones, and builds a glossary and rules files. After the user approves, typing \"continue\" makes it translate chapter by chapter, save as it goes, check against the original, and sweep earlier chapters every two or three for consistency.",
+      "sha256": "cd3af8d1d8e82e55e8db0980a9f20ccaf9a489b836afdfc55814374adaa1d02e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says a roughly 300-page book takes 15 to 20 hours spread out, with 5 to 7 hours of actual translation. The rest is waiting for quota. No finished translation is shown, and the Pride and Prejudice examples are only illustrative.",
+      "sha256": "687e847468824663d2d238664442d1a7fd53061961b1c6e9380ebb01c019a2ff"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The Claude Pro plan (about €17 a month) is said to be enough, but the session quota runs out and takes about 4 hours to refill. The guide also launches Claude Code with a flag that skips permission prompts.",
+      "sha256": "a87c9861d25a0a081f6321454ebedd0495977bfc5b75f5f191224e8273c0ffaf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.nomadbento.com/47810.htm"
+      ],
+      "sha256": "ca9fbb75ea3e5adc8a4edf8c3f97ae4816fe3bbf0376b13a4ae06c66ef892380"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-30",
+      "sha256": "24d70b9666ddc553a720f2b8cf8dba452a8dd9f7d2257646dc47add5b215d60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "060b34df958f8825865e1c0f9f6e92809e44f1615631ce0bd016ad00b284c0bd",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Translate an entire book from English to French\nA blogger's how-to guide uses Claude Code on local files to translate a whole book into French, re-reading chapters for consistency while the user reviews; it is a guide, not a finished result.\n·\nOct 30, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe user puts the book as one text file in a folder and pastes a long startup prompt into Claude Code. In phase 1 the agent skims the book, asks questions, offers sample translations in different tones, and builds a glossary and rules files. After the user approves, typing \"continue\" makes it translate chapter by chapter, save as it goes, check against the original, and sweep earlier chapters every two or three for consistency.\nHow it went\nThe author says a roughly 300-page book takes 15 to 20 hours spread out, with 5 to 7 hours of actual translation. The rest is waiting for quota. No finished translation is shown, and the Pride and Prejudice examples are only illustrative.\nWorth knowing\nThe Claude Pro plan (about €17 a month) is said to be enough, but the session quota runs out and takes about 4 hours to refill. The guide also launches Claude Code with a flag that skips permission prompts.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nThe folder [path] contains my book as [file format] files, one per chapter, written in English. Translate each chapter into French in a new folder called french, keeping the formatting. First build a glossary of names, terms and tone decisions, then after each chapter re-read earlier chapters to keep terms consistent. Stop when every chapter is translated, and give me a list of passages you were unsure about. Don't overwrite my original files.\nOriginal source: https://www.nomadbento.com/47810.htm",
+    "body_sha256": "8df0690ade08e6e2e6ab42ede4173c2f2a740eac33725d1692f8b0c01cef0195",
+    "archived_at": "2026-10-31T07:37:07.183607+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-31T07:37:07.183607+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

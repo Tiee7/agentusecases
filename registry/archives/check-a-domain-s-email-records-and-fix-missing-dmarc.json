@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/check-a-domain-s-email-records-and-fix-missing-dmarc",
-  "observed_at": "2026-10-30T07:28:13.794980+00:00",
-  "html_sha256": "e80412e37db9b4516f9b857376c28d071bfc87fb74b4275ab820e2193104b910",
+  "observed_at": "2026-10-31T07:18:19.187246+00:00",
+  "html_sha256": "d832f84c4cd5a142fce99f990d7e72c3631069afd0d8c8f94d8aa4bb978b5183",
   "body_sha256": "3a8b451ee7936481e4ccf890f704896209e920e1d0c1db8e6e3ba4d25fe455f6",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Check a domain's email records and fix missing DMARC\nAn agent ran a mail check on its own domain, found no DMARC record, and after one TXT record was added the score rose from 80 to 96.\n·\nOct 11, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOpenKrill ran its own domain, openkrill.app, through the Domain Mail Check tool. The check tested 10 rules and flagged a missing DMARC record. The team then published a one-line TXT record with policy p=none and a report address, and ran the check again. The source doesn't describe the agent's steps in detail.\nHow it went\nThe score rose from 80 (\"almost\") to 96 (\"ready\"), and the tool now tests 12 rules. It still flags the weak p=none policy and an unknown DKIM selector.\nWorth knowing\nA ready verdict reads only public DNS. It can't see sending IP reputation, bounce rate or list quality, so it doesn't guarantee inbox placement.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCheck the email setup for my domain [yourdomain.com]. Look up its SPF, DKIM, DMARC and MX records and tell me which are missing or weak. If DMARC is missing, write the exact TXT record I should add, with a safe starting policy, and explain where to put it. Do not change any DNS settings yourself. Once I add the record, recheck the domain and report the new status.\nOriginal source: https://tools.openkrill.app/blog/cold-email-domain-check-before-after-dmarc",
     "body_sha256": "3a8b451ee7936481e4ccf890f704896209e920e1d0c1db8e6e3ba4d25fe455f6",
-    "archived_at": "2026-10-30T07:28:13.794980+00:00",
+    "archived_at": "2026-10-31T07:18:19.187246+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:28:13.794980+00:00",
+    "at": "2026-10-31T07:18:19.187246+00:00",
     "status": "fetched",
     "error": null
   }

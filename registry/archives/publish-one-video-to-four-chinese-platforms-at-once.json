@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/publish-one-video-to-four-chinese-platforms-at-once",
+  "observed_at": "2026-10-31T07:37:11.197591+00:00",
+  "html_sha256": "e893f3c49bece4f52351bb0637cf10542f622309dca53e094dbff3067f5d0040",
+  "body_sha256": "0ae774b531488212fcf4ee01f446c75222ad2b4dfcd403d533d9fc8be35cf1b2",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Publish one video to four Chinese platforms at once",
+      "sha256": "9a1d6b81caa22d2b1e3602f8579f46308c5c0735b0563b42c6e07d6dcaa6bd27"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Codex skill generates titles and tags, then sub-agents fill upload forms on Xiaohongshu, Douyin, Bilibili and WeChat Channels in parallel; the author confirms each post.\n·\nOct 30, 2026",
+      "sha256": "89da24efef52ccbde02316e658482efad0c665b427927d572287a2b143dbc704"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author wrote a video-publisher Skill for Codex. Codex generates titles and tags from the Skill's rules, asks which platforms to post to, and writes one JSON checklist per platform. Four sub-agents then fill the forms in separate Ego Lite spaces, one per platform. They stop if a login is missing. When they fix a problem, they write the fix back into the Skill.",
+      "sha256": "4dc65f162f70cdc9542ef12a03171fc70bf86eb28371f319a17faf5b0b8f02cf"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Videos, titles and tags are usually ready in the drafts, but some fields still need manual correction. The author says the process is not fully stable, and gives no time or success figures.",
+      "sha256": "44fb93df82b410c63e21465927f1b220746434672aee7466748145aa6c18d72b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The agent never clicks final publish without confirmation, and the author rechecks every platform afterward, whatever the agent reports.",
+      "sha256": "6a041c8899ab1e890fd5540cdbd9652f85faa42f2feb4d20cb3e78ae8c504254"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.oiloil.org/articles/multi-platform-video-publish"
+      ],
+      "sha256": "5016e1e81069e7c78d7cdfb1bb66ec48d3829b83c87f68120069a8e2e5472605"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-30",
+      "sha256": "24d70b9666ddc553a720f2b8cf8dba452a8dd9f7d2257646dc47add5b215d60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0a01446970fb9bdda96dafec20e9a95c2f1e92d3769befc4bfadd942e83914c9",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Publish one video to four Chinese platforms at once\nA Codex skill generates titles and tags, then sub-agents fill upload forms on Xiaohongshu, Douyin, Bilibili and WeChat Channels in parallel; the author confirms each post.\n·\nOct 30, 2026\nDone with\nCX\nCodex\nWhat they did\nThe author wrote a video-publisher Skill for Codex. Codex generates titles and tags from the Skill's rules, asks which platforms to post to, and writes one JSON checklist per platform. Four sub-agents then fill the forms in separate Ego Lite spaces, one per platform. They stop if a login is missing. When they fix a problem, they write the fix back into the Skill.\nHow it went\nVideos, titles and tags are usually ready in the drafts, but some fields still need manual correction. The author says the process is not fully stable, and gives no time or success figures.\nWorth knowing\nThe agent never clicks final publish without confirmation, and the author rechecks every platform afterward, whatever the agent reports.\nTry it yourself\nwith\nCodex\nCopy prompt\nI have a finished video at [file path] about [topic]. Write a title, description and tags suited to each platform: [list of platforms], then open each upload page and fill in the form with the video and text. Don't click publish on any platform. Pause and show me the filled-in form and the text for each one, and wait for my approval before you submit it.\nOriginal source: https://www.oiloil.org/articles/multi-platform-video-publish",
+    "body_sha256": "0ae774b531488212fcf4ee01f446c75222ad2b4dfcd403d533d9fc8be35cf1b2",
+    "archived_at": "2026-10-31T07:37:11.197591+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-31T07:37:11.197591+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

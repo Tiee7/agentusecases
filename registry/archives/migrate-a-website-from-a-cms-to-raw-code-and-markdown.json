@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-a-website-from-a-cms-to-raw-code-and-markdown",
-  "observed_at": "2026-10-30T07:40:07.843957+00:00",
-  "html_sha256": "e2847c8d583c43d2a7c7d6a5f0fde5d307f9628a46472bbeefe8240b27d5932e",
+  "observed_at": "2026-10-31T07:30:13.254774+00:00",
+  "html_sha256": "6acd016749f01730f3566639d3e4c16d674cd0746004316b8fddea0e6c85ef9b",
   "body_sha256": "482d3f1247f4317e6cbda635b23e4d9770e56bc05db9e621eca64917b092111d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate a website from a CMS to raw code and Markdown\nLee Robinson used Cursor agents to move cursor.com off its CMS in three days for $260 in tokens, with subagents handling a broad refactor.\nDone with\nCR\nCursor\nWhat they did\nLee planned the migration with Opus 4.5 in Cursor. The agent suggested using the existing CMS API key to write scripts that export content, validate it, convert it to Markdown files in the repo, and upload images and videos to object storage. About 10 runs got it 80% of the way. He then ran an agent on each mismatched page, using browser screenshots to compare against production. Subagents handled the wider refactor in parallel.\nHow it went\nIt took three days and $260.32 in tokens, against his estimate of 1-2 weeks. That covered 344 agent requests and 67 commits (+43K/-322K lines). Builds got 2x faster. The last 20% took most of the time.\nWorth knowing\nExpect the final 20% (pages that don't match production) to take most of the effort. Per-page agent runs with screenshot comparison were how he closed that gap.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want to move my website at [repo or folder] off [CMS name] and into plain code with Markdown files for content. First export the existing content from [CMS or export location], then use subagents to convert pages and posts into Markdown and update the templates and routes to read from those files. Finished means the site builds locally, the pages match the originals, and you give me a list of anything you could not migrate. Show me the plan before you delete any CMS code or integrations.\nOriginal source: https://leerob.com/agents",
     "body_sha256": "482d3f1247f4317e6cbda635b23e4d9770e56bc05db9e621eca64917b092111d",
-    "archived_at": "2026-10-30T07:40:07.843957+00:00",
+    "archived_at": "2026-10-31T07:30:13.254774+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:40:07.843957+00:00",
+    "at": "2026-10-31T07:30:13.254774+00:00",
     "status": "fetched",
     "error": null
   }

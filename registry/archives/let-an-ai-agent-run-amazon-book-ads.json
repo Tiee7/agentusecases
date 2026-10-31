@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-an-ai-agent-run-amazon-book-ads",
-  "observed_at": "2026-10-30T07:45:01.618728+00:00",
-  "html_sha256": "2fcb3616b3015b4f1891eeec9e5010dd1c0d9529544d69d2fb8dc2ea92d96ee1",
+  "observed_at": "2026-10-31T07:35:07.255702+00:00",
+  "html_sha256": "94d1e3fa02cbf1c1acc4cbc43b1de915c8423090f01b18510f5528bc34562395",
   "body_sha256": "5ea69969e100f00fe161ae4932bb3eda13917559da11cdb5adec83c19c240c20",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Let an AI agent run Amazon book ads\nAn author gave an AI agent control of their Amazon ads account; it pulls reports via the Ads API on a schedule, changes bids, adds negatives, and pauses campaigns without approval.\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author wired Claude to the Amazon Ads API to run every three days across about 10 nonfiction titles. It pulled reports, changed bids, added negative keywords, paused campaigns, and logged its reasoning, with hard limits in a config file for spend, bid changes, and campaign creation; the author also fed it search data from the GitHub tool kdp-scout and kept editorial changes as manual-only proposals.\nHow it went\nAfter about six weeks, June finished at $682 in royalties against $757 in ad spend, an improvement from losing more money before. It also made a costly mistake by cloning winning keywords into a higher-bid campaign that competed with the original and caused nearly two days of dead sales, though the author later added dedupe rules and the agent shut down unprofitable Germany and Spain campaigns on its own.\nWorth knowing\nThe main catch was attribution lag: the author learned to ignore the last two days of Amazon ads data before cutting anything, and capped the system with an €800 monthly budget plus daily limits.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to my Amazon Ads account using the API credentials in [secure location] and pull a report of my book campaigns for the last [number] days. Recommend bid changes, negative keywords, and campaigns to pause, with the numbers behind each. Show me the full list and wait for my approval before changing or pausing anything.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1umauys/anyone_else_letting_an_ai_run_their_book_ads",
     "body_sha256": "5ea69969e100f00fe161ae4932bb3eda13917559da11cdb5adec83c19c240c20",
-    "archived_at": "2026-10-30T07:45:01.618728+00:00",
+    "archived_at": "2026-10-31T07:35:07.255702+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:45:01.618728+00:00",
+    "at": "2026-10-31T07:35:07.255702+00:00",
     "status": "fetched",
     "error": null
   }

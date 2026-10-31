@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-a-go-binary-with-ghidra-via-mcp",
-  "observed_at": "2026-10-30T07:09:27.725131+00:00",
-  "html_sha256": "2d817e6d81d66261c813ec2f87bd104fd93bbc80b33eb1bcb24561947bc9f023",
+  "observed_at": "2026-10-31T06:59:33.043464+00:00",
+  "html_sha256": "83c0430874f2be165aff2924677d3926888bab865ad40bfe10ec5d3c6cbcfaad",
   "body_sha256": "26c0c1c49338f074985f1108f6c1870f606b231b67965947ae6723fa679ceea8",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Reverse engineer a Go binary with Ghidra via MCP\nHuli had Cursor drive GhidraMCP to identify a Golang binary, list its routes and find a path traversal, but it missed the SQL injection check.\n·\nMar 1, 2026\nDone with\nCR\nCursor\nWhat they did\nHuli built a stripped Golang gin server with a deliberate SQL injection and path traversal, loaded it into Ghidra with the GolangAnalyzerExtension, then connected GhidraMCP to Cursor so the agent could call Ghidra's decompiler itself. Prompted only to identify the binary and its functions, it autonomously queried MCP, then was asked to reconstruct the Go source and check for vulnerabilities.\nHow it went\nUsing Cursor's composer 1.5, it correctly recovered routes, libraries, and file structure (with minor route-name errors) and found the path traversal bug but reconstructed the SQL injection code as already fixed, missing it. Switching to Opus 4.6 on the same prompt caught both vulnerabilities but still mislabeled some routes.\nWorth knowing\nResults varied heavily by model: a weaker model (composer 1.5) missed the SQL injection that a stronger model (Opus 4.6) caught with the same prompt.\nTry it yourself\nwith\nCursor\nCopy prompt\nConnect to Ghidra via MCP and analyze this Go binary [path/name] to identify its routes and endpoints, then look for vulnerabilities like path traversal or SQL injection. Give me a report of what it found, and flag anything uncertain for me to double check manually.\nOriginal source: https://blog.huli.tw/2026/03/01/en/reverse-engineering-with-ai-ghidra-mcp/",
     "body_sha256": "26c0c1c49338f074985f1108f6c1870f606b231b67965947ae6723fa679ceea8",
-    "archived_at": "2026-10-30T07:09:27.725131+00:00",
+    "archived_at": "2026-10-31T06:59:33.043464+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:09:27.725131+00:00",
+    "at": "2026-10-31T06:59:33.043464+00:00",
     "status": "fetched",
     "error": null
   }

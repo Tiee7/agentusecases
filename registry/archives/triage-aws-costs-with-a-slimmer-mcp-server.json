@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/triage-aws-costs-with-a-slimmer-mcp-server",
-  "observed_at": "2026-10-30T07:43:43.880584+00:00",
-  "html_sha256": "172f2722ee852bc17e3b18674b1e943ddfff91dcff0c1b1ed3fbc727c3eb2a48",
+  "observed_at": "2026-10-31T07:33:49.246346+00:00",
+  "html_sha256": "c06aa2ccee88dc53ef91babcc921eb99a7e3a749e7ce1aa3d3bc6a6e8a898429",
   "body_sha256": "664907481b66e1c6af1e053056b5d89c61205b561ff0854ce1edb244291b7216",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Triage AWS costs with a slimmer MCP server\nAuthor rebuilt an AWS cost-triage MCP server from 15 tools to 4, cutting a question from 7 tool calls to 2 with schemas 88% smaller.\n·\nOct 26, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a read-only AWS cost-triage MCP server twice, once as 15 thin boto3 wrappers and once as 4 outcome-level tools. Both ran in Kiro against the same real account, asked where money was being wasted. The lean version has a find_waste tool that runs the checks internally and returns five fields per finding. It also has constrained parameters and a separate estimate_savings tool.\nHow it went\nThe bloated server needed 7 calls and the lean one 2. Tool descriptions shrank 88% (7,898 to 897 characters), and both found the same three wasted resources. The Elastic IP cost stayed unverified.\nWorth knowing\nOn this small demo, Kiro's context meter only moved from 1.1% to 0.8%, so expect big savings only with many tools.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview my MCP server in [path to project] that exposes [number] tools for [e.g. AWS cost data]. Propose a slimmer design that merges overlapping tools into as few as possible, trims the schemas, and still answers questions like [example question]. Show me the plan and the before and after tool counts before editing any files, then implement it and compare the number of tool calls on that question.\nOriginal source: https://dev.to/aws-builders/mcp-token-cost-i-cut-my-mcp-server-from-15-tools-to-4-cek",
     "body_sha256": "664907481b66e1c6af1e053056b5d89c61205b561ff0854ce1edb244291b7216",
-    "archived_at": "2026-10-30T07:43:43.880584+00:00",
+    "archived_at": "2026-10-31T07:33:49.246346+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:43:43.880584+00:00",
+    "at": "2026-10-31T07:33:49.246346+00:00",
     "status": "fetched",
     "error": null
   }

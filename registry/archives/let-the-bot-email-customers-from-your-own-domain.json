@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/let-the-bot-email-customers-from-your-own-domain",
-  "observed_at": "2026-10-30T07:26:37.761439+00:00",
-  "html_sha256": "81d47d4203a8c96e3731dea98704883a815af3008f81a025eeef770b3d745608",
+  "observed_at": "2026-10-31T07:16:43.195474+00:00",
+  "html_sha256": "637755a5678ed811fb944d93adcacc3cbce375fce1c91904dff48bb00cd9e6a1",
   "body_sha256": "189b2d26fab255d6484b6b8ae97614ba3ff1c5d115da2b67b3760ce455b1403d",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Let the bot email customers from your own domain\nThe poster set up a custom-domain mailbox as an MCP connector for Grok Bot, plus a webhook so new mail triggers an automation.\n·\nOct 10, 2026\nDone with\nGB\nGrok Bot\nWhat they did\nThe poster found Grok Bot’s built-in mail too limited for customer-facing use, so they created a mailbox on their own domain and connected it to Grok as a custom MCP connector. Because incoming mail does not wake the bot automatically, they also added a webhook that starts a Grok automation on each new message; they note the webhook had to use Grok’s signed whsec_ secret format, not a bearer token.\nHow it went\nIt gave them a customer-facing address on their own domain and an inbox they could open themselves, while still letting the bot react to mail as it arrived. They say Grok’s native mail works for signups and verification codes, but shares one address across bots and has no inbox view or automatic trigger.\nWorth knowing\nTheir main gotcha was that Grok automation webhooks rejected bearer-token requests with 400s; only signed requests using the provided whsec_ secret worked.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nConnect to the mailbox [address@mydomain.com] so you can read and draft email as my business. When a new customer email arrives, categorize it, look up relevant details in [system or docs], and draft a reply in my tone. Show me each draft and wait for my approval before sending, until I say a category is safe to send automatically.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1x2iafb/grokbot_email_after_a_day_the_limits_nobody",
     "body_sha256": "189b2d26fab255d6484b6b8ae97614ba3ff1c5d115da2b67b3760ce455b1403d",
-    "archived_at": "2026-10-30T07:26:37.761439+00:00",
+    "archived_at": "2026-10-31T07:16:43.195474+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:26:37.761439+00:00",
+    "at": "2026-10-31T07:16:43.195474+00:00",
     "status": "fetched",
     "error": null
   }

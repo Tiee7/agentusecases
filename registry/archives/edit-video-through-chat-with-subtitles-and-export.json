@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/edit-video-through-chat-with-subtitles-and-export",
-  "observed_at": "2026-10-30T07:00:53.447658+00:00",
-  "html_sha256": "95a9f778fc24c8c2048a9278a871694671a3d3043f94ec17a1dddbc73de7c031",
+  "observed_at": "2026-10-31T06:50:59.052841+00:00",
+  "html_sha256": "eb20e584e8e3c9ad5cab0aae7c6d269a35c87afca0464b93eb0b3f727c0af928",
   "body_sha256": "a8611ea3953d868ce9e6baae328b139056b1950d13b8c081452f0e3846829108",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Edit video through chat with subtitles and export\nA developer built an OpenClaw skill that sends chat requests like Chinese subtitles and mp4 export to a backend video editor and returns the result.\nDone with\nOC\nOpenClaw\nWhat they did\nThe developer wrote an OpenClaw skill whose SKILL.md tells the agent how to route chat requests. Export, credit balance and upload go straight to API calls. Everything else streams to the NemoVideo backend over SSE. The agent strips the backend's GUI-style instructions, and when an edit returns no text it compares timeline state before and after and reports the difference. It then polls the render and sends back the file.\nHow it went\nThe author's example, Chinese subtitles plus mp4 export, took about 90 seconds and returned an mp4 with burned-in subtitles. About 30% of edits come back with no text, and aspect-ratio changes need full regeneration.\nWorth knowing\nDon't retry silent edits, because retries caused duplicate edits and double credit charges. Export is free, but asking the backend to export triggers a new generation that costs credits.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI'll send you a video file and an editing request in chat, like [add Chinese subtitles and export as mp4]. Run it through [video editing tool or ffmpeg], then send back the finished file. Show me the planned edits first, and don't overwrite my original file.\nOriginal source: https://dev.to/weizhang_dev/how-i-built-an-ai-video-editor-as-an-openclaw-skill-103j",
     "body_sha256": "a8611ea3953d868ce9e6baae328b139056b1950d13b8c081452f0e3846829108",
-    "archived_at": "2026-10-30T07:00:53.447658+00:00",
+    "archived_at": "2026-10-31T06:50:59.052841+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:00:53.447658+00:00",
+    "at": "2026-10-31T06:50:59.052841+00:00",
     "status": "fetched",
     "error": null
   }

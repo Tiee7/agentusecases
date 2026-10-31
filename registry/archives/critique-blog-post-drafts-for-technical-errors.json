@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/critique-blog-post-drafts-for-technical-errors",
-  "observed_at": "2026-10-30T07:28:49.784271+00:00",
-  "html_sha256": "6468120ee1da0a6e416bba04a1e6eb318430fa6d9e04e076c3c8613d85735753",
+  "observed_at": "2026-10-31T07:18:55.276441+00:00",
+  "html_sha256": "f95389b36c1c0df88f001565b210ecf7c77a23f1ebb20a1bec2ea689f6d935f7",
   "body_sha256": "780f45aa70ed8dd95617d3343d2d5b2582b6ed54f41630e4c3ea025524db0c6b",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Critique blog post drafts for technical errors\nA developer built a custom Gemini CLI command that reads a blog draft from disk and critiques it for technical errors, used in an iterative editing loop.\nDone with\nGE\nGemini\nWhat they did\nConnie Leung had Gemini CLI generate a critique.toml custom command from a natural-language prompt, then refined it by hand and saved it in .gemini/commands. The prompt casts the model as a DevRel editor. She runs it on a draft by piping the file or referencing it with @draft.md, using Gemini 3 Pro Preview, then applies the fixes and reruns.\nHow it went\nThe critique flagged three problems in her Angular/Firebase project: a white screen on initialization failure, a fetch interval that was too long in dev mode, and validation that stopped at the first missing environment variable. She fixed all three. No timing figures are given.\nWorth knowing\nThe command flags issues in the code inside the post. The fixes shown were written and applied by the author, so check each suggestion yourself.\nTry it yourself\nwith\nGemini\nCopy prompt\nCreate a custom Gemini CLI command called /critique that reads the blog draft at [path to draft file] and reviews it for technical errors, such as wrong facts, incorrect code, outdated advice and unclear explanations. It should return a numbered list of issues, each with the quoted passage, why it is wrong and a suggested fix. Do not edit the draft file; just report findings so I can revise and run it again.\nOriginal source: https://dev.to/railsstudent/automating-devrel-how-i-use-gemini-cli-and-gemini-3-to-catch-bugs-in-my-blog-posts-3koo",
     "body_sha256": "780f45aa70ed8dd95617d3343d2d5b2582b6ed54f41630e4c3ea025524db0c6b",
-    "archived_at": "2026-10-30T07:28:49.784271+00:00",
+    "archived_at": "2026-10-31T07:18:55.276441+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:28:49.784271+00:00",
+    "at": "2026-10-31T07:18:55.276441+00:00",
     "status": "fetched",
     "error": null
   }

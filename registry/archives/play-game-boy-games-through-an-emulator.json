@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/play-game-boy-games-through-an-emulator",
-  "observed_at": "2026-10-30T07:45:55.621707+00:00",
-  "html_sha256": "855b0210ca079638ff79b34185f82fde0dbeb941a2a9a5b0e131509b6e8181bc",
+  "observed_at": "2026-10-31T07:36:01.385414+00:00",
+  "html_sha256": "1e13bcd225a30a339fe453c81651f24b8298620f134ec464c7456f99a348e744",
   "body_sha256": "fdf2e475ed6ec258d4fc5b83ec7f5fd20404594e82b49bb0fdcc203c0770a0b7",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Play Game Boy games through an emulator\nA developer built an agent where Claude watches game frames from PyBoy, decides actions and presses buttons, using memory tools and periodic summaries.\n·\nOct 29, 2026\nDone with\nCL\nClaude\nWhat they did\nYou supply a ROM, an Anthropic API key and optionally a saved state. Claude 3.7 gets recent screenshots from PyBoy and answers with tool calls. It sends button sequences, sets a goal, and adds, updates or removes memory items. In the default turn-based mode, the emulator advances only when Claude sends inputs. Every 30 turns by default, it writes a progress summary.\nHow it went\nThe README gives no results or progress numbers. It describes a working agent with frame logging for debugging. Movement is purely button-based, with no coordinate helpers.\nWorth knowing\nContext is capped by settings: 30 messages and 5 screenshots by default. Thinking budget is 16000 tokens per turn, so API costs may add up.\nTry it yourself\nwith\nClaude\nCopy prompt\nBuild me a Python agent that plays [Game Boy game] through the PyBoy emulator using Claude's API. Each step it should send the current screen frame to Claude, get back a button press, and apply it, with a simple memory file and a summary written every [number] steps. It's done when I can run one command, watch it play for a few minutes, and see the summary log; tell me which ROM and API key setup I need to provide.\nOriginal source: https://github.com/jmurth1234/ClaudePlayer",
     "body_sha256": "fdf2e475ed6ec258d4fc5b83ec7f5fd20404594e82b49bb0fdcc203c0770a0b7",
-    "archived_at": "2026-10-30T07:45:55.621707+00:00",
+    "archived_at": "2026-10-31T07:36:01.385414+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:45:55.621707+00:00",
+    "at": "2026-10-31T07:36:01.385414+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/set-lighting-brightness-with-an-ai-agent-on-presence",
-  "observed_at": "2026-10-30T07:09:51.703203+00:00",
-  "html_sha256": "e2e80e37b8529ef5d27b93bfaf2b8e65d20083b0d3fb4d744afbeaeed066eb19",
+  "observed_at": "2026-10-31T06:59:57.044445+00:00",
+  "html_sha256": "7654db3f9d0a27e91cbe0604447dd643af91407e2b4567bd80d85724efe2f85e",
   "body_sha256": "97aa4267bdfa1920c647feba768d73d30ec2ee8508371957d326d46082ed83d4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Set lighting brightness with an AI agent on presence\nA Home Assistant presence sensor triggers n8n, where a Deepseek agent picks a brightness for the time of day and sets the lights.\nDone with\nN8\nn8n\nWhat they did\nn8n runs as a Home Assistant add-on. A Home Assistant automation fires when the presence sensor goes from Clear to Detected and calls an n8n webhook through a REST command. In n8n, a Deepseek agent prompted as a lighting designer picks a brightness percentage for the current time. A final node calls Home Assistant's turn_on service for the light with that value.\nHow it went\nThe source gives no measured results. It presents the workflow as working and says it is meant to avoid harsh night lighting and dim mornings. Brightness is the only attribute it actually sets.\nWorth knowing\nUse the Home Assistant IP address in the webhook URL, not the default hostname. The article calls this the main connectivity fix and recommends at least 4GB RAM.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow triggered when the presence sensor [sensor name] in Home Assistant detects someone in [room]. Have an AI agent pick a light brightness from 1 to 100 based on the time of day and [other rules, e.g. sunset or movie mode], then set [light entity] to that level. Done when I can test it at three different times of day and see a sensible brightness each time.\nOriginal source: https://growwstacks.com/blog/n8n-home-assistant-ai-lighting-automation",
     "body_sha256": "97aa4267bdfa1920c647feba768d73d30ec2ee8508371957d326d46082ed83d4",
-    "archived_at": "2026-10-30T07:09:51.703203+00:00",
+    "archived_at": "2026-10-31T06:59:57.044445+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:09:51.703203+00:00",
+    "at": "2026-10-31T06:59:57.044445+00:00",
     "status": "fetched",
     "error": null
   }

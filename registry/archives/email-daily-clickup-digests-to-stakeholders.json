@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/email-daily-clickup-digests-to-stakeholders",
-  "observed_at": "2026-10-30T07:29:25.806955+00:00",
-  "html_sha256": "d01d84e7043eb9ad0b1e2df1effa9f84bc9af771c302417c16056edea711adec",
+  "observed_at": "2026-10-31T07:19:31.253436+00:00",
+  "html_sha256": "f772211794464f43c52f1af585266727407805eb530f1ac19d257c67024279de",
   "body_sha256": "c86c6a5af2da5b0ad4512e5c1afc6752a95c6420328f13da36ebaed9d946a530",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Email daily ClickUp digests to stakeholders\nA Make.com scenario sends a daily email digest from ClickUp to stakeholders without ClickUp accounts, and adds contacts to a selected action item.\n·\nJul 1, 2026\nDone with\nMK\nMake\nWhat they did\nThey set up ClickUp with a master action-item list plus related project and contact lists, rolling stakeholder emails into each task and auto-adding the right contacts when a project is chosen. In Make, the intended flow was a 6 AM scheduled run that lists incomplete tasks, iterates them, groups them by project in a Text Aggregator, and sends one email digest to that project’s stakeholder email field; the person manually tested the outputs and email format.\nHow it went\nThe first version failed because the Text Aggregator was pulling whole ClickUp objects, so the email came out as JSON instead of task fields. Commenters said the fix was mapping individual fields and grouping by project name; no finished result or performance numbers were reported.\nWorth knowing\nA practical catch from the thread: test by writing the generated subject, recipients, and body to Google Sheets or a Make data store before turning on live email sends.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a scenario that runs every day at [time] and pulls tasks from my ClickUp [space or list] that are [due soon, changed, or blocked]. Format them into a clean email digest and send it to [stakeholder emails] who don't have ClickUp accounts. Send a test digest to me first and don't send it to stakeholders until I approve.\nOriginal source: https://www.reddit.com/r/Make/comments/1u6amg9/clickup_x_makecom_automation_my_boss_wants_me_to",
     "body_sha256": "c86c6a5af2da5b0ad4512e5c1afc6752a95c6420328f13da36ebaed9d946a530",
-    "archived_at": "2026-10-30T07:29:25.806955+00:00",
+    "archived_at": "2026-10-31T07:19:31.253436+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:29:25.806955+00:00",
+    "at": "2026-10-31T07:19:31.253436+00:00",
     "status": "fetched",
     "error": null
   }

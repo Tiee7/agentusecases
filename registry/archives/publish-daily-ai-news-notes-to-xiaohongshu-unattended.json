@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/publish-daily-ai-news-notes-to-xiaohongshu-unattended",
-  "observed_at": "2026-10-30T07:43:15.611237+00:00",
-  "html_sha256": "6fe0f577c9bd0dea27af91b420ce70a05da4c79caf719a2c9a3063355e1e1406",
+  "observed_at": "2026-10-31T07:33:21.271837+00:00",
+  "html_sha256": "f0eb5d32d4bfd4d9bd27257410b86fe8147d7dca7339921238c5c0ecd712d99e",
   "body_sha256": "1c4f06d6b68b76f7631ebf68604f5f95155dced837536a24bd46c04682810237",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Publish daily AI news notes to Xiaohongshu unattended\nA cron-scheduled agent searches for AI news, verifies sources, writes and renders a post, and publishes via browser automation; 28 of 29 runs succeeded.\n·\nOct 26, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA 09:00 cron job wakes the agent. It runs 3–4 web searches over the past 24–48 hours, opens each original source to verify it, and writes a spec file with 5 points and their URLs. Scripts render 1080×1440 images, then drive a dedicated, already-logged-in Edge profile over Chrome DevTools Protocol to upload, fill and publish. Finally it checks that the post went live. A person logs in manually when the session expires.\nHow it went\nIn 36 days, 28 of 29 scheduled runs published, with no duplicates. The one failure was a model API timeout. Each run took 4–8 minutes. Hashtags end up as plain, non-clickable text.\nWorth knowing\nPublishing is brittle: the publish button sits in a closed shadow DOM, coordinate clicks fail at random, and the editor ignores key events. The repo documents 20 failure modes.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery day at [time], search for the top [number] news items about [topic] from the past 24 hours and verify each against at least two reliable sources. Write a short social post in [language/tone], render it as an image card, and save it to [folder]. Before publishing it to [platform], pause and show me the final text and image for approval. Finish by logging what was published, with the source links, and flag any run that failed.\nOriginal source: https://github.com/Peng2505/xhs-daily-agent",
     "body_sha256": "1c4f06d6b68b76f7631ebf68604f5f95155dced837536a24bd46c04682810237",
-    "archived_at": "2026-10-30T07:43:15.611237+00:00",
+    "archived_at": "2026-10-31T07:33:21.271837+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:43:15.611237+00:00",
+    "at": "2026-10-31T07:33:21.271837+00:00",
     "status": "fetched",
     "error": null
   }

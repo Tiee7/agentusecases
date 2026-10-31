@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/coach-training-and-diet-from-wearable-data",
-  "observed_at": "2026-10-30T07:31:49.572027+00:00",
-  "html_sha256": "1326bd3ba3c9610d4ab18cf96c68e6ef576aa1e32eb7de6e3eec93fe3b5f1db5",
+  "observed_at": "2026-10-31T07:21:55.296947+00:00",
+  "html_sha256": "d01915c7d54693e0ad502512f418199e4646e801b40e2f2f8f1bef5a55697771",
   "body_sha256": "ceaf739e9d02209b355f78964011e47568442dd66e6d6ba19915c2cea8a76128",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Coach training and diet from wearable data\nThe poster uses Claude with Apple Health, nutrition and lifting app data, plus medication and bloodwork files, and has it maintain an HTML dashboard.\n·\nOct 11, 2026\nDone with\nCL\nClaude\nWhat they did\nOne commenter described a setup very close to this: Garmin data is pulled hourly into an InfluxDB on their server, and Claude Code runs there on a scheduled daily morning task. Claude reads load, stress, sleep and related metrics, calculates a training-readiness score itself, builds and adjusts the training plan, and publishes the result to a small webpage they host for phone access; they also gave it an initial full export plus years of Garmin, Strava, and .fit history for context.\nHow it went\nThey said it keeps daily training specific enough to avoid burnout or overtraining and can notice rough periods like vacation, long work weeks, and time-zone travel. The post gives no quantified results, only that long-term history improved context for future goals.\nWorth knowing\nThe main catch they mention is setup: hourly polling plus a scheduled Claude Code task on your own server, with a big historical import at the start.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm going to upload my [Apple Health export, nutrition log, lifting app data] plus [bloodwork or medication notes]. Analyze trends in my training, recovery and diet toward my goal of [goal], then build me an HTML dashboard I can update each week with new data. Finish with three specific changes to try this week, and flag anything that sounds like a question for my doctor rather than guessing.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x2c0v0/has_anyone_used_claude_as_a_training_and_diet",
     "body_sha256": "ceaf739e9d02209b355f78964011e47568442dd66e6d6ba19915c2cea8a76128",
-    "archived_at": "2026-10-30T07:31:49.572027+00:00",
+    "archived_at": "2026-10-31T07:21:55.296947+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:31:49.572027+00:00",
+    "at": "2026-10-31T07:21:55.296947+00:00",
     "status": "fetched",
     "error": null
   }

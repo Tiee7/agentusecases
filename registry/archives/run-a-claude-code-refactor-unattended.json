@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-claude-code-refactor-unattended",
+  "observed_at": "2026-10-31T07:36:35.223002+00:00",
+  "html_sha256": "3a88092ade0b700f1988ac1a37b0d271484bb12df4f50d1951562b14169d50df",
+  "body_sha256": "73a353d1805020d1285ff097693e2b9f39a5c393d072e9c5840fe3c76969e02a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a Claude Code refactor unattended",
+      "sha256": "b6893b8bba4c1bc20ace23fd1e9ce62006f92fb15ff765f578354f8fd482ff91"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code agent ran 40 minutes unattended on a refactor; it worked and tests passed, but the user couldn't tell what it did in between.\n·\nAug 30, 2026",
+      "sha256": "1c332af454870a26aea69b65f202e0647b9dc95db1326d7d326b8f45cb800013"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post says a Claude Code agent was left alone for about 40 minutes to do a refactor, and when the user returned the refactor worked and tests passed. In the comments, people describe how they handle this in practice: run the agent in a low-privilege account, inspect git diffs afterward, or log tool calls with Claude Code’s PreToolUse/PostToolUse hooks or session JSONL files under ~/.claude/projects to reconstruct what files and commands it touched.",
+      "sha256": "c99ad386f79943e6f58706e0e15bb40c38de735bcfe1ebcb60946f4dc1f2b319"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The reported outcome was that the refactor succeeded and tests passed, but the user had no clear timeline, diff summary, or visibility into whether it read sensitive files or made outside calls. Commenters said transcripts are poor for auditing, and recommended relying on diffs, permissions, and tool-level logs instead.",
+      "sha256": "3057ae8cd8f7a04c38e95473b9828dcb1349fd21e672b00f01fa03d975167651"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch was visibility: a long unattended run may succeed, but without separate logging or diff review you may not know what happened in between.",
+      "sha256": "c6dd7d970ed3fc7e10e6da790e0d81abc953d9615ef7843a2b9f3331dcd92346"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/AI_Agents/comments/1w0z37j/my_claude_code_agent_ran_for_40_minutes_while_i"
+      ],
+      "sha256": "508168f0bd6e209cc6688ce5ef31c744d66083bebb0e9217f416626b3b1d7f2e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-30",
+      "sha256": "24d70b9666ddc553a720f2b8cf8dba452a8dd9f7d2257646dc47add5b215d60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2d82b157490a7a8a74fd972208316157885e8882f1ddcb3151d26a60985ab4d3",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a Claude Code refactor unattended\nA Claude Code agent ran 40 minutes unattended on a refactor; it worked and tests passed, but the user couldn't tell what it did in between.\n·\nAug 30, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe post says a Claude Code agent was left alone for about 40 minutes to do a refactor, and when the user returned the refactor worked and tests passed. In the comments, people describe how they handle this in practice: run the agent in a low-privilege account, inspect git diffs afterward, or log tool calls with Claude Code’s PreToolUse/PostToolUse hooks or session JSONL files under ~/.claude/projects to reconstruct what files and commands it touched.\nHow it went\nThe reported outcome was that the refactor succeeded and tests passed, but the user had no clear timeline, diff summary, or visibility into whether it read sensitive files or made outside calls. Commenters said transcripts are poor for auditing, and recommended relying on diffs, permissions, and tool-level logs instead.\nWorth knowing\nThe clearest catch was visibility: a long unattended run may succeed, but without separate logging or diff review you may not know what happened in between.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRefactor [module or area of the codebase] to [goal, e.g. split it into smaller functions or remove the deprecated API]. As you work, keep a running log file called PROGRESS.md noting each change you make and why, and run [test command] after each major step. Stop when all tests pass and give me a short summary of the files you touched and anything you weren't sure about.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1w0z37j/my_claude_code_agent_ran_for_40_minutes_while_i",
+    "body_sha256": "73a353d1805020d1285ff097693e2b9f39a5c393d072e9c5840fe3c76969e02a",
+    "archived_at": "2026-10-31T07:36:35.223002+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-31T07:36:35.223002+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

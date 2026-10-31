@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/sync-monday-orders-to-xero-pos-invoices-and-bills",
-  "observed_at": "2026-10-30T07:35:25.822291+00:00",
-  "html_sha256": "86e49910fef7dbd0e3e2c2571d8e52dcd88e80be6316b086bffc5968c108dbd9",
+  "observed_at": "2026-10-31T07:25:31.233760+00:00",
+  "html_sha256": "60ce7ee4b0df4bdc2e5b0c8159122eec886f07291f903c4159e13dac5a5580f2",
   "body_sha256": "d4e7e584fa39d6405ae504356103164642d32e0231c4286050e8a04a7fab0bb7",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Sync Monday orders to Xero POs, invoices and bills\nA Make.com setup for a client creates Xero purchase orders, emails client invoices, and matches supplier invoice uploads to bills, flagging failures for attention.\n·\nMay 18, 2026\nDone with\nMK\nMake\nWhat they did\nThe setup uses three Make.com scenarios triggered by Monday webhooks. When a PO item is marked Ready, it finds or creates the supplier in Xero, creates the purchase order with line items, downloads the PDF back onto the Monday item, and creates the matching bill; a client-invoice flow does the reverse and emails the invoice, while a supplier-upload flow takes a PDF added by an employee and attaches it to the matching Xero bill by PO reference.\nHow it went\nThe author says all three flows were fully tested and running in production, with failures switching the Monday status to Needs Attention and adding a comment so staff can fix the data and retry. No results or volume numbers were given.\nWorth knowing\nThe main catch is that autonomy depends on clean status-based retries in Monday, so staff correct the item there instead of debugging inside Make.com.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a Make scenario that watches my Monday.com board [board name] and, when an item reaches [status], creates a purchase order in Xero from its details and emails the client invoice. Also match supplier invoice files uploaded to [folder or column] to the right Xero bill, and post any failures or mismatches to [Slack channel or email] instead of guessing. Create the Xero records and emails in test mode first and show me a sample of each before turning anything live.\nOriginal source: https://www.reddit.com/r/mondaydotcom/comments/1tgn8rm/built_a_monday_xero_automation_in_makecom_sharing",
     "body_sha256": "d4e7e584fa39d6405ae504356103164642d32e0231c4286050e8a04a7fab0bb7",
-    "archived_at": "2026-10-30T07:35:25.822291+00:00",
+    "archived_at": "2026-10-31T07:25:31.233760+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:35:25.822291+00:00",
+    "at": "2026-10-31T07:25:31.233760+00:00",
     "status": "fetched",
     "error": null
   }

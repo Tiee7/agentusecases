@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-multi-stage-pr-reviews-with-parallel-sub-agents",
-  "observed_at": "2026-10-30T06:50:13.421899+00:00",
-  "html_sha256": "290c87d17e1aa2117018ecb7b93e4e2ab4b266506a779c2551cc9f81ed5ce157",
+  "observed_at": "2026-10-31T06:40:19.036144+00:00",
+  "html_sha256": "66316e26b06f44b5554f6667aa3eb7fb17c7152ab30c0069a1d9d029fcb511e6",
   "body_sha256": "225aa672d4e3fe5646a990c534c0e74a662250ffed4f5f37b43a46f00643b749",
   "status": "observed",
   "fields": {
@@ -96,7 +96,7 @@
     "language": "en",
     "body": "Run multi-stage PR reviews with parallel sub-agents\nA Claude Code plugin that reviews pull requests in stages with sub-agents and validation passes, with optional ensemble review via Codex.\n·\nMay 11, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe /adamsreview:review command runs up to seven parallel sub-agent lenses (correctness, security, UX and others) on a branch or PR. Their findings go through dedup, a cheap-then-deep validation gate, and an optional Opus cross-cutting pass. With --ensemble it adds a Codex pass and a scrape of PR bot comments. /adamsreview:fix then runs fix sub-agents in parallel, re-reviews with Opus, reverts regressions and commits the rest. /adamsreview:walkthrough lets a person decide on uncertain findings.\nHow it went\nThe author reports, anecdotally on their own PRs (n=me), that it catches far more real bugs than /review, /ultrareview, CodeRabbit, Greptile and Codex review, with fewer false positives. No measured numbers are given.\nWorth knowing\n--ensemble costs more tokens and needs the Codex Claude Code plugin. Runs on a regular Claude Code subscription (Max recommended), not Extra Usage credits like /ultrareview.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nReview the pull request at [PR URL or branch name] in stages: use separate sub-agents to check correctness, security, tests, and style, then run a validation pass that discards findings you can't back up with a specific line of code. Finish with one ranked list of issues, each with file, line, and a suggested fix. Don't post any comments to the PR; just show me the list.\nOriginal source: https://github.com/adamjgmiller/adamsreview",
     "body_sha256": "225aa672d4e3fe5646a990c534c0e74a662250ffed4f5f37b43a46f00643b749",
-    "archived_at": "2026-10-30T06:50:13.421899+00:00",
+    "archived_at": "2026-10-31T06:40:19.036144+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -114,7 +114,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T06:50:13.421899+00:00",
+    "at": "2026-10-31T06:40:19.036144+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-binaries-in-ghidra",
-  "observed_at": "2026-10-30T06:51:25.413208+00:00",
-  "html_sha256": "fc2d2278221fc5d8b048ed5f44464790408c75644bb7afe2cab788b0369ee00f",
+  "observed_at": "2026-10-31T06:41:31.042818+00:00",
+  "html_sha256": "701d8dae685da313ebbb448a3de6f70a6d3316d0e31e19d4752a54058ea5810b",
   "body_sha256": "c413dac13e14aced8b1c439b1971d976475b273a833e891c057880f898878cbd",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Reverse-engineer binaries in Ghidra\nAn MCP server exposing 110 Ghidra tools for AI-assisted reverse engineering.\n·\nFeb 4, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA Ghidra plugin starts an HTTP server on localhost, and a Python bridge exposes it to MCP clients such as Claude or Cursor. The agent decompiles functions, follows call graphs and cross-references, and renames, retypes and comments in batches. A person builds and deploys the plugin and enables it in CodeBrowser.\nHow it went\nThe README now lists 253 tools, not 110. It claims 93% fewer API calls from batching, and says it was refined over hundreds of documented functions. It gives no benchmark of results.\nWorth knowing\nLazy tool loading is on by default because Gemini rejects the full tool list. Script-running endpoints are off unless you set GHIDRA_MCP_ALLOW_SCRIPTS, and the server has no authentication on localhost.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to the Ghidra MCP server I have set up and open the binary at [path to binary]. Identify its main functions, rename them based on what they do, and list any suspicious behavior such as network calls or file writes. Finish with a short written summary of what the program does and the functions that support that conclusion.\nOriginal source: https://github.com/bethington/ghidra-mcp",
     "body_sha256": "c413dac13e14aced8b1c439b1971d976475b273a833e891c057880f898878cbd",
-    "archived_at": "2026-10-30T06:51:25.413208+00:00",
+    "archived_at": "2026-10-31T06:41:31.042818+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T06:51:25.413208+00:00",
+    "at": "2026-10-31T06:41:31.042818+00:00",
     "status": "fetched",
     "error": null
   }

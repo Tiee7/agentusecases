@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/diagnose-aws-issues-with-read-only-claude-access",
+  "observed_at": "2026-10-31T07:37:05.231171+00:00",
+  "html_sha256": "f6cb268eda28e8cd0891029fca980beadfc328c19dcf1812c600178168ffb7be",
+  "body_sha256": "30b8600b86734278aa29f73df369d1fef66989dc50b604da8da906f0f5f35a3c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Diagnose AWS issues with read-only Claude access",
+      "sha256": "d814f82c24c75da9b69cee7ef91ca8691fc81a66b4b9e4c611f2ef433d237606"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A startup engineer gives Claude read-only access to AWS, logs and the database, and it investigates issues and writes a report, though it sometimes makes things up.\n·\nOct 30, 2026",
+      "sha256": "9dc9705e2f0e0b4623383525b204c035137dbc8d0941b630a216d29ed326a50f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A startup engineer who covers the whole stack (code, deployment, database, cloud, networking) gives Claude read-only access to AWS, the logs and the database. Instead of manually reading logs, checking routing tables and cross-checking against database data, they let Claude use the AWS CLI to investigate the issue. It then writes a detailed report that can be passed to others.",
+      "sha256": "71e5dc384fb29baf7c0f64213d844748827e4c495efc63490ad5f7e8ac6a9614"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says it solves issues roughly 10x faster than they could. It sometimes makes things up, and the author worries about skill atrophy, including for future job interviews.",
+      "sha256": "692b97eeb297b32af0e22bc0c96f10c9a7bb015f45dbf28204d414f931f8b4b2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Read-only access limits the damage, but the report can contain invented claims, so verify its findings before passing them along.",
+      "sha256": "9b696a53653439db3ec4729eea63e841e7cf0029db2fba18cae6de41fa958a2b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50306875"
+      ],
+      "sha256": "4139e9451fc77cb9711b8fe81be0c5557fb50b339106269b2c89ba1159014d5a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-30",
+      "sha256": "24d70b9666ddc553a720f2b8cf8dba452a8dd9f7d2257646dc47add5b215d60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "61ed1a39e5a2728b9c18f62302b9686a4db9528462bd919df68c75b48de42fdb",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Diagnose AWS issues with read-only Claude access\nA startup engineer gives Claude read-only access to AWS, logs and the database, and it investigates issues and writes a report, though it sometimes makes things up.\n·\nOct 30, 2026\nDone with\nCL\nClaude\nWhat they did\nA startup engineer who covers the whole stack (code, deployment, database, cloud, networking) gives Claude read-only access to AWS, the logs and the database. Instead of manually reading logs, checking routing tables and cross-checking against database data, they let Claude use the AWS CLI to investigate the issue. It then writes a detailed report that can be passed to others.\nHow it went\nThe author says it solves issues roughly 10x faster than they could. It sometimes makes things up, and the author worries about skill atrophy, including for future job interviews.\nWorth knowing\nRead-only access limits the damage, but the report can contain invented claims, so verify its findings before passing them along.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm giving you read-only access to [my AWS account/profile], [log source], and [database]. Investigate this problem: [describe the symptom and when it started]. Only run read-only commands, and don't change or delete anything. Write a report with what you found, the evidence for each claim (log lines, queries, resource IDs), and anything you're unsure about, clearly marked as a guess rather than a fact.\nOriginal source: https://news.ycombinator.com/item?id=50306875",
+    "body_sha256": "30b8600b86734278aa29f73df369d1fef66989dc50b604da8da906f0f5f35a3c",
+    "archived_at": "2026-10-31T07:37:05.231171+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-31T07:37:05.231171+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

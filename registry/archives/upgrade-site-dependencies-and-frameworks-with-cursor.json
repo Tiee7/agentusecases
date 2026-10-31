@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/upgrade-site-dependencies-and-frameworks-with-cursor",
-  "observed_at": "2026-10-30T07:09:13.704681+00:00",
-  "html_sha256": "ef7868717f7d4061f451858a1cc91c84d784abf4cb2ac3a404665a4b6b42d0ef",
+  "observed_at": "2026-10-31T06:59:19.156855+00:00",
+  "html_sha256": "a48dd8c4ea306b93c7db04f21b37cfb676ab9c9dd11577d91d7bc8e886d4e575",
   "body_sha256": "7bab0000c1753fce9c4fb080bd9eeb6fde6b211fa58dc7ae315452ff7eec2ac6",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Upgrade site dependencies and frameworks with Cursor\nKent C. Dodds had Cursor's agent look up migration docs, plan and upgrade Remix v2 to React Router v7 and xstate in his site.\nDone with\nCR\nCursor\nWhat they did\nKent asked Cursor to list outdated packages grouped by upgrade difficulty, then upgraded them in separate conversations: easy, medium, then majors one at a time. For xstate and Remix, he told it to read migration docs first. He ran the Remix to React Router v7 move as a long-running background agent, answered its plan questions, and fed it route output to fix routing.\nHow it went\nEverything went smoothly except routing after the switch to react-router-auto-routes, which needed a correction. Kent merged after a few BugBot and CodeRabbit fix rounds. The migration took about a day and touched over 17k lines.\nWorth knowing\nKent says it worked because the site already had good tests and docs, and giving the agent a way to check itself, like comparing route listings, made it perform much better.\nTry it yourself\nwith\nCursor\nCopy prompt\nLook up the official migration docs for upgrading [old framework/library] to [new framework/library] in my project, then plan and carry out the upgrade step by step, running tests after each change. Stop and show me a summary of all changes before committing anything.\nOriginal source: https://kentcdodds.com/blog/how-i-used-cursor-to-migrate-frameworks",
     "body_sha256": "7bab0000c1753fce9c4fb080bd9eeb6fde6b211fa58dc7ae315452ff7eec2ac6",
-    "archived_at": "2026-10-30T07:09:13.704681+00:00",
+    "archived_at": "2026-10-31T06:59:19.156855+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:09:13.704681+00:00",
+    "at": "2026-10-31T06:59:19.156855+00:00",
     "status": "fetched",
     "error": null
   }

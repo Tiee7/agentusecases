@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-cron-agents-for-inbox-research-and-site-audits",
-  "observed_at": "2026-10-30T07:23:17.846158+00:00",
-  "html_sha256": "d4bd5c94bceae0e23bfc48f5945904a8650d33ad1324a2b2ebc567157e0002fd",
+  "observed_at": "2026-10-31T07:13:23.279158+00:00",
+  "html_sha256": "e48954c2df22806cac8f740b62d6d65612b4ad448ff71264b7318e59c08e6789",
   "body_sha256": "5762734a5aa781990184426e059d727e2eeb908ad2f8591641e95792c7abf926",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run cron agents for inbox, research and site audits\nThe author runs two OpenClaw agents with 12 cron jobs covering inbox scanning, article indexing, research digests, Search Console analysis, site audits and health monitoring.\nDone with\nOC\nOpenClaw\nWhat they did\nJenny Ouyang runs two OpenClaw agents on one Oracle Cloud ARM server. One is a personal assistant with memory, and the other is a website-building bot she shares with her business partner. Twelve cron jobs run on a schedule. Twice a day the inbox job reads new newsletter posts and searches her memory database for related work of hers. It saves the results to a database and a markdown report, which she reviews via Telegram or GitHub. She writes every comment herself.\nHow it went\nThe inbox scanning works well for her. The jobs don't yet trigger each other, so handoffs are still manual. One agent wiped a database while debugging a seed conflict, and she restored it from backups.\nWorth knowing\nGive agents scoped credentials with no DROP permission, keep automatic backups, and bind the gateway to localhost. Setup took longer than the documentation suggested.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up scheduled jobs for me: every morning scan my inbox at [email account] and send me a short summary of what needs a reply, every week compile a research digest on [topic], and every month audit [my website URL] for broken links and slow pages. Send each result to me in [chat app] as a short list. Do not send, delete, or archive any email without showing me first; after setting up the jobs, show me the schedule and stop.\nOriginal source: https://buildtolaunch.substack.com/p/openclaw-ai-agent-one-person-business",
     "body_sha256": "5762734a5aa781990184426e059d727e2eeb908ad2f8591641e95792c7abf926",
-    "archived_at": "2026-10-30T07:23:17.846158+00:00",
+    "archived_at": "2026-10-31T07:13:23.279158+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:23:17.846158+00:00",
+    "at": "2026-10-31T07:13:23.279158+00:00",
     "status": "fetched",
     "error": null
   }

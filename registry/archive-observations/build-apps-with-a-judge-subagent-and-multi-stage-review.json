@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-apps-with-a-judge-subagent-and-multi-stage-review",
-  "observed_at": "2026-10-30T07:38:30.035790+00:00",
-  "html_sha256": "53c36eb273c4a3b65b5f09728bdc1f04d64a46e5ac24260c869f3ee209305d9a",
+  "observed_at": "2026-10-31T07:28:35.230247+00:00",
+  "html_sha256": "ccbd4210364b92512213ca0536fa2882837823881d6ec181335ccead8a177b0b",
   "body_sha256": "6a6d24d609c7aa7153d7cfe86bf793684b382b0327e76c244a8bf2df46d84101",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Build apps with a judge subagent and multi-stage review\nA Claude Code setup for app development uses a judge subagent, context management, and multi-stage review for quality control.\n·\nOct 19, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe post describes a solo developer using Claude Code to build a Windows app with a separate read-only judge subagent for unresolved decisions. The judge had to label claims as confirmed, guessed, or unknown and avoid deciding from guesses; the developer also started each issue in a fresh child session, then ran two review passes on code: a general code review and a second pass using coding-guideline skills, with deferred issues left in PRs for human review.\nHow it went\nThe workflow reportedly led to a Microsoft Store shipment and 142 merged PRs in 17 days. The post also notes the setup is complex and may be hard for beginners.\nWorth knowing\nThe main catch is overhead: this workflow adds fresh sessions, a separate judge, and two review stages, so it is presented as an advanced setup rather than a lightweight default.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up my project in [repo path] so that after you implement each feature of [app description], a separate judge subagent reviews the work against the requirements and tests and sends back a list of problems. Repeat the fix and review loop until the judge has no blocking issues. Keep a short notes file of decisions so context survives between sessions, and summarize the final state when finished.\nOriginal source: https://www.reddit.com/r/ClaudeWorkflows/comments/1x9vwqf/workflow_advanced_claude_code_workflow_judge",
     "body_sha256": "6a6d24d609c7aa7153d7cfe86bf793684b382b0327e76c244a8bf2df46d84101",
-    "archived_at": "2026-10-30T07:38:30.035790+00:00",
+    "archived_at": "2026-10-31T07:28:35.230247+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "published_edition": {
@@ -105,7 +105,7 @@
     "policy": "Published original and translation unchanged; latest capture awaits explicit review if body differs."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:38:30.035790+00:00",
+    "at": "2026-10-31T07:28:35.230247+00:00",
     "status": "fetched",
     "error": null
   }

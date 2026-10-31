@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/debug-low-level-cryptography-code",
-  "observed_at": "2026-10-30T06:51:21.416176+00:00",
-  "html_sha256": "43ec55e28ff8a03124f625561762ba9a514c44bc07906076f606759aaac19386",
+  "observed_at": "2026-10-31T06:41:26.936049+00:00",
+  "html_sha256": "4eb20286d89b12a8dc44fd6d88908a9068e22284c2c4cca0043958a01ed5d803",
   "body_sha256": "dee0c02b45d04ef871020f93dd22b061bca26303e4d9a316b78c9f3ea46fcdbe",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Debug low-level cryptography code\nCryptography engineer Filippo Valsorda's write-up on Claude Code debugging low-level crypto.\n·\nNov 1, 2025\nDone with\nCC\nClaude Code\nWhat they did\nFilippo Valsorda ran Claude Code (Opus 4.1, no system prompt) on his new Go ML-DSA implementation. His prompt named the test command and code directory, described the failing symptom, and asked it to think hard. It read the code and traced the bug. It also tested a hypothesis with a small test of its own. He then repeated this on two earlier signing bugs, using a fresh session for each.\nHow it went\nIt found all three bugs in one shot without help. The Verify bug took minutes: high bits were taken twice. Its proposed fixes were mediocre, so Valsorda threw them away and rewrote them himself.\nWorth knowing\nUse well-scoped failing tests, start a fresh session for each independent bug, and treat the agent's output as a pointer to the bug, not a fix to merge.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a failing test in my cryptography code at [path], where [describe the symptom, e.g. wrong output for certain inputs]. Investigate why it fails, compare against [reference implementation or test vectors], and propose a fix. Finished means the tests pass and you've explained the root cause, and you should show me the diff before changing any files.\nOriginal source: https://words.filippo.io/claude-debugging/",
     "body_sha256": "dee0c02b45d04ef871020f93dd22b061bca26303e4d9a316b78c9f3ea46fcdbe",
-    "archived_at": "2026-10-30T06:51:21.416176+00:00",
+    "archived_at": "2026-10-31T06:41:26.936049+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T06:51:21.416176+00:00",
+    "at": "2026-10-31T06:41:26.936049+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/cross-check-coding-agent-answers-with-a-second-agent",
+  "observed_at": "2026-10-31T07:36:51.172019+00:00",
+  "html_sha256": "e00182769dad8edd2dd4eb84d10c78843f5ac8cf05da367a26a6acfbb9966ce5",
+  "body_sha256": "c5303b117a6f3b27c7bc07ff63a53024ac700ccb35090bc9642a0591200a2fba",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Cross-check coding agent answers with a second agent",
+      "sha256": "d66517039356d4965d860087f8319f29dd5e365e6bcd09f7f6022405dbd0373e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster built a tool that automatically sends Claude Code responses to Codex for a second opinion, replacing manual copy-pasting.",
+      "sha256": "f995385daed7bdae17e4706651c477307a079f0795004c647be9f6576ae6aabf"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster had been manually pasting Claude Code’s replies into Codex for a second opinion, then built Sage to automate that workflow. Sage runs in a separate terminal, watches the main coding agent in real time, and sends each response to another model for review while keeping its own persistent thread; unlike the MCP approach they tried, it can read the codebase, use tools, search the web, and the human chooses whether to apply or ignore the feedback.",
+      "sha256": "eb31dea0ca38e775ff83feb1987d5dbbfea51f1e1aebc7bf1a2791298951a498"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say this workflow led to far fewer bugs and caught bad plans early, but they gave no hard metrics. In comments, users reported it already made useful catches, while the poster noted some rough edges around plan mode and needing to restart after Claude’s /clear.",
+      "sha256": "15df1a945625d053a5c5d587a99d1ab7e1d64526951af5c53a894da8fa591452"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "You can authenticate through a ChatGPT Pro Codex subscription or an API key, but /clear creates a new conversation log, so you have to rerun Sage and pick the new convo.",
+      "sha256": "5b245dce3c114d2f33a6b58b74321234c6a9e8f00aa4a84a94ab0fe53a61a067"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Codex"
+      ],
+      "sha256": "d7c05c9ade775ebb616d7c547330b8ca1e39245143fa96cb8d27467e79460a37"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/OpenaiCodex/comments/1pdv38j/got_tired_of_copypasting_my_agents_responses_into"
+      ],
+      "sha256": "26d6791b3ee67002b5fce8fd660ff43e354e5520788a0f236470673e796d5797"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-30",
+      "sha256": "24d70b9666ddc553a720f2b8cf8dba452a8dd9f7d2257646dc47add5b215d60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "8d3768e4aff07f2c783408e427df0f28c6e85b90ccd33fad1c4c9f144635d167",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Cross-check coding agent answers with a second agent\nThe poster built a tool that automatically sends Claude Code responses to Codex for a second opinion, replacing manual copy-pasting.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe poster had been manually pasting Claude Code’s replies into Codex for a second opinion, then built Sage to automate that workflow. Sage runs in a separate terminal, watches the main coding agent in real time, and sends each response to another model for review while keeping its own persistent thread; unlike the MCP approach they tried, it can read the codebase, use tools, search the web, and the human chooses whether to apply or ignore the feedback.\nHow it went\nThey say this workflow led to far fewer bugs and caught bad plans early, but they gave no hard metrics. In comments, users reported it already made useful catches, while the poster noted some rough edges around plan mode and needing to restart after Claude’s /clear.\nWorth knowing\nYou can authenticate through a ChatGPT Pro Codex subscription or an API key, but /clear creates a new conversation log, so you have to rerun Sage and pick the new convo.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small tool that takes each response Claude Code gives in my project at [repo path] and automatically sends it, with the relevant question and code context, to Codex for a second opinion. It should show me both answers side by side and highlight where they disagree. You're done when I can run one command and see the cross-check for a sample question, and tell me before installing anything or running commands that change my repo.\nOriginal source: https://www.reddit.com/r/OpenaiCodex/comments/1pdv38j/got_tired_of_copypasting_my_agents_responses_into",
+    "body_sha256": "c5303b117a6f3b27c7bc07ff63a53024ac700ccb35090bc9642a0591200a2fba",
+    "archived_at": "2026-10-31T07:36:51.172019+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-10-31T07:36:51.172019+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-client-onboarding-and-schedule-pdfs",
-  "observed_at": "2026-10-30T07:29:05.812454+00:00",
-  "html_sha256": "2254e2ae5104e738692c20a2561cf2c268923b833080a8138a65ed008633b687",
+  "observed_at": "2026-10-31T07:19:11.196850+00:00",
+  "html_sha256": "66387d743dc53233ccb6a40cd30dd22332466181d86099a6e5f9cf09766300ba",
   "body_sha256": "56c71fb2cfe1961ba1a05aff57b5f51b41f33cab1af3a1f0a3a08ddbe6d2729b",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Automate client onboarding and schedule PDFs\nAn n8n workflow triggered from a Google Sheet generates a PDF training schedule, emails it to the client with reminders, and cleans up the temp file.\n·\nNov 1, 2025\nDone with\nN8\nn8n\nWhat they did\nThey built two n8n workflows around a Google Sheet. One triggers when a new booking is marked for onboarding, pulls that client’s upcoming sessions, creates a temporary Google Doc, turns it into a personalized PDF, emails the welcome pack with the trainer CC’d, then updates the sheet so it cannot resend; a second 8am workflow checks for sessions 30 or 7 days out and repeats the PDF-and-email process for reminders.\nHow it went\nThe result was that every client automatically got a welcome pack plus 30-day and 7-day reminders with no manual sending. The post says it works well, but gives no hard metrics and the author still thinks parts could be structured more cleanly.\nWorth knowing\nThe main catch is the temporary-file PDF pipeline: it creates a Google Doc, converts it, attaches it, and deletes it afterward so Drive does not fill up.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that triggers when a new row is added to my Google Sheet [sheet name] with client name, email, and [program details]. Generate a PDF training schedule from a template, email it to the client with a short welcome message, schedule reminder emails on [days], and delete the temporary PDF afterward. Test it with a dummy row sent to my own email before enabling it for real clients.\nOriginal source: https://www.reddit.com/r/n8n/comments/1rruer8/built_an_n8n_automation_that_handles_client",
     "body_sha256": "56c71fb2cfe1961ba1a05aff57b5f51b41f33cab1af3a1f0a3a08ddbe6d2729b",
-    "archived_at": "2026-10-30T07:29:05.812454+00:00",
+    "archived_at": "2026-10-31T07:19:11.196850+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:29:05.812454+00:00",
+    "at": "2026-10-31T07:19:11.196850+00:00",
     "status": "fetched",
     "error": null
   }

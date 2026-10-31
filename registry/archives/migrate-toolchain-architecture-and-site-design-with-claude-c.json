@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-toolchain-architecture-and-site-design-with-claude-c",
-  "observed_at": "2026-10-30T07:03:37.460257+00:00",
-  "html_sha256": "a2cb40f30b7d69fd82e5351acd0c1cdeaa02d785988d449866e5541a1f44c47c",
+  "observed_at": "2026-10-31T06:53:43.075010+00:00",
+  "html_sha256": "0b1c88e921d0b043b0db6a9c9145be647aa946089960ea7eb742cf9419be8a98",
   "body_sha256": "8c6be56c3bbbdf777773e5bec50e850676879ce6f603eaeb73ff63ee879844e1",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate toolchain, architecture and site design with Claude Code\nA developer had Claude Code switch a monorepo to oxlint/oxfmt, restructure the architecture and redesign a site, validating in a loop; the redesign took days instead of weeks.\nDone with\nCC\nClaude Code\nWhat they did\nOn a 7-app Cloudflare Workers monorepo of about 1,670 TypeScript files, Claude Code replaced Biome with oxlint and oxfmt, then tsc with tsgo, in separate PRs. It also moved a frontend into feature modules from a spec the developer wrote, and helped redesign his site using a well-kept CLAUDE.md. Each step ran lint, typecheck, tests and build, and he read the output.\nHow it went\nLint plus typecheck fell from 29.04s to 1.25s, about 23x faster. The oxlint PR touched more than 700 files. The site redesign took a couple of days instead of roughly two weeks.\nWorth knowing\nPlan first, split the work into phases with atomic PRs, and measure before and after. Don't merge changes you don't understand.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repo at [path], switch the linting and formatting toolchain to [e.g. oxlint and oxfmt], and fix everything that breaks. Run the build, tests, and lint after each change and loop until they all pass. Work on a separate branch, summarize what you changed, and stop when everything is green without merging.\nOriginal source: https://sergioazocar.com/en/blog/how-to-migrate-with-claude-code-and-not-die-trying/",
     "body_sha256": "8c6be56c3bbbdf777773e5bec50e850676879ce6f603eaeb73ff63ee879844e1",
-    "archived_at": "2026-10-30T07:03:37.460257+00:00",
+    "archived_at": "2026-10-31T06:53:43.075010+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:03:37.460257+00:00",
+    "at": "2026-10-31T06:53:43.075010+00:00",
     "status": "fetched",
     "error": null
   }

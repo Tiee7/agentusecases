@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-and-score-cves-with-real-time-alerts",
-  "observed_at": "2026-10-30T07:10:37.800098+00:00",
-  "html_sha256": "99b1485df0e3a812c8d444726f493a9a971c41b343fdf53dd3b93d173bad94a2",
+  "observed_at": "2026-10-31T07:00:43.091038+00:00",
+  "html_sha256": "443dfa89f9aac67c22a8dd54add05ed2ae29f5114439617398a4ede26ea60c80",
   "body_sha256": "2a9d35fd9c1349b211c8cdd495d6ce38001b13e5858dbb149d2cd9ccf0919278",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Monitor and score CVEs with real-time alerts\nAn n8n workflow monitors CVEs from sources like CISA and OTX, scores them with AI, and alerts via Slack, Gmail and Google Sheets.\nDone with\nN8\nn8n\nWhat they did\nBright Data nodes in n8n scrape CISA, NIST, CERT-FR and BleepingComputer. A Cohere Command-R agent with session memory extracts CVE details and scores severity, using CISA KEV, CIRCL and AlienVault OTX enrichment. Output parsing and normalization stop it recalculating scores arbitrarily. Hash-based diff checks remove duplicates. Alerts go to Slack, Gmail and Google Sheets, with retries on source failures.\nHow it went\nThe author reports 100+ CVEs a day, alerts in under 5 minutes, and 99.8% uptime. The Slack Ack/Investigate/Dismiss buttons are only a demo, because the webhook was blocked, so the system is about 90% production-ready.\nWorth knowing\nWithout strict output constraints and parsing, the AI scored inconsistently. The uptime and false-positive figures are the author's own claims, not independently verified.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that checks CVE feeds such as CISA and OTX every [interval], asks an AI model to score each new CVE for relevance to my stack [list of technologies] and severity, and logs them to my Google Sheet [sheet name]. High-scoring items should also alert me in [Slack channel or Gmail]. You're done when a test run logs new CVEs and flags the relevant ones; show me a sample alert before activating sending.\nOriginal source: https://dev.to/joupify/soc-cert-automated-threat-intelligence-system-with-n8n-ai-5722",
     "body_sha256": "2a9d35fd9c1349b211c8cdd495d6ce38001b13e5858dbb149d2cd9ccf0919278",
-    "archived_at": "2026-10-30T07:10:37.800098+00:00",
+    "archived_at": "2026-10-31T07:00:43.091038+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-10-30T07:10:37.800098+00:00",
+    "at": "2026-10-31T07:00:43.091038+00:00",
     "status": "fetched",
     "error": null
   }

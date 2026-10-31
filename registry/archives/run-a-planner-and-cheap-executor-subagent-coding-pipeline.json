@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-planner-and-cheap-executor-subagent-coding-pipeline",
-  "observed_at": "2026-10-30T07:42:15.874793+00:00",
-  "html_sha256": "0158488f75cddd7b85eb02765ef5f67d684d5ce61c32f33d5adc045ffb3de5dc",
+  "observed_at": "2026-10-31T07:32:21.267203+00:00",
+  "html_sha256": "77c7fdd9693806d64f5367aa512050b75811fc2bf62a6b35c50efd12f6c7b81c",
   "body_sha256": "17c452e3b881b472f4d8e9df1d7085775b06526177789f6877006f3d9b73d152",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run a planner and cheap executor subagent coding pipeline\nThe commenter uses Codex with GPT-5.5 as planner and a GPT-5.4 Mini agent as executor so cheaper models handle tasks that would otherwise cost too much.\n·\nJul 26, 2026\nDone with\nCX\nCodex\nWhat they did\nIn the thread, the commenter says they built their own workflow instead of relying on Codex’s default agent flow. They use GPT-5.5 only to plan tasks, then hand those tasks to a GPT-5.4 Mini agent that does most of the actual work, specifically including file editing; the person chose and assembled this routing themselves.\nHow it went\nThe claimed result is lower-cost handling for most coding work because GPT-5.4 Mini covers most tasks while the pricier model is reserved for planning. The comment gives no metrics, examples, or failure cases.\nWorth knowing\nThe main catch is that they had to build the workflow themselves; the comment links a GitHub project but gives no setup time or cost numbers.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn [repo path], set up a two-stage workflow for this task: [task description]. First, use the strongest model to write a step-by-step plan with small, well-specified subtasks and acceptance tests. Then hand each subtask to a cheaper, smaller model as an executor subagent, and have the planner review each result. Stop when all acceptance tests pass, and give me a summary of the plan, the changes, and any subtasks that needed rework.\nOriginal source: https://www.reddit.com/r/codex/comments/1upz44z/codex_needs_cheaper_more_and_better_subagents",
     "body_sha256": "17c452e3b881b472f4d8e9df1d7085775b06526177789f6877006f3d9b73d152",
-    "archived_at": "2026-10-30T07:42:15.874793+00:00",
+    "archived_at": "2026-10-31T07:32:21.267203+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T07:42:15.874793+00:00",
+    "at": "2026-10-31T07:32:21.267203+00:00",
     "status": "fetched",
     "error": null
   }

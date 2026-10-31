@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-bare-bones-windows-vnc-client-from-an-email-brief",
-  "observed_at": "2026-10-30T06:54:13.420784+00:00",
-  "html_sha256": "03464f857cfafd02df312eabece062f4d5a7dd8da748936cb452ff6a8ed06224",
+  "observed_at": "2026-10-31T06:44:19.116322+00:00",
+  "html_sha256": "131b926c7a74aa34abd140d85c18a949a84ef8aa5ec7b97029da2811adc2ac41",
   "body_sha256": "2566e3ee2937ae4547c60bcbc5e9d8cf43c8dd10df401b2383b7e69fa0dccf17",
   "status": "observed",
   "fields": {
@@ -96,7 +96,7 @@
     "language": "en",
     "body": "Build a bare-bones Windows VNC client from an email brief\nThe author emailed Claude a spec for a minimal VNC viewer targeting Windows 10 over a local SSH tunnel, to be built on a Mac and delivered with a checksum.\n·\nAug 10, 2026\nDone with\nCL\nClaude\nGP\nChatGPT\nWhat they did\nThe author emailed Claude a brief asking for a bare-bones x64 Windows 10 VNC viewer. It would connect only to localhost:5921 through an SSH tunnel, show only the remote cursor, and run at max quality over gigabit LAN. Claude was to build it on the Mac in Rust or C++, host the binary, and give a SHA-256 checksum plus the PowerShell command to verify it.\nHow it went\nIt failed. Claude kept producing broken builds, used up the whole 20x Max weekly limit, and was still delivering broken code after the reset three days later. The author deleted the project after about a week.\nWorth knowing\nA week of iteration burned the entire 20x Max weekly limit and still produced no working viewer, so budget for failure on a from-scratch protocol client.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a minimal [tool, e.g. VNC viewer] for [target OS and version] that connects over [connection details, e.g. a local SSH tunnel to localhost:port]. I'm developing on [my OS], so set up cross-compilation and keep dependencies to a minimum. Finish by giving me the built executable, its SHA-256 checksum, and short build and usage instructions.\nOriginal source: https://news.ycombinator.com/item?id=49244479",
     "body_sha256": "2566e3ee2937ae4547c60bcbc5e9d8cf43c8dd10df401b2383b7e69fa0dccf17",
-    "archived_at": "2026-10-30T06:54:13.420784+00:00",
+    "archived_at": "2026-10-31T06:44:19.116322+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -114,7 +114,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-10-30T06:54:13.420784+00:00",
+    "at": "2026-10-31T06:44:19.116322+00:00",
     "status": "fetched",
     "error": null
   }
