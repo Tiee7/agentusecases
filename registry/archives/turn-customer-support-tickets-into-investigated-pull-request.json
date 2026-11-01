@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-customer-support-tickets-into-investigated-pull-request",
+  "observed_at": "2026-11-01T08:07:51.840048+00:00",
+  "html_sha256": "658eb5e1a4feb880bfd6a4cebee3783ddeb23de818ed5a23a29fb769f6536954",
+  "body_sha256": "71de14548d9a6ebcf53624ade45fa5134e8ef445375a6078a8b368110eabba79",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn customer support tickets into investigated pull requests",
+      "sha256": "8b7f8a846931251c0acbe0b579b42b5cc3838ea69b17fafe3b44010b7624f0d0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Pylon connected its support tool to Devin so a detailed customer issue starts an investigation and possibly a PR, while engineers still review and merge.\n·\nOct 19, 2026",
+      "sha256": "eda02a39e87d4ab5963fe75a2611e3538a3997a28248948f16db8c680cde8e10"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A Pylon workflow spots a detailed bug report, with an error message or repro steps, and adds an escalation tag. The tag starts a Devin automation with the issue as context. Devin looks through the repo and connected logs and tries to reproduce the failure. It may open a PR if Git permissions allow. An engineer reviews and decides whether to merge.",
+      "sha256": "1f7078da9f0e45cce256019adc5e78a8cda95ee7107b40eb67f28ca8c3e85bf6"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source describes a product launch, not measured results. Sessions can end with findings and no PR. Pylon's reporting can show whether Devin PRs opened, merged or closed. It can't confirm the customer's problem is fixed.",
+      "sha256": "da875cf5742f301f5fab098840eec75ad3ffc89fd904ff4f2806d0d3529a13d3"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Devin's default Pylon profile has read-only Git access, so an admin must grant push and PR permissions. Full coding sessions use your Devin plan, while codebase search from Pylon is free.",
+      "sha256": "e520f21372399854535365024c27cb223136bbcfd15e56bba999940f62740e45"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://quasa.io/stories/pylon-sends-support-bugs-to-devin-but-engineers-still-merge-the-fixes"
+      ],
+      "sha256": "b170c2560c473e5022a24d40d3c9f2d010fe7ef1e47e4ca067276c114afade6d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d086a3f1cb0e19bde9a119c20a7927c29d61752cda70227367a497ce9f0c390c",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn customer support tickets into investigated pull requests\nPylon connected its support tool to Devin so a detailed customer issue starts an investigation and possibly a PR, while engineers still review and merge.\n·\nOct 19, 2026\nDone with\nDE\nDevin\nWhat they did\nA Pylon workflow spots a detailed bug report, with an error message or repro steps, and adds an escalation tag. The tag starts a Devin automation with the issue as context. Devin looks through the repo and connected logs and tries to reproduce the failure. It may open a PR if Git permissions allow. An engineer reviews and decides whether to merge.\nHow it went\nThe source describes a product launch, not measured results. Sessions can end with findings and no PR. Pylon's reporting can show whether Devin PRs opened, merged or closed. It can't confirm the customer's problem is fixed.\nWorth knowing\nDevin's default Pylon profile has read-only Git access, so an admin must grant push and PR permissions. Full coding sessions use your Devin plan, while codebase search from Pylon is free.\nTry it yourself\nwith\nDevin\nCopy prompt\nWhen a new support ticket tagged [tag, e.g. bug] arrives from [support tool], read the customer's description and investigate the codebase at [repo URL] to find the likely cause. Write up your findings, and if the fix is clear, open a draft pull request with a test. Do not merge anything, and ask me before contacting the customer.\nOriginal source: https://quasa.io/stories/pylon-sends-support-bugs-to-devin-but-engineers-still-merge-the-fixes",
+    "body_sha256": "71de14548d9a6ebcf53624ade45fa5134e8ef445375a6078a8b368110eabba79",
+    "archived_at": "2026-11-01T08:07:51.840048+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:51.840048+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

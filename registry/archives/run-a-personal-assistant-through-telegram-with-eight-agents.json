@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-personal-assistant-through-telegram-with-eight-agents",
+  "observed_at": "2026-11-01T08:07:15.814114+00:00",
+  "html_sha256": "25c4591f219d62f18efdb67747cc31d98e349d9334a387b8c52ca442043f2def",
+  "body_sha256": "b982fc06e0222426422d4afd73f86edb43a9813c5d42209c3354f4a26224ac2c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a personal assistant through Telegram with eight agents",
+      "sha256": "fb55d860b47dd5dfaa1ae9abc0e793bfd8b0a611f3dabbe0b4a6208393d61216"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author built a multi-agent n8n system with eight specialized agents controlled via Telegram by voice or text, replacing their personal assistant.",
+      "sha256": "b6def2b046533bbbd1ffbe8e1e1c2f7c130d420c314bb8ff14eff63a22882354"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author built an n8n workflow with a core orchestrator agent on GPT-4.1, PostgreSQL memory, and eight specialist agents for email, calendar, expenses, travel, weather/news, research, content, social planning, and contacts. They control it through Telegram by text or voice, and the orchestrator routes each request to the right agent, which then uses connected tools like Google Workspace, Airtable, SerpAPI, Tavily, Perplexity, and Replicate to complete the task.",
+      "sha256": "55b16b1a36c736d6535213da596e2f458f66a212a8c2d98d6ebde5cea62380b5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says it saves 20+ hours a week, makes travel planning take seconds instead of hours, and gets them to inbox zero while handling routine logging and research with sources. In comments, they say they have been using it for a while, but they do not give hard operating-cost figures.",
+      "sha256": "5e551708584398a7b9d2ad61578f921cb59cfc0a5aa90f6dd7c68ce0c128d90a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch they mention is setup: you need an n8n instance, Telegram bot, Google Workspace access, PostgreSQL, and several API keys; they also say run cost is not easy to quantify.",
+      "sha256": "01663a81951fb2ab8619188f206d7019fd8439912f6ab9a50cde42db5bad9612"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1mugdof/i_built_an_ai_agent_army_in_n8n_that_completely"
+      ],
+      "sha256": "3490d2e2d6706958e6377c2425fbf05eafe9b8200a24eebcfffeceb0a2fa0e59"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "dfb15c7d062323547bdc0921980566a31b60528d97bb2b72129d6dca8170e1bf",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a personal assistant through Telegram with eight agents\nThe author built a multi-agent n8n system with eight specialized agents controlled via Telegram by voice or text, replacing their personal assistant.\nDone with\nN8\nn8n\nWhat they did\nThe author built an n8n workflow with a core orchestrator agent on GPT-4.1, PostgreSQL memory, and eight specialist agents for email, calendar, expenses, travel, weather/news, research, content, social planning, and contacts. They control it through Telegram by text or voice, and the orchestrator routes each request to the right agent, which then uses connected tools like Google Workspace, Airtable, SerpAPI, Tavily, Perplexity, and Replicate to complete the task.\nHow it went\nThe author says it saves 20+ hours a week, makes travel planning take seconds instead of hours, and gets them to inbox zero while handling routine logging and research with sources. In comments, they say they have been using it for a while, but they do not give hard operating-cost figures.\nWorth knowing\nThe main catch they mention is setup: you need an n8n instance, Telegram bot, Google Workspace access, PostgreSQL, and several API keys; they also say run cost is not easy to quantify.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me build a personal assistant in n8n that I can message on Telegram by text or voice note. Create a main router agent that sends requests to specialist agents for [e.g. calendar, email, tasks, notes, research, contacts, reminders, expenses], transcribing voice messages first. It's done when I can send a test request to each specialist and get a sensible reply, and any step that sends an email, books something, or deletes data must first show me what it's about to do and wait for my confirmation.\nOriginal source: https://www.reddit.com/r/n8n/comments/1mugdof/i_built_an_ai_agent_army_in_n8n_that_completely",
+    "body_sha256": "b982fc06e0222426422d4afd73f86edb43a9813c5d42209c3354f4a26224ac2c",
+    "archived_at": "2026-11-01T08:07:15.814114+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:15.814114+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

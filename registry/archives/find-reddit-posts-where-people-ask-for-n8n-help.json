@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/find-reddit-posts-where-people-ask-for-n8n-help",
+  "observed_at": "2026-11-01T08:07:23.816995+00:00",
+  "html_sha256": "3a9499808ea62bd0b0faeca3a8a072f3a39c1f1d2b90919e64b86a488c748f13",
+  "body_sha256": "383624e4b2d2025032ff53fdec807e2965d9de356eaaa2b9bbb59d05d4c2815a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Find Reddit posts where people ask for n8n help",
+      "sha256": "9651d2c4944172cc055d6b0a61532abf47f5f8d704383184135aede1e8239f7a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n agent scrapes recent Reddit posts, stores them in a vector store, and retrieves n8n help requests for the author.",
+      "sha256": "5dfb1df872c0ca47ead9515902b9e9df1913fa99d6d817b542e2a46e5ce26b0d"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author built two n8n workflows. One runs on a schedule, uses an Apify actor to scrape recent posts from selected n8n subreddits, then creates embeddings and stores them in PostgreSQL with pgvector; the other listens in a Telegram chat, sends the message to an AI agent with access to that vector store, and returns semantically matched help posts. The agent uses Gemini Flash 3.1 Lite.",
+      "sha256": "14c352415c5ea1313aa5bbf95ed772d807f0cfb65a28c9fa3ddfcb7e8072b818"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was a personal search assistant for finding Reddit posts where people need n8n help, and the author says it helped them understand how RAG works by grounding responses in retrieved posts. The post does not give accuracy, volume, or performance numbers.",
+      "sha256": "61279e8a08526d8abfdf39f28efc316eccffcc446d6c27f99bf73db80b68dc90"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main practical catch mentioned is model choice: they used Gemini Flash 3.1 Lite because its free tier has a high limit.",
+      "sha256": "4869d76ade500edae4b76ed9c6152697436d6ad6c79ff60646fed8b65de7465f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1ugatgt/made_myself_a_simple_ai_with_rag"
+      ],
+      "sha256": "34649fef595b3820bf651963ff1ede00f6e4910e21a4b4072fd30f38a425520b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "006e5440f1a761823a55f8157f146ea273b8def1fe9427c5391fcf9d0220167e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Find Reddit posts where people ask for n8n help\nAn n8n agent scrapes recent Reddit posts, stores them in a vector store, and retrieves n8n help requests for the author.\nDone with\nN8\nn8n\nWhat they did\nThe author built two n8n workflows. One runs on a schedule, uses an Apify actor to scrape recent posts from selected n8n subreddits, then creates embeddings and stores them in PostgreSQL with pgvector; the other listens in a Telegram chat, sends the message to an AI agent with access to that vector store, and returns semantically matched help posts. The agent uses Gemini Flash 3.1 Lite.\nHow it went\nThe result was a personal search assistant for finding Reddit posts where people need n8n help, and the author says it helped them understand how RAG works by grounding responses in retrieved posts. The post does not give accuracy, volume, or performance numbers.\nWorth knowing\nThe main practical catch mentioned is model choice: they used Gemini Flash 3.1 Lite because its free tier has a high limit.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls recent posts from [subreddits] every [day], stores them in a vector store, and then retrieves posts where someone is asking for help with [tool or topic, e.g. n8n]. It's done when I get a daily digest in [email/Slack/Google Sheet] listing each matching post with its title, link, and a one-line summary of what they need. Don't post any replies on Reddit.\nOriginal source: https://www.reddit.com/r/n8n/comments/1ugatgt/made_myself_a_simple_ai_with_rag",
+    "body_sha256": "383624e4b2d2025032ff53fdec807e2965d9de356eaaa2b9bbb59d05d4c2815a",
+    "archived_at": "2026-11-01T08:07:23.816995+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:23.816995+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

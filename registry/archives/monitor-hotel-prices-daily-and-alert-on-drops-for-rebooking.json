@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/monitor-hotel-prices-daily-and-alert-on-drops-for-rebooking",
+  "observed_at": "2026-11-01T08:07:41.955141+00:00",
+  "html_sha256": "1a667c5cd0b2e7a614ee1ff97daa29e10f8b748816a8b9191141c169bd5e2012",
+  "body_sha256": "e6f094f09b3de76e6d732a3b5b04aa8eb17c06157c8b589e625eb25fc34c07ff",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Monitor hotel prices daily and alert on drops for rebooking",
+      "sha256": "e0aa2e4acc4def69558507847ab1bfe6e915518fd503c6cf95bca3c129296421"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "After booking a refundable hotel room, a scheduled Claude task checks the same room's price daily until the cancellation window ends and alerts the user to rebook if it drops.\n·\nOct 17, 2026",
+      "sha256": "020c1575a00e4dc7f238d99950293f0fd5ae1a408ac33fc91286b0c51cfeeca4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster uses Claude with hotel-site connectors, especially Booking.com, Tripadvisor, Brek, and LetsFG, to pull the same room from multiple sites and normalize the full-stay total by including taxes and fees that may be disclosed separately. After booking a refundable rate, they set a scheduled Claude task to check that same room every day until free cancellation ends and alert them if the price drops so they can rebook.",
+      "sha256": "522ec399b91b7e4d9c7618b1018c62807b757eefb9ee9546d4def37d947fc27a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no savings total for the monitoring workflow, only that hotel prices can move sharply and sometimes fall after booking. It also depends on connectors and on fees being listed somewhere for Claude to find.",
+      "sha256": "a8a34a1826daf23f5db572a3d7de077b95a3490763781c274ae3d04456b3071f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that this only works cleanly if you book with free cancellation and keep checking until the cancellation deadline.",
+      "sha256": "a2ea78c829463f35cc46b0d4132efc49e8ccc4eec4f95563f674a7c53542fc78"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/claude/comments/1x8m80f/use_claude_to_save_on_booking_hotels_when"
+      ],
+      "sha256": "743c9ce2a8f38b9bdc2383dd38fda50d7c672776cdb058046bd4ab7d0657c351"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "beb6aad40c7d2a2ff5c8a2a98dc621f517ce6edf52ffcbdad6903f32322cfd7b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor hotel prices daily and alert on drops for rebooking\nAfter booking a refundable hotel room, a scheduled Claude task checks the same room's price daily until the cancellation window ends and alerts the user to rebook if it drops.\n·\nOct 17, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster uses Claude with hotel-site connectors, especially Booking.com, Tripadvisor, Brek, and LetsFG, to pull the same room from multiple sites and normalize the full-stay total by including taxes and fees that may be disclosed separately. After booking a refundable rate, they set a scheduled Claude task to check that same room every day until free cancellation ends and alert them if the price drops so they can rebook.\nHow it went\nThe source gives no savings total for the monitoring workflow, only that hotel prices can move sharply and sometimes fall after booking. It also depends on connectors and on fees being listed somewhere for Claude to find.\nWorth knowing\nThe main catch is that this only works cleanly if you book with free cancellation and keep checking until the cancellation deadline.\nTry it yourself\nwith\nClaude\nCopy prompt\nI booked a refundable hotel room: [hotel name], [room type], [check-in and check-out dates], at [price per night] with free cancellation until [cancellation deadline]. Set up a scheduled task to check the current price for this same room and dates once a day until the deadline passes, then stop. If the price drops below what I paid by [amount or percent], alert me with the new price, the savings and the booking link. Do not cancel or rebook anything; wait for my go-ahead.\nOriginal source: https://www.reddit.com/r/claude/comments/1x8m80f/use_claude_to_save_on_booking_hotels_when",
+    "body_sha256": "e6f094f09b3de76e6d732a3b5b04aa8eb17c06157c8b589e625eb25fc34c07ff",
+    "archived_at": "2026-11-01T08:07:41.955141+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:41.955141+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

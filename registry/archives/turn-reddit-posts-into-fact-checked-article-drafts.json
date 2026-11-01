@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-reddit-posts-into-fact-checked-article-drafts",
+  "observed_at": "2026-11-01T08:07:19.812422+00:00",
+  "html_sha256": "2418197d94b532f1fd521c610b7ab2a1391dfcc90354dbb6ad6b9c50a45e6aee",
+  "body_sha256": "6779b04e3b20466c0b40286bcdfafc8cfda4b8786ad2d7731aee27975e1eadb5",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn Reddit posts into fact-checked article drafts",
+      "sha256": "a1209ad6dc06805720a76ed254fc17bc27e0093c13e8da636fcb7fda4c69ad75"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n and LangChain workflow ingests Reddit posts, summarizes comment sentiment, drafts articles in different writer styles, and fact-checks with an editor agent.",
+      "sha256": "016d102faf22664692c521036c90caa53aec11a2bf887158e86522bcbc558044"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The maker built an n8n workflow that watches specific subreddits for posts with article flairs, pulls the linked article text, summarizes the Reddit comments for sentiment, and sends both into AI writer agents with different styles to draft a new article. It then applies SEO formatting and posts to WordPress, while Supabase stores embeddings for context and tracks Reddit post IDs to avoid duplicates; featured images and tags still involved manual work.",
+      "sha256": "875922a9eae7bc7e99ff56d4f5ab83290e0e76cf894a9ec4d21a2def41645aa5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They batch-ran it to backfill up to 100 posts and said OpenRouter costs were under $1 for 100 articles. It missed news shared as images or under other flairs, and their separate fact-checking editor idea was not working reliably yet.",
+      "sha256": "641cfd96de9ba9b0ab3794967a22f900bc40b28f36c68e66dae0100af236fa1c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main cost figure was less than a dollar via OpenRouter to generate 100 articles, but they said the editor-in-chief fact-checking agent often looped or struggled with very new information.",
+      "sha256": "a3b6e9c9069c0a2bf9d13a38affd877d0a8219d32c13f3d9cea35cad564501bd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1juaud2/automated_website_via_reddit_posts"
+      ],
+      "sha256": "6b3e2bf2f8b36e27dcdd29ab39ce64b9e34a3301d6da31317df7f1bbb1eb244c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e068c600efd564dd52d0bf48b984d5c5e46b97379d305e563bd14dfe7ae3e798",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn Reddit posts into fact-checked article drafts\nAn n8n and LangChain workflow ingests Reddit posts, summarizes comment sentiment, drafts articles in different writer styles, and fact-checks with an editor agent.\nDone with\nN8\nn8n\nWhat they did\nThe maker built an n8n workflow that watches specific subreddits for posts with article flairs, pulls the linked article text, summarizes the Reddit comments for sentiment, and sends both into AI writer agents with different styles to draft a new article. It then applies SEO formatting and posts to WordPress, while Supabase stores embeddings for context and tracks Reddit post IDs to avoid duplicates; featured images and tags still involved manual work.\nHow it went\nThey batch-ran it to backfill up to 100 posts and said OpenRouter costs were under $1 for 100 articles. It missed news shared as images or under other flairs, and their separate fact-checking editor idea was not working reliably yet.\nWorth knowing\nTheir main cost figure was less than a dollar via OpenRouter to generate 100 articles, but they said the editor-in-chief fact-checking agent often looped or struggled with very new information.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow using LangChain agents that takes Reddit posts from [subreddit] and summarizes the sentiment and main arguments in the comments. Then have a writer agent draft an article in [writer style] and an editor agent fact-check its claims against the source post and comments, flagging anything unsupported. It's finished when I get a revised draft plus a list of flagged claims for each post, saved to [Google Doc or Notion]. Do not publish anything.\nOriginal source: https://www.reddit.com/r/n8n/comments/1juaud2/automated_website_via_reddit_posts",
+    "body_sha256": "6779b04e3b20466c0b40286bcdfafc8cfda4b8786ad2d7731aee27975e1eadb5",
+    "archived_at": "2026-11-01T08:07:19.812422+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:19.812422+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

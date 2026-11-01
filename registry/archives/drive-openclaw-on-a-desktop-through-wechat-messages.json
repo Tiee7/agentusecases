@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/drive-openclaw-on-a-desktop-through-wechat-messages",
+  "observed_at": "2026-11-01T08:07:35.826429+00:00",
+  "html_sha256": "c1cac551478ab350ac691cb4707f354b33eba94f45dff727e8d9b1c611fb8cfa",
+  "body_sha256": "4882d5b9ee9edd8423598a06053c30c6c313f20e9bfda9cfbc610116db44b8cb",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Drive OpenClaw on a desktop through WeChat messages",
+      "sha256": "fc5ecf7aab7e538a67e1cc9a05541ec9d105109e483197d29239f599a5afd563"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A tester used WorkBuddy to send WeChat messages controlling OpenClaw, including generating a document of recommended skills as a web page; it could not log into WeChat or message contacts.\n·\nOct 31, 2026",
+      "sha256": "8ec43d6e1f70d50058ff4f9b75c06bb2ff75d09d93c0917c32b75a39356dabf4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The tester used WorkBuddy as a relay: a WeChat message goes to WorkBuddy, which has OpenClaw do the work on the desktop and send back the result. They asked it to write a Markdown file of 10 must-install skills, then to turn that file into a designed web page. The agent chose the frontend-design skill by itself. They also asked it to make a PDF on the desktop, and it wrote and ran a Python script to do that.",
+      "sha256": "62d34420934a80b9d5acee724d0ca5ca0466d1e4cf6bd19248a16e0e07e1eb9b"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The skills document, the web page and the desktop PDF were all produced. Tasks were mostly development and file generation, and complex ones took a long time to respond. It can't log into WeChat or message contacts.",
+      "sha256": "24e3eedbdb1b01ff756af69652e7340d8bf56f2b514206445b7e80a776e6614c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect to wait on complex tasks, since the response chain gets long, and don't expect it to handle everyday chores like messaging people yet.",
+      "sha256": "bc7ecd8b92d0d3b820aeee0ca34a2f56f1babea849edcb76ac28d2093ca8ead9"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://sspai.com/post/107186"
+      ],
+      "sha256": "d0c1898d4da1e5aad91228d79de7f75203c40523541b8be72635c4b3ed1f0fe2"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0a4d9c3433cb9f991b586c86e53c2e3c92bff5159063be5dc12eada1100d2ee4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Drive OpenClaw on a desktop through WeChat messages\nA tester used WorkBuddy to send WeChat messages controlling OpenClaw, including generating a document of recommended skills as a web page; it could not log into WeChat or message contacts.\n·\nOct 31, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe tester used WorkBuddy as a relay: a WeChat message goes to WorkBuddy, which has OpenClaw do the work on the desktop and send back the result. They asked it to write a Markdown file of 10 must-install skills, then to turn that file into a designed web page. The agent chose the frontend-design skill by itself. They also asked it to make a PDF on the desktop, and it wrote and ran a Python script to do that.\nHow it went\nThe skills document, the web page and the desktop PDF were all produced. Tasks were mostly development and file generation, and complex ones took a long time to respond. It can't log into WeChat or message contacts.\nWorth knowing\nExpect to wait on complex tasks, since the response chain gets long, and don't expect it to handle everyday chores like messaging people yet.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nI'll message you from [chat app] to control you on my desktop. Start with this task: research [topic, e.g. the best skills or plugins for my workflow] and produce a document of recommendations, published as a simple local web page. Reply with the file path when done, and pause and ask me before sending any message to another person or logging into any account.\nOriginal source: https://sspai.com/post/107186",
+    "body_sha256": "4882d5b9ee9edd8423598a06053c30c6c313f20e9bfda9cfbc610116db44b8cb",
+    "archived_at": "2026-11-01T08:07:35.826429+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:35.826429+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

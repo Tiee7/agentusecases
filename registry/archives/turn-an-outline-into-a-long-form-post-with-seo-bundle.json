@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-an-outline-into-a-long-form-post-with-seo-bundle",
+  "observed_at": "2026-11-01T08:07:21.824449+00:00",
+  "html_sha256": "3b47f7094d1d9bc4912aee392844f315eb467ac4d92ddcd9bbfce5d3f28a58c9",
+  "body_sha256": "06c8d38be2388ff7f34aa448861179ccdb1ee23b9c796227d7f8975b6266fe49",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn an outline into a long-form post with SEO bundle",
+      "sha256": "968a35449da1463c6ec270438563deec5b07277a044296bfacef9dc1c4311b4c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author built an n8n workflow that expands an outline into a long-form post and generates an SEO bundle, chosen over GPT Agent Mode.",
+      "sha256": "dbc247d17cfa8e4ac9ca1b1aaeaeed06a5ff14388cfea75aab5570aaed299ac7"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They wired an n8n flow around a webhook that receives an item’s ID, title, summary, link, and featured image. The workflow turns the input into an outline, expands it into a roughly 500-word post, generates an SEO bundle, converts markdown to HTML, fetches and uploads the featured image to WordPress, creates a draft, writes Yoast fields, and updates Google Sheets for approval and status tracking; GPT Agent Mode was only used to help prototype the Python earlier.",
+      "sha256": "d50d9a6a6d6d461d99ae384db80e3ddf3d5bb64fc91dc1c0acfafeac585bd2fc"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was a productionized pipeline for AI-news posts that outputs WordPress drafts with images and Yoast metadata. The author says they moved off GPT Agent Mode because approvals, retries, image upload, and visibility were better handled in n8n.",
+      "sha256": "97efa77f93bf3c33331456c4e3bfce8b6cf67f6af8690ba3e5c9bf546aca1ad2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that the approval loop and audit trail live in Google Sheets, and the author chose n8n specifically for determinism, retries, logs, and credential isolation.",
+      "sha256": "3fa3c198048eeaf8ef3806225e5cc0b8d2a7627b23e3997740fa336c65bf249c"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n",
+        "ChatGPT Agent"
+      ],
+      "sha256": "d531663dac125840d232e4fbb19b30a2f3125dcbae704f3692546f36aa689361"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1my0dzq"
+      ],
+      "sha256": "a2d9d12fd4298c95b43fbfb36ee53ef91968297346ba22e03f0487de9be4c37a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "1c6662f205bdf161090ff16c4c2ae9c00e1ad5860df96411b7a8f9c61eac650b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn an outline into a long-form post with SEO bundle\nThe author built an n8n workflow that expands an outline into a long-form post and generates an SEO bundle, chosen over GPT Agent Mode.\nDone with\nN8\nn8n\nGA\nChatGPT Agent\nWhat they did\nThey wired an n8n flow around a webhook that receives an item’s ID, title, summary, link, and featured image. The workflow turns the input into an outline, expands it into a roughly 500-word post, generates an SEO bundle, converts markdown to HTML, fetches and uploads the featured image to WordPress, creates a draft, writes Yoast fields, and updates Google Sheets for approval and status tracking; GPT Agent Mode was only used to help prototype the Python earlier.\nHow it went\nThe result was a productionized pipeline for AI-news posts that outputs WordPress drafts with images and Yoast metadata. The author says they moved off GPT Agent Mode because approvals, retries, image upload, and visibility were better handled in n8n.\nWorth knowing\nThe main catch is that the approval loop and audit trail live in Google Sheets, and the author chose n8n specifically for determinism, retries, logs, and credential isolation.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes my outline for [topic] from [form, Google Doc, or webhook] and expands it into a long-form post of about [word count] words in [tone/voice]. Then generate an SEO bundle: title tag, meta description, URL slug, 5 keywords, and 3 headline options. It's done when the full draft and SEO bundle land in [Google Doc/Notion] for my review, and nothing is published automatically.\nOriginal source: https://www.reddit.com/r/n8n/comments/1my0dzq",
+    "body_sha256": "06c8d38be2388ff7f34aa448861179ccdb1ee23b9c796227d7f8975b6266fe49",
+    "archived_at": "2026-11-01T08:07:21.824449+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:21.824449+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

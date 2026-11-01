@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/auto-post-curated-ai-news-to-x-every-two-hours",
+  "observed_at": "2026-11-01T08:07:13.808230+00:00",
+  "html_sha256": "2613b43b77b56aa7672d52b40e80060d04fb404dcb82e6d7a1bb008bec6c48aa",
+  "body_sha256": "6f42cf6ded76eb9d0d8c4b447feb7109644f906f00a6c9eda232e60186035dcf",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Auto-post curated AI news to X every two hours",
+      "sha256": "4d864102bddbe06e36c08d2370a6b92d05db549ba5b14cbc21aef4d59f3597c5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n workflow pulls AI/tech news from RSS feeds and posts it to the author's X account every two hours, saving manual work.\n·\nJan 1, 2025",
+      "sha256": "281ea9972e5888b560196df4eb4744fd6fa0490c83951dec8b7ea13bb93db48e"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author built an n8n workflow that pulls AI and tech stories from several RSS feeds, sends them to OpenAI to turn them into tweet-ready posts, scores those drafts for engagement, stores them in Google Sheets, and auto-posts the top ones to X every two hours. They said it had been running for 2–3 days, with the free X API tier shaping the cadence, and later they manually fixed a length bug by adding a check to keep posts at 270 characters or less.",
+      "sha256": "33a7a38605d97693551328099bd5fb1ac61d1b1197cf53a2a0f53f8d51249075"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Early results were modest: after two days they reported about 7–8 likes, with low engagement that they partly blamed on starting from a dead account. It also stalled for 2–3 days when overlength posts triggered X posting errors.",
+      "sha256": "e57e922c7dfe35c388a9ae229292e3d429577a838ca2f9b1a8e31e38f4b6aafa"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The key constraint was X’s free API limit of 17 posts per day, so they chose a 2-hour schedule, roughly 12 posts daily, to stay under it.",
+      "sha256": "bb5c1bc1cebfeba413837c719a568ebc789b08c3ebc27792c924a8f7385beb83"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1prxv82/built_an_ai_agent_that_autoposts_to_xtwitter"
+      ],
+      "sha256": "5f1838c1cb6469cd5333d9f821af6d736f51810a92809286395a9b56ad4b2933"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "cb4c81d2334c59ccc2d51e433956eabacaae6268198b1c020ab35d33ac5d81c8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Auto-post curated AI news to X every two hours\nAn n8n workflow pulls AI/tech news from RSS feeds and posts it to the author's X account every two hours, saving manual work.\n·\nJan 1, 2025\nDone with\nN8\nn8n\nWhat they did\nThe author built an n8n workflow that pulls AI and tech stories from several RSS feeds, sends them to OpenAI to turn them into tweet-ready posts, scores those drafts for engagement, stores them in Google Sheets, and auto-posts the top ones to X every two hours. They said it had been running for 2–3 days, with the free X API tier shaping the cadence, and later they manually fixed a length bug by adding a check to keep posts at 270 characters or less.\nHow it went\nEarly results were modest: after two days they reported about 7–8 likes, with low engagement that they partly blamed on starting from a dead account. It also stalled for 2–3 days when overlength posts triggered X posting errors.\nWorth knowing\nThe key constraint was X’s free API limit of 17 posts per day, so they chose a 2-hour schedule, roughly 12 posts daily, to stay under it.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that runs every [2 hours], reads these RSS feeds: [feed URLs], and picks the newest items about [topic, e.g. AI and tech] that haven't been posted before. For each one, write a short post under 280 characters with the link, and keep a record of posted links to avoid duplicates. Set it up so I can review the first few drafts in a test run, and don't connect the live posting step to my [X account] until I've approved how the posts look.\nOriginal source: https://www.reddit.com/r/n8n/comments/1prxv82/built_an_ai_agent_that_autoposts_to_xtwitter",
+    "body_sha256": "6f42cf6ded76eb9d0d8c4b447feb7109644f906f00a6c9eda232e60186035dcf",
+    "archived_at": "2026-11-01T08:07:13.808230+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:13.808230+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

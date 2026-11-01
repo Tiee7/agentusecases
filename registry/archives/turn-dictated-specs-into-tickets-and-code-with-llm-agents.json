@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-dictated-specs-into-tickets-and-code-with-llm-agents",
+  "observed_at": "2026-11-01T08:07:11.852972+00:00",
+  "html_sha256": "ab689017aa582aaa508a374dadc758d7f19483152d9837680b49c6e23b46c75b",
+  "body_sha256": "d96fc0e017cb2d0fb7bb44f91fcbda6d956ca13b4b3fbec8ad161bf2f05db361",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn dictated specs into tickets and code with LLM agents",
+      "sha256": "a38f70ebc77b8a6cf460853fa0ece4de3a35b06dc87a7740882df76e62005595"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer dictates a spec, has LLMs densify it, then plan and scaffold the project, and an agent files implementation tickets per module.\n·\nOct 31, 2026",
+      "sha256": "e46d7b2b8b98af02c111ac3ec9ca9a39e096407a791bd38acab72e3f0c1af788"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer dictates a rambling spec, Whisper transcribes it, and an LLM condenses it into a structured markdown spec filed as issue 1. After human edits and another LLM densifying pass, an LLM writes a plan and scaffolding. An agent files per-module tickets, parallel agents write commit-level tasks and implement them as PRs, and an adversarial reviewer plus rework agents iterate.",
+      "sha256": "9aa85af05e714826e38642172cdb6422f6cd6cba8bf96e4a7fb6a6ff1be2ef00"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author reports quite good results, with most PRs landing as-is and occasional corrections when the agent took the wrong approach. No numbers are given; the author says it is far cheaper than human developers despite many parallel agents and CI runs.",
+      "sha256": "e4faff8715c942433d5bacbf211b260b89b0f8c743a51b9547d3fce557d26334"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Works best when code is highly modular so agents rarely cross modules; the author keeps shared workflow, style, and lint policies in one repo vendored into each project.",
+      "sha256": "738a0bd29e87c1cdb513c0c376ee2aa97402ab9a32b4099e98968e331fc97373"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50314175"
+      ],
+      "sha256": "d50bc39ddd0aaf2d70d0d49fd76a2ecd6820041d36799bbbbcb58e84f5e04f94"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-10-31",
+      "sha256": "de548c47930cfa3a8d5f1d3d60234ad40f8c8d2066aeef34492e8d1bf60059c3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d5e95682846956587b8eb2f227bde30d4fa0bb0b2145d1494993b2d26c553266",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn dictated specs into tickets and code with LLM agents\nA developer dictates a spec, has LLMs densify it, then plan and scaffold the project, and an agent files implementation tickets per module.\n·\nOct 31, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe developer dictates a rambling spec, Whisper transcribes it, and an LLM condenses it into a structured markdown spec filed as issue 1. After human edits and another LLM densifying pass, an LLM writes a plan and scaffolding. An agent files per-module tickets, parallel agents write commit-level tasks and implement them as PRs, and an adversarial reviewer plus rework agents iterate.\nHow it went\nThe author reports quite good results, with most PRs landing as-is and occasional corrections when the agent took the wrong approach. No numbers are given; the author says it is far cheaper than human developers despite many parallel agents and CI runs.\nWorth knowing\nWorks best when code is highly modular so agents rarely cross modules; the author keeps shared workflow, style, and lint policies in one repo vendored into each project.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm going to paste a rough, dictated spec for [project idea]. First rewrite it into a tight, complete spec and list any open questions for me. Then propose a module-by-module plan, scaffold the project in [language/framework], and write one implementation ticket per module as a markdown file in a tickets folder, each with scope, acceptance criteria, and dependencies. Stop when the scaffold runs and every module has a ticket, then show me the list before doing any more work.\nOriginal source: https://news.ycombinator.com/item?id=50314175",
+    "body_sha256": "d96fc0e017cb2d0fb7bb44f91fcbda6d956ca13b4b3fbec8ad161bf2f05db361",
+    "archived_at": "2026-11-01T08:07:11.852972+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-01T08:07:11.852972+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
