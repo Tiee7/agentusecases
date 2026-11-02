@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-a-linkedin-url-into-a-cold-email",
+  "observed_at": "2026-11-02T08:14:53.576519+00:00",
+  "html_sha256": "4283d276548b99ab18607f2a191133bef330ef82b628fb48528b72923b274ce6",
+  "body_sha256": "5ff813ea7fb8a8b84430c9e21a785046fb3d4eed9cca70106aca6090f785a59e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn a LinkedIn URL into a cold email",
+      "sha256": "9b5879d138a9a1a32108b30822ce19eaf8cbefd904f383c09c5832eb3bd713b6"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n agent scrapes a LinkedIn profile from its URL and has an AI write a cold email; the author claims it books 20–30 qualified calls a month.",
+      "sha256": "b5b0153e3d232bb2a94a0c71bce93aa8278437e65a2b7697c490525cc8986f20"
+    },
+    "method": {
+      "status": "observed",
+      "value": "An n8n workflow starts from a webhook or scheduler that receives a LinkedIn URL. It validates the URL, then scrapes the profile with Apify or a headless browser. It cleans the data and builds a dynamic prompt with the profile, email goal and tone. It sends the prompt to Claude or GPT, strips hallucinated details from the reply, and delivers the result to Slack, email, Sheets or Notion.",
+      "sha256": "2ff948d2c4ec7ed1d705503e340cb6e9dbad500981993ab9f172779fe45930ac"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says it books 20–30 qualified calls a month, but gives no breakdown, reply rates or method behind that figure. A commenter says the prompt is under-specified for Claude.",
+      "sha256": "2871cf6cf3baccb331c687a2b71f643faa2b76faac2b8346f9c6e04b062a7b1b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A commenter questions whether handing LinkedIn session cookies to n8n or Make is safe or allowed under LinkedIn's policy. The post doesn't address this.",
+      "sha256": "1c923746002dee7fc3ba81ff2bfbff1e105a44b542a33f2271e821c9332968fc"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://acquisitionx.substack.com/p/how-i-built-an-ai-agent-that-generates"
+      ],
+      "sha256": "aa9b8cc18763258590d3c02e799f08b9d6977929947abb551040b39c3be898d8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "f8a42e1ee329c7cb59149dd4ee90fbb28930e3e58876139c43630d46fa2c055a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn a LinkedIn URL into a cold email\nAn n8n agent scrapes a LinkedIn profile from its URL and has an AI write a cold email; the author claims it books 20–30 qualified calls a month.\nDone with\nN8\nn8n\nWhat they did\nAn n8n workflow starts from a webhook or scheduler that receives a LinkedIn URL. It validates the URL, then scrapes the profile with Apify or a headless browser. It cleans the data and builds a dynamic prompt with the profile, email goal and tone. It sends the prompt to Claude or GPT, strips hallucinated details from the reply, and delivers the result to Slack, email, Sheets or Notion.\nHow it went\nThe author says it books 20–30 qualified calls a month, but gives no breakdown, reply rates or method behind that figure. A commenter says the prompt is under-specified for Claude.\nWorth knowing\nA commenter questions whether handing LinkedIn session cookies to n8n or Make is safe or allowed under LinkedIn's policy. The post doesn't address this.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow where I submit a LinkedIn profile URL, it scrapes the profile, and an AI agent writes a short cold email in [tone] tone offering [my product or service]. Reference something specific from the profile. Output the draft for my review and never send it automatically; the job is done when a draft appears for each URL.\nOriginal source: https://acquisitionx.substack.com/p/how-i-built-an-ai-agent-that-generates",
+    "body_sha256": "5ff813ea7fb8a8b84430c9e21a785046fb3d4eed9cca70106aca6090f785a59e",
+    "archived_at": "2026-11-02T08:14:53.576519+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:53.576519+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

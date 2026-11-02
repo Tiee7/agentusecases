@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/ask-a-coding-agent-to-fix-an-existing-pr",
+  "observed_at": "2026-11-02T08:14:39.546584+00:00",
+  "html_sha256": "01449cc2d7a03cac007735a9a980db1060bd9d64f6bab88781708c85055e4b6b",
+  "body_sha256": "3b0f5275edabc40084fa40e0fa65df4fe6c9cc659ed86012e80867264766bdf2",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Ask a coding agent to fix an existing PR",
+      "sha256": "d28b8108da0a025d978838905a967c83aa6ed149fd125e9218e8838f0bb7fe3b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer asked @copilot to fix an existing PR; it opened a new PR instead of pushing in place, later partly fixed except for fork branches.\n·\nFeb 26, 2026",
+      "sha256": "a4feb574d3e8472290fb9f72b30f1da1e6a0d63ed43e2999b735363fdf035ccf"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer opened a PR on a repo and saw Copilot's prompt to mention @copilot in a comment to make changes. He mentioned it and asked for a fix to his own PR. He expected a push to that branch. Copilot opened a separate new PR, so he would have had to merge its changes back himself.",
+      "sha256": "3649c80ec30876bfeeba19bfc2dc47bb233f62473230917b40067efc5a03c6ed"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On March 24, 2026 GitHub shipped a changelog entry letting Copilot change any PR. Stephen Toub noted it still fails when the source branch is in a fork, which covers nearly all of dotnet/runtime's human-authored PRs.",
+      "sha256": "56de81e1c47daaa9667200f4d3cd1d898ba23b48ebc0746b9d294368729fd11a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Check whether your PRs come from fork branches. Copilot still can't edit those, and GitHub's announcement was later edited to say fork PRs aren't supported.",
+      "sha256": "424e6fcb828b10dacfa4b8047d9b01dc9d653d349d626d70bee65200c32d17ff"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/orgs/community/discussions/188127"
+      ],
+      "sha256": "f8f97b93c69e0c9864855a0f9fbeea266f8c86c8ecacdd43bfe82ab481844db2"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "bfe6567f24881b3b7742a08d46a227f95ea10d115f0cd4e3d02c9a53d76b0171",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Ask a coding agent to fix an existing PR\nA developer asked @copilot to fix an existing PR; it opened a new PR instead of pushing in place, later partly fixed except for fork branches.\n·\nFeb 26, 2026\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe developer opened a PR on a repo and saw Copilot's prompt to mention @copilot in a comment to make changes. He mentioned it and asked for a fix to his own PR. He expected a push to that branch. Copilot opened a separate new PR, so he would have had to merge its changes back himself.\nHow it went\nOn March 24, 2026 GitHub shipped a changelog entry letting Copilot change any PR. Stephen Toub noted it still fails when the source branch is in a fork, which covers nearly all of dotnet/runtime's human-authored PRs.\nWorth knowing\nCheck whether your PRs come from fork branches. Copilot still can't edit those, and GitHub's announcement was later edited to say fork PRs aren't supported.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\n@copilot please fix pull request [PR number] in [owner/repo]: [describe the problem, e.g. the failing lint check and the review comment about the null case]. Push your fix to the existing PR branch if you can, rather than opening a new PR. If you can't push to this branch, because it's a fork for example, tell me why and say what you would change instead. Stop once the fix is pushed or you've explained the blocker.\nOriginal source: https://github.com/orgs/community/discussions/188127",
+    "body_sha256": "3b0f5275edabc40084fa40e0fa65df4fe6c9cc659ed86012e80867264766bdf2",
+    "archived_at": "2026-11-02T08:14:39.546584+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:39.546584+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

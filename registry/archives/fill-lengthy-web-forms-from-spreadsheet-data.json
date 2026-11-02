@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/fill-lengthy-web-forms-from-spreadsheet-data",
+  "observed_at": "2026-11-02T08:14:57.524765+00:00",
+  "html_sha256": "64b67fc1a797526a39ecd8a6eea42beaaeee4830a7af5f86086e056e29e38815",
+  "body_sha256": "4b8e5af5291e178ae7beb2d29f3efacb38cc907e0f6756689ef62e0997bc3b36",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Fill lengthy web forms from spreadsheet data",
+      "sha256": "04a75681d5d12e7db30fcd3c8bfca16875402c91d93473bfdd83c3f4ff7a8bf1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent fills long forms from Google Sheets or Excel data; one commenter used Playwright MCP with Claude and had it screenshot and verify fields.",
+      "sha256": "22cf488f6a16265ec56a74789d42009f0dcef7f08f136980852676aaadf970f4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post itself is just someone asking how to build an agent that copies data from Google Sheets or Excel into long web forms. The only concrete report in the thread comes from a commenter who used Claude with Playwright MCP to operate the browser, explicitly prompted it to take screenshots and re-check entries, and suggested switching to a fixed script if the form layout stays stable after some troubleshooting.",
+      "sha256": "bdc01ec2ae6a9c640ca1b669c9b037f05b323334e77a628b782967d758680b6e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The commenter said the agent could fill forms and, once turned into a stable script, do all fields at once and faster than a person. But they also said the Playwright MCP approach was extremely slow and made unexpected formatting mistakes unless verification was spelled out.",
+      "sha256": "cee3004fbe2cebed9e5bb064673af73689b0aa67e44e3456f0875d05686b22c9"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was speed and reliability: they said you must prompt it to screenshot and double-check fields, or it can misformat entries.",
+      "sha256": "19fdcc50782483b558525b2f2928c2c2cdff2f6f721919aca7160647452a3af5"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1ti3irm/use_case_automated_form_filling"
+      ],
+      "sha256": "2c41aaf74724ac14ce0ba62fd39c62692896052dfcab210fb479310c08925509"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "92dd707e7624c10c91e829de3c5bc423fb69dd2085ae3f5860b5a8425ae52491",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fill lengthy web forms from spreadsheet data\nAn agent fills long forms from Google Sheets or Excel data; one commenter used Playwright MCP with Claude and had it screenshot and verify fields.\nDone with\nCL\nClaude\nWhat they did\nThe post itself is just someone asking how to build an agent that copies data from Google Sheets or Excel into long web forms. The only concrete report in the thread comes from a commenter who used Claude with Playwright MCP to operate the browser, explicitly prompted it to take screenshots and re-check entries, and suggested switching to a fixed script if the form layout stays stable after some troubleshooting.\nHow it went\nThe commenter said the agent could fill forms and, once turned into a stable script, do all fields at once and faster than a person. But they also said the Playwright MCP approach was extremely slow and made unexpected formatting mistakes unless verification was spelled out.\nWorth knowing\nThe main catch was speed and reliability: they said you must prompt it to screenshot and double-check fields, or it can misformat entries.\nTry it yourself\nwith\nClaude\nCopy prompt\nUsing Playwright, open [form URL] and fill it out using each row of my spreadsheet [file path or Google Sheet link], mapping columns [list column to field matches]. After filling each page, take a screenshot and verify every field matches the data, then report any mismatches. Stop and show me the filled form before clicking Submit, and only submit after I confirm.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1ti3irm/use_case_automated_form_filling",
+    "body_sha256": "4b8e5af5291e178ae7beb2d29f3efacb38cc907e0f6756689ef62e0997bc3b36",
+    "archived_at": "2026-11-02T08:14:57.524765+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:57.524765+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

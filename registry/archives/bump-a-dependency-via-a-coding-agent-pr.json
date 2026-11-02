@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/bump-a-dependency-via-a-coding-agent-pr",
+  "observed_at": "2026-11-02T08:14:37.571390+00:00",
+  "html_sha256": "c1d378b6eee8dd57ddee1a8f29eb1a8726514b9cf40df36895b8f1e691011d6e",
+  "body_sha256": "9c123be9dcecbf1705bfdceb853d413a90631e09c52169889e7af9f928f56878",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Bump a dependency via a coding agent PR",
+      "sha256": "3b24c5a299fcdc3be3112edfac600df0bbdc509d0e0a958891815028fccfb381"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A contributor told a Copilot agent to bump the @github/copilot dependency in the SDK repo, producing a PR with package and lockfile updates plus some extra lockfile changes.\n·\nJul 6, 2026",
+      "sha256": "cda0d422366aa08d85a3495786dcfd26c447572d22bc777a996da85c050dae1c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Steve Sanderson told his agent to bump @github/copilot to 1.0.69-2 in the SDK repo. The agent's change differed from the repo's automated workflow in two ways: it also updated the Node samples and test harness package files, and it rewrote lockfile entries with musl libc qualifiers. The PR page itself shows the automation's PR. The agent's own run is described only in a comment.",
+      "sha256": "48e8dd54ac6bfc12c7465666f0fcf9d2f3eb44c59449c0f7342aa9f85c52b666"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Sanderson judged the differences harmless and merged the PR to bring things into sync. 65 checks passed. The extra lockfile churn probably came from a different toolchain version.",
+      "sha256": "0f4f83427a927538d0e57454c575eb6dc3af179e8d4596abc3b6690f7ab091b9"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "If your agent's toolchain differs from your automation's, expect unrelated lockfile diffs such as libc fields.",
+      "sha256": "edb350c30468776be5b47fa80dad537e46bdcd32c7399443c2e626d0c1ffbcf3"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/github/copilot-sdk/pull/1914"
+      ],
+      "sha256": "61b199c02433a8a22314816d03c675fa9bd6ca3f6f721cb69b50a7911583b450"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "4e60266514e6bb3525d7fbfef7d0afe16da900c311b6a05d462dd2c02dfded2d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Bump a dependency via a coding agent PR\nA contributor told a Copilot agent to bump the @github/copilot dependency in the SDK repo, producing a PR with package and lockfile updates plus some extra lockfile changes.\n·\nJul 6, 2026\nDone with\nGH\nGitHub Copilot\nWhat they did\nSteve Sanderson told his agent to bump @github/copilot to 1.0.69-2 in the SDK repo. The agent's change differed from the repo's automated workflow in two ways: it also updated the Node samples and test harness package files, and it rewrote lockfile entries with musl libc qualifiers. The PR page itself shows the automation's PR. The agent's own run is described only in a comment.\nHow it went\nSanderson judged the differences harmless and merged the PR to bring things into sync. 65 checks passed. The extra lockfile churn probably came from a different toolchain version.\nWorth knowing\nIf your agent's toolchain differs from your automation's, expect unrelated lockfile diffs such as libc fields.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nIn my repo [owner/repo], bump the dependency [package name] to [version or latest] and open a pull request. Update only the package manifest and the lockfile, and list in the PR description any lockfile changes unrelated to this dependency so I can check them. Run [test or build command] and report the result, then stop once the PR is open.\nOriginal source: https://github.com/github/copilot-sdk/pull/1914",
+    "body_sha256": "9c123be9dcecbf1705bfdceb853d413a90631e09c52169889e7af9f928f56878",
+    "archived_at": "2026-11-02T08:14:37.571390+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:37.571390+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

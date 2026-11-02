@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-cursor-agent-mode-safely-with-containers-and-hooks",
-  "observed_at": "2026-11-01T08:07:09.859971+00:00",
-  "html_sha256": "ff62f085ad031301094b9d5ecfe545880f443c978137b940ab89adef556fb339",
+  "observed_at": "2026-11-02T08:13:45.558599+00:00",
+  "html_sha256": "48c210987ef525682b3e9b0912869d106e582baaf9be76b4924f57421d2def4c",
   "body_sha256": "b1e23345df8141f5e54ef2e32d209beca0eaea847fe6f63a00e6dae3e8cc28db",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run Cursor agent mode safely with containers and hooks\nThe poster runs Cursor agent mode on a real project, including a Twilio voice agent, using containers, hooks and safeguards to protect the environment.\nDone with\nCR\nCursor\nWhat they did\nThe poster runs Cursor agent mode inside a per-feature devcontainer with Docker Compose services for the app, Postgres, Redis, and a Cloudflared sidecar, plus forwarded ports for a Twilio voice agent’s web UI and websocket endpoint. Secrets are injected from a dedicated 1Password vault, while destructive actions stay behind host SSH agent biometric approval, so the agent can use CLI commands and work autonomously but can’t safely touch main or the host environment.\nHow it went\nThe result was a setup where they could leave Cursor running on real tasks and either return to finished work or delete a broken container with no damage outside that isolated stack. It still needed extra safeguards beyond Cursor’s built-in protections, and Cloudflare Bot Fight Mode had to be disabled for some ChatGPT-facing use cases.\nWorth knowing\nTheir main practical catch is that each feature gets its own isolated containerized environment, and if the agent breaks it, they simply throw the container away and start fresh.\nTry it yourself\nwith\nCursor\nCopy prompt\nHelp me run Cursor agent mode safely on my project [project name]. Set up a dev container so the agent works in isolation, add hooks that block risky commands like [rm -rf, force push, or access to .env secrets], and keep secrets such as [API keys] out of its reach. Finish when I can run a test task inside the container and see a risky command get blocked. Show me each config change before you apply it.\nOriginal source: https://www.reddit.com/r/cursor/comments/1pct8of/my_setup_for_letting_cursors_agent_mode_run",
     "body_sha256": "b1e23345df8141f5e54ef2e32d209beca0eaea847fe6f63a00e6dae3e8cc28db",
-    "archived_at": "2026-11-01T08:07:09.859971+00:00",
+    "archived_at": "2026-11-02T08:13:45.558599+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-01T08:07:09.859971+00:00",
+    "at": "2026-11-02T08:13:45.558599+00:00",
     "status": "fetched",
     "error": null
   }

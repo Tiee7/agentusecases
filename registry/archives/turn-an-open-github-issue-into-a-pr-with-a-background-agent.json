@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/turn-an-open-github-issue-into-a-pr-with-a-background-agent",
+  "observed_at": "2026-11-02T08:14:33.537225+00:00",
+  "html_sha256": "5cf756f74787bd46d9f33914fd985704c363360292eda037064f32115756d5ce",
+  "body_sha256": "afe112f77a26561c552794ea6122970c39920e462d280e5831196e5cc3a40027",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Turn an open GitHub issue into a PR with a background agent",
+      "sha256": "42656c3e7c9a082033320f34c497a1f336b70ec6ee4fd2067ca6ff634a7f64db"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer pointed a Cursor background agent at an open issue in a Terraform repo; it opened a PR in about 3 minutes, though the PR description and title needed fixing.",
+      "sha256": "ad7556d027d36a9115cb3ad93065e63f9a20ac0e2dee284b0e4f1441ae8d8e41"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author turned off Cursor's privacy mode, which the preview requires. He then set up a background-agent machine for his terraform-aws-ecr repo, using Cursor's own interface to check the linters and tools and to fix Python environment problems. Issues had been created earlier through the GitHub MCP server. He pointed the agent at issue #33 and accepted its offer to open a PR.",
+      "sha256": "8d717e18fb51e5e2e6a35ed9c698938d979fa48e9eb56922c67a721ccb0305bb"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The agent finished in about 3 minutes and its code changes were solid. The PR description was incomplete and the title didn't follow the release-please format, so the release PR never triggered. He filled in the description with Copilot's summary.",
+      "sha256": "deab0a6aa8380208772ce4a2d7a822f92b389cc7cbe85bc6c0fe3d6aea2459f1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The test cost $4.63 for one simple PR, because background agents only use MAX models for now. You also have to set a usage-based spending limit (he set $20).",
+      "sha256": "d540b244dbf8b971f96b888fe0dcd09c92bae7c58a21eab89e0025befca52586"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://medium.com/@lgallard/exploring-cursor-background-agents-a-hands-on-experience-15555d206a18"
+      ],
+      "sha256": "6b1d7a0b72f843d518f070d91544465dbe1265a022caf45a4b5c12498bb28e78"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "47cb56df2ecccffce7e156f52b1e32d1c94625f9aea9c49bbac1a72a12858d9c",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Turn an open GitHub issue into a PR with a background agent\nA developer pointed a Cursor background agent at an open issue in a Terraform repo; it opened a PR in about 3 minutes, though the PR description and title needed fixing.\nDone with\nCR\nCursor\nWhat they did\nThe author turned off Cursor's privacy mode, which the preview requires. He then set up a background-agent machine for his terraform-aws-ecr repo, using Cursor's own interface to check the linters and tools and to fix Python environment problems. Issues had been created earlier through the GitHub MCP server. He pointed the agent at issue #33 and accepted its offer to open a PR.\nHow it went\nThe agent finished in about 3 minutes and its code changes were solid. The PR description was incomplete and the title didn't follow the release-please format, so the release PR never triggered. He filled in the description with Copilot's summary.\nWorth knowing\nThe test cost $4.63 for one simple PR, because background agents only use MAX models for now. You also have to set a usage-based spending limit (he set $20).\nTry it yourself\nwith\nCursor\nCopy prompt\nOpen GitHub issue [issue number or link] in [repo name] and use a background agent to implement a fix on a new branch. Run the existing tests or linters for [language/tool, e.g. Terraform validate] and open a pull request when they pass. Write a clear PR title and a description that links the issue and summarizes what changed and why. Stop once the PR is open and show me the link; do not merge anything.\nOriginal source: https://medium.com/@lgallard/exploring-cursor-background-agents-a-hands-on-experience-15555d206a18",
+    "body_sha256": "afe112f77a26561c552794ea6122970c39920e462d280e5831196e5cc3a40027",
+    "archived_at": "2026-11-02T08:14:33.537225+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:33.537225+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

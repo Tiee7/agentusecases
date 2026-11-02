@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/reverse-engineer-a-classic-game-rom-via-ghidra-mcp",
-  "observed_at": "2026-11-01T07:22:17.792755+00:00",
-  "html_sha256": "7ae0cdafb565b58beeee4f520138867db6ad3ca9a6db42e2d18d985f8cd3216b",
+  "observed_at": "2026-11-02T07:28:53.389731+00:00",
+  "html_sha256": "74dbab9bf0ea3ccb5be0787013a2b29a1ca788a34cb7e3601469e259f1e9f7e5",
   "body_sha256": "a85c28a6403355de82865c056251f27aa5544b1cd34ed1fa4b2b8c72dab489bf",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Reverse engineer a classic game ROM via Ghidra MCP\nThe author connected Claude to Ghidra through MCP to analyze and rename functions in an Atari River Raid ROM.\nDone with\nCL\nClaude\nWhat they did\nThe author ran an open-source Ghidra MCP server so Claude could inspect an unlabeled 8 kB Atari ROM, imported as 6502 only. Claude inferred the Atari platform from hardware registers and located the lives-decrement code. The author did the rebasing (twice) by hand and applied the one-byte patch outside Ghidra.\nHow it went\nSwapping DEY for NOP froze the lives counter at 3 in an emulator. Claude wrongly guessed the game was Centipede and struggled with sprite data. The MCP tools couldn't rebase or write the binary.\nWorth knowing\nSetup was a chain of four components, and some tool calls took about 30 seconds each, so interactive use felt slow.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to Ghidra via MCP and load this [ROM or binary file]. Analyze the disassembled functions, infer their purpose from behavior and strings, and rename them with descriptive labels, producing an annotated function map when done.\nOriginal source: https://quesma.com/blog/ghidra-mcp-unlimited-lives/",
     "body_sha256": "a85c28a6403355de82865c056251f27aa5544b1cd34ed1fa4b2b8c72dab489bf",
-    "archived_at": "2026-11-01T07:22:17.792755+00:00",
+    "archived_at": "2026-11-02T07:28:53.389731+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-01T07:22:17.792755+00:00",
+    "at": "2026-11-02T07:28:53.389731+00:00",
     "status": "fetched",
     "error": null
   }

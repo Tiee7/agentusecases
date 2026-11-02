@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/get-automated-code-review-on-your-own-pull-requests",
+  "observed_at": "2026-11-02T08:14:41.527108+00:00",
+  "html_sha256": "6c0303f1e225c5d83a05fd8c25d0cedcde3c9341f6308f6def40763857aaf3b2",
+  "body_sha256": "86c7d0cfd32e39e46a5b754629e5a29f037f8e69a0cfaff9917ed60581b43c1f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Get automated code review on your own pull requests",
+      "sha256": "f5347f0388a91a3c35309669f20359419807ec6ebbbcf54f793529a5567bd779"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user used Copilot code review on PRs in their private repo, but reviews hung for hours and ended in errors.",
+      "sha256": "401b6187f7dde0ce4c6217126c148a3bf5f0b6bfb8b569592b5a766b57675ec6"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user paid for an individual Copilot subscription and had Copilot review PRs they opened against their own private repo. It worked at first, then failed about half the time and later over 90%. Runners hung for up to 6 hours. Commenters suggested checking the repo contents, cancelling stuck jobs, and testing another repo.",
+      "sha256": "0c2030542dee82c9db7e3a4b1f24c35f656c38af44e45d7f372adeef6ddc8c0d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The cause turned out to be a 20-megabyte binary disk image checked into the repo. After the user deleted it, reviews worked again. Copilot gave no error naming the file.",
+      "sha256": "81d90256327cc0528b9049652f20d655b5fec1fe6e36b9f258fbe075bd8c1962"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Look for large binary files committed to the repo if reviews hang. The user also found that cancelling stuck runs in Actions sometimes made them produce output anyway.",
+      "sha256": "4610a8c5fcbb0af7c9bafd11cde22c5a5594a8d921736cbdb2f76090ce22758e"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/orgs/community/discussions/190036"
+      ],
+      "sha256": "edb0362867d7619a0b96164a5f02f0cf6a66fb3e89343acff6c333603ab4eef9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-01",
+      "sha256": "37e17f8cbb204123a1a93ab2ade330ee24a27cc4305b281cd507360510fb7fe1"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "dabe8d6cf47983fe83f6940d1d229877780178fe17893455042009a0c78d1682",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Get automated code review on your own pull requests\nA user used Copilot code review on PRs in their private repo, but reviews hung for hours and ended in errors.\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe user paid for an individual Copilot subscription and had Copilot review PRs they opened against their own private repo. It worked at first, then failed about half the time and later over 90%. Runners hung for up to 6 hours. Commenters suggested checking the repo contents, cancelling stuck jobs, and testing another repo.\nHow it went\nThe cause turned out to be a 20-megabyte binary disk image checked into the repo. After the user deleted it, reviews worked again. Copilot gave no error naming the file.\nWorth knowing\nLook for large binary files committed to the repo if reviews hang. The user also found that cancelling stuck runs in Actions sometimes made them produce output anyway.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nPlease review my pull request [PR number] in [owner/repo] as a code reviewer. Leave inline comments on bugs, risky changes, missing tests, and unclear naming, and finish with a short summary of the most important things to fix. If the review can't complete, tell me the error so I can retry instead of leaving it hanging.\nOriginal source: https://github.com/orgs/community/discussions/190036",
+    "body_sha256": "86c7d0cfd32e39e46a5b754629e5a29f037f8e69a0cfaff9917ed60581b43c1f",
+    "archived_at": "2026-11-02T08:14:41.527108+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-02T08:14:41.527108+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
