@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/score-off-market-real-estate-deals-from-emails",
+  "observed_at": "2026-11-03T08:35:07.579674+00:00",
+  "html_sha256": "11cdc2b9b7c226eda708723b93222606dfec4217c5a2d8e96ec2a30f945731a7",
+  "body_sha256": "77b6122c499505b5cb4a65ac76cc556f51ed6c2e423bf54242f3c3453847991c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Score off-market real estate deals from emails",
+      "sha256": "a8dd85531cc59bae1934da905cf7fe6f03d2db2e723a0f3f23ea948b9917266e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A pipeline has a Python worker read deal emails, Claude extract fields into fixed JSON, and code score them; the poster is stuck on incomplete data and login-walled sources.",
+      "sha256": "06debac882db55f3903e17072580e6e06ce4c506f575ff729b5201d97f57fb47"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster wired a dedicated Gmail to collect saved-search alerts and wholesaler emails, then had a Python worker split multi-deal emails and send each deal to a low-cost Claude model to extract fixed JSON fields, leaving unknowns null. Plain Python, not the LLM, handled the single-family and multifamily scoring, with paid lookups only after a cheap price check; output went to Supabase, a Streamlit dashboard, email alerts, and a shared Google Doc for coordination.",
+      "sha256": "eb5a33cdc7d3af0b9c9bf427bf4c95bc2235bbeeee5bc64ddcf161ba4aa31c9e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It worked well enough to centralize incoming deals and score what had data, but many leads stalled because about half arrived without a street address and others lacked unit counts or rents. The poster says those missing fields, plus login-walled sources that block automation, kept deals stuck at a needs-info stage.",
+      "sha256": "36dd7646add5d94eab03a672e38e1711cb949344ff506d3291a73be5696d5f96"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main catch is cost control and gating: expensive data lookups only run after a cheap initial price check.",
+      "sha256": "d20daed75ace8260053f26341419a23a59552db0bd0424f2e03d3d99d52a2a3b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Claude"
+      ],
+      "sha256": "f1283dd5a9207da083e28ab44bd7295ca9ffde0ff5a13df75d1a33997c0ea659"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1wwf59r/ai_pipeline_for_offmarket_real_estate_deals_120"
+      ],
+      "sha256": "c3cb6fcd7813e23ede947dbafce038a8edfeb6f6f06d729eaef1d8b56881717f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-02",
+      "sha256": "bb1de3879fc3904da5b8b20834d8d58eac44c618f8305a7357557ae506daf77f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "eff5365fbd01654024eb7bb97e8568a33b3c55c4a32e5d484f1e2a141f7c8711",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Score off-market real estate deals from emails\nA pipeline has a Python worker read deal emails, Claude extract fields into fixed JSON, and code score them; the poster is stuck on incomplete data and login-walled sources.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThe poster wired a dedicated Gmail to collect saved-search alerts and wholesaler emails, then had a Python worker split multi-deal emails and send each deal to a low-cost Claude model to extract fixed JSON fields, leaving unknowns null. Plain Python, not the LLM, handled the single-family and multifamily scoring, with paid lookups only after a cheap price check; output went to Supabase, a Streamlit dashboard, email alerts, and a shared Google Doc for coordination.\nHow it went\nIt worked well enough to centralize incoming deals and score what had data, but many leads stalled because about half arrived without a street address and others lacked unit counts or rents. The poster says those missing fields, plus login-walled sources that block automation, kept deals stuck at a needs-info stage.\nWorth knowing\nTheir main catch is cost control and gating: expensive data lookups only run after a cheap initial price check.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a Python script that reads real estate deal emails from [mailbox or folder of exported .eml files], uses Claude to extract fields into a fixed JSON schema (address, asking price, units, rents, NOI, seller contact), and uses plain code to score each deal against [my criteria]. When data is missing, mark the field as null and list it in a 'needs follow-up' output rather than guessing. Done means I can run it on a sample of 10 emails and get a ranked CSV of deals with scores and missing-data flags.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wwf59r/ai_pipeline_for_offmarket_real_estate_deals_120",
+    "body_sha256": "77b6122c499505b5cb4a65ac76cc556f51ed6c2e423bf54242f3c3453847991c",
+    "archived_at": "2026-11-03T08:35:07.579674+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-03T08:35:07.579674+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

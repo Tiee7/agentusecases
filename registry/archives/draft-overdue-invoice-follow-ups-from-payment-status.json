@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/draft-overdue-invoice-follow-ups-from-payment-status",
+  "observed_at": "2026-11-03T08:34:59.582104+00:00",
+  "html_sha256": "d097d2555352f6da628320c7ca906acef8ad89705922799a72ce5eabebf22149",
+  "body_sha256": "0577a5b21a7634a8d4fa93c572009f87ba460c6eb22cba5050b2c825f0a4b84e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Draft overdue invoice follow-ups from payment status",
+      "sha256": "6d691a464a0ac4175e4f3f92de78e3006161f70947b5b6fd84e65ec462366bf7"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A workflow checks invoice payment status in a spreadsheet on a schedule and an AI agent drafts follow-up emails based on days overdue.\n·\nApr 2, 2026",
+      "sha256": "d66e6ec0d26eaa90bf4a7b8589f8c36be0e8096ac49a864f7bda6aa53f6e4d2f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the thread, the concrete example is a commenter’s n8n setup: connect n8n to a spreadsheet, have it check payment status on a schedule, and use an AI agent to draft reminder emails based on how many days overdue an invoice is. The commenter says the workflow can map different tones to day 7, day 14, and day 30, and optionally add a human approval step before anything sends.",
+      "sha256": "3394af3b4aa730d75ba81c5e969ae78709cfeaf9de330d89918636cf7c2da5f6"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The stated payoff was cutting attention per reminder from about 20 minutes to under 3 minutes while stopping reminders once payment is recorded. It’s only described at a high level in the comment, with no build details or measured collection-rate improvement.",
+      "sha256": "e18f4f024fea0c8e64b466d4264b88a8a8fb015307013af4171382c44827e998"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that the thread’s example is only a brief Reddit comment, so you’d still need to write the reminder templates and set the overdue rules yourself.",
+      "sha256": "bb0af8198ff86b59564f9762923eeee9097a39c16c0d4ab009c04ec320e3701f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/AiForSmallBusiness/comments/1s8k6ld/how_to_automate_client_invoicing_and_payment"
+      ],
+      "sha256": "1fbd267a499edce64b62f17b41274c990b54c3d97da791d6516fd80c0c10e6bc"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-02",
+      "sha256": "bb1de3879fc3904da5b8b20834d8d58eac44c618f8305a7357557ae506daf77f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c080f46ee0cdcc31117c2e38564f35cfca7ea74d4c1d111191f2d65bdf69d309",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Draft overdue invoice follow-ups from payment status\nA workflow checks invoice payment status in a spreadsheet on a schedule and an AI agent drafts follow-up emails based on days overdue.\n·\nApr 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nIn the thread, the concrete example is a commenter’s n8n setup: connect n8n to a spreadsheet, have it check payment status on a schedule, and use an AI agent to draft reminder emails based on how many days overdue an invoice is. The commenter says the workflow can map different tones to day 7, day 14, and day 30, and optionally add a human approval step before anything sends.\nHow it went\nThe stated payoff was cutting attention per reminder from about 20 minutes to under 3 minutes while stopping reminders once payment is recorded. It’s only described at a high level in the comment, with no build details or measured collection-rate improvement.\nWorth knowing\nThe main catch is that the thread’s example is only a brief Reddit comment, so you’d still need to write the reminder templates and set the overdue rules yourself.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that runs every [day or week], reads my invoice sheet at [spreadsheet link], and finds rows where the status is unpaid and the due date has passed. For each, have an AI step draft a follow-up email to [client email column], with tone based on days overdue: [friendly under X days, firmer after]. Save the drafts in [Gmail drafts or a review sheet] and do not send anything automatically; I will review and send them myself.\nOriginal source: https://www.reddit.com/r/AiForSmallBusiness/comments/1s8k6ld/how_to_automate_client_invoicing_and_payment",
+    "body_sha256": "0577a5b21a7634a8d4fa93c572009f87ba460c6eb22cba5050b2c825f0a4b84e",
+    "archived_at": "2026-11-03T08:34:59.582104+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-03T08:34:59.582104+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

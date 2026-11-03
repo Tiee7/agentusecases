@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/gather-market-news-for-investing-with-an-agent",
+  "observed_at": "2026-11-03T08:35:13.569388+00:00",
+  "html_sha256": "8fe5021b9b43003f0cd07d757152987d3b22af0cdbcf1f37879172ea8b86d3d2",
+  "body_sha256": "340dc2d47a3ea8202f7a7d606a775c041d0518e0681c95a7f3105103a670bb86",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Gather market news for investing with an agent",
+      "sha256": "9eb58405b9312cb076d6f6bafe9899b906b7bea8c488fe5666fb7f0e5fdbbe46"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter is setting up an AI agent with access to a news API to collect market news for investing decisions.\n·\nJun 1, 2026",
+      "sha256": "a1d506fb07570658a3706b95b6e930dcb8d4d589b4b88128b3660fe1e1d17fa3"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter is setting up an agent on a VPS and plans to feed it data weekly by hand: scans on leading growth companies and industries plus an Excel sheet ranking about 200 sub-industries by performance versus the S&P 500. The agent also gets access to SEC EDGAR and a cheaper, slightly delayed news API so it can connect unusual relative-strength shifts with the prior week’s news; the person is using it to surface themes, not make final decisions.",
+      "sha256": "8ba161fd1eadc97b209ec9740a0f0b1ff6c909f7c7bb60506417f30f568d0267"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The intended result is to spot major industry shifts within a few days and catch most of the move, with CPU names like Intel, AMD, and Marvell given as examples. They describe it as a growth-investing workflow and say they are only now trying it agentically, so no performance numbers are reported.",
+      "sha256": "bbdb6999f1ab290a73c523084856e510385ac6502403aa16402e7e02eb0f3d09"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "You still have to supply the core inputs manually each week, and the commenter specifically calls out VPS setup and ongoing API bills as the main catches.",
+      "sha256": "c46c05b563153fb26acdddd67f2b7a4b63de74043b3cbde754799567c14127ec"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ValueInvesting/comments/1tn1iuv/how_can_you_use_ai_to_help_with_investing"
+      ],
+      "sha256": "bae8ada143530d62881a0f63a4eb5f2d7d4f6adcca3fa8ead8f1b45cefebea3b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-02",
+      "sha256": "bb1de3879fc3904da5b8b20834d8d58eac44c618f8305a7357557ae506daf77f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e4940285f99861d8fddae7b4ed2dc7505d3e875d03b693497c903bbd08d9e3c3",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Gather market news for investing with an agent\nA commenter is setting up an AI agent with access to a news API to collect market news for investing decisions.\n·\nJun 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter is setting up an agent on a VPS and plans to feed it data weekly by hand: scans on leading growth companies and industries plus an Excel sheet ranking about 200 sub-industries by performance versus the S&P 500. The agent also gets access to SEC EDGAR and a cheaper, slightly delayed news API so it can connect unusual relative-strength shifts with the prior week’s news; the person is using it to surface themes, not make final decisions.\nHow it went\nThe intended result is to spot major industry shifts within a few days and catch most of the move, with CPU names like Intel, AMD, and Marvell given as examples. They describe it as a growth-investing workflow and say they are only now trying it agentically, so no performance numbers are reported.\nWorth knowing\nYou still have to supply the core inputs manually each week, and the commenter specifically calls out VPS setup and ongoing API bills as the main catches.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild me a workflow that runs every morning at [time], pulls market news from [news API name] for these tickers and topics: [list], and uses an AI step to filter out noise and summarize the top 5 items with links. It should email the digest to [my email address]. Done means a test run delivers one correctly formatted digest, and the workflow only reads news and sends me the email, nothing else.\nOriginal source: https://www.reddit.com/r/ValueInvesting/comments/1tn1iuv/how_can_you_use_ai_to_help_with_investing",
+    "body_sha256": "340dc2d47a3ea8202f7a7d606a775c041d0518e0681c95a7f3105103a670bb86",
+    "archived_at": "2026-11-03T08:35:13.569388+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-03T08:35:13.569388+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

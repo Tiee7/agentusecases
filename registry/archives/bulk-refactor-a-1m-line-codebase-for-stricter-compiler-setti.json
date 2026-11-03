@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/bulk-refactor-a-1m-line-codebase-for-stricter-compiler-setti",
+  "observed_at": "2026-11-03T08:34:39.605844+00:00",
+  "html_sha256": "02cf729ed7b2daf42c29cf1c0b7a102c385a654890517f7cfdebbb002230aeb6",
+  "body_sha256": "3604e041e113bdcfaf3192042021fdac67ff29405c3bd5de251d8f643d5ba3e9",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Bulk-refactor a 1M-line codebase for stricter compiler settings",
+      "sha256": "580927a5174ea6bdca754ce104390d5150cb5d1227777ae659de2adea7699d20"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Claude systematically converts whole classes of compiler errors into cleaner code, using custom skills or scripts, across 200K+ lines in a large codebase.\n·\nNov 2, 2026",
+      "sha256": "08bda30a38cc0d2150da6658293c85069eefb79b75fe768ecb08cd6c418b1d0f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "On a mono-repo of about 50 projects and over 1M lines, they tighten compiler settings, which surfaces tens of thousands of errors. Claude takes whole classes of errors and converts them to cleaner code, using the team's custom skills or by writing new scripts. They sort refactors into logic, performance, and cosmetic buckets, and bulk-run only the latter two.",
+      "sha256": "946a5f66413fbf058a91b5640771608934a0b8aa0df17d45595c9eadb65ff0f6"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Claude handled changes across 200K+ lines that the author calls near impossible for a human in an IDE. The team also ported all code to dotnet 10 LTS and can upgrade dependencies wholesale. No timings are given.",
+      "sha256": "01d8805380e809fdad99476bc36eaeb381cc5b8a56c8351a1a85f8091c98865a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Keep business-logic changes out of bulk runs and in dedicated sessions, since the domain is complex and breakages are unaffordable; bulk-refactor only performance and cosmetic changes.",
+      "sha256": "e4110dff9ba5d406bad25564455617b459afdd914c245102a91a50196c34bacc"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50334784"
+      ],
+      "sha256": "87ac2b7f7f42038e1c8e47b3931a5aae1d2d936a6390f35db069a0ea06972a5f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-02",
+      "sha256": "bb1de3879fc3904da5b8b20834d8d58eac44c618f8305a7357557ae506daf77f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "190ef1305094bc10eb804c18940c7b35c0de4127eb2aa6755db3bfd2f6fa508b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Bulk-refactor a 1M-line codebase for stricter compiler settings\nClaude systematically converts whole classes of compiler errors into cleaner code, using custom skills or scripts, across 200K+ lines in a large codebase.\n·\nNov 2, 2026\nDone with\nCL\nClaude\nWhat they did\nOn a mono-repo of about 50 projects and over 1M lines, they tighten compiler settings, which surfaces tens of thousands of errors. Claude takes whole classes of errors and converts them to cleaner code, using the team's custom skills or by writing new scripts. They sort refactors into logic, performance, and cosmetic buckets, and bulk-run only the latter two.\nHow it went\nClaude handled changes across 200K+ lines that the author calls near impossible for a human in an IDE. The team also ported all code to dotnet 10 LTS and can upgrade dependencies wholesale. No timings are given.\nWorth knowing\nKeep business-logic changes out of bulk runs and in dedicated sessions, since the domain is complex and breakages are unaffordable; bulk-refactor only performance and cosmetic changes.\nTry it yourself\nwith\nClaude\nCopy prompt\nIn the codebase at [path], I want to enable the stricter compiler setting [flag or warning level]. Build the project, group the resulting errors by type, and pick the most common type first. Write a reusable script or skill that fixes that whole class of error safely, apply it, and rebuild to confirm the error count dropped and tests still pass. Repeat for the next error type, and stop when the build is clean or you've done [number] rounds. Show me the diff summary before you commit anything.\nOriginal source: https://news.ycombinator.com/item?id=50334784",
+    "body_sha256": "3604e041e113bdcfaf3192042021fdac67ff29405c3bd5de251d8f643d5ba3e9",
+    "archived_at": "2026-11-03T08:34:39.605844+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-03T08:34:39.605844+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

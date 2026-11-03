@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-parallel-claude-sessions-to-build-and-test-apps",
+  "observed_at": "2026-11-03T08:34:37.562313+00:00",
+  "html_sha256": "d5d04e8e40f92a571d167d2247dfe58ad10a937a8bf5fab936594c4d7564870d",
+  "body_sha256": "7499b5f7e492f1ebfb14abc84a6d4ef79e71f67b8cdbae35db0ce1c15629381c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run parallel Claude sessions to build and test apps",
+      "sha256": "e58714fa744d9d03cc28495cd6a0aeeeb5455caed1ae4ace53a75c7d35f0cf0c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer runs about 10 codebase copies with Claude sessions, planning specs first, and has Claude drive phones via adb to test UIs and debug from logs.\n·\nNov 2, 2026",
+      "sha256": "155a96b7dc6d38822f9b9c296ddaa31ff25e1068e0e92a45d8db17f446382ee3"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer keeps about 10 copies of the codebase in a /code folder, each with its own git branch, Claude session and terminal. He spends heavy time planning and specifying each task tightly so Claude can't wander. For mobile apps, he plugs phones into the laptop over USB (emulators if needed) and Claude drives the UI through adb, reads logs and debugs.",
+      "sha256": "17254b2dea293e4ac34b32a4d80752b6122edb2e0dbfc392249665dcc44b1424"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no measured results, only the claim that Claude moves very fast on tasks once set up this way. It reports the limit that he can only manage as many sessions as he can mentally handle.",
+      "sha256": "12fa5bf90de2eef5e139eddd43f3421b023740349b1b5e8f8d5da9269a291e28"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Prep mattered: about a year ago they split 10K+ line files into files of 2K lines or less and had Claude add per-file summaries and comments; a strictly typed language like dotnet is also needed.",
+      "sha256": "4c9e0dfeedec021e1551ebbd4976f04a8946383095bcb2a579144953005c8697"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50334362"
+      ],
+      "sha256": "617fd438ca01cf2b34ae71859dfe5079b437dbc6f540765a70d851d97192ab7a"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-02",
+      "sha256": "bb1de3879fc3904da5b8b20834d8d58eac44c618f8305a7357557ae506daf77f"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "bc5962ef4121823637a3278e7533e66b16ab0b00a2bec71c74c7b46d61d18a58",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run parallel Claude sessions to build and test apps\nA developer runs about 10 codebase copies with Claude sessions, planning specs first, and has Claude drive phones via adb to test UIs and debug from logs.\n·\nNov 2, 2026\nDone with\nCL\nClaude\nWhat they did\nThe developer keeps about 10 copies of the codebase in a /code folder, each with its own git branch, Claude session and terminal. He spends heavy time planning and specifying each task tightly so Claude can't wander. For mobile apps, he plugs phones into the laptop over USB (emulators if needed) and Claude drives the UI through adb, reads logs and debugs.\nHow it went\nThe source gives no measured results, only the claim that Claude moves very fast on tasks once set up this way. It reports the limit that he can only manage as many sessions as he can mentally handle.\nWorth knowing\nPrep mattered: about a year ago they split 10K+ line files into files of 2K lines or less and had Claude add per-file summaries and comments; a strictly typed language like dotnet is also needed.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm building [describe your app] in the repo at [path]. First write a short spec and a step-by-step plan for [feature], and wait for my approval. Once I approve, implement it, run the app on my connected Android device or emulator using adb, tap through [the key screen or flow], and read the logs to fix any crashes. Stop when the flow works end to end and give me a summary of what you changed and tested.\nOriginal source: https://news.ycombinator.com/item?id=50334362",
+    "body_sha256": "7499b5f7e492f1ebfb14abc84a6d4ef79e71f67b8cdbae35db0ce1c15629381c",
+    "archived_at": "2026-11-03T08:34:37.562313+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-03T08:34:37.562313+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
