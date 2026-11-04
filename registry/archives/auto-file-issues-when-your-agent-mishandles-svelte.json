@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/auto-file-issues-when-your-agent-mishandles-svelte",
+  "observed_at": "2026-11-04T08:15:49.629045+00:00",
+  "html_sha256": "a85e7c85cf8994cdfea5b954af2a9b5a76a824d9265a78920b7bc1eadac2b620",
+  "body_sha256": "cb9017bf5b623f6e76375a542ce644aa0f4823224e6a118ad6435632fa8b43be",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Auto-file issues when your agent mishandles Svelte",
+      "sha256": "ac41a8124a3f875ca68e179466c6c330fb899bdeaea68e49c35df27ba6ff20e4"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An opt-in skill lets a coding agent open an issue on the Svelte AI tools repo whenever it gets something wrong while working with Svelte.\n·\nNov 2, 2026",
+      "sha256": "6beb30d6b920bafeeb8cc5e0e1113ca1154024ad129bf073bc219eae836e0c03"
+    },
+    "method": {
+      "status": "observed",
+      "value": "You install the svelte-mcp-feedback skill separately, since no plugin bundles it. After you correct a Svelte or SvelteKit mistake the agent made, it fixes the code and builds a minimal reproduction. If the Svelte MCP is available, it runs the autofixer on that reproduction. It searches existing issues, then files one in sveltejs/ai-tools with the GitHub CLI. Without the CLI, it opens a prefilled issue form for you to submit.",
+      "sha256": "1ba4d77d6450e03bbab3fdcec51fd5c35bc2cfa313221be8dade84cc80987347"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no results or numbers. It says the skill ignores initial requests, unrelated bugs and personal style preferences, and files only concrete, generalizable mistakes.",
+      "sha256": "d9efb7186bce98bafb9a06ea427e497290637cb6862f65ee9e339159331a7d00"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "It needs the GitHub CLI installed and authenticated to file automatically. Otherwise you still have to submit the prefilled form yourself.",
+      "sha256": "af4a7451129e5290b2e727db5cc08dbf0d1c22a2dbf888dd7dfc486b6c40e7b9"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://svelte.dev/docs/ai/skills#svelte-mcp-feedback"
+      ],
+      "sha256": "feb0e5d9792d47d2a4438038491f88c6c96c9e9abf0a2bc96c8f7a9e195f9ce8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-03",
+      "sha256": "d658e2a3b5597fab6e1c619fb80cdf08d37763c2d403667798cddcf65eeccb97"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "790816ee3f0f1201ec15b1d35f9e52264a3cdef7b19b3187b5121c36b73d53a8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Auto-file issues when your agent mishandles Svelte\nAn opt-in skill lets a coding agent open an issue on the Svelte AI tools repo whenever it gets something wrong while working with Svelte.\n·\nNov 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou install the svelte-mcp-feedback skill separately, since no plugin bundles it. After you correct a Svelte or SvelteKit mistake the agent made, it fixes the code and builds a minimal reproduction. If the Svelte MCP is available, it runs the autofixer on that reproduction. It searches existing issues, then files one in sveltejs/ai-tools with the GitHub CLI. Without the CLI, it opens a prefilled issue form for you to submit.\nHow it went\nThe source gives no results or numbers. It says the skill ignores initial requests, unrelated bugs and personal style preferences, and files only concrete, generalizable mistakes.\nWorth knowing\nIt needs the GitHub CLI installed and authenticated to file automatically. Otherwise you still have to submit the prefilled form yourself.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nCreate an opt-in skill for this project that triggers when you make a mistake while working with [framework or library, e.g. Svelte]. It should draft a GitHub issue for [repo URL] with what I asked for, what you did wrong, the correct approach, and a minimal code example. Always show me the draft and wait for my approval before filing anything. Done when the skill file is saved and you've demonstrated it with a sample draft.\nOriginal source: https://svelte.dev/docs/ai/skills#svelte-mcp-feedback",
+    "body_sha256": "cb9017bf5b623f6e76375a542ce644aa0f4823224e6a118ad6435632fa8b43be",
+    "archived_at": "2026-11-04T08:15:49.629045+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-04T08:15:49.629045+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

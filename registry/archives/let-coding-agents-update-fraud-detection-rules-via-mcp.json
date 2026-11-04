@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-coding-agents-update-fraud-detection-rules-via-mcp",
+  "observed_at": "2026-11-04T08:16:15.689525+00:00",
+  "html_sha256": "aeec3ac41b98d55b348c296f1eecc51fd07631faefc342dc48809af07e0fbbe7",
+  "body_sha256": "846c5a93d6f1e7cf58795a5bd4977564e9937f56def38f58306aebee586c283b",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let coding agents update fraud detection rules via MCP",
+      "sha256": "ecddcd0979c409365e0c5c2d0666043eea105a25707c2cf2ed30eef0739b757d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Kairos exposes an MCP server so a user's agent (Claude Code, Cursor, Codex) can maintain fraud decisioning logic as fraudsters change tactics, for fraud teams.\n·\nNov 3, 2026",
+      "sha256": "212315815d60d2c5480559e598a34507f9c7348d5e1a9d1f5e0992355a831086"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the Kairos console you turn on the MCP tool groups your agent needs and create a key. You then add the server to Claude Code, Cursor or Codex. The agent builds the workflow and proposes model variants. Kairos trains and tests them on your labeled data, and the agent explains its pick and publishes the winner as the next workflow version.",
+      "sha256": "d819ae6bf26a257945f0246243275650dbcd55d860a51a99003625831f4e3ee5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The README's example has an agent design six variants for a Shopify order workflow. It publishes logistic regression plus Grayson answers as v6, with ROC-AUC 0.949 on validation and 0.930 on test. This is an illustrative example, not a reported deployment.",
+      "sha256": "d4d184aa69cd46821c1985ea4397967d1b91399fbc3383dfe3fa9393d1e5df53"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Experiments need labeled history, such as chargebacks, to train and test on. Each agent action is recorded under its key, and you choose which tool groups to enable.",
+      "sha256": "f60f148128d0ba0cf2f93cc517517f6b3d7b9b4621301f6554407668f0c64196"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Cursor",
+        "Codex"
+      ],
+      "sha256": "9be4a905d7f6202dcd42a8a79857883f0cc91548bcec77c5d4259c6dae5b42ef"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/finic-ai/kairos"
+      ],
+      "sha256": "a3d91f06608a5795aa1c74bd35bf4447b110554101607f3de00db5d626e16b39"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-03",
+      "sha256": "d658e2a3b5597fab6e1c619fb80cdf08d37763c2d403667798cddcf65eeccb97"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b5849fcd965910e2d166310c8e4de094dfc1aec764054e5c13fe04fbd6cff812",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let coding agents update fraud detection rules via MCP\nKairos exposes an MCP server so a user's agent (Claude Code, Cursor, Codex) can maintain fraud decisioning logic as fraudsters change tactics, for fraud teams.\n·\nNov 3, 2026\nDone with\nCC\nClaude Code\nCR\nCursor\nCX\nCodex\nWhat they did\nIn the Kairos console you turn on the MCP tool groups your agent needs and create a key. You then add the server to Claude Code, Cursor or Codex. The agent builds the workflow and proposes model variants. Kairos trains and tests them on your labeled data, and the agent explains its pick and publishes the winner as the next workflow version.\nHow it went\nThe README's example has an agent design six variants for a Shopify order workflow. It publishes logistic regression plus Grayson answers as v6, with ROC-AUC 0.949 on validation and 0.930 on test. This is an illustrative example, not a reported deployment.\nWorth knowing\nExperiments need labeled history, such as chargebacks, to train and test on. Each agent action is recorded under its key, and you choose which tool groups to enable.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect to our fraud decisioning MCP server at [MCP server name or URL]. Review the current rules and these recent fraud patterns: [describe new tactics, e.g. card testing from new device IDs]. Propose updated or new rules with a short reason for each and show me the diff, and do not publish or change anything live until I approve.\nOriginal source: https://github.com/finic-ai/kairos",
+    "body_sha256": "846c5a93d6f1e7cf58795a5bd4977564e9937f56def38f58306aebee586c283b",
+    "archived_at": "2026-11-04T08:16:15.689525+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-04T08:16:15.689525+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

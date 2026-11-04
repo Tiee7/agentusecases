@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-multiple-role-based-openclaw-agents-with-supervision",
+  "observed_at": "2026-11-04T08:16:09.608219+00:00",
+  "html_sha256": "50de39a1ff1d4c8290a1a10819fa928561ac67aba5ad34b541d6ff233e08a303",
+  "body_sha256": "cf9c39d6d4b114c21f18f58d595ddf2fdaef79e31520b1028ee7565c01c44cdc",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run multiple role-based OpenClaw agents with supervision",
+      "sha256": "40b949944bb9f1baac94c0a6dd8327114f43303abec5a366d4a276e4fae7a633"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter runs several OpenClaw agents, one per role, with memory, wiki links and graph search, and checks that their actions still match the original intent.\n·\nMay 1, 2026",
+      "sha256": "96a49fab2b3b6a7509c567eb28d5e230df2444ce11297e8190cb15eb36229e95"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One commenter said they run multiple OpenClaw agents, one per role. Another described a setup layer around tool-using agents that checks each proposed action against the session’s original intent, records the session, and analyzes behavior at the action, whole-session, and cross-session level so a person only reviews the high-risk or off-pattern cases.",
+      "sha256": "4fb97803f0c9dc98972ae378fd2c7896a545d2dab18434c223ba1d3b1ebfbdd6"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The thread gives scale more than metrics: one person said they handle 5–15 OpenClaw sessions, while another said supervision matters because agents can quietly drift into unrelated but technically allowed work. No hard performance results were provided.",
+      "sha256": "8637dfb64023f1d795e50a865ee075ff3efa6c36fd194739417da27ee0bfe4ec"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch is monitoring load: the commenter suggested keeping the human-facing queue small and only surfacing high-risk, misaligned, or unusual actions instead of watching every session manually.",
+      "sha256": "3fe7f571196eee3ad642159f7911c6540379231b26c1d66d475c4366f218650f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/openclaw/comments/1szknss/how_many_agentssessions_do_you_orchestrate"
+      ],
+      "sha256": "048edc19fd2dc02a80b4204b0be25a8314c501fa45a6d3e556f5ddf6f39380f1"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-03",
+      "sha256": "d658e2a3b5597fab6e1c619fb80cdf08d37763c2d403667798cddcf65eeccb97"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7bb1b5292fcf017be0bff152e2adf503b52259209a0a637d48f27266efd36cea",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run multiple role-based OpenClaw agents with supervision\nA commenter runs several OpenClaw agents, one per role, with memory, wiki links and graph search, and checks that their actions still match the original intent.\n·\nMay 1, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nOne commenter said they run multiple OpenClaw agents, one per role. Another described a setup layer around tool-using agents that checks each proposed action against the session’s original intent, records the session, and analyzes behavior at the action, whole-session, and cross-session level so a person only reviews the high-risk or off-pattern cases.\nHow it went\nThe thread gives scale more than metrics: one person said they handle 5–15 OpenClaw sessions, while another said supervision matters because agents can quietly drift into unrelated but technically allowed work. No hard performance results were provided.\nWorth knowing\nThe clearest catch is monitoring load: the commenter suggested keeping the human-facing queue small and only surfacing high-risk, misaligned, or unusual actions instead of watching every session manually.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me set up several agents, one for each role: [role 1, role 2, role 3]. Give each its own memory and instructions, link their notes in a shared wiki, and add a weekly check that compares what each agent did against my original intent for it: [goals]. Stop when all agents are configured and you've given me a sample review report. Ask me before any agent sends messages or changes files outside its area.\nOriginal source: https://www.reddit.com/r/openclaw/comments/1szknss/how_many_agentssessions_do_you_orchestrate",
+    "body_sha256": "cf9c39d6d4b114c21f18f58d595ddf2fdaef79e31520b1028ee7565c01c44cdc",
+    "archived_at": "2026-11-04T08:16:09.608219+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-04T08:16:09.608219+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

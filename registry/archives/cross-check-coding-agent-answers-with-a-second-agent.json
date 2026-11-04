@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/cross-check-coding-agent-answers-with-a-second-agent",
-  "observed_at": "2026-11-03T08:32:23.691299+00:00",
-  "html_sha256": "2798019bf01e74830dbc3b2e93e02ecf2b717e6a3713d536499dfe0fcf9f1eae",
+  "observed_at": "2026-11-04T08:12:35.837502+00:00",
+  "html_sha256": "8f5817a45e42d1b6dbefdc6493ca1a0abd30f68750522a366a7c53fd5ea35dfe",
   "body_sha256": "c5303b117a6f3b27c7bc07ff63a53024ac700ccb35090bc9642a0591200a2fba",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Cross-check coding agent answers with a second agent\nThe poster built a tool that automatically sends Claude Code responses to Codex for a second opinion, replacing manual copy-pasting.\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe poster had been manually pasting Claude Code’s replies into Codex for a second opinion, then built Sage to automate that workflow. Sage runs in a separate terminal, watches the main coding agent in real time, and sends each response to another model for review while keeping its own persistent thread; unlike the MCP approach they tried, it can read the codebase, use tools, search the web, and the human chooses whether to apply or ignore the feedback.\nHow it went\nThey say this workflow led to far fewer bugs and caught bad plans early, but they gave no hard metrics. In comments, users reported it already made useful catches, while the poster noted some rough edges around plan mode and needing to restart after Claude’s /clear.\nWorth knowing\nYou can authenticate through a ChatGPT Pro Codex subscription or an API key, but /clear creates a new conversation log, so you have to rerun Sage and pick the new convo.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small tool that takes each response Claude Code gives in my project at [repo path] and automatically sends it, with the relevant question and code context, to Codex for a second opinion. It should show me both answers side by side and highlight where they disagree. You're done when I can run one command and see the cross-check for a sample question, and tell me before installing anything or running commands that change my repo.\nOriginal source: https://www.reddit.com/r/OpenaiCodex/comments/1pdv38j/got_tired_of_copypasting_my_agents_responses_into",
     "body_sha256": "c5303b117a6f3b27c7bc07ff63a53024ac700ccb35090bc9642a0591200a2fba",
-    "archived_at": "2026-11-03T08:32:23.691299+00:00",
+    "archived_at": "2026-11-04T08:12:35.837502+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-03T08:32:23.691299+00:00",
+    "at": "2026-11-04T08:12:35.837502+00:00",
     "status": "fetched",
     "error": null
   }
