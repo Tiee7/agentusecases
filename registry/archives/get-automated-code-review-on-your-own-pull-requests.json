@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/get-automated-code-review-on-your-own-pull-requests",
-  "observed_at": "2026-11-04T08:14:25.593316+00:00",
-  "html_sha256": "fd0a6bf61f0d63a2829c6418a34d10b111fc17bcc07748e2f1c9ffdae10fc246",
+  "observed_at": "2026-11-05T08:42:23.338809+00:00",
+  "html_sha256": "ca193af1acb2acc76f3b1be130000f92ce418271195734188eb24f8230672b0e",
   "body_sha256": "86c7d0cfd32e39e46a5b754629e5a29f037f8e69a0cfaff9917ed60581b43c1f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Get automated code review on your own pull requests\nA user used Copilot code review on PRs in their private repo, but reviews hung for hours and ended in errors.\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe user paid for an individual Copilot subscription and had Copilot review PRs they opened against their own private repo. It worked at first, then failed about half the time and later over 90%. Runners hung for up to 6 hours. Commenters suggested checking the repo contents, cancelling stuck jobs, and testing another repo.\nHow it went\nThe cause turned out to be a 20-megabyte binary disk image checked into the repo. After the user deleted it, reviews worked again. Copilot gave no error naming the file.\nWorth knowing\nLook for large binary files committed to the repo if reviews hang. The user also found that cancelling stuck runs in Actions sometimes made them produce output anyway.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nPlease review my pull request [PR number] in [owner/repo] as a code reviewer. Leave inline comments on bugs, risky changes, missing tests, and unclear naming, and finish with a short summary of the most important things to fix. If the review can't complete, tell me the error so I can retry instead of leaving it hanging.\nOriginal source: https://github.com/orgs/community/discussions/190036",
     "body_sha256": "86c7d0cfd32e39e46a5b754629e5a29f037f8e69a0cfaff9917ed60581b43c1f",
-    "archived_at": "2026-11-04T08:14:25.593316+00:00",
+    "archived_at": "2026-11-05T08:42:23.338809+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-04T08:14:25.593316+00:00",
+    "at": "2026-11-05T08:42:23.338809+00:00",
     "status": "fetched",
     "error": null
   }

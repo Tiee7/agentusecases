@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/score-off-market-real-estate-deals-from-emails",
-  "observed_at": "2026-11-04T08:15:19.601655+00:00",
-  "html_sha256": "d3a9bc2272deeca87d8d047dfd8bb0627f2258b299f93c5e5383cb090433ede3",
+  "observed_at": "2026-11-05T08:43:17.357833+00:00",
+  "html_sha256": "3a309ba7e5b9f44b2b2f1363d5ea197d0d4fe912c41e308e10fabcae8f456d01",
   "body_sha256": "77b6122c499505b5cb4a65ac76cc556f51ed6c2e423bf54242f3c3453847991c",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Score off-market real estate deals from emails\nA pipeline has a Python worker read deal emails, Claude extract fields into fixed JSON, and code score them; the poster is stuck on incomplete data and login-walled sources.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThe poster wired a dedicated Gmail to collect saved-search alerts and wholesaler emails, then had a Python worker split multi-deal emails and send each deal to a low-cost Claude model to extract fixed JSON fields, leaving unknowns null. Plain Python, not the LLM, handled the single-family and multifamily scoring, with paid lookups only after a cheap price check; output went to Supabase, a Streamlit dashboard, email alerts, and a shared Google Doc for coordination.\nHow it went\nIt worked well enough to centralize incoming deals and score what had data, but many leads stalled because about half arrived without a street address and others lacked unit counts or rents. The poster says those missing fields, plus login-walled sources that block automation, kept deals stuck at a needs-info stage.\nWorth knowing\nTheir main catch is cost control and gating: expensive data lookups only run after a cheap initial price check.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a Python script that reads real estate deal emails from [mailbox or folder of exported .eml files], uses Claude to extract fields into a fixed JSON schema (address, asking price, units, rents, NOI, seller contact), and uses plain code to score each deal against [my criteria]. When data is missing, mark the field as null and list it in a 'needs follow-up' output rather than guessing. Done means I can run it on a sample of 10 emails and get a ranked CSV of deals with scores and missing-data flags.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wwf59r/ai_pipeline_for_offmarket_real_estate_deals_120",
     "body_sha256": "77b6122c499505b5cb4a65ac76cc556f51ed6c2e423bf54242f3c3453847991c",
-    "archived_at": "2026-11-04T08:15:19.601655+00:00",
+    "archived_at": "2026-11-05T08:43:17.357833+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-04T08:15:19.601655+00:00",
+    "at": "2026-11-05T08:43:17.357833+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/update-tickets-and-open-pull-requests-from-an-execute-task",
+  "observed_at": "2026-11-05T08:45:29.298188+00:00",
+  "html_sha256": "71c87e30fe3a6ee58f81aadf6480aa0204b6a4c771206e97f80bd7799b02a36b",
+  "body_sha256": "0e43c5e2098bea3e38ba70ca559dd4b1dcd4bf919441267ee0746e639523ee36",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Update tickets and open pull requests from an execute task",
+      "sha256": "2457a6ce0a72e8412687f1bf0939acd50281a0f63510c7afb03c72c707f26536"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer's execute task updates the ticket, creates the pull request, and updates its description after they confirm; another user applies Copilot to code reviews and PR comments.\n·\nOct 4, 2026",
+      "sha256": "74738c0be01dc5f7fc57d49474f9fb955183efe309fa3e3ce02b7202f772cbbf"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One commenter described a two-step setup: a skill that reads a Jira ticket written like a spec and turns it into a task plan, then an execute skill that takes that todo list and makes the code changes. They iterate on the plan with the LLM first, then the execute step prints the changes and waits for their confirmation before pushing; after approval, it updates the ticket, opens the PR, and rewrites the PR description. Another commenter said they use GitHub Copilot mainly for GitHub work like code reviews, PR comments, and repo tasks.",
+      "sha256": "a33d4a926befe8271f70edb6b9ac5aaa7c7436292cf7e932a61540dce2e0d091"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The thread gives workflow details, not hard performance results. The main user said they are still keeping training wheels on and do not yet let it auto-push, and they do not fully enjoy working this way.",
+      "sha256": "1e0c031dae70518307bb78b7cce14502410f0e0161a32da820f56ec95a39082d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The catch is that this flow still pauses for human confirmation before pushing, and the person said they only might let it auto-push after more time using it.",
+      "sha256": "75a02f3ee568cc2869706a665f49c70cfa5cd1127570eea493df5174d57a8e9f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1wfyrjy/how_do_you_guys_do_agentic_coding"
+      ],
+      "sha256": "b428e9ac98ae6765c60b0bb7fe66d6aff0f9a637a81595cb85942c3d71a449c8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-04",
+      "sha256": "ba9fc93c7ed70a8b525f0a62023d41e1344542f7d58b17385ccc81443bf5421c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e6987af82bbcf8284ee52e7c5424affc0392a3cb70103ff343efb40ac3647abe",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Update tickets and open pull requests from an execute task\nA developer's execute task updates the ticket, creates the pull request, and updates its description after they confirm; another user applies Copilot to code reviews and PR comments.\n·\nOct 4, 2026\nDone with\nGH\nGitHub Copilot\nWhat they did\nOne commenter described a two-step setup: a skill that reads a Jira ticket written like a spec and turns it into a task plan, then an execute skill that takes that todo list and makes the code changes. They iterate on the plan with the LLM first, then the execute step prints the changes and waits for their confirmation before pushing; after approval, it updates the ticket, opens the PR, and rewrites the PR description. Another commenter said they use GitHub Copilot mainly for GitHub work like code reviews, PR comments, and repo tasks.\nHow it went\nThe thread gives workflow details, not hard performance results. The main user said they are still keeping training wheels on and do not yet let it auto-push, and they do not fully enjoy working this way.\nWorth knowing\nThe catch is that this flow still pauses for human confirmation before pushing, and the person said they only might let it auto-push after more time using it.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nFor my current branch on [repo name], review the changes, then update ticket [ticket ID or link] with a progress summary and draft a pull request with a clear title and description. Show me the ticket update and PR description and wait for my confirmation before posting or creating anything. After the PR is open, review it and suggest comments on anything risky or unclear.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1wfyrjy/how_do_you_guys_do_agentic_coding",
+    "body_sha256": "0e43c5e2098bea3e38ba70ca559dd4b1dcd4bf919441267ee0746e639523ee36",
+    "archived_at": "2026-11-05T08:45:29.298188+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-05T08:45:29.298188+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

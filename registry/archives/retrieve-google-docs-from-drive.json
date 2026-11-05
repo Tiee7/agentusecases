@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/retrieve-google-docs-from-drive",
+  "observed_at": "2026-11-05T08:44:39.372805+00:00",
+  "html_sha256": "c76d075a516ff8069359e55340ba7b215a411cbfadc8d0b0f17ff4bd33489e64",
+  "body_sha256": "adf049206c06882ffbd8a32f241aed507f04fcb3238a6a43217599f1cad86eec",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Retrieve Google Docs from Drive",
+      "sha256": "e0f7d0e08a1dc741d05213093cc9a882cc00e3fc346acac5d63721c80821b962"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster asked Gemini to grab a few Google Docs from Drive and it retrieved them correctly, though they report later failures with faked data.\n·\nMar 1, 2026",
+      "sha256": "a3cba7d04631e2a89ea62bb38ab62c55e1d43817e78392772677fba628068d12"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster asked Gemini 3.1 Pro to pull a few Google Docs from their Google Drive, and it retrieved those correctly. They then asked it to cross-reference those docs with a shared Google Sheet; Gemini produced polished 2024 open-rate and click-rate figures, later asked for the IDs of the other sheets, and then finished the task after the user checked and pushed back.",
+      "sha256": "91dcf8f2297c4c5595e3e8b65269a32044032b0b6d47c600fe12699d8a201490"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "At first it looked like Gemini had fabricated data because it only used one year and later claimed it could not access the file. After the poster manually checked, they said the data was actually right, and that Gemini eventually completed the job, but in a messy, trust-eroding way.",
+      "sha256": "135619c4c4c073803ea660a5e993844c425cdf542e2378ca75fd723a7535b1a4"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The key catch from the thread is to verify outputs manually; one commenter also says attaching the file directly with the + button is more reliable than pasting a Google Sheet link.",
+      "sha256": "e4356e0bb1e702f273204a39e41d28c8138c997685c1dc9c20b01df5dfade59a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Gemini"
+      ],
+      "sha256": "33465b812c627c77e1d7c620f21d042a47736b00fb898d5ecb4d7a4880940ce3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GeminiAI/comments/1rkwkmh/gemini_31_pro_confidently_faked_all_my_data"
+      ],
+      "sha256": "13f0ba29c818570af4cd7825374a5a25e56f193ec7e022d7d959b9c75ea6f827"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-04",
+      "sha256": "ba9fc93c7ed70a8b525f0a62023d41e1344542f7d58b17385ccc81443bf5421c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c99efe35edef0a256e33204eeece81971031acbe991aee132fa2c5fe315634b6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Retrieve Google Docs from Drive\nThe poster asked Gemini to grab a few Google Docs from Drive and it retrieved them correctly, though they report later failures with faked data.\n·\nMar 1, 2026\nDone with\nGE\nGemini\nWhat they did\nThe poster asked Gemini 3.1 Pro to pull a few Google Docs from their Google Drive, and it retrieved those correctly. They then asked it to cross-reference those docs with a shared Google Sheet; Gemini produced polished 2024 open-rate and click-rate figures, later asked for the IDs of the other sheets, and then finished the task after the user checked and pushed back.\nHow it went\nAt first it looked like Gemini had fabricated data because it only used one year and later claimed it could not access the file. After the poster manually checked, they said the data was actually right, and that Gemini eventually completed the job, but in a messy, trust-eroding way.\nWorth knowing\nThe key catch from the thread is to verify outputs manually; one commenter also says attaching the file directly with the + button is more reliable than pasting a Google Sheet link.\nTry it yourself\nwith\nGemini\nCopy prompt\nFind these Google Docs in my Drive: [doc titles or keywords, or folder name]. For each one, give me the title, the link, and a short summary of its contents, quoting directly from the document. If you can't find a doc or can't read it, tell me plainly rather than guessing or inventing content. You're done when every doc is either retrieved or clearly marked as not found.\nOriginal source: https://www.reddit.com/r/GeminiAI/comments/1rkwkmh/gemini_31_pro_confidently_faked_all_my_data",
+    "body_sha256": "adf049206c06882ffbd8a32f241aed507f04fcb3238a6a43217599f1cad86eec",
+    "archived_at": "2026-11-05T08:44:39.372805+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-05T08:44:39.372805+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

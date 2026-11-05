@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/edit-a-large-notebook-with-copilot-agent-mode",
+  "observed_at": "2026-11-05T08:45:27.241510+00:00",
+  "html_sha256": "945a73877a1fb15c10288a9f262b32a6d431f38edc5893f93095dd05afe743a9",
+  "body_sha256": "f44409a3adbe0986dddfade0d2f959972e24e1b42d58876ff597f616ab9880ce",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Edit a large notebook with Copilot Agent Mode",
+      "sha256": "868a1801dc46a4ce33c8eb5628079326229c6ee04a34b7c8870d4f40353c1864"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author asked Copilot Agent Mode for moderate changes and basic features in a large ipynb; it got halfway, stopped mid-line, and broke the notebook.\n·\nJun 3, 2025",
+      "sha256": "456b00f231ab6a93385c02bf9e4cd6428005be39ac74251ce62649623e1f933d"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter described using Copilot Agent Mode in PyCharm on a fairly large Jupyter notebook, about 3,000 lines, to make moderate edits and add basic features. The agent would start rewriting the notebook, get partway through, then stop mid-line and corrupt more than half the file; the person reverted the changes and tried several models before giving up.",
+      "sha256": "85998642fe2cd0895fb393c7a678237e749bde145a8584975ec9e9f7cb8b0b3c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It failed repeatedly on the same notebook, breaking the file badly enough that the author reverted each time and stopped using Agent Mode for that job. They switched to Gemini in chat mode instead, saying it worked better for AI coding.",
+      "sha256": "eac8beb5d1bdbca8f2c269c0492a9b6377ea5310e54b5db1a1c5ffe593543cb6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was file safety: on this large ipynb, the agent repeatedly stopped halfway through edits and damaged over half the notebook.",
+      "sha256": "cbab4ac356bc46d1c5ac373e91faadda1452cf19cb85bdb54ed4aae32d3a58e6"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1kxfaec/why_does_copilot_fail_alot_in_agent_mode_a_rant"
+      ],
+      "sha256": "5a01b91f3216f7b99494ca69d8b3f04241eec5350efdd64cf7a175dab8a6436d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-04",
+      "sha256": "ba9fc93c7ed70a8b525f0a62023d41e1344542f7d58b17385ccc81443bf5421c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "22606af7c456b9d72fdf52e8a3a30a511170cbef50b0677ea3b5dcf3ac9943d3",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Edit a large notebook with Copilot Agent Mode\nThe author asked Copilot Agent Mode for moderate changes and basic features in a large ipynb; it got halfway, stopped mid-line, and broke the notebook.\n·\nJun 3, 2025\nDone with\nGH\nGitHub Copilot\nWhat they did\nA commenter described using Copilot Agent Mode in PyCharm on a fairly large Jupyter notebook, about 3,000 lines, to make moderate edits and add basic features. The agent would start rewriting the notebook, get partway through, then stop mid-line and corrupt more than half the file; the person reverted the changes and tried several models before giving up.\nHow it went\nIt failed repeatedly on the same notebook, breaking the file badly enough that the author reverted each time and stopped using Agent Mode for that job. They switched to Gemini in chat mode instead, saying it worked better for AI coding.\nWorth knowing\nThe main catch was file safety: on this large ipynb, the agent repeatedly stopped halfway through edits and damaged over half the notebook.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nI have a large notebook, [file name], and want these changes: [moderate change 1], [moderate change 2], and a basic feature to [feature]. Work one cell or section at a time, validate that the notebook is still valid JSON and runs after each edit, and never stop partway through a cell. When done, list what changed per section, and ask me before making any big restructuring edits.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1kxfaec/why_does_copilot_fail_alot_in_agent_mode_a_rant",
+    "body_sha256": "f44409a3adbe0986dddfade0d2f959972e24e1b42d58876ff597f616ab9880ce",
+    "archived_at": "2026-11-05T08:45:27.241510+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-05T08:45:27.241510+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/process-80-documents-with-an-agent",
+  "observed_at": "2026-11-05T08:45:01.232818+00:00",
+  "html_sha256": "82def3af01df0ef72247b9d121803dc6eb868a8dbb9fa18e593416fa541980a4",
+  "body_sha256": "78d7bd6555349b5cd50cac3ff41afee39328f3529db225a2935efb4ec5e5a86d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Process 80 documents with an agent",
+      "sha256": "0e1e21f22c3ffe2cbeb935fded4b0d229a1690a37c4bfce9f57fdea88d1fd1bf"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster asked Dot to process 80 documents; it finished about 60 and stopped, and refused to commit or merge a PR.\n·\nOct 20, 2026",
+      "sha256": "221934f9cb216c1f597b3bed460a5d6686f4659a386f0f840463be60005ed21c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster used Dot on coding work tied to their own GitHub repo and also tried having it work in its own VM. They told it to process 80 documents, create and merge PRs, and use the browser, but Dot repeatedly paused for approvals, refused to commit or merge, and stopped after 60 documents when its Sentry safety layer flagged the batch as too risky. The poster says they kept resetting authorizations, memory, custom rules, and even tried gh/git CLI access.",
+      "sha256": "908c4d029f4924157150ec61de391e94043f94a7a6a7dcfeeb48f0b02a325b37"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It processed about 60 of the 80 documents before stopping. The reported failure mode was not bad output so much as repeated refusals and interruptions: browser access, file reads, git/gh actions, and PR merging were denied or stalled.",
+      "sha256": "747e2a2e123addc1c67cce6560036dc29f1585079e44f995222fedafa9fb12ee"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was constant babysitting: the poster says they had to restate approvals repeatedly because Sentry denials stuck in context and derailed later steps.",
+      "sha256": "868f0b8d8bade9e663ba3e1ddec1f4e400d0f5f12ed81f84a04610bff7482b8b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Dots"
+      ],
+      "sha256": "91459cb7c634858ecf323595fcbe9f28e5384d97430578b57492bdff2118be77"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/OpenaiCodex/comments/1xagsgy/dot_and_gpt_are_unusable"
+      ],
+      "sha256": "9ec8cc763e8835305fd74d0269400be4eb5efdc502741a376603637eec150e56"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-04",
+      "sha256": "ba9fc93c7ed70a8b525f0a62023d41e1344542f7d58b17385ccc81443bf5421c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ed49f29a15a6cf26d5fb9672001a65c44b8a300991b8f1124360fe75b47d0060",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Process 80 documents with an agent\nThe poster asked Dot to process 80 documents; it finished about 60 and stopped, and refused to commit or merge a PR.\n·\nOct 20, 2026\nDone with\nDO\nDots\nWhat they did\nThe poster used Dot on coding work tied to their own GitHub repo and also tried having it work in its own VM. They told it to process 80 documents, create and merge PRs, and use the browser, but Dot repeatedly paused for approvals, refused to commit or merge, and stopped after 60 documents when its Sentry safety layer flagged the batch as too risky. The poster says they kept resetting authorizations, memory, custom rules, and even tried gh/git CLI access.\nHow it went\nIt processed about 60 of the 80 documents before stopping. The reported failure mode was not bad output so much as repeated refusals and interruptions: browser access, file reads, git/gh actions, and PR merging were denied or stalled.\nWorth knowing\nThe main catch was constant babysitting: the poster says they had to restate approvals repeatedly because Sentry denials stuck in context and derailed later steps.\nTry it yourself\nwith\nDots\nCopy prompt\nProcess these [number] documents in [folder or location]: for each one, [extract fields, summarize, or classify]. Keep a checklist of every document with its status, and keep going until all are done; if you stop, tell me exactly which are left and why. Put the results in [output file], and show me any changes before committing or merging anything.\nOriginal source: https://www.reddit.com/r/OpenaiCodex/comments/1xagsgy/dot_and_gpt_are_unusable",
+    "body_sha256": "78d7bd6555349b5cd50cac3ff41afee39328f3529db225a2935efb4ec5e5a86d",
+    "archived_at": "2026-11-05T08:45:01.232818+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-05T08:45:01.232818+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

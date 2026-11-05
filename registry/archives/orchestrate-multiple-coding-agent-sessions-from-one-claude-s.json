@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/orchestrate-multiple-coding-agent-sessions-from-one-claude-s",
+  "observed_at": "2026-11-05T08:44:43.510708+00:00",
+  "html_sha256": "e7e704e3b956186589dbfa59823c1831902d0eef77b9444ff4a8e27b0931c77e",
+  "body_sha256": "eb3423ff8675b55ec8642e1e55ca09ccf7979db8ddee48f496c4d7c5aec0c7d6",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Orchestrate multiple coding agent sessions from one Claude session",
+      "sha256": "5a5d9baed2fddb6e8837ff86b647c9c80b73bfcfec6bfa03bf70b5c4d05afb47"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer talks to one Claude session that messages other agent sessions (including Codex) as orchestrator, reachable from CLI, mobile app and IRC, to load-balance token usage.\n·\nNov 4, 2026",
+      "sha256": "4227d1d8351bc8ca15986a0c393589df7823608a65da80c245df9bb4211b2c77"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer talks mostly to a single Opus 5.5 session, chosen for its 1M context window, and lets it message other agent sessions as an orchestrator. They use it from the CLI and the mobile app. Claude often calls Codex on their behalf. Some agents are also reachable over IRC through a small CLI they're building.",
+      "sha256": "f572f1390214f7ce5bc5fea05e4eb0d1e93659c0983ad8b62bee517dca58061c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The workflow replaced the need for complex orchestration tools or agent platforms. Delegation was once for quality problems; now it mainly load-balances token usage across Claude and Codex subscriptions. The IRC CLI is still in progress.",
+      "sha256": "f4a97c443806004abf3a089eaa51b700e8bc9d30d2aeba78c8cf057f04c5f4c7"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "This assumes subscriptions to both Claude and Codex, mostly at top tiers, which the author adjusts up or down depending on usage.",
+      "sha256": "2f15abee347326a25c47cf5c1fffb00ef54bdd99e976fd0a16be7037f58179a0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude",
+        "Claude Code",
+        "Codex"
+      ],
+      "sha256": "869a35eed7f1e2ab471c556369522c67ff4bde196add4b5e18972f022a48bb32"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50368019"
+      ],
+      "sha256": "421e0c2e71e9132dc0298b3e0d75fbb78229933cf0315b6a37372541c96bbc87"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-04",
+      "sha256": "ba9fc93c7ed70a8b525f0a62023d41e1344542f7d58b17385ccc81443bf5421c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "96dd39f4ef80ac2436affbc5c5cacca0326637a25215bff59c157f819eb7b2ec",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Orchestrate multiple coding agent sessions from one Claude session\nA developer talks to one Claude session that messages other agent sessions (including Codex) as orchestrator, reachable from CLI, mobile app and IRC, to load-balance token usage.\n·\nNov 4, 2026\nDone with\nCL\nClaude\nCC\nClaude Code\nCX\nCodex\nWhat they did\nThe developer talks mostly to a single Opus 5.5 session, chosen for its 1M context window, and lets it message other agent sessions as an orchestrator. They use it from the CLI and the mobile app. Claude often calls Codex on their behalf. Some agents are also reachable over IRC through a small CLI they're building.\nHow it went\nThe workflow replaced the need for complex orchestration tools or agent platforms. Delegation was once for quality problems; now it mainly load-balances token usage across Claude and Codex subscriptions. The IRC CLI is still in progress.\nWorth knowing\nThis assumes subscriptions to both Claude and Codex, mostly at top tiers, which the author adjusts up or down depending on usage.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me set up an orchestrator workflow where this Claude Code session can send tasks to other agent sessions, including [Codex or another coding agent], and collect their replies. Start by proposing a simple setup for [my project folder] where I give you one goal and you split it into [number] parallel tasks. Show me the plan and wait for my approval before launching any sessions, and finish by summarizing what each session did.\nOriginal source: https://news.ycombinator.com/item?id=50368019",
+    "body_sha256": "eb3423ff8675b55ec8642e1e55ca09ccf7979db8ddee48f496c4d7c5aec0c7d6",
+    "archived_at": "2026-11-05T08:44:43.510708+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-05T08:44:43.510708+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
