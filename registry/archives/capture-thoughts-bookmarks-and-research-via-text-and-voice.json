@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/capture-thoughts-bookmarks-and-research-via-text-and-voice",
+  "observed_at": "2026-11-06T08:42:57.593177+00:00",
+  "html_sha256": "10e31679c3e53c1063d8728ee018bd30481edabd5a9c1b309f6ee41d84b0ad90",
+  "body_sha256": "493bc64e8d73cf8aadde17b670e0d30aaad341a16388d58b03831e0aac051e9a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Capture thoughts, bookmarks and research via text and voice",
+      "sha256": "d503d0d2d86ecd87c4ed95d21f1f5cd9f14ce1b73e240fcb57fd8ef195001050"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter describes an assistant that saves bookmarks, thoughts, wishlists and research from text and voice messages; another's WhatsApp-to-Notion flow failed at querying notes later.\n·\nAug 5, 2026",
+      "sha256": "e5531c7ec8a1a8feda5e9e89b1006fb3530a0e92778963de14fa8f48aeed1ee1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One commenter said they built the capture side with WhatsApp feeding Notion, but it was only a save pipeline: notes went in as plain text and later queries failed. Another described a fuller pattern where n8n handled message intake, audio transcription, tool calls, Notion writes, calendar checks, and scheduled reviews, while a smaller agent handled intent and search; they also buffered related messages, like a voice note and URL, into one record before classifying and storing it.",
+      "sha256": "4ebe4ba4a0457981cc2333636e5e73c9a8e1f9f3051164d4efa3060a8f16cd8d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The save flow was easy to get working, but recall broke down: asking what had been noted about a topic two weeks later returned nothing, so they stopped using it. The thread’s suggested fix was semantic retrieval with embeddings or a vector store rather than relying on Notion text search alone.",
+      "sha256": "848a15649a4cbb2f5a5a2fb082179ffc2cd7830e7a70aa90339c95ea65c7da94"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "One person said the hardest part was scheduling proactive messages, taking three rewrites before it felt natural.",
+      "sha256": "64ef270cf34c63dc2025c82bf33813293cc98ea65e7fbc3c4c16ed0c8ead4873"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://vi.reddit.com/r/n8n/comments/1uwqg9a/building_an_ai_second_brainadhd_assistant_which"
+      ],
+      "sha256": "49ae027079916fefeff98be058b2cb4bcb3389575733787097c5f9c5ddf1a5a6"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-05",
+      "sha256": "5fcb572b528519139e2387488eb3b6ebaf08e890f45e59c93ac2161bba96e0e4"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "39e1bc47517af5e1c64c710e0f15404a4b86f98c3cda26bb05c312d7cb00d5c1",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Capture thoughts, bookmarks and research via text and voice\nA commenter describes an assistant that saves bookmarks, thoughts, wishlists and research from text and voice messages; another's WhatsApp-to-Notion flow failed at querying notes later.\n·\nAug 5, 2026\nDone with\nN8\nn8n\nWhat they did\nOne commenter said they built the capture side with WhatsApp feeding Notion, but it was only a save pipeline: notes went in as plain text and later queries failed. Another described a fuller pattern where n8n handled message intake, audio transcription, tool calls, Notion writes, calendar checks, and scheduled reviews, while a smaller agent handled intent and search; they also buffered related messages, like a voice note and URL, into one record before classifying and storing it.\nHow it went\nThe save flow was easy to get working, but recall broke down: asking what had been noted about a topic two weeks later returned nothing, so they stopped using it. The thread’s suggested fix was semantic retrieval with embeddings or a vector store rather than relying on Notion text search alone.\nWorth knowing\nOne person said the hardest part was scheduling proactive messages, taking three rewrites before it felt natural.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a capture assistant that takes text or voice messages I send via [WhatsApp or Telegram], transcribes voice notes, and sorts each item as a bookmark, thought, wishlist item, or research note. Save each one to [Notion or other notes app] with a title, tags, and date. Also add a way for me to ask a question about my saved notes and get an answer with the matching entries, then test it with 5 sample messages.\nOriginal source: https://vi.reddit.com/r/n8n/comments/1uwqg9a/building_an_ai_second_brainadhd_assistant_which",
+    "body_sha256": "493bc64e8d73cf8aadde17b670e0d30aaad341a16388d58b03831e0aac051e9a",
+    "archived_at": "2026-11-06T08:42:57.593177+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-06T08:42:57.593177+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-speed-to-lead-sms-agent-that-qualifies-and-books-lea",
+  "observed_at": "2026-11-06T08:43:11.631167+00:00",
+  "html_sha256": "ce5c315464b2039ccf4cb91b72956ea9a54d0e44ab5927b0e2eeafa6f67f4ed7",
+  "body_sha256": "4c4db85ee6369a15ec1f60353541a8bf20fc7e4ac2a6ec6780c6ace1e6de2612",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a speed-to-lead SMS agent that qualifies and books leads",
+      "sha256": "5f0a3528179d173c7c2e4c3f8b3cfbeae26dbfeceb230b043acf793cf9ac7771"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Poster is building a Make agent for local small businesses that texts leads, asks qualifying questions, books appointments and sends summaries, but the conversation logic is looping.\n·\nMar 20, 2026",
+      "sha256": "ae4440a5e2d9023208e6c629f0a76dc7538f7830ebfad296e8780768c53de4b1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster is building a two-scenario Make setup for local businesses. One scenario already works: a web form lead triggers Webhooks, OpenAI, JSON parsing, Twilio, and two Data Store writes for leads and conversation history, which sends an immediate reply; the second inbound-SMS scenario is meant to keep the chat going, ask qualifying questions, book an appointment, and then notify the business with a summary, but the poster says they have not gotten that logic working and came to Reddit for help.",
+      "sha256": "7c1f0ed1a2136b9720758f3cf95686da678c0c935accf61b03366e5f88674272"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The only working result described is the instant first text after a form submission. The inbound agent is failing because it sends multiple messages, loses memory, and repeats questions, and the comments mostly tell the poster to simplify the automation and map the workflow first.",
+      "sha256": "a9d91a07a4991bfa35abda40684ef3612f8364a7b76559a279ce1ea4c398012d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The source gives no cost or timing data; the main catch is that the poster says they spent several days unsuccessfully trying to debug the looping conversation logic.",
+      "sha256": "87345834e23d000f5c99a64a5e823617b44190724d670eb57add1114f3052f94"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Make"
+      ],
+      "sha256": "0509e922cf9bb48aa8c605e35ac20ee21e9dc52eb40ca4f40974367fcc19533a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/Make/comments/1rz4epp/can_someone_help_me_figure_out_how_to_get_this"
+      ],
+      "sha256": "143f7768b39cc093df6e456c818e3497227006d3087c006a92970fbc6334582c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-05",
+      "sha256": "5fcb572b528519139e2387488eb3b6ebaf08e890f45e59c93ac2161bba96e0e4"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "6a33f356dc13fcb03d92a32985ecf1141a7b18cf72e0da30cde8e6a2e8cbe337",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a speed-to-lead SMS agent that qualifies and books leads\nPoster is building a Make agent for local small businesses that texts leads, asks qualifying questions, books appointments and sends summaries, but the conversation logic is looping.\n·\nMar 20, 2026\nDone with\nMK\nMake\nWhat they did\nThe poster is building a two-scenario Make setup for local businesses. One scenario already works: a web form lead triggers Webhooks, OpenAI, JSON parsing, Twilio, and two Data Store writes for leads and conversation history, which sends an immediate reply; the second inbound-SMS scenario is meant to keep the chat going, ask qualifying questions, book an appointment, and then notify the business with a summary, but the poster says they have not gotten that logic working and came to Reddit for help.\nHow it went\nThe only working result described is the instant first text after a form submission. The inbound agent is failing because it sends multiple messages, loses memory, and repeats questions, and the comments mostly tell the poster to simplify the automation and map the workflow first.\nWorth knowing\nThe source gives no cost or timing data; the main catch is that the poster says they spent several days unsuccessfully trying to debug the looping conversation logic.\nTry it yourself\nwith\nMake\nCopy prompt\nHelp me build a speed-to-lead scenario for [type of local business] in Make. When a new lead arrives from [form or CRM], text them within a minute, ask [3 qualifying questions] one at a time, track which question they've answered so it never repeats itself, book qualified leads into [calendar tool], and send me a summary. Stop asking once all answers are collected or the lead says stop, and hand off to me if the reply is unclear. Run it in test mode with a sample lead and show me the messages before anything goes to real customers.\nOriginal source: https://www.reddit.com/r/Make/comments/1rz4epp/can_someone_help_me_figure_out_how_to_get_this",
+    "body_sha256": "4c4db85ee6369a15ec1f60353541a8bf20fc7e4ac2a6ec6780c6ace1e6de2612",
+    "archived_at": "2026-11-06T08:43:11.631167+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-06T08:43:11.631167+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

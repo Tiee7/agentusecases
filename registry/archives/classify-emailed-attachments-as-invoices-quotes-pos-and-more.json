@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/classify-emailed-attachments-as-invoices-quotes-pos-and-more",
+  "observed_at": "2026-11-06T08:42:53.572247+00:00",
+  "html_sha256": "1e38bf8f00527a25f59ebae5e45eabf5906eecffae5b80daa03c5b0734a77a79",
+  "body_sha256": "eb45b824e472d0bda9c93ece374a61430f68d4506449b4e36514898ddfe33fa5",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Classify emailed attachments as invoices, quotes, POs and more",
+      "sha256": "22a91918c4088352f40cbe9a7be901edab1788ed20971c80d730831643a16f4b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A multi-agent n8n setup pulls attachments from a busy email account and uses Gemini to label each as invoice, quote, statement, PO or other.\n·\nApr 6, 2026",
+      "sha256": "709d0c25d34cf398dd0f2b125a16e00523f9e781db6f194ee3ab4d7c8f53362f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In a roughly 50-node n8n workflow, the builder pulls attachments from a high-traffic email account and sends them to Gemini to classify as invoice, quote, statement, PO, or other. Most files are routed into matching Google Drive folders; for POs, the flow calls QuickBooks Online, finds the matching estimate, adds the PO number, uploads the document, and creates the corresponding invoice. They also added retry handling, an error folder, and spreadsheet checkpoints to trace each document.",
+      "sha256": "eed78080f4833291509bd6bc268124d7dc05ac40f99d156b3351cf1fe6e19435"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The post gives no production results yet; the workflow was still new and the builder said they were nervous about moving it into the live environment. Its main stated safeguard is logging each document’s path or failure point.",
+      "sha256": "2272061693a85858a8fa407fb1c72eb730cf625001350d9b4d18a5bc560733b0"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect extra work on failure handling: they added checkpoints throughout plus an error Google Drive folder and spreadsheet log for timed-out API steps.",
+      "sha256": "b444351171b869289ad0dd9b21d8b826dcb553756d0d06b08a819811442d77ae"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n",
+        "Gemini"
+      ],
+      "sha256": "a7b7c52c6cdc250cdabb7081baad2d6b2a2ecd35699e47279ac97ce24f868d68"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1s8m8uj/my_dumbest_automations_make_the_most_money_and_i"
+      ],
+      "sha256": "36a1a5ce3967c90ef959473b00d12cb7dcdc71c15e1b3dd4ae1912b4fe4add38"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-05",
+      "sha256": "5fcb572b528519139e2387488eb3b6ebaf08e890f45e59c93ac2161bba96e0e4"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a53a9fe3e4224f66cbc0987e7b4ca8b4b29943f0edeebf5a453fc7140140c242",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Classify emailed attachments as invoices, quotes, POs and more\nA multi-agent n8n setup pulls attachments from a busy email account and uses Gemini to label each as invoice, quote, statement, PO or other.\n·\nApr 6, 2026\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nIn a roughly 50-node n8n workflow, the builder pulls attachments from a high-traffic email account and sends them to Gemini to classify as invoice, quote, statement, PO, or other. Most files are routed into matching Google Drive folders; for POs, the flow calls QuickBooks Online, finds the matching estimate, adds the PO number, uploads the document, and creates the corresponding invoice. They also added retry handling, an error folder, and spreadsheet checkpoints to trace each document.\nHow it went\nThe post gives no production results yet; the workflow was still new and the builder said they were nervous about moving it into the live environment. Its main stated safeguard is logging each document’s path or failure point.\nWorth knowing\nExpect extra work on failure handling: they added checkpoints throughout plus an error Google Drive folder and spreadsheet log for timed-out API steps.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that watches [email account or label], downloads each new attachment, and uses Gemini to classify it as invoice, quote, statement, purchase order, or other. Add the label and sender to a row in [Google Sheet or folder] along with the attachment name. Test it on [number] sample emails and show me the results before you turn it on, and do not forward or delete any emails.\nOriginal source: https://www.reddit.com/r/n8n/comments/1s8m8uj/my_dumbest_automations_make_the_most_money_and_i",
+    "body_sha256": "eb45b824e472d0bda9c93ece374a61430f68d4506449b4e36514898ddfe33fa5",
+    "archived_at": "2026-11-06T08:42:53.572247+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-06T08:42:53.572247+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

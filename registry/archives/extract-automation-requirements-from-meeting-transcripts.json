@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/extract-automation-requirements-from-meeting-transcripts",
+  "observed_at": "2026-11-06T08:43:01.616377+00:00",
+  "html_sha256": "3abfeb8479e039d7ef6fa6b155e714ce2ba14ba9d9e4da89c4ca223927dc3e57",
+  "body_sha256": "1be71f01d695e00f237966b4ea1098f5be560f40b0d17c6f31a11331bf23d6ed",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Extract automation requirements from meeting transcripts",
+      "sha256": "945a3fb5b13c9f5e301cf95d286c5d913aa9b8bc8ebe72e82b07edd0893a1c20"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An autonomous coding agent with n8n tooling feeds a meeting transcript into Claude to extract automation requirements and help produce production-ready workflows.\n·\nJan 6, 2026",
+      "sha256": "6f6018f92aab9bf15ceb97e3d418b1ad0cf90f50333da8458b64023aa1185c58"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster records a client meeting, sends the transcript from tools like Fireflies or Otter to Claude with a prompt to extract automation requirements, then passes Claude’s structured output into Claude Code with their n8n skill files loaded. Claude Code generates the n8n workflow JSON, validates it, can read error logs and revise it, and pushes the workflow to the poster’s n8n instance through MCP; the human mainly reviews, tests, and steps in for complex debugging or visual checks.",
+      "sha256": "e2653588541822561c44e955f6c035cf5818c138a35c9746ef54e42f71bc50cc"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say this turns meeting-to-workflow into an end-to-end pipeline and cuts a sample lead-enrichment build from 2–4 hours to about 20 minutes, with most of that time spent reviewing and testing. They also say they still use the n8n UI for production debugging, visual review, and one-off experiments.",
+      "sha256": "e17be9970eb311a7d5f2be89d148c0f8bb98d6d6fe26cc83c2055a21858ec59e"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch they name is that regular Claude chat is not enough; they say Claude Code access, an n8n MCP setup, and a growing skills library are the foundation.",
+      "sha256": "a504e0baab7904fa61ca6ed751112fa2fdf22ade59ab7be5b7344a203aedde77"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude",
+        "n8n"
+      ],
+      "sha256": "83c68abe66dc952d2db3798b2604a1b0f26c351033b3645c550a271f7bb1646d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/marketingautomation/comments/1qxn9hs/im_quitting_n8n_heres_what_im_using_instead"
+      ],
+      "sha256": "8ab7a3e8ad58d57d5080e45d974137e89966383fca372b9196ef08f9fcde1ab8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-05",
+      "sha256": "5fcb572b528519139e2387488eb3b6ebaf08e890f45e59c93ac2161bba96e0e4"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ff7d763b94133e1eab3069f3aeef64db4560c210b2e3ec850d203b307be2d92f",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Extract automation requirements from meeting transcripts\nAn autonomous coding agent with n8n tooling feeds a meeting transcript into Claude to extract automation requirements and help produce production-ready workflows.\n·\nJan 6, 2026\nDone with\nCL\nClaude\nN8\nn8n\nWhat they did\nThe poster records a client meeting, sends the transcript from tools like Fireflies or Otter to Claude with a prompt to extract automation requirements, then passes Claude’s structured output into Claude Code with their n8n skill files loaded. Claude Code generates the n8n workflow JSON, validates it, can read error logs and revise it, and pushes the workflow to the poster’s n8n instance through MCP; the human mainly reviews, tests, and steps in for complex debugging or visual checks.\nHow it went\nThey say this turns meeting-to-workflow into an end-to-end pipeline and cuts a sample lead-enrichment build from 2–4 hours to about 20 minutes, with most of that time spent reviewing and testing. They also say they still use the n8n UI for production debugging, visual review, and one-off experiments.\nWorth knowing\nThe main catch they name is that regular Claude chat is not enough; they say Claude Code access, an n8n MCP setup, and a growing skills library are the foundation.\nTry it yourself\nwith\nClaude\nCopy prompt\nHere is a transcript of a meeting about [topic or client]: [paste transcript]. Extract every task that could be automated, and for each give me the trigger, the steps, the tools involved, and any open questions. Finish with a prioritized list of the three best automations to build first and a short spec for each.\nOriginal source: https://www.reddit.com/r/marketingautomation/comments/1qxn9hs/im_quitting_n8n_heres_what_im_using_instead",
+    "body_sha256": "1be71f01d695e00f237966b4ea1098f5be560f40b0d17c6f31a11331bf23d6ed",
+    "archived_at": "2026-11-06T08:43:01.616377+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-06T08:43:01.616377+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
