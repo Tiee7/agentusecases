@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/chase-overdue-invoices-with-a-squad-of-agents",
+  "observed_at": "2026-11-07T07:53:35.545578+00:00",
+  "html_sha256": "42d4fbf5c7b96ee893c350c874b431ff77db0d3fad2a197405fae0aecd213adf",
+  "body_sha256": "f0f4fdd05bcaef1f69d1c59125cc2b80caa32fdbd1a1c457a94da281a2ecabb9",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Chase overdue invoices with a squad of agents",
+      "sha256": "b70484df29c4e9fd630b53777e86fca0f4fe1a3137dc76caf13719611cf86c7f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A freelancer built a Claude Code-orchestrated system that finds and prioritizes overdue invoices, writes personalized reminders, handles replies, and pauses reminders for 48 hours after a payment promise.",
+      "sha256": "f4f1944713eb5b74df1606d5485724af038e8ae77f44467975871fd3c2db32d8"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The system, PayMind, has three focused agents with a Next.js dashboard. One agent scans a CSV or database, scores overdue invoices by amount and days late, and segments clients. A second drafts reminders matched to lateness and channel. A third classifies client replies by intent. OpenRouter sends cheap analysis to a free model and text writing to a premium one. A person approves each draft before it sends.",
+      "sha256": "ce773203a6ca861a25f151c0fa07b25946c8d354362ac4e903dcd3c4e0067c8f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "For about 50 invoices a month, the author reports time falling from roughly 5 hours to roughly 10 minutes, with API cost around $0.10 or free. These figures are self-reported.",
+      "sha256": "a89c360c7c6e953a18dfb1bef4a59266c26f4f2a0cbd5879b32ac50ba3a6d105"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Start in draft mode, with approval clicks on the dashboard before anything sends, so a CSV typo can't produce a wrongly aggressive message to a good client.",
+      "sha256": "7a77cbd683a7a268ac32ffdb3f5e326a4ae41950a18ea5333e1248561ff54115"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/fracabu/i-built-a-squad-of-ai-agents-to-chase-invoices-for-me-ojm"
+      ],
+      "sha256": "038323be8a9415090871674d3297d310a1ceb2599314757b3fc03abb3acc1de5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-06",
+      "sha256": "ef377f09672f97eabd3eae1845ca914d09ce06c3700a844e9eaa63779780fe96"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "15edc3c043bc691ddc00cd51f9f5c3ec6b3a4c76c812227474b83b84a591c4c6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Chase overdue invoices with a squad of agents\nA freelancer built a Claude Code-orchestrated system that finds and prioritizes overdue invoices, writes personalized reminders, handles replies, and pauses reminders for 48 hours after a payment promise.\nDone with\nCC\nClaude Code\nWhat they did\nThe system, PayMind, has three focused agents with a Next.js dashboard. One agent scans a CSV or database, scores overdue invoices by amount and days late, and segments clients. A second drafts reminders matched to lateness and channel. A third classifies client replies by intent. OpenRouter sends cheap analysis to a free model and text writing to a premium one. A person approves each draft before it sends.\nHow it went\nFor about 50 invoices a month, the author reports time falling from roughly 5 hours to roughly 10 minutes, with API cost around $0.10 or free. These figures are self-reported.\nWorth knowing\nStart in draft mode, with approval clicks on the dashboard before anything sends, so a CSV typo can't produce a wrongly aggressive message to a good client.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a system to chase overdue invoices from [invoice spreadsheet, accounting export, or folder]. It should find unpaid invoices past their due date, rank them by amount and days overdue, and draft a personalized reminder email for each in a [friendly/firm] tone. If a client replies with a payment promise, it should pause reminders for that client for 48 hours. Don't send any email until you've shown me the drafts and I approve.\nOriginal source: https://dev.to/fracabu/i-built-a-squad-of-ai-agents-to-chase-invoices-for-me-ojm",
+    "body_sha256": "f0f4fdd05bcaef1f69d1c59125cc2b80caa32fdbd1a1c457a94da281a2ecabb9",
+    "archived_at": "2026-11-07T07:53:35.545578+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-07T07:53:35.545578+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

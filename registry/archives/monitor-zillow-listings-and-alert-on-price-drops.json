@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/monitor-zillow-listings-and-alert-on-price-drops",
+  "observed_at": "2026-11-07T07:53:45.527756+00:00",
+  "html_sha256": "3cb328055196b9a7b46029937d01384ff172cf9f4818338f4a1b9277a0e744e2",
+  "body_sha256": "6bf3d4984825f88fe92112aafc85f050ff044aa9f6753b236479a96e9702f4ea",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Monitor Zillow listings and alert on price drops",
+      "sha256": "eba2929914e1caf41ae7a5f8ecf2d2691bb3b1e5a306719bdac2480aa8ad0d99"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A ChatGPT Agent Mode task checks a filtered Zillow view every six hours, compares snapshots, and sent a notification with the link when a price dropped.",
+      "sha256": "46e3296992842d4c3157f68d75d6608e7fdc9cec9a7aae8838351a104a1ab862"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In ChatGPT Agent Mode, the author gave one detailed prompt. It named the target city, price ceiling, minimum bedrooms, must-have features, the filtered Zillow URL, and a six-hour check interval. The agent opened the page, parsed the listing cards, and stored them. On later runs it compared against what it had already seen and was told to notify only on price drops or new listings.",
+      "sha256": "9cc2b0b27edf4c01709c95cf3f35ce26a8feb21792ac23b1d9ac83dad5b32ecf"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On the second run a price drop happened. The agent compared snapshots, flagged the change, and sent a notification with the listing link. The source gives no further results or numbers.",
+      "sha256": "1b4d3c59f2eb951d36b5e74cdadb793a5c10ce107ed044f0a1577af154f96586"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Agent Mode needs a paid tier, since meaningful runs sit on Plus and above. The source says free accounts only get a taste, and usage limits apply.",
+      "sha256": "311624a7e568ccb6661525368932d5ceb4b3a1085a5d0cc1d88cdb5444cda366"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT Agent"
+      ],
+      "sha256": "8e2784cf4a9f851bb22a7e2941b5ad0b77848f81ffcdb85f82bf5e95b614ccd1"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://bluefx.net/blog/chatgpt-agent-finds-your-dream-home-automatically/"
+      ],
+      "sha256": "e16af1028467003109505035a5fd4955d12bec0474c5bff3b4b6b9485883e2be"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "shopping",
+        "label": "Shopping & Errands"
+      },
+      "sha256": "85035c58bde0c681d89333575e1e5450132e43fc1d5d8f209b28ccd6f081c728"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-06",
+      "sha256": "ef377f09672f97eabd3eae1845ca914d09ce06c3700a844e9eaa63779780fe96"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fe625faf3e243ef1d39ca3702a3950ee1debc45084af86fc29a0c809380d6f6d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor Zillow listings and alert on price drops\nA ChatGPT Agent Mode task checks a filtered Zillow view every six hours, compares snapshots, and sent a notification with the link when a price dropped.\nDone with\nGA\nChatGPT Agent\nWhat they did\nIn ChatGPT Agent Mode, the author gave one detailed prompt. It named the target city, price ceiling, minimum bedrooms, must-have features, the filtered Zillow URL, and a six-hour check interval. The agent opened the page, parsed the listing cards, and stored them. On later runs it compared against what it had already seen and was told to notify only on price drops or new listings.\nHow it went\nOn the second run a price drop happened. The agent compared snapshots, flagged the change, and sent a notification with the listing link. The source gives no further results or numbers.\nWorth knowing\nAgent Mode needs a paid tier, since meaningful runs sit on Plus and above. The source says free accounts only get a taste, and usage limits apply.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nOpen this filtered Zillow search: [Zillow search URL]. Every [6] hours, record the listings and their prices, compare them to the previous check, and notify me with the listing link whenever a price drops or a new listing appears that matches my filters. Keep going until I tell you to stop, and don't contact any agents or submit any forms.\nOriginal source: https://bluefx.net/blog/chatgpt-agent-finds-your-dream-home-automatically/",
+    "body_sha256": "6bf3d4984825f88fe92112aafc85f050ff044aa9f6753b236479a96e9702f4ea",
+    "archived_at": "2026-11-07T07:53:45.527756+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-07T07:53:45.527756+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-business-cron-jobs-and-connectors-through-an-agent",
-  "observed_at": "2026-11-06T08:42:15.622269+00:00",
-  "html_sha256": "3b5895e6bdd5cd857e3e7a91a5403920aa0235b41b24cee51efa4cf635957cf4",
+  "observed_at": "2026-11-07T07:52:13.698278+00:00",
+  "html_sha256": "b5c5b253c9294442ac6676683d5b89804433d3941ab7a04f723d3f46aebe45a3",
   "body_sha256": "caafb38525b3b4e43cf5869398251c59a50d3eb578227402fc1e0970810b9e6b",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run business cron jobs and connectors through an agent\nThe poster ran business workflows via Hermes cron jobs and tool connectors, but a connector outage took the agent and all its jobs down.\n·\nMay 31, 2026\nDone with\nHA\nHermes Agent\nWhat they did\nThe poster self-hosted Hermes on Railway, used Telegram as the chat interface, Alltoken.ai for the model, Composio for connectors, and Hermes’s built-in memory. They had Hermes run a side project, produce a weekly subreddit growth report, and update a Google Sheet via cron jobs and connectors; when Composio failed, the agent stopped along with every scheduled job, and they were left trying to debug and considering a fresh restart with better memory and worker setup.\nHow it went\nThe subreddit report and Google Sheet updates worked pretty well, but the attempt to fully automate the side project failed because the agent kept missing context. The biggest reported breakage was that a Composio outage took down the agent and all cron jobs, which the poster says effectively shut down their business.\nWorth knowing\nTheir stated hosting cost on Railway was about $5–$10 per month, but the main catch was that connector reliability and Hermes’s memory limits were critical failure points.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nSet up scheduled jobs that handle [recurring business task, e.g. a daily sales summary] using my connectors for [tools]. Add a health check so that if a connector fails, you skip that job, tell me which one failed, and keep the other jobs running. Show me the schedule and what each job will do before turning anything on, and confirm with me before any job sends messages or changes data.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1tsxuqc/my_30_days_with_hermes_agent",
     "body_sha256": "caafb38525b3b4e43cf5869398251c59a50d3eb578227402fc1e0970810b9e6b",
-    "archived_at": "2026-11-06T08:42:15.622269+00:00",
+    "archived_at": "2026-11-07T07:52:13.698278+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-06T08:42:15.622269+00:00",
+    "at": "2026-11-07T07:52:13.698278+00:00",
     "status": "fetched",
     "error": null
   }
