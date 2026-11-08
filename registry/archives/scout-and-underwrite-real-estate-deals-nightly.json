@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/scout-and-underwrite-real-estate-deals-nightly",
+  "observed_at": "2026-11-08T08:00:24.068887+00:00",
+  "html_sha256": "68b0867c7ac6f9f7cf6c91b1e58fe4fbbbda995fc6391eee7d7c14afa061a104",
+  "body_sha256": "33351698a6fefad6ac41b02bdced3a5f9d0329eba7eb4447c0fbfa279f4471f6",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Scout and underwrite real estate deals nightly",
+      "sha256": "21095029cb01d7c506fff12da9db42f4c830da717d175b51ec6bf6ccfaa6be54"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A builder made a Claude Code agent that scans hundreds of MLS listings nightly, underwrites those passing filters, and emails qualifying deals to investors before 6am.\n·\nJul 7, 2026",
+      "sha256": "77b36aac49428654023c2743a052a27e0ecd3857a457a351f1747ff17ac96f0f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The builder says the agent runs on a nightly schedule with Inngest, scans hundreds of MLS listings, filters by price and cap rate, then underwrites the survivors. It pulls listing data from a property-data API, backfills missing beds, baths, and square footage from a secondary endpoint, runs multiple AI models in parallel to synthesize a score, and uses user actions like saves, passes, and closes to tune fit scoring over time.",
+      "sha256": "04033b44204d9c13759dabe81e78c232b547cb94a4586b69cde1ba22c6fac6d1"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say it became Dealsletter, with almost 200 users and over 2,400 newsletter subscribers. The main shortfalls were sparse listing data, cold-start learning, and duplicate properties across feeds, which required confidence scoring and reconciliation.",
+      "sha256": "eb707ea0cd6e960cc0ce72a5cc7550845e5e5292f8d631e0cc8997d04dea37fb"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The biggest catch was data quality rather than scheduling: missing multifamily fields forced a backfill layer, and duplicate listings across sources needed extra reconciliation logic.",
+      "sha256": "8ce2b6eafee1fe4e0e148b1bad80ec7ac636ecde6b1dabe674843bcb6c4f0bff"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/vibecoding/comments/1u4ugtj/vibecoded_an_autonomous_real_estate_deal_scout"
+      ],
+      "sha256": "d26742d38cd08bd32023fc56887cdb0447397ede5302cb52d0821d42bbb63329"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c5cceb22c21390787ff819c23e5a379e8401c992c83ac8fa82bf6197f6a17c93",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Scout and underwrite real estate deals nightly\nA builder made a Claude Code agent that scans hundreds of MLS listings nightly, underwrites those passing filters, and emails qualifying deals to investors before 6am.\n·\nJul 7, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe builder says the agent runs on a nightly schedule with Inngest, scans hundreds of MLS listings, filters by price and cap rate, then underwrites the survivors. It pulls listing data from a property-data API, backfills missing beds, baths, and square footage from a secondary endpoint, runs multiple AI models in parallel to synthesize a score, and uses user actions like saves, passes, and closes to tune fit scoring over time.\nHow it went\nThey say it became Dealsletter, with almost 200 users and over 2,400 newsletter subscribers. The main shortfalls were sparse listing data, cold-start learning, and duplicate properties across feeds, which required confidence scoring and reconciliation.\nWorth knowing\nThe biggest catch was data quality rather than scheduling: missing multifamily fields forced a backfill layer, and duplicate listings across sources needed extra reconciliation logic.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me an agent that each night pulls new listings from [MLS export, feed, or site] in [market], filters them by [price, location, property type], and underwrites those that pass using [my assumptions: rent, expenses, financing, target return]. It should produce a short summary for each deal that meets [return threshold] and email the list to [recipient] by [time]. Start with a dry run that shows me the output before it sends any email.\nOriginal source: https://www.reddit.com/r/vibecoding/comments/1u4ugtj/vibecoded_an_autonomous_real_estate_deal_scout",
+    "body_sha256": "33351698a6fefad6ac41b02bdced3a5f9d0329eba7eb4447c0fbfa279f4471f6",
+    "archived_at": "2026-11-08T08:00:24.068887+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-08T08:00:24.068887+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

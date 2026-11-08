@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-an-online-store-by-texting-commands-to-an-agent",
+  "observed_at": "2026-11-08T08:00:08.019756+00:00",
+  "html_sha256": "2480564e1cc3a8b137a88c71bdd81412a47f03bd1f390c628fb91f260c01ae91",
+  "body_sha256": "b906609bae1858523dce3b4bcec5ccbe1f31cbb05d2927d984f7d05d029f1725",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run an online store by texting commands to an agent",
+      "sha256": "4a5a9ff86abcb610ed9e081859a129a43e84739d689d427dae584a36ad9ccc45"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A reference build where an OpenClaw agent runs store API calls from the owner's Telegram texts, while a buyer-facing agent handles WhatsApp orders and status questions.",
+      "sha256": "bca4c36000fa45245705788da2ee2ca40ac708c8d048e814dbef08720e9b0441"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Claw Boutique is an AWS sample with two agents sharing one Store API. A Strands agent on Bedrock AgentCore, running Nova Lite, handles buyer WhatsApp chats. An OpenClaw agent on EKS sends the owner Telegram alerts for low stock and bad reviews, then runs the Store API calls for replies such as \"restock hoodies 20\" or \"apologize\". An apology sends a WhatsApp message and a refund email, marks the order refunded, and closes the escalation.",
+      "sha256": "a032a9151731e6ed62acb6f5e1d6b69972a7d264814a122ad41098bb8bc37bf0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The post walks through the full order lifecycle working across the web store, WhatsApp, email, Telegram and an admin dashboard. It gives no performance or business figures, and it is a reference architecture, not a production deployment.",
+      "sha256": "d3e836d6c9c3c47bbd3685041fa1f1591a907e60be5d66dca3968e390575c1af"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "One CDK deploy provisions everything, but a cold deploy takes about 25-30 minutes. It needs a WhatsApp Business account, a Telegram bot token and a verified SES address, and an EKS cluster and RDS database keep running until you destroy the stack.",
+      "sha256": "bb0bab9dc5ca9c8fb4ba512f80f0a143ff55a0b4858a8086910203d85c7bfef2"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://aws.amazon.com/blogs/messaging-and-targeting/build-an-autonomous-ecommerce-assistant-with-aws-end-user-messaging-amazon-bedrock-agentcore-and-openclaw/"
+      ],
+      "sha256": "c6e54a28220072e4b8947c32f9eeddfb46c7c9983049c37b192d4ab481676bc0"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d89269730b51bc6c1a25bb7522bfed238c9e06b667a74bddad8738d8ceb334a8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run an online store by texting commands to an agent\nA reference build where an OpenClaw agent runs store API calls from the owner's Telegram texts, while a buyer-facing agent handles WhatsApp orders and status questions.\nDone with\nOC\nOpenClaw\nWhat they did\nClaw Boutique is an AWS sample with two agents sharing one Store API. A Strands agent on Bedrock AgentCore, running Nova Lite, handles buyer WhatsApp chats. An OpenClaw agent on EKS sends the owner Telegram alerts for low stock and bad reviews, then runs the Store API calls for replies such as \"restock hoodies 20\" or \"apologize\". An apology sends a WhatsApp message and a refund email, marks the order refunded, and closes the escalation.\nHow it went\nThe post walks through the full order lifecycle working across the web store, WhatsApp, email, Telegram and an admin dashboard. It gives no performance or business figures, and it is a reference architecture, not a production deployment.\nWorth knowing\nOne CDK deploy provisions everything, but a cold deploy takes about 25-30 minutes. It needs a WhatsApp Business account, a Telegram bot token and a verified SES address, and an EKS cluster and RDS database keep running until you destroy the stack.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet yourself up as my store manager that I can text through [Telegram]. When I send a command like 'show today's orders' or 'mark order [number] as shipped', run the matching call against my [store platform] API and reply with the result. For anything that changes data, refunds money, or messages a customer, first send me a summary of exactly what you are about to do and wait for my yes. You're done when you can handle these three commands correctly: [command 1], [command 2], [command 3].\nOriginal source: https://aws.amazon.com/blogs/messaging-and-targeting/build-an-autonomous-ecommerce-assistant-with-aws-end-user-messaging-amazon-bedrock-agentcore-and-openclaw/",
+    "body_sha256": "b906609bae1858523dce3b4bcec5ccbe1f31cbb05d2927d984f7d05d029f1725",
+    "archived_at": "2026-11-08T08:00:08.019756+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-08T08:00:08.019756+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

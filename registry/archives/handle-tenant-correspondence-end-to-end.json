@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/handle-tenant-correspondence-end-to-end",
+  "observed_at": "2026-11-08T08:00:28.011482+00:00",
+  "html_sha256": "ea87d0181ee0d256a34a63f5bc50bb19cfd3a85788e563615c14aee54a928cc1",
+  "body_sha256": "01d12add2287d7facee3693b9cf04fc6e5877e527c21aacd2c7d867fc69fff14",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Handle tenant correspondence end to end",
+      "sha256": "1ad38c9f4f7ab72aefbb49d29c2431b72efa5f0c3637b6b3a5b9600b3a8c125a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A remote landlord says Claude managed tenant correspondence end to end, handling landlord-tenant messages for a rental property.\n·\nJan 10, 2025",
+      "sha256": "cef97e6831e41f74b44b679d6eca7df83aa27e1f36712dab1541d8110043b2bc"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The landlord set up Claude Code on WSL2 with a small Python Gmail CLI that exposed search, thread reading, sending, and replying as shell commands. Claude then searched the tenant’s email thread, read the conversation, opened a Markdown lease, edited the two requested clauses, converted it to PDF with Pandoc, and sent it back; in comments, the poster said they still checked the work.",
+      "sha256": "43ba2f7c2ffeab69cec437e332bd3a91b99f8c194231fd2dc7168e3f925c755c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The poster says the sequence ran end to end in about two minutes and replaced a process that usually took them days. The thread’s main shortcoming was trust: commenters pushed back hard on letting AI edit and send legal contracts, and the poster later stressed a human still needed to review it.",
+      "sha256": "62a9f1ed66240a48d238c2d726092b87a6803dcf6dfbbbd24e07a1d07f889763"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The practical catch is that this relied on a roughly 200-line custom Gmail CLI plus contracts already kept in Markdown for Pandoc-based PDF generation.",
+      "sha256": "c059d68ef9b89366e1ad811a9ca7fde4c7b3e594a546e5bf500d493f02f0ea04"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1q7ff1n/i_watched_claude_opus_45_handle_my_tenant"
+      ],
+      "sha256": "d4ced278ac524d62488e1a5516365eff9ce58ac4fea92bd8d4f8e2712b7a37d7"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ca5dfaeb3757d62dc3328367763d330d111a0147ed002e7e779c0674936a36bb",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Handle tenant correspondence end to end\nA remote landlord says Claude managed tenant correspondence end to end, handling landlord-tenant messages for a rental property.\n·\nJan 10, 2025\nDone with\nCL\nClaude\nWhat they did\nThe landlord set up Claude Code on WSL2 with a small Python Gmail CLI that exposed search, thread reading, sending, and replying as shell commands. Claude then searched the tenant’s email thread, read the conversation, opened a Markdown lease, edited the two requested clauses, converted it to PDF with Pandoc, and sent it back; in comments, the poster said they still checked the work.\nHow it went\nThe poster says the sequence ran end to end in about two minutes and replaced a process that usually took them days. The thread’s main shortcoming was trust: commenters pushed back hard on letting AI edit and send legal contracts, and the poster later stressed a human still needed to review it.\nWorth knowing\nThe practical catch is that this relied on a roughly 200-line custom Gmail CLI plus contracts already kept in Markdown for Pandoc-based PDF generation.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'm a landlord for [property] and the tenant just sent this message: [paste message]. Draft a polite, clear reply consistent with my lease terms: [key lease terms] and local rules in [location]. Tell me if the situation needs a formal notice or professional advice, and give a short log entry for my records. I'll review before anything is sent.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1q7ff1n/i_watched_claude_opus_45_handle_my_tenant",
+    "body_sha256": "01d12add2287d7facee3693b9cf04fc6e5877e527c21aacd2c7d867fc69fff14",
+    "archived_at": "2026-11-08T08:00:28.011482+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-08T08:00:28.011482+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

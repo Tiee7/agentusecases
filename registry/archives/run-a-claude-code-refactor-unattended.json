@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-claude-code-refactor-unattended",
-  "observed_at": "2026-11-07T07:47:21.557320+00:00",
-  "html_sha256": "ea440f282ba2854fe3aef3115cf87ed4462975ee984f8f32c3cf06b8160d47c2",
+  "observed_at": "2026-11-08T07:53:16.227788+00:00",
+  "html_sha256": "413c3edb3c70e050676786b5f275ddffaef9f96f0a85727676dfe3869db1cdfe",
   "body_sha256": "73a353d1805020d1285ff097693e2b9f39a5c393d072e9c5840fe3c76969e02a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a Claude Code refactor unattended\nA Claude Code agent ran 40 minutes unattended on a refactor; it worked and tests passed, but the user couldn't tell what it did in between.\n·\nAug 30, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe post says a Claude Code agent was left alone for about 40 minutes to do a refactor, and when the user returned the refactor worked and tests passed. In the comments, people describe how they handle this in practice: run the agent in a low-privilege account, inspect git diffs afterward, or log tool calls with Claude Code’s PreToolUse/PostToolUse hooks or session JSONL files under ~/.claude/projects to reconstruct what files and commands it touched.\nHow it went\nThe reported outcome was that the refactor succeeded and tests passed, but the user had no clear timeline, diff summary, or visibility into whether it read sensitive files or made outside calls. Commenters said transcripts are poor for auditing, and recommended relying on diffs, permissions, and tool-level logs instead.\nWorth knowing\nThe clearest catch was visibility: a long unattended run may succeed, but without separate logging or diff review you may not know what happened in between.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRefactor [module or area of the codebase] to [goal, e.g. split it into smaller functions or remove the deprecated API]. As you work, keep a running log file called PROGRESS.md noting each change you make and why, and run [test command] after each major step. Stop when all tests pass and give me a short summary of the files you touched and anything you weren't sure about.\nOriginal source: https://www.reddit.com/r/AI_Agents/comments/1w0z37j/my_claude_code_agent_ran_for_40_minutes_while_i",
     "body_sha256": "73a353d1805020d1285ff097693e2b9f39a5c393d072e9c5840fe3c76969e02a",
-    "archived_at": "2026-11-07T07:47:21.557320+00:00",
+    "archived_at": "2026-11-08T07:53:16.227788+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-07T07:47:21.557320+00:00",
+    "at": "2026-11-08T07:53:16.227788+00:00",
     "status": "fetched",
     "error": null
   }

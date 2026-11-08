@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/capture-thoughts-bookmarks-and-research-via-text-and-voice",
-  "observed_at": "2026-11-07T07:52:55.665862+00:00",
-  "html_sha256": "f4db8006ab9e0405b74b791e843fb8c0c371d51c82d353a6d1bc07b66ed89f9b",
+  "observed_at": "2026-11-08T07:58:50.253959+00:00",
+  "html_sha256": "4aa12ea80fad61fcd69a20939c118ecf8670d295b11bd0606c62e667184d6ff5",
   "body_sha256": "493bc64e8d73cf8aadde17b670e0d30aaad341a16388d58b03831e0aac051e9a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Capture thoughts, bookmarks and research via text and voice\nA commenter describes an assistant that saves bookmarks, thoughts, wishlists and research from text and voice messages; another's WhatsApp-to-Notion flow failed at querying notes later.\n·\nAug 5, 2026\nDone with\nN8\nn8n\nWhat they did\nOne commenter said they built the capture side with WhatsApp feeding Notion, but it was only a save pipeline: notes went in as plain text and later queries failed. Another described a fuller pattern where n8n handled message intake, audio transcription, tool calls, Notion writes, calendar checks, and scheduled reviews, while a smaller agent handled intent and search; they also buffered related messages, like a voice note and URL, into one record before classifying and storing it.\nHow it went\nThe save flow was easy to get working, but recall broke down: asking what had been noted about a topic two weeks later returned nothing, so they stopped using it. The thread’s suggested fix was semantic retrieval with embeddings or a vector store rather than relying on Notion text search alone.\nWorth knowing\nOne person said the hardest part was scheduling proactive messages, taking three rewrites before it felt natural.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a capture assistant that takes text or voice messages I send via [WhatsApp or Telegram], transcribes voice notes, and sorts each item as a bookmark, thought, wishlist item, or research note. Save each one to [Notion or other notes app] with a title, tags, and date. Also add a way for me to ask a question about my saved notes and get an answer with the matching entries, then test it with 5 sample messages.\nOriginal source: https://vi.reddit.com/r/n8n/comments/1uwqg9a/building_an_ai_second_brainadhd_assistant_which",
     "body_sha256": "493bc64e8d73cf8aadde17b670e0d30aaad341a16388d58b03831e0aac051e9a",
-    "archived_at": "2026-11-07T07:52:55.665862+00:00",
+    "archived_at": "2026-11-08T07:58:50.253959+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-07T07:52:55.665862+00:00",
+    "at": "2026-11-08T07:58:50.253959+00:00",
     "status": "fetched",
     "error": null
   }

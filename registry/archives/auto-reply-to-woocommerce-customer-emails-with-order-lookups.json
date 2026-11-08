@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/auto-reply-to-woocommerce-customer-emails-with-order-lookups",
+  "observed_at": "2026-11-08T08:00:06.114154+00:00",
+  "html_sha256": "6f5949cb52e477cd0f3c09c8d5f5b8031d23c6e83c156ddfee33b8bcd71936d2",
+  "body_sha256": "5f9b342ffae69f763a21c18eb8448d1a47cf4400d04f28c31e17ed83304d7ba0",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Auto-reply to WooCommerce customer emails with order lookups",
+      "sha256": "0eeb5d6ece273bc935bff80da17e2628068e5c2d61c1de269ed806f86eea6475"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A self-hosted OpenClaw agent answers incoming store emails by looking up order details, and can email confirmations to customers with orders still processing.",
+      "sha256": "10984e6e244d9119f48d81d74338635d20526f65ee10b0bed6f376b93f48fd12"
+    },
+    "method": {
+      "status": "observed",
+      "value": "OpenClaw runs on a VPS with the WordPress and WooClaw-Lite skills, which give it check_order, find_product and store_status. An Agentmail inbox sends a webhook for each incoming email. A system prompt tells the agent to look up the order and reply in the thread, and to acknowledge refunds and complaints and flag them for a human. A manual mode handles batch confirmations.",
+      "sha256": "f0a723e077ba7303fceb4f23605609793e82acbc83123987238bb3bbc938ca14"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source's example is a shipping-status email that gets a reply with tracking and delivery details. The batch prompt for processing orders is said to replace 20-30 minutes of dashboard work. It reports no measured results from a real store.",
+      "sha256": "9279ff995da8677b4f40500bafeb2995677163bb9e33c3e1839747d92efec08d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Use a dedicated WordPress user with limited permissions, and a webhook token so only Agentmail can trigger the agent. The VPS needs Docker and at least 2 GB RAM.",
+      "sha256": "987010df391af1b4e4c42f67060c7e6daf429d1f9af6622c29deaaa4a6901778"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.hostinger.com/tutorials/how-to-automate-woocommerce-customer-email-replies-with-openclaw/"
+      ],
+      "sha256": "f05e4b90549ddd240d6c337e3c3efdb3178216723cb1e475e319920f848cd887"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2759e5ce329f9b44d7cd1830c9cc3771dd9b3e0a8947e792967fe60eee422eac",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Auto-reply to WooCommerce customer emails with order lookups\nA self-hosted OpenClaw agent answers incoming store emails by looking up order details, and can email confirmations to customers with orders still processing.\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw runs on a VPS with the WordPress and WooClaw-Lite skills, which give it check_order, find_product and store_status. An Agentmail inbox sends a webhook for each incoming email. A system prompt tells the agent to look up the order and reply in the thread, and to acknowledge refunds and complaints and flag them for a human. A manual mode handles batch confirmations.\nHow it went\nThe source's example is a shipping-status email that gets a reply with tracking and delivery details. The batch prompt for processing orders is said to replace 20-30 minutes of dashboard work. It reports no measured results from a real store.\nWorth knowing\nUse a dedicated WordPress user with limited permissions, and a webhook token so only Agentmail can trigger the agent. The VPS needs Docker and at least 2 GB RAM.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWatch the inbox at [store support email address] for new customer emails about [WooCommerce store name]. For each one, look up the customer's order in WooCommerce using [order number or customer email], then draft a reply with the real order status and details. Save every draft for my review and show me the drafts; do not send any email, including confirmations to customers whose orders are still processing, until I approve it. Stop once all emails from the last [number] days have a draft.\nOriginal source: https://www.hostinger.com/tutorials/how-to-automate-woocommerce-customer-email-replies-with-openclaw/",
+    "body_sha256": "5f9b342ffae69f763a21c18eb8448d1a47cf4400d04f28c31e17ed83304d7ba0",
+    "archived_at": "2026-11-08T08:00:06.114154+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-08T08:00:06.114154+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

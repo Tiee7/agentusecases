@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/orchestrate-coding-agents-to-ship-prs-solo",
+  "observed_at": "2026-11-08T08:00:16.111324+00:00",
+  "html_sha256": "ec7ca71b0ed6327765191f3d284977cf9d6cae896e4a132cc1877bb533ba3aba",
+  "body_sha256": "b7f7bb7fc4f768b29762bec074a2689528d3a4577ced95f47a55b27221c9e765",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Orchestrate coding agents to ship PRs solo",
+      "sha256": "673d3f85017067745675f516c9e64c135c1d280d1082b5c89cc581c2ef6c081b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A solo developer used OpenClaw to dispatch Codex and Claude Code to write code, run tests, commit, open PRs and respond to review, with Telegram alerts on completion.\n·\nNov 7, 2026",
+      "sha256": "e48cfdae0801f87518a956968882eab3dc13212f21c9c7dc1e1d867cc61a187e"
+    },
+    "method": {
+      "status": "observed",
+      "value": "OpenClaw, which the author calls Zoe, holds business context: meeting notes in Obsidian, read-only production data, and an admin API. For each task it creates a git worktree and a tmux session, then starts Codex or Claude Code with a prompt it wrote. A cron job checks every 10 minutes whether sessions are alive, PRs exist and CI passes. It restarts failed agents up to 3 times, rewriting the prompt each time.",
+      "sha256": "452ec0ea26e931d5f9c9236d6be0a17bf659633ab7a424d382a7ca2fba0fdeaa"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Over four weeks the author reports up to 94 commits a day, averaging 50, and 7 PRs in 30 minutes. Human review of each PR took 5-10 minutes. The limit was RAM: a 16GB Mac Mini ran only 4-5 agents.",
+      "sha256": "3a5b39996f15e16a493d4ea2eb926d6c7d6e3d85296b1e8aac65cd83267c0149"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Cost is about $190 a month (Claude $100, Codex $90), or about $20 to start. A PR counts as done only after CI and three AI reviewers pass, and UI changes need screenshots.",
+      "sha256": "b5d4932bc929ac5aa2b24591c1cb0f3b3c024362ef5ff957876f5c3a3226e8be"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw",
+        "Claude Code",
+        "Codex"
+      ],
+      "sha256": "51953d81e47846350f3dfd873b3fee76df1619044c80af278d50605c50a1f417"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://cloud.tencent.com/developer/article/2646044"
+      ],
+      "sha256": "6f85cd05c47321016df7f3a37854d28a08058650dae1c7f2e9210b5712a935ef"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b001cf25fece48308313582dd0272f4e0eb48c8ffc4f9e4b6756f4b0a1d766ea",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Orchestrate coding agents to ship PRs solo\nA solo developer used OpenClaw to dispatch Codex and Claude Code to write code, run tests, commit, open PRs and respond to review, with Telegram alerts on completion.\n·\nNov 7, 2026\nDone with\nOC\nOpenClaw\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOpenClaw, which the author calls Zoe, holds business context: meeting notes in Obsidian, read-only production data, and an admin API. For each task it creates a git worktree and a tmux session, then starts Codex or Claude Code with a prompt it wrote. A cron job checks every 10 minutes whether sessions are alive, PRs exist and CI passes. It restarts failed agents up to 3 times, rewriting the prompt each time.\nHow it went\nOver four weeks the author reports up to 94 commits a day, averaging 50, and 7 PRs in 30 minutes. Human review of each PR took 5-10 minutes. The limit was RAM: a 16GB Mac Mini ran only 4-5 agents.\nWorth knowing\nCost is about $190 a month (Claude $100, Codex $90), or about $20 to start. A PR counts as done only after CI and three AI reviewers pass, and UI changes need screenshots.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nAct as my dispatcher for coding agents. For the repo at [path or GitHub URL], take the task list in [issue tracker or file], hand each task to Claude Code or Codex, and have it write the code, run [test command], commit, and open a pull request. When a PR is ready or a review comment needs a response, message me on [Telegram or other channel]. Pause and show me the PR title and diff summary before opening it, and never merge anything yourself.\nOriginal source: https://cloud.tencent.com/developer/article/2646044",
+    "body_sha256": "b7f7bb7fc4f768b29762bec074a2689528d3a4577ced95f47a55b27221c9e765",
+    "archived_at": "2026-11-08T08:00:16.111324+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-08T08:00:16.111324+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
