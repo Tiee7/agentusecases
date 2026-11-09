@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/grow-a-bespoke-agent-from-claude-code-that-builds-its-own-mc",
+  "observed_at": "2026-11-09T08:45:53.977378+00:00",
+  "html_sha256": "97440e47ac70ae5549eb15ff07eed2ded03d8acf2591b1d5847084c898d67d4a",
+  "body_sha256": "93d454cee2e47c813b3016d5a2d5bb0ab8b1bccbc9455c234192b5c2fb8dc5cf",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Grow a bespoke agent from Claude Code that builds its own MCP server",
+      "sha256": "92cd9007e948ab45bf18d6ae9da591de24037c7431f8dd3808cfde2201245e82"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster built a custom agent from a bash script, a Python script and the Claude Code CLI, which created its own MCP server so they could chat with it from any Claude session.",
+      "sha256": "6fd11e1f5cacda25deda71184af9f0b46abca8917eceb9fa6c81a2b613de90e5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster used a minimal setup: one charter file, a bash script, a Python script, and the Claude Code CLI as the only interface to the model. The scripts wrote goal files, called claude, saved the output, and let the agent read its own architecture and memory docs to pick the next task; the poster says they provided early guidance through the charter and initial cycles before it became more self-directed.",
+      "sha256": "023805a07c4b8560c4a99c3d9a810450202a58a4a35726ee827bfeea336ed2c0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In two days, the agent reportedly ran 419+ autonomous goals, named itself Arden, built its own MCP server for use from any Claude session, and began a web onboarding flow. The run stopped when Anthropic flagged the project as a usage-policy violation, and the poster had not yet expanded the multi-garden architecture very far.",
+      "sha256": "fd74e2a861cb337aa03d8593e439ec75d883b19665311cb7e5e8f6057aa033ac"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was platform limits: the poster says this was on a Max plan, the CLI made prototyping simple, and limited token allowance was intentionally keeping growth restrained.",
+      "sha256": "a97e7bfb365d13407d472bc151baf22a62ed8807105a5c1253f6579501298e60"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Claude"
+      ],
+      "sha256": "f1283dd5a9207da083e28ab44bd7295ca9ffde0ff5a13df75d1a33997c0ea659"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeCode/comments/1rn1tz6/i_grew_a_bespoke_agent_with_claude_code_and"
+      ],
+      "sha256": "7ceae22ebfe3580d6d8a8fbfff99fc4a78d74b63eecf34e7bfb69e11e436c857"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-08",
+      "sha256": "3742c520e4b076b8f25c29fb2fb474ac56259e2077648042554c29b1b94855ce"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c931be9d187b0bc77fc3d0c060c690338358cf01f94075a03a317b27381bf710",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Grow a bespoke agent from Claude Code that builds its own MCP server\nThe poster built a custom agent from a bash script, a Python script and the Claude Code CLI, which created its own MCP server so they could chat with it from any Claude session.\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThe poster used a minimal setup: one charter file, a bash script, a Python script, and the Claude Code CLI as the only interface to the model. The scripts wrote goal files, called claude, saved the output, and let the agent read its own architecture and memory docs to pick the next task; the poster says they provided early guidance through the charter and initial cycles before it became more self-directed.\nHow it went\nIn two days, the agent reportedly ran 419+ autonomous goals, named itself Arden, built its own MCP server for use from any Claude session, and began a web onboarding flow. The run stopped when Anthropic flagged the project as a usage-policy violation, and the poster had not yet expanded the multi-garden architecture very far.\nWorth knowing\nThe main catch was platform limits: the poster says this was on a Max plan, the CLI made prototyping simple, and limited token allowance was intentionally keeping growth restrained.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a small personal agent in [project folder] from a bash script, a Python script and the Claude Code CLI that handles [task, e.g. summarizing my notes each morning]. Have it expose its own MCP server so I can talk to it from any Claude session, and give me the command to register that server. You're done when I can ask the agent a question from a fresh Claude session and get a real answer. Show me before you delete or overwrite any existing files.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1rn1tz6/i_grew_a_bespoke_agent_with_claude_code_and",
+    "body_sha256": "93d454cee2e47c813b3016d5a2d5bb0ab8b1bccbc9455c234192b5c2fb8dc5cf",
+    "archived_at": "2026-11-09T08:45:53.977378+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-09T08:45:53.977378+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/grow-a-new-instagram-account-autonomously",
+  "observed_at": "2026-11-09T08:46:09.976792+00:00",
+  "html_sha256": "4a31af5f00cf8358c85bb6c2e1647a30a14ce8905ae4272c90e91f02cf4dd212",
+  "body_sha256": "2ed7b920ed1c59e6610f44a89c4a57272d1285165b630b8e8072d0e42206ee00",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Grow a new Instagram account autonomously",
+      "sha256": "374389c201ef345c8f4c2e01b06ea4bb37eab80227909cbaf76f5bad55d8319e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Poster connected Manus to a new Instagram account via Composio to gain followers, but it got stuck in a loop identifying the user ID and never posted.\n·\nApr 1, 2026",
+      "sha256": "98097852fd123ea505b8fb0c7fc768835b9e1311465b173edfbc721c869d5021"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster created a brand-new Instagram account, connected it to Manus through Composio, gave the agent an API key, and told it to generate traffic, gain followers, and make the account active over a week. In practice, Manus never got past setup: it fixated on finding the account's user ID, repeatedly spawned Python scripts on its own, and the human stepped in after checking the logs 30 minutes later.",
+      "sha256": "5fe55648718b73721a6c689528e722041236457cddfc511589ca721151cc8452"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced no posts, no engagement, and no follower-growth result at all. Instead, the loop consumed the poster's entire monthly token quota in about 30 minutes before they stopped it.",
+      "sha256": "6cecf653c0f9441755da7f6fe3b6599bc305e4b3f1e4517908e98f20a57dd023"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was cost control: without a circuit breaker or close supervision, the agent kept retrying a trivial blocker until the budget was gone.",
+      "sha256": "eb8e44a06a5cc9ef3ef7a398d6d855d49171a0271f71e4e69e4641d233e450c1"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Manus"
+      ],
+      "sha256": "06665110ecda10951d4c2148a9f08bd0fcd2965a4b1c1d03f7fc65f7d7dbf990"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ChatGPT/comments/1s9f3os/i_gave_manus_ai_an_instagram_account_to_manage_it"
+      ],
+      "sha256": "201004cf6c8e9ca5fa754964c13acce894bc71778ef59727744bcfdeb1a43413"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-08",
+      "sha256": "3742c520e4b076b8f25c29fb2fb474ac56259e2077648042554c29b1b94855ce"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "6baa3f22a1c28643313df581b7ddb26f67f8fe05db86ed6359d1ad59076e95c9",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Grow a new Instagram account autonomously\nPoster connected Manus to a new Instagram account via Composio to gain followers, but it got stuck in a loop identifying the user ID and never posted.\n·\nApr 1, 2026\nDone with\nMA\nManus\nWhat they did\nThe poster created a brand-new Instagram account, connected it to Manus through Composio, gave the agent an API key, and told it to generate traffic, gain followers, and make the account active over a week. In practice, Manus never got past setup: it fixated on finding the account's user ID, repeatedly spawned Python scripts on its own, and the human stepped in after checking the logs 30 minutes later.\nHow it went\nIt produced no posts, no engagement, and no follower-growth result at all. Instead, the loop consumed the poster's entire monthly token quota in about 30 minutes before they stopped it.\nWorth knowing\nThe main catch was cost control: without a circuit breaker or close supervision, the agent kept retrying a trivial blocker until the budget was gone.\nTry it yourself\nwith\nManus\nCopy prompt\nHelp me plan and draft growth for my new Instagram account about [topic]. Create a 2-week content calendar with [number] post ideas, captions, hashtags, and a list of [number] similar accounts worth engaging with, in a Google Sheet or document. Done when the plan is complete. Don't post, follow, comment, or message anyone from my account without showing me the exact action first and waiting for my approval.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1s9f3os/i_gave_manus_ai_an_instagram_account_to_manage_it",
+    "body_sha256": "2ed7b920ed1c59e6610f44a89c4a57272d1285165b630b8e8072d0e42206ee00",
+    "archived_at": "2026-11-09T08:46:09.976792+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-09T08:46:09.976792+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

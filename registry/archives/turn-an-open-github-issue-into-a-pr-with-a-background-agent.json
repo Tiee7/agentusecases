@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-an-open-github-issue-into-a-pr-with-a-background-agent",
-  "observed_at": "2026-11-08T07:55:14.297767+00:00",
-  "html_sha256": "43ed1ce6b078311fb469574ead414b9c1521268d04742c557c94b499be3d1845",
+  "observed_at": "2026-11-09T08:39:23.990910+00:00",
+  "html_sha256": "266f399c56e59d66442d86a0a1fdab1101f66249ce3c964e013924107be44e7f",
   "body_sha256": "afe112f77a26561c552794ea6122970c39920e462d280e5831196e5cc3a40027",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn an open GitHub issue into a PR with a background agent\nA developer pointed a Cursor background agent at an open issue in a Terraform repo; it opened a PR in about 3 minutes, though the PR description and title needed fixing.\nDone with\nCR\nCursor\nWhat they did\nThe author turned off Cursor's privacy mode, which the preview requires. He then set up a background-agent machine for his terraform-aws-ecr repo, using Cursor's own interface to check the linters and tools and to fix Python environment problems. Issues had been created earlier through the GitHub MCP server. He pointed the agent at issue #33 and accepted its offer to open a PR.\nHow it went\nThe agent finished in about 3 minutes and its code changes were solid. The PR description was incomplete and the title didn't follow the release-please format, so the release PR never triggered. He filled in the description with Copilot's summary.\nWorth knowing\nThe test cost $4.63 for one simple PR, because background agents only use MAX models for now. You also have to set a usage-based spending limit (he set $20).\nTry it yourself\nwith\nCursor\nCopy prompt\nOpen GitHub issue [issue number or link] in [repo name] and use a background agent to implement a fix on a new branch. Run the existing tests or linters for [language/tool, e.g. Terraform validate] and open a pull request when they pass. Write a clear PR title and a description that links the issue and summarizes what changed and why. Stop once the PR is open and show me the link; do not merge anything.\nOriginal source: https://medium.com/@lgallard/exploring-cursor-background-agents-a-hands-on-experience-15555d206a18",
     "body_sha256": "afe112f77a26561c552794ea6122970c39920e462d280e5831196e5cc3a40027",
-    "archived_at": "2026-11-08T07:55:14.297767+00:00",
+    "archived_at": "2026-11-09T08:39:23.990910+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-08T07:55:14.297767+00:00",
+    "at": "2026-11-09T08:39:23.990910+00:00",
     "status": "fetched",
     "error": null
   }

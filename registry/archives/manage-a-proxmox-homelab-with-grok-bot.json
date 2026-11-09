@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/manage-a-proxmox-homelab-with-grok-bot",
+  "observed_at": "2026-11-09T08:45:17.971846+00:00",
+  "html_sha256": "0bc42eb88dc285736b9474bdd7e58423a7b07b7fd413544a14b7ce436f370d12",
+  "body_sha256": "e2fd3357221feaf96a7b6c8da2a94d5568642979b1b98de8d31d63a6b281e1f8",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Manage a Proxmox homelab with Grok Bot",
+      "sha256": "25484b22f741ec173e4a2be7c64a4beece2c49f58c1fa6800c5ecd52eed42aca"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user runs Grok Bot in an Ubuntu VM on Proxmox to handle repetitive homelab management, stepping in on judgment calls or breakages, with multiple agents as fallback.\n·\nNov 7, 2025",
+      "sha256": "f66d1867cc7e5dcb065ff7745ef9c2e167c963237144e0732bd8a8c4f515608a"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user set up a small guest VM on a Proxmox test server and gave Grok SSH access plus a Cloudflare tunnel. Grok then built a server-side \"submind\" of scripts and services for repetitive checks and bulk tasks, kept extending it for new projects, and also built a display interface; the user mainly supplied the server, described goals, and decided permissions and when to step in for judgment calls or breakages.",
+      "sha256": "025724e0713a1b6b91b9ae0e5b6d06f03a551d14f0de91622400d76ea9bc991c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It took over routine homelab work that had been consuming Grok usage just to confirm nothing changed, and surfaced issues on a rotating status screen. The post gives no hard performance numbers, only that the user still intervenes for new tasks, failures, and access decisions.",
+      "sha256": "d70cca3e6038dedfe2490c42f55dbd9222cb2c427789f6c08b5c2864b67ffb87"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is governance: the user says they still control what access the bot gets and what it is allowed to do.",
+      "sha256": "26ae82246ebd2fa20ff2323d17c13b064e375f778221940162a7bcb5135fd33e"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Grok Bot"
+      ],
+      "sha256": "5860acaa3c9f362c43df7296f5091d163857131e736a6ca95a173b16c2fd107e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GrokBot/comments/1xpyfog/well_im_both_pleasantly_surprised_and_a_little"
+      ],
+      "sha256": "6678f7cc32819257e309b5ce4e723aa288a1a7e5bcd646cbda4a1165c0d5cd51"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-07",
+      "sha256": "f528027a3840eeb8e5a67bd8b2f9d8b99c9e6bd4a435112b045cef46a5b252b5"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fa4caf81eb82966b8be363db5da98c29424b9fe57236289e102fb548920d1f69",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Manage a Proxmox homelab with Grok Bot\nA user runs Grok Bot in an Ubuntu VM on Proxmox to handle repetitive homelab management, stepping in on judgment calls or breakages, with multiple agents as fallback.\n·\nNov 7, 2025\nDone with\nGB\nGrok Bot\nWhat they did\nThe user set up a small guest VM on a Proxmox test server and gave Grok SSH access plus a Cloudflare tunnel. Grok then built a server-side \"submind\" of scripts and services for repetitive checks and bulk tasks, kept extending it for new projects, and also built a display interface; the user mainly supplied the server, described goals, and decided permissions and when to step in for judgment calls or breakages.\nHow it went\nIt took over routine homelab work that had been consuming Grok usage just to confirm nothing changed, and surfaced issues on a rotating status screen. The post gives no hard performance numbers, only that the user still intervenes for new tasks, failures, and access decisions.\nWorth knowing\nThe main catch is governance: the user says they still control what access the bot gets and what it is allowed to do.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nYou're running in a VM on my Proxmox homelab. Handle these repetitive jobs: [e.g. check VM health, apply updates, review backups, restart failed services], and log what you did to [file or channel]. If something breaks or a judgment call is needed, stop and describe the problem and your options. Pause and show me the plan before deleting any VM, snapshot, or data, or changing network settings.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1xpyfog/well_im_both_pleasantly_surprised_and_a_little",
+    "body_sha256": "e2fd3357221feaf96a7b6c8da2a94d5568642979b1b98de8d31d63a6b281e1f8",
+    "archived_at": "2026-11-09T08:45:17.971846+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-09T08:45:17.971846+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

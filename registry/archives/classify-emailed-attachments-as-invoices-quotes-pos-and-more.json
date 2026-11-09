@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/classify-emailed-attachments-as-invoices-quotes-pos-and-more",
-  "observed_at": "2026-11-08T07:58:46.015147+00:00",
-  "html_sha256": "ad7c17334c6204790dad7abd73f3d082f9adda2b2632e186750e52a7f0a5eed8",
+  "observed_at": "2026-11-09T08:42:55.965347+00:00",
+  "html_sha256": "5873926227447d5b4f115037ac7e084b8a7032616efaff694f08c177cbfc039f",
   "body_sha256": "eb45b824e472d0bda9c93ece374a61430f68d4506449b4e36514898ddfe33fa5",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Classify emailed attachments as invoices, quotes, POs and more\nA multi-agent n8n setup pulls attachments from a busy email account and uses Gemini to label each as invoice, quote, statement, PO or other.\n·\nApr 6, 2026\nDone with\nN8\nn8n\nGE\nGemini\nWhat they did\nIn a roughly 50-node n8n workflow, the builder pulls attachments from a high-traffic email account and sends them to Gemini to classify as invoice, quote, statement, PO, or other. Most files are routed into matching Google Drive folders; for POs, the flow calls QuickBooks Online, finds the matching estimate, adds the PO number, uploads the document, and creates the corresponding invoice. They also added retry handling, an error folder, and spreadsheet checkpoints to trace each document.\nHow it went\nThe post gives no production results yet; the workflow was still new and the builder said they were nervous about moving it into the live environment. Its main stated safeguard is logging each document’s path or failure point.\nWorth knowing\nExpect extra work on failure handling: they added checkpoints throughout plus an error Google Drive folder and spreadsheet log for timed-out API steps.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that watches [email account or label], downloads each new attachment, and uses Gemini to classify it as invoice, quote, statement, purchase order, or other. Add the label and sender to a row in [Google Sheet or folder] along with the attachment name. Test it on [number] sample emails and show me the results before you turn it on, and do not forward or delete any emails.\nOriginal source: https://www.reddit.com/r/n8n/comments/1s8m8uj/my_dumbest_automations_make_the_most_money_and_i",
     "body_sha256": "eb45b824e472d0bda9c93ece374a61430f68d4506449b4e36514898ddfe33fa5",
-    "archived_at": "2026-11-08T07:58:46.015147+00:00",
+    "archived_at": "2026-11-09T08:42:55.965347+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-08T07:58:46.015147+00:00",
+    "at": "2026-11-09T08:42:55.965347+00:00",
     "status": "fetched",
     "error": null
   }

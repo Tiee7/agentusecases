@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **81** / 注册案例 **1953**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **1986**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -27,7 +27,6 @@
 | [用 Claude 按旧姓名查询州政府无人认领财产数据库](reports/search-state-databases-for-unclaimed-property-under-old-name.md) | 适合内部效率工具 | 34.5 | 中 | available | 美国个人无人认领财产发现与认领辅助 | 2026-10-15T04:29:13.220582+00:00 |
 | [用 Claude Code 整理税务扣除凭证和 Schedule C](reports/compile-deductions-and-schedule-c-with-claude-code.md) | 适合内部效率工具 | 45.0 | 中 | available | 美国个人税务资料准备 | 2026-10-15T00:03:06.932856+08:00 |
 | [用 ChatGPT 起草停车罚单申诉](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |
-| [用 Meta Muse 协商账单、处理退货并取消订阅](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 中 | available | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [用 Grok Bot 搜索邮件、取消订阅并申请退款](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
@@ -68,6 +67,7 @@
 | [用Claude Code维护并运营Chrome扩展](reports/let-claude-code-run-a-chrome-extension-project.md) | 适合内部效率工具 | 未评定 | 中 | available | 浏览器扩展与独立产品维护 | 2026-10-20T19:14:58.334033+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
 | [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
+| [用 Meta Muse 协商账单、处理退货并取消订阅](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 中 | available | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
 | [用Claude Code整理本地新闻并上传WordPress文章](reports/publish-local-news-posts-to-wordpress-automatically.md) | 适合内部效率工具 | 41.5 | 中 | available | 内容运营与新闻草稿准备 | 2026-10-20T11:06:31.706905+00:00 |
 | [用 Claude for Word 生成原生修订并处理批注](reports/redline-lawyer-documents-with-native-word-tracked-changes.md) | 仅建议受控试点 | 44.0 | 中 | available | 专业文档流程配置与审核辅助 | 2026-10-19T22:14:26Z |
 | [用固定库存阈值检查 Shopify 并准备供应商补货邮件](reports/reorder-low-stock-from-suppliers-automatically.md) | 适合内部效率工具 | 45.5 | 中 | available | 电商库存与采购自动化 | 2026-10-19T18:41:23Z |
@@ -97,6 +97,7 @@
 
 - Research stocks and update a watchlist in the browser · `research-stocks-and-update-a-watchlist-in-the-browser`
 - Categorize bank statements by payee for taxes · `categorize-bank-statements-by-payee-for-taxes`
+- Find cheaper car insurance · `find-cheaper-car-insurance`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Build a buy-order imbalance scanner with Replit Agent · `build-a-buy-order-imbalance-scanner-with-replit-agent`
 - Accelerate scientific research with Codex · `accelerate-scientific-research-with-codex`
@@ -104,4 +105,3 @@
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
 - Add a filtered report page to a Razor Pages app · `add-a-filtered-report-page-to-a-razor-pages-app`
 - Add agentic forgetting to an agent's memory · `add-agentic-forgetting-to-an-agent-s-memory`
-- Add family to a dental plan by voice from the car · `add-family-to-a-dental-plan-by-voice-from-the-car`

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/cut-a-6-hour-training-recording-into-highlights",
-  "observed_at": "2026-11-08T07:57:50.124721+00:00",
-  "html_sha256": "be18949456b3131885bbbe21fc9abcadd7626cfb96dd4854047a34da5747a372",
+  "observed_at": "2026-11-09T08:41:59.968098+00:00",
+  "html_sha256": "fea2de8fef9344ac8e8ba54edac78bc7bb0a0a8b484142e2eccb441eff5896f7",
   "body_sha256": "b3a8f4a8f3fa9776c500797dd56c91fd803205aa0bbe6c1cb357244b82f55c64",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Cut a 6-hour training recording into highlights\nA training team used Claude Code with video-editing skills to transcribe a 6-hour live recording locally, find pauses and irrelevant parts, and build a Kdenlive project for manual touch-ups.\n·\nNov 4, 2026\nDone with\nCC\nClaude Code\nWhat they did\nFeng Yu added two skills to Claude Code: videocut-skills and cli-anything-kdenlive. He asked Claude to combine them without the paid Volcano Engine transcription API. Claude designed a local pipeline. It used faster-whisper to transcribe, applied the skill's rules to cut verbal slips and pauses, and wrote a Kdenlive project file. Feng fixed a bug in the Kdenlive CLI so the file would open. He then polished the cut by hand.\nHow it went\nThe 6-hour audio was transcribed and gave a rough cut, so the job dropped from about 3 days to a bit over 1. Many verbal slips and redundancies were left in, and the project had too many clips.\nWorth knowing\nThe machine couldn't run faster-whisper large-v3. He used the small model at int8 and transcribed audio chunks in parallel. That cost some accuracy, which made the cut timings less precise.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have a long recording at [file path], about [length] long. Transcribe it locally, then find long pauses, off-topic stretches, and [other parts to cut, e.g. breaks or tech problems], and build a [Kdenlive or other editor] project with those parts cut so I can touch it up by hand. Keep the original file untouched and give me a list of every cut with timestamps; you are done when the project file opens cleanly.\nOriginal source: https://www.dteam.top/blogs/2026-04/vibe-coding-with-videocut",
     "body_sha256": "b3a8f4a8f3fa9776c500797dd56c91fd803205aa0bbe6c1cb357244b82f55c64",
-    "archived_at": "2026-11-08T07:57:50.124721+00:00",
+    "archived_at": "2026-11-09T08:41:59.968098+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-08T07:57:50.124721+00:00",
+    "at": "2026-11-09T08:41:59.968098+00:00",
     "status": "fetched",
     "error": null
   }

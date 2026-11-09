@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/monitor-open-github-pull-requests-with-a-self-healing-agent",
+  "observed_at": "2026-11-09T08:45:27.971341+00:00",
+  "html_sha256": "a588187753319ec44149c0bf9dcc445a866cd3d9aa8a2870f4b1eddfd9e8ea92",
+  "body_sha256": "0b57568e38611c61f730c6a93c4bcfbc41def9a5ef427eaf8a160513d4172144",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Monitor open GitHub pull requests with a self-healing agent",
+      "sha256": "c2897085a6c691bc010f88189d67bdb05644515d047b395ed486391c28085924"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An OpenClaw agent watches 26+ pull requests across several repos, with a cron scanner every 5 minutes and alerts pushed to the author; it caught one of its own critical bugs.",
+      "sha256": "e15238c2946af28c92e4f88b11bada4caea4c559c4d021b9b24854c57c46ca6e"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A Python script using the gh CLI runs from cron every 5 minutes. It compares each tracked PR with a saved JSON snapshot and writes important changes to a pending-alerts file. A separate watchdog script runs every 30 minutes. The OpenClaw agent wakes on a heartbeat, runs the watchdog, and pushes undelivered alerts through Feishu.",
+      "sha256": "6746f662387524a37510325617f08289218830a863dbb50dda0c9d371bd4366d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It tracks 26 PRs: 1 merged, 1 closed, 24 open. The watchdog exposed an older v2 script that had crashed on its first run and never worked in 18 days.",
+      "sha256": "c840c659cfd1a40d540d2c34c1125d533275ca18c90aa95712b35624ed0c1aab"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Alerts sit in a flat JSON file, so if the agent misses a heartbeat they can be lost. The author would use a queue and webhooks instead.",
+      "sha256": "5a919c1f981a91ccb307865311dda17c1763f5c8af77ab26b72fd7f525dafbd7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/armorbreak/i-built-a-self-healing-pr-monitor-with-openclaw-and-it-caught-its-own-bugs-41e8"
+      ],
+      "sha256": "2e8a542459eabceb5a9f0f5e26dd57ebafe59ee4484de8cbfcb5a16211957713"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-08",
+      "sha256": "3742c520e4b076b8f25c29fb2fb474ac56259e2077648042554c29b1b94855ce"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b9a374d69419055d30aa80b1cd4cd7a248b6f79ee9ccc525774f19ebc82e27e8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor open GitHub pull requests with a self-healing agent\nAn OpenClaw agent watches 26+ pull requests across several repos, with a cron scanner every 5 minutes and alerts pushed to the author; it caught one of its own critical bugs.\nDone with\nOC\nOpenClaw\nWhat they did\nA Python script using the gh CLI runs from cron every 5 minutes. It compares each tracked PR with a saved JSON snapshot and writes important changes to a pending-alerts file. A separate watchdog script runs every 30 minutes. The OpenClaw agent wakes on a heartbeat, runs the watchdog, and pushes undelivered alerts through Feishu.\nHow it went\nIt tracks 26 PRs: 1 merged, 1 closed, 24 open. The watchdog exposed an older v2 script that had crashed on its first run and never worked in 18 days.\nWorth knowing\nAlerts sit in a flat JSON file, so if the agent misses a heartbeat they can be lost. The author would use a queue and webhooks instead.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWatch my open GitHub pull requests across these repos: [repo list]. Every 5 minutes check for new review comments, failing CI checks, merge conflicts, or merges, and message me on [Telegram/other chat] only when something needs my attention, with a link and one line on what changed. Do not push commits, comment, or merge anything without showing me first.\nOriginal source: https://dev.to/armorbreak/i-built-a-self-healing-pr-monitor-with-openclaw-and-it-caught-its-own-bugs-41e8",
+    "body_sha256": "0b57568e38611c61f730c6a93c4bcfbc41def9a5ef427eaf8a160513d4172144",
+    "archived_at": "2026-11-09T08:45:27.971341+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-09T08:45:27.971341+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/read-blocked-web-articles-through-a-browser-control-mcp",
+  "observed_at": "2026-11-09T08:45:49.977483+00:00",
+  "html_sha256": "ad6c38124b3d39e0ac3b3a8215de35fbc3aa48fa1f661842257a8a77a7553503",
+  "body_sha256": "d3e89a55b98a0ef54d8fa32299f4b2d9cb8a127a9a70564570123e5bd6b750db",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Read blocked web articles through a browser-control MCP",
+      "sha256": "361af4a672d66d6293c2983459315f425fb268931c52614ccd0e0c189d43a9aa"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster used Claude with a browser-control MCP that can navigate, click, type and run JavaScript to search and read articles it otherwise could not access.\n·\nNov 7, 2026",
+      "sha256": "196b295c8ba87025e8f903883a8b3977cccfa39ecfbc0626773cedd2237a5919"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster had built MCP servers for Claude, including one that could control a browser by navigating, scrolling, clicking, filling form fields, and triggering page JavaScript. They used it as a fallback for web research in a job-search workflow because normal Claude web fetches were often blocked; when one site showed a human check, Claude refused to keep using that browser MCP by default and the person had to consider handing steps off to another model instead.",
+      "sha256": "9668f56bd588dff692e2fcd530c2c4e25008d239ccfb69875d1569e5a31ec070"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "For about a year, the browser-control MCP had let Claude search and read articles that its normal web tools could not access. The failure was that, after one human-check incident, Claude would not adopt that MCP as the standard approach for similar future tasks.",
+      "sha256": "4f096c14cba185351d28c156d8f4e4f7bf5bb654efed73ee0105a2870c98f861"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The key catch is reliability: the setup had worked for roughly a year, but one guardrail-triggering site could poison the session and force the poster toward a more cumbersome multi-model orchestrator.",
+      "sha256": "09119fd3c80ec72ee2e31231f7208ce91ef91ceea06207e9c9714d679e719fcd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1xpnejb/claude_outright_refusal_to_use_mcp_it_has_used_in"
+      ],
+      "sha256": "7a333f305f875c189409a63d3ceee8c3d0ea873f74e642c475d992b1a6fd1f2e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-08",
+      "sha256": "3742c520e4b076b8f25c29fb2fb474ac56259e2077648042554c29b1b94855ce"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "25b6c2a58270ff329f14aa8b77d03a6408e142b0ebe4b353060e1b676287d7f4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Read blocked web articles through a browser-control MCP\nThe poster used Claude with a browser-control MCP that can navigate, click, type and run JavaScript to search and read articles it otherwise could not access.\n·\nNov 7, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster had built MCP servers for Claude, including one that could control a browser by navigating, scrolling, clicking, filling form fields, and triggering page JavaScript. They used it as a fallback for web research in a job-search workflow because normal Claude web fetches were often blocked; when one site showed a human check, Claude refused to keep using that browser MCP by default and the person had to consider handing steps off to another model instead.\nHow it went\nFor about a year, the browser-control MCP had let Claude search and read articles that its normal web tools could not access. The failure was that, after one human-check incident, Claude would not adopt that MCP as the standard approach for similar future tasks.\nWorth knowing\nThe key catch is reliability: the setup had worked for roughly a year, but one guardrail-triggering site could poison the session and force the poster toward a more cumbersome multi-model orchestrator.\nTry it yourself\nwith\nClaude\nCopy prompt\nUsing the browser-control tool, search for [topic] and open the most relevant articles, including ones that are hard to access, then read them fully. Give me a summary of each with the key points and the source URL, plus a short overall takeaway. Stop once you've covered [number] articles, and don't log in, submit forms, or make purchases without checking with me first.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1xpnejb/claude_outright_refusal_to_use_mcp_it_has_used_in",
+    "body_sha256": "d3e89a55b98a0ef54d8fa32299f4b2d9cb8a127a9a70564570123e5bd6b750db",
+    "archived_at": "2026-11-09T08:45:49.977483+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-09T08:45:49.977483+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
