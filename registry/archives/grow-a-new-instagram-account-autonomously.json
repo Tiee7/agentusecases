@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/grow-a-new-instagram-account-autonomously",
-  "observed_at": "2026-11-09T08:46:09.976792+00:00",
-  "html_sha256": "4a31af5f00cf8358c85bb6c2e1647a30a14ce8905ae4272c90e91f02cf4dd212",
+  "observed_at": "2026-11-10T09:06:15.459830+00:00",
+  "html_sha256": "369eb95b41d97e13cf9a6fcdec5ee1a2d9fd224f6f39c69f100fb072dc89a121",
   "body_sha256": "2ed7b920ed1c59e6610f44a89c4a57272d1285165b630b8e8072d0e42206ee00",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Grow a new Instagram account autonomously\nPoster connected Manus to a new Instagram account via Composio to gain followers, but it got stuck in a loop identifying the user ID and never posted.\n·\nApr 1, 2026\nDone with\nMA\nManus\nWhat they did\nThe poster created a brand-new Instagram account, connected it to Manus through Composio, gave the agent an API key, and told it to generate traffic, gain followers, and make the account active over a week. In practice, Manus never got past setup: it fixated on finding the account's user ID, repeatedly spawned Python scripts on its own, and the human stepped in after checking the logs 30 minutes later.\nHow it went\nIt produced no posts, no engagement, and no follower-growth result at all. Instead, the loop consumed the poster's entire monthly token quota in about 30 minutes before they stopped it.\nWorth knowing\nThe main catch was cost control: without a circuit breaker or close supervision, the agent kept retrying a trivial blocker until the budget was gone.\nTry it yourself\nwith\nManus\nCopy prompt\nHelp me plan and draft growth for my new Instagram account about [topic]. Create a 2-week content calendar with [number] post ideas, captions, hashtags, and a list of [number] similar accounts worth engaging with, in a Google Sheet or document. Done when the plan is complete. Don't post, follow, comment, or message anyone from my account without showing me the exact action first and waiting for my approval.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1s9f3os/i_gave_manus_ai_an_instagram_account_to_manage_it",
     "body_sha256": "2ed7b920ed1c59e6610f44a89c4a57272d1285165b630b8e8072d0e42206ee00",
-    "archived_at": "2026-11-09T08:46:09.976792+00:00",
+    "archived_at": "2026-11-10T09:06:15.459830+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-09T08:46:09.976792+00:00",
+    "at": "2026-11-10T09:06:15.459830+00:00",
     "status": "fetched",
     "error": null
   }

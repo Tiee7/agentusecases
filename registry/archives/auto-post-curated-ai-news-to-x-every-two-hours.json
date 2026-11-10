@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/auto-post-curated-ai-news-to-x-every-two-hours",
-  "observed_at": "2026-11-09T08:38:39.958534+00:00",
-  "html_sha256": "01a5ef86442cb88006c5c16cae56309fe02ebb09fed80d2b6a606ddd61c11a25",
+  "observed_at": "2026-11-10T08:58:45.583580+00:00",
+  "html_sha256": "ebbfa80392d7250b3e58f0e40b442333aa667f64e7db507207ec0ac7102e7092",
   "body_sha256": "6f42cf6ded76eb9d0d8c4b447feb7109644f906f00a6c9eda232e60186035dcf",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Auto-post curated AI news to X every two hours\nAn n8n workflow pulls AI/tech news from RSS feeds and posts it to the author's X account every two hours, saving manual work.\n·\nJan 1, 2025\nDone with\nN8\nn8n\nWhat they did\nThe author built an n8n workflow that pulls AI and tech stories from several RSS feeds, sends them to OpenAI to turn them into tweet-ready posts, scores those drafts for engagement, stores them in Google Sheets, and auto-posts the top ones to X every two hours. They said it had been running for 2–3 days, with the free X API tier shaping the cadence, and later they manually fixed a length bug by adding a check to keep posts at 270 characters or less.\nHow it went\nEarly results were modest: after two days they reported about 7–8 likes, with low engagement that they partly blamed on starting from a dead account. It also stalled for 2–3 days when overlength posts triggered X posting errors.\nWorth knowing\nThe key constraint was X’s free API limit of 17 posts per day, so they chose a 2-hour schedule, roughly 12 posts daily, to stay under it.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that runs every [2 hours], reads these RSS feeds: [feed URLs], and picks the newest items about [topic, e.g. AI and tech] that haven't been posted before. For each one, write a short post under 280 characters with the link, and keep a record of posted links to avoid duplicates. Set it up so I can review the first few drafts in a test run, and don't connect the live posting step to my [X account] until I've approved how the posts look.\nOriginal source: https://www.reddit.com/r/n8n/comments/1prxv82/built_an_ai_agent_that_autoposts_to_xtwitter",
     "body_sha256": "6f42cf6ded76eb9d0d8c4b447feb7109644f906f00a6c9eda232e60186035dcf",
-    "archived_at": "2026-11-09T08:38:39.958534+00:00",
+    "archived_at": "2026-11-10T08:58:45.583580+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-09T08:38:39.958534+00:00",
+    "at": "2026-11-10T08:58:45.583580+00:00",
     "status": "fetched",
     "error": null
   }

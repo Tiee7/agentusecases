@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/have-copilot-write-tests-and-rerun-until-they-pass",
+  "observed_at": "2026-11-10T09:06:55.435025+00:00",
+  "html_sha256": "40d167fb88d9b0ced5e8b0f05cd8740f2fe43270a8f465835f0494c98f82d96f",
+  "body_sha256": "b39046302b76d9687a271ce68078ce78622439c9f867cb95ec209e52ee534197",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Have Copilot write tests and rerun until they pass",
+      "sha256": "df712623bbdc837352b6235f6b9b372a3720bdd71d2a0525a5aa38dbb7de41b1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter set custom instructions so Copilot writes tests and reruns them until passing, needing three manual approval clicks.",
+      "sha256": "41a356b33ccb5cc475b438e62db7ee0a79dca9c3a16850dffbab3b8f576905ed"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter said they used GitHub Copilot with custom instructions telling it that whenever it wrote tests, it should keep executing the tests until they passed. In their run, Copilot created a test, ran it, saw the failure, chose on its own to rerun with a \"--info\" flag to get more detail, then changed the code and ran the tests again; the human only had to approve each terminal run.",
+      "sha256": "f04ff46ac8e06d2ad83c41c27e2402142e7f53c0129a216b4ac83ada1c59d606"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It eventually got the test passing in that example after three approved runs. The stated limitation was that Copilot still stopped for a human permission click before each terminal command.",
+      "sha256": "0998abc2922efa81cb0a38b2d4ea739bddee26bb30f4a76fc2e30e9a2e567288"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The practical catch was three manual approval clicks for terminal execution, even though the debugging loop itself was automatic.",
+      "sha256": "cc1e9e132bbc3aa597eaf6db6bfd5902c0bac2844b6084cd0d23bf89d049dc04"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1kmpoov/can_copilot_control_copilot_without_human"
+      ],
+      "sha256": "f2fa779781bb6534e2cfe5582b429d9f32655b2188b8dce0ad9e2a6c858926bf"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-09",
+      "sha256": "dd627efcb5b4f7a56b1dc2259533f08f93d260f95f32f227670084204b3069ef"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "5cf36726357ad5e527634d83baaf4cb6719bcd6cb64c7cfea214735fcc66e9a5",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Have Copilot write tests and rerun until they pass\nA commenter set custom instructions so Copilot writes tests and reruns them until passing, needing three manual approval clicks.\nDone with\nGH\nGitHub Copilot\nWhat they did\nA commenter said they used GitHub Copilot with custom instructions telling it that whenever it wrote tests, it should keep executing the tests until they passed. In their run, Copilot created a test, ran it, saw the failure, chose on its own to rerun with a \"--info\" flag to get more detail, then changed the code and ran the tests again; the human only had to approve each terminal run.\nHow it went\nIt eventually got the test passing in that example after three approved runs. The stated limitation was that Copilot still stopped for a human permission click before each terminal command.\nWorth knowing\nThe practical catch was three manual approval clicks for terminal execution, even though the debugging loop itself was automatic.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nWrite tests for [file, function, or module] using [test framework]. Run them, and if any fail, fix the code or tests and rerun until the whole suite passes. Stop when everything is green and give me a short summary of what you changed and which tests you added. Pause and ask before running any command that installs packages or deletes files.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1kmpoov/can_copilot_control_copilot_without_human",
+    "body_sha256": "b39046302b76d9687a271ce68078ce78622439c9f867cb95ec209e52ee534197",
+    "archived_at": "2026-11-10T09:06:55.435025+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-10T09:06:55.435025+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

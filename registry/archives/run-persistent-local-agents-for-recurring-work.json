@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-persistent-local-agents-for-recurring-work",
+  "observed_at": "2026-11-10T09:06:29.460976+00:00",
+  "html_sha256": "96046de5611cdd85fa47964dd6dd309eab9941e5b7a79900e41526282a01762d",
+  "body_sha256": "0f2090a224511a8e8c7e41cf78b43e748a498675be3ea13604a14f3e90dfcb44",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run persistent local agents for recurring work",
+      "sha256": "8729ae0b0be4de0c36a3f5824441dd6554a4f6ae34ddea205ae07061abb74f8f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster runs persistent agents locally to handle recurring tasks, saying a job that used to take three prompts now needs none.\n·\nOct 17, 2026",
+      "sha256": "5ea2241dea041be79835763a4e84cc8ec453dcd3d9916596f798dfd1360960dd"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster set up each recurring worker in its own Linux container on a Mac, with a separate workspace and sign-in, then ran them locally through Codex on a Plus account. They say the isolation let them stop approving every command, they re-check the container cannot reach the Mac or home network on each start, and they make research jobs finish by writing a file with size, source count, hash, and a note that sources were listed rather than fact-checked.",
+      "sha256": "6f60fae8c6f9e773d97fb4469d01d78a9b1f049f41af7efaa5642bc88e8066ad"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The main result was less supervision: a task that had needed three approval prompts now needed none. The tradeoffs were that local agents stop when the laptop sleeps, and plan limits are still the real cap.",
+      "sha256": "538890fb0a3f86b9f89e674c2f73e028eae305eba97064a231746191a0ff6efc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "They have only tested this setup with Colima on an Apple Silicon Mac, and they stress the container boundary is strong but not a guarantee.",
+      "sha256": "3708e25a9559e35a4145a728cae2f1f8cfeb35d61b79d75a5c7da203527f65ae"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/OpenAI/comments/1x5retx/dots_start_at_pro_so_i_run_persistent_agents"
+      ],
+      "sha256": "8c332bc160a271595aba8a968e9b703ec12e9dfa139235c130ac059412d3f810"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-09",
+      "sha256": "dd627efcb5b4f7a56b1dc2259533f08f93d260f95f32f227670084204b3069ef"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "6e14bc4dff0ef8fd3af9776ad6e00d9f2aff37b1df71542009bd3b08b205cdee",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run persistent local agents for recurring work\nThe poster runs persistent agents locally to handle recurring tasks, saying a job that used to take three prompts now needs none.\n·\nOct 17, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster set up each recurring worker in its own Linux container on a Mac, with a separate workspace and sign-in, then ran them locally through Codex on a Plus account. They say the isolation let them stop approving every command, they re-check the container cannot reach the Mac or home network on each start, and they make research jobs finish by writing a file with size, source count, hash, and a note that sources were listed rather than fact-checked.\nHow it went\nThe main result was less supervision: a task that had needed three approval prompts now needed none. The tradeoffs were that local agents stop when the laptop sleeps, and plan limits are still the real cap.\nWorth knowing\nThey have only tested this setup with Colima on an Apple Silicon Mac, and they stress the container boundary is strong but not a guarantee.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet up a persistent recurring job on my machine: every [schedule, e.g. weekday at 8am], do [task, e.g. check my project folder for new files and summarize changes]. Save the instructions so you don't need re-prompting, and write results to [location, e.g. a notes file]. Run it once now to show me the output, and ask before sending any messages or deleting anything.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1x5retx/dots_start_at_pro_so_i_run_persistent_agents",
+    "body_sha256": "0f2090a224511a8e8c7e41cf78b43e748a498675be3ea13604a14f3e90dfcb44",
+    "archived_at": "2026-11-10T09:06:29.460976+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-10T09:06:29.460976+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

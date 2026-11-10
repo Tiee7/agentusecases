@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/qualify-email-leads-and-create-crm-deals",
+  "observed_at": "2026-11-10T09:06:57.458281+00:00",
+  "html_sha256": "cbaa1d3907460d66fdc11ce23d42a5a560293ad26972d2459817215610dc4500",
+  "body_sha256": "ba60bd7fa3a64151d8b25e6d47dbdecdbc79b7b2d45131a0985f353d4bf5db6c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Qualify email leads and create CRM deals",
+      "sha256": "b3e9969fb795b7a09ae81c51c9d5c352673a7e0a15eb7cb06c9fe7bd9ac3d04f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n agentic workflow classifies incoming emails, qualifies leads, creates CRM deals and handles follow-ups, storing conversations in Supabase.\n·\nJun 10, 2026",
+      "sha256": "5a796532ac8a1be6502c24e8fe5966dd8beed32aad84f71fe5628b6cbe0845e5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They built a self-hosted n8n workflow around a shared Gmail inbox for a procurement client. Incoming emails are classified with OpenAI, key signals like budget, timeline, project size, authority, and readiness are extracted, and the lead state is stored in Supabase so later emails update the same record; deterministic rules then route follow-ups, escalate when needed, and create CRM customer and deal records through the CRM API once enough information is gathered.",
+      "sha256": "388133c129dcc51da14a203e753ffcc6e6a0b13552412d513978dee782d7a65d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "For a business handling about 200 inquiries a month, the first month produced roughly 3% qualified leads, and the author also said around 3% of qualified inquiries converted into closed business. It still uses human review for quote outputs on hot leads and for escalations or edge cases.",
+      "sha256": "9a8c5ce5e387662634ebf38fb67b954d6592270b22291af87a3e900ca51874e1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author says the hardest part was getting the persistent memory architecture and lead-scoring logic reliable, and that the workflow shown was only the orchestration layer over multiple sub-workflows.",
+      "sha256": "30fd409785d540f33489fe6792246cba137c3dab0e4db104c28e486079d2128b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8nbusinessautomation/comments/1u3ymt1/built_an_agentic_email_workflow_in_n8n_that"
+      ],
+      "sha256": "1ded92deb86aaa018bb764fdf96568c93c3097e33981325696a2dc228b655508"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-09",
+      "sha256": "dd627efcb5b4f7a56b1dc2259533f08f93d260f95f32f227670084204b3069ef"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d0d780bf39844f205a8e2cda9fd47797786042469ee8bb9aa8db3d439efc4ea7",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Qualify email leads and create CRM deals\nAn n8n agentic workflow classifies incoming emails, qualifies leads, creates CRM deals and handles follow-ups, storing conversations in Supabase.\n·\nJun 10, 2026\nDone with\nN8\nn8n\nWhat they did\nThey built a self-hosted n8n workflow around a shared Gmail inbox for a procurement client. Incoming emails are classified with OpenAI, key signals like budget, timeline, project size, authority, and readiness are extracted, and the lead state is stored in Supabase so later emails update the same record; deterministic rules then route follow-ups, escalate when needed, and create CRM customer and deal records through the CRM API once enough information is gathered.\nHow it went\nFor a business handling about 200 inquiries a month, the first month produced roughly 3% qualified leads, and the author also said around 3% of qualified inquiries converted into closed business. It still uses human review for quote outputs on hot leads and for escalations or edge cases.\nWorth knowing\nThe author says the hardest part was getting the persistent memory architecture and lead-scoring logic reliable, and that the workflow shown was only the orchestration layer over multiple sub-workflows.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n agentic workflow that watches [inbox] for new emails, classifies each as lead, support, or other, and qualifies leads using [criteria, e.g. budget, company size, need]. For qualified leads, create a deal in [CRM] and draft a follow-up reply, storing the conversation history in [database like Supabase]. Save follow-ups as drafts for my approval instead of sending them.\nOriginal source: https://www.reddit.com/r/n8nbusinessautomation/comments/1u3ymt1/built_an_agentic_email_workflow_in_n8n_that",
+    "body_sha256": "ba60bd7fa3a64151d8b25e6d47dbdecdbc79b7b2d45131a0985f353d4bf5db6c",
+    "archived_at": "2026-11-10T09:06:57.458281+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-10T09:06:57.458281+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

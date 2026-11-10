@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/read-blocked-web-articles-through-a-browser-control-mcp",
-  "observed_at": "2026-11-09T08:45:49.977483+00:00",
-  "html_sha256": "ad6c38124b3d39e0ac3b3a8215de35fbc3aa48fa1f661842257a8a77a7553503",
+  "observed_at": "2026-11-10T09:05:55.503793+00:00",
+  "html_sha256": "8e484f5694bf5ce90d1aac722340dcf22b4017d2d16b99426eb5ca18b928b520",
   "body_sha256": "d3e89a55b98a0ef54d8fa32299f4b2d9cb8a127a9a70564570123e5bd6b750db",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Read blocked web articles through a browser-control MCP\nThe poster used Claude with a browser-control MCP that can navigate, click, type and run JavaScript to search and read articles it otherwise could not access.\n·\nNov 7, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster had built MCP servers for Claude, including one that could control a browser by navigating, scrolling, clicking, filling form fields, and triggering page JavaScript. They used it as a fallback for web research in a job-search workflow because normal Claude web fetches were often blocked; when one site showed a human check, Claude refused to keep using that browser MCP by default and the person had to consider handing steps off to another model instead.\nHow it went\nFor about a year, the browser-control MCP had let Claude search and read articles that its normal web tools could not access. The failure was that, after one human-check incident, Claude would not adopt that MCP as the standard approach for similar future tasks.\nWorth knowing\nThe key catch is reliability: the setup had worked for roughly a year, but one guardrail-triggering site could poison the session and force the poster toward a more cumbersome multi-model orchestrator.\nTry it yourself\nwith\nClaude\nCopy prompt\nUsing the browser-control tool, search for [topic] and open the most relevant articles, including ones that are hard to access, then read them fully. Give me a summary of each with the key points and the source URL, plus a short overall takeaway. Stop once you've covered [number] articles, and don't log in, submit forms, or make purchases without checking with me first.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1xpnejb/claude_outright_refusal_to_use_mcp_it_has_used_in",
     "body_sha256": "d3e89a55b98a0ef54d8fa32299f4b2d9cb8a127a9a70564570123e5bd6b750db",
-    "archived_at": "2026-11-09T08:45:49.977483+00:00",
+    "archived_at": "2026-11-10T09:05:55.503793+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-09T08:45:49.977483+00:00",
+    "at": "2026-11-10T09:05:55.503793+00:00",
     "status": "fetched",
     "error": null
   }

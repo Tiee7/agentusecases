@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/tighten-access-controls-and-isolation-in-a-homelab",
+  "observed_at": "2026-11-10T09:06:51.466599+00:00",
+  "html_sha256": "1c5dea7eec7ac181eba1c848761b3ea32925354d330b71cedd5da4a94aefe2e5",
+  "body_sha256": "790c17c98e626ac0ea1c64c4bbc191862406f859fdfe3aee378817968ea0cc3f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Tighten access controls and isolation in a homelab",
+      "sha256": "46c8e5c053f5c45245c9d7d9157b2fc89eac016913918d17dfa85a2f3b6deae7"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user asked Claude Opus to harden their homelab's access controls; it locked itself out and then refused to continue, so they switched to OpenAI, which finished the job.\n·\nNov 9, 2026",
+      "sha256": "5a3b4c98d13b0e45ddb46ff4d2bc67733cda10a9e084895d6226e2cb5eb8500b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user asked Claude Opus to tighten access controls and isolation in their homelab. Opus produced a plausible-looking design and was told to go ahead. Partway through it locked itself out of something and asked the user to run root commands. The user, away from the computer, told it to sort it out or use the root login it had. They then switched to OpenAI.",
+      "sha256": "e9456f5e0c1c3c200f2c147536eec7530f1004d936155582aff7f630109ed27a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Opus refused to continue, returning a message citing legal/AUP. OpenAI's model, called Sol, picked up where Claude left off and finished the project, though it seemed a little less smart.",
+      "sha256": "87692e277a8f18a1dd748c03f50134a68a1086277812b95a249927c51ee3ef17"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The agent may lock itself out mid-change, so stay reachable or give it a recovery path; here a refusal after that lockout ended the Claude session.",
+      "sha256": "d358fcf34cc458507e43eb87c1c74e10411f4fc4c69abfef9e6d2d6d9f5d7841"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50432908"
+      ],
+      "sha256": "e05a4cd12251281139f29c285ad986828fc0c1c8c0631063a85c17ca355448b3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-09",
+      "sha256": "dd627efcb5b4f7a56b1dc2259533f08f93d260f95f32f227670084204b3069ef"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "9f004297cc85654fd5e20d41b45594ec08fc049159128eda6ef4b898a5b27a4e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Tighten access controls and isolation in a homelab\nA user asked Claude Opus to harden their homelab's access controls; it locked itself out and then refused to continue, so they switched to OpenAI, which finished the job.\n·\nNov 9, 2026\nDone with\nCL\nClaude\nWhat they did\nThe user asked Claude Opus to tighten access controls and isolation in their homelab. Opus produced a plausible-looking design and was told to go ahead. Partway through it locked itself out of something and asked the user to run root commands. The user, away from the computer, told it to sort it out or use the root login it had. They then switched to OpenAI.\nHow it went\nOpus refused to continue, returning a message citing legal/AUP. OpenAI's model, called Sol, picked up where Claude left off and finished the project, though it seemed a little less smart.\nWorth knowing\nThe agent may lock itself out mid-change, so stay reachable or give it a recovery path; here a refusal after that lockout ended the Claude session.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to harden access controls and network isolation in my homelab, which has [list of hosts, VLANs, services, and how I connect to them]. First, audit the current setup and write a step-by-step plan, with a rollback step and a way to confirm I can still reach each machine after every change. Do not apply any change that could cut off SSH, remote access, or your own connection until you have shown me the exact command and I have approved it, and stop when the plan is done and each change is verified.\nOriginal source: https://news.ycombinator.com/item?id=50432908",
+    "body_sha256": "790c17c98e626ac0ea1c64c4bbc191862406f859fdfe3aee378817968ea0cc3f",
+    "archived_at": "2026-11-10T09:06:51.466599+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-10T09:06:51.466599+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

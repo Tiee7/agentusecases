@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/orchestrate-coding-agents-to-ship-prs-solo",
-  "observed_at": "2026-11-09T08:44:25.985406+00:00",
-  "html_sha256": "da4c6c366efa45e6b907236e96f0e5910b7912a88990b422dfb7a111ad6cec1d",
+  "observed_at": "2026-11-10T09:04:31.647016+00:00",
+  "html_sha256": "d5604f88e9fbbee3d901eb863657ce969fc1569ca3be92e5c27d8673dc9a983a",
   "body_sha256": "b7f7bb7fc4f768b29762bec074a2689528d3a4577ced95f47a55b27221c9e765",
   "status": "observed",
   "fields": {
@@ -97,11 +97,11 @@
     "language": "en",
     "body": "Orchestrate coding agents to ship PRs solo\nA solo developer used OpenClaw to dispatch Codex and Claude Code to write code, run tests, commit, open PRs and respond to review, with Telegram alerts on completion.\n·\nNov 7, 2026\nDone with\nOC\nOpenClaw\nCC\nClaude Code\nCX\nCodex\nWhat they did\nOpenClaw, which the author calls Zoe, holds business context: meeting notes in Obsidian, read-only production data, and an admin API. For each task it creates a git worktree and a tmux session, then starts Codex or Claude Code with a prompt it wrote. A cron job checks every 10 minutes whether sessions are alive, PRs exist and CI passes. It restarts failed agents up to 3 times, rewriting the prompt each time.\nHow it went\nOver four weeks the author reports up to 94 commits a day, averaging 50, and 7 PRs in 30 minutes. Human review of each PR took 5-10 minutes. The limit was RAM: a 16GB Mac Mini ran only 4-5 agents.\nWorth knowing\nCost is about $190 a month (Claude $100, Codex $90), or about $20 to start. A PR counts as done only after CI and three AI reviewers pass, and UI changes need screenshots.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nAct as my dispatcher for coding agents. For the repo at [path or GitHub URL], take the task list in [issue tracker or file], hand each task to Claude Code or Codex, and have it write the code, run [test command], commit, and open a pull request. When a PR is ready or a review comment needs a response, message me on [Telegram or other channel]. Pause and show me the PR title and diff summary before opening it, and never merge anything yourself.\nOriginal source: https://cloud.tencent.com/developer/article/2646044",
     "body_sha256": "b7f7bb7fc4f768b29762bec074a2689528d3a4577ced95f47a55b27221c9e765",
-    "archived_at": "2026-11-09T08:44:25.985406+00:00",
+    "archived_at": "2026-11-10T09:04:31.647016+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-09T08:44:25.985406+00:00",
+    "at": "2026-11-10T09:04:31.647016+00:00",
     "status": "fetched",
     "error": null
   }

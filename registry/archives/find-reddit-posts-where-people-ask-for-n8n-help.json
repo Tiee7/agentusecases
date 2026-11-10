@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/find-reddit-posts-where-people-ask-for-n8n-help",
-  "observed_at": "2026-11-09T08:38:50.024358+00:00",
-  "html_sha256": "2c5657b5b83927b47635fa2af04eedef816903565b5faf03d75a0137fe98a4d8",
+  "observed_at": "2026-11-10T08:58:55.541896+00:00",
+  "html_sha256": "0494862450eaedd9d85ac6e5a200df592c3edd4d721aa4fabd42f0152b49cb98",
   "body_sha256": "383624e4b2d2025032ff53fdec807e2965d9de356eaaa2b9bbb59d05d4c2815a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Find Reddit posts where people ask for n8n help\nAn n8n agent scrapes recent Reddit posts, stores them in a vector store, and retrieves n8n help requests for the author.\nDone with\nN8\nn8n\nWhat they did\nThe author built two n8n workflows. One runs on a schedule, uses an Apify actor to scrape recent posts from selected n8n subreddits, then creates embeddings and stores them in PostgreSQL with pgvector; the other listens in a Telegram chat, sends the message to an AI agent with access to that vector store, and returns semantically matched help posts. The agent uses Gemini Flash 3.1 Lite.\nHow it went\nThe result was a personal search assistant for finding Reddit posts where people need n8n help, and the author says it helped them understand how RAG works by grounding responses in retrieved posts. The post does not give accuracy, volume, or performance numbers.\nWorth knowing\nThe main practical catch mentioned is model choice: they used Gemini Flash 3.1 Lite because its free tier has a high limit.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that pulls recent posts from [subreddits] every [day], stores them in a vector store, and then retrieves posts where someone is asking for help with [tool or topic, e.g. n8n]. It's done when I get a daily digest in [email/Slack/Google Sheet] listing each matching post with its title, link, and a one-line summary of what they need. Don't post any replies on Reddit.\nOriginal source: https://www.reddit.com/r/n8n/comments/1ugatgt/made_myself_a_simple_ai_with_rag",
     "body_sha256": "383624e4b2d2025032ff53fdec807e2965d9de356eaaa2b9bbb59d05d4c2815a",
-    "archived_at": "2026-11-09T08:38:50.024358+00:00",
+    "archived_at": "2026-11-10T08:58:55.541896+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-09T08:38:50.024358+00:00",
+    "at": "2026-11-10T08:58:55.541896+00:00",
     "status": "fetched",
     "error": null
   }

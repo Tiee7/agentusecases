@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-an-agent-operate-your-linux-server-and-apps",
+  "observed_at": "2026-11-10T09:06:35.448208+00:00",
+  "html_sha256": "af1faec440ae9b6d66f9953aae78ed2c919e766ac200bf448ae0f93ff0930f40",
+  "body_sha256": "a528ef72c9ca49a087adcaf8af0a5ae67bf75270e249b7d399adb8fcc937fac8",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let an agent operate your Linux server and apps",
+      "sha256": "3dbc49b71109b09766efa966b01d3264866993bd25e76fc863c473b6f788ad71"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The commenter gave a Dot access to their server through the desktop app, and it used its cloud browser and other apps to interact with the server.\n·\nNov 8, 2026",
+      "sha256": "8695d2ffd75de9ed63ef50b0c48caa58c18bcf0072504d966f561a51a93168c1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter said they installed the OpenAI desktop app on their Linux box, granted it PC and browser access, and then gave their Dot permission to use that machine. Another commenter described the same pattern in more detail: after the target Linux machine was set up as a remote machine, Dot used its own Codex session there as an operator and could work through that controlled instance rather than only the sandbox.",
+      "sha256": "c411dc6eb8fd5238351dc76baed3db65b625c882222938478b61186114c72d78"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They said it spent the day coding on the server, and another person used the setup to do sandbox-blocked tasks like running rootless Podman or an Airflow instance. Limits mentioned were that it was not free, it delegated to a separate Codex instance, and you generally could not keep chaining into more machines over SSH.",
+      "sha256": "0cec69251deaceab159bb746f81505d6fc77a4404c9fe1c4680434d54598d4a1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was security: one commenter warned not to give an autonomous agent access to your server or personal information.",
+      "sha256": "c40e183b0180e6c26f639834164a1df92717188a1ccf648fabca3465f6204892"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Dots"
+      ],
+      "sha256": "91459cb7c634858ecf323595fcbe9f28e5384d97430578b57492bdff2118be77"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/OpenAI/comments/1xqc6fa/are_you_able_to_have_dots_control_your"
+      ],
+      "sha256": "eae179a44b138a174ba66d8ceae0905e803f89dd7b63f7a95c0fe476fa231e41"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-09",
+      "sha256": "dd627efcb5b4f7a56b1dc2259533f08f93d260f95f32f227670084204b3069ef"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d58266b08dbd45595fc44b9d1792c6bce14111c9636c560862a24d58cf2ccab6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let an agent operate your Linux server and apps\nThe commenter gave a Dot access to their server through the desktop app, and it used its cloud browser and other apps to interact with the server.\n·\nNov 8, 2026\nDone with\nDO\nDots\nWhat they did\nA commenter said they installed the OpenAI desktop app on their Linux box, granted it PC and browser access, and then gave their Dot permission to use that machine. Another commenter described the same pattern in more detail: after the target Linux machine was set up as a remote machine, Dot used its own Codex session there as an operator and could work through that controlled instance rather than only the sandbox.\nHow it went\nThey said it spent the day coding on the server, and another person used the setup to do sandbox-blocked tasks like running rootless Podman or an Airflow instance. Limits mentioned were that it was not free, it delegated to a separate Codex instance, and you generally could not keep chaining into more machines over SSH.\nWorth knowing\nThe main catch was security: one commenter warned not to give an autonomous agent access to your server or personal information.\nTry it yourself\nwith\nDots\nCopy prompt\nI've given you access to my Linux server at [server address or name]. Please [task, e.g. check disk usage, review failing services, and update the app at /path], using your browser or other apps as needed. Show me the exact commands or changes before running anything that modifies or deletes data, and finish with a short report of what you found and did.\nOriginal source: https://www.reddit.com/r/OpenAI/comments/1xqc6fa/are_you_able_to_have_dots_control_your",
+    "body_sha256": "a528ef72c9ca49a087adcaf8af0a5ae67bf75270e249b7d399adb8fcc937fac8",
+    "archived_at": "2026-11-10T09:06:35.448208+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-10T09:06:35.448208+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
