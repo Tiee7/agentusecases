@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/migrate-a-codebase-from-solid-to-react-with-parallel-agents",
+  "observed_at": "2026-11-11T08:37:30.939324+00:00",
+  "html_sha256": "dc4e47d3cfff454f08ece267e61add9e465ef635f63e705813e8380a9e71d101",
+  "body_sha256": "3f2bb1557042406529f709e507058de96257a74ce099107f6021e484630b56ba",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Migrate a codebase from Solid to React with parallel agents",
+      "sha256": "bcfdae3720be5675b237c1fbf0d51469bd32e84bd1f590c31970813384198b00"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Cursor ran hundreds of agents on one codebase for weeks, doing an in-place Solid-to-React migration (+266K/-193K edits) that passed CI but still needed careful review.",
+      "sha256": "d4985da7de17ffb5db0bf615a82ab78de2ed3146302d43a55c5b80bd388d257b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Cursor pointed its multi-agent system at its own codebase for an in-place Solid-to-React migration. Planner agents explored the code and created tasks, and sub-planners covered specific areas. Worker agents each took one task and pushed changes to the same branch, while a judge agent decided at the end of each cycle whether to continue. Earlier designs with locks and flat self-coordination had failed.",
+      "sha256": "44ca381e7c5aff3354168f43156affa17c1b68482aeb1bb51c000cc121aae0d9"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The migration took over three weeks and made +266K/-193K edits. It passed CI and early checks, but the authors say it still needs careful review.",
+      "sha256": "a5595c5eef1f125965866cf6ac060441477347ec8f4bb5b1ffb9364f71e9e20c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The post says prompts mattered more than the harness or models. It also says agents sometimes ran far too long and needed periodic fresh starts to counter drift.",
+      "sha256": "a1c743bf470d9dc78479857815d5fe9cd48f2ecabdd934d0015e83370bb78ea9"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://cursor.com/blog/scaling-agents"
+      ],
+      "sha256": "79552babda7726ca85d449660ccfa1d49245455012ee188324463c04692ab066"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0e4e5af0972439f34b99af1c914e2666739125e924d34860620ab3d2b4e0d6dc",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate a codebase from Solid to React with parallel agents\nCursor ran hundreds of agents on one codebase for weeks, doing an in-place Solid-to-React migration (+266K/-193K edits) that passed CI but still needed careful review.\nDone with\nCR\nCursor\nWhat they did\nCursor pointed its multi-agent system at its own codebase for an in-place Solid-to-React migration. Planner agents explored the code and created tasks, and sub-planners covered specific areas. Worker agents each took one task and pushed changes to the same branch, while a judge agent decided at the end of each cycle whether to continue. Earlier designs with locks and flat self-coordination had failed.\nHow it went\nThe migration took over three weeks and made +266K/-193K edits. It passed CI and early checks, but the authors say it still needs careful review.\nWorth knowing\nThe post says prompts mattered more than the harness or models. It also says agents sometimes ran far too long and needed periodic fresh starts to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want to migrate my codebase at [repo path] from [source framework, e.g. Solid] to [target framework, e.g. React] in place. First write a migration plan that splits the work into independent chunks by [directory or feature], then run background agents on those chunks in parallel. Each chunk is done when it builds and the existing tests pass. Finish with a summary of what changed and which files most need my careful review, and don't merge anything until I've looked at it.\nOriginal source: https://cursor.com/blog/scaling-agents",
+    "body_sha256": "3f2bb1557042406529f709e507058de96257a74ce099107f6021e484630b56ba",
+    "archived_at": "2026-11-11T08:37:30.939324+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-11T08:37:30.939324+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

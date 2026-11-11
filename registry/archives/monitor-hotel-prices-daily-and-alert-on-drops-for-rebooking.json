@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-hotel-prices-daily-and-alert-on-drops-for-rebooking",
-  "observed_at": "2026-11-10T08:59:13.471857+00:00",
-  "html_sha256": "e736487c071f907fc7fc1309b1de1b9afc42bb235d013f9e4d2bb7f5aac1a36e",
+  "observed_at": "2026-11-11T08:29:02.755855+00:00",
+  "html_sha256": "454d75ee9d7469a24d6f59071d45869c5348a220f2d18b7faaeb87a428a972f7",
   "body_sha256": "e6f094f09b3de76e6d732a3b5b04aa8eb17c06157c8b589e625eb25fc34c07ff",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Monitor hotel prices daily and alert on drops for rebooking\nAfter booking a refundable hotel room, a scheduled Claude task checks the same room's price daily until the cancellation window ends and alerts the user to rebook if it drops.\n·\nOct 17, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster uses Claude with hotel-site connectors, especially Booking.com, Tripadvisor, Brek, and LetsFG, to pull the same room from multiple sites and normalize the full-stay total by including taxes and fees that may be disclosed separately. After booking a refundable rate, they set a scheduled Claude task to check that same room every day until free cancellation ends and alert them if the price drops so they can rebook.\nHow it went\nThe source gives no savings total for the monitoring workflow, only that hotel prices can move sharply and sometimes fall after booking. It also depends on connectors and on fees being listed somewhere for Claude to find.\nWorth knowing\nThe main catch is that this only works cleanly if you book with free cancellation and keep checking until the cancellation deadline.\nTry it yourself\nwith\nClaude\nCopy prompt\nI booked a refundable hotel room: [hotel name], [room type], [check-in and check-out dates], at [price per night] with free cancellation until [cancellation deadline]. Set up a scheduled task to check the current price for this same room and dates once a day until the deadline passes, then stop. If the price drops below what I paid by [amount or percent], alert me with the new price, the savings and the booking link. Do not cancel or rebook anything; wait for my go-ahead.\nOriginal source: https://www.reddit.com/r/claude/comments/1x8m80f/use_claude_to_save_on_booking_hotels_when",
     "body_sha256": "e6f094f09b3de76e6d732a3b5b04aa8eb17c06157c8b589e625eb25fc34c07ff",
-    "archived_at": "2026-11-10T08:59:13.471857+00:00",
+    "archived_at": "2026-11-11T08:29:02.755855+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-10T08:59:13.471857+00:00",
+    "at": "2026-11-11T08:29:02.755855+00:00",
     "status": "fetched",
     "error": null
   }

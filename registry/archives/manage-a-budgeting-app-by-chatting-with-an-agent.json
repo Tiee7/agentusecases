@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/manage-a-budgeting-app-by-chatting-with-an-agent",
+  "observed_at": "2026-11-11T08:37:34.782377+00:00",
+  "html_sha256": "f79071fc43cb47e7ec0384ff5a1d25b04b4abe764068a878d4c9cb0421e0400e",
+  "body_sha256": "4ae474a2682c34601752ec96878938f05ed2d2a0199c44bff644a0b1150da9cf",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Manage a budgeting app by chatting with an agent",
+      "sha256": "475e720085aa6f8906dcfe475572e5a3da6d847bc05db1f57c7cf054cba58234"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster uses an AI agent with tools to talk to their Actual budget: upload PDF receipts, add cash transactions, and ask about transactions.\n·\nSep 11, 2026",
+      "sha256": "f3a4f803103fff9fa961bb282683f279b80a66e0fa9b324d896075f4afdffb1d"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster wired a coding agent with tools to Actual’s API, then used chat plus uploads like bank screenshots, PDF exports, grocery-service records, and purchase emails. The agent extracted transactions, compared sources, did the arithmetic, identified duplicates, showed its planned changes, then read budget state through the API, proposed edits, applied them, and checked the result; the person reviewed changes, corrected mappings in chat, and could revert with git.",
+      "sha256": "bcef4ad218626770ff6247f492d527976aa6a8277d8b28bd31cbdfded70a1d82"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It let them manage transactions and budget targets mostly without using Actual’s UI, which they say removed enough friction to keep budgeting. The thread gives no hard performance numbers, and commenters warned about reliability and reconciliation drift, especially if mistakes slip through.",
+      "sha256": "bdb06f46f9e0623db643e632387b14b91928e51d85eae04709c3a7df4f4e7f1a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main catch is setup and safety: they keep Actual in a git repo for easy reverts and use 1Password passkey authorization so secrets are not left in the agent context.",
+      "sha256": "518566b34fa5d4fbe330c449f88810f10b19c13234b8e92cfbff63982f2db527"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/actualbudgeting/comments/1wa5hs3/i_can_just_talk_to_actual_now"
+      ],
+      "sha256": "38ed147e618d6541c5d9ccb9375ba394385fe8f926552c72ee4e275cec2cb421"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b4831ff4ac5200b9e93214d3dabb8b2cc4671a880cd1a4cd357dd85910796859",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Manage a budgeting app by chatting with an agent\nThe poster uses an AI agent with tools to talk to their Actual budget: upload PDF receipts, add cash transactions, and ask about transactions.\n·\nSep 11, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe poster wired a coding agent with tools to Actual’s API, then used chat plus uploads like bank screenshots, PDF exports, grocery-service records, and purchase emails. The agent extracted transactions, compared sources, did the arithmetic, identified duplicates, showed its planned changes, then read budget state through the API, proposed edits, applied them, and checked the result; the person reviewed changes, corrected mappings in chat, and could revert with git.\nHow it went\nIt let them manage transactions and budget targets mostly without using Actual’s UI, which they say removed enough friction to keep budgeting. The thread gives no hard performance numbers, and commenters warned about reliability and reconciliation drift, especially if mistakes slip through.\nWorth knowing\nTheir main catch is setup and safety: they keep Actual in a git repo for easy reverts and use 1Password passkey authorization so secrets are not left in the agent context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a way for me to manage my Actual Budget instance at [server URL] by chatting with you. Connect to it using the Actual API, then let me ask about transactions, add cash transactions I describe, and read PDF receipts I drop in [folder path] to create matching entries. Before adding, editing, or deleting any transaction, show me exactly what you're about to change and wait for my OK. You're done when I can ask 'what did I spend on [category] last month?' and get a correct answer.\nOriginal source: https://www.reddit.com/r/actualbudgeting/comments/1wa5hs3/i_can_just_talk_to_actual_now",
+    "body_sha256": "4ae474a2682c34601752ec96878938f05ed2d2a0199c44bff644a0b1150da9cf",
+    "archived_at": "2026-11-11T08:37:34.782377+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-11T08:37:34.782377+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

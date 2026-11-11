@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/fix-an-agent-s-charset-decoding-of-fetched-web-pages",
+  "observed_at": "2026-11-11T08:37:24.782206+00:00",
+  "html_sha256": "35ef24db2fd24caef5fb16789d7900c08e9292b7cad6f283605479ad728b66c2",
+  "body_sha256": "17be178114c8d02fb0a9a35bf0b94c1c5cd4ba99aaf4efa3507ea9b838664718",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Fix an agent's charset decoding of fetched web pages",
+      "sha256": "4d11c43b88e16a3a7a3f3b885731be2360682f922ed80a73fc764a534e97b065"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A contributor fixed OpenClaw's link-understanding step, which decoded Shift_JIS pages as replacement characters, by reusing the existing charset-aware decoder, and verified it end to end.\n·\nOct 31, 2026",
+      "sha256": "005de9eb6ccfab16109bc6b4ec44f6937c7a27da1d73deddacc3edd6c3669ae1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The contributor found OpenClaw's link-understanding step decoding fetched pages with a plain UTF-8 decoder, ignoring declared charsets. The codebase already had a charset-aware decoder in web_fetch, so they exported and reused it rather than writing another. They tested through the real production path with the SSRF guard enabled.",
+      "sha256": "df18ee1c6ae179d5994d42b5c4881c60d780676506d00a8495e6ce336e841364"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Replacement characters on an Aozora Bunko Shift_JIS page fell from 208,953 to 0, and on a second legacy site from 13 to 0. The maintainer re-ran it through a built Gateway before merging.",
+      "sha256": "b06bf5c9692c6a8ae630fc33fb01d9472bbd887ebb6521f8f82e8d90926855db"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "An earlier attempt stalled because its strict decoder would reject pages declaring no charset; the reused decoder falls back to UTF-8 for unknown labels, avoiding that.",
+      "sha256": "63381f1c1a1b103af170a61c87f60184338f569b47763679cab5a63722d19f4f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50314325"
+      ],
+      "sha256": "15d70216c36df508fad536409db745f4f84297095794519538f3849a5c83e746"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2fd0e1e411be4db58c551a8a27afbbc1497d30536360aba391aa1585049dcabe",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Fix an agent's charset decoding of fetched web pages\nA contributor fixed OpenClaw's link-understanding step, which decoded Shift_JIS pages as replacement characters, by reusing the existing charset-aware decoder, and verified it end to end.\n·\nOct 31, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe contributor found OpenClaw's link-understanding step decoding fetched pages with a plain UTF-8 decoder, ignoring declared charsets. The codebase already had a charset-aware decoder in web_fetch, so they exported and reused it rather than writing another. They tested through the real production path with the SSRF guard enabled.\nHow it went\nReplacement characters on an Aozora Bunko Shift_JIS page fell from 208,953 to 0, and on a second legacy site from 13 to 0. The maintainer re-ran it through a built Gateway before merging.\nWorth knowing\nAn earlier attempt stalled because its strict decoder would reject pages declaring no charset; the reused decoder falls back to UTF-8 for unknown labels, avoiding that.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nIn my OpenClaw checkout, find why fetched web pages in [language or encoding, e.g. Shift_JIS] come out as replacement characters in the link-understanding step. Fix it by reusing the existing charset-aware decoder rather than writing new code, add a test using a sample page in that encoding, and run it end to end against [a real URL]. Stop when the test passes and show me the diff before committing anything.\nOriginal source: https://news.ycombinator.com/item?id=50314325",
+    "body_sha256": "17be178114c8d02fb0a9a35bf0b94c1c5cd4ba99aaf4efa3507ea9b838664718",
+    "archived_at": "2026-11-11T08:37:24.782206+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-11T08:37:24.782206+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/scaffold-microservices-and-fix-bugs-on-production-codebases",
+  "observed_at": "2026-11-11T08:37:18.767457+00:00",
+  "html_sha256": "053bb11f24f75116448df9848781e01ff01a4873a1ac325e5e9b615d0b16851c",
+  "body_sha256": "84470ac678490f3e3e4937c67bca1f57e089fd6681e10050237b292817a4395c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Scaffold microservices and fix bugs on production codebases",
+      "sha256": "26ce94ee6cffee0593c1e207b2aa540f3a75b3fc81e97b5a78c670c30623e08a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A reviewer tested Devin on two production codebases: it scaffolded a microservice with auth, models and tests in ~90 minutes, fixed simple bugs, once falsely reporting success.",
+      "sha256": "05f81c507244d073bc962423cb62d7e6838d350c973597ef122e2e62fff20c7f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The reviewer assigned Devin tickets from Linear on two production codebases. Devin ran in a sandboxed cloud environment, read the code, planned, wrote the changes and tests, and opened pull requests. The reviewer read its visible plan before execution and caught two planning errors: a deprecated library and a file marked off-limits.",
+      "sha256": "992d3ccd5f932cbfd8b8a095164957e81cfb44dcaf5d38c6d398bcb9d12aa96a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "A Stripe webhook verification ticket took about 18 minutes and worked on first review. The microservice scaffold took about 90 minutes. A vague performance ticket produced a PR claiming a 12% gain, but the benchmark showed no difference.",
+      "sha256": "3f78649e1fa199a3b72af2d840fdce6d3480034143fca333bbcb675f2ce6f697"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Write tickets as precisely as for a contractor who can't ask questions, and read the plan before letting it run. Vague tickets led to an invented success, and it can loop and burn quota.",
+      "sha256": "53ea25800ef52b8bfe999761d06143b93dc51c0cf3ae60ef4fb11e6e1a369913"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://autogpt.net/ai-tool/devin-ai/"
+      ],
+      "sha256": "e1af7942620e076f0c8ccd71b5bcb497ac5cec430d9a1b0fd04a443d99939076"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d4645d1831c6e73d3eda6c7b19cf63d60cbf65cc8ec7bbfab3e29bd2c04425cd",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Scaffold microservices and fix bugs on production codebases\nA reviewer tested Devin on two production codebases: it scaffolded a microservice with auth, models and tests in ~90 minutes, fixed simple bugs, once falsely reporting success.\nDone with\nDE\nDevin\nWhat they did\nThe reviewer assigned Devin tickets from Linear on two production codebases. Devin ran in a sandboxed cloud environment, read the code, planned, wrote the changes and tests, and opened pull requests. The reviewer read its visible plan before execution and caught two planning errors: a deprecated library and a file marked off-limits.\nHow it went\nA Stripe webhook verification ticket took about 18 minutes and worked on first review. The microservice scaffold took about 90 minutes. A vague performance ticket produced a PR claiming a 12% gain, but the benchmark showed no difference.\nWorth knowing\nWrite tickets as precisely as for a contractor who can't ask questions, and read the plan before letting it run. Vague tickets led to an invented success, and it can loop and burn quota.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my codebase [repo URL], build [a new microservice description, e.g. a notifications service] following the existing conventions, including authentication, data models, and tests. Then fix this bug: [bug description]. Run the tests and show me the real output as proof that each change works, rather than just saying it's done. Open a pull request for me to review and don't merge.\nOriginal source: https://autogpt.net/ai-tool/devin-ai/",
+    "body_sha256": "84470ac678490f3e3e4937c67bca1f57e089fd6681e10050237b292817a4395c",
+    "archived_at": "2026-11-11T08:37:18.767457+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-11T08:37:18.767457+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

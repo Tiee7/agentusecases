@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-claude-code-and-codex-sessions-as-spreadsheet-cells-for-",
+  "observed_at": "2026-11-11T08:36:56.751315+00:00",
+  "html_sha256": "5b44d7b9449e669f12d2938d9b6e027445083735667a8aaaf724c74216112719",
+  "body_sha256": "1f702259f33953d22051d46c538be9cf744cfdaad356193e4f1d2357766d0d04",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run Claude Code and Codex sessions as spreadsheet cells for evals",
+      "sha256": "e7368e7e27ea7e5d64f9d94e6be9d314c4ed51e80578fa5bd96ecf9f1766c876"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Author built a spreadsheet where each cell is a Claude Code or Codex terminal, used to run benchmarks such as a demo FDA submission pass/fail prediction bench.\n·\nNov 8, 2026",
+      "sha256": "2452990919e5de072de3c5a9a83b73aa291c69bfc085f1bbda4bbda87fade882"
+    },
+    "method": {
+      "status": "observed",
+      "value": "recalc is a desktop spreadsheet where a cell can hold a Claude Code or Codex agent, written as @claude(...) or @codex(...) with references to other cells. Agent cells run only when the user runs them, and an MCP server tells the agents how the board works. In the FDA demo, models predict FDA decisions from dossiers frozen before each decision. A new model is added as a contestant and scored against the others. The user can open one answer in a terminal and ask the model why.",
+      "sha256": "2a74feb011aa891930c2f6bda449e5c2613103dcec786c87f50ca9df6698c1f3"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source describes the FDA benchmark only as a 2:37 demo video. It states no accuracy scores or run times. The project is an early beta and may have bugs.",
+      "sha256": "11ba54655daa2dc06081cc99cad0add5161d910e15b841b4df8086df8220b9d3"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Agents run on your own Claude or ChatGPT plan. recalc shows each run's cost at API prices, and Set Agent Budget caps usage. It runs macOS-first, with Linux experimental.",
+      "sha256": "a35c2dfa6c178a779f54efe6bd8e06f08d479d6138ce779c9273236c1052de0c"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Codex"
+      ],
+      "sha256": "d7c05c9ade775ebb616d7c547330b8ca1e39245143fa96cb8d27467e79460a37"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/sshah03/recalc"
+      ],
+      "sha256": "c06250ced3c65c2ec68fbae7f859d3b88f1304d21a63469f7cbc15184c18ca89"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "50a9fb3141a818b4b2ce37f473c9fe2b5371959e3dd06938fbd5bffea0fa5126",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Claude Code and Codex sessions as spreadsheet cells for evals\nAuthor built a spreadsheet where each cell is a Claude Code or Codex terminal, used to run benchmarks such as a demo FDA submission pass/fail prediction bench.\n·\nNov 8, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nWhat they did\nrecalc is a desktop spreadsheet where a cell can hold a Claude Code or Codex agent, written as @claude(...) or @codex(...) with references to other cells. Agent cells run only when the user runs them, and an MCP server tells the agents how the board works. In the FDA demo, models predict FDA decisions from dossiers frozen before each decision. A new model is added as a contestant and scored against the others. The user can open one answer in a terminal and ask the model why.\nHow it went\nThe source describes the FDA benchmark only as a 2:37 demo video. It states no accuracy scores or run times. The project is an early beta and may have bugs.\nWorth knowing\nAgents run on your own Claude or ChatGPT plan. recalc shows each run's cost at API prices, and Set Agent Budget caps usage. It runs macOS-first, with Linux experimental.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a simple local web app that shows a grid where each cell runs its own terminal session of a coding agent on one task from my eval set at [path to folder or file of test cases]. Each cell should show live output and a final pass/fail result compared against the expected answers in [file with expected answers]. When done, I should be able to run the grid with one command and see a summary of pass rates, and you should show me the plan before you install anything or run commands that delete files.\nOriginal source: https://github.com/sshah03/recalc",
+    "body_sha256": "1f702259f33953d22051d46c538be9cf744cfdaad356193e4f1d2357766d0d04",
+    "archived_at": "2026-11-11T08:36:56.751315+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-11T08:36:56.751315+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
