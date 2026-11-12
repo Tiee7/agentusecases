@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/auto-reply-to-woocommerce-customer-emails-with-order-lookups",
-  "observed_at": "2026-11-11T08:34:10.760522+00:00",
-  "html_sha256": "51871a8c2cec804ce760550afd52293227c0ad3f0441c7e0c30708059c67ad91",
+  "observed_at": "2026-11-12T09:02:11.810737+00:00",
+  "html_sha256": "05fd76606646ad71b621c39d4dd597ccbc235871b0d122dd11404816b5e0fb0a",
   "body_sha256": "5f9b342ffae69f763a21c18eb8448d1a47cf4400d04f28c31e17ed83304d7ba0",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Auto-reply to WooCommerce customer emails with order lookups\nA self-hosted OpenClaw agent answers incoming store emails by looking up order details, and can email confirmations to customers with orders still processing.\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw runs on a VPS with the WordPress and WooClaw-Lite skills, which give it check_order, find_product and store_status. An Agentmail inbox sends a webhook for each incoming email. A system prompt tells the agent to look up the order and reply in the thread, and to acknowledge refunds and complaints and flag them for a human. A manual mode handles batch confirmations.\nHow it went\nThe source's example is a shipping-status email that gets a reply with tracking and delivery details. The batch prompt for processing orders is said to replace 20-30 minutes of dashboard work. It reports no measured results from a real store.\nWorth knowing\nUse a dedicated WordPress user with limited permissions, and a webhook token so only Agentmail can trigger the agent. The VPS needs Docker and at least 2 GB RAM.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWatch the inbox at [store support email address] for new customer emails about [WooCommerce store name]. For each one, look up the customer's order in WooCommerce using [order number or customer email], then draft a reply with the real order status and details. Save every draft for my review and show me the drafts; do not send any email, including confirmations to customers whose orders are still processing, until I approve it. Stop once all emails from the last [number] days have a draft.\nOriginal source: https://www.hostinger.com/tutorials/how-to-automate-woocommerce-customer-email-replies-with-openclaw/",
     "body_sha256": "5f9b342ffae69f763a21c18eb8448d1a47cf4400d04f28c31e17ed83304d7ba0",
-    "archived_at": "2026-11-11T08:34:10.760522+00:00",
+    "archived_at": "2026-11-12T09:02:11.810737+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-11T08:34:10.760522+00:00",
+    "at": "2026-11-12T09:02:11.810737+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-cron-started-agents-for-server-updates-and-log-checks",
-  "observed_at": "2026-11-11T08:33:00.786685+00:00",
-  "html_sha256": "cffaff0119aabbf946b2c9c42973174ce293643bf244697b9fe7b2dd3d388fb2",
+  "observed_at": "2026-11-12T09:01:01.819341+00:00",
+  "html_sha256": "14e2d580d1b5adb94352f1c7e8f691fc95f9357d03594a9ef3809e775826afd9",
   "body_sha256": "cbf61600a472b9c9cfc6f0e0a1e74bd0e414d07c50b58c95ad8a098df11946b3",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run cron-started agents for server updates and log checks\nAuthor starts coding-agent sessions from cron to keep servers updated, report vulnerabilities and check logs for intrusion, using Codex and a custom harness.\n·\nNov 5, 2026\nDone with\nCX\nCodex\nWhat they did\nThe author starts agent sessions from cron, with no agent platform, using Codex and a harness they wrote themselves. The sessions handle sysadmin work: keeping servers up to date, reporting vulnerabilities to them, and checking logs for signs of intrusion. The harness writes a plan to the filesystem, hands information to the next session and resets context.\nHow it went\nThe source gives no results or numbers. It says only that the setup is in use, and the author wants the custom harness to eventually replace Codex because of its dependencies and supply-chain risk.\nWorth knowing\nThe source doesn't say how access or permissions are scoped for these cron sessions, so decide that yourself before letting an agent touch servers.\nTry it yourself\nwith\nCodex\nCopy prompt\nSet up a scheduled job on my server [hostname or SSH alias] that starts you every [night at 3am] to apply pending [apt/yum] security updates, list any packages with known vulnerabilities, and scan [log paths like /var/log/auth.log] for signs of intrusion such as repeated failed logins or unfamiliar IPs. Save a short plain-text report to [path or email] and stop when it is written. Show me the cron entry and the exact update commands before you install or run anything, and never reboot or delete files without asking.\nOriginal source: https://news.ycombinator.com/item?id=50378847",
     "body_sha256": "cbf61600a472b9c9cfc6f0e0a1e74bd0e414d07c50b58c95ad8a098df11946b3",
-    "archived_at": "2026-11-11T08:33:00.786685+00:00",
+    "archived_at": "2026-11-12T09:01:01.819341+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-11T08:33:00.786685+00:00",
+    "at": "2026-11-12T09:01:01.819341+00:00",
     "status": "fetched",
     "error": null
   }

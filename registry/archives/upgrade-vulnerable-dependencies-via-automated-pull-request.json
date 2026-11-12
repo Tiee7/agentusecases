@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/upgrade-vulnerable-dependencies-via-automated-pull-request",
+  "observed_at": "2026-11-12T09:05:17.743835+00:00",
+  "html_sha256": "7b9739143ced86f2a2f9e088aad9745a40c464b1e33f23d829d3da10e519a9f4",
+  "body_sha256": "a857a3d11c69ac7f2094861d6fb14f84073ed199a35c23718945ea91c51d6b50",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Upgrade vulnerable dependencies via automated pull request",
+      "sha256": "d8abab51a14beb17287369bc5fbe24ed2bfba88a417d16b851576198f5dab632"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Devin opened a PR on a Spring Boot and Next.js sample app upgrading dependencies to fix listed CVEs, including 103 npm vulnerabilities on the frontend.\n·\nApr 29, 2026",
+      "sha256": "9219fd01428530b41fc9711a18c0a019f78267530cbe4b81ef86d9576c5b2d65"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Requested by a user in a Devin session, Devin audited the Spring Boot backend and Next.js frontend and pushed two commits. These upgraded Spring Boot, sqlite-jdbc, Gradle, Next.js, React, axios and marked. It also fixed plaintext password storage, a hardcoded JWT secret and wildcard CORS, and adapted code to SWR v2 and React 18. It left a human checklist for manual testing.",
+      "sha256": "31f52519a1d7872b3f61330ba1e729e211be9f3e94c907c3b6057cd8ccc94aab"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Frontend npm vulnerabilities fell from 103 (10 critical) to 2 (0 critical). The PR was closed unmerged, superseded by #366. Devin's own review flagged an XSS regression: the marked sanitize option was dropped with no replacement.",
+      "sha256": "7f0f993e2f9269441c1f61d04b26f8f1851d8e159f04644b780090c262508360"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Library upgrades can silently drop safety options such as marked's sanitize. Check for that, and set JWT_SECRET before deploying. The PR also notes JaCoCo coverage failed at 33%, a pre-existing condition.",
+      "sha256": "bd874b5fbb7c118996ac6807609f15c307e38096c8b0414ca273060a7c98e42a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/Cognition-Partner-Workshops/uc-cve-remediation-regulatory-compliance/pull/181"
+      ],
+      "sha256": "731cb7e2b49091b54291beafc218b467ad381b4e557cc384c79a3baf42fbeee8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-10",
+      "sha256": "f67c5ec50bf3ce9b5e2e30b3b2ba5789ee3f1491778fd8b3b94147e12dbc2a81"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ce0cf33d0a480758cf490dab102893c0df9cb79789f29c65fc50b207c7a5b90b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Upgrade vulnerable dependencies via automated pull request\nDevin opened a PR on a Spring Boot and Next.js sample app upgrading dependencies to fix listed CVEs, including 103 npm vulnerabilities on the frontend.\n·\nApr 29, 2026\nDone with\nDE\nDevin\nWhat they did\nRequested by a user in a Devin session, Devin audited the Spring Boot backend and Next.js frontend and pushed two commits. These upgraded Spring Boot, sqlite-jdbc, Gradle, Next.js, React, axios and marked. It also fixed plaintext password storage, a hardcoded JWT secret and wildcard CORS, and adapted code to SWR v2 and React 18. It left a human checklist for manual testing.\nHow it went\nFrontend npm vulnerabilities fell from 103 (10 critical) to 2 (0 critical). The PR was closed unmerged, superseded by #366. Devin's own review flagged an XSS regression: the marked sanitize option was dropped with no replacement.\nWorth knowing\nLibrary upgrades can silently drop safety options such as marked's sanitize. Check for that, and set JWT_SECRET before deploying. The PR also notes JaCoCo coverage failed at 33%, a pre-existing condition.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my repo [repo URL], upgrade the vulnerable dependencies in [frontend/backend/both] to fix the known CVEs reported by [npm audit / Dependabot / scanner name]. Make sure the build and existing tests still pass after the upgrades. Open a pull request listing which vulnerabilities were fixed, which remain, and any breaking changes you had to handle. Don't merge it.\nOriginal source: https://github.com/Cognition-Partner-Workshops/uc-cve-remediation-regulatory-compliance/pull/181",
+    "body_sha256": "a857a3d11c69ac7f2094861d6fb14f84073ed199a35c23718945ea91c51d6b50",
+    "archived_at": "2026-11-12T09:05:17.743835+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-12T09:05:17.743835+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

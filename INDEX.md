@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **81** / 注册案例 **2031**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **2045**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -26,7 +26,7 @@
 | [用 Counterforce Health 起草拒赔申诉并致电保险公司](reports/write-appeals-and-phone-insurers-on-denied-claims.md) | 仅建议受控试点 | 47.5 | 中 | available | 美国医疗保险申诉与诊所收入周期运营 | 2026-10-15T02:10:45.597629+00:00 |
 | [用 Claude 按旧姓名查询州政府无人认领财产数据库](reports/search-state-databases-for-unclaimed-property-under-old-name.md) | 适合内部效率工具 | 34.5 | 中 | available | 美国个人无人认领财产发现与认领辅助 | 2026-10-15T04:29:13.220582+00:00 |
 | [用 Claude Code 整理税务扣除凭证和 Schedule C](reports/compile-deductions-and-schedule-c-with-claude-code.md) | 适合内部效率工具 | 45.0 | 中 | available | 美国个人税务资料准备 | 2026-10-15T00:03:06.932856+08:00 |
-| [用 ChatGPT 起草停车罚单申诉](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |
+| [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
 | [用 Grok Bot 搜索邮件、取消订阅并申请退款](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
@@ -66,7 +66,6 @@
 | [用 n8n 根据简历组织语音面试并保存记录](reports/interview-candidates-based-on-their-resume.md) | 仅建议受控试点 | 33.5 | 中 | available | 招聘流程与面试记录 | 2026-10-19T18:03:48Z |
 | [用Claude Code维护并运营Chrome扩展](reports/let-claude-code-run-a-chrome-extension-project.md) | 适合内部效率工具 | 未评定 | 中 | available | 浏览器扩展与独立产品维护 | 2026-10-20T19:14:58.334033+00:00 |
 | [将 OpenClaw 技能迁移到 Grok Bot](reports/move-openclaw-skills-to-grok-bot.md) | 仅建议受控试点 | 37.0 | 中 | available | 个人行政自动化与工作流迁移服务 | 2026-10-16T13:37:40.222711+00:00 |
-| [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
 | [用 Meta Muse 协商账单、处理退货并取消订阅](reports/negotiate-bills-handle-returns-and-cancel-subscriptions.md) | 仅建议受控试点 | 37.0 | 中 | available | 美国消费者账单管理与退款代办 | 2026-10-15T03:11:48.878088+00:00 |
 | [用Claude Code整理本地新闻并上传WordPress文章](reports/publish-local-news-posts-to-wordpress-automatically.md) | 适合内部效率工具 | 41.5 | 中 | available | 内容运营与新闻草稿准备 | 2026-10-20T11:06:31.706905+00:00 |
 | [用 Claude for Word 生成原生修订并处理批注](reports/redline-lawyer-documents-with-native-word-tracked-changes.md) | 仅建议受控试点 | 44.0 | 中 | available | 专业文档流程配置与审核辅助 | 2026-10-19T22:14:26Z |
@@ -89,6 +88,7 @@
 | [用 Claude Code 将会议笔记整理为每日行动清单](reports/turn-meeting-notes-into-a-prioritized-daily-action-list.md) | 适合内部效率工具 | 43.0 | 中 | available | 个人知识管理与会议后续工作 | 2026-10-19T20:52:20Z |
 | [用本地Codex辅导纸笔练习并保存学习记录](reports/tutor-you-through-pen-and-paper-math-with-a-local-agent.md) | 仅建议受控试点 | 35.0 | 中 | available | 个人学习工具 | 2026-10-20T01:24:22.548256+00:00 |
 | [用Claude Code指导SQL项目迁移并练习dbt](reports/use-claude-code-as-an-agentic-tutor-in-your-learning-environ.md) | 仅建议受控试点 | 37.0 | 中 | available | 成人技术学习 | 2026-10-20T02:45:22.422735+00:00 |
+| [用 ChatGPT 起草停车罚单申诉](reports/write-a-parking-ticket-appeal-that-got-dismissed.md) | 适合内部效率工具 | 29.0 | 中 | not_observed | 美国市政停车罚单材料整理与申诉写作辅助 | 2026-10-15T17:07:05.830613+00:00 |
 
 ## 需要重做的旧版简略初稿
 
