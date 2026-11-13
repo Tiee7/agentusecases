@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/track-trade-history-and-flag-contradictory-decisions",
+  "observed_at": "2026-11-13T08:45:42.620077+00:00",
+  "html_sha256": "05727076e5d6a58cac6d930da1205548c90023a045ebca1720b2bbf1456003d6",
+  "body_sha256": "a2a9a75a70bddadfd87eb03e843957dbe740962b666bdc14aa78c1135f393c28",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Track trade history and flag contradictory decisions",
+      "sha256": "31f4dba0f5bcf363a1293c20ca4a703272c882ca6763f549356ff3d8159b2d5d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An AI agent remembers every trade the author made and calls out contradictions in their decisions to support portfolio discipline.\n·\nAug 1, 2026",
+      "sha256": "f5102f5e0cda1514fb5247d4c5922d0f1ff3d2f42c39e4b1ba8e335c7bab4370"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author split the system into two agents: a research pass that only fetches raw findings from searches and filings, and a main investing agent that makes the judgment call. That main agent keeps a running journal across sessions plus a structured file for each position with entry thesis, exit conditions, and context, and it must write out its full reasoning before giving a recommendation; the human reviews that reasoning and catches stale data.",
+      "sha256": "7d200f25c25e27932642f8f7ad8f54450373a4dda2f8b079c01c1b8ceff9a7e5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It became useful once it had enough trade history to flag when the author was contradicting prior decisions, and the split setup reduced the model talking itself into conclusions during research. It still needs fact-checking because stale or outdated source data can materially skew outputs.",
+      "sha256": "ea430566242288ea4d0574e7d3f48d90900d5a44b09433e75f4f2ae0e2135510"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is ongoing verification: the author says stale data produced earnings estimates 40% apart, so a quick double-check is still necessary.",
+      "sha256": "6fe8b9b5ad4f0db9cae9c45c48069de117b23706de5b786c68d42ca49541e1e7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/InnerCircleInvesting/comments/1v0abkt/my_ai_agent_now_has_a_memory_of_every_trade_ive"
+      ],
+      "sha256": "9ada0f7a346044d9351bff4305c1ca2b8853080a050ab932a6110bf7117b80be"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d986baa5871f536f6245c535155d2792913f93dfd5f904fe89dcba98de52c98a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Track trade history and flag contradictory decisions\nAn AI agent remembers every trade the author made and calls out contradictions in their decisions to support portfolio discipline.\n·\nAug 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author split the system into two agents: a research pass that only fetches raw findings from searches and filings, and a main investing agent that makes the judgment call. That main agent keeps a running journal across sessions plus a structured file for each position with entry thesis, exit conditions, and context, and it must write out its full reasoning before giving a recommendation; the human reviews that reasoning and catches stale data.\nHow it went\nIt became useful once it had enough trade history to flag when the author was contradicting prior decisions, and the split setup reduced the model talking itself into conclusions during research. It still needs fact-checking because stale or outdated source data can materially skew outputs.\nWorth knowing\nThe main catch is ongoing verification: the author says stale data produced earnings estimates 40% apart, so a quick double-check is still necessary.\nTry it yourself\nwith\nClaude\nCopy prompt\nI'll paste in my trade history with dates, tickers, prices, and my reason for each trade: [paste log]. Act as a discipline coach: look for contradictions, such as selling something I said I'd hold long term, buying what I'd earlier called overvalued, or breaking my stated rules of [your investing rules]. Give me a list of each contradiction with the dates involved, then suggest three short rules I could adopt to avoid repeating the pattern. Going forward I'll paste each new trade and you should check it against this history before I act.\nOriginal source: https://www.reddit.com/r/InnerCircleInvesting/comments/1v0abkt/my_ai_agent_now_has_a_memory_of_every_trade_ive",
+    "body_sha256": "a2a9a75a70bddadfd87eb03e843957dbe740962b666bdc14aa78c1135f393c28",
+    "archived_at": "2026-11-13T08:45:42.620077+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:42.620077+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

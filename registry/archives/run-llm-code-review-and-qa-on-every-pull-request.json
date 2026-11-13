@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-llm-code-review-and-qa-on-every-pull-request",
+  "observed_at": "2026-11-13T08:45:22.685462+00:00",
+  "html_sha256": "18157b6afb9b9979c89413c610107908ce3bb19829136c799eedde856471555e",
+  "body_sha256": "ea4931884c11ece4f6ff448d99cbd79d009235c73dfa8f526ce4e2337c899204",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run LLM code review and QA on every pull request",
+      "sha256": "1c4f610cf82be408b6a33460dbf0f82773cb5e35483cfc2296b1c043fbbc4603"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A team added LLM-driven PR review, architecture tests and documentation to their pipeline; merged PRs tripled and issues fell, with agents filling gaps from related Jira tickets.\n·\nNov 12, 2026",
+      "sha256": "c2251d720c38a67ea5625088f277641eba8afc0343ff9cede72fd96dd08f3e49"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The team already had given/when/then acceptance criteria, linting, static analysis, automated tests, and QA and UAT rounds. About two months ago they added static and LLM-guided architecture tests, LLM-written product documentation, and LLM PR review. Agents sometimes filled gaps in the criteria by finding related Jira tickets. Developers still step in on the suggestions.",
+      "sha256": "d1b4f945fab7c1ed4bf05c50dd69493531b083a4efe05459282cb23ca00c996f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Merged PRs tripled, issues are falling, and time-to-merge is about a day, though the author doesn't credit LLMs for that last one. Downsides: QA catches planning-level mistakes, product knowledge fades, and PRs grow bigger.",
+      "sha256": "b742e6f41af9f76f378cd6e6fb6f9763a7461cdcbaffbc7133eb4bfa293c5cae"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "LLM review can be over-defensive, for example repeatedly asking for locks that current business rules make unnecessary, so a developer has to judge each suggestion.",
+      "sha256": "be81c8f418f46c5bfa22f7b808c2acd8ef061ef5f470681101cde40b60a01611"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50465013"
+      ],
+      "sha256": "a0312b302372f30cc4c508dcede47273298c4da74c1fa4339db1ee71705c0d67"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e2193b3ead4484e9447a50f5162dbfc21b726dda875f19f0fbbe5864f98cdb4b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run LLM code review and QA on every pull request\nA team added LLM-driven PR review, architecture tests and documentation to their pipeline; merged PRs tripled and issues fell, with agents filling gaps from related Jira tickets.\n·\nNov 12, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe team already had given/when/then acceptance criteria, linting, static analysis, automated tests, and QA and UAT rounds. About two months ago they added static and LLM-guided architecture tests, LLM-written product documentation, and LLM PR review. Agents sometimes filled gaps in the criteria by finding related Jira tickets. Developers still step in on the suggestions.\nHow it went\nMerged PRs tripled, issues are falling, and time-to-merge is about a day, though the author doesn't credit LLMs for that last one. Downsides: QA catches planning-level mistakes, product knowledge fades, and PRs grow bigger.\nWorth knowing\nLLM review can be over-defensive, for example repeatedly asking for locks that current business rules make unnecessary, so a developer has to judge each suggestion.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nSet up automated review on every pull request in my repo [repo name]. For each PR, have it check the diff for bugs, missing tests and style issues, compare it against the linked ticket in [Jira/issue tracker] to see if it covers the requirements, and post a summary comment. Start by showing me the workflow file you plan to add and wait for my approval before committing anything.\nOriginal source: https://news.ycombinator.com/item?id=50465013",
+    "body_sha256": "ea4931884c11ece4f6ff448d99cbd79d009235c73dfa8f526ce4e2337c899204",
+    "archived_at": "2026-11-13T08:45:22.685462+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:22.685462+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

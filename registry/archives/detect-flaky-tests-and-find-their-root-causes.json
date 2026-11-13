@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/detect-flaky-tests-and-find-their-root-causes",
-  "observed_at": "2026-11-12T09:05:29.737933+00:00",
-  "html_sha256": "cf310c089ae583c3769df8192b74fc4ca9d3aba4968521be65f1f4108182f10e",
+  "observed_at": "2026-11-13T08:44:30.745946+00:00",
+  "html_sha256": "f0f3ac6ad4921a06230df53cb890f7d530da1bc154646f09c4af955a41631e7f",
   "body_sha256": "9c6280231744cce3b04ca908b3de91476725a0299fda9252302e45d168a91230",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Detect flaky tests and find their root causes\nA QA-focused post on using Strands Agents with Gemini to detect flaky tests and trace their root causes.\n·\nNov 10, 2026\nDone with\nGE\nGemini\nWhat they did\nA Python tool parses JUnit XML results and scores each test by the share of commits where it both passed and failed. It writes JSON reports. A Strands Agents agent running on Gemini 2.5 Flash has two tools: one fetches reports for a chosen period, the other exports a Markdown analysis. The agent reads the error messages, infers likely root causes, and writes recommendations.\nHow it went\nOn generated sample data, 12 of 109 tests were flagged from 19,644 parsed results, and the agent produced a root-cause report. The author says it gives a first look only, and infrastructure failures can look like flakiness.\nWorth knowing\nTests only get flagged when the same commit has both passing and failing runs. Results also need commit_sha and run_id properties, and the setup assumes GitHub Actions.\nTry it yourself\nwith\nGemini\nCopy prompt\nLook at the test suite in [path to repo] and CI logs from [CI system or log folder]. Find tests that pass and fail inconsistently, rerun suspicious ones [20] times to confirm they are flaky, and for each one identify the likely root cause such as timing, shared state, ordering, or network. Finish with a ranked report of flaky tests with a suggested fix for each, and don't change any code until I approve.\nOriginal source: https://dev.to/m4rri4nne/detecting-flaky-tests-and-finding-their-root-causes-with-strands-agents-and-gemini-4kan",
     "body_sha256": "9c6280231744cce3b04ca908b3de91476725a0299fda9252302e45d168a91230",
-    "archived_at": "2026-11-12T09:05:29.737933+00:00",
+    "archived_at": "2026-11-13T08:44:30.745946+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-12T09:05:29.737933+00:00",
+    "at": "2026-11-13T08:44:30.745946+00:00",
     "status": "fetched",
     "error": null
   }

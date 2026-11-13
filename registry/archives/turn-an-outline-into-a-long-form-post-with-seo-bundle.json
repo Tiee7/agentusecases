@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-an-outline-into-a-long-form-post-with-seo-bundle",
-  "observed_at": "2026-11-12T08:56:43.744844+00:00",
-  "html_sha256": "2735324a1c11b318e5c0acd18da5fdead6bf6e25227d2ce94cb854292098cebe",
+  "observed_at": "2026-11-13T08:35:44.672297+00:00",
+  "html_sha256": "794ee0393a67e29e7d5ccd5626342a182283fb087d2415555ed9376de37cd78a",
   "body_sha256": "06c8d38be2388ff7f34aa448861179ccdb1ee23b9c796227d7f8975b6266fe49",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Turn an outline into a long-form post with SEO bundle\nThe author built an n8n workflow that expands an outline into a long-form post and generates an SEO bundle, chosen over GPT Agent Mode.\nDone with\nN8\nn8n\nGA\nChatGPT Agent\nWhat they did\nThey wired an n8n flow around a webhook that receives an item’s ID, title, summary, link, and featured image. The workflow turns the input into an outline, expands it into a roughly 500-word post, generates an SEO bundle, converts markdown to HTML, fetches and uploads the featured image to WordPress, creates a draft, writes Yoast fields, and updates Google Sheets for approval and status tracking; GPT Agent Mode was only used to help prototype the Python earlier.\nHow it went\nThe result was a productionized pipeline for AI-news posts that outputs WordPress drafts with images and Yoast metadata. The author says they moved off GPT Agent Mode because approvals, retries, image upload, and visibility were better handled in n8n.\nWorth knowing\nThe main catch is that the approval loop and audit trail live in Google Sheets, and the author chose n8n specifically for determinism, retries, logs, and credential isolation.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow that takes my outline for [topic] from [form, Google Doc, or webhook] and expands it into a long-form post of about [word count] words in [tone/voice]. Then generate an SEO bundle: title tag, meta description, URL slug, 5 keywords, and 3 headline options. It's done when the full draft and SEO bundle land in [Google Doc/Notion] for my review, and nothing is published automatically.\nOriginal source: https://www.reddit.com/r/n8n/comments/1my0dzq",
     "body_sha256": "06c8d38be2388ff7f34aa448861179ccdb1ee23b9c796227d7f8975b6266fe49",
-    "archived_at": "2026-11-12T08:56:43.744844+00:00",
+    "archived_at": "2026-11-13T08:35:44.672297+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-12T08:56:43.744844+00:00",
+    "at": "2026-11-13T08:35:44.672297+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/deploy-code-from-chatgpt-via-mcp-integration",
-  "observed_at": "2026-11-12T09:05:51.756486+00:00",
-  "html_sha256": "abc22efb273bda007e33a829c1d88750525d4bc44fe10f87c7b93dfd0f8adf6a",
+  "observed_at": "2026-11-13T08:44:52.941181+00:00",
+  "html_sha256": "42a0d4917aaec45422f9e6fef3b6e06de644734a9b1637391f7836127ef51578",
   "body_sha256": "523dd8f4858ad32b147d7e4f849c722fcb8b5785594e97c6a05e209fd220a4f3",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Deploy code from ChatGPT via MCP integration\nA developer added MCP integration to their self-built PaaS so ChatGPT can deploy their code without Docker or YAML.\n·\nNov 10, 2026\nDone with\nGP\nChatGPT\nWhat they did\nHarun built an MCP server into his PaaS, HYNA-Stage v3.0.0. ChatGPT or Claude Desktop connects to it as a custom connector, using a custom OAuth 2.1 + PKCE flow, because OpenAI's public directory needs a payment method. After that, asking ChatGPT to deploy an app provisions an isolated E2B MicroVM and returns a live URL. The server runs on Cloudflare and Supabase, and he wrote it from Termux on his phone.\nHow it went\nHe reports warm sandbox claims under 3 seconds, cold starts of 7-15 seconds, about 300ms hot reload, 99.9% uptime over 7 days, and over 99% deployment success. These figures are self-reported, with no methodology given.\nWorth knowing\nThe free tier caps users at 3 concurrent sandboxes, and the stack runs on free tiers of Supabase, Cloudflare, E2B and Netlify, which he says he will outgrow.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nHelp me set up deployment from my AI assistant for my project in [folder or repo]. Create an MCP server that exposes a deploy tool, which builds and ships the app to [hosting target] without needing me to write Docker or YAML by hand. Show me the exact commands and config before running any deploy, and stop when I can trigger a test deploy from my assistant.\nOriginal source: https://dev.to/koda2026/i-added-mcp-integration-so-chatgpt-can-deploy-my-code-while-i-walk-away-from-docker-yaml-3167",
     "body_sha256": "523dd8f4858ad32b147d7e4f849c722fcb8b5785594e97c6a05e209fd220a4f3",
-    "archived_at": "2026-11-12T09:05:51.756486+00:00",
+    "archived_at": "2026-11-13T08:44:52.941181+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-12T09:05:51.756486+00:00",
+    "at": "2026-11-13T08:44:52.941181+00:00",
     "status": "fetched",
     "error": null
   }

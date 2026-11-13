@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/write-exhaustive-test-suites-to-clear-a-coverage-backlog",
-  "observed_at": "2026-11-12T09:04:39.734770+00:00",
-  "html_sha256": "f91dff3ea4521d589566161b9cfaf9d0307ae48a1779d058742dea0d64a81f38",
+  "observed_at": "2026-11-13T08:43:40.711210+00:00",
+  "html_sha256": "f6c11ee36786cf7e8d25474e8bcd3477546d35bccf2a416ac4b686abf86a6f67",
   "body_sha256": "367b568ae8ecd58595beef7a7ee8ac474d84aeb224ad25c658427aef9f29565a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Write exhaustive test suites to clear a coverage backlog\nA team had Claude write exhaustive test suites for their coverage backlog, but the tests overloaded the CI node and covered disabled features, so it only partly worked.\n·\nNov 9, 2026\nDone with\nCL\nClaude\nWhat they did\nThe team had Claude write exhaustive test suites to work through their code coverage backlog. The commenter doesn't describe the prompts or tooling in detail. After the tests landed in develop, the team noticed the suite had become flakier and slower, and a person traced the problem back to the generated tests.\nHow it went\nThe full suite normally ran 30-40 minutes but could exceed an hour and then fail. Claude also wrote tests for disabled features that were about to be rewritten, so the result was only partly useful.\nWorth knowing\nTell the model what to skip and how much compute the tests may use, since 'exhaustive' got read literally and it covered disabled features slated for rewrite.\nTry it yourself\nwith\nClaude\nCopy prompt\nIn my repo at [path or repo name], find the files with the lowest test coverage in [module or directory] and write tests for them using [test framework]. Skip features that are disabled or behind flags (check [config file or flag list]), keep the suite light enough to run on a small CI node by avoiding heavy fixtures and long loops, and run the tests locally to confirm they pass and report the coverage change. Work in batches of [number] files and show me the results after each batch before moving on.\nOriginal source: https://news.ycombinator.com/item?id=50432671",
     "body_sha256": "367b568ae8ecd58595beef7a7ee8ac474d84aeb224ad25c658427aef9f29565a",
-    "archived_at": "2026-11-12T09:04:39.734770+00:00",
+    "archived_at": "2026-11-13T08:43:40.711210+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-12T09:04:39.734770+00:00",
+    "at": "2026-11-13T08:43:40.711210+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/deploy-to-the-cloud-by-talking-to-an-agent",
+  "observed_at": "2026-11-13T08:46:08.784119+00:00",
+  "html_sha256": "049ceb0eca1846716759e5fb5f64e4a0da0aab1d88475d964dda96e0cb3eb5f5",
+  "body_sha256": "ab5851cd142f2c71a4d3780f2a3e947b18bdce05bf111de592a3aba16719ca8c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Deploy to the cloud by talking to an agent",
+      "sha256": "2428d96488d0807c124b7675e89b3f17a54b6ba5600a378211dbebb3116b907d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter uses an agent to handle cloud deployment work conversationally, and used a Grok skill for a bot.\n·\nNov 11, 2026",
+      "sha256": "88fdbdf6e3d435c3355028ca650d6debff15861f89b53efb87914bce24d745da"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the thread, one commenter says they no longer handle cloud infrastructure directly and instead “just talk to an agent” that performs deployment for them. The concrete mechanics come from the original poster’s later example: they had to spell out a detailed test plan, point the main Grok bot to a Cursor dashboard endpoint for exact usage data, review the bot’s proposed plan, and only then let it go instruct other bots and return later with a reusable Grok skill.",
+      "sha256": "6aa8b60293ec31591de4dde7f2e2ad143332a384a3048dec7f7bf60a67c418da"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The commenter says this let them spin up about 15 multiplayer online games despite having no experience building them, and avoid doing cloud deployment work themselves. But the broader thread says the bots often needed hand-holding, gave naive first answers, and required tweaks before the workflow became useful.",
+      "sha256": "abdc406ea38b7fc71d6557199a506c77cbaaf8d1eea09cfbb61071e228d08f9c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is setup overhead: the poster says they spent about an hour just teaching the bot how to measure scheduled-task usage correctly before turning it into a reusable skill.",
+      "sha256": "eff241254bfc0d8c2923671498daf0088625b6d50d72462467f9ca3463f019a5"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Grok Bot"
+      ],
+      "sha256": "5860acaa3c9f362c43df7296f5091d163857131e736a6ca95a173b16c2fd107e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GrokBot/comments/1xsmf56/ai_was_supposed_to_save_us_time_what_happened"
+      ],
+      "sha256": "38ebc677faa826dd0fe614ec634d8ac2554eefa696114681d7a567e56e34eaf0"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3029b04839410e5cf420c30bbb733b1ee6939d76a487dab5d0fd58daf84935b2",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Deploy to the cloud by talking to an agent\nA commenter uses an agent to handle cloud deployment work conversationally, and used a Grok skill for a bot.\n·\nNov 11, 2026\nDone with\nGB\nGrok Bot\nWhat they did\nIn the thread, one commenter says they no longer handle cloud infrastructure directly and instead “just talk to an agent” that performs deployment for them. The concrete mechanics come from the original poster’s later example: they had to spell out a detailed test plan, point the main Grok bot to a Cursor dashboard endpoint for exact usage data, review the bot’s proposed plan, and only then let it go instruct other bots and return later with a reusable Grok skill.\nHow it went\nThe commenter says this let them spin up about 15 multiplayer online games despite having no experience building them, and avoid doing cloud deployment work themselves. But the broader thread says the bots often needed hand-holding, gave naive first answers, and required tweaks before the workflow became useful.\nWorth knowing\nThe main catch is setup overhead: the poster says they spent about an hour just teaching the bot how to measure scheduled-task usage correctly before turning it into a reusable skill.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nI have an app in [folder or repo] that I want to deploy to [AWS/GCP/Azure/Vercel]. Look at the project, propose a deployment plan, and walk me through it step by step, running the commands for setup and configuration. Before creating any paid resources, changing DNS, or touching production, stop and show me exactly what you'll do and the expected cost. You're done when the app is live at a URL and I have a short note on how to redeploy.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1xsmf56/ai_was_supposed_to_save_us_time_what_happened",
+    "body_sha256": "ab5851cd142f2c71a4d3780f2a3e947b18bdce05bf111de592a3aba16719ca8c",
+    "archived_at": "2026-11-13T08:46:08.784119+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:46:08.784119+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

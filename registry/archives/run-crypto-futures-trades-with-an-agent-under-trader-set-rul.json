@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-crypto-futures-trades-with-an-agent-under-trader-set-rul",
+  "observed_at": "2026-11-13T08:45:26.679676+00:00",
+  "html_sha256": "0dc143a2ff731a1a3d778b043704d083292ea36d8d05b65b2208fb9f9cf0470e",
+  "body_sha256": "38f675c15475672fa699c7766b5e1b2bf389a6f537523e71398632e155d09a63",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run crypto futures trades with an agent under trader-set rules",
+      "sha256": "22805d6c729848e1c2cc8bf2c6523dc2832c92a118ba2ab215691e80b4cd5f63"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A trader connected OpenClaw to OpenAlgo and a crypto futures exchange; it made 47 trades, 4 manually overridden including a rogue ETH long, then execution permission was removed.\n·\nNov 10, 2026",
+      "sha256": "6339b68d22d94ff329cdec9f80b9d96fd59f35611936ab1b3fd7fa7f323aa3db"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The trader ran OpenClaw on a Mac Mini M4, with OpenAlgo handling order placement and position management on live exchange feeds. They wrote their momentum strategy as plain-language instructions. Stop losses and a daily loss kill switch sat outside the agent. Exchange keys went through the broker's official system. Setup took about an hour. The trader monitored throughout and overrode some trades.",
+      "sha256": "6e4b866a7e22946fc92eb130e6c7ecf8103ce5ac8dce2c04d9bb7ba01e768bca"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Over 14 days: +4.8% net, 47 trades, 57% win rate, -6.2% max drawdown, 4 manual overrides. A skill update changed how a condition was read, producing the rogue ETH long. The trader then limited the agent to research and signals.",
+      "sha256": "7ca7e047e9dbf202f1c8b3e2e8286c0290283a0b3d10b315e2030f6e879d875f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Keep stop losses and kill switches outside the agent, and audit third-party skills. One ClawHub skill was sending unauthorised outbound calls, so the trader revoked and regenerated the API keys.",
+      "sha256": "125765fe237dfcde9f402b6b89bdd9d8400a54370e90dce2d80911a04e8cee73"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.mexc.com/it-IT/news/880926"
+      ],
+      "sha256": "0d60f116912fe8d31404837cdcce2c31f2a76621f1c10e67d04b941ad12abbe5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "f0c12b65aeb00e2a2b3cf53ce2cb1f58e941918d19d47e066630464c31182fef",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run crypto futures trades with an agent under trader-set rules\nA trader connected OpenClaw to OpenAlgo and a crypto futures exchange; it made 47 trades, 4 manually overridden including a rogue ETH long, then execution permission was removed.\n·\nNov 10, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe trader ran OpenClaw on a Mac Mini M4, with OpenAlgo handling order placement and position management on live exchange feeds. They wrote their momentum strategy as plain-language instructions. Stop losses and a daily loss kill switch sat outside the agent. Exchange keys went through the broker's official system. Setup took about an hour. The trader monitored throughout and overrode some trades.\nHow it went\nOver 14 days: +4.8% net, 47 trades, 57% win rate, -6.2% max drawdown, 4 manual overrides. A skill update changed how a condition was read, producing the rogue ETH long. The trader then limited the agent to research and signals.\nWorth knowing\nKeep stop losses and kill switches outside the agent, and audit third-party skills. One ClawHub skill was sending unauthorised outbound calls, so the trader revoked and regenerated the API keys.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nConnect to my [broker or exchange] account in paper trading mode and trade [instrument] only under these rules: max position size [amount], max loss per trade [percent], allowed hours [hours], no new positions after [daily loss limit]. Before placing any order, show me the order details and wait for my yes. At the end of each day, send me a log of every trade and any rule you came close to breaking.\nOriginal source: https://www.mexc.com/it-IT/news/880926",
+    "body_sha256": "38f675c15475672fa699c7766b5e1b2bf389a6f537523e71398632e155d09a63",
+    "archived_at": "2026-11-13T08:45:26.679676+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:26.679676+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

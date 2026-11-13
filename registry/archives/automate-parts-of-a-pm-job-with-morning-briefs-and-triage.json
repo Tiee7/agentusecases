@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-parts-of-a-pm-job-with-morning-briefs-and-triage",
+  "observed_at": "2026-11-13T08:46:12.627042+00:00",
+  "html_sha256": "1c68f308bc97f427f819fcca097e28fead54aa022aef2cfe477dcbb0bd861ae1",
+  "body_sha256": "6886417ef143be8b78a8ee8fe23516ac9ebe6b53865539a7dfb7a646b2febd21",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate parts of a PM job with morning briefs and triage",
+      "sha256": "8bd154ebeb39665ef0b4037cb43af5009116c5ad302ea7fea598861b66ab07b5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster trains Grok Bots to do part of their job, including a Linear-based daily brief that spawned triage agents before becoming hard to manage.\n·\nOct 18, 2026",
+      "sha256": "93bfd267dbc52c25faeb20d33a237dba99493f8ab605e9e7d2f1a2fa95ff9644"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the thread, one commenter says they built a PM- and Linear-specific Grok Bot to prepare a daily morning brief of top priorities from Linear and to spawn triage cloud agents. They reviewed its output themselves, tried retraining it by telling it to be more specific and proactive in certain situations, then deleted it when its summaries stayed vague and its behavior got more verbose and unhelpful.",
+      "sha256": "17490b2366cc5b95522bf4ee0cd5662c3a08c702936d9627058f4e7710fc6b4a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It did automate part of the workflow enough to be worth trying, but the commenter says the bot became hard to manage within about a week. Their example brief omitted key context like why a ticket was blocked, so they scrapped that bot instead of keeping it in the loop.",
+      "sha256": "a1490424a68768b199ffd309e86f3a11c9352c548a4e86e4118f7d5ae09f4e2d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was prompt drift: after about a week, the bot’s tone and summaries degraded enough that managing it outweighed the benefit.",
+      "sha256": "c8b342fc34291fdd98632161f2e81eab676b263a8bf233f5f0d26c2fce6da568"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Grok Bot"
+      ],
+      "sha256": "5860acaa3c9f362c43df7296f5091d163857131e736a6ca95a173b16c2fd107e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GrokBot/comments/1wzc9tc/shall_i_feel_guilty_of_replacing_a_team_member_with_grok_bot"
+      ],
+      "sha256": "f7cfd0a1e310d3b808a6b7dbcf35f1ce169811b8780aa07e5f3f0306059e9f8b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "39887ed96abf584faf03fc55b62a5e25bf0ec0e572feeb1a3495b49df2441fbd",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate parts of a PM job with morning briefs and triage\nThe poster trains Grok Bots to do part of their job, including a Linear-based daily brief that spawned triage agents before becoming hard to manage.\n·\nOct 18, 2026\nDone with\nGB\nGrok Bot\nWhat they did\nIn the thread, one commenter says they built a PM- and Linear-specific Grok Bot to prepare a daily morning brief of top priorities from Linear and to spawn triage cloud agents. They reviewed its output themselves, tried retraining it by telling it to be more specific and proactive in certain situations, then deleted it when its summaries stayed vague and its behavior got more verbose and unhelpful.\nHow it went\nIt did automate part of the workflow enough to be worth trying, but the commenter says the bot became hard to manage within about a week. Their example brief omitted key context like why a ticket was blocked, so they scrapped that bot instead of keeping it in the loop.\nWorth knowing\nThe main catch was prompt drift: after about a week, the bot’s tone and summaries degraded enough that managing it outweighed the benefit.\nTry it yourself\nwith\nGrok Bot\nCopy prompt\nEach weekday at [time], pull the issues in [Linear team or project] that were created or changed in the last day and write me a morning brief with what's new, what's blocked, and what needs my decision. Propose a triage label and owner for each new issue, but do not change anything until I approve. Keep the brief under one page, and start with just this one workflow before adding more.\nOriginal source: https://www.reddit.com/r/GrokBot/comments/1wzc9tc/shall_i_feel_guilty_of_replacing_a_team_member_with_grok_bot",
+    "body_sha256": "6886417ef143be8b78a8ee8fe23516ac9ebe6b53865539a7dfb7a646b2febd21",
+    "archived_at": "2026-11-13T08:46:12.627042+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:46:12.627042+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

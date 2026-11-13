@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/orchestrate-a-swarm-of-coding-agents-across-claude-code-and-",
+  "observed_at": "2026-11-13T08:45:24.693867+00:00",
+  "html_sha256": "dcf43e2d74e74e053a614f9b89e7e5223aecc0dcd12729a56f39ddfbd42b2447",
+  "body_sha256": "ffee1b593a0302182ab5eeb91dddcd62c642b82d5e065b3f0dfd8932eee4cfb1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Orchestrate a swarm of coding agents across Claude Code and Codex",
+      "sha256": "236411c313d869fece1940331309ef57f2fe788e08534ac2217f769e57ccbd4b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author built a containerized Claude Code plus Codex setup with an MCP letting Claude spawn Codex sub-agents and sub-orchestrators, plus a self-hosted git/CI stack, in 24 hours.\n·\nNov 12, 2026",
+      "sha256": "a206bca32f42bd14cbcf7e1605bdd9706566ad47b449fadeae19e58bbc3ca035"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author used a Claude model they call Fable to build a containerized Claude Code plus Codex package with a custom MCP. Through it Claude calls Codex sub-agents, including multi-level sub-orchestrators, so the Codex subscription gets used too. They also had it build a self-hosted CI/CD pipeline deploying to AWS, replacing GitHub Actions after free credits ran out. Bugs are logged as git issues and fixed by the agent.",
+      "sha256": "e6569e1972a700359a83b85bbee5a0ab749c0a2a8799f1ac2f582c0421791d82"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Over 24 hours the author says they got the full stack working, tested it themselves and with their wife, and are close to shipping several SaaS products. No metrics are given, and the claims are self-reported.",
+      "sha256": "3812945883b00702115d00526f1a1e06b6ab92965ffc6d49fc7a2248fb04d592"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author says the model is expensive and wishes it were cheaper; free GitHub Actions credits ran out quickly, which prompted the custom CI/CD.",
+      "sha256": "774d7601ba7ca8a2f0d6494e4bc8d48bdc18d8f15ba652560bec2c8d23b30d51"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Codex",
+        "Hermes Agent"
+      ],
+      "sha256": "a0cccb09cdcf3766a349b7c10a3d8eea416c670ecfac17cfb03024a094901729"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50470966"
+      ],
+      "sha256": "a3bf9f5939618de954fc7d6339c078c9cad86938739b1af07366dd35aa5b7845"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "99cfe471354b3f6b1dd3c7605a44e0975459bc1546776c0e53c934d4c0de4e82",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Orchestrate a swarm of coding agents across Claude Code and Codex\nThe author built a containerized Claude Code plus Codex setup with an MCP letting Claude spawn Codex sub-agents and sub-orchestrators, plus a self-hosted git/CI stack, in 24 hours.\n·\nNov 12, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nHA\nHermes Agent\nWhat they did\nThe author used a Claude model they call Fable to build a containerized Claude Code plus Codex package with a custom MCP. Through it Claude calls Codex sub-agents, including multi-level sub-orchestrators, so the Codex subscription gets used too. They also had it build a self-hosted CI/CD pipeline deploying to AWS, replacing GitHub Actions after free credits ran out. Bugs are logged as git issues and fixed by the agent.\nHow it went\nOver 24 hours the author says they got the full stack working, tested it themselves and with their wife, and are close to shipping several SaaS products. No metrics are given, and the claims are self-reported.\nWorth knowing\nThe author says the model is expensive and wishes it were cheaper; free GitHub Actions credits ran out quickly, which prompted the custom CI/CD.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a multi-agent coding workflow for [project description] where you act as the orchestrator and delegate subtasks to Codex as sub-agents, each working in its own container or git branch. Give me a short plan first, then build a minimal version that completes one test task end to end and reports what each sub-agent did. Pause before pushing to any remote or deleting any branch.\nOriginal source: https://news.ycombinator.com/item?id=50470966",
+    "body_sha256": "ffee1b593a0302182ab5eeb91dddcd62c642b82d5e065b3f0dfd8932eee4cfb1",
+    "archived_at": "2026-11-13T08:45:24.693867+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:24.693867+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

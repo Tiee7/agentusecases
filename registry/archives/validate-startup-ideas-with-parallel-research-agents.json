@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/validate-startup-ideas-with-parallel-research-agents",
+  "observed_at": "2026-11-13T08:45:46.612258+00:00",
+  "html_sha256": "549bdd94da8a95cd6fee22d2c4cf6a5307b90b8d07f36d3c31399bef78bc25e1",
+  "body_sha256": "09daa1abe540016359c7e1e8c79b1933192323b4302bb16adcd0d7d8d140a157",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Validate startup ideas with parallel research agents",
+      "sha256": "63c43777ef579f2edce227e335a69e7b85f42b472fb82e67d0ddccbc26c15820"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code plugin runs waves of parallel agents on market research, competitor battle cards, positioning, financial projections, and go/no-go scoring, including Reddit demand mining.",
+      "sha256": "dd2a04ab21e7068660ae6f8e8d97bdbfb576c58002abf225f8b4930718116eab"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The maker built a Claude Code plugin that validates startup ideas by running four sequential waves of 2–3 parallel research agents: market landscape, competitive analysis, customer and demand, then distribution. Each agent did 5–8 web searches, cross-checked 2–3 sources, rated source quality, and passed only the prior wave’s synthesis forward; a user first went through a 2–3 round intake interview, and the system checkpointed progress to PROGRESS.md.",
+      "sha256": "908a39683ec5940d2867d7a88d5b2d5a9bcd6025e99180ada89e391a502b0d57"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "A full run produced 30+ structured files with dates, source flags, confidence ratings, and an explicit go/no-go judgment. The author says the main weakness was not the agents but getting enough context from the user up front, and the system had to fall back to sequential or unverified runs when agent or web tools were unavailable.",
+      "sha256": "893f46de6a26c8dc4496974b45065ca19c1e3e08cee69de8849ac2ed5b3973fc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "It was designed to degrade gracefully: without subagents it runs sequentially, and without web search it uses training data but marks findings unverified and lowers confidence.",
+      "sha256": "08bf15d96df34b8950e2af2b086504152ec98190d678a2efb662a1d077de88aa"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeCode/comments/1s26cor/i_built_a_claude_code_skill_with_11_parallel"
+      ],
+      "sha256": "125e1f7ba269c157f5a4dd1c05157ca934d0a411bd68c698f7fae6ef4eafbb75"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e607fc28c239a61877b0486eabec5a510a1854f15bc41d0c3659569d3037fd52",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Validate startup ideas with parallel research agents\nA Claude Code plugin runs waves of parallel agents on market research, competitor battle cards, positioning, financial projections, and go/no-go scoring, including Reddit demand mining.\nDone with\nCC\nClaude Code\nWhat they did\nThe maker built a Claude Code plugin that validates startup ideas by running four sequential waves of 2–3 parallel research agents: market landscape, competitive analysis, customer and demand, then distribution. Each agent did 5–8 web searches, cross-checked 2–3 sources, rated source quality, and passed only the prior wave’s synthesis forward; a user first went through a 2–3 round intake interview, and the system checkpointed progress to PROGRESS.md.\nHow it went\nA full run produced 30+ structured files with dates, source flags, confidence ratings, and an explicit go/no-go judgment. The author says the main weakness was not the agents but getting enough context from the user up front, and the system had to fall back to sequential or unverified runs when agent or web tools were unavailable.\nWorth knowing\nIt was designed to degrade gracefully: without subagents it runs sequentially, and without web search it uses training data but marks findings unverified and lowers confidence.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to validate this startup idea: [one-sentence idea] for [target customer]. Run parallel research agents on market size, competitors (a battle card for each of [3-5 known competitors]), positioning, rough financial projections, and Reddit or forum demand signals. Finish with a go/no-go score and a one-page summary in a markdown file listing the evidence and sources behind each score, and flag any numbers you had to estimate.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1s26cor/i_built_a_claude_code_skill_with_11_parallel",
+    "body_sha256": "09daa1abe540016359c7e1e8c79b1933192323b4302bb16adcd0d7d8d140a157",
+    "archived_at": "2026-11-13T08:45:46.612258+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:46.612258+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

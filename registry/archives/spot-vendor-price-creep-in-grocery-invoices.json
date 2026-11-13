@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/spot-vendor-price-creep-in-grocery-invoices",
+  "observed_at": "2026-11-13T08:45:16.652768+00:00",
+  "html_sha256": "6c05ac1825b958047dc0cccb4468f60215ea4735e77eca855bcc9ba2634184cc",
+  "body_sha256": "b7d7440f86299b05bdbd88151bfc6fe781e926f78714330384067b9915e8741b",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Spot vendor price creep in grocery invoices",
+      "sha256": "7fc6aa241718eeb7245a909815cb8bbce883c2dbc692c6f87d31d6f3943fe0e8"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A grocery-store user exports six months of vendor invoices to CSV and has Claude identify price creep on specific SKUs.",
+      "sha256": "f356a4dd14e5f95094b7498187d501b6f165c521849dfc3059e22b601d81671c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A commenter suggested a grocery-store workflow: export the last six months of vendor invoices to CSV and give that messy invoice data to Claude to analyze for price creep on specific SKUs. The person asking said spotting wholesaler price changes was their main problem and that they built a Claude-based tool where they enter receipts and compare prices against previous orders; commenters also warned to verify Claude’s claims manually and keep bank logins out of scope.",
+      "sha256": "638afa476ecb4a2c70794b96bc0c8f7cff1cf78b329835bbadda4a9f26a0e475"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The thread claims this can turn a weeks-long manual review into hours and help catch small supplier increases, such as a 5% hike on a SKU. It also says Claude can misread invoice changes, like confusing larger order quantities for price increases, and may hallucinate supplier names.",
+      "sha256": "f3eb2b71f03d715688a1eff410b2bf3ad1c745dde367039d663309d91d82f77a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch from the thread is to use CSV exports or receipt comparisons, not live financial access, and check every flagged increase yourself.",
+      "sha256": "d81f010d86fd33bd8ce73f0ad92056dd6e10ef65522c21d53f391b34872f1663"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Cowork"
+      ],
+      "sha256": "fe91c7f9053a674661f0b83ac32992aacbb6f6476d290e81b49e7c8e32b440f2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/smallbusinessowner/comments/1sicf8e/anyone_using_claude_cowork_to_actually_save_time"
+      ],
+      "sha256": "e7418ed1ea6516acfec8f136b224ff5c07028ab42bebcbfb94e8cfbd22d0d2c9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-12",
+      "sha256": "eb349f71a7e711e0ce6d06c80026691e8a28047d509b4438a3b8a72f9b6646a0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "1a62ffd68dba76f3778d0be0934e2033bdcb7eaabd440e015cc0ff144a93c141",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Spot vendor price creep in grocery invoices\nA grocery-store user exports six months of vendor invoices to CSV and has Claude identify price creep on specific SKUs.\nDone with\nCW\nClaude Cowork\nWhat they did\nA commenter suggested a grocery-store workflow: export the last six months of vendor invoices to CSV and give that messy invoice data to Claude to analyze for price creep on specific SKUs. The person asking said spotting wholesaler price changes was their main problem and that they built a Claude-based tool where they enter receipts and compare prices against previous orders; commenters also warned to verify Claude’s claims manually and keep bank logins out of scope.\nHow it went\nThe thread claims this can turn a weeks-long manual review into hours and help catch small supplier increases, such as a 5% hike on a SKU. It also says Claude can misread invoice changes, like confusing larger order quantities for price increases, and may hallucinate supplier names.\nWorth knowing\nThe main catch from the thread is to use CSV exports or receipt comparisons, not live financial access, and check every flagged increase yourself.\nTry it yourself\nwith\nClaude Cowork\nCopy prompt\nI've put a CSV of my last [six] months of vendor invoices in [folder path]. Compare the unit price of each SKU over time, and list the ones whose price rose more than [5]% since the first invoice, with vendor, SKU, old price, new price, and percent change. Finish with a table sorted by biggest increase and three suggestions for which vendors to push back on; do not change or delete my files.\nOriginal source: https://www.reddit.com/r/smallbusinessowner/comments/1sicf8e/anyone_using_claude_cowork_to_actually_save_time",
+    "body_sha256": "b7d7440f86299b05bdbd88151bfc6fe781e926f78714330384067b9915e8741b",
+    "archived_at": "2026-11-13T08:45:16.652768+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-13T08:45:16.652768+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
