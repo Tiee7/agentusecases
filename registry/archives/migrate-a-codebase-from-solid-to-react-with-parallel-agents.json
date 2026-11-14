@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/migrate-a-codebase-from-solid-to-react-with-parallel-agents",
-  "observed_at": "2026-11-13T08:44:34.726614+00:00",
-  "html_sha256": "2f50d4549044bef82d8cabd172fe2c2957fb24841157673d64c073adeb9d761e",
+  "observed_at": "2026-11-14T08:29:17.429584+00:00",
+  "html_sha256": "1c4691c759f9a63327d5f5620f1c0d54d1001395572c82c726f05be345e1c082",
   "body_sha256": "3f2bb1557042406529f709e507058de96257a74ce099107f6021e484630b56ba",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Migrate a codebase from Solid to React with parallel agents\nCursor ran hundreds of agents on one codebase for weeks, doing an in-place Solid-to-React migration (+266K/-193K edits) that passed CI but still needed careful review.\nDone with\nCR\nCursor\nWhat they did\nCursor pointed its multi-agent system at its own codebase for an in-place Solid-to-React migration. Planner agents explored the code and created tasks, and sub-planners covered specific areas. Worker agents each took one task and pushed changes to the same branch, while a judge agent decided at the end of each cycle whether to continue. Earlier designs with locks and flat self-coordination had failed.\nHow it went\nThe migration took over three weeks and made +266K/-193K edits. It passed CI and early checks, but the authors say it still needs careful review.\nWorth knowing\nThe post says prompts mattered more than the harness or models. It also says agents sometimes ran far too long and needed periodic fresh starts to counter drift.\nTry it yourself\nwith\nCursor\nCopy prompt\nI want to migrate my codebase at [repo path] from [source framework, e.g. Solid] to [target framework, e.g. React] in place. First write a migration plan that splits the work into independent chunks by [directory or feature], then run background agents on those chunks in parallel. Each chunk is done when it builds and the existing tests pass. Finish with a summary of what changed and which files most need my careful review, and don't merge anything until I've looked at it.\nOriginal source: https://cursor.com/blog/scaling-agents",
     "body_sha256": "3f2bb1557042406529f709e507058de96257a74ce099107f6021e484630b56ba",
-    "archived_at": "2026-11-13T08:44:34.726614+00:00",
+    "archived_at": "2026-11-14T08:29:17.429584+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:44:34.726614+00:00",
+    "at": "2026-11-14T08:29:17.429584+00:00",
     "status": "fetched",
     "error": null
   }

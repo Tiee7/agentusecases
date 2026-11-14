@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/rewrite-rust-compiler-code-in-bulk-with-a-query-driven-tool",
+  "observed_at": "2026-11-14T08:31:11.406181+00:00",
+  "html_sha256": "6b28cf653d19b4f969de6379f6117aa9cd9e84dee39a2f3a7d46dc87a0775203",
+  "body_sha256": "af394dd80a666352aa1b02ef3bda16e4d57908385a143b51270bdcf5ffa23787",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Rewrite Rust compiler code in bulk with a query-driven tool",
+      "sha256": "923b87e496b5e5bbcda5f0c9d82d0ee0d60df9a619ad05e7339ea40e24f5fbaa"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author has Claude build a mass static code rewriting tool that finds and rewrites compiler code (like LOCAL_CRATE_ID uses) to speed up Rust builds.\n·\nNov 13, 2026",
+      "sha256": "5f31248b4d643a226cc191550cdc628d0aa38458789240eb57fe2f95ac450dc0"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Rather than having an agent hunt through rustc for every place LOCAL_CRATE_ID is defined and used, the author had Claude build a mass static code rewriting tool. A query locates the code and its surroundings, and rewrite rules target those matches. The rewrites can be reviewed and debated ahead of time, then rerun on main or nightly.",
+      "sha256": "ba1eb9124fdd91977af038defd4e04bf39108949e5b6a949f094d349a0476732"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The work is unfinished and the author has no enticing numbers yet. It's also unclear whether big changes like all crates in one process or dropping memory are worth it.",
+      "sha256": "12d127820668dd338edf16ba05ffe3c1f70531af183221037deed69e90b95451"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Rewrites can be rerun on current main and applied to other people's open PRs, so you avoid maintaining a stale hard fork, though it takes some coordination with the compiler team.",
+      "sha256": "452e7c11e2d704525f2f71ec447f642d78f4e6703b64e5aa6951cdd6ebc9e6ce"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50481795"
+      ],
+      "sha256": "257809de9ea8ba77e0206bf0ca148abd7baa4e073b46b379f21eda34fe6e26ac"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0bc414f0b2e1e0b654a3a969166d74f9b6bdd18295371ecc2616fb9a529b29ab",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Rewrite Rust compiler code in bulk with a query-driven tool\nThe author has Claude build a mass static code rewriting tool that finds and rewrites compiler code (like LOCAL_CRATE_ID uses) to speed up Rust builds.\n·\nNov 13, 2026\nDone with\nCL\nClaude\nWhat they did\nRather than having an agent hunt through rustc for every place LOCAL_CRATE_ID is defined and used, the author had Claude build a mass static code rewriting tool. A query locates the code and its surroundings, and rewrite rules target those matches. The rewrites can be reviewed and debated ahead of time, then rerun on main or nightly.\nHow it went\nThe work is unfinished and the author has no enticing numbers yet. It's also unclear whether big changes like all crates in one process or dropping memory are worth it.\nWorth knowing\nRewrites can be rerun on current main and applied to other people's open PRs, so you avoid maintaining a stale hard fork, though it takes some coordination with the compiler team.\nTry it yourself\nwith\nClaude\nCopy prompt\nIn my Rust codebase at [path to repo], find every place that uses [pattern or identifier, e.g. a specific constant or function call] and rewrite each one to [new form or approach]. Build a small reusable tool that finds matches with a structural query and applies the rewrite in bulk, rather than editing by hand. Run it on a copy first, then show me the diff summary and the build and test results before applying changes to the main branch. You're done when the project compiles, tests pass, and no old-pattern uses remain.\nOriginal source: https://news.ycombinator.com/item?id=50481795",
+    "body_sha256": "af394dd80a666352aa1b02ef3bda16e4d57908385a143b51270bdcf5ffa23787",
+    "archived_at": "2026-11-14T08:31:11.406181+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:11.406181+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

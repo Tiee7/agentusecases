@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-an-online-store-by-texting-commands-to-an-agent",
-  "observed_at": "2026-11-13T08:41:14.746969+00:00",
-  "html_sha256": "f635fbb83cde142a101b82ca4cb8899bac068963768b510e919cb5c8ceb81830",
+  "observed_at": "2026-11-14T08:25:57.447513+00:00",
+  "html_sha256": "1a9bf5a552b29465250870afcb98bc0e00d35544475581fc4e3908a777827b3a",
   "body_sha256": "b906609bae1858523dce3b4bcec5ccbe1f31cbb05d2927d984f7d05d029f1725",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run an online store by texting commands to an agent\nA reference build where an OpenClaw agent runs store API calls from the owner's Telegram texts, while a buyer-facing agent handles WhatsApp orders and status questions.\nDone with\nOC\nOpenClaw\nWhat they did\nClaw Boutique is an AWS sample with two agents sharing one Store API. A Strands agent on Bedrock AgentCore, running Nova Lite, handles buyer WhatsApp chats. An OpenClaw agent on EKS sends the owner Telegram alerts for low stock and bad reviews, then runs the Store API calls for replies such as \"restock hoodies 20\" or \"apologize\". An apology sends a WhatsApp message and a refund email, marks the order refunded, and closes the escalation.\nHow it went\nThe post walks through the full order lifecycle working across the web store, WhatsApp, email, Telegram and an admin dashboard. It gives no performance or business figures, and it is a reference architecture, not a production deployment.\nWorth knowing\nOne CDK deploy provisions everything, but a cold deploy takes about 25-30 minutes. It needs a WhatsApp Business account, a Telegram bot token and a verified SES address, and an EKS cluster and RDS database keep running until you destroy the stack.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nSet yourself up as my store manager that I can text through [Telegram]. When I send a command like 'show today's orders' or 'mark order [number] as shipped', run the matching call against my [store platform] API and reply with the result. For anything that changes data, refunds money, or messages a customer, first send me a summary of exactly what you are about to do and wait for my yes. You're done when you can handle these three commands correctly: [command 1], [command 2], [command 3].\nOriginal source: https://aws.amazon.com/blogs/messaging-and-targeting/build-an-autonomous-ecommerce-assistant-with-aws-end-user-messaging-amazon-bedrock-agentcore-and-openclaw/",
     "body_sha256": "b906609bae1858523dce3b4bcec5ccbe1f31cbb05d2927d984f7d05d029f1725",
-    "archived_at": "2026-11-13T08:41:14.746969+00:00",
+    "archived_at": "2026-11-14T08:25:57.447513+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:41:14.746969+00:00",
+    "at": "2026-11-14T08:25:57.447513+00:00",
     "status": "fetched",
     "error": null
   }

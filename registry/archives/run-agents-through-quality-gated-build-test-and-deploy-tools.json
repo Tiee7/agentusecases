@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-agents-through-quality-gated-build-test-and-deploy-tools",
+  "observed_at": "2026-11-14T08:30:57.290088+00:00",
+  "html_sha256": "9976d6f7f8f698cfd57091fd309fd8b7e5d3227dfba917033c4984e9ec63e355",
+  "body_sha256": "98e110a47192f511c2835e4e33088b3fb1b645cea0bab02fd39d914bcde516c8",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run agents through quality-gated build, test and deploy tools",
+      "sha256": "92b3ce0e512d8dc334346fbd5ad17b1009bf02c38c3e5084d04119075517cc34"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author has agents use managed tools that enforce coverage, dependency and lint metrics, build, test and deploy in about 10s, and pick up daily quality-check findings as work.\n·\nNov 13, 2026",
+      "sha256": "dbb81c7506c4c3b3d4800c842f0fc6cf64e2475cdfe773938915c3a14dcda18b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author gives agents managed tools that enforce quality metrics (test coverage, allowed dependencies, linters), then build, test and deploy roughly in parallel and prepare the work for git. The tools run on the deployment machine for speed and submit attestations of everything they do. A daily process runs further checks, such as outdated dependencies and slow tests, and turns findings into work for agents.",
+      "sha256": "c4d6afc5de129c6e45276acceed3a78576e063c187775f1a3a1db3f50b42f2b5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The full cycle, including docker build and deploy to a test environment, takes 10 seconds or less. The author's own review is mostly checking the app does what it should, and passing metrics matter more than reading the code.",
+      "sha256": "7828dc97de6c0b55fe8fb3d8b4fafc937bd62c21905d09697265d7b7e5845c3b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author built their own system to track the attestations, and finds a 10s budget achievable on every project they've worked on.",
+      "sha256": "6c0ce246aeb566186e70935b9acebf6e2d6b7e172b54ffb69cb3bb39bc37111e"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50477901"
+      ],
+      "sha256": "d17e0405d1281b6c86842fb961b3e6bf262dab63627b9ed5ac50978b3cf00d38"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "77b6d4b2c9eb6a7cd382857d1970f6cbaea8739d51e03ba5cef8d42338351cf6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run agents through quality-gated build, test and deploy tools\nThe author has agents use managed tools that enforce coverage, dependency and lint metrics, build, test and deploy in about 10s, and pick up daily quality-check findings as work.\n·\nNov 13, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author gives agents managed tools that enforce quality metrics (test coverage, allowed dependencies, linters), then build, test and deploy roughly in parallel and prepare the work for git. The tools run on the deployment machine for speed and submit attestations of everything they do. A daily process runs further checks, such as outdated dependencies and slow tests, and turns findings into work for agents.\nHow it went\nThe full cycle, including docker build and deploy to a test environment, takes 10 seconds or less. The author's own review is mostly checking the app does what it should, and passing metrics matter more than reading the code.\nWorth knowing\nThe author built their own system to track the attestations, and finds a 10s budget achievable on every project they've worked on.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repo at [path or repo name], set up quality gates for [coverage threshold, lint rules, dependency checks] and a single command that builds, tests and deploys to [environment]. Then run the daily quality checks, turn each finding into a task list, and fix the ones that are low risk. Stop when the gates pass and the build and test command runs cleanly, and pause to show me the plan before any real deploy or deletion.\nOriginal source: https://news.ycombinator.com/item?id=50477901",
+    "body_sha256": "98e110a47192f511c2835e4e33088b3fb1b645cea0bab02fd39d914bcde516c8",
+    "archived_at": "2026-11-14T08:30:57.290088+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:30:57.290088+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

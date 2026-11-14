@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/book-customers-and-verify-bookings-against-the-calendar",
-  "observed_at": "2026-11-13T08:43:50.733566+00:00",
-  "html_sha256": "4768e8958f2986fb2c0a4013cad378bd117f9e5fd2d0a5eff396ae5610b65606",
+  "observed_at": "2026-11-14T08:28:33.400469+00:00",
+  "html_sha256": "feab3cd331004f5bc0e2fce26b192c0775d387ff723edb1dbef52c1185e6eea7",
   "body_sha256": "5b4e8a474d0b87324041bab87a7e9ff0124b3566c04a4f98ef7ea80f0c78afd2",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Book customers and verify bookings against the calendar\nA booking agent confirms a customer only after the calendar returns an event ID, and a nightly job diffs claimed bookings against the calendar.\n·\nNov 4, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nOne builder said the agent is not allowed to send a booking confirmation until the calendar call returns an event ID; otherwise it tells the customer it will confirm shortly and flags the case. They also run a nightly job that reads every booking the agent claimed and diffs it against the calendar, with comments adding that read-backs should verify the stored time, timezone, attendees, and use idempotency keys to avoid duplicate retries.\nHow it went\nThe reported benefit is that the main failure mode becomes no confirmation instead of a false one. What still slips through are partial or wrong-data successes, such as an invite not being sent or an event created for the wrong time.\nWorth knowing\nFor a new client, one commenter said setup is basically one reconciliation query per action type, with calendar booking described as quick.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow where a booking agent confirms a customer's appointment only after [calendar, e.g. Google Calendar] returns an event ID, and otherwise tells the customer it failed. Add a nightly job that compares all bookings the agent claimed against actual calendar events and sends me a list of mismatches at [email or Slack]. Test it with a fake booking and show me the results before going live.\nOriginal source: https://www.reddit.com/r/n8n/comments/1xnnloa/how_do_you_check_that_the_agent_actually_did_what",
     "body_sha256": "5b4e8a474d0b87324041bab87a7e9ff0124b3566c04a4f98ef7ea80f0c78afd2",
-    "archived_at": "2026-11-13T08:43:50.733566+00:00",
+    "archived_at": "2026-11-14T08:28:33.400469+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:43:50.733566+00:00",
+    "at": "2026-11-14T08:28:33.400469+00:00",
     "status": "fetched",
     "error": null
   }

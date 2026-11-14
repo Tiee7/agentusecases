@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/send-a-daily-gmail-summary-to-slack",
+  "observed_at": "2026-11-14T08:31:57.419053+00:00",
+  "html_sha256": "3fdfece86beb0a4f09c2c3724149f613c492e12e1dc0deb63a59f88b073a0863",
+  "body_sha256": "197372b6ac68a57294ea55f26123a82b5de4e04eb0ba0d49e725030d1e5097f4",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Send a daily Gmail summary to Slack",
+      "sha256": "eba1097364120e46a4243e0fd93985807db02d06c97d136e22fd8486851a653b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster uses a scheduled Codex automation to fetch unread Gmail messages and post a morning brief to Slack.",
+      "sha256": "7a4e4c0b408f2ac32f4c67b80695b6531a1b3715ccbd7187e6d3c8405cd4f883"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster set up a scheduled Codex automation as a morning brief that checks unread Gmail from a local-time window covering yesterday morning to now, then sends a Slack DM. The prompt tells the agent to paginate Gmail results, pull fields like sender, subject, snippet or body, recipients, thread ID, attachments and unsubscribe headers, classify each email into a fixed triage taxonomy, hide newsletters and sales, and stop after posting the brief until the user confirms any next step.",
+      "sha256": "45719514f7cf18372979bb204749d09c6394df97093069724b046ff39d799320"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result is a structured daily Slack summary of unread mail with counts by category and a tally of filtered newsletters and sales emails. The source does not report usage numbers or measured results, only the prompt and that the poster uses it for this non-coding task.",
+      "sha256": "2e075f555b568bb857467ae64cb89faabc0e52652008939b457c2a62dc8113ec"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "One practical catch in the prompt is to omit Gmail maxResults because the poster says it caused intermittent 500 errors; paginate instead.",
+      "sha256": "ab65f2b25e344ba15c07e83f9c92a2092258e2e65896d668889e2ee12758de13"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/PromptEngineering/comments/1tr11ui/i_found_a_prompt_that_makes_codex_better_at"
+      ],
+      "sha256": "20962649ecb3ebe69b4c0ca39f7d7708bd69705d23860be89b721dd90d5fe22f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "5d5c1081f096132e341d55a422a1c48c59fb670cc84230142ef64d9ff8e37d09",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Send a daily Gmail summary to Slack\nThe poster uses a scheduled Codex automation to fetch unread Gmail messages and post a morning brief to Slack.\nDone with\nCX\nCodex\nWhat they did\nThe poster set up a scheduled Codex automation as a morning brief that checks unread Gmail from a local-time window covering yesterday morning to now, then sends a Slack DM. The prompt tells the agent to paginate Gmail results, pull fields like sender, subject, snippet or body, recipients, thread ID, attachments and unsubscribe headers, classify each email into a fixed triage taxonomy, hide newsletters and sales, and stop after posting the brief until the user confirms any next step.\nHow it went\nThe result is a structured daily Slack summary of unread mail with counts by category and a tally of filtered newsletters and sales emails. The source does not report usage numbers or measured results, only the prompt and that the poster uses it for this non-coding task.\nWorth knowing\nOne practical catch in the prompt is to omit Gmail maxResults because the poster says it caused intermittent 500 errors; paginate instead.\nTry it yourself\nwith\nCodex\nCopy prompt\nEvery weekday at [time, timezone], fetch my unread Gmail from the last [24 hours] and write a brief of the important ones, grouped as needs reply, FYI and ignorable, with sender and one-line summaries. Post it to my Slack [channel or DM] and stop. Do not reply to, archive or delete any emails, and show me a sample brief before you turn on the schedule.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1tr11ui/i_found_a_prompt_that_makes_codex_better_at",
+    "body_sha256": "197372b6ac68a57294ea55f26123a82b5de4e04eb0ba0d49e725030d1e5097f4",
+    "archived_at": "2026-11-14T08:31:57.419053+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:57.419053+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

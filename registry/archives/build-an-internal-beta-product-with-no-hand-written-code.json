@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-an-internal-beta-product-with-no-hand-written-code",
+  "observed_at": "2026-11-14T08:31:51.427070+00:00",
+  "html_sha256": "79c9a407dc6ffb3d94b2b2505b5f3c6c0c353910109bff6b16958744b370cb2e",
+  "body_sha256": "2ca8b519d80763e8d3c48f8f9d4b388cb68bca935e0020b7828f01a4651452a7",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build an internal beta product with no hand-written code",
+      "sha256": "b19dd9003a928cc1ec6bc20282c99c62a799acff2abc819d0482db5a2b732fa1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A team says it shipped an internal beta using Codex as the main implementation agent, with recurring background tasks scanning for deviations, updating quality grades and opening refactoring PRs.",
+      "sha256": "f315e74654e6016667cd86140a25342ffc44ce298d72c82d8f172a50c4f15499"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A three-engineer team started from an empty repo and used Codex CLI with GPT-5 to generate the scaffold, then kept humans in a prompting role: engineers described tasks, let Codex open PRs, and had it self-review, request additional agent reviews, respond to feedback, and iterate until reviews passed. They also made the app, logs, metrics, docs, and repository rules directly legible to the agent, then ran background Codex jobs on a cadence to scan for deviations, update quality grades, and open refactoring PRs.",
+      "sha256": "d5c47164094d668fcb9bcc0898d9706f4ef6b48b332895dca51ecd2425175a85"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Over about five months, Codex produced roughly a million lines of code and around 1,500 merged PRs for an internal beta with daily internal users and external alpha testers; the team estimates this was about 10x faster than hand-coding. It still broke and needed fixes, and early progress was slow until they built enough scaffolding and constraints for the agent.",
+      "sha256": "f65ca5374d9ed2907f85103448eb8853b88a27887c4c1600f41a1a2d60c2c180"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Most cleanup PRs from the recurring background tasks could be reviewed in under a minute and automerged; the post also says single Codex runs sometimes worked for more than six hours.",
+      "sha256": "390a5bf4e58b0ed6888c4889a0233bee10dbb1019745ea296599f111ca9e0138"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/codex/comments/1r2pw9q/read_this_or_stay_behind"
+      ],
+      "sha256": "b406d8d4e6b812511b5816e944d9e61e4c61cca5c895d4b0ec9793f31c644408"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "01dc9e58167aa91eb6bff4e363b4ded33276abbef7112c2a4c0bd88059647484",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build an internal beta product with no hand-written code\nA team says it shipped an internal beta using Codex as the main implementation agent, with recurring background tasks scanning for deviations, updating quality grades and opening refactoring PRs.\nDone with\nCX\nCodex\nWhat they did\nA three-engineer team started from an empty repo and used Codex CLI with GPT-5 to generate the scaffold, then kept humans in a prompting role: engineers described tasks, let Codex open PRs, and had it self-review, request additional agent reviews, respond to feedback, and iterate until reviews passed. They also made the app, logs, metrics, docs, and repository rules directly legible to the agent, then ran background Codex jobs on a cadence to scan for deviations, update quality grades, and open refactoring PRs.\nHow it went\nOver about five months, Codex produced roughly a million lines of code and around 1,500 merged PRs for an internal beta with daily internal users and external alpha testers; the team estimates this was about 10x faster than hand-coding. It still broke and needed fixes, and early progress was slow until they built enough scaffolding and constraints for the agent.\nWorth knowing\nMost cleanup PRs from the recurring background tasks could be reviewed in under a minute and automerged; the post also says single Codex runs sometimes worked for more than six hours.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path or repo name], implement [small internal feature] from this spec: [spec]. Write the code and tests yourself, then open a pull request with a summary of what changed and how you verified it. Also propose a recurring task that scans for code that deviates from [our conventions], and show me its plan before you set it up.\nOriginal source: https://www.reddit.com/r/codex/comments/1r2pw9q/read_this_or_stay_behind",
+    "body_sha256": "2ca8b519d80763e8d3c48f8f9d4b388cb68bca935e0020b7828f01a4651452a7",
+    "archived_at": "2026-11-14T08:31:51.427070+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:51.427070+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

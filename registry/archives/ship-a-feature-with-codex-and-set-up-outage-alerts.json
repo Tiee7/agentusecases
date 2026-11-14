@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/ship-a-feature-with-codex-and-set-up-outage-alerts",
+  "observed_at": "2026-11-14T08:31:55.282621+00:00",
+  "html_sha256": "6fd508b360ce1dddfb3a55a0d01e8c0a31109aafe62f3fb249548791999f177d",
+  "body_sha256": "1163aae273ab91c2eda5ab167d935a7aa3370c46a181c29958505d1fb9419bce",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Ship a feature with Codex and set up outage alerts",
+      "sha256": "fe100abfbd59c15616181f0f99db0f9c9301c5f447883532ed6d36af817f2ab4"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster used Codex to ship a feature, handing back for manual testing after 30 merged PRs, and gave it a separate task to send notices when a third-party service was down.",
+      "sha256": "73a04383d0094b0db0b377402a369d4c4a28377dee156354a5ba3370ffbbef2c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster stopped line-reading agent PRs and instead used a fresh agent to inventory exactly what each PR changed: schema, jobs, APIs, env vars, dependencies, and feature behavior. In one feature, Codex shipped 30 PRs that Claude and Codex cross-reviewed before the poster manually tested it; for another task, asking for an admin notice when a third-party service failed, the agent independently added Slack/email tracking tables, which the poster would now challenge and cut.",
+      "sha256": "fdd58e532a64b410a04a1d08ccd47a4f68733c1a9a1d78501febcbbe26981e90"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The feature worked well enough to reach manual testing, but after 30 merged PRs it turned out completely over-engineered, despite every PR passing bot cross-review. The outage-alert task also overshot the ask by turning a simple message into extra data modeling.",
+      "sha256": "b1cb5ea3b276e63ea3a7bf8ee47fca859256ed28caec17f82140cb9eccb44739"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main catch is review time: agents can produce far more code than a person can read, so they rely on manual testing and interrogation of unclear additions instead of diff-by-diff review.",
+      "sha256": "671c945d912a7db16e2bb2f407ed73524638283dd990bf72657401b5b190669f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/codex/comments/1xic8ut/dont_review_agent_code_interrogate_it"
+      ],
+      "sha256": "f90f85381997e11f39bff75df6423d48f3c27a41182edbc3bf0cf8b8a4d7c5a9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "301b9aff6835ef3c45017bcae7c4ee6f1b2bffc6fb752f7957769e58021f0a9e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Ship a feature with Codex and set up outage alerts\nThe poster used Codex to ship a feature, handing back for manual testing after 30 merged PRs, and gave it a separate task to send notices when a third-party service was down.\nDone with\nCX\nCodex\nWhat they did\nThe poster stopped line-reading agent PRs and instead used a fresh agent to inventory exactly what each PR changed: schema, jobs, APIs, env vars, dependencies, and feature behavior. In one feature, Codex shipped 30 PRs that Claude and Codex cross-reviewed before the poster manually tested it; for another task, asking for an admin notice when a third-party service failed, the agent independently added Slack/email tracking tables, which the poster would now challenge and cut.\nHow it went\nThe feature worked well enough to reach manual testing, but after 30 merged PRs it turned out completely over-engineered, despite every PR passing bot cross-review. The outage-alert task also overshot the ask by turning a simple message into extra data modeling.\nWorth knowing\nTheir main catch is review time: agents can produce far more code than a person can read, so they rely on manual testing and interrogation of unclear additions instead of diff-by-diff review.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn [repo], build [feature description] and break it into small pull requests, each with tests passing. Stop and hand it back to me for manual testing when [the feature works end to end or N PRs are merged], with a checklist of what I should try. Then set up a separate job that checks whether [third-party service] is down and drafts a notice to [Slack channel or email list]; show me the first notice before anything is sent.\nOriginal source: https://www.reddit.com/r/codex/comments/1xic8ut/dont_review_agent_code_interrogate_it",
+    "body_sha256": "1163aae273ab91c2eda5ab167d935a7aa3370c46a181c29958505d1fb9419bce",
+    "archived_at": "2026-11-14T08:31:55.282621+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:55.282621+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/upgrade-vulnerable-dependencies-via-automated-pull-request",
-  "observed_at": "2026-11-13T08:44:18.635305+00:00",
-  "html_sha256": "8d3320a175cbe8e68feccd95c21656bfe6091619d72ec35605822bc58f42544b",
+  "observed_at": "2026-11-14T08:29:01.493030+00:00",
+  "html_sha256": "70f8f6d49ebc870733e00bb594d2c0df961b7968ca78f1246f166238ee9e893e",
   "body_sha256": "a857a3d11c69ac7f2094861d6fb14f84073ed199a35c23718945ea91c51d6b50",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Upgrade vulnerable dependencies via automated pull request\nDevin opened a PR on a Spring Boot and Next.js sample app upgrading dependencies to fix listed CVEs, including 103 npm vulnerabilities on the frontend.\n·\nApr 29, 2026\nDone with\nDE\nDevin\nWhat they did\nRequested by a user in a Devin session, Devin audited the Spring Boot backend and Next.js frontend and pushed two commits. These upgraded Spring Boot, sqlite-jdbc, Gradle, Next.js, React, axios and marked. It also fixed plaintext password storage, a hardcoded JWT secret and wildcard CORS, and adapted code to SWR v2 and React 18. It left a human checklist for manual testing.\nHow it went\nFrontend npm vulnerabilities fell from 103 (10 critical) to 2 (0 critical). The PR was closed unmerged, superseded by #366. Devin's own review flagged an XSS regression: the marked sanitize option was dropped with no replacement.\nWorth knowing\nLibrary upgrades can silently drop safety options such as marked's sanitize. Check for that, and set JWT_SECRET before deploying. The PR also notes JaCoCo coverage failed at 33%, a pre-existing condition.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my repo [repo URL], upgrade the vulnerable dependencies in [frontend/backend/both] to fix the known CVEs reported by [npm audit / Dependabot / scanner name]. Make sure the build and existing tests still pass after the upgrades. Open a pull request listing which vulnerabilities were fixed, which remain, and any breaking changes you had to handle. Don't merge it.\nOriginal source: https://github.com/Cognition-Partner-Workshops/uc-cve-remediation-regulatory-compliance/pull/181",
     "body_sha256": "a857a3d11c69ac7f2094861d6fb14f84073ed199a35c23718945ea91c51d6b50",
-    "archived_at": "2026-11-13T08:44:18.635305+00:00",
+    "archived_at": "2026-11-14T08:29:01.493030+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:44:18.635305+00:00",
+    "at": "2026-11-14T08:29:01.493030+00:00",
     "status": "fetched",
     "error": null
   }

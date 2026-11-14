@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/monitor-coding-agent-progress-with-periodic-reports",
+  "observed_at": "2026-11-14T08:31:53.425128+00:00",
+  "html_sha256": "a7b6df6f434eccf7ba52d1a8ca21a4d52be9017275e1a6d432d6e35c381d36d5",
+  "body_sha256": "000e770d110eb33c9962a955b30123b4e602d0afe127b1e3db47fc1c6a50d35e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Monitor coding agent progress with periodic reports",
+      "sha256": "d9e96e8fb64d5a1c2c8128cdf631d7b063be8194794c57900d8273eed9af904e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author uses Codex as a hands-off monitor that sends plain-language progress reports every 30 minutes on an implementation agent and can pass messages directly to another agent.",
+      "sha256": "9d2d85e20afccb278a266009bdb0cd958eb0a94d90d7dc2ac2215c83b1a56b14"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author keeps their implementation work in a separate Codex task and sets up another task as a progress monitor. That monitor is scheduled to check in every 30 minutes, send plain-language summaries of what the implementation agent is doing, say whether steering is needed, and, if so, pass a steering prompt directly to the other task via task-to-task messaging instead of making the person interrupt the main worker.",
+      "sha256": "e2b7f8c18f1b18991181f0eff0157323ec917707975a28856be17705c226a3ab"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It helped the author stay hands-off and avoid derailing the implementation agent with constant interruptions. In comments, they say the setup also reduces copy-pasting, but they give no hard performance numbers and note context management is still a constant struggle.",
+      "sha256": "8b018b9bcc693ea5e4c2b8f13646543d86e19a622cff2785eb2ea7cc5aaff929"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch they mention is context bloat: split work too finely and agents waste effort on handoffs; keep tasks too large and they start forgetting earlier rules.",
+      "sha256": "5b6cb4531ad9d038ff9aae7f14eaae5dc73a5201660d17a0cc0a0d911c35dc16"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/codex/comments/1v1puqa/task_to_task_messaging_is_underrated"
+      ],
+      "sha256": "aecc7e3ea78ff390ab8eee880e6b5e8f6604a7cb64a512a103f4d25aeb2ca4b3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "6fc8d67bd2ab747754784aeee825d5c5ea9fa7014cd399a9ca8298f963004b15",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor coding agent progress with periodic reports\nThe author uses Codex as a hands-off monitor that sends plain-language progress reports every 30 minutes on an implementation agent and can pass messages directly to another agent.\nDone with\nCX\nCodex\nWhat they did\nThe author keeps their implementation work in a separate Codex task and sets up another task as a progress monitor. That monitor is scheduled to check in every 30 minutes, send plain-language summaries of what the implementation agent is doing, say whether steering is needed, and, if so, pass a steering prompt directly to the other task via task-to-task messaging instead of making the person interrupt the main worker.\nHow it went\nIt helped the author stay hands-off and avoid derailing the implementation agent with constant interruptions. In comments, they say the setup also reduces copy-pasting, but they give no hard performance numbers and note context management is still a constant struggle.\nWorth knowing\nThe main catch they mention is context bloat: split work too finely and agents waste effort on handoffs; keep tasks too large and they start forgetting earlier rules.\nTry it yourself\nwith\nCodex\nCopy prompt\nWatch the work happening in [repo, branch or terminal session] and every 30 minutes write me a short plain-language progress report covering what changed, what is stuck and what looks risky. Keep going until [the PR is merged or a stop time], and do not edit any code yourself or send messages to other agents without showing me the message first.\nOriginal source: https://www.reddit.com/r/codex/comments/1v1puqa/task_to_task_messaging_is_underrated",
+    "body_sha256": "000e770d110eb33c9962a955b30123b4e602d0afe127b1e3db47fc1c6a50d35e",
+    "archived_at": "2026-11-14T08:31:53.425128+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:53.425128+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

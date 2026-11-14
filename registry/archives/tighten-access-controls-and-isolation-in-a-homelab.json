@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/tighten-access-controls-and-isolation-in-a-homelab",
-  "observed_at": "2026-11-13T08:43:42.713294+00:00",
-  "html_sha256": "4748b2afe37182335679086505e580cfb0ee1e3ec1428d9d20663669365e5533",
+  "observed_at": "2026-11-14T08:28:25.390999+00:00",
+  "html_sha256": "70212cc6718ef642569406ecc5805a21b29ae3b6a068c076d6e6ee37fb33a5b1",
   "body_sha256": "790c17c98e626ac0ea1c64c4bbc191862406f859fdfe3aee378817968ea0cc3f",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Tighten access controls and isolation in a homelab\nA user asked Claude Opus to harden their homelab's access controls; it locked itself out and then refused to continue, so they switched to OpenAI, which finished the job.\n·\nNov 9, 2026\nDone with\nCL\nClaude\nWhat they did\nThe user asked Claude Opus to tighten access controls and isolation in their homelab. Opus produced a plausible-looking design and was told to go ahead. Partway through it locked itself out of something and asked the user to run root commands. The user, away from the computer, told it to sort it out or use the root login it had. They then switched to OpenAI.\nHow it went\nOpus refused to continue, returning a message citing legal/AUP. OpenAI's model, called Sol, picked up where Claude left off and finished the project, though it seemed a little less smart.\nWorth knowing\nThe agent may lock itself out mid-change, so stay reachable or give it a recovery path; here a refusal after that lockout ended the Claude session.\nTry it yourself\nwith\nClaude\nCopy prompt\nI want to harden access controls and network isolation in my homelab, which has [list of hosts, VLANs, services, and how I connect to them]. First, audit the current setup and write a step-by-step plan, with a rollback step and a way to confirm I can still reach each machine after every change. Do not apply any change that could cut off SSH, remote access, or your own connection until you have shown me the exact command and I have approved it, and stop when the plan is done and each change is verified.\nOriginal source: https://news.ycombinator.com/item?id=50432908",
     "body_sha256": "790c17c98e626ac0ea1c64c4bbc191862406f859fdfe3aee378817968ea0cc3f",
-    "archived_at": "2026-11-13T08:43:42.713294+00:00",
+    "archived_at": "2026-11-14T08:28:25.390999+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:43:42.713294+00:00",
+    "at": "2026-11-14T08:28:25.390999+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/verify-github-wiki-pages-render-correctly-in-the-browser",
+  "observed_at": "2026-11-14T08:31:35.396950+00:00",
+  "html_sha256": "0b912b1024bba24a2563fcf2274caf544be9818a7fefad4f5422fa78cb338309",
+  "body_sha256": "156b90457433b4d146a5daf6911656f369996a97bd3412985bf0ac812870e988",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Verify GitHub wiki pages render correctly in the browser",
+      "sha256": "ea5923106aef4d4734779f86f2439f117c7f292240c56ae2dec6f02217545079"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user asked Claude to check that several GitHub wiki pages rendered properly; Claude in Chrome opened the tab on the local PC rather than in the VM they expected, so it only partly worked as intended.\n·\nSep 7, 2026",
+      "sha256": "9c82923669a284c827b1421b2b84187ff249817226d3c70aed01d58eea20e718"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user asked Claude to verify that a few GitHub wiki pages rendered correctly, following Claude’s own suggestion to check them in the browser. Claude triggered its Chrome integration, but because the Claude in Chrome extension was signed into the user’s local Chrome, the browser action opened on the host PC instead of the lab VM reached over RDP; a commenter said this access is account-scoped, not machine-scoped.",
+      "sha256": "e30daa2f2fc5b9e1a25aff847f2d12be6582b07bc55235e0a6962961a2846a08"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It only partly worked for the intended setup: Claude could open the pages, but in the wrong environment, so it did not truly verify rendering inside the VM. The post reports Claude initially gave several incorrect explanations before landing on the account-linked extension behavior.",
+      "sha256": "22f0f98ba81fd4217ea9dca4bc45207b6c7def8f41f571f98eb76566c83f6d8b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "If you want isolation on lab VMs, keep the extension out of your normal host Chrome profile or use a separate signed-out profile except when needed.",
+      "sha256": "3b98393c225e3d4700d22ca93bde24c2f3459ac74bdf87a87746ba71192c27b3"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude in Chrome",
+        "Claude"
+      ],
+      "sha256": "bfeba731f21bda5bb37d66854154518dc692c8c4f2a11b3fe3d02dbaf3a75cf9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1wa4g7a/claude_opened_a_chrome_tab_from_within_a_vm_on_my"
+      ],
+      "sha256": "21bc4ded7d8b9304cba5e65ee5d5d0899487095298a9c75bd7198b1b14406620"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "45dfc8ffca5b5d582af40ea6e45c23b2055a65ae60e294b42fb0f4a642c3b866",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Verify GitHub wiki pages render correctly in the browser\nA user asked Claude to check that several GitHub wiki pages rendered properly; Claude in Chrome opened the tab on the local PC rather than in the VM they expected, so it only partly worked as intended.\n·\nSep 7, 2026\nDone with\nCH\nClaude in Chrome\nCL\nClaude\nWhat they did\nThe user asked Claude to verify that a few GitHub wiki pages rendered correctly, following Claude’s own suggestion to check them in the browser. Claude triggered its Chrome integration, but because the Claude in Chrome extension was signed into the user’s local Chrome, the browser action opened on the host PC instead of the lab VM reached over RDP; a commenter said this access is account-scoped, not machine-scoped.\nHow it went\nIt only partly worked for the intended setup: Claude could open the pages, but in the wrong environment, so it did not truly verify rendering inside the VM. The post reports Claude initially gave several incorrect explanations before landing on the account-linked extension behavior.\nWorth knowing\nIf you want isolation on lab VMs, keep the extension out of your normal host Chrome profile or use a separate signed-out profile except when needed.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen each of these GitHub wiki pages in my browser: [list of wiki page URLs]. For each one, check that the formatting renders correctly, including headings, tables, code blocks, images, and internal links, and click a few links to confirm they don't lead to 404s. When you're done, give me a list of pages that look fine and, for any that don't, a description of what is broken and where. Don't edit anything; just report.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wa4g7a/claude_opened_a_chrome_tab_from_within_a_vm_on_my",
+    "body_sha256": "156b90457433b4d146a5daf6911656f369996a97bd3412985bf0ac812870e988",
+    "archived_at": "2026-11-14T08:31:35.396950+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:35.396950+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

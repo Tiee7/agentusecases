@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-sandboxed-claude-code-fleet-sharing-files-via-mcp",
-  "observed_at": "2026-11-13T08:06:22.581353+00:00",
-  "html_sha256": "c42579480b638a23bc96e92dca2b275a09a4d5052a4a81aea93e3bd03edc2685",
+  "observed_at": "2026-11-14T07:51:05.329428+00:00",
+  "html_sha256": "dcac4d957d976e96bc4f8c4f07f5258fa4082c1f246d174486d3f7835e3ed2d0",
   "body_sha256": "f3e18b9d3b262d5e32150ada5bad2532232d374bdd097df3eedddba8049d9c54",
   "status": "observed",
   "fields": {
@@ -95,7 +95,7 @@
     "language": "en",
     "body": "Run sandboxed Claude Code fleet sharing files via MCP\nA developer runs a fleet of sandboxed Claude Code instances that share files through MCP tools on a virtual filesystem, with an orchestrator handling AWS storage and audit logs.\n·\nSep 21, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe developer runs a fleet of sandboxed Claude Code instances that exchange files. Agents get MCP tools to list, upload and download from a virtual filesystem using a custom URI scheme (agentfiles://). An outer orchestrator receives those MCP requests and does the real file work on AWS, so the agents never see credentials or know AWS is involved.\nHow it went\nThe model adapted well to the unusual filesystem, and the agents stayed fully compartmentalized. Tool request logs plus orchestrator logs give full auditing. The source gives no numbers.\nWorth knowing\nKeep storage credentials in the orchestrator and expose only narrow MCP file tools, so sandboxed agents never touch the backend directly.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me design a small fleet of sandboxed Claude Code instances that share files through an MCP server exposing a virtual filesystem. Build a minimal prototype with [number] agents, a shared file store backed by [local folder or S3 bucket], and an audit log of every file read and write. Stop when two agents can pass a file to each other and I can read the log, and ask before touching any cloud resources or credentials.\nOriginal source: https://news.ycombinator.com/item?id=49782293",
     "body_sha256": "f3e18b9d3b262d5e32150ada5bad2532232d374bdd097df3eedddba8049d9c54",
-    "archived_at": "2026-11-13T08:06:22.581353+00:00",
+    "archived_at": "2026-11-14T07:51:05.329428+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "source_history": [
@@ -113,7 +113,7 @@
     }
   ],
   "last_attempt": {
-    "at": "2026-11-13T08:06:22.581353+00:00",
+    "at": "2026-11-14T07:51:05.329428+00:00",
     "status": "fetched",
     "error": null
   }

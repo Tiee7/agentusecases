@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-cross-site-trend-analyzer-dashboard",
+  "observed_at": "2026-11-14T08:31:41.440901+00:00",
+  "html_sha256": "096f8bf83b97c66c9270d178bc67f40cb4789ea82caf56fe1e5259f33fb73a9c",
+  "body_sha256": "05e278a334f2e17057147fe93f63c27f11c3b68c1ecd579e293d77499f44aa0d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a cross-site trend analyzer dashboard",
+      "sha256": "93b861a8792d6c761da4587741e9557c7700f7bc07182423c2fb748257e7625b"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter had Claude Code write scrapers for GitHub, Hacker News, Reddit and Product Hunt, handle rate limits, and produce a ranked dashboard.\n·\nOct 31, 2026",
+      "sha256": "02e462b17a1d306baa1939d21d8d6ad69e5f5b7ac353a8b2434ce82537cd69e0"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They asked Claude to build a trend analyzer that pulled posts from GitHub, Hacker News, Reddit, and Product Hunt, then group them into product ideas and score them by demand versus effort. Claude wrote the scrapers on its own; when Reddit’s unauthenticated JSON endpoints returned 403s, the commenter switched it to Reddit RSS feeds, estimated popularity from a post’s rank in top this month, and slowed requests with about 8-second waits plus backoff on 429s.",
+      "sha256": "29fa495fb7f4ad0e74f371f3ca20df42ecd581ab6a218f0f05dbb696d9099f65"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced a ranked dashboard, and the commenter said it worked despite them not being a developer. The Reddit workaround lost real upvote and comment counts, so popularity on that source was only estimated.",
+      "sha256": "961f9e325974084f06ade7eefc37a5000a9ae2eb1d4fbe907aca3cd47e10c3cc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "If you copy this, the main catch was Reddit: RSS worked without auth, but it rate-limited quickly and forced approximate scoring instead of true vote totals.",
+      "sha256": "e9ff126432da813086e59deb424e868f512968439b2d44e6ee12f480ed4fc0d3"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeCode/comments/1xjlo5p/whats_your_best_holy_sht_that_actually_worked"
+      ],
+      "sha256": "859e19cb24bfba91adfff4407b7dac81f8f8b4f8ec847a0e541c91960764463c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-13",
+      "sha256": "c632fb16191a345891994e0829686cf2ba7aa7801f849afd27546548acf3347d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "dcee246c528639d775457c3635a8c9a5c8c306ae0b6edbc76b4aabc46faf17a8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a cross-site trend analyzer dashboard\nA commenter had Claude Code write scrapers for GitHub, Hacker News, Reddit and Product Hunt, handle rate limits, and produce a ranked dashboard.\n·\nOct 31, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThey asked Claude to build a trend analyzer that pulled posts from GitHub, Hacker News, Reddit, and Product Hunt, then group them into product ideas and score them by demand versus effort. Claude wrote the scrapers on its own; when Reddit’s unauthenticated JSON endpoints returned 403s, the commenter switched it to Reddit RSS feeds, estimated popularity from a post’s rank in top this month, and slowed requests with about 8-second waits plus backoff on 429s.\nHow it went\nIt produced a ranked dashboard, and the commenter said it worked despite them not being a developer. The Reddit workaround lost real upvote and comment counts, so popularity on that source was only estimated.\nWorth knowing\nIf you copy this, the main catch was Reddit: RSS worked without auth, but it rate-limited quickly and forced approximate scoring instead of true vote totals.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a small project that collects trending items from [sources, e.g., GitHub, Hacker News, Reddit, Product Hunt] about [topic or keywords]. Write a scraper for each source, handle rate limits and failures gracefully, and combine the results into a ranked, readable dashboard in [HTML or other format]. You're done when I can run one command, open the dashboard, and see the top [number] items with links and scores.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1xjlo5p/whats_your_best_holy_sht_that_actually_worked",
+    "body_sha256": "05e278a334f2e17057147fe93f63c27f11c3b68c1ecd579e293d77499f44aa0d",
+    "archived_at": "2026-11-14T08:31:41.440901+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-14T08:31:41.440901+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

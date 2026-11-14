@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/fix-an-agent-s-charset-decoding-of-fetched-web-pages",
-  "observed_at": "2026-11-13T08:44:29.020195+00:00",
-  "html_sha256": "f4284a180b3086f36d7160ece2dd3994282d7e74aad279456efde245b296c256",
+  "observed_at": "2026-11-14T08:29:11.393450+00:00",
+  "html_sha256": "87f12c4a567c337b05766b93396432eb84144a89f6f007b6e3d7c0662a8e9bb3",
   "body_sha256": "17be178114c8d02fb0a9a35bf0b94c1c5cd4ba99aaf4efa3507ea9b838664718",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Fix an agent's charset decoding of fetched web pages\nA contributor fixed OpenClaw's link-understanding step, which decoded Shift_JIS pages as replacement characters, by reusing the existing charset-aware decoder, and verified it end to end.\n·\nOct 31, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nThe contributor found OpenClaw's link-understanding step decoding fetched pages with a plain UTF-8 decoder, ignoring declared charsets. The codebase already had a charset-aware decoder in web_fetch, so they exported and reused it rather than writing another. They tested through the real production path with the SSRF guard enabled.\nHow it went\nReplacement characters on an Aozora Bunko Shift_JIS page fell from 208,953 to 0, and on a second legacy site from 13 to 0. The maintainer re-ran it through a built Gateway before merging.\nWorth knowing\nAn earlier attempt stalled because its strict decoder would reject pages declaring no charset; the reused decoder falls back to UTF-8 for unknown labels, avoiding that.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nIn my OpenClaw checkout, find why fetched web pages in [language or encoding, e.g. Shift_JIS] come out as replacement characters in the link-understanding step. Fix it by reusing the existing charset-aware decoder rather than writing new code, add a test using a sample page in that encoding, and run it end to end against [a real URL]. Stop when the test passes and show me the diff before committing anything.\nOriginal source: https://news.ycombinator.com/item?id=50314325",
     "body_sha256": "17be178114c8d02fb0a9a35bf0b94c1c5cd4ba99aaf4efa3507ea9b838664718",
-    "archived_at": "2026-11-13T08:44:29.020195+00:00",
+    "archived_at": "2026-11-14T08:29:11.393450+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-13T08:44:29.020195+00:00",
+    "at": "2026-11-14T08:29:11.393450+00:00",
     "status": "fetched",
     "error": null
   }
