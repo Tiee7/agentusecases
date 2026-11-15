@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/rebuild-scanned-pages-as-vector-pdfs",
+  "observed_at": "2026-11-15T08:45:01.414730+00:00",
+  "html_sha256": "4d0c039e2042b621740f07d42badfa9bb70462ea5aed12e3a64968106bc3e0cc",
+  "body_sha256": "ee227bff7bffdd2c3387d13f0ad8df5541742fac684c094954a2d8c54b9c33cc",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Rebuild scanned pages as vector PDFs",
+      "sha256": "998a39320413dbc1268aaf6a630735d5eb3599e09175a903809d27010a67cd31"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Claude Code and Codex skill redraws scans and phone photos as new PDFs with real text, vector diagrams and original layout, benchmarked with and without the skill.\n·\nNov 4, 2026",
+      "sha256": "ffa4992d15ef7ba020d059658f82e2a53ffb196c9b00a4f83a5377c28a9960ff"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The skill takes over the steps where agents go wrong. A script measures everything in scan pixels, one command drafts every page, and the agent reads doubtful words from an enlarged contact sheet per page. Each rebuild is overlaid on the scan, and a report lists what is still missing. Fixing a word is one line in a JSON file.",
+      "sha256": "e0e6297d6ce7b225606d4c0edb1a6a595cb7dfc74266b332b9aafdcdc52f300e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On two unseen 9-page synthetic documents, scores rose from about 0.84 to 0.997 for Haiku and Fable. Sonnet and Opus were already near 0.994 and reached 0.998. Gains were within noise on 3-page packets for Sonnet and Opus.",
+      "sha256": "1491006d7033bcd036c82dcc70cb43815bd73dc4bb313255a48f0508d3c8c858"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "It takes minutes of agent time per page, and Opus and Fable ran slower with the skill; for searchable text alone, OCRmyPDF is the better tool.",
+      "sha256": "c227007db0f520c690140df91ed866cde03b93fe4317ef434a852443f3f3c247"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Codex",
+        "Claude"
+      ],
+      "sha256": "c6ab836cbea3c5145172f3fc98a9e37a28a8715015f5e64d13246f3290f51ace"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50365700"
+      ],
+      "sha256": "9378012e5c40b31e741d3854a9ac96a93d1de60f627fb9b9abfb6c74f6325f38"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "0868e8af0f748d87ab80819c0cb59c2b07b488e75602931b886ebbd87c21b40f",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Rebuild scanned pages as vector PDFs\nA Claude Code and Codex skill redraws scans and phone photos as new PDFs with real text, vector diagrams and original layout, benchmarked with and without the skill.\n·\nNov 4, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nCL\nClaude\nWhat they did\nThe skill takes over the steps where agents go wrong. A script measures everything in scan pixels, one command drafts every page, and the agent reads doubtful words from an enlarged contact sheet per page. Each rebuild is overlaid on the scan, and a report lists what is still missing. Fixing a word is one line in a JSON file.\nHow it went\nOn two unseen 9-page synthetic documents, scores rose from about 0.84 to 0.997 for Haiku and Fable. Sonnet and Opus were already near 0.994 and reached 0.998. Gains were within noise on 3-page packets for Sonnet and Opus.\nWorth knowing\nIt takes minutes of agent time per page, and Opus and Fable ran slower with the skill; for searchable text alone, OCRmyPDF is the better tool.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI have scanned pages and phone photos in [folder path]. Rebuild each one as a new PDF with real selectable text, vector redraws of any diagrams or figures, and the original layout, fonts and spacing matched as closely as you can. Save the results in [output folder] without touching the originals, then compare each new PDF with its source and list any spots where text or diagrams differ so I can check them.\nOriginal source: https://news.ycombinator.com/item?id=50365700",
+    "body_sha256": "ee227bff7bffdd2c3387d13f0ad8df5541742fac684c094954a2d8c54b9c33cc",
+    "archived_at": "2026-11-15T08:45:01.414730+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:45:01.414730+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

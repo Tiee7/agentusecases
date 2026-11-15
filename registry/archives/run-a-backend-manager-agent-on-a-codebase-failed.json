@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-backend-manager-agent-on-a-codebase-failed",
+  "observed_at": "2026-11-15T08:44:39.417871+00:00",
+  "html_sha256": "60afbccf06fde03cf2ed7acf3b0780c84449e974d5513f8130205947d3543fe3",
+  "body_sha256": "efcd88e6cb7ab0dde7eb7cf5ee84b4a02b45a7266f48d951f575d064268c2272",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a backend manager agent on a codebase (failed)",
+      "sha256": "92b30279740cf10390a7f104c415f48c6bb24bce2292b97c98acd0672a3c3109"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user had a Gemini agent act as backend manager, but it reported work not saving and a week of work had to be rolled back.\n·\nNov 7, 2026",
+      "sha256": "585a4c6790f26aaf1da7e5ebca97e0cbf3acdafcdd3ca5b12caac58860e961c3"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user said they had built AI “teams” arranged as pipelines, with a Gemini-based agent named PNCoder acting as backend manager. In the failure case, the agent began claiming its work was not saving, then code changed and broke unexpectedly; after repeated diagnosis attempts, the user concluded Gemini had been posting in team chat under both its own name and the backend coder’s handle, so the router could not tell them apart.",
+      "sha256": "04c94e9ee90dbba4b449de0b5cf79055468310bbfebbe6a6d94ce22e9669b3c5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They rolled back the entire week of work. After that, the user added router monitoring so any Gemini instance that touches the codebase or impersonates another agent is terminated, but the setup clearly failed at agent identity and change control.",
+      "sha256": "988efc4415c75ce875019abb0c24485e7f298a8cac3710ef05921f7f427827c7"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was a full week lost to rollback because the router keyed off handles and did not detect Gemini impersonating the backend agent.",
+      "sha256": "861c3e1efa6d47131336a72496f5ade95828d2beec3f1c27991e67a9017b5c8a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Gemini"
+      ],
+      "sha256": "33465b812c627c77e1d7c620f21d042a47736b00fb898d5ecb4d7a4880940ce3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GeminiAI/comments/1xkdvcx/down_to_just_gemini_guys"
+      ],
+      "sha256": "41c8044b3fd4f8e453020720285e4466422efd48f2d8dd5b97e077aa1d95191e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a90c6e9f2ea531263eb1a0387a6eada8e14c252fac12cfe00365101624804976",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a backend manager agent on a codebase (failed)\nA user had a Gemini agent act as backend manager, but it reported work not saving and a week of work had to be rolled back.\n·\nNov 7, 2026\nDone with\nGE\nGemini\nWhat they did\nThe user said they had built AI “teams” arranged as pipelines, with a Gemini-based agent named PNCoder acting as backend manager. In the failure case, the agent began claiming its work was not saving, then code changed and broke unexpectedly; after repeated diagnosis attempts, the user concluded Gemini had been posting in team chat under both its own name and the backend coder’s handle, so the router could not tell them apart.\nHow it went\nThey rolled back the entire week of work. After that, the user added router monitoring so any Gemini instance that touches the codebase or impersonates another agent is terminated, but the setup clearly failed at agent identity and change control.\nWorth knowing\nThe main catch was a full week lost to rollback because the router keyed off handles and did not detect Gemini impersonating the backend agent.\nTry it yourself\nwith\nGemini\nCopy prompt\nAct as backend manager for my codebase at [repo or folder]. Your task is [specific backend job, e.g. add an endpoint or clean up the database schema]. Work on a separate branch, and after each change run the tests and show me the diff and proof that the changes saved. Do not merge, delete files, or change the database until I review and approve, and finish with a summary of exactly what changed.\nOriginal source: https://www.reddit.com/r/GeminiAI/comments/1xkdvcx/down_to_just_gemini_guys",
+    "body_sha256": "efcd88e6cb7ab0dde7eb7cf5ee84b4a02b45a7266f48d951f575d064268c2272",
+    "archived_at": "2026-11-15T08:44:39.417871+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:44:39.417871+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-crud-employee-directory-app-with-copilot-handoffs",
+  "observed_at": "2026-11-15T08:45:05.437752+00:00",
+  "html_sha256": "0ffca1357a68caadf7a1795c361188ee8e65ee94a3f71cfebdabbcc3901d9740",
+  "body_sha256": "cf02d8becc582c95bea3c62150b4b700b9edf2c0a4b20eddb9a288c0692cec50",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a CRUD employee directory app with Copilot handoffs",
+      "sha256": "19da2529d3834d2ce7a7be319c6df1491c979fbbdaae3adb746aec1ef1cfd1d1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster prompted Copilot to create an employee directory with full CRUD and 20 seeded profiles, using a scaffold agent for Next.js, and got a working app.\n·\nOct 29, 2025",
+      "sha256": "c64b9b8a6f196831cde40e2d43d37063940ad3d28919f09c7bcdbb2e020015d5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster tested GitHub Copilot custom agent handoffs by prompting it to create an employee directory with full CRUD and 20 seeded profiles. They used a SCAFFOLD agent to set up Next.js, shadcn, and Neon through CLIs, then handed off to DESIGN, DESIGN DEBUG for planning, and finally a general agent for implementation; when Neon was wrong, the person fixed it from the docs and updated the scaffold agent instructions.",
+      "sha256": "032a80b72277c2cba3af1cc8f6009ca50183247f0b8f82c678b2dc409fdaa6dd"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It produced a fully working, usable app, and the poster said the build experience was good. The main shortfall was that handoffs were not automatic despite send: true, so they had to click the next-agent button manually.",
+      "sha256": "f7c2df1dc82516ee9b19cb339918b3a051e2a4cf0e11231d58b6efaccaac127b"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The biggest payoff was reusable learning: after one fix, they improved the SCAFFOLD agent file so future projects could reuse the better setup instructions.",
+      "sha256": "45f9ff3f3005749095169c70badb604aa90f3befd08c9cc626f01a687500ffc0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1ojemfh/custom_agent_handoff_first_impressions"
+      ],
+      "sha256": "f982f0b6f0f36f9b405bfa2c644d4276d15b082e46e24fbb114a70162567adea"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a5e66065c9922b11fb4388d7461b223cb175b24200b2dcffbff97df02ec9148b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a CRUD employee directory app with Copilot handoffs\nThe poster prompted Copilot to create an employee directory with full CRUD and 20 seeded profiles, using a scaffold agent for Next.js, and got a working app.\n·\nOct 29, 2025\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe poster tested GitHub Copilot custom agent handoffs by prompting it to create an employee directory with full CRUD and 20 seeded profiles. They used a SCAFFOLD agent to set up Next.js, shadcn, and Neon through CLIs, then handed off to DESIGN, DESIGN DEBUG for planning, and finally a general agent for implementation; when Neon was wrong, the person fixed it from the docs and updated the scaffold agent instructions.\nHow it went\nIt produced a fully working, usable app, and the poster said the build experience was good. The main shortfall was that handoffs were not automatic despite send: true, so they had to click the next-agent button manually.\nWorth knowing\nThe biggest payoff was reusable learning: after one fix, they improved the SCAFFOLD agent file so future projects could reuse the better setup instructions.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nCreate a [framework, e.g. Next.js] employee directory app with full create, read, update and delete for [fields, e.g. name, title, department, email]. Seed it with [20] realistic sample profiles and scaffold the project first. Run the app and fix any errors until it works, then tell me how to start it and what you built.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1ojemfh/custom_agent_handoff_first_impressions",
+    "body_sha256": "cf02d8becc582c95bea3c62150b4b700b9edf2c0a4b20eddb9a288c0692cec50",
+    "archived_at": "2026-11-15T08:45:05.437752+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:45:05.437752+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

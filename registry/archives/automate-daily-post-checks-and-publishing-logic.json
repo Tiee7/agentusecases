@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-daily-post-checks-and-publishing-logic",
+  "observed_at": "2026-11-15T08:45:15.366838+00:00",
+  "html_sha256": "b90131bd90d68112d0f70975a70fd718e8bff8fd5e5179d8fa09c6ed7f1475ce",
+  "body_sha256": "aeff33708286ba434e1c1291bf5b7a86bc3c06e0506eb668a193b3fa72849a5c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate daily post checks and publishing logic",
+      "sha256": "f81735b7845c5ddb1cc34045b1e254a3f9f88ce1779509b95f1d46c8ad5adca3"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Zapier agent watches for a post with today's date, checks whether it was already posted, analyzes the copy, and uses Zapier Tables.",
+      "sha256": "05706a3282b267d959a582614897ed3ee5f5461ec8cf6f98ef47b00408c14ec5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster had been trying to build a Zap that pulled scheduled LinkedIn copy from a Zapier Table fed by an interface and published it on the right day. Their colleague replaced the Scheduler -> Table -> LinkedIn Zap with an agent instructed to find a record whose calendar date matched the current date, confirm it had not already been posted, extract the copy, and send it to LinkedIn while preserving line breaks and emojis.",
+      "sha256": "f2371dcc873406a96e4b1c748a68fd94afacc05234cce4c4960b12171da169e0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It worked much faster to set up than the original Zap attempt: the poster says they spent hours on the Zap, while the colleague built the agent in about 15 minutes. The main issue the agent solved was formatting preservation for emojis and line breaks, which had been the sticking point in the Zap.",
+      "sha256": "02ed3578ddb64346246a029da5dbfe0b4adda97fd73fa38fbdb4ba90ccae362f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The clearest catch was formatting: the original Zap struggled with emojis and line breaks from the table, so the agent needed an explicit instruction to preserve the copy exactly.",
+      "sha256": "cb2909f4cc315b89e7931e7c0b59eb5d8a3227dbc8a10ba4a96f8457fc149461"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Zapier Agents"
+      ],
+      "sha256": "f722674cb518bc01691d24a4b486658dab34c0fb35457369b48d016a51218db9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/zapier/comments/1mf6cge/agent_embarrassment"
+      ],
+      "sha256": "2cef6335feafc4a13bc9dbb3b61cc91b07905b685ed5f651da764c314bab1fb8"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "9aefd58d5c4717439696d413eecd742441da5b98d36e4e27081ecd8a6a82dbd5",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate daily post checks and publishing logic\nA Zapier agent watches for a post with today's date, checks whether it was already posted, analyzes the copy, and uses Zapier Tables.\nDone with\nZA\nZapier Agents\nWhat they did\nThe poster had been trying to build a Zap that pulled scheduled LinkedIn copy from a Zapier Table fed by an interface and published it on the right day. Their colleague replaced the Scheduler -> Table -> LinkedIn Zap with an agent instructed to find a record whose calendar date matched the current date, confirm it had not already been posted, extract the copy, and send it to LinkedIn while preserving line breaks and emojis.\nHow it went\nIt worked much faster to set up than the original Zap attempt: the poster says they spent hours on the Zap, while the colleague built the agent in about 15 minutes. The main issue the agent solved was formatting preservation for emojis and line breaks, which had been the sticking point in the Zap.\nWorth knowing\nThe clearest catch was formatting: the original Zap struggled with emojis and line breaks from the table, so the agent needed an explicit instruction to preserve the copy exactly.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nCreate a Zapier agent that checks [blog CMS / Google Sheet / Notion] each morning for a post dated today. It should look in a Zapier Table to see whether that post was already published, review the copy for [tone, length, or other rules], and record the result in the table. If it's new and passes, show me the post and ask for approval before publishing to [platform].\nOriginal source: https://www.reddit.com/r/zapier/comments/1mf6cge/agent_embarrassment",
+    "body_sha256": "aeff33708286ba434e1c1291bf5b7a86bc3c06e0506eb668a193b3fa72849a5c",
+    "archived_at": "2026-11-15T08:45:15.366838+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:45:15.366838+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

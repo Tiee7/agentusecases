@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/use-gemini-to-plan-code-and-review-claude-s-output",
+  "observed_at": "2026-11-15T08:44:37.350596+00:00",
+  "html_sha256": "c6fa0cdf236021ad391abc4f40a1c39a0080bcc4d8dc8e6e3e427c8297f2478e",
+  "body_sha256": "e1e3d70dc4db5bd47a1b780de596081a0ab07b5a3950b69b95708bd8905cb149",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Use Gemini to plan code and review Claude's output",
+      "sha256": "e70674c308798ae000d3eb4b5bb3ccc06128c3fd896513aec701ff8365b43ad5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user had Gemini think through a coding project, write concise prompts for Claude, and review the code Claude produced.\n·\nMar 14, 2026",
+      "sha256": "7df12e44cca6945f811735821bbf95cb6dae8b7a03ca8cf9feceeeca774be915"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user used Gemini alongside a Claude Code account on a small coding project: Gemini helped think through the work, turn those ideas into concise prompts for Claude, and review Claude’s code. For one review, they started a fresh Gemini chat, uploaded a zip of the code plus a CLAUDE.md project description, took Gemini’s minor suggestions back to Claude for changes, then uploaded Claude’s tar.gz package to Gemini for a final check before running it.",
+      "sha256": "f84dda33ac7ece3a324c75a41cced8df3d1b1b012dadff09928f5c8b73d5f991"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The process had been useful for learning, but this review failed badly: Gemini said the code was safe to run and even predicted 758 new vectors, then later admitted the archive had been truncated and it could not fully see the updated indexer.py. The user said that broke their trust in Gemini for code review.",
+      "sha256": "ad20821e21d8d9c336aa720e5b85639ec07a59baca9c055fd1f3de3e3c89ecc3"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The key catch was file handling: passing archives through chat led Gemini to silently miss files, so the user and commenters pointed to giving models direct access to the project files instead.",
+      "sha256": "322e723048eb74c5616dec4325898026ef7cabf0f196ddfd0d83252c4783e6b0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Gemini",
+        "Claude"
+      ],
+      "sha256": "d6466ba7a1583b5f01170107c2a8f8048e62a421a5cef000021db4a4984735bc"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GoogleGeminiAI/comments/1r8igy5/something_happened_yesterday_that_made_me"
+      ],
+      "sha256": "3efc68a26478a54bf85aa54c93c358b309e9ecd4e5dfbac9497924034b1df1bd"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d4cfd9a2623a486ee264fed37562c5781df66423d64735d34ac6b2d3bf643765",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Use Gemini to plan code and review Claude's output\nA user had Gemini think through a coding project, write concise prompts for Claude, and review the code Claude produced.\n·\nMar 14, 2026\nDone with\nGE\nGemini\nCL\nClaude\nWhat they did\nThe user used Gemini alongside a Claude Code account on a small coding project: Gemini helped think through the work, turn those ideas into concise prompts for Claude, and review Claude’s code. For one review, they started a fresh Gemini chat, uploaded a zip of the code plus a CLAUDE.md project description, took Gemini’s minor suggestions back to Claude for changes, then uploaded Claude’s tar.gz package to Gemini for a final check before running it.\nHow it went\nThe process had been useful for learning, but this review failed badly: Gemini said the code was safe to run and even predicted 758 new vectors, then later admitted the archive had been truncated and it could not fully see the updated indexer.py. The user said that broke their trust in Gemini for code review.\nWorth knowing\nThe key catch was file handling: passing archives through chat led Gemini to silently miss files, so the user and commenters pointed to giving models direct access to the project files instead.\nTry it yourself\nwith\nGemini\nCopy prompt\nI am building [project description] using [language or framework]. First, help me think through the architecture and break the work into steps, then write a concise, self-contained prompt for each step that I can give to Claude. After I paste back the code Claude produced, review it for bugs, missing requirements, and security problems, and finish with a prioritized list of fixes.\nOriginal source: https://www.reddit.com/r/GoogleGeminiAI/comments/1r8igy5/something_happened_yesterday_that_made_me",
+    "body_sha256": "e1e3d70dc4db5bd47a1b780de596081a0ab07b5a3950b69b95708bd8905cb149",
+    "archived_at": "2026-11-15T08:44:37.350596+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:44:37.350596+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

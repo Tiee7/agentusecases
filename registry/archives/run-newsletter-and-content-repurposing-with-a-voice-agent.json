@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-newsletter-and-content-repurposing-with-a-voice-agent",
+  "observed_at": "2026-11-15T08:45:09.351717+00:00",
+  "html_sha256": "7fa054ee05cbe7bdb9601eac881af75e024a53c939934e0790190262d88d6c2a",
+  "body_sha256": "63ee6fb4c672600859f97e0327951a5f681b150589ba789f38c3dcc260ff1837",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run newsletter and content repurposing with a voice agent",
+      "sha256": "880e04656877baf40724baa294e2cf333067db538aef7ccf66bfc20a8f1e39e5"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A voice agent hands work to n8n, which writes a daily AI newsletter, generates images, repurposes content into threads and video scripts, and does research.\n·\nJul 29, 2025",
+      "sha256": "f35f6e74addf8b97362a5bac09a258346190eccab3c4a5d7379d443cfe984378"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The setup used an ElevenLabs voice agent as the front end and a single webhook tool to pass full spoken requests into an n8n workflow. In n8n, an agent node with daily memory picked from custom sub-workflows such as writing the newsletter from scraped AI news, generating branded images, turning the newsletter into a Twitter thread and short-form script, creating a HeyGen avatar video, and running Perplexity-based research; the human mainly assigned work by voice and extended the system by adding new tools.",
+      "sha256": "3d3cab9134fbc6c537fe949ab669d80567fb528d1986001a7e7916223da7ef46"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The poster says it now handles a daily AI newsletter with 10k subscribers plus repurposing, image generation, video creation, and research. The post presents architecture and a demo, but it does not give before-and-after time savings or quality benchmarks.",
+      "sha256": "14e0fea7ab1eb330ee0616cd4ebf92f320a6d6f0564f95eda7c70769da33fb97"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A key implementation catch is the date-based memory key, which lets same-day follow-ups like “repurpose the newsletter” work with the earlier output.",
+      "sha256": "b15a417da3baee3e2011f2d22fe90401c383bc02464fcfbe52652b1ac96616a0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1mch7p6/i_built_an_ai_voice_agent_that_replaced_my_entire"
+      ],
+      "sha256": "26f2108d0a0c949f90ec4537ef6ff0c6d353463d0f145785fcd547d456dcfd48"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-14",
+      "sha256": "0d6e26ddd58d94bc10d172fdd51f25341599247029f8d9966f83cf2910ac2831"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "991401c714730c7b420320129004e9e69f8191b632e6ae4560741ca38a9bdbe4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run newsletter and content repurposing with a voice agent\nA voice agent hands work to n8n, which writes a daily AI newsletter, generates images, repurposes content into threads and video scripts, and does research.\n·\nJul 29, 2025\nDone with\nN8\nn8n\nWhat they did\nThe setup used an ElevenLabs voice agent as the front end and a single webhook tool to pass full spoken requests into an n8n workflow. In n8n, an agent node with daily memory picked from custom sub-workflows such as writing the newsletter from scraped AI news, generating branded images, turning the newsletter into a Twitter thread and short-form script, creating a HeyGen avatar video, and running Perplexity-based research; the human mainly assigned work by voice and extended the system by adding new tools.\nHow it went\nThe poster says it now handles a daily AI newsletter with 10k subscribers plus repurposing, image generation, video creation, and research. The post presents architecture and a demo, but it does not give before-and-after time savings or quality benchmarks.\nWorth knowing\nA key implementation catch is the date-based memory key, which lets same-day follow-ups like “repurpose the newsletter” work with the earlier output.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me set up a content pipeline for my [topic] newsletter. Each day it should research the top [number] stories from [sources], write a newsletter draft in my voice using [sample past issue], and generate a header image idea. Then repurpose the draft into a thread and a short video script. Save everything as files in [folder] and stop for my review; do not publish or send anything.\nOriginal source: https://www.reddit.com/r/n8n/comments/1mch7p6/i_built_an_ai_voice_agent_that_replaced_my_entire",
+    "body_sha256": "63ee6fb4c672600859f97e0327951a5f681b150589ba789f38c3dcc260ff1837",
+    "archived_at": "2026-11-15T08:45:09.351717+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-15T08:45:09.351717+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
