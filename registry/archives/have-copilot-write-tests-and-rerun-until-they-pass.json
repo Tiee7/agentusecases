@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/have-copilot-write-tests-and-rerun-until-they-pass",
-  "observed_at": "2026-11-15T08:41:03.430082+00:00",
-  "html_sha256": "273e75c93e3686dd0b7b90751d0c245da0fafb64c050af88cd20979d88357a50",
+  "observed_at": "2026-11-16T08:46:45.636546+00:00",
+  "html_sha256": "4f8597959958c0dd697fba8d18526a7e0d9061240a3ceeffdb00c39e956ffc7e",
   "body_sha256": "b39046302b76d9687a271ce68078ce78622439c9f867cb95ec209e52ee534197",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Have Copilot write tests and rerun until they pass\nA commenter set custom instructions so Copilot writes tests and reruns them until passing, needing three manual approval clicks.\nDone with\nGH\nGitHub Copilot\nWhat they did\nA commenter said they used GitHub Copilot with custom instructions telling it that whenever it wrote tests, it should keep executing the tests until they passed. In their run, Copilot created a test, ran it, saw the failure, chose on its own to rerun with a \"--info\" flag to get more detail, then changed the code and ran the tests again; the human only had to approve each terminal run.\nHow it went\nIt eventually got the test passing in that example after three approved runs. The stated limitation was that Copilot still stopped for a human permission click before each terminal command.\nWorth knowing\nThe practical catch was three manual approval clicks for terminal execution, even though the debugging loop itself was automatic.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nWrite tests for [file, function, or module] using [test framework]. Run them, and if any fail, fix the code or tests and rerun until the whole suite passes. Stop when everything is green and give me a short summary of what you changed and which tests you added. Pause and ask before running any command that installs packages or deletes files.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1kmpoov/can_copilot_control_copilot_without_human",
     "body_sha256": "b39046302b76d9687a271ce68078ce78622439c9f867cb95ec209e52ee534197",
-    "archived_at": "2026-11-15T08:41:03.430082+00:00",
+    "archived_at": "2026-11-16T08:46:45.636546+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-15T08:41:03.430082+00:00",
+    "at": "2026-11-16T08:46:45.636546+00:00",
     "status": "fetched",
     "error": null
   }

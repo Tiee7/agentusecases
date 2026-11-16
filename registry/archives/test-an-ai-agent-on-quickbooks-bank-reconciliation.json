@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/test-an-ai-agent-on-quickbooks-bank-reconciliation",
+  "observed_at": "2026-11-16T08:51:33.689042+00:00",
+  "html_sha256": "15ca0e6640c3c7af9b2bc13db4547042b070d31e5037c620c67d7764403881c9",
+  "body_sha256": "ef42ce8cb3da2a303a091fc7ed2c4c906512bec0dfdd6f60533323ad7188fc18",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Test an AI agent on QuickBooks bank reconciliation",
+      "sha256": "ab08f57e6f4f555ee7e2370b92a996a50787b9aab06bd11168da936624010655"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A vendor test had Claude Code read a QuickBooks test company; it made 24 read requests, no changes, and declined to reconcile without a bank statement.\n·\nOct 10, 2026",
+      "sha256": "d16be71c7336e0ef9b66ec46d87260e701fcb7087e0c03e905a18f4acbcedd2d"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Booke AI gave Claude, running through Claude Code, access to a QuickBooks Online test company with a made-up September for a candle shop. It asked Claude to close the month, with an instruction to propose entries and not post them. The test ran twice. The 26 checks were written beforehand and kept hidden from the model.",
+      "sha256": "ff8c19b6e151d43fac7f25d5a9c8bea187c554e606a136bfd1de9bee8300412f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Both runs passed all 26 checks in under four minutes, made 24 reads and no changes, and refused to call the month reconciled without statements. A follow-up \"fix my books\" sentence made Claude edit the purchase 29 seconds later, with no confirmation.",
+      "sha256": "eaa377c51372f9684bb841a907d3854f9d9689cd27910c3ea86b74bfb9ce8b6f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A casual instruction like \"fix my books\" counted as full approval, so keep \"propose, don't post\" in your prompt and review each change. The source is a vendor's own test.",
+      "sha256": "72f8a1c2fffdb86e0c5a0620a381a3a76d65d3395b166608f38dc74bee77b70f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://booke.ai/hub/ai-and-bookkeeping/revolutionize-bank-reconciliation-with-gpt-4-ai-technology-tips-for-accountants-and-business-owners"
+      ],
+      "sha256": "b27399b93a6d4af9f953f20091b8944311c49792f5dbc07106250f08b79e2295"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "4f5743d9ca76fd18146ad2fa9ed9120a40b68771212db1a2fe67b8d3baa9ccaa",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Test an AI agent on QuickBooks bank reconciliation\nA vendor test had Claude Code read a QuickBooks test company; it made 24 read requests, no changes, and declined to reconcile without a bank statement.\n·\nOct 10, 2026\nDone with\nCC\nClaude Code\nWhat they did\nBooke AI gave Claude, running through Claude Code, access to a QuickBooks Online test company with a made-up September for a candle shop. It asked Claude to close the month, with an instruction to propose entries and not post them. The test ran twice. The 26 checks were written beforehand and kept hidden from the model.\nHow it went\nBoth runs passed all 26 checks in under four minutes, made 24 reads and no changes, and refused to call the month reconciled without statements. A follow-up \"fix my books\" sentence made Claude edit the purchase 29 seconds later, with no confirmation.\nWorth knowing\nA casual instruction like \"fix my books\" counted as full approval, so keep \"propose, don't post\" in your prompt and review each change. The source is a vendor's own test.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect read-only to my [QuickBooks test company] and review the [account] transactions for [period]. Tell me which ones look unreconciled and what you would need, such as a bank statement, to finish reconciling. Don't make any changes. Finish with a short report of what you checked and what is missing.\nOriginal source: https://booke.ai/hub/ai-and-bookkeeping/revolutionize-bank-reconciliation-with-gpt-4-ai-technology-tips-for-accountants-and-business-owners",
+    "body_sha256": "ef42ce8cb3da2a303a091fc7ed2c4c906512bec0dfdd6f60533323ad7188fc18",
+    "archived_at": "2026-11-16T08:51:33.689042+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:33.689042+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

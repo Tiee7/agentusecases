@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-google-ads-and-analytics-tasks-with-an-agent",
+  "observed_at": "2026-11-16T08:51:21.687098+00:00",
+  "html_sha256": "bf9126bd882d5f12a0edbeed16a8ab86b3389dedf5bf8f161e5fc5dd566ee010",
+  "body_sha256": "37a5bfad9d7672132c1146bbd24641e23726b9fda3414a243ae23e10693be7b4",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run Google Ads and Analytics tasks with an agent",
+      "sha256": "378607179b2fd55a5e6bbd0b392510a47e3356593e63d4893a99d52118dffeb6"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A marketing agency tested ChatGPT Operator: it copied GA data into a Sheet with a chart and exported the search query report, but was slow and got stuck on a later step.",
+      "sha256": "45635a7a0f62920386a2cfbce45eabba4db06f28408c540dc31a5b72c6410255"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Alex Swerdlow tested OpenAI's Operator, a browser agent in the ChatGPT Pro plan, over three days. He had it log into Google Ads and Google Analytics. It copied GA data into a Google Sheet and charted it. It also found and exported the search query report, added a relevance column, and crawled a website. He took over to fix the Sheets mistakes.",
+      "sha256": "ca90d94de5c2657d49fb14f9780efa72322509a01636360bea5dd2545bd26b2e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The GA copy and chart mostly worked, with some formatting and data errors. After his manual fix, it scored about 30 query rows reasonably well, then crashed in a Sheets loop he couldn't clear. Day 1 failed completely.",
+      "sha256": "a0a1e5e5a80077b417b76194e114e575ffda7f511ade1fc5c4107006e85d34fe"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Day 1 took an hour or more and ended with a bare refusal. Responsiveness improved by day 2, but the author calls it a proof of concept, not ready for real work.",
+      "sha256": "2efd6b88ab499b90dfff64fecef9b1153fd0472bd1428c5afdfd5d3e26ce366f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Operator"
+      ],
+      "sha256": "1821264f63fb70bde6175d42e4f7bff83b5c0b2e9326134e5edb77e8e9225875"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://openmoves.com/blog/testing-chatgpt-operator-for-google-ads-tasks/"
+      ],
+      "sha256": "117e56cffb11f2002973b4c6ad2c6c15e3e223dbdf561fa8c6f415e8e5f9197e"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "9c8783eb1acd9010ff89fe44149533cca409bdbe07dd54e4d65fd702da03e618",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Google Ads and Analytics tasks with an agent\nA marketing agency tested ChatGPT Operator: it copied GA data into a Sheet with a chart and exported the search query report, but was slow and got stuck on a later step.\nDone with\nOP\nOperator\nWhat they did\nAlex Swerdlow tested OpenAI's Operator, a browser agent in the ChatGPT Pro plan, over three days. He had it log into Google Ads and Google Analytics. It copied GA data into a Google Sheet and charted it. It also found and exported the search query report, added a relevance column, and crawled a website. He took over to fix the Sheets mistakes.\nHow it went\nThe GA copy and chart mostly worked, with some formatting and data errors. After his manual fix, it scored about 30 query rows reasonably well, then crashed in a Sheets loop he couldn't clear. Day 1 failed completely.\nWorth knowing\nDay 1 took an hour or more and ended with a bare refusal. Responsiveness improved by day 2, but the author calls it a proof of concept, not ready for real work.\nTry it yourself\nwith\nOperator\nCopy prompt\nOpen my Google Analytics property [property name] and copy the [metric, e.g. sessions by channel] for [date range] into a new Google Sheet, then add a chart of it. Next, go to Google Ads account [account name] and export the search query report for the same dates into the Sheet. Stop when the Sheet has both the chart and the report, and tell me if you get stuck on any step. Pause and ask me before changing any settings in either account.\nOriginal source: https://openmoves.com/blog/testing-chatgpt-operator-for-google-ads-tasks/",
+    "body_sha256": "37a5bfad9d7672132c1146bbd24641e23726b9fda3414a243ae23e10693be7b4",
+    "archived_at": "2026-11-16T08:51:21.687098+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:21.687098+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

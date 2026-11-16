@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/screen-resumes-and-run-ai-voice-interviews-for-candidates",
+  "observed_at": "2026-11-16T08:51:25.641548+00:00",
+  "html_sha256": "f8138200ee763f8806b621d8947259f9dd0a8000da6188137d98129af00aad55",
+  "body_sha256": "b60a4fdc3f4cd440a0a84b21d95bf6c409d4abf43bdc23c6092f1073cd2b40f7",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Screen resumes and run AI voice interviews for candidates",
+      "sha256": "5475c819f45a21f62901fa93795c82450a0c5ea5e9962ba1afa61b8ca0dded7e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An open-source agent uses Claude to score PDF resumes 0-100, phones candidates scoring 60+ via Vapi for 4 structured questions, then scores transcripts and ranks candidates.",
+      "sha256": "81951c2fb381186e5e53ee7e4c4c969bdaf08e72a4e3ecbbe0042aae5627f23f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Django sends each uploaded PDF resume to Claude as a base64 document, with no parser. Claude returns a score and recommendation. For candidates scoring 60 or higher, Django triggers a Vapi outbound call. Vapi calls a custom Claude endpoint, and Claude asks four questions and ends the call with an end_call tool. A webhook then delivers the transcript for scoring.",
+      "sha256": "70276297ae094edb9ced217d8246f889331c420d3d3882ac136938e9243d3ea8"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Screening takes under 5 seconds per resume, and an interview takes about 5 minutes. Scores of 75 or more are shortlisted and under 50 are rejected. Scores from 50 to 75 need a human decision. The post presents it as a v1 and gives no hiring outcomes.",
+      "sha256": "61cf127489b90d58e4a1aba4132b4651a9ed48851a1489ec1383f56e10d35f8c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author estimates about $50/month for a small team (Claude API, Vapi calls, a small server). Voice calls need the backend exposed publicly, for example through ngrok.",
+      "sha256": "e804b9713231ab2a6910e3339a0055e79ce792b56294be56ff498f18f048324f"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://codewithmuh.com/blog/i-built-an-ai-hiring-agent-that-screens-resumes-and-conducts-voice-interviews"
+      ],
+      "sha256": "113355388cf150d182ce7f876eaf0619167af8aeb133944c3c7706c87fe83077"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b1f6610ae0123cf5ba2f4e2fc732d22db91b8b5dbee807476e3b94d4049fa445",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Screen resumes and run AI voice interviews for candidates\nAn open-source agent uses Claude to score PDF resumes 0-100, phones candidates scoring 60+ via Vapi for 4 structured questions, then scores transcripts and ranks candidates.\nDone with\nCL\nClaude\nWhat they did\nDjango sends each uploaded PDF resume to Claude as a base64 document, with no parser. Claude returns a score and recommendation. For candidates scoring 60 or higher, Django triggers a Vapi outbound call. Vapi calls a custom Claude endpoint, and Claude asks four questions and ends the call with an end_call tool. A webhook then delivers the transcript for scoring.\nHow it went\nScreening takes under 5 seconds per resume, and an interview takes about 5 minutes. Scores of 75 or more are shortlisted and under 50 are rejected. Scores from 50 to 75 need a human decision. The post presents it as a v1 and gives no hiring outcomes.\nWorth knowing\nThe author estimates about $50/month for a small team (Claude API, Vapi calls, a small server). Voice calls need the backend exposed publicly, for example through ngrok.\nTry it yourself\nwith\nClaude\nCopy prompt\nBuild me a small script that screens resumes for the [job title] role. It should read every PDF in [folder path], score each resume 0-100 against these requirements: [list of must-haves and nice-to-haves], and write a ranked CSV with the score and a one-sentence reason for each. You are done when the CSV exists and I've reviewed the top 10; do not contact any candidate, and pause and show me the list before any step that would call or message someone.\nOriginal source: https://codewithmuh.com/blog/i-built-an-ai-hiring-agent-that-screens-resumes-and-conducts-voice-interviews",
+    "body_sha256": "b60a4fdc3f4cd440a0a84b21d95bf6c409d4abf43bdc23c6092f1073cd2b40f7",
+    "archived_at": "2026-11-16T08:51:25.641548+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:25.641548+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/give-coding-agents-compiler-accurate-call-graphs-for-refacto",
+  "observed_at": "2026-11-16T08:51:23.645553+00:00",
+  "html_sha256": "647abb132399f4a9dc89e66d4f5d2c326b3fd84d95ff19d9f6b38fed89b0a525",
+  "body_sha256": "f89ac926127ba25a7ba42573dafef5465f747203969362fe8ce57349b809de17",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Give coding agents compiler-accurate call graphs for refactors",
+      "sha256": "b72526c8092593dc0e27e5935156fec3b95d19fa2681ab043fc2d44ec561729d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Lantern Lattice gives coding agents call-graph tracing, impact analysis and symbol-based edits over MCP, such as renaming a function across 4 files in two calls; built largely with Claude Code plugins.\n·\nNov 5, 2026",
+      "sha256": "28450f26d78f33da45d2aab4dbeec5f61396f0948f2d87e0a55d44210cadb602"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Lantern Lattice runs as an MCP server that builds call graphs from each language's own tools, such as rust-analyzer, gopls and clangd. The agent uses trace to list a function's callers, then one replace_text call to rename it across files. Its tools replace Grep, Read, Edit and Write, which keeps the graph current. Each non-Rust language was built mostly through its own Claude Code plugin.",
+      "sha256": "c464f8efbbfa73ba1f67ca668493b3fcd7ee009cb7d9915427b52e9da047b77d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Renaming a function took two calls: 550 bytes for trace, 375 for the edit across 4 files. Grep plus reading the files was 26 lines in 23 files and 51 KB. Uncertain calls are left out.",
+      "sha256": "503a46a899b454f1ff944afc0d49334d4339c9c66c7fc081ed65c3147c306a41"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Only tested with Claude Code so far; configs for other agents are untested. Rust queries on 20k symbols take 0.01 to 0.02 s, and the first answer after an edit about 1 s.",
+      "sha256": "ba242ac408baeddd307222f5f09c66b23b186ba0eeec03ce78fb3cc315d32bb6"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50384020"
+      ],
+      "sha256": "031084741c3f3be2cb31677c5edcd05a8ed17c4771f6dacb1b1c520de9fe11d4"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e99e88d9f8037874edb339361ea88d439ff96702558c0829ce06505d328beb75",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Give coding agents compiler-accurate call graphs for refactors\nLantern Lattice gives coding agents call-graph tracing, impact analysis and symbol-based edits over MCP, such as renaming a function across 4 files in two calls; built largely with Claude Code plugins.\n·\nNov 5, 2026\nDone with\nCC\nClaude Code\nWhat they did\nLantern Lattice runs as an MCP server that builds call graphs from each language's own tools, such as rust-analyzer, gopls and clangd. The agent uses trace to list a function's callers, then one replace_text call to rename it across files. Its tools replace Grep, Read, Edit and Write, which keeps the graph current. Each non-Rust language was built mostly through its own Claude Code plugin.\nHow it went\nRenaming a function took two calls: 550 bytes for trace, 375 for the edit across 4 files. Grep plus reading the files was 26 lines in 23 files and 51 KB. Uncertain calls are left out.\nWorth knowing\nOnly tested with Claude Code so far; configs for other agents are untested. Rust queries on 20k symbols take 0.01 to 0.02 s, and the first answer after an edit about 1 s.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repository at [path or repo name], I want to rename the function [function name] to [new name] safely. First trace everything that calls it and list the files and call sites affected, then make the rename across all of them, including tests and docs. Run [test command] afterward and stop once the tests pass, giving me a summary of every file changed.\nOriginal source: https://news.ycombinator.com/item?id=50384020",
+    "body_sha256": "f89ac926127ba25a7ba42573dafef5465f747203969362fe8ce57349b809de17",
+    "archived_at": "2026-11-16T08:51:23.645553+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:23.645553+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

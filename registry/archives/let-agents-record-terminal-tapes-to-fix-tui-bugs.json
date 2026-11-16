@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-agents-record-terminal-tapes-to-fix-tui-bugs",
+  "observed_at": "2026-11-16T08:51:17.627524+00:00",
+  "html_sha256": "b6b3f090fef27e9a5f0f962f71066594e642069de0bf5f6b1be9e4077631ee60",
+  "body_sha256": "3a1722d181386ca09c547d247c636b8ed5a6ff109bd32348aab811fb4469e062",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let agents record terminal tapes to fix TUI bugs",
+      "sha256": "405b8aa957fb0598855f7ab3c45b15e3b57788e638e05695547c00386747c8cb"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author's LLM agents record terminal sessions with ntrecord, then review them to validate or improve work, fixing charting bugs and improving TUI browser conformance.\n·\nNov 15, 2026",
+      "sha256": "fefb0525d9a81f4ceefc4ec97d75273302e03e50e859fb29e0f5dab1664ec7fc"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author built ntrecord, a terminal recorder based on libghostty-vt, after finding vhs and an earlier tool didn't handle their Kitty-heavy needs. In their agent loops, the LLMs make their own tapes to reach a particular terminal state, then look at the recording to validate or improve their work. The author says they no longer have to ask for this.",
+      "sha256": "df0ab38d465aaea60c2bd965c66895fea358c9a1d7a62750b979e00d4f695444"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says it has been great in agent loops and that they used it to fix charting bugs and improve TUI browser conformance. The comment gives no numbers or failure cases.",
+      "sha256": "19c6e0692789da61754c7f556b516acd628bcc39a7800519a8c42a5f41a7ead7"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Plain tools like vhs didn't handle Kitty graphics for this author, so check that your recorder supports the terminal features your TUI uses.",
+      "sha256": "74b70a2bbcf83551db0679e9940a1396463bb406ed2521b1b7600305f8e9513a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50510512"
+      ],
+      "sha256": "b6d5eb0ed3d1d24b639971e1a7bc1225e8ece6688e976d4ada2fdf483b7f4e87"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "348c3c5f4a693bffa94f08ec88fabc53f30a9b3a77fef858c4054df8b0a12d40",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let agents record terminal tapes to fix TUI bugs\nThe author's LLM agents record terminal sessions with ntrecord, then review them to validate or improve work, fixing charting bugs and improving TUI browser conformance.\n·\nNov 15, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built ntrecord, a terminal recorder based on libghostty-vt, after finding vhs and an earlier tool didn't handle their Kitty-heavy needs. In their agent loops, the LLMs make their own tapes to reach a particular terminal state, then look at the recording to validate or improve their work. The author says they no longer have to ask for this.\nHow it went\nThe author says it has been great in agent loops and that they used it to fix charting bugs and improve TUI browser conformance. The comment gives no numbers or failure cases.\nWorth knowing\nPlain tools like vhs didn't handle Kitty graphics for this author, so check that your recorder supports the terminal features your TUI uses.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm working on a terminal UI in [project path]. Install or use ntrecord to record a terminal session of [the feature or screen to check], then review the recording to find visual bugs such as [e.g. broken charts, misaligned layout, wrong colors]. Fix what you find, record again to confirm, and give me a short summary of what changed. Stop once the recording shows the issue gone.\nOriginal source: https://news.ycombinator.com/item?id=50510512",
+    "body_sha256": "3a1722d181386ca09c547d247c636b8ed5a6ff109bd32348aab811fb4469e062",
+    "archived_at": "2026-11-16T08:51:17.627524+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:17.627524+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

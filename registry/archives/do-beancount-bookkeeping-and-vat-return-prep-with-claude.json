@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/do-beancount-bookkeeping-and-vat-return-prep-with-claude",
+  "observed_at": "2026-11-16T08:51:35.647314+00:00",
+  "html_sha256": "537780a4fe0c2871f78412cfa229dc6b8d085abccd9e8fdea3d21c5f1566c929",
+  "body_sha256": "504f9bf189268e6354a76efa18467abf5bf31a7d1ec4833323964e6bfde5de0f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Do Beancount bookkeeping and VAT return prep with Claude",
+      "sha256": "00d9b6048f33c4e1cb17180db758e6f03c6cce9ef81aff09a8e55602bda4059e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster used Claude to tidy the chart of accounts, write Beancount queries, and generate a script producing values for the quarterly VAT report.\n·\nJul 1, 2025",
+      "sha256": "2d23caf6ff993a71bc8bde645b11ea1ff355c07954e885437d64da11e6283741"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster kept the company books in Beancount and used Claude Code against that plain-text setup, but was cautious about letting it edit the ledger directly. For a Swiss quarterly VAT filing, Claude first helped tidy the chart of accounts, then wrote Beancount queries, and finally produced a small script that outputs the values to copy into the return; later they extended the same CLI to generate Swiss QR-bill invoices and book them in the ledger, while leaving fuzzy tasks like reading receipts or guessing accounts to the agent.",
+      "sha256": "eefe04b1d0e9548f7945225ff2e946045ed8566556fe112bc17020e295ff3434"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It replaced manual VAT prep with a repeatable script-based workflow and expanded into invoicing, statement importers, and possible year-end reports. The poster says exact math and statutory outputs stay in deterministic CLI code, with the agent orchestrating rather than doing the calculations.",
+      "sha256": "f5d4a27e117aba8ad17ff0118fb59a0af885de38fb217c3b76df2727496816b0"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is privacy and trust: the thread raises concern about sending sensitive financial data to hosted AI tools, and the poster says they still avoid having the model itself do the math.",
+      "sha256": "765993467658399637e7a40f74b0776e542b6e8410b79d453b7c7a5b4d88d989"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/plaintextaccounting/comments/1uvesdw/beancount_with_claude_code"
+      ],
+      "sha256": "3a4fa7c37f5b3adb7be44229221b0a9ffff0b01f38e3ddf02fad3785ab012269"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "72ca6de0011767c1ba6e35771d46861071ba48282d10ec5de8f58b4d1b216c97",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Do Beancount bookkeeping and VAT return prep with Claude\nThe poster used Claude to tidy the chart of accounts, write Beancount queries, and generate a script producing values for the quarterly VAT report.\n·\nJul 1, 2025\nDone with\nCC\nClaude Code\nWhat they did\nThe poster kept the company books in Beancount and used Claude Code against that plain-text setup, but was cautious about letting it edit the ledger directly. For a Swiss quarterly VAT filing, Claude first helped tidy the chart of accounts, then wrote Beancount queries, and finally produced a small script that outputs the values to copy into the return; later they extended the same CLI to generate Swiss QR-bill invoices and book them in the ledger, while leaving fuzzy tasks like reading receipts or guessing accounts to the agent.\nHow it went\nIt replaced manual VAT prep with a repeatable script-based workflow and expanded into invoicing, statement importers, and possible year-end reports. The poster says exact math and statutory outputs stay in deterministic CLI code, with the agent orchestrating rather than doing the calculations.\nWorth knowing\nThe main catch is privacy and trust: the thread raises concern about sending sensitive financial data to hosted AI tools, and the poster says they still avoid having the model itself do the math.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my Beancount ledger at [path], tidy the chart of accounts by suggesting merges and renames for [problem areas]. Then write a script that uses Beancount queries to produce the values for my [quarterly VAT return boxes]. It's done when the script runs and prints each box with the transactions behind it. Show me the proposed account changes before editing any files.\nOriginal source: https://www.reddit.com/r/plaintextaccounting/comments/1uvesdw/beancount_with_claude_code",
+    "body_sha256": "504f9bf189268e6354a76efa18467abf5bf31a7d1ec4833323964e6bfde5de0f",
+    "archived_at": "2026-11-16T08:51:35.647314+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:35.647314+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

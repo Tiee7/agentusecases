@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/diagnose-ubuntu-problems-with-a-confined-read-only-agent",
+  "observed_at": "2026-11-16T08:51:03.622466+00:00",
+  "html_sha256": "8f402b025eec63ead80b04ec261b05005e93162e48e91eb20c518fcc20524049",
+  "body_sha256": "40c7e70e29241a11ff04f12f5a4e36b18836256b911e8eabdf3179b061d3b3c1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Diagnose Ubuntu problems with a confined, read-only agent",
+      "sha256": "fbd5ef89f9eb2166493126eea70f27987df5b458aa94581e75383c141e853691"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Maat is an MCP-based agent confined in a snap that reads journals, units and processes on Linux hosts and proposes typed fix plans, which the user applies via polkit.\n·\nNov 2, 2026",
+      "sha256": "8d259bd2009b232568ebe5556e331888eb8cb15cfdd1f2e32580358b7ffae096"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Maat runs as an MCP server inside a strictly confined snap. AppArmor and seccomp let it read the journal, systemd units, processes and disks, but block network sockets, file writes and restarting units. The model can only propose a typed plan citing log lines. The user applies it through a separate polkit-gated tool, which verifies the result and logs to a hash-chained audit trail. One agent can reach many hosts over SSH.",
+      "sha256": "6fedeb9c0e71ffb7d26900b9dda8c8ce08729463f611eddfa47411618eac659d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On ten LXD scenarios run three times each, gpt-oss:20b found the root cause in 28 of 30 attempts and got 3 of 6 fixes applied and verified. qwen3:8b found 24 of 30 and fixed nothing. Neither followed instructions planted in logs.",
+      "sha256": "b4fc11a326ddc654a76254de04a3464a58afbf335a6aa6faf8b9fa80ca892538"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The scenarios are easy (keyword rules score 9 of 10) and only two are adversarial, so treat the numbers as a first data point. Only Ubuntu 24.04 is tested, on the Snap Store edge channel.",
+      "sha256": "5374e5b8d8cb53f78713ca5fac95ac8dacf5aa62f57bf9db8c2f9428b2c28aa8"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50336831"
+      ],
+      "sha256": "afa30cdc97c0f594ba788b92e974dc95c8be711f4e383b89827f3a3fe1950d76"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "1a170f2628a890cb5aecbe1864115219a7e8e7b8871c874180861c4f88f9a239",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Diagnose Ubuntu problems with a confined, read-only agent\nMaat is an MCP-based agent confined in a snap that reads journals, units and processes on Linux hosts and proposes typed fix plans, which the user applies via polkit.\n·\nNov 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMaat runs as an MCP server inside a strictly confined snap. AppArmor and seccomp let it read the journal, systemd units, processes and disks, but block network sockets, file writes and restarting units. The model can only propose a typed plan citing log lines. The user applies it through a separate polkit-gated tool, which verifies the result and logs to a hash-chained audit trail. One agent can reach many hosts over SSH.\nHow it went\nOn ten LXD scenarios run three times each, gpt-oss:20b found the root cause in 28 of 30 attempts and got 3 of 6 fixes applied and verified. qwen3:8b found 24 of 30 and fixed nothing. Neither followed instructions planted in logs.\nWorth knowing\nThe scenarios are easy (keyword rules score 9 of 10) and only two are adversarial, so treat the numbers as a first data point. Only Ubuntu 24.04 is tested, on the Snap Store edge channel.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOn my [Ubuntu version] machine, act as a read-only diagnostician for [describe the problem, e.g. service failing at boot or high CPU]. Read the relevant journal logs, systemd units and running processes, but do not change anything. Finish with a ranked list of likely causes and a step-by-step fix plan with exact commands, and pause for my approval before running any of them.\nOriginal source: https://news.ycombinator.com/item?id=50336831",
+    "body_sha256": "40c7e70e29241a11ff04f12f5a4e36b18836256b911e8eabdf3179b061d3b3c1",
+    "archived_at": "2026-11-16T08:51:03.622466+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:03.622466+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

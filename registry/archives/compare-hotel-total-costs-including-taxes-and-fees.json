@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/compare-hotel-total-costs-including-taxes-and-fees",
+  "observed_at": "2026-11-16T08:51:11.637552+00:00",
+  "html_sha256": "aa2b65337d3cf274a47faf1124b64e514606397c5c38b5a827e5ecc2c9a52a05",
+  "body_sha256": "eec0a971e73f1886325635f3e28358f32c6df48acfe4b58a95c8be3707801c89",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Compare hotel total costs including taxes and fees",
+      "sha256": "1623510ff4e27f1f2a89485164f9dc231521d1a1e5400c162b6a0a1afe1f5c02"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster uses Claude to pull the same hotel from several sites and calculate the total with taxes and fees before booking.\n·\nOct 1, 2026",
+      "sha256": "a5a496dad876a44c61ce5f379e8ca0163b08afeae4f5dfcc2778fef639273aac"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster connects Claude to live hotel-search tools such as Booking.com, Tripadvisor, Brek, and LetsFG, then asks it to pull the same hotel or shortlist from several sites and compute one true total including tourist taxes and fees paid at the property. They also have Claude scan recent reviews for extra charges like parking or safe fees, and they sometimes book a refundable rate and use a scheduled daily recheck until the cancellation deadline, with the person canceling and rebooking when Claude flags a lower price.",
+      "sha256": "355accab8583b71b660cc347f2f980e3917d35ee4e0c828f27e7fc07ad130b35"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say hidden or inconsistently displayed charges were common in their checks, and in 43 hotels the refundable rate was at most about 11% higher, sometimes under 2%. They also say prices can swing by roughly 60% within hours, but the post gives no aggregate savings total.",
+      "sha256": "778303621e812829d915b9c4ebca1984427cc0145d8a45541dd739978dfa60ac"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that this only works with live connectors added to Claude; the poster also says review checking on Reddit needed Claude to use Playwright.",
+      "sha256": "113d162d27f80df3c4b9e185a22331dee70d0a48df98a440741c91fd7d132676"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/Anthropic/comments/1xaui4p/use_claude_to_save_on_hotel_fees_when_you_travel"
+      ],
+      "sha256": "6822d5eed526fcc91549a70c0ba9f045a0f870d4f0dae06bf73700d0cb0be19f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-15",
+      "sha256": "68bbad58a1969b561d452f9d0d1029480bf2a576e56e3caa30766a8e150d1357"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "538ae8e8ec8d38a5f883a52a4369f1049382c4b94b951987fee02e82e6aa13fc",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Compare hotel total costs including taxes and fees\nThe poster uses Claude to pull the same hotel from several sites and calculate the total with taxes and fees before booking.\n·\nOct 1, 2026\nDone with\nCL\nClaude\nWhat they did\nThe poster connects Claude to live hotel-search tools such as Booking.com, Tripadvisor, Brek, and LetsFG, then asks it to pull the same hotel or shortlist from several sites and compute one true total including tourist taxes and fees paid at the property. They also have Claude scan recent reviews for extra charges like parking or safe fees, and they sometimes book a refundable rate and use a scheduled daily recheck until the cancellation deadline, with the person canceling and rebooking when Claude flags a lower price.\nHow it went\nThey say hidden or inconsistently displayed charges were common in their checks, and in 43 hotels the refundable rate was at most about 11% higher, sometimes under 2%. They also say prices can swing by roughly 60% within hours, but the post gives no aggregate savings total.\nWorth knowing\nThe main catch is that this only works with live connectors added to Claude; the poster also says review checking on Reddit needed Claude to use Playwright.\nTry it yourself\nwith\nClaude\nCopy prompt\nFind [hotel name] in [city] for [check-in] to [check-out], [number] guests, on [sites, e.g. Booking.com, Expedia, the hotel's own site]. For each, record the room type, nightly rate, taxes, resort and other fees, and cancellation policy, then calculate the true total. Give me a comparison table ranked by total cost, and do not book anything.\nOriginal source: https://www.reddit.com/r/Anthropic/comments/1xaui4p/use_claude_to_save_on_hotel_fees_when_you_travel",
+    "body_sha256": "eec0a971e73f1886325635f3e28358f32c6df48acfe4b58a95c8be3707801c89",
+    "archived_at": "2026-11-16T08:51:11.637552+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-16T08:51:11.637552+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
