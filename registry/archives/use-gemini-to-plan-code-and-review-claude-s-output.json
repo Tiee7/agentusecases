@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/use-gemini-to-plan-code-and-review-claude-s-output",
-  "observed_at": "2026-11-16T08:50:19.712336+00:00",
-  "html_sha256": "65bcfe841c44d280de8d1853b116b313255d20cf6390b160e5f60015c3c68c23",
+  "observed_at": "2026-11-17T10:00:01.492106+00:00",
+  "html_sha256": "ead58307b7a02eb663687023f1fef3ba3faa60069289e9f5c6ba06a87b4ab35f",
   "body_sha256": "e1e3d70dc4db5bd47a1b780de596081a0ab07b5a3950b69b95708bd8905cb149",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Use Gemini to plan code and review Claude's output\nA user had Gemini think through a coding project, write concise prompts for Claude, and review the code Claude produced.\n·\nMar 14, 2026\nDone with\nGE\nGemini\nCL\nClaude\nWhat they did\nThe user used Gemini alongside a Claude Code account on a small coding project: Gemini helped think through the work, turn those ideas into concise prompts for Claude, and review Claude’s code. For one review, they started a fresh Gemini chat, uploaded a zip of the code plus a CLAUDE.md project description, took Gemini’s minor suggestions back to Claude for changes, then uploaded Claude’s tar.gz package to Gemini for a final check before running it.\nHow it went\nThe process had been useful for learning, but this review failed badly: Gemini said the code was safe to run and even predicted 758 new vectors, then later admitted the archive had been truncated and it could not fully see the updated indexer.py. The user said that broke their trust in Gemini for code review.\nWorth knowing\nThe key catch was file handling: passing archives through chat led Gemini to silently miss files, so the user and commenters pointed to giving models direct access to the project files instead.\nTry it yourself\nwith\nGemini\nCopy prompt\nI am building [project description] using [language or framework]. First, help me think through the architecture and break the work into steps, then write a concise, self-contained prompt for each step that I can give to Claude. After I paste back the code Claude produced, review it for bugs, missing requirements, and security problems, and finish with a prioritized list of fixes.\nOriginal source: https://www.reddit.com/r/GoogleGeminiAI/comments/1r8igy5/something_happened_yesterday_that_made_me",
     "body_sha256": "e1e3d70dc4db5bd47a1b780de596081a0ab07b5a3950b69b95708bd8905cb149",
-    "archived_at": "2026-11-16T08:50:19.712336+00:00",
+    "archived_at": "2026-11-17T10:00:01.492106+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-16T08:50:19.712336+00:00",
+    "at": "2026-11-17T10:00:01.492106+00:00",
     "status": "fetched",
     "error": null
   }

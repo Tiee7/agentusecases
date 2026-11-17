@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/diagnose-ubuntu-problems-with-a-confined-read-only-agent",
-  "observed_at": "2026-11-16T08:51:03.622466+00:00",
-  "html_sha256": "8f402b025eec63ead80b04ec261b05005e93162e48e91eb20c518fcc20524049",
+  "observed_at": "2026-11-17T10:00:45.508060+00:00",
+  "html_sha256": "5f084b8e1a4adc670e9a2e90b5d6defbadd7a659f4ff129138f405328c38603f",
   "body_sha256": "40c7e70e29241a11ff04f12f5a4e36b18836256b911e8eabdf3179b061d3b3c1",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Diagnose Ubuntu problems with a confined, read-only agent\nMaat is an MCP-based agent confined in a snap that reads journals, units and processes on Linux hosts and proposes typed fix plans, which the user applies via polkit.\n·\nNov 2, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMaat runs as an MCP server inside a strictly confined snap. AppArmor and seccomp let it read the journal, systemd units, processes and disks, but block network sockets, file writes and restarting units. The model can only propose a typed plan citing log lines. The user applies it through a separate polkit-gated tool, which verifies the result and logs to a hash-chained audit trail. One agent can reach many hosts over SSH.\nHow it went\nOn ten LXD scenarios run three times each, gpt-oss:20b found the root cause in 28 of 30 attempts and got 3 of 6 fixes applied and verified. qwen3:8b found 24 of 30 and fixed nothing. Neither followed instructions planted in logs.\nWorth knowing\nThe scenarios are easy (keyword rules score 9 of 10) and only two are adversarial, so treat the numbers as a first data point. Only Ubuntu 24.04 is tested, on the Snap Store edge channel.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nOn my [Ubuntu version] machine, act as a read-only diagnostician for [describe the problem, e.g. service failing at boot or high CPU]. Read the relevant journal logs, systemd units and running processes, but do not change anything. Finish with a ranked list of likely causes and a step-by-step fix plan with exact commands, and pause for my approval before running any of them.\nOriginal source: https://news.ycombinator.com/item?id=50336831",
     "body_sha256": "40c7e70e29241a11ff04f12f5a4e36b18836256b911e8eabdf3179b061d3b3c1",
-    "archived_at": "2026-11-16T08:51:03.622466+00:00",
+    "archived_at": "2026-11-17T10:00:45.508060+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-16T08:51:03.622466+00:00",
+    "at": "2026-11-17T10:00:45.508060+00:00",
     "status": "fetched",
     "error": null
   }
