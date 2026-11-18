@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/count-real-estate-listings-by-subtracting-filter-results",
+  "observed_at": "2026-11-18T09:25:12.607954+00:00",
+  "html_sha256": "7f037b9b51c5127cae7e15f87052931dd50577ba4146d5ab85face757f23057d",
+  "body_sha256": "69f1623a3cb9e9e33d94d230297a801d001fb97877a0f93298dcdf2c2694c09d",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Count real estate listings by subtracting filter results",
+      "sha256": "c42e1155f41195814e113e66e38d1a103618a463edc9c3e971ecf25fbf9de459"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "ChatGPT Agent Mode counted Trulia listings in Florida with exactly three bathrooms by subtracting the 'four or more' count from 'three or more'; the team stepped in for a bot check.",
+      "sha256": "f9a84f08e32a31f83b38bdf6033da49077e28689a1110611051f52b1429d387c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The team switched on Agent Mode by typing /agent, then gave it a short prompt with the Trulia Florida URL, asking for the total count of homes with 3 baths. The agent opened a virtual browser and reached the filters on its own. It found no exact-three filter, so it pulled the 'three or more' and 'four or more' counts and subtracted. When Trulia ran a verification check, a team member completed it and handed control back.",
+      "sha256": "0dca1c572518c070c5679ae37b65d5bb72119e7c365f59f7fb9f69559057e587"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The agent finished the task and produced the exactly-three-bathroom count after the handoff. The article doesn't state the actual number. The recorded session ran 8.5 minutes.",
+      "sha256": "df67edf33e168f1fe71002333b98398d5443375650c1568f5146bdf6061c84d6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect a bot-verification check mid-run, so someone needs to be watching to complete it. The session took about 8.5 minutes for one count.",
+      "sha256": "992d13c674762de8ddbbcd5b21f941aab9bad847a0d5d957b4c628ccf57217b0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT Agent"
+      ],
+      "sha256": "8e2784cf4a9f851bb22a7e2941b5ad0b77848f81ffcdb85f82bf5e95b614ccd1"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://accelstone.com/articles/how-to-use-chatgpt-agent-mode-to-handle-online-tasks-with-its-own-virtual-desktop/"
+      ],
+      "sha256": "971951d8673c06147807735e3d81452ce6c890e9ee27a7212d8271c48946dfbf"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-17",
+      "sha256": "3af512824d0e341bce2cd7739940bb37ce7ca505725ec00377769cb83bdf1fc3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "a53067141c3899298c0fd890e655b0648d68fc80fc7a063a630d8aac1813d554",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Count real estate listings by subtracting filter results\nChatGPT Agent Mode counted Trulia listings in Florida with exactly three bathrooms by subtracting the 'four or more' count from 'three or more'; the team stepped in for a bot check.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe team switched on Agent Mode by typing /agent, then gave it a short prompt with the Trulia Florida URL, asking for the total count of homes with 3 baths. The agent opened a virtual browser and reached the filters on its own. It found no exact-three filter, so it pulled the 'three or more' and 'four or more' counts and subtracted. When Trulia ran a verification check, a team member completed it and handed control back.\nHow it went\nThe agent finished the task and produced the exactly-three-bathroom count after the handoff. The article doesn't state the actual number. The recorded session ran 8.5 minutes.\nWorth knowing\nExpect a bot-verification check mid-run, so someone needs to be watching to complete it. The session took about 8.5 minutes for one count.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nGo to [real estate site, e.g. Trulia] and find how many listings in [state or city] have exactly [number] bathrooms. Do it by running the search with '[number] or more' and again with '[number+1] or more', then subtracting the second count from the first. Report both counts, the result, and the filters you used, and stop there. If a bot check or login appears, pause and ask me to take over.\nOriginal source: https://accelstone.com/articles/how-to-use-chatgpt-agent-mode-to-handle-online-tasks-with-its-own-virtual-desktop/",
+    "body_sha256": "69f1623a3cb9e9e33d94d230297a801d001fb97877a0f93298dcdf2c2694c09d",
+    "archived_at": "2026-11-18T09:25:12.607954+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-18T09:25:12.607954+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

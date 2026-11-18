@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-and-test-an-image-editor-with-agent-driven-headless-gu",
+  "observed_at": "2026-11-18T09:25:06.606147+00:00",
+  "html_sha256": "a27aff69073425de06bed6239419b361ea6194ac6e6058ca58ef8833d8814599",
+  "body_sha256": "96b78d6fd62b105eb7c5ec5c42c2e332ce0c940fd359589f3c298aae7a110444",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build and test an image editor with agent-driven headless GUI",
+      "sha256": "bcd63cc9eb75e8cccf8d9ce1e425e76551aee00a14ea4834bf50cff991a724a0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer had Opus build an image editor and a Sonnet subagent test it via a headless sway setup with scripted mouse and keyboard input, catching most bugs; manual checks were still needed.\n·\nNov 17, 2026",
+      "sha256": "aedc9d526d97cd466748359676ad792c5549e6dc6b7a592ce791f11903656d66"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer hand-wrote scripts so the agent could drive the app headlessly: a headless sway instance, a daemon using Wayland virtual keyboard and mouse protocols via a unix socket, and bash glue. Commands (start, screenshot, mouse move/click, type) were documented in claude.md. Opus built the editor; a Sonnet subagent did interactive testing. The developer specified how each tool and panel should work.",
+      "sha256": "a9735d1f6e897622ac8612d9176b0449eda62092a9d40a94231d3ec699aeff7b"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Testing was mostly automatic and Sonnet caught most bugs itself. The developer still did a cursory manual check, since headless sway differs from a real desktop environment with KDE's platform theme.",
+      "sha256": "7f9380f870a505f05deb2352c7becb9ff5c736e5361907af309c8c763f2e6f4f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Scripted input mocking was far more reliable than the accessibility API route (pyatspi2) tried first; a Sonnet subagent also cut cost and avoids inheriting Opus's long context.",
+      "sha256": "22dfb81a7dca5a719f490028ee2dcfa980eaff6710d46534cb8393b3cccca5dd"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Claude"
+      ],
+      "sha256": "f1283dd5a9207da083e28ab44bd7295ca9ffde0ff5a13df75d1a33997c0ea659"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50533409"
+      ],
+      "sha256": "32b559623f03f60a322012e1d9edda652f3897bddf773300f1d0096ecfc7c21b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-17",
+      "sha256": "3af512824d0e341bce2cd7739940bb37ce7ca505725ec00377769cb83bdf1fc3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "02dbf44973aa348aa2df5a1976167ad84e7e4202f9f4c27923190f6c1f13d3c6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build and test an image editor with agent-driven headless GUI\nA developer had Opus build an image editor and a Sonnet subagent test it via a headless sway setup with scripted mouse and keyboard input, catching most bugs; manual checks were still needed.\n·\nNov 17, 2026\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThe developer hand-wrote scripts so the agent could drive the app headlessly: a headless sway instance, a daemon using Wayland virtual keyboard and mouse protocols via a unix socket, and bash glue. Commands (start, screenshot, mouse move/click, type) were documented in claude.md. Opus built the editor; a Sonnet subagent did interactive testing. The developer specified how each tool and panel should work.\nHow it went\nTesting was mostly automatic and Sonnet caught most bugs itself. The developer still did a cursory manual check, since headless sway differs from a real desktop environment with KDE's platform theme.\nWorth knowing\nScripted input mocking was far more reliable than the accessibility API route (pyatspi2) tried first; a Sonnet subagent also cut cost and avoids inheriting Opus's long context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a small [type of GUI app, e.g. image editor] in this folder using [language/toolkit]. Then set up a headless display environment, such as a headless Wayland compositor, and have a separate subagent test the app by scripting mouse and keyboard input and taking screenshots. Fix every bug the tester finds, repeat until a full test pass finds no new problems, and give me a list of things you could not verify so I can check them by hand.\nOriginal source: https://news.ycombinator.com/item?id=50533409",
+    "body_sha256": "96b78d6fd62b105eb7c5ec5c42c2e332ce0c940fd359589f3c298aae7a110444",
+    "archived_at": "2026-11-18T09:25:06.606147+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-18T09:25:06.606147+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

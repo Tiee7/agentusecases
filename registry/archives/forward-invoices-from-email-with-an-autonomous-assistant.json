@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/forward-invoices-from-email-with-an-autonomous-assistant",
+  "observed_at": "2026-11-18T09:24:56.619906+00:00",
+  "html_sha256": "f916d3d4730a3adc5a51296f97d16222f9691aafbee89c32cbb0689086774c10",
+  "body_sha256": "698f72c4a6f0a586d1a5fa0c014fdd739f09f707a381fe814dcfa6eda7a0d01b",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Forward invoices from email with an autonomous assistant",
+      "sha256": "03a0565cd517b0a287a2679298be238d116d68be2b91473d75103b576c36ffc6"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user gave a ChatGPT assistant the job of identifying and forwarding invoices; it instead flagged an unnoticed data privacy issue and messaged the user first.",
+      "sha256": "961c7bd4a71f36749152df6ceaabbb608534061a1a483481e4e04a5564dd1245"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The user set up ChatGPT’s autonomous assistant to check an Outlook inbox every hour, identify invoice emails, and forward them to accounting. During one run, it examined an attached Excel file, noticed hidden personal data from other businesses, stopped itself from forwarding the original message, and asked whether it should send only the invoice PDF instead; the user then investigated and reported the issue.",
+      "sha256": "074d84337c955638ef391d30a6916e0e1f628bf2d6b244de332ecb5ddfca585d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It surfaced a privacy breach that had apparently been present in monthly spreadsheets sent to many businesses for about two years, and the sender said it would notify authorities and recipients. The user also found a reliability gap: a later recurring run appears to have forwarded the attachment anyway.",
+      "sha256": "91952806d6b0aba334e14aa6c004b01237dd78895d60c9fb41b7d4faebdf3457"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The key catch was inconsistency: the assistant’s warning and refusal on one run did not necessarily persist across later automated executions.",
+      "sha256": "2e5e3c75b8e20bc315e7759d9f4ed6748ac785c64328febb6932cdca67b35a1b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT"
+      ],
+      "sha256": "82e451268285d424c611a7a33277446d5e018e11c1752ebdc4ea4c6c13533e4e"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ChatGPT/comments/1xy2f4g/i_asked_chatgpt_to_forward_invoices_instead_it"
+      ],
+      "sha256": "30f862e33ef3e0dfcafcf922181656e9d8ab17e3bbb82c6cb5967cd7f4f4aedb"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-17",
+      "sha256": "3af512824d0e341bce2cd7739940bb37ce7ca505725ec00377769cb83bdf1fc3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "c9441192f4316e1c0c47b61465b7f0e5138f83dc1ce0f123f8e68645f7f01f60",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Forward invoices from email with an autonomous assistant\nA user gave a ChatGPT assistant the job of identifying and forwarding invoices; it instead flagged an unnoticed data privacy issue and messaged the user first.\nDone with\nGP\nChatGPT\nWhat they did\nThe user set up ChatGPT’s autonomous assistant to check an Outlook inbox every hour, identify invoice emails, and forward them to accounting. During one run, it examined an attached Excel file, noticed hidden personal data from other businesses, stopped itself from forwarding the original message, and asked whether it should send only the invoice PDF instead; the user then investigated and reported the issue.\nHow it went\nIt surfaced a privacy breach that had apparently been present in monthly spreadsheets sent to many businesses for about two years, and the sender said it would notify authorities and recipients. The user also found a reliability gap: a later recurring run appears to have forwarded the attachment anyway.\nWorth knowing\nThe key catch was inconsistency: the assistant’s warning and refusal on one run did not necessarily persist across later automated executions.\nTry it yourself\nwith\nChatGPT\nCopy prompt\nHelp me find invoices in my email from [vendors or sender domains] over [date range] and prepare them to forward to [accounting email address]. List each invoice you find with sender, date, and amount, and flag anything that looks sensitive, such as personal data or messages that aren't really invoices. Pause and show me the full list and the draft forwards before sending anything. You're done when I've approved the list and every approved invoice is forwarded.\nOriginal source: https://www.reddit.com/r/ChatGPT/comments/1xy2f4g/i_asked_chatgpt_to_forward_invoices_instead_it",
+    "body_sha256": "698f72c4a6f0a586d1a5fa0c014fdd739f09f707a381fe814dcfa6eda7a0d01b",
+    "archived_at": "2026-11-18T09:24:56.619906+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-18T09:24:56.619906+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

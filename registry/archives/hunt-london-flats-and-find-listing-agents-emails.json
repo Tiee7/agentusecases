@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/hunt-london-flats-and-find-listing-agents-emails",
+  "observed_at": "2026-11-18T09:25:04.626201+00:00",
+  "html_sha256": "0a37cae52deb226bb21be2dc5be20370d4349f61ab4bb729c46c5c901b6b3dcd",
+  "body_sha256": "de86673ef42f78df2417a2a038c81877d75e09c3749cc3c6151e840e9a57c48e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Hunt London flats and find listing agents' emails",
+      "sha256": "ba393e11bc2c40a11a73df9bf4a1bb5867daa1db691a8cbdc166fe074447b76c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A weekend-built agent looks up new London rental listings, checks a database for the listing agent, and resolves their email from their website for renters.\n·\nMar 1, 2026",
+      "sha256": "4523df1008f7c5ba6dcea05909255c3424b8784fdc3fb45fdaf9996563fe0355"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The builder made a weekend side project for London renters that watches major UK letting aggregators every 45 seconds, compares new listings to preferences inferred from 20 swipe judgments, and then sends personalized enquiries automatically. The setup used Vercel, cron scraping, Postgres, and MiniMax M2.5; when a new listing arrived it checked a database for the letting branch and, if missing, resolved the agent email from the agent’s own website.",
+      "sha256": "ca34137097ab0bd5a1bdb3b82dc04959b330116026e3f5a08f0e0b1b6783042e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Testing it on the builder produced multiple viewing offers within 48 hours after previously getting no responses, and they found a flat and put in an offer. They also said the email lookup reached about 80-90% coverage after a couple weeks, but described the project as more of a fun side build than a venture-scale business.",
+      "sha256": "61d25c9ea20d5d5f0078be59689e6a14c114cba36faaeaea3b7d2b6a5a2da0ef"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Users swiped 20 listings to train the taste model, and the builder said evaluation cost was about $0.20 per user per month with prompt caching.",
+      "sha256": "981aa2108caa7d16658e7fa7ef462891742fc30fc52829362e4223184b109842"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/SideProject/comments/1rcrix9/i_built_a_demandside_ai_agent_for_londons_rental"
+      ],
+      "sha256": "cf8f39ca8d3e530c2f2ec2e14012c1464a2edfe78f88c472257f6ee48318e906"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-17",
+      "sha256": "3af512824d0e341bce2cd7739940bb37ce7ca505725ec00377769cb83bdf1fc3"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "72f68158510d1bfce4eeb125fb3737a86be4b43a77beb61afcda53ac2ec139e8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Hunt London flats and find listing agents' emails\nA weekend-built agent looks up new London rental listings, checks a database for the listing agent, and resolves their email from their website for renters.\n·\nMar 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe builder made a weekend side project for London renters that watches major UK letting aggregators every 45 seconds, compares new listings to preferences inferred from 20 swipe judgments, and then sends personalized enquiries automatically. The setup used Vercel, cron scraping, Postgres, and MiniMax M2.5; when a new listing arrived it checked a database for the letting branch and, if missing, resolved the agent email from the agent’s own website.\nHow it went\nTesting it on the builder produced multiple viewing offers within 48 hours after previously getting no responses, and they found a flat and put in an offer. They also said the email lookup reached about 80-90% coverage after a couple weeks, but described the project as more of a fun side build than a venture-scale business.\nWorth knowing\nUsers swiped 20 listings to train the taste model, and the builder said evaluation cost was about $0.20 per user per month with prompt caching.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nWrite a script that checks [Rightmove, Zoopla, or listing site] for new rental listings in [London areas] under [monthly rent] with at least [number] bedrooms, finds the listing agent for each, and looks up their contact email from the agent's website. Output a daily CSV or message with listing link, rent, agent name, and email, and mark any email it couldn't confirm. Don't send any emails; stop when a test run produces a correct list for today's listings.\nOriginal source: https://www.reddit.com/r/SideProject/comments/1rcrix9/i_built_a_demandside_ai_agent_for_londons_rental",
+    "body_sha256": "de86673ef42f78df2417a2a038c81877d75e09c3749cc3c6151e840e9a57c48e",
+    "archived_at": "2026-11-18T09:25:04.626201+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-18T09:25:04.626201+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

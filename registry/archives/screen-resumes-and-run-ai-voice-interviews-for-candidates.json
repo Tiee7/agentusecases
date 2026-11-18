@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/screen-resumes-and-run-ai-voice-interviews-for-candidates",
-  "observed_at": "2026-11-17T10:01:07.503929+00:00",
-  "html_sha256": "f25aece4f9d62ba372279559b981626a1973c79cd63808f66c72d97c72bd1d6c",
+  "observed_at": "2026-11-18T09:24:20.602016+00:00",
+  "html_sha256": "d38f5b788a0079498dae3a56891204efebfb7bd140c3003a7058ee66fcc07bee",
   "body_sha256": "b60a4fdc3f4cd440a0a84b21d95bf6c409d4abf43bdc23c6092f1073cd2b40f7",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Screen resumes and run AI voice interviews for candidates\nAn open-source agent uses Claude to score PDF resumes 0-100, phones candidates scoring 60+ via Vapi for 4 structured questions, then scores transcripts and ranks candidates.\nDone with\nCL\nClaude\nWhat they did\nDjango sends each uploaded PDF resume to Claude as a base64 document, with no parser. Claude returns a score and recommendation. For candidates scoring 60 or higher, Django triggers a Vapi outbound call. Vapi calls a custom Claude endpoint, and Claude asks four questions and ends the call with an end_call tool. A webhook then delivers the transcript for scoring.\nHow it went\nScreening takes under 5 seconds per resume, and an interview takes about 5 minutes. Scores of 75 or more are shortlisted and under 50 are rejected. Scores from 50 to 75 need a human decision. The post presents it as a v1 and gives no hiring outcomes.\nWorth knowing\nThe author estimates about $50/month for a small team (Claude API, Vapi calls, a small server). Voice calls need the backend exposed publicly, for example through ngrok.\nTry it yourself\nwith\nClaude\nCopy prompt\nBuild me a small script that screens resumes for the [job title] role. It should read every PDF in [folder path], score each resume 0-100 against these requirements: [list of must-haves and nice-to-haves], and write a ranked CSV with the score and a one-sentence reason for each. You are done when the CSV exists and I've reviewed the top 10; do not contact any candidate, and pause and show me the list before any step that would call or message someone.\nOriginal source: https://codewithmuh.com/blog/i-built-an-ai-hiring-agent-that-screens-resumes-and-conducts-voice-interviews",
     "body_sha256": "b60a4fdc3f4cd440a0a84b21d95bf6c409d4abf43bdc23c6092f1073cd2b40f7",
-    "archived_at": "2026-11-17T10:01:07.503929+00:00",
+    "archived_at": "2026-11-18T09:24:20.602016+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-17T10:01:07.503929+00:00",
+    "at": "2026-11-18T09:24:20.602016+00:00",
     "status": "fetched",
     "error": null
   }
