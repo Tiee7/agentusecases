@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/extract-receipts-into-a-csv-and-audit-subscriptions-with-cla",
+  "observed_at": "2026-11-19T09:38:30.256836+00:00",
+  "html_sha256": "df28fade4d4658a8a7d53400df6af620683372d5d09b11de859fde2718671d18",
+  "body_sha256": "54a0e62999dee4919d1ef1b43d983f0987d651e53bbf19a908d3f80ad8967cc0",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Extract receipts into a CSV and audit subscriptions with Claude Code",
+      "sha256": "913e3b67aeff8136567019439b92788bcdbcc9cc51ae50269e75daf2d9379895"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author tested Claude Code on non-coding jobs: pulling vendor, date, amount and category from about 120 scanned receipts into a CSV, and subscription auditing and a corrupted video; a few tasks only half worked.",
+      "sha256": "12513ca6782f07269dc3a8ee44414a6ff0d74c3d5090838bff7bd0f2662e5c2f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author scanned about 120 receipts into a folder and asked Claude Code to pull vendor, date, amount and category into one CSV. It read each PDF and flagged receipts over the documentation-retention threshold. For subscriptions, it analyzed two years of bank statements exported as CSVs and grouped recurring charges by merchant.",
+      "sha256": "2e7e58563262a4b198300614574dce63c1f4176257f3df31d20b4592ccfc7350"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Receipts came out as a CSV, with a handful of faded thermal receipts left blank rather than guessed. The subscription audit surfaced an unused gym membership. The author estimates about 90% time saved on receipts.",
+      "sha256": "5a563d793692a7853eec65ebad21922451684b3e35a614d57f13a5edd1d7fc6a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Faded receipts came back with blank amounts, so check those by hand. Spot-check totals before filing anything. All tests ran on the $20/month Claude Pro plan.",
+      "sha256": "8fe708e0acb5bce9b1281066a51c6d7d76d61d2b68974685cdf36263521ea2ba"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://websites2know.com/claude-code-use-cases/"
+      ],
+      "sha256": "1360e05e2b2da9e16efb8e7cf93ffd1ae8098b7f36d3d51216e13d1e97157b05"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-18",
+      "sha256": "0f45d26b9bca5bab9215ee29cc079e2776099e08de9df505123e52128fe91375"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "b1bec153338c6544f719a5fed4203afc41584048aa505438e919e0e264391715",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Extract receipts into a CSV and audit subscriptions with Claude Code\nThe author tested Claude Code on non-coding jobs: pulling vendor, date, amount and category from about 120 scanned receipts into a CSV, and subscription auditing and a corrupted video; a few tasks only half worked.\nDone with\nCC\nClaude Code\nWhat they did\nThe author scanned about 120 receipts into a folder and asked Claude Code to pull vendor, date, amount and category into one CSV. It read each PDF and flagged receipts over the documentation-retention threshold. For subscriptions, it analyzed two years of bank statements exported as CSVs and grouped recurring charges by merchant.\nHow it went\nReceipts came out as a CSV, with a handful of faded thermal receipts left blank rather than guessed. The subscription audit surfaced an unused gym membership. The author estimates about 90% time saved on receipts.\nWorth knowing\nFaded receipts came back with blank amounts, so check those by hand. Spot-check totals before filing anything. All tests ran on the $20/month Claude Pro plan.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nLook at the folder [path to scanned receipts] and read each receipt to extract vendor, date, amount, currency and a spending category into a single CSV called receipts.csv. Flag any receipt you could not read confidently in a separate list rather than guessing. When done, give me the row count and total, and don't move, rename or delete any of my original files.\nOriginal source: https://websites2know.com/claude-code-use-cases/",
+    "body_sha256": "54a0e62999dee4919d1ef1b43d983f0987d651e53bbf19a908d3f80ad8967cc0",
+    "archived_at": "2026-11-19T09:38:30.256836+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-19T09:38:30.256836+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

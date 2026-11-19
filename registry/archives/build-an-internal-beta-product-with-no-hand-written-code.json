@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-an-internal-beta-product-with-no-hand-written-code",
-  "observed_at": "2026-11-18T09:23:02.601694+00:00",
-  "html_sha256": "3d503dd39ef8bd393cb1bb6d030db6c743690d1d475bea95dd742f95942775fb",
+  "observed_at": "2026-11-19T09:35:14.265997+00:00",
+  "html_sha256": "6efc639275a438a74eb165ee569705d8a651208e1353eac27447d6827f32304e",
   "body_sha256": "2ca8b519d80763e8d3c48f8f9d4b388cb68bca935e0020b7828f01a4651452a7",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build an internal beta product with no hand-written code\nA team says it shipped an internal beta using Codex as the main implementation agent, with recurring background tasks scanning for deviations, updating quality grades and opening refactoring PRs.\nDone with\nCX\nCodex\nWhat they did\nA three-engineer team started from an empty repo and used Codex CLI with GPT-5 to generate the scaffold, then kept humans in a prompting role: engineers described tasks, let Codex open PRs, and had it self-review, request additional agent reviews, respond to feedback, and iterate until reviews passed. They also made the app, logs, metrics, docs, and repository rules directly legible to the agent, then ran background Codex jobs on a cadence to scan for deviations, update quality grades, and open refactoring PRs.\nHow it went\nOver about five months, Codex produced roughly a million lines of code and around 1,500 merged PRs for an internal beta with daily internal users and external alpha testers; the team estimates this was about 10x faster than hand-coding. It still broke and needed fixes, and early progress was slow until they built enough scaffolding and constraints for the agent.\nWorth knowing\nMost cleanup PRs from the recurring background tasks could be reviewed in under a minute and automerged; the post also says single Codex runs sometimes worked for more than six hours.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn my repo at [path or repo name], implement [small internal feature] from this spec: [spec]. Write the code and tests yourself, then open a pull request with a summary of what changed and how you verified it. Also propose a recurring task that scans for code that deviates from [our conventions], and show me its plan before you set it up.\nOriginal source: https://www.reddit.com/r/codex/comments/1r2pw9q/read_this_or_stay_behind",
     "body_sha256": "2ca8b519d80763e8d3c48f8f9d4b388cb68bca935e0020b7828f01a4651452a7",
-    "archived_at": "2026-11-18T09:23:02.601694+00:00",
+    "archived_at": "2026-11-19T09:35:14.265997+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-18T09:23:02.601694+00:00",
+    "at": "2026-11-19T09:35:14.265997+00:00",
     "status": "fetched",
     "error": null
   }

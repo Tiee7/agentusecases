@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/compare-single-agent-vs-multi-agent-builds",
+  "observed_at": "2026-11-19T09:38:24.132966+00:00",
+  "html_sha256": "be837b8f2623c7bbd9d3d91916cb07a21e95b1b398ea668d50d74052266d2be9",
+  "body_sha256": "d785404e0e1d8016c121b4b773b43c3600407d8a77695d5e852920b2df3f513c",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Compare single-agent vs multi-agent builds",
+      "sha256": "c665d223471589f5b64da2ee2b2b3b33a68349dff40b0b46f9a76c9547edeb8d"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Poster ran Claude Code on two real builds across 35 runs, finding a single agent with skills matched a subagent team's quality at lower cost and time.\n·\nNov 13, 2026",
+      "sha256": "6039477cc3de79dc4eb6bc2d2d17227f07dfd90b456571293308407cd0d4d149"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster compared two Claude Code setups on the same web-app build: a team with an orchestrator plus planner, builder, reviewer, and tester subagents, versus one agent using those same role prompts as skills with subagents disabled. They ran each setup 7 times in fresh Docker containers, capped runs at 40 minutes, and graded the output with 40 hidden Playwright tests plus blind screenshot scoring in separate Claude sessions.",
+      "sha256": "55af1302283ff210a0ceabcb6eeddac902ccbb99e725af047cb4783272a045f1"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On the harder task, both setups passed 40/40 hidden tests every run and had the same median design score of 37/50, but the team’s median cost was $1.31 versus $0.81 and median time was 28.6 minutes versus 15.0. In an earlier easier version, the team also introduced two handoff-related keyboard-booking failures, though both setups missed one UI flaw.",
+      "sha256": "8b0b42676af5ed53fff5379897b9b0315ebd1104b0496b3c45fc42b5b4c1140c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was cost from fresh subagents rereading and recaching prompts; the poster also notes all prices were API list prices and they did not run Anthropic’s eval kit because it required a paid API key.",
+      "sha256": "3507fa6fdf6f95867daede7cd2b4a3b2ca3269b74d926d884b414b76efadf91d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeCode/comments/1xuqnnc/i_tested_anthropics_one_agent_with_skills_beats_a"
+      ],
+      "sha256": "6765ffeb9461afe7503dbf91c840cdbc2d25da361ab85537e272c284931df452"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-18",
+      "sha256": "0f45d26b9bca5bab9215ee29cc079e2776099e08de9df505123e52128fe91375"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "827158d1d293bf997230dc64d31267ab84e4eacc0f8b00d87d7c4a5092078aa0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Compare single-agent vs multi-agent builds\nPoster ran Claude Code on two real builds across 35 runs, finding a single agent with skills matched a subagent team's quality at lower cost and time.\n·\nNov 13, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe poster compared two Claude Code setups on the same web-app build: a team with an orchestrator plus planner, builder, reviewer, and tester subagents, versus one agent using those same role prompts as skills with subagents disabled. They ran each setup 7 times in fresh Docker containers, capped runs at 40 minutes, and graded the output with 40 hidden Playwright tests plus blind screenshot scoring in separate Claude sessions.\nHow it went\nOn the harder task, both setups passed 40/40 hidden tests every run and had the same median design score of 37/50, but the team’s median cost was $1.31 versus $0.81 and median time was 28.6 minutes versus 15.0. In an earlier easier version, the team also introduced two handoff-related keyboard-booking failures, though both setups missed one UI flaw.\nWorth knowing\nThe main catch was cost from fresh subagents rereading and recaching prompts; the poster also notes all prices were API list prices and they did not run Anthropic’s eval kit because it required a paid API key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to compare a single agent with skills against a multi-subagent team on [my build task]. Run each approach [number] times in a clean copy of [repo path], and record cost, time, and a quality check against [my criteria]. Finish with a short table of results and which setup you'd recommend.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1xuqnnc/i_tested_anthropics_one_agent_with_skills_beats_a",
+    "body_sha256": "d785404e0e1d8016c121b4b773b43c3600407d8a77695d5e852920b2df3f513c",
+    "archived_at": "2026-11-19T09:38:24.132966+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-19T09:38:24.132966+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

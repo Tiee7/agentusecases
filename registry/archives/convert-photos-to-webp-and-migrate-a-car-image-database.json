@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/convert-photos-to-webp-and-migrate-a-car-image-database",
+  "observed_at": "2026-11-19T09:38:32.129095+00:00",
+  "html_sha256": "a83ce5849b3e4282ff97646fdc1fd7be6e9d925e0c55c773477e6e678b654e86",
+  "body_sha256": "971a605c0f8048fbca585f3a8ef47861395acbe43ce16a97262be7b75eb258a1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Convert photos to WebP and migrate a car image database",
+      "sha256": "67118e860dd98aeb641b244165f294af5045a1add79fc279f12b71c1bf91994c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Commenters used Codex to convert 220 large JPGs to WebP and upload them, and to migrate over 1 million car images into a new database and schema.",
+      "sha256": "396c54a17114c40c596dccef9242e00994d0ea53a637ad62e04cb263f412b6a7"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the comments, one user said they gave Codex 220 JPGs at about 60 MB each and had it convert them to WebP, apply specific quality settings, resize them, and upload the finished files to the server. Another said Codex wrote scripts for a week-long migration of more than 1 million car images, including converting images and rebuilding a messy legacy SQL database into a new schema; the human directed the work and let Codex handle the scripting.",
+      "sha256": "de4a2dc7a7fdaedb77a6f6ae32db7cf2a90bebf2748e064f9a6d7e5d0ff69a62"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The photo batch was reduced to about 6 MB total and the uploader said the prompting took about 10 seconds. The car-image migration reportedly took about a week instead of months, though no exact output metrics beyond the 1 million-image scale were given.",
+      "sha256": "e3648b3782a73b178bcdf1c22b22977f6384876e03a69848adfa6ebf9c8c9c98"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch mentioned is time and trust: the big migration still took about a week, while the smaller image job was mostly a prompt plus automated busywork.",
+      "sha256": "4b872aca3b98fb323a113323506ef4f684d5496e7999e18b9271b77d9dea9a81"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Codex"
+      ],
+      "sha256": "0209e5290d7602c2118c7b23078c00bab8c73baf63cb9fc86f5b416703b107b7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/codex/comments/1t9ne79/something_fundamental_has_changed_about_how_i_use"
+      ],
+      "sha256": "44baf786e07b5980a9bc56e8f8dff65b0422efc07db7612a2bb7e78b53c7f298"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-18",
+      "sha256": "0f45d26b9bca5bab9215ee29cc079e2776099e08de9df505123e52128fe91375"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2eb0ca68d1d081cab4fdb53df4145811b90cbe642ee157570cc2fe4ceed5dec4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Convert photos to WebP and migrate a car image database\nCommenters used Codex to convert 220 large JPGs to WebP and upload them, and to migrate over 1 million car images into a new database and schema.\nDone with\nCX\nCodex\nWhat they did\nIn the comments, one user said they gave Codex 220 JPGs at about 60 MB each and had it convert them to WebP, apply specific quality settings, resize them, and upload the finished files to the server. Another said Codex wrote scripts for a week-long migration of more than 1 million car images, including converting images and rebuilding a messy legacy SQL database into a new schema; the human directed the work and let Codex handle the scripting.\nHow it went\nThe photo batch was reduced to about 6 MB total and the uploader said the prompting took about 10 seconds. The car-image migration reportedly took about a week instead of months, though no exact output metrics beyond the 1 million-image scale were given.\nWorth knowing\nThe main catch mentioned is time and trust: the big migration still took about a week, while the smaller image job was mostly a prompt plus automated busywork.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn [folder or repo path], convert all JPG images larger than [size, e.g. 500KB] to WebP at quality [80], keeping the filenames and folder structure. Then upload the converted files to [destination, e.g. S3 bucket or CDN] and give me a report of file counts and total size before and after. Keep the originals, and pause to show me the plan before uploading or overwriting anything.\nOriginal source: https://www.reddit.com/r/codex/comments/1t9ne79/something_fundamental_has_changed_about_how_i_use",
+    "body_sha256": "971a605c0f8048fbca585f3a8ef47861395acbe43ce16a97262be7b75eb258a1",
+    "archived_at": "2026-11-19T09:38:32.129095+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-19T09:38:32.129095+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

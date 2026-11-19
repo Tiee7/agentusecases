@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-mac-tasks-through-claude-computer-use",
+  "observed_at": "2026-11-19T09:38:20.231965+00:00",
+  "html_sha256": "41753ab0f20728fb224f3347e7c011bcdbdbe7c1d56d3e7013dbcdffb0d87f77",
+  "body_sha256": "71ef5bdebe263493352e105339b3df4e1a4a97d0e4e3750936f57ad2bb410581",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run Mac tasks through Claude computer use",
+      "sha256": "8586ffea20f557365e0908d786352d67cb85f1e67bc5658626aaa61ef48c0dfb"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Poster gave Claude dozens of Mac tasks across Finder, Settings, Obsidian and more, creating notes and verifying outputs; dragging and dropdowns still caused problems.\n·\nOct 21, 2026",
+      "sha256": "bbc11ef933c38ed1696e2fa51dd67b098a32c14b098e23f3288d3d8a7b187091"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster gave Claude Opus 5.5 dozens of Mac tasks across Finder, System Settings, Obsidian, Telegram, Freeform, Preview, and Spotify, then read the logs and reran most tasks with instructions to act through the app like a person. Claude mostly tried terminal commands first, used app-provided numbered controls instead of aiming the mouse, batched several actions before checking results, and asked the person to step in for things like Touch ID or overwriting files.",
+      "sha256": "681314dfdee012392c6fdabd87ec59e8eeccb24a1eb5dcfbe388e7711f52729e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "It was much faster when it could avoid the screen, with median actions around half a second versus decisions taking over two seconds, but app-driven runs were slower. Failures clustered around dragging, which worked 2 of 4 times, and System Settings drop-downs, where the workaround was wrong every time.",
+      "sha256": "ecacf30db03040847ce4156be57ca81da62ed5e6e89035773433640a3d133b17"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was that “do it in the app” made runs slower; the poster says screen inspection caused most latency and errors.",
+      "sha256": "58634cf5b28ebaf9a2c598a44bd3dd7476ac74ef45944088b9dc2b6fadc98ddc"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude computer use"
+      ],
+      "sha256": "617607bcaf38ba4a5d1952ed5f51bf4e97bf427ac48a486b74af97f8d6565b2c"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1xbq70c/reverse_engineered_claudes_computer_use"
+      ],
+      "sha256": "5bfeccdc134c61760a548141660ea3ad65bd732443f695e1380fc0c675107bf5"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-18",
+      "sha256": "0f45d26b9bca5bab9215ee29cc079e2776099e08de9df505123e52128fe91375"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ad9b46d6b1bf25d85d94a460ae080d9d7398f2b0f3387d3e1eef4ecc741eab6d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run Mac tasks through Claude computer use\nPoster gave Claude dozens of Mac tasks across Finder, Settings, Obsidian and more, creating notes and verifying outputs; dragging and dropdowns still caused problems.\n·\nOct 21, 2026\nDone with\nCU\nClaude computer use\nWhat they did\nThe poster gave Claude Opus 5.5 dozens of Mac tasks across Finder, System Settings, Obsidian, Telegram, Freeform, Preview, and Spotify, then read the logs and reran most tasks with instructions to act through the app like a person. Claude mostly tried terminal commands first, used app-provided numbered controls instead of aiming the mouse, batched several actions before checking results, and asked the person to step in for things like Touch ID or overwriting files.\nHow it went\nIt was much faster when it could avoid the screen, with median actions around half a second versus decisions taking over two seconds, but app-driven runs were slower. Failures clustered around dragging, which worked 2 of 4 times, and System Settings drop-downs, where the workaround was wrong every time.\nWorth knowing\nThe main catch was that “do it in the app” made runs slower; the poster says screen inspection caused most latency and errors.\nTry it yourself\nwith\nClaude computer use\nCopy prompt\nOn my Mac, please do these tasks one by one: [list of tasks in Finder, Settings, notes app]. After each one, verify the result and tell me what you checked. If a drag or dropdown fails, try a keyboard alternative, and pause before deleting or overwriting anything.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1xbq70c/reverse_engineered_claudes_computer_use",
+    "body_sha256": "71ef5bdebe263493352e105339b3df4e1a4a97d0e4e3750936f57ad2bb410581",
+    "archived_at": "2026-11-19T09:38:20.231965+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-19T09:38:20.231965+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

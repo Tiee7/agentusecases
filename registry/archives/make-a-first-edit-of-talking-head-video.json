@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/make-a-first-edit-of-talking-head-video",
+  "observed_at": "2026-11-19T09:38:10.273349+00:00",
+  "html_sha256": "f68fb3c9d82237a34ec02a969cdb83bc2f7e36c3e2b403c18b86bb27c9062391",
+  "body_sha256": "0c96b8a0eb817de2c42d137ba8791a39e990af50d316cd8b341c6a1450e448c2",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Make a first edit of talking-head video",
+      "sha256": "54543084e3ea2129149a1a43890cf4dcd3987f33aa7bb98b239053d049b0a23f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent skill reads a recording's transcript, writes an edit plan, renders with ffmpeg, then checks a contact sheet of cuts and re-renders if needed.\n·\nNov 14, 2026",
+      "sha256": "ffacbfab4941a48d90f75f39b8291cf9abb8af116a357ed337ead882b7a98015"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A script transcribes the video with word timestamps. The agent reads the whole transcript and writes an edit.json cut list, with a reason for each cut. A plan-only run produces edit-plan.md, and the person approves it. Scripts then render with ffmpeg, and the agent inspects cuts.jpg and the warnings, re-rendering if needed.",
+      "sha256": "36efe7f06830765de11f671da20f31b715617ce85e164826795c77e2709663d8"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In the worked example, a 6:39 NASA interview became 5:57 with 12 cuts. Only about 9 seconds came from inside the talking, because the interview was already well delivered.",
+      "sha256": "72e672fa6b3362f0f94d3c72f7dc91932e7382b760903cb11d895a03d55a6407"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Transcription can leave out filler words unless prompted, and an unwritten \"um\" can't be cut. The skill sends a disfluent prompt, and you can pass names and jargon with --terms.",
+      "sha256": "271c79df8c94f61f2e65e4bed907d075349e020428fc1167ef1a488a2900d995"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenClaw"
+      ],
+      "sha256": "36285d9df8c6a49e91072e7ce0e505c5e270b91014fb6f1da1abf3fdd237617a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/fheijdenrijk/video-editing-skill-for-claude-code-an-agent-that-plans-every-cut-then-renders-with-ffmpeg-518a"
+      ],
+      "sha256": "35b751ff052b664e825fdab61ad565968156eada3a118813fd637d7ba5ea96b3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-18",
+      "sha256": "0f45d26b9bca5bab9215ee29cc079e2776099e08de9df505123e52128fe91375"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "907ad5fbc42979474a435ce7e354d89650e701c35b30e129603cce4bf3ddade9",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Make a first edit of talking-head video\nAn agent skill reads a recording's transcript, writes an edit plan, renders with ffmpeg, then checks a contact sheet of cuts and re-renders if needed.\n·\nNov 14, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nOC\nOpenClaw\nWhat they did\nA script transcribes the video with word timestamps. The agent reads the whole transcript and writes an edit.json cut list, with a reason for each cut. A plan-only run produces edit-plan.md, and the person approves it. Scripts then render with ffmpeg, and the agent inspects cuts.jpg and the warnings, re-rendering if needed.\nHow it went\nIn the worked example, a 6:39 NASA interview became 5:57 with 12 cuts. Only about 9 seconds came from inside the talking, because the interview was already well delivered.\nWorth knowing\nTranscription can leave out filler words unless prompted, and an unwritten \"um\" can't be cut. The skill sends a disfluent prompt, and you can pass names and jargon with --terms.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nMake a first-pass edit of my talking-head video at [file path]. Transcribe it, write an edit plan that removes filler words, dead air, and flubbed takes, render it with ffmpeg, then build a contact sheet of the cut points and check it. Re-render if any cuts look wrong, and stop when you have a clean [format] file plus a short list of the changes you made.\nOriginal source: https://dev.to/fheijdenrijk/video-editing-skill-for-claude-code-an-agent-that-plans-every-cut-then-renders-with-ffmpeg-518a",
+    "body_sha256": "0c96b8a0eb817de2c42d137ba8791a39e990af50d316cd8b341c6a1450e448c2",
+    "archived_at": "2026-11-19T09:38:10.273349+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-19T09:38:10.273349+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

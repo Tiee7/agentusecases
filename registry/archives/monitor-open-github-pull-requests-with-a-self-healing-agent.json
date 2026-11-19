@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-open-github-pull-requests-with-a-self-healing-agent",
-  "observed_at": "2026-11-18T09:18:18.622528+00:00",
-  "html_sha256": "dcbba13f83386e7960028e6b027e7dcc4f7d6f7ba4ac3c482b5ff98a600ee036",
+  "observed_at": "2026-11-19T09:30:30.101729+00:00",
+  "html_sha256": "79f2b9211dd95352654f0364fba3ea5606b298a2e8300bde10b0f01c2fdbd528",
   "body_sha256": "0b57568e38611c61f730c6a93c4bcfbc41def9a5ef427eaf8a160513d4172144",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Monitor open GitHub pull requests with a self-healing agent\nAn OpenClaw agent watches 26+ pull requests across several repos, with a cron scanner every 5 minutes and alerts pushed to the author; it caught one of its own critical bugs.\nDone with\nOC\nOpenClaw\nWhat they did\nA Python script using the gh CLI runs from cron every 5 minutes. It compares each tracked PR with a saved JSON snapshot and writes important changes to a pending-alerts file. A separate watchdog script runs every 30 minutes. The OpenClaw agent wakes on a heartbeat, runs the watchdog, and pushes undelivered alerts through Feishu.\nHow it went\nIt tracks 26 PRs: 1 merged, 1 closed, 24 open. The watchdog exposed an older v2 script that had crashed on its first run and never worked in 18 days.\nWorth knowing\nAlerts sit in a flat JSON file, so if the agent misses a heartbeat they can be lost. The author would use a queue and webhooks instead.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWatch my open GitHub pull requests across these repos: [repo list]. Every 5 minutes check for new review comments, failing CI checks, merge conflicts, or merges, and message me on [Telegram/other chat] only when something needs my attention, with a link and one line on what changed. Do not push commits, comment, or merge anything without showing me first.\nOriginal source: https://dev.to/armorbreak/i-built-a-self-healing-pr-monitor-with-openclaw-and-it-caught-its-own-bugs-41e8",
     "body_sha256": "0b57568e38611c61f730c6a93c4bcfbc41def9a5ef427eaf8a160513d4172144",
-    "archived_at": "2026-11-18T09:18:18.622528+00:00",
+    "archived_at": "2026-11-19T09:30:30.101729+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-18T09:18:18.622528+00:00",
+    "at": "2026-11-19T09:30:30.101729+00:00",
     "status": "fetched",
     "error": null
   }
