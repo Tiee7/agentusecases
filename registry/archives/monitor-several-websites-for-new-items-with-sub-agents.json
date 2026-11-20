@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/monitor-several-websites-for-new-items-with-sub-agents",
+  "observed_at": "2026-11-20T09:20:47.096220+00:00",
+  "html_sha256": "1d43bd964111d01347b5a2bff32cb47c59d58b6be698e12422deb8f9e6804c78",
+  "body_sha256": "a2dc01e23eaedd427d2bb5e6f90bba55d69fdd275c6f8709106056542c07ed4e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Monitor several websites for new items with sub-agents",
+      "sha256": "63c254209bbe48ccd1bff39ced59031a9c9358a3bcbddc802ad1dc732eb6f28c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "In a nine-day test Hermes Agent watched several sites with one sub-agent each and found the most new items, but filled its 25 GB disk and missed runs.",
+      "sha256": "111362d18daf406906c609cb769da77ea74cda2aa88f6fc586cb5d6532cc7f10"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Hermes Agent ran on a Hermes Cloud server with its own Gmail mailbox. Each weekday at 06:00 UTC it checked six AI benchmark sites for new articles, reports and benchmarks, using one sub-agent per site, and saved a report draft. The testers did not intervene, except to move it to a bigger server after the disk filled.",
+      "sha256": "135b566f24907b0975637b23cabf3d9bd887a8ead6caba9d13a46d3d6f6c7375"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Hermes Agent caught 24 of 47 new items, the most of the four agents. 824 of its 1,099 listed items were user-submitted prompts. It missed 2 runs and was slow: median 162 minutes per watch report.",
+      "sha256": "7748ef5a4ed52916aba92c6962c3433a2cc52c2bad1e9893086ac7400ed541dc"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "It saved raw data from one site every day until the 25 GB disk filled on November 5. Model usage would have cost about $20 a day at API prices.",
+      "sha256": "bbab0551c5d8a76235cbc5e7d2316c99774b50ab6616583a30c0a40d76e59bcc"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent",
+        "Dots",
+        "Grok Bot"
+      ],
+      "sha256": "30d3e4f289394765fa511266710bddd1487f8c713cb4c04efd7f195ae3dc4c4d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://aimultiple.com/always-on-agents"
+      ],
+      "sha256": "aef0bb12a7076a91180a5eabd68208447b53c2124766fca3135f78c8f7abcae0"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "5aac2278e88a72ee0a78fd5ec8c8630ad5904a75d2f1c9c8320c303a0e345fcc",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Monitor several websites for new items with sub-agents\nIn a nine-day test Hermes Agent watched several sites with one sub-agent each and found the most new items, but filled its 25 GB disk and missed runs.\nDone with\nHA\nHermes Agent\nDO\nDots\nGB\nGrok Bot\nWhat they did\nHermes Agent ran on a Hermes Cloud server with its own Gmail mailbox. Each weekday at 06:00 UTC it checked six AI benchmark sites for new articles, reports and benchmarks, using one sub-agent per site, and saved a report draft. The testers did not intervene, except to move it to a bigger server after the disk filled.\nHow it went\nHermes Agent caught 24 of 47 new items, the most of the four agents. 824 of its 1,099 listed items were user-submitted prompts. It missed 2 runs and was slow: median 162 minutes per watch report.\nWorth knowing\nIt saved raw data from one site every day until the 25 GB disk filled on November 5. Model usage would have cost about $20 a day at API prices.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nWatch these sites for new [items, listings, or posts]: [list of URLs], using one sub-agent per site and checking every [interval]. Message me on [chat app] with a short summary and link for each new item, skipping anything already reported. Also keep an eye on your disk usage and tell me if it passes [percent], or if any run gets missed.\nOriginal source: https://aimultiple.com/always-on-agents",
+    "body_sha256": "a2dc01e23eaedd427d2bb5e6f90bba55d69fdd275c6f8709106056542c07ed4e",
+    "archived_at": "2026-11-20T09:20:47.096220+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:47.096220+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

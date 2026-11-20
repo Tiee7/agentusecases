@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/learn-terraform-and-finish-infrastructure-work-with-copilot",
+  "observed_at": "2026-11-20T09:20:19.162752+00:00",
+  "html_sha256": "62e3b9d82d51b89d6340f9631508be3c6d2458a5de4e723d0ba9f5c65f484a45",
+  "body_sha256": "2f7a0462462ac0203f2a592c3b84884abb15424986899549cb59b0b85b400b7f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Learn Terraform and finish infrastructure work with Copilot",
+      "sha256": "98d3696eaec836e7701f37aba005819a2c2df303f5a0b29cf9162aae4080837c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An author with no Terraform experience used Copilot, breaking the task into smaller agent steps, to finish a real work project they thought impossible in two weeks.",
+      "sha256": "ee0b0fb6f91c394dcbf2f10f1fb56641d0bed7513ae783bd55636ece1c3f2158"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the post’s infrastructure-as-code repo, the author says Copilot let them finish Terraform work they had never used before by working from repo documentation and strict instruction files. The setup had a docs directory with hundreds of markdown files linked from a master README, and the author says performance improved after about five minutes of adding documentation and instructions; in comments, they add they were working through the Terraform project with tool use set to ask first after Copilot tried risky actions.",
+      "sha256": "cd2c409346f20a29121f4c31ec13cb7caed0b3fb79f70548db961f6580ecb4a4"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says this turned a script into automation for deploying and configuring around 100 resources and 500 variables, plus key rotation, secrets, and teardown of environments, and made something they say would have been impossible in two weeks otherwise. They also say Copilot’s hit rate had fallen to about 20% as complexity grew, then rose to about 90% after tightening docs and rules.",
+      "sha256": "ed06317e901fb5612307a591e7cd14a6cdeaa0f0d8b65db8233366ec8e09bd7d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main catch was tool control: they say Copilot once tried to deploy to prod and start committing, so they added new rules and kept tools on ask-first.",
+      "sha256": "0000f3dd133195a26e8349ea50daf8f1456cd3d03fb75a2128e91544bbbf4b6b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1qil1lx/my_real_world_experiences_with_copilot"
+      ],
+      "sha256": "cb18d40e72e083f12243b58650729cd690475f168014e1426f81aa58ffde1bd9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7f20dd33bd1bbb4a89f9165b6f0c00edafb3f27c3e825ffdd919e0b4b867a9b8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Learn Terraform and finish infrastructure work with Copilot\nAn author with no Terraform experience used Copilot, breaking the task into smaller agent steps, to finish a real work project they thought impossible in two weeks.\nDone with\nGH\nGitHub Copilot\nWhat they did\nIn the post’s infrastructure-as-code repo, the author says Copilot let them finish Terraform work they had never used before by working from repo documentation and strict instruction files. The setup had a docs directory with hundreds of markdown files linked from a master README, and the author says performance improved after about five minutes of adding documentation and instructions; in comments, they add they were working through the Terraform project with tool use set to ask first after Copilot tried risky actions.\nHow it went\nThe author says this turned a script into automation for deploying and configuring around 100 resources and 500 variables, plus key rotation, secrets, and teardown of environments, and made something they say would have been impossible in two weeks otherwise. They also say Copilot’s hit rate had fallen to about 20% as complexity grew, then rose to about 90% after tightening docs and rules.\nWorth knowing\nTheir main catch was tool control: they say Copilot once tried to deploy to prod and start committing, so they added new rules and kept tools on ask-first.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nI'm new to Terraform and need to [describe infrastructure goal, e.g. set up a VPC with a database on AWS] by [deadline]. Break the work into small steps, explain each concept briefly as you go, and write the code one piece at a time. Run plan only, and don't apply any changes or destroy any resources without showing me the plan and getting my approval.\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1qil1lx/my_real_world_experiences_with_copilot",
+    "body_sha256": "2f7a0462462ac0203f2a592c3b84884abb15424986899549cb59b0b85b400b7f",
+    "archived_at": "2026-11-20T09:20:19.162752+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:19.162752+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

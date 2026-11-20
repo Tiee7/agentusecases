@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-an-ingestion-and-retrieval-agent-repo-in-cursor",
+  "observed_at": "2026-11-20T09:20:03.183167+00:00",
+  "html_sha256": "3719b0dd8c1909584a25fac8ec26efd6804ccb2b15293adbf62969327d8365e7",
+  "body_sha256": "9e6abc219bbe7ddc7913c1a5865496382e6346d882da733d2001599d57653ce2",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build an ingestion and retrieval agent repo in Cursor",
+      "sha256": "0282b82a1171fb3fe9b629b12de63d2087a6758ccf7d419510d5ca56f79149d0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter built a whole repo in Cursor, including an ingestion pipeline, Neo4j schema, retrieval tools, and a LangGraph agent, using agent mode and project rules.\n·\nMay 3, 2025",
+      "sha256": "ddf72e7e71b4a9e484b1dfb6348f794ab3d28a2616fc71b2c5741532e89437ca"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They built an open-source Agentic GraphRAG repo in Cursor, covering the ingestion pipeline, Neo4j schema, retrieval tools, and a DeepAgents/LangGraph agent. In agent mode they split work across parallel subagents with separate contexts for ingestion, graph queries, and tests, and used pstack plus custom skills: /poteto-mode chose a playbook and verified it by running it, while /swarm fanned tasks out to parallel agents.",
+      "sha256": "ef5119ca3a36196a4193cf6dd1b5ff3877b0531f693c24b03b22d6907a910ac0"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was a library that keeps documents, task history, and agent decisions in one graph, cites passages for saved decisions, flags dependent decisions when a source changes, and exposes tools over MCP. The post gives no benchmarks, costs, or specific misses.",
+      "sha256": "577fa2053b333db33536840d7e4c89d693cc7dbdd1f0cadebef500597829e623"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "They say they used Cursor’s Grok models for most of the coding.",
+      "sha256": "eda2791462fe0af2e45beb66ad982211b6afe5807976a02d1536b9d96aa68e03"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/cursor/comments/1sx30zw/weekly_cursor_project_showcase_thread"
+      ],
+      "sha256": "24994e4a64c73e0276dffdf61a0355be3dd7b0aa9f448cedfa3ebb73149c99a9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "2d2b1f30e6320a23ef138842f7b9c3dd641bf72f6238fc161f8e74567126e2a8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build an ingestion and retrieval agent repo in Cursor\nA commenter built a whole repo in Cursor, including an ingestion pipeline, Neo4j schema, retrieval tools, and a LangGraph agent, using agent mode and project rules.\n·\nMay 3, 2025\nDone with\nCR\nCursor\nWhat they did\nThey built an open-source Agentic GraphRAG repo in Cursor, covering the ingestion pipeline, Neo4j schema, retrieval tools, and a DeepAgents/LangGraph agent. In agent mode they split work across parallel subagents with separate contexts for ingestion, graph queries, and tests, and used pstack plus custom skills: /poteto-mode chose a playbook and verified it by running it, while /swarm fanned tasks out to parallel agents.\nHow it went\nThe result was a library that keeps documents, task history, and agent decisions in one graph, cites passages for saved decisions, flags dependent decisions when a source changes, and exposes tools over MCP. The post gives no benchmarks, costs, or specific misses.\nWorth knowing\nThey say they used Cursor’s Grok models for most of the coding.\nTry it yourself\nwith\nCursor\nCopy prompt\nUsing agent mode, help me build a repo for an agent that ingests [type of documents or data] and answers questions over them with [database, e.g. Neo4j]. First write project rules covering the stack, folder layout, and coding conventions, then build the ingestion pipeline, the database schema, the retrieval tools, and a [LangGraph] agent that uses them. Work step by step, run the code as you go, and stop when I can ingest a sample file and ask a question that returns a sourced answer.\nOriginal source: https://www.reddit.com/r/cursor/comments/1sx30zw/weekly_cursor_project_showcase_thread",
+    "body_sha256": "9e6abc219bbe7ddc7913c1a5865496382e6346d882da733d2001599d57653ce2",
+    "archived_at": "2026-11-20T09:20:03.183167+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:03.183167+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

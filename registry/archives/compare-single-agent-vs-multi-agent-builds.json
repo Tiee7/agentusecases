@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/compare-single-agent-vs-multi-agent-builds",
-  "observed_at": "2026-11-19T09:38:24.132966+00:00",
-  "html_sha256": "be837b8f2623c7bbd9d3d91916cb07a21e95b1b398ea668d50d74052266d2be9",
+  "observed_at": "2026-11-20T09:19:05.223454+00:00",
+  "html_sha256": "b2cfd8b2360faf4211aed1980c9fd599ddd91c6129fdf6056f476df149233652",
   "body_sha256": "d785404e0e1d8016c121b4b773b43c3600407d8a77695d5e852920b2df3f513c",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Compare single-agent vs multi-agent builds\nPoster ran Claude Code on two real builds across 35 runs, finding a single agent with skills matched a subagent team's quality at lower cost and time.\n·\nNov 13, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe poster compared two Claude Code setups on the same web-app build: a team with an orchestrator plus planner, builder, reviewer, and tester subagents, versus one agent using those same role prompts as skills with subagents disabled. They ran each setup 7 times in fresh Docker containers, capped runs at 40 minutes, and graded the output with 40 hidden Playwright tests plus blind screenshot scoring in separate Claude sessions.\nHow it went\nOn the harder task, both setups passed 40/40 hidden tests every run and had the same median design score of 37/50, but the team’s median cost was $1.31 versus $0.81 and median time was 28.6 minutes versus 15.0. In an earlier easier version, the team also introduced two handoff-related keyboard-booking failures, though both setups missed one UI flaw.\nWorth knowing\nThe main catch was cost from fresh subagents rereading and recaching prompts; the poster also notes all prices were API list prices and they did not run Anthropic’s eval kit because it required a paid API key.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to compare a single agent with skills against a multi-subagent team on [my build task]. Run each approach [number] times in a clean copy of [repo path], and record cost, time, and a quality check against [my criteria]. Finish with a short table of results and which setup you'd recommend.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1xuqnnc/i_tested_anthropics_one_agent_with_skills_beats_a",
     "body_sha256": "d785404e0e1d8016c121b4b773b43c3600407d8a77695d5e852920b2df3f513c",
-    "archived_at": "2026-11-19T09:38:24.132966+00:00",
+    "archived_at": "2026-11-20T09:19:05.223454+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-19T09:38:24.132966+00:00",
+    "at": "2026-11-20T09:19:05.223454+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/route-customer-support-requests-across-nested-sub-agents",
+  "observed_at": "2026-11-20T09:20:39.137515+00:00",
+  "html_sha256": "845f16110b037a7c3e6ae4474a1403b25442ff3a109e1e5e8cb14bd2857f8c4b",
+  "body_sha256": "c3d7d23c4b24d7e0602dce17767b61b3d397f67276ac80370aa6e754adb296ad",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Route customer support requests across nested sub-agents",
+      "sha256": "b9c9fb397089811242a09d5f19ba54d977f3a9e9b62c272ef8b0a5928f3a3268"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Make AI Agents setup where an orchestrator routes messages to account lookup, refund, or human-handoff agents.\n·\nAug 1, 2026",
+      "sha256": "f85fa3d01c46a43e60371a9e9465af2eacd2153cbfafc8e0a6115c4b127288d1"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The post describes Make’s new nested-agent pattern rather than a user case study: you add a main Make AI Agent as an orchestrator, then add other Make AI Agents as tools inside it. The orchestrator receives a request, chooses a specialist such as account lookup, refund, or human handoff, and returns one combined result; the post says each specialist can be tested and reused separately.",
+      "sha256": "cae689db51551eafd070c461d567fda1b662cd59ce9517c30344af7b69fa511a"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The stated outcome is structural, not measured: larger workflows can be split into focused specialists instead of one catch-all agent, and the feature is available on all Make plans, including free. The thread gives no implementation details, metrics, or reported shortcomings.",
+      "sha256": "4ef08b51f1548b89f949349efc3cffe47bb79c996f4bd2fa4f826fe593f9340a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch is that this Reddit thread is a product announcement, so if you want to copy it you only get the setup path in Make, not a worked support-routing example.",
+      "sha256": "c4272d4d2f9f1d2fa0627e983e534eca3a09e65edfe74404c4c128837c99c439"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Make"
+      ],
+      "sha256": "0509e922cf9bb48aa8c605e35ac20ee21e9dc52eb40ca4f40974367fcc19533a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/Make/comments/1v83qav/make_ai_subagents_nested_agents"
+      ],
+      "sha256": "73326a7cae415c74c56b61a1f4087a9b1fed56339fd77764f3c004bfd60f451d"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3effc37a3ad6615d98973d90a9ebab3fa2ccf8f40b44e8a73dca8d049d21d574",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Route customer support requests across nested sub-agents\nA Make AI Agents setup where an orchestrator routes messages to account lookup, refund, or human-handoff agents.\n·\nAug 1, 2026\nDone with\nMK\nMake\nWhat they did\nThe post describes Make’s new nested-agent pattern rather than a user case study: you add a main Make AI Agent as an orchestrator, then add other Make AI Agents as tools inside it. The orchestrator receives a request, chooses a specialist such as account lookup, refund, or human handoff, and returns one combined result; the post says each specialist can be tested and reused separately.\nHow it went\nThe stated outcome is structural, not measured: larger workflows can be split into focused specialists instead of one catch-all agent, and the feature is available on all Make plans, including free. The thread gives no implementation details, metrics, or reported shortcomings.\nWorth knowing\nThe main catch is that this Reddit thread is a product announcement, so if you want to copy it you only get the setup path in Make, not a worked support-routing example.\nTry it yourself\nwith\nMake\nCopy prompt\nHelp me build a Make AI Agents scenario for customer support. An orchestrator agent should read each incoming message from [channel, such as email or chat] and route it to one of three sub-agents: an account lookup agent using [my customer database or tool], a refund agent following [my refund policy and limits], or a human-handoff agent that alerts [team member or channel]. Walk me through the setup, then test it with 3 sample messages, one per path. Set the refund agent to pause for my approval before issuing any refund or sending a reply to a customer.\nOriginal source: https://www.reddit.com/r/Make/comments/1v83qav/make_ai_subagents_nested_agents",
+    "body_sha256": "c3d7d23c4b24d7e0602dce17767b61b3d397f67276ac80370aa6e754adb296ad",
+    "archived_at": "2026-11-20T09:20:39.137515+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:39.137515+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

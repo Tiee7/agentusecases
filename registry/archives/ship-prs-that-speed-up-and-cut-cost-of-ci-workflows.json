@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/ship-prs-that-speed-up-and-cut-cost-of-ci-workflows",
-  "observed_at": "2026-11-19T09:37:22.243732+00:00",
-  "html_sha256": "c2120cb85a92f86c8e764f647c25c88ad566aac4a1d348849b3238123cfb9ba1",
+  "observed_at": "2026-11-20T09:18:03.156498+00:00",
+  "html_sha256": "d7374265c64e2700d2cb7cdf81dc208c2b3b1035b07cccd14d664b82cb074b4a",
   "body_sha256": "acbffa91a16c5cd843258bd47e757eafc5fed1d1c18f8921e45f2c027c5528ea",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Ship PRs that speed up and cut cost of CI workflows\nAn agent loop on CI runners opens PRs that improve test and workflow speed and cost; it cut Mastra's slowest workflow from 29m56s to 5m06s and found a bottleneck in better-auth.\n·\nNov 17, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nYou install the StarSling GitHub App and switch your workflows to its runners by changing one runs-on line. Agents then read your workflows, jobs, run logs and machine telemetry, and open PRs that fix caching, shard tests, parallelize jobs and reorder work. A person reviews and merges each PR.\nHow it went\nMastra's test suite p95 fell from 29m56s to 5m06s. Better Auth's E2E went from 2m22s to 1m04s. Partcl says an agent PR made its Rust tests 2x faster. These figures are partly from the faster runners, not the agent PRs alone.\nWorth knowing\nOptimization PRs are only on paid plans and are off by default for new accounts. Usage is $0.008/min for a 4 vCPU runner, and the free trial gives 2,000 minutes.\nTry it yourself\nwith\nCodex\nCopy prompt\nLook through the CI workflows in my repo [repo name or path] and find the slowest or most expensive ones using recent run times from [CI provider, e.g. GitHub Actions]. For the top [number] offenders, propose and make changes such as caching, parallelizing jobs, or skipping redundant steps. Open a separate draft PR for each fix that includes before and after timing estimates, and stop once each PR is ready for my review. Do not merge anything or change secrets or deployment settings without showing me first.\nOriginal source: https://starsling.dev",
     "body_sha256": "acbffa91a16c5cd843258bd47e757eafc5fed1d1c18f8921e45f2c027c5528ea",
-    "archived_at": "2026-11-19T09:37:22.243732+00:00",
+    "archived_at": "2026-11-20T09:18:03.156498+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-19T09:37:22.243732+00:00",
+    "at": "2026-11-20T09:18:03.156498+00:00",
     "status": "fetched",
     "error": null
   }

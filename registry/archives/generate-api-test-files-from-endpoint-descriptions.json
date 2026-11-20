@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/generate-api-test-files-from-endpoint-descriptions",
+  "observed_at": "2026-11-20T09:20:01.173043+00:00",
+  "html_sha256": "6830daa07b38c9c68aff6e498bd505531cd8721216c9a8a7eacd1d4b3078e260",
+  "body_sha256": "116d3e221b3db748c233b9802f1db7a6a57128549826726d28b752c757b50958",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Generate API test files from endpoint descriptions",
+      "sha256": "3336d08ef882b45f43a0284d23d9ce381503f74486d26e2c4e1a3ef293ff31e2"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A poster described their endpoints to Cursor's agent, which generated .http files with tests and assertions, then ran them through an extension.\n·\nMar 15, 2025",
+      "sha256": "419c3d410d05b9c5e297b5b84de79fd53d5d666f2bed5bd76e00ef1bf39b0c93"
+    },
+    "method": {
+      "status": "observed",
+      "value": "In the Reddit comment, the builder says they made a Cursor extension so API testing stayed inside the editor. Their workflow was: describe endpoints to Cursor’s agent or point it at docs, let the agent generate a set of .http files with tests and assertions, then run those files through the extension, which uses their open-source t-req engine to make the requests scriptable rather than static.",
+      "sha256": "955c57835b3d804991404a22e5004fc648d962c31c1e8c225a28673376909728"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The stated result was an in-editor loop where the agent could scaffold runnable API tests and the user could iterate without switching tools or copying tokens around. The post gives no performance numbers or concrete limits beyond saying everything runs locally and needs no account.",
+      "sha256": "070b6b1e4c8bb554ee7664e14801e0296deba22deb6b675672401f33c576e660"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch mentioned is that this depends on the author’s extension plus the t-req engine; they say it runs locally and requires no account.",
+      "sha256": "cffa7c6d3e3f9e24006297fc806d733a8501e986403ae0b58993d10b42b50088"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/cursor/comments/1ritmge/weekly_cursor_project_showcase_thread"
+      ],
+      "sha256": "d90a5827053be71046726ad4d5b641f8ee4718e47ecb91ca1c5eed66d093900c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e6a0f38aa3a9ee2b98772573822189df0e0b174b08eb6e45c14ca66df28ff219",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Generate API test files from endpoint descriptions\nA poster described their endpoints to Cursor's agent, which generated .http files with tests and assertions, then ran them through an extension.\n·\nMar 15, 2025\nDone with\nCR\nCursor\nWhat they did\nIn the Reddit comment, the builder says they made a Cursor extension so API testing stayed inside the editor. Their workflow was: describe endpoints to Cursor’s agent or point it at docs, let the agent generate a set of .http files with tests and assertions, then run those files through the extension, which uses their open-source t-req engine to make the requests scriptable rather than static.\nHow it went\nThe stated result was an in-editor loop where the agent could scaffold runnable API tests and the user could iterate without switching tools or copying tokens around. The post gives no performance numbers or concrete limits beyond saying everything runs locally and needs no account.\nWorth knowing\nThe main catch mentioned is that this depends on the author’s extension plus the t-req engine; they say it runs locally and requires no account.\nTry it yourself\nwith\nCursor\nCopy prompt\nI have an API with these endpoints: [list each endpoint with method, path, and what it does]. In my repo, create .http files in a [tests/api] folder with a request for each endpoint, covering a success case and at least one error case, and add assertions for status code and key response fields. Use [base URL] as a variable, then run the files through my REST client extension and show me which assertions pass or fail. You're done when every endpoint has tests and you've reported the results.\nOriginal source: https://www.reddit.com/r/cursor/comments/1ritmge/weekly_cursor_project_showcase_thread",
+    "body_sha256": "116d3e221b3db748c233b9802f1db7a6a57128549826726d28b752c757b50958",
+    "archived_at": "2026-11-20T09:20:01.173043+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:01.173043+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-notebook-on-a-tpu-via-colab-mcp-from-claude-code",
+  "observed_at": "2026-11-20T09:20:43.125057+00:00",
+  "html_sha256": "5f06a28e90266943a3866d9805cf531e1b370977284e0f8edd4fbb24406d9abf",
+  "body_sha256": "94974f4fe9d0288c1900e468198c806f01c619a2d4d76d5f472886a1d596ad14",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a notebook on a TPU via Colab MCP from Claude Code",
+      "sha256": "8ed6e173d6554d38c5260fe88e3570acebf2704fc5b34c31d1b813e5dd626a1a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A step-by-step setup connecting Claude Code to Google's hosted Colab MCP endpoint, running a notebook on a fresh TPU v5e-1 and then deleting it.\n·\nNov 18, 2026",
+      "sha256": "3d684c1fbef09f5b884f34a70e8740ba93f141f8267c20c0c058f77a71c15f88"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author got a token with the colaboratory scope from the Colab CLI login and enabled the API in a quota project. A headersHelper script passed both to Claude Code, since its built-in OAuth failed. A Python runner then created a TPU v5e-1 runtime, opened one session, sent each notebook cell to execute_code, and deleted the runtime in a finally block.",
+      "sha256": "7d099df68c9f405ebf391452b4fdc95a16883b6de6a22aba04f19643a14a11b8"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "A v5e-1 was ready in 4 seconds, and a 26-cell Gemma 4 notebook ran clean in 901 seconds. Its answers matched the Colab CLI run. Output comes back as text only, so HTML output was lost.",
+      "sha256": "0789cda74aa54d15724f805f775169ac36cc109ba3469a8f279bd1376ba0bb51"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Streams close at 300 seconds and interrupt the kernel, so split any longer cell. A plain gcloud ADC token is rejected for lacking the scope.",
+      "sha256": "838f64129187cbe98ff1cd4ec2d5a07a696fe67032ef34672189060515809f5b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/gde/the-colab-mcp-endpoint-from-claude-code-set-it-up-test-it-run-a-notebook-on-a-tpu-4ck9"
+      ],
+      "sha256": "ad2de4a482a57eca322f2d2c93a07ef988f6ac8ea5f8fc14ac82e82b04f45c21"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "978d5bb6fb5032cd3c6a6d6c17fcb11e195a949f7324574877473f036bcfdd2b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a notebook on a TPU via Colab MCP from Claude Code\nA step-by-step setup connecting Claude Code to Google's hosted Colab MCP endpoint, running a notebook on a fresh TPU v5e-1 and then deleting it.\n·\nNov 18, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe author got a token with the colaboratory scope from the Colab CLI login and enabled the API in a quota project. A headersHelper script passed both to Claude Code, since its built-in OAuth failed. A Python runner then created a TPU v5e-1 runtime, opened one session, sent each notebook cell to execute_code, and deleted the runtime in a finally block.\nHow it went\nA v5e-1 was ready in 4 seconds, and a 26-cell Gemma 4 notebook ran clean in 901 seconds. Its answers matched the Colab CLI run. Output comes back as text only, so HTML output was lost.\nWorth knowing\nStreams close at 300 seconds and interrupt the kernel, so split any longer cell. A plain gcloud ADC token is rejected for lacking the scope.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect yourself to Google's hosted Colab MCP endpoint, walking me through any authentication I need to do. Then run my notebook [path or Colab link] on a fresh [TPU v5e-1 or other runtime] and show me the output. When it finishes, tell me which runtime you created and ask me to confirm before you delete it.\nOriginal source: https://dev.to/gde/the-colab-mcp-endpoint-from-claude-code-set-it-up-test-it-run-a-notebook-on-a-tpu-4ck9",
+    "body_sha256": "94974f4fe9d0288c1900e468198c806f01c619a2d4d76d5f472886a1d596ad14",
+    "archived_at": "2026-11-20T09:20:43.125057+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:43.125057+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

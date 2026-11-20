@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/send-a-daily-gmail-summary-to-slack",
-  "observed_at": "2026-11-19T09:35:20.244592+00:00",
-  "html_sha256": "7b2eccacfd2c6a67004f8cdb328e07efbcc7f2226372e4e96320d62c3bbb96c5",
+  "observed_at": "2026-11-20T09:16:01.153005+00:00",
+  "html_sha256": "6f0f584f4e3aba19972d7764ea49229eecc3c2b616a604ffa85c7b3749e0fe3b",
   "body_sha256": "197372b6ac68a57294ea55f26123a82b5de4e04eb0ba0d49e725030d1e5097f4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Send a daily Gmail summary to Slack\nThe poster uses a scheduled Codex automation to fetch unread Gmail messages and post a morning brief to Slack.\nDone with\nCX\nCodex\nWhat they did\nThe poster set up a scheduled Codex automation as a morning brief that checks unread Gmail from a local-time window covering yesterday morning to now, then sends a Slack DM. The prompt tells the agent to paginate Gmail results, pull fields like sender, subject, snippet or body, recipients, thread ID, attachments and unsubscribe headers, classify each email into a fixed triage taxonomy, hide newsletters and sales, and stop after posting the brief until the user confirms any next step.\nHow it went\nThe result is a structured daily Slack summary of unread mail with counts by category and a tally of filtered newsletters and sales emails. The source does not report usage numbers or measured results, only the prompt and that the poster uses it for this non-coding task.\nWorth knowing\nOne practical catch in the prompt is to omit Gmail maxResults because the poster says it caused intermittent 500 errors; paginate instead.\nTry it yourself\nwith\nCodex\nCopy prompt\nEvery weekday at [time, timezone], fetch my unread Gmail from the last [24 hours] and write a brief of the important ones, grouped as needs reply, FYI and ignorable, with sender and one-line summaries. Post it to my Slack [channel or DM] and stop. Do not reply to, archive or delete any emails, and show me a sample brief before you turn on the schedule.\nOriginal source: https://www.reddit.com/r/PromptEngineering/comments/1tr11ui/i_found_a_prompt_that_makes_codex_better_at",
     "body_sha256": "197372b6ac68a57294ea55f26123a82b5de4e04eb0ba0d49e725030d1e5097f4",
-    "archived_at": "2026-11-19T09:35:20.244592+00:00",
+    "archived_at": "2026-11-20T09:16:01.153005+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-19T09:35:20.244592+00:00",
+    "at": "2026-11-20T09:16:01.153005+00:00",
     "status": "fetched",
     "error": null
   }

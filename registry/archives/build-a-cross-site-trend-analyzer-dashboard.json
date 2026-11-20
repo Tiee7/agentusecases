@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-cross-site-trend-analyzer-dashboard",
-  "observed_at": "2026-11-19T09:35:04.241763+00:00",
-  "html_sha256": "7b661b121b0c47c52ee0e3d49d2bdb64d05322a2d21fb6a23a8efa9c779dd572",
+  "observed_at": "2026-11-20T09:15:45.138211+00:00",
+  "html_sha256": "037c3ad86811a148b97a55af268c816a51a0ed7f25286cee84a095186dcfe3ca",
   "body_sha256": "05e278a334f2e17057147fe93f63c27f11c3b68c1ecd579e293d77499f44aa0d",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a cross-site trend analyzer dashboard\nA commenter had Claude Code write scrapers for GitHub, Hacker News, Reddit and Product Hunt, handle rate limits, and produce a ranked dashboard.\n·\nOct 31, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThey asked Claude to build a trend analyzer that pulled posts from GitHub, Hacker News, Reddit, and Product Hunt, then group them into product ideas and score them by demand versus effort. Claude wrote the scrapers on its own; when Reddit’s unauthenticated JSON endpoints returned 403s, the commenter switched it to Reddit RSS feeds, estimated popularity from a post’s rank in top this month, and slowed requests with about 8-second waits plus backoff on 429s.\nHow it went\nIt produced a ranked dashboard, and the commenter said it worked despite them not being a developer. The Reddit workaround lost real upvote and comment counts, so popularity on that source was only estimated.\nWorth knowing\nIf you copy this, the main catch was Reddit: RSS worked without auth, but it rate-limited quickly and forced approximate scoring instead of true vote totals.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a small project that collects trending items from [sources, e.g., GitHub, Hacker News, Reddit, Product Hunt] about [topic or keywords]. Write a scraper for each source, handle rate limits and failures gracefully, and combine the results into a ranked, readable dashboard in [HTML or other format]. You're done when I can run one command, open the dashboard, and see the top [number] items with links and scores.\nOriginal source: https://www.reddit.com/r/ClaudeCode/comments/1xjlo5p/whats_your_best_holy_sht_that_actually_worked",
     "body_sha256": "05e278a334f2e17057147fe93f63c27f11c3b68c1ecd579e293d77499f44aa0d",
-    "archived_at": "2026-11-19T09:35:04.241763+00:00",
+    "archived_at": "2026-11-20T09:15:45.138211+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-19T09:35:04.241763+00:00",
+    "at": "2026-11-20T09:15:45.138211+00:00",
     "status": "fetched",
     "error": null
   }

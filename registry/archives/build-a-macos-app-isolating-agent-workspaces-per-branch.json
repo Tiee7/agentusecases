@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-a-macos-app-isolating-agent-workspaces-per-branch",
+  "observed_at": "2026-11-20T09:20:05.151956+00:00",
+  "html_sha256": "bacf9d97f4f986e7c4c5e25b81305ea45375f018615c41060c49a445bcba7aeb",
+  "body_sha256": "b67d33b3b1254ac77937868e4e86aeaa51d35d2728e747935c1b07877c452a20",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build a macOS app isolating agent workspaces per branch",
+      "sha256": "a1fbb10964da5b54c6da6ee2bb5c67c76fd64ce3cbac77bbbf08581602ac5a70"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A poster used Cursor to build an Electron macOS app that gives each coding agent an isolated workspace per git branch with its own local IP.\n·\nApr 26, 2025",
+      "sha256": "b72ecc8d4720ba4265407de205738326ea4507d37764bec07159d58e173d081b"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster built Galactic, an Electron macOS app for running multiple Cursor or Claude Code agents in parallel, each tied to its own git branch and isolated workspace. In the thread they say Cursor helped build the Electron shell and UI, and in a related showcase comment they add that Cursor wrote the entire Electron main process and an MCP server, while agent mode was used for the network-isolation logic that assigns each workspace a unique loopback IP.",
+      "sha256": "f8a892cddf8cb1f10959a2722b34f85fb034a0b24622f6cff6dd6f431c988c4e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The stated result was that parallel agent workspaces could run the same ports without conflicts and avoid context bleeding between branches. The thread gives no performance numbers or broader limitations beyond framing it as a fix for that specific multi-agent workflow problem.",
+      "sha256": "6c8537e646adbf954b928812e531351737f08e79832d4364ac9017e2c9436630"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The source’s main catch is scope: it describes the app’s branch-per-workspace and unique-local-IP setup, but offers no concrete build time, cost, or benchmark details.",
+      "sha256": "f12060ea0cfb5341787a12e0d438b43c911784bfc28c43cd4470f174bdcb19a9"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor",
+        "Claude Code"
+      ],
+      "sha256": "8b2ceab7cb85db4b92f85fcc0dbc5357b0c778a8b1bd5edda5aa4f7c47fe4ae7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/cursor/comments/1rv8srt/weekly_cursor_project_showcase_thread"
+      ],
+      "sha256": "6a01e8190f63293a051a8d815d7749f674e461a3f5a65643884d5a8bce01bcc3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "01a9b384b90089e9c0e46ec6e2c65ab306624ecb0d1de8a14b148341344c7b24",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build a macOS app isolating agent workspaces per branch\nA poster used Cursor to build an Electron macOS app that gives each coding agent an isolated workspace per git branch with its own local IP.\n·\nApr 26, 2025\nDone with\nCR\nCursor\nCC\nClaude Code\nWhat they did\nThe poster built Galactic, an Electron macOS app for running multiple Cursor or Claude Code agents in parallel, each tied to its own git branch and isolated workspace. In the thread they say Cursor helped build the Electron shell and UI, and in a related showcase comment they add that Cursor wrote the entire Electron main process and an MCP server, while agent mode was used for the network-isolation logic that assigns each workspace a unique loopback IP.\nHow it went\nThe stated result was that parallel agent workspaces could run the same ports without conflicts and avoid context bleeding between branches. The thread gives no performance numbers or broader limitations beyond framing it as a fix for that specific multi-agent workflow problem.\nWorth knowing\nThe source’s main catch is scope: it describes the app’s branch-per-workspace and unique-local-IP setup, but offers no concrete build time, cost, or benchmark details.\nTry it yourself\nwith\nCursor\nCopy prompt\nHelp me build a [macOS/Electron] desktop app that gives each coding agent its own isolated workspace per git branch, with a separate [local IP or port] for each one. Start with a short plan of the architecture, then implement the main process, workspace creation from a branch, and the network isolation. You're done when I can launch two workspaces on different branches and confirm they run without interfering with each other. Ask me before deleting any files or running destructive git commands.\nOriginal source: https://www.reddit.com/r/cursor/comments/1rv8srt/weekly_cursor_project_showcase_thread",
+    "body_sha256": "b67d33b3b1254ac77937868e4e86aeaa51d35d2728e747935c1b07877c452a20",
+    "archived_at": "2026-11-20T09:20:05.151956+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:05.151956+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

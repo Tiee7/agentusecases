@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/auto-apply-to-marathon-lotteries-when-they-open",
+  "observed_at": "2026-11-20T09:19:43.149606+00:00",
+  "html_sha256": "93461cca8979c770d01761d7a705a2e8f155da21fd3cb0899c6b33091ba0b6d1",
+  "body_sha256": "d4f6904c52544d02129b819100d20f9e2934b4e79d3a06918ffb8d9857afbe4e",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Auto-apply to marathon lotteries when they open",
+      "sha256": "8f06d2d879d67fb528926aa028684e385516e372a0d3926ac27a1fff31ded251"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent checks World Marathon Majors entry pages twice daily and, when a lottery opens, uses a Claude-driven browser to create accounts, read Gmail codes, submit the form and email confirmation.\n·\nNov 19, 2026",
+      "sha256": "6fe824b9df921db765ed713504471193e84f0b6acabe8a9fb20604d205f61cd9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "It runs on GitHub Actions. Twice a day, Claude Haiku reads each race's entry page, and its answer counts only if the quoted sentence is really on the page. When a lottery is open, a headless browser driven by Claude Opus logs in or creates an account, reads Gmail codes, fills the form from a YAML profile, accepts the terms and submits. It then emails a screenshot.",
+      "sha256": "32fbabae00b81cecad4f94dcf41c300351128948c4564ab8cddb02c8a2f8a7f4"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The source gives no results from real applications. It lists Tokyo, London, Berlin, Chicago, New York City, Sydney and Cape Town. It won't solve CAPTCHAs. If it can't apply, it emails a link and reminders instead.",
+      "sha256": "978133a5518429f3d117e0eb1b52ba78ec9e338d6f9393185d004db1126d5921"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect roughly $1–3 a month, with about $1–4 of Claude usage per application and a hard cap of $8. Some races' terms forbid automated entries.",
+      "sha256": "3f5f71e3f8a861f653cf9b0796440c3442d0ec5d8f5a5c233bf8c47f44e46724"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.com/angelinachou/marathon-agent"
+      ],
+      "sha256": "2964b2ae7fa136070452b6f7373f45b13b9731615e235c3141e643f08f29bf12"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "07653eea62f939f2d3b58239cf0f9b09b91c23f3972db9d11e98b60cdc6cbcb1",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Auto-apply to marathon lotteries when they open\nAn agent checks World Marathon Majors entry pages twice daily and, when a lottery opens, uses a Claude-driven browser to create accounts, read Gmail codes, submit the form and email confirmation.\n·\nNov 19, 2026\nDone with\nCL\nClaude\nWhat they did\nIt runs on GitHub Actions. Twice a day, Claude Haiku reads each race's entry page, and its answer counts only if the quoted sentence is really on the page. When a lottery is open, a headless browser driven by Claude Opus logs in or creates an account, reads Gmail codes, fills the form from a YAML profile, accepts the terms and submits. It then emails a screenshot.\nHow it went\nThe source gives no results from real applications. It lists Tokyo, London, Berlin, Chicago, New York City, Sydney and Cape Town. It won't solve CAPTCHAs. If it can't apply, it emails a link and reminders instead.\nWorth knowing\nExpect roughly $1–3 a month, with about $1–4 of Claude usage per application and a hard cap of $8. Some races' terms forbid automated entries.\nTry it yourself\nwith\nClaude\nCopy prompt\nTwice a day, check the entry pages for [list of races or URLs] and tell me when a lottery or registration window opens. When one opens, start the application using my details [name, birthdate, nationality, emergency contact], and read any verification code from my Gmail if needed. Before you submit the final form or create any new account, pause and show me what you're about to send, then email me a confirmation once I approve and it's done.\nOriginal source: https://github.com/angelinachou/marathon-agent",
+    "body_sha256": "d4f6904c52544d02129b819100d20f9e2934b4e79d3a06918ffb8d9857afbe4e",
+    "archived_at": "2026-11-20T09:19:43.149606+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:19:43.149606+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

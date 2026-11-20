@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-coordinated-multi-agent-workflow-in-copilot",
+  "observed_at": "2026-11-20T09:20:21.142126+00:00",
+  "html_sha256": "3a033454b739235c06502772f26b7ade4fac39f0e99f1138b700324a9869eb31",
+  "body_sha256": "f6a3761ee3e0a1d5ca9fdd46f49647871230c9c9959290e9f22ff56cf0dfd817",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a coordinated multi-agent workflow in Copilot",
+      "sha256": "b6687e0eb03dbf85cb0fb8e09378169470203762976bdcc020d31d21f5c886a2"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer experiments with multi-agent setups in GitHub Copilot inside VS Code as part of their workflow.",
+      "sha256": "28b28e0be4a1601bef5eef8ec5cb778bd690f71f9cecc1e44956eac68add55ae"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The developer built a spec-driven, artifact-based agent team inside GitHub Copilot in VS Code, with stages for spec, architecture, planning, implementation, review, QA, security, integration, and docs. An Orchestrator agent ran the flow, enforced gates between stages, and relied on files like spec.md, acceptance.json, tasks.yaml, and status.json so sub-agents could reread state and continue across chats when context degraded.",
+      "sha256": "d6cc8ca6cb9f2fd02fa4834eab8b99751064623b5f2dde59605b5c9d58e64cd1"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say it worked surprisingly well for larger features and small greenfield projects, gave more consistent results than single prompts, and asked useful clarification questions. It was slower end to end and had too much overhead for tiny quick fixes.",
+      "sha256": "bfdea6d828771c6a08ed9c2ccba063154b37580f2a5f9a36074bc21f5ecd412d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was context loss in long Copilot sessions, so saving progress to artifacts on disk was central to making the workflow usable.",
+      "sha256": "4ea0aaa0558d2ac996b8bcde7e72d173c039d9a078e016ee7b0525a23c0952a4"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/GithubCopilot/comments/1r7jx0b/experimenting_with_a_coordinated_multiagent"
+      ],
+      "sha256": "e802cb8bc9a63ebb4aee4650fb3f7ce27d2da116e195fce1b7281064a817f557"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-19",
+      "sha256": "010cc5180132fb0adc25f5f348f229084383e04439f2c21bb9b55505c19a04f8"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "bc4c94c4cdaeadd85fc361b70c93773e860a2dd5bf3b2aa4d79f0b5784f7afa2",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a coordinated multi-agent workflow in Copilot\nA developer experiments with multi-agent setups in GitHub Copilot inside VS Code as part of their workflow.\nDone with\nGH\nGitHub Copilot\nWhat they did\nThe developer built a spec-driven, artifact-based agent team inside GitHub Copilot in VS Code, with stages for spec, architecture, planning, implementation, review, QA, security, integration, and docs. An Orchestrator agent ran the flow, enforced gates between stages, and relied on files like spec.md, acceptance.json, tasks.yaml, and status.json so sub-agents could reread state and continue across chats when context degraded.\nHow it went\nThey say it worked surprisingly well for larger features and small greenfield projects, gave more consistent results than single prompts, and asked useful clarification questions. It was slower end to end and had too much overhead for tiny quick fixes.\nWorth knowing\nThe main catch was context loss in long Copilot sessions, so saving progress to artifacts on disk was central to making the workflow usable.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nIn VS Code, set up a multi-agent workflow for [task, e.g. adding a feature to my app] with separate roles: one agent to plan, one to implement, one to write tests, and one to review. Define each role's instructions in files in my repo and tell me how to run them in order. You're done when I can run the whole flow once on [small example task].\nOriginal source: https://www.reddit.com/r/GithubCopilot/comments/1r7jx0b/experimenting_with_a_coordinated_multiagent",
+    "body_sha256": "f6a3761ee3e0a1d5ca9fdd46f49647871230c9c9959290e9f22ff56cf0dfd817",
+    "archived_at": "2026-11-20T09:20:21.142126+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-20T09:20:21.142126+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
