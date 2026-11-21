@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/research-open-source-ui-frameworks-with-sub-agents",
-  "observed_at": "2026-11-20T09:19:03.131261+00:00",
-  "html_sha256": "e7315f9f8755a2c529dfdffe0a3a00000e9f531eec93dea32702e63a830509ee",
+  "observed_at": "2026-11-21T09:13:10.120500+00:00",
+  "html_sha256": "5d6af796c93435beca660d9adf286620871700df9b819fac1d9a55591b2b4d04",
   "body_sha256": "1e605c5f2e5d440af846872a72cf5fce5fbf3d794ddca10186c586621b66d6ce",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Research open-source UI frameworks with sub-agents\nUser asked Claude Code to research frameworks for an AI-assembled UI feature; it spawned 339 sub-agents in about 10 minutes and used up the five-hour quota.\n·\nJun 18, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe poster asked Claude Code to research open-source frameworks for AI-assembled UI components. Claude started with two general-purpose agents, and because that agent type can use the Agent tool, they recursively spawned more agents up to the product’s nesting limits; afterward, the user checked the transcripts and added a PreToolUse hook to block general-purpose spawns while still allowing safer agent types like Explore and Plan.\nHow it went\nIn about 10 minutes it created 339 sub-agent transcript files, and the full turn ran 26 minutes 25 seconds. But 295 of 339 agents hit rate limits and returned nothing, exhausting the MAX 5-hour quota with little useful output.\nWorth knowing\nThe main catch is that general-purpose is the default agent type and there was no built-in confirmation, token-budget warning, or setting to turn off nested spawning.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nResearch open-source [UI frameworks/libraries] for [feature I want to build]. Use sub-agents, but cap them at [number] so you don't use up my quota. Finish with a comparison table covering maturity, licensing, fit for [my requirement], and a recommendation with reasons.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1u5d02w/til_claude_code_spawned_339_subagents_from_a",
     "body_sha256": "1e605c5f2e5d440af846872a72cf5fce5fbf3d794ddca10186c586621b66d6ce",
-    "archived_at": "2026-11-20T09:19:03.131261+00:00",
+    "archived_at": "2026-11-21T09:13:10.120500+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-20T09:19:03.131261+00:00",
+    "at": "2026-11-21T09:13:10.120500+00:00",
     "status": "fetched",
     "error": null
   }

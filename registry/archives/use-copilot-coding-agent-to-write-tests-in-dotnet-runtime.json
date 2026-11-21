@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/use-copilot-coding-agent-to-write-tests-in-dotnet-runtime",
+  "observed_at": "2026-11-21T09:15:24.100708+00:00",
+  "html_sha256": "7b2497ff0d2a44455d880dd27f7be1eb7163074a4afd34df5e9d3dfdfae7f83f",
+  "body_sha256": "713713b9d026e6bdeaae226de2de25505352d21ad539071f7453c5c1fddf34f0",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Use Copilot coding agent to write tests in dotnet/runtime",
+      "sha256": "e378bc15bc3d87c308a33d11b42a69170369370c28327b84faf7651c7b22f880"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The .NET team used Copilot coding agent for ten months in dotnet/runtime; tests were a strength, though some broke on older frameworks or failed in CI.",
+      "sha256": "b6b3b064b5844ebe38d6d14e20b03d133fe4eb01d4eb753170166722537a2776"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Maintainers in dotnet/runtime assigned test-writing tasks to Copilot coding agent, including coverage additions. The agent used coverage tools and wrote tests. A maintainer reviewed each PR. The team added instructions covering testing conventions: no exact exception message assertions, conditional test attributes, and tests that can't run on .NET Framework. They also told it to avoid InternalsVisibleTo.",
+      "sha256": "54d1be0316ebfb61653571b61ecb7b26784be82b0d9deee7dd826aed50462cac"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Testing PRs succeeded 75.6% of the time (99 PRs). The agent produced too many redundant tests, sometimes encoded buggy behavior as expected, and wrote tests that broke on older frameworks or in CI.",
+      "sha256": "0e61dd6c15d2c9eafe5a3f2372c36ef2cc334a61742a21a278b3a52b352fe05e"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Review needs pruning and care: 65.7% of the agent's added lines were tests, and local green runs didn't cover CI's many configurations.",
+      "sha256": "6be0cf2d1e3d7286bc4f44d937472c84be44f8ef28938f4c648607af784d2763"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/"
+      ],
+      "sha256": "c26fa0dc6f6b2b95f8a3c48fee96c5840cab1dbc3298f5856134ecc58fd8d042"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "ee74a9de17f7986ba1dce8dd61c7f177b4c6afdc122b37f74a8b162c4c731dc4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Use Copilot coding agent to write tests in dotnet/runtime\nThe .NET team used Copilot coding agent for ten months in dotnet/runtime; tests were a strength, though some broke on older frameworks or failed in CI.\nDone with\nGH\nGitHub Copilot\nWhat they did\nMaintainers in dotnet/runtime assigned test-writing tasks to Copilot coding agent, including coverage additions. The agent used coverage tools and wrote tests. A maintainer reviewed each PR. The team added instructions covering testing conventions: no exact exception message assertions, conditional test attributes, and tests that can't run on .NET Framework. They also told it to avoid InternalsVisibleTo.\nHow it went\nTesting PRs succeeded 75.6% of the time (99 PRs). The agent produced too many redundant tests, sometimes encoded buggy behavior as expected, and wrote tests that broke on older frameworks or in CI.\nWorth knowing\nReview needs pruning and care: 65.7% of the agent's added lines were tests, and local green runs didn't cover CI's many configurations.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nIn [owner/repo], write tests for [class or feature] following the existing test conventions and covering edge cases. Check that they run on every [framework or version] we support, not just the newest, and fix any CI failures. Open a draft PR listing which test cases you added and anything you could not get passing.\nOriginal source: https://devblogs.microsoft.com/dotnet/ten-months-with-cca-in-dotnet-runtime/",
+    "body_sha256": "713713b9d026e6bdeaae226de2de25505352d21ad539071f7453c5c1fddf34f0",
+    "archived_at": "2026-11-21T09:15:24.100708+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:24.100708+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/send-sentry-bugs-to-copilot-as-github-issues-for-fixing",
+  "observed_at": "2026-11-21T09:15:20.088724+00:00",
+  "html_sha256": "0a8d035ada1f923e4c1cb17c5cfa3914f4234799d7b41443894aa349ef7555a5",
+  "body_sha256": "d8fc33bbf18cde0e7a88827349c263ba86af0919493fbcf9108a454e396e5b81",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Send Sentry bugs to Copilot as GitHub issues for fixing",
+      "sha256": "66570239102b2c40c19e8c9229382a68d2e7db24a327b81414a7e73a0c3c42f9"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Author turned about 15 Sentry bugs into issues assigned to Copilot, which solved about 60% unaided; it was confidently wrong on failing Vitest tests.\n·\nNov 10, 2025",
+      "sha256": "8a5a78106bdd5dbe8e18183bbdb89ee0209f2f0cd11fad19de18f5bc287fb0ad"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Harrison clicked the button in Sentry that creates a GitHub issue for about 15 of his noisier bugs. He then assigned each issue to Copilot in GitHub, with no IDE involved. He suggests adding the Sentry MCP server to the repository for better context. He stepped in only where Copilot needed steering.",
+      "sha256": "f85e67b82065c4fdf8251ea654a8160abb87a86b43bf61435bbae2047884537d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Copilot solved about 60% with no steering. A couple of fixes were bad enough that he closed them, and the rest needed one or two prompts. On failing Vitest tests in CI it was confidently wrong.",
+      "sha256": "206bfd5bb24da355c48dcf2048f4bb9685de06be3057f7d2b3899fb5cb42a25c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Copilot used the .nvmrc Node version but his CI didn't, so its single-threaded Vitest change passed in its own run and made things worse. Rate limits and rebase conflicts also got in the way.",
+      "sha256": "61ddc7a70c474b75bc3643a8a6e82a1d09a917efc70102dba6588f3837faa65d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://harrisonmilbradt.com/blog/2025-11-10-an-honest-review-of-copilot-agents-hq"
+      ],
+      "sha256": "aed23c19753ca5556f9685f5db07c96278150f7fa3a59111655c5cbd1ada7c8f"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "7b19d779456c6cb9ab12720b781edc436d434dc55a52229f0a3f65dd47f9b93e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Send Sentry bugs to Copilot as GitHub issues for fixing\nAuthor turned about 15 Sentry bugs into issues assigned to Copilot, which solved about 60% unaided; it was confidently wrong on failing Vitest tests.\n·\nNov 10, 2025\nDone with\nGH\nGitHub Copilot\nWhat they did\nHarrison clicked the button in Sentry that creates a GitHub issue for about 15 of his noisier bugs. He then assigned each issue to Copilot in GitHub, with no IDE involved. He suggests adding the Sentry MCP server to the repository for better context. He stepped in only where Copilot needed steering.\nHow it went\nCopilot solved about 60% with no steering. A couple of fixes were bad enough that he closed them, and the rest needed one or two prompts. On failing Vitest tests in CI it was confidently wrong.\nWorth knowing\nCopilot used the .nvmrc Node version but his CI didn't, so its single-threaded Vitest change passed in its own run and made things worse. Rate limits and rebase conflicts also got in the way.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nTake the open Sentry errors for [project] that look fixable, and create a GitHub issue for each in [owner/repo] with the stack trace, frequency, and likely cause. Assign each issue to Copilot coding agent so it opens a draft PR. Do not merge anything; I will review each PR, and I want you to flag any PR where the tests are still failing.\nOriginal source: https://harrisonmilbradt.com/blog/2025-11-10-an-honest-review-of-copilot-agents-hq",
+    "body_sha256": "d8fc33bbf18cde0e7a88827349c263ba86af0919493fbcf9108a454e396e5b81",
+    "archived_at": "2026-11-21T09:15:20.088724+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:20.088724+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

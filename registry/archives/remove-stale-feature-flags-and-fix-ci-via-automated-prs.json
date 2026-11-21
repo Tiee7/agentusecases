@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/remove-stale-feature-flags-and-fix-ci-via-automated-prs",
+  "observed_at": "2026-11-21T09:15:06.030912+00:00",
+  "html_sha256": "621b7f6df854f529aa404625e5ab75b2483fee97ae3d55fc0137bdf966255726",
+  "body_sha256": "4343deed7490dd0fcd1d31b70a324e0009da863a2039dff79b813c1a106daaee",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Remove stale feature flags and fix CI via automated PRs",
+      "sha256": "957453ab9d9f9af2e219c6a04a557bed12816de8837688a0de7be66a8d8f57ec"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Ramp built Devin workflows where an engineer enters a feature flag and Devin opens a PR removing it; it also fixed flaky tests and CI issues (vendor case study).",
+      "sha256": "dd71bcc2668c6fc97bed50d6d408950b4c2b9481383ad386b47ed8d3801fc0ad"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Ramp used Devin's API to run many Devins in parallel. For feature flags, a playbook prompt split the removal across worker Devins, each handling assigned files. A clean-up Devin merged their output into one PR. This sits behind an internal admin-dashboard tool, so an engineer enters a flag and gets tagged on the PR. For slow tests, scripts checked that coverage was unchanged.",
+      "sha256": "164348905009e69da50d304e8b4cc13563dfe29c654be882a796592f0ce4817e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Ramp removed 150 complex feature flags in a month, which an engineer credits with over 1000 hours saved. Overall it reports about 80 merged PRs a week. Airflow fixes averaged 8 minutes from bug to PR, and half could be merged as-is.",
+      "sha256": "af3f85c604c206cc9cc5070af1c827ee5d08eb1a871478987405d0a70f7062c1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Validation scripts, such as a coverage-regression check for slow tests, kept failed attempts from surfacing as PRs, so review bandwidth was the only limit on parallelism.",
+      "sha256": "51371b659b8f01041ddfce95a227aee2715bcee8c6f4b71b1aa5ba435ec532bf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://archive-devin-ai.lusion.co/customers/ramp/"
+      ],
+      "sha256": "324a9bbdec4769e04d9db94425a18f9d895eaea1ff9041e10360edf15275bfeb"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fcaeef3683297839087d105af540da6a541227ef98a52584ff63689296f44788",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Remove stale feature flags and fix CI via automated PRs\nRamp built Devin workflows where an engineer enters a feature flag and Devin opens a PR removing it; it also fixed flaky tests and CI issues (vendor case study).\nDone with\nDE\nDevin\nWhat they did\nRamp used Devin's API to run many Devins in parallel. For feature flags, a playbook prompt split the removal across worker Devins, each handling assigned files. A clean-up Devin merged their output into one PR. This sits behind an internal admin-dashboard tool, so an engineer enters a flag and gets tagged on the PR. For slow tests, scripts checked that coverage was unchanged.\nHow it went\nRamp removed 150 complex feature flags in a month, which an engineer credits with over 1000 hours saved. Overall it reports about 80 merged PRs a week. Airflow fixes averaged 8 minutes from bug to PR, and half could be merged as-is.\nWorth knowing\nValidation scripts, such as a coverage-regression check for slow tests, kept failed attempts from surfacing as PRs, so review bandwidth was the only limit on parallelism.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my repo [repo name], remove the feature flag [flag name] and keep the behavior of the [enabled/disabled] path everywhere it's used. Delete the flag definition, dead branches, and related tests or config, then run the test suite and fix anything that breaks. Open a pull request with a summary of every file changed. Show me the PR for review and do not merge it.\nOriginal source: https://archive-devin-ai.lusion.co/customers/ramp/",
+    "body_sha256": "4343deed7490dd0fcd1d31b70a324e0009da863a2039dff79b813c1a106daaee",
+    "archived_at": "2026-11-21T09:15:06.030912+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:06.030912+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

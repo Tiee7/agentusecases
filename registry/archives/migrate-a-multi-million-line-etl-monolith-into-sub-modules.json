@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/migrate-a-multi-million-line-etl-monolith-into-sub-modules",
+  "observed_at": "2026-11-21T09:15:04.091745+00:00",
+  "html_sha256": "52bc6fa4996d75cb5fece2844f6c9fc17871c1df4020defed578ff534dd40ccc",
+  "body_sha256": "2d9fe54ca6ccd94dc2c4c80f3ed29c0e7cf06ca813f830fa0aaca4df1b64eb72",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Migrate a multi-million-line ETL monolith into sub-modules",
+      "sha256": "61e0f0c47b3b3e53b6ac15250a1dbda98e2058a4a5a51221e534aae7fde415d8"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Nubank used Devin to split its core ETL monolith into sub-modules, reporting weeks instead of months and 20x cost savings (vendor story).",
+      "sha256": "7e1007f9d3d5d8780db4bb8dfacbb2a7700a64de1805c0456a54452dcf90a4b9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Nubank gave Devin examples of data class migrations its engineers had done by hand. Some were used to fine-tune Devin, and the rest became a benchmark set. Devin then ran many migration sub-tasks in parallel. It wrote itself scripts for mechanical steps, such as detecting a data class's country extension from its file path. Engineers only managed the project, reviewed the changes, made small adjustments and merged the PRs.",
+      "sha256": "ec6857cac7787c389cf47d2a59e6f587b36ba2ce373913ea5239332990a957fe"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Fine-tuning doubled task completion scores and cut sub-task time from about 40 minutes to 10. Nubank reports 8-12x engineering efficiency and over 20x cost savings. Data, Collections and Risk finished in weeks. Those figures come from the vendor.",
+      "sha256": "c1b38043da20d35ce6519c1a5fd3453f798dab7f2755238b3cf165cd82c09a27"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Devin needed fine-tuning on past manual migrations first. Early weeks still had errors and uncertainty before it improved with more examples.",
+      "sha256": "0285151f259f25cf7c4fdb07e011c0cf365f1e0e4c936d808ec6ec394e672083"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Devin"
+      ],
+      "sha256": "1cc55ee293c0017a2d8622c5f8f0089f7653a83e11293e68e0487bb4901e6fb3"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://devin.ai/customers/nubank"
+      ],
+      "sha256": "2620c4fde1a48bfbe3b2ab9d52d4ba6606f7b226c10eb5c8928c4db55f21cbe3"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "29b856f45a3c0e9f28d2aeeaea190bec905332d8041ae830695c344f15f7b032",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate a multi-million-line ETL monolith into sub-modules\nNubank used Devin to split its core ETL monolith into sub-modules, reporting weeks instead of months and 20x cost savings (vendor story).\nDone with\nDE\nDevin\nWhat they did\nNubank gave Devin examples of data class migrations its engineers had done by hand. Some were used to fine-tune Devin, and the rest became a benchmark set. Devin then ran many migration sub-tasks in parallel. It wrote itself scripts for mechanical steps, such as detecting a data class's country extension from its file path. Engineers only managed the project, reviewed the changes, made small adjustments and merged the PRs.\nHow it went\nFine-tuning doubled task completion scores and cut sub-task time from about 40 minutes to 10. Nubank reports 8-12x engineering efficiency and over 20x cost savings. Data, Collections and Risk finished in weeks. Those figures come from the vendor.\nWorth knowing\nDevin needed fine-tuning on past manual migrations first. Early weeks still had errors and uncertainty before it improved with more examples.\nTry it yourself\nwith\nDevin\nCopy prompt\nI have a large [language/framework] codebase in [repo name] with one monolithic module, [module name], that I want split into smaller sub-modules. First, analyze its dependencies and propose a split plan with module boundaries, and wait for my approval. Then do the migration in small, reviewable pull requests, running the existing tests after each step. You're done when all sub-modules build, tests pass, and every PR has a description of what moved and why. Do not merge anything; leave the PRs for my review.\nOriginal source: https://devin.ai/customers/nubank",
+    "body_sha256": "2d9fe54ca6ccd94dc2c4c80f3ed29c0e7cf06ca813f830fa0aaca4df1b64eb72",
+    "archived_at": "2026-11-21T09:15:04.091745+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:04.091745+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-and-test-an-image-editor-with-agent-driven-headless-gu",
-  "observed_at": "2026-11-20T09:17:59.148448+00:00",
-  "html_sha256": "4d6e125286e060f4fcb9d233788d0d3284985d4be19303b291b6e37e372df105",
+  "observed_at": "2026-11-21T09:12:06.015089+00:00",
+  "html_sha256": "757bf7359d4331485de453b1a1eefb8c621b712443337527f2f653d035c26b73",
   "body_sha256": "96b78d6fd62b105eb7c5ec5c42c2e332ce0c940fd359589f3c298aae7a110444",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Build and test an image editor with agent-driven headless GUI\nA developer had Opus build an image editor and a Sonnet subagent test it via a headless sway setup with scripted mouse and keyboard input, catching most bugs; manual checks were still needed.\n·\nNov 17, 2026\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThe developer hand-wrote scripts so the agent could drive the app headlessly: a headless sway instance, a daemon using Wayland virtual keyboard and mouse protocols via a unix socket, and bash glue. Commands (start, screenshot, mouse move/click, type) were documented in claude.md. Opus built the editor; a Sonnet subagent did interactive testing. The developer specified how each tool and panel should work.\nHow it went\nTesting was mostly automatic and Sonnet caught most bugs itself. The developer still did a cursory manual check, since headless sway differs from a real desktop environment with KDE's platform theme.\nWorth knowing\nScripted input mocking was far more reliable than the accessibility API route (pyatspi2) tried first; a Sonnet subagent also cut cost and avoids inheriting Opus's long context.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a small [type of GUI app, e.g. image editor] in this folder using [language/toolkit]. Then set up a headless display environment, such as a headless Wayland compositor, and have a separate subagent test the app by scripting mouse and keyboard input and taking screenshots. Fix every bug the tester finds, repeat until a full test pass finds no new problems, and give me a list of things you could not verify so I can check them by hand.\nOriginal source: https://news.ycombinator.com/item?id=50533409",
     "body_sha256": "96b78d6fd62b105eb7c5ec5c42c2e332ce0c940fd359589f3c298aae7a110444",
-    "archived_at": "2026-11-20T09:17:59.148448+00:00",
+    "archived_at": "2026-11-21T09:12:06.015089+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-20T09:17:59.148448+00:00",
+    "at": "2026-11-21T09:12:06.015089+00:00",
     "status": "fetched",
     "error": null
   }

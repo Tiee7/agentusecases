@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/migrate-dashboard-auth-to-nextauth-js-and-generate-tests",
+  "observed_at": "2026-11-21T09:15:16.096185+00:00",
+  "html_sha256": "c5c976c359c81468a5f441b40c19660a1268345f5d7f3cccfafd46d1c651b400",
+  "body_sha256": "630a1978535508479f9f32d574271a0811ea258ab638da51ab4b470f9705f152",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Migrate dashboard auth to NextAuth.js and generate tests",
+      "sha256": "b846baa7ed568d21b8f8607b3182fc01cbace2ab1adcbe326c0f6fab13049a23"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Author used Cursor Agent to migrate a SaaS dashboard to NextAuth.js across 14 files with three manual fixes, and a background agent wrote 34 tests, 28 passing at first.",
+      "sha256": "0eb8452057d97027152ae8563412728f8667a021038015d5cd992c80a7627e9a"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author described the move from a custom auth system to NextAuth.js in Cursor's Agent chat. The migration touched 14 files: route handlers, middleware, session management, page wrappers and environment config. Separately, a background agent on its own branch wrote unit tests for a Python data pipeline and opened a PR while the author kept working on the dashboard.",
+      "sha256": "f7881f2878f74316ff562be39e7447cd267cf110ea23579ee30db1de32f19802"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The migration needed three manual fixes (a missing env variable, a wrong callback URL pattern, a session type mismatch) and took about 90 minutes, against an estimated 4 hours. The agent's PR had 34 tests; 28 passed, and six needed fixture tweaks.",
+      "sha256": "cc692279ac88860fcda499f2a4ec115b4e733391224d7e16b04b6296c0a6bf6a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Heavy agent use burned through Pro credits by about day 22, and the author bought extra credits twice, so the effective cost was closer to $35 a month.",
+      "sha256": "3d85211ba42f980f0e4b5fb08962f3b46499c8d3c50b9ef53542650d758a4bdf"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor"
+      ],
+      "sha256": "6021e193690ad0d751ca7636931c64367a12e343360ad2e1c12cf7991825ca5d"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/techsifted/cursor-ai-review-2026-the-code-editor-that-thinks-alongside-you-33gl"
+      ],
+      "sha256": "a00c186b7e504460dada76f9b3200118a44e173a60c91a002e5c58aac9f60159"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "4d9d43c8b1c86c0afd4b3a02947640a65f67da624300c805fe43d3b294ee51f0",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Migrate dashboard auth to NextAuth.js and generate tests\nAuthor used Cursor Agent to migrate a SaaS dashboard to NextAuth.js across 14 files with three manual fixes, and a background agent wrote 34 tests, 28 passing at first.\nDone with\nCR\nCursor\nWhat they did\nThe author described the move from a custom auth system to NextAuth.js in Cursor's Agent chat. The migration touched 14 files: route handlers, middleware, session management, page wrappers and environment config. Separately, a background agent on its own branch wrote unit tests for a Python data pipeline and opened a PR while the author kept working on the dashboard.\nHow it went\nThe migration needed three manual fixes (a missing env variable, a wrong callback URL pattern, a session type mismatch) and took about 90 minutes, against an estimated 4 hours. The agent's PR had 34 tests; 28 passed, and six needed fixture tweaks.\nWorth knowing\nHeavy agent use burned through Pro credits by about day 22, and the author bought extra credits twice, so the effective cost was closer to $35 a month.\nTry it yourself\nwith\nCursor\nCopy prompt\nIn my project [project name], migrate authentication from [current auth approach] to [target library, e.g. NextAuth.js], updating every file that depends on it. Then start a background agent to write tests for the new auth flow and run them. When done, give me a list of changed files, the test results, and anything that failed or needs my manual review. Pause and show me the plan before editing files.\nOriginal source: https://dev.to/techsifted/cursor-ai-review-2026-the-code-editor-that-thinks-alongside-you-33gl",
+    "body_sha256": "630a1978535508479f9f32d574271a0811ea258ab638da51ab4b470f9705f152",
+    "archived_at": "2026-11-21T09:15:16.096185+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:16.096185+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/verify-github-wiki-pages-render-correctly-in-the-browser",
-  "observed_at": "2026-11-20T09:15:39.130719+00:00",
-  "html_sha256": "65b17e18d41ae8a197d1b56b86ff851172a16ddff72766652e24c6381a3764e0",
+  "observed_at": "2026-11-21T09:09:46.095026+00:00",
+  "html_sha256": "4a7e832a62a0b67e8ee433ec4e166fcd1fdb5bd3a6f6b62350d7efda984c24f4",
   "body_sha256": "156b90457433b4d146a5daf6911656f369996a97bd3412985bf0ac812870e988",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Verify GitHub wiki pages render correctly in the browser\nA user asked Claude to check that several GitHub wiki pages rendered properly; Claude in Chrome opened the tab on the local PC rather than in the VM they expected, so it only partly worked as intended.\n·\nSep 7, 2026\nDone with\nCH\nClaude in Chrome\nCL\nClaude\nWhat they did\nThe user asked Claude to verify that a few GitHub wiki pages rendered correctly, following Claude’s own suggestion to check them in the browser. Claude triggered its Chrome integration, but because the Claude in Chrome extension was signed into the user’s local Chrome, the browser action opened on the host PC instead of the lab VM reached over RDP; a commenter said this access is account-scoped, not machine-scoped.\nHow it went\nIt only partly worked for the intended setup: Claude could open the pages, but in the wrong environment, so it did not truly verify rendering inside the VM. The post reports Claude initially gave several incorrect explanations before landing on the account-linked extension behavior.\nWorth knowing\nIf you want isolation on lab VMs, keep the extension out of your normal host Chrome profile or use a separate signed-out profile except when needed.\nTry it yourself\nwith\nClaude in Chrome\nCopy prompt\nOpen each of these GitHub wiki pages in my browser: [list of wiki page URLs]. For each one, check that the formatting renders correctly, including headings, tables, code blocks, images, and internal links, and click a few links to confirm they don't lead to 404s. When you're done, give me a list of pages that look fine and, for any that don't, a description of what is broken and where. Don't edit anything; just report.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wa4g7a/claude_opened_a_chrome_tab_from_within_a_vm_on_my",
     "body_sha256": "156b90457433b4d146a5daf6911656f369996a97bd3412985bf0ac812870e988",
-    "archived_at": "2026-11-20T09:15:39.130719+00:00",
+    "archived_at": "2026-11-21T09:09:46.095026+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-20T09:15:39.130719+00:00",
+    "at": "2026-11-21T09:09:46.095026+00:00",
     "status": "fetched",
     "error": null
   }

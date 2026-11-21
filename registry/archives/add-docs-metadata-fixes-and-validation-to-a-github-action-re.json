@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/add-docs-metadata-fixes-and-validation-to-a-github-action-re",
+  "observed_at": "2026-11-21T09:15:18.097208+00:00",
+  "html_sha256": "03ee419be40877d47095f97f59edfbf527f10a31f9434d939290ecf0ebcef1d1",
+  "body_sha256": "b881cf775f7507917ccd9f32a6152deaf7ab3b7ca04b4cdda0d21b76138647af",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Add docs, metadata fixes and validation to a GitHub Action repo",
+      "sha256": "14db5e6e1b542652e9cd29c5367808bc122f71724f85d9556e77a45153c137f7"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A developer used Copilot agent mode and the coding agent to add docs, fix metadata and add input validation; it fixed its own CI failure and the PR passed.",
+      "sha256": "b72cd9be27c29e0568f32a6b5e1ea4d7d88c0287a84665d29b569f94294850cd"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Chris Reddington first had Copilot rewrite the repo's custom instructions and added a setup-steps file so the agent could build and test. He asked Copilot Chat to list technical debt and write a scoped issue. He assigned that issue to the coding agent, which opened a PR with metadata fixes, README corrections, input validation and four new tests.",
+      "sha256": "5982c724079a18e7c4c1c9bf2ead303bb9497bed6d7a40361b6070a6cdbde54f"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The agent finished in just over 11 minutes. CI then failed on a Markdown lint rule missing from the instructions. Copilot fixed it from a PR comment with the pasted error, and the PR passed.",
+      "sha256": "d84e5b3883d1a9f0399ab4ef5e0ca6dea66b2abb392fe2fff2bccb8307504941"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Put every CI check, including extra linters, in the custom instructions. The agent only knew the checks it was told about, and an unlisted Markdown lint caused the failure.",
+      "sha256": "34f9e985302c13809f9f0f1602eaaa2995a4f732d3f54de18bdd7dc788d2c8d8"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "GitHub Copilot"
+      ],
+      "sha256": "9e06cd595d894c58e55099429b38a46de586d495cc77b348123dec0a794f41f9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://github.blog/ai-and-ml/github-copilot/from-chaos-to-clarity-using-github-copilot-agents-to-improve-developer-workflows/"
+      ],
+      "sha256": "9bf084864332d07df63154b65320301217c694ae15c966924464b17a828201cb"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-20",
+      "sha256": "a50c57015cc199eea6053392579c050bcd6d7200a4a7e18c1d32d3e8b61662ad"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "df467586593fa1db698e906ccd4460e644de635d46e0bbb04e9dba6d966247a2",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Add docs, metadata fixes and validation to a GitHub Action repo\nA developer used Copilot agent mode and the coding agent to add docs, fix metadata and add input validation; it fixed its own CI failure and the PR passed.\nDone with\nGH\nGitHub Copilot\nWhat they did\nChris Reddington first had Copilot rewrite the repo's custom instructions and added a setup-steps file so the agent could build and test. He asked Copilot Chat to list technical debt and write a scoped issue. He assigned that issue to the coding agent, which opened a PR with metadata fixes, README corrections, input validation and four new tests.\nHow it went\nThe agent finished in just over 11 minutes. CI then failed on a Markdown lint rule missing from the instructions. Copilot fixed it from a PR comment with the pasted error, and the PR passed.\nWorth knowing\nPut every CI check, including extra linters, in the custom instructions. The agent only knew the checks it was told about, and an unlisted Markdown lint caused the failure.\nTry it yourself\nwith\nGitHub Copilot\nCopy prompt\nIn my GitHub repo [owner/repo], which is a GitHub Action, add a clear README covering usage and inputs, fix any problems in action.yml metadata, and add validation for the inputs [list inputs]. Open a pull request, and if CI fails, read the logs and fix it. You are done when CI passes and the PR description summarizes every change.\nOriginal source: https://github.blog/ai-and-ml/github-copilot/from-chaos-to-clarity-using-github-copilot-agents-to-improve-developer-workflows/",
+    "body_sha256": "b881cf775f7507917ccd9f32a6152deaf7ab3b7ca04b4cdda0d21b76138647af",
+    "archived_at": "2026-11-21T09:15:18.097208+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-21T09:15:18.097208+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
