@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/classify-and-reply-to-customer-inquiries-with-an-ai-agent",
+  "observed_at": "2026-11-22T09:02:36.445078+00:00",
+  "html_sha256": "d588df643cd4f596052801011b5c0926f282d4c48514422199535684a8533a60",
+  "body_sha256": "a0cc55f0131aebd981097bfec0756b48124ca9e52ffe06190e58e772c7f4044a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Classify and reply to customer inquiries with an AI agent",
+      "sha256": "7e9927d10c3eddb92f8b2992432f4b0c800f39a3e5f6695932582c33a8f870c7"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A Make AI agent classifies form submissions (FAQ, quote, urgent, general), drafts a personalized reply, and pings Slack for emergencies; a separate module sends the email.",
+      "sha256": "6161399e8af96b6f7a1ba3231ead15cd246bbaa845b49ec81a864a2e8cee0350"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Susana Toth built a seven-module Make scenario around one AI Agent module. It had plain-English instructions, a 60-line FAQ file the agent searches, and a Slack tool for urgent cases. Gmail and SMTP weren't available as agent tools, so the agent writes the email text and a regular Email module sends it. She tested in the chat hub first.",
+      "sha256": "563ac7e8eb3cd2c3900cde0f9cba427df48b65fd94129a230eace76f05c89918"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The Small built-in model classified all four test cases correctly, with no mistakes. It cost 43–50 credits per run, against 42 for the Router and OpenAI version.",
+      "sha256": "b879b342ad264d4bf7aeb336e6d138ff88db41cebab3e5f68419e121cd9c311f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Name and describe the Slack tool tightly, such as \"only for urgent issues\". Before she did, the agent pinged Slack on every inquiry.",
+      "sha256": "4c8b2093fb1d45988d3504b05deeefaaae1aed4bd30f14db854dfb1055ba4d5c"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Make"
+      ],
+      "sha256": "0509e922cf9bb48aa8c605e35ac20ee21e9dc52eb40ca4f40974367fcc19533a"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://medium.com/@susanatoth-workflows/i-tested-make-coms-new-ai-agents-on-a-live-workflow-here-s-what-it-actually-costs-6fbf03d02e8e"
+      ],
+      "sha256": "d623273a4c6fa79b54f01ba245b5661d988370f0f42761db5d21a93d4584ed09"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-21",
+      "sha256": "29c899a7eeb66757d2c487522ae381f50b2d409276b71f0e2c611b0008beb0f0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3331ba28a03e3e797fa2de53b5e94f336c83c60c0a45ad227093449e19b44ce8",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Classify and reply to customer inquiries with an AI agent\nA Make AI agent classifies form submissions (FAQ, quote, urgent, general), drafts a personalized reply, and pings Slack for emergencies; a separate module sends the email.\nDone with\nMK\nMake\nWhat they did\nSusana Toth built a seven-module Make scenario around one AI Agent module. It had plain-English instructions, a 60-line FAQ file the agent searches, and a Slack tool for urgent cases. Gmail and SMTP weren't available as agent tools, so the agent writes the email text and a regular Email module sends it. She tested in the chat hub first.\nHow it went\nThe Small built-in model classified all four test cases correctly, with no mistakes. It cost 43–50 credits per run, against 42 for the Router and OpenAI version.\nWorth knowing\nName and describe the Slack tool tightly, such as \"only for urgent issues\". Before she did, the agent pinged Slack on every inquiry.\nTry it yourself\nwith\nMake\nCopy prompt\nBuild a Make scenario that triggers on each new submission from [your form tool], uses an AI agent to classify it as FAQ, quote request, urgent, or general, and drafts a personalized reply using my details: [business name, services, tone]. If it is urgent, post an alert to Slack channel [channel name]. Save every reply as a draft and pause to show me the email before any send step is turned on; you are done when a test submission of each type is routed correctly.\nOriginal source: https://medium.com/@susanatoth-workflows/i-tested-make-coms-new-ai-agents-on-a-live-workflow-here-s-what-it-actually-costs-6fbf03d02e8e",
+    "body_sha256": "a0cc55f0131aebd981097bfec0756b48124ca9e52ffe06190e58e772c7f4044a",
+    "archived_at": "2026-11-22T09:02:36.445078+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-22T09:02:36.445078+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

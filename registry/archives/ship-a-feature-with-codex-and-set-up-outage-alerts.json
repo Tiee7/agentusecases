@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/ship-a-feature-with-codex-and-set-up-outage-alerts",
-  "observed_at": "2026-11-21T09:10:06.042626+00:00",
-  "html_sha256": "691978326bf65771afbb9783ee349ce3715cdc84589d4f068f75542b3fb93db0",
+  "observed_at": "2026-11-22T08:57:04.338824+00:00",
+  "html_sha256": "44e405140e2b40cf99422f924a74bbef4884a3106cbe270604d23b12d115fb9b",
   "body_sha256": "1163aae273ab91c2eda5ab167d935a7aa3370c46a181c29958505d1fb9419bce",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Ship a feature with Codex and set up outage alerts\nThe poster used Codex to ship a feature, handing back for manual testing after 30 merged PRs, and gave it a separate task to send notices when a third-party service was down.\nDone with\nCX\nCodex\nWhat they did\nThe poster stopped line-reading agent PRs and instead used a fresh agent to inventory exactly what each PR changed: schema, jobs, APIs, env vars, dependencies, and feature behavior. In one feature, Codex shipped 30 PRs that Claude and Codex cross-reviewed before the poster manually tested it; for another task, asking for an admin notice when a third-party service failed, the agent independently added Slack/email tracking tables, which the poster would now challenge and cut.\nHow it went\nThe feature worked well enough to reach manual testing, but after 30 merged PRs it turned out completely over-engineered, despite every PR passing bot cross-review. The outage-alert task also overshot the ask by turning a simple message into extra data modeling.\nWorth knowing\nTheir main catch is review time: agents can produce far more code than a person can read, so they rely on manual testing and interrogation of unclear additions instead of diff-by-diff review.\nTry it yourself\nwith\nCodex\nCopy prompt\nIn [repo], build [feature description] and break it into small pull requests, each with tests passing. Stop and hand it back to me for manual testing when [the feature works end to end or N PRs are merged], with a checklist of what I should try. Then set up a separate job that checks whether [third-party service] is down and drafts a notice to [Slack channel or email list]; show me the first notice before anything is sent.\nOriginal source: https://www.reddit.com/r/codex/comments/1xic8ut/dont_review_agent_code_interrogate_it",
     "body_sha256": "1163aae273ab91c2eda5ab167d935a7aa3370c46a181c29958505d1fb9419bce",
-    "archived_at": "2026-11-21T09:10:06.042626+00:00",
+    "archived_at": "2026-11-22T08:57:04.338824+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-21T09:10:06.042626+00:00",
+    "at": "2026-11-22T08:57:04.338824+00:00",
     "status": "fetched",
     "error": null
   }

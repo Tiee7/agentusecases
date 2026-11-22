@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-realtor-s-facebook-page-with-a-scheduling-agent",
+  "observed_at": "2026-11-22T09:03:02.296934+00:00",
+  "html_sha256": "338bc6ede08c8f2fc011b72cda377cef7e043ef87d2a4f02781919c0d95d3805",
+  "body_sha256": "3af74b2848b84ff9122855c4546dfe49007f183c13d573af050f232569ffe8e4",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a realtor's Facebook page with a scheduling agent",
+      "sha256": "283d143d0b063063d7da33fce51d563307e29a40b8e0a0267f79d6508713d109"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent built for a realtor automatically schedules Facebook posts, and the builders also ran it on their own marketing while handling Meta API permission changes and retries.\n·\nMay 1, 2026",
+      "sha256": "7c165782a2b8717f9113beec7b4caaa8dd506e322104acbcd1c65add212578a4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They built a workflow for a realtor where listing details are sent to an agent, the agent turns them into Facebook posts, schedules them automatically, and sends updates through Telegram. Before handing it over, they ran the same system on their own business page for 10 days: feeding content briefs, having the agent draft in their page voice, using scheduled jobs to publish, and routing every action back through Telegram for approval; the agent could not publish without approval, had no unrestricted shell access, and ran on their own hardware.",
+      "sha256": "a9edd8ac827b80290d1669dfd6194c12da7fd21a1262eceb64ed6b313610b426"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In the 10-day test, it published 15 posts, processed nearly 880k tokens locally, and kept a full audit trail. They hit issues with a false incomplete audit flag and Meta API permission changes and retries before the posting pipeline stabilized; in comments they said the realtor loves it.",
+      "sha256": "be306ccdc269c444a7afed8a5c528c0d7818b0912b7276b9b170c01dde6231e2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Their main catch was operational hardening: running it on themselves first exposed Meta API permission changes and retry issues before client launch.",
+      "sha256": "cf1c7bc90241ffbdbe69a79f3a597263d666c9182526f407878fd096cf7828ca"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/AiForSmallBusiness/comments/1tfbc33/we_built_a_facebook_ai_agent_for_a_realtor_then"
+      ],
+      "sha256": "ca7a4dc4a362b6e7295a89a6e4f2ba87222a711bde06fed760c20c50ef903854"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-21",
+      "sha256": "29c899a7eeb66757d2c487522ae381f50b2d409276b71f0e2c611b0008beb0f0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "924638da12a7cdc625c23dd065f11d4775e17763921cbe2da8bf8b859ab43d59",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a realtor's Facebook page with a scheduling agent\nAn agent built for a realtor automatically schedules Facebook posts, and the builders also ran it on their own marketing while handling Meta API permission changes and retries.\n·\nMay 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThey built a workflow for a realtor where listing details are sent to an agent, the agent turns them into Facebook posts, schedules them automatically, and sends updates through Telegram. Before handing it over, they ran the same system on their own business page for 10 days: feeding content briefs, having the agent draft in their page voice, using scheduled jobs to publish, and routing every action back through Telegram for approval; the agent could not publish without approval, had no unrestricted shell access, and ran on their own hardware.\nHow it went\nIn the 10-day test, it published 15 posts, processed nearly 880k tokens locally, and kept a full audit trail. They hit issues with a false incomplete audit flag and Meta API permission changes and retries before the posting pipeline stabilized; in comments they said the realtor loves it.\nWorth knowing\nTheir main catch was operational hardening: running it on themselves first exposed Meta API permission changes and retry issues before client launch.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nSet up an agent that takes the posts I add to [spreadsheet or Google Doc] for my [business type] and schedules them on my Facebook Page [page name] at [days and times]. If a post fails, have it retry [number] times and then email me at [email] with the reason. Before turning it on, show me the schedule and the first post it will publish and wait for my approval.\nOriginal source: https://www.reddit.com/r/AiForSmallBusiness/comments/1tfbc33/we_built_a_facebook_ai_agent_for_a_realtor_then",
+    "body_sha256": "3af74b2848b84ff9122855c4546dfe49007f183c13d573af050f232569ffe8e4",
+    "archived_at": "2026-11-22T09:03:02.296934+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-22T09:03:02.296934+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/plan-and-price-a-full-trip-through-a-booking-cli",
+  "observed_at": "2026-11-22T09:02:54.435776+00:00",
+  "html_sha256": "ac9a7e8adbd1a3fa9f31ede51b94fb443008c33d8a2eab19cc74db1fa39abf8b",
+  "body_sha256": "2627bbcf39c6aa4496ea5dab05fb0caf7196640df83b93274ca9bca681b7bfff",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Plan and price a full trip through a booking CLI",
+      "sha256": "03f00ea4dbb797e38c12dd1bfe0b9cf90480b69a1317ee0743e8acedaed1d8dd"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An AI agent with no prior knowledge of the tooling planned and priced a Dulles–Barcelona round trip with seven hotel nights in under three minutes, verified bookable by dry run (vendor demo).",
+      "sha256": "7950bd5a630f3da63c5c6547f8d06dd6505d2bd0ec8dc74f1a90b38104491f57"
+    },
+    "method": {
+      "status": "observed",
+      "value": "A fresh agent session got one instruction: plan and price a real trip with Voyagier's CLI. It read the tool's built-in docs, created one traveler with a passport and loyalty numbers, searched live flights and hotels, and chose a United nonstop and Le Méridien Barcelona. Each response listed remaining blockers and the next command. It finished with a dry-run booking check.",
+      "sha256": "7856d728f2e678a04a7d395e3afc6e2ddb678a63f7cc974627f41b1b49e2b4cc"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The cold agent reached a verified $3,931.21 quote in 26 commands and just under seven minutes. An agent that already knew the tool took 17 commands and 161 seconds. It still hit minor friction, such as a warning line that corrupted JSON output.",
+      "sha256": "c9eb82786700d6d5ba7c6d80f22b4836a9dfe4c3979a0bba8acd2e397dd2dfed"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Access is by invitation, and the real booking step spends money. Search, plan, quote and dry-run cost nothing, and the booking command refuses to run without a stated expected total.",
+      "sha256": "6aa9f4f75801c22f848d578f0be61be0093414e888c48b13e1d47b964582a2ee"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.voyagier.com/blog/voyagier-for-ai-agents"
+      ],
+      "sha256": "0356653cef030a9cb290857070db12c9990b20d6a931da25f6bd4dce441516fe"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-21",
+      "sha256": "29c899a7eeb66757d2c487522ae381f50b2d409276b71f0e2c611b0008beb0f0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "4bf8d486a2207b50e74c2b5b8d5967f92503234fde2c8c2b1050373e63d5d5f6",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Plan and price a full trip through a booking CLI\nAn AI agent with no prior knowledge of the tooling planned and priced a Dulles–Barcelona round trip with seven hotel nights in under three minutes, verified bookable by dry run (vendor demo).\nDone with a\ncustom-built or unnamed agent\nWhat they did\nA fresh agent session got one instruction: plan and price a real trip with Voyagier's CLI. It read the tool's built-in docs, created one traveler with a passport and loyalty numbers, searched live flights and hotels, and chose a United nonstop and Le Méridien Barcelona. Each response listed remaining blockers and the next command. It finished with a dry-run booking check.\nHow it went\nThe cold agent reached a verified $3,931.21 quote in 26 commands and just under seven minutes. An agent that already knew the tool took 17 commands and 161 seconds. It still hit minor friction, such as a warning line that corrupted JSON output.\nWorth knowing\nAccess is by invitation, and the real booking step spends money. Search, plan, quote and dry-run cost nothing, and the booking command refuses to run without a stated expected total.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nPlan a round trip from [home airport] to [destination city] leaving [start date] and returning [end date], with [number] hotel nights. Find flight and hotel options within a budget of [amount], and give me a single priced itinerary with links so I can check each part is bookable. Stop once you've presented the itinerary and total cost; do not book or enter payment details without showing me exactly what you're about to purchase and getting my approval.\nOriginal source: https://www.voyagier.com/blog/voyagier-for-ai-agents",
+    "body_sha256": "2627bbcf39c6aa4496ea5dab05fb0caf7196640df83b93274ca9bca681b7bfff",
+    "archived_at": "2026-11-22T09:02:54.435776+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-22T09:02:54.435776+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

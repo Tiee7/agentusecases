@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/process-small-refund-requests-automatically-with-a-zapier-ag",
+  "observed_at": "2026-11-22T09:02:34.288091+00:00",
+  "html_sha256": "f226e364955042f706bd9ac7e1670f9f1e3d77d2c4ad66385c14aeed204097e5",
+  "body_sha256": "6c2cc9d3973f7c9464ca77bcd168794512c622316d2b4072d4d2ca2eb218e97a",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Process small refund requests automatically with a Zapier agent",
+      "sha256": "3f364643691330fb806ecdc2de0cef95105effe6a89dde2c5a91e6396e15a6d1"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A small SaaS owner has a Zapier agent handle refund requests under $50 from the past 7 days: it pulls Stripe data, checks the policy in Google Docs, and emails a confirmation. The author also used an agent for invoice follow-ups.",
+      "sha256": "79d180a38a5323fb7556c74dc7256098065e502debf6bdc338973970f666e4e0"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author, who runs a small SaaS, gave a Zapier agent one plain-language instruction to handle refund requests under $50 from the last 7 days. The agent pulled Stripe data, checked the refund policy in Google Docs, and sent a confirmation email. The author did not define each step. The author also set up an invoice follow-up agent.",
+      "sha256": "ab96749d9804f3b488c1fcdd8ea4aca07cc26c128ccba2667a2ff5ae3f0d2409"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says the refund agent ran without field mapping. The invoice follow-up agent took two hours to set up and saved about ten hours a week. An early \"handle all refunds\" instruction led the agent to approve a $500 refund for a customer who had already been refunded twice.",
+      "sha256": "c979b3d95d3c6fae8357814b8e962d3a2491fc0661c0e0bfddab79f2d1f2f091"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Put a hard cap in the action layer. The author says to never let the agent make financial decisions over $100 without a human check.",
+      "sha256": "a030697c2ffae0502e623904d7e9b6b647f1dbd9e896a482d2ff5535cada5221"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Zapier Agents"
+      ],
+      "sha256": "f722674cb518bc01691d24a4b486658dab34c0fb35457369b48d016a51218db9"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://aegisai.in/zapier-ai-agents-automation-workflow-2026/"
+      ],
+      "sha256": "f6b304d193b57cda6cf24ed9d526690f3b1933eede487918433854f0ce5656ee"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-21",
+      "sha256": "29c899a7eeb66757d2c487522ae381f50b2d409276b71f0e2c611b0008beb0f0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "67c34de5ddc987223ab784c6c849b7af0b213bc00ca0eb3230f1228783fc0ec1",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Process small refund requests automatically with a Zapier agent\nA small SaaS owner has a Zapier agent handle refund requests under $50 from the past 7 days: it pulls Stripe data, checks the policy in Google Docs, and emails a confirmation. The author also used an agent for invoice follow-ups.\nDone with\nZA\nZapier Agents\nWhat they did\nThe author, who runs a small SaaS, gave a Zapier agent one plain-language instruction to handle refund requests under $50 from the last 7 days. The agent pulled Stripe data, checked the refund policy in Google Docs, and sent a confirmation email. The author did not define each step. The author also set up an invoice follow-up agent.\nHow it went\nThe author says the refund agent ran without field mapping. The invoice follow-up agent took two hours to set up and saved about ten hours a week. An early \"handle all refunds\" instruction led the agent to approve a $500 refund for a customer who had already been refunded twice.\nWorth knowing\nPut a hard cap in the action layer. The author says to never let the agent make financial decisions over $100 without a human check.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nSet up an agent that handles refund requests under [dollar amount, e.g. $50] from the last [number] days. For each request, have it look up the customer's payment in [payment tool, e.g. Stripe], check my refund policy in [Google Doc or link], and decide whether it qualifies. For qualifying requests, draft a confirmation email to the customer, and pause to show me the refund and email for approval before issuing the refund or sending anything; for the rest, list them with the reason they were skipped.\nOriginal source: https://aegisai.in/zapier-ai-agents-automation-workflow-2026/",
+    "body_sha256": "6c2cc9d3973f7c9464ca77bcd168794512c622316d2b4072d4d2ca2eb218e97a",
+    "archived_at": "2026-11-22T09:02:34.288091+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-22T09:02:34.288091+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

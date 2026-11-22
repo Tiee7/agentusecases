@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/monitor-coding-agent-progress-with-periodic-reports",
-  "observed_at": "2026-11-21T09:10:04.011503+00:00",
-  "html_sha256": "cabcee886772ce98295b5fa58d08621f5480d64d3e247d51909ad7451af32a01",
+  "observed_at": "2026-11-22T08:57:02.366935+00:00",
+  "html_sha256": "e67e100614b7ee622a850db467174a328b8320d197cc356530ee3a4869ca9b00",
   "body_sha256": "000e770d110eb33c9962a955b30123b4e602d0afe127b1e3db47fc1c6a50d35e",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Monitor coding agent progress with periodic reports\nThe author uses Codex as a hands-off monitor that sends plain-language progress reports every 30 minutes on an implementation agent and can pass messages directly to another agent.\nDone with\nCX\nCodex\nWhat they did\nThe author keeps their implementation work in a separate Codex task and sets up another task as a progress monitor. That monitor is scheduled to check in every 30 minutes, send plain-language summaries of what the implementation agent is doing, say whether steering is needed, and, if so, pass a steering prompt directly to the other task via task-to-task messaging instead of making the person interrupt the main worker.\nHow it went\nIt helped the author stay hands-off and avoid derailing the implementation agent with constant interruptions. In comments, they say the setup also reduces copy-pasting, but they give no hard performance numbers and note context management is still a constant struggle.\nWorth knowing\nThe main catch they mention is context bloat: split work too finely and agents waste effort on handoffs; keep tasks too large and they start forgetting earlier rules.\nTry it yourself\nwith\nCodex\nCopy prompt\nWatch the work happening in [repo, branch or terminal session] and every 30 minutes write me a short plain-language progress report covering what changed, what is stuck and what looks risky. Keep going until [the PR is merged or a stop time], and do not edit any code yourself or send messages to other agents without showing me the message first.\nOriginal source: https://www.reddit.com/r/codex/comments/1v1puqa/task_to_task_messaging_is_underrated",
     "body_sha256": "000e770d110eb33c9962a955b30123b4e602d0afe127b1e3db47fc1c6a50d35e",
-    "archived_at": "2026-11-21T09:10:04.011503+00:00",
+    "archived_at": "2026-11-22T08:57:02.366935+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-21T09:10:04.011503+00:00",
+    "at": "2026-11-22T08:57:02.366935+00:00",
     "status": "fetched",
     "error": null
   }

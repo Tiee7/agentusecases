@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-an-ai-coding-agent-on-dos",
+  "observed_at": "2026-11-22T09:02:32.331743+00:00",
+  "html_sha256": "e0ca4f5697213f8d99973d3a7501b9304c2bbf264de4bb717b08cb608720b0f6",
+  "body_sha256": "84983a9a5d6d7e1378dbb797dac4e60253bc8b4d10d9db2d79a6ff5a4c5715b1",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run an AI coding agent on DOS",
+      "sha256": "5ab8d83f76d22973badaf578bb393dda9150952548ff5bf4f9da5cb9f0170f9f"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "ClawDOS is an AI coding agent built to run on DOS, per the Show HN headline; no further details are given.\n·\nNov 21, 2026",
+      "sha256": "77e601ddba17a3484272c98f125328bb93fcd8128ee6fc1be2c9e93456365d0f"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Claude wrote ClawDOS, a 176 KB DOS program that runs on an IBM PC XT (8088, 640K, CGA). It calls the Claude Messages API directly, through a TLS tunnel on a second machine, because the 8088 can't handle TLS. Claude gets 18 tools for files, running programs, screenshots and memory notes. It compiles with Turbo C, and safe mode asks the user to approve changes.",
+      "sha256": "07606c73f7a5215e0bc722082f7eeaa357b63ab32e1b4b7f5f1e7946a861701d"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "A single prompt produced, compiled and ran a primes program in 64 seconds. Claude also wrote a WarGames-style demo on the machine. The screenshots shown come from the 86Box emulator, with the demo also filmed on real hardware.",
+      "sha256": "71dea0f6eb3fd7989f7558b97ef070ce62eacb520ce80780adeb7cb6251fee9c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "You need a Mac or Windows PC with Python 3 and an Anthropic API key for the tunnel and build. Turbo C must come from your own floppy images.",
+      "sha256": "91067f53b80136a1f76bd85c1741a2b1116fa4bd2e373d090e8ec2b81279dc63"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "http://ricapar.net/ClawDOS/"
+      ],
+      "sha256": "443d152a27aad715c2b0b4373af180a04532192b338d3adbe62c51b476746840"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-21",
+      "sha256": "29c899a7eeb66757d2c487522ae381f50b2d409276b71f0e2c611b0008beb0f0"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "e12db5b78a47d0d9c55eaddfd4e481fdf2b832cdf29323c77021698c33b715e4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run an AI coding agent on DOS\nClawDOS is an AI coding agent built to run on DOS, per the Show HN headline; no further details are given.\n·\nNov 21, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nClaude wrote ClawDOS, a 176 KB DOS program that runs on an IBM PC XT (8088, 640K, CGA). It calls the Claude Messages API directly, through a TLS tunnel on a second machine, because the 8088 can't handle TLS. Claude gets 18 tools for files, running programs, screenshots and memory notes. It compiles with Turbo C, and safe mode asks the user to approve changes.\nHow it went\nA single prompt produced, compiled and ran a primes program in 64 seconds. Claude also wrote a WarGames-style demo on the machine. The screenshots shown come from the 86Box emulator, with the demo also filmed on real hardware.\nWorth knowing\nYou need a Mac or Windows PC with Python 3 and an Anthropic API key for the tunnel and build. Turbo C must come from your own floppy images.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me build a small coding agent that runs on [retro or constrained platform, e.g. DOS, an old Raspberry Pi, a 1990s-era PC emulator]. Start by telling me what is realistic given its limits, then write the code in [language, e.g. C or Turbo Pascal] so it can take a typed request, send it to [AI model API or local model], and show the reply on screen. You are done when I can run it in [emulator or hardware] and get one working response; ask me before installing anything outside this project folder.\nOriginal source: http://ricapar.net/ClawDOS/",
+    "body_sha256": "84983a9a5d6d7e1378dbb797dac4e60253bc8b4d10d9db2d79a6ff5a4c5715b1",
+    "archived_at": "2026-11-22T09:02:32.331743+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-22T09:02:32.331743+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
