@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/rewrite-rust-compiler-code-in-bulk-with-a-query-driven-tool",
-  "observed_at": "2026-11-22T08:56:20.326245+00:00",
-  "html_sha256": "a4cf941d1ea4f1629bc5e5737f4e0f6a14f036653f8d0aa6b80e55fce2d707f8",
+  "observed_at": "2026-11-23T09:45:16.537202+00:00",
+  "html_sha256": "33162870928c5e631a59f554a7b78567a9d8c670669993a63e6b129c2e5042ba",
   "body_sha256": "af394dd80a666352aa1b02ef3bda16e4d57908385a143b51270bdcf5ffa23787",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Rewrite Rust compiler code in bulk with a query-driven tool\nThe author has Claude build a mass static code rewriting tool that finds and rewrites compiler code (like LOCAL_CRATE_ID uses) to speed up Rust builds.\n·\nNov 13, 2026\nDone with\nCL\nClaude\nWhat they did\nRather than having an agent hunt through rustc for every place LOCAL_CRATE_ID is defined and used, the author had Claude build a mass static code rewriting tool. A query locates the code and its surroundings, and rewrite rules target those matches. The rewrites can be reviewed and debated ahead of time, then rerun on main or nightly.\nHow it went\nThe work is unfinished and the author has no enticing numbers yet. It's also unclear whether big changes like all crates in one process or dropping memory are worth it.\nWorth knowing\nRewrites can be rerun on current main and applied to other people's open PRs, so you avoid maintaining a stale hard fork, though it takes some coordination with the compiler team.\nTry it yourself\nwith\nClaude\nCopy prompt\nIn my Rust codebase at [path to repo], find every place that uses [pattern or identifier, e.g. a specific constant or function call] and rewrite each one to [new form or approach]. Build a small reusable tool that finds matches with a structural query and applies the rewrite in bulk, rather than editing by hand. Run it on a copy first, then show me the diff summary and the build and test results before applying changes to the main branch. You're done when the project compiles, tests pass, and no old-pattern uses remain.\nOriginal source: https://news.ycombinator.com/item?id=50481795",
     "body_sha256": "af394dd80a666352aa1b02ef3bda16e4d57908385a143b51270bdcf5ffa23787",
-    "archived_at": "2026-11-22T08:56:20.326245+00:00",
+    "archived_at": "2026-11-23T09:45:16.537202+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-22T08:56:20.326245+00:00",
+    "at": "2026-11-23T09:45:16.537202+00:00",
     "status": "fetched",
     "error": null
   }

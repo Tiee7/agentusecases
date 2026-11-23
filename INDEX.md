@@ -1,6 +1,6 @@
 # 商业深度研究总索引
 
-已完成深度研究 **81** / 注册案例 **2291**。旧版简略初稿 **0** 份不计入完成。
+已完成深度研究 **81** / 注册案例 **2316**。旧版简略初稿 **0** 份不计入完成。
 
 两路研究各自串行，独立分支验证、推送和回读完成后即可继续，无额外冷却；main 由整合任务串行合并，网站验收独立进行。历史计划触发验证不代表当前持续运行，见[任务指令与实际状态](tasks/hourly-business-research.md)。一个case ID对应一份报告、一份结构化记录及来源凭据。用户反馈只占5%。
 
@@ -28,7 +28,6 @@
 | [用 Claude Code 整理税务扣除凭证和 Schedule C](reports/compile-deductions-and-schedule-c-with-claude-code.md) | 适合内部效率工具 | 45.0 | 中 | available | 美国个人税务资料准备 | 2026-10-15T00:03:06.932856+08:00 |
 | [用 ChatGPT 整理购车报价并准备谈判问题](reports/negotiate-a-car-purchase-with-chatgpt.md) | 适合内部效率工具 | 41.0 | 中 | available | 消费者购车资料与报价比较 | 2026-10-19T21:36:03Z |
 | [用 Claude Cowork 生成投资备忘录并跟踪投资](reports/produce-investment-memos-with-claude-cowork.md) | 适合内部效率工具 | 41.0 | 中 | available | 证券研究与知识工作自动化 | 2026-10-16T06:23:33.837964+00:00 |
-| [用 Grok Bot 搜索邮件、取消订阅并申请退款](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [用 ChatGPT Agent 通过 Robinhood MCP 操作股票交易](reports/trade-stocks-via-robinhood-mcp.md) | 不建议商业投入 | 20.0 | 待核实 | available | 个人证券交易辅助软件 | 2026-10-16T03:04:14.394660+00:00 |
 | [用 Claude in Chrome 协商 AT&T 账单抵扣](reports/negotiate-a-billing-credit-from-at-t.md) | 不建议商业投入 | 36.0 | 中 | available | 个人通信账单争议准备与抵扣核对 | 2026-10-16T18:09:49.328837+00:00 |
 | [用四个 AI 模型各管理 1,000 美元模拟股票组合](reports/let-ai-models-trade-stocks-autonomously-with-1k-each.md) | 不建议商业投入 | 26.0 | 中 | available | 投资研究与模拟交易 | 2026-10-16T11:48:16.607003+00:00 |
@@ -52,6 +51,7 @@
 | [用 n8n 预约看房并同步客户跟进状态](reports/book-site-visits-and-follow-up-with-real-estate-leads.md) | 仅建议受控试点 | 42.0 | 中 | available | 房地产线索与预约管理 | 2026-10-19T20:29:40Z |
 | [用Claude Code构建项目开发工作流生成器](reports/build-a-dev-workflow-generator-with-test-driven-agent-coding.md) | 适合内部效率工具 | 未评定 | 中 | available | 开发者工具与工程流程集成 | 2026-10-20T21:48:20.558058+00:00 |
 | [用 Claude Code 裁决子智能体和分阶段审查开发应用](reports/build-apps-with-a-judge-subagent-and-multi-stage-review.md) | 适合内部效率工具 | 未评定 | 中 | available | 开发者工具与桌面软件交付 | 2026-10-21T08:49:24.868128+00:00 |
+| [用 Grok Bot 搜索邮件、取消订阅并申请退款](reports/cancel-and-refund-subscriptions-by-searching-email-and-calli.md) | 仅建议受控试点 | 36.0 | 中 | not_observed | 个人订阅管理与消费服务 | 2026-10-15T06:04:21.480348+00:00 |
 | [用 Alexa+ 从零散语音提问中比对 Costco 等多店商品单价与差价](reports/compare-costco-bag-prices-and-savings-from-a-jumbled-request.md) | 不建议商业投入 | 未评定 | 中 | available | 家庭采购与商品单位价格比较 | 2026-10-24T02:50:58.393111+00:00 |
 | [用Grok Bot连接Gmail并生成待审邮件摘要](reports/connect-an-agent-to-email-with-scoped-access.md) | 仅建议受控试点 | 未评定 | 中 | available | 邮件工作流 | 2026-10-20T14:55:09.576494+00:00 |
 | [用 AI agent 核对承包商报价与变更单并起草异议邮件](reports/dispute-contractor-pricing-and-change-orders.md) | 适合内部效率工具 | 45.0 | 中 | available | 工程项目费用核对与变更资料准备 | 2026-10-18T00:33:53.332368+00:00 |
@@ -99,9 +99,9 @@
 - Categorize bank statements by payee for taxes · `categorize-bank-statements-by-payee-for-taxes`
 - Negotiate an AT&T bill down · `negotiate-an-at-t-bill-down`
 - Find cheaper car insurance · `find-cheaper-car-insurance`
+- Lower an internet bill and file expense reports · `lower-an-internet-bill-and-file-expense-reports`
 - Turn vet charges into ready-to-send pet insurance claims · `turn-vet-charges-into-ready-to-send-pet-insurance-claims`
 - Accelerate scientific research with Codex · `accelerate-scientific-research-with-codex`
 - Act on cloud PR chat context and close issues · `act-on-cloud-pr-chat-context-and-close-issues`
 - Add 61 kid-friendly mini-games to an app · `add-61-kid-friendly-mini-games-to-an-app`
 - Add a battle-of-Alesia expansion to a 1990s game remake · `add-a-battle-of-alesia-expansion-to-a-1990s-game-remake`
-- Add a filtered report page to a Razor Pages app · `add-a-filtered-report-page-to-a-razor-pages-app`

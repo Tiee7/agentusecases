@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/plan-and-book-a-new-zealand-south-island-trip",
+  "observed_at": "2026-11-23T09:52:52.525742+00:00",
+  "html_sha256": "4d89154d0c464e35c7baa318339552b734f9544251f213b6976d425fde1dc20b",
+  "body_sha256": "b7f21df5025dc0c7fb49acb3a2ad36ebead68c65ce0802d545671fe0b0be4a81",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Plan and book a New Zealand South Island trip",
+      "sha256": "50b971b262a530833c12a4f48bf9a00a5e8561bc0b3831c8638fe5d479b0a42e"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster used OpenClaw and Claude Code to plan a South Island trip; the agent handled much of the booking work, though they still made 12 of 13 bookings themselves.\n·\nFeb 1, 2026",
+      "sha256": "5fc16b665ee633578ffb71f9d7a18bc85e3138b571162d6a2fa47eae2cdd08df"
+    },
+    "method": {
+      "status": "observed",
+      "value": "He used OpenClaw, managed through Claude Code, to plan an 8-day South Island trip with flights, hotels, train rides, and activities. The agent researched operators, compared prices, built a day-by-day itinerary, read traveler details from a sandboxed Google Drive file, tracked booked vs. pending items, and tried Playwright booking scripts, but he usually had to finish transactions himself because of CAPTCHA, payment, and site automation failures.",
+      "sha256": "07c435443fd019366e0f1ec25ddc76c290a5cf17ba9aaafec27555f1b1f2023c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The research output was strong enough that he says it rivaled a good travel agent, and the DIY trip came out 55% cheaper than a traditional tour operator quote. But in the main planning session he still made 12 of 13 bookings himself, with the agent acting more like a research assistant than a true executive assistant.",
+      "sha256": "ba2b0b6b4cc95c9a5131e64218fa1842e2acf2936b5056db60ace041ce6c8cd5"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Most useful in practice was Claude Code with SSH, file access, and web search; OpenClaw’s browser booking flow was slow and brittle, though later he says it could complete purchases with human approval guardrails.",
+      "sha256": "89c5cd08888cca46f14d8dd21a374ab0db661026ecfb11e1ff9bc93a71cf4822"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw",
+        "Claude Code"
+      ],
+      "sha256": "d4cf476452369f006764ca5cdda578550b3a7dbb3b70009cec119e7ddecd50a0"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/openclaw/comments/1qyvy7u/applying_an_agent_armed_with_the_scary_ability_to"
+      ],
+      "sha256": "dac38ffe46cf5c95c4069cabee8de18392f696264c141759a4a66ba1bb966601"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-22",
+      "sha256": "0974e9ca5d11e5ffc2478070456a4335d0899cf7f33cb7239a701e58659caf91"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "75671292170b4449e3959523d17014911934680ad54e6958f741f23214e374a4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Plan and book a New Zealand South Island trip\nThe poster used OpenClaw and Claude Code to plan a South Island trip; the agent handled much of the booking work, though they still made 12 of 13 bookings themselves.\n·\nFeb 1, 2026\nDone with\nOC\nOpenClaw\nCC\nClaude Code\nWhat they did\nHe used OpenClaw, managed through Claude Code, to plan an 8-day South Island trip with flights, hotels, train rides, and activities. The agent researched operators, compared prices, built a day-by-day itinerary, read traveler details from a sandboxed Google Drive file, tracked booked vs. pending items, and tried Playwright booking scripts, but he usually had to finish transactions himself because of CAPTCHA, payment, and site automation failures.\nHow it went\nThe research output was strong enough that he says it rivaled a good travel agent, and the DIY trip came out 55% cheaper than a traditional tour operator quote. But in the main planning session he still made 12 of 13 bookings himself, with the agent acting more like a research assistant than a true executive assistant.\nWorth knowing\nMost useful in practice was Claude Code with SSH, file access, and web search; OpenClaw’s browser booking flow was slow and brittle, though later he says it could complete purchases with human approval guardrails.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nHelp me plan a [number]-day trip to [destination] from [start date] to [end date] for [number of travelers], with a budget of [amount] and interests in [interests]. Create a day-by-day itinerary in a file, plus a checklist of every booking I need (flights, lodging, car, activities) with links, prices, and cancellation terms. You're done when the checklist is complete and ordered by what to book first. Don't book or pay for anything; pause and show me the details before any purchase step.\nOriginal source: https://www.reddit.com/r/openclaw/comments/1qyvy7u/applying_an_agent_armed_with_the_scary_ability_to",
+    "body_sha256": "b7f21df5025dc0c7fb49acb3a2ad36ebead68c65ce0802d545671fe0b0be4a81",
+    "archived_at": "2026-11-23T09:52:52.525742+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-23T09:52:52.525742+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

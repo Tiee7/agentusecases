@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/give-coding-agents-compiler-accurate-call-graphs-for-refacto",
-  "observed_at": "2026-11-22T08:58:16.359397+00:00",
-  "html_sha256": "8de3966c5925640e4ff221ba953af9d5dd1bef5ebf3e1b4473f2e4d440605615",
+  "observed_at": "2026-11-23T09:47:12.528457+00:00",
+  "html_sha256": "192e1556be1bd99153369e971cf4f53ef6978460e747c5fef9f788f958b6ba26",
   "body_sha256": "f89ac926127ba25a7ba42573dafef5465f747203969362fe8ce57349b809de17",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Give coding agents compiler-accurate call graphs for refactors\nLantern Lattice gives coding agents call-graph tracing, impact analysis and symbol-based edits over MCP, such as renaming a function across 4 files in two calls; built largely with Claude Code plugins.\n·\nNov 5, 2026\nDone with\nCC\nClaude Code\nWhat they did\nLantern Lattice runs as an MCP server that builds call graphs from each language's own tools, such as rust-analyzer, gopls and clangd. The agent uses trace to list a function's callers, then one replace_text call to rename it across files. Its tools replace Grep, Read, Edit and Write, which keeps the graph current. Each non-Rust language was built mostly through its own Claude Code plugin.\nHow it went\nRenaming a function took two calls: 550 bytes for trace, 375 for the edit across 4 files. Grep plus reading the files was 26 lines in 23 files and 51 KB. Uncertain calls are left out.\nWorth knowing\nOnly tested with Claude Code so far; configs for other agents are untested. Rust queries on 20k symbols take 0.01 to 0.02 s, and the first answer after an edit about 1 s.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repository at [path or repo name], I want to rename the function [function name] to [new name] safely. First trace everything that calls it and list the files and call sites affected, then make the rename across all of them, including tests and docs. Run [test command] afterward and stop once the tests pass, giving me a summary of every file changed.\nOriginal source: https://news.ycombinator.com/item?id=50384020",
     "body_sha256": "f89ac926127ba25a7ba42573dafef5465f747203969362fe8ce57349b809de17",
-    "archived_at": "2026-11-22T08:58:16.359397+00:00",
+    "archived_at": "2026-11-23T09:47:12.528457+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-22T08:58:16.359397+00:00",
+    "at": "2026-11-23T09:47:12.528457+00:00",
     "status": "fetched",
     "error": null
   }

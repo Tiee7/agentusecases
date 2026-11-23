@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/score-reddit-investing-picks-blind-on-reasoning-quality",
+  "observed_at": "2026-11-23T09:52:12.545082+00:00",
+  "html_sha256": "13ffda5e42cdc18690f3804ac043e7df7861d90ed78867669951e25558b5e8e8",
+  "body_sha256": "8af774c145a0292918aed83f83c2b5f2b0231f5318fd66a6b08c01411c948e99",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Score Reddit investing picks blind on reasoning quality",
+      "sha256": "758dc1ecdb1bca9ece2ec33fa5cc60a28e45707be6c230d703bd4cec9e356a75"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Built a multi-agent pipeline with Claude Code that pulled 547 r/ValueInvesting recommendations and scored them on reasoning quality without popularity signals.\n·\nMar 27, 2026",
+      "sha256": "f60ae3df6a634536fabb91dc2d3f00ea58ae10113b045868e2fce947be5b547e"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They used Claude Code to scrape every February 2025 r/ValueInvesting post and comment via the Reddit API, filter for stock recommendations, map mentions to tickers, strip out upvotes and other popularity signals, and spawn a sub-agent per recommendation to score five criteria from 1–10. Those scores were summed into a composite, then used to build equal-weight 10-stock portfolios for the crowd, Claude’s picks, and underdogs; the author reran the pipeline on September 2025 posts to avoid training-cutoff leakage.",
+      "sha256": "b9c6dbe0b4124f147e63c8c1564efc7383f015252d71d6351fd9e0c7c423228c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "From 547 recommendations across 238 tickers, the February backtest showed the crowd at +39.8%, Claude’s picks at +37.0%, and the S&P 500 at +19.5%; in the September blind test, Claude’s picks returned +5.2% versus the crowd’s -10.8% and the S&P’s +2.4%. The author says it is not statistically significant, and the crowd result was heavily driven by a few outliers.",
+      "sha256": "5be99836e22db34ce18c104cbfac968cc772b192024e77e15262be5df2dfb7f0"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was time: they did not run the September underdogs portfolio and said these experiments are constrained by spare time outside a 9-to-5.",
+      "sha256": "6e1adb11c26d08b6c054b62da5dd6de3cc42c6c0977686ccf19dc5be30a0fec9"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code",
+        "Claude"
+      ],
+      "sha256": "f1283dd5a9207da083e28ab44bd7295ca9ffde0ff5a13df75d1a33997c0ea659"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1rkw25u/i_had_opus_46_evaluate_547_reddit_investing"
+      ],
+      "sha256": "e8e3a21e2f441b813d7cfdc576121c9669ba366a9c0d71c237e68e7d530578cc"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-22",
+      "sha256": "0974e9ca5d11e5ffc2478070456a4335d0899cf7f33cb7239a701e58659caf91"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "435196730f94a025d3d52170d05ca600c996914729bb36d053f8c9e429aff323",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Score Reddit investing picks blind on reasoning quality\nBuilt a multi-agent pipeline with Claude Code that pulled 547 r/ValueInvesting recommendations and scored them on reasoning quality without popularity signals.\n·\nMar 27, 2026\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThey used Claude Code to scrape every February 2025 r/ValueInvesting post and comment via the Reddit API, filter for stock recommendations, map mentions to tickers, strip out upvotes and other popularity signals, and spawn a sub-agent per recommendation to score five criteria from 1–10. Those scores were summed into a composite, then used to build equal-weight 10-stock portfolios for the crowd, Claude’s picks, and underdogs; the author reran the pipeline on September 2025 posts to avoid training-cutoff leakage.\nHow it went\nFrom 547 recommendations across 238 tickers, the February backtest showed the crowd at +39.8%, Claude’s picks at +37.0%, and the S&P 500 at +19.5%; in the September blind test, Claude’s picks returned +5.2% versus the crowd’s -10.8% and the S&P’s +2.4%. The author says it is not statistically significant, and the crowd result was heavily driven by a few outliers.\nWorth knowing\nThe main catch was time: they did not run the September underdogs portfolio and said these experiments are constrained by spare time outside a 9-to-5.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a pipeline that collects the last [500] stock recommendation posts from [subreddit] and strips out upvotes, comment counts, usernames, and any other popularity signals. Then have separate agents score each pick blind on reasoning quality using this rubric: [e.g., thesis clarity, evidence, risk acknowledgment, valuation logic]. When done, save a ranked CSV and a short report on what the top-scored picks had in common, and show me the rubric and a sample of scores before running the full batch.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1rkw25u/i_had_opus_46_evaluate_547_reddit_investing",
+    "body_sha256": "8af774c145a0292918aed83f83c2b5f2b0231f5318fd66a6b08c01411c948e99",
+    "archived_at": "2026-11-23T09:52:12.545082+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-23T09:52:12.545082+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

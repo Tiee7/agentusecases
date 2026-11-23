@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/work-through-bug-lists-on-a-schedule-in-git-worktrees",
-  "observed_at": "2026-11-22T09:00:22.296047+00:00",
-  "html_sha256": "8924f9c1a8aa1943a3f7d118f58b6896bf803aac76ddafc419df1bfa636bdb7b",
+  "observed_at": "2026-11-23T09:49:18.509142+00:00",
+  "html_sha256": "6e3db535c0f8cca52c725226272b629ca50e8469f88f000ad176561e164a8c7f",
   "body_sha256": "5f31f164267ea4443cea59973754cdb742b6752c2445308371f38a5d46189230",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Work through bug lists on a schedule in git worktrees\nA scheduled Codex routine opens bug and feature lists from GitHub Issues or Notion and works selected items in separate git worktrees, leaving specs, tests and review to the human.\nDone with\nCX\nCodex\nWhat they did\nThe post itself is a request for advice, but one commenter says they built a similar setup by running a locally hosted n8n and Codex on their own servers. Their workflow pulls tasks from an issue list, creates separate git worktrees for each task, and passes them to a main orchestrator agent that coordinates sub-agents for implementation, refactors, tests, and docs; the human mainly handles specs, tests, and review.\nHow it went\nThe source gives no hard metrics, but the commenter says the automation handles repetitive execution and leaves them mostly spending time on specs, tests, and review. It also mentions extra code critique from agents using OpenAI, Claude, Grok, and local models before anything is merged.\nWorth knowing\nThe clearest implementation detail is that they trigger Codex from n8n with an execute node, but they never shared the promised GitHub workflow details.\nTry it yourself\nwith\nCodex\nCopy prompt\nOn a schedule of [e.g. every weekday at 9am], open my bug and feature list in [GitHub Issues repo / Notion page] and pick up to [number] items labeled [label]. Work each one in its own git worktree on a separate branch, and leave a short note on what you changed and which tests you ran. Don't merge anything or close any issues; I'll write specs and review the branches myself.\nOriginal source: https://www.reddit.com/r/codex/comments/1qhvy6u/automating_a_daily_codex_routine_git_worktrees",
     "body_sha256": "5f31f164267ea4443cea59973754cdb742b6752c2445308371f38a5d46189230",
-    "archived_at": "2026-11-22T09:00:22.296047+00:00",
+    "archived_at": "2026-11-23T09:49:18.509142+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-22T09:00:22.296047+00:00",
+    "at": "2026-11-23T09:49:18.509142+00:00",
     "status": "fetched",
     "error": null
   }
