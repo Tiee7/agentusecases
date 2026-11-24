@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/write-and-publish-wechat-articles-with-an-agent",
-  "observed_at": "2026-11-23T09:46:22.495574+00:00",
-  "html_sha256": "21862b216d951cc56f41d11c798c149f0f7937a28cb8a38248febf8a7096b402",
+  "observed_at": "2026-11-24T11:51:28.220089+00:00",
+  "html_sha256": "13604fee5e4da0a959be4a5bbb6792038da9db2bc26f9a489493810f50cefdad",
   "body_sha256": "6048c31378ffeb0d36bfd33b93ffbeec4d4ad27a969105c38fc5fc6d9914c34a",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Write and publish WeChat articles with an agent\nThe author had OpenClaw write a WeChat article, save it as Markdown and publish via a skill; writing and formatting worked but publishing failed with an API permission error.\n·\nNov 13, 2026\nDone with\nOC\nOpenClaw\nWhat they did\nOpenClaw ran in WSL2 on Windows, using Claude Opus 4.5 through a third-party model service. The author asked it to find and install a WeChat publishing skill. They supplied the AppID and AppSecret, installed dependencies by hand, and added their IP to WeChat's allowlist. One prompt then had it write an article on moving from coding to architecture, save it as Markdown, format it and publish.\nHow it went\nThe article was written and formatted well, and it reached the WeChat drafts folder. Publishing failed with error 48001 because the account isn't enterprise-verified and so lacks publish API permission.\nWorth knowing\nWithout an enterprise-verified official account, the publish API is refused, so expect to stop at the drafts folder. Setup also needed manual dependency installation and an IP allowlist entry.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nWrite a [length]-word article for my WeChat official account on [topic] in the tone of [tone], and save it as a Markdown file at [path]. Format it for WeChat and then try to publish it as a draft using the publishing skill. If publishing fails, tell me the exact error and what permission or setting I need to change, and pause for my approval before anything is actually published.\nOriginal source: https://www.cnblogs.com/gylei/p/19770641",
     "body_sha256": "6048c31378ffeb0d36bfd33b93ffbeec4d4ad27a969105c38fc5fc6d9914c34a",
-    "archived_at": "2026-11-23T09:46:22.495574+00:00",
+    "archived_at": "2026-11-24T11:51:28.220089+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-23T09:46:22.495574+00:00",
+    "at": "2026-11-24T11:51:28.220089+00:00",
     "status": "fetched",
     "error": null
   }

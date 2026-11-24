@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-trading-agent-team-and-build-decks-with-a-script",
+  "observed_at": "2026-11-24T11:58:50.196478+00:00",
+  "html_sha256": "0dc9f2634e1c07f53eaec2e182db3879c574ab80bce333368f60cac784f33f85",
+  "body_sha256": "9821c93f7f6e589764af08bf53db50d45d66460d40df1b63ce3324b6662a7d82",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a trading agent team and build decks with a script",
+      "sha256": "c7d66de8f427d6277d17de34442b0ba56c98f586255a616bf0f639ca4a0e904a"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user organizes a trading setup with an orchestrator and sub-agents for analysis and debate, and had Hermes write a Python script to build decks, though it got confused by direct file edits.\nMore AI trading agents",
+      "sha256": "68f2c7e0c29fb36f169ffb79ecf2a877aff9b80a7f8decc9668b518d139b1ef4"
+    },
+    "method": {
+      "status": "observed",
+      "value": "One user runs Hermes on stock trading through Robinhood’s MCP server using an agent subaccount with spending and position limits, plus prompt guardrails like maximum trade size, no margin, and requiring confirmation before a first sell. They added an orchestrator with 4–7 sub-agents that each analyze or argue a case, and the orchestrator chooses the best argument; for decks, Hermes generated a .pptx by writing a Python script from a detailed contract markdown file.",
+      "sha256": "ceb16264babdfb1f8bee6cae232e8b710306597e239c79b05b6633365630d26e"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They said the trading setup made a small amount of money, and Hermes did better than expected on PowerPoint generation with only minor follow-up edits. The main failure was deck editing: if they changed the file directly, Hermes got confused because the .pptx no longer matched the Python used to build it.",
+      "sha256": "3711706e4c695f43e58cb93d69ef5ce93e24ec5cba5658a36ccc40a0332bc5e1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "They found it worked better to let Hermes keep editing through the script rather than manually changing the deck file yourself.",
+      "sha256": "b370655eacc49d312018d51470e1823a226c1fd3f22b434979e3160d6b79ae3c"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Hermes Agent"
+      ],
+      "sha256": "f8ea674179336e4a1ac886a45e463f9b8befd4d2ae38c7ffcada8d1351c35fd2"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/hermesagent/comments/1x9xec6/what_tasks_do_you_use_hermes_agent_for_and_what"
+      ],
+      "sha256": "d87862092b7cf2886cb6ad8a726d26886e56847bc87fa7db91d1a96a7102ef9c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-23",
+      "sha256": "860cc931f2746b53b7ef28ab1cbfbfb3340695f47990c74420cbd95368a5e60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "11bf731cf9c8bb6f137c9a87a937a4927e071c041ca41c83d75e091593edf465",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a trading agent team and build decks with a script\nA user organizes a trading setup with an orchestrator and sub-agents for analysis and debate, and had Hermes write a Python script to build decks, though it got confused by direct file edits.\nMore AI trading agents\nDone with\nHA\nHermes Agent\nWhat they did\nOne user runs Hermes on stock trading through Robinhood’s MCP server using an agent subaccount with spending and position limits, plus prompt guardrails like maximum trade size, no margin, and requiring confirmation before a first sell. They added an orchestrator with 4–7 sub-agents that each analyze or argue a case, and the orchestrator chooses the best argument; for decks, Hermes generated a .pptx by writing a Python script from a detailed contract markdown file.\nHow it went\nThey said the trading setup made a small amount of money, and Hermes did better than expected on PowerPoint generation with only minor follow-up edits. The main failure was deck editing: if they changed the file directly, Hermes got confused because the .pptx no longer matched the Python used to build it.\nWorth knowing\nThey found it worked better to let Hermes keep editing through the script rather than manually changing the deck file yourself.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp me set up a team of agents for [analysis task, e.g. evaluating stocks I am watching]: one orchestrator and sub-agents for [analysis], [bull case], and [bear case] who debate before the orchestrator summarizes. Then write a Python script that builds a slide deck from the summary at [output path], and have the script generate the files rather than editing existing files directly. Do not place any trades or connect to any brokerage account. The job is finished when I can run the script and get a deck for [ticker or topic].\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1x9xec6/what_tasks_do_you_use_hermes_agent_for_and_what",
+    "body_sha256": "9821c93f7f6e589764af08bf53db50d45d66460d40df1b63ce3324b6662a7d82",
+    "archived_at": "2026-11-24T11:58:50.196478+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-24T11:58:50.196478+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

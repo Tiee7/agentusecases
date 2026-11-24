@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/make-a-first-edit-of-talking-head-video",
-  "observed_at": "2026-11-23T09:48:52.547488+00:00",
-  "html_sha256": "2cd306bc6e7e4f74985fb4552820f083dcffb194061d6c22e973596549e8795f",
+  "observed_at": "2026-11-24T11:53:58.413201+00:00",
+  "html_sha256": "e9cea1003b6079291040fc6087d7185a34c5837bebe54ccd82421fbd57725767",
   "body_sha256": "0c96b8a0eb817de2c42d137ba8791a39e990af50d316cd8b341c6a1450e448c2",
   "status": "observed",
   "fields": {
@@ -98,11 +98,11 @@
     "language": "en",
     "body": "Make a first edit of talking-head video\nAn agent skill reads a recording's transcript, writes an edit plan, renders with ffmpeg, then checks a contact sheet of cuts and re-renders if needed.\n·\nNov 14, 2026\nDone with\nCC\nClaude Code\nCX\nCodex\nCR\nCursor\nOC\nOpenClaw\nWhat they did\nA script transcribes the video with word timestamps. The agent reads the whole transcript and writes an edit.json cut list, with a reason for each cut. A plan-only run produces edit-plan.md, and the person approves it. Scripts then render with ffmpeg, and the agent inspects cuts.jpg and the warnings, re-rendering if needed.\nHow it went\nIn the worked example, a 6:39 NASA interview became 5:57 with 12 cuts. Only about 9 seconds came from inside the talking, because the interview was already well delivered.\nWorth knowing\nTranscription can leave out filler words unless prompted, and an unwritten \"um\" can't be cut. The skill sends a disfluent prompt, and you can pass names and jargon with --terms.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nMake a first-pass edit of my talking-head video at [file path]. Transcribe it, write an edit plan that removes filler words, dead air, and flubbed takes, render it with ffmpeg, then build a contact sheet of the cut points and check it. Re-render if any cuts look wrong, and stop when you have a clean [format] file plus a short list of the changes you made.\nOriginal source: https://dev.to/fheijdenrijk/video-editing-skill-for-claude-code-an-agent-that-plans-every-cut-then-renders-with-ffmpeg-518a",
     "body_sha256": "0c96b8a0eb817de2c42d137ba8791a39e990af50d316cd8b341c6a1450e448c2",
-    "archived_at": "2026-11-23T09:48:52.547488+00:00",
+    "archived_at": "2026-11-24T11:53:58.413201+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-23T09:48:52.547488+00:00",
+    "at": "2026-11-24T11:53:58.413201+00:00",
     "status": "fetched",
     "error": null
   }

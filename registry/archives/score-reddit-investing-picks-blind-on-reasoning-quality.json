@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/score-reddit-investing-picks-blind-on-reasoning-quality",
-  "observed_at": "2026-11-23T09:52:12.545082+00:00",
-  "html_sha256": "13ffda5e42cdc18690f3804ac043e7df7861d90ed78867669951e25558b5e8e8",
+  "observed_at": "2026-11-24T11:57:18.231365+00:00",
+  "html_sha256": "2a3c0a18933e1c66ccd2b7e1cdb7bdaa5843a0632736d1841df95c1d4129b6fa",
   "body_sha256": "8af774c145a0292918aed83f83c2b5f2b0231f5318fd66a6b08c01411c948e99",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Score Reddit investing picks blind on reasoning quality\nBuilt a multi-agent pipeline with Claude Code that pulled 547 r/ValueInvesting recommendations and scored them on reasoning quality without popularity signals.\n·\nMar 27, 2026\nDone with\nCC\nClaude Code\nCL\nClaude\nWhat they did\nThey used Claude Code to scrape every February 2025 r/ValueInvesting post and comment via the Reddit API, filter for stock recommendations, map mentions to tickers, strip out upvotes and other popularity signals, and spawn a sub-agent per recommendation to score five criteria from 1–10. Those scores were summed into a composite, then used to build equal-weight 10-stock portfolios for the crowd, Claude’s picks, and underdogs; the author reran the pipeline on September 2025 posts to avoid training-cutoff leakage.\nHow it went\nFrom 547 recommendations across 238 tickers, the February backtest showed the crowd at +39.8%, Claude’s picks at +37.0%, and the S&P 500 at +19.5%; in the September blind test, Claude’s picks returned +5.2% versus the crowd’s -10.8% and the S&P’s +2.4%. The author says it is not statistically significant, and the crowd result was heavily driven by a few outliers.\nWorth knowing\nThe main catch was time: they did not run the September underdogs portfolio and said these experiments are constrained by spare time outside a 9-to-5.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild a pipeline that collects the last [500] stock recommendation posts from [subreddit] and strips out upvotes, comment counts, usernames, and any other popularity signals. Then have separate agents score each pick blind on reasoning quality using this rubric: [e.g., thesis clarity, evidence, risk acknowledgment, valuation logic]. When done, save a ranked CSV and a short report on what the top-scored picks had in common, and show me the rubric and a sample of scores before running the full batch.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1rkw25u/i_had_opus_46_evaluate_547_reddit_investing",
     "body_sha256": "8af774c145a0292918aed83f83c2b5f2b0231f5318fd66a6b08c01411c948e99",
-    "archived_at": "2026-11-23T09:52:12.545082+00:00",
+    "archived_at": "2026-11-24T11:57:18.231365+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-23T09:52:12.545082+00:00",
+    "at": "2026-11-24T11:57:18.231365+00:00",
     "status": "fetched",
     "error": null
   }

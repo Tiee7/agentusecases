@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-video-editing-on-a-personal-pc",
+  "observed_at": "2026-11-24T11:58:12.138420+00:00",
+  "html_sha256": "9128b31252bc06d6b855695d55146bd3a557d9e8ce97b17e08b43f1fb29e5d02",
+  "body_sha256": "b21e1b784ce78a73d76f54701ca84d2904726da12a01fdcdc7dcf611f6adc2ff",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate video editing on a personal PC",
+      "sha256": "2fa0ca24fa251172f3b0dcba1f7f256f47b88e7effd7507e0e604f74ec70bfa0"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A user films clips on their phone, sends them to their computer, and Claude runs the editing pipeline without an editing app or MCP plugin.\n·\nNov 16, 2026",
+      "sha256": "4c20795623be0f9c0e2759e01381ce9c31d6aca5ab529e5211bd784304dfc835"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They built a local pipeline Claude runs on their own PC: clips shot on a phone are dropped onto the computer, and a worker script watches a folder and starts processing automatically. It makes a 1080p working copy, transcribes with Whisper on the GPU, removes pauses, filler words, restarts, and spoken \"cut that\" sections, then Claude reviews the cut list before Python scripts use ffmpeg, OpenCV, and rembg to render full videos, shorts, and thumbnails.",
+      "sha256": "883a39150a2a26a49b6cf26560330a4261924ff9689ae5a1f6ebef86726a8853"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The user says they use it to edit and post videos for various businesses across about 25 social accounts. The source gives no timing, cost, or performance numbers, and says final checking still happens when Claude reviews frames for quality and privacy.",
+      "sha256": "bfd3215beecc6d70358fe256bc2273e5d95f4c1ba7c6a5ac75af25acf53842b8"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "This was plain Python on a personal PC with ffmpeg, Whisper, OpenCV, and rembg, explicitly not an editing app or MCP plugin.",
+      "sha256": "11ef79fa1494d66b5a72a82c34d2534ad61a9712cff61b14bebe997bb8118071"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1xxgcjo/absolutely_amazing"
+      ],
+      "sha256": "b9918b18cb5b479780f2f409ed29d12615a71f0da5fa9a881e3d1b917ba9f6f9"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "creative",
+        "label": "Content & Creative"
+      },
+      "sha256": "9cf1b8016dcb862e1f5b8d02a784cb1beb8b47bcc5c26339f4f0d477a1cf4ad5"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-23",
+      "sha256": "860cc931f2746b53b7ef28ab1cbfbfb3340695f47990c74420cbd95368a5e60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "26c39b86a144d026d18f8025e9d7530a7cbac908b68bee1f2dd85d1acd2e595a",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate video editing on a personal PC\nA user films clips on their phone, sends them to their computer, and Claude runs the editing pipeline without an editing app or MCP plugin.\n·\nNov 16, 2026\nDone with\nCL\nClaude\nWhat they did\nThey built a local pipeline Claude runs on their own PC: clips shot on a phone are dropped onto the computer, and a worker script watches a folder and starts processing automatically. It makes a 1080p working copy, transcribes with Whisper on the GPU, removes pauses, filler words, restarts, and spoken \"cut that\" sections, then Claude reviews the cut list before Python scripts use ffmpeg, OpenCV, and rembg to render full videos, shorts, and thumbnails.\nHow it went\nThe user says they use it to edit and post videos for various businesses across about 25 social accounts. The source gives no timing, cost, or performance numbers, and says final checking still happens when Claude reviews frames for quality and privacy.\nWorth knowing\nThis was plain Python on a personal PC with ffmpeg, Whisper, OpenCV, and rembg, explicitly not an editing app or MCP plugin.\nTry it yourself\nwith\nClaude\nCopy prompt\nI film short clips on my phone and move them to [folder path] on my computer. Set up a repeatable pipeline using free command-line tools like ffmpeg that takes the clips in that folder and produces one finished video with [trims, cuts, captions, music, resolution]. A finished job is one script I can run on a new folder of clips, and a sample output from my current files. Never overwrite the original clips.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1xxgcjo/absolutely_amazing",
+    "body_sha256": "b21e1b784ce78a73d76f54701ca84d2904726da12a01fdcdc7dcf611f6adc2ff",
+    "archived_at": "2026-11-24T11:58:12.138420+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-24T11:58:12.138420+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

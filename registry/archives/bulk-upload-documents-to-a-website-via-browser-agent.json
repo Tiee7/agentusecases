@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/bulk-upload-documents-to-a-website-via-browser-agent",
+  "observed_at": "2026-11-24T11:58:08.223359+00:00",
+  "html_sha256": "9a90dcf570fea8f7d80c362a8b6f020d322cc4eaddb8ebbfa637f48ef849973e",
+  "body_sha256": "53ae3e49b7f339e75f5bbf10cad802e0530d2a043990eadc1de563e43de098be",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Bulk upload documents to a website via browser agent",
+      "sha256": "9002d51726a94a15db2ae9042146b8c907fe979c7ea2dd90b6ae4a3cc6f7fd08"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster pairs Claude Desktop for file management with Claude in Chrome to upload many documents to a website.\n·\nOct 17, 2026",
+      "sha256": "ed4b5629cdbb0e1472942aad5d6a75e2ec6eed8b5154b768196bad97d864dd50"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster had Claude Desktop handle the local file work: renaming and organizing certifications, staging them in batches of 20 because Claude in Chrome could only upload 20 files at a time, and creating an Excel sheet with the form data. Then Claude in Chrome uploaded each batch to the SaaS site and produced a summary for the person to pass back to Desktop, which was then used to mark records in Excel and file the uploaded documents into the right folders.",
+      "sha256": "6d752e2b27a9a8e8400339a877da4b4a148aebec3bfbe1470816d36c0ea6d8ae"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "For about 150 certifications, the split workflow still saved time, but the poster said the handoff between Desktop and Chrome created too much back and forth and was hard to make smooth for teammates. Commenters suggested moving beyond chat interfaces to Claude CLI or a Python script using the Anthropics API and the SaaS tool's API.",
+      "sha256": "dba8846db4868eb48fe6567c7186d75e4b7af224dbdec0b70e433b52c00c537d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The main catch was Chrome’s 20-file upload limit, which forced manual batch handoffs between the two Claude environments.",
+      "sha256": "6f20035294baf70919d1dc765fdb16663896b09bc603d1470f6f219a7ce3bc69"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude",
+        "Claude in Chrome"
+      ],
+      "sha256": "3eaecbecfe1bf767b126e09c6900dc962ecc3f54986c73c9d80c39e06112e360"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1x1lkn2/uploading_numerous_documents_to_a_website_workflow"
+      ],
+      "sha256": "7c724729d2fc7e498791a928e6ae6e7b5e1bcee2499a9d3ef04934214ad7e044"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-23",
+      "sha256": "860cc931f2746b53b7ef28ab1cbfbfb3340695f47990c74420cbd95368a5e60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "693e43330351c0337a93ccffe16427339eae0071204794622fabef4fccd9ff76",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Bulk upload documents to a website via browser agent\nThe poster pairs Claude Desktop for file management with Claude in Chrome to upload many documents to a website.\n·\nOct 17, 2026\nDone with\nCL\nClaude\nCH\nClaude in Chrome\nWhat they did\nThe poster had Claude Desktop handle the local file work: renaming and organizing certifications, staging them in batches of 20 because Claude in Chrome could only upload 20 files at a time, and creating an Excel sheet with the form data. Then Claude in Chrome uploaded each batch to the SaaS site and produced a summary for the person to pass back to Desktop, which was then used to mark records in Excel and file the uploaded documents into the right folders.\nHow it went\nFor about 150 certifications, the split workflow still saved time, but the poster said the handoff between Desktop and Chrome created too much back and forth and was hard to make smooth for teammates. Commenters suggested moving beyond chat interfaces to Claude CLI or a Python script using the Anthropics API and the SaaS tool's API.\nWorth knowing\nThe main catch was Chrome’s 20-file upload limit, which forced manual batch handoffs between the two Claude environments.\nTry it yourself\nwith\nClaude\nCopy prompt\nI have a folder of documents at [folder path] that need to go to [website name and upload page URL]. Sort the files by [name, date or category], then upload them one by one in the browser, matching each to the right field or folder on the site. Before you submit anything, show me the full list of what will be uploaded where and wait for my approval. When done, give me a checklist of what succeeded and what failed.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1x1lkn2/uploading_numerous_documents_to_a_website_workflow",
+    "body_sha256": "53ae3e49b7f339e75f5bbf10cad802e0530d2a043990eadc1de563e43de098be",
+    "archived_at": "2026-11-24T11:58:08.223359+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-24T11:58:08.223359+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

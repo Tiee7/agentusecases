@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/explain-a-denied-insurance-claim-from-eob-and-policy",
+  "observed_at": "2026-11-24T11:58:04.147573+00:00",
+  "html_sha256": "81e13c3dea712ea00ff25e8fd2b74be6641ac07713dcb7e8af7585ec47dd0a9a",
+  "body_sha256": "4d612b1faaea46973dd35b220ebe714d5c8b2ffe0279b32063c6e572c47bfd67",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Explain a denied insurance claim from EOB and policy",
+      "sha256": "1f6f065ca83423a81883ee41d98968ddd24320240e43ca0ee8876b77614359ba"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Claude Code cross-referenced an EOB and policy documents in about three minutes and showed the author owed nothing beyond what they already paid; it did not file anything.",
+      "sha256": "e0e16bad7cccb205b65a7a05eb04e767f8e2fb474104da02d0e3e9f75dce3749"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author made a new Git repo for personal insurance, with a CLAUDE.md, a filing schema, a journal and a README. This took about 15 minutes. He dropped in the Aetna EOB and his policy documents and asked Claude Code to explain the denied claim. Claude then offered to draft an email to the dentist, but the source doesn't say it sent one.",
+      "sha256": "56716e4b5aace9bf58c687c52bf0cfdb5166f1ce9b20301e28894abf385200cc"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In about three minutes Claude explained that the plan excludes comprehensive dental services. It also showed that the $1,316 \"Your Share\" was the billed amount, while the in-network rate was $723.83, which he was already paying.",
+      "sha256": "47877dae0f7dff1dd7c2d7ddfad087cefcf81815017c7ac8e9136c260385c01d"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The EOB's \"Your Share\" column showed the full billed amount, not the contracted in-network rate. Check that difference before assuming you owe more.",
+      "sha256": "9da133ff303bc84922b96f0566ca040eeaf37fa832cdd4c887c5a4c8b1155e5b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://common-sense.com/insights/insurance-denial-resolved-before-coffee/"
+      ],
+      "sha256": "366e6fa704e4bca9179979aa00a629e11f7413e546a7f1002b8696533dc25439"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-23",
+      "sha256": "860cc931f2746b53b7ef28ab1cbfbfb3340695f47990c74420cbd95368a5e60c"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "691fe7409c3071f03295687e5bd29a833694cf1f9d42289de85d36f3d69d8e22",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Explain a denied insurance claim from EOB and policy\nClaude Code cross-referenced an EOB and policy documents in about three minutes and showed the author owed nothing beyond what they already paid; it did not file anything.\nDone with\nCC\nClaude Code\nWhat they did\nThe author made a new Git repo for personal insurance, with a CLAUDE.md, a filing schema, a journal and a README. This took about 15 minutes. He dropped in the Aetna EOB and his policy documents and asked Claude Code to explain the denied claim. Claude then offered to draft an email to the dentist, but the source doesn't say it sent one.\nHow it went\nIn about three minutes Claude explained that the plan excludes comprehensive dental services. It also showed that the $1,316 \"Your Share\" was the billed amount, while the in-network rate was $723.83, which he was already paying.\nWorth knowing\nThe EOB's \"Your Share\" column showed the full billed amount, not the contracted in-network rate. Check that difference before assuming you owe more.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI'm putting my Explanation of Benefits at [path to EOB file] and my policy documents in [folder path] in the same folder. Read them and explain why this claim was denied or reduced, what I actually owe, and whether the amount matches my plan's deductible, copay and coinsurance. Give me a short plain-English summary plus the exact policy language you relied on, and do not contact anyone or file anything.\nOriginal source: https://common-sense.com/insights/insurance-denial-resolved-before-coffee/",
+    "body_sha256": "4d612b1faaea46973dd35b220ebe714d5c8b2ffe0279b32063c6e572c47bfd67",
+    "archived_at": "2026-11-24T11:58:04.147573+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-24T11:58:04.147573+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
