@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/route-refused-tasks-between-local-and-frontier-models",
+  "observed_at": "2026-11-25T10:52:29.217199+00:00",
+  "html_sha256": "8cc8d89d8b0f0b1c13944e1fac70cbe75ae7804ceafee93ec88fb414de0388bf",
+  "body_sha256": "6b81a2e8b114429a31995b3604b8782643b254e260efe4efe116ef98fc3da234",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Route refused tasks between local and frontier models",
+      "sha256": "8b047c31e1e5086b2b71b09867b2ac74279516a9b6eb1611f5aa360186481b48"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter runs a local Qwen model with an agents.md policy that escalates refused tasks via a shared SQL task board to a model willing to do them, such as clicking login buttons.\n·\nNov 24, 2026",
+      "sha256": "fd2113fce8b7c5ca7719013082a4f41aa7c05ae24b32b156ddfa462dc9cfcbe5"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter runs a local Qwen model alongside other models, all guided by an agents.md file containing an accept-refusal, negotiate-refusal, escalate-refusal policy. When a model balks at a task, the policy tells the models to talk to each other and hand the blocked task to whichever one will do it, using a shared SQL database board of tasks.",
+      "sha256": "c4f0c524bfa303387f06b9afc012cea21351c8cb3b5e623412ebe4314a3c1403"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The commenter says this gets around refusals in their own workflows, such as a model objecting to clicking a login button on a webpage. No numbers or systematic results are given; it is a brief anecdote.",
+      "sha256": "cfd682f2dad4909304f36373f2cb827beecc93277b8bffb5a25da325df1d411c"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The source gives no setup details beyond the policy names, the agents.md file and the shared SQL task board, so expect to design the routing and board schema yourself.",
+      "sha256": "43ce7173f94a48d18b298643bb62b9c9d369b27be47802394ca70e24511c6459"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://news.ycombinator.com/item?id=50634581"
+      ],
+      "sha256": "3f10433c9417ed42b8c72dc40afc9519ca644d9e4a2549830858cb0cbfcbb6df"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-24",
+      "sha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "49e611991674340c25b1700a3e8437457884cd64553d8cebc8815f4a51c6f17b",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Route refused tasks between local and frontier models\nA commenter runs a local Qwen model with an agents.md policy that escalates refused tasks via a shared SQL task board to a model willing to do them, such as clicking login buttons.\n·\nNov 24, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter runs a local Qwen model alongside other models, all guided by an agents.md file containing an accept-refusal, negotiate-refusal, escalate-refusal policy. When a model balks at a task, the policy tells the models to talk to each other and hand the blocked task to whichever one will do it, using a shared SQL database board of tasks.\nHow it went\nThe commenter says this gets around refusals in their own workflows, such as a model objecting to clicking a login button on a webpage. No numbers or systematic results are given; it is a brief anecdote.\nWorth knowing\nThe source gives no setup details beyond the policy names, the agents.md file and the shared SQL task board, so expect to design the routing and board schema yourself.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a routing policy between my local model [model name, e.g. Qwen] and a stronger hosted model. Write an agents.md that tells the local model to log any task it refuses or can't do into a shared SQL task board table at [database path], with fields for task, status and result. Then write a small worker that picks up those pending tasks and sends them to [hosted model]. Run one test task and show me the board before and after. Ask me before running anything that touches my accounts.\nOriginal source: https://news.ycombinator.com/item?id=50634581",
+    "body_sha256": "6b81a2e8b114429a31995b3604b8782643b254e260efe4efe116ef98fc3da234",
+    "archived_at": "2026-11-25T10:52:29.217199+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-25T10:52:29.217199+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

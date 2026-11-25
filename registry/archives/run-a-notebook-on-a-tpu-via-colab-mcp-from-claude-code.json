@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-notebook-on-a-tpu-via-colab-mcp-from-claude-code",
-  "observed_at": "2026-11-24T11:55:50.213738+00:00",
-  "html_sha256": "5f62b4ffe49029e5ee2060bac442d13f83c3e5023660fb0b0872336f89ad2c4e",
+  "observed_at": "2026-11-25T10:49:07.330694+00:00",
+  "html_sha256": "04377b2b70c0c296300c3dcbe98604d9dc403da88aa82e7a030606369ef57259",
   "body_sha256": "94974f4fe9d0288c1900e468198c806f01c619a2d4d76d5f472886a1d596ad14",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a notebook on a TPU via Colab MCP from Claude Code\nA step-by-step setup connecting Claude Code to Google's hosted Colab MCP endpoint, running a notebook on a fresh TPU v5e-1 and then deleting it.\n·\nNov 18, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe author got a token with the colaboratory scope from the Colab CLI login and enabled the API in a quota project. A headersHelper script passed both to Claude Code, since its built-in OAuth failed. A Python runner then created a TPU v5e-1 runtime, opened one session, sent each notebook cell to execute_code, and deleted the runtime in a finally block.\nHow it went\nA v5e-1 was ready in 4 seconds, and a 26-cell Gemma 4 notebook ran clean in 901 seconds. Its answers matched the Colab CLI run. Output comes back as text only, so HTML output was lost.\nWorth knowing\nStreams close at 300 seconds and interrupt the kernel, so split any longer cell. A plain gcloud ADC token is rejected for lacking the scope.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nConnect yourself to Google's hosted Colab MCP endpoint, walking me through any authentication I need to do. Then run my notebook [path or Colab link] on a fresh [TPU v5e-1 or other runtime] and show me the output. When it finishes, tell me which runtime you created and ask me to confirm before you delete it.\nOriginal source: https://dev.to/gde/the-colab-mcp-endpoint-from-claude-code-set-it-up-test-it-run-a-notebook-on-a-tpu-4ck9",
     "body_sha256": "94974f4fe9d0288c1900e468198c806f01c619a2d4d76d5f472886a1d596ad14",
-    "archived_at": "2026-11-24T11:55:50.213738+00:00",
+    "archived_at": "2026-11-25T10:49:07.330694+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-24T11:55:50.213738+00:00",
+    "at": "2026-11-25T10:49:07.330694+00:00",
     "status": "fetched",
     "error": null
   }

@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/remove-stale-feature-flags-and-fix-ci-via-automated-prs",
-  "observed_at": "2026-11-24T11:56:06.214383+00:00",
-  "html_sha256": "07800107a5b2653bd3fa68249046b5aa4514943021ee44713a327fa250daccef",
+  "observed_at": "2026-11-25T10:49:23.339485+00:00",
+  "html_sha256": "b9798ae96f6a5974d9ec6d77ec429101f331ec862b014c915e759ad946b7b654",
   "body_sha256": "4343deed7490dd0fcd1d31b70a324e0009da863a2039dff79b813c1a106daaee",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Remove stale feature flags and fix CI via automated PRs\nRamp built Devin workflows where an engineer enters a feature flag and Devin opens a PR removing it; it also fixed flaky tests and CI issues (vendor case study).\nDone with\nDE\nDevin\nWhat they did\nRamp used Devin's API to run many Devins in parallel. For feature flags, a playbook prompt split the removal across worker Devins, each handling assigned files. A clean-up Devin merged their output into one PR. This sits behind an internal admin-dashboard tool, so an engineer enters a flag and gets tagged on the PR. For slow tests, scripts checked that coverage was unchanged.\nHow it went\nRamp removed 150 complex feature flags in a month, which an engineer credits with over 1000 hours saved. Overall it reports about 80 merged PRs a week. Airflow fixes averaged 8 minutes from bug to PR, and half could be merged as-is.\nWorth knowing\nValidation scripts, such as a coverage-regression check for slow tests, kept failed attempts from surfacing as PRs, so review bandwidth was the only limit on parallelism.\nTry it yourself\nwith\nDevin\nCopy prompt\nIn my repo [repo name], remove the feature flag [flag name] and keep the behavior of the [enabled/disabled] path everywhere it's used. Delete the flag definition, dead branches, and related tests or config, then run the test suite and fix anything that breaks. Open a pull request with a summary of every file changed. Show me the PR for review and do not merge it.\nOriginal source: https://archive-devin-ai.lusion.co/customers/ramp/",
     "body_sha256": "4343deed7490dd0fcd1d31b70a324e0009da863a2039dff79b813c1a106daaee",
-    "archived_at": "2026-11-24T11:56:06.214383+00:00",
+    "archived_at": "2026-11-25T10:49:23.339485+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-24T11:56:06.214383+00:00",
+    "at": "2026-11-25T10:49:23.339485+00:00",
     "status": "fetched",
     "error": null
   }

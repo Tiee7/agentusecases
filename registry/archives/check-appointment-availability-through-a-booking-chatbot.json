@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/check-appointment-availability-through-a-booking-chatbot",
+  "observed_at": "2026-11-25T10:52:23.221954+00:00",
+  "html_sha256": "ed0a8be8d4743b96fd3637be9478fe7df2bf566cf419e96a5c7d3a10651758c4",
+  "body_sha256": "ac6827272e51cf2828d43f00ea568e6f8d81ef415bd70f99ee30738a3c55f346",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Check appointment availability through a booking chatbot",
+      "sha256": "3cc0ec89b255031da4fd1ccfc16f1171575088e915489d43635d25ef8f91d198"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An n8n chatbot workflow has a booking agent that calls another workflow to check appointment availability in Booksy.",
+      "sha256": "9f8c5587bf678d3384c1f58ba17a6ed425bf1f3cdfb947254dc5d81851364bbf"
+    },
+    "method": {
+      "status": "observed",
+      "value": "They built an n8n Messenger bot for a beauty salon that starts from a Facebook webhook, deduplicates messages in Redis, classifies whether the user wants FAQ help or booking, and stores chat context in Postgres. For booking, the main agent calls a separate availability-check workflow that takes the service name, looks up its duration, searches the Booksy calendar, and returns open slots; the builder also used Supabase RAG for service questions and iterated prompts to make GPT call the booking function instead of only claiming success.",
+      "sha256": "5c9b4708f14783487e85f394a20bdeeeb7d84211c76cfbabe88ae57652440b23"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The builder says it works and the client is happy, but gives no booking-rate or time-saved numbers. Main problems were wrong Polish date parsing and needing many prompt revisions before the model reliably triggered the booking action.",
+      "sha256": "a0da5d3046b678575bdc40fc37e51c39cf26f5b1ef8ed41e71be606706825ae2"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect complexity: this version had 30+ nodes, plus two days spent fixing Polish date handling and about 20 prompt iterations to get function calling to behave.",
+      "sha256": "2992c39abb63bbd035e90eb457ef6a65ed70f9e0215e037fe4616af8357663d5"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1p6czwe/looking_for_feedback_on_my_n8n_workflow_chatbot"
+      ],
+      "sha256": "007fc554140a53974a928713dd4dfda6b4beb7a3fd46d9bef83f996a5f3e6dc0"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-24",
+      "sha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "dfc6bdeceabd226719100950eb00998f9e662cbedd0f23de84999625acaf065d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Check appointment availability through a booking chatbot\nAn n8n chatbot workflow has a booking agent that calls another workflow to check appointment availability in Booksy.\nDone with\nN8\nn8n\nWhat they did\nThey built an n8n Messenger bot for a beauty salon that starts from a Facebook webhook, deduplicates messages in Redis, classifies whether the user wants FAQ help or booking, and stores chat context in Postgres. For booking, the main agent calls a separate availability-check workflow that takes the service name, looks up its duration, searches the Booksy calendar, and returns open slots; the builder also used Supabase RAG for service questions and iterated prompts to make GPT call the booking function instead of only claiming success.\nHow it went\nThe builder says it works and the client is happy, but gives no booking-rate or time-saved numbers. Main problems were wrong Polish date parsing and needing many prompt revisions before the model reliably triggered the booking action.\nWorth knowing\nExpect complexity: this version had 30+ nodes, plus two days spent fixing Polish date handling and about 20 prompt iterations to get function calling to behave.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me build an n8n chatbot for [business name] that answers customer questions and, when someone asks about an appointment, calls a separate workflow to check open slots in [booking system, e.g. Booksy] for [service] on [date range]. It should reply with the available times. It should not book anything until the customer confirms and I have reviewed the booking step. You're done when a test chat returns real availability.\nOriginal source: https://www.reddit.com/r/n8n/comments/1p6czwe/looking_for_feedback_on_my_n8n_workflow_chatbot",
+    "body_sha256": "ac6827272e51cf2828d43f00ea568e6f8d81ef415bd70f99ee30738a3c55f346",
+    "archived_at": "2026-11-25T10:52:23.221954+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-25T10:52:23.221954+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

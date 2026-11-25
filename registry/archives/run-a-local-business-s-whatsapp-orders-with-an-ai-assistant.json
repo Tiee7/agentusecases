@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/run-a-local-business-s-whatsapp-orders-with-an-ai-assistant",
+  "observed_at": "2026-11-25T10:52:21.299349+00:00",
+  "html_sha256": "1797d950d5a98efee4b772d815e80d8b126a1479f69b9ae1b200c9d4e974687e",
+  "body_sha256": "15698574b68aefb0c2893b8015e04b9bfbe40b7e3eb551d9e6207adf25536439",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Run a local business's WhatsApp orders with an AI assistant",
+      "sha256": "3ec8c02228677fdb25265260325f33e92cafb17b2362e4a019fc37856faa90ec"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Built in n8n for a paying client: transcribes voice notes, analyzes images, and hands buying intent to an order-execution agent.\n·\nMar 1, 2026",
+      "sha256": "a3a3b11d477a2c3bb4b8ca0432f1a3fbcefb7dff776f6ace54cc00b0ee8bc22c"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The builder mapped the bookstore owner’s common WhatsApp flows, then built separate n8n subsystems for media handling, product search, and ordering before connecting them. Messages were routed through an AI classifier; audio was transcribed, images were checked for receipts or products, Supabase FTS/vector search looked up books, and an order agent locked the chat into an ordering state to collect shipping details and handle COD or bank-transfer paths, with owner notifications sent after confirmation.",
+      "sha256": "f17a712c9ad9aa284ed1959e4907e9fd9c224280f265e86f3ca1963ba73aee83"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They say it gave customers instant 24/7 replies and saved the solo owner hours of repetitive messaging, inventory checks, and address collection. The stated deal was $500, though the post gives no hard metrics beyond that and notes the system was tested rather than described with longer-term results.",
+      "sha256": "881f92d45da564ea3d5eb6b5f57fadcd652c2335abe49ee2df808a971bb13c58"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Reported running costs were Supabase at $25/month, a Hostinger VPS at about $100/year, plus OpenAI token costs.",
+      "sha256": "1efc240c256e6b67820a635b8b3c12e6a090640d8f73518bd5968fa8cb6fce03"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "n8n"
+      ],
+      "sha256": "a086af9fc49622854dd717ee83bfbad12021610168c4589279a5a2a8cff6db1b"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/n8n/comments/1rq486u/i_made_500_on_my_first_n8n_paid_project_building"
+      ],
+      "sha256": "e027f180338d9c9c62607aba3af7e8c86a65e7443b26de4dd853d05bfa45cd38"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "growth",
+        "label": "Sales, Marketing & Support"
+      },
+      "sha256": "308cd133425e7740ac93591625e8192a0d3db97a4d9ce8cd9610f2d013ee037f"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-24",
+      "sha256": "5d949350d8beeebceee172c92b737c60235842fd18da6c1228a5270c50b97353"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "87e84a4def47dbf137f9f67f2d5de8d695ddbe928e47813f445b509fc83cb5ae",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Run a local business's WhatsApp orders with an AI assistant\nBuilt in n8n for a paying client: transcribes voice notes, analyzes images, and hands buying intent to an order-execution agent.\n·\nMar 1, 2026\nDone with\nN8\nn8n\nWhat they did\nThe builder mapped the bookstore owner’s common WhatsApp flows, then built separate n8n subsystems for media handling, product search, and ordering before connecting them. Messages were routed through an AI classifier; audio was transcribed, images were checked for receipts or products, Supabase FTS/vector search looked up books, and an order agent locked the chat into an ordering state to collect shipping details and handle COD or bank-transfer paths, with owner notifications sent after confirmation.\nHow it went\nThey say it gave customers instant 24/7 replies and saved the solo owner hours of repetitive messaging, inventory checks, and address collection. The stated deal was $500, though the post gives no hard metrics beyond that and notes the system was tested rather than described with longer-term results.\nWorth knowing\nReported running costs were Supabase at $25/month, a Hostinger VPS at about $100/year, plus OpenAI token costs.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me build an n8n workflow for [business name] that receives incoming WhatsApp messages. It should transcribe voice notes, describe any images, and work out whether the customer wants to buy [products]. If so, it should pass the order details to a second agent that prepares the order in [order system]. Pause for my approval before placing any order or sending any reply to a customer. You're done when a test voice note and a test photo each produce the correct order summary.\nOriginal source: https://www.reddit.com/r/n8n/comments/1rq486u/i_made_500_on_my_first_n8n_paid_project_building",
+    "body_sha256": "15698574b68aefb0c2893b8015e04b9bfbe40b7e3eb551d9e6207adf25536439",
+    "archived_at": "2026-11-25T10:52:21.299349+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-25T10:52:21.299349+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
