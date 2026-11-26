@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/analyze-a-rental-property-deal-with-comps-and-rehab-costs",
+  "observed_at": "2026-11-26T10:29:46.563042+00:00",
+  "html_sha256": "1773840a095adf96cd33ab270d6a4225208e3fbd3882b52bd1bfc9521539e8b5",
+  "body_sha256": "7428d206070e2e8e0ad5b168099bc83a2592046e72cf906150ad6132c4be19bc",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Analyze a rental property deal with comps and rehab costs",
+      "sha256": "13f4b17b1cc5673ea88822a3daa9855035a10401bb5985a5f138155ba5893034"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Claude Code, connected to an MCP server, pulls property value, comps and rent estimates and runs a deal analysis on a $312,000 Florida listing with $45,000 rehab. Vendor example, not a real user report.",
+      "sha256": "5f3b918e6a1b8898b16b1d45812a1fd7833d41e4da5c0d3c5126bf1338dc11c9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Resideline's remote MCP server is added to Claude Code with one command and an API key header. For a hypothetical Orange Park, Florida house listed at $312,000 with a $45,000 rehab estimate, the assistant chains the value and comps tool, the rent estimate tool, and optionally the fuller deal analysis tool. The user can then drop comps and re-run.",
+      "sha256": "83d985a2d33ce472f713d59c502a6b06593fb3eac6b791b20447b3954a3987c5"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The outcome is illustrative only. The post says the example's reasoning is not data returned by the server, so it gives no real results. It stresses that the tool supplies data and does not underwrite the deal.",
+      "sha256": "e03ea662a9d40907512a6bab31ba7d988dc0ac8bc59731c12100fc6c96abe253"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "A single analysis can fire value, rent and full analysis calls, which is 14 credits. Pro is $89/month for 2,500 credits. Live valuation accuracy is graded in only 38 states.",
+      "sha256": "1d9ab2105cbb052c66af1a633357f2eb4c3f396398600bab75e2b6bb69357d3b"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://resideline.com/blog/analyze-real-estate-deals-with-claude-mcp"
+      ],
+      "sha256": "245333ff7a699992d692836876b6c309307b0632bf5740175167ac8a7c25e374"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "money",
+        "label": "Money, Bills & Benefits"
+      },
+      "sha256": "dc09e54658306e2e0582c07582931707727ebcd3e9e735fea945c6c7aca1222a"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-25",
+      "sha256": "661df755a6fb12fe02c26c036e7f26e1958b88fe84e39ad3156c4a67968ecf2e"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fabcfd9d8f4c3f3b5def3aa7f18ae39832fda40724e79a52333f88e035853a7f",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Analyze a rental property deal with comps and rehab costs\nClaude Code, connected to an MCP server, pulls property value, comps and rent estimates and runs a deal analysis on a $312,000 Florida listing with $45,000 rehab. Vendor example, not a real user report.\nDone with\nCC\nClaude Code\nWhat they did\nResideline's remote MCP server is added to Claude Code with one command and an API key header. For a hypothetical Orange Park, Florida house listed at $312,000 with a $45,000 rehab estimate, the assistant chains the value and comps tool, the rent estimate tool, and optionally the fuller deal analysis tool. The user can then drop comps and re-run.\nHow it went\nThe outcome is illustrative only. The post says the example's reasoning is not data returned by the server, so it gives no real results. It stresses that the tool supplies data and does not underwrite the deal.\nWorth knowing\nA single analysis can fire value, rent and full analysis calls, which is 14 credits. Pro is $89/month for 2,500 credits. Live valuation accuracy is graded in only 38 states.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nAnalyze this rental property deal: [address], listed at $[price] with an estimated $[rehab cost] rehab. Pull the estimated value, comparable sales, and rent estimates from [data source or connected tool], then calculate total investment, projected monthly cash flow, cap rate, and cash-on-cash return using [down payment and interest rate] financing. Finish with a one-page summary and a clear buy, negotiate, or pass recommendation, listing any assumptions you made.\nOriginal source: https://resideline.com/blog/analyze-real-estate-deals-with-claude-mcp",
+    "body_sha256": "7428d206070e2e8e0ad5b168099bc83a2592046e72cf906150ad6132c4be19bc",
+    "archived_at": "2026-11-26T10:29:46.563042+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-26T10:29:46.563042+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

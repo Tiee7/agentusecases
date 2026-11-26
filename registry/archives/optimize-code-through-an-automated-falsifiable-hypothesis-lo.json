@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/optimize-code-through-an-automated-falsifiable-hypothesis-lo",
+  "observed_at": "2026-11-26T10:29:36.571132+00:00",
+  "html_sha256": "bece46dedd9975e6390b7eb61bd2c19761d57486c94400218fa9c37838dff9f5",
+  "body_sha256": "95d2856abdb43f4f2510e3cb445a5a2a3231af18dc7985d5dc5b7acd6137ad32",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Optimize code through an automated falsifiable-hypothesis loop",
+      "sha256": "5741c7d71a3d0c01104e63a833b58f87cd7428cf02004cf1e1441b74f4501058"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "An agent skill profiles code, proposes and tests optimization hypotheses in a loop, keeps verified improvements in version control, and writes a PDF report; it sped up KaHIP 3.9x and VieCut 8.9x.\n·\nNov 23, 2026",
+      "sha256": "97537dab49564c51513e38ba7f8fbac2abc5a15964c98a573a63225bb3986c33"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The skill runs in Claude Code or Codex. During setup you and the agent agree on the benchmark, the metric, the correctness assertions and the budget, and then it works alone. For each idea it writes a falsifiable hypothesis with a predicted effect, makes a minimal Git commit, and runs the benchmark. It keeps the change only if it is faster and still correct, and otherwise reverts it.",
+      "sha256": "c6494df31668beb22e45d89821793e553b4362b6d174797ba3b3c8bb921b76c9"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "On KaHIP kaffpa, one session ran 122 experiments across 69 hypotheses and kept 41 patches, for 3.9x overall. VieCut got 8.9x with every cut unchanged. Each kept change was checked against the original output.",
+      "sha256": "e502f48683a46a09d8695b675609b199906e01e79c726a28a6d1d2a15760a16a"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "You define the correctness assertions up front, such as bit-identical output, and the agent checks only those. A 10-minute quick-start example is provided if you want to try it first.",
+      "sha256": "6256b3aee136dd3859ee72266861183950fa70807214a6c507f4e84322b4aa8d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://chszlab.github.io/AgenticAlgorithmEngineering/"
+      ],
+      "sha256": "2173b93bf1c9928d4f76faeeb48c72685c6874981a3b120ddd823b2c8560093c"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-25",
+      "sha256": "661df755a6fb12fe02c26c036e7f26e1958b88fe84e39ad3156c4a67968ecf2e"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fce610bc0964a6b5b417bf32fc5fbde86e8f92810d9142ec7d4479976dec0135",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Optimize code through an automated falsifiable-hypothesis loop\nAn agent skill profiles code, proposes and tests optimization hypotheses in a loop, keeps verified improvements in version control, and writes a PDF report; it sped up KaHIP 3.9x and VieCut 8.9x.\n·\nNov 23, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe skill runs in Claude Code or Codex. During setup you and the agent agree on the benchmark, the metric, the correctness assertions and the budget, and then it works alone. For each idea it writes a falsifiable hypothesis with a predicted effect, makes a minimal Git commit, and runs the benchmark. It keeps the change only if it is faster and still correct, and otherwise reverts it.\nHow it went\nOn KaHIP kaffpa, one session ran 122 experiments across 69 hypotheses and kept 41 patches, for 3.9x overall. VieCut got 8.9x with every cut unchanged. Each kept change was checked against the original output.\nWorth knowing\nYou define the correctness assertions up front, such as bit-identical output, and the agent checks only those. A 10-minute quick-start example is provided if you want to try it first.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repository at [path or repo], profile [program or benchmark command] and find the biggest performance bottlenecks. Then loop: state a falsifiable hypothesis for a speedup, implement it, run [test command] to confirm correctness and re-run the benchmark, and commit only changes that are verified faster, reverting the rest. Stop after [number] hypotheses or when gains flatten, then write a short PDF report with the baseline, each hypothesis and its result, and the final speedup. Do not push to any remote or delete branches without showing me first.\nOriginal source: https://chszlab.github.io/AgenticAlgorithmEngineering/",
+    "body_sha256": "95d2856abdb43f4f2510e3cb445a5a2a3231af18dc7985d5dc5b7acd6137ad32",
+    "archived_at": "2026-11-26T10:29:36.571132+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-26T10:29:36.571132+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

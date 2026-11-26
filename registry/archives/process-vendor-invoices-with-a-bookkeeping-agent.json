@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/process-vendor-invoices-with-a-bookkeeping-agent",
+  "observed_at": "2026-11-26T10:29:32.558725+00:00",
+  "html_sha256": "d61e0d270a9e7be240e0811d01543c8213ae0e1f7819ded4de627fe9cd01b5e5",
+  "body_sha256": "401f0c62713c98f45e5452f4fb4f3da3782fe27c5382110b0f61d46b18819e65",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Process vendor invoices with a bookkeeping agent",
+      "sha256": "298a5aa420124efc8643f6eb61152f014c4c5dcb7812087ad31df45cac6631e3"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Two accountants at a $10M firm built an invoice-processing agent with Cursor and Claude Code, reporting cost falling from about $7 to $0.20 per invoice.",
+      "sha256": "5cf30efbc97f2382978efb751d4925cc4addf9c44b08d6b2bc8e66e5713ec5ef"
+    },
+    "method": {
+      "status": "observed",
+      "value": "Two accountants at the firm, neither an engineer, built the agent with Cursor and Claude Code. The source gives little build detail beyond that. It describes the general pattern: the agent reads invoices, codes them, and posts them when it is confident. Uncertain invoices go to a person. The accountants kept feeding the agent edge cases over time.",
+      "sha256": "d9fb1c82fe0c3fa2dad1dc7b1d55f1fcd8a8781c5d255f7b087b4e014c9d1f65"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Cost fell from about $7 to about $0.20 per invoice, a 97 percent drop. Accuracy was about 80 percent after a week and 98 percent after six months. All figures are self-reported by the firm.",
+      "sha256": "c2870fe39167981a19e1564d943701dba2d9db9368ec6b0260c1a4f77d148454"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Most of the effort is the ongoing review of exceptions. The jump from 80 to 98 percent came from feeding edge cases back in, so someone has to own that queue.",
+      "sha256": "a271505d44bb99f38a61101298a5b12bccd14f8bfc9f2b50fc14e84493f523e7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Cursor",
+        "Claude Code"
+      ],
+      "sha256": "8b2ceab7cb85db4b92f85fcc0dbc5357b0c778a8b1bd5edda5aa4f7c47fe4ae7"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.builtwithagents.ai/blog/ai-bookkeeping-agent-small-accounting-firm"
+      ],
+      "sha256": "59cabfef22554954d5079a2d6e299a86e5872055cf8e0d3201464d10a131ae0b"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-25",
+      "sha256": "661df755a6fb12fe02c26c036e7f26e1958b88fe84e39ad3156c4a67968ecf2e"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "460c79ca2a8169e0510a1e7a29ec97a072a66cad904ca39486f719d6a2a77b9e",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Process vendor invoices with a bookkeeping agent\nTwo accountants at a $10M firm built an invoice-processing agent with Cursor and Claude Code, reporting cost falling from about $7 to $0.20 per invoice.\nDone with\nCR\nCursor\nCC\nClaude Code\nWhat they did\nTwo accountants at the firm, neither an engineer, built the agent with Cursor and Claude Code. The source gives little build detail beyond that. It describes the general pattern: the agent reads invoices, codes them, and posts them when it is confident. Uncertain invoices go to a person. The accountants kept feeding the agent edge cases over time.\nHow it went\nCost fell from about $7 to about $0.20 per invoice, a 97 percent drop. Accuracy was about 80 percent after a week and 98 percent after six months. All figures are self-reported by the firm.\nWorth knowing\nMost of the effort is the ongoing review of exceptions. The jump from 80 to 98 percent came from feeding edge cases back in, so someone has to own that queue.\nTry it yourself\nwith\nCursor\nCopy prompt\nI'm an accountant at [firm type] and I want to build an agent that processes vendor invoices from the folder [path to invoice PDFs]. For each invoice, extract vendor, date, invoice number, line items, and total, suggest a GL account from my chart of accounts in [file name], and flag anything unusual like duplicates or missing fields. Write results to a CSV I can review, and stop there; do not post anything to my accounting system or send any messages without showing me first.\nOriginal source: https://www.builtwithagents.ai/blog/ai-bookkeeping-agent-small-accounting-firm",
+    "body_sha256": "401f0c62713c98f45e5452f4fb4f3da3782fe27c5382110b0f61d46b18819e65",
+    "archived_at": "2026-11-26T10:29:32.558725+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-26T10:29:32.558725+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

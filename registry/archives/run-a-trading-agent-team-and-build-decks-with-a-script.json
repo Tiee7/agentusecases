@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-trading-agent-team-and-build-decks-with-a-script",
-  "observed_at": "2026-11-25T10:52:07.396484+00:00",
-  "html_sha256": "e13502d2e692367cbb04b99f066a4d3b5eb90dacc454e5b15942fa1132a70a1e",
+  "observed_at": "2026-11-26T10:28:48.557423+00:00",
+  "html_sha256": "8951ffe04e0580beb8e844fbc928b402fdd5cc12a614a5c17ad09a299ea9c00a",
   "body_sha256": "9821c93f7f6e589764af08bf53db50d45d66460d40df1b63ce3324b6662a7d82",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a trading agent team and build decks with a script\nA user organizes a trading setup with an orchestrator and sub-agents for analysis and debate, and had Hermes write a Python script to build decks, though it got confused by direct file edits.\nMore AI trading agents\nDone with\nHA\nHermes Agent\nWhat they did\nOne user runs Hermes on stock trading through Robinhood’s MCP server using an agent subaccount with spending and position limits, plus prompt guardrails like maximum trade size, no margin, and requiring confirmation before a first sell. They added an orchestrator with 4–7 sub-agents that each analyze or argue a case, and the orchestrator chooses the best argument; for decks, Hermes generated a .pptx by writing a Python script from a detailed contract markdown file.\nHow it went\nThey said the trading setup made a small amount of money, and Hermes did better than expected on PowerPoint generation with only minor follow-up edits. The main failure was deck editing: if they changed the file directly, Hermes got confused because the .pptx no longer matched the Python used to build it.\nWorth knowing\nThey found it worked better to let Hermes keep editing through the script rather than manually changing the deck file yourself.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp me set up a team of agents for [analysis task, e.g. evaluating stocks I am watching]: one orchestrator and sub-agents for [analysis], [bull case], and [bear case] who debate before the orchestrator summarizes. Then write a Python script that builds a slide deck from the summary at [output path], and have the script generate the files rather than editing existing files directly. Do not place any trades or connect to any brokerage account. The job is finished when I can run the script and get a deck for [ticker or topic].\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1x9xec6/what_tasks_do_you_use_hermes_agent_for_and_what",
     "body_sha256": "9821c93f7f6e589764af08bf53db50d45d66460d40df1b63ce3324b6662a7d82",
-    "archived_at": "2026-11-25T10:52:07.396484+00:00",
+    "archived_at": "2026-11-26T10:28:48.557423+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-25T10:52:07.396484+00:00",
+    "at": "2026-11-26T10:28:48.557423+00:00",
     "status": "fetched",
     "error": null
   }

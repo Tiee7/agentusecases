@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/gate-refund-actions-with-a-tool-gate-model",
+  "observed_at": "2026-11-26T10:29:42.566105+00:00",
+  "html_sha256": "873993ecf0381ff382e2b12e54bced547f3c5ef83deafda25473dc15ff518d23",
+  "body_sha256": "748beadec19f30cd026031bb0faff05db05f86627dfda2fffdd3f1c203ef5384",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Gate refund actions with a tool-gate model",
+      "sha256": "cccac9c0a1d05e8a4e1f793a138953f05a7a363bbeb7677e8c1e7396ec072c65"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The author tested Strands Decider 2B as a tool gate that decides whether an agent should act on 16 refund cases, compared against Nova Pro as a judge.\n·\nNov 25, 2026",
+      "sha256": "198415dcbbdd41bfaeecc605962236c29ee3d547153bf04e478a739098c152c2"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author placed a Strands intervention, SuspicionGate, on before_tool_call for a refund tool. It asked Decider 2B three typed questions: risk score, grounded yes/no, and allow/probe/block. The gate returned proceed, guide or deny. He wrote 16 cases first: 5 legitimate, 4 vague, 4 fraud, 3 injection. He ran the same cases through a Nova Pro judge, then replayed the recorded outputs at different thresholds.",
+      "sha256": "e4e82a323a789aca0758ae318150ce0cea4e51bb1fad68c0fa4686d300aab5ab"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "Decider stopped 7 of 11 bad requests and Nova Pro stopped 9. Neither blocked a legitimate refund, and neither stopped the injection that told the classifier to allow. Raising min_confidence to 0.90 cut Decider's misses to one.",
+      "sha256": "70e4df5b0b3fcd040bc70810289b528f37a046164fbf5968807a57b638085ff3"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "On a CPU-only t2.large, Decider took about 9.6 s per call against 0.6 s for Nova Pro. The safe threshold window was only about 0.03 wide, so calibrate on your own cases.",
+      "sha256": "e791a52a689ed3630dae264635ca8bf4563ed928710e7733d540f9a854288b45"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004"
+      ],
+      "sha256": "2d9eb293b6f276d94d602c936f5e072f1ac67ab57f796c2d2e00126344c91e47"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "operations",
+        "label": "Work & Operations"
+      },
+      "sha256": "5be0f6a63485fa147b43ed96520e279a0c66cd689b8b8c4ec86ee533560e3228"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-25",
+      "sha256": "661df755a6fb12fe02c26c036e7f26e1958b88fe84e39ad3156c4a67968ecf2e"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "78e9405dcd8ba406543aad4a94ec345eb95e0eb0352bc5d8c91848f943997ac1",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Gate refund actions with a tool-gate model\nThe author tested Strands Decider 2B as a tool gate that decides whether an agent should act on 16 refund cases, compared against Nova Pro as a judge.\n·\nNov 25, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author placed a Strands intervention, SuspicionGate, on before_tool_call for a refund tool. It asked Decider 2B three typed questions: risk score, grounded yes/no, and allow/probe/block. The gate returned proceed, guide or deny. He wrote 16 cases first: 5 legitimate, 4 vague, 4 fraud, 3 injection. He ran the same cases through a Nova Pro judge, then replayed the recorded outputs at different thresholds.\nHow it went\nDecider stopped 7 of 11 bad requests and Nova Pro stopped 9. Neither blocked a legitimate refund, and neither stopped the injection that told the classifier to allow. Raising min_confidence to 0.90 cut Decider's misses to one.\nWorth knowing\nOn a CPU-only t2.large, Decider took about 9.6 s per call against 0.6 s for Nova Pro. The safe threshold window was only about 0.03 wide, so calibrate on your own cases.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to test whether a small model can act as a gate that decides if an agent should take an action like [e.g. issuing a refund]. Write a script that runs [number] test cases from [file or description of cases] through the gate model and through a larger judge model, then compares their decisions. A finished job is a table showing each case, both decisions, where they disagree, and the overall agreement rate. Do not call any real refund or payment systems; use mock tools only.\nOriginal source: https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004",
+    "body_sha256": "748beadec19f30cd026031bb0faff05db05f86627dfda2fffdd3f1c203ef5384",
+    "archived_at": "2026-11-26T10:29:42.566105+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-26T10:29:42.566105+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

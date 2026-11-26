@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/turn-spoken-orders-into-pos-actions",
-  "observed_at": "2026-11-25T10:47:19.332662+00:00",
-  "html_sha256": "27f733392009dfca66c64b77377ce32cd1b2025187a3c33f46fa9dbdc5e3e610",
+  "observed_at": "2026-11-26T10:24:00.664584+00:00",
+  "html_sha256": "61ce5c4338f49afff11f835363f0f011e9193dfb2c49ade0caf25c40785b7053",
   "body_sha256": "be4f04a79034e0353a06a3a048c8e73887bb15b1a5fd2ded1a13c466539d88d9",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Turn spoken orders into POS actions\nA custom LLM agent converts staff speech into API calls that add or remove items in a store POS and start card or QR payment.\n·\nNov 17, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author built a LangChain agent on gpt-3.5-turbo with three tools: add items, remove items and pay. Each tool is a function that sends a request to a FastAPI endpoint standing in for the POS. A headset listens to the whole conversation. The prompt tells the agent to act only on speech between the cue words 'agent' and 'please' and to ignore everything else.\nHow it went\nIn the demo the agent picked out the relevant orders from the chatter, adjusted the order after a change of mind, and then started card payment. The source gives no accuracy or speed numbers, and it does not report a real store deployment.\nWorth knowing\nThe agent decides which tool to call from the function names and docstrings, so write the docstrings as instructions to the LLM, including the exact data format you expect.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild a workflow that takes spoken or transcribed staff orders like [example phrase] and uses an LLM to turn them into API calls against [my POS system] to add or remove items on the current order. Test it with sample phrases in a sandbox first. Require a staff confirmation step that shows the parsed order before any item changes or payment starts.\nOriginal source: https://towardsai.com/p/l/a-guide-to-integrating-llm-agent-into-pos-systems",
     "body_sha256": "be4f04a79034e0353a06a3a048c8e73887bb15b1a5fd2ded1a13c466539d88d9",
-    "archived_at": "2026-11-25T10:47:19.332662+00:00",
+    "archived_at": "2026-11-26T10:24:00.664584+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-25T10:47:19.332662+00:00",
+    "at": "2026-11-26T10:24:00.664584+00:00",
     "status": "fetched",
     "error": null
   }
