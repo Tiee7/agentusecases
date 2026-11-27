@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-an-email-and-booking-assistant-for-office-admin",
-  "observed_at": "2026-11-26T10:25:32.654109+00:00",
-  "html_sha256": "48d33ac8cdaa6f52534dc7b502a2c5cc71955318ccd3eee65016cb7500d22a4e",
+  "observed_at": "2026-11-27T10:41:21.954523+00:00",
+  "html_sha256": "f32476a51b34f29224dfb15e54dfa1edbe37763c9b41368df28d0425fbb6c97a",
   "body_sha256": "dc53df40f68cf2a5637711e96de6be7362a65e83beeac7d4b8f5f8767e04511d",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Run an email and booking assistant for office admin\nA poster builds an n8n and Claude system handling bounce detection, reply classification, follow-up reminders, invoice tracking, a weekly agenda and daily unread-inbox summaries.\n·\nOct 1, 2026\nDone with\nN8\nn8n\nCL\nClaude\nWhat they did\nThe poster had already built mostly deterministic n8n workflows around Gmail, Google Workspace, Airtable, Telegram, Drive and Claude: bounce detection, reply classification, follow-up reminders in Google Calendar, invoice tracking, a weekly agenda, daily unread-inbox summaries, plus a drafting flow that pulled Airtable data and the email thread before calling Claude once per draft. They also ran a Telegram agent with Airtable, Calendar and draft-only Gmail tools, and a reviewed style-learning loop where Claude proposed writing rules from sent emails, the poster approved them in Airtable, and only those approved rules were used when drafting.\nHow it went\nIt was running enough to handle recurring admin work and produce Gmail drafts for review, but the post gives no booking or time-saved numbers. The main limitation stated was deciding whether to keep expanding deterministic workflows, use one agent to call them, or split into multiple agents without raising execution and token costs.\nWorth knowing\nThe clearest implementation catch is that it never sends automatically: everything ends as a Gmail draft, and long-term memory is kept in Airtable rather than n8n chat memory.\nTry it yourself\nwith\nn8n\nCopy prompt\nBuild an n8n workflow connected to my inbox [Gmail or Outlook] that detects bounced emails, classifies replies as [categories, e.g. interested, not now, unsubscribe], flags follow-ups due after [number] days, and tracks invoices mentioned. Have it send me a daily summary of unread mail and a weekly agenda every [day and time]. Do not send any messages to others without my approval; draft them for me instead.\nOriginal source: https://www.reddit.com/r/n8n/comments/1x6gr9s/workflows_only_a_single_ai_agent_or_multiagent",
     "body_sha256": "dc53df40f68cf2a5637711e96de6be7362a65e83beeac7d4b8f5f8767e04511d",
-    "archived_at": "2026-11-26T10:25:32.654109+00:00",
+    "archived_at": "2026-11-27T10:41:21.954523+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:25:32.654109+00:00",
+    "at": "2026-11-27T10:41:21.954523+00:00",
     "status": "fetched",
     "error": null
   }

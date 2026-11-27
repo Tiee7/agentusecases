@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/build-morning-routine-and-vacuum-automations",
+  "observed_at": "2026-11-27T10:45:39.822815+00:00",
+  "html_sha256": "1d1741f05dbc4fd99ec9b8f1a699dd483b1ab0c29d2f48d93dc64c1119af101a",
+  "body_sha256": "162353b6088a03411f9f905d1ed0ad686c38e64c2bcc05c668fdc3447576407f",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Build morning routine and vacuum automations",
+      "sha256": "a8343dce6380349f63bac7c9eecb4c7e97d7b268496f2584456539570c60d15c"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A commenter had Claude help build a button-triggered morning routine for their daughter and a robot vacuum dispatch when the litter box cycles.\n·\nOct 24, 2026",
+      "sha256": "2e8ed1b5f9733bf71313ebe608faee993803e73a80d194ea70eaff9dd718b0e8"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The commenter used an Aqara Wireless Mini Switch in Home Assistant as a physical trigger. A single press runs a time-based routine: in the morning it slowly raises lights, plays a reminder, and starts a playlist; at night it slowly lowers lights, plays an evening reminder, starts a bedtime playlist, and locks any exterior doors still unlocked. In the same setup, a litter-box cycle sends the Roborock to vacuum in front of it unless the game room is occupied or media is playing on the living-room TV.",
+      "sha256": "391fa25dad13c461f38aa64d5038cdf69cad49e4a2d6a82576c49c0b1c366226"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "They describe these as their favorite automations, with the litter-box flow also changing a nearby closet light to red when the waste bin is getting close to full. No performance numbers or failure cases were given.",
+      "sha256": "f3f0dd7672ef53c3af1161246953579ea8ad35ce21505918ee59d618db65707f"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The concrete hardware detail is the Aqara Wireless Mini Switch; the vacuum run is gated by room-occupancy and TV-playback checks.",
+      "sha256": "9d761e38fdf9c3a6364deb97c2ffec99f8edd98a5cf56fdf82ef7624a327d5fa"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude"
+      ],
+      "sha256": "53a5fe7e61486d69b6e355d5d6a84f4eccbc78ca7952c074b29788adec7681be"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/homeassistant/comments/1wsrnwc/what_is_your_best_automationscriptscene_this_is"
+      ],
+      "sha256": "f436ec5a5653411d8fcf230994233590d05cb599eeaf820169e17d5991b566ca"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "life",
+        "label": "Life Admin & Home"
+      },
+      "sha256": "bf3f212414b7ec310a26c320d456a8bcca2c42d47a7f8d64fe240d270c8c3eed"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-26",
+      "sha256": "3499899299887758c821185c1130b43595cf63c729475469168ddbce5ec709a7"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "fc54fad8a532a2b61f7b9b2d17483a6fc60666c118a92e0270b99b32b0c4114d",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Build morning routine and vacuum automations\nA commenter had Claude help build a button-triggered morning routine for their daughter and a robot vacuum dispatch when the litter box cycles.\n·\nOct 24, 2026\nDone with\nCL\nClaude\nWhat they did\nThe commenter used an Aqara Wireless Mini Switch in Home Assistant as a physical trigger. A single press runs a time-based routine: in the morning it slowly raises lights, plays a reminder, and starts a playlist; at night it slowly lowers lights, plays an evening reminder, starts a bedtime playlist, and locks any exterior doors still unlocked. In the same setup, a litter-box cycle sends the Roborock to vacuum in front of it unless the game room is occupied or media is playing on the living-room TV.\nHow it went\nThey describe these as their favorite automations, with the litter-box flow also changing a nearby closet light to red when the waste bin is getting close to full. No performance numbers or failure cases were given.\nWorth knowing\nThe concrete hardware detail is the Aqara Wireless Mini Switch; the vacuum run is gated by room-occupancy and TV-playback checks.\nTry it yourself\nwith\nClaude\nCopy prompt\nHelp me create two Home Assistant automations. First, a morning routine for my [child] triggered by pressing [button or device] that does [lights, music, announcements, etc.]. Second, send my robot vacuum [model] to clean when [trigger, e.g. the litter box finishes a cycle]. Give me the YAML with my entity names as placeholders, explain how to find the right entities, and stop when I have both automations ready to paste in and test.\nOriginal source: https://www.reddit.com/r/homeassistant/comments/1wsrnwc/what_is_your_best_automationscriptscene_this_is",
+    "body_sha256": "162353b6088a03411f9f905d1ed0ad686c38e64c2bcc05c668fdc3447576407f",
+    "archived_at": "2026-11-27T10:45:39.822815+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-27T10:45:39.822815+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

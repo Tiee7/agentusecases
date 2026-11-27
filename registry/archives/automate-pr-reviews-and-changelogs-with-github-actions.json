@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/automate-pr-reviews-and-changelogs-with-github-actions",
+  "observed_at": "2026-11-27T10:45:45.834610+00:00",
+  "html_sha256": "5c7b7b4e48d08fcb3ca1c12d3f7673bb381c525f622eef6cd6667bcbb67ceff3",
+  "body_sha256": "eae7f43cfabee4ecb381da38500ba1cf94133dbffc64e0c1c3523e03d60d1602",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Automate PR reviews and changelogs with GitHub Actions",
+      "sha256": "0d44d05969f4ecef18ec08ae5127cf48be1ed4eac1e54f3bd9418ec1111a0e03"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Author runs Claude Code autonomously in GitHub Actions in production to review PRs, analyze test failures, generate changelogs and turn issue specs into implementation stubs.\n·\nOct 17, 2026",
+      "sha256": "bfe4cbb42e8ac18dd7320e83957c01af36931d0d56bf1c02b281f5648a72f549"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author uses the official Claude Code GitHub Action with a prompt in each workflow, triggered by events. PR opens trigger a review comment. A failed test run triggers root-cause analysis posted on the PR. Version tags trigger a CHANGELOG.md update that Claude commits and pushes. An 'ai-scaffold' issue label triggers stub files and a draft PR. Permissions are scoped per workflow.",
+      "sha256": "52a6826bddff2e92c2218c9eed5c1fcb5ea34fecc38e2459480701786f26884c"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says every non-draft PR gets a review comment within 2 minutes, setup took about 4 hours, and savings are 3-4 hours a week. These are self-reported figures with no independent check.",
+      "sha256": "66128b286a4f1f3a74dbd61126ffd273a582bd8265e4dcb16aaeea4dde7678ac"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author estimates $15-25/month at Sonnet pricing for 3-5 developers and 10-15 PRs a week. Skipping draft PRs and bot commits helps keep the bill down.",
+      "sha256": "f0aacf0e6c47f831522bd238141576fc6758f2c77a1141ccd5d9fdf73314ad4a"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://dev.to/whoffagents/github-actions-claude-code-i-automated-my-entire-dev-workflow-4h0h"
+      ],
+      "sha256": "779c9c8c016cb2a598060664ad1b6f05d2e333e40d8089c77e16ca8f5aaa3c97"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-26",
+      "sha256": "3499899299887758c821185c1130b43595cf63c729475469168ddbce5ec709a7"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "d694b4993f76646090376b80e804fd2923d8a5fa8c26b5edc702223b8330aa99",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Automate PR reviews and changelogs with GitHub Actions\nAuthor runs Claude Code autonomously in GitHub Actions in production to review PRs, analyze test failures, generate changelogs and turn issue specs into implementation stubs.\n·\nOct 17, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe author uses the official Claude Code GitHub Action with a prompt in each workflow, triggered by events. PR opens trigger a review comment. A failed test run triggers root-cause analysis posted on the PR. Version tags trigger a CHANGELOG.md update that Claude commits and pushes. An 'ai-scaffold' issue label triggers stub files and a draft PR. Permissions are scoped per workflow.\nHow it went\nThe author says every non-draft PR gets a review comment within 2 minutes, setup took about 4 hours, and savings are 3-4 hours a week. These are self-reported figures with no independent check.\nWorth knowing\nThe author estimates $15-25/month at Sonnet pricing for 3-5 developers and 10-15 PRs a week. Skipping draft PRs and bot commits helps keep the bill down.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nSet up a GitHub Actions workflow in my repo [repo name] that runs Claude Code on every new pull request to review the diff and post a summary comment with any bugs or risks it finds. Also add a step that drafts a changelog entry from merged PRs under [changelog file path]. Show me the workflow file and wait for my approval before committing it or adding any secrets.\nOriginal source: https://dev.to/whoffagents/github-actions-claude-code-i-automated-my-entire-dev-workflow-4h0h",
+    "body_sha256": "eae7f43cfabee4ecb381da38500ba1cf94133dbffc64e0c1c3523e03d60d1602",
+    "archived_at": "2026-11-27T10:45:45.834610+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-27T10:45:45.834610+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

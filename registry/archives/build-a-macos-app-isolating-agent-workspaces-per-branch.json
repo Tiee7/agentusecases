@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-macos-app-isolating-agent-workspaces-per-branch",
-  "observed_at": "2026-11-26T10:25:10.656187+00:00",
-  "html_sha256": "739b908795bc61a3e0ab913924f692b2a08af368456204a78859d5602e361737",
+  "observed_at": "2026-11-27T10:40:59.918837+00:00",
+  "html_sha256": "97116f93d2e779d4a40eb33488a7e26a30d59814801f6b252e3d046679972f15",
   "body_sha256": "b67d33b3b1254ac77937868e4e86aeaa51d35d2728e747935c1b07877c452a20",
   "status": "observed",
   "fields": {
@@ -96,11 +96,11 @@
     "language": "en",
     "body": "Build a macOS app isolating agent workspaces per branch\nA poster used Cursor to build an Electron macOS app that gives each coding agent an isolated workspace per git branch with its own local IP.\n·\nApr 26, 2025\nDone with\nCR\nCursor\nCC\nClaude Code\nWhat they did\nThe poster built Galactic, an Electron macOS app for running multiple Cursor or Claude Code agents in parallel, each tied to its own git branch and isolated workspace. In the thread they say Cursor helped build the Electron shell and UI, and in a related showcase comment they add that Cursor wrote the entire Electron main process and an MCP server, while agent mode was used for the network-isolation logic that assigns each workspace a unique loopback IP.\nHow it went\nThe stated result was that parallel agent workspaces could run the same ports without conflicts and avoid context bleeding between branches. The thread gives no performance numbers or broader limitations beyond framing it as a fix for that specific multi-agent workflow problem.\nWorth knowing\nThe source’s main catch is scope: it describes the app’s branch-per-workspace and unique-local-IP setup, but offers no concrete build time, cost, or benchmark details.\nTry it yourself\nwith\nCursor\nCopy prompt\nHelp me build a [macOS/Electron] desktop app that gives each coding agent its own isolated workspace per git branch, with a separate [local IP or port] for each one. Start with a short plan of the architecture, then implement the main process, workspace creation from a branch, and the network isolation. You're done when I can launch two workspaces on different branches and confirm they run without interfering with each other. Ask me before deleting any files or running destructive git commands.\nOriginal source: https://www.reddit.com/r/cursor/comments/1rv8srt/weekly_cursor_project_showcase_thread",
     "body_sha256": "b67d33b3b1254ac77937868e4e86aeaa51d35d2728e747935c1b07877c452a20",
-    "archived_at": "2026-11-26T10:25:10.656187+00:00",
+    "archived_at": "2026-11-27T10:40:59.918837+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:25:10.656187+00:00",
+    "at": "2026-11-27T10:40:59.918837+00:00",
     "status": "fetched",
     "error": null
   }

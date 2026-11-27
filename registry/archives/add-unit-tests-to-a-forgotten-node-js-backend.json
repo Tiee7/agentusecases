@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/add-unit-tests-to-a-forgotten-node-js-backend",
+  "observed_at": "2026-11-27T10:45:47.837235+00:00",
+  "html_sha256": "47948648a5d5e07751c16fddaac549e7b1d6bf35fdc3720b9228c6719090d3b8",
+  "body_sha256": "89842b41759946df0ed3dff9a40896caa5a916570bcd697ced6bc016a2e97e5b",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Add unit tests to a forgotten Node.js backend",
+      "sha256": "235ca662a3f963a5242551625b80ce746a33de3ad24253ff23b556aaff6e95fb"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "Claude Code read AGENTS.md, scanned the source, wrote 23 vitest tests and fixed 4 failures over two rounds in about fifteen minutes.\n·\nNov 25, 2026",
+      "sha256": "47d995766c6fa8ac907973974b5a2cb96448cc2cc12b6a61b90e4e15d3071ac9"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author had a two-year-old Node.js backend they no longer remembered. They put an AGENTS.md in the project root listing the stack, directory conventions and code style. Then they gave Claude Code one goal: fill in core business logic unit tests with vitest. The agent read AGENTS.md, scanned src/, wrote tests module by module, ran them and fixed failures itself.",
+      "sha256": "391196ee8d1755c6bf7661bfd6fdd5dea37ad1ad086dc2818b87ad3850530153"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "In about fifteen minutes it wrote 23 tests. 19 passed straight away, and the other 4 passed after two rounds of self-fixing. The author estimates the chat-style approach would have taken about ninety minutes.",
+      "sha256": "2c5e01fc7dbf9b9e31e0873c69f8cea618d64e5ffee48bae43a6869faa13e7a6"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "The author warns that agents can weaken tests to make them pass or hide problems, so review the final diff by hand before committing.",
+      "sha256": "c8211e4d431edde16f481012944e148306992a64ba827417533e812abcd75869"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.cnblogs.com/uniqueDong/p/21767814"
+      ],
+      "sha256": "20b44ed2f5d7b2fba7730aeab02c30530d11f07c5de085237285c82025c1ab57"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-26",
+      "sha256": "3499899299887758c821185c1130b43595cf63c729475469168ddbce5ec709a7"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "5786593ef8e6d971a13cffb341301299a6b833a75f271399d9a0a013c61fb9fc",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Add unit tests to a forgotten Node.js backend\nClaude Code read AGENTS.md, scanned the source, wrote 23 vitest tests and fixed 4 failures over two rounds in about fifteen minutes.\n·\nNov 25, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe author had a two-year-old Node.js backend they no longer remembered. They put an AGENTS.md in the project root listing the stack, directory conventions and code style. Then they gave Claude Code one goal: fill in core business logic unit tests with vitest. The agent read AGENTS.md, scanned src/, wrote tests module by module, ran them and fixed failures itself.\nHow it went\nIn about fifteen minutes it wrote 23 tests. 19 passed straight away, and the other 4 passed after two rounds of self-fixing. The author estimates the chat-style approach would have taken about ninety minutes.\nWorth knowing\nThe author warns that agents can weaken tests to make them pass or hide problems, so review the final diff by hand before committing.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nRead the project docs and source in [project folder], then add unit tests with [test framework, e.g. vitest] covering the main modules and routes. Run the tests, fix failures that come from the test code, and report any that look like real bugs in the app without changing the app code. Finish with a summary of what's covered and the pass count.\nOriginal source: https://www.cnblogs.com/uniqueDong/p/21767814",
+    "body_sha256": "89842b41759946df0ed3dff9a40896caa5a916570bcd697ced6bc016a2e97e5b",
+    "archived_at": "2026-11-27T10:45:47.837235+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-27T10:45:47.837235+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

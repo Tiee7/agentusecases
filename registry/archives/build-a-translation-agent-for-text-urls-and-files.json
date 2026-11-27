@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/build-a-translation-agent-for-text-urls-and-files",
-  "observed_at": "2026-11-26T10:27:24.557553+00:00",
-  "html_sha256": "f923470c8331453fae6145afc564623b46716d379aa1d75536bbed94bf3d2629",
+  "observed_at": "2026-11-27T10:43:14.038764+00:00",
+  "html_sha256": "a5e0d77bfad1db5ad63235de5bb85e0a7f2f4dbf27bb45199346bbe01e3a2c96",
   "body_sha256": "9476bed3212d60769b8812adf17df40e50ff7f8a982b582e49b15f9b40d058c3",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Build a translation agent for text, URLs and files\nThe author used Claude Code to build, with no hand-written code, an agent that translates text, a URL or a local file; it fetched a blog's articles and translated two into Chinese.\n·\nNov 22, 2026\nDone with\nCC\nClaude Code\nWhat they did\nClaude Code wrote the agent in small versions that each ran on their own: a UI shell, then the Doubao 1.6 model, then web-fetch and file-read tools, then tool status shown in the UI. A CLAUDE.md file told it to test and fix its own output. The author pasted current SDK examples into each prompt. When v0.3 went wrong, he rolled back and rewrote the prompt.\nHow it went\nThe agent took a blog URL, fetched the homepage, found the first two articles and translated them into Chinese. It made three fetch calls. The author says his web fetching is crude and fails on most pages.\nWorth knowing\nThe author says it took about 2 hours, but only because he had already hand-built several earlier versions. He suggests using a model trained for tool use.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nBuild me a small translation tool that takes either pasted text, a URL, or a local file path and translates it into [target language]. Fetch the page or read the file, keep the original formatting and headings, and save the result as [output file name]. Test it by translating [a sample URL or file] and show me the result, then tell me how to run it myself.\nOriginal source: https://baoyu.io/blog/claude-code-translation-agent-opensource",
     "body_sha256": "9476bed3212d60769b8812adf17df40e50ff7f8a982b582e49b15f9b40d058c3",
-    "archived_at": "2026-11-26T10:27:24.557553+00:00",
+    "archived_at": "2026-11-27T10:43:14.038764+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:27:24.557553+00:00",
+    "at": "2026-11-27T10:43:14.038764+00:00",
     "status": "fetched",
     "error": null
   }

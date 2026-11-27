@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/check-appointment-availability-through-a-booking-chatbot",
-  "observed_at": "2026-11-26T10:29:04.558359+00:00",
-  "html_sha256": "038cfd920426c794c16d0a67a5f46099c0d1ad4ad5a3ae6165819a72bb0f4d14",
+  "observed_at": "2026-11-27T10:44:53.982429+00:00",
+  "html_sha256": "a08b623de1b9a64697411681dfa8996e06cc871c9a1169389a9fc17154cebdc8",
   "body_sha256": "ac6827272e51cf2828d43f00ea568e6f8d81ef415bd70f99ee30738a3c55f346",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Check appointment availability through a booking chatbot\nAn n8n chatbot workflow has a booking agent that calls another workflow to check appointment availability in Booksy.\nDone with\nN8\nn8n\nWhat they did\nThey built an n8n Messenger bot for a beauty salon that starts from a Facebook webhook, deduplicates messages in Redis, classifies whether the user wants FAQ help or booking, and stores chat context in Postgres. For booking, the main agent calls a separate availability-check workflow that takes the service name, looks up its duration, searches the Booksy calendar, and returns open slots; the builder also used Supabase RAG for service questions and iterated prompts to make GPT call the booking function instead of only claiming success.\nHow it went\nThe builder says it works and the client is happy, but gives no booking-rate or time-saved numbers. Main problems were wrong Polish date parsing and needing many prompt revisions before the model reliably triggered the booking action.\nWorth knowing\nExpect complexity: this version had 30+ nodes, plus two days spent fixing Polish date handling and about 20 prompt iterations to get function calling to behave.\nTry it yourself\nwith\nn8n\nCopy prompt\nHelp me build an n8n chatbot for [business name] that answers customer questions and, when someone asks about an appointment, calls a separate workflow to check open slots in [booking system, e.g. Booksy] for [service] on [date range]. It should reply with the available times. It should not book anything until the customer confirms and I have reviewed the booking step. You're done when a test chat returns real availability.\nOriginal source: https://www.reddit.com/r/n8n/comments/1p6czwe/looking_for_feedback_on_my_n8n_workflow_chatbot",
     "body_sha256": "ac6827272e51cf2828d43f00ea568e6f8d81ef415bd70f99ee30738a3c55f346",
-    "archived_at": "2026-11-26T10:29:04.558359+00:00",
+    "archived_at": "2026-11-27T10:44:53.982429+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:29:04.558359+00:00",
+    "at": "2026-11-27T10:44:53.982429+00:00",
     "status": "fetched",
     "error": null
   }

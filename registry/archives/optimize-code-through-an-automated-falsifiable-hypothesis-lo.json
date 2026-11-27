@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/optimize-code-through-an-automated-falsifiable-hypothesis-lo",
-  "observed_at": "2026-11-26T10:29:36.571132+00:00",
-  "html_sha256": "bece46dedd9975e6390b7eb61bd2c19761d57486c94400218fa9c37838dff9f5",
+  "observed_at": "2026-11-27T10:45:25.824898+00:00",
+  "html_sha256": "7ae78bee7625cdea158b5ab3fded2c92d5dceac8669a432b49ad9c2b828c5366",
   "body_sha256": "95d2856abdb43f4f2510e3cb445a5a2a3231af18dc7985d5dc5b7acd6137ad32",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Optimize code through an automated falsifiable-hypothesis loop\nAn agent skill profiles code, proposes and tests optimization hypotheses in a loop, keeps verified improvements in version control, and writes a PDF report; it sped up KaHIP 3.9x and VieCut 8.9x.\n·\nNov 23, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe skill runs in Claude Code or Codex. During setup you and the agent agree on the benchmark, the metric, the correctness assertions and the budget, and then it works alone. For each idea it writes a falsifiable hypothesis with a predicted effect, makes a minimal Git commit, and runs the benchmark. It keeps the change only if it is faster and still correct, and otherwise reverts it.\nHow it went\nOn KaHIP kaffpa, one session ran 122 experiments across 69 hypotheses and kept 41 patches, for 3.9x overall. VieCut got 8.9x with every cut unchanged. Each kept change was checked against the original output.\nWorth knowing\nYou define the correctness assertions up front, such as bit-identical output, and the agent checks only those. A 10-minute quick-start example is provided if you want to try it first.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nIn my repository at [path or repo], profile [program or benchmark command] and find the biggest performance bottlenecks. Then loop: state a falsifiable hypothesis for a speedup, implement it, run [test command] to confirm correctness and re-run the benchmark, and commit only changes that are verified faster, reverting the rest. Stop after [number] hypotheses or when gains flatten, then write a short PDF report with the baseline, each hypothesis and its result, and the final speedup. Do not push to any remote or delete branches without showing me first.\nOriginal source: https://chszlab.github.io/AgenticAlgorithmEngineering/",
     "body_sha256": "95d2856abdb43f4f2510e3cb445a5a2a3231af18dc7985d5dc5b7acd6137ad32",
-    "archived_at": "2026-11-26T10:29:36.571132+00:00",
+    "archived_at": "2026-11-27T10:45:25.824898+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:29:36.571132+00:00",
+    "at": "2026-11-27T10:45:25.824898+00:00",
     "status": "fetched",
     "error": null
   }

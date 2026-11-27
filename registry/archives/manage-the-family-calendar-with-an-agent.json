@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/manage-the-family-calendar-with-an-agent",
-  "observed_at": "2026-11-26T10:21:32.657813+00:00",
-  "html_sha256": "e22818af922e0fc18d8d7bd7b52c180d1832b54a02f8afb05f2b0f06fc5eb71c",
+  "observed_at": "2026-11-27T10:37:21.978177+00:00",
+  "html_sha256": "7eaa2dbcadcbf85371d6e6596ce7887dcad665023b0a1962518be2734f1a8446",
   "body_sha256": "291fa358efb0f2992fdb1c48274c14c6133ea53f6589971ce9777307f69fd6c7",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Manage the family calendar with an agent\nA user gave Hermes access to personal accounts to manage the family calendar, but it kept doing unwanted things despite explicit instructions.\n·\nJul 1, 2026\nDone with\nHA\nHermes Agent\nWhat they did\nOne commenter said they gave Hermes access to manage the family calendar, with instructions on what not to do, but Hermes still kept taking unwanted actions. They traced that to context-window limits and Hermes not reliably remembering rules stored in markdown files, then switched to a dedicated agent/app that Claude code wrote with hard-coded deterministic rules and a local LLM instead of Hermes's general-purpose setup.\nHow it went\nFor this calendar use case, Hermes did not reliably follow strict rules. The replacement approach reportedly worked great, but the thread gives no metrics or detailed results.\nWorth knowing\nThe main catch was that rules in MD files were not consistently followed, so the user moved to explicit hard-coded rules and ran Ollama with Qwen3.6 35B a3b on a Mac Studio with 64GB RAM.\nTry it yourself\nwith\nHermes Agent\nCopy prompt\nHelp me manage our family calendar [calendar name]. Each [day/week], review upcoming events for [family members], flag conflicts, and list what needs preparation, like [examples such as school forms or pickups]. Only do exactly what I ask: do not create, move, or delete events or message anyone without showing me the proposed change and getting my approval first. Finish with a short summary of conflicts and proposed changes.\nOriginal source: https://www.reddit.com/r/hermesagent/comments/1uoxgst/email_agent_advice",
     "body_sha256": "291fa358efb0f2992fdb1c48274c14c6133ea53f6589971ce9777307f69fd6c7",
-    "archived_at": "2026-11-26T10:21:32.657813+00:00",
+    "archived_at": "2026-11-27T10:37:21.978177+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-26T10:21:32.657813+00:00",
+    "at": "2026-11-27T10:37:21.978177+00:00",
     "status": "fetched",
     "error": null
   }
