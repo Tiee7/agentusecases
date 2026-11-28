@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/automate-video-editing-on-a-personal-pc",
-  "observed_at": "2026-11-27T10:43:59.979519+00:00",
-  "html_sha256": "6eac04b87a32ebeb1e4ff84660acb14237596f5c48bfb842f4024d80eda07382",
+  "observed_at": "2026-11-28T09:58:01.466719+00:00",
+  "html_sha256": "12789718b772a81ab7ba213397b5dce39a0e3c1a78298a7b5174508cc1e0e366",
   "body_sha256": "b21e1b784ce78a73d76f54701ca84d2904726da12a01fdcdc7dcf611f6adc2ff",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Automate video editing on a personal PC\nA user films clips on their phone, sends them to their computer, and Claude runs the editing pipeline without an editing app or MCP plugin.\n·\nNov 16, 2026\nDone with\nCL\nClaude\nWhat they did\nThey built a local pipeline Claude runs on their own PC: clips shot on a phone are dropped onto the computer, and a worker script watches a folder and starts processing automatically. It makes a 1080p working copy, transcribes with Whisper on the GPU, removes pauses, filler words, restarts, and spoken \"cut that\" sections, then Claude reviews the cut list before Python scripts use ffmpeg, OpenCV, and rembg to render full videos, shorts, and thumbnails.\nHow it went\nThe user says they use it to edit and post videos for various businesses across about 25 social accounts. The source gives no timing, cost, or performance numbers, and says final checking still happens when Claude reviews frames for quality and privacy.\nWorth knowing\nThis was plain Python on a personal PC with ffmpeg, Whisper, OpenCV, and rembg, explicitly not an editing app or MCP plugin.\nTry it yourself\nwith\nClaude\nCopy prompt\nI film short clips on my phone and move them to [folder path] on my computer. Set up a repeatable pipeline using free command-line tools like ffmpeg that takes the clips in that folder and produces one finished video with [trims, cuts, captions, music, resolution]. A finished job is one script I can run on a new folder of clips, and a sample output from my current files. Never overwrite the original clips.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1xxgcjo/absolutely_amazing",
     "body_sha256": "b21e1b784ce78a73d76f54701ca84d2904726da12a01fdcdc7dcf611f6adc2ff",
-    "archived_at": "2026-11-27T10:43:59.979519+00:00",
+    "archived_at": "2026-11-28T09:58:01.466719+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-27T10:43:59.979519+00:00",
+    "at": "2026-11-28T09:58:01.466719+00:00",
     "status": "fetched",
     "error": null
   }

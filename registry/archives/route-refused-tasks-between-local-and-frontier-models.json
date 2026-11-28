@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/route-refused-tasks-between-local-and-frontier-models",
-  "observed_at": "2026-11-27T10:44:59.830266+00:00",
-  "html_sha256": "f80096de2d47b29f5aef55cf3a63c8d02cf7ddcaec077ec6c16f1e0213e8448d",
+  "observed_at": "2026-11-28T09:59:01.519074+00:00",
+  "html_sha256": "dae1485dba0322cf8dedf30f3e35a91037213ca3b56713e2838545a9196fafe7",
   "body_sha256": "6b81a2e8b114429a31995b3604b8782643b254e260efe4efe116ef98fc3da234",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Route refused tasks between local and frontier models\nA commenter runs a local Qwen model with an agents.md policy that escalates refused tasks via a shared SQL task board to a model willing to do them, such as clicking login buttons.\n·\nNov 24, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe commenter runs a local Qwen model alongside other models, all guided by an agents.md file containing an accept-refusal, negotiate-refusal, escalate-refusal policy. When a model balks at a task, the policy tells the models to talk to each other and hand the blocked task to whichever one will do it, using a shared SQL database board of tasks.\nHow it went\nThe commenter says this gets around refusals in their own workflows, such as a model objecting to clicking a login button on a webpage. No numbers or systematic results are given; it is a brief anecdote.\nWorth knowing\nThe source gives no setup details beyond the policy names, the agents.md file and the shared SQL task board, so expect to design the routing and board schema yourself.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a routing policy between my local model [model name, e.g. Qwen] and a stronger hosted model. Write an agents.md that tells the local model to log any task it refuses or can't do into a shared SQL task board table at [database path], with fields for task, status and result. Then write a small worker that picks up those pending tasks and sends them to [hosted model]. Run one test task and show me the board before and after. Ask me before running anything that touches my accounts.\nOriginal source: https://news.ycombinator.com/item?id=50634581",
     "body_sha256": "6b81a2e8b114429a31995b3604b8782643b254e260efe4efe116ef98fc3da234",
-    "archived_at": "2026-11-27T10:44:59.830266+00:00",
+    "archived_at": "2026-11-28T09:59:01.519074+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-27T10:44:59.830266+00:00",
+    "at": "2026-11-28T09:59:01.519074+00:00",
     "status": "fetched",
     "error": null
   }

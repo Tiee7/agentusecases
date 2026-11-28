@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/book-an-appointment-using-chatgpt-agent-mode",
+  "observed_at": "2026-11-28T10:00:15.487438+00:00",
+  "html_sha256": "6c9f63afd860320f368340d302ef362f0e0b0c0605d7564811517a9efdef5bd6",
+  "body_sha256": "b53b54403b80110ac04c61d1df5de26f03528e3214aea921ecd0578f2b1a55d4",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Book an appointment using ChatGPT Agent mode",
+      "sha256": "0b89ef3686309ed5c6348eb1ee54cf149bbec2eb45d2ee99e004f0a74150e671"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The agent checked Google Calendar for free time and sent an appointment email, but was about 10x slower than manual, the session expired, and the chosen time conflicted.",
+      "sha256": "c19d00012bd2fd343533ef6fdf40b76430c4afef7efaa90194619a72d333b3de"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The author linked Google Calendar and Gmail as connectors in ChatGPT Agent mode. They asked it to find a free slot this week with a one-hour travel buffer either side, then email the slot to a recipient. The agent said it had no calendar access, so the author reconnected and logged in again, including two-factor on a phone. The agent then checked the calendar and drafted the email, and the author edited it.",
+      "sha256": "2bb53a6e52c9c8790faa86abe7f1de819ba4bef9cececcf62ef84925acd53abb"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The email went out, but the slot it picked already had an appointment in it. The draft included an awkward line about travel buffers that the author had to delete. The whole run was very slow.",
+      "sha256": "170e25ac25e43f74e8a8785cbfe376aa6b01b7215fb42991884e0aa1e105a7a4"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Expect to log in yourself even with connectors set up. In the author's earlier Shinkansen booking test, agent mode took 20 minutes against 2.5 minutes by hand, and the site session expired.",
+      "sha256": "8aca55f8f55f94b64e605468eea222334e8d64d6df460052642ce3ddb73905c0"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "ChatGPT Agent"
+      ],
+      "sha256": "8e2784cf4a9f851bb22a7e2941b5ad0b77848f81ffcdb85f82bf5e95b614ccd1"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://note.com/systemdev/n/n897a42e9deda?hl=en"
+      ],
+      "sha256": "2dc09a5c3344d8365ddf8f080394078e9240f5f74ee95866a2daa82cbdf1a756"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "travel",
+        "label": "Travel & Bookings"
+      },
+      "sha256": "0fb9bd3e5b8a960b179aad7e0bd008f36504996f7ddf9edcc8e88e80df70335b"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-27",
+      "sha256": "da3bbc3fc2e390fae91450f60b4b1bb6eefca50e93a6c5c3919370bcf751b02d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "12cc1cb988ef1ce004af43755336aa06c5e5df48f1281546cb9eb5c279f2e164",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Book an appointment using ChatGPT Agent mode\nThe agent checked Google Calendar for free time and sent an appointment email, but was about 10x slower than manual, the session expired, and the chosen time conflicted.\nDone with\nGA\nChatGPT Agent\nWhat they did\nThe author linked Google Calendar and Gmail as connectors in ChatGPT Agent mode. They asked it to find a free slot this week with a one-hour travel buffer either side, then email the slot to a recipient. The agent said it had no calendar access, so the author reconnected and logged in again, including two-factor on a phone. The agent then checked the calendar and drafted the email, and the author edited it.\nHow it went\nThe email went out, but the slot it picked already had an appointment in it. The draft included an awkward line about travel buffers that the author had to delete. The whole run was very slow.\nWorth knowing\nExpect to log in yourself even with connectors set up. In the author's earlier Shinkansen booking test, agent mode took 20 minutes against 2.5 minutes by hand, and the site session expired.\nTry it yourself\nwith\nChatGPT Agent\nCopy prompt\nCheck my Google Calendar for free time over the next [number] days, then find the booking page or email address for [provider, e.g. my dentist] and propose an appointment that fits [duration] and avoids my existing events. Double-check the chosen slot against my calendar for conflicts. Do not submit the booking form or send any email until you show me the exact time and message and I approve it.\nOriginal source: https://note.com/systemdev/n/n897a42e9deda?hl=en",
+    "body_sha256": "b53b54403b80110ac04c61d1df5de26f03528e3214aea921ecd0578f2b1a55d4",
+    "archived_at": "2026-11-28T10:00:15.487438+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-28T10:00:15.487438+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

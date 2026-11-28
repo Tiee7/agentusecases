@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/answer-canadian-statistics-questions-from-official-data-sour",
+  "observed_at": "2026-11-28T10:00:21.535101+00:00",
+  "html_sha256": "e29f393cff1b1b4f4963dffaa55df3868659837a1c63b51a30977bbb4e610251",
+  "body_sha256": "5a22c1db3b68e7c5507bf4b353cee223513d1b9323f654ddaa7c35dce0466cd8",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Answer Canadian statistics questions from official data sources",
+      "sha256": "3c70ffb2b41bb7f68b8b290b2ca4c7a536dad15a4e540374309fd21c992df1dd"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "MapleStats connects an AI to 186 official Canadian data sources so it can return accurate figures like unemployment rates and rents; the author reports 8% to 92% accuracy on a 53-question benchmark.\n·\nNov 26, 2026",
+      "sha256": "6567f871fd3cee91ecae87742f2140b490962f29a82f928dd2217a543622f00d"
+    },
+    "method": {
+      "status": "observed",
+      "value": "MapleStats is an MCP server that you connect to an agent such as Claude Code, Codex or Cursor. The agent searches all sources at once, then fetches each figure live from the publisher, with the table id, period and licence attached. It can send its cited figures to a check_answer tool, which re-reads them from the source. It can also write R, Python, Stata or Julia scripts, or an Excel query, that rerun the pull.",
+      "sha256": "2516481e4bfa16e257a7c7b77ee0fb208529f94c98927e66f4de40c81ffce774"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The page now lists 205 sources and 515 tools, not the 186 in the summary. The page's benchmark figures (8% to 92% on 53 questions) are not on this page; they are on a separate benchmarks page.",
+      "sha256": "103bd202c08c79b2dc532d20dbc21c3d4096c4039940a7d2930b174c42d58954"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "It is a beta (v0.7.0). The site warns that an assistant's written answers can still be wrong, so check each figure against the cited source.",
+      "sha256": "6fa622f36a8bf7d630cd551a64a22fe016b566278c51cd6e03ac54fb74aa2261"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "custom-built or unnamed agent"
+      ],
+      "sha256": "1124a548027ce4d5a45e5c42f788aeead759cffbb2652596e93730c649b43da8"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://maplestats.danielstats.io"
+      ],
+      "sha256": "bb8be654c5496bd5c4a5ab64b5e51535dd7a16b684484399d532af4b3e0b9945"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "research",
+        "label": "Research & Knowledge"
+      },
+      "sha256": "28ebe5eafeac0c6aa76d45ce6b216f264a795f07a54fca28c54666aebf043199"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-27",
+      "sha256": "da3bbc3fc2e390fae91450f60b4b1bb6eefca50e93a6c5c3919370bcf751b02d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "12d1a65db80ab1643834a324f61091837e2398833553c9d7fb63d753942c7f35",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Answer Canadian statistics questions from official data sources\nMapleStats connects an AI to 186 official Canadian data sources so it can return accurate figures like unemployment rates and rents; the author reports 8% to 92% accuracy on a 53-question benchmark.\n·\nNov 26, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nMapleStats is an MCP server that you connect to an agent such as Claude Code, Codex or Cursor. The agent searches all sources at once, then fetches each figure live from the publisher, with the table id, period and licence attached. It can send its cited figures to a check_answer tool, which re-reads them from the source. It can also write R, Python, Stata or Julia scripts, or an Excel query, that rerun the pull.\nHow it went\nThe page now lists 205 sources and 515 tools, not the 186 in the summary. The page's benchmark figures (8% to 92% on 53 questions) are not on this page; they are on a separate benchmarks page.\nWorth knowing\nIt is a beta (v0.7.0). The site warns that an assistant's written answers can still be wrong, so check each figure against the cited source.\nTry it yourself\nwith\nClaude\nCopy prompt\nI need accurate statistics about [topic, e.g. unemployment rate or average rent] for [Canadian region or city] and [time period]. Look only at official sources such as Statistics Canada or CMHC, and give me each figure with the table name, release date, and a link. If you cannot find an official number, say so instead of estimating, and stop once you have answered all of these questions: [list your questions].\nOriginal source: https://maplestats.danielstats.io",
+    "body_sha256": "5a22c1db3b68e7c5507bf4b353cee223513d1b9323f654ddaa7c35dce0466cd8",
+    "archived_at": "2026-11-28T10:00:21.535101+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-28T10:00:21.535101+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

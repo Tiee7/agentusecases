@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/run-a-realtor-s-facebook-page-with-a-scheduling-agent",
-  "observed_at": "2026-11-27T10:42:52.091155+00:00",
-  "html_sha256": "bfd904a697b043c3950efb51ede6247cb527ce89ccaae911df7ccd4a5eb86992",
+  "observed_at": "2026-11-28T09:56:53.443917+00:00",
+  "html_sha256": "0901e2b0c920a6dbb1f29af75a877b10573f767ed7c597ab06c36f4d2b38a142",
   "body_sha256": "3af74b2848b84ff9122855c4546dfe49007f183c13d573af050f232569ffe8e4",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Run a realtor's Facebook page with a scheduling agent\nAn agent built for a realtor automatically schedules Facebook posts, and the builders also ran it on their own marketing while handling Meta API permission changes and retries.\n·\nMay 1, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThey built a workflow for a realtor where listing details are sent to an agent, the agent turns them into Facebook posts, schedules them automatically, and sends updates through Telegram. Before handing it over, they ran the same system on their own business page for 10 days: feeding content briefs, having the agent draft in their page voice, using scheduled jobs to publish, and routing every action back through Telegram for approval; the agent could not publish without approval, had no unrestricted shell access, and ran on their own hardware.\nHow it went\nIn the 10-day test, it published 15 posts, processed nearly 880k tokens locally, and kept a full audit trail. They hit issues with a false incomplete audit flag and Meta API permission changes and retries before the posting pipeline stabilized; in comments they said the realtor loves it.\nWorth knowing\nTheir main catch was operational hardening: running it on themselves first exposed Meta API permission changes and retry issues before client launch.\nTry it yourself\nwith\nZapier Agents\nCopy prompt\nSet up an agent that takes the posts I add to [spreadsheet or Google Doc] for my [business type] and schedules them on my Facebook Page [page name] at [days and times]. If a post fails, have it retry [number] times and then email me at [email] with the reason. Before turning it on, show me the schedule and the first post it will publish and wait for my approval.\nOriginal source: https://www.reddit.com/r/AiForSmallBusiness/comments/1tfbc33/we_built_a_facebook_ai_agent_for_a_realtor_then",
     "body_sha256": "3af74b2848b84ff9122855c4546dfe49007f183c13d573af050f232569ffe8e4",
-    "archived_at": "2026-11-27T10:42:52.091155+00:00",
+    "archived_at": "2026-11-28T09:56:53.443917+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-27T10:42:52.091155+00:00",
+    "at": "2026-11-28T09:56:53.443917+00:00",
     "status": "fetched",
     "error": null
   }

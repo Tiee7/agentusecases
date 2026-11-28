@@ -1,8 +1,8 @@
 {
   "version": 1,
   "url": "https://agentusecases.ai/use-case/gate-refund-actions-with-a-tool-gate-model",
-  "observed_at": "2026-11-27T10:45:31.819835+00:00",
-  "html_sha256": "f8838b80fccabbd222bd1a5f1d4f9c33fb2861ecdf43ca1f4a196bf494df6651",
+  "observed_at": "2026-11-28T09:59:33.552595+00:00",
+  "html_sha256": "d835c954cb95199273edbe069ad89cb7ae7c488335a212fa8d909a945bc31303",
   "body_sha256": "748beadec19f30cd026031bb0faff05db05f86627dfda2fffdd3f1c203ef5384",
   "status": "observed",
   "fields": {
@@ -95,11 +95,11 @@
     "language": "en",
     "body": "Gate refund actions with a tool-gate model\nThe author tested Strands Decider 2B as a tool gate that decides whether an agent should act on 16 refund cases, compared against Nova Pro as a judge.\n·\nNov 25, 2026\nDone with a\ncustom-built or unnamed agent\nWhat they did\nThe author placed a Strands intervention, SuspicionGate, on before_tool_call for a refund tool. It asked Decider 2B three typed questions: risk score, grounded yes/no, and allow/probe/block. The gate returned proceed, guide or deny. He wrote 16 cases first: 5 legitimate, 4 vague, 4 fraud, 3 injection. He ran the same cases through a Nova Pro judge, then replayed the recorded outputs at different thresholds.\nHow it went\nDecider stopped 7 of 11 bad requests and Nova Pro stopped 9. Neither blocked a legitimate refund, and neither stopped the injection that told the classifier to allow. Raising min_confidence to 0.90 cut Decider's misses to one.\nWorth knowing\nOn a CPU-only t2.large, Decider took about 9.6 s per call against 0.6 s for Nova Pro. The safe threshold window was only about 0.03 wide, so calibrate on your own cases.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nI want to test whether a small model can act as a gate that decides if an agent should take an action like [e.g. issuing a refund]. Write a script that runs [number] test cases from [file or description of cases] through the gate model and through a larger judge model, then compares their decisions. A finished job is a table showing each case, both decisions, where they disagree, and the overall agreement rate. Do not call any real refund or payment systems; use mock tools only.\nOriginal source: https://dev.to/aws-builders/stop-ai-agents-acting-on-bluffs-a-strands-decider-2b-tool-gate-test-5004",
     "body_sha256": "748beadec19f30cd026031bb0faff05db05f86627dfda2fffdd3f1c203ef5384",
-    "archived_at": "2026-11-27T10:45:31.819835+00:00",
+    "archived_at": "2026-11-28T09:59:33.552595+00:00",
     "scope": "Captured case text; external linked articles and HTML excluded."
   },
   "last_attempt": {
-    "at": "2026-11-27T10:45:31.819835+00:00",
+    "at": "2026-11-28T09:59:33.552595+00:00",
     "status": "fetched",
     "error": null
   }

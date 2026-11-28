@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/process-github-issues-into-pull-requests-overnight",
+  "observed_at": "2026-11-28T10:00:37.463420+00:00",
+  "html_sha256": "f708450ae4b021179bde10a0f2d306de7c6e023f795aed77640079576bc776bb",
+  "body_sha256": "ec39f15de1237936c9b83c0eb8a4dee3c86dd77dc87738190747d171d6fa5eb5",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Process GitHub issues into pull requests overnight",
+      "sha256": "4dca629974fdca1fb25bc7073e1d60506e6aa1522991aee30ac8af8fee577efc"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "A cron job triggers an OpenClaw agent to pick one unstarted GitHub issue, implement and test the change, open a PR, and relabel the issue ai-completed.",
+      "sha256": "7e4c6c2301d0c9e0855a4f197f21cf24fbd8ffd1cbd459ebadbcb8cccea121bd"
+    },
+    "method": {
+      "status": "observed",
+      "value": "An openclaw cron job runs every 10 minutes on an Apple Silicon Mac. Each run reads a local engineer.md that lists repos, maps each to a local folder, and defines the labels. The agent uses gh to pick one ai-ready issue and mark it ai-wip. It implements the change, runs tests (Docker preferred), opens a PR, and marks the issue ai-completed, or ai-failed on errors.",
+      "sha256": "68147f0b1d553ce563f005e7aa2391e89b0aa9e289d6b6bbb84c022244efbb42"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The author says he runs this in production and finds PRs lined up by morning. The article gives no counts or success rates. It warns that unattended meta-tasks, where the AI writes its own issues, can drift off target.",
+      "sha256": "f3b1a18891785780ed94fe77206f99a35c532e0593eda637d84ad303af6b41c9"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Getting tests to run locally (for example docker compose) is the heaviest setup work. Without it you wake up to failed PRs.",
+      "sha256": "cdb1b54c8d257f188e002c0dc4e319b30b9a9a66133122aaeb9c6fd452da167d"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "OpenClaw"
+      ],
+      "sha256": "3087ed1ba6d97193976f965e453317e99208d20db26fc7dc86d49f04855955f5"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://medium.com/@takamasa1222/keep-openclaw-working-while-you-sleep-92752cd575ce"
+      ],
+      "sha256": "e453339b33dd262121146b6c6ee02c08ec0d2f11f20abb01cad96b72764f9803"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Source explicitly labels the external publication date Undated."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-27",
+      "sha256": "da3bbc3fc2e390fae91450f60b4b1bb6eefca50e93a6c5c3919370bcf751b02d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "3bf9f9be8d185dff572581b8edece6c7a5c68e07150ad0917c10f9bc56be12d4",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Process GitHub issues into pull requests overnight\nA cron job triggers an OpenClaw agent to pick one unstarted GitHub issue, implement and test the change, open a PR, and relabel the issue ai-completed.\nDone with\nOC\nOpenClaw\nWhat they did\nAn openclaw cron job runs every 10 minutes on an Apple Silicon Mac. Each run reads a local engineer.md that lists repos, maps each to a local folder, and defines the labels. The agent uses gh to pick one ai-ready issue and mark it ai-wip. It implements the change, runs tests (Docker preferred), opens a PR, and marks the issue ai-completed, or ai-failed on errors.\nHow it went\nThe author says he runs this in production and finds PRs lined up by morning. The article gives no counts or success rates. It warns that unattended meta-tasks, where the AI writes its own issues, can drift off target.\nWorth knowing\nGetting tests to run locally (for example docker compose) is the heaviest setup work. Without it you wake up to failed PRs.\nTry it yourself\nwith\nOpenClaw\nCopy prompt\nEvery night at [time, e.g. 1:00 AM], look at the open issues in my GitHub repo [owner/repo] and pick one that has no label and no one working on it. Implement the change on a new branch, run the tests, and open a pull request that links the issue. When the PR is open, relabel the issue [ai-completed] and stop, and do not merge anything or touch more than one issue per run.\nOriginal source: https://medium.com/@takamasa1222/keep-openclaw-working-while-you-sleep-92752cd575ce",
+    "body_sha256": "ec39f15de1237936c9b83c0eb8a4dee3c86dd77dc87738190747d171d6fa5eb5",
+    "archived_at": "2026-11-28T10:00:37.463420+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-28T10:00:37.463420+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}

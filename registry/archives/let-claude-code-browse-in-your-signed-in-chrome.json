@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "url": "https://agentusecases.ai/use-case/let-claude-code-browse-in-your-signed-in-chrome",
+  "observed_at": "2026-11-28T10:00:55.527153+00:00",
+  "html_sha256": "d3a8a21366ba431d889c73a03ca7ef5b770705a828005765b074aedfc06ed769",
+  "body_sha256": "2b80d9e8316f3077f725f92b44f5bc55a161f7fede8b084af27b58275903cad3",
+  "status": "observed",
+  "fields": {
+    "title": {
+      "status": "observed",
+      "value": "Let Claude Code browse in your signed-in Chrome",
+      "sha256": "f0868a9bb953a4f90e2736f20686db88d72a0ff77f89f7deec43b2fa06c5d498"
+    },
+    "introduction": {
+      "status": "observed",
+      "value": "The poster built an open-source macOS tool so Claude Code can operate their signed-in Chrome directly without taking over their keyboard.\n·\nOct 1, 2026",
+      "sha256": "b885c62715cc6edf30f99fd466bef517fd6abb82ca2f47983f6e6ebe2fad5838"
+    },
+    "method": {
+      "status": "observed",
+      "value": "The poster built agent-chrome, a free MIT-licensed macOS plugin for Claude Code that makes a copy of one of your signed-in Chrome profiles and opens it in a separate background window that never takes focus. Setup happens through Claude Code chat: after installing the plugin, you ask Claude to set it up for a profile, it lists profiles, asks which one to copy, and registers an MCP server such as chrome-work; the person can step in to watch the window or complete login and 2FA prompts.",
+      "sha256": "18e4e5f8f9eec6eacd41f23fdf32298943b42154cd1a01de332e6d44959d37ef"
+    },
+    "outcome": {
+      "status": "observed",
+      "value": "The result was a way to let Claude work inside sites already signed into that Chrome profile while the user kept typing in the terminal, and the post says setup takes about two minutes. It is macOS-only, new sign-ins in real Chrome do not sync over unless you re-copy the profile, and extensions like password managers are disabled.",
+      "sha256": "72187b91afa075f1251e14569d38ee89237a1b3c6fcc2a03d5640ce1549fd7e1"
+    },
+    "notes": {
+      "status": "observed",
+      "value": "Because the copied browser keeps Chrome Sync on, any password the agent saves there can sync back to the user's Google account.",
+      "sha256": "652af7d090fc4da8d1af9551f69bda5ea59610b86c944fbcbae5357147f9b1b7"
+    },
+    "actual_agents": {
+      "status": "observed",
+      "value": [
+        "Claude Code"
+      ],
+      "sha256": "6351b4951d1874cb55c1e66d97a3348e019ee932c91367198c0c5653928df643"
+    },
+    "original_sources": {
+      "status": "observed",
+      "value": [
+        "https://www.reddit.com/r/ClaudeAI/comments/1wvozdr/i_made_claude_code_browse_in_my_signedin_chrome"
+      ],
+      "sha256": "877d621fab8a5387b32ed0ed76248e7e78a1c08365c78f666e66b694d217b8aa"
+    },
+    "author": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "category": {
+      "status": "observed",
+      "value": {
+        "id": "software",
+        "label": "Software & DevOps"
+      },
+      "sha256": "c68e79b616c51bf4ffb6f2e9b5ea10554ab4cb79c41fd7781f3c514b883ddcf6"
+    },
+    "tags": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "wanted": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "source_date": {
+      "status": "not_observed",
+      "value": null,
+      "sha256": null,
+      "reason": "Not present in the captured public page; not a zero or proof of absence."
+    },
+    "added_at": {
+      "status": "observed",
+      "value": "2026-11-27",
+      "sha256": "da3bbc3fc2e390fae91450f60b4b1bb6eefca50e93a6c5c3919370bcf751b02d"
+    },
+    "try_it": {
+      "status": "observed",
+      "value": null,
+      "sha256": "f8d23aee04f9b6a10a1a025e5c59c48c676ef324bff21dc1dfb82448defa3bb9",
+      "publication": "existing_source_trial_field"
+    }
+  },
+  "publication": "source_case_text_and_separate_editorial",
+  "source_text": {
+    "format": "extracted_page_text",
+    "language": "en",
+    "body": "Let Claude Code browse in your signed-in Chrome\nThe poster built an open-source macOS tool so Claude Code can operate their signed-in Chrome directly without taking over their keyboard.\n·\nOct 1, 2026\nDone with\nCC\nClaude Code\nWhat they did\nThe poster built agent-chrome, a free MIT-licensed macOS plugin for Claude Code that makes a copy of one of your signed-in Chrome profiles and opens it in a separate background window that never takes focus. Setup happens through Claude Code chat: after installing the plugin, you ask Claude to set it up for a profile, it lists profiles, asks which one to copy, and registers an MCP server such as chrome-work; the person can step in to watch the window or complete login and 2FA prompts.\nHow it went\nThe result was a way to let Claude work inside sites already signed into that Chrome profile while the user kept typing in the terminal, and the post says setup takes about two minutes. It is macOS-only, new sign-ins in real Chrome do not sync over unless you re-copy the profile, and extensions like password managers are disabled.\nWorth knowing\nBecause the copied browser keeps Chrome Sync on, any password the agent saves there can sync back to the user's Google account.\nTry it yourself\nwith\nClaude Code\nCopy prompt\nHelp me set up a way for you to operate my already signed-in Chrome on [macOS] without taking over my keyboard and mouse. Look for an open-source tool or approach that does this, explain how it works and what access it needs, and install it only after I approve. You're done when you can open [a site I'm logged into] in my Chrome and read [specific page or data] while I keep working. Pause and ask me before any click that submits a form, sends a message, or changes an account.\nOriginal source: https://www.reddit.com/r/ClaudeAI/comments/1wvozdr/i_made_claude_code_browse_in_my_signedin_chrome",
+    "body_sha256": "2b80d9e8316f3077f725f92b44f5bc55a161f7fede8b084af27b58275903cad3",
+    "archived_at": "2026-11-28T10:00:55.527153+00:00",
+    "scope": "Captured case text; external linked articles and HTML excluded."
+  },
+  "last_attempt": {
+    "at": "2026-11-28T10:00:55.527153+00:00",
+    "status": "fetched",
+    "error": null
+  }
+}
